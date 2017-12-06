@@ -3,6 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.bloombox.platform.client</groupId>
   <artifactId>java-client</artifactId>
+  <name>Bloombox: Java Client</name>
   <version>1.0-SNAPSHOT</version>
   <build>
     <plugins>
@@ -22,6 +23,14 @@
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <version>${maven.jar.version}</version>
+        <executions>
+          <execution>
+            <id>attach-test-jar</id>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
@@ -47,6 +56,12 @@
             <goals>
               <goal>test-compile</goal>
             </goals>
+            <configuration>
+              <sourceDirs>
+                <sourceDir>${project.basedir}/src/test/java</sourceDir>
+                <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
+              </sourceDirs>
+            </configuration>
           </execution>
         </executions>
         <configuration>
@@ -207,6 +222,44 @@
   </build>
   <dependencies>
     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>hamcrest-core</artifactId>
+          <groupId>org.hamcrest</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>2.12.0</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>byte-buddy</artifactId>
+          <groupId>net.bytebuddy</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>byte-buddy-agent</artifactId>
+          <groupId>net.bytebuddy</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>objenesis</artifactId>
+          <groupId>org.objenesis</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-test-junit</artifactId>
+      <version>1.2.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
       <artifactId>kotlin-test</artifactId>
       <version>1.2.0</version>
@@ -221,19 +274,22 @@
     <grpc.version>1.7.0</grpc.version>
     <maven.jar.version>3.0.2</maven.jar.version>
     <maven.source.version>3.0.1</maven.source.version>
+    <mockito.version>2.12.0</mockito.version>
     <bloombox.telemetry.version>v1beta3</bloombox.telemetry.version>
     <google.instrumentation.version>0.4.3</google.instrumentation.version>
     <bloombox.shop.endpoint>shop.api.bloombox.cloud</bloombox.shop.endpoint>
     <netty.boringssl.version>2.0.7.Final</netty.boringssl.version>
+    <junit.version>4.12</junit.version>
     <maven.jacoco.version>0.7.9</maven.jacoco.version>
     <maven.shade.version>3.1.0</maven.shade.version>
     <maven.clean.version>2.6.1</maven.clean.version>
+    <mockito.kotlin.version>1.5.0</mockito.kotlin.version>
     <maven.compiler.version>3.7.0</maven.compiler.version>
     <protobuf.version>3.4.0</protobuf.version>
     <bloombox.shop.version>v1</bloombox.shop.version>
     <lmax.disruptor.version>3.3.7</lmax.disruptor.version>
-    <log4j.version>2.10.0</log4j.version>
     <maven.proguard.version>2.0.14</maven.proguard.version>
+    <log4j.version>2.10.0</log4j.version>
   </properties>
 </project>
 

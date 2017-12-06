@@ -6,6 +6,7 @@
 
     <groupId>io.bloombox.platform.client</groupId>
     <artifactId>java-client</artifactId>
+    <name>Bloombox: Java Client</name>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -24,6 +25,11 @@
         <opencensus.version>0.9.0</opencensus.version>
         <google.instrumentation.version>0.4.3</google.instrumentation.version>
         <kotlin.version>1.2.0</kotlin.version>
+
+        <!-- Testing -->
+        <junit.version>4.12</junit.version>
+        <mockito.version>2.12.0</mockito.version>
+        <mockito.kotlin.version>1.5.0</mockito.kotlin.version>
 
         <!-- Plugins -->
         <maven.jar.version>3.0.2</maven.jar.version>
@@ -147,6 +153,31 @@
             <artifactId>kotlin-stdlib-jre8</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.nhaarman</groupId>
+            <artifactId>mockito-kotlin</artifactId>
+            <version>${mockito.kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test-junit</artifactId>
+            <version>${kotlin.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test</artifactId>
@@ -176,6 +207,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>${maven.jar.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-test-jar</id>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -201,6 +240,12 @@
                         <goals>
                             <goal>test-compile</goal>
                         </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>${project.basedir}/src/test/java</sourceDir>
+                                <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
+                            </sourceDirs>
+                        </configuration>
                     </execution>
                 </executions>
                 <configuration>
