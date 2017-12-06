@@ -18,5 +18,4 @@ clean:
 
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox..."
-	@mvn clean package install
-
+	@mvn clean package site install
