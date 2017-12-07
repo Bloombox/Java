@@ -79,8 +79,6 @@
         <grpc.version>1.7.0</grpc.version>
         <protobuf.version>3.4.0</protobuf.version>
         <netty.boringssl.version>2.0.7.Final</netty.boringssl.version>
-        <opencensus.version>0.9.0</opencensus.version>
-        <google.instrumentation.version>0.4.3</google.instrumentation.version>
         <kotlin.version>1.2.0</kotlin.version>
 
         <!-- Testing -->
@@ -143,41 +141,10 @@
             <version>${netty.boringssl.version}</version>
         </dependency>
 
-        <!-- Tracing -->
-        <dependency>
-            <groupId>io.opencensus</groupId>
-            <artifactId>opencensus-api</artifactId>
-            <version>${opencensus.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.opencensus</groupId>
-            <artifactId>opencensus-exporter-trace-logging</artifactId>
-            <version>${opencensus.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.opencensus</groupId>
-            <artifactId>opencensus-exporter-trace-stackdriver</artifactId>
-            <version>${opencensus.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.opencensus</groupId>
-            <artifactId>opencensus-contrib-grpc-util</artifactId>
-            <version>${opencensus.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.instrumentation</groupId>
-            <artifactId>instrumentation-api</artifactId>
-            <version>${google.instrumentation.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.opencensus</groupId>
-            <artifactId>opencensus-impl</artifactId>
-            <version>${opencensus.version}</version>
-            <scope>runtime</scope>
-        </dependency>
+        <!-- Kotlin Stdlib -->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jre8</artifactId>
+            <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
         </dependency>
 
@@ -186,18 +153,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test-junit</artifactId>
-            <version>${kotlin.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test</artifactId>
-            <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
