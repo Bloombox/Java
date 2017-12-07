@@ -20,7 +20,7 @@ build: sync-schema $(TARGET_JAR)
 
 clean:
 	@echo "Cleaning Java client artifacts..."
-	@rm -fr $(TARGET)
+	@rm -fr $(TARGET) src/main/java/io/bloombox/schema
 
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox..."
