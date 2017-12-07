@@ -12,8 +12,8 @@
 
     <scm>
         <url>https://github.com/bloombox/java</url>
-        <connection>https://github.com/bloombox/java.git</connection>
-        <developerConnection>git@github.com:bloombox/java.git</developerConnection>
+        <connection>scm:git:https://github.com/bloombox/java.git</connection>
+        <developerConnection>scm:git:git@github.com:bloombox/java.git</developerConnection>
     </scm>
 
     <pluginRepositories>
