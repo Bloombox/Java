@@ -5,8 +5,26 @@
   <artifactId>java-client</artifactId>
   <name>Bloombox: Java Client</name>
   <version>1.0-SNAPSHOT</version>
+  <url>https://bloombox.github.io/Java</url>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.jetbrains.dokka</groupId>
+        <artifactId>dokka-maven-plugin</artifactId>
+        <version>${maven.dokka.version}</version>
+        <executions>
+          <execution>
+            <phase>pre-site</phase>
+            <goals>
+              <goal>dokka</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>${maven.site.version}</version>
+      </plugin>
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>${maven.clean.version}</version>
@@ -218,8 +236,19 @@
           </transformers>
         </configuration>
       </plugin>
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>${maven.reports.version}</version>
+      </plugin>
     </plugins>
   </build>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>jcenter</id>
+      <name>JCenter</name>
+      <url>https://jcenter.bintray.com/</url>
+    </pluginRepository>
+  </pluginRepositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -230,26 +259,6 @@
         <exclusion>
           <artifactId>hamcrest-core</artifactId>
           <groupId>org.hamcrest</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>2.12.0</version>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>byte-buddy</artifactId>
-          <groupId>net.bytebuddy</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>byte-buddy-agent</artifactId>
-          <groupId>net.bytebuddy</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>objenesis</artifactId>
-          <groupId>org.objenesis</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -270,26 +279,27 @@
     <opencensus.version>0.9.0</opencensus.version>
     <kotlin.version>1.2.0</kotlin.version>
     <maven.surefire.version>2.20</maven.surefire.version>
+    <maven.site.version>3.6</maven.site.version>
     <bloombox.telemetry.endpoint>telemetry.api.bloombox.cloud</bloombox.telemetry.endpoint>
     <grpc.version>1.7.0</grpc.version>
     <maven.jar.version>3.0.2</maven.jar.version>
     <maven.source.version>3.0.1</maven.source.version>
-    <mockito.version>2.12.0</mockito.version>
     <bloombox.telemetry.version>v1beta3</bloombox.telemetry.version>
+    <maven.dokka.version>0.9.15</maven.dokka.version>
     <google.instrumentation.version>0.4.3</google.instrumentation.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <bloombox.shop.endpoint>shop.api.bloombox.cloud</bloombox.shop.endpoint>
     <netty.boringssl.version>2.0.7.Final</netty.boringssl.version>
     <junit.version>4.12</junit.version>
     <maven.jacoco.version>0.7.9</maven.jacoco.version>
     <maven.shade.version>3.1.0</maven.shade.version>
     <maven.clean.version>2.6.1</maven.clean.version>
-    <mockito.kotlin.version>1.5.0</mockito.kotlin.version>
+    <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
     <maven.compiler.version>3.7.0</maven.compiler.version>
     <protobuf.version>3.4.0</protobuf.version>
+    <maven.reports.version>2.9</maven.reports.version>
     <bloombox.shop.version>v1</bloombox.shop.version>
-    <lmax.disruptor.version>3.3.7</lmax.disruptor.version>
     <maven.proguard.version>2.0.14</maven.proguard.version>
-    <log4j.version>2.10.0</log4j.version>
   </properties>
 </project>
 

@@ -8,6 +8,13 @@
     <artifactId>java-client</artifactId>
     <name>Bloombox: Java Client</name>
     <version>1.0-SNAPSHOT</version>
+    <url>https://bloombox.github.io/Java</url>
+
+    <scm>
+        <url>https://github.com/bloombox/java</url>
+        <connection>https://github.com/bloombox/java.git</connection>
+        <developerConnection>git@github.com:bloombox/java.git</developerConnection>
+    </scm>
 
     <pluginRepositories>
         <pluginRepository>
@@ -16,6 +23,17 @@
             <url>https://jcenter.bintray.com/</url>
         </pluginRepository>
     </pluginRepositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <!-- Configuration -->
@@ -28,16 +46,12 @@
         <grpc.version>1.7.0</grpc.version>
         <protobuf.version>3.4.0</protobuf.version>
         <netty.boringssl.version>2.0.7.Final</netty.boringssl.version>
-        <log4j.version>2.10.0</log4j.version>
-        <lmax.disruptor.version>3.3.7</lmax.disruptor.version>
         <opencensus.version>0.9.0</opencensus.version>
         <google.instrumentation.version>0.4.3</google.instrumentation.version>
         <kotlin.version>1.2.0</kotlin.version>
 
         <!-- Testing -->
         <junit.version>4.12</junit.version>
-        <mockito.version>2.12.0</mockito.version>
-        <mockito.kotlin.version>1.5.0</mockito.kotlin.version>
 
         <!-- Plugins -->
         <maven.jar.version>3.0.2</maven.jar.version>
@@ -50,6 +64,14 @@
         <maven.source.version>3.0.1</maven.source.version>
         <maven.dokka.version>0.9.15</maven.dokka.version>
         <maven.site.version>3.6</maven.site.version>
+        <maven.reports.version>2.9</maven.reports.version>
+        <maven.deploy.version>2.8.2</maven.deploy.version>
+        <maven.release.version>2.5.3</maven.release.version>
+        <maven.github.verison>0.9</maven.github.verison>
+
+        <!-- Settings -->
+        <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -99,33 +121,6 @@
             <version>${netty.boringssl.version}</version>
         </dependency>
 
-        <!-- Logging -->
-        <dependency>
-            <groupId>com.lmax</groupId>
-            <artifactId>disruptor</artifactId>
-            <version>${lmax.disruptor.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-jul</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-
         <!-- Tracing -->
         <dependency>
             <groupId>io.opencensus</groupId>
@@ -170,17 +165,6 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.nhaarman</groupId>
-            <artifactId>mockito-kotlin</artifactId>
-            <version>${mockito.kotlin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -328,98 +312,8 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>${maven.shade.version}</version>
                 <configuration>
-                    <!--<minimizeJar>true</minimizeJar>-->
-
-                    <!-- Filters -->
-                    <filters>
-                        <filter>
-                            <artifact>*:*</artifact>
-                            <excludes>
-                                <exclude>META-INF/maven/</exclude>
-                                <exclude>META-INF/*.SF</exclude>
-                                <exclude>META-INF/*.DSA</exclude>
-                                <exclude>META-INF/*.RSA</exclude>
-                            </excludes>
-                        </filter>
-                        <filter>
-                            <artifact>com.lmax:disruptor</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>org.apache.logging.log4j:*</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>org.apache.logging.log4j.adapters:*</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>io.grpc:grpc-stub</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>io.netty:*</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>io.grpc:grpc-core</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>io.grpc:grpc-netty</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>io.grpc:grpc-protobuf</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>io.opencensus:*</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>com.google.auth:*</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>org.jetbrains.kotlin:*</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>org.apache.commons.logging:*</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                        <filter>
-                            <artifact>com.google.instrumentation:*</artifact>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </filter>
-                    </filters>
+                    <shadedArtifactAttached>true</shadedArtifactAttached>
+                    <shadedClassifierName>bundled</shadedClassifierName>
 
                     <!-- Artifacts -->
                     <artifactSet>
@@ -437,22 +331,13 @@
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                             <manifestEntries>
-                                <Main-Class>rpc.server.shop.ShopServer</Main-Class>
+                                <Main-Class>bloombox.client.CLITool</Main-Class>
                             </manifestEntries>
                         </transformer>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer">
                         </transformer>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
                             <addHeader>false</addHeader>
-                        </transformer>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
-                            <resource>authority-roots.pem</resource>
-                            <resource>service-key.json</resource>
-                            <resource>log4j2.xml</resource>
-                        </transformer>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
-                            <resource>service-key.json.enc</resource>
-                            <resource>.txt</resource>
                         </transformer>
                     </transformers>
                 </configuration>
@@ -464,6 +349,39 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>${maven.github.version}</version>
+                <configuration>
+                    <message>Update site.</message>
+                    <project>bloombox/java</project>
+                    <server>github</server>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site-deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${maven.reports.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven.deploy.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven.release.version}</version>
             </plugin>
         </plugins>
     </build>

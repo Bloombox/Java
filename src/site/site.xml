@@ -1,0 +1,66 @@
+<project name="Bloombox for Java">
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.6</version>
+    </skin>
+
+    <bannerLeft>
+        <name>Bloombox for Java</name>
+        <src>https://storage.googleapis.com/bloom-static/branding/java/logo-bloombox-java.png</src>
+        <href>https://bloombox.github.io/Java</href>
+    </bannerLeft>
+
+    <publishDate position="right"/>
+    <version position="right"/>
+
+    <body>
+        <menu name="Overview">
+            <item name="Home" href="index.html" />
+            <item name="Getting Started" href="getting-started.html" />
+            <item name="API Keys" href="api-keys.html" />
+            <item name="FAQ" href="faq.html" />
+        </menu>
+
+        <menu name="APIs and Services">
+            <item name="Shop API" href="services/shop.html"/>
+            <item name="Telemetry API" href="services/telemetry.html"/>
+        </menu>
+
+        <links>
+            <item name="Main Website" href="https://bloombox.io"/>
+            <item name="Client for JavaScript" href="https://bloombox.github.io/JS"/>
+        </links>
+
+        <breadcrumbs>
+            <item name="Bloombox" href="https://bloombox.io"/>
+        </breadcrumbs>
+
+        <footer>Copyright © 2017, Momentum Ideas Co. All rights reserved.</footer>
+    </body>
+
+    <custom>
+        <fluidoSkin>
+            <skipGenerationDate>true</skipGenerationDate>
+            <breadcrumbDivider>»</breadcrumbDivider>
+            <topBarEnabled>false</topBarEnabled>
+            <sideBarEnabled>true</sideBarEnabled>
+            <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+            <topBarIcon>
+                <name>Bloombox</name>
+                <alt>Bloombox</alt>
+                <src>https://storage.googleapis.com/bloom-static/branding/logo-bloombox-v2-pms-muted-small.png</src>
+                <href>/index.html</href>
+            </topBarIcon>
+            <gitHub>
+                <projectId>bloombox/Java</projectId>
+                <ribbonOrientation>right</ribbonOrientation>
+                <ribbonColor>green</ribbonColor>
+            </gitHub>
+            <twitter>
+                <user>bloomboxIO</user>
+                <showUser>true</showUser>
+            </twitter>
+        </fluidoSkin>
+    </custom>
+</project>

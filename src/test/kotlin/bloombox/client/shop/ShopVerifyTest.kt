@@ -3,6 +3,7 @@ package bloombox.client.shop
 
 import bloombox.client.BloomboxClient
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 import bloombox.client.internals.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import io.bloombox.schema.services.shop.VerifyMember
@@ -28,7 +29,7 @@ class ShopVerifyTest: ClientRPCTest() {
           client.verifyMember("does-not-exist@error.com")
 
   // -- Tests -- //
-  @test
+  @test @ignore
   fun testGoodAccountVerify() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
@@ -45,7 +46,7 @@ class ShopVerifyTest: ClientRPCTest() {
     assertTrue(response.verified, "known-good account should verify correctly")
   }
 
-  @test
+  @test @ignore
   fun testBadAccountVerify() {
     // run a known-good account verification
     val response = testMemberVerifyBadAccount(client.platform.shop())
