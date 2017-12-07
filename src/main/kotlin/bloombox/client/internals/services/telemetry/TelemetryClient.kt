@@ -1,7 +1,8 @@
+
 package bloombox.client.internals.services.telemetry
 
 import bloombox.client.interfaces.ServiceClient
-import core.Logging
+import bloombox.client.internals.rpc.RPCClient
 import io.bloombox.schema.base.ProductKey
 import io.bloombox.schema.identity.UserKey
 import io.bloombox.schema.menu.section.Section
@@ -15,11 +16,11 @@ import io.bloombox.schema.telemetry.context.BrowserContext
 import io.bloombox.schema.telemetry.context.DeviceContext
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
+import io.grpc.netty.NegotiationType
 import io.grpc.netty.NettyChannelBuilder
-import rpc.client.RPCClient
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
-import java.util.concurrent.TimeUnit
+import java.util.logging.Logger
 
 
 /**
@@ -33,7 +34,7 @@ class TelemetryClient(override val host: String,
                       override val executor: Executor = Executors.newSingleThreadExecutor(),
                       internal val defaultPartner: String? = null,
                       internal val defaultLocation: String? = null,
-                      internal val deviceUUID: String? = null): RPCClient(host, port), ServiceClient {
+                      internal val deviceUUID: String? = null): RPCClient(), ServiceClient {
   // -- Settings & Context -- //
   /**
    * Context for an event, with the opportunity to override settings.
@@ -156,6 +157,7 @@ class TelemetryClient(override val host: String,
           .sslContext(GrpcSslContexts.forClient()
                   .trustManager(this.javaClass.getResourceAsStream(authorityRoots))
                   .build())
+          .negotiationType(NegotiationType.TLS)
           .intercept(interceptor)
           .build()
 
@@ -171,7 +173,7 @@ class TelemetryClient(override val host: String,
     /**
      * Logging tools.
      */
-    private val logging = Logging.logger("TelemetryClient")
+    private val logging = Logger.getLogger("TelemetryClient")
   }
 
   // -- Protocol Stubs -- //
@@ -253,23 +255,6 @@ class TelemetryClient(override val host: String,
       builder.group = group
 
     return builder
-  }
-
-  /**
-   * Close active connections.
-   */
-  override fun close(soft: Boolean,
-                     block: Boolean,
-                     timeout: Pair<Long, TimeUnit>) {
-    if (!channel.isShutdown) {
-      if (soft) {
-        channel.shutdown()
-      } else {
-        channel.shutdownNow()
-      }
-      if (block)
-        channel.awaitTermination(timeout.first, timeout.second)
-    }
   }
 
   // -- Public Interface -- //

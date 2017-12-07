@@ -1,3 +1,4 @@
+
 package bloombox.client.internals.err
 
 import bloombox.client.interfaces.ClientError

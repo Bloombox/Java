@@ -1,3 +1,4 @@
+
 package bloombox.client.internals.services.shop
 
 import bloombox.client.interfaces.ClientError

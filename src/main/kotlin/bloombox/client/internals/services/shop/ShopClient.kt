@@ -3,7 +3,7 @@ package bloombox.client.internals.services.shop
 
 import bloombox.client.interfaces.ServiceClient
 import bloombox.client.internals.err.ServiceClientException
-import core.Logging
+import bloombox.client.internals.rpc.RPCClient
 import io.bloombox.schema.commerce.CommercialOrder
 import io.bloombox.schema.partner.PartnerKey
 import io.bloombox.schema.partner.PartnerLocationKey
@@ -12,11 +12,11 @@ import io.bloombox.schema.services.shop.SubmitOrder
 import io.bloombox.schema.services.shop.VerifyMember
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
+import io.grpc.netty.NegotiationType
 import io.grpc.netty.NettyChannelBuilder
-import rpc.client.RPCClient
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
-import java.util.concurrent.TimeUnit
+import java.util.logging.Logger
 
 
 /**
@@ -30,7 +30,7 @@ class ShopClient(override val host: String,
                  override val executor: Executor = Executors.newSingleThreadExecutor(),
                  internal val defaultPartner: String? = null,
                  internal val defaultLocation: String? = null,
-                 internal val deviceUUID: String? = null): RPCClient(host, port), ServiceClient {
+                 internal val deviceUUID: String? = null): RPCClient(), ServiceClient {
   /**
    * Specifies contextual information for a shop operation.
    */
@@ -99,6 +99,7 @@ class ShopClient(override val host: String,
           .sslContext(GrpcSslContexts.forClient()
                   .trustManager(this.javaClass.getResourceAsStream(authorityRoots))
                   .build())
+          .negotiationType(NegotiationType.TLS)
           .intercept(interceptor)
           .build()
 
@@ -129,24 +130,7 @@ class ShopClient(override val host: String,
     /**
      * Logging tools.
      */
-    private val logging = Logging.logger("ShopClient")
-  }
-
-  /**
-   * Close active connections.
-   */
-  override fun close(soft: Boolean,
-                     block: Boolean,
-                     timeout: Pair<Long, TimeUnit>) {
-    if (!channel.isShutdown) {
-      if (soft) {
-        channel.shutdown()
-      } else {
-        channel.shutdownNow()
-      }
-      if (block)
-        channel.awaitTermination(timeout.first, timeout.second)
-    }
+    private val logging = Logger.getLogger("ShopClient")
   }
 
   /**
@@ -183,7 +167,7 @@ class ShopClient(override val host: String,
       return this.blocking.verifyMember(request)
 
     } catch (e: StatusRuntimeException) {
-      logging.error { "StatusRuntimeException: '${e.message}'" }
+      logging.severe("StatusRuntimeException: '${e.message}'")
       throw e
     }
   }
@@ -213,7 +197,7 @@ class ShopClient(override val host: String,
       return this.blocking.submitOrder(request)
 
     } catch (e: StatusRuntimeException) {
-      logging.error { "StatusRuntimeException: '${e.message}'" }
+      logging.severe("StatusRuntimeException: '${e.message}'")
       throw e
     }
   }
