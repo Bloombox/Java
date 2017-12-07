@@ -3,6 +3,7 @@
 ## Bloombox: Java API Client
 #
 
+RELEASE_VERSION ?= 1.0-beta1
 CLIENT_VERSION ?= 1.0-SNAPSHOT
 TARGET ?= target/
 TARGET_JAR ?= $(TARGET)java-client-$(CLIENT_VERSION).jar
@@ -27,4 +28,3 @@ $(TARGET_JAR):
 release: build
 	@echo "Building release for Bloombox Java Client 'v$(RELEASE_VERSION)'..."
 	@mvn clean package install site $(RELEASE_GOALS) -Dproject.version=$(RELEASE_VERSION) -Dbloombox.release $(SERVICE_ARGS) $(RELEASE_ARGS)
-
