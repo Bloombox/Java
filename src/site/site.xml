@@ -22,9 +22,14 @@
             <item name="FAQ" href="faq.html" />
         </menu>
 
-        <menu name="APIs and Services">
+        <menu name="Tools &amp; Services">
             <item name="Shop API" href="services/shop.html"/>
             <item name="Telemetry API" href="services/telemetry.html"/>
+        </menu>
+
+        <menu name="API Docs">
+            <item name="Client (Dokka)" href="client/java-client/index.html"/>
+            <item name="Schema (Javadoc)" href="apidocs/index.html"/>
         </menu>
 
         <links>
