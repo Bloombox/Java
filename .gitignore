@@ -1,3 +1,4 @@
 .idea/
 target/
 src/main/java/io/bloombox/schema/
+src/main/java/gen_bq_schema/
