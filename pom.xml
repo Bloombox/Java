@@ -172,7 +172,7 @@
                 <version>${maven.dokka.version}</version>
                 <executions>
                     <execution>
-                        <phase>pre-site</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>dokka</goal>
                         </goals>
