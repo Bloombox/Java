@@ -69,6 +69,10 @@
             <name>momentron-snapshots</name>
             <url>https://artifactory.hq.mm-corp.systems/artifactory/bloombox-client</url>
         </snapshotRepository>
+        <site>
+            <url>https://github.com/bloombox/java</url>
+            <name>Bloombox for Java</name>
+        </site>
     </distributionManagement>
 
     <properties>
