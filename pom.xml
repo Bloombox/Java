@@ -359,10 +359,22 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <includeDirs>
-                        <includeDir>src/main/kotlin</includeDir>
-                    </includeDirs>
+                    <moduleName>java-client</moduleName>
+                    <outputFormat>html</outputFormat>
+
+                    <jdkVersion>8</jdkVersion>
+                    <sourceDirectories>
+                        <sourceDirectory>src/main/kotlin</sourceDirectory>
+                    </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
+                    <perPackageOptions>
+                        <packageOptions>
+                            <prefix>bloombox</prefix>
+                            <skipDeprecated>false</skipDeprecated>
+                            <reportUndocumented>true</reportUndocumented>
+                            <includeNonPublic>false</includeNonPublic>
+                        </packageOptions>
+                    </perPackageOptions>
                 </configuration>
             </plugin>
             <plugin>
@@ -404,10 +416,22 @@
                 <artifactId>dokka-maven-plugin</artifactId>
                 <version>${maven.dokka.version}</version>
                 <configuration>
-                    <includeDirs>
-                        <includeDir>src/main/kotlin</includeDir>
-                    </includeDirs>
+                    <moduleName>java-client</moduleName>
+                    <outputFormat>html</outputFormat>
+
+                    <jdkVersion>8</jdkVersion>
+                    <sourceDirectories>
+                        <sourceDirectory>src/main/kotlin</sourceDirectory>
+                    </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
+                    <perPackageOptions>
+                        <packageOptions>
+                            <prefix>bloombox</prefix>
+                            <skipDeprecated>false</skipDeprecated>
+                            <reportUndocumented>true</reportUndocumented>
+                            <includeNonPublic>false</includeNonPublic>
+                        </packageOptions>
+                    </perPackageOptions>
                 </configuration>
             </plugin>
         </plugins>
