@@ -60,16 +60,14 @@
     </pluginRepositories>
 
     <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>momentron-releases</name>
-            <url>https://artifactory.hq.mm-corp.systems/artifactory/bloombox-client</url>
-        </repository>
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>momentron-snapshots</name>
-            <url>https://artifactory.hq.mm-corp.systems/artifactory/bloombox-client</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
         <site>
             <id>github</id>
             <url>https://github.com/bloombox/java</url>
@@ -109,6 +107,7 @@
         <maven.github.version>0.9</maven.github.version>
         <maven.gpg.version>1.4</maven.gpg.version>
         <maven.javadoc.version>2.10.4</maven.javadoc.version>
+        <maven.nexus.version>1.6.7</maven.nexus.version>
 
         <!-- Settings -->
         <jvm.target>1.8</jvm.target>
@@ -251,7 +250,7 @@
                     <execution>
                         <id>attach-sources</id>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>jar-no-fork</goal>
                         </goals>
                     </execution>
                     <execution>
@@ -354,6 +353,17 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>${maven.nexus.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jetbrains.dokka</groupId>
