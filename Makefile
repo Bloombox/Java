@@ -30,7 +30,7 @@ RELEASE_GOALS ?= release:clean release:prepare release:perform
 
 all: build
 
-build: sync-schema $(TARGET_JAR)
+build: $(TARGET_JAR)
 
 clean:
 	@echo "Cleaning Java client artifacts..."
@@ -54,4 +54,3 @@ sync-schema: $(SCHEMA)
 	@echo "Copying schemas..."
 	@mkdir -p src/main/java/
 	@cp -fr schema/languages/java/ src/main/java/
-
