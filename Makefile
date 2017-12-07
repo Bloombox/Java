@@ -36,7 +36,7 @@ $(SCHEMA):
 
 sync-schema: $(SCHEMA)
 	@echo "Building schema..."
-	@$(MAKE) -C schema SERVICES=yes LANGUAGES=java PROTO_FLAGS=--javagrpc_out=languages/java
+	@$(MAKE) -C schema SERVICES=yes TABLES=no LANGUAGES=java PROTO_FLAGS=--javagrpc_out=languages/java
 	@echo "Copying schemas..."
 	@mkdir -p src/main/java/
 	@cp -fr schema/languages/java/ src/main/java/
