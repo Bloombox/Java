@@ -394,6 +394,7 @@
                     <classifier>docs</classifier>
                     <level>public</level>
                     <outputDirectory>target/site/schema</outputDirectory>
+                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*</excludePackageNames>
                 </configuration>
             </plugin>
         </plugins>
@@ -409,6 +410,7 @@
                     <classifier>docs</classifier>
                     <level>public</level>
                     <outputDirectory>target/site/schema</outputDirectory>
+                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*</excludePackageNames>
                 </configuration>
             </plugin>
             <plugin>
