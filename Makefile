@@ -34,7 +34,7 @@ build: $(TARGET_JAR)
 
 clean:
 	@echo "Cleaning Java client artifacts..."
-	@rm -fr $(TARGET) src/main/java/io/bloombox/schema
+	@rm -fr $(TARGET)
 
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox..."
