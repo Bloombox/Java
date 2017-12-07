@@ -89,7 +89,6 @@
         <maven.clean.version>2.6.1</maven.clean.version>
         <maven.surefire.version>2.20</maven.surefire.version>
         <maven.compiler.version>3.7.0</maven.compiler.version>
-        <maven.proguard.version>2.0.14</maven.proguard.version>
         <maven.jacoco.version>0.7.9</maven.jacoco.version>
         <maven.shade.version>3.1.0</maven.shade.version>
         <maven.source.version>3.0.1</maven.source.version>
@@ -100,6 +99,7 @@
         <maven.release.version>2.5.3</maven.release.version>
         <maven.github.version>0.9</maven.github.version>
         <maven.gpg.version>1.4</maven.gpg.version>
+        <maven.javadoc.version>2.10.4</maven.javadoc.version>
 
         <!-- Settings -->
         <jvm.target>1.8</jvm.target>
@@ -166,19 +166,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.jetbrains.dokka</groupId>
-                <artifactId>dokka-maven-plugin</artifactId>
-                <version>${maven.dokka.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>dokka</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
@@ -265,34 +252,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.github.wvengen</groupId>
-                <artifactId>proguard-maven-plugin</artifactId>
-                <version>${maven.proguard.version}</version>
-                <executions>
-                    <execution>
-                        <id>shaded-small</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>proguard</goal>
-                        </goals>
-                        <configuration>
-                            <proguardVersion>5.2</proguardVersion>
-                            <attach>true</attach>
-                            <obfuscate>true</obfuscate>
-                            <appendClassifier>true</appendClassifier>
-
-                            <attachArtifactClassifier>opt</attachArtifactClassifier>
-                            <proguardInclude>${project.basedir}/client.pro</proguardInclude>
-                        </configuration>
-                    </execution>
-                </executions>
-                <configuration>
-                    <options>
-                        <option>-target ${jvm.target}</option>
-                    </options>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -387,6 +346,70 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>${maven.dokka.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>dokka</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <includeDirs>
+                        <includeDir>src/main/kotlin</includeDir>
+                    </includeDirs>
+                    <outputDir>target/site/client</outputDir>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>javadoc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <attach>true</attach>
+                    <classifier>docs</classifier>
+                    <level>public</level>
+                    <outputDirectory>target/site/schema</outputDirectory>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.version}</version>
+                <configuration>
+                    <attach>true</attach>
+                    <classifier>docs</classifier>
+                    <level>public</level>
+                    <outputDirectory>target/site/schema</outputDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>${maven.dokka.version}</version>
+                <configuration>
+                    <includeDirs>
+                        <includeDir>src/main/kotlin</includeDir>
+                    </includeDirs>
+                    <outputDir>target/site/client</outputDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
