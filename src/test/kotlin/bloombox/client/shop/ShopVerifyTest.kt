@@ -4,6 +4,8 @@ import bloombox.client.BloomboxClient
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import io.bloombox.schema.services.shop.VerifyMember
+import kotlin.test.assertNotNull
+import kotlin.test.assertTrue
 import org.junit.Ignore as ignore
 import org.junit.Test as test
 

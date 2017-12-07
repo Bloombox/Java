@@ -2,18 +2,52 @@
 -libraryjars <java.home>/lib/jce.jar
 -printmapping out.map
 
+-dontskipnonpubliclibraryclasses
 -keepparameternames
 -renamesourcefileattribute SourceFile
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,
                 SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
 
 -optimizationpasses 5
--overloadaggressively
--allowaccessmodification
--keep public class bloombox.client.Bloombox { public *; }
--keep public class bloombox.client.BloomboxClient { public *; }
--keep public class bloombox.client.CLITool { public *; }
--keep public class bloombox.client.services.** { public *; }
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+-keep public class * {
+      public protected *;
+}
+
+-keepclassmembernames class * {
+    java.lang.Class class$(java.lang.String);
+    java.lang.Class class$(java.lang.String, boolean);
+}
+
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
+}
+
+-keepclassmembers,allowoptimization enum * {
+    public static **[] values(); public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep,allowoptimization,allowshrinking public class io.bloombox.schema.** {
+    public *;
+}
+
+-keep class bloombox.client.Bloombox { public *; }
+-keep class bloombox.client.BloomboxClient { public *; }
+-keep class bloombox.client.CLITool { public *; }
+-keep class bloombox.client.services.** { public *; }
+-keep class bloombox.client.interfaces.** { *; }
+-keep,allowoptimization,allowshrinking,allowobfuscation class bloombox.client.internals.** { *; }
+
 -keep class io.grpc.**
 -keep class io.grpc.netty.**
 -keep class io.netty.**

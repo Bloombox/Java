@@ -279,7 +279,11 @@
                         </goals>
                         <configuration>
                             <proguardVersion>5.2</proguardVersion>
-                            <attachArtifactClassifier>true</attachArtifactClassifier>
+                            <attach>true</attach>
+                            <obfuscate>true</obfuscate>
+                            <appendClassifier>true</appendClassifier>
+
+                            <attachArtifactClassifier>opt</attachArtifactClassifier>
                             <proguardInclude>${project.basedir}/client.pro</proguardInclude>
                         </configuration>
                     </execution>

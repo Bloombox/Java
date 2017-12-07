@@ -1,6 +1,8 @@
 package bloombox.client
 
 import bloombox.client.test.ClientRPCTest
+import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 import org.junit.Test as test
 
 

@@ -1,5 +1,6 @@
 package bloombox.client
 
+import kotlin.test.assertEquals
 import org.junit.Test as test
 
 
