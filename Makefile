@@ -40,7 +40,7 @@ $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox..."
 	@mvn $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
 
-release: build
+release:
 	@echo "Building release for Bloombox Java Client 'v$(RELEASE_VERSION)'..."
 	@mvn clean package install site $(RELEASE_GOALS) -Dproject.version=$(RELEASE_VERSION) -Dbloombox.release $(SERVICE_ARGS) $(RELEASE_ARGS)
 
