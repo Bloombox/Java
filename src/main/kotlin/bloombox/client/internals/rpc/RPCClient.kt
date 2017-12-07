@@ -1,4 +1,3 @@
-
 package bloombox.client.internals.rpc
 
 import io.grpc.ManagedChannel

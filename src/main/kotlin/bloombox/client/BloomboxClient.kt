@@ -1,4 +1,3 @@
-
 package bloombox.client
 
 import bloombox.client.interfaces.ServiceClient
@@ -17,59 +16,59 @@ import java.util.concurrent.TimeUnit
  * - `telemetry/v1beta3`: Telemetry service. For submitting telemetry event data of different kinds.
  */
 class BloomboxClient(
-        /**
-         * Settings to use for RPCs.
-         */
-        internal val settings: Settings,
+      /**
+       * Settings to use for RPCs.
+       */
+      internal val settings: Settings,
 
-        /**
-         * Target to use for RPCs.
-         */
-        target: ClientTarget = ClientTarget.LOCAL) {
+      /**
+       * Target to use for RPCs.
+       */
+      target: ClientTarget = ClientTarget.LOCAL) {
   // -- Settings -- //
   /**
    * Specifies client settings that can be passed in to modify RPC behavior.
    */
   data class Settings(
-    /**
-     * API key to use under the hood.
-     */
-    internal val apiKey: String,
+        /**
+         * API key to use under the hood.
+         */
+        internal val apiKey: String,
 
-    /**
-     * Whether to enable logging.
-     */
-    internal val enableLogging: Boolean = true,
+        /**
+         * Whether to enable logging.
+         */
+        internal val enableLogging: Boolean = true,
 
-    /**
-     * Partner code.
-     */
-    internal val partner: String? = null,
+        /**
+         * Partner code.
+         */
+        internal val partner: String? = null,
 
-    /**
-     * Location code. Optional, and if specified, requires a partner code.
-     */
-    internal val location: String? = null,
+        /**
+         * Location code. Optional, and if specified, requires a partner code.
+         */
+        internal val location: String? = null,
 
-    /**
-     * Device UUID. Optional, and if specified, requires a partner and location code.
-     */
-    internal val device: String? = null,
+        /**
+         * Device UUID. Optional, and if specified, requires a partner and location code.
+         */
+        internal val device: String? = null,
 
-    /**
-     * Executor to use for followup tasks and client RPC execution.
-     */
-    internal val executor: Executor = Executors.newSingleThreadExecutor(),
+        /**
+         * Executor to use for followup tasks and client RPC execution.
+         */
+        internal val executor: Executor = Executors.newSingleThreadExecutor(),
 
-    /**
-     * Timeout value for unary (i.e., non-streaming) requests.
-     */
-    internal val requestTimeout: Pair<Long, TimeUnit> = Pair(10, TimeUnit.MINUTES),
+        /**
+         * Timeout value for unary (i.e., non-streaming) requests.
+         */
+        internal val requestTimeout: Pair<Long, TimeUnit> = Pair(10, TimeUnit.MINUTES),
 
-    /**
-     * Timeout to wait for a client to close its connection.
-     */
-    internal val closeTimeout: Pair<Long, TimeUnit> = Pair(2, TimeUnit.SECONDS))
+        /**
+         * Timeout to wait for a client to close its connection.
+         */
+        internal val closeTimeout: Pair<Long, TimeUnit> = Pair(2, TimeUnit.SECONDS))
 
   /**
    * Specifies client target settings understood by the Java/Kotlin client.
@@ -126,11 +125,11 @@ class BloomboxClient(
    * Resolve the host endpoint for the selected client target.
    */
   private fun ClientTarget.host(): String =
-      when (this) {
-        ClientTarget.LOCAL -> "127.0.0.1"
-        ClientTarget.PRODUCTION -> Endpoints.production
-        ClientTarget.SANDBOX -> Endpoints.sandbox
-      }
+        when (this) {
+          ClientTarget.LOCAL -> "127.0.0.1"
+          ClientTarget.PRODUCTION -> Endpoints.production
+          ClientTarget.SANDBOX -> Endpoints.sandbox
+        }
 
   /**
    * Holds references to each RPC service, so calls may be proxied to them.
@@ -144,42 +143,54 @@ class BloomboxClient(
      */
     internal val shop = if (ct == ClientTarget.LOCAL) {
       ShopClient(
-              domain,
-              Endpoints.localShopPort,
-              apiKey,
-              settings.enableLogging,
-              settings.executor,
-              settings.partner,
-              settings.location) } else {
+            domain,
+            Endpoints.localShopPort,
+            apiKey,
+            settings.enableLogging,
+            settings.executor,
+            settings.partner,
+            settings.location)
+    } else {
       ShopClient(
-              if (ct == ClientTarget.SANDBOX) { "shop.rpc.$domain" } else { "shop.$domain" },
-              Endpoints.grpcPort,
-              apiKey,
-              settings.enableLogging,
-              settings.executor,
-              settings.partner,
-              settings.location,
-              settings.device) }
+            if (ct == ClientTarget.SANDBOX) {
+              "shop.rpc.$domain"
+            } else {
+              "shop.$domain"
+            },
+            Endpoints.grpcPort,
+            apiKey,
+            settings.enableLogging,
+            settings.executor,
+            settings.partner,
+            settings.location,
+            settings.device)
+    }
 
     /**
      * Telemetry client. Offers RPC access to telemetry data ingest services.
      */
     internal val telemetry = if (ct == ClientTarget.LOCAL) {
       TelemetryClient(
-              domain,
-              Endpoints.localTelemetryPort,
-              apiKey,
-              settings.enableLogging,
-              settings.executor) } else {
+            domain,
+            Endpoints.localTelemetryPort,
+            apiKey,
+            settings.enableLogging,
+            settings.executor)
+    } else {
       TelemetryClient(
-              if (ct == ClientTarget.SANDBOX) { "telemetry.rpc.$domain" } else { "telemetry.$domain" },
-              Endpoints.grpcPort,
-              apiKey,
-              settings.enableLogging,
-              settings.executor,
-              settings.partner,
-              settings.location,
-              settings.device) }
+            if (ct == ClientTarget.SANDBOX) {
+              "telemetry.rpc.$domain"
+            } else {
+              "telemetry.$domain"
+            },
+            Endpoints.grpcPort,
+            apiKey,
+            settings.enableLogging,
+            settings.executor,
+            settings.partner,
+            settings.location,
+            settings.device)
+    }
 
     /**
      * Reference to all mounted/supported services.

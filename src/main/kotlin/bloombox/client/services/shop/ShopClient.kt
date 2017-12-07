@@ -1,4 +1,3 @@
-
 package bloombox.client.services.shop
 
 import bloombox.client.interfaces.ServiceClient
@@ -30,7 +29,7 @@ class ShopClient(override val host: String,
                  override val executor: Executor = Executors.newSingleThreadExecutor(),
                  internal val defaultPartner: String? = null,
                  internal val defaultLocation: String? = null,
-                 internal val deviceUUID: String? = null): RPCClient(), ServiceClient {
+                 internal val deviceUUID: String? = null) : RPCClient(), ServiceClient {
   /**
    * Specifies contextual information for a shop operation.
    */
@@ -50,19 +49,19 @@ class ShopClient(override val host: String,
     fun serialize(partner: String? = null,
                   location: String? = null,
                   deviceUUID: String? = null): ShopContext =
-            ShopContext(
-              partner = this.partner ?: partner,
-              location = this.location ?: location,
-              deviceUUID = this.deviceUUID ?: deviceUUID)
+          ShopContext(
+                partner = this.partner ?: partner,
+                location = this.location ?: location,
+                deviceUUID = this.deviceUUID ?: deviceUUID)
   }
 
   /**
    * Auth interceptor for shop requests.
    */
-  class ShopInterceptor(val apikey: String?): ClientInterceptor {
+  class ShopInterceptor(val apikey: String?) : ClientInterceptor {
     companion object {
       val apiKeyHeader: Metadata.Key<String> = Metadata.Key.of(
-              "x-api-key", Metadata.ASCII_STRING_MARSHALLER)
+            "x-api-key", Metadata.ASCII_STRING_MARSHALLER)
     }
 
     override fun <ReqT : Any?, RespT : Any?> interceptCall(method: MethodDescriptor<ReqT, RespT>?,
@@ -94,14 +93,14 @@ class ShopClient(override val host: String,
    * Channel for client->server traffic.
    */
   override val channel: ManagedChannel = NettyChannelBuilder
-          .forAddress(host, port)
-          .executor(executor)
-          .sslContext(GrpcSslContexts.forClient()
-                  .trustManager(this.javaClass.getResourceAsStream(authorityRoots))
-                  .build())
-          .negotiationType(NegotiationType.TLS)
-          .intercept(interceptor)
-          .build()
+        .forAddress(host, port)
+        .executor(executor)
+        .sslContext(GrpcSslContexts.forClient()
+              .trustManager(this.javaClass.getResourceAsStream(authorityRoots))
+              .build())
+        .negotiationType(NegotiationType.TLS)
+        .intercept(interceptor)
+        .build()
 
   /**
    * Blocking call stub.
@@ -156,12 +155,12 @@ class ShopClient(override val host: String,
     val locationKey = rendered.location!!
 
     val request = VerifyMember.Request.newBuilder()
-            .setEmailAddress(email)
-            .setLocation(PartnerLocationKey.newBuilder()
-                    .setCode(locationKey)
-                    .setPartner(PartnerKey.newBuilder()
-                            .setCode(partnerKey)))
-            .build()
+          .setEmailAddress(email)
+          .setLocation(PartnerLocationKey.newBuilder()
+                .setCode(locationKey)
+                .setPartner(PartnerKey.newBuilder()
+                      .setCode(partnerKey)))
+          .build()
 
     try {
       return this.blocking.verifyMember(request)
@@ -186,12 +185,12 @@ class ShopClient(override val host: String,
     val locationKey = rendered.location!!
 
     val request = SubmitOrder.Request.newBuilder()
-            .setOrder(order)
-            .setLocation(PartnerLocationKey.newBuilder()
-                    .setCode(locationKey)
-                    .setPartner(PartnerKey.newBuilder()
-                            .setCode(partnerKey)))
-            .build()
+          .setOrder(order)
+          .setLocation(PartnerLocationKey.newBuilder()
+                .setCode(locationKey)
+                .setPartner(PartnerKey.newBuilder()
+                      .setCode(partnerKey)))
+          .build()
 
     try {
       return this.blocking.submitOrder(request)

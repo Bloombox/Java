@@ -1,4 +1,3 @@
-
 package bloombox.client.test
 
 import bloombox.client.BloomboxClient
@@ -23,22 +22,22 @@ open class ClientRPCTest {
      * Local client.
      */
     val local: BloomboxClient = BloomboxClient(
-            BloomboxClient.Settings(testApiKey, true, testPartner, testLocation),
-            BloomboxClient.ClientTarget.LOCAL)
+          BloomboxClient.Settings(testApiKey, true, testPartner, testLocation),
+          BloomboxClient.ClientTarget.LOCAL)
 
     /**
      * Sandbox client.
      */
     val sandbox: BloomboxClient = BloomboxClient(
-            BloomboxClient.Settings(testApiKey, true, testPartner, testLocation),
-            BloomboxClient.ClientTarget.SANDBOX)
+          BloomboxClient.Settings(testApiKey, true, testPartner, testLocation),
+          BloomboxClient.ClientTarget.SANDBOX)
 
     /**
      * Production client.
      */
     val platform: BloomboxClient = BloomboxClient(
-            BloomboxClient.Settings(testApiKey, true, testPartner, testLocation),
-            BloomboxClient.ClientTarget.PRODUCTION)
+          BloomboxClient.Settings(testApiKey, true, testPartner, testLocation),
+          BloomboxClient.ClientTarget.PRODUCTION)
 
     /**
      * Reference to all supported clients.

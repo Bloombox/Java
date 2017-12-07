@@ -1,4 +1,3 @@
-
 package bloombox.client.services.telemetry
 
 import bloombox.client.interfaces.ServiceClient
@@ -34,90 +33,90 @@ class TelemetryClient(override val host: String,
                       override val executor: Executor = Executors.newSingleThreadExecutor(),
                       internal val defaultPartner: String? = null,
                       internal val defaultLocation: String? = null,
-                      internal val deviceUUID: String? = null): RPCClient(), ServiceClient {
+                      internal val deviceUUID: String? = null) : RPCClient(), ServiceClient {
   // -- Settings & Context -- //
   /**
    * Context for an event, with the opportunity to override settings.
    */
   data class EventContext(
-          /**
-           * Partner code for an event. Explicitly overrides `defaultPartner`.
-           */
-          val partner: String? = null,
+        /**
+         * Partner code for an event. Explicitly overrides `defaultPartner`.
+         */
+        val partner: String? = null,
 
-          /**
-           * Location code for an event. Explicitly overrides `defaultLocation`.
-           */
-          val location: String? = null,
+        /**
+         * Location code for an event. Explicitly overrides `defaultLocation`.
+         */
+        val location: String? = null,
 
-          /**
-           * Device UUID to report. Requires a value for `partner` and `location`.
-           */
-          val deviceUUID: String? = null,
+        /**
+         * Device UUID to report. Requires a value for `partner` and `location`.
+         */
+        val deviceUUID: String? = null,
 
-          /**
-           * User key to report as active for this event.
-           */
-          val userKey: String? = null,
+        /**
+         * User key to report as active for this event.
+         */
+        val userKey: String? = null,
 
-          /**
-           * Order key to report as active for this event.
-           */
-          val orderKey: String? = null,
+        /**
+         * Order key to report as active for this event.
+         */
+        val orderKey: String? = null,
 
-          /**
-           * Menu section to report as active for this event.
-           */
-          val section: Section? = null,
+        /**
+         * Menu section to report as active for this event.
+         */
+        val section: Section? = null,
 
-          /**
-           * Item key to report as active for this event.
-           */
-          val item: ProductKey? = null,
+        /**
+         * Item key to report as active for this event.
+         */
+        val item: ProductKey? = null,
 
-          /**
-           * Unique fingerprint for an anonymous device.
-           */
-          val fingerprint: String? = null,
+        /**
+         * Unique fingerprint for an anonymous device.
+         */
+        val fingerprint: String? = null,
 
-          /**
-           * Group or session ID for an event.
-           */
-          val group: String? = null,
+        /**
+         * Group or session ID for an event.
+         */
+        val group: String? = null,
 
-          /**
-           * Native device context to use for an event.
-           */
-          val nativeContext: DeviceContext.NativeDeviceContext? = null,
+        /**
+         * Native device context to use for an event.
+         */
+        val nativeContext: DeviceContext.NativeDeviceContext? = null,
 
-          /**
-           * Browser context to send for an event.
-           */
-          val browserContext: BrowserContext.BrowserDeviceContext? = null)
+        /**
+         * Browser context to send for an event.
+         */
+        val browserContext: BrowserContext.BrowserDeviceContext? = null)
 
   // -- Internals -- //
   /**
    * Interceptor for telemetry auth.
    */
-  class TelemetryInterceptor(val apikey: String?): ClientInterceptor {
+  class TelemetryInterceptor(val apikey: String?) : ClientInterceptor {
     companion object {
       /**
        * Bloombox library API key header, at X-Bloom-Key.
        */
       private val bloomApiKeyHeader: io.grpc.Metadata.Key<String> = io.grpc.Metadata.Key.of(
-              "x-bloom-key", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
+            "x-bloom-key", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
 
       /**
        * Bloombox debug header, at X-Bloom-Debug.
        */
       private val debugModeHeader: io.grpc.Metadata.Key<String> = io.grpc.Metadata.Key.of(
-              "x-bloom-debug", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
+            "x-bloom-debug", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
 
       /**
        * Bloombox event context header, at X-Bloom-Context.
        */
       private val contextHeader: io.grpc.Metadata.Key<String> = io.grpc.Metadata.Key.of(
-              "x-bloom-context", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
+            "x-bloom-context", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
     }
 
     /**
@@ -152,14 +151,14 @@ class TelemetryClient(override val host: String,
    * Channel for client->server traffic.
    */
   override val channel: ManagedChannel = NettyChannelBuilder
-          .forAddress(host, port)
-          .executor(executor)
-          .sslContext(GrpcSslContexts.forClient()
-                  .trustManager(this.javaClass.getResourceAsStream(authorityRoots))
-                  .build())
-          .negotiationType(NegotiationType.TLS)
-          .intercept(interceptor)
-          .build()
+        .forAddress(host, port)
+        .executor(executor)
+        .sslContext(GrpcSslContexts.forClient()
+              .trustManager(this.javaClass.getResourceAsStream(authorityRoots))
+              .build())
+        .negotiationType(NegotiationType.TLS)
+        .intercept(interceptor)
+        .build()
 
   /**
    * Main function to run the server.
@@ -240,7 +239,7 @@ class TelemetryClient(override val host: String,
       }
     }
     if (orderKey != null && orderKey.isNotBlank() && orderKey.isNotEmpty())
-      // set order key
+    // set order key
       scope.order = orderKey
     builder.setScope(scope)
 

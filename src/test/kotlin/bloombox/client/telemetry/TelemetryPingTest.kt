@@ -1,4 +1,3 @@
-
 package bloombox.client.telemetry
 
 import bloombox.client.services.telemetry.TelemetryClient
@@ -10,7 +9,7 @@ import org.junit.Test as test
 /**
  * Test PING calls through the Telemetry service.
  */
-class TelemetryPingTest: ClientRPCTest() {
+class TelemetryPingTest : ClientRPCTest() {
   /**
    * Test a PING call.
    */
@@ -18,7 +17,8 @@ class TelemetryPingTest: ClientRPCTest() {
     client.Generic().ping()
   }
 
-  @test @ignore
+  @test
+  @ignore
   fun testBasicPing() {
     testPing(client.platform.telemetry())
   }

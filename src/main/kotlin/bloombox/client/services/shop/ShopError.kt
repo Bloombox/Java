@@ -1,4 +1,3 @@
-
 package bloombox.client.services.shop
 
 import bloombox.client.interfaces.ClientError
@@ -7,7 +6,7 @@ import bloombox.client.interfaces.ClientError
 /**
  * Enumerates known or otherwise identifiable shop errors that might occur.
  */
-enum class ShopError: ClientError {
+enum class ShopError : ClientError {
   /**
    * Specifies that the partner code was missing or invalid.
    */

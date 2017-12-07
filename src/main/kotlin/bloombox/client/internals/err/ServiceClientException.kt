@@ -1,4 +1,3 @@
-
 package bloombox.client.internals.err
 
 import bloombox.client.interfaces.ClientError
@@ -8,8 +7,8 @@ import bloombox.client.interfaces.ClientError
  * Specifies an exception that occurred within a service client, known by a ClientError-compliant error case.
  */
 class ServiceClientException(
-        err: ClientError,
-        cause: Throwable? = null): Exception(formatErr(err), cause) {
+      err: ClientError,
+      cause: Throwable? = null) : Exception(formatErr(err), cause) {
   companion object {
     /**
      * Format a ClientError.
