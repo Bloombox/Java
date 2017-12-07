@@ -26,7 +26,7 @@ DEFAULT_GOALS = clean package install
 GOALS ?= $(DEFAULT_GOALS)
 SCHEMA ?= schema/
 RELEASE_ARGS ?=
-RELEASE_GOALS ?= release:clean release:prepare release:perform
+RELEASE_GOALS ?= release:prepare-with-pom release:perform
 
 all: build
 
