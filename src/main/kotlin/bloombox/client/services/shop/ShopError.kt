@@ -1,5 +1,5 @@
 
-package bloombox.client.internals.services.shop
+package bloombox.client.services.shop
 
 import bloombox.client.interfaces.ClientError
 

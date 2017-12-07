@@ -1,7 +1,7 @@
 
 package bloombox.client.telemetry
 
-import bloombox.client.internals.services.telemetry.TelemetryClient
+import bloombox.client.services.telemetry.TelemetryClient
 import bloombox.client.test.ClientRPCTest
 import org.junit.Test as test
 import org.junit.Ignore as ignore

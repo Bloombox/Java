@@ -2,8 +2,8 @@
 package bloombox.client
 
 import bloombox.client.interfaces.ServiceClient
-import bloombox.client.internals.services.shop.ShopClient
-import bloombox.client.internals.services.telemetry.TelemetryClient
+import bloombox.client.services.shop.ShopClient
+import bloombox.client.services.telemetry.TelemetryClient
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit

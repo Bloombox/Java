@@ -1,8 +1,7 @@
 
 package bloombox.client.shop
 
-import bloombox.client.internals.services.shop.ShopClient
-import bloombox.client.test.ClientRPCTest
+import bloombox.client.services.shop.ShopClient
 import io.bloombox.schema.base.ProductKey
 import io.bloombox.schema.base.ProductKind
 import io.bloombox.schema.base.ProductType

@@ -1,5 +1,5 @@
 
-package bloombox.client.internals.services.telemetry
+package bloombox.client.services.telemetry
 
 import bloombox.client.interfaces.ServiceClient
 import bloombox.client.internals.rpc.RPCClient
