@@ -37,7 +37,7 @@
     java.lang.Object readResolve();
 }
 
--keep,allowoptimization,allowshrinking public class io.bloombox.schema.** {
+-keep public class io.bloombox.schema.** {
     public *;
 }
 
