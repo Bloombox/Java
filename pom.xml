@@ -14,8 +14,8 @@
         <url>https://github.com/bloombox/java</url>
         <connection>scm:git:https://github.com/bloombox/java.git</connection>
         <developerConnection>scm:git:git@github.com:bloombox/java.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <organization>
         <url>https://bloombox.io</url>
@@ -70,6 +70,7 @@
             <url>https://artifactory.hq.mm-corp.systems/artifactory/bloombox-client</url>
         </snapshotRepository>
         <site>
+            <id>github</id>
             <url>https://github.com/bloombox/java</url>
             <name>Bloombox for Java</name>
         </site>
