@@ -58,18 +58,16 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>momentron-releases</name>
-            <url>https://artifactory.hq.mm-corp.systems/artifactory/bloombox-client</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>momentron-snapshots</name>
-            <url>https://artifactory.hq.mm-corp.systems/artifactory/bloombox-client</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!--<distributionManagement>-->
+        <!--<snapshotRepository>-->
+            <!--<id>ossrh</id>-->
+            <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+        <!--</snapshotRepository>-->
+        <!--<repository>-->
+            <!--<id>ossrh</id>-->
+            <!--<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+        <!--</repository>-->
+    <!--</distributionManagement>-->
 
     <properties>
         <!-- Configuration -->
