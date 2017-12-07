@@ -2,13 +2,11 @@
 package bloombox.client.shop
 
 import bloombox.client.BloomboxClient
-import org.junit.Test as test
-import org.junit.Ignore as ignore
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import io.bloombox.schema.services.shop.VerifyMember
-import kotlin.test.assertTrue
-import kotlin.test.assertNotNull
+import org.junit.Ignore as ignore
+import org.junit.Test as test
 
 
 /**
