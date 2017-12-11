@@ -51,6 +51,8 @@ $(SCHEMA):
 	@git submodule update --init --remote schema
 
 sync-schema: $(SCHEMA)
+	@echo "Updating schema..."
+	@git submodule update --init --remote schema
 	@echo "Building schema..."
 	@$(MAKE) -C schema SERVICES=yes TABLES=no LANGUAGES=java PROTO_FLAGS=--javagrpc_out=languages/java
 	@echo "Copying schemas..."
