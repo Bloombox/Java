@@ -345,12 +345,12 @@ class TelemetryClient(override val host: String,
             occurred ?: System.currentTimeMillis())
 
       val ev = AnalyticsEvent.Event.newBuilder()
-            .setUuid(eventUUID)
             .setOccurred(instant)
             .setPayload(Struct.newBuilder().putAllFields(payload))
             .build()
 
       val req = Event.Request.newBuilder()
+            .setUuid(eventUUID)
             .setEvent(ev)
             .setContext(merged)
             .build()
