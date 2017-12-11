@@ -19,6 +19,7 @@ package bloombox.client
 import bloombox.client.interfaces.ServiceClient
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.services.telemetry.TelemetryClient
+import java.time.Duration
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -91,12 +92,12 @@ class BloomboxClient(
         /**
          * Timeout value for unary (i.e., non-streaming) requests.
          */
-        internal val requestTimeout: Pair<Long, TimeUnit> = Pair(10, TimeUnit.MINUTES),
+        internal val requestTimeout: Duration = Duration.ofSeconds(30),
 
         /**
          * Timeout to wait for a client to close its connection.
          */
-        internal val closeTimeout: Pair<Long, TimeUnit> = Pair(2, TimeUnit.SECONDS))
+        internal val closeTimeout: Duration = Duration.ofSeconds(10))
 
   /**
    * Specifies client target settings understood by the Java/Kotlin client.
@@ -174,6 +175,7 @@ class BloomboxClient(
             domain,
             Endpoints.localShopPort,
             apiKey,
+            settings.requestTimeout,
             settings.enableLogging,
             settings.executor,
             settings.partner,
@@ -187,6 +189,7 @@ class BloomboxClient(
             },
             Endpoints.grpcPort,
             apiKey,
+            settings.requestTimeout,
             settings.enableLogging,
             settings.executor,
             settings.partner,
@@ -202,6 +205,7 @@ class BloomboxClient(
             domain,
             Endpoints.localTelemetryPort,
             apiKey,
+            settings.requestTimeout,
             settings.enableLogging,
             settings.executor)
     } else {
@@ -213,6 +217,7 @@ class BloomboxClient(
             },
             Endpoints.grpcPort,
             apiKey,
+            settings.requestTimeout,
             settings.enableLogging,
             settings.executor,
             settings.partner,
@@ -223,7 +228,7 @@ class BloomboxClient(
     /**
      * Reference to all mounted/supported services.
      */
-    internal val _allServices: Array<ServiceClient> = arrayOf(shop, telemetry)
+    internal val allServices: Array<ServiceClient> = arrayOf(shop, telemetry)
   }
 
   /**
@@ -237,9 +242,14 @@ class BloomboxClient(
    */
   fun close(soft: Boolean = true,
             block: Boolean = true,
-            timeout: Pair<Long, TimeUnit>? = null) {
-    val closeTimeout = timeout ?: settings.closeTimeout
-    services._allServices.forEach { it.close(soft, block, closeTimeout) }
+            timeout: Duration? = null) {
+    val closeTimeout: Duration = timeout ?: settings.closeTimeout
+    services.allServices.forEach {
+      it.close(
+            soft,
+            block,
+            Pair(closeTimeout.toMillis(), TimeUnit.MILLISECONDS))
+    }
   }
 
   // -- Public Services -- //
