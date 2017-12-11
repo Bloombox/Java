@@ -22,7 +22,6 @@ import bloombox.client.internals.rpc.RPCClient
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import io.bloombox.schema.base.ProductKey
-import io.bloombox.schema.device.DeviceType
 import io.bloombox.schema.identity.UserKey
 import io.bloombox.schema.menu.section.Section
 import io.bloombox.schema.services.telemetry.v1beta3.*
@@ -39,9 +38,11 @@ import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.NegotiationType
 import io.grpc.netty.NettyChannelBuilder
+import java.time.Duration
 import java.util.*
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
 import java.util.logging.Logger
 
 
@@ -52,6 +53,7 @@ import java.util.logging.Logger
 class TelemetryClient(override val host: String,
                       override val port: Int,
                       override val apiKey: String,
+                      override val timeout: Duration,
                       override val enableLogging: Boolean = true,
                       override val executor: Executor = Executors.newSingleThreadExecutor(),
                       internal val defaultPartner: String? = null,
@@ -279,7 +281,7 @@ class TelemetryClient(override val host: String,
     return builder
   }
 
-  // -- Public Interface -- //
+  // -- Service: Generic Telemetry -- //
   /**
    * Generic event methods.
    */
@@ -288,11 +290,6 @@ class TelemetryClient(override val host: String,
      * Event telemetry service stub.
      */
     private val event = EventTelemetryGrpc.newFutureStub(channel)
-
-    /**
-     * Event telemetry service stub.
-     */
-    private val eventSync = EventTelemetryGrpc.newBlockingStub(channel)
 
     /**
      * Base context to use.
@@ -308,6 +305,7 @@ class TelemetryClient(override val host: String,
                       .setType(OperatingSystemContext.OSType.LINUX)))
           .build()
 
+    // -- API: Ping -- //
     /**
      * Ping the service.
      */
@@ -317,13 +315,15 @@ class TelemetryClient(override val host: String,
       logging.info { "PING @ $start" }
 
       // send the event
-      eventSync.ping(TelemetryPing.Request.getDefaultInstance())
+      event.ping(TelemetryPing.Request.getDefaultInstance())
+            .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
 
       // note when the pong came back
       val done = System.currentTimeMillis()
       logging.info { "PONG @ $done: ${done - start}ms" }
     }
 
+    // -- API: Events -- //
     /**
      * Record a generic event.
      */
@@ -355,52 +355,59 @@ class TelemetryClient(override val host: String,
             .setContext(merged)
             .build()
 
-      event.event(req)
+      event.event(req).get(timeout.toMillis(), TimeUnit.MILLISECONDS)
     }
 
+    // -- API: Errors -- //
     /**
      * Record a generic error report.
      */
     fun exception() {
-      TODO("not implemented")
+      TODO("Error reporting is not yet implemented.")
     }
   }
 
+  // -- Service: Commercial Telemetry -- //
   /**
    * Commercial telemetry methods.
    */
   inner class Commercial {
+    // -- API: Impressions -- //
     /**
      * Record a commercial impression event.
      */
     fun impression() {
-      TODO("not implemented")
+      TODO("Commercial analytics is not yet implemented.")
     }
 
+    // -- API: Views -- //
     /**
      * Record a commercial view event.
      */
     fun view() {
-      TODO("not implemented")
+      TODO("Commercial analytics is not yet implemented.")
     }
 
+    // -- API: Actions -- //
     /**
      * Record a commercial action event.
      */
     fun action() {
-      TODO("not implemented")
+      TODO("Commercial analytics is not yet implemented.")
     }
   }
 
+  // -- Service: Identity Telemetry -- //
   /**
    * Identity and user telemetry methods.
    */
   inner class Identity {
+    // -- API: Actions -- //
     /**
      * Record an identity-related event.
      */
     fun action() {
-      TODO("not implemented")
+      TODO("Commercial analytics is not yet implemented.")
     }
   }
 }
