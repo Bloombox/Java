@@ -29,7 +29,7 @@ import org.junit.Test as test
 /**
  * Test shop verification routines with known-bad and known-good test accounts.
  */
-class ShopVerifyTest : ClientRPCTest() {
+class ShopVerifyTest: ClientRPCTest() {
   // -- RPC Routines -- //
   /**
    * Test verification of a known-good account.
@@ -45,7 +45,6 @@ class ShopVerifyTest : ClientRPCTest() {
 
   // -- Tests -- //
   @test
-  @ignore
   fun testGoodAccountVerify() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
@@ -60,10 +59,11 @@ class ShopVerifyTest : ClientRPCTest() {
 
     assertNotNull(response, "response from server for known-good verify should not be null")
     assertTrue(response.verified, "known-good account should verify correctly")
+
+    prodClient.close()
   }
 
   @test
-  @ignore
   fun testBadAccountVerify() {
     // run a known-good account verification
     val response = testMemberVerifyBadAccount(client.platform.shop())

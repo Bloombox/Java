@@ -17,6 +17,7 @@
 package bloombox.client.shop
 
 import bloombox.client.services.shop.ShopClient
+import bloombox.client.test.ClientRPCTest
 import io.bloombox.schema.base.ProductKey
 import io.bloombox.schema.base.ProductKind
 import io.bloombox.schema.base.ProductType
@@ -30,21 +31,36 @@ import io.bloombox.schema.contact.PhoneNumber
 import io.bloombox.schema.geo.Address
 import io.bloombox.schema.person.Name
 import io.bloombox.schema.person.Person
+import io.bloombox.schema.services.shop.GetOrder
 import io.bloombox.schema.services.shop.SubmitOrder
 import io.bloombox.schema.temporal.Instant
+import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
+import kotlin.test.assertNull
+import kotlin.test.assertTrue
+import org.junit.Ignore as ignore
+import org.junit.Test as test
 
 
 /**
  * Tests related to orders.
  */
-class ShopOrderTest {
+class ShopOrderTest: ClientRPCTest() {
+  companion object {
+    /**
+     * Known-good order ID.
+     */
+    private const val knownOrderId = "abc123"
+  }
+
   /**
    * Test an order submission operation.
    */
-  private fun testOrderSubmit(client: ShopClient): SubmitOrder.Response {
+  private fun testOrderSubmit(client: ShopClient,
+                              order: CommercialOrder.Order? = null): SubmitOrder.Response {
     val now = java.time.Instant.now()
 
-    val order = CommercialOrder.Order.newBuilder()
+    val order = order ?: CommercialOrder.Order.newBuilder()
 
           .setCustomer(OrderCustomer.Customer.newBuilder()
                 .setPerson(Person.newBuilder()
@@ -100,5 +116,40 @@ class ShopOrderTest {
                       .setWeight(OrderItem.ProductWeight.EIGHTH))).build()
 
     return client.submitOrder(order)
+  }
+
+  /**
+   * Test fetching an order by ID.
+   */
+  private fun testOrderFetch(client: ShopClient, id: String): GetOrder.Response {
+    return client.getOrder(id)
+  }
+
+  @test
+  fun testFetchKnownOrder() {
+    // fetch a known-good order ID
+    val response = testOrderFetch(client.platform.shop(), knownOrderId)
+    assertNotNull(response, "response from server for known-good order fetch should not be null")
+    assertTrue(response.success, "response from server for known-good order fetch should be successful")
+    assertNotNull(response.order, "response from server for known-good order should contain order")
+    assertEquals(response.order.id, knownOrderId, "response from server for known-good order should match requested ID")
+  }
+
+  @test
+  fun testFetchOrderNotFound() {
+    // fetch a known-good order ID
+    val response = testOrderFetch(client.platform.shop(), "blablablanotfound")
+    assertNotNull(response, "response from server for known-not-found order fetch should not be null")
+    assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
+    assertNull(response.order, "response from server for known-good order should contain order")
+  }
+
+  @ignore
+  @test
+  fun testSubmitOrder() {
+    // submit a known-good order
+    val response = testOrderSubmit(client.platform.shop())
+    assertNotNull(response, "response from server for order submit should not be null")
+    assertNull(response.orderId, "response from server for order submit should have new order ID")
   }
 }
