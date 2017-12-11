@@ -42,6 +42,18 @@ class BloomboxClient(
        */
       target: ClientTarget = ClientTarget.LOCAL) {
   // -- Settings -- //
+  companion object {
+    /**
+     * Version for the library.
+     */
+    internal const val VERSION = "1.0-beta4"
+
+    /**
+     * API client variant name.
+     */
+    internal const val VARIANT = "full"
+  }
+
   /**
    * Specifies client settings that can be passed in to modify RPC behavior.
    */
