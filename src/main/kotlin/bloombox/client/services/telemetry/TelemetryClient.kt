@@ -16,23 +16,30 @@
 
 package bloombox.client.services.telemetry
 
+import bloombox.client.BloomboxClient
 import bloombox.client.interfaces.ServiceClient
 import bloombox.client.internals.rpc.RPCClient
+import com.google.protobuf.Struct
+import com.google.protobuf.Value
 import io.bloombox.schema.base.ProductKey
+import io.bloombox.schema.device.DeviceType
 import io.bloombox.schema.identity.UserKey
 import io.bloombox.schema.menu.section.Section
-import io.bloombox.schema.services.telemetry.v1beta3.CommercialTelemetryGrpc
-import io.bloombox.schema.services.telemetry.v1beta3.EventTelemetryGrpc
-import io.bloombox.schema.services.telemetry.v1beta3.IdentityTelemetryGrpc
-import io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing
+import io.bloombox.schema.services.telemetry.v1beta3.*
+import io.bloombox.schema.struct.VersionSpec
 import io.bloombox.schema.telemetry.AnalyticsContext
+import io.bloombox.schema.telemetry.AnalyticsEvent
 import io.bloombox.schema.telemetry.AnalyticsScope
 import io.bloombox.schema.telemetry.context.BrowserContext
 import io.bloombox.schema.telemetry.context.DeviceContext
+import io.bloombox.schema.telemetry.context.LibraryContext
+import io.bloombox.schema.telemetry.context.OperatingSystemContext
+import io.bloombox.schema.temporal.Instant
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.NegotiationType
 import io.grpc.netty.NettyChannelBuilder
+import java.util.*
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 import java.util.logging.Logger
@@ -288,6 +295,20 @@ class TelemetryClient(override val host: String,
     private val eventSync = EventTelemetryGrpc.newBlockingStub(channel)
 
     /**
+     * Base context to use.
+     */
+    private val _baseContext: AnalyticsContext.Context = AnalyticsContext.Context.newBuilder()
+          .setLibrary(LibraryContext.DeviceLibrary.newBuilder()
+                .setClient(LibraryContext.APIClient.JAVA)
+                .setVariant(BloomboxClient.VARIANT)
+                .setVersion(VersionSpec.newBuilder().setName(BloomboxClient.VERSION)))
+          .setNative(DeviceContext.NativeDeviceContext.newBuilder()
+                .setRole(DeviceContext.DeviceRole.SERVER)
+                .setOs(OperatingSystemContext.DeviceOS.newBuilder()
+                      .setType(OperatingSystemContext.OSType.LINUX)))
+          .build()
+
+    /**
      * Ping the service.
      */
     fun ping() {
@@ -306,8 +327,35 @@ class TelemetryClient(override val host: String,
     /**
      * Record a generic event.
      */
-    fun event() {
-      TODO("not implemented")
+    fun event(payload: Map<String, Value>? = null,
+              uuid: String? = null,
+              occurred: Long? = null,
+              context: EventContext? = null) {
+      val merged: AnalyticsContext.Context = if (context != null) {
+        context.serialize(defaultPartner, defaultLocation, deviceUUID)
+              .mergeFrom(_baseContext)
+              .build()
+      } else {
+        _baseContext
+      }
+
+      val eventUUID = uuid ?: UUID.randomUUID().toString()
+
+      val instant = Instant.newBuilder().setTimestamp(
+            occurred ?: System.currentTimeMillis())
+
+      val ev = AnalyticsEvent.Event.newBuilder()
+            .setUuid(eventUUID)
+            .setOccurred(instant)
+            .setPayload(Struct.newBuilder().putAllFields(payload))
+            .build()
+
+      val req = Event.Request.newBuilder()
+            .setEvent(ev)
+            .setContext(merged)
+            .build()
+
+      event.event(req)
     }
 
     /**
