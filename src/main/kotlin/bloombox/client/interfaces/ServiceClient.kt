@@ -16,6 +16,7 @@
 
 package bloombox.client.interfaces
 
+import java.time.Duration
 import java.util.concurrent.Executor
 import java.util.concurrent.TimeUnit
 
@@ -49,6 +50,11 @@ internal interface ServiceClient {
    * Executor for followup and RPC client activities.
    */
   val executor: Executor
+
+  /**
+   * RPC request timeout to apply.
+   */
+  val timeout: Duration
 
   /**
    * Utility function to close any existing client connection.
