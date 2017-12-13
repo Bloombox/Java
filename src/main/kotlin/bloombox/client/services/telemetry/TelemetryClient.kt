@@ -29,10 +29,7 @@ import io.bloombox.schema.struct.VersionSpec
 import io.bloombox.schema.telemetry.AnalyticsContext
 import io.bloombox.schema.telemetry.AnalyticsEvent
 import io.bloombox.schema.telemetry.AnalyticsScope
-import io.bloombox.schema.telemetry.context.BrowserContext
-import io.bloombox.schema.telemetry.context.DeviceContext
-import io.bloombox.schema.telemetry.context.LibraryContext
-import io.bloombox.schema.telemetry.context.OperatingSystemContext
+import io.bloombox.schema.telemetry.context.*
 import io.bloombox.schema.temporal.Instant
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
@@ -198,6 +195,16 @@ class TelemetryClient(override val host: String,
      * Logging tools.
      */
     private val logging = Logger.getLogger("TelemetryClient")
+
+    /**
+     * Internal collection prefix.
+     */
+    private const val internalPrefix = "_bloom_"
+
+    /**
+     * Server-side event fingerprint.
+     */
+    private val fingerprint = UUID.randomUUID().toString().toUpperCase()
   }
 
   // -- Protocol Stubs -- //
@@ -242,10 +249,10 @@ class TelemetryClient(override val host: String,
         if ((deviceUUID ?: this.deviceUUID) != null) {
           // full set of partner/device context
           val device = (deviceUUID ?: this.deviceUUID)!!
-          scope.partner = "$partner/$location/$device"
+          scope.partner = "partner/$partner/location/$location/device/$device"
         } else {
           // partner/location only
-          scope.partner = "$partner/$location"
+          scope.partner = "partner/$partner/location/$location"
         }
       } else {
         // partner only
@@ -257,7 +264,7 @@ class TelemetryClient(override val host: String,
     if (section != null) {
       if (item != null && item.id != null && item.id.isNotEmpty() && item.id.isNotBlank()) {
         // section and item
-        scope.commercial = "${section.name}/${item.id}"
+        scope.commercial = "section/${section.name}/item/${item.id}"
       } else {
         // section-level
         scope.commercial = section.name
@@ -327,19 +334,30 @@ class TelemetryClient(override val host: String,
     /**
      * Record a generic event.
      */
-    fun event(payload: Map<String, Value>? = null,
-              uuid: String? = null,
+    fun event(collection: String,
               occurred: Long? = null,
+              payload: Map<String, Value>? = null,
               context: EventContext? = null) {
-      val merged: AnalyticsContext.Context = if (context != null) {
+      val merged: AnalyticsContext.Context.Builder = if (context != null) {
         context.serialize(defaultPartner, defaultLocation, deviceUUID)
               .mergeFrom(_baseContext)
-              .build()
       } else {
-        _baseContext
+        _baseContext.toBuilder()
       }
 
-      val eventUUID = uuid ?: UUID.randomUUID().toString()
+      // add event collection
+      if (!merged.hasCollection())
+        merged.setCollection(AnalyticsCollection.Collection.newBuilder()
+              .setInternal(collection.startsWith(internalPrefix))
+              .setType(AnalyticsCollection.EventType.GENERIC)
+              .setName(collection))
+
+      if (merged.fingerprint == null || merged.fingerprint.isEmpty() || merged.fingerprint.isBlank())
+        merged.fingerprint = fingerprint
+      if (merged.group == null || merged.group.isEmpty() || merged.group.isBlank())
+        merged.group = fingerprint
+
+      val eventUUID = UUID.randomUUID().toString().toUpperCase()
 
       val instant = Instant.newBuilder().setTimestamp(
             occurred ?: System.currentTimeMillis())

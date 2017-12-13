@@ -141,15 +141,5 @@ class ShopOrderTest: ClientRPCTest() {
     val response = testOrderFetch(client.platform.shop(), "blablablanotfound")
     assertNotNull(response, "response from server for known-not-found order fetch should not be null")
     assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
-    assertNull(response.order, "response from server for known-good order should contain order")
-  }
-
-  @ignore
-  @test
-  fun testSubmitOrder() {
-    // submit a known-good order
-    val response = testOrderSubmit(client.platform.shop())
-    assertNotNull(response, "response from server for order submit should not be null")
-    assertNull(response.orderId, "response from server for order submit should have new order ID")
   }
 }

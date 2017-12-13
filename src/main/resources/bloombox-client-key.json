@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bloom-java",
+  "private_key_id": "70c273768ddccee973edc664b583efee00694b01",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC55Ax90JNT19Gy\n7FFzcA69XyFqPVJ6xQBqSU0Pkc5eA1Ta0NAEwVup6J1sxrqY+i02qnr6Ik2pZawa\n54ppwfxfpKYw3mIEUuVALDlqrdMqBBbNSrplRmRelhSJmFmBTvGtleTnBIwzkZAe\nMS96MJCHyZ2DpFgjnoHrL8yWnBEREGr3runzqREOl/Ke4PBw1gbkM8KIn224q9ka\nF7csTE/ZXhxtGJSeXtPZRzL6S1QwjcwLQXbAGl5MVb+Te+72dbqnxk0yNtA8IWPX\nfaudyRpaM8him1Mo0e9M3eLriDNJE0o32JnL6RGjwUiFQb9OkYvQuHyNJcRJUTn0\nizskQWhdAgMBAAECggEAAVK8vgaGjfG61eW1vLce+70aHUn7dNFDK/6ClGpKyEOI\nzpfu6yG/N8nmmPgfKuiY+ssi3fXxjJOjMnvUceVGGR4waqeilfpLFHZcIETFfIaT\n7Pkrs33ZSA0Ub1hMxs1bjgtDmltfbhyKpJRgDKQc20KVovLAB9zget6Xu7i3rGHo\n7e0AXeDa7UB0T2rPYnXJz1j3hGllcghiIGhkpxy5RLBMtvY8i5B8GXaYHqfgvpIk\n5cvWooAMeNDjncBUP1eFr+Gvi8u9mYOxdQPW0Qf/5lBnvcSglgUhxqq5I85PjSvG\nvf1wmQHptE8kIbiyWQVxWB6ELt6yZpCDao32y4eHUQKBgQDcd9dhRaJCLbVCfU4i\nRhgNh3Z7Q8KRD0N1x7BBO9uPFIDnGjMeD3k4rcpoXML+GfnmFtHHf6zPvaGVSBe9\nCUQIGtA2lhmg5HMZG1lQlCdidHMvZ9LgpJKHXI+LPLfyGV0ZkDrFjCuaoD1Wjnnq\ndVpskH5cLdifFFz6PdU7pTTe1QKBgQDX2Zp10DPp+9chP2pOJ+dB/9iEP7JpL2an\ne9NCoGNfr2zDld9sPamzWBsQuGxnZwiHUz5VV6ZenVKFllQB0Mjd9L+GkYe0ARbZ\nBpygzV5CA8Rol813X+jQCl912V688YVlvTFmQAI4DtmV2LFLQz4ONIFM4oXLVwZe\naE2KVol3aQKBgAfmE0Vc5U9Rq+jR7Ha15C6357rK1rGzxkr1+I6dwmQB7Axbl/E/\nxKwPLe1HRYUtERL5RlLLdDmNJbjfeFpBdrqDm2oZPpnRFX6UyEJmzHJukaHlKlz6\nCHXpDwuCBWUbG4bK8BAb0YQcsZXkTOHlinPRSXWr/tLUO/CLPpSAesBxAoGAUSCA\nZXdzi6YUHXLwSZ/F05CNmGc4b0BZnOl1Zb1SnEwa3QgfiVdDyRx8T7SBSfv3wKUQ\n8JKY/Ua0FXGC8Yu/c2zh73oTPxyJsdhCVk3Z94Xi9EzZ9NwfbNH5PxoL+YftU2fg\ngUXdj6RFM4TWXitPz5b8YiFhmCOFSUZ6nlwYHsECgYEA26QmqNTpP+rsK+yEnUAN\nE6zbSaasFHLh6RnXBE4Awwl/0ZvX7lr053FuCXpj7yVPSB+iIp+swQrE6N6fE4WB\n6mh7Zj03CRaxhbPl7rCYQmGg+4izxvKfmaqmgUXOFcrIVUgxCV45yy2TpzFhBKEc\nXPUSe9s2g7QRP39/yt53GRU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "jclient@bloom-java.iam.gserviceaccount.com",
+  "client_id": "115276021830943791196",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/jclient%40bloom-java.iam.gserviceaccount.com"
+}
