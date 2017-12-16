@@ -1,5 +1,6 @@
-
 # Bloombox Client for Java
+
+Latest Version: `1.0-beta4`
 
 This Maven project and resulting JAR provide Java clients API access to the [Bloombox](https://bloombox.io) platform.
 Bloombox APIs are built and served using [gRPC](https://grpc.io) and exposed in client libraries like this one with a
