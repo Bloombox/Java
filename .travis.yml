@@ -16,7 +16,6 @@ before_script:
   - ./cc-test-reporter before-build
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip -B -V
 script:
-  - mvn test -B
+  - mvn test jacoco:report -B
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-
