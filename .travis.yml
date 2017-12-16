@@ -18,4 +18,4 @@ before_script:
 script:
   - mvn test jacoco:report -B
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco
