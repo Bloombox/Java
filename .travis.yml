@@ -19,4 +19,5 @@ script:
   - mvn test jacoco:report -B
 after_script:
   - cp -fv ./target/site/jacoco/jacoco.xml .
-  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco
+  - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco --prefix /home/travis/build/Bloombox/Java/target/classes
+
