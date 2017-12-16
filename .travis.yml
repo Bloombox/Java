@@ -2,6 +2,8 @@ env:
   global:
     - CC_TEST_REPORTER_ID=aa7d09060adc8243f2a6f51b6051ea2629b2f9a3c28042076f2494193bc8ad06
 language: java
+git:
+  submodules: false
 jdk:
   - oraclejdk8
   - openjdk8
