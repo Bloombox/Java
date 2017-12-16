@@ -25,7 +25,7 @@ SERVICE_ARGS ?= -Dbloombox.shop.version=$(SHOP_VERSION) -Dbloombox.telemetry.ver
 DEFAULT_GOALS = clean package install
 GOALS ?= $(DEFAULT_GOALS)
 SCHEMA ?= schema/
-RELEASE_ARGS ?=
+RELEASE_ARGS ?= -DperformRelease=true
 RELEASE_GOALS ?= release:prepare release:perform
 
 all: build
