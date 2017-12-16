@@ -5,9 +5,9 @@ language: java
 git:
   submodules: false
 jdk:
+  - oraclejdk9
   - oraclejdk8
   - openjdk8
-  - oraclejdk7
   - openjdk7
 cache:
   directories:
