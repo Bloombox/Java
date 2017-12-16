@@ -1,6 +1,4 @@
-# Bloombox Client for Java  [![Build Status](https://travis-ci.org/Bloombox/Java.svg?branch=master)](https://travis-ci.org/Bloombox/Java)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/97f47bd5c867f368414a/maintainability)](https://codeclimate.com/github/Bloombox/Java/maintainability)
+# Bloombox Client for Java  [![Build Status](https://travis-ci.org/Bloombox/Java.svg?branch=master)](https://travis-ci.org/Bloombox/Java) [![Maintainability](https://api.codeclimate.com/v1/badges/97f47bd5c867f368414a/maintainability)](https://codeclimate.com/github/Bloombox/Java/maintainability)
 
 Latest Version: `1.0-beta4`
 
