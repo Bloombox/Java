@@ -19,5 +19,6 @@ script:
   - mvn test jacoco:report -B
 after_script:
   - cp -fv ./target/site/jacoco/jacoco.xml ./
-  - cp -frv ./src/main/kotlin/* ./src/main/java/
+  - cp -frv ./src/main/kotlin/* ./
+  - cp -frv ./src/main/java/* ./
   - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco --prefix /home/travis/build/Bloombox/Java/src/main/java
