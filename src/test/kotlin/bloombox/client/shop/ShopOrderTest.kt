@@ -34,6 +34,7 @@ import io.bloombox.schema.person.Person
 import io.bloombox.schema.services.shop.GetOrder
 import io.bloombox.schema.services.shop.SubmitOrder
 import io.bloombox.schema.temporal.Instant
+import java.util.concurrent.TimeUnit
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
@@ -118,17 +119,10 @@ class ShopOrderTest: ClientRPCTest() {
     return client.submitOrder(order)
   }
 
-  /**
-   * Test fetching an order by ID.
-   */
-  private fun testOrderFetch(client: ShopClient, id: String): GetOrder.Response {
-    return client.getOrder(id)
-  }
-
   @test
   fun testFetchKnownOrder() {
     // fetch a known-good order ID
-    val response = testOrderFetch(client.platform.shop(), knownOrderId)
+    val response = client.platform.shop().getOrder(knownOrderId)
     assertNotNull(response, "response from server for known-good order fetch should not be null")
     assertTrue(response.success, "response from server for known-good order fetch should be successful")
     assertNotNull(response.order, "response from server for known-good order should contain order")
@@ -138,7 +132,7 @@ class ShopOrderTest: ClientRPCTest() {
   @test
   fun testFetchOrderNotFound() {
     // fetch a known-good order ID
-    val response = testOrderFetch(client.platform.shop(), "blablablanotfound")
+    val response = client.platform.shop().getOrder("blablablanotfound")
     assertNotNull(response, "response from server for known-not-found order fetch should not be null")
     assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
   }

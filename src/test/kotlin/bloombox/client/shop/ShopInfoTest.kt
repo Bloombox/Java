@@ -47,7 +47,7 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testShopHours() {
-    val response = client.platform.shop().shopInfo(
+    val response = client.platform.shop().info(
           ShopClient.ShopContext(
                 partner = partnerID,
                 location = locationID))
@@ -61,11 +61,11 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testZipcheckKnownGood() {
-    val responseOne = client.platform.shop().zipCheck("95120", ShopClient.ShopContext(
+    val responseOne = client.platform.shop().checkZipcode("95120", ShopClient.ShopContext(
           partner = partnerID,
           location = locationID))
 
-    val responseTwo = client.platform.shop().zipCheck("94404", ShopClient.ShopContext(
+    val responseTwo = client.platform.shop().checkZipcode("94404", ShopClient.ShopContext(
           partner = partnerID,
           location = locationID))
 
@@ -82,7 +82,7 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testZipcheckKnownBad() {
-    val responseOne = client.platform.shop().zipCheck("12345", ShopClient.ShopContext(
+    val responseOne = client.platform.shop().checkZipcode("12345", ShopClient.ShopContext(
           partner = partnerID,
           location = locationID))
 
