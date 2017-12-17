@@ -36,11 +36,12 @@ import java.util.logging.Logger
 
 
 // Method Callbacks
-typealias InfoCallback = (ShopInfo.Response?, ServiceClientException?) -> Unit
-typealias ZipcheckCallback = (CheckZipcode.Response?, ServiceClientException?) -> Unit
-typealias GetOrderCallback = (GetOrder.Response?, ServiceClientException?) -> Unit
-typealias SubmitOrderCallback = (SubmitOrder.Response?, ServiceClientException?) -> Unit
-typealias VerifyMemberCallback = (VerifyMember.Response?, ServiceClientException?) -> Unit
+typealias InfoCallback = (ShopInfo.Response) -> Unit
+typealias ZipcheckCallback = (CheckZipcode.Response) -> Unit
+typealias GetOrderCallback = (GetOrder.Response) -> Unit
+typealias SubmitOrderCallback = (SubmitOrder.Response) -> Unit
+typealias VerifyMemberCallback = (VerifyMember.Response) -> Unit
+typealias ShopErrorCallback = (ServiceClientException?) -> Unit
 
 
 /**
@@ -164,14 +165,20 @@ class ShopClient(override val host: String,
    * errors according to `ShopClientException`.
    */
   private fun <T> executeAndDispatchCallback(op: ListenableFuture<T>,
-                                             callback: (T?, ServiceClientException?) -> Unit) {
+                                             callback: (T) -> Unit,
+                                             err: ShopErrorCallback) {
     try {
       val response = op.get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-      callback(response, null)
+      if (response != null) {
+        callback(response)
+      } else {
+        // no response: dispatch err callback with null
+        err(null)
+      }
     } catch (e: ServiceClientException) {
-      callback(null, e)
+      err(e)
     } catch (e: StatusRuntimeException) {
-      callback(null, ServiceClientException(ShopError.RUNTIME_ERROR, e))
+      err(ServiceClientException(ShopError.RUNTIME_ERROR, e))
     }
   }
 
@@ -202,6 +209,7 @@ class ShopClient(override val host: String,
    */
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun info(callback: InfoCallback,
+           err: ShopErrorCallback,
            context: ShopContext = ShopContext.defaultContext()): ListenableFuture<ShopInfo.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
@@ -218,7 +226,7 @@ class ShopClient(override val host: String,
     val op = this.future.shopInfo(request)
     op.addListener(Runnable {
       // dispatch user callback
-      executeAndDispatchCallback(op, callback)
+      executeAndDispatchCallback(op, callback, err)
     }, executor)
     return op
   }
@@ -253,6 +261,7 @@ class ShopClient(override val host: String,
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun checkZipcode(zipcode: String,
                    callback: ZipcheckCallback,
+                   err: ShopErrorCallback,
                    context: ShopContext = ShopContext.defaultContext()): ListenableFuture<CheckZipcode.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
@@ -270,7 +279,7 @@ class ShopClient(override val host: String,
     val op = this.future.checkZipcode(request)
     op.addListener(Runnable {
       // handle user callback
-      executeAndDispatchCallback(op, callback)
+      executeAndDispatchCallback(op, callback, err)
     }, executor)
     return op
   }
@@ -307,6 +316,7 @@ class ShopClient(override val host: String,
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun verifyMember(email: String,
                    callback: VerifyMemberCallback,
+                   err: ShopErrorCallback,
                    context: ShopContext = ShopContext.defaultContext()): ListenableFuture<VerifyMember.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
@@ -326,7 +336,7 @@ class ShopClient(override val host: String,
     val op = this.future.verifyMember(request)
     op.addListener(Runnable {
       // dispatch user callback
-      executeAndDispatchCallback(op, callback)
+      executeAndDispatchCallback(op, callback, err)
     }, executor)
     return op
   }
@@ -363,6 +373,7 @@ class ShopClient(override val host: String,
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun submitOrder(order: CommercialOrder.Order,
                   callback: SubmitOrderCallback,
+                  err: ShopErrorCallback,
                   context: ShopContext = ShopContext.defaultContext()): ListenableFuture<SubmitOrder.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
@@ -382,7 +393,7 @@ class ShopClient(override val host: String,
     val op = this.future.submitOrder(request)
     op.addListener(Runnable {
       // dispatch user callback
-      executeAndDispatchCallback(op, callback)
+      executeAndDispatchCallback(op, callback, err)
     }, executor)
     return op
   }
@@ -418,6 +429,7 @@ class ShopClient(override val host: String,
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun getOrder(id: String,
                callback: GetOrderCallback,
+               err: ShopErrorCallback,
                context: ShopContext = ShopContext.defaultContext()): ListenableFuture<GetOrder.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
@@ -435,7 +447,7 @@ class ShopClient(override val host: String,
 
     val op = this.future.getOrder(request)
     op.addListener(Runnable {
-      executeAndDispatchCallback(op, callback)
+      executeAndDispatchCallback(op, callback, err)
     }, executor)
     return op
   }
