@@ -29,6 +29,7 @@ class ServiceClientException(
     /**
      * Format a ClientError.
      */
-    private fun formatErr(err: ClientError): String = "Code ${err.code()}: ${err.message()}"
+    private fun formatErr(err: ClientError): String =
+          "Error '${err.domain()}::${err.code()}': ${err.message()}"
   }
 }

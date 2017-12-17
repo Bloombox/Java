@@ -39,15 +39,6 @@ enum class ShopError : ClientError {
     override fun domain(): String = shopDomain
     override fun code(): Int = 1
     override fun message(): String = "Must provide a location code."
-  },
-
-  /**
-   * Specifies that a connection was refused.
-   */
-  CONNECTION_REFUSED {
-    override fun domain(): String = shopDomain
-    override fun code(): Int = 2
-    override fun message(): String = "Connection refused."
   };
 
   companion object {
