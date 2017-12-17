@@ -35,4 +35,34 @@ object Bloombox {
      */
     const val legalName = "Bloombox, LLC"
   }
+
+  /**
+   * Statically-set RPC client endpoints.
+   */
+  internal object Endpoints {
+    /**
+     * Production client endpoint.
+     */
+    internal const val production = "api.bloombox.cloud"
+
+    /**
+     * Sandbox endpoint. Requires special auth.
+     */
+    internal const val sandbox = "sandbox.usw1.bloombox.services"
+
+    /**
+     * Port to use for TLS-wrapped gRPC traffic.
+     */
+    internal const val grpcPort = 443
+
+    /**
+     * Port to use locally for the Telemetry service.
+     */
+    internal const val localTelemetryPort = 1090
+
+    /**
+     * Port to use locally for the Shop service.
+     */
+    internal const val localShopPort = 1091
+  }
 }

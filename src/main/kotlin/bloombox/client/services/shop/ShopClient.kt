@@ -32,7 +32,6 @@ import java.time.Duration
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
-import java.util.logging.Logger
 
 
 // Method Callbacks
@@ -52,7 +51,6 @@ class ShopClient(override val host: String,
                  override val port: Int,
                  override val apiKey: String,
                  override val timeout: Duration,
-                 override val enableLogging: Boolean = true,
                  override val executor: Executor = Executors.newSingleThreadExecutor(),
                  internal val defaultPartner: String? = null,
                  internal val defaultLocation: String? = null,
@@ -94,12 +92,8 @@ class ShopClient(override val host: String,
 
     override fun <ReqT : Any?, RespT : Any?> interceptCall(method: MethodDescriptor<ReqT, RespT>?,
                                                            callOptions: CallOptions?,
-                                                           next: Channel?): ClientCall<ReqT, RespT>? {
-      if (next == null)
-        return null
-
+                                                           next: Channel): ClientCall<ReqT, RespT>? {
       var call: ClientCall<ReqT, RespT> = next.newCall(method, callOptions)
-
       call = object : ForwardingClientCall.SimpleForwardingClientCall<ReqT, RespT>(call) {
         override fun start(responseListener: Listener<RespT>, headers: Metadata) {
           if (apikey != null && apikey.length > 2) {
@@ -138,11 +132,6 @@ class ShopClient(override val host: String,
      * Authority root certificates location.
      */
     private const val authorityRoots = "/authority-roots.pem"
-
-    /**
-     * Logging tools.
-     */
-    private val logging = Logger.getLogger("ShopClient")
   }
 
   /**

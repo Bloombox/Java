@@ -121,43 +121,13 @@ class BloomboxClient(
 
   // -- Internals -- //
   /**
-   * Statically-set RPC client endpoints.
-   */
-  internal object Endpoints {
-    /**
-     * Production client endpoint.
-     */
-    internal const val production = "api.bloombox.cloud"
-
-    /**
-     * Sandbox endpoint. Requires special auth.
-     */
-    internal const val sandbox = "sandbox.usw1.bloombox.services"
-
-    /**
-     * Port to use for TLS-wrapped gRPC traffic.
-     */
-    internal const val grpcPort = 443
-
-    /**
-     * Port to use locally for the Telemetry service.
-     */
-    internal const val localTelemetryPort = 1090
-
-    /**
-     * Port to use locally for the Shop service.
-     */
-    internal const val localShopPort = 1091
-  }
-
-  /**
    * Resolve the host endpoint for the selected client target.
    */
   private fun ClientTarget.host(): String =
         when (this) {
           ClientTarget.LOCAL -> "127.0.0.1"
-          ClientTarget.PRODUCTION -> Endpoints.production
-          ClientTarget.SANDBOX -> Endpoints.sandbox
+          ClientTarget.PRODUCTION -> Bloombox.Endpoints.production
+          ClientTarget.SANDBOX -> Bloombox.Endpoints.sandbox
         }
 
   /**
@@ -173,13 +143,13 @@ class BloomboxClient(
     internal val shop = if (ct == ClientTarget.LOCAL) {
       ShopClient(
             domain,
-            Endpoints.localShopPort,
+            Bloombox.Endpoints.localShopPort,
             apiKey,
-            settings.requestTimeout,
-            settings.enableLogging,
-            settings.executor,
-            settings.partner,
-            settings.location)
+            timeout = settings.requestTimeout,
+            executor = settings.executor,
+            defaultPartner = settings.partner,
+            defaultLocation = settings.location,
+            deviceUUID = settings.device)
     } else {
       ShopClient(
             if (ct == ClientTarget.SANDBOX) {
@@ -187,14 +157,13 @@ class BloomboxClient(
             } else {
               "shop.$domain"
             },
-            Endpoints.grpcPort,
+            Bloombox.Endpoints.grpcPort,
             apiKey,
-            settings.requestTimeout,
-            settings.enableLogging,
-            settings.executor,
-            settings.partner,
-            settings.location,
-            settings.device)
+            timeout = settings.requestTimeout,
+            executor = settings.executor,
+            defaultPartner = settings.partner,
+            defaultLocation = settings.location,
+            deviceUUID = settings.device)
     }
 
     /**
@@ -203,11 +172,13 @@ class BloomboxClient(
     internal val telemetry = if (ct == ClientTarget.LOCAL) {
       TelemetryClient(
             domain,
-            Endpoints.localTelemetryPort,
+            Bloombox.Endpoints.localTelemetryPort,
             apiKey,
-            settings.requestTimeout,
-            settings.enableLogging,
-            settings.executor)
+            timeout = settings.requestTimeout,
+            executor = settings.executor,
+            defaultPartner = settings.partner,
+            defaultLocation = settings.location,
+            deviceUUID = settings.device)
     } else {
       TelemetryClient(
             if (ct == ClientTarget.SANDBOX) {
@@ -215,14 +186,13 @@ class BloomboxClient(
             } else {
               "telemetry.$domain"
             },
-            Endpoints.grpcPort,
+            Bloombox.Endpoints.grpcPort,
             apiKey,
-            settings.requestTimeout,
-            settings.enableLogging,
-            settings.executor,
-            settings.partner,
-            settings.location,
-            settings.device)
+            timeout = settings.requestTimeout,
+            executor = settings.executor,
+            defaultPartner = settings.partner,
+            defaultLocation = settings.location,
+            deviceUUID = settings.device)
     }
 
     /**

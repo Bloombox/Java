@@ -42,11 +42,6 @@ internal interface ServiceClient {
   val apiKey: String
 
   /**
-   * Setting to control logging.
-   */
-  val enableLogging: Boolean
-
-  /**
    * Executor for followup and RPC client activities.
    */
   val executor: Executor
