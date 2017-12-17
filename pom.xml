@@ -238,6 +238,7 @@
                     <excludes>
                         <exclude>gen_bq_schema/**/*</exclude>
                         <exclude>io/bloombox/schema/**/*</exclude>
+                        <exclude>bloombox/client/Bloombox.java</exclude>
                     </excludes>
                 </configuration>
             </plugin>
