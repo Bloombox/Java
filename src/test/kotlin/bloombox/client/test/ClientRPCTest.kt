@@ -17,6 +17,7 @@
 package bloombox.client.test
 
 import bloombox.client.BloomboxClient
+import java.util.logging.Logger
 import org.junit.After as after
 
 
@@ -28,6 +29,7 @@ open class ClientRPCTest {
     const val testApiKey = "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM"
     const val testPartner = "mm"
     const val testLocation = "sacramento"
+    val logging: Logger = Logger.getAnonymousLogger()
   }
 
   /**

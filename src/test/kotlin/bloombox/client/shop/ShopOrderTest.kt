@@ -130,6 +130,22 @@ class ShopOrderTest: ClientRPCTest() {
   }
 
   @test
+  fun testFetchKnownOrderAsync() {
+    // fetch a known-good order ID
+    val operation = client.platform.shop().getOrder(knownOrderId, { response ->
+      assertNotNull(response, "response from server for known-good order fetch should not be null")
+      assertTrue(response.success, "response from server for known-good order fetch should be successful")
+      assertNotNull(response.order, "response from server for known-good order should contain order")
+      assertEquals(response.order.id, knownOrderId, "response from server for known-good order should match requested ID")
+    }, { err ->
+      logging.severe("Severe error fetching order: $err")
+    })
+
+    // make sure it executes, with a 10-second timeout
+    operation.get(10, TimeUnit.SECONDS)
+  }
+
+  @test
   fun testFetchOrderNotFound() {
     // fetch a known-good order ID
     val response = client.platform.shop().getOrder("blablablanotfound")
