@@ -65,11 +65,6 @@ class BloomboxClient(
         internal val apiKey: String,
 
         /**
-         * Whether to enable logging.
-         */
-        internal val enableLogging: Boolean = true,
-
-        /**
          * Partner code.
          */
         internal val partner: String? = null,
@@ -148,8 +143,7 @@ class BloomboxClient(
             timeout = settings.requestTimeout,
             executor = settings.executor,
             defaultPartner = settings.partner,
-            defaultLocation = settings.location,
-            deviceUUID = settings.device)
+            defaultLocation = settings.location)
     } else {
       ShopClient(
             if (ct == ClientTarget.SANDBOX) {
@@ -162,8 +156,7 @@ class BloomboxClient(
             timeout = settings.requestTimeout,
             executor = settings.executor,
             defaultPartner = settings.partner,
-            defaultLocation = settings.location,
-            deviceUUID = settings.device)
+            defaultLocation = settings.location)
     }
 
     /**

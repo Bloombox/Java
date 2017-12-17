@@ -53,15 +53,13 @@ class ShopClient(override val host: String,
                  override val timeout: Duration,
                  override val executor: Executor = Executors.newSingleThreadExecutor(),
                  internal val defaultPartner: String? = null,
-                 internal val defaultLocation: String? = null,
-                 internal val deviceUUID: String? = null) : RPCClient(), ServiceClient {
+                 internal val defaultLocation: String? = null) : RPCClient(), ServiceClient {
   // -- Internals -- //
   /**
    * Specifies contextual information for a shop operation.
    */
   data class ShopContext(internal val partner: String? = null,
-                         internal val location: String? = null,
-                         internal val deviceUUID: String? = null) {
+                         internal val location: String? = null) {
     companion object {
       /**
        * Generate a default shop context.
@@ -73,12 +71,10 @@ class ShopClient(override val host: String,
      * Serialize this shop context.
      */
     fun serialize(partner: String? = null,
-                  location: String? = null,
-                  deviceUUID: String? = null): ShopContext =
+                  location: String? = null): ShopContext =
           ShopContext(
                 partner = this.partner ?: partner,
-                location = this.location ?: location,
-                deviceUUID = this.deviceUUID ?: deviceUUID)
+                location = this.location ?: location)
   }
 
   /**
@@ -177,7 +173,7 @@ class ShopClient(override val host: String,
    */
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun info(context: ShopContext = ShopContext.defaultContext()): ShopInfo.Response {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     val partnerKey = rendered.partner!!
@@ -200,7 +196,7 @@ class ShopClient(override val host: String,
   fun info(callback: InfoCallback,
            err: ShopErrorCallback,
            context: ShopContext = ShopContext.defaultContext()): ListenableFuture<ShopInfo.Response> {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     val partnerKey = rendered.partner!!
@@ -227,7 +223,7 @@ class ShopClient(override val host: String,
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun checkZipcode(zipcode: String,
                    context: ShopContext = ShopContext.defaultContext()): CheckZipcode.Response {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     val partnerKey = rendered.partner!!
@@ -252,7 +248,7 @@ class ShopClient(override val host: String,
                    callback: ZipcheckCallback,
                    err: ShopErrorCallback,
                    context: ShopContext = ShopContext.defaultContext()): ListenableFuture<CheckZipcode.Response> {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     val partnerKey = rendered.partner!!
@@ -280,7 +276,7 @@ class ShopClient(override val host: String,
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun verifyMember(email: String,
                    context: ShopContext = ShopContext.defaultContext()): VerifyMember.Response {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     // must have partner/location key by now - they are validated above
@@ -307,7 +303,7 @@ class ShopClient(override val host: String,
                    callback: VerifyMemberCallback,
                    err: ShopErrorCallback,
                    context: ShopContext = ShopContext.defaultContext()): ListenableFuture<VerifyMember.Response> {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     // must have partner/location key by now - they are validated above
@@ -337,7 +333,7 @@ class ShopClient(override val host: String,
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun submitOrder(order: CommercialOrder.Order,
                   context: ShopContext = ShopContext.defaultContext()): SubmitOrder.Response {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     // must have partner/location key by now - they are validated above
@@ -364,7 +360,7 @@ class ShopClient(override val host: String,
                   callback: SubmitOrderCallback,
                   err: ShopErrorCallback,
                   context: ShopContext = ShopContext.defaultContext()): ListenableFuture<SubmitOrder.Response> {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     // must have partner/location key by now - they are validated above
@@ -394,7 +390,7 @@ class ShopClient(override val host: String,
   @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun getOrder(id: String,
                context: ShopContext = ShopContext.defaultContext()): GetOrder.Response {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     // must have partner/location key by now - they are validated above
@@ -420,7 +416,7 @@ class ShopClient(override val host: String,
                callback: GetOrderCallback,
                err: ShopErrorCallback,
                context: ShopContext = ShopContext.defaultContext()): ListenableFuture<GetOrder.Response> {
-    val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
+    val rendered = context.serialize(defaultPartner, defaultLocation)
     validateShopContext(rendered)
 
     // must have partner/location key by now - they are validated above
