@@ -30,7 +30,7 @@ class TelemetryPingTest : ClientRPCTest() {
    * Test a PING call.
    */
   private fun testPing(client: TelemetryClient) {
-    client.Generic().ping()
+    client.ping()
   }
 
   @test

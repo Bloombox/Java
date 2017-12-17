@@ -31,13 +31,11 @@ import io.bloombox.schema.contact.PhoneNumber
 import io.bloombox.schema.geo.Address
 import io.bloombox.schema.person.Name
 import io.bloombox.schema.person.Person
-import io.bloombox.schema.services.shop.GetOrder
 import io.bloombox.schema.services.shop.SubmitOrder
 import io.bloombox.schema.temporal.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
-import kotlin.test.assertNull
 import kotlin.test.assertTrue
 import org.junit.Ignore as ignore
 import org.junit.Test as test
@@ -151,5 +149,19 @@ class ShopOrderTest: ClientRPCTest() {
     val response = client.platform.shop().getOrder("blablablanotfound")
     assertNotNull(response, "response from server for known-not-found order fetch should not be null")
     assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
+  }
+
+  @test
+  fun testFetchOrderNotFoundAsync() {
+    // fetch a known-good order ID
+    val operation = client.platform.shop().getOrder("blablablanotfound", { response ->
+      assertNotNull(response, "response from server for known-not-found order fetch should not be null")
+      assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
+    }, { err ->
+      logging.severe("Severe error fetching order: $err")
+    })
+
+    // make sure it executes, with a 10-second timeout
+    operation.get(10, TimeUnit.SECONDS)
   }
 }

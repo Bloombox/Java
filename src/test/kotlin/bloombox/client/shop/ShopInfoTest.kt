@@ -20,6 +20,7 @@ import bloombox.client.BloomboxClient
 import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
+import java.util.concurrent.TimeUnit
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
@@ -59,14 +60,29 @@ class ShopInfoTest: ClientRPCTest() {
   }
 
   /**
+   * Test fetching shop hours asynchronously.
+   */
+  @test
+  fun testShopHoursAsync() {
+    val operation = client.platform.shop().info({ response ->
+      assertNotNull(response, "response from server for hours should not be null")
+      assertNotNull(response.shopStatus, "response from server should specify shop status")
+    }, { err ->
+      logging.severe("Severe error fetching order: $err")
+    }, ShopClient.ShopContext(partner = partnerID, location = locationID))
+
+    // make sure it executes, with a 10-second timeout
+    operation.get(10, TimeUnit.SECONDS)
+  }
+
+  /**
    * Test fetching shop hours, but with an invalid partner.
    */
   @test(expected = ServiceClientException::class)
   fun testShopHoursInvalidPartner() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
-          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
-          false),
+          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM"),
           BloomboxClient.ClientTarget.PRODUCTION)
     try {
       prodClient.shop().info()
@@ -83,7 +99,6 @@ class ShopInfoTest: ClientRPCTest() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
           "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
-          false,
           partner = "mm"),
           BloomboxClient.ClientTarget.PRODUCTION)
     try {
@@ -115,15 +130,56 @@ class ShopInfoTest: ClientRPCTest() {
   }
 
   /**
+   * Test a known-good zipcode via zipcheck, asynchronously.
+   */
+  @test
+  fun testZipcheckKnownGoodAsync() {
+    val opOne = client.platform.shop().checkZipcode("95120", { response ->
+      assertNotNull(response, "response from server for zipcheck 1 should not be null")
+      assertTrue(response.supported, "response from server for zipcheck 1 should grant access")
+      assertEquals(response.deliveryMinimum, (50.0).toFloat(), "response should specify correct delivery minimum for zipcheck 1")
+    }, { err ->
+      logging.severe("Severe error fetching order: $err")
+    }, ShopClient.ShopContext(partner = partnerID, location = locationID))
+
+    val opTwo = client.platform.shop().checkZipcode("94404", { response ->
+      assertNotNull(response, "response from server for zipcheck 2 should not be null")
+      assertTrue(response.supported, "response from server for zipcheck 2 should grant access")
+      assertEquals(response.deliveryMinimum, (200.0).toFloat(), "response should specify correct delivery minimum for zipcheck 2")
+    }, { err ->
+      logging.severe("Severe error fetching order: $err")
+    }, ShopClient.ShopContext(partner = partnerID, location = locationID))
+
+    // make sure both ops execute, with a 5-second timeout each
+    opOne.get(5, TimeUnit.SECONDS)
+    opTwo.get(5, TimeUnit.SECONDS)
+  }
+
+  /**
    * Test a known-bad zipcode via zipcheck.
    */
   @test
   fun testZipcheckKnownBad() {
-    val responseOne = client.platform.shop().checkZipcode("12345", ShopClient.ShopContext(
-          partner = partnerID,
-          location = locationID))
+    val responseOne = client.platform.shop().checkZipcode("12345",
+          ShopClient.ShopContext(partner = partnerID, location = locationID))
 
     assertNotNull(responseOne, "response from server for bad zipcheck should not be null")
     assertTrue(!responseOne.supported, "response from server for bad zipcheck should withhold access")
+  }
+
+  /**
+   * Test a known-bad zipcode via zipcheck.
+   */
+  @test
+  fun testZipcheckKnownBadAsync() {
+    val operation = client.platform.shop().checkZipcode("12345", { response ->
+      assertNotNull(response, "response from server for bad zipcheck should not be null")
+      assertTrue(!response.supported, "response from server for bad zipcheck should withhold access")
+    }, { err ->
+      logging.severe("Severe error fetching order: $err")
+    }, ShopClient.ShopContext(partner = partnerID, location = locationID))
+
+    // make sure it executes, with a 10-second timeout
+    operation.get(10, TimeUnit.SECONDS)
   }
 }

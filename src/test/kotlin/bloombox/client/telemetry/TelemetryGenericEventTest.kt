@@ -46,7 +46,7 @@ class TelemetryGenericEventTest: ClientRPCTest() {
   @test
   fun testBasicEvent() {
     // we should be able to send a basic event
-    client.platform.telemetry().Generic().event(
+    client.platform.telemetry().event(
           "testsuite",
           occurred = System.currentTimeMillis(),
           payload = mapOf(

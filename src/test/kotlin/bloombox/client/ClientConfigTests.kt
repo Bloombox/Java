@@ -36,7 +36,7 @@ class ClientConfigTests : ClientRPCTest() {
   fun testDefaultGrpcPort() {
     assertEquals(
           expectedPort,
-          BloomboxClient.Endpoints.grpcPort,
+          Bloombox.Endpoints.grpcPort,
           "grpc port should be 465")
   }
 
@@ -44,12 +44,12 @@ class ClientConfigTests : ClientRPCTest() {
   fun testProductionSandboxEndpoints() {
     assertEquals(
           "api.bloombox.cloud",
-          BloomboxClient.Endpoints.production,
+          Bloombox.Endpoints.production,
           "production endpoint domain should be set to api.bloombox.cloud")
 
     assertTrue(
-          BloomboxClient.Endpoints.sandbox.contains("sandbox")
-                && BloomboxClient.Endpoints.sandbox.contains("bloombox.services"),
+          Bloombox.Endpoints.sandbox.contains("sandbox")
+                && Bloombox.Endpoints.sandbox.contains("bloombox.services"),
           "sandbox endpoint domain should contain sandbox and bloombox.services")
   }
 
