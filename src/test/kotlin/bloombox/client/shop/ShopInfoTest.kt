@@ -16,6 +16,8 @@
 
 package bloombox.client.shop
 
+import bloombox.client.BloomboxClient
+import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import kotlin.test.assertEquals
@@ -54,6 +56,41 @@ class ShopInfoTest: ClientRPCTest() {
 
     assertNotNull(response, "response from server for hours should not be null")
     assertNotNull(response.shopStatus, "response from server should specify shop status")
+  }
+
+  /**
+   * Test fetching shop hours, but with an invalid partner.
+   */
+  @test(expected = ServiceClientException::class)
+  fun testShopHoursInvalidPartner() {
+    // prep a client for prod
+    val prodClient = BloomboxClient(BloomboxClient.Settings(
+          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
+          false),
+          BloomboxClient.ClientTarget.PRODUCTION)
+    try {
+      prodClient.shop().info()
+    } finally {
+      prodClient.close()
+    }
+  }
+
+  /**
+   * Test fetching shop hours, but with an invalid location.
+   */
+  @test(expected = ServiceClientException::class)
+  fun testShopHoursInvalidLocation() {
+    // prep a client for prod
+    val prodClient = BloomboxClient(BloomboxClient.Settings(
+          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
+          false,
+          partner = "mm"),
+          BloomboxClient.ClientTarget.PRODUCTION)
+    try {
+      prodClient.shop().info()
+    } finally {
+      prodClient.close()
+    }
   }
 
   /**

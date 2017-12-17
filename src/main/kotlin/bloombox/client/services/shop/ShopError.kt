@@ -27,18 +27,28 @@ enum class ShopError : ClientError {
    * Specifies that the partner code was missing or invalid.
    */
   PARTNER_INVALID {
-    override fun domain(): String = shopDomain
-    override fun code(): Int = 0
-    override fun message(): String = "Must provide a partner code."
+    override fun domain(cause: Throwable?): String = shopDomain
+    override fun code(cause: Throwable?): Int = 0
+    override fun message(cause: Throwable?): String = "Must provide a valid partner code."
   },
 
   /**
    * Specifies that the location code was missing or invalid.
    */
   LOCATION_INVALID {
-    override fun domain(): String = shopDomain
-    override fun code(): Int = 1
-    override fun message(): String = "Must provide a location code."
+    override fun domain(cause: Throwable?): String = shopDomain
+    override fun code(cause: Throwable?): Int = 1
+    override fun message(cause: Throwable?): String = "Must provide a valid location code."
+  },
+
+  /**
+   * An error was encountered in the underlying framework.
+   */
+  RUNTIME_ERROR {
+    override fun domain(cause: Throwable?): String = shopDomain
+    override fun code(cause: Throwable?): Int = 2
+    override fun message(cause: Throwable?): String =
+          cause?.localizedMessage ?: cause?.message ?: "Runtime error."
   };
 
   companion object {

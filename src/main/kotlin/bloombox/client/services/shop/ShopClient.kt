@@ -36,11 +36,11 @@ import java.util.logging.Logger
 
 
 // Method Callbacks
-typealias InfoCallback = (ListenableFuture<ShopInfo.Response>) -> Void
-typealias ZipcheckCallback = (ListenableFuture<CheckZipcode.Response>) -> Void
-typealias GetOrderCallback = (ListenableFuture<GetOrder.Response>) -> Void
-typealias SubmitOrderCallback = (ListenableFuture<SubmitOrder.Response>) -> Void
-typealias VerifyMemberCallback = (ListenableFuture<VerifyMember.Response>) -> Void
+typealias InfoCallback = (ShopInfo.Response?, ServiceClientException?) -> Unit
+typealias ZipcheckCallback = (CheckZipcode.Response?, ServiceClientException?) -> Unit
+typealias GetOrderCallback = (GetOrder.Response?, ServiceClientException?) -> Unit
+typealias SubmitOrderCallback = (SubmitOrder.Response?, ServiceClientException?) -> Unit
+typealias VerifyMemberCallback = (VerifyMember.Response?, ServiceClientException?) -> Unit
 
 
 /**
@@ -159,6 +159,22 @@ class ShopClient(override val host: String,
    */
   private val future: ShopGrpc.ShopFutureStub = ShopGrpc.newFutureStub(channel)
 
+  /**
+   * Execute an operation, and dispatch a user callback accordingly, handling underlying
+   * errors according to `ShopClientException`.
+   */
+  private fun <T> executeAndDispatchCallback(op: ListenableFuture<T>,
+                                             callback: (T?, ServiceClientException?) -> Unit) {
+    try {
+      val response = op.get(timeout.toMillis(), TimeUnit.MILLISECONDS)
+      callback(response, null)
+    } catch (e: ServiceClientException) {
+      callback(null, e)
+    } catch (e: StatusRuntimeException) {
+      callback(null, ServiceClientException(ShopError.RUNTIME_ERROR, e))
+    }
+  }
+
   // -- API: Shop Hours -- //
   /**
    * Fetch hours info for the active partner/location pair.
@@ -202,7 +218,7 @@ class ShopClient(override val host: String,
     val op = this.future.shopInfo(request)
     op.addListener(Runnable {
       // dispatch user callback
-      callback(op)
+      executeAndDispatchCallback(op, callback)
     }, executor)
     return op
   }
@@ -254,7 +270,7 @@ class ShopClient(override val host: String,
     val op = this.future.checkZipcode(request)
     op.addListener(Runnable {
       // handle user callback
-      callback(op)
+      executeAndDispatchCallback(op, callback)
     }, executor)
     return op
   }
@@ -309,8 +325,8 @@ class ShopClient(override val host: String,
 
     val op = this.future.verifyMember(request)
     op.addListener(Runnable {
-        // dispatch user callback
-        callback(op)
+      // dispatch user callback
+      executeAndDispatchCallback(op, callback)
     }, executor)
     return op
   }
@@ -366,7 +382,7 @@ class ShopClient(override val host: String,
     val op = this.future.submitOrder(request)
     op.addListener(Runnable {
       // dispatch user callback
-      callback(op)
+      executeAndDispatchCallback(op, callback)
     }, executor)
     return op
   }
@@ -419,7 +435,7 @@ class ShopClient(override val host: String,
 
     val op = this.future.getOrder(request)
     op.addListener(Runnable {
-      callback(op)
+      executeAndDispatchCallback(op, callback)
     }, executor)
     return op
   }

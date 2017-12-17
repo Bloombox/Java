@@ -24,12 +24,14 @@ import bloombox.client.interfaces.ClientError
  */
 class ServiceClientException(
       err: ClientError,
-      cause: Throwable? = null) : Exception(formatErr(err), cause) {
+      cause: Throwable? = null) : Exception(formatErr(err, cause), cause) {
   companion object {
     /**
      * Format a ClientError.
      */
-    private fun formatErr(err: ClientError): String =
-          "Error '${err.domain()}::${err.code()}': ${err.message()}"
+    private fun formatErr(err: ClientError,
+                          cause: Throwable?): String =
+          "Error '${err.domain(cause)}::${err.code(cause)}': " +
+                err.message(cause)
   }
 }

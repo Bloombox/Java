@@ -25,15 +25,15 @@ interface ClientError {
   /**
    * The "domain" of the error is usually the name of the service.
    */
-  fun domain(): String
+  fun domain(cause: Throwable?): String
 
   /**
    * Integer error code. Usually derived from an enum's value.
    */
-  fun code(): Int
+  fun code(cause: Throwable?): Int
 
   /**
    * Error message to return or display.
    */
-  fun message(): String
+  fun message(cause: Throwable?): String
 }
