@@ -35,6 +35,14 @@ import java.util.concurrent.TimeUnit
 import java.util.logging.Logger
 
 
+// Method Callbacks
+typealias InfoCallback = (ListenableFuture<ShopInfo.Response>) -> Void
+typealias ZipcheckCallback = (ListenableFuture<CheckZipcode.Response>) -> Void
+typealias GetOrderCallback = (ListenableFuture<GetOrder.Response>) -> Void
+typealias SubmitOrderCallback = (ListenableFuture<SubmitOrder.Response>) -> Void
+typealias VerifyMemberCallback = (ListenableFuture<VerifyMember.Response>) -> Void
+
+
 /**
  * Shop RPC client.
  */
@@ -155,8 +163,8 @@ class ShopClient(override val host: String,
   /**
    * Fetch hours info for the active partner/location pair.
    */
-  @Throws(ServiceClientException::class)
-  fun shopInfo(context: ShopContext = ShopContext.defaultContext()): ShopInfo.Response {
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  fun info(context: ShopContext = ShopContext.defaultContext()): ShopInfo.Response {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
 
@@ -169,20 +177,16 @@ class ShopClient(override val host: String,
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()
 
-    try {
-      return this.future.shopInfo(request)
-            .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-    } catch (e: StatusRuntimeException) {
-      logging.severe("StatusRuntimeException: '${e.message}'")
-      throw e
-    }
+    return this.future.shopInfo(request)
+          .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
   }
 
   /**
    * Fetch hours, asynchronously, for the active partner/location pair.
    */
-  fun shopInfo(callback: Runnable? = null,
-               context: ShopContext = ShopContext.defaultContext()): ListenableFuture<ShopInfo.Response> {
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  fun info(callback: InfoCallback,
+           context: ShopContext = ShopContext.defaultContext()): ListenableFuture<ShopInfo.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
 
@@ -196,7 +200,10 @@ class ShopClient(override val host: String,
                       .setCode(partnerKey))).build()
 
     val op = this.future.shopInfo(request)
-    if (callback != null) op.addListener(callback, executor)
+    op.addListener(Runnable {
+      // dispatch user callback
+      callback(op)
+    }, executor)
     return op
   }
 
@@ -204,9 +211,9 @@ class ShopClient(override val host: String,
   /**
    * Fetch delivery support status and minimum order value for a given US zipcode.
    */
-  @Throws(ServiceClientException::class)
-  fun zipCheck(zipcode: String,
-               context: ShopContext = ShopContext.defaultContext()): CheckZipcode.Response {
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  fun checkZipcode(zipcode: String,
+                   context: ShopContext = ShopContext.defaultContext()): CheckZipcode.Response {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
 
@@ -220,21 +227,17 @@ class ShopClient(override val host: String,
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()
 
-    try {
-      return this.future.checkZipcode(request)
-            .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-    } catch (e: StatusRuntimeException) {
-      logging.severe("StatusRuntimeException: '${e.message}'")
-      throw e
-    }
+    return this.future.checkZipcode(request)
+          .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
   }
 
   /**
    * Fetch delivery support status and minimum order value, asynchronously, for a given US zipcode.
    */
-  fun zipCheck(zipcode: String,
-               callback: Runnable? = null,
-               context: ShopContext = ShopContext.defaultContext()): ListenableFuture<CheckZipcode.Response> {
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  fun checkZipcode(zipcode: String,
+                   callback: ZipcheckCallback,
+                   context: ShopContext = ShopContext.defaultContext()): ListenableFuture<CheckZipcode.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
 
@@ -249,7 +252,10 @@ class ShopClient(override val host: String,
                       .setCode(partnerKey))).build()
 
     val op = this.future.checkZipcode(request)
-    if (callback != null) op.addListener(callback, executor)
+    op.addListener(Runnable {
+      // handle user callback
+      callback(op)
+    }, executor)
     return op
   }
 
@@ -257,7 +263,7 @@ class ShopClient(override val host: String,
   /**
    * Verify a member.
    */
-  @Throws(ServiceClientException::class)
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun verifyMember(email: String,
                    context: ShopContext = ShopContext.defaultContext()): VerifyMember.Response {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
@@ -275,21 +281,16 @@ class ShopClient(override val host: String,
                       .setCode(partnerKey)))
           .build()
 
-    try {
-      return this.future.verifyMember(request)
-            .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-
-    } catch (e: StatusRuntimeException) {
-      logging.severe("StatusRuntimeException: '${e.message}'")
-      throw e
-    }
+    return this.future.verifyMember(request)
+          .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
   }
 
   /**
    * Verify a member asynchronously.
    */
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun verifyMember(email: String,
-                   callback: Runnable? = null,
+                   callback: VerifyMemberCallback,
                    context: ShopContext = ShopContext.defaultContext()): ListenableFuture<VerifyMember.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
@@ -307,7 +308,10 @@ class ShopClient(override val host: String,
           .build()
 
     val op = this.future.verifyMember(request)
-    if (callback != null) op.addListener(callback, executor)
+    op.addListener(Runnable {
+        // dispatch user callback
+        callback(op)
+    }, executor)
     return op
   }
 
@@ -315,7 +319,7 @@ class ShopClient(override val host: String,
   /**
    * Submit an order to the shop service.
    */
-  @Throws(ServiceClientException::class)
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun submitOrder(order: CommercialOrder.Order,
                   context: ShopContext = ShopContext.defaultContext()): SubmitOrder.Response {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
@@ -333,21 +337,16 @@ class ShopClient(override val host: String,
                       .setCode(partnerKey)))
           .build()
 
-    try {
-      return this.future.submitOrder(request)
-            .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-
-    } catch (e: StatusRuntimeException) {
-      logging.severe("StatusRuntimeException: '${e.message}'")
-      throw e
-    }
+    return this.future.submitOrder(request)
+          .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
   }
 
   /**
    * Submit an order, asynchronously, to the shop service.
    */
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun submitOrder(order: CommercialOrder.Order,
-                  callback: Runnable? = null,
+                  callback: SubmitOrderCallback,
                   context: ShopContext = ShopContext.defaultContext()): ListenableFuture<SubmitOrder.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
@@ -365,7 +364,10 @@ class ShopClient(override val host: String,
           .build()
 
     val op = this.future.submitOrder(request)
-    if (callback != null) op.addListener(callback, executor)
+    op.addListener(Runnable {
+      // dispatch user callback
+      callback(op)
+    }, executor)
     return op
   }
 
@@ -373,7 +375,7 @@ class ShopClient(override val host: String,
   /**
    * Fetch an order along with its status.
    */
-  @Throws(ServiceClientException::class)
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun getOrder(id: String,
                context: ShopContext = ShopContext.defaultContext()): GetOrder.Response {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
@@ -390,21 +392,16 @@ class ShopClient(override val host: String,
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()
 
-    try {
-      return this.future.getOrder(request)
-            .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-
-    } catch (e: StatusRuntimeException) {
-      logging.severe("StatusRuntimeException: '${e.message}'")
-      throw e
-    }
+    return this.future.getOrder(request)
+          .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
   }
 
   /**
    * Fetch an order, asynchronously, along with its status.
    */
+  @Throws(ServiceClientException::class, StatusRuntimeException::class)
   fun getOrder(id: String,
-               callback: Runnable? = null,
+               callback: GetOrderCallback,
                context: ShopContext = ShopContext.defaultContext()): ListenableFuture<GetOrder.Response> {
     val rendered = context.serialize(defaultPartner, defaultLocation, deviceUUID)
     validateShopContext(rendered)
@@ -421,7 +418,9 @@ class ShopClient(override val host: String,
                       .setCode(partnerKey))).build()
 
     val op = this.future.getOrder(request)
-    if (callback != null) op.addListener(callback, executor)
+    op.addListener(Runnable {
+      callback(op)
+    }, executor)
     return op
   }
 }
