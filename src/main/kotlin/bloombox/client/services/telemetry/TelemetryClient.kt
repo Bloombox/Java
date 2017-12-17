@@ -41,7 +41,10 @@ import java.util.*
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
-import java.util.logging.Logger
+
+
+// Method Callbacks
+typealias PingCallback = (Long?) -> Unit
 
 
 /**
@@ -146,12 +149,8 @@ class TelemetryClient(override val host: String,
      */
     override fun <ReqT : Any?, RespT : Any?> interceptCall(method: MethodDescriptor<ReqT, RespT>?,
                                                            callOptions: CallOptions?,
-                                                           next: Channel?): ClientCall<ReqT, RespT>? {
-      if (next == null)
-        return null
-
+                                                           next: Channel): ClientCall<ReqT, RespT>? {
       var call: ClientCall<ReqT, RespT> = next.newCall(method, callOptions)
-
       call = object : ForwardingClientCall.SimpleForwardingClientCall<ReqT, RespT>(call) {
         override fun start(responseListener: Listener<RespT>, headers: Metadata) {
           if (apikey != null && apikey.length > 2) {
@@ -192,11 +191,6 @@ class TelemetryClient(override val host: String,
     private const val authorityRoots = "/authority-roots.pem"
 
     /**
-     * Logging tools.
-     */
-    private val logging = Logger.getLogger("TelemetryClient")
-
-    /**
      * Internal collection prefix.
      */
     private const val internalPrefix = "_bloom_"
@@ -209,24 +203,19 @@ class TelemetryClient(override val host: String,
 
   // -- Protocol Stubs -- //
   /**
-   * Protocol stub.
+   * Event telemetry service stub.
    */
-  private inner class Client {
-    /**
-     * Event telemetry service stub.
-     */
-    private val event = EventTelemetryGrpc.newStub(channel)
+  private val event = EventTelemetryGrpc.newStub(channel)
 
-    /**
-     * Commercial telemetry service stub.
-     */
-    private val commercial = CommercialTelemetryGrpc.newStub(channel)
+  /**
+   * Commercial telemetry service stub.
+   */
+  private val commercial = CommercialTelemetryGrpc.newStub(channel)
 
-    /**
-     * Identity telemetry service stub.
-     */
-    private val identity = IdentityTelemetryGrpc.newStub(channel)
-  }
+  /**
+   * Identity telemetry service stub.
+   */
+  private val identity = IdentityTelemetryGrpc.newStub(channel)
 
   /**
    * Serialize individual event context into a final analytics context, considering default values passed in when
@@ -290,159 +279,135 @@ class TelemetryClient(override val host: String,
 
   // -- Service: Generic Telemetry -- //
   /**
-   * Generic event methods.
+   * Event telemetry service stub.
    */
-  inner class Generic {
-    /**
-     * Event telemetry service stub.
-     */
-    private val event = EventTelemetryGrpc.newFutureStub(channel)
+  private val eventService = EventTelemetryGrpc.newFutureStub(channel)
 
-    /**
-     * Base context to use.
-     */
-    private val _baseContext: AnalyticsContext.Context = AnalyticsContext.Context.newBuilder()
-          .setLibrary(LibraryContext.DeviceLibrary.newBuilder()
-                .setClient(LibraryContext.APIClient.JAVA)
-                .setVariant(BloomboxClient.VARIANT)
-                .setVersion(VersionSpec.newBuilder().setName(BloomboxClient.VERSION)))
-          .setNative(DeviceContext.NativeDeviceContext.newBuilder()
-                .setRole(DeviceContext.DeviceRole.SERVER)
-                .setOs(OperatingSystemContext.DeviceOS.newBuilder()
-                      .setType(OperatingSystemContext.OSType.LINUX)))
-          .build()
+  /**
+   * Base context to use.
+   */
+  private val _baseContext: AnalyticsContext.Context = AnalyticsContext.Context.newBuilder()
+        .setLibrary(LibraryContext.DeviceLibrary.newBuilder()
+              .setClient(LibraryContext.APIClient.JAVA)
+              .setVariant(BloomboxClient.VARIANT)
+              .setVersion(VersionSpec.newBuilder().setName(BloomboxClient.VERSION)))
+        .setNative(DeviceContext.NativeDeviceContext.newBuilder()
+              .setRole(DeviceContext.DeviceRole.SERVER)
+              .setOs(OperatingSystemContext.DeviceOS.newBuilder()
+                    .setType(OperatingSystemContext.OSType.LINUX)))
+        .build()
 
-    /**
-     * Resolve event context, according to global settings, and also explicit
-     * context passed into whatever higher-order method is calling this.
-     */
-    private fun resolveContext(collection: String,
-                               context: EventContext? = null): AnalyticsContext.Context.Builder {
-      val merged: AnalyticsContext.Context.Builder = if (context != null) {
-        context.serialize(defaultPartner, defaultLocation, deviceUUID)
-              .mergeFrom(_baseContext)
-      } else {
-        _baseContext.toBuilder()
-      }
-
-      // add event collection
-      if (!merged.hasCollection())
-        merged.setCollection(AnalyticsCollection.Collection.newBuilder()
-              .setInternal(collection.startsWith(internalPrefix))
-              .setType(AnalyticsCollection.EventType.GENERIC)
-              .setName(collection))
-
-      if (merged.fingerprint == null || merged.fingerprint.isEmpty() || merged.fingerprint.isBlank())
-        merged.fingerprint = fingerprint
-      if (merged.group == null || merged.group.isEmpty() || merged.group.isBlank())
-        merged.group = fingerprint
-      return merged
+  /**
+   * Resolve event context, according to global settings, and also explicit
+   * context passed into whatever higher-order method is calling this.
+   */
+  private fun resolveContext(collection: String,
+                             context: EventContext? = null): AnalyticsContext.Context.Builder {
+    val merged: AnalyticsContext.Context.Builder = if (context != null) {
+      context.serialize(defaultPartner, defaultLocation, deviceUUID)
+            .mergeFrom(_baseContext)
+    } else {
+      _baseContext.toBuilder()
     }
 
-    // -- API: Ping -- //
-    /**
-     * Ping the service.
-     */
-    fun ping() {
-      // take a starting timestamp
-      val start = System.currentTimeMillis()
-      logging.info { "PING @ $start" }
+    // add event collection
+    if (!merged.hasCollection())
+      merged.setCollection(AnalyticsCollection.Collection.newBuilder()
+            .setInternal(collection.startsWith(internalPrefix))
+            .setType(AnalyticsCollection.EventType.GENERIC)
+            .setName(collection))
 
+    if (merged.fingerprint == null || merged.fingerprint.isEmpty() || merged.fingerprint.isBlank())
+      merged.fingerprint = fingerprint
+    if (merged.group == null || merged.group.isEmpty() || merged.group.isBlank())
+      merged.group = fingerprint
+    return merged
+  }
+
+  // -- API: Ping -- //
+  /**
+   * Ping the service.
+   */
+  fun ping(callback: PingCallback? = null) {
+    // take a starting timestamp
+    val start: Long? = if (callback != null) {
+      System.currentTimeMillis()
+    } else {
+      null
+    }
+
+    try {
       // send the event
-      event.ping(TelemetryPing.Request.getDefaultInstance())
+      eventService.ping(TelemetryPing.Request.getDefaultInstance())
             .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
 
       // note when the pong came back
-      val done = System.currentTimeMillis()
-      logging.info { "PONG @ $done: ${done - start}ms" }
-    }
+      if (callback != null) {
+        val done = System.currentTimeMillis()
+        callback(done - start!!)
+      }
+    } catch (e: StatusRuntimeException) {
 
-    // -- API: Events -- //
-    /**
-     * Record a generic event.
-     */
-    fun event(collection: String,
-              uuid: String? = null,
-              occurred: Long? = null,
-              payload: Map<String, Value>? = null,
-              context: EventContext? = null) {
-      val merged = resolveContext(collection, context)
-
-      val eventUUID = uuid?.toUpperCase() ?: UUID.randomUUID().toString().toUpperCase()
-
-      val instant = Instant.newBuilder().setTimestamp(
-            occurred ?: System.currentTimeMillis())
-
-      val ev = AnalyticsEvent.Event.newBuilder()
-            .setOccurred(instant)
-            .setPayload(Struct.newBuilder().putAllFields(payload))
-            .build()
-
-      val req = Event.Request.newBuilder()
-            .setUuid(eventUUID)
-            .setEvent(ev)
-            .setContext(merged)
-            .build()
-
-      event.event(req).get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-    }
-
-    // -- API: Errors -- //
-    /**
-     * Record a generic error report.
-     */
-    fun exception(collection: String,
-                  uuid: String? = null,
-                  domain: String = "global",
-                  code: Int = -1,
-                  occurred: Long? = null,
-                  context: EventContext? = null) {
-      val merged = resolveContext(collection, context)
-      val errorUUID = uuid?.toUpperCase() ?: UUID.randomUUID().toString().toUpperCase()
-
-      val instant = Instant.newBuilder().setTimestamp(
-            occurred ?: System.currentTimeMillis())
-
-      val ev = Exception.newBuilder()
-            .setUuid(errorUUID)
-            .setError(AnalyticsException.Exception.newBuilder()
-                  .setOccurred(instant)
-                  .setCode(code)
-                  .setDomain(domain))
-            .setContext(merged)
-            .build()
-
-      event.error(ev).get(timeout.toMillis(), TimeUnit.MILLISECONDS)
     }
   }
 
-  // -- Service: Commercial Telemetry -- //
+  // -- API: Events -- //
   /**
-   * Commercial telemetry methods.
+   * Record a generic event.
    */
-  inner class Commercial {
-    // -- API: Impressions -- //
-    /**
-     * Record a commercial impression event.
-     */
-    fun impression() {
-      TODO("Commercial analytics is not yet implemented.")
-    }
+  fun event(collection: String,
+            uuid: String? = null,
+            occurred: Long? = null,
+            payload: Map<String, Value>? = null,
+            context: EventContext? = null) {
+    val merged = resolveContext(collection, context)
 
-    // -- API: Views -- //
-    /**
-     * Record a commercial view event.
-     */
-    fun view() {
-      TODO("Commercial analytics is not yet implemented.")
-    }
+    val eventUUID = uuid?.toUpperCase() ?: UUID.randomUUID().toString().toUpperCase()
 
-    // -- API: Actions -- //
-    /**
-     * Record a commercial action event.
-     */
-    fun action() {
-      TODO("Commercial analytics is not yet implemented.")
-    }
+    val instant = Instant.newBuilder().setTimestamp(
+          occurred ?: System.currentTimeMillis())
+
+    val ev = AnalyticsEvent.Event.newBuilder()
+          .setOccurred(instant)
+          .setPayload(Struct.newBuilder().putAllFields(payload))
+          .build()
+
+    val req = Event.Request.newBuilder()
+          .setUuid(eventUUID)
+          .setEvent(ev)
+          .setContext(merged)
+          .build()
+
+    eventService.event(req)
+          .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
+  }
+
+  // -- API: Errors -- //
+  /**
+   * Record a generic error report.
+   */
+  fun exception(collection: String,
+                uuid: String? = null,
+                domain: String = "global",
+                code: Int = -1,
+                occurred: Long? = null,
+                context: EventContext? = null) {
+    val merged = resolveContext(collection, context)
+    val errorUUID = uuid?.toUpperCase() ?: UUID.randomUUID().toString().toUpperCase()
+
+    val instant = Instant.newBuilder().setTimestamp(
+          occurred ?: System.currentTimeMillis())
+
+    val ev = Exception.newBuilder()
+          .setUuid(errorUUID)
+          .setError(AnalyticsException.Exception.newBuilder()
+                .setOccurred(instant)
+                .setCode(code)
+                .setDomain(domain))
+          .setContext(merged)
+          .build()
+
+    eventService.error(ev)
+          .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
   }
 }
