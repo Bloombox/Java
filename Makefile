@@ -43,9 +43,17 @@ clean:
 	@echo "Cleaning Java client artifacts..."
 	@rm -fr $(TARGET)
 
+ifeq ($(EMBEDDED_SCHEMA),yes)
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox..."
 	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
+else:
+$(TARGET_JAR):
+	@echo "Cleaning embedded schema..."
+	@rm -frv src/main/java/io
+	@echo "Building Java client for Bloombox..."
+	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
+endif
 
 release:
 	@echo "Building release for Bloombox Java Client 'v$(RELEASE_VERSION)'..."
