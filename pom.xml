@@ -435,7 +435,7 @@
 
                     <jdkVersion>8</jdkVersion>
                     <sourceDirectories>
-                        <sourceDirectory>src/main/kotlin</sourceDirectory>
+                        <sourceDirectory>base/client/src/main/kotlin</sourceDirectory>
                     </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
                     <perPackageOptions>
