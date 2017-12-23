@@ -31,7 +31,7 @@ import io.bloombox.schema.contact.PhoneNumber
 import io.bloombox.schema.geo.Address
 import io.bloombox.schema.person.Name
 import io.bloombox.schema.person.Person
-import io.bloombox.schema.services.shop.SubmitOrder
+import io.bloombox.schema.services.shop.v1.SubmitOrder
 import io.bloombox.schema.temporal.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.test.assertEquals

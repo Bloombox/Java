@@ -23,7 +23,7 @@ import com.google.common.util.concurrent.ListenableFuture
 import io.bloombox.schema.commerce.CommercialOrder
 import io.bloombox.schema.partner.PartnerKey
 import io.bloombox.schema.partner.PartnerLocationKey
-import io.bloombox.schema.services.shop.*
+import io.bloombox.schema.services.shop.v1.*
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.NegotiationType

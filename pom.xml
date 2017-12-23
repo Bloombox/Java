@@ -78,10 +78,10 @@
         <bloombox.telemetry.endpoint>telemetry.api.bloombox.cloud</bloombox.telemetry.endpoint>
 
         <!-- Dependencies -->
-        <grpc.version>1.7.0</grpc.version>
-        <protobuf.version>3.4.0</protobuf.version>
+        <grpc.version>1.8.0</grpc.version>
+        <protobuf.version>3.5.1</protobuf.version>
         <netty.boringssl.version>2.0.7.Final</netty.boringssl.version>
-        <kotlin.version>1.2.0</kotlin.version>
+        <kotlin.version>1.2.10</kotlin.version>
 
         <!-- Testing -->
         <junit.version>4.12</junit.version>
@@ -142,6 +142,13 @@
     </profiles>
 
     <dependencies>
+        <!-- Schema -->
+        <dependency>
+            <groupId>io.bloombox.labs.platform</groupId>
+            <artifactId>schema</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- Protobuf -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
@@ -269,7 +276,6 @@
                         <configuration>
                             <sourceDirs>
                                 <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
-                                <sourceDir>${project.basedir}/src/main/java</sourceDir>
                             </sourceDirs>
                         </configuration>
                     </execution>
