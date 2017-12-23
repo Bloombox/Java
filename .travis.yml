@@ -14,6 +14,7 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+install:
   - mvn -f pom-public.xml install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip -B -V
 script:
   - mvn -f pom-public.xml test jacoco:report -B
@@ -22,3 +23,4 @@ after_script:
   - cp -frv ./src/main/kotlin/* ./
   - cp -frv ./src/main/java/* ./
   - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco --prefix /home/travis/build/Bloombox/Java/src/main/java
+
