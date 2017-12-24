@@ -4,7 +4,7 @@
 
     <groupId>io.bloombox</groupId>
     <artifactId>java-client</artifactId>
-    <name>Bloombox: Java Client</name>
+    <name>Base: Client</name>
     <version>1.0-SNAPSHOT</version>
     <url>https://bloombox.github.io/Java</url>
     <description>Java RPCAPI client for the Bloombox Cloud.</description>
