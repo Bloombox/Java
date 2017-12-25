@@ -17,7 +17,7 @@
 ## Bloombox: Java API Client
 #
 
-RELEASE_VERSION ?= 1.0-beta5
+RELEASE_VERSION ?= 1.0-beta6
 CLIENT_VERSION ?= 1.0-SNAPSHOT
 TARGET ?= target/
 TARGET_JAR ?= $(TARGET)java-client-$(CLIENT_VERSION).jar
