@@ -47,7 +47,7 @@ ifeq ($(EMBEDDED_SCHEMA),yes)
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox..."
 	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
-else:
+else
 $(TARGET_JAR):
 	@echo "Cleaning embedded schema..."
 	@rm -frv src/main/java/io
