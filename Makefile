@@ -57,7 +57,7 @@ endif
 
 release:
 	@echo "Building release for Bloombox Java Client 'v$(RELEASE_VERSION)'..."
-	@mvn -f $(POMFILE) clean package install site $(RELEASE_GOALS) -Dproject.version=$(RELEASE_VERSION) -Dbloombox.release $(SERVICE_ARGS) $(RELEASE_ARGS)
+	@mvn -f $(POMFILE) clean package install site:site $(RELEASE_GOALS) -Dproject.version=$(RELEASE_VERSION) -Dbloombox.release $(SERVICE_ARGS) $(RELEASE_ARGS)
 	@cd target/site && git init && git add . && git commit -m "Update docs" && git checkout -b gh-pages && git remote add origin git@github.com:bloombox/java.git && git push origin gh-pages --force && rm -fr .git
 	@echo "Docs published."
 
