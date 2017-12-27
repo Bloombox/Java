@@ -345,6 +345,9 @@ public final class OperatingSystemContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1025,7 +1028,7 @@ public final class OperatingSystemContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DeviceOS(input, extensionRegistry);
+        return new DeviceOS(input, extensionRegistry);
       }
     };
 
@@ -1067,7 +1070,7 @@ public final class OperatingSystemContext {
       "cB+\212@(Version of the OS running on the d" +
       "evice.*\217\001\n\006OSType\022\016\n\nOS_UNKNOWN\020\000\022\007\n\003iOS" +
       "\020d\022\t\n\005macOS\020e\022\010\n\004tvOS\020f\022\013\n\007watchOS\020g\022\014\n\007" +
-      "ANDROID\020\310\001\022\021\n\014ANDROID_WEAR\020\311\001\022\013\n\007WINDOWS",
+      "ANDROID\020\310\001\022\021\n\014ANDROID_WEAR\020\311\001\022\013\n\007WINDOWS" +
       "\020\004\022\021\n\rWINDOWS_PHONE\020\005\022\t\n\005LINUX\020\006BE\n$io.b" +
       "loombox.schema.telemetry.contextB\026Operat" +
       "ingSystemContextH\001P\000\370\001\001b\006proto3"

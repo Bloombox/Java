@@ -372,6 +372,9 @@ public final class ProductAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1320,7 +1323,7 @@ public final class ProductAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Impression(input, extensionRegistry);
+        return new Impression(input, extensionRegistry);
       }
     };
 
@@ -1432,6 +1435,9 @@ public final class ProductAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2305,7 +2311,7 @@ public final class ProductAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new View(input, extensionRegistry);
+        return new View(input, extensionRegistry);
       }
     };
 
@@ -2425,6 +2431,9 @@ public final class ProductAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3334,7 +3343,7 @@ public final class ProductAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Action(input, extensionRegistry);
+        return new Action(input, extensionRegistry);
       }
     };
 
@@ -3386,7 +3395,7 @@ public final class ProductAnalytics {
       "\030\001 \001(\0132\020.base.ProductKey\022\023\n\013interactive\030" +
       "\002 \001(\010\022#\n\010occurred\030\003 \001(\0132\021.temporal.Insta" +
       "nt\"|\n\006Action\022\035\n\003key\030\001 \001(\0132\020.base.Product" +
-      "Key\022.\n\004verb\030\002 \001(\0162 .analytics.product.Pr",
+      "Key\022.\n\004verb\030\002 \001(\0162 .analytics.product.Pr" +
       "oductAction\022#\n\010occurred\030\003 \001(\0132\021.temporal" +
       ".Instant*\212\001\n\rProductAction\022\010\n\004VIEW\020\000\022\t\n\005" +
       "SHARE\020\001\022\014\n\010FAVORITE\020\002\022\013\n\007COMPARE\020\003\022\010\n\004CA" +

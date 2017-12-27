@@ -42,7 +42,7 @@ public final class PartnerLocationOuterClass {
       " that owns this location.\022d\n\004code\030\002 \001(\tB" +
       "V\212@SShort string that uniquely identifie" +
       "s this location, under a given partner a" +
-      "ccount.\"\326\006\n\017PartnerLocation\022g\n\004code\030\001 \001(",
+      "ccount.\"\326\006\n\017PartnerLocation\022g\n\004code\030\001 \001(" +
       "\tBY\212@VShort, unique string that identifi" +
       "es this location, scoped to the parent o" +
       "rganization.\022&\n\007partner\030\002 \001(\0132\020.partner." +
@@ -52,7 +52,7 @@ public final class PartnerLocationOuterClass {
       "location in the administrative dashboard" +
       ". If this is not specified, `name` is sh" +
       "own.\022h\n\005flags\030\005 \001(\0132\025.partner.PartnerFla" +
-      "gsBB\212@?Flags that specify conditions app",
+      "gsBB\212@?Flags that specify conditions app" +
       "lied to this partner location.\022P\n\007contac" +
       "t\030\007 \001(\0132\024.contact.ContactInfoB)\212@&Contac" +
       "t information for this location.\022\206\001\n\010bra" +
@@ -62,7 +62,7 @@ public final class PartnerLocationOuterClass {
       "pecified.\022R\n\007created\030\010 \001(\0132\021.temporal.In" +
       "stantB.\212@+Timestamp for when this record" +
       " was created.\022Y\n\010modified\030\t \001(\0132\021.tempor" +
-      "al.InstantB4\212@1Timestamp for when this r",
+      "al.InstantB4\212@1Timestamp for when this r" +
       "ecord was last modified.B \n\032io.bloombox." +
       "schema.partnerH\001P\001b\006proto3"
     };

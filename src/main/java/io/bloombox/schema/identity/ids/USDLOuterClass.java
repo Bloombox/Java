@@ -42,7 +42,7 @@ public final class USDLOuterClass {
       "\014B\003\200@\001H\000B\006\n\004data\"\304\001\n\004USDL\022\024\n\007barcode\030\001 \001" +
       "(\014B\003\200@\001\022S\n\014jurisdiction\030\005 \001(\0162\020.geo.usa." +
       "USStateB+\212@(State that issued this Drive" +
-      "r\'s License.\022Q\n\006fields\030d \003(\0132\034.identity.",
+      "r\'s License.\022Q\n\006fields\030d \003(\0132\034.identity." +
       "ids.USDLFieldValueB#\212@ Raw field data fo" +
       "r this license.*\270\005\n\tUSDLField\022\020\n\014BACK_BA" +
       "RCODE\020\000\022\017\n\013FAMILY_NAME\020\001\022\016\n\nGIVEN_NAME\020\002" +
@@ -52,7 +52,7 @@ public final class USDLOuterClass {
       "\n\tEYE_COLOR\020\016\022\016\n\nHAIR_COLOR\020\017\022\020\n\014FULL_AD" +
       "DRESS\020\024\022\020\n\014ADDRESS_LINE\020\025\022\021\n\rADDRESS_LIN" +
       "E2\020\026\022\020\n\014ADDRESS_CITY\020\027\022\017\n\013POSTAL_CODE\020\030\022" +
-      "\026\n\022STATE_JURISDICTION\020\031\022\016\n\nLICENSE_ID\020\036\022",
+      "\026\n\022STATE_JURISDICTION\020\031\022\016\n\nLICENSE_ID\020\036\022" +
       "\026\n\022LICENSE_ISSUE_DATE\020\037\022\027\n\023LICENSE_EXPIR" +
       "Y_DATE\020 \022\027\n\023ISSUER_JURISDICTION\020!\022&\n\"ISS" +
       "UER_JURISDICTION_FORMAT_VERSION\020\"\022\030\n\024UNI" +
@@ -62,7 +62,7 @@ public final class USDLOuterClass {
       "\n\010UNDER_19\020=\022\014\n\010UNDER_21\020>\022\017\n\013ORGAN_DONO" +
       "R\020?\022\013\n\007VETERAN\020@\022\017\n\013NONRESIDENT\020A\022\022\n\016RAC" +
       "E_ETHNICITY\020F\022\023\n\017COMPLIANCE_TYPE\020GB%\n\037io" +
-      ".bloombox.schema.identity.idsH\001P\001b\006proto",
+      ".bloombox.schema.identity.idsH\001P\001b\006proto" +
       "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

@@ -512,6 +512,9 @@ public final class CommercialOrder {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1192,7 +1195,7 @@ public final class CommercialOrder {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new OrderScheduling(input, extensionRegistry);
+        return new OrderScheduling(input, extensionRegistry);
       }
     };
 
@@ -1306,6 +1309,9 @@ public final class CommercialOrder {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2140,7 +2146,7 @@ public final class CommercialOrder {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new StatusCheckin(input, extensionRegistry);
+        return new StatusCheckin(input, extensionRegistry);
       }
     };
 
@@ -2211,6 +2217,9 @@ public final class CommercialOrder {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2706,7 +2715,7 @@ public final class CommercialOrder {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new OrderKey(input, extensionRegistry);
+        return new OrderKey(input, extensionRegistry);
       }
     };
 
@@ -3032,6 +3041,9 @@ public final class CommercialOrder {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5766,7 +5778,7 @@ public final class CommercialOrder {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Order(input, extensionRegistry);
+        return new Order(input, extensionRegistry);
       }
     };
 
@@ -5823,7 +5835,7 @@ public final class CommercialOrder {
       "l.Instant\"k\n\rStatusCheckin\022%\n\006status\030\001 \001" +
       "(\0162\025.commerce.OrderStatus\022\"\n\007instant\030\002 \001" +
       "(\0132\021.temporal.Instant\022\017\n\007message\030\003 \001(\t\"J" +
-      "\n\010OrderKey\022>\n\002id\030\001 \001(\tB2\212@/Order ID, ass",
+      "\n\010OrderKey\022>\n\002id\030\001 \001(\tB2\212@/Order ID, ass" +
       "igned by the server upon creation.\"\371\002\n\005O" +
       "rder\022\n\n\002id\030\001 \001(\t\022!\n\004type\030\002 \001(\0162\023.commerc" +
       "e.OrderType\022%\n\006status\030\003 \001(\0162\025.commerce.O" +
@@ -5833,7 +5845,7 @@ public final class CommercialOrder {
       "ommerce.DeliveryDestination\022\r\n\005notes\030\007 \001" +
       "(\t\022\034\n\004item\030\010 \003(\0132\016.commerce.Item\022+\n\nacti" +
       "on_log\030\t \003(\0132\027.commerce.StatusCheckin\022%\n" +
-      "\ncreated_at\030\n \001(\0132\021.temporal.Instant\022\020\n\010",
+      "\ncreated_at\030\n \001(\0132\021.temporal.Instant\022\020\n\010" +
       "subtotal\030\013 \001(\001*%\n\tOrderType\022\n\n\006PICKUP\020\000\022" +
       "\014\n\010DELIVERY\020\001*%\n\016SchedulingType\022\010\n\004ASAP\020" +
       "\000\022\t\n\005TIMED\020\001*a\n\013OrderStatus\022\013\n\007PENDING\020\000" +

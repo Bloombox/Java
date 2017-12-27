@@ -37,7 +37,7 @@ public final class ContactInfoOuterClass {
       "l contact information.\022F\n\005phone\030\002 \001(\0132\024." +
       "contact.PhoneNumberB!\212@\036Telephone contac" +
       "t information.\022M\n\005email\030\003 \001(\0132\025.contact." +
-      "EmailAddressB\'\212@$Electronic mail contact",
+      "EmailAddressB\'\212@$Electronic mail contact" +
       " information.\022B\n\007website\030\004 \001(\0132\020.contact" +
       ".WebsiteB\037\212@\034Website contact information" +
       ".B \n\032io.bloombox.schema.contactH\001P\001b\006pro" +

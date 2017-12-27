@@ -42,7 +42,7 @@ public final class AttachedContent {
       "gDescriptor.proto\"\202\001\n\021ProductTimestamps\022" +
       "\"\n\007created\030\001 \001(\0132\021.temporal.Instant\022#\n\010m" +
       "odified\030\002 \001(\0132\021.temporal.Instant\022$\n\tpubl" +
-      "ished\030\003 \001(\0132\021.temporal.Instant\"\204\003\n\016Produ",
+      "ished\030\003 \001(\0132\021.temporal.Instant\"\204\003\n\016Produ" +
       "ctContent\022\033\n\004name\030\001 \001(\0132\r.content.Name\022\035" +
       "\n\005brand\030\002 \001(\0132\016.content.Brand\022!\n\007summary" +
       "\030\003 \001(\0132\020.content.Content\022\037\n\005usage\030\004 \001(\0132" +
@@ -52,7 +52,7 @@ public final class AttachedContent {
       "ProductPricing\0220\n\007testing\030\010 \001(\0132\037.struct" +
       "s.labtesting.TestResults\022#\n\005flags\030\t \003(\0162" +
       "\024.structs.ProductFlag\022&\n\002ts\030\n \001(\0132\032.cont" +
-      "ent.ProductTimestampsB4\n\032io.bloombox.sch",
+      "ent.ProductTimestampsB4\n\032io.bloombox.sch" +
       "ema.contentB\017AttachedContentH\001P\001\370\001\001b\006pro" +
       "to3"
     };

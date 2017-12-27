@@ -52,7 +52,7 @@ public final class LocationOuterClass {
       " distance value.\"\261\001\n\020LocationAccuracy\022K\n" +
       "\010estimate\030\001 \001(\010B9\212@6Specifies whether th" +
       "is accuracy rating is an estimate.\022P\n\005va" +
-      "lue\030\002 \001(\0132\022.geo.DistanceValueB-\212@*Distan",
+      "lue\030\002 \001(\0132\022.geo.DistanceValueB-\212@*Distan" +
       "ce value for the accuracy specified.\"\307\002\n" +
       "\010Location\022F\n\004name\030\001 \001(\0132\r.content.NameB)" +
       "\212@&Name for this location, if applicable" +
@@ -62,7 +62,7 @@ public final class LocationOuterClass {
       "latitude/longitude) for this location.\022V" +
       "\n\010accuracy\030\004 \001(\0132\025.geo.LocationAccuracyB" +
       "-\212@*Specifies the accuracy estimate, if " +
-      "known.\"\304\003\n\010Distance\022D\n\010estimate\030\001 \001(\010B2\212",
+      "known.\"\304\003\n\010Distance\022D\n\010estimate\030\001 \001(\010B2\212" +
       "@/Specifies whether this distance is an " +
       "estimate.\022n\n\010accuracy\030\002 \001(\0132\025.geo.Locati" +
       "onAccuracyBE\212@BSpecifies the accuracy es" +
@@ -72,7 +72,7 @@ public final class LocationOuterClass {
       "imate.\022U\n\005start\030\004 \001(\0132\r.geo.LocationB7\212@" +
       "4Specifies the starting location for a d" +
       "istance span.\022V\n\003end\030\005 \001(\0132\r.geo.Locatio" +
-      "nB:\212@7Specifies the terminating location",
+      "nB:\212@7Specifies the terminating location" +
       " for a distance span.*m\n\014DistanceUnit\022\n\n" +
       "\006METERS\020\000\022\n\n\006INCHES\020\001\022\010\n\004FEET\020\002\022\017\n\013MILLI" +
       "METERS\020\003\022\017\n\013CENTIMETERS\020\004\022\016\n\nKILOMETERS\020" +

@@ -293,6 +293,9 @@ public final class AnalyticsPipeline {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3055,7 +3058,7 @@ public final class AnalyticsPipeline {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new TelemetryEvent(input, extensionRegistry);
+        return new TelemetryEvent(input, extensionRegistry);
       }
     };
 
@@ -3097,7 +3100,7 @@ public final class AnalyticsPipeline {
       "\n\016TelemetryEvent\022\014\n\004uuid\030\001 \001(\t\022#\n\007contex" +
       "t\030\002 \001(\0132\022.analytics.Context\022!\n\006ingest\030\003 " +
       "\001(\0132\021.temporal.Instant\022#\n\010occurred\030\004 \001(\013" +
-      "2\021.temporal.Instant\022+\n\007generic\030\n \001(\0132\030.a",
+      "2\021.temporal.Instant\022+\n\007generic\030\n \001(\0132\030.a" +
       "nalytics.generic.EventH\000\022-\n\005error\030\013 \001(\0132" +
       "\034.analytics.generic.ExceptionH\000\022L\n\nimpre" +
       "ssion\030\024 \001(\01326.services.telemetry.v1beta2" +
@@ -3107,7 +3110,7 @@ public final class AnalyticsPipeline {
       "es.telemetry.v1beta2.CommercialEvent.Act" +
       "ionH\000\022G\n\013user_action\030\036 \001(\01320.services.te" +
       "lemetry.v1beta2.IdentityEvent.ActionH\000B\007" +
-      "\n\005eventB]\n-io.bloombox.schema.services.t",
+      "\n\005eventB]\n-io.bloombox.schema.services.t" +
       "elemetry.v1beta2B\021AnalyticsPipelineH\001P\000\370" +
       "\001\001\252\002\021Telemetry.v1beta2b\006proto3"
     };

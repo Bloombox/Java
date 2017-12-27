@@ -399,6 +399,9 @@ public final class PrerollProduct {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2113,7 +2116,7 @@ public final class PrerollProduct {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Preroll(input, extensionRegistry);
+        return new Preroll(input, extensionRegistry);
       }
     };
 
@@ -2155,7 +2158,7 @@ public final class PrerollProduct {
       "ags\030\005 \003(\0162\025.products.PrerollFlag\022(\n\007prod" +
       "uct\030\006 \001(\0132\027.content.ProductContent\022(\n\010ma" +
       "terial\030\007 \001(\0132\026.content.MaterialsData*}\n\013" +
-      "PrerollFlag\022\024\n\020NO_PREROLL_FLAGS\020\000\022\020\n\014HAS",
+      "PrerollFlag\022\024\n\020NO_PREROLL_FLAGS\020\000\022\020\n\014HAS" +
       "H_INFUSED\020\001\022\020\n\014KIEF_INFUSED\020\002\022\r\n\tFORTIFI" +
       "ED\020\003\022\017\n\013FULL_FLOWER\020\004\022\024\n\020CONTAINS_TOBACC" +
       "O\020\005B3\n\032io.bloombox.schema.productB\016Prero" +

@@ -110,6 +110,9 @@ public final class AnalyticsScope {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -929,7 +932,7 @@ public final class AnalyticsScope {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Scope(input, extensionRegistry);
+        return new Scope(input, extensionRegistry);
       }
     };
 
@@ -971,7 +974,7 @@ public final class AnalyticsScope {
       "that reported an event.\022\240\001\n\ncommercial\030\002" +
       " \001(\tB\213\001\212@\207\001Commercial scope. Specifies, " +
       "each-if-applicable and only in the follo" +
-      "wing order-of-scope, the section name, p",
+      "wing order-of-scope, the section name, p" +
       "roduct key, and order key.\022\201\001\n\005order\030\003 \001" +
       "(\tBr\212@oOrder scope. Specifies, only if t" +
       "here is an active order, the order ID th" +

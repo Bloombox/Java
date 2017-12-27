@@ -327,6 +327,9 @@ public final class ApothecaryProduct {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1466,7 +1469,7 @@ public final class ApothecaryProduct {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Apothecary(input, extensionRegistry);
+        return new Apothecary(input, extensionRegistry);
       }
     };
 
@@ -1508,7 +1511,7 @@ public final class ApothecaryProduct {
       "Content\022(\n\010material\030\004 \001(\0132\026.content.Mate" +
       "rialsData*r\n\016ApothecaryType\022\032\n\026UNSPECIFI" +
       "ED_APOTHECARY\020\000\022\013\n\007TOPICAL\020\001\022\014\n\010TINCTURE" +
-      "\020\002\022\013\n\007CAPSULE\020\003\022\014\n\010INJECTOR\020\004\022\016\n\nSUBLING",
+      "\020\002\022\013\n\007CAPSULE\020\003\022\014\n\010INJECTOR\020\004\022\016\n\nSUBLING" +
       "UAL\020\005B6\n\032io.bloombox.schema.productB\021Apo" +
       "thecaryProductH\001P\000\370\001\001b\006proto3"
     };

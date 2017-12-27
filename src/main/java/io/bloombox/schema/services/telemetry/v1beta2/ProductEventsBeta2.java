@@ -47,7 +47,7 @@ public final class ProductEventsBeta2 {
       ".product.Impression\"Y\n\013ProductView\022#\n\007co" +
       "ntext\030\001 \001(\0132\022.analytics.Context\022%\n\004view\030" +
       "\002 \001(\0132\027.analytics.product.View\"_\n\rProduc" +
-      "tAction\022#\n\007context\030\001 \001(\0132\022.analytics.Con",
+      "tAction\022#\n\007context\030\001 \001(\0132\022.analytics.Con" +
       "text\022)\n\006action\030\002 \001(\0132\031.analytics.product" +
       ".ActionBG\n-io.bloombox.schema.services.t" +
       "elemetry.v1beta2H\001P\001\252\002\021Telemetry.v1beta2" +

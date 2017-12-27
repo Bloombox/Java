@@ -37,7 +37,7 @@ public final class PassportOuterClass {
       "d string code, like \"US\" or \"UK\".\022J\n\013exp" +
       "ire_date\030\004 \001(\0132\016.temporal.DateB%\212@\"Expir" +
       "ation date for this document.\022J\n\nbirth_d" +
-      "ate\030\005 \001(\0132\016.temporal.DateB&\212@#Birth date",
+      "ate\030\005 \001(\0132\016.temporal.DateB&\212@#Birth date" +
       " listed on this document.B%\n\037io.bloombox" +
       ".schema.identity.idsH\001P\001b\006proto3"
     };

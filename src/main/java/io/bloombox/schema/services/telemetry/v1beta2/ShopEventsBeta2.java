@@ -47,7 +47,7 @@ public final class ShopEventsBeta2 {
       "ression\"S\n\010ShopView\022#\n\007context\030\001 \001(\0132\022.a" +
       "nalytics.Context\022\"\n\004view\030\002 \001(\0132\024.analyti" +
       "cs.shop.View\"Y\n\nShopAction\022#\n\007context\030\001 " +
-      "\001(\0132\022.analytics.Context\022&\n\006action\030\002 \001(\0132",
+      "\001(\0132\022.analytics.Context\022&\n\006action\030\002 \001(\0132" +
       "\026.analytics.shop.ActionBG\n-io.bloombox.s" +
       "chema.services.telemetry.v1beta2H\001P\001\252\002\021T" +
       "elemetry.v1beta2b\006proto3"

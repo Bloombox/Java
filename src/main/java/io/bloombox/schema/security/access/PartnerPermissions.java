@@ -42,7 +42,7 @@ public final class PartnerPermissions {
       "tions\030\005 \003(\0132\037.security.access.LocationAc" +
       "cess\022\025\n\rall_locations\030\006 \001(\010\022\r\n\005admin\030d \001" +
       "(\010\"j\n\016LocationAccess\022\016\n\006active\030\001 \001(\010\022\022\n\n" +
-      "granted_by\030\002 \001(\t\022%\n\ngranted_at\030\003 \001(\0132\021.t",
+      "granted_by\030\002 \001(\t\022%\n\ngranted_at\030\003 \001(\0132\021.t" +
       "emporal.Instant\022\r\n\005admin\030d \001(\010*T\n\021Partne" +
       "rPermission\022\t\n\005OWNER\020\000\022\016\n\nSUPERVISOR\020\001\022\013" +
       "\n\007BILLING\020\002\022\t\n\005AUDIT\020\003\022\014\n\010READONLY\020\004B(\n\"" +

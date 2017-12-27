@@ -294,6 +294,9 @@ public final class CartridgeProduct {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1434,7 +1437,7 @@ public final class CartridgeProduct {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Cartridge(input, extensionRegistry);
+        return new Cartridge(input, extensionRegistry);
       }
     };
 
@@ -1476,7 +1479,7 @@ public final class CartridgeProduct {
       "tent\022(\n\010material\030\004 \001(\0132\026.content.Materia" +
       "lsData*O\n\rCartridgeType\022\031\n\025UNSPECIFIED_C" +
       "ARTRIDGE\020\000\022\r\n\tCARTRIDGE\020\001\022\013\n\007BATTERY\020\002\022\007" +
-      "\n\003KIT\020\003B5\n\032io.bloombox.schema.productB\020C",
+      "\n\003KIT\020\003B5\n\032io.bloombox.schema.productB\020C" +
       "artridgeProductH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

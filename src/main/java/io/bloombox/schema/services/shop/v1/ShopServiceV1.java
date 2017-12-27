@@ -172,7 +172,7 @@ public final class ShopServiceV1 {
       "ation.proto\032\034google/api/annotations.prot" +
       "o\"\267\001\n\004Ping\032\t\n\007Request\0323\n\010Response\022\'\n\006sta" +
       "tus\030\001 \001(\0162\027.services.ServiceStatus\032o\n\tOp" +
-      "eration\022/\n\007request\030\001 \001(\0132\036.services.shop",
+      "eration\022/\n\007request\030\001 \001(\0132\036.services.shop" +
       ".v1.Ping.Request\0221\n\010response\030\002 \001(\0132\037.ser" +
       "vices.shop.v1.Ping.Response\"\374\001\n\010ShopInfo" +
       "\0328\n\007Request\022-\n\010location\030\001 \001(\0132\033.partner." +
@@ -182,7 +182,7 @@ public final class ShopServiceV1 {
       "es.shop.v1.ShopInfo.Request\0225\n\010response\030" +
       "\002 \001(\0132#.services.shop.v1.ShopInfo.Respon" +
       "se\"\301\004\n\014EnrollMember\032\303\002\n\007Request\022\036\n\006perso" +
-      "n\030\001 \001(\0132\016.person.Person\022*\n\006source\030\002 \001(\0162",
+      "n\030\001 \001(\0132\016.person.Person\022*\n\006source\030\002 \001(\0162" +
       "\032.identity.EnrollmentSource\022\017\n\007channel\030\003" +
       " \001(\t\022/\n\ndoctor_rec\030\004 \001(\0132\033.identity.ids." +
       "UserDoctorRec\022#\n\rgovernment_id\030\005 \001(\0132\014.i" +
@@ -192,7 +192,7 @@ public final class ShopServiceV1 {
       ".identity.ConsumerProfile\032j\n\010Response\022\n\n" +
       "\002id\030\001 \001(\t\022\024\n\nforeign_id\030\002 \001(\tH\000\0222\n\005error" +
       "\030\003 \001(\0162!.services.shop.v1.EnrollmentErro" +
-      "rH\000B\010\n\006result\032\177\n\tOperation\0227\n\007request\030\001 ",
+      "rH\000B\010\n\006result\032\177\n\tOperation\0227\n\007request\030\001 " +
       "\001(\0132&.services.shop.v1.EnrollMember.Requ" +
       "est\0229\n\010response\030\002 \001(\0132\'.services.shop.v1" +
       ".EnrollMember.Response\"\340\002\n\014VerifyMember\032" +
@@ -202,7 +202,7 @@ public final class ShopServiceV1 {
       "er\030\002 \001(\0132\022.commerce.CustomerH\000\022.\n\005error\030" +
       "\003 \001(\0162\035.services.shop.v1.VerifyErrorH\000B\010" +
       "\n\006result\032\177\n\tOperation\0227\n\007request\030\001 \001(\0132&" +
-      ".services.shop.v1.VerifyMember.Request\0229",
+      ".services.shop.v1.VerifyMember.Request\0229" +
       "\n\010response\030\002 \001(\0132\'.services.shop.v1.Veri" +
       "fyMember.Response\"\223\002\n\014CheckZipcode\032I\n\007Re" +
       "quest\022\017\n\007zipcode\030\001 \001(\t\022-\n\010location\030\002 \001(\013" +
@@ -212,7 +212,7 @@ public final class ShopServiceV1 {
       "ervices.shop.v1.CheckZipcode.Request\0229\n\010" +
       "response\030\002 \001(\0132\'.services.shop.v1.CheckZ" +
       "ipcode.Response\"\261\002\n\013SubmitOrder\032X\n\007Reque" +
-      "st\022\036\n\005order\030\001 \001(\0132\017.commerce.Order\022-\n\010lo",
+      "st\022\036\n\005order\030\001 \001(\0132\017.commerce.Order\022-\n\010lo" +
       "cation\030\002 \001(\0132\033.partner.PartnerLocationKe" +
       "y\032I\n\010Response\022+\n\005error\030\001 \001(\0162\034.services." +
       "shop.v1.OrderError\022\020\n\010order_id\030\002 \001(\t\032}\n\t" +
@@ -222,7 +222,7 @@ public final class ShopServiceV1 {
       "nse\"\214\002\n\010GetOrder\032J\n\007Request\022\020\n\010order_id\030" +
       "\001 \001(\t\022-\n\010location\030\002 \001(\0132\033.partner.Partne" +
       "rLocationKey\032;\n\010Response\022\017\n\007success\030\001 \001(" +
-      "\010\022\036\n\005order\030\002 \001(\0132\017.commerce.Order\032w\n\tOpe",
+      "\010\022\036\n\005order\030\002 \001(\0132\017.commerce.Order\032w\n\tOpe" +
       "ration\0223\n\007request\030\001 \001(\0132\".services.shop." +
       "v1.GetOrder.Request\0225\n\010response\030\002 \001(\0132#." +
       "services.shop.v1.GetOrder.Response*d\n\013Ve" +
@@ -232,7 +232,7 @@ public final class ShopServiceV1 {
       "ROR\020\000\022\021\n\rINVALID_ORDER\020\001\022\025\n\021USER_NOT_ELI" +
       "GIBLE\020\002\022\030\n\024ZIPCODE_NOT_ELIGIBLE\020\003\022\026\n\022ZIP" +
       "CODE_NOT_ACTIVE\020\004\022\033\n\027ZIPCODE_MINIMUM_NOT" +
-      "_MET\020\005\022\023\n\017INVALID_PARTNER\020\006\022\024\n\020INVALID_L",
+      "_MET\020\005\022\023\n\017INVALID_PARTNER\020\006\022\024\n\020INVALID_L" +
       "OCATION\020\007\022\024\n\020INVALID_CUSTOMER\020\010\022\027\n\023MISSI" +
       "NG_DESTINATION\020\t\022\021\n\rSHOP_NOT_OPEN\020\n\022\032\n\026G" +
       "LOBAL_MINIMUM_NOT_MET\020\013\022\030\n\024MEMBERSHIP_NO" +
@@ -242,7 +242,7 @@ public final class ShopServiceV1 {
       "LID_PHONE\020\003\022\031\n\025INVALID_DATE_OF_BIRTH\020\004\022\022" +
       "\n\016INVALID_REC_ID\020\005\022\032\n\026INVALID_REC_EXPIRA" +
       "TION\020\006\022\033\n\027INVALID_REC_DOCTOR_NAME\020\007\022\034\n\030I" +
-      "NVALID_REC_DOCTOR_PHONE\020\010\022\023\n\017INVALID_USD",
+      "NVALID_REC_DOCTOR_PHONE\020\010\022\023\n\017INVALID_USD" +
       "L_ID\020\t\022\033\n\027INVALID_USDL_EXPIRATION\020\013\022\035\n\031I" +
       "NVALID_USDL_JURISDICTION\020\014\022\024\n\020ACCOUNT_CO" +
       "NFLICT\020\r\022\032\n\026ACCOUNT_CONFLICT_EMAIL\020\016\022\032\n\026" +
@@ -252,7 +252,7 @@ public final class ShopServiceV1 {
       "P_ONLY\020\0032\343\n\n\004Shop\022^\n\004Ping\022\036.services.sho" +
       "p.v1.Ping.Request\032\037.services.shop.v1.Pin" +
       "g.Response\"\025\202\323\344\223\002\017\022\r/shop/v1/ping\022\252\001\n\010Sh" +
-      "opInfo\022\".services.shop.v1.ShopInfo.Reque",
+      "opInfo\022\".services.shop.v1.ShopInfo.Reque" +
       "st\032#.services.shop.v1.ShopInfo.Response\"" +
       "U\202\323\344\223\002O\022M/shop/v1/partners/{location.par" +
       "tner.code}/locations/{location.code}/sho" +
@@ -262,7 +262,7 @@ public final class ShopServiceV1 {
       "v1/partners/{location.partner.code}/loca" +
       "tions/{location.code}/members:\001*Z\025\"\020/sho" +
       "p/v1/members:\001*\022\277\001\n\014CheckZipcode\022&.servi" +
-      "ces.shop.v1.CheckZipcode.Request\032\'.servi",
+      "ces.shop.v1.CheckZipcode.Request\032\'.servi" +
       "ces.shop.v1.CheckZipcode.Response\"^\202\323\344\223\002" +
       "X\022V/shop/v1/partners/{location.partner.c" +
       "ode}/locations/{location.code}/zipcheck/" +
@@ -272,7 +272,7 @@ public final class ShopServiceV1 {
       "op/v1/partners/{location.partner.code}/l" +
       "ocations/{location.code}/members/{email_" +
       "address}/verify\022\231\002\n\013SubmitOrder\022%.servic" +
-      "es.shop.v1.SubmitOrder.Request\032&.service",
+      "es.shop.v1.SubmitOrder.Request\032&.service" +
       "s.shop.v1.SubmitOrder.Response\"\272\001\202\323\344\223\002\263\001" +
       "\"J/shop/v1/partners/{location.partner.co" +
       "de}/locations/{location.code}/orders:\005or" +
@@ -282,7 +282,7 @@ public final class ShopServiceV1 {
       "ces.shop.v1.GetOrder.Request\032#.services." +
       "shop.v1.GetOrder.Response\"{\202\323\344\223\002u\022U/shop" +
       "/v1/partners/{location.partner.code}/loc" +
-      "ations/{location.code}/orders/{order_id}",
+      "ations/{location.code}/orders/{order_id}" +
       "Z\034\022\032/shop/v1/orders/{order_id}B)\n#io.blo" +
       "ombox.schema.services.shop.v1H\001P\001b\006proto" +
       "3"

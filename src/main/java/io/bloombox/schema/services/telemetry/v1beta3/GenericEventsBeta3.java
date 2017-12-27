@@ -57,7 +57,7 @@ public final class GenericEventsBeta3 {
       "analytics.generic.Event\022\014\n\004uuid\030\003 \001(\t\0320\n" +
       "\005Batch\022\'\n\005event\030\002 \003(\0132\030.analytics.generi" +
       "c.Event\032k\n\014BatchRequest\022#\n\007context\030\001 \001(\013" +
-      "2\022.analytics.Context\0226\n\005batch\030\002 \003(\0132\'.se",
+      "2\022.analytics.Context\0226\n\005batch\030\002 \003(\0132\'.se" +
       "rvices.telemetry.v1beta3.Event.Batch\"k\n\t" +
       "Exception\022#\n\007context\030\001 \001(\0132\022.analytics.C" +
       "ontext\022+\n\005error\030\002 \001(\0132\034.analytics.generi" +

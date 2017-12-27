@@ -52,7 +52,7 @@ public final class MediaItemType {
       "based media item.H\000\022d\n\rdocument_type\030\311\001 " +
       "\001(\0132\023.media.DocumentTypeB5\212@2Specifies c" +
       "ontent for a document-based media item.H" +
-      "\000\022[\n\nvideo_type\030\255\002 \001(\0132\020.media.VideoType",
+      "\000\022[\n\nvideo_type\030\255\002 \001(\0132\020.media.VideoType" +
       "B2\212@/Specifies content for a video-based" +
       " media item.H\000\"4\n\004Kind\022\010\n\004LINK\020\000\022\t\n\005IMAG" +
       "E\020\001\022\014\n\010DOCUMENT\020\002\022\t\n\005VIDEO\020\003B\t\n\007content\"" +
@@ -62,7 +62,7 @@ public final class MediaItemType {
       "ImageKind\022\007\n\003PNG\020\000\022\007\n\003JPG\020\001\022\007\n\003GIF\020\002\022\007\n\003" +
       "SVG\020\003\022\010\n\004WEBP\020\004\"\216\002\n\014DocumentType\022n\n\004kind" +
       "\030\001 \001(\0162 .media.DocumentType.DocumentKind" +
-      "B>\212@;Specifies the kind of document bein",
+      "B>\212@;Specifies the kind of document bein" +
       "g attached or described.\022T\n\ncompressed\030\002" +
       " \001(\010B@\212@=Specifies whether the attached " +
       "document is compressed or not.\"8\n\014Docume" +

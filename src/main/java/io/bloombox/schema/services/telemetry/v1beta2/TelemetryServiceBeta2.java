@@ -87,7 +87,7 @@ public final class TelemetryServiceBeta2 {
       "emetry/v1beta2/commerce/ShopEvents_Beta2" +
       ".proto\0322telemetry/v1beta2/commerce/Order" +
       "Events_Beta2.proto\0324telemetry/v1beta2/co" +
-      "mmerce/SectionEvents_Beta2.proto\0324teleme",
+      "mmerce/SectionEvents_Beta2.proto\0324teleme" +
       "try/v1beta2/commerce/ProductEvents_Beta2" +
       ".proto\032\033google/protobuf/empty.proto\032\034goo" +
       "gle/api/annotations.proto\"\211\001\n\021TelemetryR" +
@@ -97,7 +97,7 @@ public final class TelemetryServiceBeta2 {
       "tatus\"\214\002\n\rTelemetryPing\032.\n\007Request\022#\n\007co" +
       "ntext\030\001 \001(\0132\022.analytics.Context\0323\n\010Respo" +
       "nse\022\'\n\006status\030\001 \001(\0162\027.services.ServiceSt" +
-      "atus\032\225\001\n\tOperation\022B\n\007request\030\001 \001(\01321.se",
+      "atus\032\225\001\n\tOperation\022B\n\007request\030\001 \001(\01321.se" +
       "rvices.telemetry.v1beta2.TelemetryPing.R" +
       "equest\022D\n\010response\030\002 \001(\01322.services.tele" +
       "metry.v1beta2.TelemetryPing.Response\"\250\006\n" +
@@ -107,7 +107,7 @@ public final class TelemetryServiceBeta2 {
       "onImpressionH\000\022@\n\007product\030\013 \001(\0132-.servic" +
       "es.telemetry.v1beta2.ProductImpressionH\000" +
       "\022:\n\004shop\030\014 \001(\0132*.services.telemetry.v1be" +
-      "ta2.ShopImpressionH\000B\007\n\005event\032\342\001\n\004View\022#",
+      "ta2.ShopImpressionH\000B\007\n\005event\032\342\001\n\004View\022#" +
       "\n\007context\030\001 \001(\0132\022.analytics.Context\022:\n\007s" +
       "ection\030\n \001(\0132\'.services.telemetry.v1beta" +
       "2.SectionViewH\000\022:\n\007product\030\013 \001(\0132\'.servi" +
@@ -117,7 +117,7 @@ public final class TelemetryServiceBeta2 {
       "\001(\t\022#\n\007context\030\002 \001(\0132\022.analytics.Context" +
       "\022<\n\007section\030\n \001(\0132).services.telemetry.v" +
       "1beta2.SectionActionH\000\022<\n\007product\030\013 \001(\0132" +
-      ").services.telemetry.v1beta2.ProductActi",
+      ").services.telemetry.v1beta2.ProductActi" +
       "onH\000\0226\n\004shop\030\014 \001(\0132&.services.telemetry." +
       "v1beta2.ShopActionH\000\0228\n\005order\030\r \001(\0132\'.se" +
       "rvices.telemetry.v1beta2.OrderActionH\000B\007" +
@@ -127,7 +127,7 @@ public final class TelemetryServiceBeta2 {
       "try.v1beta2.UserActionH\000B\007\n\005event*$\n\017Ope" +
       "rationStatus\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001*\336\001\n\016Tele" +
       "metryError\022\013\n\007UNKNOWN\020\000\022\026\n\022INVALID_COLLE" +
-      "CTION\020\001\022\023\n\017INVALID_PARTNER\020\002\022\024\n\020INVALID_",
+      "CTION\020\001\022\023\n\017INVALID_PARTNER\020\002\022\024\n\020INVALID_" +
       "LOCATION\020\003\022\022\n\016INVALID_DEVICE\020\004\022\020\n\014INVALI" +
       "D_USER\020\005\022\022\n\016INVALID_CLIENT\020\006\022\025\n\021PARTNER_" +
       "NOT_FOUND\020\007\022\026\n\022LOCATION_NOT_FOUND\020\010\022\023\n\017I" +
@@ -137,7 +137,7 @@ public final class TelemetryServiceBeta2 {
       "eta2.TelemetryPing.Response\"E\202\323\344\223\002?\022\027/te" +
       "lemetry/v1beta2/pingZ$\"\037/telemetry/v1bet" +
       "a2/generic/ping:\001*\022\351\001\n\005Event\022).services." +
-      "telemetry.v1beta2.Event.Request\032\026.google",
+      "telemetry.v1beta2.Event.Request\032\026.google" +
       ".protobuf.Empty\"\234\001\202\323\344\223\002\225\001\"3/telemetry/v1" +
       "beta2/events/{context.collection.name}:\001" +
       "*Z[\"V/telemetry/v1beta2/{context.scope.p" +
@@ -147,7 +147,7 @@ public final class TelemetryServiceBeta2 {
       "ces.telemetry.v1beta2.TelemetryResponse\"" +
       "\216\001\202\323\344\223\002\207\001\"\037/telemetry/v1beta2/events/bat" +
       "ch:\001*Za\"\\/telemetry/v1beta2/{context.sco" +
-      "pe.partner=partners/*}/events/{context.c",
+      "pe.partner=partners/*}/events/{context.c" +
       "ollection.name}:batch:\001*\022\355\001\n\005Error\022%.ser" +
       "vices.telemetry.v1beta2.Exception\032\026.goog" +
       "le.protobuf.Empty\"\244\001\202\323\344\223\002\235\001\"7/telemetry/" +
@@ -157,7 +157,7 @@ public final class TelemetryServiceBeta2 {
       "text.collection.name}:\001*2\306\006\n\023CommercialT" +
       "elemetry\022\222\002\n\nImpression\0226.services.telem" +
       "etry.v1beta2.CommercialEvent.Impression\032" +
-      "\026.google.protobuf.Empty\"\263\001\202\323\344\223\002\254\001\"@/tele",
+      "\026.google.protobuf.Empty\"\263\001\202\323\344\223\002\254\001\"@/tele" +
       "metry/v1beta2/commerce/{context.scope.co" +
       "mmercial=*}:impress:\001*Ze\022c/telemetry/v1b" +
       "eta2/{context.scope.partner=partners/*}/" +
@@ -167,7 +167,7 @@ public final class TelemetryServiceBeta2 {
       "uf.Empty\"\255\001\202\323\344\223\002\246\001\"=/telemetry/v1beta2/c" +
       "ommerce/{context.scope.commercial=*}:vie" +
       "w:\001*Zb\022`/telemetry/v1beta2/{context.scop" +
-      "e.partner=partners/*}/commerce/{context.",
+      "e.partner=partners/*}/commerce/{context." +
       "scope.commercial=*}:view\022\226\002\n\006Action\0222.se" +
       "rvices.telemetry.v1beta2.CommercialEvent" +
       ".Action\032\026.google.protobuf.Empty\"\277\001\202\323\344\223\002\270" +
@@ -177,7 +177,7 @@ public final class TelemetryServiceBeta2 {
       "r=partners/*}/commerce/{context.scope.co" +
       "mmercial=*}/action/{name}2\226\002\n\021IdentityTe" +
       "lemetry\022\200\002\n\006Action\0220.services.telemetry." +
-      "v1beta2.IdentityEvent.Action\032\026.google.pr",
+      "v1beta2.IdentityEvent.Action\032\026.google.pr" +
       "otobuf.Empty\"\253\001\202\323\344\223\002\244\001\"</telemetry/v1bet" +
       "a2/identity/{context.user.uid}/action/{n" +
       "ame}:\001*Za\022_/telemetry/v1beta2/{context.s" +

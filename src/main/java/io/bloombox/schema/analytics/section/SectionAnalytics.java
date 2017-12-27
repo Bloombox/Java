@@ -232,6 +232,9 @@ public final class SectionAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1031,7 +1034,7 @@ public final class SectionAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Impression(input, extensionRegistry);
+        return new Impression(input, extensionRegistry);
       }
     };
 
@@ -1143,6 +1146,9 @@ public final class SectionAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2016,7 +2022,7 @@ public final class SectionAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new View(input, extensionRegistry);
+        return new View(input, extensionRegistry);
       }
     };
 
@@ -2137,6 +2143,9 @@ public final class SectionAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3047,7 +3056,7 @@ public final class SectionAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Action(input, extensionRegistry);
+        return new Action(input, extensionRegistry);
       }
     };
 
@@ -3099,7 +3108,7 @@ public final class SectionAnalytics {
       ".products.menu.section.SectionSpec\022\023\n\013in" +
       "teractive\030\002 \001(\010\022#\n\010occurred\030\003 \001(\0132\021.temp" +
       "oral.Instant\"\217\001\n\006Action\0220\n\004spec\030\001 \001(\0132\"." +
-      "products.menu.section.SectionSpec\022.\n\004ver",
+      "products.menu.section.SectionSpec\022.\n\004ver" +
       "b\030\002 \001(\0162 .analytics.section.SectionActio" +
       "n\022#\n\010occurred\030\003 \001(\0132\021.temporal.Instant*/" +
       "\n\rSectionAction\022\010\n\004VIEW\020\000\022\010\n\004SORT\020\001\022\n\n\006F" +

@@ -373,6 +373,9 @@ public final class CommercialDiscounts {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1184,7 +1187,7 @@ public final class CommercialDiscounts {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DiscountSpec(input, extensionRegistry);
+        return new DiscountSpec(input, extensionRegistry);
       }
     };
 
@@ -1389,6 +1392,9 @@ public final class CommercialDiscounts {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3040,7 +3046,7 @@ public final class CommercialDiscounts {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Discount(input, extensionRegistry);
+        return new Discount(input, extensionRegistry);
       }
     };
 
@@ -3087,7 +3093,7 @@ public final class CommercialDiscounts {
       "\006\n\004rate\"\311\001\n\010Discount\022\n\n\002id\030\001 \001(\t\0220\n\004spec" +
       "\030\002 \001(\0132\".accounting.discounts.DiscountSp" +
       "ec\022\014\n\004name\030\003 \001(\t\022\r\n\005label\030\004 \001(\t\022\023\n\013descr" +
-      "iption\030\005 \001(\t\022&\n\013modified_at\030\007 \001(\0132\021.temp",
+      "iption\030\005 \001(\t\022&\n\013modified_at\030\007 \001(\0132\021.temp" +
       "oral.Instant\022%\n\ncreated_at\030\006 \001(\0132\021.tempo" +
       "ral.Instant*9\n\014DiscountType\022\n\n\006CUSTOM\020\000\022" +
       "\r\n\tSTATUTORY\020\001\022\016\n\nCOMMERCIAL\020\002*>\n\rDiscou" +

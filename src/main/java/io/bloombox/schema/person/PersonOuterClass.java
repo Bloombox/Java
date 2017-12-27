@@ -37,7 +37,7 @@ public final class PersonOuterClass {
       "n\'s legal name, if it differs from their" +
       " primary name.\022J\n\016alternate_name\030\003 \001(\0132\014" +
       ".person.NameB$\212@!Person\'s optional alter" +
-      "nate name.\022G\n\007contact\030\004 \001(\0132\024.contact.Co",
+      "nate name.\022G\n\007contact\030\004 \001(\0132\024.contact.Co" +
       "ntactInfoB \212@\035Person\'s contact informati" +
       "on.\0228\n\rdate_of_birth\030\005 \001(\0132\016.temporal.Da" +
       "teB\021\212@\016Date of birth.B\037\n\031io.bloombox.sch" +

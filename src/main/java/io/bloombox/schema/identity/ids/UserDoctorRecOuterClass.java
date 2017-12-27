@@ -37,7 +37,7 @@ public final class UserDoctorRecOuterClass {
       "ate for the recommendation.\022&\n\007barcode\030\003" +
       " \001(\tB\025\212@\022Raw barcode value.\022O\n\005state\030\004 \001" +
       "(\0162\020.geo.usa.USStateB.\212@+US state where " +
-      "the recommendation is valid.\0223\n\007country\030",
+      "the recommendation is valid.\0223\n\007country\030" +
       "\005 \001(\tB\"\212@\037Country for the recommendation" +
       ".\022)\n\tdoctor_id\030\006 \001(\tB\026\212@\023Doctor\'s unique" +
       " ID.\022L\n\006doctor\030\007 \001(\0132\016.person.PersonB,\212@" +

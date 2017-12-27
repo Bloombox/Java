@@ -547,6 +547,9 @@ public final class ExtractProduct {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2219,7 +2222,7 @@ public final class ExtractProduct {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Extract(input, extensionRegistry);
+        return new Extract(input, extensionRegistry);
       }
     };
 
@@ -2261,7 +2264,7 @@ public final class ExtractProduct {
       "wer\030\004 \001(\0132\026.base.ProductReference\022(\n\007pro" +
       "duct\030\005 \001(\0132\027.content.ProductContent\022(\n\010m" +
       "aterial\030\006 \001(\0132\026.content.MaterialsData*t\n" +
-      "\013ExtractType\022\027\n\023UNSPECIFIED_EXTRACT\020\000\022\007\n",
+      "\013ExtractType\022\027\n\023UNSPECIFIED_EXTRACT\020\000\022\007\n" +
       "\003OIL\020\001\022\007\n\003WAX\020\002\022\013\n\007SHATTER\020\003\022\010\n\004KIEF\020\004\022\010" +
       "\n\004HASH\020\005\022\016\n\nLIVE_RESIN\020\006\022\t\n\005ROSIN\020\007*4\n\013E" +
       "xtractFlag\022\024\n\020NO_EXTRACT_FLAGS\020\000\022\017\n\013SOLV" +

@@ -458,6 +458,9 @@ public final class OrderItem {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1474,7 +1477,7 @@ public final class OrderItem {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new VariantSpec(input, extensionRegistry);
+        return new VariantSpec(input, extensionRegistry);
       }
     };
 
@@ -1626,6 +1629,9 @@ public final class OrderItem {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2860,7 +2866,7 @@ public final class OrderItem {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Item(input, extensionRegistry);
+        return new Item(input, extensionRegistry);
       }
     };
 
@@ -2907,7 +2913,7 @@ public final class OrderItem {
       "variant\030\002 \003(\0132\025.commerce.VariantSpec\022\r\n\005" +
       "count\030\003 \001(\r\022\r\n\005price\030\004 \001(\001\022\014\n\004cost\030\005 \001(\001" +
       "*1\n\016ProductVariant\022\n\n\006WEIGHT\020\000\022\t\n\005COLOR\020" +
-      "\001\022\010\n\004SIZE\020\002*a\n\rProductWeight\022\r\n\tNO_WEIGH",
+      "\001\022\010\n\004SIZE\020\002*a\n\rProductWeight\022\r\n\tNO_WEIGH" +
       "T\020\000\022\014\n\010HALFGRAM\020\001\022\010\n\004GRAM\020\002\022\n\n\006EIGHTH\020\003\022" +
       "\013\n\007QUARTER\020\004\022\010\n\004HALF\020\005\022\006\n\002OZ\020\006B/\n\033io.blo" +
       "ombox.schema.commerceB\tOrderItemH\001P\000\370\001\001b" +

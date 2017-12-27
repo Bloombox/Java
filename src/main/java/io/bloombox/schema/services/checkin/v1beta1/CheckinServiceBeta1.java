@@ -92,7 +92,7 @@ public final class CheckinServiceBeta1 {
       "o\"\307\001\n\004Ping\032\t\n\007Request\0323\n\010Response\022\'\n\006sta" +
       "tus\030\001 \001(\0162\027.services.ServiceStatus\032\177\n\tOp" +
       "eration\0227\n\007request\030\001 \001(\0132&.services.chec" +
-      "kin.v1beta1.Ping.Request\0229\n\010response\030\002 \001",
+      "kin.v1beta1.Ping.Request\0229\n\010response\030\002 \001" +
       "(\0132\'.services.checkin.v1beta1.Ping.Respo" +
       "nse\"\224\001\n\013CheckinUser\022\036\n\003key\030\001 \001(\0132\021.ident" +
       "ity.UserKey\022\"\n\005flags\030\002 \001(\0132\023.identity.Us" +
@@ -102,7 +102,7 @@ public final class CheckinServiceBeta1 {
       "\030\002 \001(\0162&.services.checkin.v1beta1.Checki" +
       "nError\0223\n\004user\030\003 \001(\0132%.services.checkin." +
       "v1beta1.CheckinUser\"\366\001\n\tIDCheckin\032`\n\007Req" +
-      "uest\022\036\n\010document\030\001 \001(\0132\014.identity.ID\022&\n\014",
+      "uest\022\036\n\010document\030\001 \001(\0132\014.identity.ID\022&\n\014" +
       "jurisdiction\030\002 \001(\0162\020.geo.usa.USState\022\r\n\005" +
       "scope\030\003 \001(\t\032\206\001\n\tOperation\022<\n\007request\030\001 \001" +
       "(\0132+.services.checkin.v1beta1.IDCheckin." +
@@ -112,7 +112,7 @@ public final class CheckinServiceBeta1 {
       "load\030\002 \001(\t\022\021\n\tsignature\030\003 \001(\t\022\r\n\005agent\030\004" +
       " \001(\t\022\r\n\005scope\030\005 \001(\t\032\210\001\n\tOperation\022>\n\007req" +
       "uest\030\001 \001(\0132-.services.checkin.v1beta1.Ca" +
-      "rdCheckin.Request\022;\n\010response\030\002 \001(\0132).se",
+      "rdCheckin.Request\022;\n\010response\030\002 \001(\0132).se" +
       "rvices.checkin.v1beta1.CheckinResponse*\262" +
       "\002\n\014CheckinError\022\014\n\010NO_ERROR\020\000\022\020\n\014ID_NOT_" +
       "FOUND\020\001\022\016\n\nID_EXPIRED\020\002\022\016\n\nID_INVALID\020\003\022" +
@@ -122,7 +122,7 @@ public final class CheckinServiceBeta1 {
       "PENDED\020\t\022\023\n\017PARTNER_INVALID\020\n\022\024\n\020LOCATIO" +
       "N_INVALID\020\013\022\030\n\024JURISDICTION_INVALID\020\014\022\034\n" +
       "\030JURISDICTION_UNSUPPORTED\020\r2\361\003\n\007Checkin\022" +
-      "v\n\004Ping\022&.services.checkin.v1beta1.Ping.",
+      "v\n\004Ping\022&.services.checkin.v1beta1.Ping." +
       "Request\032\'.services.checkin.v1beta1.Ping." +
       "Response\"\035\202\323\344\223\002\027\022\025/checkin/v1beta1/ping\022" +
       "\341\001\n\007License\022+.services.checkin.v1beta1.I" +
@@ -132,7 +132,7 @@ public final class CheckinServiceBeta1 {
       "cument.type}:id:\001*Z/\"*/checkin/v1beta1/{" +
       "document.type}/global:id:\001*\022\211\001\n\004Card\022-.s" +
       "ervices.checkin.v1beta1.CardCheckin.Requ" +
-      "est\032).services.checkin.v1beta1.CheckinRe",
+      "est\032).services.checkin.v1beta1.CheckinRe" +
       "sponse\"\'\202\323\344\223\002!\"\034/checkin/v1beta1/global:" +
       "card:\001*B1\n+io.bloombox.schema.services.c" +
       "heckin.v1beta1H\001P\001b\006proto3"

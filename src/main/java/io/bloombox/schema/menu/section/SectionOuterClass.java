@@ -52,7 +52,7 @@ public final class SectionOuterClass {
       "diaItem\"b\n\017SectionSettings\022\033\n\004name\030\001 \001(\013" +
       "2\r.content.Name\0222\n\005media\030\002 \001(\0132#.product" +
       "s.menu.section.SectionMedia\"\205\002\n\013SectionS" +
-      "pec\0221\n\007section\030\001 \001(\0162\036.products.menu.sec",
+      "pec\0221\n\007section\030\001 \001(\0162\036.products.menu.sec" +
       "tion.SectionH\000\022>\n\016custom_section\030\002 \001(\0132$" +
       ".products.menu.section.CustomSectionH\000\022\016" +
       "\n\004name\030\003 \001(\tH\000\0228\n\010settings\030\004 \001(\0132&.produ" +
@@ -62,7 +62,7 @@ public final class SectionOuterClass {
       "\n\010FEATURED\020\001*\215\001\n\007Section\022\017\n\013UNSPECIFIED\020" +
       "\000\022\013\n\007FLOWERS\020\001\022\014\n\010EXTRACTS\020\002\022\013\n\007EDIBLES\020" +
       "\003\022\016\n\nCARTRIDGES\020\004\022\016\n\nAPOTHECARY\020\005\022\014\n\010PRE" +
-      "ROLLS\020\006\022\n\n\006PLANTS\020\007\022\017\n\013MERCHANDISE\020\010*2\n\017",
+      "ROLLS\020\006\022\n\n\006PLANTS\020\007\022\017\n\013MERCHANDISE\020\010*2\n\017" +
       "FilteredSection\022\013\n\007ON_SALE\020\000\022\t\n\005HOUSE\020\001\022" +
       "\007\n\003CBD\020\002B%\n\037io.bloombox.schema.menu.sect" +
       "ionH\001P\001b\006proto3"

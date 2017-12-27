@@ -92,7 +92,7 @@ public final class UserOuterClass {
       "\032$structs/labtesting/TestResults.proto\032(" +
       "security/access/PartnerPermissions.proto" +
       "\"g\n\007UserKey\022\'\n\003uid\030\001 \001(\tB\032\212@\027Unique ID f" +
-      "or the user.\0223\n\010identity\030\002 \001(\tB!\212@\036Speci",
+      "or the user.\0223\n\010identity\030\002 \001(\tB!\212@\036Speci" +
       "fic user identity in use.\"\230\010\n\004User\022\'\n\003ui" +
       "d\030\001 \001(\tB\032\212@\027Unique ID for the user.\022C\n\005f" +
       "lags\030\002 \001(\0132\023.identity.UserFlagsB\037\212@\034Bool" +
@@ -102,7 +102,7 @@ public final class UserOuterClass {
       "n\030\024 \003(\0132\014.identity.IDB.\200@\001\212@(Government " +
       "ID associated with this user.\022j\n\ndoctor_" +
       "rec\030\025 \003(\0132\033.identity.ids.UserDoctorRecB9" +
-      "\200@\001\212@3Doctor\'s recommendations associate",
+      "\200@\001\212@3Doctor\'s recommendations associate" +
       "d with this user.\022`\n\004seen\030\036 \001(\0132\021.tempor" +
       "al.InstantB?\212@<Last time this user was s" +
       "een, via auth/login/enrollment etc.\022O\n\006s" +
@@ -112,7 +112,7 @@ public final class UserOuterClass {
       "iesEntryB+\200@\001\212@%Identities associated wi" +
       "th this user.\022P\n\005media\030) \003(\0132\031.identity." +
       "User.MediaEntryB&\200@\001\212@ Media associated " +
-      "with this user.\022O\n\010consumer\030d \001(\0132\031.iden",
+      "with this user.\022O\n\010consumer\030d \001(\0132\031.iden" +
       "tity.ConsumerProfileB\"\212@\037Consumer profil" +
       "e for this user.\022O\n\010industry\030e \001(\0132\031.ide" +
       "ntity.IndustryProfileB\"\212@\037Industry profi" +
@@ -122,7 +122,7 @@ public final class UserOuterClass {
       "\037\n\005value\030\002 \001(\0132\020.media.MediaItem:\0028\001\"\367\002\n" +
       "\tUserFlags\022D\n\tvalidated\030\001 \001(\010B1\212@.Indica" +
       "tes that the account has been validated." +
-      "\022H\n\tsuspended\030\002 \001(\010B5\212@2Indicates that t",
+      "\022H\n\tsuspended\030\002 \001(\010B5\212@2Indicates that t" +
       "he account is currently suspended.\022B\n\005ad" +
       "min\030\003 \001(\010B3\212@0Indicates that the account" +
       " has admin privileges.\022G\n\004beta\030\004 \001(\010B9\212@" +
@@ -132,7 +132,7 @@ public final class UserOuterClass {
       "ndbox systems.\"\255\002\n\014UserIdentity\022\\\n\010provi" +
       "der\030\001 \001(\0162\032.identity.IdentityProviderB.\212" +
       "@+Provider for this external/foreign acc" +
-      "ount.\022F\n\002id\030\002 \001(\tB:\212@7Unique ID for this",
+      "ount.\022F\n\002id\030\002 \001(\tB:\212@7Unique ID for this" +
       " account with the specified provider.\022w\n" +
       "\004seen\030\003 \001(\0132\021.temporal.InstantBV\212@STimes" +
       "tamp for when this identity was last use" +
@@ -142,7 +142,7 @@ public final class UserOuterClass {
       "_dispensaries\030\002 \003(\tB/\212@,Enumerates favor" +
       "ite dispensaries for a user.\022n\n\021enrollme" +
       "nt_source\030\003 \001(\0162\032.identity.EnrollmentSou" +
-      "rceB7\212@4Specifies enrollment source attr",
+      "rceB7\212@4Specifies enrollment source attr" +
       "ibution information.\022a\n\022enrollment_chann" +
       "el\030\004 \001(\tBE\212@BArbitrary string for the ch" +
       "annel through which this user enrolled.\022" +
@@ -152,7 +152,7 @@ public final class UserOuterClass {
       "]\n\007section\030\001 \003(\0162\036.products.menu.section" +
       ".SectionB,\212@)Preferred menu sections or " +
       "product types.\022[\n\007feeling\030\002 \003(\0162\033.struct" +
-      "s.labtesting.FeelingB-\212@*Preferred feeli",
+      "s.labtesting.FeelingB-\212@*Preferred feeli" +
       "ngs or experiential states.\022N\n\ntaste_not" +
       "e\030\003 \003(\0162\035.structs.labtesting.TasteNoteB\033" +
       "\212@\030Preferred tasting notes.\022W\n\017desired_p" +
@@ -162,7 +162,7 @@ public final class UserOuterClass {
       "ting.CannabinoidRatioB\035\212@\032Desired cannab" +
       "inoid ratio.\022>\n\007species\030\006 \003(\0162\020.structs." +
       "SpeciesB\033\212@\030Preferred species types.\0225\n\004" +
-      "grow\030\007 \003(\0162\r.structs.GrowB\030\212@\025Preferred ",
+      "grow\030\007 \003(\0162\r.structs.GrowB\030\212@\025Preferred " +
       "grow types.\"t\n\023ConsumerPreferences\022]\n\004me" +
       "nu\030\n \001(\0132\031.identity.MenuPreferencesB4\212@1" +
       "Preferred menu sections/product types, a" +
@@ -172,7 +172,7 @@ public final class UserOuterClass {
       "lment.\022^\n\020referral_channel\030\002 \001(\tBD\212@ARef" +
       "erral channel token - an artbirary, end-" +
       "system provided value.\022U\n\014signed_up_at\030\003" +
-      " \001(\0132\021.temporal.InstantB,\212@)Timestamp fo",
+      " \001(\0132\021.temporal.InstantB,\212@)Timestamp fo" +
       "r when this profile enrolled.\022R\n\004seen\030\004 " +
       "\001(\0132\021.temporal.InstantB1\212@.Timestamp for" +
       " when this profile was last seen.\022b\n\nfor" +
@@ -182,7 +182,7 @@ public final class UserOuterClass {
       "ive\030\001 \001(\010B\"\212@\037Profile inactive/active st" +
       "atus.\022n\n\010partners\030\002 \003(\0132\'.identity.Indus" +
       "tryProfile.PartnersEntryB3\212@0Map of part" +
-      "ner accesses levels to partner codes.\032O\n",
+      "ner accesses levels to partner codes.\032O\n" +
       "\rPartnersEntry\022\013\n\003key\030\001 \001(\t\022-\n\005value\030\002 \001" +
       "(\0132\036.security.access.PartnerAccess:\0028\001*A" +
       "\n\rUserMediaType\022\013\n\007PICTURE\020\000\022\023\n\017DRIVERS_" +

@@ -261,6 +261,9 @@ public final class LibraryContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1095,7 +1098,7 @@ public final class LibraryContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DeviceLibrary(input, extensionRegistry);
+        return new DeviceLibrary(input, extensionRegistry);
       }
     };
 
@@ -1137,7 +1140,7 @@ public final class LibraryContext {
       "sion specification for the library being" +
       " used to transmit data.\022s\n\006client\030\003 \001(\0162" +
       "\034.analytics.context.APIClientBE\212@BSpecif" +
-      "ies which internal Bloombox library sent",
+      "ies which internal Bloombox library sent" +
       " this event, if any.*C\n\tAPIClient\022\020\n\014UNI" +
       "DENTIFIED\020\000\022\017\n\013JAVA_SCRIPT\020\001\022\t\n\005SWIFT\020\002\022" +
       "\010\n\004JAVA\020\003B=\n$io.bloombox.schema.telemetr" +

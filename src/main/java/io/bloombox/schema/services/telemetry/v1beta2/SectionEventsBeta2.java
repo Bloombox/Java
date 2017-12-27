@@ -47,7 +47,7 @@ public final class SectionEventsBeta2 {
       ".section.Impression\"Y\n\013SectionView\022#\n\007co" +
       "ntext\030\001 \001(\0132\022.analytics.Context\022%\n\004view\030" +
       "\002 \001(\0132\027.analytics.section.View\"_\n\rSectio" +
-      "nAction\022#\n\007context\030\001 \001(\0132\022.analytics.Con",
+      "nAction\022#\n\007context\030\001 \001(\0132\022.analytics.Con" +
       "text\022)\n\006action\030\002 \001(\0132\031.analytics.section" +
       ".ActionBG\n-io.bloombox.schema.services.t" +
       "elemetry.v1beta2H\001P\001\252\002\021Telemetry.v1beta2" +

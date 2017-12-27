@@ -102,7 +102,7 @@ public final class MenuOuterClass {
       "ct.proto\032\025products/Flower.proto\032\032product" +
       "s/Merchandise.proto\032\024products/Plant.prot" +
       "o\032\026products/Preroll.proto\"\270\001\n\010Metadata\022*" +
-      "\n\010location\030\001 \001(\0132\030.partner.PartnerLocati",
+      "\n\010location\030\001 \001(\0132\030.partner.PartnerLocati" +
       "on\022\017\n\007version\030\002 \001(\004\022%\n\006status\030\003 \001(\0162\025.pr" +
       "oducts.menu.Status\022\"\n\005flags\030\004 \003(\0162\023.prod" +
       "ucts.menu.Flag\022$\n\tpublished\030\005 \001(\0132\021.temp" +
@@ -112,7 +112,7 @@ public final class MenuOuterClass {
       "u.section.SectionSpec\022+\n\007product\030\003 \003(\0132\032" +
       ".products.menu.MenuProduct\"K\n\rSectionedM" +
       "enu\022\r\n\005count\030\001 \001(\005\022+\n\007payload\030\002 \003(\0132\032.pr" +
-      "oducts.menu.SectionData\"\222\010\n\nStaticMenu\022=",
+      "oducts.menu.SectionData\"\222\010\n\nStaticMenu\022=" +
       "\n\napothecary\030\001 \003(\0132).products.menu.Stati" +
       "cMenu.ApothecaryEntry\022=\n\ncartridges\030\002 \003(" +
       "\0132).products.menu.StaticMenu.CartridgesE" +
@@ -122,7 +122,7 @@ public final class MenuOuterClass {
       "\0227\n\007flowers\030\005 \003(\0132&.products.menu.Static" +
       "Menu.FlowersEntry\022?\n\013merchandise\030\006 \003(\0132*" +
       ".products.menu.StaticMenu.MerchandiseEnt" +
-      "ry\0225\n\006plants\030\007 \003(\0132%.products.menu.Stati",
+      "ry\0225\n\006plants\030\007 \003(\0132%.products.menu.Stati" +
       "cMenu.PlantsEntry\0229\n\010prerolls\030\010 \003(\0132\'.pr" +
       "oducts.menu.StaticMenu.PrerollsEntry\032G\n\017" +
       "ApothecaryEntry\022\013\n\003key\030\001 \001(\t\022#\n\005value\030\002 " +
@@ -132,7 +132,7 @@ public final class MenuOuterClass {
       "\003key\030\001 \001(\t\022\037\n\005value\030\002 \001(\0132\020.products.Edi" +
       "ble:\0028\001\032B\n\rExtractsEntry\022\013\n\003key\030\001 \001(\t\022 \n" +
       "\005value\030\002 \001(\0132\021.products.Extract:\0028\001\032@\n\014F" +
-      "lowersEntry\022\013\n\003key\030\001 \001(\t\022\037\n\005value\030\002 \001(\0132",
+      "lowersEntry\022\013\n\003key\030\001 \001(\t\022\037\n\005value\030\002 \001(\0132" +
       "\020.products.Flower:\0028\001\032I\n\020MerchandiseEntr" +
       "y\022\013\n\003key\030\001 \001(\t\022$\n\005value\030\002 \001(\0132\025.products" +
       ".Merchandise:\0028\001\032>\n\013PlantsEntry\022\013\n\003key\030\001" +
@@ -142,7 +142,7 @@ public final class MenuOuterClass {
       "\010metadata\030\001 \001(\0132\027.products.menu.Metadata" +
       "\022/\n\007payload\030\003 \001(\0132\034.products.menu.Sectio" +
       "nedMenuH\000\022)\n\004menu\030\004 \001(\0132\031.products.menu." +
-      "StaticMenuH\000B\t\n\007content*#\n\006Status\022\017\n\013UNP",
+      "StaticMenuH\000B\t\n\007content*#\n\006Status\022\017\n\013UNP" +
       "UBLISHED\020\000\022\010\n\004LIVE\020\001*/\n\004Flag\022\t\n\005DRAFT\020\000\022" +
       "\013\n\007PRIVATE\020\001\022\017\n\013OUT_OF_DATE\020\002B\035\n\027io.bloo" +
       "mbox.schema.menuH\001P\001b\006proto3"

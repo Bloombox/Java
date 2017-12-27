@@ -261,6 +261,9 @@ public final class CommercialPurchase {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1095,7 +1098,7 @@ public final class CommercialPurchase {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PurchaseEvent(input, extensionRegistry);
+        return new PurchaseEvent(input, extensionRegistry);
       }
     };
 
@@ -1257,6 +1260,9 @@ public final class CommercialPurchase {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2623,7 +2629,7 @@ public final class CommercialPurchase {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Receipt(input, extensionRegistry);
+        return new Receipt(input, extensionRegistry);
       }
     };
 
@@ -2941,6 +2947,9 @@ public final class CommercialPurchase {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5644,7 +5653,7 @@ public final class CommercialPurchase {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Purchase(input, extensionRegistry);
+        return new Purchase(input, extensionRegistry);
       }
     };
 
@@ -5696,7 +5705,7 @@ public final class CommercialPurchase {
       "os.PurchaseStatus\022\"\n\007instant\030\002 \001(\0132\021.tem" +
       "poral.Instant\022\017\n\007message\030\003 \001(\t\"\200\001\n\007Recei" +
       "pt\022\020\n\010subtotal\030\001 \001(\001\022\"\n\003tax\030\002 \003(\0132\025.acco" +
-      "unting.taxes.Tax\0220\n\010discount\030\003 \003(\0132\036.acc",
+      "unting.taxes.Tax\0220\n\010discount\030\003 \003(\0132\036.acc" +
       "ounting.discounts.Discount\022\r\n\005total\030\004 \001(" +
       "\001\"\342\002\n\010Purchase\022\n\n\002id\030\001 \001(\t\022\024\n\014partner_co" +
       "de\030\002 \001(\t\022\025\n\rlocation_code\030\003 \001(\t\022,\n\006statu" +
@@ -5706,7 +5715,7 @@ public final class CommercialPurchase {
       "\022\034\n\004item\030\007 \003(\0132\016.commerce.Item\022&\n\007receip" +
       "t\030\010 \001(\0132\025.commerce.pos.Receipt\022/\n\naction" +
       "_log\030\t \003(\0132\033.commerce.pos.PurchaseEvent\022" +
-      "%\n\ncreated_at\030\n \001(\0132\021.temporal.Instant*?",
+      "%\n\ncreated_at\030\n \001(\0132\021.temporal.Instant*?" +
       "\n\016PurchaseStatus\022\013\n\007DORMANT\020\000\022\010\n\004OPEN\020\001\022" +
       "\n\n\006VOIDED\020\002\022\n\n\006CLOSED\020\003B<\n\037io.bloombox.s" +
       "chema.commerce.posB\022CommercialPurchaseH\001" +

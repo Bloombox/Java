@@ -37,7 +37,7 @@ public final class IDOuterClass {
       " this identity document.\022J\n\013expire_date\030" +
       "\003 \001(\0132\016.temporal.DateB%\212@\"Expiration dat" +
       "e for this document.\022J\n\nbirth_date\030\004 \001(\013" +
-      "2\016.temporal.DateB&\212@#Birth date listed o",
+      "2\016.temporal.DateB&\212@#Birth date listed o" +
       "n this document.\022I\n\007license\030\024 \001(\0132\022.iden" +
       "tity.ids.USDLB\"\212@\037United States Driver\'s" +
       " License.H\000\022A\n\010passport\030\025 \001(\0132\026.identity" +

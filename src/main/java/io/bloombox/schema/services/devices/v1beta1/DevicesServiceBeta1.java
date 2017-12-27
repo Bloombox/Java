@@ -82,7 +82,7 @@ public final class DevicesServiceBeta1 {
       "\020DeviceActivation\022\014\n\004uuid\030\001 \001(\t\022\020\n\010hostn" +
       "ame\030\002 \001(\t\022>\n\nassignment\030\003 \001(\0132*.services" +
       ".devices.v1beta1.DeviceAssignment\"\307\001\n\004Pi" +
-      "ng\032\t\n\007Request\0323\n\010Response\022\'\n\006status\030\001 \001(",
+      "ng\032\t\n\007Request\0323\n\010Response\022\'\n\006status\030\001 \001(" +
       "\0162\027.services.ServiceStatus\032\177\n\tOperation\022" +
       "7\n\007request\030\001 \001(\0132&.services.devices.v1be" +
       "ta1.Ping.Request\0229\n\010response\030\002 \001(\0132\'.ser" +
@@ -92,7 +92,7 @@ public final class DevicesServiceBeta1 {
       "e\030\001 \001(\010\0224\n\005error\030\002 \001(\0162%.services.device" +
       "s.v1beta1.DeviceError\022<\n\010manifest\030\003 \001(\0132" +
       "*.services.devices.v1beta1.DeviceActivat" +
-      "ion\032\213\001\n\tOperation\022=\n\007request\030\001 \001(\0132,.ser",
+      "ion\032\213\001\n\tOperation\022=\n\007request\030\001 \001(\0132,.ser" +
       "vices.devices.v1beta1.Activation.Request" +
       "\022?\n\010response\030\002 \001(\0132-.services.devices.v1" +
       "beta1.Activation.Response*\033\n\013DeviceError" +
@@ -102,7 +102,7 @@ public final class DevicesServiceBeta1 {
       "eta1.Ping.Request\032\'.services.devices.v1b" +
       "eta1.Ping.Response\"\035\202\323\344\223\002\027\022\025/devices/v1b" +
       "eta1/ping\022\226\001\n\010Activate\022,.services.device" +
-      "s.v1beta1.Activation.Request\032-.services.",
+      "s.v1beta1.Activation.Request\032-.services." +
       "devices.v1beta1.Activation.Response\"-\202\323\344" +
       "\223\002\'\"\"/devices/v1beta1/{serial}:activate:" +
       "\001*B1\n+io.bloombox.schema.services.device" +
