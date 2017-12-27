@@ -336,6 +336,9 @@ public final class PlantProduct {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1913,7 +1916,7 @@ public final class PlantProduct {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Plant(input, extensionRegistry);
+        return new Plant(input, extensionRegistry);
       }
     };
 
@@ -1955,7 +1958,7 @@ public final class PlantProduct {
       "t\030\004 \001(\0132\027.content.ProductContent\022(\n\010mate" +
       "rial\030\005 \001(\0132\026.content.MaterialsData*7\n\tPl" +
       "antType\022\025\n\021UNSPECIFIED_PLANT\020\000\022\010\n\004SEED\020\001" +
-      "\022\t\n\005CLONE\020\002B1\n\032io.bloombox.schema.produc",
+      "\022\t\n\005CLONE\020\002B1\n\032io.bloombox.schema.produc" +
       "tB\014PlantProductH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

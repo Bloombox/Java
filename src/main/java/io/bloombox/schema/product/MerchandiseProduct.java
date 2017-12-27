@@ -479,6 +479,9 @@ public final class MerchandiseProduct {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1693,7 +1696,7 @@ public final class MerchandiseProduct {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Merchandise(input, extensionRegistry);
+        return new Merchandise(input, extensionRegistry);
       }
     };
 
@@ -1735,7 +1738,7 @@ public final class MerchandiseProduct {
       ".content.ProductContent*g\n\017MerchandiseTy" +
       "pe\022\033\n\027UNSPECIFIED_MERCHANDISE\020\000\022\014\n\010CLOTH" +
       "ING\020\001\022\r\n\tGLASSWARE\020\002\022\r\n\tCONTAINER\020\003\022\013\n\007L" +
-      "IGHTER\020\004*M\n\017MerchandiseFlag\022\030\n\024NO_MERCHA",
+      "IGHTER\020\004*M\n\017MerchandiseFlag\022\030\n\024NO_MERCHA" +
       "NDISE_FLAGS\020\000\022\020\n\014MEDICAL_ONLY\020\001\022\016\n\nBRAND" +
       "_SWAG\020\002B7\n\032io.bloombox.schema.productB\022M" +
       "erchandiseProductH\001P\000\370\001\001b\006proto3"

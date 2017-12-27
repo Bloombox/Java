@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -63,7 +64,7 @@ public final class PartnerOuterClass {
       "(\tBC\212@@Short string that uniquely identi" +
       "fies this partner organization.\022I\n\004name\030" +
       "\002 \001(\tB;\212@8Full human-readable label for " +
-      "this partner organization.\022]\n\005flags\030\003 \001(",
+      "this partner organization.\022]\n\005flags\030\003 \001(" +
       "\0132\025.partner.PartnerFlagsB7\212@4Flags for v" +
       "arious things about this partner account" +
       ".\022>\n\nlegal_name\030\004 \001(\tB*\212@\'Legal name of " +
@@ -73,7 +74,7 @@ public final class PartnerOuterClass {
       "ing\030\006 \001(\0132\020.media.MediaItemB.\212@+Branding" +
       " information for this organization.\022u\n\007c" +
       "hannel\030\007 \001(\0162\027.partner.PartnerChannelBK\212" +
-      "@HChannel through which this partner org",
+      "@HChannel through which this partner org" +
       "anization interacts with Bloombox.\022R\n\007cr" +
       "eated\030d \001(\0132\021.temporal.InstantB.\212@+Times" +
       "tamp for when this record was created.\022Y" +
@@ -83,7 +84,7 @@ public final class PartnerOuterClass {
       "\030\001 \001(\010B\216\001\212@\212\001Specifies that the subject " +
       "partner organization is currently suspen" +
       "ded, organization wide, and has had acce" +
-      "ss revoked to Bloombox systems.\022\260\001\n\007past",
+      "ss revoked to Bloombox systems.\022\260\001\n\007past" +
       "due\030\002 \001(\010B\236\001\212@\232\001Specifies that the subje" +
       "ct partner organiztaion is currently in " +
       "a past-due state, where their organizati" +
@@ -93,7 +94,7 @@ public final class PartnerOuterClass {
       " access to beta features, clusters, and " +
       "systems.\022`\n\007sandbox\030\004 \001(\010BO\212@LSpecifies " +
       "that the subject partner organization ha" +
-      "s internal sandbox access.\022\235\001\n\010internal\030",
+      "s internal sandbox access.\022\235\001\n\010internal\030" +
       "\005 \001(\010B\212\001\212@\206\001Specifies that the subject p" +
       "artner organization is a testing account" +
       " held and managed internally by Bloombox" +

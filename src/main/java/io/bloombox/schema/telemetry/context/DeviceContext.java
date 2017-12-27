@@ -336,6 +336,9 @@ public final class DeviceContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -823,7 +826,7 @@ public final class DeviceContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new PixelSize(input, extensionRegistry);
+        return new PixelSize(input, extensionRegistry);
       }
     };
 
@@ -953,6 +956,9 @@ public final class DeviceContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1935,7 +1941,7 @@ public final class DeviceContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DeviceScreen(input, extensionRegistry);
+        return new DeviceScreen(input, extensionRegistry);
       }
     };
 
@@ -2143,6 +2149,9 @@ public final class DeviceContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3830,7 +3839,7 @@ public final class DeviceContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new NativeDeviceContext(input, extensionRegistry);
+        return new NativeDeviceContext(input, extensionRegistry);
       }
     };
 
@@ -3882,7 +3891,7 @@ public final class DeviceContext {
       " \001(\rB2\360?\001\212@,Specifies the width portion " +
       "of a pixel size.\022C\n\006height\030\002 \001(\rB3\360?\001\212@-" +
       "Specifies the height portion of a pixel " +
-      "size.\"\354\002\n\014DeviceScreen\022D\n\006screen\030\001 \001(\0132\034",
+      "size.\"\354\002\n\014DeviceScreen\022D\n\006screen\030\001 \001(\0132\034" +
       ".analytics.context.PixelSizeB\026\212@\023Size of" +
       " the screen.\022H\n\010viewport\030\002 \001(\0132\034.analyti" +
       "cs.context.PixelSizeB\030\212@\025Size of the vie" +
@@ -3892,7 +3901,7 @@ public final class DeviceContext {
       "enOrientationBM\212@JSpecifies the orientat" +
       "ion of the screen at the time an event w" +
       "as captured.\"\247\004\n\023NativeDeviceContext\022L\n\004" +
-      "type\030\001 \001(\0162\022.device.DeviceTypeB*\360?\001\212@$Sp",
+      "type\030\001 \001(\0162\022.device.DeviceTypeB*\360?\001\212@$Sp" +
       "ecifies the type of native device.\022[\n\004ro" +
       "le\030\002 \001(\0162\035.analytics.context.DeviceRoleB" +
       ".\360?\001\212@(Specifies the role of the native " +
@@ -3902,7 +3911,7 @@ public final class DeviceContext {
       "ty.BluetoothBeaconB,\212@)BLE signal broadc" +
       "asting from this device.\022Z\n\twitnessed\030\007 " +
       "\003(\0132\032.proximity.BluetoothBeaconB+\360?\001\212@%B" +
-      "LE signals witnessed by this device.\022X\n\006",
+      "LE signals witnessed by this device.\022X\n\006" +
       "screen\030\004 \001(\0132\037.analytics.context.DeviceS" +
       "creenB\'\212@$Information about the device s" +
       "creen.*$\n\nDeviceRole\022\n\n\006CLIENT\020\000\022\n\n\006SERV" +

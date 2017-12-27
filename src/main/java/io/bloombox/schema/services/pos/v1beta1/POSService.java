@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -68,7 +69,7 @@ public final class POSService {
       "ing.Request\0225\n\010response\030\002 \001(\0132#.services" +
       ".pos.v1beta1.Ping.Response*\262\001\n\010POSError\022" +
       "\013\n\007UNKNOWN\020\000\022\026\n\022INVALID_COLLECTION\020\001\022\023\n\017" +
-      "INVALID_PARTNER\020\002\022\024\n\020INVALID_LOCATION\020\003\022",
+      "INVALID_PARTNER\020\002\022\024\n\020INVALID_LOCATION\020\003\022" +
       "\022\n\016INVALID_DEVICE\020\004\022\025\n\021PARTNER_NOT_FOUND" +
       "\020\005\022\026\n\022LOCATION_NOT_FOUND\020\006\022\023\n\017INVALID_PA" +
       "YLOAD\020c2u\n\013PointOfSale\022f\n\004Ping\022\".service" +

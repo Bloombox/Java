@@ -386,6 +386,9 @@ public final class ShopAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1031,7 +1034,7 @@ public final class ShopAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Impression(input, extensionRegistry);
+        return new Impression(input, extensionRegistry);
       }
     };
 
@@ -1129,6 +1132,9 @@ public final class ShopAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1848,7 +1854,7 @@ public final class ShopAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new View(input, extensionRegistry);
+        return new View(input, extensionRegistry);
       }
     };
 
@@ -1954,6 +1960,9 @@ public final class ShopAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2709,7 +2718,7 @@ public final class ShopAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Action(input, extensionRegistry);
+        return new Action(input, extensionRegistry);
       }
     };
 
@@ -2761,7 +2770,7 @@ public final class ShopAnalytics {
       "ion\022\020\n\010physical\030\001 \001(\010\022(\n\004verb\030\002 \001(\0162\032.an" +
       "alytics.shop.ShopAction\022#\n\010occurred\030\004 \001(" +
       "\0132\021.temporal.Instant*\230\001\n\nShopAction\022\n\n\006E" +
-      "NGAGE\020\000\022\n\n\006ENROLL\020\n\022\014\n\010ACTIVATE\020\013\022\010\n\004JOI",
+      "NGAGE\020\000\022\n\n\006ENROLL\020\n\022\014\n\010ACTIVATE\020\013\022\010\n\004JOI" +
       "N\020\014\022\n\n\006VERIFY\020\r\022\013\n\007CHECKIN\020\016\022\017\n\013PREFEREN" +
       "CES\020\017\022\014\n\010PURCHASE\020\020\022\t\n\005ORDER\020\021\022\n\n\006OPT_IN" +
       "\020\024\022\013\n\007OPT_OUT\020\025B9\n!io.bloombox.schema.an" +

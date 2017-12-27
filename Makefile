@@ -17,7 +17,7 @@
 ## Bloombox: Java API Client
 #
 
-RELEASE_VERSION ?= 1.0-beta5
+RELEASE_VERSION ?= 1.0-beta6
 CLIENT_VERSION ?= 1.0-SNAPSHOT
 TARGET ?= target/
 TARGET_JAR ?= $(TARGET)java-client-$(CLIENT_VERSION).jar
@@ -27,22 +27,37 @@ GOALS ?= $(DEFAULT_GOALS)
 SCHEMA ?= schema/
 RELEASE_ARGS ?= -DperformRelease=true
 RELEASE_GOALS ?= release:prepare release:perform
+EMBEDDED_SCHEMA ?= yes
 
 all: build
 
+ifeq ($(EMBEDDED_SCHEMA),yes)
+POMFILE ?= pom-public.xml
+build: sync-schema $(TARGET_JAR)
+else
+POMFILE ?= pom.xml
 build: $(TARGET_JAR)
+endif
 
 clean:
 	@echo "Cleaning Java client artifacts..."
 	@rm -fr $(TARGET)
 
+ifeq ($(EMBEDDED_SCHEMA),yes)
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox..."
-	@mvn $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
+	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
+else
+$(TARGET_JAR):
+	@echo "Cleaning embedded schema..."
+	@rm -frv src/main/java/io
+	@echo "Building Java client for Bloombox..."
+	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
+endif
 
 release:
 	@echo "Building release for Bloombox Java Client 'v$(RELEASE_VERSION)'..."
-	@mvn clean package install site $(RELEASE_GOALS) -Dproject.version=$(RELEASE_VERSION) -Dbloombox.release $(SERVICE_ARGS) $(RELEASE_ARGS)
+	@mvn -f $(POMFILE) clean package install site $(RELEASE_GOALS) -Dproject.version=$(RELEASE_VERSION) -Dbloombox.release $(SERVICE_ARGS) $(RELEASE_ARGS)
 	@cd target/site && git init && git add . && git commit -m "Update docs" && git checkout -b gh-pages && git remote add origin git@github.com:bloombox/java.git && git push origin gh-pages --force && rm -fr .git
 	@echo "Docs published."
 

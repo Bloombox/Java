@@ -4,7 +4,7 @@
 
     <groupId>io.bloombox</groupId>
     <artifactId>java-client</artifactId>
-    <name>Bloombox: Java Client</name>
+    <name>Base: Client</name>
     <version>1.0-SNAPSHOT</version>
     <url>https://bloombox.github.io/Java</url>
     <description>Java RPCAPI client for the Bloombox Cloud.</description>
@@ -78,10 +78,10 @@
         <bloombox.telemetry.endpoint>telemetry.api.bloombox.cloud</bloombox.telemetry.endpoint>
 
         <!-- Dependencies -->
-        <grpc.version>1.7.0</grpc.version>
-        <protobuf.version>3.4.0</protobuf.version>
-        <netty.boringssl.version>2.0.7.Final</netty.boringssl.version>
-        <kotlin.version>1.2.0</kotlin.version>
+        <grpc.version>1.8.0</grpc.version>
+        <protobuf.version>3.5.1</protobuf.version>
+        <netty.boringssl.version>2.0.6.Final</netty.boringssl.version>
+        <kotlin.version>1.2.10</kotlin.version>
 
         <!-- Testing -->
         <junit.version>4.12</junit.version>
@@ -142,6 +142,13 @@
     </profiles>
 
     <dependencies>
+        <!-- Schema -->
+        <dependency>
+            <groupId>io.bloombox.labs.platform</groupId>
+            <artifactId>schema</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- Protobuf -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
@@ -428,7 +435,7 @@
 
                     <jdkVersion>8</jdkVersion>
                     <sourceDirectories>
-                        <sourceDirectory>src/main/kotlin</sourceDirectory>
+                        <sourceDirectory>base/client/src/main/kotlin</sourceDirectory>
                     </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
                     <perPackageOptions>

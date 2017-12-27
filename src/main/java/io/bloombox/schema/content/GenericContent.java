@@ -53,7 +53,7 @@ public final class GenericContent {
       "\n\013compression\030\005 \001(\0132\021.base.Compression\"(" +
       "\n\004Type\022\010\n\004TEXT\020\000\022\014\n\010MARKDOWN\020\001\022\010\n\004HTML\020\002" +
       "\"\024\n\010Encoding\022\010\n\004UTF8\020\000B3\n\032io.bloombox.sc" +
-      "hema.contentB\016GenericContentH\001P\001\370\001\001b\006pro",
+      "hema.contentB\016GenericContentH\001P\001\370\001\001b\006pro" +
       "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

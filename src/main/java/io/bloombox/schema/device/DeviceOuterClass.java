@@ -63,7 +63,7 @@ public final class DeviceOuterClass {
       "ce.\022G\n\003key\030\004 \001(\0132\031.device.DeviceCredenti" +
       "alsB\037\212@\034Credentials for this device.\"\266\001\n" +
       "\013DeviceFlags\022a\n\tephemeral\030\001 \001(\010BN\212@KFlag" +
-      " to mark a device as ephemeral, i.e. att",
+      " to mark a device as ephemeral, i.e. att" +
       "ached to a disposable identity.\022D\n\007manag" +
       "ed\030\002 \001(\010B3\212@0Flag to mark a device as ma" +
       "naged by EMM systems.\"\264\001\n\021DeviceCredenti" +
@@ -73,7 +73,7 @@ public final class DeviceOuterClass {
       "dentity\030\004 \001(\tB\003\200@\001\022\030\n\013authorities\030\005 \003(\014B" +
       "\003\200@\001*Q\n\nDeviceType\022\027\n\023UNKNOWN_DEVICE_TYP" +
       "E\020\000\022\013\n\007DESKTOP\020\001\022\t\n\005PHONE\020\002\022\n\n\006TABLET\020\003\022" +
-      "\006\n\002TV\020\004B\037\n\031io.bloombox.schema.deviceH\001P\001",
+      "\006\n\002TV\020\004B\037\n\031io.bloombox.schema.deviceH\001P\001" +
       "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

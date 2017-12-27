@@ -408,6 +408,9 @@ public final class AccountingTaxes {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1373,7 +1376,7 @@ public final class AccountingTaxes {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new TaxSpec(input, extensionRegistry);
+        return new TaxSpec(input, extensionRegistry);
       }
     };
 
@@ -1528,6 +1531,9 @@ public final class AccountingTaxes {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2721,7 +2727,7 @@ public final class AccountingTaxes {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Tax(input, extensionRegistry);
+        return new Tax(input, extensionRegistry);
       }
     };
 
@@ -2768,7 +2774,7 @@ public final class AccountingTaxes {
       "ax\022\n\n\002id\030\001 \001(\t\022\'\n\004spec\030\002 \001(\0132\031.accountin" +
       "g.taxes.TaxSpec\022\014\n\004name\030\003 \001(\t\022\r\n\005label\030\004" +
       " \001(\t\022\023\n\013description\030\005 \001(\t*7\n\017TaxJurisdic" +
-      "tion\022\t\n\005LOCAL\020\000\022\014\n\010PROVINCE\020\001\022\013\n\007FEDERAL",
+      "tion\022\t\n\005LOCAL\020\000\022\014\n\010PROVINCE\020\001\022\013\n\007FEDERAL" +
       "\020\002*9\n\010TaxBasis\022\010\n\004ITEM\020\000\022\022\n\016ORDER_SUBTOT" +
       "AL\020\001\022\017\n\013ORDER_TOTAL\020\002B7\n\035io.bloombox.sch" +
       "ema.accountingB\017AccountingTaxesH\001P\000\370\001\001b\006" +

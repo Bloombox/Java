@@ -528,6 +528,9 @@ public final class CommercialOrder {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1208,7 +1211,7 @@ public final class CommercialOrder {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new OrderScheduling(input, extensionRegistry);
+        return new OrderScheduling(input, extensionRegistry);
       }
     };
 
@@ -1322,6 +1325,9 @@ public final class CommercialOrder {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2156,7 +2162,7 @@ public final class CommercialOrder {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new StatusCheckin(input, extensionRegistry);
+        return new StatusCheckin(input, extensionRegistry);
       }
     };
 
@@ -2227,6 +2233,9 @@ public final class CommercialOrder {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2722,7 +2731,7 @@ public final class CommercialOrder {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new OrderKey(input, extensionRegistry);
+        return new OrderKey(input, extensionRegistry);
       }
     };
 
@@ -3002,6 +3011,15 @@ public final class CommercialOrder {
      * <code>.temporal.Instant created_at = 10;</code>
      */
     io.bloombox.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Order subtotal.
+     * </pre>
+     *
+     * <code>double subtotal = 11;</code>
+     */
+    double getSubtotal();
   }
   /**
    * <pre>
@@ -3026,6 +3044,7 @@ public final class CommercialOrder {
       notes_ = "";
       item_ = java.util.Collections.emptyList();
       actionLog_ = java.util.Collections.emptyList();
+      subtotal_ = 0D;
     }
 
     @java.lang.Override
@@ -3038,6 +3057,9 @@ public final class CommercialOrder {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3148,6 +3170,11 @@ public final class CommercialOrder {
                 createdAt_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 89: {
+
+              subtotal_ = input.readDouble();
               break;
             }
           }
@@ -3555,6 +3582,19 @@ public final class CommercialOrder {
       return getCreatedAt();
     }
 
+    public static final int SUBTOTAL_FIELD_NUMBER = 11;
+    private double subtotal_;
+    /**
+     * <pre>
+     * Order subtotal.
+     * </pre>
+     *
+     * <code>double subtotal = 11;</code>
+     */
+    public double getSubtotal() {
+      return subtotal_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3596,6 +3636,9 @@ public final class CommercialOrder {
       }
       if (createdAt_ != null) {
         output.writeMessage(10, getCreatedAt());
+      }
+      if (subtotal_ != 0D) {
+        output.writeDouble(11, subtotal_);
       }
       unknownFields.writeTo(output);
     }
@@ -3643,6 +3686,10 @@ public final class CommercialOrder {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getCreatedAt());
       }
+      if (subtotal_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(11, subtotal_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3689,6 +3736,10 @@ public final class CommercialOrder {
         result = result && getCreatedAt()
             .equals(other.getCreatedAt());
       }
+      result = result && (
+          java.lang.Double.doubleToLongBits(getSubtotal())
+          == java.lang.Double.doubleToLongBits(
+              other.getSubtotal()));
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3732,6 +3783,9 @@ public final class CommercialOrder {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
       }
+      hash = (37 * hash) + SUBTOTAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getSubtotal()));
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3911,6 +3965,8 @@ public final class CommercialOrder {
           createdAt_ = null;
           createdAtBuilder_ = null;
         }
+        subtotal_ = 0D;
+
         return this;
       }
 
@@ -3977,6 +4033,7 @@ public final class CommercialOrder {
         } else {
           result.createdAt_ = createdAtBuilder_.build();
         }
+        result.subtotal_ = subtotal_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4096,6 +4153,9 @@ public final class CommercialOrder {
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.getSubtotal() != 0D) {
+          setSubtotal(other.getSubtotal());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5666,6 +5726,44 @@ public final class CommercialOrder {
         }
         return createdAtBuilder_;
       }
+
+      private double subtotal_ ;
+      /**
+       * <pre>
+       * Order subtotal.
+       * </pre>
+       *
+       * <code>double subtotal = 11;</code>
+       */
+      public double getSubtotal() {
+        return subtotal_;
+      }
+      /**
+       * <pre>
+       * Order subtotal.
+       * </pre>
+       *
+       * <code>double subtotal = 11;</code>
+       */
+      public Builder setSubtotal(double value) {
+        
+        subtotal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Order subtotal.
+       * </pre>
+       *
+       * <code>double subtotal = 11;</code>
+       */
+      public Builder clearSubtotal() {
+        
+        subtotal_ = 0D;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -5696,7 +5794,7 @@ public final class CommercialOrder {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Order(input, extensionRegistry);
+        return new Order(input, extensionRegistry);
       }
     };
 
@@ -5753,8 +5851,8 @@ public final class CommercialOrder {
       "l.Instant\"k\n\rStatusCheckin\022%\n\006status\030\001 \001" +
       "(\0162\025.commerce.OrderStatus\022\"\n\007instant\030\002 \001" +
       "(\0132\021.temporal.Instant\022\017\n\007message\030\003 \001(\t\"J" +
-      "\n\010OrderKey\022>\n\002id\030\001 \001(\tB2\212@/Order ID, ass",
-      "igned by the server upon creation.\"\347\002\n\005O" +
+      "\n\010OrderKey\022>\n\002id\030\001 \001(\tB2\212@/Order ID, ass" +
+      "igned by the server upon creation.\"\371\002\n\005O" +
       "rder\022\n\n\002id\030\001 \001(\t\022!\n\004type\030\002 \001(\0162\023.commerc" +
       "e.OrderType\022%\n\006status\030\003 \001(\0162\025.commerce.O" +
       "rderStatus\022$\n\010customer\030\004 \001(\0132\022.commerce." +
@@ -5763,13 +5861,14 @@ public final class CommercialOrder {
       "ommerce.DeliveryDestination\022\r\n\005notes\030\007 \001" +
       "(\t\022\034\n\004item\030\010 \003(\0132\016.commerce.Item\022+\n\nacti" +
       "on_log\030\t \003(\0132\027.commerce.StatusCheckin\022%\n" +
-      "\ncreated_at\030\n \001(\0132\021.temporal.Instant*%\n\t",
-      "OrderType\022\n\n\006PICKUP\020\000\022\014\n\010DELIVERY\020\001*%\n\016S" +
-      "chedulingType\022\010\n\004ASAP\020\000\022\t\n\005TIMED\020\001*a\n\013Or" +
-      "derStatus\022\013\n\007PENDING\020\000\022\014\n\010APPROVED\020\001\022\014\n\010" +
-      "REJECTED\020\002\022\014\n\010ASSIGNED\020\003\022\014\n\010EN_ROUTE\020\004\022\r" +
-      "\n\tFULFILLED\020\005B5\n\033io.bloombox.schema.comm" +
-      "erceB\017CommercialOrderH\001P\000\370\001\001b\006proto3"
+      "\ncreated_at\030\n \001(\0132\021.temporal.Instant\022\020\n\010" +
+      "subtotal\030\013 \001(\001*%\n\tOrderType\022\n\n\006PICKUP\020\000\022" +
+      "\014\n\010DELIVERY\020\001*%\n\016SchedulingType\022\010\n\004ASAP\020" +
+      "\000\022\t\n\005TIMED\020\001*a\n\013OrderStatus\022\013\n\007PENDING\020\000" +
+      "\022\014\n\010APPROVED\020\001\022\014\n\010REJECTED\020\002\022\014\n\010ASSIGNED" +
+      "\020\003\022\014\n\010EN_ROUTE\020\004\022\r\n\tFULFILLED\020\005B5\n\033io.bl" +
+      "oombox.schema.commerceB\017CommercialOrderH" +
+      "\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5811,7 +5910,7 @@ public final class CommercialOrder {
     internal_static_commerce_Order_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_commerce_Order_descriptor,
-        new java.lang.String[] { "Id", "Type", "Status", "Customer", "Scheduling", "Destination", "Notes", "Item", "ActionLog", "CreatedAt", });
+        new java.lang.String[] { "Id", "Type", "Status", "Customer", "Scheduling", "Destination", "Notes", "Item", "ActionLog", "CreatedAt", "Subtotal", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);

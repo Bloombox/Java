@@ -474,6 +474,9 @@ public final class OrderItem {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1490,7 +1493,7 @@ public final class OrderItem {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new VariantSpec(input, extensionRegistry);
+        return new VariantSpec(input, extensionRegistry);
       }
     };
 
@@ -1590,6 +1593,24 @@ public final class OrderItem {
      * <code>uint32 count = 3;</code>
      */
     int getCount();
+
+    /**
+     * <pre>
+     * Unit price of this item.
+     * </pre>
+     *
+     * <code>double price = 4;</code>
+     */
+    double getPrice();
+
+    /**
+     * <pre>
+     * Line-item cost calculated from count and price.
+     * </pre>
+     *
+     * <code>double cost = 5;</code>
+     */
+    double getCost();
   }
   /**
    * <pre>
@@ -1610,6 +1631,8 @@ public final class OrderItem {
     private Item() {
       variant_ = java.util.Collections.emptyList();
       count_ = 0;
+      price_ = 0D;
+      cost_ = 0D;
     }
 
     @java.lang.Override
@@ -1622,6 +1645,9 @@ public final class OrderItem {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1665,6 +1691,16 @@ public final class OrderItem {
             case 24: {
 
               count_ = input.readUInt32();
+              break;
+            }
+            case 33: {
+
+              price_ = input.readDouble();
+              break;
+            }
+            case 41: {
+
+              cost_ = input.readDouble();
               break;
             }
           }
@@ -1796,6 +1832,32 @@ public final class OrderItem {
       return count_;
     }
 
+    public static final int PRICE_FIELD_NUMBER = 4;
+    private double price_;
+    /**
+     * <pre>
+     * Unit price of this item.
+     * </pre>
+     *
+     * <code>double price = 4;</code>
+     */
+    public double getPrice() {
+      return price_;
+    }
+
+    public static final int COST_FIELD_NUMBER = 5;
+    private double cost_;
+    /**
+     * <pre>
+     * Line-item cost calculated from count and price.
+     * </pre>
+     *
+     * <code>double cost = 5;</code>
+     */
+    public double getCost() {
+      return cost_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1817,6 +1879,12 @@ public final class OrderItem {
       if (count_ != 0) {
         output.writeUInt32(3, count_);
       }
+      if (price_ != 0D) {
+        output.writeDouble(4, price_);
+      }
+      if (cost_ != 0D) {
+        output.writeDouble(5, cost_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1836,6 +1904,14 @@ public final class OrderItem {
       if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, count_);
+      }
+      if (price_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(4, price_);
+      }
+      if (cost_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(5, cost_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1862,6 +1938,14 @@ public final class OrderItem {
           .equals(other.getVariantList());
       result = result && (getCount()
           == other.getCount());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getPrice())
+          == java.lang.Double.doubleToLongBits(
+              other.getPrice()));
+      result = result && (
+          java.lang.Double.doubleToLongBits(getCost())
+          == java.lang.Double.doubleToLongBits(
+              other.getCost()));
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1883,6 +1967,12 @@ public final class OrderItem {
       }
       hash = (37 * hash) + COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getCount();
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getPrice()));
+      hash = (37 * hash) + COST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getCost()));
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2031,6 +2121,10 @@ public final class OrderItem {
         }
         count_ = 0;
 
+        price_ = 0D;
+
+        cost_ = 0D;
+
         return this;
       }
 
@@ -2070,6 +2164,8 @@ public final class OrderItem {
           result.variant_ = variantBuilder_.build();
         }
         result.count_ = count_;
+        result.price_ = price_;
+        result.cost_ = cost_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2143,6 +2239,12 @@ public final class OrderItem {
         }
         if (other.getCount() != 0) {
           setCount(other.getCount());
+        }
+        if (other.getPrice() != 0D) {
+          setPrice(other.getPrice());
+        }
+        if (other.getCost() != 0D) {
+          setCost(other.getCost());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2674,6 +2776,82 @@ public final class OrderItem {
         onChanged();
         return this;
       }
+
+      private double price_ ;
+      /**
+       * <pre>
+       * Unit price of this item.
+       * </pre>
+       *
+       * <code>double price = 4;</code>
+       */
+      public double getPrice() {
+        return price_;
+      }
+      /**
+       * <pre>
+       * Unit price of this item.
+       * </pre>
+       *
+       * <code>double price = 4;</code>
+       */
+      public Builder setPrice(double value) {
+        
+        price_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unit price of this item.
+       * </pre>
+       *
+       * <code>double price = 4;</code>
+       */
+      public Builder clearPrice() {
+        
+        price_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double cost_ ;
+      /**
+       * <pre>
+       * Line-item cost calculated from count and price.
+       * </pre>
+       *
+       * <code>double cost = 5;</code>
+       */
+      public double getCost() {
+        return cost_;
+      }
+      /**
+       * <pre>
+       * Line-item cost calculated from count and price.
+       * </pre>
+       *
+       * <code>double cost = 5;</code>
+       */
+      public Builder setCost(double value) {
+        
+        cost_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Line-item cost calculated from count and price.
+       * </pre>
+       *
+       * <code>double cost = 5;</code>
+       */
+      public Builder clearCost() {
+        
+        cost_ = 0D;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -2704,7 +2882,7 @@ public final class OrderItem {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Item(input, extensionRegistry);
+        return new Item(input, extensionRegistry);
       }
     };
 
@@ -2746,15 +2924,16 @@ public final class OrderItem {
       "oductKey.proto\"\214\001\n\013VariantSpec\022)\n\007varian" +
       "t\030\001 \001(\0162\030.commerce.ProductVariant\022)\n\006wei" +
       "ght\030\002 \001(\0162\027.commerce.ProductWeightH\000\022\016\n\004" +
-      "size\030\003 \001(\tH\000\022\017\n\005color\030\004 \001(\tH\000B\006\n\004spec\"\\\n" +
+      "size\030\003 \001(\tH\000\022\017\n\005color\030\004 \001(\tH\000B\006\n\004spec\"y\n" +
       "\004Item\022\035\n\003key\030\001 \001(\0132\020.base.ProductKey\022&\n\007" +
       "variant\030\002 \003(\0132\025.commerce.VariantSpec\022\r\n\005" +
-      "count\030\003 \001(\r*1\n\016ProductVariant\022\n\n\006WEIGHT\020" +
-      "\000\022\t\n\005COLOR\020\001\022\010\n\004SIZE\020\002*a\n\rProductWeight\022" +
-      "\r\n\tNO_WEIGHT\020\000\022\014\n\010HALFGRAM\020\001\022\010\n\004GRAM\020\002\022\n",
-      "\n\006EIGHTH\020\003\022\013\n\007QUARTER\020\004\022\010\n\004HALF\020\005\022\006\n\002OZ\020" +
-      "\006B/\n\033io.bloombox.schema.commerceB\tOrderI" +
-      "temH\001P\000\370\001\001b\006proto3"
+      "count\030\003 \001(\r\022\r\n\005price\030\004 \001(\001\022\014\n\004cost\030\005 \001(\001" +
+      "*1\n\016ProductVariant\022\n\n\006WEIGHT\020\000\022\t\n\005COLOR\020" +
+      "\001\022\010\n\004SIZE\020\002*a\n\rProductWeight\022\r\n\tNO_WEIGH" +
+      "T\020\000\022\014\n\010HALFGRAM\020\001\022\010\n\004GRAM\020\002\022\n\n\006EIGHTH\020\003\022" +
+      "\013\n\007QUARTER\020\004\022\010\n\004HALF\020\005\022\006\n\002OZ\020\006B/\n\033io.blo" +
+      "ombox.schema.commerceB\tOrderItemH\001P\000\370\001\001b" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2780,7 +2959,7 @@ public final class OrderItem {
     internal_static_commerce_Item_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_commerce_Item_descriptor,
-        new java.lang.String[] { "Key", "Variant", "Count", });
+        new java.lang.String[] { "Key", "Variant", "Count", "Price", "Cost", });
     io.bloombox.schema.base.BaseProductKey.getDescriptor();
   }
 

@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -40,4 +41,22 @@ public interface UserKeyOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUidBytes();
+
+  /**
+   * <pre>
+   * Specific user identity in use.
+   * </pre>
+   *
+   * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+   */
+  java.lang.String getIdentity();
+  /**
+   * <pre>
+   * Specific user identity in use.
+   * </pre>
+   *
+   * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+   */
+  com.google.protobuf.ByteString
+      getIdentityBytes();
 }

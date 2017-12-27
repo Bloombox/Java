@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -103,80 +104,79 @@ public final class TelemetryServiceBeta3 {
       "Analytics.proto\032)analytics/commerce/Sect" +
       "ionAnalytics.proto\032&analytics/identity/U" +
       "serAnalytics.proto\032+telemetry/v1beta3/Ge" +
-      "nericEvents_Beta3.proto\032\033google/protobuf",
+      "nericEvents_Beta3.proto\032\033google/protobuf" +
       "/empty.proto\032\034google/api/annotations.pro" +
       "to\"\211\001\n\021TelemetryResponse\022;\n\006status\030\001 \001(\016" +
       "2+.services.telemetry.v1beta3.OperationS" +
       "tatus\022\r\n\005count\030\002 \001(\r\022(\n\007service\030\003 \001(\0162\027." +
-      "services.ServiceStatus\"\214\002\n\rTelemetryPing" +
-      "\032.\n\007Request\022#\n\007context\030\001 \001(\0132\022.analytics" +
-      ".Context\0323\n\010Response\022\'\n\006status\030\001 \001(\0162\027.s" +
-      "ervices.ServiceStatus\032\225\001\n\tOperation\022B\n\007r" +
-      "equest\030\001 \001(\01321.services.telemetry.v1beta" +
-      "3.TelemetryPing.Request\022D\n\010response\030\002 \001(",
-      "\01322.services.telemetry.v1beta3.Telemetry" +
-      "Ping.Response\"\210\005\n\017CommercialEvent\032\312\001\n\nIm" +
-      "pression\022#\n\007context\030\001 \001(\0132\022.analytics.Co" +
-      "ntext\0220\n\007section\030\n \001(\0132\035.analytics.secti" +
-      "on.ImpressionH\000\0220\n\007product\030\013 \001(\0132\035.analy" +
-      "tics.product.ImpressionH\000\022*\n\004shop\030\014 \001(\0132" +
-      "\032.analytics.shop.ImpressionH\000B\007\n\005event\032\262" +
-      "\001\n\004View\022#\n\007context\030\001 \001(\0132\022.analytics.Con" +
-      "text\022*\n\007section\030\n \001(\0132\027.analytics.sectio" +
-      "n.ViewH\000\022*\n\007product\030\013 \001(\0132\027.analytics.pr",
-      "oduct.ViewH\000\022$\n\004shop\030\014 \001(\0132\024.analytics.s" +
-      "hop.ViewH\000B\007\n\005event\032\362\001\n\006Action\022\014\n\004name\030\001" +
-      " \001(\t\022#\n\007context\030\002 \001(\0132\022.analytics.Contex" +
-      "t\022,\n\007section\030\n \001(\0132\031.analytics.section.A" +
-      "ctionH\000\022,\n\007product\030\013 \001(\0132\031.analytics.pro" +
-      "duct.ActionH\000\022&\n\004shop\030\014 \001(\0132\026.analytics." +
-      "shop.ActionH\000\022(\n\005order\030\r \001(\0132\027.analytics" +
-      ".order.ActionH\000B\007\n\005event\"\203\001\n\rIdentityEve" +
-      "nt\032r\n\006Action\022\014\n\004name\030\001 \001(\t\022#\n\007context\030\002 " +
-      "\001(\0132\022.analytics.Context\022,\n\006action\030\n \001(\0132",
-      "\032.analytics.identity.ActionH\000B\007\n\005event*$" +
-      "\n\017OperationStatus\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001*\336\001\n" +
-      "\016TelemetryError\022\013\n\007UNKNOWN\020\000\022\026\n\022INVALID_" +
-      "COLLECTION\020\001\022\023\n\017INVALID_PARTNER\020\002\022\024\n\020INV" +
-      "ALID_LOCATION\020\003\022\022\n\016INVALID_DEVICE\020\004\022\020\n\014I" +
-      "NVALID_USER\020\005\022\022\n\016INVALID_CLIENT\020\006\022\025\n\021PAR" +
-      "TNER_NOT_FOUND\020\007\022\026\n\022LOCATION_NOT_FOUND\020\010" +
-      "\022\023\n\017INVALID_PAYLOAD\020c2\360\004\n\016EventTelemetry" +
-      "\022\264\001\n\004Ping\0221.services.telemetry.v1beta3.T" +
-      "elemetryPing.Request\0322.services.telemetr",
-      "y.v1beta3.TelemetryPing.Response\"E\202\323\344\223\002?" +
-      "\022\027/telemetry/v1beta3/pingZ$\"\037/telemetry/" +
-      "v1beta3/generic/ping:\001*\022\211\001\n\005Event\022).serv" +
-      "ices.telemetry.v1beta3.Event.Request\032\026.g" +
-      "oogle.protobuf.Empty\"=\202\323\344\223\0027\"2/telemetry" +
-      "/v1beta3/{context.collection.name}:event" +
-      ":\001*\022\222\001\n\005Batch\022..services.telemetry.v1bet" +
-      "a3.Event.BatchRequest\032-.services.telemet" +
-      "ry.v1beta3.TelemetryResponse\"*\202\323\344\223\002$\"\037/t" +
-      "elemetry/v1beta3/events:batch:\001*\022\205\001\n\005Err",
-      "or\022%.services.telemetry.v1beta3.Exceptio" +
-      "n\032\026.google.protobuf.Empty\"=\202\323\344\223\0027\"2/tele" +
+      "services.ServiceStatus\"\347\001\n\rTelemetryPing" +
+      "\032\t\n\007Request\0323\n\010Response\022\'\n\006status\030\001 \001(\0162" +
+      "\027.services.ServiceStatus\032\225\001\n\tOperation\022B" +
+      "\n\007request\030\001 \001(\01321.services.telemetry.v1b" +
+      "eta3.TelemetryPing.Request\022D\n\010response\030\002" +
+      " \001(\01322.services.telemetry.v1beta3.Teleme" +
+      "tryPing.Response\"\210\005\n\017CommercialEvent\032\312\001\n" +
+      "\nImpression\022#\n\007context\030\001 \001(\0132\022.analytics" +
+      ".Context\0220\n\007section\030\n \001(\0132\035.analytics.se" +
+      "ction.ImpressionH\000\0220\n\007product\030\013 \001(\0132\035.an" +
+      "alytics.product.ImpressionH\000\022*\n\004shop\030\014 \001" +
+      "(\0132\032.analytics.shop.ImpressionH\000B\007\n\005even" +
+      "t\032\262\001\n\004View\022#\n\007context\030\001 \001(\0132\022.analytics." +
+      "Context\022*\n\007section\030\n \001(\0132\027.analytics.sec" +
+      "tion.ViewH\000\022*\n\007product\030\013 \001(\0132\027.analytics" +
+      ".product.ViewH\000\022$\n\004shop\030\014 \001(\0132\024.analytic" +
+      "s.shop.ViewH\000B\007\n\005event\032\362\001\n\006Action\022\014\n\004nam" +
+      "e\030\001 \001(\t\022#\n\007context\030\002 \001(\0132\022.analytics.Con" +
+      "text\022,\n\007section\030\n \001(\0132\031.analytics.sectio" +
+      "n.ActionH\000\022,\n\007product\030\013 \001(\0132\031.analytics." +
+      "product.ActionH\000\022&\n\004shop\030\014 \001(\0132\026.analyti" +
+      "cs.shop.ActionH\000\022(\n\005order\030\r \001(\0132\027.analyt" +
+      "ics.order.ActionH\000B\007\n\005event\"\203\001\n\rIdentity" +
+      "Event\032r\n\006Action\022\014\n\004name\030\001 \001(\t\022#\n\007context" +
+      "\030\002 \001(\0132\022.analytics.Context\022,\n\006action\030\n \001" +
+      "(\0132\032.analytics.identity.ActionH\000B\007\n\005even" +
+      "t*$\n\017OperationStatus\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001*" +
+      "\336\001\n\016TelemetryError\022\013\n\007UNKNOWN\020\000\022\026\n\022INVAL" +
+      "ID_COLLECTION\020\001\022\023\n\017INVALID_PARTNER\020\002\022\024\n\020" +
+      "INVALID_LOCATION\020\003\022\022\n\016INVALID_DEVICE\020\004\022\020" +
+      "\n\014INVALID_USER\020\005\022\022\n\016INVALID_CLIENT\020\006\022\025\n\021" +
+      "PARTNER_NOT_FOUND\020\007\022\026\n\022LOCATION_NOT_FOUN" +
+      "D\020\010\022\023\n\017INVALID_PAYLOAD\020c2\312\004\n\016EventTeleme" +
+      "try\022\216\001\n\004Ping\0221.services.telemetry.v1beta" +
+      "3.TelemetryPing.Request\0322.services.telem" +
+      "etry.v1beta3.TelemetryPing.Response\"\037\202\323\344" +
+      "\223\002\031\022\027/telemetry/v1beta3/ping\022\211\001\n\005Event\022)" +
+      ".services.telemetry.v1beta3.Event.Reques" +
+      "t\032\026.google.protobuf.Empty\"=\202\323\344\223\0027\"2/tele" +
       "metry/v1beta3/{context.collection.name}:" +
-      "error:\001*2\210\004\n\023CommercialTelemetry\022\251\001\n\nImp" +
-      "ression\0226.services.telemetry.v1beta3.Com" +
-      "mercialEvent.Impression\032\026.google.protobu" +
-      "f.Empty\"K\202\323\344\223\002E\"@/telemetry/v1beta3/comm" +
-      "erce/{context.scope.commercial=*}:impres" +
-      "s:\001*\022\232\001\n\004View\0220.services.telemetry.v1bet" +
-      "a3.CommercialEvent.View\032\026.google.protobu",
-      "f.Empty\"H\202\323\344\223\002B\"=/telemetry/v1beta3/comm" +
-      "erce/{context.scope.commercial=*}:view:\001" +
-      "*\022\247\001\n\006Action\0222.services.telemetry.v1beta" +
-      "3.CommercialEvent.Action\032\026.google.protob" +
-      "uf.Empty\"Q\202\323\344\223\002K\"F/telemetry/v1beta3/com" +
-      "merce/{name}/{context.scope.commercial=*" +
-      "}:action:\001*2\265\001\n\021IdentityTelemetry\022\237\001\n\006Ac" +
-      "tion\0220.services.telemetry.v1beta3.Identi" +
-      "tyEvent.Action\032\026.google.protobuf.Empty\"K" +
-      "\202\323\344\223\002E\"@/telemetry/v1beta3/identity/{nam",
-      "e}/{context.user_key.uid}:action:\001*BG\n-i" +
-      "o.bloombox.schema.services.telemetry.v1b" +
-      "eta3H\001P\001\252\002\021Telemetry.v1beta3b\006proto3"
+      "event:\001*\022\222\001\n\005Batch\022..services.telemetry." +
+      "v1beta3.Event.BatchRequest\032-.services.te" +
+      "lemetry.v1beta3.TelemetryResponse\"*\202\323\344\223\002" +
+      "$\"\037/telemetry/v1beta3/events:batch:\001*\022\205\001" +
+      "\n\005Error\022%.services.telemetry.v1beta3.Exc" +
+      "eption\032\026.google.protobuf.Empty\"=\202\323\344\223\0027\"2" +
+      "/telemetry/v1beta3/{context.collection.n" +
+      "ame}:error:\001*2\210\004\n\023CommercialTelemetry\022\251\001" +
+      "\n\nImpression\0226.services.telemetry.v1beta" +
+      "3.CommercialEvent.Impression\032\026.google.pr" +
+      "otobuf.Empty\"K\202\323\344\223\002E\"@/telemetry/v1beta3" +
+      "/commerce/{context.scope.commercial=*}:i" +
+      "mpress:\001*\022\232\001\n\004View\0220.services.telemetry." +
+      "v1beta3.CommercialEvent.View\032\026.google.pr" +
+      "otobuf.Empty\"H\202\323\344\223\002B\"=/telemetry/v1beta3" +
+      "/commerce/{context.scope.commercial=*}:v" +
+      "iew:\001*\022\247\001\n\006Action\0222.services.telemetry.v" +
+      "1beta3.CommercialEvent.Action\032\026.google.p" +
+      "rotobuf.Empty\"Q\202\323\344\223\002K\"F/telemetry/v1beta" +
+      "3/commerce/{name}/{context.scope.commerc" +
+      "ial=*}:action:\001*2\265\001\n\021IdentityTelemetry\022\237" +
+      "\001\n\006Action\0220.services.telemetry.v1beta3.I" +
+      "dentityEvent.Action\032\026.google.protobuf.Em" +
+      "pty\"K\202\323\344\223\002E\"@/telemetry/v1beta3/identity" +
+      "/{name}/{context.user_key.uid}:action:\001*" +
+      "BG\n-io.bloombox.schema.services.telemetr" +
+      "y.v1beta3H\001P\001\252\002\021Telemetry.v1beta3b\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -217,7 +217,7 @@ public final class TelemetryServiceBeta3 {
     internal_static_services_telemetry_v1beta3_TelemetryPing_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_telemetry_v1beta3_TelemetryPing_Request_descriptor,
-        new java.lang.String[] { "Context", });
+        new java.lang.String[] { });
     internal_static_services_telemetry_v1beta3_TelemetryPing_Response_descriptor =
       internal_static_services_telemetry_v1beta3_TelemetryPing_descriptor.getNestedTypes().get(1);
     internal_static_services_telemetry_v1beta3_TelemetryPing_Response_fieldAccessorTable = new

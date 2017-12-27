@@ -401,6 +401,9 @@ public final class UserAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1236,7 +1239,7 @@ public final class UserAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Action(input, extensionRegistry);
+        return new Action(input, extensionRegistry);
       }
     };
 
@@ -1278,7 +1281,7 @@ public final class UserAnalytics {
       "TIVATE\020\013\022\010\n\004JOIN\020\014\022\n\n\006VERIFY\020\r\022\013\n\007CHECKI" +
       "N\020\016\022\017\n\013PREFERENCES\020\017\022\014\n\010PURCHASE\020\020\022\t\n\005OR" +
       "DER\020\021\022\n\n\006OPT_IN\020\022\022\013\n\007OPT_OUT\020\023B9\n!io.blo" +
-      "ombox.schema.analytics.userB\rUserAnalyti",
+      "ombox.schema.analytics.userB\rUserAnalyti" +
       "csH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

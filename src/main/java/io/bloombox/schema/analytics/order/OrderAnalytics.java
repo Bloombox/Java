@@ -445,6 +445,9 @@ public final class OrderAnalytics {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1584,7 +1587,7 @@ public final class OrderAnalytics {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Action(input, extensionRegistry);
+        return new Action(input, extensionRegistry);
       }
     };
 
@@ -1626,7 +1629,7 @@ public final class OrderAnalytics {
       "\0132\022.commerce.Customer\022#\n\010occurred\030\004 \001(\0132" +
       "\021.temporal.Instant*\377\001\n\013OrderAction\022\017\n\013AD" +
       "D_TO_CART\020\000\022\024\n\020REMOVE_FROM_CART\020\001\022\020\n\014RES" +
-      "TORE_CART\020\002\022\021\n\rVERIFY_MEMBER\020\003\022\020\n\014ORDER_",
+      "TORE_CART\020\002\022\021\n\rVERIFY_MEMBER\020\003\022\020\n\014ORDER_" +
       "SUBMIT\020\004\022\020\n\014ORDER_STATUS\020\005\022\020\n\014ORDER_CANC" +
       "EL\020\006\022\022\n\016ORDER_ACCEPTED\020\007\022\022\n\016ORDER_REJECT" +
       "ED\020\010\022\025\n\021ORDER_IN_PROGERSS\020\t\022\032\n\026ORDER_OUT" +

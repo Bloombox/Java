@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -63,7 +64,7 @@ public final class ShopEventsBeta2 {
       "ression\"S\n\010ShopView\022#\n\007context\030\001 \001(\0132\022.a" +
       "nalytics.Context\022\"\n\004view\030\002 \001(\0132\024.analyti" +
       "cs.shop.View\"Y\n\nShopAction\022#\n\007context\030\001 " +
-      "\001(\0132\022.analytics.Context\022&\n\006action\030\002 \001(\0132",
+      "\001(\0132\022.analytics.Context\022&\n\006action\030\002 \001(\0132" +
       "\026.analytics.shop.ActionBG\n-io.bloombox.s" +
       "chema.services.telemetry.v1beta2H\001P\001\252\002\021T" +
       "elemetry.v1beta2b\006proto3"

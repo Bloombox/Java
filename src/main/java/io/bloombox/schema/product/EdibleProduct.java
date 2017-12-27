@@ -439,6 +439,9 @@ public final class EdibleProduct {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1088,7 +1091,7 @@ public final class EdibleProduct {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new EdibleIngredient(input, extensionRegistry);
+        return new EdibleIngredient(input, extensionRegistry);
       }
     };
 
@@ -1322,6 +1325,9 @@ public final class EdibleProduct {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3199,7 +3205,7 @@ public final class EdibleProduct {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Edible(input, extensionRegistry);
+        return new Edible(input, extensionRegistry);
       }
     };
 
@@ -3246,7 +3252,7 @@ public final class EdibleProduct {
       "Type\022#\n\005flags\030\003 \003(\0162\024.products.EdibleFla" +
       "g\022(\n\007product\030\004 \001(\0132\027.content.ProductCont" +
       "ent\022(\n\010material\030\005 \001(\0132\026.content.Material" +
-      "sData\022/\n\013ingredients\030\006 \003(\0132\032.products.Ed",
+      "sData\022/\n\013ingredients\030\006 \003(\0132\032.products.Ed" +
       "ibleIngredient*Y\n\nEdibleType\022\026\n\022UNSPECIF" +
       "IED_EDIBLE\020\000\022\r\n\tCHOCOLATE\020\001\022\016\n\nBAKED_GOO" +
       "D\020\002\022\t\n\005CANDY\020\003\022\t\n\005DRINK\020\004*\\\n\nEdibleFlag\022" +

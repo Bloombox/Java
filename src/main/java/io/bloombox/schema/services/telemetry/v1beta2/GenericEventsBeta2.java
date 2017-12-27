@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -73,7 +74,7 @@ public final class GenericEventsBeta2 {
       "\002 \001(\0132\030.analytics.generic.Event\0320\n\005Batch" +
       "\022\'\n\005event\030\002 \003(\0132\030.analytics.generic.Even" +
       "t\032k\n\014BatchRequest\022#\n\007context\030\001 \001(\0132\022.ana" +
-      "lytics.Context\0226\n\005batch\030\002 \003(\0132\'.services",
+      "lytics.Context\0226\n\005batch\030\002 \003(\0132\'.services" +
       ".telemetry.v1beta2.Event.Batch\"]\n\tExcept" +
       "ion\022#\n\007context\030\001 \001(\0132\022.analytics.Context" +
       "\022+\n\005error\030\002 \001(\0132\034.analytics.generic.Exce" +

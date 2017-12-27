@@ -53,7 +53,7 @@ public final class MaterialsContent {
       "\030\002 \001(\0132\021.structs.Genetics\022\033\n\004grow\030\003 \001(\0162" +
       "\r.structs.Grow\022\035\n\005shelf\030\004 \001(\0162\016.structs." +
       "Shelf\022;\n\010channels\030\005 \003(\0132).products.distr" +
-      "ibution.DistributionPolicyB5\n\032io.bloombo",
+      "ibution.DistributionPolicyB5\n\032io.bloombo" +
       "x.schema.contentB\020MaterialsContentH\001P\001\370\001" +
       "\001b\006proto3"
     };

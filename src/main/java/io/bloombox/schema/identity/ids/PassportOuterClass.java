@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -53,7 +54,7 @@ public final class PassportOuterClass {
       "d string code, like \"US\" or \"UK\".\022J\n\013exp" +
       "ire_date\030\004 \001(\0132\016.temporal.DateB%\212@\"Expir" +
       "ation date for this document.\022J\n\nbirth_d" +
-      "ate\030\005 \001(\0132\016.temporal.DateB&\212@#Birth date",
+      "ate\030\005 \001(\0132\016.temporal.DateB&\212@#Birth date" +
       " listed on this document.B%\n\037io.bloombox" +
       ".schema.identity.idsH\001P\001b\006proto3"
     };

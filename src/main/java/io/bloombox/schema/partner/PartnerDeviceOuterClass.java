@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -63,7 +64,7 @@ public final class PartnerDeviceOuterClass {
       "uuid\030\001 \001(\t\022!\n\007partner\030\002 \001(\0132\020.partner.Pa" +
       "rtner\022*\n\010location\030\003 \001(\0132\030.partner.Partne" +
       "rLocation\022(\n\004type\030\004 \001(\0162\032.partner.Partne" +
-      "rDeviceType\022*\n\005flags\030\005 \001(\0132\033.partner.Par",
+      "rDeviceType\022*\n\005flags\030\005 \001(\0132\033.partner.Par" +
       "tnerDeviceFlags\022\036\n\006device\030\006 \001(\0132\016.device" +
       ".Device\022\037\n\004seen\030\007 \001(\0132\021.temporal.Instant" +
       "\022%\n\nregistered\030\010 \001(\0132\021.temporal.Instant\"" +

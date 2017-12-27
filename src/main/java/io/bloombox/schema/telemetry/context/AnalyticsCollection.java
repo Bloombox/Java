@@ -279,6 +279,9 @@ public final class AnalyticsCollection {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -958,7 +961,7 @@ public final class AnalyticsCollection {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Collection(input, extensionRegistry);
+        return new Collection(input, extensionRegistry);
       }
     };
 
@@ -1000,7 +1003,7 @@ public final class AnalyticsCollection {
       "s\n\004type\030\003 \001(\0162\034.analytics.context.EventT" +
       "ypeBG\212@DSpecifies the type of event. Usu" +
       "ally added by the telemetry backend.*W\n\t" +
-      "EventType\022\013\n\007GENERIC\020\000\022\016\n\nCOMMERCIAL\020\001\022\014",
+      "EventType\022\013\n\007GENERIC\020\000\022\016\n\nCOMMERCIAL\020\001\022\014" +
       "\n\010IDENTITY\020\002\022\016\n\nEXPERIENCE\020\003\022\017\n\013OPERATIO" +
       "NAL\020\004BB\n$io.bloombox.schema.telemetry.co" +
       "ntextB\023AnalyticsCollectionH\001P\000\370\001\001b\006proto" +

@@ -83,6 +83,9 @@ public final class AnalyticsException {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -570,7 +573,7 @@ public final class AnalyticsException {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SourceLineReference(input, extensionRegistry);
+        return new SourceLineReference(input, extensionRegistry);
       }
     };
 
@@ -696,6 +699,9 @@ public final class AnalyticsException {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1754,7 +1760,7 @@ public final class AnalyticsException {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SourceLocation(input, extensionRegistry);
+        return new SourceLocation(input, extensionRegistry);
       }
     };
 
@@ -1885,6 +1891,9 @@ public final class AnalyticsException {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2911,7 +2920,7 @@ public final class AnalyticsException {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Exception(input, extensionRegistry);
+        return new Exception(input, extensionRegistry);
       }
     };
 
@@ -2963,7 +2972,7 @@ public final class AnalyticsException {
       "eneric.SourceLineReferenceH\000\022\020\n\006offset\030\004" +
       " \001(\003H\000B\n\n\010pinpoint\"\203\001\n\tException\022\016\n\006doma" +
       "in\030\001 \001(\t\022\014\n\004code\030\002 \001(\005\0223\n\010location\030\003 \001(\013" +
-      "2!.analytics.generic.SourceLocation\022#\n\010o",
+      "2!.analytics.generic.SourceLocation\022#\n\010o" +
       "ccurred\030\004 \001(\0132\021.temporal.InstantB9\n\034io.b" +
       "loombox.schema.telemetryB\022AnalyticsExcep" +
       "tionH\001P\000\370\001\001b\006proto3"

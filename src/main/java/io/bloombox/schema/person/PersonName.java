@@ -53,7 +53,7 @@ public final class PersonName {
       "st, name.\022-\n\013middle_name\030\004 \001(\tB\030\212@\025Perso" +
       "n\'s middle name.\022.\n\006prefix\030\005 \001(\tB\036\212@\033Pre" +
       "fix for a person\'s name.\0220\n\007postfix\030\006 \001(" +
-      "\tB\037\212@\034Postfix for a person\'s name.B\037\n\031io",
+      "\tB\037\212@\034Postfix for a person\'s name.B\037\n\031io" +
       ".bloombox.schema.personH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

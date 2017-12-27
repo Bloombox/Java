@@ -53,7 +53,7 @@ public final class BasicTestingSpec {
       "stMedia\022\'\n\014last_updated\030\003 \001(\0132\021.temporal" +
       ".Instant\0226\n\014cannabinoids\030\024 \001(\0132 .structs" +
       ".labtesting.Cannabinoids\0222\n\nsubjective\030\036" +
-      " \001(\0132\036.structs.labtesting.SubjectiveBD\n)",
+      " \001(\0132\036.structs.labtesting.SubjectiveBD\n)" +
       "io.bloombox.schema.product.struct.testin" +
       "gB\020BasicTestingSpecH\001P\001\370\001\001b\006proto3"
     };

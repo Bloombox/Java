@@ -68,7 +68,7 @@ public final class ProductDiscount {
       "\'\n\004type\030\001 \001(\0162\031.structs.pricing.SaleType" +
       "\022$\n\teffective\030\002 \001(\0132\021.temporal.Instant\022%" +
       "\n\nexpiration\030\003 \001(\0132\021.temporal.Instant\022=\n" +
-      "\016percentage_off\030\004 \001(\0132#.structs.pricing.",
+      "\016percentage_off\030\004 \001(\0132#.structs.pricing." +
       "PercentageDiscountH\000\022-\n\004bogo\030\005 \001(\0132\035.str" +
       "ucts.pricing.BOGODiscountH\000\0223\n\007loyalty\030\006" +
       " \001(\0132 .structs.pricing.LoyaltyDiscountH\000" +

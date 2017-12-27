@@ -360,6 +360,9 @@ public final class BrowserContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1567,7 +1570,7 @@ public final class BrowserContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new BrowserDeviceContext(input, extensionRegistry);
+        return new BrowserDeviceContext(input, extensionRegistry);
       }
     };
 
@@ -1609,7 +1612,7 @@ public final class BrowserContext {
       "eviceContext\022_\n\014browser_type\030\001 \001(\0162\036.ana" +
       "lytics.context.BrowserTypeB)\360?\001\212@#Specif" +
       "ies the general browser type.\022G\n\007version" +
-      "\030\002 \001(\0132\024.structs.VersionSpecB \212@\035Version",
+      "\030\002 \001(\0132\024.structs.VersionSpecB \212@\035Version" +
       " info for the browser.\022A\n\010language\030\003 \001(\t" +
       "B/\212@,Active language, as reported by the" +
       " browser.\022M\n\nuser_agent\030\004 \001(\tB9\212@6Raw us" +
@@ -1619,7 +1622,7 @@ public final class BrowserContext {
       "\022N\n\024hardware_concurrency\030\006 \001(\rB0\212@-Hardw" +
       "are concurrency reported by the browser." +
       "\022<\n\013color_depth\030\007 \001(\rB\'\212@$Color depth re" +
-      "ported by the browser.*b\n\013BrowserType\022\023\n",
+      "ported by the browser.*b\n\013BrowserType\022\023\n" +
       "\017BROWSER_UNKNOWN\020\000\022\n\n\006CHROME\020\001\022\n\n\006SAFARI" +
       "\020\002\022\013\n\007FIREFOX\020\003\022\t\n\005OPERA\020\004\022\016\n\nIE_OR_EDGE" +
       "\020\005B=\n$io.bloombox.schema.telemetry.conte" +

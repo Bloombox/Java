@@ -78,7 +78,7 @@ public final class ProductPricingSpec {
       ".PricingTierAvailability\0222\n\tdiscounts\030\003 " +
       "\003(\0132\037.structs.pricing.SaleDescriptor\"\236\001\n" +
       "\031WeightedPricingDescriptor\0222\n\006weight\030\001 \001" +
-      "(\0162\".structs.pricing.PricingWeightTier\0224",
+      "(\0162\".structs.pricing.PricingWeightTier\0224" +
       "\n\004tier\030\002 \001(\0132&.structs.pricing.UnitPrici" +
       "ngDescriptor\022\027\n\017weight_in_grams\030\003 \001(\002\"\032\n" +
       "\030FreebiePricingDescriptor\"\200\002\n\021PricingDes" +
@@ -88,7 +88,7 @@ public final class ProductPricingSpec {
       "\025 \001(\0132*.structs.pricing.WeightedPricingD" +
       "escriptorH\000\022<\n\007freebie\030\026 \001(\0132).structs.p" +
       "ricing.FreebiePricingDescriptorH\000B\t\n\007pri" +
-      "cing\"z\n\016ProductPricing\0222\n\tdiscounts\030\001 \003(",
+      "cing\"z\n\016ProductPricing\0222\n\tdiscounts\030\001 \003(" +
       "\0132\037.structs.pricing.SaleDescriptor\0224\n\010ma" +
       "nifest\030\002 \003(\0132\".structs.pricing.PricingDe" +
       "scriptor*2\n\013PricingType\022\010\n\004UNIT\020\000\022\014\n\010WEI" +

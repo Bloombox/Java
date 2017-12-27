@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -48,6 +49,9 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -92,31 +96,6 @@ private static final long serialVersionUID = 0L;
   public interface RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.TelemetryPing.Request)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Optional context to include in this ping.
-     * </pre>
-     *
-     * <code>.analytics.Context context = 1;</code>
-     */
-    boolean hasContext();
-    /**
-     * <pre>
-     * Optional context to include in this ping.
-     * </pre>
-     *
-     * <code>.analytics.Context context = 1;</code>
-     */
-    io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
-    /**
-     * <pre>
-     * Optional context to include in this ping.
-     * </pre>
-     *
-     * <code>.analytics.Context context = 1;</code>
-     */
-    io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
   }
   /**
    * <pre>
@@ -147,7 +126,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -163,19 +144,6 @@ private static final long serialVersionUID = 0L;
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder subBuilder = null;
-              if (context_ != null) {
-                subBuilder = context_.toBuilder();
-              }
-              context_ = input.readMessage(io.bloombox.schema.telemetry.AnalyticsContext.Context.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(context_);
-                context_ = subBuilder.buildPartial();
-              }
-
               break;
             }
           }
@@ -202,39 +170,6 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request.class, io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request.Builder.class);
     }
 
-    public static final int CONTEXT_FIELD_NUMBER = 1;
-    private io.bloombox.schema.telemetry.AnalyticsContext.Context context_;
-    /**
-     * <pre>
-     * Optional context to include in this ping.
-     * </pre>
-     *
-     * <code>.analytics.Context context = 1;</code>
-     */
-    public boolean hasContext() {
-      return context_ != null;
-    }
-    /**
-     * <pre>
-     * Optional context to include in this ping.
-     * </pre>
-     *
-     * <code>.analytics.Context context = 1;</code>
-     */
-    public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
-      return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
-    }
-    /**
-     * <pre>
-     * Optional context to include in this ping.
-     * </pre>
-     *
-     * <code>.analytics.Context context = 1;</code>
-     */
-    public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
-      return getContext();
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -247,9 +182,6 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (context_ != null) {
-        output.writeMessage(1, getContext());
-      }
       unknownFields.writeTo(output);
     }
 
@@ -258,10 +190,6 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (context_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getContext());
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -278,11 +206,6 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request other = (io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request) obj;
 
       boolean result = true;
-      result = result && (hasContext() == other.hasContext());
-      if (hasContext()) {
-        result = result && getContext()
-            .equals(other.getContext());
-      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -294,10 +217,6 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasContext()) {
-        hash = (37 * hash) + CONTEXT_FIELD_NUMBER;
-        hash = (53 * hash) + getContext().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -431,12 +350,6 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        if (contextBuilder_ == null) {
-          context_ = null;
-        } else {
-          context_ = null;
-          contextBuilder_ = null;
-        }
         return this;
       }
 
@@ -459,11 +372,6 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request buildPartial() {
         io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request result = new io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request(this);
-        if (contextBuilder_ == null) {
-          result.context_ = context_;
-        } else {
-          result.context_ = contextBuilder_.build();
-        }
         onBuilt();
         return result;
       }
@@ -505,9 +413,6 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request other) {
         if (other == io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request.getDefaultInstance()) return this;
-        if (other.hasContext()) {
-          mergeContext(other.getContext());
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -533,159 +438,6 @@ private static final long serialVersionUID = 0L;
           }
         }
         return this;
-      }
-
-      private io.bloombox.schema.telemetry.AnalyticsContext.Context context_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> contextBuilder_;
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      public boolean hasContext() {
-        return contextBuilder_ != null || context_ != null;
-      }
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
-        if (contextBuilder_ == null) {
-          return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
-        } else {
-          return contextBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
-        if (contextBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          context_ = value;
-          onChanged();
-        } else {
-          contextBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      public Builder setContext(
-          io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
-        if (contextBuilder_ == null) {
-          context_ = builderForValue.build();
-          onChanged();
-        } else {
-          contextBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
-        if (contextBuilder_ == null) {
-          if (context_ != null) {
-            context_ =
-              io.bloombox.schema.telemetry.AnalyticsContext.Context.newBuilder(context_).mergeFrom(value).buildPartial();
-          } else {
-            context_ = value;
-          }
-          onChanged();
-        } else {
-          contextBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      public Builder clearContext() {
-        if (contextBuilder_ == null) {
-          context_ = null;
-          onChanged();
-        } else {
-          context_ = null;
-          contextBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
-        
-        onChanged();
-        return getContextFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
-        if (contextBuilder_ != null) {
-          return contextBuilder_.getMessageOrBuilder();
-        } else {
-          return context_ == null ?
-              io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
-        }
-      }
-      /**
-       * <pre>
-       * Optional context to include in this ping.
-       * </pre>
-       *
-       * <code>.analytics.Context context = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
-          getContextFieldBuilder() {
-        if (contextBuilder_ == null) {
-          contextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder>(
-                  getContext(),
-                  getParentForChildren(),
-                  isClean());
-          context_ = null;
-        }
-        return contextBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -717,7 +469,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Request(input, extensionRegistry);
+        return new Request(input, extensionRegistry);
       }
     };
 
@@ -787,6 +539,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1238,7 +993,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Response(input, extensionRegistry);
+        return new Response(input, extensionRegistry);
       }
     };
 
@@ -1340,6 +1095,9 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2139,7 +1897,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Operation(input, extensionRegistry);
+        return new Operation(input, extensionRegistry);
       }
     };
 
@@ -2457,7 +2215,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TelemetryPing(input, extensionRegistry);
+      return new TelemetryPing(input, extensionRegistry);
     }
   };
 

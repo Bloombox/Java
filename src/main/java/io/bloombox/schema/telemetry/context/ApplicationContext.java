@@ -295,6 +295,9 @@ public final class ApplicationContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1560,7 +1563,7 @@ public final class ApplicationContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new WebApplication(input, extensionRegistry);
+        return new WebApplication(input, extensionRegistry);
       }
     };
 
@@ -1718,6 +1721,9 @@ public final class ApplicationContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3082,7 +3088,7 @@ public final class ApplicationContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DeviceApplication(input, extensionRegistry);
+        return new DeviceApplication(input, extensionRegistry);
       }
     };
 
@@ -3129,7 +3135,7 @@ public final class ApplicationContext {
       "the event was sent.\022-\n\006anchor\030\003 \001(\tB\035\212@\032" +
       "Anchor in the URL, if any.\022/\n\005title\030\004 \001(" +
       "\tB \212@\035Title of the current webpage.\0224\n\010r" +
-      "eferrer\030\005 \001(\tB\"\212@\037Referring URL for this",
+      "eferrer\030\005 \001(\tB\"\212@\037Referring URL for this" +
       " webpage.\022>\n\010protocol\030\006 \001(\tB,\212@)Protocol" +
       " that was used to serve this URL.\"\335\003\n\021De" +
       "viceApplication\022L\n\004type\030\001 \001(\0162\".analytic" +
@@ -3139,7 +3145,7 @@ public final class ApplicationContext {
       "ng application.\022\177\n\003web\030\n \001(\0132!.analytics" +
       ".context.WebApplicationBM\212@JSpecifies in" +
       "formation about an event that was sent f" +
-      "rom a web application.H\000\022E\n\tbundle_id\030\024 ",
+      "rom a web application.H\000\022E\n\tbundle_id\030\024 " +
       "\001(\tB0\212@-Specifies a bundle ID for an iOS" +
       " application.H\000\022X\n\022android_package_id\030\036 " +
       "\001(\tB:\212@7Specifies an application ID for " +

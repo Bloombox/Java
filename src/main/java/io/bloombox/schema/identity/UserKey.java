@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -37,6 +38,7 @@ private static final long serialVersionUID = 0L;
   }
   private UserKey() {
     uid_ = "";
+    identity_ = "";
   }
 
   @java.lang.Override
@@ -49,6 +51,9 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
     int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -71,6 +76,12 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             uid_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            identity_ = s;
             break;
           }
         }
@@ -139,6 +150,48 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IDENTITY_FIELD_NUMBER = 2;
+  private volatile java.lang.Object identity_;
+  /**
+   * <pre>
+   * Specific user identity in use.
+   * </pre>
+   *
+   * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+   */
+  public java.lang.String getIdentity() {
+    java.lang.Object ref = identity_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      identity_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Specific user identity in use.
+   * </pre>
+   *
+   * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+   */
+  public com.google.protobuf.ByteString
+      getIdentityBytes() {
+    java.lang.Object ref = identity_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      identity_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -154,6 +207,9 @@ private static final long serialVersionUID = 0L;
     if (!getUidBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
     }
+    if (!getIdentityBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, identity_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -164,6 +220,9 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!getUidBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
+    }
+    if (!getIdentityBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, identity_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,6 +242,8 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getUid()
         .equals(other.getUid());
+    result = result && getIdentity()
+        .equals(other.getIdentity());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -196,6 +257,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + UID_FIELD_NUMBER;
     hash = (53 * hash) + getUid().hashCode();
+    hash = (37 * hash) + IDENTITY_FIELD_NUMBER;
+    hash = (53 * hash) + getIdentity().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -331,6 +394,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       uid_ = "";
 
+      identity_ = "";
+
       return this;
     }
 
@@ -354,6 +419,7 @@ private static final long serialVersionUID = 0L;
     public io.bloombox.schema.identity.UserKey buildPartial() {
       io.bloombox.schema.identity.UserKey result = new io.bloombox.schema.identity.UserKey(this);
       result.uid_ = uid_;
+      result.identity_ = identity_;
       onBuilt();
       return result;
     }
@@ -397,6 +463,10 @@ private static final long serialVersionUID = 0L;
       if (other == io.bloombox.schema.identity.UserKey.getDefaultInstance()) return this;
       if (!other.getUid().isEmpty()) {
         uid_ = other.uid_;
+        onChanged();
+      }
+      if (!other.getIdentity().isEmpty()) {
+        identity_ = other.identity_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -514,6 +584,95 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
+
+    private java.lang.Object identity_ = "";
+    /**
+     * <pre>
+     * Specific user identity in use.
+     * </pre>
+     *
+     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+     */
+    public java.lang.String getIdentity() {
+      java.lang.Object ref = identity_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        identity_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Specific user identity in use.
+     * </pre>
+     *
+     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdentityBytes() {
+      java.lang.Object ref = identity_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Specific user identity in use.
+     * </pre>
+     *
+     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+     */
+    public Builder setIdentity(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      identity_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specific user identity in use.
+     * </pre>
+     *
+     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+     */
+    public Builder clearIdentity() {
+      
+      identity_ = getDefaultInstance().getIdentity();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specific user identity in use.
+     * </pre>
+     *
+     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
+     */
+    public Builder setIdentityBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      identity_ = value;
+      onChanged();
+      return this;
+    }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFieldsProto3(unknownFields);
@@ -544,7 +703,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UserKey(input, extensionRegistry);
+      return new UserKey(input, extensionRegistry);
     }
   };
 

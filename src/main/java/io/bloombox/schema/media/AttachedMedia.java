@@ -53,7 +53,7 @@ public final class AttachedMedia {
       "describing.\022.\n\004name\030\003 \001(\tB \212@\035Friendly n" +
       "ame for this media.\022+\n\003uri\030\004 \001(\tB\036\212@\033Abs" +
       "olute URI to this media.B0\n\030io.bloombox." +
-      "schema.mediaB\rAttachedMediaH\001P\001\370\001\001b\006prot",
+      "schema.mediaB\rAttachedMediaH\001P\001\370\001\001b\006prot" +
       "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

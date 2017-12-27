@@ -19,7 +19,7 @@ package bloombox.client.shop
 import bloombox.client.BloomboxClient
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
-import io.bloombox.schema.services.shop.VerifyMember
+import io.bloombox.schema.services.shop.v1.VerifyMember
 import java.util.concurrent.TimeUnit
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue

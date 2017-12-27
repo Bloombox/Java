@@ -133,6 +133,9 @@ public final class AnalyticsContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1080,7 +1083,7 @@ public final class AnalyticsContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new EventPosition(input, extensionRegistry);
+        return new EventPosition(input, extensionRegistry);
       }
     };
 
@@ -1207,6 +1210,9 @@ public final class AnalyticsContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2235,7 +2241,7 @@ public final class AnalyticsContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new EventActors(input, extensionRegistry);
+        return new EventActors(input, extensionRegistry);
       }
     };
 
@@ -2568,6 +2574,9 @@ public final class AnalyticsContext {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5376,7 +5385,7 @@ public final class AnalyticsContext {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Context(input, extensionRegistry);
+        return new Context(input, extensionRegistry);
       }
     };
 
@@ -5428,7 +5437,7 @@ public final class AnalyticsContext {
       "wser.proto\032\037analytics/context/Library.pr" +
       "oto\032\"analytics/context/Collection.proto\032" +
       "#analytics/context/Application.proto\032$an" +
-      "alytics/context/NativeDevice.proto\"\270\004\n\rE",
+      "alytics/context/NativeDevice.proto\"\270\004\n\rE" +
       "ventPosition\022\211\001\n\006ingest\030\002 \001(\0132\021.temporal" +
       ".InstantBf\360?\001\372?\tTIMESTAMP\212@TTimestamp de" +
       "scribing when this event was ingested by" +
@@ -5438,7 +5447,7 @@ public final class AnalyticsContext {
       " event occurred, as reported by the subm" +
       "itting device or endpoint.\022\202\001\n\tprocessed" +
       "\030\004 \001(\004Bo\372?\tTIMESTAMP\212@`Timestamp describ" +
-      "ing when this event occurred, as reporte",
+      "ing when this event occurred, as reporte" +
       "d by the submitting device or endpoint.\022" +
       "|\n\010enriched\030\005 \001(\004Bj\372?\tTIMESTAMP\212@[Timest" +
       "amps describing each instance of this ev" +
@@ -5448,7 +5457,7 @@ public final class AnalyticsContext {
       "gged in when the event was submitted.\022Z\n" +
       "\007partner\030\002 \001(\0132\020.partner.PartnerB7\212@4Par" +
       "tner account under which the event was s" +
-      "ubmitted.\022e\n\010location\030\003 \001(\0132\030.partner.Pa",
+      "ubmitted.\022e\n\010location\030\003 \001(\0132\030.partner.Pa" +
       "rtnerLocationB9\212@6Location account under" +
       " which this event was submitted.\"\324\013\n\007Con" +
       "text\022r\n\ncollection\030\001 \001(\0132\035.analytics.con" +
@@ -5458,7 +5467,7 @@ public final class AnalyticsContext {
       "@8Specifies the user associated with thi" +
       "s event, if known.\022M\n\013fingerprint\030\003 \001(\tB" +
       "8\212@5Unique device fingerprint for this a" +
-      "nalytics context.\022\227\001\n\005group\030\004 \001(\tB\207\001\212@\203\001",
+      "nalytics context.\022\227\001\n\005group\030\004 \001(\tB\207\001\212@\203\001" +
       "Arbitrary group ID for this event. Gathe" +
       "rs events into buckets of variable size," +
       " usually used to indicate a user or devi" +
@@ -5468,7 +5477,7 @@ public final class AnalyticsContext {
       "\nip_address\030\006 \001(\tBX\212@UIP address of the " +
       "server or client that transmitted this i" +
       "nformation, if is is known.\022O\n\005scope\030\007 \001" +
-      "(\0132\020.analytics.ScopeB.\212@+Partner and com",
+      "(\0132\020.analytics.ScopeB.\212@+Partner and com" +
       "mercial scope of this event.\022V\n\003app\030\010 \001(" +
       "\0132$.analytics.context.DeviceApplicationB" +
       "#\212@ Application version information.\022R\n\007" +
@@ -5478,7 +5487,7 @@ public final class AnalyticsContext {
       "tiveDeviceContextB\275\001\212@\271\001Specifies inform" +
       "ation about a native device, when the ev" +
       "ent is being sent from a native context " +
-      "of some kind, such as a mobile phone app",
+      "of some kind, such as a mobile phone app" +
       "lication or embedded device running part" +
       "ner code.\022\254\001\n\007browser\030\013 \001(\0132\'.analytics." +
       "context.BrowserDeviceContextBr\212@oSpecifi" +
@@ -5488,7 +5497,7 @@ public final class AnalyticsContext {
       "\001(\0132\r.geo.LocationBk\212@hOrigin location f" +
       "or this event, as determined by geolocat" +
       "ion or explicit inclusion in the event p" +
-      "ayload.B7\n\034io.bloombox.schema.telemetryB",
+      "ayload.B7\n\034io.bloombox.schema.telemetryB" +
       "\020AnalyticsContextH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

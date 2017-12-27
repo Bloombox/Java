@@ -411,6 +411,9 @@ public final class DistributionChannel {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1125,7 +1128,7 @@ public final class DistributionChannel {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new DistributionPolicy(input, extensionRegistry);
+        return new DistributionPolicy(input, extensionRegistry);
       }
     };
 
@@ -1167,7 +1170,7 @@ public final class DistributionChannel {
       "\022\027\n\023UNSPECIFIED_CHANNEL\020\000\022\n\n\006RETAIL\020\001\022\r\n" +
       "\tWHOLESALE\020\002\022\010\n\004BULK\020\003*H\n\013ChannelType\022\034\n" +
       "\030UNSPECIFIED_CHANNEL_TYPE\020\000\022\n\n\006DIRECT\020\001\022" +
-      "\017\n\013MARKETPLACE\020\002B8\n\032io.bloombox.schema.p",
+      "\017\n\013MARKETPLACE\020\002B8\n\032io.bloombox.schema.p" +
       "roductB\023DistributionChannelH\001P\000\370\001\001b\006prot" +
       "o3"
     };

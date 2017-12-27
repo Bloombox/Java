@@ -1,10 +1,11 @@
 /*
  * Copyright 2017, Bloombox, LLC. All rights reserved.
  *
- * Source and object computer code contained herein is the private intellectual property
- * of Bloombox, a California Limited Liability Corporation. Use of this code in source form
- * requires permission in writing before use or the publishing of derivative works, for
- * commercial purposes or any other purpose, from a duly authorized officer of Momentum
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
  * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -339,6 +340,9 @@ public final class AnalyticsPipeline {
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -3333,7 +3337,7 @@ public final class AnalyticsPipeline {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-          return new TelemetryEvent(input, extensionRegistry);
+        return new TelemetryEvent(input, extensionRegistry);
       }
     };
 
@@ -3375,7 +3379,7 @@ public final class AnalyticsPipeline {
       "tryEvent\022\014\n\004uuid\030\001 \001(\t\022\016\n\006parent\030\002 \001(\t\022\020" +
       "\n\010internal\030\003 \001(\010\022(\n\006timing\030\004 \001(\0132\030.analy" +
       "tics.EventPosition\022#\n\007context\030\005 \001(\0132\022.an" +
-      "alytics.Context\022&\n\006actors\030\006 \001(\0132\026.analyt",
+      "alytics.Context\022&\n\006actors\030\006 \001(\0132\026.analyt" +
       "ics.EventActors\022+\n\007generic\030\n \001(\0132\030.analy" +
       "tics.generic.EventH\000\022-\n\005error\030\013 \001(\0132\034.an" +
       "alytics.generic.ExceptionH\000\022L\n\nimpressio" +
@@ -3385,7 +3389,7 @@ public final class AnalyticsPipeline {
       "vent.ViewH\000\022D\n\006action\030\026 \001(\01322.services.t" +
       "elemetry.v1beta3.CommercialEvent.ActionH" +
       "\000\022G\n\013user_action\030\036 \001(\01320.services.teleme" +
-      "try.v1beta3.IdentityEvent.ActionH\000B\007\n\005ev",
+      "try.v1beta3.IdentityEvent.ActionH\000B\007\n\005ev" +
       "entB]\n-io.bloombox.schema.services.telem" +
       "etry.v1beta3B\021AnalyticsPipelineH\001P\000\370\001\001\252\002" +
       "\021Telemetry.v1beta3b\006proto3"
