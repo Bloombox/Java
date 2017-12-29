@@ -47,16 +47,11 @@ public final class PassportOuterClass {
     java.lang.String[] descriptorData = {
       "\n\033identity/ids/Passport.proto\022\014identity." +
       "ids\032\016bq_field.proto\032\023temporal/Date.proto" +
-      "\"\326\002\n\010Passport\022\024\n\007barcode\030\001 \001(\014B\003\200@\001\0224\n\002i" +
-      "d\030\002 \001(\tB(\212@%Unique document ID for this " +
-      "passport.\022f\n\006nation\030\003 \001(\tBV\212@SNation tha" +
-      "t issued this passport, as an abbreviate" +
-      "d string code, like \"US\" or \"UK\".\022J\n\013exp" +
-      "ire_date\030\004 \001(\0132\016.temporal.DateB%\212@\"Expir" +
-      "ation date for this document.\022J\n\nbirth_d" +
-      "ate\030\005 \001(\0132\016.temporal.DateB&\212@#Birth date" +
-      " listed on this document.B%\n\037io.bloombox" +
-      ".schema.identity.idsH\001P\001b\006proto3"
+      "\"\210\001\n\010Passport\022\024\n\007barcode\030\001 \001(\014B\003\200@\001\022f\n\006n" +
+      "ation\030\002 \001(\tBV\212@SNation that issued this " +
+      "passport, as an abbreviated string code," +
+      " like \"US\" or \"UK\".B%\n\037io.bloombox.schem" +
+      "a.identity.idsH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -77,7 +72,7 @@ public final class PassportOuterClass {
     internal_static_identity_ids_Passport_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_identity_ids_Passport_descriptor,
-        new java.lang.String[] { "Barcode", "Id", "Nation", "ExpireDate", "BirthDate", });
+        new java.lang.String[] { "Barcode", "Nation", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);

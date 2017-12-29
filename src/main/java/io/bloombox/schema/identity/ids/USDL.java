@@ -40,6 +40,7 @@ private static final long serialVersionUID = 0L;
     barcode_ = "";
     magstripe_ = "";
     jurisdiction_ = 0;
+    identificationCard_ = false;
     fields_ = java.util.Collections.emptyList();
   }
 
@@ -86,16 +87,21 @@ private static final long serialVersionUID = 0L;
             magstripe_ = s;
             break;
           }
-          case 40: {
+          case 24: {
             int rawValue = input.readEnum();
 
             jurisdiction_ = rawValue;
             break;
           }
+          case 32: {
+
+            identificationCard_ = input.readBool();
+            break;
+          }
           case 802: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
               fields_ = new java.util.ArrayList<io.bloombox.schema.identity.ids.USDLFieldValue>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000010;
             }
             fields_.add(
                 input.readMessage(io.bloombox.schema.identity.ids.USDLFieldValue.parser(), extensionRegistry));
@@ -109,7 +115,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
         fields_ = java.util.Collections.unmodifiableList(fields_);
       }
       this.unknownFields = unknownFields.build();
@@ -213,14 +219,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int JURISDICTION_FIELD_NUMBER = 5;
+  public static final int JURISDICTION_FIELD_NUMBER = 3;
   private int jurisdiction_;
   /**
    * <pre>
    * State that issued this Driver's License.
    * </pre>
    *
-   * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+   * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
    */
   public int getJurisdictionValue() {
     return jurisdiction_;
@@ -230,11 +236,24 @@ private static final long serialVersionUID = 0L;
    * State that issued this Driver's License.
    * </pre>
    *
-   * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+   * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
    */
   public io.bloombox.schema.geo.usa.USState getJurisdiction() {
     io.bloombox.schema.geo.usa.USState result = io.bloombox.schema.geo.usa.USState.valueOf(jurisdiction_);
     return result == null ? io.bloombox.schema.geo.usa.USState.UNRECOGNIZED : result;
+  }
+
+  public static final int IDENTIFICATION_CARD_FIELD_NUMBER = 4;
+  private boolean identificationCard_;
+  /**
+   * <pre>
+   * Flag that indicates this is an identification card, not a Driver's License.
+   * </pre>
+   *
+   * <code>bool identification_card = 4 [(.gen_bq_schema.description) = "Flag that indicates this is an identification card, not a Driver&#92;'s License."];</code>
+   */
+  public boolean getIdentificationCard() {
+    return identificationCard_;
   }
 
   public static final int FIELDS_FIELD_NUMBER = 100;
@@ -311,7 +330,10 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, magstripe_);
     }
     if (jurisdiction_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
-      output.writeEnum(5, jurisdiction_);
+      output.writeEnum(3, jurisdiction_);
+    }
+    if (identificationCard_ != false) {
+      output.writeBool(4, identificationCard_);
     }
     for (int i = 0; i < fields_.size(); i++) {
       output.writeMessage(100, fields_.get(i));
@@ -332,7 +354,11 @@ private static final long serialVersionUID = 0L;
     }
     if (jurisdiction_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, jurisdiction_);
+        .computeEnumSize(3, jurisdiction_);
+    }
+    if (identificationCard_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, identificationCard_);
     }
     for (int i = 0; i < fields_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -359,6 +385,8 @@ private static final long serialVersionUID = 0L;
     result = result && getMagstripe()
         .equals(other.getMagstripe());
     result = result && jurisdiction_ == other.jurisdiction_;
+    result = result && (getIdentificationCard()
+        == other.getIdentificationCard());
     result = result && getFieldsList()
         .equals(other.getFieldsList());
     result = result && unknownFields.equals(other.unknownFields);
@@ -378,6 +406,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getMagstripe().hashCode();
     hash = (37 * hash) + JURISDICTION_FIELD_NUMBER;
     hash = (53 * hash) + jurisdiction_;
+    hash = (37 * hash) + IDENTIFICATION_CARD_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIdentificationCard());
     if (getFieldsCount() > 0) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
@@ -522,9 +553,11 @@ private static final long serialVersionUID = 0L;
 
       jurisdiction_ = 0;
 
+      identificationCard_ = false;
+
       if (fieldsBuilder_ == null) {
         fields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
         fieldsBuilder_.clear();
       }
@@ -555,10 +588,11 @@ private static final long serialVersionUID = 0L;
       result.barcode_ = barcode_;
       result.magstripe_ = magstripe_;
       result.jurisdiction_ = jurisdiction_;
+      result.identificationCard_ = identificationCard_;
       if (fieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
           fields_ = java.util.Collections.unmodifiableList(fields_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.fields_ = fields_;
       } else {
@@ -617,11 +651,14 @@ private static final long serialVersionUID = 0L;
       if (other.jurisdiction_ != 0) {
         setJurisdictionValue(other.getJurisdictionValue());
       }
+      if (other.getIdentificationCard() != false) {
+        setIdentificationCard(other.getIdentificationCard());
+      }
       if (fieldsBuilder_ == null) {
         if (!other.fields_.isEmpty()) {
           if (fields_.isEmpty()) {
             fields_ = other.fields_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureFieldsIsMutable();
             fields_.addAll(other.fields_);
@@ -634,7 +671,7 @@ private static final long serialVersionUID = 0L;
             fieldsBuilder_.dispose();
             fieldsBuilder_ = null;
             fields_ = other.fields_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
             fieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFieldsFieldBuilder() : null;
@@ -855,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public int getJurisdictionValue() {
       return jurisdiction_;
@@ -865,7 +902,7 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public Builder setJurisdictionValue(int value) {
       jurisdiction_ = value;
@@ -877,7 +914,7 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public io.bloombox.schema.geo.usa.USState getJurisdiction() {
       io.bloombox.schema.geo.usa.USState result = io.bloombox.schema.geo.usa.USState.valueOf(jurisdiction_);
@@ -888,7 +925,7 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public Builder setJurisdiction(io.bloombox.schema.geo.usa.USState value) {
       if (value == null) {
@@ -904,7 +941,7 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public Builder clearJurisdiction() {
       
@@ -913,12 +950,50 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean identificationCard_ ;
+    /**
+     * <pre>
+     * Flag that indicates this is an identification card, not a Driver's License.
+     * </pre>
+     *
+     * <code>bool identification_card = 4 [(.gen_bq_schema.description) = "Flag that indicates this is an identification card, not a Driver&#92;'s License."];</code>
+     */
+    public boolean getIdentificationCard() {
+      return identificationCard_;
+    }
+    /**
+     * <pre>
+     * Flag that indicates this is an identification card, not a Driver's License.
+     * </pre>
+     *
+     * <code>bool identification_card = 4 [(.gen_bq_schema.description) = "Flag that indicates this is an identification card, not a Driver&#92;'s License."];</code>
+     */
+    public Builder setIdentificationCard(boolean value) {
+      
+      identificationCard_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Flag that indicates this is an identification card, not a Driver's License.
+     * </pre>
+     *
+     * <code>bool identification_card = 4 [(.gen_bq_schema.description) = "Flag that indicates this is an identification card, not a Driver&#92;'s License."];</code>
+     */
+    public Builder clearIdentificationCard() {
+      
+      identificationCard_ = false;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<io.bloombox.schema.identity.ids.USDLFieldValue> fields_ =
       java.util.Collections.emptyList();
     private void ensureFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
         fields_ = new java.util.ArrayList<io.bloombox.schema.identity.ids.USDLFieldValue>(fields_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1112,7 +1187,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFields() {
       if (fieldsBuilder_ == null) {
         fields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         fieldsBuilder_.clear();
@@ -1217,7 +1292,7 @@ private static final long serialVersionUID = 0L;
         fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.bloombox.schema.identity.ids.USDLFieldValue, io.bloombox.schema.identity.ids.USDLFieldValue.Builder, io.bloombox.schema.identity.ids.USDLFieldValueOrBuilder>(
                 fields_,
-                ((bitField0_ & 0x00000008) == 0x00000008),
+                ((bitField0_ & 0x00000010) == 0x00000010),
                 getParentForChildren(),
                 isClean());
         fields_ = null;

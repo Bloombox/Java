@@ -38,7 +38,6 @@ private static final long serialVersionUID = 0L;
   }
   private Passport() {
     barcode_ = com.google.protobuf.ByteString.EMPTY;
-    id_ = "";
     nation_ = "";
   }
 
@@ -81,39 +80,7 @@ private static final long serialVersionUID = 0L;
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            id_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
             nation_ = s;
-            break;
-          }
-          case 34: {
-            io.bloombox.schema.temporal.Date.Builder subBuilder = null;
-            if (expireDate_ != null) {
-              subBuilder = expireDate_.toBuilder();
-            }
-            expireDate_ = input.readMessage(io.bloombox.schema.temporal.Date.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(expireDate_);
-              expireDate_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 42: {
-            io.bloombox.schema.temporal.Date.Builder subBuilder = null;
-            if (birthDate_ != null) {
-              subBuilder = birthDate_.toBuilder();
-            }
-            birthDate_ = input.readMessage(io.bloombox.schema.temporal.Date.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(birthDate_);
-              birthDate_ = subBuilder.buildPartial();
-            }
-
             break;
           }
         }
@@ -153,56 +120,14 @@ private static final long serialVersionUID = 0L;
     return barcode_;
   }
 
-  public static final int ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object id_;
-  /**
-   * <pre>
-   * Unique document ID for this passport.
-   * </pre>
-   *
-   * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-   */
-  public java.lang.String getId() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      id_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Unique document ID for this passport.
-   * </pre>
-   *
-   * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-   */
-  public com.google.protobuf.ByteString
-      getIdBytes() {
-    java.lang.Object ref = id_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      id_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int NATION_FIELD_NUMBER = 3;
+  public static final int NATION_FIELD_NUMBER = 2;
   private volatile java.lang.Object nation_;
   /**
    * <pre>
    * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
    * </pre>
    *
-   * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+   * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
    */
   public java.lang.String getNation() {
     java.lang.Object ref = nation_;
@@ -221,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
    * </pre>
    *
-   * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+   * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
    */
   public com.google.protobuf.ByteString
       getNationBytes() {
@@ -235,72 +160,6 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
-  }
-
-  public static final int EXPIRE_DATE_FIELD_NUMBER = 4;
-  private io.bloombox.schema.temporal.Date expireDate_;
-  /**
-   * <pre>
-   * Expiration date for this document.
-   * </pre>
-   *
-   * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-   */
-  public boolean hasExpireDate() {
-    return expireDate_ != null;
-  }
-  /**
-   * <pre>
-   * Expiration date for this document.
-   * </pre>
-   *
-   * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-   */
-  public io.bloombox.schema.temporal.Date getExpireDate() {
-    return expireDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : expireDate_;
-  }
-  /**
-   * <pre>
-   * Expiration date for this document.
-   * </pre>
-   *
-   * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-   */
-  public io.bloombox.schema.temporal.DateOrBuilder getExpireDateOrBuilder() {
-    return getExpireDate();
-  }
-
-  public static final int BIRTH_DATE_FIELD_NUMBER = 5;
-  private io.bloombox.schema.temporal.Date birthDate_;
-  /**
-   * <pre>
-   * Birth date listed on this document.
-   * </pre>
-   *
-   * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-   */
-  public boolean hasBirthDate() {
-    return birthDate_ != null;
-  }
-  /**
-   * <pre>
-   * Birth date listed on this document.
-   * </pre>
-   *
-   * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-   */
-  public io.bloombox.schema.temporal.Date getBirthDate() {
-    return birthDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : birthDate_;
-  }
-  /**
-   * <pre>
-   * Birth date listed on this document.
-   * </pre>
-   *
-   * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-   */
-  public io.bloombox.schema.temporal.DateOrBuilder getBirthDateOrBuilder() {
-    return getBirthDate();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -318,17 +177,8 @@ private static final long serialVersionUID = 0L;
     if (!barcode_.isEmpty()) {
       output.writeBytes(1, barcode_);
     }
-    if (!getIdBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
-    }
     if (!getNationBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nation_);
-    }
-    if (expireDate_ != null) {
-      output.writeMessage(4, getExpireDate());
-    }
-    if (birthDate_ != null) {
-      output.writeMessage(5, getBirthDate());
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nation_);
     }
     unknownFields.writeTo(output);
   }
@@ -342,19 +192,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBytesSize(1, barcode_);
     }
-    if (!getIdBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
-    }
     if (!getNationBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nation_);
-    }
-    if (expireDate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getExpireDate());
-    }
-    if (birthDate_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getBirthDate());
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nation_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -374,20 +213,8 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getBarcode()
         .equals(other.getBarcode());
-    result = result && getId()
-        .equals(other.getId());
     result = result && getNation()
         .equals(other.getNation());
-    result = result && (hasExpireDate() == other.hasExpireDate());
-    if (hasExpireDate()) {
-      result = result && getExpireDate()
-          .equals(other.getExpireDate());
-    }
-    result = result && (hasBirthDate() == other.hasBirthDate());
-    if (hasBirthDate()) {
-      result = result && getBirthDate()
-          .equals(other.getBirthDate());
-    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -401,18 +228,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + BARCODE_FIELD_NUMBER;
     hash = (53 * hash) + getBarcode().hashCode();
-    hash = (37 * hash) + ID_FIELD_NUMBER;
-    hash = (53 * hash) + getId().hashCode();
     hash = (37 * hash) + NATION_FIELD_NUMBER;
     hash = (53 * hash) + getNation().hashCode();
-    if (hasExpireDate()) {
-      hash = (37 * hash) + EXPIRE_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getExpireDate().hashCode();
-    }
-    if (hasBirthDate()) {
-      hash = (37 * hash) + BIRTH_DATE_FIELD_NUMBER;
-      hash = (53 * hash) + getBirthDate().hashCode();
-    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -548,22 +365,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       barcode_ = com.google.protobuf.ByteString.EMPTY;
 
-      id_ = "";
-
       nation_ = "";
 
-      if (expireDateBuilder_ == null) {
-        expireDate_ = null;
-      } else {
-        expireDate_ = null;
-        expireDateBuilder_ = null;
-      }
-      if (birthDateBuilder_ == null) {
-        birthDate_ = null;
-      } else {
-        birthDate_ = null;
-        birthDateBuilder_ = null;
-      }
       return this;
     }
 
@@ -587,18 +390,7 @@ private static final long serialVersionUID = 0L;
     public io.bloombox.schema.identity.ids.Passport buildPartial() {
       io.bloombox.schema.identity.ids.Passport result = new io.bloombox.schema.identity.ids.Passport(this);
       result.barcode_ = barcode_;
-      result.id_ = id_;
       result.nation_ = nation_;
-      if (expireDateBuilder_ == null) {
-        result.expireDate_ = expireDate_;
-      } else {
-        result.expireDate_ = expireDateBuilder_.build();
-      }
-      if (birthDateBuilder_ == null) {
-        result.birthDate_ = birthDate_;
-      } else {
-        result.birthDate_ = birthDateBuilder_.build();
-      }
       onBuilt();
       return result;
     }
@@ -643,19 +435,9 @@ private static final long serialVersionUID = 0L;
       if (other.getBarcode() != com.google.protobuf.ByteString.EMPTY) {
         setBarcode(other.getBarcode());
       }
-      if (!other.getId().isEmpty()) {
-        id_ = other.id_;
-        onChanged();
-      }
       if (!other.getNation().isEmpty()) {
         nation_ = other.nation_;
         onChanged();
-      }
-      if (other.hasExpireDate()) {
-        mergeExpireDate(other.getExpireDate());
-      }
-      if (other.hasBirthDate()) {
-        mergeBirthDate(other.getBirthDate());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -725,102 +507,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object id_ = "";
-    /**
-     * <pre>
-     * Unique document ID for this passport.
-     * </pre>
-     *
-     * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Unique document ID for this passport.
-     * </pre>
-     *
-     * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Unique document ID for this passport.
-     * </pre>
-     *
-     * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-     */
-    public Builder setId(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      id_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Unique document ID for this passport.
-     * </pre>
-     *
-     * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-     */
-    public Builder clearId() {
-      
-      id_ = getDefaultInstance().getId();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Unique document ID for this passport.
-     * </pre>
-     *
-     * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-     */
-    public Builder setIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      id_ = value;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object nation_ = "";
     /**
      * <pre>
      * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
      * </pre>
      *
-     * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+     * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
      */
     public java.lang.String getNation() {
       java.lang.Object ref = nation_;
@@ -839,7 +532,7 @@ private static final long serialVersionUID = 0L;
      * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
      * </pre>
      *
-     * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+     * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
      */
     public com.google.protobuf.ByteString
         getNationBytes() {
@@ -859,7 +552,7 @@ private static final long serialVersionUID = 0L;
      * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
      * </pre>
      *
-     * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+     * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
      */
     public Builder setNation(
         java.lang.String value) {
@@ -876,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
      * </pre>
      *
-     * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+     * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
      */
     public Builder clearNation() {
       
@@ -889,7 +582,7 @@ private static final long serialVersionUID = 0L;
      * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
      * </pre>
      *
-     * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+     * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
      */
     public Builder setNationBytes(
         com.google.protobuf.ByteString value) {
@@ -901,312 +594,6 @@ private static final long serialVersionUID = 0L;
       nation_ = value;
       onChanged();
       return this;
-    }
-
-    private io.bloombox.schema.temporal.Date expireDate_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> expireDateBuilder_;
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    public boolean hasExpireDate() {
-      return expireDateBuilder_ != null || expireDate_ != null;
-    }
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    public io.bloombox.schema.temporal.Date getExpireDate() {
-      if (expireDateBuilder_ == null) {
-        return expireDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : expireDate_;
-      } else {
-        return expireDateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    public Builder setExpireDate(io.bloombox.schema.temporal.Date value) {
-      if (expireDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        expireDate_ = value;
-        onChanged();
-      } else {
-        expireDateBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    public Builder setExpireDate(
-        io.bloombox.schema.temporal.Date.Builder builderForValue) {
-      if (expireDateBuilder_ == null) {
-        expireDate_ = builderForValue.build();
-        onChanged();
-      } else {
-        expireDateBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    public Builder mergeExpireDate(io.bloombox.schema.temporal.Date value) {
-      if (expireDateBuilder_ == null) {
-        if (expireDate_ != null) {
-          expireDate_ =
-            io.bloombox.schema.temporal.Date.newBuilder(expireDate_).mergeFrom(value).buildPartial();
-        } else {
-          expireDate_ = value;
-        }
-        onChanged();
-      } else {
-        expireDateBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    public Builder clearExpireDate() {
-      if (expireDateBuilder_ == null) {
-        expireDate_ = null;
-        onChanged();
-      } else {
-        expireDate_ = null;
-        expireDateBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    public io.bloombox.schema.temporal.Date.Builder getExpireDateBuilder() {
-      
-      onChanged();
-      return getExpireDateFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    public io.bloombox.schema.temporal.DateOrBuilder getExpireDateOrBuilder() {
-      if (expireDateBuilder_ != null) {
-        return expireDateBuilder_.getMessageOrBuilder();
-      } else {
-        return expireDate_ == null ?
-            io.bloombox.schema.temporal.Date.getDefaultInstance() : expireDate_;
-      }
-    }
-    /**
-     * <pre>
-     * Expiration date for this document.
-     * </pre>
-     *
-     * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> 
-        getExpireDateFieldBuilder() {
-      if (expireDateBuilder_ == null) {
-        expireDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder>(
-                getExpireDate(),
-                getParentForChildren(),
-                isClean());
-        expireDate_ = null;
-      }
-      return expireDateBuilder_;
-    }
-
-    private io.bloombox.schema.temporal.Date birthDate_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> birthDateBuilder_;
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    public boolean hasBirthDate() {
-      return birthDateBuilder_ != null || birthDate_ != null;
-    }
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    public io.bloombox.schema.temporal.Date getBirthDate() {
-      if (birthDateBuilder_ == null) {
-        return birthDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : birthDate_;
-      } else {
-        return birthDateBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    public Builder setBirthDate(io.bloombox.schema.temporal.Date value) {
-      if (birthDateBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        birthDate_ = value;
-        onChanged();
-      } else {
-        birthDateBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    public Builder setBirthDate(
-        io.bloombox.schema.temporal.Date.Builder builderForValue) {
-      if (birthDateBuilder_ == null) {
-        birthDate_ = builderForValue.build();
-        onChanged();
-      } else {
-        birthDateBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    public Builder mergeBirthDate(io.bloombox.schema.temporal.Date value) {
-      if (birthDateBuilder_ == null) {
-        if (birthDate_ != null) {
-          birthDate_ =
-            io.bloombox.schema.temporal.Date.newBuilder(birthDate_).mergeFrom(value).buildPartial();
-        } else {
-          birthDate_ = value;
-        }
-        onChanged();
-      } else {
-        birthDateBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    public Builder clearBirthDate() {
-      if (birthDateBuilder_ == null) {
-        birthDate_ = null;
-        onChanged();
-      } else {
-        birthDate_ = null;
-        birthDateBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    public io.bloombox.schema.temporal.Date.Builder getBirthDateBuilder() {
-      
-      onChanged();
-      return getBirthDateFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    public io.bloombox.schema.temporal.DateOrBuilder getBirthDateOrBuilder() {
-      if (birthDateBuilder_ != null) {
-        return birthDateBuilder_.getMessageOrBuilder();
-      } else {
-        return birthDate_ == null ?
-            io.bloombox.schema.temporal.Date.getDefaultInstance() : birthDate_;
-      }
-    }
-    /**
-     * <pre>
-     * Birth date listed on this document.
-     * </pre>
-     *
-     * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> 
-        getBirthDateFieldBuilder() {
-      if (birthDateBuilder_ == null) {
-        birthDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder>(
-                getBirthDate(),
-                getParentForChildren(),
-                isClean());
-        birthDate_ = null;
-      }
-      return birthDateBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

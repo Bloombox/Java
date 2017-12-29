@@ -62,11 +62,11 @@ public final class CheckinGrpc {
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request,
-      io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> METHOD_LICENSE =
+      io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> METHOD_IDENTIFICATION =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.checkin.v1beta1.Checkin", "License"))
+              "services.checkin.v1beta1.Checkin", "Identification"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -131,9 +131,9 @@ public final class CheckinGrpc {
      * Specifies an operation to check a user in via their government ID.
      * </pre>
      */
-    public void license(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request,
+    public void identification(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_LICENSE, responseObserver);
+      asyncUnimplementedUnaryCall(METHOD_IDENTIFICATION, responseObserver);
     }
 
     /**
@@ -156,12 +156,12 @@ public final class CheckinGrpc {
                 io.bloombox.schema.services.checkin.v1beta1.Ping.Response>(
                   this, METHODID_PING)))
           .addMethod(
-            METHOD_LICENSE,
+            METHOD_IDENTIFICATION,
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request,
                 io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>(
-                  this, METHODID_LICENSE)))
+                  this, METHODID_IDENTIFICATION)))
           .addMethod(
             METHOD_CARD,
             asyncUnaryCall(
@@ -211,10 +211,10 @@ public final class CheckinGrpc {
      * Specifies an operation to check a user in via their government ID.
      * </pre>
      */
-    public void license(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request,
+    public void identification(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_LICENSE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_IDENTIFICATION, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -266,9 +266,9 @@ public final class CheckinGrpc {
      * Specifies an operation to check a user in via their government ID.
      * </pre>
      */
-    public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse license(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request) {
+    public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse identification(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_LICENSE, getCallOptions(), request);
+          getChannel(), METHOD_IDENTIFICATION, getCallOptions(), request);
     }
 
     /**
@@ -320,10 +320,10 @@ public final class CheckinGrpc {
      * Specifies an operation to check a user in via their government ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> license(
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> identification(
         io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_LICENSE, getCallOptions()), request);
+          getChannel().newCall(METHOD_IDENTIFICATION, getCallOptions()), request);
     }
 
     /**
@@ -339,7 +339,7 @@ public final class CheckinGrpc {
   }
 
   private static final int METHODID_PING = 0;
-  private static final int METHODID_LICENSE = 1;
+  private static final int METHODID_IDENTIFICATION = 1;
   private static final int METHODID_CARD = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
@@ -363,8 +363,8 @@ public final class CheckinGrpc {
           serviceImpl.ping((io.bloombox.schema.services.checkin.v1beta1.Ping.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.Ping.Response>) responseObserver);
           break;
-        case METHODID_LICENSE:
-          serviceImpl.license((io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request) request,
+        case METHODID_IDENTIFICATION:
+          serviceImpl.identification((io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>) responseObserver);
           break;
         case METHODID_CARD:
@@ -405,7 +405,7 @@ public final class CheckinGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CheckinDescriptorSupplier())
               .addMethod(METHOD_PING)
-              .addMethod(METHOD_LICENSE)
+              .addMethod(METHOD_IDENTIFICATION)
               .addMethod(METHOD_CARD)
               .build();
         }

@@ -65,7 +65,7 @@ public interface USDLOrBuilder extends
    * State that issued this Driver's License.
    * </pre>
    *
-   * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+   * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
    */
   int getJurisdictionValue();
   /**
@@ -73,9 +73,18 @@ public interface USDLOrBuilder extends
    * State that issued this Driver's License.
    * </pre>
    *
-   * <code>.geo.usa.USState jurisdiction = 5 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+   * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
    */
   io.bloombox.schema.geo.usa.USState getJurisdiction();
+
+  /**
+   * <pre>
+   * Flag that indicates this is an identification card, not a Driver's License.
+   * </pre>
+   *
+   * <code>bool identification_card = 4 [(.gen_bq_schema.description) = "Flag that indicates this is an identification card, not a Driver&#92;'s License."];</code>
+   */
+  boolean getIdentificationCard();
 
   /**
    * <pre>

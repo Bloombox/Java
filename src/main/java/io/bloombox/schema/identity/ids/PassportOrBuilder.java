@@ -35,28 +35,10 @@ public interface PassportOrBuilder extends
 
   /**
    * <pre>
-   * Unique document ID for this passport.
-   * </pre>
-   *
-   * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-   */
-  java.lang.String getId();
-  /**
-   * <pre>
-   * Unique document ID for this passport.
-   * </pre>
-   *
-   * <code>string id = 2 [(.gen_bq_schema.description) = "Unique document ID for this passport."];</code>
-   */
-  com.google.protobuf.ByteString
-      getIdBytes();
-
-  /**
-   * <pre>
    * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
    * </pre>
    *
-   * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+   * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
    */
   java.lang.String getNation();
   /**
@@ -64,58 +46,8 @@ public interface PassportOrBuilder extends
    * Nation that issued this passport, as an abbreviated string code, like "US" or "UK".
    * </pre>
    *
-   * <code>string nation = 3 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
+   * <code>string nation = 2 [(.gen_bq_schema.description) = "Nation that issued this passport, as an abbreviated string code, like &#92;"US&#92;" or &#92;"UK&#92;"."];</code>
    */
   com.google.protobuf.ByteString
       getNationBytes();
-
-  /**
-   * <pre>
-   * Expiration date for this document.
-   * </pre>
-   *
-   * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-   */
-  boolean hasExpireDate();
-  /**
-   * <pre>
-   * Expiration date for this document.
-   * </pre>
-   *
-   * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-   */
-  io.bloombox.schema.temporal.Date getExpireDate();
-  /**
-   * <pre>
-   * Expiration date for this document.
-   * </pre>
-   *
-   * <code>.temporal.Date expire_date = 4 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
-   */
-  io.bloombox.schema.temporal.DateOrBuilder getExpireDateOrBuilder();
-
-  /**
-   * <pre>
-   * Birth date listed on this document.
-   * </pre>
-   *
-   * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-   */
-  boolean hasBirthDate();
-  /**
-   * <pre>
-   * Birth date listed on this document.
-   * </pre>
-   *
-   * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-   */
-  io.bloombox.schema.temporal.Date getBirthDate();
-  /**
-   * <pre>
-   * Birth date listed on this document.
-   * </pre>
-   *
-   * <code>.temporal.Date birth_date = 5 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
-   */
-  io.bloombox.schema.temporal.DateOrBuilder getBirthDateOrBuilder();
 }

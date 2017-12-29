@@ -117,16 +117,16 @@ public final class DevicesServiceBeta1 {
       "VICE_NOT_FOUND\020\002\022\022\n\016INTERNAL_ERROR\020\003\022\025\n\021" +
       "DEVICE_UNASSIGNED\020\004*=\n\nDeviceRole\022\016\n\nUNA" +
       "SSIGNED\020\000\022\006\n\002TV\020\001\022\013\n\007CHECKIN\020\002\022\n\n\006BEACON" +
-      "\020\0032\300\002\n\007Devices\022v\n\004Ping\022&.services.device" +
+      "\020\0032\316\002\n\007Devices\022v\n\004Ping\022&.services.device" +
       "s.v1beta1.Ping.Request\032\'.services.device" +
       "s.v1beta1.Ping.Response\"\035\202\323\344\223\002\027\022\025/device" +
-      "s/v1beta1/ping\022\274\001\n\010Activate\022,.services.d" +
+      "s/v1beta1/ping\022\312\001\n\010Activate\022,.services.d" +
       "evices.v1beta1.Activation.Request\032-.serv" +
       "ices.devices.v1beta1.Activation.Response" +
-      "\"S\202\323\344\223\002M\"\"/devices/v1beta1/{serial}:acti" +
-      "vate:\001*Z$\022\"/checkin/v1beta1/{serial}:act" +
-      "ivateB1\n+io.bloombox.schema.services.dev" +
-      "ices.v1beta1H\001P\001b\006proto3"
+      "\"a\202\323\344\223\002[\")/devices/v1beta1/{serial}/devi" +
+      "ce:activate:\001*Z+\022)/checkin/v1beta1/{seri" +
+      "al}/device:activateB1\n+io.bloombox.schem" +
+      "a.services.devices.v1beta1H\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

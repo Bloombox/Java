@@ -138,21 +138,21 @@ public final class CheckinServiceBeta1 {
       "DED\020\007\022\022\n\016USER_SUSPENDED\020\010\022\025\n\021PARTNER_SUS" +
       "PENDED\020\t\022\023\n\017PARTNER_INVALID\020\n\022\024\n\020LOCATIO" +
       "N_INVALID\020\013\022\030\n\024JURISDICTION_INVALID\020\014\022\034\n" +
-      "\030JURISDICTION_UNSUPPORTED\020\r2\361\003\n\007Checkin\022" +
+      "\030JURISDICTION_UNSUPPORTED\020\r2\337\003\n\007Checkin\022" +
       "v\n\004Ping\022&.services.checkin.v1beta1.Ping." +
       "Request\032\'.services.checkin.v1beta1.Ping." +
       "Response\"\035\202\323\344\223\002\027\022\025/checkin/v1beta1/ping\022" +
-      "\341\001\n\007License\022+.services.checkin.v1beta1.I" +
-      "DCheckin.Request\032).services.checkin.v1be" +
-      "ta1.CheckinResponse\"~\202\323\344\223\002x\"B/checkin/v1" +
-      "beta1/{scope=partners/*/locations/*}/{do" +
-      "cument.type}:id:\001*Z/\"*/checkin/v1beta1/{" +
-      "document.type}/global:id:\001*\022\211\001\n\004Card\022-.s" +
-      "ervices.checkin.v1beta1.CardCheckin.Requ" +
-      "est\032).services.checkin.v1beta1.CheckinRe" +
-      "sponse\"\'\202\323\344\223\002!\"\034/checkin/v1beta1/global:" +
-      "card:\001*B1\n+io.bloombox.schema.services.c" +
-      "heckin.v1beta1H\001P\001b\006proto3"
+      "\317\001\n\016Identification\022+.services.checkin.v1" +
+      "beta1.IDCheckin.Request\032).services.check" +
+      "in.v1beta1.CheckinResponse\"e\202\323\344\223\002_\"9/che" +
+      "ckin/v1beta1/{scope=partners/*/locations" +
+      "/*}/global:id:\001*Z\037\"\032/checkin/v1beta1/glo" +
+      "bal:id:\001*\022\211\001\n\004Card\022-.services.checkin.v1" +
+      "beta1.CardCheckin.Request\032).services.che" +
+      "ckin.v1beta1.CheckinResponse\"\'\202\323\344\223\002!\"\034/c" +
+      "heckin/v1beta1/global:card:\001*B1\n+io.bloo" +
+      "mbox.schema.services.checkin.v1beta1H\001P\001" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
