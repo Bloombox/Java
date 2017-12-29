@@ -112,18 +112,21 @@ public final class DevicesServiceBeta1 {
       "ion\032\213\001\n\tOperation\022=\n\007request\030\001 \001(\0132,.ser" +
       "vices.devices.v1beta1.Activation.Request" +
       "\022?\n\010response\030\002 \001(\0132-.services.devices.v1" +
-      "beta1.Activation.Response*\033\n\013DeviceError" +
-      "\022\014\n\010NO_ERROR\020\000*=\n\nDeviceRole\022\016\n\nUNASSIGN" +
-      "ED\020\000\022\006\n\002TV\020\001\022\013\n\007CHECKIN\020\002\022\n\n\006BEACON\020\0032\232\002" +
-      "\n\007Devices\022v\n\004Ping\022&.services.devices.v1b" +
-      "eta1.Ping.Request\032\'.services.devices.v1b" +
-      "eta1.Ping.Response\"\035\202\323\344\223\002\027\022\025/devices/v1b" +
-      "eta1/ping\022\226\001\n\010Activate\022,.services.device" +
-      "s.v1beta1.Activation.Request\032-.services." +
-      "devices.v1beta1.Activation.Response\"-\202\323\344" +
-      "\223\002\'\"\"/devices/v1beta1/{serial}:activate:" +
-      "\001*B1\n+io.bloombox.schema.services.device" +
-      "s.v1beta1H\001P\001b\006proto3"
+      "beta1.Activation.Response*p\n\013DeviceError" +
+      "\022\014\n\010NO_ERROR\020\000\022\022\n\016INVALID_SERIAL\020\001\022\024\n\020DE" +
+      "VICE_NOT_FOUND\020\002\022\022\n\016INTERNAL_ERROR\020\003\022\025\n\021" +
+      "DEVICE_UNASSIGNED\020\004*=\n\nDeviceRole\022\016\n\nUNA" +
+      "SSIGNED\020\000\022\006\n\002TV\020\001\022\013\n\007CHECKIN\020\002\022\n\n\006BEACON" +
+      "\020\0032\300\002\n\007Devices\022v\n\004Ping\022&.services.device" +
+      "s.v1beta1.Ping.Request\032\'.services.device" +
+      "s.v1beta1.Ping.Response\"\035\202\323\344\223\002\027\022\025/device" +
+      "s/v1beta1/ping\022\274\001\n\010Activate\022,.services.d" +
+      "evices.v1beta1.Activation.Request\032-.serv" +
+      "ices.devices.v1beta1.Activation.Response" +
+      "\"S\202\323\344\223\002M\"\"/devices/v1beta1/{serial}:acti" +
+      "vate:\001*Z$\022\"/checkin/v1beta1/{serial}:act" +
+      "ivateB1\n+io.bloombox.schema.services.dev" +
+      "ices.v1beta1H\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

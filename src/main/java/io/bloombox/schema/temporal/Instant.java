@@ -80,20 +80,6 @@ private static final long serialVersionUID = 0L;
             spec_ = input.readUInt64();
             break;
           }
-          case 26: {
-            com.google.protobuf.Timestamp.Builder subBuilder = null;
-            if (specCase_ == 3) {
-              subBuilder = ((com.google.protobuf.Timestamp) spec_).toBuilder();
-            }
-            spec_ =
-                input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.protobuf.Timestamp) spec_);
-              spec_ = subBuilder.buildPartial();
-            }
-            specCase_ = 3;
-            break;
-          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -124,7 +110,6 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite {
     ISO8601(1),
     TIMESTAMP(2),
-    INSTANT(3),
     SPEC_NOT_SET(0);
     private final int value;
     private SpecCase(int value) {
@@ -142,7 +127,6 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 1: return ISO8601;
         case 2: return TIMESTAMP;
-        case 3: return INSTANT;
         case 0: return SPEC_NOT_SET;
         default: return null;
       }
@@ -224,44 +208,6 @@ private static final long serialVersionUID = 0L;
     return 0L;
   }
 
-  public static final int INSTANT_FIELD_NUMBER = 3;
-  /**
-   * <pre>
-   * Protobuf timestamp.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-   */
-  public boolean hasInstant() {
-    return specCase_ == 3;
-  }
-  /**
-   * <pre>
-   * Protobuf timestamp.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-   */
-  public com.google.protobuf.Timestamp getInstant() {
-    if (specCase_ == 3) {
-       return (com.google.protobuf.Timestamp) spec_;
-    }
-    return com.google.protobuf.Timestamp.getDefaultInstance();
-  }
-  /**
-   * <pre>
-   * Protobuf timestamp.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-   */
-  public com.google.protobuf.TimestampOrBuilder getInstantOrBuilder() {
-    if (specCase_ == 3) {
-       return (com.google.protobuf.Timestamp) spec_;
-    }
-    return com.google.protobuf.Timestamp.getDefaultInstance();
-  }
-
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -281,9 +227,6 @@ private static final long serialVersionUID = 0L;
       output.writeUInt64(
           2, (long)((java.lang.Long) spec_));
     }
-    if (specCase_ == 3) {
-      output.writeMessage(3, (com.google.protobuf.Timestamp) spec_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -299,10 +242,6 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(
             2, (long)((java.lang.Long) spec_));
-    }
-    if (specCase_ == 3) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, (com.google.protobuf.Timestamp) spec_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -332,10 +271,6 @@ private static final long serialVersionUID = 0L;
         result = result && (getTimestamp()
             == other.getTimestamp());
         break;
-      case 3:
-        result = result && getInstant()
-            .equals(other.getInstant());
-        break;
       case 0:
       default:
     }
@@ -359,10 +294,6 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getTimestamp());
-        break;
-      case 3:
-        hash = (37 * hash) + INSTANT_FIELD_NUMBER;
-        hash = (53 * hash) + getInstant().hashCode();
         break;
       case 0:
       default:
@@ -530,13 +461,6 @@ private static final long serialVersionUID = 0L;
       if (specCase_ == 2) {
         result.spec_ = spec_;
       }
-      if (specCase_ == 3) {
-        if (instantBuilder_ == null) {
-          result.spec_ = spec_;
-        } else {
-          result.spec_ = instantBuilder_.build();
-        }
-      }
       result.specCase_ = specCase_;
       onBuilt();
       return result;
@@ -588,10 +512,6 @@ private static final long serialVersionUID = 0L;
         }
         case TIMESTAMP: {
           setTimestamp(other.getTimestamp());
-          break;
-        }
-        case INSTANT: {
-          mergeInstant(other.getInstant());
           break;
         }
         case SPEC_NOT_SET: {
@@ -780,178 +700,6 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       return this;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> instantBuilder_;
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    public boolean hasInstant() {
-      return specCase_ == 3;
-    }
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    public com.google.protobuf.Timestamp getInstant() {
-      if (instantBuilder_ == null) {
-        if (specCase_ == 3) {
-          return (com.google.protobuf.Timestamp) spec_;
-        }
-        return com.google.protobuf.Timestamp.getDefaultInstance();
-      } else {
-        if (specCase_ == 3) {
-          return instantBuilder_.getMessage();
-        }
-        return com.google.protobuf.Timestamp.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    public Builder setInstant(com.google.protobuf.Timestamp value) {
-      if (instantBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        spec_ = value;
-        onChanged();
-      } else {
-        instantBuilder_.setMessage(value);
-      }
-      specCase_ = 3;
-      return this;
-    }
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    public Builder setInstant(
-        com.google.protobuf.Timestamp.Builder builderForValue) {
-      if (instantBuilder_ == null) {
-        spec_ = builderForValue.build();
-        onChanged();
-      } else {
-        instantBuilder_.setMessage(builderForValue.build());
-      }
-      specCase_ = 3;
-      return this;
-    }
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    public Builder mergeInstant(com.google.protobuf.Timestamp value) {
-      if (instantBuilder_ == null) {
-        if (specCase_ == 3 &&
-            spec_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          spec_ = com.google.protobuf.Timestamp.newBuilder((com.google.protobuf.Timestamp) spec_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          spec_ = value;
-        }
-        onChanged();
-      } else {
-        if (specCase_ == 3) {
-          instantBuilder_.mergeFrom(value);
-        }
-        instantBuilder_.setMessage(value);
-      }
-      specCase_ = 3;
-      return this;
-    }
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    public Builder clearInstant() {
-      if (instantBuilder_ == null) {
-        if (specCase_ == 3) {
-          specCase_ = 0;
-          spec_ = null;
-          onChanged();
-        }
-      } else {
-        if (specCase_ == 3) {
-          specCase_ = 0;
-          spec_ = null;
-        }
-        instantBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    public com.google.protobuf.Timestamp.Builder getInstantBuilder() {
-      return getInstantFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    public com.google.protobuf.TimestampOrBuilder getInstantOrBuilder() {
-      if ((specCase_ == 3) && (instantBuilder_ != null)) {
-        return instantBuilder_.getMessageOrBuilder();
-      } else {
-        if (specCase_ == 3) {
-          return (com.google.protobuf.Timestamp) spec_;
-        }
-        return com.google.protobuf.Timestamp.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * Protobuf timestamp.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-        getInstantFieldBuilder() {
-      if (instantBuilder_ == null) {
-        if (!(specCase_ == 3)) {
-          spec_ = com.google.protobuf.Timestamp.getDefaultInstance();
-        }
-        instantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                (com.google.protobuf.Timestamp) spec_,
-                getParentForChildren(),
-                isClean());
-        spec_ = null;
-      }
-      specCase_ = 3;
-      onChanged();;
-      return instantBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

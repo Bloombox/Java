@@ -50,30 +50,5 @@ public interface InstantOrBuilder extends
    */
   long getTimestamp();
 
-  /**
-   * <pre>
-   * Protobuf timestamp.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-   */
-  boolean hasInstant();
-  /**
-   * <pre>
-   * Protobuf timestamp.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-   */
-  com.google.protobuf.Timestamp getInstant();
-  /**
-   * <pre>
-   * Protobuf timestamp.
-   * </pre>
-   *
-   * <code>.google.protobuf.Timestamp instant = 3 [(.gen_bq_schema.description) = "Unix epoch timestamp, at millisecond resolution."];</code>
-   */
-  com.google.protobuf.TimestampOrBuilder getInstantOrBuilder();
-
   public io.bloombox.schema.temporal.Instant.SpecCase getSpecCase();
 }

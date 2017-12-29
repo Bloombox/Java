@@ -45,15 +45,11 @@ public final class InstantOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026temporal/Instant.proto\022\010temporal\032\016bq_f" +
-      "ield.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\"\363\001\n\007Instant\0222\n\007iso8601\030\001 \001(\tB\037\212@\034ISO" +
-      "8601-formatted timestamp.H\000\022H\n\ttimestamp" +
-      "\030\002 \001(\004B3\212@0Unix epoch timestamp, at mill" +
-      "isecond resolution.H\000\022b\n\007instant\030\003 \001(\0132\032" +
-      ".google.protobuf.TimestampB3\212@0Unix epoc" +
-      "h timestamp, at millisecond resolution.H" +
-      "\000B\006\n\004specB!\n\033io.bloombox.schema.temporal" +
-      "H\001P\001b\006proto3"
+      "ield.proto\"\217\001\n\007Instant\0222\n\007iso8601\030\001 \001(\tB" +
+      "\037\212@\034ISO8601-formatted timestamp.H\000\022H\n\tti" +
+      "mestamp\030\002 \001(\004B3\212@0Unix epoch timestamp, " +
+      "at millisecond resolution.H\000B\006\n\004specB!\n\033" +
+      "io.bloombox.schema.temporalH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,21 +63,19 @@ public final class InstantOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
         }, assigner);
     internal_static_temporal_Instant_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_temporal_Instant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_temporal_Instant_descriptor,
-        new java.lang.String[] { "Iso8601", "Timestamp", "Instant", "Spec", });
+        new java.lang.String[] { "Iso8601", "Timestamp", "Spec", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

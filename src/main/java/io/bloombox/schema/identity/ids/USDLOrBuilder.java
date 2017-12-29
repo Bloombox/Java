@@ -29,9 +29,36 @@ public interface USDLOrBuilder extends
    * Raw barcode data for this Driver's License.
    * </pre>
    *
-   * <code>bytes barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
    */
-  com.google.protobuf.ByteString getBarcode();
+  java.lang.String getBarcode();
+  /**
+   * <pre>
+   * Raw barcode data for this Driver's License.
+   * </pre>
+   *
+   * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+   */
+  com.google.protobuf.ByteString
+      getBarcodeBytes();
+
+  /**
+   * <pre>
+   * Raw barcode data for this Driver's License.
+   * </pre>
+   *
+   * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+   */
+  java.lang.String getMagstripe();
+  /**
+   * <pre>
+   * Raw barcode data for this Driver's License.
+   * </pre>
+   *
+   * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+   */
+  com.google.protobuf.ByteString
+      getMagstripeBytes();
 
   /**
    * <pre>

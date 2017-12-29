@@ -56,31 +56,31 @@ public final class USDLOuterClass {
       "ids.USDLFieldB&\212@#Field that we are stor" +
       "ing data for.\022/\n\005value\030\002 \001(\tB\036\212@\033String " +
       "data for this field.H\000\022\030\n\traw_value\030\003 \001(" +
-      "\014B\003\200@\001H\000B\006\n\004data\"\304\001\n\004USDL\022\024\n\007barcode\030\001 \001" +
-      "(\014B\003\200@\001\022S\n\014jurisdiction\030\005 \001(\0162\020.geo.usa." +
-      "USStateB+\212@(State that issued this Drive" +
-      "r\'s License.\022Q\n\006fields\030d \003(\0132\034.identity." +
-      "ids.USDLFieldValueB#\212@ Raw field data fo" +
-      "r this license.*\270\005\n\tUSDLField\022\020\n\014BACK_BA" +
-      "RCODE\020\000\022\017\n\013FAMILY_NAME\020\001\022\016\n\nGIVEN_NAME\020\002" +
-      "\022\017\n\013MIDDLE_NAME\020\003\022\r\n\tFULL_NAME\020\004\022\017\n\013NAME" +
-      "_PREFIX\020\005\022\017\n\013NAME_SUFFIX\020\006\022\021\n\rDATE_OF_BI" +
-      "RTH\020\n\022\007\n\003SEX\020\013\022\n\n\006HEIGHT\020\014\022\n\n\006WEIGHT\020\r\022\r" +
-      "\n\tEYE_COLOR\020\016\022\016\n\nHAIR_COLOR\020\017\022\020\n\014FULL_AD" +
-      "DRESS\020\024\022\020\n\014ADDRESS_LINE\020\025\022\021\n\rADDRESS_LIN" +
-      "E2\020\026\022\020\n\014ADDRESS_CITY\020\027\022\017\n\013POSTAL_CODE\020\030\022" +
-      "\026\n\022STATE_JURISDICTION\020\031\022\016\n\nLICENSE_ID\020\036\022" +
-      "\026\n\022LICENSE_ISSUE_DATE\020\037\022\027\n\023LICENSE_EXPIR" +
-      "Y_DATE\020 \022\027\n\023ISSUER_JURISDICTION\020!\022&\n\"ISS" +
-      "UER_JURISDICTION_FORMAT_VERSION\020\"\022\030\n\024UNI" +
-      "QUE_DOCUMENT_CODE\020(\022\032\n\026INVENTORY_CONTROL" +
-      "_CODE\020)\022\021\n\rUNDER_18_DATE\0202\022\021\n\rUNDER_19_D" +
-      "ATE\0203\022\021\n\rUNDER_21_DATE\0204\022\014\n\010UNDER_18\020<\022\014" +
-      "\n\010UNDER_19\020=\022\014\n\010UNDER_21\020>\022\017\n\013ORGAN_DONO" +
-      "R\020?\022\013\n\007VETERAN\020@\022\017\n\013NONRESIDENT\020A\022\022\n\016RAC" +
-      "E_ETHNICITY\020F\022\023\n\017COMPLIANCE_TYPE\020GB%\n\037io" +
-      ".bloombox.schema.identity.idsH\001P\001b\006proto" +
-      "3"
+      "\014B\003\200@\001H\000B\006\n\004data\"\334\001\n\004USDL\022\024\n\007barcode\030\001 \001" +
+      "(\tB\003\200@\001\022\026\n\tmagstripe\030\002 \001(\tB\003\200@\001\022S\n\014juris" +
+      "diction\030\005 \001(\0162\020.geo.usa.USStateB+\212@(Stat" +
+      "e that issued this Driver\'s License.\022Q\n\006" +
+      "fields\030d \003(\0132\034.identity.ids.USDLFieldVal" +
+      "ueB#\212@ Raw field data for this license.*" +
+      "\270\005\n\tUSDLField\022\020\n\014BACK_BARCODE\020\000\022\017\n\013FAMIL" +
+      "Y_NAME\020\001\022\016\n\nGIVEN_NAME\020\002\022\017\n\013MIDDLE_NAME\020" +
+      "\003\022\r\n\tFULL_NAME\020\004\022\017\n\013NAME_PREFIX\020\005\022\017\n\013NAM" +
+      "E_SUFFIX\020\006\022\021\n\rDATE_OF_BIRTH\020\n\022\007\n\003SEX\020\013\022\n" +
+      "\n\006HEIGHT\020\014\022\n\n\006WEIGHT\020\r\022\r\n\tEYE_COLOR\020\016\022\016\n" +
+      "\nHAIR_COLOR\020\017\022\020\n\014FULL_ADDRESS\020\024\022\020\n\014ADDRE" +
+      "SS_LINE\020\025\022\021\n\rADDRESS_LINE2\020\026\022\020\n\014ADDRESS_" +
+      "CITY\020\027\022\017\n\013POSTAL_CODE\020\030\022\026\n\022STATE_JURISDI" +
+      "CTION\020\031\022\016\n\nLICENSE_ID\020\036\022\026\n\022LICENSE_ISSUE" +
+      "_DATE\020\037\022\027\n\023LICENSE_EXPIRY_DATE\020 \022\027\n\023ISSU" +
+      "ER_JURISDICTION\020!\022&\n\"ISSUER_JURISDICTION" +
+      "_FORMAT_VERSION\020\"\022\030\n\024UNIQUE_DOCUMENT_COD" +
+      "E\020(\022\032\n\026INVENTORY_CONTROL_CODE\020)\022\021\n\rUNDER" +
+      "_18_DATE\0202\022\021\n\rUNDER_19_DATE\0203\022\021\n\rUNDER_2" +
+      "1_DATE\0204\022\014\n\010UNDER_18\020<\022\014\n\010UNDER_19\020=\022\014\n\010" +
+      "UNDER_21\020>\022\017\n\013ORGAN_DONOR\020?\022\013\n\007VETERAN\020@" +
+      "\022\017\n\013NONRESIDENT\020A\022\022\n\016RACE_ETHNICITY\020F\022\023\n" +
+      "\017COMPLIANCE_TYPE\020GB%\n\037io.bloombox.schema" +
+      ".identity.idsH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -107,7 +107,7 @@ public final class USDLOuterClass {
     internal_static_identity_ids_USDL_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_identity_ids_USDL_descriptor,
-        new java.lang.String[] { "Barcode", "Jurisdiction", "Fields", });
+        new java.lang.String[] { "Barcode", "Magstripe", "Jurisdiction", "Fields", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);

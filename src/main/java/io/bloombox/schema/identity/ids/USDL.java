@@ -37,7 +37,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private USDL() {
-    barcode_ = com.google.protobuf.ByteString.EMPTY;
+    barcode_ = "";
+    magstripe_ = "";
     jurisdiction_ = 0;
     fields_ = java.util.Collections.emptyList();
   }
@@ -74,8 +75,15 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            barcode_ = input.readBytes();
+            barcode_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            magstripe_ = s;
             break;
           }
           case 40: {
@@ -85,9 +93,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 802: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
               fields_ = new java.util.ArrayList<io.bloombox.schema.identity.ids.USDLFieldValue>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000008;
             }
             fields_.add(
                 input.readMessage(io.bloombox.schema.identity.ids.USDLFieldValue.parser(), extensionRegistry));
@@ -101,7 +109,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
         fields_ = java.util.Collections.unmodifiableList(fields_);
       }
       this.unknownFields = unknownFields.build();
@@ -122,16 +130,87 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int BARCODE_FIELD_NUMBER = 1;
-  private com.google.protobuf.ByteString barcode_;
+  private volatile java.lang.Object barcode_;
   /**
    * <pre>
    * Raw barcode data for this Driver's License.
    * </pre>
    *
-   * <code>bytes barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
    */
-  public com.google.protobuf.ByteString getBarcode() {
-    return barcode_;
+  public java.lang.String getBarcode() {
+    java.lang.Object ref = barcode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      barcode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Raw barcode data for this Driver's License.
+   * </pre>
+   *
+   * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+   */
+  public com.google.protobuf.ByteString
+      getBarcodeBytes() {
+    java.lang.Object ref = barcode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      barcode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MAGSTRIPE_FIELD_NUMBER = 2;
+  private volatile java.lang.Object magstripe_;
+  /**
+   * <pre>
+   * Raw barcode data for this Driver's License.
+   * </pre>
+   *
+   * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+   */
+  public java.lang.String getMagstripe() {
+    java.lang.Object ref = magstripe_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      magstripe_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Raw barcode data for this Driver's License.
+   * </pre>
+   *
+   * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+   */
+  public com.google.protobuf.ByteString
+      getMagstripeBytes() {
+    java.lang.Object ref = magstripe_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      magstripe_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int JURISDICTION_FIELD_NUMBER = 5;
@@ -225,8 +304,11 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!barcode_.isEmpty()) {
-      output.writeBytes(1, barcode_);
+    if (!getBarcodeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, barcode_);
+    }
+    if (!getMagstripeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, magstripe_);
     }
     if (jurisdiction_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
       output.writeEnum(5, jurisdiction_);
@@ -242,9 +324,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!barcode_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(1, barcode_);
+    if (!getBarcodeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, barcode_);
+    }
+    if (!getMagstripeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, magstripe_);
     }
     if (jurisdiction_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -272,6 +356,8 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getBarcode()
         .equals(other.getBarcode());
+    result = result && getMagstripe()
+        .equals(other.getMagstripe());
     result = result && jurisdiction_ == other.jurisdiction_;
     result = result && getFieldsList()
         .equals(other.getFieldsList());
@@ -288,6 +374,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + BARCODE_FIELD_NUMBER;
     hash = (53 * hash) + getBarcode().hashCode();
+    hash = (37 * hash) + MAGSTRIPE_FIELD_NUMBER;
+    hash = (53 * hash) + getMagstripe().hashCode();
     hash = (37 * hash) + JURISDICTION_FIELD_NUMBER;
     hash = (53 * hash) + jurisdiction_;
     if (getFieldsCount() > 0) {
@@ -428,13 +516,15 @@ private static final long serialVersionUID = 0L;
     }
     public Builder clear() {
       super.clear();
-      barcode_ = com.google.protobuf.ByteString.EMPTY;
+      barcode_ = "";
+
+      magstripe_ = "";
 
       jurisdiction_ = 0;
 
       if (fieldsBuilder_ == null) {
         fields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
         fieldsBuilder_.clear();
       }
@@ -463,11 +553,12 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       result.barcode_ = barcode_;
+      result.magstripe_ = magstripe_;
       result.jurisdiction_ = jurisdiction_;
       if (fieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
           fields_ = java.util.Collections.unmodifiableList(fields_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.fields_ = fields_;
       } else {
@@ -515,8 +606,13 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(io.bloombox.schema.identity.ids.USDL other) {
       if (other == io.bloombox.schema.identity.ids.USDL.getDefaultInstance()) return this;
-      if (other.getBarcode() != com.google.protobuf.ByteString.EMPTY) {
-        setBarcode(other.getBarcode());
+      if (!other.getBarcode().isEmpty()) {
+        barcode_ = other.barcode_;
+        onChanged();
+      }
+      if (!other.getMagstripe().isEmpty()) {
+        magstripe_ = other.magstripe_;
+        onChanged();
       }
       if (other.jurisdiction_ != 0) {
         setJurisdictionValue(other.getJurisdictionValue());
@@ -525,7 +621,7 @@ private static final long serialVersionUID = 0L;
         if (!other.fields_.isEmpty()) {
           if (fields_.isEmpty()) {
             fields_ = other.fields_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureFieldsIsMutable();
             fields_.addAll(other.fields_);
@@ -538,7 +634,7 @@ private static final long serialVersionUID = 0L;
             fieldsBuilder_.dispose();
             fieldsBuilder_ = null;
             fields_ = other.fields_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             fieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFieldsFieldBuilder() : null;
@@ -575,25 +671,55 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.ByteString barcode_ = com.google.protobuf.ByteString.EMPTY;
+    private java.lang.Object barcode_ = "";
     /**
      * <pre>
      * Raw barcode data for this Driver's License.
      * </pre>
      *
-     * <code>bytes barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
      */
-    public com.google.protobuf.ByteString getBarcode() {
-      return barcode_;
+    public java.lang.String getBarcode() {
+      java.lang.Object ref = barcode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        barcode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
      * Raw barcode data for this Driver's License.
      * </pre>
      *
-     * <code>bytes barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
      */
-    public Builder setBarcode(com.google.protobuf.ByteString value) {
+    public com.google.protobuf.ByteString
+        getBarcodeBytes() {
+      java.lang.Object ref = barcode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        barcode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Raw barcode data for this Driver's License.
+     * </pre>
+     *
+     * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public Builder setBarcode(
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -607,11 +733,118 @@ private static final long serialVersionUID = 0L;
      * Raw barcode data for this Driver's License.
      * </pre>
      *
-     * <code>bytes barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder clearBarcode() {
       
       barcode_ = getDefaultInstance().getBarcode();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw barcode data for this Driver's License.
+     * </pre>
+     *
+     * <code>string barcode = 1 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public Builder setBarcodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      barcode_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object magstripe_ = "";
+    /**
+     * <pre>
+     * Raw barcode data for this Driver's License.
+     * </pre>
+     *
+     * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public java.lang.String getMagstripe() {
+      java.lang.Object ref = magstripe_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        magstripe_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Raw barcode data for this Driver's License.
+     * </pre>
+     *
+     * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getMagstripeBytes() {
+      java.lang.Object ref = magstripe_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        magstripe_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Raw barcode data for this Driver's License.
+     * </pre>
+     *
+     * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public Builder setMagstripe(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      magstripe_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw barcode data for this Driver's License.
+     * </pre>
+     *
+     * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public Builder clearMagstripe() {
+      
+      magstripe_ = getDefaultInstance().getMagstripe();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw barcode data for this Driver's License.
+     * </pre>
+     *
+     * <code>string magstripe = 2 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public Builder setMagstripeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      magstripe_ = value;
       onChanged();
       return this;
     }
@@ -683,9 +916,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<io.bloombox.schema.identity.ids.USDLFieldValue> fields_ =
       java.util.Collections.emptyList();
     private void ensureFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
         fields_ = new java.util.ArrayList<io.bloombox.schema.identity.ids.USDLFieldValue>(fields_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -879,7 +1112,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFields() {
       if (fieldsBuilder_ == null) {
         fields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         fieldsBuilder_.clear();
@@ -984,7 +1217,7 @@ private static final long serialVersionUID = 0L;
         fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.bloombox.schema.identity.ids.USDLFieldValue, io.bloombox.schema.identity.ids.USDLFieldValue.Builder, io.bloombox.schema.identity.ids.USDLFieldValueOrBuilder>(
                 fields_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
+                ((bitField0_ & 0x00000008) == 0x00000008),
                 getParentForChildren(),
                 isClean());
         fields_ = null;

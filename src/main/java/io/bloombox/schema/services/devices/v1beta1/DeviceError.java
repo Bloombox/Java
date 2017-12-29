@@ -37,6 +37,38 @@ public enum DeviceError
    * <code>NO_ERROR = 0;</code>
    */
   NO_ERROR(0),
+  /**
+   * <pre>
+   * The specified serial number was invalid.
+   * </pre>
+   *
+   * <code>INVALID_SERIAL = 1;</code>
+   */
+  INVALID_SERIAL(1),
+  /**
+   * <pre>
+   * The specified device could not be found.
+   * </pre>
+   *
+   * <code>DEVICE_NOT_FOUND = 2;</code>
+   */
+  DEVICE_NOT_FOUND(2),
+  /**
+   * <pre>
+   * An internal error occurred.
+   * </pre>
+   *
+   * <code>INTERNAL_ERROR = 3;</code>
+   */
+  INTERNAL_ERROR(3),
+  /**
+   * <pre>
+   * The specified device is not currently assigned.
+   * </pre>
+   *
+   * <code>DEVICE_UNASSIGNED = 4;</code>
+   */
+  DEVICE_UNASSIGNED(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -48,6 +80,38 @@ public enum DeviceError
    * <code>NO_ERROR = 0;</code>
    */
   public static final int NO_ERROR_VALUE = 0;
+  /**
+   * <pre>
+   * The specified serial number was invalid.
+   * </pre>
+   *
+   * <code>INVALID_SERIAL = 1;</code>
+   */
+  public static final int INVALID_SERIAL_VALUE = 1;
+  /**
+   * <pre>
+   * The specified device could not be found.
+   * </pre>
+   *
+   * <code>DEVICE_NOT_FOUND = 2;</code>
+   */
+  public static final int DEVICE_NOT_FOUND_VALUE = 2;
+  /**
+   * <pre>
+   * An internal error occurred.
+   * </pre>
+   *
+   * <code>INTERNAL_ERROR = 3;</code>
+   */
+  public static final int INTERNAL_ERROR_VALUE = 3;
+  /**
+   * <pre>
+   * The specified device is not currently assigned.
+   * </pre>
+   *
+   * <code>DEVICE_UNASSIGNED = 4;</code>
+   */
+  public static final int DEVICE_UNASSIGNED_VALUE = 4;
 
 
   public final int getNumber() {
@@ -69,6 +133,10 @@ public enum DeviceError
   public static DeviceError forNumber(int value) {
     switch (value) {
       case 0: return NO_ERROR;
+      case 1: return INVALID_SERIAL;
+      case 2: return DEVICE_NOT_FOUND;
+      case 3: return INTERNAL_ERROR;
+      case 4: return DEVICE_UNASSIGNED;
       default: return null;
     }
   }
