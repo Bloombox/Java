@@ -67,6 +67,27 @@ class ShopVerifyTest: ClientRPCTest() {
   }
 
   /**
+   * Test verifying a known good account with a second partner.
+   */
+  @test
+  fun testGoodAccountVerifyOtherPartner() {
+    // prep a client for prod
+    val prodClient = BloomboxClient(BloomboxClient.Settings(
+          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
+          partner = "abatin",
+          location = "sacramento"),
+          BloomboxClient.ClientTarget.PRODUCTION)
+
+    // run a known-good account verification
+    val response = testMemberVerifyGoodAccount(prodClient.shop())
+
+    assertNotNull(response, "response from server for known-good alternate partner verify should not be null")
+    assertTrue(response.verified, "known-good alternate partner account should verify correctly")
+
+    prodClient.close(false)
+  }
+
+  /**
    * Test verifying a known good account, asynchronously.
    */
   @test
