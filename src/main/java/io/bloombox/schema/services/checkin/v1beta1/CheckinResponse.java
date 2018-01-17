@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
   }
   private CheckinResponse() {
     success_ = false;
+    mustEnroll_ = false;
     error_ = 0;
   }
 
@@ -79,12 +80,17 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 16: {
+
+            mustEnroll_ = input.readBool();
+            break;
+          }
+          case 24: {
             int rawValue = input.readEnum();
 
             error_ = rawValue;
             break;
           }
-          case 26: {
+          case 34: {
             io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder subBuilder = null;
             if (user_ != null) {
               subBuilder = user_.toBuilder();
@@ -93,6 +99,19 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(user_);
               user_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder subBuilder = null;
+            if (enrollment_ != null) {
+              subBuilder = enrollment_.toBuilder();
+            }
+            enrollment_ = input.readMessage(io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(enrollment_);
+              enrollment_ = subBuilder.buildPartial();
             }
 
             break;
@@ -134,14 +153,27 @@ private static final long serialVersionUID = 0L;
     return success_;
   }
 
-  public static final int ERROR_FIELD_NUMBER = 2;
+  public static final int MUST_ENROLL_FIELD_NUMBER = 2;
+  private boolean mustEnroll_;
+  /**
+   * <pre>
+   * Specifies whether the user must enroll to continue.
+   * </pre>
+   *
+   * <code>bool must_enroll = 2;</code>
+   */
+  public boolean getMustEnroll() {
+    return mustEnroll_;
+  }
+
+  public static final int ERROR_FIELD_NUMBER = 3;
   private int error_;
   /**
    * <pre>
    * Specifies a known checkin error that occurred, if applicable.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+   * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
    */
   public int getErrorValue() {
     return error_;
@@ -151,21 +183,21 @@ private static final long serialVersionUID = 0L;
    * Specifies a known checkin error that occurred, if applicable.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+   * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
    */
   public io.bloombox.schema.services.checkin.v1beta1.CheckinError getError() {
     io.bloombox.schema.services.checkin.v1beta1.CheckinError result = io.bloombox.schema.services.checkin.v1beta1.CheckinError.valueOf(error_);
     return result == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinError.UNRECOGNIZED : result;
   }
 
-  public static final int USER_FIELD_NUMBER = 3;
+  public static final int USER_FIELD_NUMBER = 4;
   private io.bloombox.schema.services.checkin.v1beta1.CheckinUser user_;
   /**
    * <pre>
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   public boolean hasUser() {
     return user_ != null;
@@ -175,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   public io.bloombox.schema.services.checkin.v1beta1.CheckinUser getUser() {
     return user_ == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinUser.getDefaultInstance() : user_;
@@ -185,10 +217,43 @@ private static final long serialVersionUID = 0L;
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   public io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder getUserOrBuilder() {
     return getUser();
+  }
+
+  public static final int ENROLLMENT_FIELD_NUMBER = 5;
+  private io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment_;
+  /**
+   * <pre>
+   * Information related to the user's next enrollment action, if required.
+   * </pre>
+   *
+   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   */
+  public boolean hasEnrollment() {
+    return enrollment_ != null;
+  }
+  /**
+   * <pre>
+   * Information related to the user's next enrollment action, if required.
+   * </pre>
+   *
+   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   */
+  public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment getEnrollment() {
+    return enrollment_ == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.getDefaultInstance() : enrollment_;
+  }
+  /**
+   * <pre>
+   * Information related to the user's next enrollment action, if required.
+   * </pre>
+   *
+   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   */
+  public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder getEnrollmentOrBuilder() {
+    return getEnrollment();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -206,11 +271,17 @@ private static final long serialVersionUID = 0L;
     if (success_ != false) {
       output.writeBool(1, success_);
     }
+    if (mustEnroll_ != false) {
+      output.writeBool(2, mustEnroll_);
+    }
     if (error_ != io.bloombox.schema.services.checkin.v1beta1.CheckinError.NO_ERROR.getNumber()) {
-      output.writeEnum(2, error_);
+      output.writeEnum(3, error_);
     }
     if (user_ != null) {
-      output.writeMessage(3, getUser());
+      output.writeMessage(4, getUser());
+    }
+    if (enrollment_ != null) {
+      output.writeMessage(5, getEnrollment());
     }
     unknownFields.writeTo(output);
   }
@@ -224,13 +295,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, success_);
     }
+    if (mustEnroll_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, mustEnroll_);
+    }
     if (error_ != io.bloombox.schema.services.checkin.v1beta1.CheckinError.NO_ERROR.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, error_);
+        .computeEnumSize(3, error_);
     }
     if (user_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, getUser());
+        .computeMessageSize(4, getUser());
+    }
+    if (enrollment_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getEnrollment());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -250,11 +329,18 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && (getSuccess()
         == other.getSuccess());
+    result = result && (getMustEnroll()
+        == other.getMustEnroll());
     result = result && error_ == other.error_;
     result = result && (hasUser() == other.hasUser());
     if (hasUser()) {
       result = result && getUser()
           .equals(other.getUser());
+    }
+    result = result && (hasEnrollment() == other.hasEnrollment());
+    if (hasEnrollment()) {
+      result = result && getEnrollment()
+          .equals(other.getEnrollment());
     }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
@@ -270,11 +356,18 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getSuccess());
+    hash = (37 * hash) + MUST_ENROLL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getMustEnroll());
     hash = (37 * hash) + ERROR_FIELD_NUMBER;
     hash = (53 * hash) + error_;
     if (hasUser()) {
       hash = (37 * hash) + USER_FIELD_NUMBER;
       hash = (53 * hash) + getUser().hashCode();
+    }
+    if (hasEnrollment()) {
+      hash = (37 * hash) + ENROLLMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getEnrollment().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -412,6 +505,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       success_ = false;
 
+      mustEnroll_ = false;
+
       error_ = 0;
 
       if (userBuilder_ == null) {
@@ -419,6 +514,12 @@ private static final long serialVersionUID = 0L;
       } else {
         user_ = null;
         userBuilder_ = null;
+      }
+      if (enrollmentBuilder_ == null) {
+        enrollment_ = null;
+      } else {
+        enrollment_ = null;
+        enrollmentBuilder_ = null;
       }
       return this;
     }
@@ -443,11 +544,17 @@ private static final long serialVersionUID = 0L;
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse buildPartial() {
       io.bloombox.schema.services.checkin.v1beta1.CheckinResponse result = new io.bloombox.schema.services.checkin.v1beta1.CheckinResponse(this);
       result.success_ = success_;
+      result.mustEnroll_ = mustEnroll_;
       result.error_ = error_;
       if (userBuilder_ == null) {
         result.user_ = user_;
       } else {
         result.user_ = userBuilder_.build();
+      }
+      if (enrollmentBuilder_ == null) {
+        result.enrollment_ = enrollment_;
+      } else {
+        result.enrollment_ = enrollmentBuilder_.build();
       }
       onBuilt();
       return result;
@@ -493,11 +600,17 @@ private static final long serialVersionUID = 0L;
       if (other.getSuccess() != false) {
         setSuccess(other.getSuccess());
       }
+      if (other.getMustEnroll() != false) {
+        setMustEnroll(other.getMustEnroll());
+      }
       if (other.error_ != 0) {
         setErrorValue(other.getErrorValue());
       }
       if (other.hasUser()) {
         mergeUser(other.getUser());
+      }
+      if (other.hasEnrollment()) {
+        mergeEnrollment(other.getEnrollment());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -564,13 +677,51 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private boolean mustEnroll_ ;
+    /**
+     * <pre>
+     * Specifies whether the user must enroll to continue.
+     * </pre>
+     *
+     * <code>bool must_enroll = 2;</code>
+     */
+    public boolean getMustEnroll() {
+      return mustEnroll_;
+    }
+    /**
+     * <pre>
+     * Specifies whether the user must enroll to continue.
+     * </pre>
+     *
+     * <code>bool must_enroll = 2;</code>
+     */
+    public Builder setMustEnroll(boolean value) {
+      
+      mustEnroll_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies whether the user must enroll to continue.
+     * </pre>
+     *
+     * <code>bool must_enroll = 2;</code>
+     */
+    public Builder clearMustEnroll() {
+      
+      mustEnroll_ = false;
+      onChanged();
+      return this;
+    }
+
     private int error_ = 0;
     /**
      * <pre>
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+     * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public int getErrorValue() {
       return error_;
@@ -580,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+     * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public Builder setErrorValue(int value) {
       error_ = value;
@@ -592,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+     * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinError getError() {
       io.bloombox.schema.services.checkin.v1beta1.CheckinError result = io.bloombox.schema.services.checkin.v1beta1.CheckinError.valueOf(error_);
@@ -603,7 +754,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+     * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public Builder setError(io.bloombox.schema.services.checkin.v1beta1.CheckinError value) {
       if (value == null) {
@@ -619,7 +770,7 @@ private static final long serialVersionUID = 0L;
      * Specifies a known checkin error that occurred, if applicable.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+     * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
      */
     public Builder clearError() {
       
@@ -636,7 +787,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public boolean hasUser() {
       return userBuilder_ != null || user_ != null;
@@ -646,7 +797,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUser getUser() {
       if (userBuilder_ == null) {
@@ -660,7 +811,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public Builder setUser(io.bloombox.schema.services.checkin.v1beta1.CheckinUser value) {
       if (userBuilder_ == null) {
@@ -680,7 +831,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public Builder setUser(
         io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder builderForValue) {
@@ -698,7 +849,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public Builder mergeUser(io.bloombox.schema.services.checkin.v1beta1.CheckinUser value) {
       if (userBuilder_ == null) {
@@ -720,7 +871,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public Builder clearUser() {
       if (userBuilder_ == null) {
@@ -738,7 +889,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder getUserBuilder() {
       
@@ -750,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder getUserOrBuilder() {
       if (userBuilder_ != null) {
@@ -765,7 +916,7 @@ private static final long serialVersionUID = 0L;
      * Information about the resulting user account.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+     * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.checkin.v1beta1.CheckinUser, io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder, io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder> 
@@ -779,6 +930,159 @@ private static final long serialVersionUID = 0L;
         user_ = null;
       }
       return userBuilder_;
+    }
+
+    private io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder> enrollmentBuilder_;
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    public boolean hasEnrollment() {
+      return enrollmentBuilder_ != null || enrollment_ != null;
+    }
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment getEnrollment() {
+      if (enrollmentBuilder_ == null) {
+        return enrollment_ == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.getDefaultInstance() : enrollment_;
+      } else {
+        return enrollmentBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    public Builder setEnrollment(io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment value) {
+      if (enrollmentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        enrollment_ = value;
+        onChanged();
+      } else {
+        enrollmentBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    public Builder setEnrollment(
+        io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder builderForValue) {
+      if (enrollmentBuilder_ == null) {
+        enrollment_ = builderForValue.build();
+        onChanged();
+      } else {
+        enrollmentBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    public Builder mergeEnrollment(io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment value) {
+      if (enrollmentBuilder_ == null) {
+        if (enrollment_ != null) {
+          enrollment_ =
+            io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.newBuilder(enrollment_).mergeFrom(value).buildPartial();
+        } else {
+          enrollment_ = value;
+        }
+        onChanged();
+      } else {
+        enrollmentBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    public Builder clearEnrollment() {
+      if (enrollmentBuilder_ == null) {
+        enrollment_ = null;
+        onChanged();
+      } else {
+        enrollment_ = null;
+        enrollmentBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder getEnrollmentBuilder() {
+      
+      onChanged();
+      return getEnrollmentFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder getEnrollmentOrBuilder() {
+      if (enrollmentBuilder_ != null) {
+        return enrollmentBuilder_.getMessageOrBuilder();
+      } else {
+        return enrollment_ == null ?
+            io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.getDefaultInstance() : enrollment_;
+      }
+    }
+    /**
+     * <pre>
+     * Information related to the user's next enrollment action, if required.
+     * </pre>
+     *
+     * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder> 
+        getEnrollmentFieldBuilder() {
+      if (enrollmentBuilder_ == null) {
+        enrollmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder>(
+                getEnrollment(),
+                getParentForChildren(),
+                isClean());
+        enrollment_ = null;
+      }
+      return enrollmentBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

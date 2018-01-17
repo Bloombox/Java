@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -124,7 +124,7 @@ public final class DevicesServiceBeta1 {
       "evices.v1beta1.Activation.Request\032-.serv" +
       "ices.devices.v1beta1.Activation.Response" +
       "\"a\202\323\344\223\002[\")/devices/v1beta1/{serial}/devi" +
-      "ce:activate:\001*Z+\022)/checkin/v1beta1/{seri" +
+      "ce:activate:\001*Z+\022)/devices/v1beta1/{seri" +
       "al}/device:activateB1\n+io.bloombox.schem" +
       "a.services.devices.v1beta1H\001P\001b\006proto3"
     };

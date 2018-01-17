@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -1018,7 +1018,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Request for member verification.
+     * Request to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1026,7 +1026,7 @@ private static final long serialVersionUID = 0L;
     boolean hasRequest();
     /**
      * <pre>
-     * Request for member verification.
+     * Request to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1034,7 +1034,7 @@ private static final long serialVersionUID = 0L;
     io.bloombox.schema.services.checkin.v1beta1.Ping.Request getRequest();
     /**
      * <pre>
-     * Request for member verification.
+     * Request to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1043,7 +1043,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Response for member verification.
+     * Response to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1051,7 +1051,7 @@ private static final long serialVersionUID = 0L;
     boolean hasResponse();
     /**
      * <pre>
-     * Response for member verification.
+     * Response to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1059,7 +1059,7 @@ private static final long serialVersionUID = 0L;
     io.bloombox.schema.services.checkin.v1beta1.Ping.Response getResponse();
     /**
      * <pre>
-     * Response for member verification.
+     * Response to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1170,7 +1170,7 @@ private static final long serialVersionUID = 0L;
     private io.bloombox.schema.services.checkin.v1beta1.Ping.Request request_;
     /**
      * <pre>
-     * Request for member verification.
+     * Request to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1180,7 +1180,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Request for member verification.
+     * Request to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Request for member verification.
+     * Request to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1203,7 +1203,7 @@ private static final long serialVersionUID = 0L;
     private io.bloombox.schema.services.checkin.v1beta1.Ping.Response response_;
     /**
      * <pre>
-     * Response for member verification.
+     * Response to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1213,7 +1213,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Response for member verification.
+     * Response to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1223,7 +1223,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Response for member verification.
+     * Response to ping.
      * </pre>
      *
      * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1567,7 +1567,7 @@ private static final long serialVersionUID = 0L;
           io.bloombox.schema.services.checkin.v1beta1.Ping.Request, io.bloombox.schema.services.checkin.v1beta1.Ping.Request.Builder, io.bloombox.schema.services.checkin.v1beta1.Ping.RequestOrBuilder> requestBuilder_;
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1577,7 +1577,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1591,7 +1591,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1611,7 +1611,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1629,7 +1629,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1651,7 +1651,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1669,7 +1669,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1681,7 +1681,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1696,7 +1696,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request for member verification.
+       * Request to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Request request = 1;</code>
@@ -1720,7 +1720,7 @@ private static final long serialVersionUID = 0L;
           io.bloombox.schema.services.checkin.v1beta1.Ping.Response, io.bloombox.schema.services.checkin.v1beta1.Ping.Response.Builder, io.bloombox.schema.services.checkin.v1beta1.Ping.ResponseOrBuilder> responseBuilder_;
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1730,7 +1730,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1744,7 +1744,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1764,7 +1764,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1782,7 +1782,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1804,7 +1804,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1822,7 +1822,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1834,7 +1834,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>
@@ -1849,7 +1849,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response for member verification.
+       * Response to ping.
        * </pre>
        *
        * <code>.services.checkin.v1beta1.Ping.Response response = 2;</code>

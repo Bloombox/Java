@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,9 +62,18 @@ public interface ContentOrBuilder extends
    * Raw bytes of underlying content data.
    * </pre>
    *
-   * <code>bytes content = 3;</code>
+   * <code>string content = 3;</code>
    */
-  com.google.protobuf.ByteString getContent();
+  java.lang.String getContent();
+  /**
+   * <pre>
+   * Raw bytes of underlying content data.
+   * </pre>
+   *
+   * <code>string content = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getContentBytes();
 
   /**
    * <pre>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -57,6 +57,11 @@ public final class CheckinServiceBeta1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_services_checkin_v1beta1_CheckinUser_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_services_checkin_v1beta1_CheckinEnrollment_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_services_checkin_v1beta1_CheckinEnrollment_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_services_checkin_v1beta1_CheckinResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -101,58 +106,58 @@ public final class CheckinServiceBeta1 {
   static {
     java.lang.String[] descriptorData = {
       "\n*checkin/v1beta1/CheckinService_Beta1.p" +
-      "roto\022\030services.checkin.v1beta1\032\031contact/" +
-      "ContactInfo.proto\032\021geo/USState.proto\032\021id" +
-      "entity/ID.proto\032\023identity/User.proto\032\034se" +
-      "rvices/ServiceStatus.proto\032\027person/Perso" +
-      "nName.proto\032\034google/api/annotations.prot" +
-      "o\"\307\001\n\004Ping\032\t\n\007Request\0323\n\010Response\022\'\n\006sta" +
-      "tus\030\001 \001(\0162\027.services.ServiceStatus\032\177\n\tOp" +
-      "eration\0227\n\007request\030\001 \001(\0132&.services.chec" +
-      "kin.v1beta1.Ping.Request\0229\n\010response\030\002 \001" +
-      "(\0132\'.services.checkin.v1beta1.Ping.Respo" +
-      "nse\"\224\001\n\013CheckinUser\022\036\n\003key\030\001 \001(\0132\021.ident" +
-      "ity.UserKey\022\"\n\005flags\030\002 \001(\0132\023.identity.Us" +
-      "erFlags\022\032\n\004name\030\003 \001(\0132\014.person.Name\022%\n\007c" +
-      "ontact\030\004 \001(\0132\024.contact.ContactInfo\"\216\001\n\017C" +
-      "heckinResponse\022\017\n\007success\030\001 \001(\010\0225\n\005error" +
-      "\030\002 \001(\0162&.services.checkin.v1beta1.Checki" +
-      "nError\0223\n\004user\030\003 \001(\0132%.services.checkin." +
-      "v1beta1.CheckinUser\"\366\001\n\tIDCheckin\032`\n\007Req" +
-      "uest\022\036\n\010document\030\001 \001(\0132\014.identity.ID\022&\n\014" +
-      "jurisdiction\030\002 \001(\0162\020.geo.usa.USState\022\r\n\005" +
-      "scope\030\003 \001(\t\032\206\001\n\tOperation\022<\n\007request\030\001 \001" +
-      "(\0132+.services.checkin.v1beta1.IDCheckin." +
-      "Request\022;\n\010response\030\002 \001(\0132).services.che" +
-      "ckin.v1beta1.CheckinResponse\"\367\001\n\013CardChe" +
-      "ckin\032]\n\007Request\022\020\n\010cardType\030\001 \001(\t\022\017\n\007pay" +
-      "load\030\002 \001(\t\022\021\n\tsignature\030\003 \001(\t\022\r\n\005agent\030\004" +
-      " \001(\t\022\r\n\005scope\030\005 \001(\t\032\210\001\n\tOperation\022>\n\007req" +
-      "uest\030\001 \001(\0132-.services.checkin.v1beta1.Ca" +
-      "rdCheckin.Request\022;\n\010response\030\002 \001(\0132).se" +
-      "rvices.checkin.v1beta1.CheckinResponse*\262" +
-      "\002\n\014CheckinError\022\014\n\010NO_ERROR\020\000\022\020\n\014ID_NOT_" +
-      "FOUND\020\001\022\016\n\nID_EXPIRED\020\002\022\016\n\nID_INVALID\020\003\022" +
-      "\027\n\023ID_TYPE_UNSUPPORTED\020\004\022\025\n\021CARD_TYPE_IN" +
-      "VALID\020\005\022\020\n\014CARD_EXPIRED\020\006\022\022\n\016CARD_SUSPEN" +
-      "DED\020\007\022\022\n\016USER_SUSPENDED\020\010\022\025\n\021PARTNER_SUS" +
-      "PENDED\020\t\022\023\n\017PARTNER_INVALID\020\n\022\024\n\020LOCATIO" +
-      "N_INVALID\020\013\022\030\n\024JURISDICTION_INVALID\020\014\022\034\n" +
-      "\030JURISDICTION_UNSUPPORTED\020\r2\337\003\n\007Checkin\022" +
-      "v\n\004Ping\022&.services.checkin.v1beta1.Ping." +
-      "Request\032\'.services.checkin.v1beta1.Ping." +
-      "Response\"\035\202\323\344\223\002\027\022\025/checkin/v1beta1/ping\022" +
-      "\317\001\n\016Identification\022+.services.checkin.v1" +
-      "beta1.IDCheckin.Request\032).services.check" +
-      "in.v1beta1.CheckinResponse\"e\202\323\344\223\002_\"9/che" +
-      "ckin/v1beta1/{scope=partners/*/locations" +
-      "/*}/global:id:\001*Z\037\"\032/checkin/v1beta1/glo" +
-      "bal:id:\001*\022\211\001\n\004Card\022-.services.checkin.v1" +
-      "beta1.CardCheckin.Request\032).services.che" +
-      "ckin.v1beta1.CheckinResponse\"\'\202\323\344\223\002!\"\034/c" +
-      "heckin/v1beta1/global:card:\001*B1\n+io.bloo" +
-      "mbox.schema.services.checkin.v1beta1H\001P\001" +
-      "b\006proto3"
+      "roto\022\030services.checkin.v1beta1\032\023identity" +
+      "/User.proto\032\034services/ServiceStatus.prot" +
+      "o\032\027person/PersonName.proto\032\034google/api/a" +
+      "nnotations.proto\"\307\001\n\004Ping\032\t\n\007Request\0323\n\010" +
+      "Response\022\'\n\006status\030\001 \001(\0162\027.services.Serv" +
+      "iceStatus\032\177\n\tOperation\0227\n\007request\030\001 \001(\0132" +
+      "&.services.checkin.v1beta1.Ping.Request\022" +
+      "9\n\010response\030\002 \001(\0132\'.services.checkin.v1b" +
+      "eta1.Ping.Response\"m\n\013CheckinUser\022\036\n\003key" +
+      "\030\001 \001(\0132\021.identity.UserKey\022\"\n\005flags\030\002 \001(\013" +
+      "2\023.identity.UserFlags\022\032\n\004name\030\003 \001(\0132\014.pe" +
+      "rson.Name\"!\n\021CheckinEnrollment\022\014\n\004code\030\001" +
+      " \001(\t\"\344\001\n\017CheckinResponse\022\017\n\007success\030\001 \001(" +
+      "\010\022\023\n\013must_enroll\030\002 \001(\010\0225\n\005error\030\003 \001(\0162&." +
+      "services.checkin.v1beta1.CheckinError\0223\n" +
+      "\004user\030\004 \001(\0132%.services.checkin.v1beta1.C" +
+      "heckinUser\022?\n\nenrollment\030\005 \001(\0132+.service" +
+      "s.checkin.v1beta1.CheckinEnrollment\"\347\001\n\t" +
+      "IDCheckin\032Q\n\007Request\022\013\n\003raw\030\001 \001(\t\022\r\n\005sco" +
+      "pe\030\002 \001(\t\022\025\n\rserial_number\030\003 \001(\t\022\023\n\013finge" +
+      "rprint\030\004 \001(\t\032\206\001\n\tOperation\022<\n\007request\030\001 " +
+      "\001(\0132+.services.checkin.v1beta1.IDCheckin" +
+      ".Request\022;\n\010response\030\002 \001(\0132).services.ch" +
+      "eckin.v1beta1.CheckinResponse\"\367\001\n\013CardCh" +
+      "eckin\032]\n\007Request\022\020\n\010cardType\030\001 \001(\t\022\017\n\007pa" +
+      "yload\030\002 \001(\t\022\021\n\tsignature\030\003 \001(\t\022\r\n\005agent\030" +
+      "\004 \001(\t\022\r\n\005scope\030\005 \001(\t\032\210\001\n\tOperation\022>\n\007re" +
+      "quest\030\001 \001(\0132-.services.checkin.v1beta1.C" +
+      "ardCheckin.Request\022;\n\010response\030\002 \001(\0132).s" +
+      "ervices.checkin.v1beta1.CheckinResponse*" +
+      "\305\002\n\014CheckinError\022\014\n\010NO_ERROR\020\000\022\020\n\014ID_NOT" +
+      "_FOUND\020\001\022\016\n\nID_EXPIRED\020\002\022\016\n\nID_INVALID\020\003" +
+      "\022\027\n\023ID_TYPE_UNSUPPORTED\020\004\022\025\n\021CARD_TYPE_I" +
+      "NVALID\020\005\022\020\n\014CARD_EXPIRED\020\006\022\022\n\016CARD_SUSPE" +
+      "NDED\020\007\022\022\n\016USER_SUSPENDED\020\010\022\025\n\021PARTNER_SU" +
+      "SPENDED\020\t\022\023\n\017PARTNER_INVALID\020\n\022\024\n\020LOCATI" +
+      "ON_INVALID\020\013\022\030\n\024JURISDICTION_INVALID\020\014\022\034" +
+      "\n\030JURISDICTION_UNSUPPORTED\020\r\022\021\n\rUSER_UND" +
+      "ERAGE\020\0162\337\003\n\007Checkin\022v\n\004Ping\022&.services.c" +
+      "heckin.v1beta1.Ping.Request\032\'.services.c" +
+      "heckin.v1beta1.Ping.Response\"\035\202\323\344\223\002\027\022\025/c" +
+      "heckin/v1beta1/ping\022\317\001\n\016Identification\022+" +
+      ".services.checkin.v1beta1.IDCheckin.Requ" +
+      "est\032).services.checkin.v1beta1.CheckinRe" +
+      "sponse\"e\202\323\344\223\002_\"9/checkin/v1beta1/{scope=" +
+      "partners/*/locations/*}/global:id:\001*Z\037\"\032" +
+      "/checkin/v1beta1/global:id:\001*\022\211\001\n\004Card\022-" +
+      ".services.checkin.v1beta1.CardCheckin.Re" +
+      "quest\032).services.checkin.v1beta1.Checkin" +
+      "Response\"\'\202\323\344\223\002!\"\034/checkin/v1beta1/globa" +
+      "l:card:\001*B1\n+io.bloombox.schema.services" +
+      ".checkin.v1beta1H\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -165,9 +170,6 @@ public final class CheckinServiceBeta1 {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.contact.ContactInfoOuterClass.getDescriptor(),
-          io.bloombox.schema.geo.usa.USStateOuterClass.getDescriptor(),
-          io.bloombox.schema.identity.IDOuterClass.getDescriptor(),
           io.bloombox.schema.identity.UserOuterClass.getDescriptor(),
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
           io.bloombox.schema.person.PersonName.getDescriptor(),
@@ -202,15 +204,21 @@ public final class CheckinServiceBeta1 {
     internal_static_services_checkin_v1beta1_CheckinUser_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_checkin_v1beta1_CheckinUser_descriptor,
-        new java.lang.String[] { "Key", "Flags", "Name", "Contact", });
-    internal_static_services_checkin_v1beta1_CheckinResponse_descriptor =
+        new java.lang.String[] { "Key", "Flags", "Name", });
+    internal_static_services_checkin_v1beta1_CheckinEnrollment_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_services_checkin_v1beta1_CheckinEnrollment_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_services_checkin_v1beta1_CheckinEnrollment_descriptor,
+        new java.lang.String[] { "Code", });
+    internal_static_services_checkin_v1beta1_CheckinResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_services_checkin_v1beta1_CheckinResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_checkin_v1beta1_CheckinResponse_descriptor,
-        new java.lang.String[] { "Success", "Error", "User", });
+        new java.lang.String[] { "Success", "MustEnroll", "Error", "User", "Enrollment", });
     internal_static_services_checkin_v1beta1_IDCheckin_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_services_checkin_v1beta1_IDCheckin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_checkin_v1beta1_IDCheckin_descriptor,
@@ -220,7 +228,7 @@ public final class CheckinServiceBeta1 {
     internal_static_services_checkin_v1beta1_IDCheckin_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_checkin_v1beta1_IDCheckin_Request_descriptor,
-        new java.lang.String[] { "Document", "Jurisdiction", "Scope", });
+        new java.lang.String[] { "Raw", "Scope", "SerialNumber", "Fingerprint", });
     internal_static_services_checkin_v1beta1_IDCheckin_Operation_descriptor =
       internal_static_services_checkin_v1beta1_IDCheckin_descriptor.getNestedTypes().get(1);
     internal_static_services_checkin_v1beta1_IDCheckin_Operation_fieldAccessorTable = new
@@ -228,7 +236,7 @@ public final class CheckinServiceBeta1 {
         internal_static_services_checkin_v1beta1_IDCheckin_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
     internal_static_services_checkin_v1beta1_CardCheckin_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_services_checkin_v1beta1_CardCheckin_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_services_checkin_v1beta1_CardCheckin_descriptor,
@@ -250,9 +258,6 @@ public final class CheckinServiceBeta1 {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    io.bloombox.schema.contact.ContactInfoOuterClass.getDescriptor();
-    io.bloombox.schema.geo.usa.USStateOuterClass.getDescriptor();
-    io.bloombox.schema.identity.IDOuterClass.getDescriptor();
     io.bloombox.schema.identity.UserOuterClass.getDescriptor();
     io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();
     io.bloombox.schema.person.PersonName.getDescriptor();

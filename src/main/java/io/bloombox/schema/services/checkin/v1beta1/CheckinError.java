@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -141,6 +141,15 @@ public enum CheckinError
    * <code>JURISDICTION_UNSUPPORTED = 13;</code>
    */
   JURISDICTION_UNSUPPORTED(13),
+  /**
+   * <pre>
+   * The user is not old enough to meet the requisite age requirements for the jurisdiction within which
+   * they attempted to checkin.
+   * </pre>
+   *
+   * <code>USER_UNDERAGE = 14;</code>
+   */
+  USER_UNDERAGE(14),
   UNRECOGNIZED(-1),
   ;
 
@@ -256,6 +265,15 @@ public enum CheckinError
    * <code>JURISDICTION_UNSUPPORTED = 13;</code>
    */
   public static final int JURISDICTION_UNSUPPORTED_VALUE = 13;
+  /**
+   * <pre>
+   * The user is not old enough to meet the requisite age requirements for the jurisdiction within which
+   * they attempted to checkin.
+   * </pre>
+   *
+   * <code>USER_UNDERAGE = 14;</code>
+   */
+  public static final int USER_UNDERAGE_VALUE = 14;
 
 
   public final int getNumber() {
@@ -290,6 +308,7 @@ public enum CheckinError
       case 11: return LOCATION_INVALID;
       case 12: return JURISDICTION_INVALID;
       case 13: return JURISDICTION_UNSUPPORTED;
+      case 14: return USER_UNDERAGE;
       default: return null;
     }
   }

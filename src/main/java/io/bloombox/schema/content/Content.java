@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ private static final long serialVersionUID = 0L;
   private Content() {
     type_ = 0;
     encoding_ = 0;
-    content_ = com.google.protobuf.ByteString.EMPTY;
+    content_ = "";
     language_ = 0;
   }
 
@@ -86,8 +86,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            content_ = input.readBytes();
+            content_ = s;
             break;
           }
           case 32: {
@@ -285,6 +286,22 @@ private static final long serialVersionUID = 0L;
      * <code>UTF8 = 0;</code>
      */
     UTF8(0),
+    /**
+     * <pre>
+     * Base-64 encoded UTF-8.
+     * </pre>
+     *
+     * <code>B64 = 1;</code>
+     */
+    B64(1),
+    /**
+     * <pre>
+     * Base-64 encoded ASCII.
+     * </pre>
+     *
+     * <code>B64_ASCII = 2;</code>
+     */
+    B64_ASCII(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -296,6 +313,22 @@ private static final long serialVersionUID = 0L;
      * <code>UTF8 = 0;</code>
      */
     public static final int UTF8_VALUE = 0;
+    /**
+     * <pre>
+     * Base-64 encoded UTF-8.
+     * </pre>
+     *
+     * <code>B64 = 1;</code>
+     */
+    public static final int B64_VALUE = 1;
+    /**
+     * <pre>
+     * Base-64 encoded ASCII.
+     * </pre>
+     *
+     * <code>B64_ASCII = 2;</code>
+     */
+    public static final int B64_ASCII_VALUE = 2;
 
 
     public final int getNumber() {
@@ -317,6 +350,8 @@ private static final long serialVersionUID = 0L;
     public static Encoding forNumber(int value) {
       switch (value) {
         case 0: return UTF8;
+        case 1: return B64;
+        case 2: return B64_ASCII;
         default: return null;
       }
     }
@@ -418,16 +453,45 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTENT_FIELD_NUMBER = 3;
-  private com.google.protobuf.ByteString content_;
+  private volatile java.lang.Object content_;
   /**
    * <pre>
    * Raw bytes of underlying content data.
    * </pre>
    *
-   * <code>bytes content = 3;</code>
+   * <code>string content = 3;</code>
    */
-  public com.google.protobuf.ByteString getContent() {
-    return content_;
+  public java.lang.String getContent() {
+    java.lang.Object ref = content_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      content_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Raw bytes of underlying content data.
+   * </pre>
+   *
+   * <code>string content = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getContentBytes() {
+    java.lang.Object ref = content_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      content_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int LANGUAGE_FIELD_NUMBER = 4;
@@ -505,8 +569,8 @@ private static final long serialVersionUID = 0L;
     if (encoding_ != io.bloombox.schema.content.Content.Encoding.UTF8.getNumber()) {
       output.writeEnum(2, encoding_);
     }
-    if (!content_.isEmpty()) {
-      output.writeBytes(3, content_);
+    if (!getContentBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, content_);
     }
     if (language_ != io.bloombox.schema.base.Language.ENGLISH.getNumber()) {
       output.writeEnum(4, language_);
@@ -530,9 +594,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, encoding_);
     }
-    if (!content_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(3, content_);
+    if (!getContentBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, content_);
     }
     if (language_ != io.bloombox.schema.base.Language.ENGLISH.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -728,7 +791,7 @@ private static final long serialVersionUID = 0L;
 
       encoding_ = 0;
 
-      content_ = com.google.protobuf.ByteString.EMPTY;
+      content_ = "";
 
       language_ = 0;
 
@@ -816,8 +879,9 @@ private static final long serialVersionUID = 0L;
       if (other.encoding_ != 0) {
         setEncodingValue(other.getEncodingValue());
       }
-      if (other.getContent() != com.google.protobuf.ByteString.EMPTY) {
-        setContent(other.getContent());
+      if (!other.getContent().isEmpty()) {
+        content_ = other.content_;
+        onChanged();
       }
       if (other.language_ != 0) {
         setLanguageValue(other.getLanguageValue());
@@ -980,25 +1044,55 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+    private java.lang.Object content_ = "";
     /**
      * <pre>
      * Raw bytes of underlying content data.
      * </pre>
      *
-     * <code>bytes content = 3;</code>
+     * <code>string content = 3;</code>
      */
-    public com.google.protobuf.ByteString getContent() {
-      return content_;
+    public java.lang.String getContent() {
+      java.lang.Object ref = content_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        content_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
      * Raw bytes of underlying content data.
      * </pre>
      *
-     * <code>bytes content = 3;</code>
+     * <code>string content = 3;</code>
      */
-    public Builder setContent(com.google.protobuf.ByteString value) {
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = content_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        content_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Raw bytes of underlying content data.
+     * </pre>
+     *
+     * <code>string content = 3;</code>
+     */
+    public Builder setContent(
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -1012,11 +1106,29 @@ private static final long serialVersionUID = 0L;
      * Raw bytes of underlying content data.
      * </pre>
      *
-     * <code>bytes content = 3;</code>
+     * <code>string content = 3;</code>
      */
     public Builder clearContent() {
       
       content_ = getDefaultInstance().getContent();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw bytes of underlying content data.
+     * </pre>
+     *
+     * <code>string content = 3;</code>
+     */
+    public Builder setContentBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      content_ = value;
       onChanged();
       return this;
     }

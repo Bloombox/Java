@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -98,29 +98,4 @@ public interface CheckinUserOrBuilder extends
    * <code>.person.Name name = 3;</code>
    */
   io.bloombox.schema.person.NameOrBuilder getNameOrBuilder();
-
-  /**
-   * <pre>
-   * Person's contact information, for confirmation.
-   * </pre>
-   *
-   * <code>.contact.ContactInfo contact = 4;</code>
-   */
-  boolean hasContact();
-  /**
-   * <pre>
-   * Person's contact information, for confirmation.
-   * </pre>
-   *
-   * <code>.contact.ContactInfo contact = 4;</code>
-   */
-  io.bloombox.schema.contact.ContactInfo getContact();
-  /**
-   * <pre>
-   * Person's contact information, for confirmation.
-   * </pre>
-   *
-   * <code>.contact.ContactInfo contact = 4;</code>
-   */
-  io.bloombox.schema.contact.ContactInfoOrBuilder getContactOrBuilder();
 }
