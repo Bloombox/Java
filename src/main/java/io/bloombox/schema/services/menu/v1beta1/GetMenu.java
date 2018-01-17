@@ -1415,27 +1415,27 @@ private static final long serialVersionUID = 0L;
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu menu = 2;</code>
+     * <code>.products.menu.Menu catalog = 2;</code>
      */
-    boolean hasMenu();
+    boolean hasCatalog();
     /**
      * <pre>
      * Specifies the actual menu data payload returned in this response. The menu payload is independently usable, and
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu menu = 2;</code>
+     * <code>.products.menu.Menu catalog = 2;</code>
      */
-    io.bloombox.schema.menu.Menu getMenu();
+    io.bloombox.schema.menu.Menu getCatalog();
     /**
      * <pre>
      * Specifies the actual menu data payload returned in this response. The menu payload is independently usable, and
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu menu = 2;</code>
+     * <code>.products.menu.Menu catalog = 2;</code>
      */
-    io.bloombox.schema.menu.MenuOrBuilder getMenuOrBuilder();
+    io.bloombox.schema.menu.MenuOrBuilder getCatalogOrBuilder();
   }
   /**
    * <pre>
@@ -1502,13 +1502,13 @@ private static final long serialVersionUID = 0L;
             }
             case 18: {
               io.bloombox.schema.menu.Menu.Builder subBuilder = null;
-              if (menu_ != null) {
-                subBuilder = menu_.toBuilder();
+              if (catalog_ != null) {
+                subBuilder = catalog_.toBuilder();
               }
-              menu_ = input.readMessage(io.bloombox.schema.menu.Menu.parser(), extensionRegistry);
+              catalog_ = input.readMessage(io.bloombox.schema.menu.Menu.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(menu_);
-                menu_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(catalog_);
+                catalog_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1573,18 +1573,18 @@ private static final long serialVersionUID = 0L;
       return getFingerprint();
     }
 
-    public static final int MENU_FIELD_NUMBER = 2;
-    private io.bloombox.schema.menu.Menu menu_;
+    public static final int CATALOG_FIELD_NUMBER = 2;
+    private io.bloombox.schema.menu.Menu catalog_;
     /**
      * <pre>
      * Specifies the actual menu data payload returned in this response. The menu payload is independently usable, and
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu menu = 2;</code>
+     * <code>.products.menu.Menu catalog = 2;</code>
      */
-    public boolean hasMenu() {
-      return menu_ != null;
+    public boolean hasCatalog() {
+      return catalog_ != null;
     }
     /**
      * <pre>
@@ -1592,10 +1592,10 @@ private static final long serialVersionUID = 0L;
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu menu = 2;</code>
+     * <code>.products.menu.Menu catalog = 2;</code>
      */
-    public io.bloombox.schema.menu.Menu getMenu() {
-      return menu_ == null ? io.bloombox.schema.menu.Menu.getDefaultInstance() : menu_;
+    public io.bloombox.schema.menu.Menu getCatalog() {
+      return catalog_ == null ? io.bloombox.schema.menu.Menu.getDefaultInstance() : catalog_;
     }
     /**
      * <pre>
@@ -1603,10 +1603,10 @@ private static final long serialVersionUID = 0L;
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu menu = 2;</code>
+     * <code>.products.menu.Menu catalog = 2;</code>
      */
-    public io.bloombox.schema.menu.MenuOrBuilder getMenuOrBuilder() {
-      return getMenu();
+    public io.bloombox.schema.menu.MenuOrBuilder getCatalogOrBuilder() {
+      return getCatalog();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1624,8 +1624,8 @@ private static final long serialVersionUID = 0L;
       if (fingerprint_ != null) {
         output.writeMessage(1, getFingerprint());
       }
-      if (menu_ != null) {
-        output.writeMessage(2, getMenu());
+      if (catalog_ != null) {
+        output.writeMessage(2, getCatalog());
       }
       unknownFields.writeTo(output);
     }
@@ -1639,9 +1639,9 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getFingerprint());
       }
-      if (menu_ != null) {
+      if (catalog_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getMenu());
+          .computeMessageSize(2, getCatalog());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1664,10 +1664,10 @@ private static final long serialVersionUID = 0L;
         result = result && getFingerprint()
             .equals(other.getFingerprint());
       }
-      result = result && (hasMenu() == other.hasMenu());
-      if (hasMenu()) {
-        result = result && getMenu()
-            .equals(other.getMenu());
+      result = result && (hasCatalog() == other.hasCatalog());
+      if (hasCatalog()) {
+        result = result && getCatalog()
+            .equals(other.getCatalog());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -1684,9 +1684,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
         hash = (53 * hash) + getFingerprint().hashCode();
       }
-      if (hasMenu()) {
-        hash = (37 * hash) + MENU_FIELD_NUMBER;
-        hash = (53 * hash) + getMenu().hashCode();
+      if (hasCatalog()) {
+        hash = (37 * hash) + CATALOG_FIELD_NUMBER;
+        hash = (53 * hash) + getCatalog().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1827,11 +1827,11 @@ private static final long serialVersionUID = 0L;
           fingerprint_ = null;
           fingerprintBuilder_ = null;
         }
-        if (menuBuilder_ == null) {
-          menu_ = null;
+        if (catalogBuilder_ == null) {
+          catalog_ = null;
         } else {
-          menu_ = null;
-          menuBuilder_ = null;
+          catalog_ = null;
+          catalogBuilder_ = null;
         }
         return this;
       }
@@ -1860,10 +1860,10 @@ private static final long serialVersionUID = 0L;
         } else {
           result.fingerprint_ = fingerprintBuilder_.build();
         }
-        if (menuBuilder_ == null) {
-          result.menu_ = menu_;
+        if (catalogBuilder_ == null) {
+          result.catalog_ = catalog_;
         } else {
-          result.menu_ = menuBuilder_.build();
+          result.catalog_ = catalogBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1909,8 +1909,8 @@ private static final long serialVersionUID = 0L;
         if (other.hasFingerprint()) {
           mergeFingerprint(other.getFingerprint());
         }
-        if (other.hasMenu()) {
-          mergeMenu(other.getMenu());
+        if (other.hasCatalog()) {
+          mergeCatalog(other.getCatalog());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2101,19 +2101,19 @@ private static final long serialVersionUID = 0L;
         return fingerprintBuilder_;
       }
 
-      private io.bloombox.schema.menu.Menu menu_ = null;
+      private io.bloombox.schema.menu.Menu catalog_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.Menu, io.bloombox.schema.menu.Menu.Builder, io.bloombox.schema.menu.MenuOrBuilder> menuBuilder_;
+          io.bloombox.schema.menu.Menu, io.bloombox.schema.menu.Menu.Builder, io.bloombox.schema.menu.MenuOrBuilder> catalogBuilder_;
       /**
        * <pre>
        * Specifies the actual menu data payload returned in this response. The menu payload is independently usable, and
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
-      public boolean hasMenu() {
-        return menuBuilder_ != null || menu_ != null;
+      public boolean hasCatalog() {
+        return catalogBuilder_ != null || catalog_ != null;
       }
       /**
        * <pre>
@@ -2121,13 +2121,13 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
-      public io.bloombox.schema.menu.Menu getMenu() {
-        if (menuBuilder_ == null) {
-          return menu_ == null ? io.bloombox.schema.menu.Menu.getDefaultInstance() : menu_;
+      public io.bloombox.schema.menu.Menu getCatalog() {
+        if (catalogBuilder_ == null) {
+          return catalog_ == null ? io.bloombox.schema.menu.Menu.getDefaultInstance() : catalog_;
         } else {
-          return menuBuilder_.getMessage();
+          return catalogBuilder_.getMessage();
         }
       }
       /**
@@ -2136,17 +2136,17 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
-      public Builder setMenu(io.bloombox.schema.menu.Menu value) {
-        if (menuBuilder_ == null) {
+      public Builder setCatalog(io.bloombox.schema.menu.Menu value) {
+        if (catalogBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          menu_ = value;
+          catalog_ = value;
           onChanged();
         } else {
-          menuBuilder_.setMessage(value);
+          catalogBuilder_.setMessage(value);
         }
 
         return this;
@@ -2157,15 +2157,15 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
-      public Builder setMenu(
+      public Builder setCatalog(
           io.bloombox.schema.menu.Menu.Builder builderForValue) {
-        if (menuBuilder_ == null) {
-          menu_ = builderForValue.build();
+        if (catalogBuilder_ == null) {
+          catalog_ = builderForValue.build();
           onChanged();
         } else {
-          menuBuilder_.setMessage(builderForValue.build());
+          catalogBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
@@ -2176,19 +2176,19 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
-      public Builder mergeMenu(io.bloombox.schema.menu.Menu value) {
-        if (menuBuilder_ == null) {
-          if (menu_ != null) {
-            menu_ =
-              io.bloombox.schema.menu.Menu.newBuilder(menu_).mergeFrom(value).buildPartial();
+      public Builder mergeCatalog(io.bloombox.schema.menu.Menu value) {
+        if (catalogBuilder_ == null) {
+          if (catalog_ != null) {
+            catalog_ =
+              io.bloombox.schema.menu.Menu.newBuilder(catalog_).mergeFrom(value).buildPartial();
           } else {
-            menu_ = value;
+            catalog_ = value;
           }
           onChanged();
         } else {
-          menuBuilder_.mergeFrom(value);
+          catalogBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -2199,15 +2199,15 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
-      public Builder clearMenu() {
-        if (menuBuilder_ == null) {
-          menu_ = null;
+      public Builder clearCatalog() {
+        if (catalogBuilder_ == null) {
+          catalog_ = null;
           onChanged();
         } else {
-          menu_ = null;
-          menuBuilder_ = null;
+          catalog_ = null;
+          catalogBuilder_ = null;
         }
 
         return this;
@@ -2218,12 +2218,12 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
-      public io.bloombox.schema.menu.Menu.Builder getMenuBuilder() {
+      public io.bloombox.schema.menu.Menu.Builder getCatalogBuilder() {
         
         onChanged();
-        return getMenuFieldBuilder().getBuilder();
+        return getCatalogFieldBuilder().getBuilder();
       }
       /**
        * <pre>
@@ -2231,14 +2231,14 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
-      public io.bloombox.schema.menu.MenuOrBuilder getMenuOrBuilder() {
-        if (menuBuilder_ != null) {
-          return menuBuilder_.getMessageOrBuilder();
+      public io.bloombox.schema.menu.MenuOrBuilder getCatalogOrBuilder() {
+        if (catalogBuilder_ != null) {
+          return catalogBuilder_.getMessageOrBuilder();
         } else {
-          return menu_ == null ?
-              io.bloombox.schema.menu.Menu.getDefaultInstance() : menu_;
+          return catalog_ == null ?
+              io.bloombox.schema.menu.Menu.getDefaultInstance() : catalog_;
         }
       }
       /**
@@ -2247,20 +2247,20 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu menu = 2;</code>
+       * <code>.products.menu.Menu catalog = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.menu.Menu, io.bloombox.schema.menu.Menu.Builder, io.bloombox.schema.menu.MenuOrBuilder> 
-          getMenuFieldBuilder() {
-        if (menuBuilder_ == null) {
-          menuBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getCatalogFieldBuilder() {
+        if (catalogBuilder_ == null) {
+          catalogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               io.bloombox.schema.menu.Menu, io.bloombox.schema.menu.Menu.Builder, io.bloombox.schema.menu.MenuOrBuilder>(
-                  getMenu(),
+                  getCatalog(),
                   getParentForChildren(),
                   isClean());
-          menu_ = null;
+          catalog_ = null;
         }
-        return menuBuilder_;
+        return catalogBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
