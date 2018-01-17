@@ -135,8 +135,8 @@ class ShopClient(override val host: String,
    */
   @Throws(ServiceClientException::class)
   private fun validateShopContext(context: ShopContext) {
-    context.partner ?: throw ServiceClientException(ShopError.PARTNER_INVALID)
-    context.location ?: throw ServiceClientException(ShopError.LOCATION_INVALID)
+    context.partner ?: throw ServiceClientException(ShopClientError.PARTNER_INVALID)
+    context.location ?: throw ServiceClientException(ShopClientError.LOCATION_INVALID)
   }
 
   // -- Stubs -- //
@@ -163,7 +163,7 @@ class ShopClient(override val host: String,
     } catch (e: ServiceClientException) {
       err(e)
     } catch (e: StatusRuntimeException) {
-      err(ServiceClientException(ShopError.RUNTIME_ERROR, e))
+      err(ServiceClientException(ShopClientError.RUNTIME_ERROR, e))
     }
   }
 

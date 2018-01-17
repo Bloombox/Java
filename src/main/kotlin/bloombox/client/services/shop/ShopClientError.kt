@@ -22,7 +22,7 @@ import bloombox.client.interfaces.ClientError
 /**
  * Enumerates known or otherwise identifiable shop errors that might occur.
  */
-enum class ShopError : ClientError {
+enum class ShopClientError : ClientError {
   /**
    * Specifies that the partner code was missing or invalid.
    */
