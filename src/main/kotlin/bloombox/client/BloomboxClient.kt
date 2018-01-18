@@ -48,7 +48,7 @@ class BloomboxClient(
     /**
      * Version for the library.
      */
-    internal const val VERSION = "1.0-beta8"
+    internal const val VERSION = "1.0-beta9"
 
     /**
      * API client variant name.
