@@ -248,6 +248,22 @@ public final class EdibleProduct {
      * <code>FAIR_TRADE = 4;</code>
      */
     FAIR_TRADE(4),
+    /**
+     * <pre>
+     * Flag indicating this edible product is considered organic.
+     * </pre>
+     *
+     * <code>ORGANIC = 5;</code>
+     */
+    ORGANIC(5),
+    /**
+     * <pre>
+     * Flag indicating this edible product was grown or cultivated or prepared locally.
+     * </pre>
+     *
+     * <code>LOCAL = 6;</code>
+     */
+    LOCAL(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -291,6 +307,22 @@ public final class EdibleProduct {
      * <code>FAIR_TRADE = 4;</code>
      */
     public static final int FAIR_TRADE_VALUE = 4;
+    /**
+     * <pre>
+     * Flag indicating this edible product is considered organic.
+     * </pre>
+     *
+     * <code>ORGANIC = 5;</code>
+     */
+    public static final int ORGANIC_VALUE = 5;
+    /**
+     * <pre>
+     * Flag indicating this edible product was grown or cultivated or prepared locally.
+     * </pre>
+     *
+     * <code>LOCAL = 6;</code>
+     */
+    public static final int LOCAL_VALUE = 6;
 
 
     public final int getNumber() {
@@ -316,6 +348,8 @@ public final class EdibleProduct {
         case 2: return GLUTEN_FREE;
         case 3: return SUGAR_FREE;
         case 4: return FAIR_TRADE;
+        case 5: return ORGANIC;
+        case 6: return LOCAL;
         default: return null;
       }
     }
@@ -3255,11 +3289,12 @@ public final class EdibleProduct {
       "sData\022/\n\013ingredients\030\006 \003(\0132\032.products.Ed" +
       "ibleIngredient*Y\n\nEdibleType\022\026\n\022UNSPECIF" +
       "IED_EDIBLE\020\000\022\r\n\tCHOCOLATE\020\001\022\016\n\nBAKED_GOO" +
-      "D\020\002\022\t\n\005CANDY\020\003\022\t\n\005DRINK\020\004*\\\n\nEdibleFlag\022" +
+      "D\020\002\022\t\n\005CANDY\020\003\022\t\n\005DRINK\020\004*t\n\nEdibleFlag\022" +
       "\022\n\016NO_EDIBLE_FLAG\020\000\022\t\n\005VEGAN\020\001\022\017\n\013GLUTEN" +
-      "_FREE\020\002\022\016\n\nSUGAR_FREE\020\003\022\016\n\nFAIR_TRADE\020\004B" +
-      "2\n\032io.bloombox.schema.productB\rEdiblePro" +
-      "ductH\001P\000\370\001\001b\006proto3"
+      "_FREE\020\002\022\016\n\nSUGAR_FREE\020\003\022\016\n\nFAIR_TRADE\020\004\022" +
+      "\013\n\007ORGANIC\020\005\022\t\n\005LOCAL\020\006B2\n\032io.bloombox.s" +
+      "chema.productB\rEdibleProductH\001P\000\370\001\001b\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

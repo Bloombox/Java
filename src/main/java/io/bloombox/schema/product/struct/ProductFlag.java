@@ -68,6 +68,10 @@ public enum ProductFlag
    * <code>ON_SALE = 9;</code>
    */
   ON_SALE(9),
+  /**
+   * <code>LOCAL = 10;</code>
+   */
+  LOCAL(10),
   UNRECOGNIZED(-1),
   ;
 
@@ -111,6 +115,10 @@ public enum ProductFlag
    * <code>ON_SALE = 9;</code>
    */
   public static final int ON_SALE_VALUE = 9;
+  /**
+   * <code>LOCAL = 10;</code>
+   */
+  public static final int LOCAL_VALUE = 10;
 
 
   public final int getNumber() {
@@ -141,6 +149,7 @@ public enum ProductFlag
       case 7: return LAST_CHANCE;
       case 8: return LIMITED_TIME;
       case 9: return ON_SALE;
+      case 10: return LOCAL;
       default: return null;
     }
   }

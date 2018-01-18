@@ -1436,6 +1436,15 @@ private static final long serialVersionUID = 0L;
      * <code>.products.menu.Menu catalog = 2;</code>
      */
     io.bloombox.schema.menu.MenuOrBuilder getCatalogOrBuilder();
+
+    /**
+     * <pre>
+     * Total count of products included in this response, across all menu sections.
+     * </pre>
+     *
+     * <code>int32 count = 3;</code>
+     */
+    int getCount();
   }
   /**
    * <pre>
@@ -1454,6 +1463,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
+      count_ = 0;
     }
 
     @java.lang.Override
@@ -1511,6 +1521,11 @@ private static final long serialVersionUID = 0L;
                 catalog_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 24: {
+
+              count_ = input.readInt32();
               break;
             }
           }
@@ -1609,6 +1624,19 @@ private static final long serialVersionUID = 0L;
       return getCatalog();
     }
 
+    public static final int COUNT_FIELD_NUMBER = 3;
+    private int count_;
+    /**
+     * <pre>
+     * Total count of products included in this response, across all menu sections.
+     * </pre>
+     *
+     * <code>int32 count = 3;</code>
+     */
+    public int getCount() {
+      return count_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1627,6 +1655,9 @@ private static final long serialVersionUID = 0L;
       if (catalog_ != null) {
         output.writeMessage(2, getCatalog());
       }
+      if (count_ != 0) {
+        output.writeInt32(3, count_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1642,6 +1673,10 @@ private static final long serialVersionUID = 0L;
       if (catalog_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCatalog());
+      }
+      if (count_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, count_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1669,6 +1704,8 @@ private static final long serialVersionUID = 0L;
         result = result && getCatalog()
             .equals(other.getCatalog());
       }
+      result = result && (getCount()
+          == other.getCount());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1688,6 +1725,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CATALOG_FIELD_NUMBER;
         hash = (53 * hash) + getCatalog().hashCode();
       }
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1833,6 +1872,8 @@ private static final long serialVersionUID = 0L;
           catalog_ = null;
           catalogBuilder_ = null;
         }
+        count_ = 0;
+
         return this;
       }
 
@@ -1865,6 +1906,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.catalog_ = catalogBuilder_.build();
         }
+        result.count_ = count_;
         onBuilt();
         return result;
       }
@@ -1911,6 +1953,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasCatalog()) {
           mergeCatalog(other.getCatalog());
+        }
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2261,6 +2306,44 @@ private static final long serialVersionUID = 0L;
           catalog_ = null;
         }
         return catalogBuilder_;
+      }
+
+      private int count_ ;
+      /**
+       * <pre>
+       * Total count of products included in this response, across all menu sections.
+       * </pre>
+       *
+       * <code>int32 count = 3;</code>
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <pre>
+       * Total count of products included in this response, across all menu sections.
+       * </pre>
+       *
+       * <code>int32 count = 3;</code>
+       */
+      public Builder setCount(int value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Total count of products included in this response, across all menu sections.
+       * </pre>
+       *
+       * <code>int32 count = 3;</code>
+       */
+      public Builder clearCount() {
+        
+        count_ = 0;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

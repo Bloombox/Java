@@ -39,13 +39,13 @@ public final class BaseStructs {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032structs/ProductFlags.proto\022\007structs*\233\001" +
+      "\n\032structs/ProductFlags.proto\022\007structs*\246\001" +
       "\n\013ProductFlag\022\013\n\007VISIBLE\020\000\022\n\n\006HIDDEN\020\001\022\013" +
       "\n\007PREMIUM\020\002\022\014\n\010FEATURED\020\003\022\013\n\007ORGANIC\020\004\022\r" +
       "\n\tEXCLUSIVE\020\005\022\014\n\010IN_HOUSE\020\006\022\017\n\013LAST_CHAN" +
-      "CE\020\007\022\020\n\014LIMITED_TIME\020\010\022\013\n\007ON_SALE\020\tB7\n!i" +
-      "o.bloombox.schema.product.structB\013BaseSt" +
-      "ructsH\001P\001\370\001\001b\006proto3"
+      "CE\020\007\022\020\n\014LIMITED_TIME\020\010\022\013\n\007ON_SALE\020\t\022\t\n\005L" +
+      "OCAL\020\nB7\n!io.bloombox.schema.product.str" +
+      "uctB\013BaseStructsH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
