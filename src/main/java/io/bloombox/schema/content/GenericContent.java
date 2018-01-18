@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,15 +46,15 @@ public final class GenericContent {
     java.lang.String[] descriptorData = {
       "\n\025content/Content.proto\022\007content\032\016bq_fie" +
       "ld.proto\032\023base/Language.proto\032\026base/Comp" +
-      "ression.proto\"\366\001\n\007Content\022#\n\004type\030\001 \001(\0162" +
+      "ression.proto\"\216\002\n\007Content\022#\n\004type\030\001 \001(\0162" +
       "\025.content.Content.Type\022+\n\010encoding\030\002 \001(\016" +
       "2\031.content.Content.Encoding\022\017\n\007content\030\003" +
-      " \001(\014\022 \n\010language\030\004 \001(\0162\016.base.Language\022&" +
+      " \001(\t\022 \n\010language\030\004 \001(\0162\016.base.Language\022&" +
       "\n\013compression\030\005 \001(\0132\021.base.Compression\"(" +
       "\n\004Type\022\010\n\004TEXT\020\000\022\014\n\010MARKDOWN\020\001\022\010\n\004HTML\020\002" +
-      "\"\024\n\010Encoding\022\010\n\004UTF8\020\000B3\n\032io.bloombox.sc" +
-      "hema.contentB\016GenericContentH\001P\001\370\001\001b\006pro" +
-      "to3"
+      "\",\n\010Encoding\022\010\n\004UTF8\020\000\022\007\n\003B64\020\001\022\r\n\tB64_A" +
+      "SCII\020\002B3\n\032io.bloombox.schema.contentB\016Ge" +
+      "nericContentH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

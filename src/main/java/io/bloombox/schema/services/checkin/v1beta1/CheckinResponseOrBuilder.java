@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -35,10 +35,19 @@ public interface CheckinResponseOrBuilder extends
 
   /**
    * <pre>
+   * Specifies whether the user must enroll to continue.
+   * </pre>
+   *
+   * <code>bool must_enroll = 2;</code>
+   */
+  boolean getMustEnroll();
+
+  /**
+   * <pre>
    * Specifies a known checkin error that occurred, if applicable.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+   * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
    */
   int getErrorValue();
   /**
@@ -46,7 +55,7 @@ public interface CheckinResponseOrBuilder extends
    * Specifies a known checkin error that occurred, if applicable.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinError error = 2;</code>
+   * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
    */
   io.bloombox.schema.services.checkin.v1beta1.CheckinError getError();
 
@@ -55,7 +64,7 @@ public interface CheckinResponseOrBuilder extends
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   boolean hasUser();
   /**
@@ -63,7 +72,7 @@ public interface CheckinResponseOrBuilder extends
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   io.bloombox.schema.services.checkin.v1beta1.CheckinUser getUser();
   /**
@@ -71,7 +80,32 @@ public interface CheckinResponseOrBuilder extends
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 3;</code>
+   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder getUserOrBuilder();
+
+  /**
+   * <pre>
+   * Information related to the user's next enrollment action, if required.
+   * </pre>
+   *
+   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   */
+  boolean hasEnrollment();
+  /**
+   * <pre>
+   * Information related to the user's next enrollment action, if required.
+   * </pre>
+   *
+   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   */
+  io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment getEnrollment();
+  /**
+   * <pre>
+   * Information related to the user's next enrollment action, if required.
+   * </pre>
+   *
+   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   */
+  io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder getEnrollmentOrBuilder();
 }

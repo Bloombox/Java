@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 package bloombox.client
 
 import bloombox.client.interfaces.ServiceClient
+import bloombox.client.services.menu.MenuClient
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.services.telemetry.TelemetryClient
 import java.time.Duration
@@ -47,7 +48,7 @@ class BloomboxClient(
     /**
      * Version for the library.
      */
-    internal const val VERSION = "1.0-beta4"
+    internal const val VERSION = "1.0-beta8"
 
     /**
      * API client variant name.
@@ -189,6 +190,33 @@ class BloomboxClient(
     }
 
     /**
+     * Menu client. Offers RPC access to retrieve and update menu data.
+     */
+    internal val menu = if (ct == ClientTarget.LOCAL) {
+      MenuClient(
+            domain,
+            Bloombox.Endpoints.localMenuPort,
+            apiKey,
+            timeout = settings.requestTimeout,
+            executor = settings.executor,
+            defaultPartner = settings.partner,
+            defaultLocation = settings.location)
+    } else {
+      MenuClient(
+            if (ct == ClientTarget.SANDBOX) {
+              "menu.rpc.$domain"
+            } else {
+              "menu.$domain"
+            },
+            Bloombox.Endpoints.grpcPort,
+            apiKey,
+            timeout = settings.requestTimeout,
+            executor = settings.executor,
+            defaultPartner = settings.partner,
+            defaultLocation = settings.location)
+    }
+
+    /**
      * Reference to all mounted/supported services.
      */
     internal val allServices: Array<ServiceClient> = arrayOf(shop, telemetry)
@@ -225,4 +253,9 @@ class BloomboxClient(
    * Fetch a reference to the Telemetry API client.
    */
   fun telemetry(): TelemetryClient = services.telemetry
+
+  /**
+   * Fetch a reference to the Menu API client.
+   */
+  fun menu(): MenuClient = services.menu
 }

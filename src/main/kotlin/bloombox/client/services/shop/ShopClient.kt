@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -135,8 +135,10 @@ class ShopClient(override val host: String,
    */
   @Throws(ServiceClientException::class)
   private fun validateShopContext(context: ShopContext) {
-    context.partner ?: throw ServiceClientException(ShopError.PARTNER_INVALID)
-    context.location ?: throw ServiceClientException(ShopError.LOCATION_INVALID)
+    context.partner ?: throw ServiceClientException(ShopClientError.PARTNER_INVALID)
+    context.location ?: throw ServiceClientException(ShopClientError.LOCATION_INVALID)
+    if (context.partner.length < 2) throw ServiceClientException(ShopClientError.PARTNER_INVALID)
+    if (context.location.length < 2) throw ServiceClientException(ShopClientError.LOCATION_INVALID)
   }
 
   // -- Stubs -- //
@@ -163,7 +165,7 @@ class ShopClient(override val host: String,
     } catch (e: ServiceClientException) {
       err(e)
     } catch (e: StatusRuntimeException) {
-      err(ServiceClientException(ShopError.RUNTIME_ERROR, e))
+      err(ServiceClientException(ShopClientError.RUNTIME_ERROR, e))
     }
   }
 

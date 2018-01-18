@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Metadata() {
+    scope_ = "";
     version_ = 0L;
     status_ = 0;
     flags_ = java.util.Collections.emptyList();
@@ -73,16 +74,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 10: {
-            io.bloombox.schema.partner.PartnerLocation.Builder subBuilder = null;
-            if (location_ != null) {
-              subBuilder = location_.toBuilder();
-            }
-            location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(location_);
-              location_ = subBuilder.buildPartial();
-            }
+            java.lang.String s = input.readStringRequireUtf8();
 
+            scope_ = s;
             break;
           }
           case 16: {
@@ -160,37 +154,46 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
-  public static final int LOCATION_FIELD_NUMBER = 1;
-  private io.bloombox.schema.partner.PartnerLocation location_;
+  public static final int SCOPE_FIELD_NUMBER = 1;
+  private volatile java.lang.Object scope_;
   /**
    * <pre>
    * Partner location that owns this menu data.
    * </pre>
    *
-   * <code>.partner.PartnerLocation location = 1;</code>
+   * <code>string scope = 1;</code>
    */
-  public boolean hasLocation() {
-    return location_ != null;
+  public java.lang.String getScope() {
+    java.lang.Object ref = scope_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      scope_ = s;
+      return s;
+    }
   }
   /**
    * <pre>
    * Partner location that owns this menu data.
    * </pre>
    *
-   * <code>.partner.PartnerLocation location = 1;</code>
+   * <code>string scope = 1;</code>
    */
-  public io.bloombox.schema.partner.PartnerLocation getLocation() {
-    return location_ == null ? io.bloombox.schema.partner.PartnerLocation.getDefaultInstance() : location_;
-  }
-  /**
-   * <pre>
-   * Partner location that owns this menu data.
-   * </pre>
-   *
-   * <code>.partner.PartnerLocation location = 1;</code>
-   */
-  public io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder() {
-    return getLocation();
+  public com.google.protobuf.ByteString
+      getScopeBytes() {
+    java.lang.Object ref = scope_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      scope_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int VERSION_FIELD_NUMBER = 2;
@@ -341,8 +344,8 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (location_ != null) {
-      output.writeMessage(1, getLocation());
+    if (!getScopeBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
     }
     if (version_ != 0L) {
       output.writeUInt64(2, version_);
@@ -368,9 +371,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (location_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getLocation());
+    if (!getScopeBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
     }
     if (version_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -412,11 +414,8 @@ private static final long serialVersionUID = 0L;
     io.bloombox.schema.menu.Metadata other = (io.bloombox.schema.menu.Metadata) obj;
 
     boolean result = true;
-    result = result && (hasLocation() == other.hasLocation());
-    if (hasLocation()) {
-      result = result && getLocation()
-          .equals(other.getLocation());
-    }
+    result = result && getScope()
+        .equals(other.getScope());
     result = result && (getVersion()
         == other.getVersion());
     result = result && status_ == other.status_;
@@ -437,10 +436,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasLocation()) {
-      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
-      hash = (53 * hash) + getLocation().hashCode();
-    }
+    hash = (37 * hash) + SCOPE_FIELD_NUMBER;
+    hash = (53 * hash) + getScope().hashCode();
     hash = (37 * hash) + VERSION_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getVersion());
@@ -587,12 +584,8 @@ private static final long serialVersionUID = 0L;
     }
     public Builder clear() {
       super.clear();
-      if (locationBuilder_ == null) {
-        location_ = null;
-      } else {
-        location_ = null;
-        locationBuilder_ = null;
-      }
+      scope_ = "";
+
       version_ = 0L;
 
       status_ = 0;
@@ -629,11 +622,7 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.menu.Metadata result = new io.bloombox.schema.menu.Metadata(this);
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
-      if (locationBuilder_ == null) {
-        result.location_ = location_;
-      } else {
-        result.location_ = locationBuilder_.build();
-      }
+      result.scope_ = scope_;
       result.version_ = version_;
       result.status_ = status_;
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
@@ -688,8 +677,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(io.bloombox.schema.menu.Metadata other) {
       if (other == io.bloombox.schema.menu.Metadata.getDefaultInstance()) return this;
-      if (other.hasLocation()) {
-        mergeLocation(other.getLocation());
+      if (!other.getScope().isEmpty()) {
+        scope_ = other.scope_;
+        onChanged();
       }
       if (other.getVersion() != 0L) {
         setVersion(other.getVersion());
@@ -738,31 +728,24 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private io.bloombox.schema.partner.PartnerLocation location_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.PartnerLocation, io.bloombox.schema.partner.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOrBuilder> locationBuilder_;
+    private java.lang.Object scope_ = "";
     /**
      * <pre>
      * Partner location that owns this menu data.
      * </pre>
      *
-     * <code>.partner.PartnerLocation location = 1;</code>
+     * <code>string scope = 1;</code>
      */
-    public boolean hasLocation() {
-      return locationBuilder_ != null || location_ != null;
-    }
-    /**
-     * <pre>
-     * Partner location that owns this menu data.
-     * </pre>
-     *
-     * <code>.partner.PartnerLocation location = 1;</code>
-     */
-    public io.bloombox.schema.partner.PartnerLocation getLocation() {
-      if (locationBuilder_ == null) {
-        return location_ == null ? io.bloombox.schema.partner.PartnerLocation.getDefaultInstance() : location_;
+    public java.lang.String getScope() {
+      java.lang.Object ref = scope_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        scope_ = s;
+        return s;
       } else {
-        return locationBuilder_.getMessage();
+        return (java.lang.String) ref;
       }
     }
     /**
@@ -770,125 +753,68 @@ private static final long serialVersionUID = 0L;
      * Partner location that owns this menu data.
      * </pre>
      *
-     * <code>.partner.PartnerLocation location = 1;</code>
+     * <code>string scope = 1;</code>
      */
-    public Builder setLocation(io.bloombox.schema.partner.PartnerLocation value) {
-      if (locationBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        location_ = value;
-        onChanged();
+    public com.google.protobuf.ByteString
+        getScopeBytes() {
+      java.lang.Object ref = scope_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        scope_ = b;
+        return b;
       } else {
-        locationBuilder_.setMessage(value);
+        return (com.google.protobuf.ByteString) ref;
       }
-
-      return this;
     }
     /**
      * <pre>
      * Partner location that owns this menu data.
      * </pre>
      *
-     * <code>.partner.PartnerLocation location = 1;</code>
+     * <code>string scope = 1;</code>
      */
-    public Builder setLocation(
-        io.bloombox.schema.partner.PartnerLocation.Builder builderForValue) {
-      if (locationBuilder_ == null) {
-        location_ = builderForValue.build();
-        onChanged();
-      } else {
-        locationBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Partner location that owns this menu data.
-     * </pre>
-     *
-     * <code>.partner.PartnerLocation location = 1;</code>
-     */
-    public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocation value) {
-      if (locationBuilder_ == null) {
-        if (location_ != null) {
-          location_ =
-            io.bloombox.schema.partner.PartnerLocation.newBuilder(location_).mergeFrom(value).buildPartial();
-        } else {
-          location_ = value;
-        }
-        onChanged();
-      } else {
-        locationBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Partner location that owns this menu data.
-     * </pre>
-     *
-     * <code>.partner.PartnerLocation location = 1;</code>
-     */
-    public Builder clearLocation() {
-      if (locationBuilder_ == null) {
-        location_ = null;
-        onChanged();
-      } else {
-        location_ = null;
-        locationBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Partner location that owns this menu data.
-     * </pre>
-     *
-     * <code>.partner.PartnerLocation location = 1;</code>
-     */
-    public io.bloombox.schema.partner.PartnerLocation.Builder getLocationBuilder() {
-      
+    public Builder setScope(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      scope_ = value;
       onChanged();
-      return getLocationFieldBuilder().getBuilder();
+      return this;
     }
     /**
      * <pre>
      * Partner location that owns this menu data.
      * </pre>
      *
-     * <code>.partner.PartnerLocation location = 1;</code>
+     * <code>string scope = 1;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder() {
-      if (locationBuilder_ != null) {
-        return locationBuilder_.getMessageOrBuilder();
-      } else {
-        return location_ == null ?
-            io.bloombox.schema.partner.PartnerLocation.getDefaultInstance() : location_;
-      }
+    public Builder clearScope() {
+      
+      scope_ = getDefaultInstance().getScope();
+      onChanged();
+      return this;
     }
     /**
      * <pre>
      * Partner location that owns this menu data.
      * </pre>
      *
-     * <code>.partner.PartnerLocation location = 1;</code>
+     * <code>string scope = 1;</code>
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.PartnerLocation, io.bloombox.schema.partner.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOrBuilder> 
-        getLocationFieldBuilder() {
-      if (locationBuilder_ == null) {
-        locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.partner.PartnerLocation, io.bloombox.schema.partner.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOrBuilder>(
-                getLocation(),
-                getParentForChildren(),
-                isClean());
-        location_ = null;
-      }
-      return locationBuilder_;
+    public Builder setScopeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      scope_ = value;
+      onChanged();
+      return this;
     }
 
     private long version_ ;

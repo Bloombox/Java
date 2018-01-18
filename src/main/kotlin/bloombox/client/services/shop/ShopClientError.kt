@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import bloombox.client.interfaces.ClientError
 /**
  * Enumerates known or otherwise identifiable shop errors that might occur.
  */
-enum class ShopError : ClientError {
+enum class ShopClientError : ClientError {
   /**
    * Specifies that the partner code was missing or invalid.
    */

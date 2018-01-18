@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,37 +33,41 @@ public enum ProductFlag
    */
   VISIBLE(0),
   /**
-   * <code>PREMIUM = 1;</code>
+   * <code>HIDDEN = 1;</code>
    */
-  PREMIUM(1),
+  HIDDEN(1),
   /**
-   * <code>FEATURED = 2;</code>
+   * <code>PREMIUM = 2;</code>
    */
-  FEATURED(2),
+  PREMIUM(2),
   /**
-   * <code>ORGANIC = 3;</code>
+   * <code>FEATURED = 3;</code>
    */
-  ORGANIC(3),
+  FEATURED(3),
   /**
-   * <code>EXCLUSIVE = 4;</code>
+   * <code>ORGANIC = 4;</code>
    */
-  EXCLUSIVE(4),
+  ORGANIC(4),
   /**
-   * <code>IN_HOUSE = 5;</code>
+   * <code>EXCLUSIVE = 5;</code>
    */
-  IN_HOUSE(5),
+  EXCLUSIVE(5),
   /**
-   * <code>LAST_CHANCE = 6;</code>
+   * <code>IN_HOUSE = 6;</code>
    */
-  LAST_CHANCE(6),
+  IN_HOUSE(6),
   /**
-   * <code>LIMITED_TIME = 7;</code>
+   * <code>LAST_CHANCE = 7;</code>
    */
-  LIMITED_TIME(7),
+  LAST_CHANCE(7),
   /**
-   * <code>ON_SALE = 8;</code>
+   * <code>LIMITED_TIME = 8;</code>
    */
-  ON_SALE(8),
+  LIMITED_TIME(8),
+  /**
+   * <code>ON_SALE = 9;</code>
+   */
+  ON_SALE(9),
   UNRECOGNIZED(-1),
   ;
 
@@ -72,37 +76,41 @@ public enum ProductFlag
    */
   public static final int VISIBLE_VALUE = 0;
   /**
-   * <code>PREMIUM = 1;</code>
+   * <code>HIDDEN = 1;</code>
    */
-  public static final int PREMIUM_VALUE = 1;
+  public static final int HIDDEN_VALUE = 1;
   /**
-   * <code>FEATURED = 2;</code>
+   * <code>PREMIUM = 2;</code>
    */
-  public static final int FEATURED_VALUE = 2;
+  public static final int PREMIUM_VALUE = 2;
   /**
-   * <code>ORGANIC = 3;</code>
+   * <code>FEATURED = 3;</code>
    */
-  public static final int ORGANIC_VALUE = 3;
+  public static final int FEATURED_VALUE = 3;
   /**
-   * <code>EXCLUSIVE = 4;</code>
+   * <code>ORGANIC = 4;</code>
    */
-  public static final int EXCLUSIVE_VALUE = 4;
+  public static final int ORGANIC_VALUE = 4;
   /**
-   * <code>IN_HOUSE = 5;</code>
+   * <code>EXCLUSIVE = 5;</code>
    */
-  public static final int IN_HOUSE_VALUE = 5;
+  public static final int EXCLUSIVE_VALUE = 5;
   /**
-   * <code>LAST_CHANCE = 6;</code>
+   * <code>IN_HOUSE = 6;</code>
    */
-  public static final int LAST_CHANCE_VALUE = 6;
+  public static final int IN_HOUSE_VALUE = 6;
   /**
-   * <code>LIMITED_TIME = 7;</code>
+   * <code>LAST_CHANCE = 7;</code>
    */
-  public static final int LIMITED_TIME_VALUE = 7;
+  public static final int LAST_CHANCE_VALUE = 7;
   /**
-   * <code>ON_SALE = 8;</code>
+   * <code>LIMITED_TIME = 8;</code>
    */
-  public static final int ON_SALE_VALUE = 8;
+  public static final int LIMITED_TIME_VALUE = 8;
+  /**
+   * <code>ON_SALE = 9;</code>
+   */
+  public static final int ON_SALE_VALUE = 9;
 
 
   public final int getNumber() {
@@ -124,14 +132,15 @@ public enum ProductFlag
   public static ProductFlag forNumber(int value) {
     switch (value) {
       case 0: return VISIBLE;
-      case 1: return PREMIUM;
-      case 2: return FEATURED;
-      case 3: return ORGANIC;
-      case 4: return EXCLUSIVE;
-      case 5: return IN_HOUSE;
-      case 6: return LAST_CHANCE;
-      case 7: return LIMITED_TIME;
-      case 8: return ON_SALE;
+      case 1: return HIDDEN;
+      case 2: return PREMIUM;
+      case 3: return FEATURED;
+      case 4: return ORGANIC;
+      case 5: return EXCLUSIVE;
+      case 6: return IN_HOUSE;
+      case 7: return LAST_CHANCE;
+      case 8: return LIMITED_TIME;
+      case 9: return ON_SALE;
       default: return null;
     }
   }

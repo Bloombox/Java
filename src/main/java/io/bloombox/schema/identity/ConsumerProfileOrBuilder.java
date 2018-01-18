@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -127,4 +127,21 @@ public interface ConsumerProfileOrBuilder extends
    * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
    */
   io.bloombox.schema.identity.ConsumerPreferencesOrBuilder getPreferencesOrBuilder();
+
+  /**
+   * <pre>
+   * Specifies the primary consumer type for this account.
+   * </pre>
+   *
+   * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+   */
+  int getTypeValue();
+  /**
+   * <pre>
+   * Specifies the primary consumer type for this account.
+   * </pre>
+   *
+   * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+   */
+  io.bloombox.schema.identity.ConsumerType getType();
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -106,19 +106,6 @@ private static final long serialVersionUID = 0L;
             if (subBuilder != null) {
               subBuilder.mergeFrom(name_);
               name_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            io.bloombox.schema.contact.ContactInfo.Builder subBuilder = null;
-            if (contact_ != null) {
-              subBuilder = contact_.toBuilder();
-            }
-            contact_ = input.readMessage(io.bloombox.schema.contact.ContactInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(contact_);
-              contact_ = subBuilder.buildPartial();
             }
 
             break;
@@ -246,39 +233,6 @@ private static final long serialVersionUID = 0L;
     return getName();
   }
 
-  public static final int CONTACT_FIELD_NUMBER = 4;
-  private io.bloombox.schema.contact.ContactInfo contact_;
-  /**
-   * <pre>
-   * Person's contact information, for confirmation.
-   * </pre>
-   *
-   * <code>.contact.ContactInfo contact = 4;</code>
-   */
-  public boolean hasContact() {
-    return contact_ != null;
-  }
-  /**
-   * <pre>
-   * Person's contact information, for confirmation.
-   * </pre>
-   *
-   * <code>.contact.ContactInfo contact = 4;</code>
-   */
-  public io.bloombox.schema.contact.ContactInfo getContact() {
-    return contact_ == null ? io.bloombox.schema.contact.ContactInfo.getDefaultInstance() : contact_;
-  }
-  /**
-   * <pre>
-   * Person's contact information, for confirmation.
-   * </pre>
-   *
-   * <code>.contact.ContactInfo contact = 4;</code>
-   */
-  public io.bloombox.schema.contact.ContactInfoOrBuilder getContactOrBuilder() {
-    return getContact();
-  }
-
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -300,9 +254,6 @@ private static final long serialVersionUID = 0L;
     if (name_ != null) {
       output.writeMessage(3, getName());
     }
-    if (contact_ != null) {
-      output.writeMessage(4, getContact());
-    }
     unknownFields.writeTo(output);
   }
 
@@ -322,10 +273,6 @@ private static final long serialVersionUID = 0L;
     if (name_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getName());
-    }
-    if (contact_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getContact());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -358,11 +305,6 @@ private static final long serialVersionUID = 0L;
       result = result && getName()
           .equals(other.getName());
     }
-    result = result && (hasContact() == other.hasContact());
-    if (hasContact()) {
-      result = result && getContact()
-          .equals(other.getContact());
-    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -385,10 +327,6 @@ private static final long serialVersionUID = 0L;
     if (hasName()) {
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-    }
-    if (hasContact()) {
-      hash = (37 * hash) + CONTACT_FIELD_NUMBER;
-      hash = (53 * hash) + getContact().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -542,12 +480,6 @@ private static final long serialVersionUID = 0L;
         name_ = null;
         nameBuilder_ = null;
       }
-      if (contactBuilder_ == null) {
-        contact_ = null;
-      } else {
-        contact_ = null;
-        contactBuilder_ = null;
-      }
       return this;
     }
 
@@ -584,11 +516,6 @@ private static final long serialVersionUID = 0L;
         result.name_ = name_;
       } else {
         result.name_ = nameBuilder_.build();
-      }
-      if (contactBuilder_ == null) {
-        result.contact_ = contact_;
-      } else {
-        result.contact_ = contactBuilder_.build();
       }
       onBuilt();
       return result;
@@ -639,9 +566,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasName()) {
         mergeName(other.getName());
-      }
-      if (other.hasContact()) {
-        mergeContact(other.getContact());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1127,159 +1051,6 @@ private static final long serialVersionUID = 0L;
         name_ = null;
       }
       return nameBuilder_;
-    }
-
-    private io.bloombox.schema.contact.ContactInfo contact_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.contact.ContactInfo, io.bloombox.schema.contact.ContactInfo.Builder, io.bloombox.schema.contact.ContactInfoOrBuilder> contactBuilder_;
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    public boolean hasContact() {
-      return contactBuilder_ != null || contact_ != null;
-    }
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    public io.bloombox.schema.contact.ContactInfo getContact() {
-      if (contactBuilder_ == null) {
-        return contact_ == null ? io.bloombox.schema.contact.ContactInfo.getDefaultInstance() : contact_;
-      } else {
-        return contactBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    public Builder setContact(io.bloombox.schema.contact.ContactInfo value) {
-      if (contactBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        contact_ = value;
-        onChanged();
-      } else {
-        contactBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    public Builder setContact(
-        io.bloombox.schema.contact.ContactInfo.Builder builderForValue) {
-      if (contactBuilder_ == null) {
-        contact_ = builderForValue.build();
-        onChanged();
-      } else {
-        contactBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    public Builder mergeContact(io.bloombox.schema.contact.ContactInfo value) {
-      if (contactBuilder_ == null) {
-        if (contact_ != null) {
-          contact_ =
-            io.bloombox.schema.contact.ContactInfo.newBuilder(contact_).mergeFrom(value).buildPartial();
-        } else {
-          contact_ = value;
-        }
-        onChanged();
-      } else {
-        contactBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    public Builder clearContact() {
-      if (contactBuilder_ == null) {
-        contact_ = null;
-        onChanged();
-      } else {
-        contact_ = null;
-        contactBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    public io.bloombox.schema.contact.ContactInfo.Builder getContactBuilder() {
-      
-      onChanged();
-      return getContactFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    public io.bloombox.schema.contact.ContactInfoOrBuilder getContactOrBuilder() {
-      if (contactBuilder_ != null) {
-        return contactBuilder_.getMessageOrBuilder();
-      } else {
-        return contact_ == null ?
-            io.bloombox.schema.contact.ContactInfo.getDefaultInstance() : contact_;
-      }
-    }
-    /**
-     * <pre>
-     * Person's contact information, for confirmation.
-     * </pre>
-     *
-     * <code>.contact.ContactInfo contact = 4;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.contact.ContactInfo, io.bloombox.schema.contact.ContactInfo.Builder, io.bloombox.schema.contact.ContactInfoOrBuilder> 
-        getContactFieldBuilder() {
-      if (contactBuilder_ == null) {
-        contactBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.contact.ContactInfo, io.bloombox.schema.contact.ContactInfo.Builder, io.bloombox.schema.contact.ContactInfoOrBuilder>(
-                getContact(),
-                getParentForChildren(),
-                isClean());
-        contact_ = null;
-      }
-      return contactBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

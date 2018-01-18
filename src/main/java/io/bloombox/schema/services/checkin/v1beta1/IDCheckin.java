@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -100,52 +100,28 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * ID type the user wishes to check in with.
+     * Raw string, produced from a barcode scan or magstripe read.
      * </pre>
      *
-     * <code>.identity.ID document = 1;</code>
+     * <code>string raw = 1;</code>
      */
-    boolean hasDocument();
+    java.lang.String getRaw();
     /**
      * <pre>
-     * ID type the user wishes to check in with.
+     * Raw string, produced from a barcode scan or magstripe read.
      * </pre>
      *
-     * <code>.identity.ID document = 1;</code>
+     * <code>string raw = 1;</code>
      */
-    io.bloombox.schema.identity.ID getDocument();
-    /**
-     * <pre>
-     * ID type the user wishes to check in with.
-     * </pre>
-     *
-     * <code>.identity.ID document = 1;</code>
-     */
-    io.bloombox.schema.identity.IDOrBuilder getDocumentOrBuilder();
-
-    /**
-     * <pre>
-     * US state identified as the issuing jurisdiction.
-     * </pre>
-     *
-     * <code>.geo.usa.USState jurisdiction = 2;</code>
-     */
-    int getJurisdictionValue();
-    /**
-     * <pre>
-     * US state identified as the issuing jurisdiction.
-     * </pre>
-     *
-     * <code>.geo.usa.USState jurisdiction = 2;</code>
-     */
-    io.bloombox.schema.geo.usa.USState getJurisdiction();
+    com.google.protobuf.ByteString
+        getRawBytes();
 
     /**
      * <pre>
      * Partnership scope for the request.
      * </pre>
      *
-     * <code>string scope = 3;</code>
+     * <code>string scope = 2;</code>
      */
     java.lang.String getScope();
     /**
@@ -153,10 +129,46 @@ private static final long serialVersionUID = 0L;
      * Partnership scope for the request.
      * </pre>
      *
-     * <code>string scope = 3;</code>
+     * <code>string scope = 2;</code>
      */
     com.google.protobuf.ByteString
         getScopeBytes();
+
+    /**
+     * <pre>
+     * Serial number of the device that is submitting this request.
+     * </pre>
+     *
+     * <code>string serial_number = 3;</code>
+     */
+    java.lang.String getSerialNumber();
+    /**
+     * <pre>
+     * Serial number of the device that is submitting this request.
+     * </pre>
+     *
+     * <code>string serial_number = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getSerialNumberBytes();
+
+    /**
+     * <pre>
+     * Unique hardware fingerprint for the device that is submitting this request.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    java.lang.String getFingerprint();
+    /**
+     * <pre>
+     * Unique hardware fingerprint for the device that is submitting this request.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getFingerprintBytes();
   }
   /**
    * <pre>
@@ -175,8 +187,10 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
-      jurisdiction_ = 0;
+      raw_ = "";
       scope_ = "";
+      serialNumber_ = "";
+      fingerprint_ = "";
     }
 
     @java.lang.Override
@@ -211,28 +225,27 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.bloombox.schema.identity.ID.Builder subBuilder = null;
-              if (document_ != null) {
-                subBuilder = document_.toBuilder();
-              }
-              document_ = input.readMessage(io.bloombox.schema.identity.ID.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(document_);
-                document_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              raw_ = s;
               break;
             }
-            case 16: {
-              int rawValue = input.readEnum();
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              jurisdiction_ = rawValue;
+              scope_ = s;
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              scope_ = s;
+              serialNumber_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fingerprint_ = s;
               break;
             }
           }
@@ -259,71 +272,56 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request.class, io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request.Builder.class);
     }
 
-    public static final int DOCUMENT_FIELD_NUMBER = 1;
-    private io.bloombox.schema.identity.ID document_;
+    public static final int RAW_FIELD_NUMBER = 1;
+    private volatile java.lang.Object raw_;
     /**
      * <pre>
-     * ID type the user wishes to check in with.
+     * Raw string, produced from a barcode scan or magstripe read.
      * </pre>
      *
-     * <code>.identity.ID document = 1;</code>
+     * <code>string raw = 1;</code>
      */
-    public boolean hasDocument() {
-      return document_ != null;
+    public java.lang.String getRaw() {
+      java.lang.Object ref = raw_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        raw_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * ID type the user wishes to check in with.
+     * Raw string, produced from a barcode scan or magstripe read.
      * </pre>
      *
-     * <code>.identity.ID document = 1;</code>
+     * <code>string raw = 1;</code>
      */
-    public io.bloombox.schema.identity.ID getDocument() {
-      return document_ == null ? io.bloombox.schema.identity.ID.getDefaultInstance() : document_;
-    }
-    /**
-     * <pre>
-     * ID type the user wishes to check in with.
-     * </pre>
-     *
-     * <code>.identity.ID document = 1;</code>
-     */
-    public io.bloombox.schema.identity.IDOrBuilder getDocumentOrBuilder() {
-      return getDocument();
-    }
-
-    public static final int JURISDICTION_FIELD_NUMBER = 2;
-    private int jurisdiction_;
-    /**
-     * <pre>
-     * US state identified as the issuing jurisdiction.
-     * </pre>
-     *
-     * <code>.geo.usa.USState jurisdiction = 2;</code>
-     */
-    public int getJurisdictionValue() {
-      return jurisdiction_;
-    }
-    /**
-     * <pre>
-     * US state identified as the issuing jurisdiction.
-     * </pre>
-     *
-     * <code>.geo.usa.USState jurisdiction = 2;</code>
-     */
-    public io.bloombox.schema.geo.usa.USState getJurisdiction() {
-      io.bloombox.schema.geo.usa.USState result = io.bloombox.schema.geo.usa.USState.valueOf(jurisdiction_);
-      return result == null ? io.bloombox.schema.geo.usa.USState.UNRECOGNIZED : result;
+    public com.google.protobuf.ByteString
+        getRawBytes() {
+      java.lang.Object ref = raw_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        raw_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int SCOPE_FIELD_NUMBER = 3;
+    public static final int SCOPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object scope_;
     /**
      * <pre>
      * Partnership scope for the request.
      * </pre>
      *
-     * <code>string scope = 3;</code>
+     * <code>string scope = 2;</code>
      */
     public java.lang.String getScope() {
       java.lang.Object ref = scope_;
@@ -342,7 +340,7 @@ private static final long serialVersionUID = 0L;
      * Partnership scope for the request.
      * </pre>
      *
-     * <code>string scope = 3;</code>
+     * <code>string scope = 2;</code>
      */
     public com.google.protobuf.ByteString
         getScopeBytes() {
@@ -352,6 +350,90 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         scope_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERIAL_NUMBER_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serialNumber_;
+    /**
+     * <pre>
+     * Serial number of the device that is submitting this request.
+     * </pre>
+     *
+     * <code>string serial_number = 3;</code>
+     */
+    public java.lang.String getSerialNumber() {
+      java.lang.Object ref = serialNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serialNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Serial number of the device that is submitting this request.
+     * </pre>
+     *
+     * <code>string serial_number = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSerialNumberBytes() {
+      java.lang.Object ref = serialNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serialNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FINGERPRINT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object fingerprint_;
+    /**
+     * <pre>
+     * Unique hardware fingerprint for the device that is submitting this request.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    public java.lang.String getFingerprint() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fingerprint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique hardware fingerprint for the device that is submitting this request.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFingerprintBytes() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fingerprint_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -370,14 +452,17 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (document_ != null) {
-        output.writeMessage(1, getDocument());
-      }
-      if (jurisdiction_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, jurisdiction_);
+      if (!getRawBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, raw_);
       }
       if (!getScopeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, scope_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, scope_);
+      }
+      if (!getSerialNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serialNumber_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fingerprint_);
       }
       unknownFields.writeTo(output);
     }
@@ -387,16 +472,17 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (document_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getDocument());
-      }
-      if (jurisdiction_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, jurisdiction_);
+      if (!getRawBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, raw_);
       }
       if (!getScopeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, scope_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, scope_);
+      }
+      if (!getSerialNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serialNumber_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -414,14 +500,14 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request other = (io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request) obj;
 
       boolean result = true;
-      result = result && (hasDocument() == other.hasDocument());
-      if (hasDocument()) {
-        result = result && getDocument()
-            .equals(other.getDocument());
-      }
-      result = result && jurisdiction_ == other.jurisdiction_;
+      result = result && getRaw()
+          .equals(other.getRaw());
       result = result && getScope()
           .equals(other.getScope());
+      result = result && getSerialNumber()
+          .equals(other.getSerialNumber());
+      result = result && getFingerprint()
+          .equals(other.getFingerprint());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -433,14 +519,14 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasDocument()) {
-        hash = (37 * hash) + DOCUMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getDocument().hashCode();
-      }
-      hash = (37 * hash) + JURISDICTION_FIELD_NUMBER;
-      hash = (53 * hash) + jurisdiction_;
+      hash = (37 * hash) + RAW_FIELD_NUMBER;
+      hash = (53 * hash) + getRaw().hashCode();
       hash = (37 * hash) + SCOPE_FIELD_NUMBER;
       hash = (53 * hash) + getScope().hashCode();
+      hash = (37 * hash) + SERIAL_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getSerialNumber().hashCode();
+      hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
+      hash = (53 * hash) + getFingerprint().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -574,15 +660,13 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        if (documentBuilder_ == null) {
-          document_ = null;
-        } else {
-          document_ = null;
-          documentBuilder_ = null;
-        }
-        jurisdiction_ = 0;
+        raw_ = "";
 
         scope_ = "";
+
+        serialNumber_ = "";
+
+        fingerprint_ = "";
 
         return this;
       }
@@ -606,13 +690,10 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request buildPartial() {
         io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request result = new io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request(this);
-        if (documentBuilder_ == null) {
-          result.document_ = document_;
-        } else {
-          result.document_ = documentBuilder_.build();
-        }
-        result.jurisdiction_ = jurisdiction_;
+        result.raw_ = raw_;
         result.scope_ = scope_;
+        result.serialNumber_ = serialNumber_;
+        result.fingerprint_ = fingerprint_;
         onBuilt();
         return result;
       }
@@ -654,14 +735,20 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request other) {
         if (other == io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request.getDefaultInstance()) return this;
-        if (other.hasDocument()) {
-          mergeDocument(other.getDocument());
-        }
-        if (other.jurisdiction_ != 0) {
-          setJurisdictionValue(other.getJurisdictionValue());
+        if (!other.getRaw().isEmpty()) {
+          raw_ = other.raw_;
+          onChanged();
         }
         if (!other.getScope().isEmpty()) {
           scope_ = other.scope_;
+          onChanged();
+        }
+        if (!other.getSerialNumber().isEmpty()) {
+          serialNumber_ = other.serialNumber_;
+          onChanged();
+        }
+        if (!other.getFingerprint().isEmpty()) {
+          fingerprint_ = other.fingerprint_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -691,219 +778,91 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.identity.ID document_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.ID, io.bloombox.schema.identity.ID.Builder, io.bloombox.schema.identity.IDOrBuilder> documentBuilder_;
+      private java.lang.Object raw_ = "";
       /**
        * <pre>
-       * ID type the user wishes to check in with.
+       * Raw string, produced from a barcode scan or magstripe read.
        * </pre>
        *
-       * <code>.identity.ID document = 1;</code>
+       * <code>string raw = 1;</code>
        */
-      public boolean hasDocument() {
-        return documentBuilder_ != null || document_ != null;
-      }
-      /**
-       * <pre>
-       * ID type the user wishes to check in with.
-       * </pre>
-       *
-       * <code>.identity.ID document = 1;</code>
-       */
-      public io.bloombox.schema.identity.ID getDocument() {
-        if (documentBuilder_ == null) {
-          return document_ == null ? io.bloombox.schema.identity.ID.getDefaultInstance() : document_;
+      public java.lang.String getRaw() {
+        java.lang.Object ref = raw_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          raw_ = s;
+          return s;
         } else {
-          return documentBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
        * <pre>
-       * ID type the user wishes to check in with.
+       * Raw string, produced from a barcode scan or magstripe read.
        * </pre>
        *
-       * <code>.identity.ID document = 1;</code>
+       * <code>string raw = 1;</code>
        */
-      public Builder setDocument(io.bloombox.schema.identity.ID value) {
-        if (documentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          document_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getRawBytes() {
+        java.lang.Object ref = raw_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          raw_ = b;
+          return b;
         } else {
-          documentBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * ID type the user wishes to check in with.
-       * </pre>
-       *
-       * <code>.identity.ID document = 1;</code>
-       */
-      public Builder setDocument(
-          io.bloombox.schema.identity.ID.Builder builderForValue) {
-        if (documentBuilder_ == null) {
-          document_ = builderForValue.build();
-          onChanged();
-        } else {
-          documentBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * ID type the user wishes to check in with.
-       * </pre>
-       *
-       * <code>.identity.ID document = 1;</code>
-       */
-      public Builder mergeDocument(io.bloombox.schema.identity.ID value) {
-        if (documentBuilder_ == null) {
-          if (document_ != null) {
-            document_ =
-              io.bloombox.schema.identity.ID.newBuilder(document_).mergeFrom(value).buildPartial();
-          } else {
-            document_ = value;
-          }
-          onChanged();
-        } else {
-          documentBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * ID type the user wishes to check in with.
-       * </pre>
-       *
-       * <code>.identity.ID document = 1;</code>
-       */
-      public Builder clearDocument() {
-        if (documentBuilder_ == null) {
-          document_ = null;
-          onChanged();
-        } else {
-          document_ = null;
-          documentBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * ID type the user wishes to check in with.
-       * </pre>
-       *
-       * <code>.identity.ID document = 1;</code>
-       */
-      public io.bloombox.schema.identity.ID.Builder getDocumentBuilder() {
-        
-        onChanged();
-        return getDocumentFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * ID type the user wishes to check in with.
-       * </pre>
-       *
-       * <code>.identity.ID document = 1;</code>
-       */
-      public io.bloombox.schema.identity.IDOrBuilder getDocumentOrBuilder() {
-        if (documentBuilder_ != null) {
-          return documentBuilder_.getMessageOrBuilder();
-        } else {
-          return document_ == null ?
-              io.bloombox.schema.identity.ID.getDefaultInstance() : document_;
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
        * <pre>
-       * ID type the user wishes to check in with.
+       * Raw string, produced from a barcode scan or magstripe read.
        * </pre>
        *
-       * <code>.identity.ID document = 1;</code>
+       * <code>string raw = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.ID, io.bloombox.schema.identity.ID.Builder, io.bloombox.schema.identity.IDOrBuilder> 
-          getDocumentFieldBuilder() {
-        if (documentBuilder_ == null) {
-          documentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.ID, io.bloombox.schema.identity.ID.Builder, io.bloombox.schema.identity.IDOrBuilder>(
-                  getDocument(),
-                  getParentForChildren(),
-                  isClean());
-          document_ = null;
-        }
-        return documentBuilder_;
-      }
-
-      private int jurisdiction_ = 0;
-      /**
-       * <pre>
-       * US state identified as the issuing jurisdiction.
-       * </pre>
-       *
-       * <code>.geo.usa.USState jurisdiction = 2;</code>
-       */
-      public int getJurisdictionValue() {
-        return jurisdiction_;
-      }
-      /**
-       * <pre>
-       * US state identified as the issuing jurisdiction.
-       * </pre>
-       *
-       * <code>.geo.usa.USState jurisdiction = 2;</code>
-       */
-      public Builder setJurisdictionValue(int value) {
-        jurisdiction_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * US state identified as the issuing jurisdiction.
-       * </pre>
-       *
-       * <code>.geo.usa.USState jurisdiction = 2;</code>
-       */
-      public io.bloombox.schema.geo.usa.USState getJurisdiction() {
-        io.bloombox.schema.geo.usa.USState result = io.bloombox.schema.geo.usa.USState.valueOf(jurisdiction_);
-        return result == null ? io.bloombox.schema.geo.usa.USState.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * US state identified as the issuing jurisdiction.
-       * </pre>
-       *
-       * <code>.geo.usa.USState jurisdiction = 2;</code>
-       */
-      public Builder setJurisdiction(io.bloombox.schema.geo.usa.USState value) {
+      public Builder setRaw(
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        jurisdiction_ = value.getNumber();
+    throw new NullPointerException();
+  }
+  
+        raw_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * US state identified as the issuing jurisdiction.
+       * Raw string, produced from a barcode scan or magstripe read.
        * </pre>
        *
-       * <code>.geo.usa.USState jurisdiction = 2;</code>
+       * <code>string raw = 1;</code>
        */
-      public Builder clearJurisdiction() {
+      public Builder clearRaw() {
         
-        jurisdiction_ = 0;
+        raw_ = getDefaultInstance().getRaw();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw string, produced from a barcode scan or magstripe read.
+       * </pre>
+       *
+       * <code>string raw = 1;</code>
+       */
+      public Builder setRawBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        raw_ = value;
         onChanged();
         return this;
       }
@@ -914,7 +873,7 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 3;</code>
+       * <code>string scope = 2;</code>
        */
       public java.lang.String getScope() {
         java.lang.Object ref = scope_;
@@ -933,7 +892,7 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 3;</code>
+       * <code>string scope = 2;</code>
        */
       public com.google.protobuf.ByteString
           getScopeBytes() {
@@ -953,7 +912,7 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 3;</code>
+       * <code>string scope = 2;</code>
        */
       public Builder setScope(
           java.lang.String value) {
@@ -970,7 +929,7 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 3;</code>
+       * <code>string scope = 2;</code>
        */
       public Builder clearScope() {
         
@@ -983,7 +942,7 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 3;</code>
+       * <code>string scope = 2;</code>
        */
       public Builder setScopeBytes(
           com.google.protobuf.ByteString value) {
@@ -993,6 +952,184 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
         
         scope_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serialNumber_ = "";
+      /**
+       * <pre>
+       * Serial number of the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string serial_number = 3;</code>
+       */
+      public java.lang.String getSerialNumber() {
+        java.lang.Object ref = serialNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serialNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Serial number of the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string serial_number = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSerialNumberBytes() {
+        java.lang.Object ref = serialNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serialNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Serial number of the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string serial_number = 3;</code>
+       */
+      public Builder setSerialNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serialNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Serial number of the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string serial_number = 3;</code>
+       */
+      public Builder clearSerialNumber() {
+        
+        serialNumber_ = getDefaultInstance().getSerialNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Serial number of the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string serial_number = 3;</code>
+       */
+      public Builder setSerialNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serialNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fingerprint_ = "";
+      /**
+       * <pre>
+       * Unique hardware fingerprint for the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public java.lang.String getFingerprint() {
+        java.lang.Object ref = fingerprint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fingerprint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique hardware fingerprint for the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFingerprintBytes() {
+        java.lang.Object ref = fingerprint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fingerprint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique hardware fingerprint for the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public Builder setFingerprint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique hardware fingerprint for the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public Builder clearFingerprint() {
+        
+        fingerprint_ = getDefaultInstance().getFingerprint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique hardware fingerprint for the device that is submitting this request.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public Builder setFingerprintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fingerprint_ = value;
         onChanged();
         return this;
       }

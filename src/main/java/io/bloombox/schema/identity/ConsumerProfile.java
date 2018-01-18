@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
  * Source and object computer code contained herein is the private intellectual
  * property of Bloombox, a California Limited Liability Corporation. Use of this
@@ -41,6 +41,7 @@ private static final long serialVersionUID = 0L;
     favoriteDispensaries_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     enrollmentSource_ = 0;
     enrollmentChannel_ = "";
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -111,6 +112,12 @@ private static final long serialVersionUID = 0L;
               preferences_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 48: {
+            int rawValue = input.readEnum();
+
+            type_ = rawValue;
             break;
           }
         }
@@ -298,6 +305,30 @@ private static final long serialVersionUID = 0L;
     return getPreferences();
   }
 
+  public static final int TYPE_FIELD_NUMBER = 6;
+  private int type_;
+  /**
+   * <pre>
+   * Specifies the primary consumer type for this account.
+   * </pre>
+   *
+   * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+   */
+  public int getTypeValue() {
+    return type_;
+  }
+  /**
+   * <pre>
+   * Specifies the primary consumer type for this account.
+   * </pre>
+   *
+   * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+   */
+  public io.bloombox.schema.identity.ConsumerType getType() {
+    io.bloombox.schema.identity.ConsumerType result = io.bloombox.schema.identity.ConsumerType.valueOf(type_);
+    return result == null ? io.bloombox.schema.identity.ConsumerType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -324,6 +355,9 @@ private static final long serialVersionUID = 0L;
     }
     if (preferences_ != null) {
       output.writeMessage(5, getPreferences());
+    }
+    if (type_ != io.bloombox.schema.identity.ConsumerType.UNVALIDATED.getNumber()) {
+      output.writeEnum(6, type_);
     }
     unknownFields.writeTo(output);
   }
@@ -356,6 +390,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getPreferences());
     }
+    if (type_ != io.bloombox.schema.identity.ConsumerType.UNVALIDATED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, type_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -384,6 +422,7 @@ private static final long serialVersionUID = 0L;
       result = result && getPreferences()
           .equals(other.getPreferences());
     }
+    result = result && type_ == other.type_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -410,6 +449,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PREFERENCES_FIELD_NUMBER;
       hash = (53 * hash) + getPreferences().hashCode();
     }
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -557,6 +598,8 @@ private static final long serialVersionUID = 0L;
         preferences_ = null;
         preferencesBuilder_ = null;
       }
+      type_ = 0;
+
       return this;
     }
 
@@ -594,6 +637,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.preferences_ = preferencesBuilder_.build();
       }
+      result.type_ = type_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -658,6 +702,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPreferences()) {
         mergePreferences(other.getPreferences());
+      }
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1159,6 +1206,70 @@ private static final long serialVersionUID = 0L;
         preferences_ = null;
       }
       return preferencesBuilder_;
+    }
+
+    private int type_ = 0;
+    /**
+     * <pre>
+     * Specifies the primary consumer type for this account.
+     * </pre>
+     *
+     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Specifies the primary consumer type for this account.
+     * </pre>
+     *
+     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     */
+    public Builder setTypeValue(int value) {
+      type_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the primary consumer type for this account.
+     * </pre>
+     *
+     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     */
+    public io.bloombox.schema.identity.ConsumerType getType() {
+      io.bloombox.schema.identity.ConsumerType result = io.bloombox.schema.identity.ConsumerType.valueOf(type_);
+      return result == null ? io.bloombox.schema.identity.ConsumerType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Specifies the primary consumer type for this account.
+     * </pre>
+     *
+     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     */
+    public Builder setType(io.bloombox.schema.identity.ConsumerType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      type_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the primary consumer type for this account.
+     * </pre>
+     *
+     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     */
+    public Builder clearType() {
+      
+      type_ = 0;
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

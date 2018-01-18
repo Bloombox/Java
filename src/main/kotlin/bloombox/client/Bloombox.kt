@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,5 +64,10 @@ object Bloombox {
      * Port to use locally for the Shop service.
      */
     internal const val localShopPort = 1091
+
+    /**
+     * Port to use locally for the Menu service.
+     */
+    internal const val localMenuPort = 1094
   }
 }

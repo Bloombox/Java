@@ -1,5 +1,5 @@
 /*
- * Copyright 2017, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,25 +28,18 @@ public interface MetadataOrBuilder extends
    * Partner location that owns this menu data.
    * </pre>
    *
-   * <code>.partner.PartnerLocation location = 1;</code>
+   * <code>string scope = 1;</code>
    */
-  boolean hasLocation();
+  java.lang.String getScope();
   /**
    * <pre>
    * Partner location that owns this menu data.
    * </pre>
    *
-   * <code>.partner.PartnerLocation location = 1;</code>
+   * <code>string scope = 1;</code>
    */
-  io.bloombox.schema.partner.PartnerLocation getLocation();
-  /**
-   * <pre>
-   * Partner location that owns this menu data.
-   * </pre>
-   *
-   * <code>.partner.PartnerLocation location = 1;</code>
-   */
-  io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder();
+  com.google.protobuf.ByteString
+      getScopeBytes();
 
   /**
    * <pre>
