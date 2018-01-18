@@ -32,10 +32,6 @@ import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
 
-// Method Callbacks
-typealias MenuErrorCallback = (ServiceClientException?) -> Unit
-
-
 /**
  * Menu RPC client.
  */
@@ -130,6 +126,8 @@ class MenuClient(override val host: String,
   private fun validateMenuContext(context: MenuContext) {
     context.partner ?: throw ServiceClientException(MenuClientError.PARTNER_INVALID)
     context.location ?: throw ServiceClientException(MenuClientError.LOCATION_INVALID)
+    if (context.partner.length < 2) throw ServiceClientException(MenuClientError.PARTNER_INVALID)
+    if (context.location.length < 2) throw ServiceClientException(MenuClientError.LOCATION_INVALID)
   }
 
   // -- Stubs -- //
@@ -137,28 +135,6 @@ class MenuClient(override val host: String,
    * Future-based call stub.
    */
   private val future: MenuGrpc.MenuFutureStub = MenuGrpc.newFutureStub(channel)
-
-  /**
-   * Execute an operation, and dispatch a user callback accordingly, handling underlying
-   * errors according to `MenuClientException`.
-   */
-  private fun <T> executeAndDispatchCallback(op: ListenableFuture<T>,
-                                             callback: (T) -> Unit,
-                                             err: MenuErrorCallback) {
-    try {
-      val response = op.get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-      if (response != null) {
-        callback(response)
-      } else {
-        // no response: dispatch err callback with null
-        err(null)
-      }
-    } catch (e: ServiceClientException) {
-      err(e)
-    } catch (e: StatusRuntimeException) {
-      err(ServiceClientException(MenuClientError.RUNTIME_ERROR, e))
-    }
-  }
 
   // -- API: Retrieve Menu -- //
   /**

@@ -137,6 +137,8 @@ class ShopClient(override val host: String,
   private fun validateShopContext(context: ShopContext) {
     context.partner ?: throw ServiceClientException(ShopClientError.PARTNER_INVALID)
     context.location ?: throw ServiceClientException(ShopClientError.LOCATION_INVALID)
+    if (context.partner.length < 2) throw ServiceClientException(ShopClientError.PARTNER_INVALID)
+    if (context.location.length < 2) throw ServiceClientException(ShopClientError.LOCATION_INVALID)
   }
 
   // -- Stubs -- //

@@ -26,7 +26,7 @@ import org.junit.After as after
  */
 open class ClientRPCTest {
   companion object {
-    const val testApiKey = "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM"
+    const val testApiKey = "AIzaSyBC4ZQVM3JnnS4P-wu6MHKi5oc0NcEuWxE"
     const val testPartner = "mm"
     const val testLocation = "sacramento"
     val logging: Logger = Logger.getAnonymousLogger()

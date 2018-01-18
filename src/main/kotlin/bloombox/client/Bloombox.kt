@@ -64,5 +64,10 @@ object Bloombox {
      * Port to use locally for the Shop service.
      */
     internal const val localShopPort = 1091
+
+    /**
+     * Port to use locally for the Menu service.
+     */
+    internal const val localMenuPort = 1094
   }
 }
