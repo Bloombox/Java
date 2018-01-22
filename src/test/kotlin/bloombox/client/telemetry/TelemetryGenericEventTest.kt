@@ -43,7 +43,7 @@ class TelemetryGenericEventTest: ClientRPCTest() {
     private const val locationID = "sacramento"
   }
 
-  @test
+  @test @ignore
   fun testBasicEvent() {
     // we should be able to send a basic event
     client.platform.telemetry().event(

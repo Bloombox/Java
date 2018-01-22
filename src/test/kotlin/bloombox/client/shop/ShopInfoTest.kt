@@ -48,7 +48,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours.
    */
-  @test
+  @test @ignore
   fun testShopHours() {
     val response = client.platform.shop().info(
           ShopClient.ShopContext(
@@ -62,7 +62,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours asynchronously.
    */
-  @test
+  @test @ignore
   fun testShopHoursAsync() {
     val operation = client.platform.shop().info({ response ->
       assertNotNull(response, "response from server for hours should not be null")
@@ -78,7 +78,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid partner.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ServiceClientException::class) @ignore
   fun testShopHoursInvalidPartner() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
@@ -94,7 +94,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid location.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ServiceClientException::class) @ignore
   fun testShopHoursInvalidLocation() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
@@ -111,7 +111,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test a known-good zipcode via zipcheck.
    */
-  @test
+  @test @ignore
   fun testZipcheckKnownGood() {
     val responseOne = client.platform.shop().checkZipcode("95120", ShopClient.ShopContext(
           partner = partnerID,
@@ -132,7 +132,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test a known-good zipcode via zipcheck, asynchronously.
    */
-  @test
+  @test @ignore
   fun testZipcheckKnownGoodAsync() {
     val opOne = client.platform.shop().checkZipcode("95120", { response ->
       assertNotNull(response, "response from server for zipcheck 1 should not be null")
@@ -158,7 +158,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test a known-bad zipcode via zipcheck.
    */
-  @test
+  @test @ignore
   fun testZipcheckKnownBad() {
     val responseOne = client.platform.shop().checkZipcode("12345",
           ShopClient.ShopContext(partner = partnerID, location = locationID))
@@ -170,7 +170,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test a known-bad zipcode via zipcheck.
    */
-  @test
+  @test @ignore
   fun testZipcheckKnownBadAsync() {
     val operation = client.platform.shop().checkZipcode("12345", { response ->
       assertNotNull(response, "response from server for bad zipcheck should not be null")
