@@ -134,38 +134,38 @@ public final class CheckinServiceBeta1 {
       "(\0132;.bloombox.schema.services.checkin.v1" +
       "beta1.IDCheckin.Request\022K\n\010response\030\002 \001(" +
       "\01329.bloombox.schema.services.checkin.v1b" +
-      "eta1.CheckinResponse\"\227\002\n\013CardCheckin\032]\n\007" +
-      "Request\022\020\n\010cardType\030\001 \001(\t\022\017\n\007payload\030\002 \001" +
-      "(\t\022\021\n\tsignature\030\003 \001(\t\022\r\n\005agent\030\004 \001(\t\022\r\n\005" +
-      "scope\030\005 \001(\t\032\250\001\n\tOperation\022N\n\007request\030\001 \001" +
-      "(\0132=.bloombox.schema.services.checkin.v1" +
-      "beta1.CardCheckin.Request\022K\n\010response\030\002 " +
-      "\001(\01329.bloombox.schema.services.checkin.v" +
-      "1beta1.CheckinResponse*\305\002\n\014CheckinError\022" +
-      "\014\n\010NO_ERROR\020\000\022\020\n\014ID_NOT_FOUND\020\001\022\016\n\nID_EX" +
-      "PIRED\020\002\022\016\n\nID_INVALID\020\003\022\027\n\023ID_TYPE_UNSUP" +
-      "PORTED\020\004\022\025\n\021CARD_TYPE_INVALID\020\005\022\020\n\014CARD_" +
-      "EXPIRED\020\006\022\022\n\016CARD_SUSPENDED\020\007\022\022\n\016USER_SU" +
-      "SPENDED\020\010\022\025\n\021PARTNER_SUSPENDED\020\t\022\023\n\017PART" +
-      "NER_INVALID\020\n\022\024\n\020LOCATION_INVALID\020\013\022\030\n\024J" +
-      "URISDICTION_INVALID\020\014\022\034\n\030JURISDICTION_UN" +
-      "SUPPORTED\020\r\022\021\n\rUSER_UNDERAGE\020\0162\300\004\n\007Check" +
-      "in\022\226\001\n\004Ping\0226.bloombox.schema.services.c" +
-      "heckin.v1beta1.Ping.Request\0327.bloombox.s" +
-      "chema.services.checkin.v1beta1.Ping.Resp" +
-      "onse\"\035\202\323\344\223\002\027\022\025/checkin/v1beta1/ping\022\357\001\n\016" +
-      "Identification\022;.bloombox.schema.service" +
-      "s.checkin.v1beta1.IDCheckin.Request\0329.bl" +
-      "oombox.schema.services.checkin.v1beta1.C" +
-      "heckinResponse\"e\202\323\344\223\002_\"9/checkin/v1beta1" +
-      "/{scope=partners/*/locations/*}/global:i" +
-      "d:\001*Z\037\"\032/checkin/v1beta1/global:id:\001*\022\251\001" +
-      "\n\004Card\022=.bloombox.schema.services.checki" +
-      "n.v1beta1.CardCheckin.Request\0329.bloombox" +
-      ".schema.services.checkin.v1beta1.Checkin" +
-      "Response\"\'\202\323\344\223\002!\"\034/checkin/v1beta1/globa" +
-      "l:card:\001*B1\n+io.bloombox.schema.services" +
-      ".checkin.v1beta1H\001P\001b\006proto3"
+      "eta1.CheckinResponse\"\230\002\n\013CardCheckin\032^\n\007" +
+      "Request\022\021\n\tcard_type\030\001 \001(\t\022\017\n\007payload\030\002 " +
+      "\001(\t\022\021\n\tsignature\030\003 \001(\t\022\r\n\005agent\030\004 \001(\t\022\r\n" +
+      "\005scope\030\005 \001(\t\032\250\001\n\tOperation\022N\n\007request\030\001 " +
+      "\001(\0132=.bloombox.schema.services.checkin.v" +
+      "1beta1.CardCheckin.Request\022K\n\010response\030\002" +
+      " \001(\01329.bloombox.schema.services.checkin." +
+      "v1beta1.CheckinResponse*\305\002\n\014CheckinError" +
+      "\022\014\n\010NO_ERROR\020\000\022\020\n\014ID_NOT_FOUND\020\001\022\016\n\nID_E" +
+      "XPIRED\020\002\022\016\n\nID_INVALID\020\003\022\027\n\023ID_TYPE_UNSU" +
+      "PPORTED\020\004\022\025\n\021CARD_TYPE_INVALID\020\005\022\020\n\014CARD" +
+      "_EXPIRED\020\006\022\022\n\016CARD_SUSPENDED\020\007\022\022\n\016USER_S" +
+      "USPENDED\020\010\022\025\n\021PARTNER_SUSPENDED\020\t\022\023\n\017PAR" +
+      "TNER_INVALID\020\n\022\024\n\020LOCATION_INVALID\020\013\022\030\n\024" +
+      "JURISDICTION_INVALID\020\014\022\034\n\030JURISDICTION_U" +
+      "NSUPPORTED\020\r\022\021\n\rUSER_UNDERAGE\020\0162\300\004\n\007Chec" +
+      "kin\022\226\001\n\004Ping\0226.bloombox.schema.services." +
+      "checkin.v1beta1.Ping.Request\0327.bloombox." +
+      "schema.services.checkin.v1beta1.Ping.Res" +
+      "ponse\"\035\202\323\344\223\002\027\022\025/checkin/v1beta1/ping\022\357\001\n" +
+      "\016Identification\022;.bloombox.schema.servic" +
+      "es.checkin.v1beta1.IDCheckin.Request\0329.b" +
+      "loombox.schema.services.checkin.v1beta1." +
+      "CheckinResponse\"e\202\323\344\223\002_\"9/checkin/v1beta" +
+      "1/{scope=partners/*/locations/*}/global:" +
+      "id:\001*Z\037\"\032/checkin/v1beta1/global:id:\001*\022\251" +
+      "\001\n\004Card\022=.bloombox.schema.services.check" +
+      "in.v1beta1.CardCheckin.Request\0329.bloombo" +
+      "x.schema.services.checkin.v1beta1.Checki" +
+      "nResponse\"\'\202\323\344\223\002!\"\034/checkin/v1beta1/glob" +
+      "al:card:\001*B1\n+io.bloombox.schema.service" +
+      "s.checkin.v1beta1H\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

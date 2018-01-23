@@ -1041,12 +1041,11 @@ public final class OrderCustomer {
   static {
     java.lang.String[] descriptorData = {
       "\n\027commerce/Customer.proto\022\025opencannabis." +
-      "commerce\032\023person/Person.proto\032\023identity/" +
-      "User.proto\"]\n\010Customer\022+\n\006person\030\001 \001(\0132\033" +
-      ".opencannabis.person.Person\022\022\n\nforeign_i" +
-      "d\030\002 \001(\t\022\020\n\010user_key\030\003 \001(\tB7\n\037io.opencann" +
-      "abis.schema.commerceB\rOrderCustomerH\001P\000\370" +
-      "\001\001b\006proto3"
+      "commerce\032\023person/Person.proto\"]\n\010Custome" +
+      "r\022+\n\006person\030\001 \001(\0132\033.opencannabis.person." +
+      "Person\022\022\n\nforeign_id\030\002 \001(\t\022\020\n\010user_key\030\003" +
+      " \001(\tB7\n\037io.opencannabis.schema.commerceB" +
+      "\rOrderCustomerH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1060,7 +1059,6 @@ public final class OrderCustomer {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.person.PersonOuterClass.getDescriptor(),
-          io.bloombox.schema.identity.UserOuterClass.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_commerce_Customer_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1069,7 +1067,6 @@ public final class OrderCustomer {
         internal_static_opencannabis_commerce_Customer_descriptor,
         new java.lang.String[] { "Person", "ForeignId", "UserKey", });
     io.opencannabis.schema.person.PersonOuterClass.getDescriptor();
-    io.bloombox.schema.identity.UserOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

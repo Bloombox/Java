@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
      * Type ID of the subject digital card.
      * </pre>
      *
-     * <code>string cardType = 1;</code>
+     * <code>string card_type = 1;</code>
      */
     java.lang.String getCardType();
     /**
@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
      * Type ID of the subject digital card.
      * </pre>
      *
-     * <code>string cardType = 1;</code>
+     * <code>string card_type = 1;</code>
      */
     com.google.protobuf.ByteString
         getCardTypeBytes();
@@ -297,14 +297,14 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.class, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.Builder.class);
     }
 
-    public static final int CARDTYPE_FIELD_NUMBER = 1;
+    public static final int CARD_TYPE_FIELD_NUMBER = 1;
     private volatile java.lang.Object cardType_;
     /**
      * <pre>
      * Type ID of the subject digital card.
      * </pre>
      *
-     * <code>string cardType = 1;</code>
+     * <code>string card_type = 1;</code>
      */
     public java.lang.String getCardType() {
       java.lang.Object ref = cardType_;
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
      * Type ID of the subject digital card.
      * </pre>
      *
-     * <code>string cardType = 1;</code>
+     * <code>string card_type = 1;</code>
      */
     public com.google.protobuf.ByteString
         getCardTypeBytes() {
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CARDTYPE_FIELD_NUMBER;
+      hash = (37 * hash) + CARD_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getCardType().hashCode();
       hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
       hash = (53 * hash) + getPayload().hashCode();
@@ -868,7 +868,7 @@ private static final long serialVersionUID = 0L;
        * Type ID of the subject digital card.
        * </pre>
        *
-       * <code>string cardType = 1;</code>
+       * <code>string card_type = 1;</code>
        */
       public java.lang.String getCardType() {
         java.lang.Object ref = cardType_;
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
        * Type ID of the subject digital card.
        * </pre>
        *
-       * <code>string cardType = 1;</code>
+       * <code>string card_type = 1;</code>
        */
       public com.google.protobuf.ByteString
           getCardTypeBytes() {
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
        * Type ID of the subject digital card.
        * </pre>
        *
-       * <code>string cardType = 1;</code>
+       * <code>string card_type = 1;</code>
        */
       public Builder setCardType(
           java.lang.String value) {
@@ -924,7 +924,7 @@ private static final long serialVersionUID = 0L;
        * Type ID of the subject digital card.
        * </pre>
        *
-       * <code>string cardType = 1;</code>
+       * <code>string card_type = 1;</code>
        */
       public Builder clearCardType() {
         
@@ -937,7 +937,7 @@ private static final long serialVersionUID = 0L;
        * Type ID of the subject digital card.
        * </pre>
        *
-       * <code>string cardType = 1;</code>
+       * <code>string card_type = 1;</code>
        */
       public Builder setCardTypeBytes(
           com.google.protobuf.ByteString value) {
