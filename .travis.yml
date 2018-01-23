@@ -17,7 +17,7 @@ before_script:
 install:
   - mvn -f pom-public.xml install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip -B -V
 script:
-  - mvn -f pom-public.xml test jacoco:report -DskipTests=true -B
+  - mvn -f pom-public.xml test jacoco:report -B
 after_script:
   - cp -fv ./target/site/jacoco/jacoco.xml ./
   - cp -frv ./src/main/kotlin/* ./

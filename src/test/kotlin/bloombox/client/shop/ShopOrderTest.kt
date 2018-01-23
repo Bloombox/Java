@@ -38,6 +38,7 @@ import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 
 
 /**
@@ -116,7 +117,7 @@ class ShopOrderTest: ClientRPCTest() {
     return client.submitOrder(orderObj)
   }
 
-  @test
+  @test @ignore
   fun testFetchKnownOrder() {
     // fetch a known-good order ID
     val response = client.platform.shop().getOrder(knownOrderId)
@@ -126,7 +127,7 @@ class ShopOrderTest: ClientRPCTest() {
     assertEquals(response.order.id, knownOrderId, "response from server for known-good order should match requested ID")
   }
 
-  @test
+  @test @ignore
   fun testFetchKnownOrderAsync() {
     // fetch a known-good order ID
     val operation = client.platform.shop().getOrder(knownOrderId, { response ->
@@ -142,7 +143,7 @@ class ShopOrderTest: ClientRPCTest() {
     operation.get(10, TimeUnit.SECONDS)
   }
 
-  @test
+  @test @ignore
   fun testFetchOrderNotFound() {
     // fetch a known-good order ID
     val response = client.platform.shop().getOrder("blablablanotfound")
@@ -150,7 +151,7 @@ class ShopOrderTest: ClientRPCTest() {
     assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
   }
 
-  @test
+  @test @ignore
   fun testFetchOrderNotFoundAsync() {
     // fetch a known-good order ID
     val operation = client.platform.shop().getOrder("blablablanotfound", { response ->
