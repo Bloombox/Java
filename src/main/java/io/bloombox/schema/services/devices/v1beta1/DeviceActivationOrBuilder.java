@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.devices.v1beta1;
 
 public interface DeviceActivationOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.devices.v1beta1.DeviceActivation)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.devices.v1beta1.DeviceActivation)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -65,7 +65,7 @@ public interface DeviceActivationOrBuilder extends
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   boolean hasAssignment();
   /**
@@ -73,7 +73,7 @@ public interface DeviceActivationOrBuilder extends
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceAssignment getAssignment();
   /**
@@ -81,7 +81,7 @@ public interface DeviceActivationOrBuilder extends
    * Assignment information for the device.
    * </pre>
    *
-   * <code>.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceAssignmentOrBuilder getAssignmentOrBuilder();
 }

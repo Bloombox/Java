@@ -44,7 +44,7 @@ public final class MenuGrpc {
 
   private MenuGrpc() {}
 
-  public static final String SERVICE_NAME = "services.menu.v1beta1.Menu";
+  public static final String SERVICE_NAME = "bloombox.schema.services.menu.v1beta1.Menu";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -53,7 +53,7 @@ public final class MenuGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.Ping.Request, io.bloombox.schema.services.menu.v1beta1.Ping.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.menu.v1beta1.Menu", "Ping"))
+              "bloombox.schema.services.menu.v1beta1.Menu", "Ping"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.menu.v1beta1.Ping.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -65,7 +65,7 @@ public final class MenuGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.menu.v1beta1.Menu", "Retrieve"))
+              "bloombox.schema.services.menu.v1beta1.Menu", "Retrieve"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -114,7 +114,7 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to check a user in via their government ID.
+     * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
     public void retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
@@ -176,7 +176,7 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to check a user in via their government ID.
+     * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
     public void retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
@@ -219,7 +219,7 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to check a user in via their government ID.
+     * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
     public io.bloombox.schema.services.menu.v1beta1.GetMenu.Response retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
@@ -262,7 +262,7 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to check a user in via their government ID.
+     * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> retrieve(

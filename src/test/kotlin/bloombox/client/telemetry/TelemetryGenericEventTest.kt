@@ -20,9 +20,6 @@ import bloombox.client.services.telemetry.TelemetryClient
 import bloombox.client.test.ClientRPCTest
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
-import java.util.*
-import kotlin.test.assertNotNull
-import kotlin.test.assertTrue
 import org.junit.Ignore as ignore
 import org.junit.Test as test
 

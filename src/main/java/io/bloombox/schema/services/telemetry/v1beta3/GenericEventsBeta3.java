@@ -32,30 +32,30 @@ public final class GenericEventsBeta3 {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_telemetry_v1beta3_Event_descriptor;
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_telemetry_v1beta3_Event_fieldAccessorTable;
+      internal_static_bloombox_schema_services_telemetry_v1beta3_Event_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_telemetry_v1beta3_Event_Request_descriptor;
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_telemetry_v1beta3_Event_Request_fieldAccessorTable;
+      internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_telemetry_v1beta3_Event_Batch_descriptor;
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_telemetry_v1beta3_Event_Batch_fieldAccessorTable;
+      internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_telemetry_v1beta3_Event_BatchRequest_descriptor;
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_telemetry_v1beta3_Event_BatchRequest_fieldAccessorTable;
+      internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_telemetry_v1beta3_Exception_descriptor;
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_telemetry_v1beta3_Exception_fieldAccessorTable;
+      internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -66,21 +66,24 @@ public final class GenericEventsBeta3 {
   static {
     java.lang.String[] descriptorData = {
       "\n+telemetry/v1beta3/GenericEvents_Beta3." +
-      "proto\022\032services.telemetry.v1beta3\032\027analy" +
-      "tics/Context.proto\032\035analytics/generic/Ev" +
-      "ent.proto\032!analytics/generic/Exception.p" +
-      "roto\"\215\002\n\005Event\032e\n\007Request\022#\n\007context\030\001 \001" +
-      "(\0132\022.analytics.Context\022\'\n\005event\030\002 \001(\0132\030." +
-      "analytics.generic.Event\022\014\n\004uuid\030\003 \001(\t\0320\n" +
-      "\005Batch\022\'\n\005event\030\002 \003(\0132\030.analytics.generi" +
-      "c.Event\032k\n\014BatchRequest\022#\n\007context\030\001 \001(\013" +
-      "2\022.analytics.Context\0226\n\005batch\030\002 \003(\0132\'.se" +
-      "rvices.telemetry.v1beta3.Event.Batch\"k\n\t" +
-      "Exception\022#\n\007context\030\001 \001(\0132\022.analytics.C" +
-      "ontext\022+\n\005error\030\002 \001(\0132\034.analytics.generi" +
-      "c.Exception\022\014\n\004uuid\030\003 \001(\tBG\n-io.bloombox" +
-      ".schema.services.telemetry.v1beta3H\001P\001\252\002" +
-      "\021Telemetry.v1beta3b\006proto3"
+      "proto\022*bloombox.schema.services.telemetr" +
+      "y.v1beta3\032\027analytics/Context.proto\032\035anal" +
+      "ytics/generic/Event.proto\032!analytics/gen" +
+      "eric/Exception.proto\"\337\002\n\005Event\032\205\001\n\007Reque" +
+      "st\0223\n\007context\030\001 \001(\0132\".bloombox.schema.an" +
+      "alytics.Context\0227\n\005event\030\002 \001(\0132(.bloombo" +
+      "x.schema.analytics.generic.Event\022\014\n\004uuid" +
+      "\030\003 \001(\t\032@\n\005Batch\0227\n\005event\030\002 \003(\0132(.bloombo" +
+      "x.schema.analytics.generic.Event\032\213\001\n\014Bat" +
+      "chRequest\0223\n\007context\030\001 \001(\0132\".bloombox.sc" +
+      "hema.analytics.Context\022F\n\005batch\030\002 \003(\01327." +
+      "bloombox.schema.services.telemetry.v1bet" +
+      "a3.Event.Batch\"\213\001\n\tException\0223\n\007context\030" +
+      "\001 \001(\0132\".bloombox.schema.analytics.Contex" +
+      "t\022;\n\005error\030\002 \001(\0132,.bloombox.schema.analy" +
+      "tics.generic.Exception\022\014\n\004uuid\030\003 \001(\tBG\n-" +
+      "io.bloombox.schema.services.telemetry.v1" +
+      "beta3H\001P\001\252\002\021Telemetry.v1beta3b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -97,35 +100,35 @@ public final class GenericEventsBeta3 {
           io.bloombox.schema.telemetry.AnalyticsEvent.getDescriptor(),
           io.bloombox.schema.telemetry.AnalyticsException.getDescriptor(),
         }, assigner);
-    internal_static_services_telemetry_v1beta3_Event_descriptor =
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_services_telemetry_v1beta3_Event_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_telemetry_v1beta3_Event_descriptor,
+        internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor,
         new java.lang.String[] { });
-    internal_static_services_telemetry_v1beta3_Event_Request_descriptor =
-      internal_static_services_telemetry_v1beta3_Event_descriptor.getNestedTypes().get(0);
-    internal_static_services_telemetry_v1beta3_Event_Request_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_descriptor =
+      internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_telemetry_v1beta3_Event_Request_descriptor,
+        internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_descriptor,
         new java.lang.String[] { "Context", "Event", "Uuid", });
-    internal_static_services_telemetry_v1beta3_Event_Batch_descriptor =
-      internal_static_services_telemetry_v1beta3_Event_descriptor.getNestedTypes().get(1);
-    internal_static_services_telemetry_v1beta3_Event_Batch_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_descriptor =
+      internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_telemetry_v1beta3_Event_Batch_descriptor,
+        internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_descriptor,
         new java.lang.String[] { "Event", });
-    internal_static_services_telemetry_v1beta3_Event_BatchRequest_descriptor =
-      internal_static_services_telemetry_v1beta3_Event_descriptor.getNestedTypes().get(2);
-    internal_static_services_telemetry_v1beta3_Event_BatchRequest_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_descriptor =
+      internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_telemetry_v1beta3_Event_BatchRequest_descriptor,
+        internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_descriptor,
         new java.lang.String[] { "Context", "Batch", });
-    internal_static_services_telemetry_v1beta3_Exception_descriptor =
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_services_telemetry_v1beta3_Exception_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_telemetry_v1beta3_Exception_descriptor,
+        internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_descriptor,
         new java.lang.String[] { "Context", "Error", "Uuid", });
     io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor();
     io.bloombox.schema.telemetry.AnalyticsEvent.getDescriptor();

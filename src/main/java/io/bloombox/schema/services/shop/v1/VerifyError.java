@@ -25,7 +25,7 @@ package io.bloombox.schema.services.shop.v1;
  * Enumerates errors that may prevent a user from being considered eligible for express and delivery orders.
  * </pre>
  *
- * Protobuf enum {@code services.shop.v1.VerifyError}
+ * Protobuf enum {@code bloombox.schema.services.shop.v1.VerifyError}
  */
 public enum VerifyError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -186,6 +186,6 @@ public enum VerifyError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.shop.v1.VerifyError)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.shop.v1.VerifyError)
 }
 

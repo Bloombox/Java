@@ -44,7 +44,7 @@ public final class EventTelemetryGrpc {
 
   private EventTelemetryGrpc() {}
 
-  public static final String SERVICE_NAME = "services.telemetry.v1beta3.EventTelemetry";
+  public static final String SERVICE_NAME = "bloombox.schema.services.telemetry.v1beta3.EventTelemetry";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -53,7 +53,7 @@ public final class EventTelemetryGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request, io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.telemetry.v1beta3.EventTelemetry", "Ping"))
+              "bloombox.schema.services.telemetry.v1beta3.EventTelemetry", "Ping"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.telemetry.v1beta3.TelemetryPing.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -65,7 +65,7 @@ public final class EventTelemetryGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta3.Event.Request, com.google.protobuf.Empty>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.telemetry.v1beta3.EventTelemetry", "Event"))
+              "bloombox.schema.services.telemetry.v1beta3.EventTelemetry", "Event"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.telemetry.v1beta3.Event.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -77,7 +77,7 @@ public final class EventTelemetryGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest, io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.telemetry.v1beta3.EventTelemetry", "Batch"))
+              "bloombox.schema.services.telemetry.v1beta3.EventTelemetry", "Batch"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -89,7 +89,7 @@ public final class EventTelemetryGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta3.Exception, com.google.protobuf.Empty>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.telemetry.v1beta3.EventTelemetry", "Error"))
+              "bloombox.schema.services.telemetry.v1beta3.EventTelemetry", "Error"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.telemetry.v1beta3.Exception.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

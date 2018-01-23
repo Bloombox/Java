@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.partner;
 
 public interface PartnerLocationOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:partner.PartnerLocation)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerLocation)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -47,7 +46,7 @@ public interface PartnerLocationOrBuilder extends
    * Partner record that owns this location.
    * </pre>
    *
-   * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   boolean hasPartner();
   /**
@@ -55,7 +54,7 @@ public interface PartnerLocationOrBuilder extends
    * Partner record that owns this location.
    * </pre>
    *
-   * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   io.bloombox.schema.partner.Partner getPartner();
   /**
@@ -63,7 +62,7 @@ public interface PartnerLocationOrBuilder extends
    * Partner record that owns this location.
    * </pre>
    *
-   * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder();
 
@@ -108,7 +107,7 @@ public interface PartnerLocationOrBuilder extends
    * Flags that specify conditions applied to this partner location.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
    */
   boolean hasFlags();
   /**
@@ -116,7 +115,7 @@ public interface PartnerLocationOrBuilder extends
    * Flags that specify conditions applied to this partner location.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
    */
   io.bloombox.schema.partner.PartnerFlags getFlags();
   /**
@@ -124,7 +123,7 @@ public interface PartnerLocationOrBuilder extends
    * Flags that specify conditions applied to this partner location.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
    */
   io.bloombox.schema.partner.PartnerFlagsOrBuilder getFlagsOrBuilder();
 
@@ -133,7 +132,7 @@ public interface PartnerLocationOrBuilder extends
    * Contact information for this location.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
    */
   boolean hasContact();
   /**
@@ -141,24 +140,24 @@ public interface PartnerLocationOrBuilder extends
    * Contact information for this location.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
    */
-  io.bloombox.schema.contact.ContactInfo getContact();
+  io.opencannabis.schema.contact.ContactInfo getContact();
   /**
    * <pre>
    * Contact information for this location.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
    */
-  io.bloombox.schema.contact.ContactInfoOrBuilder getContactOrBuilder();
+  io.opencannabis.schema.contact.ContactInfoOrBuilder getContactOrBuilder();
 
   /**
    * <pre>
    * Branding specific to this location. Partner-level branding is used if this is left unspecified.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
    */
   boolean hasBranding();
   /**
@@ -166,24 +165,24 @@ public interface PartnerLocationOrBuilder extends
    * Branding specific to this location. Partner-level branding is used if this is left unspecified.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
    */
-  io.bloombox.schema.media.MediaItem getBranding();
+  io.opencannabis.schema.media.MediaItem getBranding();
   /**
    * <pre>
    * Branding specific to this location. Partner-level branding is used if this is left unspecified.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
    */
-  io.bloombox.schema.media.MediaItemOrBuilder getBrandingOrBuilder();
+  io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder();
 
   /**
    * <pre>
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
   boolean hasCreated();
   /**
@@ -191,24 +190,24 @@ public interface PartnerLocationOrBuilder extends
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
-  io.bloombox.schema.temporal.Instant getCreated();
+  io.opencannabis.schema.temporal.Instant getCreated();
   /**
    * <pre>
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getCreatedOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getCreatedOrBuilder();
 
   /**
    * <pre>
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
   boolean hasModified();
   /**
@@ -216,15 +215,15 @@ public interface PartnerLocationOrBuilder extends
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
-  io.bloombox.schema.temporal.Instant getModified();
+  io.opencannabis.schema.temporal.Instant getModified();
   /**
    * <pre>
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getModifiedOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder();
 }

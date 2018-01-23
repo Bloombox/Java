@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.checkin.v1beta1;
 
 public interface CheckinEnrollmentOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.checkin.v1beta1.CheckinEnrollment)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.checkin.v1beta1.CheckinEnrollment)
     com.google.protobuf.MessageOrBuilder {
 
   /**

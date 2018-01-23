@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.telemetry.v1beta3;
 
 public interface TelemetryResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.TelemetryResponse)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.TelemetryResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +29,7 @@ public interface TelemetryResponseOrBuilder extends
    * Status of the operation.
    * </pre>
    *
-   * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+   * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
    */
   int getStatusValue();
   /**
@@ -37,7 +37,7 @@ public interface TelemetryResponseOrBuilder extends
    * Status of the operation.
    * </pre>
    *
-   * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+   * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
    */
   io.bloombox.schema.services.telemetry.v1beta3.OperationStatus getStatus();
 
@@ -55,7 +55,7 @@ public interface TelemetryResponseOrBuilder extends
    * Service maintenance status, if applicable.
    * </pre>
    *
-   * <code>.services.ServiceStatus service = 3;</code>
+   * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
    */
   int getServiceValue();
   /**
@@ -63,7 +63,7 @@ public interface TelemetryResponseOrBuilder extends
    * Service maintenance status, if applicable.
    * </pre>
    *
-   * <code>.services.ServiceStatus service = 3;</code>
+   * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
    */
   io.bloombox.schema.services.ServiceStatus getService();
 }

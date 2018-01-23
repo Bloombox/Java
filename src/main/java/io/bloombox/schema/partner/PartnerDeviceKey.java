@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,11 +20,11 @@
 package io.bloombox.schema.partner;
 
 /**
- * Protobuf type {@code partner.PartnerDeviceKey}
+ * Protobuf type {@code bloombox.schema.partner.PartnerDeviceKey}
  */
 public  final class PartnerDeviceKey extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:partner.PartnerDeviceKey)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerDeviceKey)
     PartnerDeviceKeyOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use PartnerDeviceKey.newBuilder() to construct.
@@ -100,12 +99,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDeviceKey_descriptor;
+    return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDeviceKey_fieldAccessorTable
+    return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.partner.PartnerDeviceKey.class, io.bloombox.schema.partner.PartnerDeviceKey.Builder.class);
   }
@@ -113,19 +112,19 @@ private static final long serialVersionUID = 0L;
   public static final int LOCATION_FIELD_NUMBER = 1;
   private io.bloombox.schema.partner.PartnerLocationKey location_;
   /**
-   * <code>.partner.PartnerLocationKey location = 1;</code>
+   * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
    */
   public boolean hasLocation() {
     return location_ != null;
   }
   /**
-   * <code>.partner.PartnerLocationKey location = 1;</code>
+   * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
    */
   public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
     return location_ == null ? io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance() : location_;
   }
   /**
-   * <code>.partner.PartnerLocationKey location = 1;</code>
+   * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
    */
   public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
     return getLocation();
@@ -332,20 +331,20 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code partner.PartnerDeviceKey}
+   * Protobuf type {@code bloombox.schema.partner.PartnerDeviceKey}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:partner.PartnerDeviceKey)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerDeviceKey)
       io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDeviceKey_descriptor;
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDeviceKey_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerDeviceKey.class, io.bloombox.schema.partner.PartnerDeviceKey.Builder.class);
     }
@@ -380,7 +379,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDeviceKey_descriptor;
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
     }
 
     public io.bloombox.schema.partner.PartnerDeviceKey getDefaultInstanceForType() {
@@ -482,13 +481,13 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> locationBuilder_;
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public boolean hasLocation() {
       return locationBuilder_ != null || location_ != null;
     }
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
       if (locationBuilder_ == null) {
@@ -498,7 +497,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public Builder setLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
       if (locationBuilder_ == null) {
@@ -514,7 +513,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public Builder setLocation(
         io.bloombox.schema.partner.PartnerLocationKey.Builder builderForValue) {
@@ -528,7 +527,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
       if (locationBuilder_ == null) {
@@ -546,7 +545,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public Builder clearLocation() {
       if (locationBuilder_ == null) {
@@ -560,7 +559,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKey.Builder getLocationBuilder() {
       
@@ -568,7 +567,7 @@ private static final long serialVersionUID = 0L;
       return getLocationFieldBuilder().getBuilder();
     }
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
       if (locationBuilder_ != null) {
@@ -579,7 +578,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> 
@@ -674,10 +673,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:partner.PartnerDeviceKey)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerDeviceKey)
   }
 
-  // @@protoc_insertion_point(class_scope:partner.PartnerDeviceKey)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerDeviceKey)
   private static final io.bloombox.schema.partner.PartnerDeviceKey DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerDeviceKey();

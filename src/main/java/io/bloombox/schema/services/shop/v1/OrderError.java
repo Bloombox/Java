@@ -25,7 +25,7 @@ package io.bloombox.schema.services.shop.v1;
  * Enumerates errors that may prevent a user from submitting an order for pickup or delivery.
  * </pre>
  *
- * Protobuf enum {@code services.shop.v1.OrderError}
+ * Protobuf enum {@code bloombox.schema.services.shop.v1.OrderError}
  */
 public enum OrderError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -339,6 +339,6 @@ public enum OrderError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.shop.v1.OrderError)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.shop.v1.OrderError)
 }
 

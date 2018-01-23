@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * User profile information for a cannabis consumer.
  * </pre>
  *
- * Protobuf type {@code identity.ConsumerProfile}
+ * Protobuf type {@code bloombox.schema.identity.ConsumerProfile}
  */
 public  final class ConsumerProfile extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.ConsumerProfile)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ConsumerProfile)
     ConsumerProfileOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ConsumerProfile.newBuilder() to construct.
@@ -137,12 +136,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerProfile_descriptor;
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerProfile_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerProfile_fieldAccessorTable
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerProfile_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.ConsumerProfile.class, io.bloombox.schema.identity.ConsumerProfile.Builder.class);
   }
@@ -213,7 +212,7 @@ private static final long serialVersionUID = 0L;
    * Specifies enrollment source attribution information.
    * </pre>
    *
-   * <code>.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+   * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
    */
   public int getEnrollmentSourceValue() {
     return enrollmentSource_;
@@ -223,7 +222,7 @@ private static final long serialVersionUID = 0L;
    * Specifies enrollment source attribution information.
    * </pre>
    *
-   * <code>.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+   * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
    */
   public io.bloombox.schema.identity.EnrollmentSource getEnrollmentSource() {
     io.bloombox.schema.identity.EnrollmentSource result = io.bloombox.schema.identity.EnrollmentSource.valueOf(enrollmentSource_);
@@ -279,7 +278,7 @@ private static final long serialVersionUID = 0L;
    * Preferences attached to a consumer account.
    * </pre>
    *
-   * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+   * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
    */
   public boolean hasPreferences() {
     return preferences_ != null;
@@ -289,7 +288,7 @@ private static final long serialVersionUID = 0L;
    * Preferences attached to a consumer account.
    * </pre>
    *
-   * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+   * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
    */
   public io.bloombox.schema.identity.ConsumerPreferences getPreferences() {
     return preferences_ == null ? io.bloombox.schema.identity.ConsumerPreferences.getDefaultInstance() : preferences_;
@@ -299,7 +298,7 @@ private static final long serialVersionUID = 0L;
    * Preferences attached to a consumer account.
    * </pre>
    *
-   * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+   * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
    */
   public io.bloombox.schema.identity.ConsumerPreferencesOrBuilder getPreferencesOrBuilder() {
     return getPreferences();
@@ -312,7 +311,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the primary consumer type for this account.
    * </pre>
    *
-   * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+   * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
    */
   public int getTypeValue() {
     return type_;
@@ -322,7 +321,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the primary consumer type for this account.
    * </pre>
    *
-   * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+   * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
    */
   public io.bloombox.schema.identity.ConsumerType getType() {
     io.bloombox.schema.identity.ConsumerType result = io.bloombox.schema.identity.ConsumerType.valueOf(type_);
@@ -549,20 +548,20 @@ private static final long serialVersionUID = 0L;
    * User profile information for a cannabis consumer.
    * </pre>
    *
-   * Protobuf type {@code identity.ConsumerProfile}
+   * Protobuf type {@code bloombox.schema.identity.ConsumerProfile}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.ConsumerProfile)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ConsumerProfile)
       io.bloombox.schema.identity.ConsumerProfileOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerProfile_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerProfile_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerProfile_fieldAccessorTable
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerProfile_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ConsumerProfile.class, io.bloombox.schema.identity.ConsumerProfile.Builder.class);
     }
@@ -605,7 +604,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerProfile_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerProfile_descriptor;
     }
 
     public io.bloombox.schema.identity.ConsumerProfile getDefaultInstanceForType() {
@@ -908,7 +907,7 @@ private static final long serialVersionUID = 0L;
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     public int getEnrollmentSourceValue() {
       return enrollmentSource_;
@@ -918,7 +917,7 @@ private static final long serialVersionUID = 0L;
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     public Builder setEnrollmentSourceValue(int value) {
       enrollmentSource_ = value;
@@ -930,7 +929,7 @@ private static final long serialVersionUID = 0L;
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     public io.bloombox.schema.identity.EnrollmentSource getEnrollmentSource() {
       io.bloombox.schema.identity.EnrollmentSource result = io.bloombox.schema.identity.EnrollmentSource.valueOf(enrollmentSource_);
@@ -941,7 +940,7 @@ private static final long serialVersionUID = 0L;
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     public Builder setEnrollmentSource(io.bloombox.schema.identity.EnrollmentSource value) {
       if (value == null) {
@@ -957,7 +956,7 @@ private static final long serialVersionUID = 0L;
      * Specifies enrollment source attribution information.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource enrollment_source = 3 [(.gen_bq_schema.description) = "Specifies enrollment source attribution information."];</code>
      */
     public Builder clearEnrollmentSource() {
       
@@ -1063,7 +1062,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public boolean hasPreferences() {
       return preferencesBuilder_ != null || preferences_ != null;
@@ -1073,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public io.bloombox.schema.identity.ConsumerPreferences getPreferences() {
       if (preferencesBuilder_ == null) {
@@ -1087,7 +1086,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public Builder setPreferences(io.bloombox.schema.identity.ConsumerPreferences value) {
       if (preferencesBuilder_ == null) {
@@ -1107,7 +1106,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public Builder setPreferences(
         io.bloombox.schema.identity.ConsumerPreferences.Builder builderForValue) {
@@ -1125,7 +1124,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public Builder mergePreferences(io.bloombox.schema.identity.ConsumerPreferences value) {
       if (preferencesBuilder_ == null) {
@@ -1147,7 +1146,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public Builder clearPreferences() {
       if (preferencesBuilder_ == null) {
@@ -1165,7 +1164,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public io.bloombox.schema.identity.ConsumerPreferences.Builder getPreferencesBuilder() {
       
@@ -1177,7 +1176,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     public io.bloombox.schema.identity.ConsumerPreferencesOrBuilder getPreferencesOrBuilder() {
       if (preferencesBuilder_ != null) {
@@ -1192,7 +1191,7 @@ private static final long serialVersionUID = 0L;
      * Preferences attached to a consumer account.
      * </pre>
      *
-     * <code>.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerPreferences preferences = 5 [(.gen_bq_schema.description) = "Preferences attached to a consumer account."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.ConsumerPreferences, io.bloombox.schema.identity.ConsumerPreferences.Builder, io.bloombox.schema.identity.ConsumerPreferencesOrBuilder> 
@@ -1214,7 +1213,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -1224,7 +1223,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -1236,7 +1235,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     public io.bloombox.schema.identity.ConsumerType getType() {
       io.bloombox.schema.identity.ConsumerType result = io.bloombox.schema.identity.ConsumerType.valueOf(type_);
@@ -1247,7 +1246,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     public Builder setType(io.bloombox.schema.identity.ConsumerType value) {
       if (value == null) {
@@ -1263,7 +1262,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the primary consumer type for this account.
      * </pre>
      *
-     * <code>.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
+     * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
      */
     public Builder clearType() {
       
@@ -1282,10 +1281,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.ConsumerProfile)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ConsumerProfile)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.ConsumerProfile)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ConsumerProfile)
   private static final io.bloombox.schema.identity.ConsumerProfile DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.ConsumerProfile();

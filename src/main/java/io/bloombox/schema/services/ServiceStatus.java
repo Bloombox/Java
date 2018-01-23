@@ -25,7 +25,7 @@ package io.bloombox.schema.services;
  * Specifies the status of this service in PING responses.
  * </pre>
  *
- * Protobuf enum {@code services.ServiceStatus}
+ * Protobuf enum {@code bloombox.schema.services.ServiceStatus}
  */
 public enum ServiceStatus
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -169,6 +169,6 @@ public enum ServiceStatus
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.ServiceStatus)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.ServiceStatus)
 }
 

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.security;
  * Specifies an auth token issued to a device, or some other machine-based actor.
  * </pre>
  *
- * Protobuf type {@code security.DeviceToken}
+ * Protobuf type {@code bloombox.schema.security.DeviceToken}
  */
 public  final class DeviceToken extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:security.DeviceToken)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.security.DeviceToken)
     DeviceTokenOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use DeviceToken.newBuilder() to construct.
@@ -84,11 +83,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.bloombox.schema.device.Device.Builder subBuilder = null;
+            io.opencannabis.schema.device.Device.Builder subBuilder = null;
             if (device_ != null) {
               subBuilder = device_.toBuilder();
             }
-            device_ = input.readMessage(io.bloombox.schema.device.Device.parser(), extensionRegistry);
+            device_ = input.readMessage(io.opencannabis.schema.device.Device.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(device_);
               device_ = subBuilder.buildPartial();
@@ -97,11 +96,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (issued_ != null) {
               subBuilder = issued_.toBuilder();
             }
-            issued_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            issued_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(issued_);
               issued_ = subBuilder.buildPartial();
@@ -110,11 +109,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (expires_ != null) {
               subBuilder = expires_.toBuilder();
             }
-            expires_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            expires_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(expires_);
               expires_ = subBuilder.buildPartial();
@@ -136,12 +135,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_security_DeviceToken_descriptor;
+    return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_bloombox_schema_security_DeviceToken_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_security_DeviceToken_fieldAccessorTable
+    return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_bloombox_schema_security_DeviceToken_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.security.DeviceToken.class, io.bloombox.schema.security.DeviceToken.Builder.class);
   }
@@ -153,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * Authentication token, usable by this device to authenticate to the API, etc.
    * </pre>
    *
-   * <code>.security.AuthToken token = 1;</code>
+   * <code>.bloombox.schema.security.AuthToken token = 1;</code>
    */
   public boolean hasToken() {
     return token_ != null;
@@ -163,7 +162,7 @@ private static final long serialVersionUID = 0L;
    * Authentication token, usable by this device to authenticate to the API, etc.
    * </pre>
    *
-   * <code>.security.AuthToken token = 1;</code>
+   * <code>.bloombox.schema.security.AuthToken token = 1;</code>
    */
   public io.bloombox.schema.security.AuthToken getToken() {
     return token_ == null ? io.bloombox.schema.security.AuthToken.getDefaultInstance() : token_;
@@ -173,20 +172,20 @@ private static final long serialVersionUID = 0L;
    * Authentication token, usable by this device to authenticate to the API, etc.
    * </pre>
    *
-   * <code>.security.AuthToken token = 1;</code>
+   * <code>.bloombox.schema.security.AuthToken token = 1;</code>
    */
   public io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder() {
     return getToken();
   }
 
   public static final int DEVICE_FIELD_NUMBER = 2;
-  private io.bloombox.schema.device.Device device_;
+  private io.opencannabis.schema.device.Device device_;
   /**
    * <pre>
    * Information passed from the server to this device, including credentials, stateful flags, and so on.
    * </pre>
    *
-   * <code>.device.Device device = 2;</code>
+   * <code>.opencannabis.device.Device device = 2;</code>
    */
   public boolean hasDevice() {
     return device_ != null;
@@ -196,30 +195,30 @@ private static final long serialVersionUID = 0L;
    * Information passed from the server to this device, including credentials, stateful flags, and so on.
    * </pre>
    *
-   * <code>.device.Device device = 2;</code>
+   * <code>.opencannabis.device.Device device = 2;</code>
    */
-  public io.bloombox.schema.device.Device getDevice() {
-    return device_ == null ? io.bloombox.schema.device.Device.getDefaultInstance() : device_;
+  public io.opencannabis.schema.device.Device getDevice() {
+    return device_ == null ? io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
   }
   /**
    * <pre>
    * Information passed from the server to this device, including credentials, stateful flags, and so on.
    * </pre>
    *
-   * <code>.device.Device device = 2;</code>
+   * <code>.opencannabis.device.Device device = 2;</code>
    */
-  public io.bloombox.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
+  public io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
     return getDevice();
   }
 
   public static final int ISSUED_FIELD_NUMBER = 3;
-  private io.bloombox.schema.temporal.Instant issued_;
+  private io.opencannabis.schema.temporal.Instant issued_;
   /**
    * <pre>
    * Issuance timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant issued = 3;</code>
+   * <code>.opencannabis.temporal.Instant issued = 3;</code>
    */
   public boolean hasIssued() {
     return issued_ != null;
@@ -229,30 +228,30 @@ private static final long serialVersionUID = 0L;
    * Issuance timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant issued = 3;</code>
+   * <code>.opencannabis.temporal.Instant issued = 3;</code>
    */
-  public io.bloombox.schema.temporal.Instant getIssued() {
-    return issued_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : issued_;
+  public io.opencannabis.schema.temporal.Instant getIssued() {
+    return issued_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : issued_;
   }
   /**
    * <pre>
    * Issuance timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant issued = 3;</code>
+   * <code>.opencannabis.temporal.Instant issued = 3;</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getIssuedOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getIssuedOrBuilder() {
     return getIssued();
   }
 
   public static final int EXPIRES_FIELD_NUMBER = 4;
-  private io.bloombox.schema.temporal.Instant expires_;
+  private io.opencannabis.schema.temporal.Instant expires_;
   /**
    * <pre>
    * Expiry timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant expires = 4;</code>
+   * <code>.opencannabis.temporal.Instant expires = 4;</code>
    */
   public boolean hasExpires() {
     return expires_ != null;
@@ -262,19 +261,19 @@ private static final long serialVersionUID = 0L;
    * Expiry timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant expires = 4;</code>
+   * <code>.opencannabis.temporal.Instant expires = 4;</code>
    */
-  public io.bloombox.schema.temporal.Instant getExpires() {
-    return expires_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : expires_;
+  public io.opencannabis.schema.temporal.Instant getExpires() {
+    return expires_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : expires_;
   }
   /**
    * <pre>
    * Expiry timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant expires = 4;</code>
+   * <code>.opencannabis.temporal.Instant expires = 4;</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getExpiresOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getExpiresOrBuilder() {
     return getExpires();
   }
 
@@ -487,20 +486,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an auth token issued to a device, or some other machine-based actor.
    * </pre>
    *
-   * Protobuf type {@code security.DeviceToken}
+   * Protobuf type {@code bloombox.schema.security.DeviceToken}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:security.DeviceToken)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.security.DeviceToken)
       io.bloombox.schema.security.DeviceTokenOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_security_DeviceToken_descriptor;
+      return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_bloombox_schema_security_DeviceToken_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_security_DeviceToken_fieldAccessorTable
+      return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_bloombox_schema_security_DeviceToken_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.security.DeviceToken.class, io.bloombox.schema.security.DeviceToken.Builder.class);
     }
@@ -551,7 +550,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_security_DeviceToken_descriptor;
+      return io.bloombox.schema.security.DeviceTokenOuterClass.internal_static_bloombox_schema_security_DeviceToken_descriptor;
     }
 
     public io.bloombox.schema.security.DeviceToken getDefaultInstanceForType() {
@@ -676,7 +675,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     public boolean hasToken() {
       return tokenBuilder_ != null || token_ != null;
@@ -686,7 +685,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     public io.bloombox.schema.security.AuthToken getToken() {
       if (tokenBuilder_ == null) {
@@ -700,7 +699,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     public Builder setToken(io.bloombox.schema.security.AuthToken value) {
       if (tokenBuilder_ == null) {
@@ -720,7 +719,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     public Builder setToken(
         io.bloombox.schema.security.AuthToken.Builder builderForValue) {
@@ -738,7 +737,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     public Builder mergeToken(io.bloombox.schema.security.AuthToken value) {
       if (tokenBuilder_ == null) {
@@ -760,7 +759,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     public Builder clearToken() {
       if (tokenBuilder_ == null) {
@@ -778,7 +777,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     public io.bloombox.schema.security.AuthToken.Builder getTokenBuilder() {
       
@@ -790,7 +789,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     public io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder() {
       if (tokenBuilder_ != null) {
@@ -805,7 +804,7 @@ private static final long serialVersionUID = 0L;
      * Authentication token, usable by this device to authenticate to the API, etc.
      * </pre>
      *
-     * <code>.security.AuthToken token = 1;</code>
+     * <code>.bloombox.schema.security.AuthToken token = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.security.AuthToken, io.bloombox.schema.security.AuthToken.Builder, io.bloombox.schema.security.AuthTokenOrBuilder> 
@@ -821,15 +820,15 @@ private static final long serialVersionUID = 0L;
       return tokenBuilder_;
     }
 
-    private io.bloombox.schema.device.Device device_ = null;
+    private io.opencannabis.schema.device.Device device_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.device.Device, io.bloombox.schema.device.Device.Builder, io.bloombox.schema.device.DeviceOrBuilder> deviceBuilder_;
+        io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder> deviceBuilder_;
     /**
      * <pre>
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
     public boolean hasDevice() {
       return deviceBuilder_ != null || device_ != null;
@@ -839,11 +838,11 @@ private static final long serialVersionUID = 0L;
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
-    public io.bloombox.schema.device.Device getDevice() {
+    public io.opencannabis.schema.device.Device getDevice() {
       if (deviceBuilder_ == null) {
-        return device_ == null ? io.bloombox.schema.device.Device.getDefaultInstance() : device_;
+        return device_ == null ? io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
       } else {
         return deviceBuilder_.getMessage();
       }
@@ -853,9 +852,9 @@ private static final long serialVersionUID = 0L;
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
-    public Builder setDevice(io.bloombox.schema.device.Device value) {
+    public Builder setDevice(io.opencannabis.schema.device.Device value) {
       if (deviceBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -873,10 +872,10 @@ private static final long serialVersionUID = 0L;
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
     public Builder setDevice(
-        io.bloombox.schema.device.Device.Builder builderForValue) {
+        io.opencannabis.schema.device.Device.Builder builderForValue) {
       if (deviceBuilder_ == null) {
         device_ = builderForValue.build();
         onChanged();
@@ -891,13 +890,13 @@ private static final long serialVersionUID = 0L;
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
-    public Builder mergeDevice(io.bloombox.schema.device.Device value) {
+    public Builder mergeDevice(io.opencannabis.schema.device.Device value) {
       if (deviceBuilder_ == null) {
         if (device_ != null) {
           device_ =
-            io.bloombox.schema.device.Device.newBuilder(device_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.device.Device.newBuilder(device_).mergeFrom(value).buildPartial();
         } else {
           device_ = value;
         }
@@ -913,7 +912,7 @@ private static final long serialVersionUID = 0L;
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
     public Builder clearDevice() {
       if (deviceBuilder_ == null) {
@@ -931,9 +930,9 @@ private static final long serialVersionUID = 0L;
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
-    public io.bloombox.schema.device.Device.Builder getDeviceBuilder() {
+    public io.opencannabis.schema.device.Device.Builder getDeviceBuilder() {
       
       onChanged();
       return getDeviceFieldBuilder().getBuilder();
@@ -943,14 +942,14 @@ private static final long serialVersionUID = 0L;
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
-    public io.bloombox.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
+    public io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
       if (deviceBuilder_ != null) {
         return deviceBuilder_.getMessageOrBuilder();
       } else {
         return device_ == null ?
-            io.bloombox.schema.device.Device.getDefaultInstance() : device_;
+            io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
       }
     }
     /**
@@ -958,14 +957,14 @@ private static final long serialVersionUID = 0L;
      * Information passed from the server to this device, including credentials, stateful flags, and so on.
      * </pre>
      *
-     * <code>.device.Device device = 2;</code>
+     * <code>.opencannabis.device.Device device = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.device.Device, io.bloombox.schema.device.Device.Builder, io.bloombox.schema.device.DeviceOrBuilder> 
+        io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder> 
         getDeviceFieldBuilder() {
       if (deviceBuilder_ == null) {
         deviceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.device.Device, io.bloombox.schema.device.Device.Builder, io.bloombox.schema.device.DeviceOrBuilder>(
+            io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder>(
                 getDevice(),
                 getParentForChildren(),
                 isClean());
@@ -974,15 +973,15 @@ private static final long serialVersionUID = 0L;
       return deviceBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant issued_ = null;
+    private io.opencannabis.schema.temporal.Instant issued_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> issuedBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> issuedBuilder_;
     /**
      * <pre>
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
     public boolean hasIssued() {
       return issuedBuilder_ != null || issued_ != null;
@@ -992,11 +991,11 @@ private static final long serialVersionUID = 0L;
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant getIssued() {
+    public io.opencannabis.schema.temporal.Instant getIssued() {
       if (issuedBuilder_ == null) {
-        return issued_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : issued_;
+        return issued_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : issued_;
       } else {
         return issuedBuilder_.getMessage();
       }
@@ -1006,9 +1005,9 @@ private static final long serialVersionUID = 0L;
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
-    public Builder setIssued(io.bloombox.schema.temporal.Instant value) {
+    public Builder setIssued(io.opencannabis.schema.temporal.Instant value) {
       if (issuedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1026,10 +1025,10 @@ private static final long serialVersionUID = 0L;
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
     public Builder setIssued(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (issuedBuilder_ == null) {
         issued_ = builderForValue.build();
         onChanged();
@@ -1044,13 +1043,13 @@ private static final long serialVersionUID = 0L;
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
-    public Builder mergeIssued(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeIssued(io.opencannabis.schema.temporal.Instant value) {
       if (issuedBuilder_ == null) {
         if (issued_ != null) {
           issued_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(issued_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(issued_).mergeFrom(value).buildPartial();
         } else {
           issued_ = value;
         }
@@ -1066,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
     public Builder clearIssued() {
       if (issuedBuilder_ == null) {
@@ -1084,9 +1083,9 @@ private static final long serialVersionUID = 0L;
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getIssuedBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getIssuedBuilder() {
       
       onChanged();
       return getIssuedFieldBuilder().getBuilder();
@@ -1096,14 +1095,14 @@ private static final long serialVersionUID = 0L;
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getIssuedOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getIssuedOrBuilder() {
       if (issuedBuilder_ != null) {
         return issuedBuilder_.getMessageOrBuilder();
       } else {
         return issued_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : issued_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : issued_;
       }
     }
     /**
@@ -1111,14 +1110,14 @@ private static final long serialVersionUID = 0L;
      * Issuance timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant issued = 3;</code>
+     * <code>.opencannabis.temporal.Instant issued = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getIssuedFieldBuilder() {
       if (issuedBuilder_ == null) {
         issuedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getIssued(),
                 getParentForChildren(),
                 isClean());
@@ -1127,15 +1126,15 @@ private static final long serialVersionUID = 0L;
       return issuedBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant expires_ = null;
+    private io.opencannabis.schema.temporal.Instant expires_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> expiresBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> expiresBuilder_;
     /**
      * <pre>
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
     public boolean hasExpires() {
       return expiresBuilder_ != null || expires_ != null;
@@ -1145,11 +1144,11 @@ private static final long serialVersionUID = 0L;
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
-    public io.bloombox.schema.temporal.Instant getExpires() {
+    public io.opencannabis.schema.temporal.Instant getExpires() {
       if (expiresBuilder_ == null) {
-        return expires_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : expires_;
+        return expires_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : expires_;
       } else {
         return expiresBuilder_.getMessage();
       }
@@ -1159,9 +1158,9 @@ private static final long serialVersionUID = 0L;
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
-    public Builder setExpires(io.bloombox.schema.temporal.Instant value) {
+    public Builder setExpires(io.opencannabis.schema.temporal.Instant value) {
       if (expiresBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1179,10 +1178,10 @@ private static final long serialVersionUID = 0L;
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
     public Builder setExpires(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (expiresBuilder_ == null) {
         expires_ = builderForValue.build();
         onChanged();
@@ -1197,13 +1196,13 @@ private static final long serialVersionUID = 0L;
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
-    public Builder mergeExpires(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeExpires(io.opencannabis.schema.temporal.Instant value) {
       if (expiresBuilder_ == null) {
         if (expires_ != null) {
           expires_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(expires_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(expires_).mergeFrom(value).buildPartial();
         } else {
           expires_ = value;
         }
@@ -1219,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
     public Builder clearExpires() {
       if (expiresBuilder_ == null) {
@@ -1237,9 +1236,9 @@ private static final long serialVersionUID = 0L;
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getExpiresBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getExpiresBuilder() {
       
       onChanged();
       return getExpiresFieldBuilder().getBuilder();
@@ -1249,14 +1248,14 @@ private static final long serialVersionUID = 0L;
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getExpiresOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getExpiresOrBuilder() {
       if (expiresBuilder_ != null) {
         return expiresBuilder_.getMessageOrBuilder();
       } else {
         return expires_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : expires_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : expires_;
       }
     }
     /**
@@ -1264,14 +1263,14 @@ private static final long serialVersionUID = 0L;
      * Expiry timestamp for this device token.
      * </pre>
      *
-     * <code>.temporal.Instant expires = 4;</code>
+     * <code>.opencannabis.temporal.Instant expires = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getExpiresFieldBuilder() {
       if (expiresBuilder_ == null) {
         expiresBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getExpires(),
                 getParentForChildren(),
                 isClean());
@@ -1290,10 +1289,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:security.DeviceToken)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.security.DeviceToken)
   }
 
-  // @@protoc_insertion_point(class_scope:security.DeviceToken)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.security.DeviceToken)
   private static final io.bloombox.schema.security.DeviceToken DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.security.DeviceToken();

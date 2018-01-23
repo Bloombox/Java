@@ -45,7 +45,7 @@ public final class ShopGrpc {
 
   private ShopGrpc() {}
 
-  public static final String SERVICE_NAME = "services.shop.v1.Shop";
+  public static final String SERVICE_NAME = "bloombox.schema.services.shop.v1.Shop";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -54,7 +54,7 @@ public final class ShopGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.Ping.Request, io.bloombox.schema.services.shop.v1.Ping.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.shop.v1.Shop", "Ping"))
+              "bloombox.schema.services.shop.v1.Shop", "Ping"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.shop.v1.Ping.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -66,7 +66,7 @@ public final class ShopGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.ShopInfo.Request, io.bloombox.schema.services.shop.v1.ShopInfo.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.shop.v1.Shop", "ShopInfo"))
+              "bloombox.schema.services.shop.v1.Shop", "ShopInfo"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.shop.v1.ShopInfo.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -78,7 +78,7 @@ public final class ShopGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.EnrollMember.Request, io.bloombox.schema.services.shop.v1.EnrollMember.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.shop.v1.Shop", "EnrollMember"))
+              "bloombox.schema.services.shop.v1.Shop", "EnrollMember"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.shop.v1.EnrollMember.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -90,7 +90,7 @@ public final class ShopGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.CheckZipcode.Request, io.bloombox.schema.services.shop.v1.CheckZipcode.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.shop.v1.Shop", "CheckZipcode"))
+              "bloombox.schema.services.shop.v1.Shop", "CheckZipcode"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.shop.v1.CheckZipcode.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -102,7 +102,7 @@ public final class ShopGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.VerifyMember.Request, io.bloombox.schema.services.shop.v1.VerifyMember.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.shop.v1.Shop", "VerifyMember"))
+              "bloombox.schema.services.shop.v1.Shop", "VerifyMember"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.shop.v1.VerifyMember.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -114,7 +114,7 @@ public final class ShopGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.SubmitOrder.Request, io.bloombox.schema.services.shop.v1.SubmitOrder.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.shop.v1.Shop", "SubmitOrder"))
+              "bloombox.schema.services.shop.v1.Shop", "SubmitOrder"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.shop.v1.SubmitOrder.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -126,7 +126,7 @@ public final class ShopGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.GetOrder.Request, io.bloombox.schema.services.shop.v1.GetOrder.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.shop.v1.Shop", "GetOrder"))
+              "bloombox.schema.services.shop.v1.Shop", "GetOrder"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.shop.v1.GetOrder.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

@@ -25,11 +25,11 @@ package io.bloombox.schema.services.checkin.v1beta1;
  * Specifies information to prompt a user to enroll via SMS.
  * </pre>
  *
- * Protobuf type {@code services.checkin.v1beta1.CheckinEnrollment}
+ * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CheckinEnrollment}
  */
 public  final class CheckinEnrollment extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.checkin.v1beta1.CheckinEnrollment)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.checkin.v1beta1.CheckinEnrollment)
     CheckinEnrollmentOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CheckinEnrollment.newBuilder() to construct.
@@ -91,12 +91,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinEnrollment_descriptor;
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinEnrollment_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinEnrollment_fieldAccessorTable
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinEnrollment_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.class, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder.class);
   }
@@ -298,20 +298,20 @@ private static final long serialVersionUID = 0L;
    * Specifies information to prompt a user to enroll via SMS.
    * </pre>
    *
-   * Protobuf type {@code services.checkin.v1beta1.CheckinEnrollment}
+   * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CheckinEnrollment}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.checkin.v1beta1.CheckinEnrollment)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.checkin.v1beta1.CheckinEnrollment)
       io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinEnrollment_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinEnrollment_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinEnrollment_fieldAccessorTable
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinEnrollment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.class, io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment.Builder.class);
     }
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinEnrollment_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinEnrollment_descriptor;
     }
 
     public io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment getDefaultInstanceForType() {
@@ -529,10 +529,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.checkin.v1beta1.CheckinEnrollment)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.checkin.v1beta1.CheckinEnrollment)
   }
 
-  // @@protoc_insertion_point(class_scope:services.checkin.v1beta1.CheckinEnrollment)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.checkin.v1beta1.CheckinEnrollment)
   private static final io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment();

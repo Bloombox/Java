@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.partner;
  * Specifies a key that references a location owned by a partner organization that has an active account with Bloombox.
  * </pre>
  *
- * Protobuf type {@code partner.PartnerLocationKey}
+ * Protobuf type {@code bloombox.schema.partner.PartnerLocationKey}
  */
 public  final class PartnerLocationKey extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:partner.PartnerLocationKey)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerLocationKey)
     PartnerLocationKeyOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use PartnerLocationKey.newBuilder() to construct.
@@ -104,12 +103,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocationKey_descriptor;
+    return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocationKey_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocationKey_fieldAccessorTable
+    return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocationKey_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.partner.PartnerLocationKey.class, io.bloombox.schema.partner.PartnerLocationKey.Builder.class);
   }
@@ -121,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the partner that owns this location.
    * </pre>
    *
-   * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+   * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
    */
   public boolean hasPartner() {
     return partner_ != null;
@@ -131,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the partner that owns this location.
    * </pre>
    *
-   * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+   * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
    */
   public io.bloombox.schema.partner.PartnerKey getPartner() {
     return partner_ == null ? io.bloombox.schema.partner.PartnerKey.getDefaultInstance() : partner_;
@@ -141,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the partner that owns this location.
    * </pre>
    *
-   * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+   * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
    */
   public io.bloombox.schema.partner.PartnerKeyOrBuilder getPartnerOrBuilder() {
     return getPartner();
@@ -360,20 +359,20 @@ private static final long serialVersionUID = 0L;
    * Specifies a key that references a location owned by a partner organization that has an active account with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code partner.PartnerLocationKey}
+   * Protobuf type {@code bloombox.schema.partner.PartnerLocationKey}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:partner.PartnerLocationKey)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerLocationKey)
       io.bloombox.schema.partner.PartnerLocationKeyOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocationKey_descriptor;
+      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocationKey_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocationKey_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocationKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerLocationKey.class, io.bloombox.schema.partner.PartnerLocationKey.Builder.class);
     }
@@ -408,7 +407,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocationKey_descriptor;
+      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocationKey_descriptor;
     }
 
     public io.bloombox.schema.partner.PartnerLocationKey getDefaultInstanceForType() {
@@ -514,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public boolean hasPartner() {
       return partnerBuilder_ != null || partner_ != null;
@@ -524,7 +523,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public io.bloombox.schema.partner.PartnerKey getPartner() {
       if (partnerBuilder_ == null) {
@@ -538,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public Builder setPartner(io.bloombox.schema.partner.PartnerKey value) {
       if (partnerBuilder_ == null) {
@@ -558,7 +557,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public Builder setPartner(
         io.bloombox.schema.partner.PartnerKey.Builder builderForValue) {
@@ -576,7 +575,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public Builder mergePartner(io.bloombox.schema.partner.PartnerKey value) {
       if (partnerBuilder_ == null) {
@@ -598,7 +597,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public Builder clearPartner() {
       if (partnerBuilder_ == null) {
@@ -616,7 +615,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public io.bloombox.schema.partner.PartnerKey.Builder getPartnerBuilder() {
       
@@ -628,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     public io.bloombox.schema.partner.PartnerKeyOrBuilder getPartnerOrBuilder() {
       if (partnerBuilder_ != null) {
@@ -643,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the partner that owns this location.
      * </pre>
      *
-     * <code>.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
+     * <code>.bloombox.schema.partner.PartnerKey partner = 1 [(.gen_bq_schema.description) = "Specifies the partner that owns this location."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.PartnerKey, io.bloombox.schema.partner.PartnerKey.Builder, io.bloombox.schema.partner.PartnerKeyOrBuilder> 
@@ -758,10 +757,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:partner.PartnerLocationKey)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerLocationKey)
   }
 
-  // @@protoc_insertion_point(class_scope:partner.PartnerLocationKey)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerLocationKey)
   private static final io.bloombox.schema.partner.PartnerLocationKey DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerLocationKey();

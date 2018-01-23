@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,15 +31,15 @@ public final class PartnerPermissions {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_security_access_PartnerAccess_descriptor;
+    internal_static_bloombox_schema_security_access_PartnerAccess_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_security_access_PartnerAccess_fieldAccessorTable;
+      internal_static_bloombox_schema_security_access_PartnerAccess_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_security_access_LocationAccess_descriptor;
+    internal_static_bloombox_schema_security_access_LocationAccess_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_security_access_LocationAccess_fieldAccessorTable;
+      internal_static_bloombox_schema_security_access_LocationAccess_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -51,20 +50,21 @@ public final class PartnerPermissions {
   static {
     java.lang.String[] descriptorData = {
       "\n(security/access/PartnerPermissions.pro" +
-      "to\022\017security.access\032\026temporal/Instant.pr" +
-      "oto\"\354\001\n\rPartnerAccess\022\016\n\006active\030\001 \001(\010\022\022\n" +
-      "\ngranted_by\030\002 \001(\t\022%\n\ngranted_at\030\003 \001(\0132\021." +
-      "temporal.Instant\0226\n\nprivileges\030\004 \003(\0162\".s" +
-      "ecurity.access.PartnerPermission\0222\n\tloca" +
-      "tions\030\005 \003(\0132\037.security.access.LocationAc" +
-      "cess\022\025\n\rall_locations\030\006 \001(\010\022\r\n\005admin\030d \001" +
-      "(\010\"j\n\016LocationAccess\022\016\n\006active\030\001 \001(\010\022\022\n\n" +
-      "granted_by\030\002 \001(\t\022%\n\ngranted_at\030\003 \001(\0132\021.t" +
-      "emporal.Instant\022\r\n\005admin\030d \001(\010*T\n\021Partne" +
-      "rPermission\022\t\n\005OWNER\020\000\022\016\n\nSUPERVISOR\020\001\022\013" +
-      "\n\007BILLING\020\002\022\t\n\005AUDIT\020\003\022\014\n\010READONLY\020\004B(\n\"" +
-      "io.bloombox.schema.security.accessH\001P\001b\006" +
-      "proto3"
+      "to\022\037bloombox.schema.security.access\032\026tem" +
+      "poral/Instant.proto\"\231\002\n\rPartnerAccess\022\016\n" +
+      "\006active\030\001 \001(\010\022\022\n\ngranted_by\030\002 \001(\t\0222\n\ngra" +
+      "nted_at\030\003 \001(\0132\036.opencannabis.temporal.In" +
+      "stant\022F\n\nprivileges\030\004 \003(\01622.bloombox.sch" +
+      "ema.security.access.PartnerPermission\022B\n" +
+      "\tlocations\030\005 \003(\0132/.bloombox.schema.secur" +
+      "ity.access.LocationAccess\022\025\n\rall_locatio" +
+      "ns\030\006 \001(\010\022\r\n\005admin\030d \001(\010\"w\n\016LocationAcces" +
+      "s\022\016\n\006active\030\001 \001(\010\022\022\n\ngranted_by\030\002 \001(\t\0222\n" +
+      "\ngranted_at\030\003 \001(\0132\036.opencannabis.tempora" +
+      "l.Instant\022\r\n\005admin\030d \001(\010*T\n\021PartnerPermi" +
+      "ssion\022\t\n\005OWNER\020\000\022\016\n\nSUPERVISOR\020\001\022\013\n\007BILL" +
+      "ING\020\002\022\t\n\005AUDIT\020\003\022\014\n\010READONLY\020\004B(\n\"io.blo" +
+      "ombox.schema.security.accessH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -77,21 +77,21 @@ public final class PartnerPermissions {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_security_access_PartnerAccess_descriptor =
+    internal_static_bloombox_schema_security_access_PartnerAccess_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_security_access_PartnerAccess_fieldAccessorTable = new
+    internal_static_bloombox_schema_security_access_PartnerAccess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_security_access_PartnerAccess_descriptor,
+        internal_static_bloombox_schema_security_access_PartnerAccess_descriptor,
         new java.lang.String[] { "Active", "GrantedBy", "GrantedAt", "Privileges", "Locations", "AllLocations", "Admin", });
-    internal_static_security_access_LocationAccess_descriptor =
+    internal_static_bloombox_schema_security_access_LocationAccess_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_security_access_LocationAccess_fieldAccessorTable = new
+    internal_static_bloombox_schema_security_access_LocationAccess_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_security_access_LocationAccess_descriptor,
+        internal_static_bloombox_schema_security_access_LocationAccess_descriptor,
         new java.lang.String[] { "Active", "GrantedBy", "GrantedAt", "Admin", });
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,10 +31,10 @@ public final class PassportOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_identity_ids_Passport_descriptor;
+    internal_static_bloombox_schema_identity_ids_Passport_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_identity_ids_Passport_fieldAccessorTable;
+      internal_static_bloombox_schema_identity_ids_Passport_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,13 +44,13 @@ public final class PassportOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033identity/ids/Passport.proto\022\014identity." +
-      "ids\032\016bq_field.proto\032\023temporal/Date.proto" +
-      "\"\210\001\n\010Passport\022\024\n\007barcode\030\001 \001(\014B\003\200@\001\022f\n\006n" +
-      "ation\030\002 \001(\tBV\212@SNation that issued this " +
-      "passport, as an abbreviated string code," +
-      " like \"US\" or \"UK\".B%\n\037io.bloombox.schem" +
-      "a.identity.idsH\001P\001b\006proto3"
+      "\n\033identity/ids/Passport.proto\022\034bloombox." +
+      "schema.identity.ids\032\016bq_field.proto\"\210\001\n\010" +
+      "Passport\022\024\n\007barcode\030\001 \001(\014B\003\200@\001\022f\n\006nation" +
+      "\030\002 \001(\tBV\212@SNation that issued this passp" +
+      "ort, as an abbreviated string code, like" +
+      " \"US\" or \"UK\".B%\n\037io.bloombox.schema.ide" +
+      "ntity.idsH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -65,13 +64,12 @@ public final class PassportOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.temporal.DateOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_identity_ids_Passport_descriptor =
+    internal_static_bloombox_schema_identity_ids_Passport_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_identity_ids_Passport_fieldAccessorTable = new
+    internal_static_bloombox_schema_identity_ids_Passport_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_identity_ids_Passport_descriptor,
+        internal_static_bloombox_schema_identity_ids_Passport_descriptor,
         new java.lang.String[] { "Barcode", "Nation", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -80,7 +78,6 @@ public final class PassportOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.temporal.DateOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

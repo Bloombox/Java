@@ -23,7 +23,6 @@ public final class BqField {
    * <pre>
    * Flag to specify that a field should be marked as 'REQUIRED' when
    * used to generate schema for BigQuery.
-   * TODO: register with protobuf-global-extension-registry&#64;google.com
    * </pre>
    *
    * <code>extend .google.protobuf.FieldOptions { ... }</code>
@@ -42,7 +41,6 @@ public final class BqField {
    * generator. This is useful, for example, to store epoch timestamps
    * with the underlying 'TIMESTAMP' type, when normally, they would
    * be structured as 'INTEGER' fields.
-   * TODO: register with protobuf-global-extension-registry&#64;google.com
    * </pre>
    *
    * <code>extend .google.protobuf.FieldOptions { ... }</code>
@@ -58,7 +56,6 @@ public final class BqField {
   /**
    * <pre>
    * Optionally omit a field from BigQuery schema.
-   * TODO: register with protobuf-global-extension-registry&#64;google.com
    * </pre>
    *
    * <code>extend .google.protobuf.FieldOptions { ... }</code>
@@ -74,7 +71,6 @@ public final class BqField {
   /**
    * <pre>
    * Set the description for a field in BigQuery schema.
-   * TODO: register with protobuf-global-extension-registry&#64;google.com
    * </pre>
    *
    * <code>extend .google.protobuf.FieldOptions { ... }</code>

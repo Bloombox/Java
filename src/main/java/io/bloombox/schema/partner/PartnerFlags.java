@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.partner;
  * Specifies flags that may be set on a partner organization account.
  * </pre>
  *
- * Protobuf type {@code partner.PartnerFlags}
+ * Protobuf type {@code bloombox.schema.partner.PartnerFlags}
  */
 public  final class PartnerFlags extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:partner.PartnerFlags)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerFlags)
     PartnerFlagsOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use PartnerFlags.newBuilder() to construct.
@@ -114,12 +113,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.partner.PartnerOuterClass.internal_static_partner_PartnerFlags_descriptor;
+    return io.bloombox.schema.partner.PartnerOuterClass.internal_static_bloombox_schema_partner_PartnerFlags_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.partner.PartnerOuterClass.internal_static_partner_PartnerFlags_fieldAccessorTable
+    return io.bloombox.schema.partner.PartnerOuterClass.internal_static_bloombox_schema_partner_PartnerFlags_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.partner.PartnerFlags.class, io.bloombox.schema.partner.PartnerFlags.Builder.class);
   }
@@ -397,20 +396,20 @@ private static final long serialVersionUID = 0L;
    * Specifies flags that may be set on a partner organization account.
    * </pre>
    *
-   * Protobuf type {@code partner.PartnerFlags}
+   * Protobuf type {@code bloombox.schema.partner.PartnerFlags}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:partner.PartnerFlags)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerFlags)
       io.bloombox.schema.partner.PartnerFlagsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerOuterClass.internal_static_partner_PartnerFlags_descriptor;
+      return io.bloombox.schema.partner.PartnerOuterClass.internal_static_bloombox_schema_partner_PartnerFlags_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerOuterClass.internal_static_partner_PartnerFlags_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerOuterClass.internal_static_bloombox_schema_partner_PartnerFlags_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerFlags.class, io.bloombox.schema.partner.PartnerFlags.Builder.class);
     }
@@ -447,7 +446,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.partner.PartnerOuterClass.internal_static_partner_PartnerFlags_descriptor;
+      return io.bloombox.schema.partner.PartnerOuterClass.internal_static_bloombox_schema_partner_PartnerFlags_descriptor;
     }
 
     public io.bloombox.schema.partner.PartnerFlags getDefaultInstanceForType() {
@@ -761,10 +760,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:partner.PartnerFlags)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerFlags)
   }
 
-  // @@protoc_insertion_point(class_scope:partner.PartnerFlags)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerFlags)
   private static final io.bloombox.schema.partner.PartnerFlags DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerFlags();

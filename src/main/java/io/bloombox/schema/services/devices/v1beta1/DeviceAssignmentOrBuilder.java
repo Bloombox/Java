@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.devices.v1beta1;
 
 public interface DeviceAssignmentOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.devices.v1beta1.DeviceAssignment)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.devices.v1beta1.DeviceAssignment)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -65,7 +65,7 @@ public interface DeviceAssignmentOrBuilder extends
    * Role setting for the device.
    * </pre>
    *
-   * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
    */
   int getRoleValue();
   /**
@@ -73,7 +73,7 @@ public interface DeviceAssignmentOrBuilder extends
    * Role setting for the device.
    * </pre>
    *
-   * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceRole getRole();
 }

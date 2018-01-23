@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.identity;
 
 public interface UserOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.User)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.User)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -47,7 +46,7 @@ public interface UserOrBuilder extends
    * Boolean flags for this user.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
    */
   boolean hasFlags();
   /**
@@ -55,7 +54,7 @@ public interface UserOrBuilder extends
    * Boolean flags for this user.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
    */
   io.bloombox.schema.identity.UserFlags getFlags();
   /**
@@ -63,7 +62,7 @@ public interface UserOrBuilder extends
    * Boolean flags for this user.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
    */
   io.bloombox.schema.identity.UserFlagsOrBuilder getFlagsOrBuilder();
 
@@ -72,7 +71,7 @@ public interface UserOrBuilder extends
    * Person's information that backs this user.
    * </pre>
    *
-   * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+   * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
    */
   boolean hasPerson();
   /**
@@ -80,24 +79,24 @@ public interface UserOrBuilder extends
    * Person's information that backs this user.
    * </pre>
    *
-   * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+   * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
    */
-  io.bloombox.schema.person.Person getPerson();
+  io.opencannabis.schema.person.Person getPerson();
   /**
    * <pre>
    * Person's information that backs this user.
    * </pre>
    *
-   * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+   * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
    */
-  io.bloombox.schema.person.PersonOrBuilder getPersonOrBuilder();
+  io.opencannabis.schema.person.PersonOrBuilder getPersonOrBuilder();
 
   /**
    * <pre>
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   java.util.List<io.bloombox.schema.identity.ID> 
       getIdentificationList();
@@ -106,7 +105,7 @@ public interface UserOrBuilder extends
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   io.bloombox.schema.identity.ID getIdentification(int index);
   /**
@@ -114,7 +113,7 @@ public interface UserOrBuilder extends
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   int getIdentificationCount();
   /**
@@ -122,7 +121,7 @@ public interface UserOrBuilder extends
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   java.util.List<? extends io.bloombox.schema.identity.IDOrBuilder> 
       getIdentificationOrBuilderList();
@@ -131,7 +130,7 @@ public interface UserOrBuilder extends
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   io.bloombox.schema.identity.IDOrBuilder getIdentificationOrBuilder(
       int index);
@@ -141,7 +140,7 @@ public interface UserOrBuilder extends
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   java.util.List<io.bloombox.schema.identity.ids.UserDoctorRec> 
       getDoctorRecList();
@@ -150,7 +149,7 @@ public interface UserOrBuilder extends
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   io.bloombox.schema.identity.ids.UserDoctorRec getDoctorRec(int index);
   /**
@@ -158,7 +157,7 @@ public interface UserOrBuilder extends
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   int getDoctorRecCount();
   /**
@@ -166,7 +165,7 @@ public interface UserOrBuilder extends
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   java.util.List<? extends io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder> 
       getDoctorRecOrBuilderList();
@@ -175,7 +174,7 @@ public interface UserOrBuilder extends
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder getDoctorRecOrBuilder(
       int index);
@@ -185,7 +184,7 @@ public interface UserOrBuilder extends
    * Last time this user was seen, via auth/login/enrollment etc.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
    */
   boolean hasSeen();
   /**
@@ -193,24 +192,24 @@ public interface UserOrBuilder extends
    * Last time this user was seen, via auth/login/enrollment etc.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
    */
-  io.bloombox.schema.temporal.Instant getSeen();
+  io.opencannabis.schema.temporal.Instant getSeen();
   /**
    * <pre>
    * Last time this user was seen, via auth/login/enrollment etc.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder();
 
   /**
    * <pre>
    * Timestamp for when this user was created.
    * </pre>
    *
-   * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+   * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
    */
   boolean hasSignup();
   /**
@@ -218,24 +217,24 @@ public interface UserOrBuilder extends
    * Timestamp for when this user was created.
    * </pre>
    *
-   * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+   * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
    */
-  io.bloombox.schema.temporal.Instant getSignup();
+  io.opencannabis.schema.temporal.Instant getSignup();
   /**
    * <pre>
    * Timestamp for when this user was created.
    * </pre>
    *
-   * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+   * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getSignupOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getSignupOrBuilder();
 
   /**
    * <pre>
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
   int getIdentitiesCount();
   /**
@@ -243,7 +242,7 @@ public interface UserOrBuilder extends
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
   boolean containsIdentities(
       java.lang.String key);
@@ -258,7 +257,7 @@ public interface UserOrBuilder extends
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
   java.util.Map<java.lang.String, io.bloombox.schema.identity.UserIdentity>
   getIdentitiesMap();
@@ -267,7 +266,7 @@ public interface UserOrBuilder extends
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
 
   io.bloombox.schema.identity.UserIdentity getIdentitiesOrDefault(
@@ -278,7 +277,7 @@ public interface UserOrBuilder extends
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
 
   io.bloombox.schema.identity.UserIdentity getIdentitiesOrThrow(
@@ -289,7 +288,7 @@ public interface UserOrBuilder extends
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
   int getMediaCount();
   /**
@@ -297,7 +296,7 @@ public interface UserOrBuilder extends
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
   boolean containsMedia(
       java.lang.String key);
@@ -305,37 +304,37 @@ public interface UserOrBuilder extends
    * Use {@link #getMediaMap()} instead.
    */
   @java.lang.Deprecated
-  java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem>
+  java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem>
   getMedia();
   /**
    * <pre>
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
-  java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem>
+  java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem>
   getMediaMap();
   /**
    * <pre>
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
 
-  io.bloombox.schema.media.MediaItem getMediaOrDefault(
+  io.opencannabis.schema.media.MediaItem getMediaOrDefault(
       java.lang.String key,
-      io.bloombox.schema.media.MediaItem defaultValue);
+      io.opencannabis.schema.media.MediaItem defaultValue);
   /**
    * <pre>
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
 
-  io.bloombox.schema.media.MediaItem getMediaOrThrow(
+  io.opencannabis.schema.media.MediaItem getMediaOrThrow(
       java.lang.String key);
 
   /**
@@ -343,7 +342,7 @@ public interface UserOrBuilder extends
    * Consumer profile for this user.
    * </pre>
    *
-   * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+   * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
    */
   boolean hasConsumer();
   /**
@@ -351,7 +350,7 @@ public interface UserOrBuilder extends
    * Consumer profile for this user.
    * </pre>
    *
-   * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+   * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
    */
   io.bloombox.schema.identity.ConsumerProfile getConsumer();
   /**
@@ -359,7 +358,7 @@ public interface UserOrBuilder extends
    * Consumer profile for this user.
    * </pre>
    *
-   * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+   * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
    */
   io.bloombox.schema.identity.ConsumerProfileOrBuilder getConsumerOrBuilder();
 
@@ -368,7 +367,7 @@ public interface UserOrBuilder extends
    * Industry profile for this user.
    * </pre>
    *
-   * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+   * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
    */
   boolean hasIndustry();
   /**
@@ -376,7 +375,7 @@ public interface UserOrBuilder extends
    * Industry profile for this user.
    * </pre>
    *
-   * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+   * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
    */
   io.bloombox.schema.identity.IndustryProfile getIndustry();
   /**
@@ -384,7 +383,7 @@ public interface UserOrBuilder extends
    * Industry profile for this user.
    * </pre>
    *
-   * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+   * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
    */
   io.bloombox.schema.identity.IndustryProfileOrBuilder getIndustryOrBuilder();
 }

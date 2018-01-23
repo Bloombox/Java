@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class ProductAnalytics {
    * Specifies the types of actions that a user may take on a product.
    * </pre>
    *
-   * Protobuf enum {@code analytics.product.ProductAction}
+   * Protobuf enum {@code bloombox.schema.analytics.product.ProductAction}
    */
   public enum ProductAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -281,11 +282,11 @@ public final class ProductAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.product.ProductAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.product.ProductAction)
   }
 
   public interface ImpressionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.product.Impression)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.product.Impression)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -293,7 +294,7 @@ public final class ProductAnalytics {
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
     boolean hasKey();
     /**
@@ -301,17 +302,17 @@ public final class ProductAnalytics {
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.bloombox.schema.base.ProductKey getKey();
+    io.opencannabis.schema.base.ProductKey getKey();
     /**
      * <pre>
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+    io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
 
     /**
      * <pre>
@@ -336,7 +337,7 @@ public final class ProductAnalytics {
      * Timestamp for when this impression occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
     boolean hasOccurred();
     /**
@@ -344,17 +345,17 @@ public final class ProductAnalytics {
      * Timestamp for when this impression occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Timestamp for when this impression occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -362,11 +363,11 @@ public final class ProductAnalytics {
    * for detail information to an end user.
    * </pre>
    *
-   * Protobuf type {@code analytics.product.Impression}
+   * Protobuf type {@code bloombox.schema.analytics.product.Impression}
    */
   public  static final class Impression extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.product.Impression)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.product.Impression)
       ImpressionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Impression.newBuilder() to construct.
@@ -410,11 +411,11 @@ public final class ProductAnalytics {
               break;
             }
             case 10: {
-              io.bloombox.schema.base.ProductKey.Builder subBuilder = null;
+              io.opencannabis.schema.base.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
                 subBuilder = key_.toBuilder();
               }
-              key_ = input.readMessage(io.bloombox.schema.base.ProductKey.parser(), extensionRegistry);
+              key_ = input.readMessage(io.opencannabis.schema.base.ProductKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(key_);
                 key_ = subBuilder.buildPartial();
@@ -433,11 +434,11 @@ public final class ProductAnalytics {
               break;
             }
             case 34: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -459,24 +460,24 @@ public final class ProductAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Impression_descriptor;
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Impression_fieldAccessorTable
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.product.ProductAnalytics.Impression.class, io.bloombox.schema.analytics.product.ProductAnalytics.Impression.Builder.class);
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private io.bloombox.schema.base.ProductKey key_;
+    private io.opencannabis.schema.base.ProductKey key_;
     /**
      * <pre>
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -486,19 +487,19 @@ public final class ProductAnalytics {
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.bloombox.schema.base.ProductKey getKey() {
-      return key_ == null ? io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.base.ProductKey getKey() {
+      return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+    public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
@@ -529,13 +530,13 @@ public final class ProductAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 4;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Timestamp for when this impression occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -545,19 +546,19 @@ public final class ProductAnalytics {
      * Timestamp for when this impression occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Timestamp for when this impression occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -763,20 +764,20 @@ public final class ProductAnalytics {
      * for detail information to an end user.
      * </pre>
      *
-     * Protobuf type {@code analytics.product.Impression}
+     * Protobuf type {@code bloombox.schema.analytics.product.Impression}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.product.Impression)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.product.Impression)
         io.bloombox.schema.analytics.product.ProductAnalytics.ImpressionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Impression_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Impression_fieldAccessorTable
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.product.ProductAnalytics.Impression.class, io.bloombox.schema.analytics.product.ProductAnalytics.Impression.Builder.class);
       }
@@ -819,7 +820,7 @@ public final class ProductAnalytics {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Impression_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Impression_descriptor;
       }
 
       public io.bloombox.schema.analytics.product.ProductAnalytics.Impression getDefaultInstanceForType() {
@@ -928,15 +929,15 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.base.ProductKey key_ = null;
+      private io.opencannabis.schema.base.ProductKey key_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder> keyBuilder_;
+          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -946,11 +947,11 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKey getKey() {
+      public io.opencannabis.schema.base.ProductKey getKey() {
         if (keyBuilder_ == null) {
-          return key_ == null ? io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+          return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
         } else {
           return keyBuilder_.getMessage();
         }
@@ -960,9 +961,9 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder setKey(io.bloombox.schema.base.ProductKey value) {
+      public Builder setKey(io.opencannabis.schema.base.ProductKey value) {
         if (keyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -980,10 +981,10 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder setKey(
-          io.bloombox.schema.base.ProductKey.Builder builderForValue) {
+          io.opencannabis.schema.base.ProductKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
           key_ = builderForValue.build();
           onChanged();
@@ -998,13 +999,13 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder mergeKey(io.bloombox.schema.base.ProductKey value) {
+      public Builder mergeKey(io.opencannabis.schema.base.ProductKey value) {
         if (keyBuilder_ == null) {
           if (key_ != null) {
             key_ =
-              io.bloombox.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
           } else {
             key_ = value;
           }
@@ -1020,7 +1021,7 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -1038,9 +1039,9 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKey.Builder getKeyBuilder() {
+      public io.opencannabis.schema.base.ProductKey.Builder getKeyBuilder() {
         
         onChanged();
         return getKeyFieldBuilder().getBuilder();
@@ -1050,14 +1051,14 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+      public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
           return keyBuilder_.getMessageOrBuilder();
         } else {
           return key_ == null ?
-              io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+              io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
         }
       }
       /**
@@ -1065,14 +1066,14 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder> 
+          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
           keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder>(
+              io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder>(
                   getKey(),
                   getParentForChildren(),
                   isClean());
@@ -1157,15 +1158,15 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -1175,11 +1176,11 @@ public final class ProductAnalytics {
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -1189,9 +1190,9 @@ public final class ProductAnalytics {
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1209,10 +1210,10 @@ public final class ProductAnalytics {
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -1227,13 +1228,13 @@ public final class ProductAnalytics {
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -1249,7 +1250,7 @@ public final class ProductAnalytics {
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -1267,9 +1268,9 @@ public final class ProductAnalytics {
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -1279,14 +1280,14 @@ public final class ProductAnalytics {
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1294,14 +1295,14 @@ public final class ProductAnalytics {
        * Timestamp for when this impression occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -1320,10 +1321,10 @@ public final class ProductAnalytics {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.product.Impression)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.product.Impression)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.product.Impression)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.product.Impression)
     private static final io.bloombox.schema.analytics.product.ProductAnalytics.Impression DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.product.ProductAnalytics.Impression();
@@ -1359,7 +1360,7 @@ public final class ProductAnalytics {
   }
 
   public interface ViewOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.product.View)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.product.View)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1367,7 +1368,7 @@ public final class ProductAnalytics {
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
     boolean hasKey();
     /**
@@ -1375,17 +1376,17 @@ public final class ProductAnalytics {
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.bloombox.schema.base.ProductKey getKey();
+    io.opencannabis.schema.base.ProductKey getKey();
     /**
      * <pre>
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+    io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
 
     /**
      * <pre>
@@ -1401,7 +1402,7 @@ public final class ProductAnalytics {
      * Timestamp for when this view occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     boolean hasOccurred();
     /**
@@ -1409,28 +1410,28 @@ public final class ProductAnalytics {
      * Timestamp for when this view occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Timestamp for when this view occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
    * Specifies that an end-user viewed detail information about a product.
    * </pre>
    *
-   * Protobuf type {@code analytics.product.View}
+   * Protobuf type {@code bloombox.schema.analytics.product.View}
    */
   public  static final class View extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.product.View)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.product.View)
       ViewOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use View.newBuilder() to construct.
@@ -1473,11 +1474,11 @@ public final class ProductAnalytics {
               break;
             }
             case 10: {
-              io.bloombox.schema.base.ProductKey.Builder subBuilder = null;
+              io.opencannabis.schema.base.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
                 subBuilder = key_.toBuilder();
               }
-              key_ = input.readMessage(io.bloombox.schema.base.ProductKey.parser(), extensionRegistry);
+              key_ = input.readMessage(io.opencannabis.schema.base.ProductKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(key_);
                 key_ = subBuilder.buildPartial();
@@ -1491,11 +1492,11 @@ public final class ProductAnalytics {
               break;
             }
             case 26: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -1517,24 +1518,24 @@ public final class ProductAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_View_descriptor;
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_View_fieldAccessorTable
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.product.ProductAnalytics.View.class, io.bloombox.schema.analytics.product.ProductAnalytics.View.Builder.class);
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private io.bloombox.schema.base.ProductKey key_;
+    private io.opencannabis.schema.base.ProductKey key_;
     /**
      * <pre>
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -1544,19 +1545,19 @@ public final class ProductAnalytics {
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.bloombox.schema.base.ProductKey getKey() {
-      return key_ == null ? io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.base.ProductKey getKey() {
+      return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
      * Key for the product that was viewed.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+    public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
@@ -1574,13 +1575,13 @@ public final class ProductAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Timestamp for when this view occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -1590,19 +1591,19 @@ public final class ProductAnalytics {
      * Timestamp for when this view occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Timestamp for when this view occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -1795,20 +1796,20 @@ public final class ProductAnalytics {
      * Specifies that an end-user viewed detail information about a product.
      * </pre>
      *
-     * Protobuf type {@code analytics.product.View}
+     * Protobuf type {@code bloombox.schema.analytics.product.View}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.product.View)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.product.View)
         io.bloombox.schema.analytics.product.ProductAnalytics.ViewOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_View_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_View_fieldAccessorTable
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.product.ProductAnalytics.View.class, io.bloombox.schema.analytics.product.ProductAnalytics.View.Builder.class);
       }
@@ -1849,7 +1850,7 @@ public final class ProductAnalytics {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_View_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_View_descriptor;
       }
 
       public io.bloombox.schema.analytics.product.ProductAnalytics.View getDefaultInstanceForType() {
@@ -1954,15 +1955,15 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.base.ProductKey key_ = null;
+      private io.opencannabis.schema.base.ProductKey key_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder> keyBuilder_;
+          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -1972,11 +1973,11 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKey getKey() {
+      public io.opencannabis.schema.base.ProductKey getKey() {
         if (keyBuilder_ == null) {
-          return key_ == null ? io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+          return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
         } else {
           return keyBuilder_.getMessage();
         }
@@ -1986,9 +1987,9 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder setKey(io.bloombox.schema.base.ProductKey value) {
+      public Builder setKey(io.opencannabis.schema.base.ProductKey value) {
         if (keyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2006,10 +2007,10 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder setKey(
-          io.bloombox.schema.base.ProductKey.Builder builderForValue) {
+          io.opencannabis.schema.base.ProductKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
           key_ = builderForValue.build();
           onChanged();
@@ -2024,13 +2025,13 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder mergeKey(io.bloombox.schema.base.ProductKey value) {
+      public Builder mergeKey(io.opencannabis.schema.base.ProductKey value) {
         if (keyBuilder_ == null) {
           if (key_ != null) {
             key_ =
-              io.bloombox.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
           } else {
             key_ = value;
           }
@@ -2046,7 +2047,7 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -2064,9 +2065,9 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKey.Builder getKeyBuilder() {
+      public io.opencannabis.schema.base.ProductKey.Builder getKeyBuilder() {
         
         onChanged();
         return getKeyFieldBuilder().getBuilder();
@@ -2076,14 +2077,14 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+      public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
           return keyBuilder_.getMessageOrBuilder();
         } else {
           return key_ == null ?
-              io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+              io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
         }
       }
       /**
@@ -2091,14 +2092,14 @@ public final class ProductAnalytics {
        * Key for the product that was viewed.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder> 
+          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
           keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder>(
+              io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder>(
                   getKey(),
                   getParentForChildren(),
                   isClean());
@@ -2145,15 +2146,15 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -2163,11 +2164,11 @@ public final class ProductAnalytics {
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -2177,9 +2178,9 @@ public final class ProductAnalytics {
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2197,10 +2198,10 @@ public final class ProductAnalytics {
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -2215,13 +2216,13 @@ public final class ProductAnalytics {
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -2237,7 +2238,7 @@ public final class ProductAnalytics {
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -2255,9 +2256,9 @@ public final class ProductAnalytics {
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -2267,14 +2268,14 @@ public final class ProductAnalytics {
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -2282,14 +2283,14 @@ public final class ProductAnalytics {
        * Timestamp for when this view occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -2308,10 +2309,10 @@ public final class ProductAnalytics {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.product.View)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.product.View)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.product.View)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.product.View)
     private static final io.bloombox.schema.analytics.product.ProductAnalytics.View DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.product.ProductAnalytics.View();
@@ -2347,7 +2348,7 @@ public final class ProductAnalytics {
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.product.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.product.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2355,7 +2356,7 @@ public final class ProductAnalytics {
      * Key for the product that action was taken on.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
     boolean hasKey();
     /**
@@ -2363,24 +2364,24 @@ public final class ProductAnalytics {
      * Key for the product that action was taken on.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.bloombox.schema.base.ProductKey getKey();
+    io.opencannabis.schema.base.ProductKey getKey();
     /**
      * <pre>
      * Key for the product that action was taken on.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+    io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
 
     /**
      * <pre>
      * The action that was taken on the product.
      * </pre>
      *
-     * <code>.analytics.product.ProductAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -2388,7 +2389,7 @@ public final class ProductAnalytics {
      * The action that was taken on the product.
      * </pre>
      *
-     * <code>.analytics.product.ProductAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction getVerb();
 
@@ -2397,7 +2398,7 @@ public final class ProductAnalytics {
      * Timestamp for when this action occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     boolean hasOccurred();
     /**
@@ -2405,28 +2406,28 @@ public final class ProductAnalytics {
      * Timestamp for when this action occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Timestamp for when this action occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
    * An action that was taken affirmatively by a user on a particular product.
    * </pre>
    *
-   * Protobuf type {@code analytics.product.Action}
+   * Protobuf type {@code bloombox.schema.analytics.product.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.product.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.product.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -2469,11 +2470,11 @@ public final class ProductAnalytics {
               break;
             }
             case 10: {
-              io.bloombox.schema.base.ProductKey.Builder subBuilder = null;
+              io.opencannabis.schema.base.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
                 subBuilder = key_.toBuilder();
               }
-              key_ = input.readMessage(io.bloombox.schema.base.ProductKey.parser(), extensionRegistry);
+              key_ = input.readMessage(io.opencannabis.schema.base.ProductKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(key_);
                 key_ = subBuilder.buildPartial();
@@ -2488,11 +2489,11 @@ public final class ProductAnalytics {
               break;
             }
             case 26: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -2514,24 +2515,24 @@ public final class ProductAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Action_descriptor;
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.product.ProductAnalytics.Action.class, io.bloombox.schema.analytics.product.ProductAnalytics.Action.Builder.class);
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private io.bloombox.schema.base.ProductKey key_;
+    private io.opencannabis.schema.base.ProductKey key_;
     /**
      * <pre>
      * Key for the product that action was taken on.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
     public boolean hasKey() {
       return key_ != null;
@@ -2541,19 +2542,19 @@ public final class ProductAnalytics {
      * Key for the product that action was taken on.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.bloombox.schema.base.ProductKey getKey() {
-      return key_ == null ? io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.base.ProductKey getKey() {
+      return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
      * Key for the product that action was taken on.
      * </pre>
      *
-     * <code>.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+    public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
@@ -2564,7 +2565,7 @@ public final class ProductAnalytics {
      * The action that was taken on the product.
      * </pre>
      *
-     * <code>.analytics.product.ProductAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -2574,7 +2575,7 @@ public final class ProductAnalytics {
      * The action that was taken on the product.
      * </pre>
      *
-     * <code>.analytics.product.ProductAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction getVerb() {
       io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction result = io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction.valueOf(verb_);
@@ -2582,13 +2583,13 @@ public final class ProductAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Timestamp for when this action occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -2598,19 +2599,19 @@ public final class ProductAnalytics {
      * Timestamp for when this action occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Timestamp for when this action occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -2801,20 +2802,20 @@ public final class ProductAnalytics {
      * An action that was taken affirmatively by a user on a particular product.
      * </pre>
      *
-     * Protobuf type {@code analytics.product.Action}
+     * Protobuf type {@code bloombox.schema.analytics.product.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.product.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.product.Action)
         io.bloombox.schema.analytics.product.ProductAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Action_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.product.ProductAnalytics.Action.class, io.bloombox.schema.analytics.product.ProductAnalytics.Action.Builder.class);
       }
@@ -2855,7 +2856,7 @@ public final class ProductAnalytics {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_analytics_product_Action_descriptor;
+        return io.bloombox.schema.analytics.product.ProductAnalytics.internal_static_bloombox_schema_analytics_product_Action_descriptor;
       }
 
       public io.bloombox.schema.analytics.product.ProductAnalytics.Action getDefaultInstanceForType() {
@@ -2960,15 +2961,15 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.base.ProductKey key_ = null;
+      private io.opencannabis.schema.base.ProductKey key_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder> keyBuilder_;
+          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public boolean hasKey() {
         return keyBuilder_ != null || key_ != null;
@@ -2978,11 +2979,11 @@ public final class ProductAnalytics {
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKey getKey() {
+      public io.opencannabis.schema.base.ProductKey getKey() {
         if (keyBuilder_ == null) {
-          return key_ == null ? io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+          return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
         } else {
           return keyBuilder_.getMessage();
         }
@@ -2992,9 +2993,9 @@ public final class ProductAnalytics {
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder setKey(io.bloombox.schema.base.ProductKey value) {
+      public Builder setKey(io.opencannabis.schema.base.ProductKey value) {
         if (keyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3012,10 +3013,10 @@ public final class ProductAnalytics {
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder setKey(
-          io.bloombox.schema.base.ProductKey.Builder builderForValue) {
+          io.opencannabis.schema.base.ProductKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
           key_ = builderForValue.build();
           onChanged();
@@ -3030,13 +3031,13 @@ public final class ProductAnalytics {
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder mergeKey(io.bloombox.schema.base.ProductKey value) {
+      public Builder mergeKey(io.opencannabis.schema.base.ProductKey value) {
         if (keyBuilder_ == null) {
           if (key_ != null) {
             key_ =
-              io.bloombox.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
           } else {
             key_ = value;
           }
@@ -3052,7 +3053,7 @@ public final class ProductAnalytics {
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
@@ -3070,9 +3071,9 @@ public final class ProductAnalytics {
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKey.Builder getKeyBuilder() {
+      public io.opencannabis.schema.base.ProductKey.Builder getKeyBuilder() {
         
         onChanged();
         return getKeyFieldBuilder().getBuilder();
@@ -3082,14 +3083,14 @@ public final class ProductAnalytics {
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.bloombox.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+      public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
           return keyBuilder_.getMessageOrBuilder();
         } else {
           return key_ == null ?
-              io.bloombox.schema.base.ProductKey.getDefaultInstance() : key_;
+              io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
         }
       }
       /**
@@ -3097,14 +3098,14 @@ public final class ProductAnalytics {
        * Key for the product that action was taken on.
        * </pre>
        *
-       * <code>.base.ProductKey key = 1;</code>
+       * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder> 
+          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
           keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.base.ProductKey, io.bloombox.schema.base.ProductKey.Builder, io.bloombox.schema.base.ProductKeyOrBuilder>(
+              io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder>(
                   getKey(),
                   getParentForChildren(),
                   isClean());
@@ -3119,7 +3120,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -3129,7 +3130,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -3141,7 +3142,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction getVerb() {
         io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction result = io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction.valueOf(verb_);
@@ -3152,7 +3153,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.product.ProductAnalytics.ProductAction value) {
         if (value == null) {
@@ -3168,7 +3169,7 @@ public final class ProductAnalytics {
        * The action that was taken on the product.
        * </pre>
        *
-       * <code>.analytics.product.ProductAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.product.ProductAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -3177,15 +3178,15 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -3195,11 +3196,11 @@ public final class ProductAnalytics {
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -3209,9 +3210,9 @@ public final class ProductAnalytics {
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3229,10 +3230,10 @@ public final class ProductAnalytics {
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -3247,13 +3248,13 @@ public final class ProductAnalytics {
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -3269,7 +3270,7 @@ public final class ProductAnalytics {
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -3287,9 +3288,9 @@ public final class ProductAnalytics {
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -3299,14 +3300,14 @@ public final class ProductAnalytics {
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -3314,14 +3315,14 @@ public final class ProductAnalytics {
        * Timestamp for when this action occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -3340,10 +3341,10 @@ public final class ProductAnalytics {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.product.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.product.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.product.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.product.Action)
     private static final io.bloombox.schema.analytics.product.ProductAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.product.ProductAnalytics.Action();
@@ -3379,20 +3380,20 @@ public final class ProductAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_product_Impression_descriptor;
+    internal_static_bloombox_schema_analytics_product_Impression_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_product_Impression_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_product_Impression_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_product_View_descriptor;
+    internal_static_bloombox_schema_analytics_product_View_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_product_View_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_product_View_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_product_Action_descriptor;
+    internal_static_bloombox_schema_analytics_product_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_product_Action_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_product_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3403,22 +3404,25 @@ public final class ProductAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n)analytics/commerce/ProductAnalytics.pr" +
-      "oto\022\021analytics.product\032\025base/ProductKey." +
-      "proto\032\026temporal/Instant.proto\"r\n\nImpress" +
-      "ion\022\035\n\003key\030\001 \001(\0132\020.base.ProductKey\022\020\n\010fi" +
-      "ltered\030\002 \001(\010\022\016\n\006sorted\030\003 \001(\010\022#\n\010occurred" +
-      "\030\004 \001(\0132\021.temporal.Instant\"_\n\004View\022\035\n\003key" +
-      "\030\001 \001(\0132\020.base.ProductKey\022\023\n\013interactive\030" +
-      "\002 \001(\010\022#\n\010occurred\030\003 \001(\0132\021.temporal.Insta" +
-      "nt\"|\n\006Action\022\035\n\003key\030\001 \001(\0132\020.base.Product" +
-      "Key\022.\n\004verb\030\002 \001(\0162 .analytics.product.Pr" +
-      "oductAction\022#\n\010occurred\030\003 \001(\0132\021.temporal" +
-      ".Instant*\212\001\n\rProductAction\022\010\n\004VIEW\020\000\022\t\n\005" +
-      "SHARE\020\001\022\014\n\010FAVORITE\020\002\022\013\n\007COMPARE\020\003\022\010\n\004CA" +
-      "RT\020\004\022\014\n\010PURCHASE\020\005\022\r\n\tSUBSCRIBE\020\006\022\010\n\004ZOO" +
-      "M\020\007\022\013\n\007REPORTS\020\010\022\013\n\007SIMILAR\020\tB?\n$io.bloo" +
-      "mbox.schema.analytics.productB\020ProductAn" +
-      "alyticsH\001P\000\370\001\001b\006proto3"
+      "oto\022!bloombox.schema.analytics.product\032\025" +
+      "base/ProductKey.proto\032\026temporal/Instant." +
+      "proto\"\214\001\n\nImpression\022*\n\003key\030\001 \001(\0132\035.open" +
+      "cannabis.base.ProductKey\022\020\n\010filtered\030\002 \001" +
+      "(\010\022\016\n\006sorted\030\003 \001(\010\0220\n\010occurred\030\004 \001(\0132\036.o" +
+      "pencannabis.temporal.Instant\"y\n\004View\022*\n\003" +
+      "key\030\001 \001(\0132\035.opencannabis.base.ProductKey" +
+      "\022\023\n\013interactive\030\002 \001(\010\0220\n\010occurred\030\003 \001(\0132" +
+      "\036.opencannabis.temporal.Instant\"\246\001\n\006Acti" +
+      "on\022*\n\003key\030\001 \001(\0132\035.opencannabis.base.Prod" +
+      "uctKey\022>\n\004verb\030\002 \001(\01620.bloombox.schema.a" +
+      "nalytics.product.ProductAction\0220\n\010occurr" +
+      "ed\030\003 \001(\0132\036.opencannabis.temporal.Instant" +
+      "*\212\001\n\rProductAction\022\010\n\004VIEW\020\000\022\t\n\005SHARE\020\001\022" +
+      "\014\n\010FAVORITE\020\002\022\013\n\007COMPARE\020\003\022\010\n\004CART\020\004\022\014\n\010" +
+      "PURCHASE\020\005\022\r\n\tSUBSCRIBE\020\006\022\010\n\004ZOOM\020\007\022\013\n\007R" +
+      "EPORTS\020\010\022\013\n\007SIMILAR\020\tB?\n$io.bloombox.sch" +
+      "ema.analytics.productB\020ProductAnalyticsH" +
+      "\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3431,29 +3435,29 @@ public final class ProductAnalytics {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.base.BaseProductKey.getDescriptor(),
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_analytics_product_Impression_descriptor =
+    internal_static_bloombox_schema_analytics_product_Impression_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_product_Impression_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_product_Impression_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_product_Impression_descriptor,
+        internal_static_bloombox_schema_analytics_product_Impression_descriptor,
         new java.lang.String[] { "Key", "Filtered", "Sorted", "Occurred", });
-    internal_static_analytics_product_View_descriptor =
+    internal_static_bloombox_schema_analytics_product_View_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_analytics_product_View_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_product_View_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_product_View_descriptor,
+        internal_static_bloombox_schema_analytics_product_View_descriptor,
         new java.lang.String[] { "Key", "Interactive", "Occurred", });
-    internal_static_analytics_product_Action_descriptor =
+    internal_static_bloombox_schema_analytics_product_Action_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_analytics_product_Action_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_product_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_product_Action_descriptor,
+        internal_static_bloombox_schema_analytics_product_Action_descriptor,
         new java.lang.String[] { "Key", "Verb", "Occurred", });
-    io.bloombox.schema.base.BaseProductKey.getDescriptor();
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.base.BaseProductKey.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

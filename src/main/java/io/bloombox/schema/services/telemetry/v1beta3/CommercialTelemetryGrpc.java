@@ -45,7 +45,7 @@ public final class CommercialTelemetryGrpc {
 
   private CommercialTelemetryGrpc() {}
 
-  public static final String SERVICE_NAME = "services.telemetry.v1beta3.CommercialTelemetry";
+  public static final String SERVICE_NAME = "bloombox.schema.services.telemetry.v1beta3.CommercialTelemetry";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -54,7 +54,7 @@ public final class CommercialTelemetryGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression, com.google.protobuf.Empty>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.telemetry.v1beta3.CommercialTelemetry", "Impression"))
+              "bloombox.schema.services.telemetry.v1beta3.CommercialTelemetry", "Impression"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -66,7 +66,7 @@ public final class CommercialTelemetryGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View, com.google.protobuf.Empty>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.telemetry.v1beta3.CommercialTelemetry", "View"))
+              "bloombox.schema.services.telemetry.v1beta3.CommercialTelemetry", "View"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -78,7 +78,7 @@ public final class CommercialTelemetryGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action, com.google.protobuf.Empty>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.telemetry.v1beta3.CommercialTelemetry", "Action"))
+              "bloombox.schema.services.telemetry.v1beta3.CommercialTelemetry", "Action"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

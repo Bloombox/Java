@@ -35,7 +35,7 @@ public final class CommercialPurchase {
    * Enumerates statuses that a purchase transaction may take.
    * </pre>
    *
-   * Protobuf enum {@code commerce.pos.PurchaseStatus}
+   * Protobuf enum {@code bloombox.schema.commerce.pos.PurchaseStatus}
    */
   public enum PurchaseStatus
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -179,11 +179,11 @@ public final class CommercialPurchase {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:commerce.pos.PurchaseStatus)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.commerce.pos.PurchaseStatus)
   }
 
   public interface PurchaseEventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:commerce.pos.PurchaseEvent)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.commerce.pos.PurchaseEvent)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -191,7 +191,7 @@ public final class CommercialPurchase {
      * Status the order moved to.
      * </pre>
      *
-     * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+     * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
      */
     int getStatusValue();
     /**
@@ -199,7 +199,7 @@ public final class CommercialPurchase {
      * Status the order moved to.
      * </pre>
      *
-     * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+     * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
      */
     io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus getStatus();
 
@@ -208,7 +208,7 @@ public final class CommercialPurchase {
      * Instant the order was moved to this status.
      * </pre>
      *
-     * <code>.temporal.Instant instant = 2;</code>
+     * <code>.opencannabis.temporal.Instant instant = 2;</code>
      */
     boolean hasInstant();
     /**
@@ -216,17 +216,17 @@ public final class CommercialPurchase {
      * Instant the order was moved to this status.
      * </pre>
      *
-     * <code>.temporal.Instant instant = 2;</code>
+     * <code>.opencannabis.temporal.Instant instant = 2;</code>
      */
-    io.bloombox.schema.temporal.Instant getInstant();
+    io.opencannabis.schema.temporal.Instant getInstant();
     /**
      * <pre>
      * Instant the order was moved to this status.
      * </pre>
      *
-     * <code>.temporal.Instant instant = 2;</code>
+     * <code>.opencannabis.temporal.Instant instant = 2;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getInstantOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getInstantOrBuilder();
 
     /**
      * <pre>
@@ -251,11 +251,11 @@ public final class CommercialPurchase {
    * Specifies an event that takes place against a Purchase.
    * </pre>
    *
-   * Protobuf type {@code commerce.pos.PurchaseEvent}
+   * Protobuf type {@code bloombox.schema.commerce.pos.PurchaseEvent}
    */
   public  static final class PurchaseEvent extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:commerce.pos.PurchaseEvent)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.commerce.pos.PurchaseEvent)
       PurchaseEventOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PurchaseEvent.newBuilder() to construct.
@@ -305,11 +305,11 @@ public final class CommercialPurchase {
               break;
             }
             case 18: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (instant_ != null) {
                 subBuilder = instant_.toBuilder();
               }
-              instant_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              instant_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(instant_);
                 instant_ = subBuilder.buildPartial();
@@ -337,12 +337,12 @@ public final class CommercialPurchase {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_PurchaseEvent_descriptor;
+      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_PurchaseEvent_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_PurchaseEvent_fieldAccessorTable
+      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_PurchaseEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.class, io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder.class);
     }
@@ -354,7 +354,7 @@ public final class CommercialPurchase {
      * Status the order moved to.
      * </pre>
      *
-     * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+     * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -364,7 +364,7 @@ public final class CommercialPurchase {
      * Status the order moved to.
      * </pre>
      *
-     * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+     * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
      */
     public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus getStatus() {
       io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus result = io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus.valueOf(status_);
@@ -372,13 +372,13 @@ public final class CommercialPurchase {
     }
 
     public static final int INSTANT_FIELD_NUMBER = 2;
-    private io.bloombox.schema.temporal.Instant instant_;
+    private io.opencannabis.schema.temporal.Instant instant_;
     /**
      * <pre>
      * Instant the order was moved to this status.
      * </pre>
      *
-     * <code>.temporal.Instant instant = 2;</code>
+     * <code>.opencannabis.temporal.Instant instant = 2;</code>
      */
     public boolean hasInstant() {
       return instant_ != null;
@@ -388,19 +388,19 @@ public final class CommercialPurchase {
      * Instant the order was moved to this status.
      * </pre>
      *
-     * <code>.temporal.Instant instant = 2;</code>
+     * <code>.opencannabis.temporal.Instant instant = 2;</code>
      */
-    public io.bloombox.schema.temporal.Instant getInstant() {
-      return instant_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : instant_;
+    public io.opencannabis.schema.temporal.Instant getInstant() {
+      return instant_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : instant_;
     }
     /**
      * <pre>
      * Instant the order was moved to this status.
      * </pre>
      *
-     * <code>.temporal.Instant instant = 2;</code>
+     * <code>.opencannabis.temporal.Instant instant = 2;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getInstantOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getInstantOrBuilder() {
       return getInstant();
     }
 
@@ -627,20 +627,20 @@ public final class CommercialPurchase {
      * Specifies an event that takes place against a Purchase.
      * </pre>
      *
-     * Protobuf type {@code commerce.pos.PurchaseEvent}
+     * Protobuf type {@code bloombox.schema.commerce.pos.PurchaseEvent}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:commerce.pos.PurchaseEvent)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.commerce.pos.PurchaseEvent)
         io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_PurchaseEvent_descriptor;
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_PurchaseEvent_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_PurchaseEvent_fieldAccessorTable
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_PurchaseEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.class, io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder.class);
       }
@@ -677,7 +677,7 @@ public final class CommercialPurchase {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_PurchaseEvent_descriptor;
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_PurchaseEvent_descriptor;
       }
 
       public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent getDefaultInstanceForType() {
@@ -785,7 +785,7 @@ public final class CommercialPurchase {
        * Status the order moved to.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -795,7 +795,7 @@ public final class CommercialPurchase {
        * Status the order moved to.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -807,7 +807,7 @@ public final class CommercialPurchase {
        * Status the order moved to.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus getStatus() {
         io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus result = io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus.valueOf(status_);
@@ -818,7 +818,7 @@ public final class CommercialPurchase {
        * Status the order moved to.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
        */
       public Builder setStatus(io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus value) {
         if (value == null) {
@@ -834,7 +834,7 @@ public final class CommercialPurchase {
        * Status the order moved to.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 1;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 1;</code>
        */
       public Builder clearStatus() {
         
@@ -843,15 +843,15 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.bloombox.schema.temporal.Instant instant_ = null;
+      private io.opencannabis.schema.temporal.Instant instant_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> instantBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> instantBuilder_;
       /**
        * <pre>
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
       public boolean hasInstant() {
         return instantBuilder_ != null || instant_ != null;
@@ -861,11 +861,11 @@ public final class CommercialPurchase {
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
-      public io.bloombox.schema.temporal.Instant getInstant() {
+      public io.opencannabis.schema.temporal.Instant getInstant() {
         if (instantBuilder_ == null) {
-          return instant_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : instant_;
+          return instant_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : instant_;
         } else {
           return instantBuilder_.getMessage();
         }
@@ -875,9 +875,9 @@ public final class CommercialPurchase {
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
-      public Builder setInstant(io.bloombox.schema.temporal.Instant value) {
+      public Builder setInstant(io.opencannabis.schema.temporal.Instant value) {
         if (instantBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -895,10 +895,10 @@ public final class CommercialPurchase {
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
       public Builder setInstant(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (instantBuilder_ == null) {
           instant_ = builderForValue.build();
           onChanged();
@@ -913,13 +913,13 @@ public final class CommercialPurchase {
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
-      public Builder mergeInstant(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeInstant(io.opencannabis.schema.temporal.Instant value) {
         if (instantBuilder_ == null) {
           if (instant_ != null) {
             instant_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(instant_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(instant_).mergeFrom(value).buildPartial();
           } else {
             instant_ = value;
           }
@@ -935,7 +935,7 @@ public final class CommercialPurchase {
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
       public Builder clearInstant() {
         if (instantBuilder_ == null) {
@@ -953,9 +953,9 @@ public final class CommercialPurchase {
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getInstantBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getInstantBuilder() {
         
         onChanged();
         return getInstantFieldBuilder().getBuilder();
@@ -965,14 +965,14 @@ public final class CommercialPurchase {
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getInstantOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getInstantOrBuilder() {
         if (instantBuilder_ != null) {
           return instantBuilder_.getMessageOrBuilder();
         } else {
           return instant_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : instant_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : instant_;
         }
       }
       /**
@@ -980,14 +980,14 @@ public final class CommercialPurchase {
        * Instant the order was moved to this status.
        * </pre>
        *
-       * <code>.temporal.Instant instant = 2;</code>
+       * <code>.opencannabis.temporal.Instant instant = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getInstantFieldBuilder() {
         if (instantBuilder_ == null) {
           instantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getInstant(),
                   getParentForChildren(),
                   isClean());
@@ -1095,10 +1095,10 @@ public final class CommercialPurchase {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:commerce.pos.PurchaseEvent)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.commerce.pos.PurchaseEvent)
     }
 
-    // @@protoc_insertion_point(class_scope:commerce.pos.PurchaseEvent)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.commerce.pos.PurchaseEvent)
     private static final io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent();
@@ -1134,7 +1134,7 @@ public final class CommercialPurchase {
   }
 
   public interface ReceiptOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:commerce.pos.Receipt)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.commerce.pos.Receipt)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1151,24 +1151,24 @@ public final class CommercialPurchase {
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
-    java.util.List<io.bloombox.schema.accounting.AccountingTaxes.Tax> 
+    java.util.List<io.opencannabis.schema.accounting.AccountingTaxes.Tax> 
         getTaxList();
     /**
      * <pre>
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
-    io.bloombox.schema.accounting.AccountingTaxes.Tax getTax(int index);
+    io.opencannabis.schema.accounting.AccountingTaxes.Tax getTax(int index);
     /**
      * <pre>
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
     int getTaxCount();
     /**
@@ -1176,18 +1176,18 @@ public final class CommercialPurchase {
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
-    java.util.List<? extends io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder> 
+    java.util.List<? extends io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder> 
         getTaxOrBuilderList();
     /**
      * <pre>
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
-    io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder getTaxOrBuilder(
+    io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder getTaxOrBuilder(
         int index);
 
     /**
@@ -1195,24 +1195,24 @@ public final class CommercialPurchase {
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
-    java.util.List<io.bloombox.schema.commerce.CommercialDiscounts.Discount> 
+    java.util.List<io.opencannabis.schema.accounting.CommercialDiscounts.Discount> 
         getDiscountList();
     /**
      * <pre>
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
-    io.bloombox.schema.commerce.CommercialDiscounts.Discount getDiscount(int index);
+    io.opencannabis.schema.accounting.CommercialDiscounts.Discount getDiscount(int index);
     /**
      * <pre>
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
     int getDiscountCount();
     /**
@@ -1220,18 +1220,18 @@ public final class CommercialPurchase {
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
-    java.util.List<? extends io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder> 
+    java.util.List<? extends io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder> 
         getDiscountOrBuilderList();
     /**
      * <pre>
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
-    io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder getDiscountOrBuilder(
+    io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder getDiscountOrBuilder(
         int index);
 
     /**
@@ -1248,11 +1248,11 @@ public final class CommercialPurchase {
    * Receipt object describing each of a purchase's component taxes and charges.
    * </pre>
    *
-   * Protobuf type {@code commerce.pos.Receipt}
+   * Protobuf type {@code bloombox.schema.commerce.pos.Receipt}
    */
   public  static final class Receipt extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:commerce.pos.Receipt)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.commerce.pos.Receipt)
       ReceiptOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Receipt.newBuilder() to construct.
@@ -1304,20 +1304,20 @@ public final class CommercialPurchase {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                tax_ = new java.util.ArrayList<io.bloombox.schema.accounting.AccountingTaxes.Tax>();
+                tax_ = new java.util.ArrayList<io.opencannabis.schema.accounting.AccountingTaxes.Tax>();
                 mutable_bitField0_ |= 0x00000002;
               }
               tax_.add(
-                  input.readMessage(io.bloombox.schema.accounting.AccountingTaxes.Tax.parser(), extensionRegistry));
+                  input.readMessage(io.opencannabis.schema.accounting.AccountingTaxes.Tax.parser(), extensionRegistry));
               break;
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                discount_ = new java.util.ArrayList<io.bloombox.schema.commerce.CommercialDiscounts.Discount>();
+                discount_ = new java.util.ArrayList<io.opencannabis.schema.accounting.CommercialDiscounts.Discount>();
                 mutable_bitField0_ |= 0x00000004;
               }
               discount_.add(
-                  input.readMessage(io.bloombox.schema.commerce.CommercialDiscounts.Discount.parser(), extensionRegistry));
+                  input.readMessage(io.opencannabis.schema.accounting.CommercialDiscounts.Discount.parser(), extensionRegistry));
               break;
             }
             case 33: {
@@ -1345,12 +1345,12 @@ public final class CommercialPurchase {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Receipt_descriptor;
+      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Receipt_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Receipt_fieldAccessorTable
+      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Receipt_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt.class, io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt.Builder.class);
     }
@@ -1370,15 +1370,15 @@ public final class CommercialPurchase {
     }
 
     public static final int TAX_FIELD_NUMBER = 2;
-    private java.util.List<io.bloombox.schema.accounting.AccountingTaxes.Tax> tax_;
+    private java.util.List<io.opencannabis.schema.accounting.AccountingTaxes.Tax> tax_;
     /**
      * <pre>
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
-    public java.util.List<io.bloombox.schema.accounting.AccountingTaxes.Tax> getTaxList() {
+    public java.util.List<io.opencannabis.schema.accounting.AccountingTaxes.Tax> getTaxList() {
       return tax_;
     }
     /**
@@ -1386,9 +1386,9 @@ public final class CommercialPurchase {
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
-    public java.util.List<? extends io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder> 
+    public java.util.List<? extends io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder> 
         getTaxOrBuilderList() {
       return tax_;
     }
@@ -1397,7 +1397,7 @@ public final class CommercialPurchase {
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
     public int getTaxCount() {
       return tax_.size();
@@ -1407,9 +1407,9 @@ public final class CommercialPurchase {
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
-    public io.bloombox.schema.accounting.AccountingTaxes.Tax getTax(int index) {
+    public io.opencannabis.schema.accounting.AccountingTaxes.Tax getTax(int index) {
       return tax_.get(index);
     }
     /**
@@ -1417,23 +1417,23 @@ public final class CommercialPurchase {
      * Tax entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+     * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
      */
-    public io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder getTaxOrBuilder(
+    public io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder getTaxOrBuilder(
         int index) {
       return tax_.get(index);
     }
 
     public static final int DISCOUNT_FIELD_NUMBER = 3;
-    private java.util.List<io.bloombox.schema.commerce.CommercialDiscounts.Discount> discount_;
+    private java.util.List<io.opencannabis.schema.accounting.CommercialDiscounts.Discount> discount_;
     /**
      * <pre>
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
-    public java.util.List<io.bloombox.schema.commerce.CommercialDiscounts.Discount> getDiscountList() {
+    public java.util.List<io.opencannabis.schema.accounting.CommercialDiscounts.Discount> getDiscountList() {
       return discount_;
     }
     /**
@@ -1441,9 +1441,9 @@ public final class CommercialPurchase {
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
-    public java.util.List<? extends io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder> 
+    public java.util.List<? extends io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder> 
         getDiscountOrBuilderList() {
       return discount_;
     }
@@ -1452,7 +1452,7 @@ public final class CommercialPurchase {
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
     public int getDiscountCount() {
       return discount_.size();
@@ -1462,9 +1462,9 @@ public final class CommercialPurchase {
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
-    public io.bloombox.schema.commerce.CommercialDiscounts.Discount getDiscount(int index) {
+    public io.opencannabis.schema.accounting.CommercialDiscounts.Discount getDiscount(int index) {
       return discount_.get(index);
     }
     /**
@@ -1472,9 +1472,9 @@ public final class CommercialPurchase {
      * Discount entries applied to this receipt.
      * </pre>
      *
-     * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+     * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
      */
-    public io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder getDiscountOrBuilder(
+    public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder getDiscountOrBuilder(
         int index) {
       return discount_.get(index);
     }
@@ -1691,20 +1691,20 @@ public final class CommercialPurchase {
      * Receipt object describing each of a purchase's component taxes and charges.
      * </pre>
      *
-     * Protobuf type {@code commerce.pos.Receipt}
+     * Protobuf type {@code bloombox.schema.commerce.pos.Receipt}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:commerce.pos.Receipt)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.commerce.pos.Receipt)
         io.bloombox.schema.commerce.pos.CommercialPurchase.ReceiptOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Receipt_descriptor;
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Receipt_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Receipt_fieldAccessorTable
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Receipt_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt.class, io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt.Builder.class);
       }
@@ -1749,7 +1749,7 @@ public final class CommercialPurchase {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Receipt_descriptor;
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Receipt_descriptor;
       }
 
       public io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt getDefaultInstanceForType() {
@@ -1954,26 +1954,26 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private java.util.List<io.bloombox.schema.accounting.AccountingTaxes.Tax> tax_ =
+      private java.util.List<io.opencannabis.schema.accounting.AccountingTaxes.Tax> tax_ =
         java.util.Collections.emptyList();
       private void ensureTaxIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          tax_ = new java.util.ArrayList<io.bloombox.schema.accounting.AccountingTaxes.Tax>(tax_);
+          tax_ = new java.util.ArrayList<io.opencannabis.schema.accounting.AccountingTaxes.Tax>(tax_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.accounting.AccountingTaxes.Tax, io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder, io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder> taxBuilder_;
+          io.opencannabis.schema.accounting.AccountingTaxes.Tax, io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder, io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder> taxBuilder_;
 
       /**
        * <pre>
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public java.util.List<io.bloombox.schema.accounting.AccountingTaxes.Tax> getTaxList() {
+      public java.util.List<io.opencannabis.schema.accounting.AccountingTaxes.Tax> getTaxList() {
         if (taxBuilder_ == null) {
           return java.util.Collections.unmodifiableList(tax_);
         } else {
@@ -1985,7 +1985,7 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public int getTaxCount() {
         if (taxBuilder_ == null) {
@@ -1999,9 +1999,9 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public io.bloombox.schema.accounting.AccountingTaxes.Tax getTax(int index) {
+      public io.opencannabis.schema.accounting.AccountingTaxes.Tax getTax(int index) {
         if (taxBuilder_ == null) {
           return tax_.get(index);
         } else {
@@ -2013,10 +2013,10 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public Builder setTax(
-          int index, io.bloombox.schema.accounting.AccountingTaxes.Tax value) {
+          int index, io.opencannabis.schema.accounting.AccountingTaxes.Tax value) {
         if (taxBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2034,10 +2034,10 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public Builder setTax(
-          int index, io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder builderForValue) {
+          int index, io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder builderForValue) {
         if (taxBuilder_ == null) {
           ensureTaxIsMutable();
           tax_.set(index, builderForValue.build());
@@ -2052,9 +2052,9 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public Builder addTax(io.bloombox.schema.accounting.AccountingTaxes.Tax value) {
+      public Builder addTax(io.opencannabis.schema.accounting.AccountingTaxes.Tax value) {
         if (taxBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2072,10 +2072,10 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public Builder addTax(
-          int index, io.bloombox.schema.accounting.AccountingTaxes.Tax value) {
+          int index, io.opencannabis.schema.accounting.AccountingTaxes.Tax value) {
         if (taxBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2093,10 +2093,10 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public Builder addTax(
-          io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder builderForValue) {
+          io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder builderForValue) {
         if (taxBuilder_ == null) {
           ensureTaxIsMutable();
           tax_.add(builderForValue.build());
@@ -2111,10 +2111,10 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public Builder addTax(
-          int index, io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder builderForValue) {
+          int index, io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder builderForValue) {
         if (taxBuilder_ == null) {
           ensureTaxIsMutable();
           tax_.add(index, builderForValue.build());
@@ -2129,10 +2129,10 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public Builder addAllTax(
-          java.lang.Iterable<? extends io.bloombox.schema.accounting.AccountingTaxes.Tax> values) {
+          java.lang.Iterable<? extends io.opencannabis.schema.accounting.AccountingTaxes.Tax> values) {
         if (taxBuilder_ == null) {
           ensureTaxIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2148,7 +2148,7 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public Builder clearTax() {
         if (taxBuilder_ == null) {
@@ -2165,7 +2165,7 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
       public Builder removeTax(int index) {
         if (taxBuilder_ == null) {
@@ -2182,9 +2182,9 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder getTaxBuilder(
+      public io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder getTaxBuilder(
           int index) {
         return getTaxFieldBuilder().getBuilder(index);
       }
@@ -2193,9 +2193,9 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder getTaxOrBuilder(
+      public io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder getTaxOrBuilder(
           int index) {
         if (taxBuilder_ == null) {
           return tax_.get(index);  } else {
@@ -2207,9 +2207,9 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public java.util.List<? extends io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder> 
+      public java.util.List<? extends io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder> 
            getTaxOrBuilderList() {
         if (taxBuilder_ != null) {
           return taxBuilder_.getMessageOrBuilderList();
@@ -2222,41 +2222,41 @@ public final class CommercialPurchase {
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder addTaxBuilder() {
+      public io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder addTaxBuilder() {
         return getTaxFieldBuilder().addBuilder(
-            io.bloombox.schema.accounting.AccountingTaxes.Tax.getDefaultInstance());
+            io.opencannabis.schema.accounting.AccountingTaxes.Tax.getDefaultInstance());
       }
       /**
        * <pre>
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder addTaxBuilder(
+      public io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder addTaxBuilder(
           int index) {
         return getTaxFieldBuilder().addBuilder(
-            index, io.bloombox.schema.accounting.AccountingTaxes.Tax.getDefaultInstance());
+            index, io.opencannabis.schema.accounting.AccountingTaxes.Tax.getDefaultInstance());
       }
       /**
        * <pre>
        * Tax entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.taxes.Tax tax = 2;</code>
+       * <code>repeated .opencannabis.taxes.Tax tax = 2;</code>
        */
-      public java.util.List<io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder> 
+      public java.util.List<io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder> 
            getTaxBuilderList() {
         return getTaxFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.accounting.AccountingTaxes.Tax, io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder, io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder> 
+          io.opencannabis.schema.accounting.AccountingTaxes.Tax, io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder, io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder> 
           getTaxFieldBuilder() {
         if (taxBuilder_ == null) {
           taxBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.bloombox.schema.accounting.AccountingTaxes.Tax, io.bloombox.schema.accounting.AccountingTaxes.Tax.Builder, io.bloombox.schema.accounting.AccountingTaxes.TaxOrBuilder>(
+              io.opencannabis.schema.accounting.AccountingTaxes.Tax, io.opencannabis.schema.accounting.AccountingTaxes.Tax.Builder, io.opencannabis.schema.accounting.AccountingTaxes.TaxOrBuilder>(
                   tax_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -2266,26 +2266,26 @@ public final class CommercialPurchase {
         return taxBuilder_;
       }
 
-      private java.util.List<io.bloombox.schema.commerce.CommercialDiscounts.Discount> discount_ =
+      private java.util.List<io.opencannabis.schema.accounting.CommercialDiscounts.Discount> discount_ =
         java.util.Collections.emptyList();
       private void ensureDiscountIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          discount_ = new java.util.ArrayList<io.bloombox.schema.commerce.CommercialDiscounts.Discount>(discount_);
+          discount_ = new java.util.ArrayList<io.opencannabis.schema.accounting.CommercialDiscounts.Discount>(discount_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.commerce.CommercialDiscounts.Discount, io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder, io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder> discountBuilder_;
+          io.opencannabis.schema.accounting.CommercialDiscounts.Discount, io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder, io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder> discountBuilder_;
 
       /**
        * <pre>
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public java.util.List<io.bloombox.schema.commerce.CommercialDiscounts.Discount> getDiscountList() {
+      public java.util.List<io.opencannabis.schema.accounting.CommercialDiscounts.Discount> getDiscountList() {
         if (discountBuilder_ == null) {
           return java.util.Collections.unmodifiableList(discount_);
         } else {
@@ -2297,7 +2297,7 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public int getDiscountCount() {
         if (discountBuilder_ == null) {
@@ -2311,9 +2311,9 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public io.bloombox.schema.commerce.CommercialDiscounts.Discount getDiscount(int index) {
+      public io.opencannabis.schema.accounting.CommercialDiscounts.Discount getDiscount(int index) {
         if (discountBuilder_ == null) {
           return discount_.get(index);
         } else {
@@ -2325,10 +2325,10 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public Builder setDiscount(
-          int index, io.bloombox.schema.commerce.CommercialDiscounts.Discount value) {
+          int index, io.opencannabis.schema.accounting.CommercialDiscounts.Discount value) {
         if (discountBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2346,10 +2346,10 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public Builder setDiscount(
-          int index, io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder builderForValue) {
+          int index, io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder builderForValue) {
         if (discountBuilder_ == null) {
           ensureDiscountIsMutable();
           discount_.set(index, builderForValue.build());
@@ -2364,9 +2364,9 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public Builder addDiscount(io.bloombox.schema.commerce.CommercialDiscounts.Discount value) {
+      public Builder addDiscount(io.opencannabis.schema.accounting.CommercialDiscounts.Discount value) {
         if (discountBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2384,10 +2384,10 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public Builder addDiscount(
-          int index, io.bloombox.schema.commerce.CommercialDiscounts.Discount value) {
+          int index, io.opencannabis.schema.accounting.CommercialDiscounts.Discount value) {
         if (discountBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2405,10 +2405,10 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public Builder addDiscount(
-          io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder builderForValue) {
+          io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder builderForValue) {
         if (discountBuilder_ == null) {
           ensureDiscountIsMutable();
           discount_.add(builderForValue.build());
@@ -2423,10 +2423,10 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public Builder addDiscount(
-          int index, io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder builderForValue) {
+          int index, io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder builderForValue) {
         if (discountBuilder_ == null) {
           ensureDiscountIsMutable();
           discount_.add(index, builderForValue.build());
@@ -2441,10 +2441,10 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public Builder addAllDiscount(
-          java.lang.Iterable<? extends io.bloombox.schema.commerce.CommercialDiscounts.Discount> values) {
+          java.lang.Iterable<? extends io.opencannabis.schema.accounting.CommercialDiscounts.Discount> values) {
         if (discountBuilder_ == null) {
           ensureDiscountIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2460,7 +2460,7 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public Builder clearDiscount() {
         if (discountBuilder_ == null) {
@@ -2477,7 +2477,7 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
       public Builder removeDiscount(int index) {
         if (discountBuilder_ == null) {
@@ -2494,9 +2494,9 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder getDiscountBuilder(
+      public io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder getDiscountBuilder(
           int index) {
         return getDiscountFieldBuilder().getBuilder(index);
       }
@@ -2505,9 +2505,9 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder getDiscountOrBuilder(
+      public io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder getDiscountOrBuilder(
           int index) {
         if (discountBuilder_ == null) {
           return discount_.get(index);  } else {
@@ -2519,9 +2519,9 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public java.util.List<? extends io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder> 
+      public java.util.List<? extends io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder> 
            getDiscountOrBuilderList() {
         if (discountBuilder_ != null) {
           return discountBuilder_.getMessageOrBuilderList();
@@ -2534,41 +2534,41 @@ public final class CommercialPurchase {
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder addDiscountBuilder() {
+      public io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder addDiscountBuilder() {
         return getDiscountFieldBuilder().addBuilder(
-            io.bloombox.schema.commerce.CommercialDiscounts.Discount.getDefaultInstance());
+            io.opencannabis.schema.accounting.CommercialDiscounts.Discount.getDefaultInstance());
       }
       /**
        * <pre>
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder addDiscountBuilder(
+      public io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder addDiscountBuilder(
           int index) {
         return getDiscountFieldBuilder().addBuilder(
-            index, io.bloombox.schema.commerce.CommercialDiscounts.Discount.getDefaultInstance());
+            index, io.opencannabis.schema.accounting.CommercialDiscounts.Discount.getDefaultInstance());
       }
       /**
        * <pre>
        * Discount entries applied to this receipt.
        * </pre>
        *
-       * <code>repeated .accounting.discounts.Discount discount = 3;</code>
+       * <code>repeated .opencannabis.commerce.Discount discount = 3;</code>
        */
-      public java.util.List<io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder> 
+      public java.util.List<io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder> 
            getDiscountBuilderList() {
         return getDiscountFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.commerce.CommercialDiscounts.Discount, io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder, io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder> 
+          io.opencannabis.schema.accounting.CommercialDiscounts.Discount, io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder, io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder> 
           getDiscountFieldBuilder() {
         if (discountBuilder_ == null) {
           discountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.bloombox.schema.commerce.CommercialDiscounts.Discount, io.bloombox.schema.commerce.CommercialDiscounts.Discount.Builder, io.bloombox.schema.commerce.CommercialDiscounts.DiscountOrBuilder>(
+              io.opencannabis.schema.accounting.CommercialDiscounts.Discount, io.opencannabis.schema.accounting.CommercialDiscounts.Discount.Builder, io.opencannabis.schema.accounting.CommercialDiscounts.DiscountOrBuilder>(
                   discount_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -2626,10 +2626,10 @@ public final class CommercialPurchase {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:commerce.pos.Receipt)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.commerce.pos.Receipt)
     }
 
-    // @@protoc_insertion_point(class_scope:commerce.pos.Receipt)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.commerce.pos.Receipt)
     private static final io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt();
@@ -2665,7 +2665,7 @@ public final class CommercialPurchase {
   }
 
   public interface PurchaseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:commerce.pos.Purchase)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.commerce.pos.Purchase)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2727,7 +2727,7 @@ public final class CommercialPurchase {
      * Current status of this purchase.
      * </pre>
      *
-     * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+     * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
      */
     int getStatusValue();
     /**
@@ -2735,7 +2735,7 @@ public final class CommercialPurchase {
      * Current status of this purchase.
      * </pre>
      *
-     * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+     * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
      */
     io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus getStatus();
 
@@ -2744,7 +2744,7 @@ public final class CommercialPurchase {
      * Customer that submitted this purchase.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 5;</code>
+     * <code>.opencannabis.commerce.Customer customer = 5;</code>
      */
     boolean hasCustomer();
     /**
@@ -2752,24 +2752,24 @@ public final class CommercialPurchase {
      * Customer that submitted this purchase.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 5;</code>
+     * <code>.opencannabis.commerce.Customer customer = 5;</code>
      */
-    io.bloombox.schema.commerce.OrderCustomer.Customer getCustomer();
+    io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer();
     /**
      * <pre>
      * Customer that submitted this purchase.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 5;</code>
+     * <code>.opencannabis.commerce.Customer customer = 5;</code>
      */
-    io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder();
+    io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder();
 
     /**
      * <pre>
      * Point-of-Sale device that submitted this purchase.
      * </pre>
      *
-     * <code>.partner.PartnerDeviceKey register = 6;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
     boolean hasRegister();
     /**
@@ -2777,7 +2777,7 @@ public final class CommercialPurchase {
      * Point-of-Sale device that submitted this purchase.
      * </pre>
      *
-     * <code>.partner.PartnerDeviceKey register = 6;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
     io.bloombox.schema.partner.PartnerDeviceKey getRegister();
     /**
@@ -2785,7 +2785,7 @@ public final class CommercialPurchase {
      * Point-of-Sale device that submitted this purchase.
      * </pre>
      *
-     * <code>.partner.PartnerDeviceKey register = 6;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
     io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder getRegisterOrBuilder();
 
@@ -2794,24 +2794,24 @@ public final class CommercialPurchase {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
-    java.util.List<io.bloombox.schema.commerce.OrderItem.Item> 
+    java.util.List<io.opencannabis.schema.commerce.OrderItem.Item> 
         getItemList();
     /**
      * <pre>
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
-    io.bloombox.schema.commerce.OrderItem.Item getItem(int index);
+    io.opencannabis.schema.commerce.OrderItem.Item getItem(int index);
     /**
      * <pre>
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
     int getItemCount();
     /**
@@ -2819,18 +2819,18 @@ public final class CommercialPurchase {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
-    java.util.List<? extends io.bloombox.schema.commerce.OrderItem.ItemOrBuilder> 
+    java.util.List<? extends io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> 
         getItemOrBuilderList();
     /**
      * <pre>
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
-    io.bloombox.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
+    io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
         int index);
 
     /**
@@ -2838,7 +2838,7 @@ public final class CommercialPurchase {
      * Calculated order values and components, like taxes, subtotal, and so on.
      * </pre>
      *
-     * <code>.commerce.pos.Receipt receipt = 8;</code>
+     * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
      */
     boolean hasReceipt();
     /**
@@ -2846,7 +2846,7 @@ public final class CommercialPurchase {
      * Calculated order values and components, like taxes, subtotal, and so on.
      * </pre>
      *
-     * <code>.commerce.pos.Receipt receipt = 8;</code>
+     * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
      */
     io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt getReceipt();
     /**
@@ -2854,7 +2854,7 @@ public final class CommercialPurchase {
      * Calculated order values and components, like taxes, subtotal, and so on.
      * </pre>
      *
-     * <code>.commerce.pos.Receipt receipt = 8;</code>
+     * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
      */
     io.bloombox.schema.commerce.pos.CommercialPurchase.ReceiptOrBuilder getReceiptOrBuilder();
 
@@ -2863,7 +2863,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     java.util.List<io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent> 
         getActionLogList();
@@ -2872,7 +2872,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent getActionLog(int index);
     /**
@@ -2880,7 +2880,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     int getActionLogCount();
     /**
@@ -2888,7 +2888,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     java.util.List<? extends io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEventOrBuilder> 
         getActionLogOrBuilderList();
@@ -2897,7 +2897,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEventOrBuilder getActionLogOrBuilder(
         int index);
@@ -2907,7 +2907,7 @@ public final class CommercialPurchase {
      * When this order was created.
      * </pre>
      *
-     * <code>.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
      */
     boolean hasCreatedAt();
     /**
@@ -2915,17 +2915,17 @@ public final class CommercialPurchase {
      * When this order was created.
      * </pre>
      *
-     * <code>.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
      */
-    io.bloombox.schema.temporal.Instant getCreatedAt();
+    io.opencannabis.schema.temporal.Instant getCreatedAt();
     /**
      * <pre>
      * When this order was created.
      * </pre>
      *
-     * <code>.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -2933,11 +2933,11 @@ public final class CommercialPurchase {
    * retail dispensary.
    * </pre>
    *
-   * Protobuf type {@code commerce.pos.Purchase}
+   * Protobuf type {@code bloombox.schema.commerce.pos.Purchase}
    */
   public  static final class Purchase extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:commerce.pos.Purchase)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.commerce.pos.Purchase)
       PurchaseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Purchase.newBuilder() to construct.
@@ -3009,11 +3009,11 @@ public final class CommercialPurchase {
               break;
             }
             case 42: {
-              io.bloombox.schema.commerce.OrderCustomer.Customer.Builder subBuilder = null;
+              io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder subBuilder = null;
               if (customer_ != null) {
                 subBuilder = customer_.toBuilder();
               }
-              customer_ = input.readMessage(io.bloombox.schema.commerce.OrderCustomer.Customer.parser(), extensionRegistry);
+              customer_ = input.readMessage(io.opencannabis.schema.commerce.OrderCustomer.Customer.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(customer_);
                 customer_ = subBuilder.buildPartial();
@@ -3036,11 +3036,11 @@ public final class CommercialPurchase {
             }
             case 58: {
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                item_ = new java.util.ArrayList<io.bloombox.schema.commerce.OrderItem.Item>();
+                item_ = new java.util.ArrayList<io.opencannabis.schema.commerce.OrderItem.Item>();
                 mutable_bitField0_ |= 0x00000040;
               }
               item_.add(
-                  input.readMessage(io.bloombox.schema.commerce.OrderItem.Item.parser(), extensionRegistry));
+                  input.readMessage(io.opencannabis.schema.commerce.OrderItem.Item.parser(), extensionRegistry));
               break;
             }
             case 66: {
@@ -3066,11 +3066,11 @@ public final class CommercialPurchase {
               break;
             }
             case 82: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (createdAt_ != null) {
                 subBuilder = createdAt_.toBuilder();
               }
-              createdAt_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              createdAt_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(createdAt_);
                 createdAt_ = subBuilder.buildPartial();
@@ -3098,12 +3098,12 @@ public final class CommercialPurchase {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Purchase_descriptor;
+      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Purchase_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Purchase_fieldAccessorTable
+      return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Purchase_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.commerce.pos.CommercialPurchase.Purchase.class, io.bloombox.schema.commerce.pos.CommercialPurchase.Purchase.Builder.class);
     }
@@ -3242,7 +3242,7 @@ public final class CommercialPurchase {
      * Current status of this purchase.
      * </pre>
      *
-     * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+     * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -3252,7 +3252,7 @@ public final class CommercialPurchase {
      * Current status of this purchase.
      * </pre>
      *
-     * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+     * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
      */
     public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus getStatus() {
       io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus result = io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus.valueOf(status_);
@@ -3260,13 +3260,13 @@ public final class CommercialPurchase {
     }
 
     public static final int CUSTOMER_FIELD_NUMBER = 5;
-    private io.bloombox.schema.commerce.OrderCustomer.Customer customer_;
+    private io.opencannabis.schema.commerce.OrderCustomer.Customer customer_;
     /**
      * <pre>
      * Customer that submitted this purchase.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 5;</code>
+     * <code>.opencannabis.commerce.Customer customer = 5;</code>
      */
     public boolean hasCustomer() {
       return customer_ != null;
@@ -3276,19 +3276,19 @@ public final class CommercialPurchase {
      * Customer that submitted this purchase.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 5;</code>
+     * <code>.opencannabis.commerce.Customer customer = 5;</code>
      */
-    public io.bloombox.schema.commerce.OrderCustomer.Customer getCustomer() {
-      return customer_ == null ? io.bloombox.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
+    public io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer() {
+      return customer_ == null ? io.opencannabis.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
     }
     /**
      * <pre>
      * Customer that submitted this purchase.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 5;</code>
+     * <code>.opencannabis.commerce.Customer customer = 5;</code>
      */
-    public io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
+    public io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
       return getCustomer();
     }
 
@@ -3299,7 +3299,7 @@ public final class CommercialPurchase {
      * Point-of-Sale device that submitted this purchase.
      * </pre>
      *
-     * <code>.partner.PartnerDeviceKey register = 6;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
     public boolean hasRegister() {
       return register_ != null;
@@ -3309,7 +3309,7 @@ public final class CommercialPurchase {
      * Point-of-Sale device that submitted this purchase.
      * </pre>
      *
-     * <code>.partner.PartnerDeviceKey register = 6;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
     public io.bloombox.schema.partner.PartnerDeviceKey getRegister() {
       return register_ == null ? io.bloombox.schema.partner.PartnerDeviceKey.getDefaultInstance() : register_;
@@ -3319,22 +3319,22 @@ public final class CommercialPurchase {
      * Point-of-Sale device that submitted this purchase.
      * </pre>
      *
-     * <code>.partner.PartnerDeviceKey register = 6;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
     public io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
       return getRegister();
     }
 
     public static final int ITEM_FIELD_NUMBER = 7;
-    private java.util.List<io.bloombox.schema.commerce.OrderItem.Item> item_;
+    private java.util.List<io.opencannabis.schema.commerce.OrderItem.Item> item_;
     /**
      * <pre>
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
-    public java.util.List<io.bloombox.schema.commerce.OrderItem.Item> getItemList() {
+    public java.util.List<io.opencannabis.schema.commerce.OrderItem.Item> getItemList() {
       return item_;
     }
     /**
@@ -3342,9 +3342,9 @@ public final class CommercialPurchase {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
-    public java.util.List<? extends io.bloombox.schema.commerce.OrderItem.ItemOrBuilder> 
+    public java.util.List<? extends io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> 
         getItemOrBuilderList() {
       return item_;
     }
@@ -3353,7 +3353,7 @@ public final class CommercialPurchase {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
     public int getItemCount() {
       return item_.size();
@@ -3363,9 +3363,9 @@ public final class CommercialPurchase {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
-    public io.bloombox.schema.commerce.OrderItem.Item getItem(int index) {
+    public io.opencannabis.schema.commerce.OrderItem.Item getItem(int index) {
       return item_.get(index);
     }
     /**
@@ -3373,9 +3373,9 @@ public final class CommercialPurchase {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .commerce.Item item = 7;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 7;</code>
      */
-    public io.bloombox.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
+    public io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
         int index) {
       return item_.get(index);
     }
@@ -3387,7 +3387,7 @@ public final class CommercialPurchase {
      * Calculated order values and components, like taxes, subtotal, and so on.
      * </pre>
      *
-     * <code>.commerce.pos.Receipt receipt = 8;</code>
+     * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
      */
     public boolean hasReceipt() {
       return receipt_ != null;
@@ -3397,7 +3397,7 @@ public final class CommercialPurchase {
      * Calculated order values and components, like taxes, subtotal, and so on.
      * </pre>
      *
-     * <code>.commerce.pos.Receipt receipt = 8;</code>
+     * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
      */
     public io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt getReceipt() {
       return receipt_ == null ? io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt.getDefaultInstance() : receipt_;
@@ -3407,7 +3407,7 @@ public final class CommercialPurchase {
      * Calculated order values and components, like taxes, subtotal, and so on.
      * </pre>
      *
-     * <code>.commerce.pos.Receipt receipt = 8;</code>
+     * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
      */
     public io.bloombox.schema.commerce.pos.CommercialPurchase.ReceiptOrBuilder getReceiptOrBuilder() {
       return getReceipt();
@@ -3420,7 +3420,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     public java.util.List<io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent> getActionLogList() {
       return actionLog_;
@@ -3430,7 +3430,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     public java.util.List<? extends io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEventOrBuilder> 
         getActionLogOrBuilderList() {
@@ -3441,7 +3441,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     public int getActionLogCount() {
       return actionLog_.size();
@@ -3451,7 +3451,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent getActionLog(int index) {
       return actionLog_.get(index);
@@ -3461,7 +3461,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+     * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
      */
     public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEventOrBuilder getActionLogOrBuilder(
         int index) {
@@ -3469,13 +3469,13 @@ public final class CommercialPurchase {
     }
 
     public static final int CREATED_AT_FIELD_NUMBER = 10;
-    private io.bloombox.schema.temporal.Instant createdAt_;
+    private io.opencannabis.schema.temporal.Instant createdAt_;
     /**
      * <pre>
      * When this order was created.
      * </pre>
      *
-     * <code>.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
@@ -3485,19 +3485,19 @@ public final class CommercialPurchase {
      * When this order was created.
      * </pre>
      *
-     * <code>.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
      */
-    public io.bloombox.schema.temporal.Instant getCreatedAt() {
-      return createdAt_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : createdAt_;
+    public io.opencannabis.schema.temporal.Instant getCreatedAt() {
+      return createdAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : createdAt_;
     }
     /**
      * <pre>
      * When this order was created.
      * </pre>
      *
-     * <code>.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
 
@@ -3777,20 +3777,20 @@ public final class CommercialPurchase {
      * retail dispensary.
      * </pre>
      *
-     * Protobuf type {@code commerce.pos.Purchase}
+     * Protobuf type {@code bloombox.schema.commerce.pos.Purchase}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:commerce.pos.Purchase)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.commerce.pos.Purchase)
         io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Purchase_descriptor;
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Purchase_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Purchase_fieldAccessorTable
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Purchase_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.commerce.pos.CommercialPurchase.Purchase.class, io.bloombox.schema.commerce.pos.CommercialPurchase.Purchase.Builder.class);
       }
@@ -3863,7 +3863,7 @@ public final class CommercialPurchase {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_commerce_pos_Purchase_descriptor;
+        return io.bloombox.schema.commerce.pos.CommercialPurchase.internal_static_bloombox_schema_commerce_pos_Purchase_descriptor;
       }
 
       public io.bloombox.schema.commerce.pos.CommercialPurchase.Purchase getDefaultInstanceForType() {
@@ -4346,7 +4346,7 @@ public final class CommercialPurchase {
        * Current status of this purchase.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -4356,7 +4356,7 @@ public final class CommercialPurchase {
        * Current status of this purchase.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -4368,7 +4368,7 @@ public final class CommercialPurchase {
        * Current status of this purchase.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus getStatus() {
         io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus result = io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus.valueOf(status_);
@@ -4379,7 +4379,7 @@ public final class CommercialPurchase {
        * Current status of this purchase.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
        */
       public Builder setStatus(io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseStatus value) {
         if (value == null) {
@@ -4395,7 +4395,7 @@ public final class CommercialPurchase {
        * Current status of this purchase.
        * </pre>
        *
-       * <code>.commerce.pos.PurchaseStatus status = 4;</code>
+       * <code>.bloombox.schema.commerce.pos.PurchaseStatus status = 4;</code>
        */
       public Builder clearStatus() {
         
@@ -4404,15 +4404,15 @@ public final class CommercialPurchase {
         return this;
       }
 
-      private io.bloombox.schema.commerce.OrderCustomer.Customer customer_ = null;
+      private io.opencannabis.schema.commerce.OrderCustomer.Customer customer_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.OrderCustomer.Customer, io.bloombox.schema.commerce.OrderCustomer.Customer.Builder, io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder> customerBuilder_;
+          io.opencannabis.schema.commerce.OrderCustomer.Customer, io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder, io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder> customerBuilder_;
       /**
        * <pre>
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
       public boolean hasCustomer() {
         return customerBuilder_ != null || customer_ != null;
@@ -4422,11 +4422,11 @@ public final class CommercialPurchase {
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
-      public io.bloombox.schema.commerce.OrderCustomer.Customer getCustomer() {
+      public io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer() {
         if (customerBuilder_ == null) {
-          return customer_ == null ? io.bloombox.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
+          return customer_ == null ? io.opencannabis.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
         } else {
           return customerBuilder_.getMessage();
         }
@@ -4436,9 +4436,9 @@ public final class CommercialPurchase {
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
-      public Builder setCustomer(io.bloombox.schema.commerce.OrderCustomer.Customer value) {
+      public Builder setCustomer(io.opencannabis.schema.commerce.OrderCustomer.Customer value) {
         if (customerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4456,10 +4456,10 @@ public final class CommercialPurchase {
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
       public Builder setCustomer(
-          io.bloombox.schema.commerce.OrderCustomer.Customer.Builder builderForValue) {
+          io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder builderForValue) {
         if (customerBuilder_ == null) {
           customer_ = builderForValue.build();
           onChanged();
@@ -4474,13 +4474,13 @@ public final class CommercialPurchase {
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
-      public Builder mergeCustomer(io.bloombox.schema.commerce.OrderCustomer.Customer value) {
+      public Builder mergeCustomer(io.opencannabis.schema.commerce.OrderCustomer.Customer value) {
         if (customerBuilder_ == null) {
           if (customer_ != null) {
             customer_ =
-              io.bloombox.schema.commerce.OrderCustomer.Customer.newBuilder(customer_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.commerce.OrderCustomer.Customer.newBuilder(customer_).mergeFrom(value).buildPartial();
           } else {
             customer_ = value;
           }
@@ -4496,7 +4496,7 @@ public final class CommercialPurchase {
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
       public Builder clearCustomer() {
         if (customerBuilder_ == null) {
@@ -4514,9 +4514,9 @@ public final class CommercialPurchase {
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
-      public io.bloombox.schema.commerce.OrderCustomer.Customer.Builder getCustomerBuilder() {
+      public io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder getCustomerBuilder() {
         
         onChanged();
         return getCustomerFieldBuilder().getBuilder();
@@ -4526,14 +4526,14 @@ public final class CommercialPurchase {
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
-      public io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
+      public io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
         if (customerBuilder_ != null) {
           return customerBuilder_.getMessageOrBuilder();
         } else {
           return customer_ == null ?
-              io.bloombox.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
+              io.opencannabis.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
         }
       }
       /**
@@ -4541,14 +4541,14 @@ public final class CommercialPurchase {
        * Customer that submitted this purchase.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 5;</code>
+       * <code>.opencannabis.commerce.Customer customer = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.OrderCustomer.Customer, io.bloombox.schema.commerce.OrderCustomer.Customer.Builder, io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder> 
+          io.opencannabis.schema.commerce.OrderCustomer.Customer, io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder, io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder> 
           getCustomerFieldBuilder() {
         if (customerBuilder_ == null) {
           customerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.commerce.OrderCustomer.Customer, io.bloombox.schema.commerce.OrderCustomer.Customer.Builder, io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder>(
+              io.opencannabis.schema.commerce.OrderCustomer.Customer, io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder, io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder>(
                   getCustomer(),
                   getParentForChildren(),
                   isClean());
@@ -4565,7 +4565,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public boolean hasRegister() {
         return registerBuilder_ != null || register_ != null;
@@ -4575,7 +4575,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public io.bloombox.schema.partner.PartnerDeviceKey getRegister() {
         if (registerBuilder_ == null) {
@@ -4589,7 +4589,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public Builder setRegister(io.bloombox.schema.partner.PartnerDeviceKey value) {
         if (registerBuilder_ == null) {
@@ -4609,7 +4609,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public Builder setRegister(
           io.bloombox.schema.partner.PartnerDeviceKey.Builder builderForValue) {
@@ -4627,7 +4627,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public Builder mergeRegister(io.bloombox.schema.partner.PartnerDeviceKey value) {
         if (registerBuilder_ == null) {
@@ -4649,7 +4649,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public Builder clearRegister() {
         if (registerBuilder_ == null) {
@@ -4667,7 +4667,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public io.bloombox.schema.partner.PartnerDeviceKey.Builder getRegisterBuilder() {
         
@@ -4679,7 +4679,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
         if (registerBuilder_ != null) {
@@ -4694,7 +4694,7 @@ public final class CommercialPurchase {
        * Point-of-Sale device that submitted this purchase.
        * </pre>
        *
-       * <code>.partner.PartnerDeviceKey register = 6;</code>
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder> 
@@ -4710,26 +4710,26 @@ public final class CommercialPurchase {
         return registerBuilder_;
       }
 
-      private java.util.List<io.bloombox.schema.commerce.OrderItem.Item> item_ =
+      private java.util.List<io.opencannabis.schema.commerce.OrderItem.Item> item_ =
         java.util.Collections.emptyList();
       private void ensureItemIsMutable() {
         if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          item_ = new java.util.ArrayList<io.bloombox.schema.commerce.OrderItem.Item>(item_);
+          item_ = new java.util.ArrayList<io.opencannabis.schema.commerce.OrderItem.Item>(item_);
           bitField0_ |= 0x00000040;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.commerce.OrderItem.Item, io.bloombox.schema.commerce.OrderItem.Item.Builder, io.bloombox.schema.commerce.OrderItem.ItemOrBuilder> itemBuilder_;
+          io.opencannabis.schema.commerce.OrderItem.Item, io.opencannabis.schema.commerce.OrderItem.Item.Builder, io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> itemBuilder_;
 
       /**
        * <pre>
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public java.util.List<io.bloombox.schema.commerce.OrderItem.Item> getItemList() {
+      public java.util.List<io.opencannabis.schema.commerce.OrderItem.Item> getItemList() {
         if (itemBuilder_ == null) {
           return java.util.Collections.unmodifiableList(item_);
         } else {
@@ -4741,7 +4741,7 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public int getItemCount() {
         if (itemBuilder_ == null) {
@@ -4755,9 +4755,9 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public io.bloombox.schema.commerce.OrderItem.Item getItem(int index) {
+      public io.opencannabis.schema.commerce.OrderItem.Item getItem(int index) {
         if (itemBuilder_ == null) {
           return item_.get(index);
         } else {
@@ -4769,10 +4769,10 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public Builder setItem(
-          int index, io.bloombox.schema.commerce.OrderItem.Item value) {
+          int index, io.opencannabis.schema.commerce.OrderItem.Item value) {
         if (itemBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4790,10 +4790,10 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public Builder setItem(
-          int index, io.bloombox.schema.commerce.OrderItem.Item.Builder builderForValue) {
+          int index, io.opencannabis.schema.commerce.OrderItem.Item.Builder builderForValue) {
         if (itemBuilder_ == null) {
           ensureItemIsMutable();
           item_.set(index, builderForValue.build());
@@ -4808,9 +4808,9 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public Builder addItem(io.bloombox.schema.commerce.OrderItem.Item value) {
+      public Builder addItem(io.opencannabis.schema.commerce.OrderItem.Item value) {
         if (itemBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4828,10 +4828,10 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public Builder addItem(
-          int index, io.bloombox.schema.commerce.OrderItem.Item value) {
+          int index, io.opencannabis.schema.commerce.OrderItem.Item value) {
         if (itemBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4849,10 +4849,10 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public Builder addItem(
-          io.bloombox.schema.commerce.OrderItem.Item.Builder builderForValue) {
+          io.opencannabis.schema.commerce.OrderItem.Item.Builder builderForValue) {
         if (itemBuilder_ == null) {
           ensureItemIsMutable();
           item_.add(builderForValue.build());
@@ -4867,10 +4867,10 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public Builder addItem(
-          int index, io.bloombox.schema.commerce.OrderItem.Item.Builder builderForValue) {
+          int index, io.opencannabis.schema.commerce.OrderItem.Item.Builder builderForValue) {
         if (itemBuilder_ == null) {
           ensureItemIsMutable();
           item_.add(index, builderForValue.build());
@@ -4885,10 +4885,10 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public Builder addAllItem(
-          java.lang.Iterable<? extends io.bloombox.schema.commerce.OrderItem.Item> values) {
+          java.lang.Iterable<? extends io.opencannabis.schema.commerce.OrderItem.Item> values) {
         if (itemBuilder_ == null) {
           ensureItemIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4904,7 +4904,7 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public Builder clearItem() {
         if (itemBuilder_ == null) {
@@ -4921,7 +4921,7 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
       public Builder removeItem(int index) {
         if (itemBuilder_ == null) {
@@ -4938,9 +4938,9 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public io.bloombox.schema.commerce.OrderItem.Item.Builder getItemBuilder(
+      public io.opencannabis.schema.commerce.OrderItem.Item.Builder getItemBuilder(
           int index) {
         return getItemFieldBuilder().getBuilder(index);
       }
@@ -4949,9 +4949,9 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public io.bloombox.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
+      public io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
           int index) {
         if (itemBuilder_ == null) {
           return item_.get(index);  } else {
@@ -4963,9 +4963,9 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public java.util.List<? extends io.bloombox.schema.commerce.OrderItem.ItemOrBuilder> 
+      public java.util.List<? extends io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> 
            getItemOrBuilderList() {
         if (itemBuilder_ != null) {
           return itemBuilder_.getMessageOrBuilderList();
@@ -4978,41 +4978,41 @@ public final class CommercialPurchase {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public io.bloombox.schema.commerce.OrderItem.Item.Builder addItemBuilder() {
+      public io.opencannabis.schema.commerce.OrderItem.Item.Builder addItemBuilder() {
         return getItemFieldBuilder().addBuilder(
-            io.bloombox.schema.commerce.OrderItem.Item.getDefaultInstance());
+            io.opencannabis.schema.commerce.OrderItem.Item.getDefaultInstance());
       }
       /**
        * <pre>
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public io.bloombox.schema.commerce.OrderItem.Item.Builder addItemBuilder(
+      public io.opencannabis.schema.commerce.OrderItem.Item.Builder addItemBuilder(
           int index) {
         return getItemFieldBuilder().addBuilder(
-            index, io.bloombox.schema.commerce.OrderItem.Item.getDefaultInstance());
+            index, io.opencannabis.schema.commerce.OrderItem.Item.getDefaultInstance());
       }
       /**
        * <pre>
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .commerce.Item item = 7;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 7;</code>
        */
-      public java.util.List<io.bloombox.schema.commerce.OrderItem.Item.Builder> 
+      public java.util.List<io.opencannabis.schema.commerce.OrderItem.Item.Builder> 
            getItemBuilderList() {
         return getItemFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.commerce.OrderItem.Item, io.bloombox.schema.commerce.OrderItem.Item.Builder, io.bloombox.schema.commerce.OrderItem.ItemOrBuilder> 
+          io.opencannabis.schema.commerce.OrderItem.Item, io.opencannabis.schema.commerce.OrderItem.Item.Builder, io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> 
           getItemFieldBuilder() {
         if (itemBuilder_ == null) {
           itemBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.bloombox.schema.commerce.OrderItem.Item, io.bloombox.schema.commerce.OrderItem.Item.Builder, io.bloombox.schema.commerce.OrderItem.ItemOrBuilder>(
+              io.opencannabis.schema.commerce.OrderItem.Item, io.opencannabis.schema.commerce.OrderItem.Item.Builder, io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder>(
                   item_,
                   ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
@@ -5030,7 +5030,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       public boolean hasReceipt() {
         return receiptBuilder_ != null || receipt_ != null;
@@ -5040,7 +5040,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt getReceipt() {
         if (receiptBuilder_ == null) {
@@ -5054,7 +5054,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       public Builder setReceipt(io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt value) {
         if (receiptBuilder_ == null) {
@@ -5074,7 +5074,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       public Builder setReceipt(
           io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt.Builder builderForValue) {
@@ -5092,7 +5092,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       public Builder mergeReceipt(io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt value) {
         if (receiptBuilder_ == null) {
@@ -5114,7 +5114,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       public Builder clearReceipt() {
         if (receiptBuilder_ == null) {
@@ -5132,7 +5132,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt.Builder getReceiptBuilder() {
         
@@ -5144,7 +5144,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.ReceiptOrBuilder getReceiptOrBuilder() {
         if (receiptBuilder_ != null) {
@@ -5159,7 +5159,7 @@ public final class CommercialPurchase {
        * Calculated order values and components, like taxes, subtotal, and so on.
        * </pre>
        *
-       * <code>.commerce.pos.Receipt receipt = 8;</code>
+       * <code>.bloombox.schema.commerce.pos.Receipt receipt = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt, io.bloombox.schema.commerce.pos.CommercialPurchase.Receipt.Builder, io.bloombox.schema.commerce.pos.CommercialPurchase.ReceiptOrBuilder> 
@@ -5192,7 +5192,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public java.util.List<io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent> getActionLogList() {
         if (actionLogBuilder_ == null) {
@@ -5206,7 +5206,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public int getActionLogCount() {
         if (actionLogBuilder_ == null) {
@@ -5220,7 +5220,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent getActionLog(int index) {
         if (actionLogBuilder_ == null) {
@@ -5234,7 +5234,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder setActionLog(
           int index, io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent value) {
@@ -5255,7 +5255,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder setActionLog(
           int index, io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder builderForValue) {
@@ -5273,7 +5273,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder addActionLog(io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent value) {
         if (actionLogBuilder_ == null) {
@@ -5293,7 +5293,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder addActionLog(
           int index, io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent value) {
@@ -5314,7 +5314,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder addActionLog(
           io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder builderForValue) {
@@ -5332,7 +5332,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder addActionLog(
           int index, io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder builderForValue) {
@@ -5350,7 +5350,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder addAllActionLog(
           java.lang.Iterable<? extends io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent> values) {
@@ -5369,7 +5369,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder clearActionLog() {
         if (actionLogBuilder_ == null) {
@@ -5386,7 +5386,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public Builder removeActionLog(int index) {
         if (actionLogBuilder_ == null) {
@@ -5403,7 +5403,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder getActionLogBuilder(
           int index) {
@@ -5414,7 +5414,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEventOrBuilder getActionLogOrBuilder(
           int index) {
@@ -5428,7 +5428,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public java.util.List<? extends io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEventOrBuilder> 
            getActionLogOrBuilderList() {
@@ -5443,7 +5443,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder addActionLogBuilder() {
         return getActionLogFieldBuilder().addBuilder(
@@ -5454,7 +5454,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder addActionLogBuilder(
           int index) {
@@ -5466,7 +5466,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .commerce.pos.PurchaseEvent action_log = 9;</code>
+       * <code>repeated .bloombox.schema.commerce.pos.PurchaseEvent action_log = 9;</code>
        */
       public java.util.List<io.bloombox.schema.commerce.pos.CommercialPurchase.PurchaseEvent.Builder> 
            getActionLogBuilderList() {
@@ -5487,15 +5487,15 @@ public final class CommercialPurchase {
         return actionLogBuilder_;
       }
 
-      private io.bloombox.schema.temporal.Instant createdAt_ = null;
+      private io.opencannabis.schema.temporal.Instant createdAt_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> createdAtBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> createdAtBuilder_;
       /**
        * <pre>
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -5505,11 +5505,11 @@ public final class CommercialPurchase {
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
-      public io.bloombox.schema.temporal.Instant getCreatedAt() {
+      public io.opencannabis.schema.temporal.Instant getCreatedAt() {
         if (createdAtBuilder_ == null) {
-          return createdAt_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : createdAt_;
+          return createdAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : createdAt_;
         } else {
           return createdAtBuilder_.getMessage();
         }
@@ -5519,9 +5519,9 @@ public final class CommercialPurchase {
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
-      public Builder setCreatedAt(io.bloombox.schema.temporal.Instant value) {
+      public Builder setCreatedAt(io.opencannabis.schema.temporal.Instant value) {
         if (createdAtBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5539,10 +5539,10 @@ public final class CommercialPurchase {
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
       public Builder setCreatedAt(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (createdAtBuilder_ == null) {
           createdAt_ = builderForValue.build();
           onChanged();
@@ -5557,13 +5557,13 @@ public final class CommercialPurchase {
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
-      public Builder mergeCreatedAt(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeCreatedAt(io.opencannabis.schema.temporal.Instant value) {
         if (createdAtBuilder_ == null) {
           if (createdAt_ != null) {
             createdAt_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(createdAt_).mergeFrom(value).buildPartial();
           } else {
             createdAt_ = value;
           }
@@ -5579,7 +5579,7 @@ public final class CommercialPurchase {
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
       public Builder clearCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -5597,9 +5597,9 @@ public final class CommercialPurchase {
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getCreatedAtBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getCreatedAtBuilder() {
         
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
@@ -5609,14 +5609,14 @@ public final class CommercialPurchase {
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
           return createdAtBuilder_.getMessageOrBuilder();
         } else {
           return createdAt_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : createdAt_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : createdAt_;
         }
       }
       /**
@@ -5624,14 +5624,14 @@ public final class CommercialPurchase {
        * When this order was created.
        * </pre>
        *
-       * <code>.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getCreatedAtFieldBuilder() {
         if (createdAtBuilder_ == null) {
           createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getCreatedAt(),
                   getParentForChildren(),
                   isClean());
@@ -5650,10 +5650,10 @@ public final class CommercialPurchase {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:commerce.pos.Purchase)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.commerce.pos.Purchase)
     }
 
-    // @@protoc_insertion_point(class_scope:commerce.pos.Purchase)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.commerce.pos.Purchase)
     private static final io.bloombox.schema.commerce.pos.CommercialPurchase.Purchase DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.commerce.pos.CommercialPurchase.Purchase();
@@ -5689,20 +5689,20 @@ public final class CommercialPurchase {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_commerce_pos_PurchaseEvent_descriptor;
+    internal_static_bloombox_schema_commerce_pos_PurchaseEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_commerce_pos_PurchaseEvent_fieldAccessorTable;
+      internal_static_bloombox_schema_commerce_pos_PurchaseEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_commerce_pos_Receipt_descriptor;
+    internal_static_bloombox_schema_commerce_pos_Receipt_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_commerce_pos_Receipt_fieldAccessorTable;
+      internal_static_bloombox_schema_commerce_pos_Receipt_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_commerce_pos_Purchase_descriptor;
+    internal_static_bloombox_schema_commerce_pos_Purchase_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_commerce_pos_Purchase_fieldAccessorTable;
+      internal_static_bloombox_schema_commerce_pos_Purchase_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5712,30 +5712,34 @@ public final class CommercialPurchase {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033commerce/pos/Purchase.proto\022\014commerce." +
-      "pos\032\023commerce/Item.proto\032\027commerce/Custo" +
-      "mer.proto\032\026accounting/Taxes.proto\032\032accou" +
-      "nting/Discounts.proto\032\026temporal/Instant." +
-      "proto\032\033partner/PartnerDevice.proto\"r\n\rPu" +
-      "rchaseEvent\022,\n\006status\030\001 \001(\0162\034.commerce.p" +
-      "os.PurchaseStatus\022\"\n\007instant\030\002 \001(\0132\021.tem" +
-      "poral.Instant\022\017\n\007message\030\003 \001(\t\"\200\001\n\007Recei" +
-      "pt\022\020\n\010subtotal\030\001 \001(\001\022\"\n\003tax\030\002 \003(\0132\025.acco" +
-      "unting.taxes.Tax\0220\n\010discount\030\003 \003(\0132\036.acc" +
-      "ounting.discounts.Discount\022\r\n\005total\030\004 \001(" +
-      "\001\"\342\002\n\010Purchase\022\n\n\002id\030\001 \001(\t\022\024\n\014partner_co" +
-      "de\030\002 \001(\t\022\025\n\rlocation_code\030\003 \001(\t\022,\n\006statu" +
-      "s\030\004 \001(\0162\034.commerce.pos.PurchaseStatus\022$\n" +
-      "\010customer\030\005 \001(\0132\022.commerce.Customer\022+\n\010r" +
-      "egister\030\006 \001(\0132\031.partner.PartnerDeviceKey" +
-      "\022\034\n\004item\030\007 \003(\0132\016.commerce.Item\022&\n\007receip" +
-      "t\030\010 \001(\0132\025.commerce.pos.Receipt\022/\n\naction" +
-      "_log\030\t \003(\0132\033.commerce.pos.PurchaseEvent\022" +
-      "%\n\ncreated_at\030\n \001(\0132\021.temporal.Instant*?" +
-      "\n\016PurchaseStatus\022\013\n\007DORMANT\020\000\022\010\n\004OPEN\020\001\022" +
-      "\n\n\006VOIDED\020\002\022\n\n\006CLOSED\020\003B<\n\037io.bloombox.s" +
-      "chema.commerce.posB\022CommercialPurchaseH\001" +
-      "P\000\370\001\001b\006proto3"
+      "\n\033commerce/pos/Purchase.proto\022\034bloombox." +
+      "schema.commerce.pos\032\026accounting/Taxes.pr" +
+      "oto\032\023commerce/Item.proto\032\027commerce/Custo" +
+      "mer.proto\032\030commerce/Discounts.proto\032\026tem" +
+      "poral/Instant.proto\032\033partner/PartnerDevi" +
+      "ce.proto\"\217\001\n\rPurchaseEvent\022<\n\006status\030\001 \001" +
+      "(\0162,.bloombox.schema.commerce.pos.Purcha" +
+      "seStatus\022/\n\007instant\030\002 \001(\0132\036.opencannabis" +
+      ".temporal.Instant\022\017\n\007message\030\003 \001(\t\"\203\001\n\007R" +
+      "eceipt\022\020\n\010subtotal\030\001 \001(\001\022$\n\003tax\030\002 \003(\0132\027." +
+      "opencannabis.taxes.Tax\0221\n\010discount\030\003 \003(\013" +
+      "2\037.opencannabis.commerce.Discount\022\r\n\005tot" +
+      "al\030\004 \001(\001\"\311\003\n\010Purchase\022\n\n\002id\030\001 \001(\t\022\024\n\014par" +
+      "tner_code\030\002 \001(\t\022\025\n\rlocation_code\030\003 \001(\t\022<" +
+      "\n\006status\030\004 \001(\0162,.bloombox.schema.commerc" +
+      "e.pos.PurchaseStatus\0221\n\010customer\030\005 \001(\0132\037" +
+      ".opencannabis.commerce.Customer\022;\n\010regis" +
+      "ter\030\006 \001(\0132).bloombox.schema.partner.Part" +
+      "nerDeviceKey\022)\n\004item\030\007 \003(\0132\033.opencannabi" +
+      "s.commerce.Item\0226\n\007receipt\030\010 \001(\0132%.bloom" +
+      "box.schema.commerce.pos.Receipt\022?\n\nactio" +
+      "n_log\030\t \003(\0132+.bloombox.schema.commerce.p" +
+      "os.PurchaseEvent\0222\n\ncreated_at\030\n \001(\0132\036.o" +
+      "pencannabis.temporal.Instant*?\n\016Purchase" +
+      "Status\022\013\n\007DORMANT\020\000\022\010\n\004OPEN\020\001\022\n\n\006VOIDED\020" +
+      "\002\022\n\n\006CLOSED\020\003B<\n\037io.bloombox.schema.comm" +
+      "erce.posB\022CommercialPurchaseH\001P\000\370\001\001b\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5748,36 +5752,36 @@ public final class CommercialPurchase {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.commerce.OrderItem.getDescriptor(),
-          io.bloombox.schema.commerce.OrderCustomer.getDescriptor(),
-          io.bloombox.schema.accounting.AccountingTaxes.getDescriptor(),
-          io.bloombox.schema.commerce.CommercialDiscounts.getDescriptor(),
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.accounting.AccountingTaxes.getDescriptor(),
+          io.opencannabis.schema.commerce.OrderItem.getDescriptor(),
+          io.opencannabis.schema.commerce.OrderCustomer.getDescriptor(),
+          io.opencannabis.schema.accounting.CommercialDiscounts.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
           io.bloombox.schema.partner.PartnerDeviceOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_commerce_pos_PurchaseEvent_descriptor =
+    internal_static_bloombox_schema_commerce_pos_PurchaseEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_commerce_pos_PurchaseEvent_fieldAccessorTable = new
+    internal_static_bloombox_schema_commerce_pos_PurchaseEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_commerce_pos_PurchaseEvent_descriptor,
+        internal_static_bloombox_schema_commerce_pos_PurchaseEvent_descriptor,
         new java.lang.String[] { "Status", "Instant", "Message", });
-    internal_static_commerce_pos_Receipt_descriptor =
+    internal_static_bloombox_schema_commerce_pos_Receipt_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_commerce_pos_Receipt_fieldAccessorTable = new
+    internal_static_bloombox_schema_commerce_pos_Receipt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_commerce_pos_Receipt_descriptor,
+        internal_static_bloombox_schema_commerce_pos_Receipt_descriptor,
         new java.lang.String[] { "Subtotal", "Tax", "Discount", "Total", });
-    internal_static_commerce_pos_Purchase_descriptor =
+    internal_static_bloombox_schema_commerce_pos_Purchase_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_commerce_pos_Purchase_fieldAccessorTable = new
+    internal_static_bloombox_schema_commerce_pos_Purchase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_commerce_pos_Purchase_descriptor,
+        internal_static_bloombox_schema_commerce_pos_Purchase_descriptor,
         new java.lang.String[] { "Id", "PartnerCode", "LocationCode", "Status", "Customer", "Register", "Item", "Receipt", "ActionLog", "CreatedAt", });
-    io.bloombox.schema.commerce.OrderItem.getDescriptor();
-    io.bloombox.schema.commerce.OrderCustomer.getDescriptor();
-    io.bloombox.schema.accounting.AccountingTaxes.getDescriptor();
-    io.bloombox.schema.commerce.CommercialDiscounts.getDescriptor();
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.accounting.AccountingTaxes.getDescriptor();
+    io.opencannabis.schema.commerce.OrderItem.getDescriptor();
+    io.opencannabis.schema.commerce.OrderCustomer.getDescriptor();
+    io.opencannabis.schema.accounting.CommercialDiscounts.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
     io.bloombox.schema.partner.PartnerDeviceOuterClass.getDescriptor();
   }
 

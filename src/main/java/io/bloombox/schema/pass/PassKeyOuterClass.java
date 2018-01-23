@@ -31,10 +31,10 @@ public final class PassKeyOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_identity_pass_PassKey_descriptor;
+    internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_identity_pass_PassKey_fieldAccessorTable;
+      internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -44,10 +44,10 @@ public final class PassKeyOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033identity/pass/PassKey.proto\022\ridentity." +
-      "pass\"7\n\007PassKey\022\017\n\007encoded\030\001 \001(\t\022\016\n\006seri" +
-      "al\030\002 \001(\t\022\013\n\003uid\030\003 \001(\tB\035\n\027io.bloombox.sch" +
-      "ema.passH\001P\001b\006proto3"
+      "\n\033identity/pass/PassKey.proto\022\035bloombox." +
+      "schema.identity.pass\"7\n\007PassKey\022\017\n\007encod" +
+      "ed\030\001 \001(\t\022\016\n\006serial\030\002 \001(\t\022\013\n\003uid\030\003 \001(\tB\035\n" +
+      "\027io.bloombox.schema.passH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,11 +61,11 @@ public final class PassKeyOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_identity_pass_PassKey_descriptor =
+    internal_static_bloombox_schema_identity_pass_PassKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_identity_pass_PassKey_fieldAccessorTable = new
+    internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_identity_pass_PassKey_descriptor,
+        internal_static_bloombox_schema_identity_pass_PassKey_descriptor,
         new java.lang.String[] { "Encoded", "Serial", "Uid", });
   }
 

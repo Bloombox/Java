@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.shop.v1;
 
 public interface GetOrderOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.shop.v1.GetOrder)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.GetOrder)
     com.google.protobuf.MessageOrBuilder {
 }

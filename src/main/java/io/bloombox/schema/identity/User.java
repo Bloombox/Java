@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * Represents an individual who uses software.
  * </pre>
  *
- * Protobuf type {@code identity.User}
+ * Protobuf type {@code bloombox.schema.identity.User}
  */
 public  final class User extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.User)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.User)
     UserOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use User.newBuilder() to construct.
@@ -93,11 +92,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.bloombox.schema.person.Person.Builder subBuilder = null;
+            io.opencannabis.schema.person.Person.Builder subBuilder = null;
             if (person_ != null) {
               subBuilder = person_.toBuilder();
             }
-            person_ = input.readMessage(io.bloombox.schema.person.Person.parser(), extensionRegistry);
+            person_ = input.readMessage(io.opencannabis.schema.person.Person.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(person_);
               person_ = subBuilder.buildPartial();
@@ -124,11 +123,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 242: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (seen_ != null) {
               subBuilder = seen_.toBuilder();
             }
-            seen_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            seen_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(seen_);
               seen_ = subBuilder.buildPartial();
@@ -137,11 +136,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 250: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (signup_ != null) {
               subBuilder = signup_.toBuilder();
             }
-            signup_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            signup_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(signup_);
               signup_ = subBuilder.buildPartial();
@@ -168,7 +167,7 @@ private static final long serialVersionUID = 0L;
                   MediaDefaultEntryHolder.defaultEntry);
               mutable_bitField0_ |= 0x00000100;
             }
-            com.google.protobuf.MapEntry<java.lang.String, io.bloombox.schema.media.MediaItem>
+            com.google.protobuf.MapEntry<java.lang.String, io.opencannabis.schema.media.MediaItem>
             media__ = input.readMessage(
                 MediaDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
             media_.getMutableMap().put(
@@ -221,7 +220,7 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_User_descriptor;
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_User_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -239,7 +238,7 @@ private static final long serialVersionUID = 0L;
   }
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_User_fieldAccessorTable
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_User_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.User.class, io.bloombox.schema.identity.User.Builder.class);
   }
@@ -294,7 +293,7 @@ private static final long serialVersionUID = 0L;
    * Boolean flags for this user.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
    */
   public boolean hasFlags() {
     return flags_ != null;
@@ -304,7 +303,7 @@ private static final long serialVersionUID = 0L;
    * Boolean flags for this user.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
    */
   public io.bloombox.schema.identity.UserFlags getFlags() {
     return flags_ == null ? io.bloombox.schema.identity.UserFlags.getDefaultInstance() : flags_;
@@ -314,20 +313,20 @@ private static final long serialVersionUID = 0L;
    * Boolean flags for this user.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
    */
   public io.bloombox.schema.identity.UserFlagsOrBuilder getFlagsOrBuilder() {
     return getFlags();
   }
 
   public static final int PERSON_FIELD_NUMBER = 3;
-  private io.bloombox.schema.person.Person person_;
+  private io.opencannabis.schema.person.Person person_;
   /**
    * <pre>
    * Person's information that backs this user.
    * </pre>
    *
-   * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+   * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
    */
   public boolean hasPerson() {
     return person_ != null;
@@ -337,19 +336,19 @@ private static final long serialVersionUID = 0L;
    * Person's information that backs this user.
    * </pre>
    *
-   * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+   * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
    */
-  public io.bloombox.schema.person.Person getPerson() {
-    return person_ == null ? io.bloombox.schema.person.Person.getDefaultInstance() : person_;
+  public io.opencannabis.schema.person.Person getPerson() {
+    return person_ == null ? io.opencannabis.schema.person.Person.getDefaultInstance() : person_;
   }
   /**
    * <pre>
    * Person's information that backs this user.
    * </pre>
    *
-   * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+   * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
    */
-  public io.bloombox.schema.person.PersonOrBuilder getPersonOrBuilder() {
+  public io.opencannabis.schema.person.PersonOrBuilder getPersonOrBuilder() {
     return getPerson();
   }
 
@@ -360,7 +359,7 @@ private static final long serialVersionUID = 0L;
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   public java.util.List<io.bloombox.schema.identity.ID> getIdentificationList() {
     return identification_;
@@ -370,7 +369,7 @@ private static final long serialVersionUID = 0L;
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   public java.util.List<? extends io.bloombox.schema.identity.IDOrBuilder> 
       getIdentificationOrBuilderList() {
@@ -381,7 +380,7 @@ private static final long serialVersionUID = 0L;
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   public int getIdentificationCount() {
     return identification_.size();
@@ -391,7 +390,7 @@ private static final long serialVersionUID = 0L;
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   public io.bloombox.schema.identity.ID getIdentification(int index) {
     return identification_.get(index);
@@ -401,7 +400,7 @@ private static final long serialVersionUID = 0L;
    * Government ID associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
    */
   public io.bloombox.schema.identity.IDOrBuilder getIdentificationOrBuilder(
       int index) {
@@ -415,7 +414,7 @@ private static final long serialVersionUID = 0L;
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   public java.util.List<io.bloombox.schema.identity.ids.UserDoctorRec> getDoctorRecList() {
     return doctorRec_;
@@ -425,7 +424,7 @@ private static final long serialVersionUID = 0L;
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   public java.util.List<? extends io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder> 
       getDoctorRecOrBuilderList() {
@@ -436,7 +435,7 @@ private static final long serialVersionUID = 0L;
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   public int getDoctorRecCount() {
     return doctorRec_.size();
@@ -446,7 +445,7 @@ private static final long serialVersionUID = 0L;
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   public io.bloombox.schema.identity.ids.UserDoctorRec getDoctorRec(int index) {
     return doctorRec_.get(index);
@@ -456,7 +455,7 @@ private static final long serialVersionUID = 0L;
    * Doctor's recommendations associated with this user.
    * </pre>
    *
-   * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
    */
   public io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder getDoctorRecOrBuilder(
       int index) {
@@ -464,13 +463,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEEN_FIELD_NUMBER = 30;
-  private io.bloombox.schema.temporal.Instant seen_;
+  private io.opencannabis.schema.temporal.Instant seen_;
   /**
    * <pre>
    * Last time this user was seen, via auth/login/enrollment etc.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
    */
   public boolean hasSeen() {
     return seen_ != null;
@@ -480,30 +479,30 @@ private static final long serialVersionUID = 0L;
    * Last time this user was seen, via auth/login/enrollment etc.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
    */
-  public io.bloombox.schema.temporal.Instant getSeen() {
-    return seen_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+  public io.opencannabis.schema.temporal.Instant getSeen() {
+    return seen_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
   }
   /**
    * <pre>
    * Last time this user was seen, via auth/login/enrollment etc.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
     return getSeen();
   }
 
   public static final int SIGNUP_FIELD_NUMBER = 31;
-  private io.bloombox.schema.temporal.Instant signup_;
+  private io.opencannabis.schema.temporal.Instant signup_;
   /**
    * <pre>
    * Timestamp for when this user was created.
    * </pre>
    *
-   * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+   * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
    */
   public boolean hasSignup() {
     return signup_ != null;
@@ -513,19 +512,19 @@ private static final long serialVersionUID = 0L;
    * Timestamp for when this user was created.
    * </pre>
    *
-   * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+   * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
    */
-  public io.bloombox.schema.temporal.Instant getSignup() {
-    return signup_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : signup_;
+  public io.opencannabis.schema.temporal.Instant getSignup() {
+    return signup_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : signup_;
   }
   /**
    * <pre>
    * Timestamp for when this user was created.
    * </pre>
    *
-   * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+   * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getSignupOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getSignupOrBuilder() {
     return getSignup();
   }
 
@@ -535,7 +534,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String, io.bloombox.schema.identity.UserIdentity> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, io.bloombox.schema.identity.UserIdentity>newDefaultInstance(
-                io.bloombox.schema.identity.UserOuterClass.internal_static_identity_User_IdentitiesEntry_descriptor, 
+                io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_User_IdentitiesEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -560,7 +559,7 @@ private static final long serialVersionUID = 0L;
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
 
   public boolean containsIdentities(
@@ -580,7 +579,7 @@ private static final long serialVersionUID = 0L;
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
 
   public java.util.Map<java.lang.String, io.bloombox.schema.identity.UserIdentity> getIdentitiesMap() {
@@ -591,7 +590,7 @@ private static final long serialVersionUID = 0L;
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
 
   public io.bloombox.schema.identity.UserIdentity getIdentitiesOrDefault(
@@ -607,7 +606,7 @@ private static final long serialVersionUID = 0L;
    * Identities associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+   * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
    */
 
   public io.bloombox.schema.identity.UserIdentity getIdentitiesOrThrow(
@@ -624,18 +623,18 @@ private static final long serialVersionUID = 0L;
   public static final int MEDIA_FIELD_NUMBER = 41;
   private static final class MediaDefaultEntryHolder {
     static final com.google.protobuf.MapEntry<
-        java.lang.String, io.bloombox.schema.media.MediaItem> defaultEntry =
+        java.lang.String, io.opencannabis.schema.media.MediaItem> defaultEntry =
             com.google.protobuf.MapEntry
-            .<java.lang.String, io.bloombox.schema.media.MediaItem>newDefaultInstance(
-                io.bloombox.schema.identity.UserOuterClass.internal_static_identity_User_MediaEntry_descriptor, 
+            .<java.lang.String, io.opencannabis.schema.media.MediaItem>newDefaultInstance(
+                io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_User_MediaEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                io.bloombox.schema.media.MediaItem.getDefaultInstance());
+                io.opencannabis.schema.media.MediaItem.getDefaultInstance());
   }
   private com.google.protobuf.MapField<
-      java.lang.String, io.bloombox.schema.media.MediaItem> media_;
-  private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.media.MediaItem>
+      java.lang.String, io.opencannabis.schema.media.MediaItem> media_;
+  private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.MediaItem>
   internalGetMedia() {
     if (media_ == null) {
       return com.google.protobuf.MapField.emptyMapField(
@@ -652,7 +651,7 @@ private static final long serialVersionUID = 0L;
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
 
   public boolean containsMedia(
@@ -664,7 +663,7 @@ private static final long serialVersionUID = 0L;
    * Use {@link #getMediaMap()} instead.
    */
   @java.lang.Deprecated
-  public java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> getMedia() {
+  public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> getMedia() {
     return getMediaMap();
   }
   /**
@@ -672,10 +671,10 @@ private static final long serialVersionUID = 0L;
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
 
-  public java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> getMediaMap() {
+  public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> getMediaMap() {
     return internalGetMedia().getMap();
   }
   /**
@@ -683,14 +682,14 @@ private static final long serialVersionUID = 0L;
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
 
-  public io.bloombox.schema.media.MediaItem getMediaOrDefault(
+  public io.opencannabis.schema.media.MediaItem getMediaOrDefault(
       java.lang.String key,
-      io.bloombox.schema.media.MediaItem defaultValue) {
+      io.opencannabis.schema.media.MediaItem defaultValue) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> map =
+    java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> map =
         internalGetMedia().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
@@ -699,13 +698,13 @@ private static final long serialVersionUID = 0L;
    * Media associated with this user.
    * </pre>
    *
-   * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+   * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
    */
 
-  public io.bloombox.schema.media.MediaItem getMediaOrThrow(
+  public io.opencannabis.schema.media.MediaItem getMediaOrThrow(
       java.lang.String key) {
     if (key == null) { throw new java.lang.NullPointerException(); }
-    java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> map =
+    java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> map =
         internalGetMedia().getMap();
     if (!map.containsKey(key)) {
       throw new java.lang.IllegalArgumentException();
@@ -720,7 +719,7 @@ private static final long serialVersionUID = 0L;
    * Consumer profile for this user.
    * </pre>
    *
-   * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+   * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
    */
   public boolean hasConsumer() {
     return consumer_ != null;
@@ -730,7 +729,7 @@ private static final long serialVersionUID = 0L;
    * Consumer profile for this user.
    * </pre>
    *
-   * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+   * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
    */
   public io.bloombox.schema.identity.ConsumerProfile getConsumer() {
     return consumer_ == null ? io.bloombox.schema.identity.ConsumerProfile.getDefaultInstance() : consumer_;
@@ -740,7 +739,7 @@ private static final long serialVersionUID = 0L;
    * Consumer profile for this user.
    * </pre>
    *
-   * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+   * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
    */
   public io.bloombox.schema.identity.ConsumerProfileOrBuilder getConsumerOrBuilder() {
     return getConsumer();
@@ -753,7 +752,7 @@ private static final long serialVersionUID = 0L;
    * Industry profile for this user.
    * </pre>
    *
-   * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+   * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
    */
   public boolean hasIndustry() {
     return industry_ != null;
@@ -763,7 +762,7 @@ private static final long serialVersionUID = 0L;
    * Industry profile for this user.
    * </pre>
    *
-   * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+   * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
    */
   public io.bloombox.schema.identity.IndustryProfile getIndustry() {
     return industry_ == null ? io.bloombox.schema.identity.IndustryProfile.getDefaultInstance() : industry_;
@@ -773,7 +772,7 @@ private static final long serialVersionUID = 0L;
    * Industry profile for this user.
    * </pre>
    *
-   * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+   * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
    */
   public io.bloombox.schema.identity.IndustryProfileOrBuilder getIndustryOrBuilder() {
     return getIndustry();
@@ -875,9 +874,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(40, identities__);
     }
-    for (java.util.Map.Entry<java.lang.String, io.bloombox.schema.media.MediaItem> entry
+    for (java.util.Map.Entry<java.lang.String, io.opencannabis.schema.media.MediaItem> entry
          : internalGetMedia().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, io.bloombox.schema.media.MediaItem>
+      com.google.protobuf.MapEntry<java.lang.String, io.opencannabis.schema.media.MediaItem>
       media__ = MediaDefaultEntryHolder.defaultEntry.newBuilderForType()
           .setKey(entry.getKey())
           .setValue(entry.getValue())
@@ -1100,15 +1099,15 @@ private static final long serialVersionUID = 0L;
    * Represents an individual who uses software.
    * </pre>
    *
-   * Protobuf type {@code identity.User}
+   * Protobuf type {@code bloombox.schema.identity.User}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.User)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.User)
       io.bloombox.schema.identity.UserOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_User_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_User_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -1139,7 +1138,7 @@ private static final long serialVersionUID = 0L;
     }
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_User_fieldAccessorTable
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_User_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.User.class, io.bloombox.schema.identity.User.Builder.class);
     }
@@ -1220,7 +1219,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_User_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_User_descriptor;
     }
 
     public io.bloombox.schema.identity.User getDefaultInstanceForType() {
@@ -1537,7 +1536,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     public boolean hasFlags() {
       return flagsBuilder_ != null || flags_ != null;
@@ -1547,7 +1546,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     public io.bloombox.schema.identity.UserFlags getFlags() {
       if (flagsBuilder_ == null) {
@@ -1561,7 +1560,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     public Builder setFlags(io.bloombox.schema.identity.UserFlags value) {
       if (flagsBuilder_ == null) {
@@ -1581,7 +1580,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     public Builder setFlags(
         io.bloombox.schema.identity.UserFlags.Builder builderForValue) {
@@ -1599,7 +1598,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     public Builder mergeFlags(io.bloombox.schema.identity.UserFlags value) {
       if (flagsBuilder_ == null) {
@@ -1621,7 +1620,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     public Builder clearFlags() {
       if (flagsBuilder_ == null) {
@@ -1639,7 +1638,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     public io.bloombox.schema.identity.UserFlags.Builder getFlagsBuilder() {
       
@@ -1651,7 +1650,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     public io.bloombox.schema.identity.UserFlagsOrBuilder getFlagsOrBuilder() {
       if (flagsBuilder_ != null) {
@@ -1666,7 +1665,7 @@ private static final long serialVersionUID = 0L;
      * Boolean flags for this user.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2 [(.gen_bq_schema.description) = "Boolean flags for this user."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.UserFlags, io.bloombox.schema.identity.UserFlags.Builder, io.bloombox.schema.identity.UserFlagsOrBuilder> 
@@ -1682,15 +1681,15 @@ private static final long serialVersionUID = 0L;
       return flagsBuilder_;
     }
 
-    private io.bloombox.schema.person.Person person_ = null;
+    private io.opencannabis.schema.person.Person person_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.person.Person, io.bloombox.schema.person.Person.Builder, io.bloombox.schema.person.PersonOrBuilder> personBuilder_;
+        io.opencannabis.schema.person.Person, io.opencannabis.schema.person.Person.Builder, io.opencannabis.schema.person.PersonOrBuilder> personBuilder_;
     /**
      * <pre>
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
     public boolean hasPerson() {
       return personBuilder_ != null || person_ != null;
@@ -1700,11 +1699,11 @@ private static final long serialVersionUID = 0L;
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
-    public io.bloombox.schema.person.Person getPerson() {
+    public io.opencannabis.schema.person.Person getPerson() {
       if (personBuilder_ == null) {
-        return person_ == null ? io.bloombox.schema.person.Person.getDefaultInstance() : person_;
+        return person_ == null ? io.opencannabis.schema.person.Person.getDefaultInstance() : person_;
       } else {
         return personBuilder_.getMessage();
       }
@@ -1714,9 +1713,9 @@ private static final long serialVersionUID = 0L;
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
-    public Builder setPerson(io.bloombox.schema.person.Person value) {
+    public Builder setPerson(io.opencannabis.schema.person.Person value) {
       if (personBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1734,10 +1733,10 @@ private static final long serialVersionUID = 0L;
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
     public Builder setPerson(
-        io.bloombox.schema.person.Person.Builder builderForValue) {
+        io.opencannabis.schema.person.Person.Builder builderForValue) {
       if (personBuilder_ == null) {
         person_ = builderForValue.build();
         onChanged();
@@ -1752,13 +1751,13 @@ private static final long serialVersionUID = 0L;
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
-    public Builder mergePerson(io.bloombox.schema.person.Person value) {
+    public Builder mergePerson(io.opencannabis.schema.person.Person value) {
       if (personBuilder_ == null) {
         if (person_ != null) {
           person_ =
-            io.bloombox.schema.person.Person.newBuilder(person_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.person.Person.newBuilder(person_).mergeFrom(value).buildPartial();
         } else {
           person_ = value;
         }
@@ -1774,7 +1773,7 @@ private static final long serialVersionUID = 0L;
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
     public Builder clearPerson() {
       if (personBuilder_ == null) {
@@ -1792,9 +1791,9 @@ private static final long serialVersionUID = 0L;
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
-    public io.bloombox.schema.person.Person.Builder getPersonBuilder() {
+    public io.opencannabis.schema.person.Person.Builder getPersonBuilder() {
       
       onChanged();
       return getPersonFieldBuilder().getBuilder();
@@ -1804,14 +1803,14 @@ private static final long serialVersionUID = 0L;
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
-    public io.bloombox.schema.person.PersonOrBuilder getPersonOrBuilder() {
+    public io.opencannabis.schema.person.PersonOrBuilder getPersonOrBuilder() {
       if (personBuilder_ != null) {
         return personBuilder_.getMessageOrBuilder();
       } else {
         return person_ == null ?
-            io.bloombox.schema.person.Person.getDefaultInstance() : person_;
+            io.opencannabis.schema.person.Person.getDefaultInstance() : person_;
       }
     }
     /**
@@ -1819,14 +1818,14 @@ private static final long serialVersionUID = 0L;
      * Person's information that backs this user.
      * </pre>
      *
-     * <code>.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
+     * <code>.opencannabis.person.Person person = 3 [(.gen_bq_schema.description) = "Person&#92;'s information that backs this user."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.person.Person, io.bloombox.schema.person.Person.Builder, io.bloombox.schema.person.PersonOrBuilder> 
+        io.opencannabis.schema.person.Person, io.opencannabis.schema.person.Person.Builder, io.opencannabis.schema.person.PersonOrBuilder> 
         getPersonFieldBuilder() {
       if (personBuilder_ == null) {
         personBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.person.Person, io.bloombox.schema.person.Person.Builder, io.bloombox.schema.person.PersonOrBuilder>(
+            io.opencannabis.schema.person.Person, io.opencannabis.schema.person.Person.Builder, io.opencannabis.schema.person.PersonOrBuilder>(
                 getPerson(),
                 getParentForChildren(),
                 isClean());
@@ -1852,7 +1851,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public java.util.List<io.bloombox.schema.identity.ID> getIdentificationList() {
       if (identificationBuilder_ == null) {
@@ -1866,7 +1865,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public int getIdentificationCount() {
       if (identificationBuilder_ == null) {
@@ -1880,7 +1879,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ID getIdentification(int index) {
       if (identificationBuilder_ == null) {
@@ -1894,7 +1893,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder setIdentification(
         int index, io.bloombox.schema.identity.ID value) {
@@ -1915,7 +1914,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder setIdentification(
         int index, io.bloombox.schema.identity.ID.Builder builderForValue) {
@@ -1933,7 +1932,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder addIdentification(io.bloombox.schema.identity.ID value) {
       if (identificationBuilder_ == null) {
@@ -1953,7 +1952,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder addIdentification(
         int index, io.bloombox.schema.identity.ID value) {
@@ -1974,7 +1973,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder addIdentification(
         io.bloombox.schema.identity.ID.Builder builderForValue) {
@@ -1992,7 +1991,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder addIdentification(
         int index, io.bloombox.schema.identity.ID.Builder builderForValue) {
@@ -2010,7 +2009,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder addAllIdentification(
         java.lang.Iterable<? extends io.bloombox.schema.identity.ID> values) {
@@ -2029,7 +2028,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder clearIdentification() {
       if (identificationBuilder_ == null) {
@@ -2046,7 +2045,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public Builder removeIdentification(int index) {
       if (identificationBuilder_ == null) {
@@ -2063,7 +2062,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ID.Builder getIdentificationBuilder(
         int index) {
@@ -2074,7 +2073,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public io.bloombox.schema.identity.IDOrBuilder getIdentificationOrBuilder(
         int index) {
@@ -2088,7 +2087,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public java.util.List<? extends io.bloombox.schema.identity.IDOrBuilder> 
          getIdentificationOrBuilderList() {
@@ -2103,7 +2102,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ID.Builder addIdentificationBuilder() {
       return getIdentificationFieldBuilder().addBuilder(
@@ -2114,7 +2113,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ID.Builder addIdentificationBuilder(
         int index) {
@@ -2126,7 +2125,7 @@ private static final long serialVersionUID = 0L;
      * Government ID associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ID identification = 20 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Government ID associated with this user."];</code>
      */
     public java.util.List<io.bloombox.schema.identity.ID.Builder> 
          getIdentificationBuilderList() {
@@ -2164,7 +2163,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public java.util.List<io.bloombox.schema.identity.ids.UserDoctorRec> getDoctorRecList() {
       if (doctorRecBuilder_ == null) {
@@ -2178,7 +2177,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public int getDoctorRecCount() {
       if (doctorRecBuilder_ == null) {
@@ -2192,7 +2191,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ids.UserDoctorRec getDoctorRec(int index) {
       if (doctorRecBuilder_ == null) {
@@ -2206,7 +2205,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder setDoctorRec(
         int index, io.bloombox.schema.identity.ids.UserDoctorRec value) {
@@ -2227,7 +2226,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder setDoctorRec(
         int index, io.bloombox.schema.identity.ids.UserDoctorRec.Builder builderForValue) {
@@ -2245,7 +2244,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder addDoctorRec(io.bloombox.schema.identity.ids.UserDoctorRec value) {
       if (doctorRecBuilder_ == null) {
@@ -2265,7 +2264,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder addDoctorRec(
         int index, io.bloombox.schema.identity.ids.UserDoctorRec value) {
@@ -2286,7 +2285,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder addDoctorRec(
         io.bloombox.schema.identity.ids.UserDoctorRec.Builder builderForValue) {
@@ -2304,7 +2303,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder addDoctorRec(
         int index, io.bloombox.schema.identity.ids.UserDoctorRec.Builder builderForValue) {
@@ -2322,7 +2321,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder addAllDoctorRec(
         java.lang.Iterable<? extends io.bloombox.schema.identity.ids.UserDoctorRec> values) {
@@ -2341,7 +2340,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder clearDoctorRec() {
       if (doctorRecBuilder_ == null) {
@@ -2358,7 +2357,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public Builder removeDoctorRec(int index) {
       if (doctorRecBuilder_ == null) {
@@ -2375,7 +2374,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ids.UserDoctorRec.Builder getDoctorRecBuilder(
         int index) {
@@ -2386,7 +2385,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder getDoctorRecOrBuilder(
         int index) {
@@ -2400,7 +2399,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public java.util.List<? extends io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder> 
          getDoctorRecOrBuilderList() {
@@ -2415,7 +2414,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ids.UserDoctorRec.Builder addDoctorRecBuilder() {
       return getDoctorRecFieldBuilder().addBuilder(
@@ -2426,7 +2425,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public io.bloombox.schema.identity.ids.UserDoctorRec.Builder addDoctorRecBuilder(
         int index) {
@@ -2438,7 +2437,7 @@ private static final long serialVersionUID = 0L;
      * Doctor's recommendations associated with this user.
      * </pre>
      *
-     * <code>repeated .identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 21 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Doctor&#92;'s recommendations associated with this user."];</code>
      */
     public java.util.List<io.bloombox.schema.identity.ids.UserDoctorRec.Builder> 
          getDoctorRecBuilderList() {
@@ -2459,15 +2458,15 @@ private static final long serialVersionUID = 0L;
       return doctorRecBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant seen_ = null;
+    private io.opencannabis.schema.temporal.Instant seen_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> seenBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> seenBuilder_;
     /**
      * <pre>
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
     public boolean hasSeen() {
       return seenBuilder_ != null || seen_ != null;
@@ -2477,11 +2476,11 @@ private static final long serialVersionUID = 0L;
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
-    public io.bloombox.schema.temporal.Instant getSeen() {
+    public io.opencannabis.schema.temporal.Instant getSeen() {
       if (seenBuilder_ == null) {
-        return seen_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+        return seen_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
       } else {
         return seenBuilder_.getMessage();
       }
@@ -2491,9 +2490,9 @@ private static final long serialVersionUID = 0L;
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
-    public Builder setSeen(io.bloombox.schema.temporal.Instant value) {
+    public Builder setSeen(io.opencannabis.schema.temporal.Instant value) {
       if (seenBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2511,10 +2510,10 @@ private static final long serialVersionUID = 0L;
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
     public Builder setSeen(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (seenBuilder_ == null) {
         seen_ = builderForValue.build();
         onChanged();
@@ -2529,13 +2528,13 @@ private static final long serialVersionUID = 0L;
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
-    public Builder mergeSeen(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeSeen(io.opencannabis.schema.temporal.Instant value) {
       if (seenBuilder_ == null) {
         if (seen_ != null) {
           seen_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(seen_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(seen_).mergeFrom(value).buildPartial();
         } else {
           seen_ = value;
         }
@@ -2551,7 +2550,7 @@ private static final long serialVersionUID = 0L;
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
     public Builder clearSeen() {
       if (seenBuilder_ == null) {
@@ -2569,9 +2568,9 @@ private static final long serialVersionUID = 0L;
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getSeenBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getSeenBuilder() {
       
       onChanged();
       return getSeenFieldBuilder().getBuilder();
@@ -2581,14 +2580,14 @@ private static final long serialVersionUID = 0L;
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
       if (seenBuilder_ != null) {
         return seenBuilder_.getMessageOrBuilder();
       } else {
         return seen_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
       }
     }
     /**
@@ -2596,14 +2595,14 @@ private static final long serialVersionUID = 0L;
      * Last time this user was seen, via auth/login/enrollment etc.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 30 [(.gen_bq_schema.description) = "Last time this user was seen, via auth/login/enrollment etc."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getSeenFieldBuilder() {
       if (seenBuilder_ == null) {
         seenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getSeen(),
                 getParentForChildren(),
                 isClean());
@@ -2612,15 +2611,15 @@ private static final long serialVersionUID = 0L;
       return seenBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant signup_ = null;
+    private io.opencannabis.schema.temporal.Instant signup_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> signupBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> signupBuilder_;
     /**
      * <pre>
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
     public boolean hasSignup() {
       return signupBuilder_ != null || signup_ != null;
@@ -2630,11 +2629,11 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
-    public io.bloombox.schema.temporal.Instant getSignup() {
+    public io.opencannabis.schema.temporal.Instant getSignup() {
       if (signupBuilder_ == null) {
-        return signup_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : signup_;
+        return signup_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : signup_;
       } else {
         return signupBuilder_.getMessage();
       }
@@ -2644,9 +2643,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
-    public Builder setSignup(io.bloombox.schema.temporal.Instant value) {
+    public Builder setSignup(io.opencannabis.schema.temporal.Instant value) {
       if (signupBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2664,10 +2663,10 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
     public Builder setSignup(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (signupBuilder_ == null) {
         signup_ = builderForValue.build();
         onChanged();
@@ -2682,13 +2681,13 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
-    public Builder mergeSignup(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeSignup(io.opencannabis.schema.temporal.Instant value) {
       if (signupBuilder_ == null) {
         if (signup_ != null) {
           signup_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(signup_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(signup_).mergeFrom(value).buildPartial();
         } else {
           signup_ = value;
         }
@@ -2704,7 +2703,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
     public Builder clearSignup() {
       if (signupBuilder_ == null) {
@@ -2722,9 +2721,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getSignupBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getSignupBuilder() {
       
       onChanged();
       return getSignupFieldBuilder().getBuilder();
@@ -2734,14 +2733,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getSignupOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getSignupOrBuilder() {
       if (signupBuilder_ != null) {
         return signupBuilder_.getMessageOrBuilder();
       } else {
         return signup_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : signup_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : signup_;
       }
     }
     /**
@@ -2749,14 +2748,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this user was created.
      * </pre>
      *
-     * <code>.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
+     * <code>.opencannabis.temporal.Instant signup = 31 [(.gen_bq_schema.description) = "Timestamp for when this user was created."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getSignupFieldBuilder() {
       if (signupBuilder_ == null) {
         signupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getSignup(),
                 getParentForChildren(),
                 isClean());
@@ -2796,7 +2795,7 @@ private static final long serialVersionUID = 0L;
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public boolean containsIdentities(
@@ -2816,7 +2815,7 @@ private static final long serialVersionUID = 0L;
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.identity.UserIdentity> getIdentitiesMap() {
@@ -2827,7 +2826,7 @@ private static final long serialVersionUID = 0L;
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public io.bloombox.schema.identity.UserIdentity getIdentitiesOrDefault(
@@ -2843,7 +2842,7 @@ private static final long serialVersionUID = 0L;
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public io.bloombox.schema.identity.UserIdentity getIdentitiesOrThrow(
@@ -2867,7 +2866,7 @@ private static final long serialVersionUID = 0L;
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public Builder removeIdentities(
@@ -2890,7 +2889,7 @@ private static final long serialVersionUID = 0L;
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
     public Builder putIdentities(
         java.lang.String key,
@@ -2906,7 +2905,7 @@ private static final long serialVersionUID = 0L;
      * Identities associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
+     * <code>map&lt;string, .bloombox.schema.identity.UserIdentity&gt; identities = 40 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Identities associated with this user."];</code>
      */
 
     public Builder putAllIdentities(
@@ -2917,8 +2916,8 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.MapField<
-        java.lang.String, io.bloombox.schema.media.MediaItem> media_;
-    private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.media.MediaItem>
+        java.lang.String, io.opencannabis.schema.media.MediaItem> media_;
+    private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.MediaItem>
     internalGetMedia() {
       if (media_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -2926,7 +2925,7 @@ private static final long serialVersionUID = 0L;
       }
       return media_;
     }
-    private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.media.MediaItem>
+    private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.MediaItem>
     internalGetMutableMedia() {
       onChanged();;
       if (media_ == null) {
@@ -2947,7 +2946,7 @@ private static final long serialVersionUID = 0L;
      * Media associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+     * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
     public boolean containsMedia(
@@ -2959,7 +2958,7 @@ private static final long serialVersionUID = 0L;
      * Use {@link #getMediaMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> getMedia() {
+    public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> getMedia() {
       return getMediaMap();
     }
     /**
@@ -2967,10 +2966,10 @@ private static final long serialVersionUID = 0L;
      * Media associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+     * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
-    public java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> getMediaMap() {
+    public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> getMediaMap() {
       return internalGetMedia().getMap();
     }
     /**
@@ -2978,14 +2977,14 @@ private static final long serialVersionUID = 0L;
      * Media associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+     * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
-    public io.bloombox.schema.media.MediaItem getMediaOrDefault(
+    public io.opencannabis.schema.media.MediaItem getMediaOrDefault(
         java.lang.String key,
-        io.bloombox.schema.media.MediaItem defaultValue) {
+        io.opencannabis.schema.media.MediaItem defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> map =
+      java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> map =
           internalGetMedia().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -2994,13 +2993,13 @@ private static final long serialVersionUID = 0L;
      * Media associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+     * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
-    public io.bloombox.schema.media.MediaItem getMediaOrThrow(
+    public io.opencannabis.schema.media.MediaItem getMediaOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> map =
+      java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> map =
           internalGetMedia().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -3018,7 +3017,7 @@ private static final long serialVersionUID = 0L;
      * Media associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+     * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
     public Builder removeMedia(
@@ -3032,7 +3031,7 @@ private static final long serialVersionUID = 0L;
      * Use alternate mutation accessors instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem>
+    public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem>
     getMutableMedia() {
       return internalGetMutableMedia().getMutableMap();
     }
@@ -3041,11 +3040,11 @@ private static final long serialVersionUID = 0L;
      * Media associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+     * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
     public Builder putMedia(
         java.lang.String key,
-        io.bloombox.schema.media.MediaItem value) {
+        io.opencannabis.schema.media.MediaItem value) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableMedia().getMutableMap()
@@ -3057,11 +3056,11 @@ private static final long serialVersionUID = 0L;
      * Media associated with this user.
      * </pre>
      *
-     * <code>map&lt;string, .media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
+     * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
     public Builder putAllMedia(
-        java.util.Map<java.lang.String, io.bloombox.schema.media.MediaItem> values) {
+        java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> values) {
       internalGetMutableMedia().getMutableMap()
           .putAll(values);
       return this;
@@ -3075,7 +3074,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public boolean hasConsumer() {
       return consumerBuilder_ != null || consumer_ != null;
@@ -3085,7 +3084,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public io.bloombox.schema.identity.ConsumerProfile getConsumer() {
       if (consumerBuilder_ == null) {
@@ -3099,7 +3098,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public Builder setConsumer(io.bloombox.schema.identity.ConsumerProfile value) {
       if (consumerBuilder_ == null) {
@@ -3119,7 +3118,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public Builder setConsumer(
         io.bloombox.schema.identity.ConsumerProfile.Builder builderForValue) {
@@ -3137,7 +3136,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public Builder mergeConsumer(io.bloombox.schema.identity.ConsumerProfile value) {
       if (consumerBuilder_ == null) {
@@ -3159,7 +3158,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public Builder clearConsumer() {
       if (consumerBuilder_ == null) {
@@ -3177,7 +3176,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public io.bloombox.schema.identity.ConsumerProfile.Builder getConsumerBuilder() {
       
@@ -3189,7 +3188,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     public io.bloombox.schema.identity.ConsumerProfileOrBuilder getConsumerOrBuilder() {
       if (consumerBuilder_ != null) {
@@ -3204,7 +3203,7 @@ private static final long serialVersionUID = 0L;
      * Consumer profile for this user.
      * </pre>
      *
-     * <code>.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
+     * <code>.bloombox.schema.identity.ConsumerProfile consumer = 100 [(.gen_bq_schema.description) = "Consumer profile for this user."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.ConsumerProfile, io.bloombox.schema.identity.ConsumerProfile.Builder, io.bloombox.schema.identity.ConsumerProfileOrBuilder> 
@@ -3228,7 +3227,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public boolean hasIndustry() {
       return industryBuilder_ != null || industry_ != null;
@@ -3238,7 +3237,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public io.bloombox.schema.identity.IndustryProfile getIndustry() {
       if (industryBuilder_ == null) {
@@ -3252,7 +3251,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public Builder setIndustry(io.bloombox.schema.identity.IndustryProfile value) {
       if (industryBuilder_ == null) {
@@ -3272,7 +3271,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public Builder setIndustry(
         io.bloombox.schema.identity.IndustryProfile.Builder builderForValue) {
@@ -3290,7 +3289,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public Builder mergeIndustry(io.bloombox.schema.identity.IndustryProfile value) {
       if (industryBuilder_ == null) {
@@ -3312,7 +3311,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public Builder clearIndustry() {
       if (industryBuilder_ == null) {
@@ -3330,7 +3329,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public io.bloombox.schema.identity.IndustryProfile.Builder getIndustryBuilder() {
       
@@ -3342,7 +3341,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     public io.bloombox.schema.identity.IndustryProfileOrBuilder getIndustryOrBuilder() {
       if (industryBuilder_ != null) {
@@ -3357,7 +3356,7 @@ private static final long serialVersionUID = 0L;
      * Industry profile for this user.
      * </pre>
      *
-     * <code>.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
+     * <code>.bloombox.schema.identity.IndustryProfile industry = 101 [(.gen_bq_schema.description) = "Industry profile for this user."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.IndustryProfile, io.bloombox.schema.identity.IndustryProfile.Builder, io.bloombox.schema.identity.IndustryProfileOrBuilder> 
@@ -3383,10 +3382,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.User)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.User)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.User)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.User)
   private static final io.bloombox.schema.identity.User DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.User();

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,10 +31,10 @@ public final class UserDoctorRecOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_identity_ids_UserDoctorRec_descriptor;
+    internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_identity_ids_UserDoctorRec_fieldAccessorTable;
+      internal_static_bloombox_schema_identity_ids_UserDoctorRec_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,22 +44,23 @@ public final class UserDoctorRecOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n identity/ids/UserDoctorRec.proto\022\014iden" +
-      "tity.ids\032\016bq_field.proto\032\021geo/USState.pr" +
-      "oto\032\023person/Person.proto\032\023temporal/Date." +
-      "proto\"\262\003\n\rUserDoctorRec\022%\n\002id\030\001 \001(\tB\031\212@\026" +
-      "ID number/unique code.\022S\n\017expiration_dat" +
-      "e\030\002 \001(\0132\016.temporal.DateB*\212@\'Expiration d" +
-      "ate for the recommendation.\022&\n\007barcode\030\003" +
-      " \001(\tB\025\212@\022Raw barcode value.\022O\n\005state\030\004 \001" +
-      "(\0162\020.geo.usa.USStateB.\212@+US state where " +
-      "the recommendation is valid.\0223\n\007country\030" +
-      "\005 \001(\tB\"\212@\037Country for the recommendation" +
-      ".\022)\n\tdoctor_id\030\006 \001(\tB\026\212@\023Doctor\'s unique" +
-      " ID.\022L\n\006doctor\030\007 \001(\0132\016.person.PersonB,\212@" +
-      ")Personal information about the physicia" +
-      "n.B%\n\037io.bloombox.schema.identity.idsH\001P" +
-      "\001b\006proto3"
+      "\n identity/ids/UserDoctorRec.proto\022\034bloo" +
+      "mbox.schema.identity.ids\032\016bq_field.proto" +
+      "\032\021geo/USState.proto\032\023person/Person.proto" +
+      "\032\023temporal/Date.proto\"\331\003\n\rUserDoctorRec\022" +
+      "%\n\002id\030\001 \001(\tB\031\212@\026ID number/unique code.\022`" +
+      "\n\017expiration_date\030\002 \001(\0132\033.opencannabis.t" +
+      "emporal.DateB*\212@\'Expiration date for the" +
+      " recommendation.\022&\n\007barcode\030\003 \001(\tB\025\212@\022Ra" +
+      "w barcode value.\022\\\n\005state\030\004 \001(\0162\035.openca" +
+      "nnabis.geo.usa.USStateB.\212@+US state wher" +
+      "e the recommendation is valid.\0223\n\007countr" +
+      "y\030\005 \001(\tB\"\212@\037Country for the recommendati" +
+      "on.\022)\n\tdoctor_id\030\006 \001(\tB\026\212@\023Doctor\'s uniq" +
+      "ue ID.\022Y\n\006doctor\030\007 \001(\0132\033.opencannabis.pe" +
+      "rson.PersonB,\212@)Personal information abo" +
+      "ut the physician.B%\n\037io.bloombox.schema." +
+      "identity.idsH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -74,15 +74,15 @@ public final class UserDoctorRecOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.geo.usa.USStateOuterClass.getDescriptor(),
-          io.bloombox.schema.person.PersonOuterClass.getDescriptor(),
-          io.bloombox.schema.temporal.DateOuterClass.getDescriptor(),
+          io.opencannabis.schema.geo.usa.USStateOuterClass.getDescriptor(),
+          io.opencannabis.schema.person.PersonOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.DateOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_identity_ids_UserDoctorRec_descriptor =
+    internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_identity_ids_UserDoctorRec_fieldAccessorTable = new
+    internal_static_bloombox_schema_identity_ids_UserDoctorRec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_identity_ids_UserDoctorRec_descriptor,
+        internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor,
         new java.lang.String[] { "Id", "ExpirationDate", "Barcode", "State", "Country", "DoctorId", "Doctor", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -90,9 +90,9 @@ public final class UserDoctorRecOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.geo.usa.USStateOuterClass.getDescriptor();
-    io.bloombox.schema.person.PersonOuterClass.getDescriptor();
-    io.bloombox.schema.temporal.DateOuterClass.getDescriptor();
+    io.opencannabis.schema.geo.usa.USStateOuterClass.getDescriptor();
+    io.opencannabis.schema.person.PersonOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.DateOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

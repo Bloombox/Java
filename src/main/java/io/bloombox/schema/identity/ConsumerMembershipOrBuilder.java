@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.identity;
 
 public interface ConsumerMembershipOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.ConsumerMembership)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ConsumerMembership)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +28,7 @@ public interface ConsumerMembershipOrBuilder extends
    * Referral source for this enrollment.
    * </pre>
    *
-   * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+   * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
    */
   int getReferralSourceValue();
   /**
@@ -37,7 +36,7 @@ public interface ConsumerMembershipOrBuilder extends
    * Referral source for this enrollment.
    * </pre>
    *
-   * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+   * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
    */
   io.bloombox.schema.identity.EnrollmentSource getReferralSource();
 
@@ -64,7 +63,7 @@ public interface ConsumerMembershipOrBuilder extends
    * Timestamp for when this profile enrolled.
    * </pre>
    *
-   * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+   * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
    */
   boolean hasSignedUpAt();
   /**
@@ -72,24 +71,24 @@ public interface ConsumerMembershipOrBuilder extends
    * Timestamp for when this profile enrolled.
    * </pre>
    *
-   * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+   * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
    */
-  io.bloombox.schema.temporal.Instant getSignedUpAt();
+  io.opencannabis.schema.temporal.Instant getSignedUpAt();
   /**
    * <pre>
    * Timestamp for when this profile enrolled.
    * </pre>
    *
-   * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+   * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getSignedUpAtOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getSignedUpAtOrBuilder();
 
   /**
    * <pre>
    * Timestamp for when this profile was last seen.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
    */
   boolean hasSeen();
   /**
@@ -97,17 +96,17 @@ public interface ConsumerMembershipOrBuilder extends
    * Timestamp for when this profile was last seen.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
    */
-  io.bloombox.schema.temporal.Instant getSeen();
+  io.opencannabis.schema.temporal.Instant getSeen();
   /**
    * <pre>
    * Timestamp for when this profile was last seen.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder();
 
   /**
    * <pre>

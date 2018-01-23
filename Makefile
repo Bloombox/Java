@@ -17,7 +17,7 @@
 ## Bloombox: Java API Client
 #
 
-RELEASE_VERSION ?= 1.0-beta9
+RELEASE_VERSION ?= 1.0-beta10
 CLIENT_VERSION ?= 1.0-SNAPSHOT
 TARGET ?= target/
 TARGET_JAR ?= $(TARGET)java-client-$(CLIENT_VERSION).jar
@@ -33,11 +33,11 @@ all: build
 
 ifeq ($(EMBEDDED_SCHEMA),yes)
 POMFILE ?= pom-public.xml
-build: sync-schema $(TARGET_JAR)
 else
 POMFILE ?= pom.xml
-build: $(TARGET_JAR)
 endif
+
+build: $(TARGET_JAR)
 
 clean:
 	@echo "Cleaning Java client artifacts..."

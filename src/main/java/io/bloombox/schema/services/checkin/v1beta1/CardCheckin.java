@@ -26,11 +26,11 @@ package io.bloombox.schema.services.checkin.v1beta1;
  * the form of an Apple Wallet based, Bloombox-issued pass.
  * </pre>
  *
- * Protobuf type {@code services.checkin.v1beta1.CardCheckin}
+ * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CardCheckin}
  */
 public  final class CardCheckin extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.checkin.v1beta1.CardCheckin)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.checkin.v1beta1.CardCheckin)
     CardCheckinOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CardCheckin.newBuilder() to construct.
@@ -84,18 +84,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_descriptor;
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_fieldAccessorTable
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.checkin.v1beta1.CardCheckin.class, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.checkin.v1beta1.CardCheckin.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.checkin.v1beta1.CardCheckin.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -193,11 +193,11 @@ private static final long serialVersionUID = 0L;
    * Request to checkin via a user's digital card.
    * </pre>
    *
-   * Protobuf type {@code services.checkin.v1beta1.CardCheckin.Request}
+   * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CardCheckin.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.checkin.v1beta1.CardCheckin.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.checkin.v1beta1.CardCheckin.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -287,12 +287,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Request_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Request_fieldAccessorTable
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.class, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.Builder.class);
     }
@@ -702,20 +702,20 @@ private static final long serialVersionUID = 0L;
      * Request to checkin via a user's digital card.
      * </pre>
      *
-     * Protobuf type {@code services.checkin.v1beta1.CardCheckin.Request}
+     * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CardCheckin.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.checkin.v1beta1.CardCheckin.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.checkin.v1beta1.CardCheckin.Request)
         io.bloombox.schema.services.checkin.v1beta1.CardCheckin.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Request_descriptor;
+        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Request_fieldAccessorTable
+        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.class, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.Builder.class);
       }
@@ -752,7 +752,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Request_descriptor;
+        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Request_descriptor;
       }
 
       public io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request getDefaultInstanceForType() {
@@ -1317,10 +1317,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.checkin.v1beta1.CardCheckin.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.checkin.v1beta1.CardCheckin.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.checkin.v1beta1.CardCheckin.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.checkin.v1beta1.CardCheckin.Request)
     private static final io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request();
@@ -1356,7 +1356,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.checkin.v1beta1.CardCheckin.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1364,7 +1364,7 @@ private static final long serialVersionUID = 0L;
      * Request to check a user in via their government ID.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1372,7 +1372,7 @@ private static final long serialVersionUID = 0L;
      * Request to check a user in via their government ID.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
      */
     io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request getRequest();
     /**
@@ -1380,7 +1380,7 @@ private static final long serialVersionUID = 0L;
      * Request to check a user in via their government ID.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
      */
     io.bloombox.schema.services.checkin.v1beta1.CardCheckin.RequestOrBuilder getRequestOrBuilder();
 
@@ -1389,7 +1389,7 @@ private static final long serialVersionUID = 0L;
      * Generic checkin response.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1397,7 +1397,7 @@ private static final long serialVersionUID = 0L;
      * Generic checkin response.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
      */
     io.bloombox.schema.services.checkin.v1beta1.CheckinResponse getResponse();
     /**
@@ -1405,7 +1405,7 @@ private static final long serialVersionUID = 0L;
      * Generic checkin response.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
      */
     io.bloombox.schema.services.checkin.v1beta1.CheckinResponseOrBuilder getResponseOrBuilder();
   }
@@ -1414,11 +1414,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a digital checkin operation, consisting of one request and one generic checkin response.
    * </pre>
    *
-   * Protobuf type {@code services.checkin.v1beta1.CardCheckin.Operation}
+   * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.checkin.v1beta1.CardCheckin.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1499,12 +1499,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Operation_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Operation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation.class, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation.Builder.class);
     }
@@ -1516,7 +1516,7 @@ private static final long serialVersionUID = 0L;
      * Request to check a user in via their government ID.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1526,7 +1526,7 @@ private static final long serialVersionUID = 0L;
      * Request to check a user in via their government ID.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.getDefaultInstance() : request_;
@@ -1536,7 +1536,7 @@ private static final long serialVersionUID = 0L;
      * Request to check a user in via their government ID.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CardCheckin.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1549,7 +1549,7 @@ private static final long serialVersionUID = 0L;
      * Generic checkin response.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1559,7 +1559,7 @@ private static final long serialVersionUID = 0L;
      * Generic checkin response.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse getResponse() {
       return response_ == null ? io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.getDefaultInstance() : response_;
@@ -1569,7 +1569,7 @@ private static final long serialVersionUID = 0L;
      * Generic checkin response.
      * </pre>
      *
-     * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+     * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
@@ -1752,20 +1752,20 @@ private static final long serialVersionUID = 0L;
      * Specifies a digital checkin operation, consisting of one request and one generic checkin response.
      * </pre>
      *
-     * Protobuf type {@code services.checkin.v1beta1.CardCheckin.Operation}
+     * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.checkin.v1beta1.CardCheckin.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation)
         io.bloombox.schema.services.checkin.v1beta1.CardCheckin.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Operation_descriptor;
+        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Operation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation.class, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation.Builder.class);
       }
@@ -1804,7 +1804,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_Operation_descriptor;
+        return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_Operation_descriptor;
       }
 
       public io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation getDefaultInstanceForType() {
@@ -1913,7 +1913,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -1923,7 +1923,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       public io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -1937,7 +1937,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request value) {
         if (requestBuilder_ == null) {
@@ -1957,7 +1957,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.Builder builderForValue) {
@@ -1975,7 +1975,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request value) {
         if (requestBuilder_ == null) {
@@ -1997,7 +1997,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2015,7 +2015,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       public io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.Builder getRequestBuilder() {
         
@@ -2027,7 +2027,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       public io.bloombox.schema.services.checkin.v1beta1.CardCheckin.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2042,7 +2042,7 @@ private static final long serialVersionUID = 0L;
        * Request to check a user in via their government ID.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.Builder, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.RequestOrBuilder> 
@@ -2066,7 +2066,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2076,7 +2076,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse getResponse() {
         if (responseBuilder_ == null) {
@@ -2090,7 +2090,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.checkin.v1beta1.CheckinResponse value) {
         if (responseBuilder_ == null) {
@@ -2110,7 +2110,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.Builder builderForValue) {
@@ -2128,7 +2128,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.checkin.v1beta1.CheckinResponse value) {
         if (responseBuilder_ == null) {
@@ -2150,7 +2150,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2168,7 +2168,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.Builder getResponseBuilder() {
         
@@ -2180,7 +2180,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       public io.bloombox.schema.services.checkin.v1beta1.CheckinResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2195,7 +2195,7 @@ private static final long serialVersionUID = 0L;
        * Generic checkin response.
        * </pre>
        *
-       * <code>.services.checkin.v1beta1.CheckinResponse response = 2;</code>
+       * <code>.bloombox.schema.services.checkin.v1beta1.CheckinResponse response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.checkin.v1beta1.CheckinResponse, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse.Builder, io.bloombox.schema.services.checkin.v1beta1.CheckinResponseOrBuilder> 
@@ -2221,10 +2221,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.checkin.v1beta1.CardCheckin.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:services.checkin.v1beta1.CardCheckin.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation)
     private static final io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Operation();
@@ -2405,20 +2405,20 @@ private static final long serialVersionUID = 0L;
    * the form of an Apple Wallet based, Bloombox-issued pass.
    * </pre>
    *
-   * Protobuf type {@code services.checkin.v1beta1.CardCheckin}
+   * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CardCheckin}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.checkin.v1beta1.CardCheckin)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.checkin.v1beta1.CardCheckin)
       io.bloombox.schema.services.checkin.v1beta1.CardCheckinOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_fieldAccessorTable
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.checkin.v1beta1.CardCheckin.class, io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Builder.class);
     }
@@ -2445,7 +2445,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CardCheckin_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CardCheckin_descriptor;
     }
 
     public io.bloombox.schema.services.checkin.v1beta1.CardCheckin getDefaultInstanceForType() {
@@ -2540,10 +2540,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.checkin.v1beta1.CardCheckin)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.checkin.v1beta1.CardCheckin)
   }
 
-  // @@protoc_insertion_point(class_scope:services.checkin.v1beta1.CardCheckin)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.checkin.v1beta1.CardCheckin)
   private static final io.bloombox.schema.services.checkin.v1beta1.CardCheckin DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.checkin.v1beta1.CardCheckin();

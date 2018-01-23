@@ -20,7 +20,7 @@
 package io.bloombox.schema.pass;
 
 public interface PassKeyOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.pass.PassKey)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.pass.PassKey)
     com.google.protobuf.MessageOrBuilder {
 
   /**

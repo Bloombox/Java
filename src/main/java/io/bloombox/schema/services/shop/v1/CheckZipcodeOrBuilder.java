@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.shop.v1;
 
 public interface CheckZipcodeOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.shop.v1.CheckZipcode)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.CheckZipcode)
     com.google.protobuf.MessageOrBuilder {
 }

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class SectionAnalytics {
    * Specifies actions that may be taken within a menu section.
    * </pre>
    *
-   * Protobuf enum {@code analytics.section.SectionAction}
+   * Protobuf enum {@code bloombox.schema.analytics.section.SectionAction}
    */
   public enum SectionAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -162,11 +163,11 @@ public final class SectionAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.section.SectionAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.section.SectionAction)
   }
 
   public interface ImpressionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.section.Impression)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.section.Impression)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -174,7 +175,7 @@ public final class SectionAnalytics {
      * Section that was presented.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
     boolean hasSpec();
     /**
@@ -182,24 +183,24 @@ public final class SectionAnalytics {
      * Section that was presented.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    io.bloombox.schema.menu.section.SectionSpec getSpec();
+    io.opencannabis.schema.menu.section.SectionSpec getSpec();
     /**
      * <pre>
      * Section that was presented.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder();
+    io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder();
 
     /**
      * <pre>
      * Specifies when this impression event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
     boolean hasOccurred();
     /**
@@ -207,28 +208,28 @@ public final class SectionAnalytics {
      * Specifies when this impression event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Specifies when this impression event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
    * Specifies a section impression event, wherein a user has been presented a particular menu section.
    * </pre>
    *
-   * Protobuf type {@code analytics.section.Impression}
+   * Protobuf type {@code bloombox.schema.analytics.section.Impression}
    */
   public  static final class Impression extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.section.Impression)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.section.Impression)
       ImpressionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Impression.newBuilder() to construct.
@@ -270,11 +271,11 @@ public final class SectionAnalytics {
               break;
             }
             case 10: {
-              io.bloombox.schema.menu.section.SectionSpec.Builder subBuilder = null;
+              io.opencannabis.schema.menu.section.SectionSpec.Builder subBuilder = null;
               if (spec_ != null) {
                 subBuilder = spec_.toBuilder();
               }
-              spec_ = input.readMessage(io.bloombox.schema.menu.section.SectionSpec.parser(), extensionRegistry);
+              spec_ = input.readMessage(io.opencannabis.schema.menu.section.SectionSpec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(spec_);
                 spec_ = subBuilder.buildPartial();
@@ -283,11 +284,11 @@ public final class SectionAnalytics {
               break;
             }
             case 18: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -309,24 +310,24 @@ public final class SectionAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Impression_descriptor;
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Impression_fieldAccessorTable
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.section.SectionAnalytics.Impression.class, io.bloombox.schema.analytics.section.SectionAnalytics.Impression.Builder.class);
     }
 
     public static final int SPEC_FIELD_NUMBER = 1;
-    private io.bloombox.schema.menu.section.SectionSpec spec_;
+    private io.opencannabis.schema.menu.section.SectionSpec spec_;
     /**
      * <pre>
      * Section that was presented.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
     public boolean hasSpec() {
       return spec_ != null;
@@ -336,30 +337,30 @@ public final class SectionAnalytics {
      * Section that was presented.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    public io.bloombox.schema.menu.section.SectionSpec getSpec() {
-      return spec_ == null ? io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+    public io.opencannabis.schema.menu.section.SectionSpec getSpec() {
+      return spec_ == null ? io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
     }
     /**
      * <pre>
      * Section that was presented.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    public io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
+    public io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
       return getSpec();
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 2;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Specifies when this impression event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -369,19 +370,19 @@ public final class SectionAnalytics {
      * Specifies when this impression event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Specifies when this impression event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -562,20 +563,20 @@ public final class SectionAnalytics {
      * Specifies a section impression event, wherein a user has been presented a particular menu section.
      * </pre>
      *
-     * Protobuf type {@code analytics.section.Impression}
+     * Protobuf type {@code bloombox.schema.analytics.section.Impression}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.section.Impression)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.section.Impression)
         io.bloombox.schema.analytics.section.SectionAnalytics.ImpressionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Impression_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Impression_fieldAccessorTable
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.section.SectionAnalytics.Impression.class, io.bloombox.schema.analytics.section.SectionAnalytics.Impression.Builder.class);
       }
@@ -614,7 +615,7 @@ public final class SectionAnalytics {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Impression_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Impression_descriptor;
       }
 
       public io.bloombox.schema.analytics.section.SectionAnalytics.Impression getDefaultInstanceForType() {
@@ -715,15 +716,15 @@ public final class SectionAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.menu.section.SectionSpec spec_ = null;
+      private io.opencannabis.schema.menu.section.SectionSpec spec_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder> specBuilder_;
+          io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder> specBuilder_;
       /**
        * <pre>
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public boolean hasSpec() {
         return specBuilder_ != null || spec_ != null;
@@ -733,11 +734,11 @@ public final class SectionAnalytics {
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpec getSpec() {
+      public io.opencannabis.schema.menu.section.SectionSpec getSpec() {
         if (specBuilder_ == null) {
-          return spec_ == null ? io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+          return spec_ == null ? io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
         } else {
           return specBuilder_.getMessage();
         }
@@ -747,9 +748,9 @@ public final class SectionAnalytics {
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public Builder setSpec(io.bloombox.schema.menu.section.SectionSpec value) {
+      public Builder setSpec(io.opencannabis.schema.menu.section.SectionSpec value) {
         if (specBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -767,10 +768,10 @@ public final class SectionAnalytics {
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public Builder setSpec(
-          io.bloombox.schema.menu.section.SectionSpec.Builder builderForValue) {
+          io.opencannabis.schema.menu.section.SectionSpec.Builder builderForValue) {
         if (specBuilder_ == null) {
           spec_ = builderForValue.build();
           onChanged();
@@ -785,13 +786,13 @@ public final class SectionAnalytics {
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public Builder mergeSpec(io.bloombox.schema.menu.section.SectionSpec value) {
+      public Builder mergeSpec(io.opencannabis.schema.menu.section.SectionSpec value) {
         if (specBuilder_ == null) {
           if (spec_ != null) {
             spec_ =
-              io.bloombox.schema.menu.section.SectionSpec.newBuilder(spec_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.menu.section.SectionSpec.newBuilder(spec_).mergeFrom(value).buildPartial();
           } else {
             spec_ = value;
           }
@@ -807,7 +808,7 @@ public final class SectionAnalytics {
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public Builder clearSpec() {
         if (specBuilder_ == null) {
@@ -825,9 +826,9 @@ public final class SectionAnalytics {
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpec.Builder getSpecBuilder() {
+      public io.opencannabis.schema.menu.section.SectionSpec.Builder getSpecBuilder() {
         
         onChanged();
         return getSpecFieldBuilder().getBuilder();
@@ -837,14 +838,14 @@ public final class SectionAnalytics {
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
+      public io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
         if (specBuilder_ != null) {
           return specBuilder_.getMessageOrBuilder();
         } else {
           return spec_ == null ?
-              io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+              io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
         }
       }
       /**
@@ -852,14 +853,14 @@ public final class SectionAnalytics {
        * Section that was presented.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder> 
+          io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder> 
           getSpecFieldBuilder() {
         if (specBuilder_ == null) {
           specBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder>(
+              io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder>(
                   getSpec(),
                   getParentForChildren(),
                   isClean());
@@ -868,15 +869,15 @@ public final class SectionAnalytics {
         return specBuilder_;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -886,11 +887,11 @@ public final class SectionAnalytics {
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -900,9 +901,9 @@ public final class SectionAnalytics {
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -920,10 +921,10 @@ public final class SectionAnalytics {
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -938,13 +939,13 @@ public final class SectionAnalytics {
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -960,7 +961,7 @@ public final class SectionAnalytics {
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -978,9 +979,9 @@ public final class SectionAnalytics {
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -990,14 +991,14 @@ public final class SectionAnalytics {
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1005,14 +1006,14 @@ public final class SectionAnalytics {
        * Specifies when this impression event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -1031,10 +1032,10 @@ public final class SectionAnalytics {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.section.Impression)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.section.Impression)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.section.Impression)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.section.Impression)
     private static final io.bloombox.schema.analytics.section.SectionAnalytics.Impression DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.section.SectionAnalytics.Impression();
@@ -1070,7 +1071,7 @@ public final class SectionAnalytics {
   }
 
   public interface ViewOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.section.View)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.section.View)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1078,7 +1079,7 @@ public final class SectionAnalytics {
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
     boolean hasSpec();
     /**
@@ -1086,17 +1087,17 @@ public final class SectionAnalytics {
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    io.bloombox.schema.menu.section.SectionSpec getSpec();
+    io.opencannabis.schema.menu.section.SectionSpec getSpec();
     /**
      * <pre>
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder();
+    io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder();
 
     /**
      * <pre>
@@ -1112,7 +1113,7 @@ public final class SectionAnalytics {
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     boolean hasOccurred();
     /**
@@ -1120,28 +1121,28 @@ public final class SectionAnalytics {
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
    * Specifies a section view event, wherein a user has navigated to a particular menu section.
    * </pre>
    *
-   * Protobuf type {@code analytics.section.View}
+   * Protobuf type {@code bloombox.schema.analytics.section.View}
    */
   public  static final class View extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.section.View)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.section.View)
       ViewOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use View.newBuilder() to construct.
@@ -1184,11 +1185,11 @@ public final class SectionAnalytics {
               break;
             }
             case 10: {
-              io.bloombox.schema.menu.section.SectionSpec.Builder subBuilder = null;
+              io.opencannabis.schema.menu.section.SectionSpec.Builder subBuilder = null;
               if (spec_ != null) {
                 subBuilder = spec_.toBuilder();
               }
-              spec_ = input.readMessage(io.bloombox.schema.menu.section.SectionSpec.parser(), extensionRegistry);
+              spec_ = input.readMessage(io.opencannabis.schema.menu.section.SectionSpec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(spec_);
                 spec_ = subBuilder.buildPartial();
@@ -1202,11 +1203,11 @@ public final class SectionAnalytics {
               break;
             }
             case 26: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -1228,24 +1229,24 @@ public final class SectionAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_View_descriptor;
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_View_fieldAccessorTable
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.section.SectionAnalytics.View.class, io.bloombox.schema.analytics.section.SectionAnalytics.View.Builder.class);
     }
 
     public static final int SPEC_FIELD_NUMBER = 1;
-    private io.bloombox.schema.menu.section.SectionSpec spec_;
+    private io.opencannabis.schema.menu.section.SectionSpec spec_;
     /**
      * <pre>
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
     public boolean hasSpec() {
       return spec_ != null;
@@ -1255,19 +1256,19 @@ public final class SectionAnalytics {
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    public io.bloombox.schema.menu.section.SectionSpec getSpec() {
-      return spec_ == null ? io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+    public io.opencannabis.schema.menu.section.SectionSpec getSpec() {
+      return spec_ == null ? io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
     }
     /**
      * <pre>
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    public io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
+    public io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
       return getSpec();
     }
 
@@ -1285,13 +1286,13 @@ public final class SectionAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -1301,19 +1302,19 @@ public final class SectionAnalytics {
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -1506,20 +1507,20 @@ public final class SectionAnalytics {
      * Specifies a section view event, wherein a user has navigated to a particular menu section.
      * </pre>
      *
-     * Protobuf type {@code analytics.section.View}
+     * Protobuf type {@code bloombox.schema.analytics.section.View}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.section.View)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.section.View)
         io.bloombox.schema.analytics.section.SectionAnalytics.ViewOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_View_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_View_fieldAccessorTable
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.section.SectionAnalytics.View.class, io.bloombox.schema.analytics.section.SectionAnalytics.View.Builder.class);
       }
@@ -1560,7 +1561,7 @@ public final class SectionAnalytics {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_View_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_View_descriptor;
       }
 
       public io.bloombox.schema.analytics.section.SectionAnalytics.View getDefaultInstanceForType() {
@@ -1665,15 +1666,15 @@ public final class SectionAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.menu.section.SectionSpec spec_ = null;
+      private io.opencannabis.schema.menu.section.SectionSpec spec_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder> specBuilder_;
+          io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder> specBuilder_;
       /**
        * <pre>
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public boolean hasSpec() {
         return specBuilder_ != null || spec_ != null;
@@ -1683,11 +1684,11 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpec getSpec() {
+      public io.opencannabis.schema.menu.section.SectionSpec getSpec() {
         if (specBuilder_ == null) {
-          return spec_ == null ? io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+          return spec_ == null ? io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
         } else {
           return specBuilder_.getMessage();
         }
@@ -1697,9 +1698,9 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public Builder setSpec(io.bloombox.schema.menu.section.SectionSpec value) {
+      public Builder setSpec(io.opencannabis.schema.menu.section.SectionSpec value) {
         if (specBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1717,10 +1718,10 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public Builder setSpec(
-          io.bloombox.schema.menu.section.SectionSpec.Builder builderForValue) {
+          io.opencannabis.schema.menu.section.SectionSpec.Builder builderForValue) {
         if (specBuilder_ == null) {
           spec_ = builderForValue.build();
           onChanged();
@@ -1735,13 +1736,13 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public Builder mergeSpec(io.bloombox.schema.menu.section.SectionSpec value) {
+      public Builder mergeSpec(io.opencannabis.schema.menu.section.SectionSpec value) {
         if (specBuilder_ == null) {
           if (spec_ != null) {
             spec_ =
-              io.bloombox.schema.menu.section.SectionSpec.newBuilder(spec_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.menu.section.SectionSpec.newBuilder(spec_).mergeFrom(value).buildPartial();
           } else {
             spec_ = value;
           }
@@ -1757,7 +1758,7 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public Builder clearSpec() {
         if (specBuilder_ == null) {
@@ -1775,9 +1776,9 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpec.Builder getSpecBuilder() {
+      public io.opencannabis.schema.menu.section.SectionSpec.Builder getSpecBuilder() {
         
         onChanged();
         return getSpecFieldBuilder().getBuilder();
@@ -1787,14 +1788,14 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
+      public io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
         if (specBuilder_ != null) {
           return specBuilder_.getMessageOrBuilder();
         } else {
           return spec_ == null ?
-              io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+              io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
         }
       }
       /**
@@ -1802,14 +1803,14 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder> 
+          io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder> 
           getSpecFieldBuilder() {
         if (specBuilder_ == null) {
           specBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder>(
+              io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder>(
                   getSpec(),
                   getParentForChildren(),
                   isClean());
@@ -1856,15 +1857,15 @@ public final class SectionAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -1874,11 +1875,11 @@ public final class SectionAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -1888,9 +1889,9 @@ public final class SectionAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1908,10 +1909,10 @@ public final class SectionAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -1926,13 +1927,13 @@ public final class SectionAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -1948,7 +1949,7 @@ public final class SectionAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -1966,9 +1967,9 @@ public final class SectionAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -1978,14 +1979,14 @@ public final class SectionAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1993,14 +1994,14 @@ public final class SectionAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -2019,10 +2020,10 @@ public final class SectionAnalytics {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.section.View)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.section.View)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.section.View)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.section.View)
     private static final io.bloombox.schema.analytics.section.SectionAnalytics.View DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.section.SectionAnalytics.View();
@@ -2058,7 +2059,7 @@ public final class SectionAnalytics {
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.section.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.section.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2066,7 +2067,7 @@ public final class SectionAnalytics {
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
     boolean hasSpec();
     /**
@@ -2074,24 +2075,24 @@ public final class SectionAnalytics {
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    io.bloombox.schema.menu.section.SectionSpec getSpec();
+    io.opencannabis.schema.menu.section.SectionSpec getSpec();
     /**
      * <pre>
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder();
+    io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder();
 
     /**
      * <pre>
      * Action that was taken within the section.
      * </pre>
      *
-     * <code>.analytics.section.SectionAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -2099,7 +2100,7 @@ public final class SectionAnalytics {
      * Action that was taken within the section.
      * </pre>
      *
-     * <code>.analytics.section.SectionAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction getVerb();
 
@@ -2108,7 +2109,7 @@ public final class SectionAnalytics {
      * Specifies when this action event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     boolean hasOccurred();
     /**
@@ -2116,17 +2117,17 @@ public final class SectionAnalytics {
      * Specifies when this action event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Specifies when this action event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -2134,11 +2135,11 @@ public final class SectionAnalytics {
    * view of a particular menu section.
    * </pre>
    *
-   * Protobuf type {@code analytics.section.Action}
+   * Protobuf type {@code bloombox.schema.analytics.section.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.section.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.section.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -2181,11 +2182,11 @@ public final class SectionAnalytics {
               break;
             }
             case 10: {
-              io.bloombox.schema.menu.section.SectionSpec.Builder subBuilder = null;
+              io.opencannabis.schema.menu.section.SectionSpec.Builder subBuilder = null;
               if (spec_ != null) {
                 subBuilder = spec_.toBuilder();
               }
-              spec_ = input.readMessage(io.bloombox.schema.menu.section.SectionSpec.parser(), extensionRegistry);
+              spec_ = input.readMessage(io.opencannabis.schema.menu.section.SectionSpec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(spec_);
                 spec_ = subBuilder.buildPartial();
@@ -2200,11 +2201,11 @@ public final class SectionAnalytics {
               break;
             }
             case 26: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -2226,24 +2227,24 @@ public final class SectionAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Action_descriptor;
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.section.SectionAnalytics.Action.class, io.bloombox.schema.analytics.section.SectionAnalytics.Action.Builder.class);
     }
 
     public static final int SPEC_FIELD_NUMBER = 1;
-    private io.bloombox.schema.menu.section.SectionSpec spec_;
+    private io.opencannabis.schema.menu.section.SectionSpec spec_;
     /**
      * <pre>
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
     public boolean hasSpec() {
       return spec_ != null;
@@ -2253,19 +2254,19 @@ public final class SectionAnalytics {
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    public io.bloombox.schema.menu.section.SectionSpec getSpec() {
-      return spec_ == null ? io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+    public io.opencannabis.schema.menu.section.SectionSpec getSpec() {
+      return spec_ == null ? io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
     }
     /**
      * <pre>
      * Section that was viewed.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 1;</code>
+     * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
      */
-    public io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
+    public io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
       return getSpec();
     }
 
@@ -2276,7 +2277,7 @@ public final class SectionAnalytics {
      * Action that was taken within the section.
      * </pre>
      *
-     * <code>.analytics.section.SectionAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -2286,7 +2287,7 @@ public final class SectionAnalytics {
      * Action that was taken within the section.
      * </pre>
      *
-     * <code>.analytics.section.SectionAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction getVerb() {
       io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction result = io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction.valueOf(verb_);
@@ -2294,13 +2295,13 @@ public final class SectionAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Specifies when this action event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -2310,19 +2311,19 @@ public final class SectionAnalytics {
      * Specifies when this action event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Specifies when this action event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -2514,20 +2515,20 @@ public final class SectionAnalytics {
      * view of a particular menu section.
      * </pre>
      *
-     * Protobuf type {@code analytics.section.Action}
+     * Protobuf type {@code bloombox.schema.analytics.section.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.section.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.section.Action)
         io.bloombox.schema.analytics.section.SectionAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Action_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.section.SectionAnalytics.Action.class, io.bloombox.schema.analytics.section.SectionAnalytics.Action.Builder.class);
       }
@@ -2568,7 +2569,7 @@ public final class SectionAnalytics {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_analytics_section_Action_descriptor;
+        return io.bloombox.schema.analytics.section.SectionAnalytics.internal_static_bloombox_schema_analytics_section_Action_descriptor;
       }
 
       public io.bloombox.schema.analytics.section.SectionAnalytics.Action getDefaultInstanceForType() {
@@ -2673,15 +2674,15 @@ public final class SectionAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.menu.section.SectionSpec spec_ = null;
+      private io.opencannabis.schema.menu.section.SectionSpec spec_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder> specBuilder_;
+          io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder> specBuilder_;
       /**
        * <pre>
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public boolean hasSpec() {
         return specBuilder_ != null || spec_ != null;
@@ -2691,11 +2692,11 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpec getSpec() {
+      public io.opencannabis.schema.menu.section.SectionSpec getSpec() {
         if (specBuilder_ == null) {
-          return spec_ == null ? io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+          return spec_ == null ? io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
         } else {
           return specBuilder_.getMessage();
         }
@@ -2705,9 +2706,9 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public Builder setSpec(io.bloombox.schema.menu.section.SectionSpec value) {
+      public Builder setSpec(io.opencannabis.schema.menu.section.SectionSpec value) {
         if (specBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2725,10 +2726,10 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public Builder setSpec(
-          io.bloombox.schema.menu.section.SectionSpec.Builder builderForValue) {
+          io.opencannabis.schema.menu.section.SectionSpec.Builder builderForValue) {
         if (specBuilder_ == null) {
           spec_ = builderForValue.build();
           onChanged();
@@ -2743,13 +2744,13 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public Builder mergeSpec(io.bloombox.schema.menu.section.SectionSpec value) {
+      public Builder mergeSpec(io.opencannabis.schema.menu.section.SectionSpec value) {
         if (specBuilder_ == null) {
           if (spec_ != null) {
             spec_ =
-              io.bloombox.schema.menu.section.SectionSpec.newBuilder(spec_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.menu.section.SectionSpec.newBuilder(spec_).mergeFrom(value).buildPartial();
           } else {
             spec_ = value;
           }
@@ -2765,7 +2766,7 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       public Builder clearSpec() {
         if (specBuilder_ == null) {
@@ -2783,9 +2784,9 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpec.Builder getSpecBuilder() {
+      public io.opencannabis.schema.menu.section.SectionSpec.Builder getSpecBuilder() {
         
         onChanged();
         return getSpecFieldBuilder().getBuilder();
@@ -2795,14 +2796,14 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
+      public io.opencannabis.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
         if (specBuilder_ != null) {
           return specBuilder_.getMessageOrBuilder();
         } else {
           return spec_ == null ?
-              io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
+              io.opencannabis.schema.menu.section.SectionSpec.getDefaultInstance() : spec_;
         }
       }
       /**
@@ -2810,14 +2811,14 @@ public final class SectionAnalytics {
        * Section that was viewed.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 1;</code>
+       * <code>.opencannabis.products.menu.section.SectionSpec spec = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder> 
+          io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder> 
           getSpecFieldBuilder() {
         if (specBuilder_ == null) {
           specBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder>(
+              io.opencannabis.schema.menu.section.SectionSpec, io.opencannabis.schema.menu.section.SectionSpec.Builder, io.opencannabis.schema.menu.section.SectionSpecOrBuilder>(
                   getSpec(),
                   getParentForChildren(),
                   isClean());
@@ -2832,7 +2833,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -2842,7 +2843,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -2854,7 +2855,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction getVerb() {
         io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction result = io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction.valueOf(verb_);
@@ -2865,7 +2866,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.section.SectionAnalytics.SectionAction value) {
         if (value == null) {
@@ -2881,7 +2882,7 @@ public final class SectionAnalytics {
        * Action that was taken within the section.
        * </pre>
        *
-       * <code>.analytics.section.SectionAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.section.SectionAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -2890,15 +2891,15 @@ public final class SectionAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -2908,11 +2909,11 @@ public final class SectionAnalytics {
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -2922,9 +2923,9 @@ public final class SectionAnalytics {
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2942,10 +2943,10 @@ public final class SectionAnalytics {
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -2960,13 +2961,13 @@ public final class SectionAnalytics {
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -2982,7 +2983,7 @@ public final class SectionAnalytics {
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -3000,9 +3001,9 @@ public final class SectionAnalytics {
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -3012,14 +3013,14 @@ public final class SectionAnalytics {
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -3027,14 +3028,14 @@ public final class SectionAnalytics {
        * Specifies when this action event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -3053,10 +3054,10 @@ public final class SectionAnalytics {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.section.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.section.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.section.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.section.Action)
     private static final io.bloombox.schema.analytics.section.SectionAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.section.SectionAnalytics.Action();
@@ -3092,20 +3093,20 @@ public final class SectionAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_section_Impression_descriptor;
+    internal_static_bloombox_schema_analytics_section_Impression_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_section_Impression_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_section_Impression_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_section_View_descriptor;
+    internal_static_bloombox_schema_analytics_section_View_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_section_View_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_section_View_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_section_Action_descriptor;
+    internal_static_bloombox_schema_analytics_section_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_section_Action_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_section_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3116,20 +3117,23 @@ public final class SectionAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n)analytics/commerce/SectionAnalytics.pr" +
-      "oto\022\021analytics.section\032\026temporal/Instant" +
-      ".proto\032\033products/menu/Section.proto\"c\n\nI" +
-      "mpression\0220\n\004spec\030\001 \001(\0132\".products.menu." +
-      "section.SectionSpec\022#\n\010occurred\030\002 \001(\0132\021." +
-      "temporal.Instant\"r\n\004View\0220\n\004spec\030\001 \001(\0132\"" +
-      ".products.menu.section.SectionSpec\022\023\n\013in" +
-      "teractive\030\002 \001(\010\022#\n\010occurred\030\003 \001(\0132\021.temp" +
-      "oral.Instant\"\217\001\n\006Action\0220\n\004spec\030\001 \001(\0132\"." +
-      "products.menu.section.SectionSpec\022.\n\004ver" +
-      "b\030\002 \001(\0162 .analytics.section.SectionActio" +
-      "n\022#\n\010occurred\030\003 \001(\0132\021.temporal.Instant*/" +
-      "\n\rSectionAction\022\010\n\004VIEW\020\000\022\010\n\004SORT\020\001\022\n\n\006F" +
-      "ILTER\020\002B?\n$io.bloombox.schema.analytics." +
-      "sectionB\020SectionAnalyticsH\001P\000\370\001\001b\006proto3"
+      "oto\022!bloombox.schema.analytics.section\032\026" +
+      "temporal/Instant.proto\032\033products/menu/Se" +
+      "ction.proto\"}\n\nImpression\022=\n\004spec\030\001 \001(\0132" +
+      "/.opencannabis.products.menu.section.Sec" +
+      "tionSpec\0220\n\010occurred\030\002 \001(\0132\036.opencannabi" +
+      "s.temporal.Instant\"\214\001\n\004View\022=\n\004spec\030\001 \001(" +
+      "\0132/.opencannabis.products.menu.section.S" +
+      "ectionSpec\022\023\n\013interactive\030\002 \001(\010\0220\n\010occur" +
+      "red\030\003 \001(\0132\036.opencannabis.temporal.Instan" +
+      "t\"\271\001\n\006Action\022=\n\004spec\030\001 \001(\0132/.opencannabi" +
+      "s.products.menu.section.SectionSpec\022>\n\004v" +
+      "erb\030\002 \001(\01620.bloombox.schema.analytics.se" +
+      "ction.SectionAction\0220\n\010occurred\030\003 \001(\0132\036." +
+      "opencannabis.temporal.Instant*/\n\rSection" +
+      "Action\022\010\n\004VIEW\020\000\022\010\n\004SORT\020\001\022\n\n\006FILTER\020\002B?" +
+      "\n$io.bloombox.schema.analytics.sectionB\020" +
+      "SectionAnalyticsH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3142,29 +3146,29 @@ public final class SectionAnalytics {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
-          io.bloombox.schema.menu.section.SectionOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_analytics_section_Impression_descriptor =
+    internal_static_bloombox_schema_analytics_section_Impression_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_section_Impression_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_section_Impression_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_section_Impression_descriptor,
+        internal_static_bloombox_schema_analytics_section_Impression_descriptor,
         new java.lang.String[] { "Spec", "Occurred", });
-    internal_static_analytics_section_View_descriptor =
+    internal_static_bloombox_schema_analytics_section_View_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_analytics_section_View_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_section_View_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_section_View_descriptor,
+        internal_static_bloombox_schema_analytics_section_View_descriptor,
         new java.lang.String[] { "Spec", "Interactive", "Occurred", });
-    internal_static_analytics_section_Action_descriptor =
+    internal_static_bloombox_schema_analytics_section_Action_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_analytics_section_Action_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_section_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_section_Action_descriptor,
+        internal_static_bloombox_schema_analytics_section_Action_descriptor,
         new java.lang.String[] { "Spec", "Verb", "Occurred", });
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
-    io.bloombox.schema.menu.section.SectionOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

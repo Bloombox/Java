@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,11 +20,11 @@
 package io.bloombox.schema.security;
 
 /**
- * Protobuf type {@code security.IdentityToken}
+ * Protobuf type {@code bloombox.schema.security.IdentityToken}
  */
 public  final class IdentityToken extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:security.IdentityToken)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.security.IdentityToken)
     IdentityTokenOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use IdentityToken.newBuilder() to construct.
@@ -101,12 +100,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_security_IdentityToken_descriptor;
+    return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_security_IdentityToken_fieldAccessorTable
+    return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.security.IdentityToken.class, io.bloombox.schema.security.IdentityToken.Builder.class);
   }
@@ -182,13 +181,13 @@ private static final long serialVersionUID = 0L;
   public static final int ISSUER_FIELD_NUMBER = 3;
   private int issuer_;
   /**
-   * <code>.security.IdentityTokenIssuer issuer = 3;</code>
+   * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
    */
   public int getIssuerValue() {
     return issuer_;
   }
   /**
-   * <code>.security.IdentityTokenIssuer issuer = 3;</code>
+   * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
    */
   public io.bloombox.schema.security.IdentityTokenIssuer getIssuer() {
     io.bloombox.schema.security.IdentityTokenIssuer result = io.bloombox.schema.security.IdentityTokenIssuer.valueOf(issuer_);
@@ -366,20 +365,20 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code security.IdentityToken}
+   * Protobuf type {@code bloombox.schema.security.IdentityToken}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:security.IdentityToken)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.security.IdentityToken)
       io.bloombox.schema.security.IdentityTokenOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_security_IdentityToken_descriptor;
+      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_security_IdentityToken_fieldAccessorTable
+      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.security.IdentityToken.class, io.bloombox.schema.security.IdentityToken.Builder.class);
     }
@@ -412,7 +411,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_security_IdentityToken_descriptor;
+      return io.bloombox.schema.security.IdentityTokenOuterClass.internal_static_bloombox_schema_security_IdentityToken_descriptor;
     }
 
     public io.bloombox.schema.security.IdentityToken getDefaultInstanceForType() {
@@ -651,13 +650,13 @@ private static final long serialVersionUID = 0L;
 
     private int issuer_ = 0;
     /**
-     * <code>.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public int getIssuerValue() {
       return issuer_;
     }
     /**
-     * <code>.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder setIssuerValue(int value) {
       issuer_ = value;
@@ -665,14 +664,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public io.bloombox.schema.security.IdentityTokenIssuer getIssuer() {
       io.bloombox.schema.security.IdentityTokenIssuer result = io.bloombox.schema.security.IdentityTokenIssuer.valueOf(issuer_);
       return result == null ? io.bloombox.schema.security.IdentityTokenIssuer.UNRECOGNIZED : result;
     }
     /**
-     * <code>.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder setIssuer(io.bloombox.schema.security.IdentityTokenIssuer value) {
       if (value == null) {
@@ -684,7 +683,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.security.IdentityTokenIssuer issuer = 3;</code>
+     * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder clearIssuer() {
       
@@ -703,10 +702,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:security.IdentityToken)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.security.IdentityToken)
   }
 
-  // @@protoc_insertion_point(class_scope:security.IdentityToken)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.security.IdentityToken)
   private static final io.bloombox.schema.security.IdentityToken DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.security.IdentityToken();

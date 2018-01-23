@@ -25,7 +25,7 @@ package io.bloombox.schema.services.menu.v1beta1;
  * Enumerates known errors that may be thrown by menu operations.
  * </pre>
  *
- * Protobuf enum {@code services.menu.v1beta1.MenuError}
+ * Protobuf enum {@code bloombox.schema.services.menu.v1beta1.MenuError}
  */
 public enum MenuError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -220,6 +220,6 @@ public enum MenuError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.menu.v1beta1.MenuError)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.menu.v1beta1.MenuError)
 }
 

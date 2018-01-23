@@ -45,7 +45,7 @@ public final class CheckinGrpc {
 
   private CheckinGrpc() {}
 
-  public static final String SERVICE_NAME = "services.checkin.v1beta1.Checkin";
+  public static final String SERVICE_NAME = "bloombox.schema.services.checkin.v1beta1.Checkin";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -54,7 +54,7 @@ public final class CheckinGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.Ping.Request, io.bloombox.schema.services.checkin.v1beta1.Ping.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.checkin.v1beta1.Checkin", "Ping"))
+              "bloombox.schema.services.checkin.v1beta1.Checkin", "Ping"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.checkin.v1beta1.Ping.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -66,7 +66,7 @@ public final class CheckinGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.checkin.v1beta1.Checkin", "Identification"))
+              "bloombox.schema.services.checkin.v1beta1.Checkin", "Identification"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.checkin.v1beta1.IDCheckin.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -78,7 +78,7 @@ public final class CheckinGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request, io.bloombox.schema.services.checkin.v1beta1.CheckinResponse>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.checkin.v1beta1.Checkin", "Card"))
+              "bloombox.schema.services.checkin.v1beta1.Checkin", "Card"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

@@ -25,7 +25,7 @@ package io.bloombox.schema.services.telemetry.v1beta3;
  * Specifies known errors that may be emitted in exceptional processing cases.
  * </pre>
  *
- * Protobuf enum {@code services.telemetry.v1beta3.TelemetryError}
+ * Protobuf enum {@code bloombox.schema.services.telemetry.v1beta3.TelemetryError}
  */
 public enum TelemetryError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -271,6 +271,6 @@ public enum TelemetryError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.telemetry.v1beta3.TelemetryError)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.telemetry.v1beta3.TelemetryError)
 }
 

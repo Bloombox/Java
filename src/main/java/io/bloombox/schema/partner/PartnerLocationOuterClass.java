@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,15 +31,15 @@ public final class PartnerLocationOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partner_PartnerLocationKey_descriptor;
+    internal_static_bloombox_schema_partner_PartnerLocationKey_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partner_PartnerLocationKey_fieldAccessorTable;
+      internal_static_bloombox_schema_partner_PartnerLocationKey_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partner_PartnerLocation_descriptor;
+    internal_static_bloombox_schema_partner_PartnerLocation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partner_PartnerLocation_fieldAccessorTable;
+      internal_static_bloombox_schema_partner_PartnerLocation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,38 +49,41 @@ public final class PartnerLocationOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035partner/PartnerLocation.proto\022\007partner" +
-      "\032\016bq_field.proto\032\025partner/Partner.proto\032" +
-      "\025media/MediaItem.proto\032\026temporal/Instant" +
-      ".proto\032\031contact/ContactInfo.proto\"\323\001\n\022Pa" +
-      "rtnerLocationKey\022W\n\007partner\030\001 \001(\0132\023.part" +
-      "ner.PartnerKeyB1\212@.Specifies the partner" +
-      " that owns this location.\022d\n\004code\030\002 \001(\tB" +
-      "V\212@SShort string that uniquely identifie" +
-      "s this location, under a given partner a" +
-      "ccount.\"\326\006\n\017PartnerLocation\022g\n\004code\030\001 \001(" +
-      "\tBY\212@VShort, unique string that identifi" +
-      "es this location, scoped to the parent o" +
-      "rganization.\022&\n\007partner\030\002 \001(\0132\020.partner." +
-      "PartnerB\003\200@\001\022G\n\004name\030\003 \001(\tB9\212@6Name of t" +
-      "his location, in human-readable verbose " +
-      "form.\022u\n\005label\030\004 \001(\tBf\212@cLabel for this " +
-      "location in the administrative dashboard" +
-      ". If this is not specified, `name` is sh" +
-      "own.\022h\n\005flags\030\005 \001(\0132\025.partner.PartnerFla" +
-      "gsBB\212@?Flags that specify conditions app" +
-      "lied to this partner location.\022P\n\007contac" +
-      "t\030\007 \001(\0132\024.contact.ContactInfoB)\212@&Contac" +
-      "t information for this location.\022\206\001\n\010bra" +
-      "nding\030\006 \001(\0132\020.media.MediaItemBb\212@_Brandi" +
-      "ng specific to this location. Partner-le" +
-      "vel branding is used if this is left uns" +
-      "pecified.\022R\n\007created\030\010 \001(\0132\021.temporal.In" +
-      "stantB.\212@+Timestamp for when this record" +
-      " was created.\022Y\n\010modified\030\t \001(\0132\021.tempor" +
-      "al.InstantB4\212@1Timestamp for when this r" +
-      "ecord was last modified.B \n\032io.bloombox." +
-      "schema.partnerH\001P\001b\006proto3"
+      "\n\035partner/PartnerLocation.proto\022\027bloombo" +
+      "x.schema.partner\032\016bq_field.proto\032\025partne" +
+      "r/Partner.proto\032\025media/MediaItem.proto\032\026" +
+      "temporal/Instant.proto\032\031contact/ContactI" +
+      "nfo.proto\"\343\001\n\022PartnerLocationKey\022g\n\007part" +
+      "ner\030\001 \001(\0132#.bloombox.schema.partner.Part" +
+      "nerKeyB1\212@.Specifies the partner that ow" +
+      "ns this location.\022d\n\004code\030\002 \001(\tBV\212@SShor" +
+      "t string that uniquely identifies this l" +
+      "ocation, under a given partner account.\"" +
+      "\252\007\n\017PartnerLocation\022g\n\004code\030\001 \001(\tBY\212@VSh" +
+      "ort, unique string that identifies this " +
+      "location, scoped to the parent organizat" +
+      "ion.\0226\n\007partner\030\002 \001(\0132 .bloombox.schema." +
+      "partner.PartnerB\003\200@\001\022G\n\004name\030\003 \001(\tB9\212@6N" +
+      "ame of this location, in human-readable " +
+      "verbose form.\022u\n\005label\030\004 \001(\tBf\212@cLabel f" +
+      "or this location in the administrative d" +
+      "ashboard. If this is not specified, `nam" +
+      "e` is shown.\022x\n\005flags\030\005 \001(\0132%.bloombox.s" +
+      "chema.partner.PartnerFlagsBB\212@?Flags tha" +
+      "t specify conditions applied to this par" +
+      "tner location.\022]\n\007contact\030\007 \001(\0132!.openca" +
+      "nnabis.contact.ContactInfoB)\212@&Contact i" +
+      "nformation for this location.\022\223\001\n\010brandi" +
+      "ng\030\006 \001(\0132\035.opencannabis.media.MediaItemB" +
+      "b\212@_Branding specific to this location. " +
+      "Partner-level branding is used if this i" +
+      "s left unspecified.\022_\n\007created\030\010 \001(\0132\036.o" +
+      "pencannabis.temporal.InstantB.\212@+Timesta" +
+      "mp for when this record was created.\022f\n\010" +
+      "modified\030\t \001(\0132\036.opencannabis.temporal.I" +
+      "nstantB4\212@1Timestamp for when this recor" +
+      "d was last modified.B \n\032io.bloombox.sche" +
+      "ma.partnerH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -96,21 +98,21 @@ public final class PartnerLocationOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
           io.bloombox.schema.partner.PartnerOuterClass.getDescriptor(),
-          io.bloombox.schema.media.AttachedMedia.getDescriptor(),
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
-          io.bloombox.schema.contact.ContactInfoOuterClass.getDescriptor(),
+          io.opencannabis.schema.media.AttachedMedia.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.contact.ContactInfoOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_partner_PartnerLocationKey_descriptor =
+    internal_static_bloombox_schema_partner_PartnerLocationKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_partner_PartnerLocationKey_fieldAccessorTable = new
+    internal_static_bloombox_schema_partner_PartnerLocationKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partner_PartnerLocationKey_descriptor,
+        internal_static_bloombox_schema_partner_PartnerLocationKey_descriptor,
         new java.lang.String[] { "Partner", "Code", });
-    internal_static_partner_PartnerLocation_descriptor =
+    internal_static_bloombox_schema_partner_PartnerLocation_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_partner_PartnerLocation_fieldAccessorTable = new
+    internal_static_bloombox_schema_partner_PartnerLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partner_PartnerLocation_descriptor,
+        internal_static_bloombox_schema_partner_PartnerLocation_descriptor,
         new java.lang.String[] { "Code", "Partner", "Name", "Label", "Flags", "Contact", "Branding", "Created", "Modified", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -120,9 +122,9 @@ public final class PartnerLocationOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
     io.bloombox.schema.partner.PartnerOuterClass.getDescriptor();
-    io.bloombox.schema.media.AttachedMedia.getDescriptor();
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
-    io.bloombox.schema.contact.ContactInfoOuterClass.getDescriptor();
+    io.opencannabis.schema.media.AttachedMedia.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.contact.ContactInfoOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

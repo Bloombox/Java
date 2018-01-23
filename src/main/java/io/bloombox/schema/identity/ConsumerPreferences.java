@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * Specifies preferences related to a user's profile as a cannabis consumer.
  * </pre>
  *
- * Protobuf type {@code identity.ConsumerPreferences}
+ * Protobuf type {@code bloombox.schema.identity.ConsumerPreferences}
  */
 public  final class ConsumerPreferences extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.ConsumerPreferences)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ConsumerPreferences)
     ConsumerPreferencesOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ConsumerPreferences.newBuilder() to construct.
@@ -97,12 +96,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerPreferences_descriptor;
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerPreferences_fieldAccessorTable
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerPreferences_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.ConsumerPreferences.class, io.bloombox.schema.identity.ConsumerPreferences.Builder.class);
   }
@@ -114,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * Preferred menu sections/product types, and so on.
    * </pre>
    *
-   * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+   * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
    */
   public boolean hasMenu() {
     return menu_ != null;
@@ -124,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * Preferred menu sections/product types, and so on.
    * </pre>
    *
-   * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+   * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
    */
   public io.bloombox.schema.identity.MenuPreferences getMenu() {
     return menu_ == null ? io.bloombox.schema.identity.MenuPreferences.getDefaultInstance() : menu_;
@@ -134,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * Preferred menu sections/product types, and so on.
    * </pre>
    *
-   * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+   * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
    */
   public io.bloombox.schema.identity.MenuPreferencesOrBuilder getMenuOrBuilder() {
     return getMenu();
@@ -301,20 +300,20 @@ private static final long serialVersionUID = 0L;
    * Specifies preferences related to a user's profile as a cannabis consumer.
    * </pre>
    *
-   * Protobuf type {@code identity.ConsumerPreferences}
+   * Protobuf type {@code bloombox.schema.identity.ConsumerPreferences}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.ConsumerPreferences)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ConsumerPreferences)
       io.bloombox.schema.identity.ConsumerPreferencesOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerPreferences_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerPreferences_fieldAccessorTable
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerPreferences_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ConsumerPreferences.class, io.bloombox.schema.identity.ConsumerPreferences.Builder.class);
     }
@@ -347,7 +346,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerPreferences_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor;
     }
 
     public io.bloombox.schema.identity.ConsumerPreferences getDefaultInstanceForType() {
@@ -448,7 +447,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public boolean hasMenu() {
       return menuBuilder_ != null || menu_ != null;
@@ -458,7 +457,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public io.bloombox.schema.identity.MenuPreferences getMenu() {
       if (menuBuilder_ == null) {
@@ -472,7 +471,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public Builder setMenu(io.bloombox.schema.identity.MenuPreferences value) {
       if (menuBuilder_ == null) {
@@ -492,7 +491,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public Builder setMenu(
         io.bloombox.schema.identity.MenuPreferences.Builder builderForValue) {
@@ -510,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public Builder mergeMenu(io.bloombox.schema.identity.MenuPreferences value) {
       if (menuBuilder_ == null) {
@@ -532,7 +531,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public Builder clearMenu() {
       if (menuBuilder_ == null) {
@@ -550,7 +549,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public io.bloombox.schema.identity.MenuPreferences.Builder getMenuBuilder() {
       
@@ -562,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     public io.bloombox.schema.identity.MenuPreferencesOrBuilder getMenuOrBuilder() {
       if (menuBuilder_ != null) {
@@ -577,7 +576,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections/product types, and so on.
      * </pre>
      *
-     * <code>.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
+     * <code>.bloombox.schema.identity.MenuPreferences menu = 10 [(.gen_bq_schema.description) = "Preferred menu sections/product types, and so on."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.MenuPreferences, io.bloombox.schema.identity.MenuPreferences.Builder, io.bloombox.schema.identity.MenuPreferencesOrBuilder> 
@@ -603,10 +602,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.ConsumerPreferences)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ConsumerPreferences)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.ConsumerPreferences)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ConsumerPreferences)
   private static final io.bloombox.schema.identity.ConsumerPreferences DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.ConsumerPreferences();

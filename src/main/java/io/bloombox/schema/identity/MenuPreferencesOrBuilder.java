@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.identity;
 
 public interface MenuPreferencesOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.MenuPreferences)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.MenuPreferences)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,15 +28,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
-  java.util.List<io.bloombox.schema.menu.section.Section> getSectionList();
+  java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList();
   /**
    * <pre>
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
   int getSectionCount();
   /**
@@ -45,15 +44,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
-  io.bloombox.schema.menu.section.Section getSection(int index);
+  io.opencannabis.schema.menu.section.Section getSection(int index);
   /**
    * <pre>
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
   java.util.List<java.lang.Integer>
   getSectionValueList();
@@ -62,7 +61,7 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
   int getSectionValue(int index);
 
@@ -71,15 +70,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
-  java.util.List<io.bloombox.schema.product.struct.testing.Feeling> getFeelingList();
+  java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingList();
   /**
    * <pre>
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
   int getFeelingCount();
   /**
@@ -87,15 +86,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
-  io.bloombox.schema.product.struct.testing.Feeling getFeeling(int index);
+  io.opencannabis.schema.product.struct.testing.Feeling getFeeling(int index);
   /**
    * <pre>
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
   java.util.List<java.lang.Integer>
   getFeelingValueList();
@@ -104,7 +103,7 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
   int getFeelingValue(int index);
 
@@ -113,15 +112,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
-  java.util.List<io.bloombox.schema.product.struct.testing.TasteNote> getTasteNoteList();
+  java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getTasteNoteList();
   /**
    * <pre>
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
   int getTasteNoteCount();
   /**
@@ -129,15 +128,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
-  io.bloombox.schema.product.struct.testing.TasteNote getTasteNote(int index);
+  io.opencannabis.schema.product.struct.testing.TasteNote getTasteNote(int index);
   /**
    * <pre>
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
   java.util.List<java.lang.Integer>
   getTasteNoteValueList();
@@ -146,7 +145,7 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
   int getTasteNoteValue(int index);
 
@@ -155,7 +154,7 @@ public interface MenuPreferencesOrBuilder extends
    * Desired potency level.
    * </pre>
    *
-   * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+   * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
    */
   int getDesiredPotencyValue();
   /**
@@ -163,16 +162,16 @@ public interface MenuPreferencesOrBuilder extends
    * Desired potency level.
    * </pre>
    *
-   * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+   * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
    */
-  io.bloombox.schema.product.struct.testing.PotencyEstimate getDesiredPotency();
+  io.opencannabis.schema.product.struct.testing.PotencyEstimate getDesiredPotency();
 
   /**
    * <pre>
    * Desired cannabinoid ratio.
    * </pre>
    *
-   * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+   * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
    */
   int getCannabinoidRatioValue();
   /**
@@ -180,24 +179,24 @@ public interface MenuPreferencesOrBuilder extends
    * Desired cannabinoid ratio.
    * </pre>
    *
-   * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+   * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
    */
-  io.bloombox.schema.product.struct.testing.CannabinoidRatio getCannabinoidRatio();
+  io.opencannabis.schema.product.struct.testing.CannabinoidRatio getCannabinoidRatio();
 
   /**
    * <pre>
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
-  java.util.List<io.bloombox.schema.product.struct.Species> getSpeciesList();
+  java.util.List<io.opencannabis.schema.product.struct.Species> getSpeciesList();
   /**
    * <pre>
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
   int getSpeciesCount();
   /**
@@ -205,15 +204,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
-  io.bloombox.schema.product.struct.Species getSpecies(int index);
+  io.opencannabis.schema.product.struct.Species getSpecies(int index);
   /**
    * <pre>
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
   java.util.List<java.lang.Integer>
   getSpeciesValueList();
@@ -222,7 +221,7 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
   int getSpeciesValue(int index);
 
@@ -231,15 +230,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
-  java.util.List<io.bloombox.schema.product.struct.Grow> getGrowList();
+  java.util.List<io.opencannabis.schema.product.struct.Grow> getGrowList();
   /**
    * <pre>
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
   int getGrowCount();
   /**
@@ -247,15 +246,15 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
-  io.bloombox.schema.product.struct.Grow getGrow(int index);
+  io.opencannabis.schema.product.struct.Grow getGrow(int index);
   /**
    * <pre>
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
   java.util.List<java.lang.Integer>
   getGrowValueList();
@@ -264,7 +263,7 @@ public interface MenuPreferencesOrBuilder extends
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
   int getGrowValue(int index);
 }

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,11 +20,11 @@
 package io.bloombox.schema.security.access;
 
 /**
- * Protobuf type {@code security.access.PartnerAccess}
+ * Protobuf type {@code bloombox.schema.security.access.PartnerAccess}
  */
 public  final class PartnerAccess extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:security.access.PartnerAccess)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.security.access.PartnerAccess)
     PartnerAccessOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use PartnerAccess.newBuilder() to construct.
@@ -84,11 +83,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (grantedAt_ != null) {
               subBuilder = grantedAt_.toBuilder();
             }
-            grantedAt_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            grantedAt_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(grantedAt_);
               grantedAt_ = subBuilder.buildPartial();
@@ -158,12 +157,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_PartnerAccess_descriptor;
+    return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_PartnerAccess_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_PartnerAccess_fieldAccessorTable
+    return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_PartnerAccess_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.security.access.PartnerAccess.class, io.bloombox.schema.security.access.PartnerAccess.Builder.class);
   }
@@ -213,23 +212,23 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GRANTED_AT_FIELD_NUMBER = 3;
-  private io.bloombox.schema.temporal.Instant grantedAt_;
+  private io.opencannabis.schema.temporal.Instant grantedAt_;
   /**
-   * <code>.temporal.Instant granted_at = 3;</code>
+   * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
    */
   public boolean hasGrantedAt() {
     return grantedAt_ != null;
   }
   /**
-   * <code>.temporal.Instant granted_at = 3;</code>
+   * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
    */
-  public io.bloombox.schema.temporal.Instant getGrantedAt() {
-    return grantedAt_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
+  public io.opencannabis.schema.temporal.Instant getGrantedAt() {
+    return grantedAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
   }
   /**
-   * <code>.temporal.Instant granted_at = 3;</code>
+   * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getGrantedAtOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getGrantedAtOrBuilder() {
     return getGrantedAt();
   }
 
@@ -245,33 +244,33 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
-   * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+   * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
    */
   public java.util.List<io.bloombox.schema.security.access.PartnerPermission> getPrivilegesList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, io.bloombox.schema.security.access.PartnerPermission>(privileges_, privileges_converter_);
   }
   /**
-   * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+   * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
    */
   public int getPrivilegesCount() {
     return privileges_.size();
   }
   /**
-   * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+   * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
    */
   public io.bloombox.schema.security.access.PartnerPermission getPrivileges(int index) {
     return privileges_converter_.convert(privileges_.get(index));
   }
   /**
-   * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+   * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
    */
   public java.util.List<java.lang.Integer>
   getPrivilegesValueList() {
     return privileges_;
   }
   /**
-   * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+   * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
    */
   public int getPrivilegesValue(int index) {
     return privileges_.get(index);
@@ -281,32 +280,32 @@ private static final long serialVersionUID = 0L;
   public static final int LOCATIONS_FIELD_NUMBER = 5;
   private java.util.List<io.bloombox.schema.security.access.LocationAccess> locations_;
   /**
-   * <code>repeated .security.access.LocationAccess locations = 5;</code>
+   * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
    */
   public java.util.List<io.bloombox.schema.security.access.LocationAccess> getLocationsList() {
     return locations_;
   }
   /**
-   * <code>repeated .security.access.LocationAccess locations = 5;</code>
+   * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
    */
   public java.util.List<? extends io.bloombox.schema.security.access.LocationAccessOrBuilder> 
       getLocationsOrBuilderList() {
     return locations_;
   }
   /**
-   * <code>repeated .security.access.LocationAccess locations = 5;</code>
+   * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
    */
   public int getLocationsCount() {
     return locations_.size();
   }
   /**
-   * <code>repeated .security.access.LocationAccess locations = 5;</code>
+   * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
    */
   public io.bloombox.schema.security.access.LocationAccess getLocations(int index) {
     return locations_.get(index);
   }
   /**
-   * <code>repeated .security.access.LocationAccess locations = 5;</code>
+   * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
    */
   public io.bloombox.schema.security.access.LocationAccessOrBuilder getLocationsOrBuilder(
       int index) {
@@ -572,20 +571,20 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code security.access.PartnerAccess}
+   * Protobuf type {@code bloombox.schema.security.access.PartnerAccess}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:security.access.PartnerAccess)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.security.access.PartnerAccess)
       io.bloombox.schema.security.access.PartnerAccessOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_PartnerAccess_descriptor;
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_PartnerAccess_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_PartnerAccess_fieldAccessorTable
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_PartnerAccess_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.security.access.PartnerAccess.class, io.bloombox.schema.security.access.PartnerAccess.Builder.class);
     }
@@ -635,7 +634,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_PartnerAccess_descriptor;
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_PartnerAccess_descriptor;
     }
 
     public io.bloombox.schema.security.access.PartnerAccess getDefaultInstanceForType() {
@@ -894,29 +893,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.temporal.Instant grantedAt_ = null;
+    private io.opencannabis.schema.temporal.Instant grantedAt_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> grantedAtBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> grantedAtBuilder_;
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
     public boolean hasGrantedAt() {
       return grantedAtBuilder_ != null || grantedAt_ != null;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant getGrantedAt() {
+    public io.opencannabis.schema.temporal.Instant getGrantedAt() {
       if (grantedAtBuilder_ == null) {
-        return grantedAt_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
+        return grantedAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
       } else {
         return grantedAtBuilder_.getMessage();
       }
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public Builder setGrantedAt(io.bloombox.schema.temporal.Instant value) {
+    public Builder setGrantedAt(io.opencannabis.schema.temporal.Instant value) {
       if (grantedAtBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -930,10 +929,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
     public Builder setGrantedAt(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (grantedAtBuilder_ == null) {
         grantedAt_ = builderForValue.build();
         onChanged();
@@ -944,13 +943,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public Builder mergeGrantedAt(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeGrantedAt(io.opencannabis.schema.temporal.Instant value) {
       if (grantedAtBuilder_ == null) {
         if (grantedAt_ != null) {
           grantedAt_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(grantedAt_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(grantedAt_).mergeFrom(value).buildPartial();
         } else {
           grantedAt_ = value;
         }
@@ -962,7 +961,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
     public Builder clearGrantedAt() {
       if (grantedAtBuilder_ == null) {
@@ -976,33 +975,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getGrantedAtBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getGrantedAtBuilder() {
       
       onChanged();
       return getGrantedAtFieldBuilder().getBuilder();
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getGrantedAtOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getGrantedAtOrBuilder() {
       if (grantedAtBuilder_ != null) {
         return grantedAtBuilder_.getMessageOrBuilder();
       } else {
         return grantedAt_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
       }
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getGrantedAtFieldBuilder() {
       if (grantedAtBuilder_ == null) {
         grantedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getGrantedAt(),
                 getParentForChildren(),
                 isClean());
@@ -1020,26 +1019,26 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public java.util.List<io.bloombox.schema.security.access.PartnerPermission> getPrivilegesList() {
       return new com.google.protobuf.Internal.ListAdapter<
           java.lang.Integer, io.bloombox.schema.security.access.PartnerPermission>(privileges_, privileges_converter_);
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public int getPrivilegesCount() {
       return privileges_.size();
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public io.bloombox.schema.security.access.PartnerPermission getPrivileges(int index) {
       return privileges_converter_.convert(privileges_.get(index));
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public Builder setPrivileges(
         int index, io.bloombox.schema.security.access.PartnerPermission value) {
@@ -1052,7 +1051,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public Builder addPrivileges(io.bloombox.schema.security.access.PartnerPermission value) {
       if (value == null) {
@@ -1064,7 +1063,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public Builder addAllPrivileges(
         java.lang.Iterable<? extends io.bloombox.schema.security.access.PartnerPermission> values) {
@@ -1076,7 +1075,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public Builder clearPrivileges() {
       privileges_ = java.util.Collections.emptyList();
@@ -1085,20 +1084,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public java.util.List<java.lang.Integer>
     getPrivilegesValueList() {
       return java.util.Collections.unmodifiableList(privileges_);
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public int getPrivilegesValue(int index) {
       return privileges_.get(index);
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public Builder setPrivilegesValue(
         int index, int value) {
@@ -1108,7 +1107,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public Builder addPrivilegesValue(int value) {
       ensurePrivilegesIsMutable();
@@ -1117,7 +1116,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.PartnerPermission privileges = 4;</code>
+     * <code>repeated .bloombox.schema.security.access.PartnerPermission privileges = 4;</code>
      */
     public Builder addAllPrivilegesValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -1142,7 +1141,7 @@ private static final long serialVersionUID = 0L;
         io.bloombox.schema.security.access.LocationAccess, io.bloombox.schema.security.access.LocationAccess.Builder, io.bloombox.schema.security.access.LocationAccessOrBuilder> locationsBuilder_;
 
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public java.util.List<io.bloombox.schema.security.access.LocationAccess> getLocationsList() {
       if (locationsBuilder_ == null) {
@@ -1152,7 +1151,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public int getLocationsCount() {
       if (locationsBuilder_ == null) {
@@ -1162,7 +1161,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public io.bloombox.schema.security.access.LocationAccess getLocations(int index) {
       if (locationsBuilder_ == null) {
@@ -1172,7 +1171,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder setLocations(
         int index, io.bloombox.schema.security.access.LocationAccess value) {
@@ -1189,7 +1188,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder setLocations(
         int index, io.bloombox.schema.security.access.LocationAccess.Builder builderForValue) {
@@ -1203,7 +1202,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder addLocations(io.bloombox.schema.security.access.LocationAccess value) {
       if (locationsBuilder_ == null) {
@@ -1219,7 +1218,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder addLocations(
         int index, io.bloombox.schema.security.access.LocationAccess value) {
@@ -1236,7 +1235,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder addLocations(
         io.bloombox.schema.security.access.LocationAccess.Builder builderForValue) {
@@ -1250,7 +1249,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder addLocations(
         int index, io.bloombox.schema.security.access.LocationAccess.Builder builderForValue) {
@@ -1264,7 +1263,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder addAllLocations(
         java.lang.Iterable<? extends io.bloombox.schema.security.access.LocationAccess> values) {
@@ -1279,7 +1278,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder clearLocations() {
       if (locationsBuilder_ == null) {
@@ -1292,7 +1291,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public Builder removeLocations(int index) {
       if (locationsBuilder_ == null) {
@@ -1305,14 +1304,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public io.bloombox.schema.security.access.LocationAccess.Builder getLocationsBuilder(
         int index) {
       return getLocationsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public io.bloombox.schema.security.access.LocationAccessOrBuilder getLocationsOrBuilder(
         int index) {
@@ -1322,7 +1321,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public java.util.List<? extends io.bloombox.schema.security.access.LocationAccessOrBuilder> 
          getLocationsOrBuilderList() {
@@ -1333,14 +1332,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public io.bloombox.schema.security.access.LocationAccess.Builder addLocationsBuilder() {
       return getLocationsFieldBuilder().addBuilder(
           io.bloombox.schema.security.access.LocationAccess.getDefaultInstance());
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public io.bloombox.schema.security.access.LocationAccess.Builder addLocationsBuilder(
         int index) {
@@ -1348,7 +1347,7 @@ private static final long serialVersionUID = 0L;
           index, io.bloombox.schema.security.access.LocationAccess.getDefaultInstance());
     }
     /**
-     * <code>repeated .security.access.LocationAccess locations = 5;</code>
+     * <code>repeated .bloombox.schema.security.access.LocationAccess locations = 5;</code>
      */
     public java.util.List<io.bloombox.schema.security.access.LocationAccess.Builder> 
          getLocationsBuilderList() {
@@ -1431,10 +1430,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:security.access.PartnerAccess)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.security.access.PartnerAccess)
   }
 
-  // @@protoc_insertion_point(class_scope:security.access.PartnerAccess)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.security.access.PartnerAccess)
   private static final io.bloombox.schema.security.access.PartnerAccess DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.security.access.PartnerAccess();

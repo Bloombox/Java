@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class UserAnalytics {
    * Specifies actions that may be taken by a user. See also: `ShopAction`.
    * </pre>
    *
-   * Protobuf enum {@code analytics.identity.UserAction}
+   * Protobuf enum {@code bloombox.schema.analytics.identity.UserAction}
    */
   public enum UserAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -302,11 +303,11 @@ public final class UserAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.identity.UserAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.identity.UserAction)
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.identity.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.identity.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -332,7 +333,7 @@ public final class UserAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.analytics.identity.UserAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -340,7 +341,7 @@ public final class UserAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.analytics.identity.UserAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.user.UserAnalytics.UserAction getVerb();
 
@@ -349,7 +350,7 @@ public final class UserAnalytics {
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     boolean hasOccurred();
     /**
@@ -357,17 +358,17 @@ public final class UserAnalytics {
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -375,11 +376,11 @@ public final class UserAnalytics {
    * with regards to a particular system, or their account or preferences.
    * </pre>
    *
-   * Protobuf type {@code analytics.identity.Action}
+   * Protobuf type {@code bloombox.schema.analytics.identity.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.identity.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.identity.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -435,11 +436,11 @@ public final class UserAnalytics {
               break;
             }
             case 26: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -461,12 +462,12 @@ public final class UserAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_analytics_identity_Action_descriptor;
+      return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_analytics_identity_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.user.UserAnalytics.Action.class, io.bloombox.schema.analytics.user.UserAnalytics.Action.Builder.class);
     }
@@ -520,7 +521,7 @@ public final class UserAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.analytics.identity.UserAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -530,7 +531,7 @@ public final class UserAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.analytics.identity.UserAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.user.UserAnalytics.UserAction getVerb() {
       io.bloombox.schema.analytics.user.UserAnalytics.UserAction result = io.bloombox.schema.analytics.user.UserAnalytics.UserAction.valueOf(verb_);
@@ -538,13 +539,13 @@ public final class UserAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -554,19 +555,19 @@ public final class UserAnalytics {
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 3;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -752,20 +753,20 @@ public final class UserAnalytics {
      * with regards to a particular system, or their account or preferences.
      * </pre>
      *
-     * Protobuf type {@code analytics.identity.Action}
+     * Protobuf type {@code bloombox.schema.analytics.identity.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.identity.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.identity.Action)
         io.bloombox.schema.analytics.user.UserAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_analytics_identity_Action_descriptor;
+        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_analytics_identity_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.user.UserAnalytics.Action.class, io.bloombox.schema.analytics.user.UserAnalytics.Action.Builder.class);
       }
@@ -802,7 +803,7 @@ public final class UserAnalytics {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_analytics_identity_Action_descriptor;
+        return io.bloombox.schema.analytics.user.UserAnalytics.internal_static_bloombox_schema_analytics_identity_Action_descriptor;
       }
 
       public io.bloombox.schema.analytics.user.UserAnalytics.Action getDefaultInstanceForType() {
@@ -999,7 +1000,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -1009,7 +1010,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -1021,7 +1022,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.user.UserAnalytics.UserAction getVerb() {
         io.bloombox.schema.analytics.user.UserAnalytics.UserAction result = io.bloombox.schema.analytics.user.UserAnalytics.UserAction.valueOf(verb_);
@@ -1032,7 +1033,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.user.UserAnalytics.UserAction value) {
         if (value == null) {
@@ -1048,7 +1049,7 @@ public final class UserAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.identity.UserAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.identity.UserAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -1057,15 +1058,15 @@ public final class UserAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -1075,11 +1076,11 @@ public final class UserAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -1089,9 +1090,9 @@ public final class UserAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1109,10 +1110,10 @@ public final class UserAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -1127,13 +1128,13 @@ public final class UserAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -1149,7 +1150,7 @@ public final class UserAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -1167,9 +1168,9 @@ public final class UserAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -1179,14 +1180,14 @@ public final class UserAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1194,14 +1195,14 @@ public final class UserAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 3;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -1220,10 +1221,10 @@ public final class UserAnalytics {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.identity.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.identity.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.identity.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.identity.Action)
     private static final io.bloombox.schema.analytics.user.UserAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.user.UserAnalytics.Action();
@@ -1259,10 +1260,10 @@ public final class UserAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_identity_Action_descriptor;
+    internal_static_bloombox_schema_analytics_identity_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_identity_Action_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_identity_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1273,16 +1274,17 @@ public final class UserAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n&analytics/identity/UserAnalytics.proto" +
-      "\022\022analytics.identity\032\026temporal/Instant.p" +
-      "roto\"m\n\006Action\022\020\n\010identity\030\001 \001(\t\022,\n\004verb" +
-      "\030\002 \001(\0162\036.analytics.identity.UserAction\022#" +
-      "\n\010occurred\030\003 \001(\0132\021.temporal.Instant*\230\001\n\n" +
-      "UserAction\022\n\n\006ENGAGE\020\000\022\n\n\006ENROLL\020\n\022\014\n\010AC" +
-      "TIVATE\020\013\022\010\n\004JOIN\020\014\022\n\n\006VERIFY\020\r\022\013\n\007CHECKI" +
-      "N\020\016\022\017\n\013PREFERENCES\020\017\022\014\n\010PURCHASE\020\020\022\t\n\005OR" +
-      "DER\020\021\022\n\n\006OPT_IN\020\022\022\013\n\007OPT_OUT\020\023B9\n!io.blo" +
-      "ombox.schema.analytics.userB\rUserAnalyti" +
-      "csH\001P\000\370\001\001b\006proto3"
+      "\022\"bloombox.schema.analytics.identity\032\026te" +
+      "mporal/Instant.proto\"\212\001\n\006Action\022\020\n\010ident" +
+      "ity\030\001 \001(\t\022<\n\004verb\030\002 \001(\0162..bloombox.schem" +
+      "a.analytics.identity.UserAction\0220\n\010occur" +
+      "red\030\003 \001(\0132\036.opencannabis.temporal.Instan" +
+      "t*\230\001\n\nUserAction\022\n\n\006ENGAGE\020\000\022\n\n\006ENROLL\020\n" +
+      "\022\014\n\010ACTIVATE\020\013\022\010\n\004JOIN\020\014\022\n\n\006VERIFY\020\r\022\013\n\007" +
+      "CHECKIN\020\016\022\017\n\013PREFERENCES\020\017\022\014\n\010PURCHASE\020\020" +
+      "\022\t\n\005ORDER\020\021\022\n\n\006OPT_IN\020\022\022\013\n\007OPT_OUT\020\023B9\n!" +
+      "io.bloombox.schema.analytics.userB\rUserA" +
+      "nalyticsH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1295,15 +1297,15 @@ public final class UserAnalytics {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_analytics_identity_Action_descriptor =
+    internal_static_bloombox_schema_analytics_identity_Action_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_identity_Action_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_identity_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_identity_Action_descriptor,
+        internal_static_bloombox_schema_analytics_identity_Action_descriptor,
         new java.lang.String[] { "Identity", "Verb", "Occurred", });
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

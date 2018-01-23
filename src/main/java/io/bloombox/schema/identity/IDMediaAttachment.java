@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * Media attachment that binds some document media to a particular driver's license.
  * </pre>
  *
- * Protobuf type {@code identity.IDMediaAttachment}
+ * Protobuf type {@code bloombox.schema.identity.IDMediaAttachment}
  */
 public  final class IDMediaAttachment extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.IDMediaAttachment)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.IDMediaAttachment)
     IDMediaAttachmentOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use IDMediaAttachment.newBuilder() to construct.
@@ -116,12 +115,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_identity_IDMediaAttachment_descriptor;
+    return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_identity_IDMediaAttachment_fieldAccessorTable
+    return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_bloombox_schema_identity_IDMediaAttachment_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.IDMediaAttachment.class, io.bloombox.schema.identity.IDMediaAttachment.Builder.class);
   }
@@ -133,7 +132,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the kind of media being attached.
    * </pre>
    *
-   * <code>.identity.IDMedia type = 1;</code>
+   * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
    */
   public int getTypeValue() {
     return type_;
@@ -143,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the kind of media being attached.
    * </pre>
    *
-   * <code>.identity.IDMedia type = 1;</code>
+   * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
    */
   public io.bloombox.schema.identity.IDMedia getType() {
     io.bloombox.schema.identity.IDMedia result = io.bloombox.schema.identity.IDMedia.valueOf(type_);
@@ -157,7 +156,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the orientation of the attached media.
    * </pre>
    *
-   * <code>.media.MediaOrientation orientation = 2;</code>
+   * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
    */
   public int getOrientationValue() {
     return orientation_;
@@ -167,11 +166,11 @@ private static final long serialVersionUID = 0L;
    * Specifies the orientation of the attached media.
    * </pre>
    *
-   * <code>.media.MediaOrientation orientation = 2;</code>
+   * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
    */
-  public io.bloombox.schema.media.MediaOrientation getOrientation() {
-    io.bloombox.schema.media.MediaOrientation result = io.bloombox.schema.media.MediaOrientation.valueOf(orientation_);
-    return result == null ? io.bloombox.schema.media.MediaOrientation.UNRECOGNIZED : result;
+  public io.opencannabis.schema.media.MediaOrientation getOrientation() {
+    io.opencannabis.schema.media.MediaOrientation result = io.opencannabis.schema.media.MediaOrientation.valueOf(orientation_);
+    return result == null ? io.opencannabis.schema.media.MediaOrientation.UNRECOGNIZED : result;
   }
 
   public static final int DATA_FIELD_NUMBER = 3;
@@ -228,7 +227,7 @@ private static final long serialVersionUID = 0L;
     if (type_ != io.bloombox.schema.identity.IDMedia.DOCUMENT_FRONT.getNumber()) {
       output.writeEnum(1, type_);
     }
-    if (orientation_ != io.bloombox.schema.media.MediaOrientation.UP.getNumber()) {
+    if (orientation_ != io.opencannabis.schema.media.MediaOrientation.UP.getNumber()) {
       output.writeEnum(2, orientation_);
     }
     if (!data_.isEmpty()) {
@@ -252,7 +251,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, type_);
     }
-    if (orientation_ != io.bloombox.schema.media.MediaOrientation.UP.getNumber()) {
+    if (orientation_ != io.opencannabis.schema.media.MediaOrientation.UP.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, orientation_);
     }
@@ -414,20 +413,20 @@ private static final long serialVersionUID = 0L;
    * Media attachment that binds some document media to a particular driver's license.
    * </pre>
    *
-   * Protobuf type {@code identity.IDMediaAttachment}
+   * Protobuf type {@code bloombox.schema.identity.IDMediaAttachment}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.IDMediaAttachment)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.IDMediaAttachment)
       io.bloombox.schema.identity.IDMediaAttachmentOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_identity_IDMediaAttachment_descriptor;
+      return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_identity_IDMediaAttachment_fieldAccessorTable
+      return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_bloombox_schema_identity_IDMediaAttachment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.IDMediaAttachment.class, io.bloombox.schema.identity.IDMediaAttachment.Builder.class);
     }
@@ -464,7 +463,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_identity_IDMediaAttachment_descriptor;
+      return io.bloombox.schema.identity.IDMediaOuterClass.internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor;
     }
 
     public io.bloombox.schema.identity.IDMediaAttachment getDefaultInstanceForType() {
@@ -575,7 +574,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
@@ -585,7 +584,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -597,7 +596,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
      */
     public io.bloombox.schema.identity.IDMedia getType() {
       io.bloombox.schema.identity.IDMedia result = io.bloombox.schema.identity.IDMedia.valueOf(type_);
@@ -608,7 +607,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
      */
     public Builder setType(io.bloombox.schema.identity.IDMedia value) {
       if (value == null) {
@@ -624,7 +623,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the kind of media being attached.
      * </pre>
      *
-     * <code>.identity.IDMedia type = 1;</code>
+     * <code>.bloombox.schema.identity.IDMedia type = 1;</code>
      */
     public Builder clearType() {
       
@@ -639,7 +638,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the orientation of the attached media.
      * </pre>
      *
-     * <code>.media.MediaOrientation orientation = 2;</code>
+     * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
      */
     public int getOrientationValue() {
       return orientation_;
@@ -649,7 +648,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the orientation of the attached media.
      * </pre>
      *
-     * <code>.media.MediaOrientation orientation = 2;</code>
+     * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
      */
     public Builder setOrientationValue(int value) {
       orientation_ = value;
@@ -661,20 +660,20 @@ private static final long serialVersionUID = 0L;
      * Specifies the orientation of the attached media.
      * </pre>
      *
-     * <code>.media.MediaOrientation orientation = 2;</code>
+     * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
      */
-    public io.bloombox.schema.media.MediaOrientation getOrientation() {
-      io.bloombox.schema.media.MediaOrientation result = io.bloombox.schema.media.MediaOrientation.valueOf(orientation_);
-      return result == null ? io.bloombox.schema.media.MediaOrientation.UNRECOGNIZED : result;
+    public io.opencannabis.schema.media.MediaOrientation getOrientation() {
+      io.opencannabis.schema.media.MediaOrientation result = io.opencannabis.schema.media.MediaOrientation.valueOf(orientation_);
+      return result == null ? io.opencannabis.schema.media.MediaOrientation.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Specifies the orientation of the attached media.
      * </pre>
      *
-     * <code>.media.MediaOrientation orientation = 2;</code>
+     * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
      */
-    public Builder setOrientation(io.bloombox.schema.media.MediaOrientation value) {
+    public Builder setOrientation(io.opencannabis.schema.media.MediaOrientation value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -688,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the orientation of the attached media.
      * </pre>
      *
-     * <code>.media.MediaOrientation orientation = 2;</code>
+     * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
      */
     public Builder clearOrientation() {
       
@@ -824,10 +823,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.IDMediaAttachment)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.IDMediaAttachment)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.IDMediaAttachment)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.IDMediaAttachment)
   private static final io.bloombox.schema.identity.IDMediaAttachment DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.IDMediaAttachment();

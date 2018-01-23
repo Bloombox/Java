@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class LibraryContext {
    * Specifies known API client libraries, produced internally by Bloombox.
    * </pre>
    *
-   * Protobuf enum {@code analytics.context.APIClient}
+   * Protobuf enum {@code bloombox.schema.analytics.context.APIClient}
    */
   public enum APIClient
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -179,11 +180,11 @@ public final class LibraryContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.context.APIClient)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.APIClient)
   }
 
   public interface DeviceLibraryOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.context.DeviceLibrary)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.DeviceLibrary)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -209,7 +210,7 @@ public final class LibraryContext {
      * Version specification for the library being used to transmit data.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
      */
     boolean hasVersion();
     /**
@@ -217,24 +218,24 @@ public final class LibraryContext {
      * Version specification for the library being used to transmit data.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
      */
-    io.bloombox.schema.struct.VersionSpec getVersion();
+    io.opencannabis.schema.struct.VersionSpec getVersion();
     /**
      * <pre>
      * Version specification for the library being used to transmit data.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
      */
-    io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder();
+    io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder();
 
     /**
      * <pre>
      * Specifies, if applicable, the internally-produced client library in use.
      * </pre>
      *
-     * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+     * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
      */
     int getClientValue();
     /**
@@ -242,7 +243,7 @@ public final class LibraryContext {
      * Specifies, if applicable, the internally-produced client library in use.
      * </pre>
      *
-     * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+     * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
      */
     io.bloombox.schema.telemetry.context.LibraryContext.APIClient getClient();
   }
@@ -251,11 +252,11 @@ public final class LibraryContext {
    * Specifies information about the library being used to transmit data.
    * </pre>
    *
-   * Protobuf type {@code analytics.context.DeviceLibrary}
+   * Protobuf type {@code bloombox.schema.analytics.context.DeviceLibrary}
    */
   public  static final class DeviceLibrary extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.context.DeviceLibrary)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.DeviceLibrary)
       DeviceLibraryOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeviceLibrary.newBuilder() to construct.
@@ -305,11 +306,11 @@ public final class LibraryContext {
               break;
             }
             case 18: {
-              io.bloombox.schema.struct.VersionSpec.Builder subBuilder = null;
+              io.opencannabis.schema.struct.VersionSpec.Builder subBuilder = null;
               if (version_ != null) {
                 subBuilder = version_.toBuilder();
               }
-              version_ = input.readMessage(io.bloombox.schema.struct.VersionSpec.parser(), extensionRegistry);
+              version_ = input.readMessage(io.opencannabis.schema.struct.VersionSpec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(version_);
                 version_ = subBuilder.buildPartial();
@@ -337,12 +338,12 @@ public final class LibraryContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_analytics_context_DeviceLibrary_descriptor;
+      return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_analytics_context_DeviceLibrary_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.class, io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.Builder.class);
     }
@@ -390,13 +391,13 @@ public final class LibraryContext {
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private io.bloombox.schema.struct.VersionSpec version_;
+    private io.opencannabis.schema.struct.VersionSpec version_;
     /**
      * <pre>
      * Version specification for the library being used to transmit data.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
      */
     public boolean hasVersion() {
       return version_ != null;
@@ -406,19 +407,19 @@ public final class LibraryContext {
      * Version specification for the library being used to transmit data.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
      */
-    public io.bloombox.schema.struct.VersionSpec getVersion() {
-      return version_ == null ? io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+    public io.opencannabis.schema.struct.VersionSpec getVersion() {
+      return version_ == null ? io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
     }
     /**
      * <pre>
      * Version specification for the library being used to transmit data.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
      */
-    public io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
+    public io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
       return getVersion();
     }
 
@@ -429,7 +430,7 @@ public final class LibraryContext {
      * Specifies, if applicable, the internally-produced client library in use.
      * </pre>
      *
-     * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+     * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
      */
     public int getClientValue() {
       return client_;
@@ -439,7 +440,7 @@ public final class LibraryContext {
      * Specifies, if applicable, the internally-produced client library in use.
      * </pre>
      *
-     * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+     * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
      */
     public io.bloombox.schema.telemetry.context.LibraryContext.APIClient getClient() {
       io.bloombox.schema.telemetry.context.LibraryContext.APIClient result = io.bloombox.schema.telemetry.context.LibraryContext.APIClient.valueOf(client_);
@@ -627,20 +628,20 @@ public final class LibraryContext {
      * Specifies information about the library being used to transmit data.
      * </pre>
      *
-     * Protobuf type {@code analytics.context.DeviceLibrary}
+     * Protobuf type {@code bloombox.schema.analytics.context.DeviceLibrary}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.context.DeviceLibrary)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.DeviceLibrary)
         io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibraryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_analytics_context_DeviceLibrary_descriptor;
+        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_analytics_context_DeviceLibrary_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.class, io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary.Builder.class);
       }
@@ -677,7 +678,7 @@ public final class LibraryContext {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_analytics_context_DeviceLibrary_descriptor;
+        return io.bloombox.schema.telemetry.context.LibraryContext.internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor;
       }
 
       public io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary getDefaultInstanceForType() {
@@ -868,15 +869,15 @@ public final class LibraryContext {
         return this;
       }
 
-      private io.bloombox.schema.struct.VersionSpec version_ = null;
+      private io.opencannabis.schema.struct.VersionSpec version_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder> versionBuilder_;
+          io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder> versionBuilder_;
       /**
        * <pre>
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
       public boolean hasVersion() {
         return versionBuilder_ != null || version_ != null;
@@ -886,11 +887,11 @@ public final class LibraryContext {
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpec getVersion() {
+      public io.opencannabis.schema.struct.VersionSpec getVersion() {
         if (versionBuilder_ == null) {
-          return version_ == null ? io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+          return version_ == null ? io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
         } else {
           return versionBuilder_.getMessage();
         }
@@ -900,9 +901,9 @@ public final class LibraryContext {
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
-      public Builder setVersion(io.bloombox.schema.struct.VersionSpec value) {
+      public Builder setVersion(io.opencannabis.schema.struct.VersionSpec value) {
         if (versionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -920,10 +921,10 @@ public final class LibraryContext {
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
       public Builder setVersion(
-          io.bloombox.schema.struct.VersionSpec.Builder builderForValue) {
+          io.opencannabis.schema.struct.VersionSpec.Builder builderForValue) {
         if (versionBuilder_ == null) {
           version_ = builderForValue.build();
           onChanged();
@@ -938,13 +939,13 @@ public final class LibraryContext {
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
-      public Builder mergeVersion(io.bloombox.schema.struct.VersionSpec value) {
+      public Builder mergeVersion(io.opencannabis.schema.struct.VersionSpec value) {
         if (versionBuilder_ == null) {
           if (version_ != null) {
             version_ =
-              io.bloombox.schema.struct.VersionSpec.newBuilder(version_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.struct.VersionSpec.newBuilder(version_).mergeFrom(value).buildPartial();
           } else {
             version_ = value;
           }
@@ -960,7 +961,7 @@ public final class LibraryContext {
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
       public Builder clearVersion() {
         if (versionBuilder_ == null) {
@@ -978,9 +979,9 @@ public final class LibraryContext {
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpec.Builder getVersionBuilder() {
+      public io.opencannabis.schema.struct.VersionSpec.Builder getVersionBuilder() {
         
         onChanged();
         return getVersionFieldBuilder().getBuilder();
@@ -990,14 +991,14 @@ public final class LibraryContext {
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
+      public io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
         if (versionBuilder_ != null) {
           return versionBuilder_.getMessageOrBuilder();
         } else {
           return version_ == null ?
-              io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+              io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
         }
       }
       /**
@@ -1005,14 +1006,14 @@ public final class LibraryContext {
        * Version specification for the library being used to transmit data.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Version specification for the library being used to transmit data."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder> 
+          io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder> 
           getVersionFieldBuilder() {
         if (versionBuilder_ == null) {
           versionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder>(
+              io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder>(
                   getVersion(),
                   getParentForChildren(),
                   isClean());
@@ -1027,7 +1028,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public int getClientValue() {
         return client_;
@@ -1037,7 +1038,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public Builder setClientValue(int value) {
         client_ = value;
@@ -1049,7 +1050,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public io.bloombox.schema.telemetry.context.LibraryContext.APIClient getClient() {
         io.bloombox.schema.telemetry.context.LibraryContext.APIClient result = io.bloombox.schema.telemetry.context.LibraryContext.APIClient.valueOf(client_);
@@ -1060,7 +1061,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public Builder setClient(io.bloombox.schema.telemetry.context.LibraryContext.APIClient value) {
         if (value == null) {
@@ -1076,7 +1077,7 @@ public final class LibraryContext {
        * Specifies, if applicable, the internally-produced client library in use.
        * </pre>
        *
-       * <code>.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
+       * <code>.bloombox.schema.analytics.context.APIClient client = 3 [(.gen_bq_schema.description) = "Specifies which internal Bloombox library sent this event, if any."];</code>
        */
       public Builder clearClient() {
         
@@ -1095,10 +1096,10 @@ public final class LibraryContext {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.context.DeviceLibrary)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.DeviceLibrary)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.context.DeviceLibrary)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.DeviceLibrary)
     private static final io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.LibraryContext.DeviceLibrary();
@@ -1134,10 +1135,10 @@ public final class LibraryContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_context_DeviceLibrary_descriptor;
+    internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_context_DeviceLibrary_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_context_DeviceLibrary_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1147,20 +1148,22 @@ public final class LibraryContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\037analytics/context/Library.proto\022\021analy" +
-      "tics.context\032\016bq_field.proto\032\025structs/Ve" +
-      "rsion.proto\"\306\002\n\rDeviceLibrary\022O\n\007variant" +
-      "\030\001 \001(\tB>\360?\001\212@8Variant name of the librar" +
-      "y being used to transmit data.\022o\n\007versio" +
-      "n\030\002 \001(\0132\024.structs.VersionSpecBH\360?\001\212@BVer" +
-      "sion specification for the library being" +
-      " used to transmit data.\022s\n\006client\030\003 \001(\0162" +
-      "\034.analytics.context.APIClientBE\212@BSpecif" +
-      "ies which internal Bloombox library sent" +
-      " this event, if any.*C\n\tAPIClient\022\020\n\014UNI" +
-      "DENTIFIED\020\000\022\017\n\013JAVA_SCRIPT\020\001\022\t\n\005SWIFT\020\002\022" +
-      "\010\n\004JAVA\020\003B=\n$io.bloombox.schema.telemetr" +
-      "y.contextB\016LibraryContextH\001P\000\370\001\001b\006proto3"
+      "\n\037analytics/context/Library.proto\022!bloom" +
+      "box.schema.analytics.context\032\016bq_field.p" +
+      "roto\032\025structs/Version.proto\"\344\002\n\rDeviceLi" +
+      "brary\022O\n\007variant\030\001 \001(\tB>\360?\001\212@8Variant na" +
+      "me of the library being used to transmit" +
+      " data.\022|\n\007version\030\002 \001(\0132!.opencannabis.s" +
+      "tructs.VersionSpecBH\360?\001\212@BVersion specif" +
+      "ication for the library being used to tr" +
+      "ansmit data.\022\203\001\n\006client\030\003 \001(\0162,.bloombox" +
+      ".schema.analytics.context.APIClientBE\212@B" +
+      "Specifies which internal Bloombox librar" +
+      "y sent this event, if any.*C\n\tAPIClient\022" +
+      "\020\n\014UNIDENTIFIED\020\000\022\017\n\013JAVA_SCRIPT\020\001\022\t\n\005SW" +
+      "IFT\020\002\022\010\n\004JAVA\020\003B=\n$io.bloombox.schema.te" +
+      "lemetry.contextB\016LibraryContextH\001P\000\370\001\001b\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1174,13 +1177,13 @@ public final class LibraryContext {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.struct.Version.getDescriptor(),
+          io.opencannabis.schema.struct.Version.getDescriptor(),
         }, assigner);
-    internal_static_analytics_context_DeviceLibrary_descriptor =
+    internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_context_DeviceLibrary_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_context_DeviceLibrary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_context_DeviceLibrary_descriptor,
+        internal_static_bloombox_schema_analytics_context_DeviceLibrary_descriptor,
         new java.lang.String[] { "Variant", "Version", "Client", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -1189,7 +1192,7 @@ public final class LibraryContext {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.struct.Version.getDescriptor();
+    io.opencannabis.schema.struct.Version.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

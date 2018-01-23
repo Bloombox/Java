@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class AnalyticsScope {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface ScopeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.Scope)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.Scope)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -99,11 +100,11 @@ public final class AnalyticsScope {
    * transaction), among others.
    * </pre>
    *
-   * Protobuf type {@code analytics.Scope}
+   * Protobuf type {@code bloombox.schema.analytics.Scope}
    */
   public  static final class Scope extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.Scope)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.Scope)
       ScopeOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Scope.newBuilder() to construct.
@@ -179,12 +180,12 @@ public final class AnalyticsScope {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_analytics_Scope_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_analytics_Scope_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsScope.Scope.class, io.bloombox.schema.telemetry.AnalyticsScope.Scope.Builder.class);
     }
@@ -496,20 +497,20 @@ public final class AnalyticsScope {
      * transaction), among others.
      * </pre>
      *
-     * Protobuf type {@code analytics.Scope}
+     * Protobuf type {@code bloombox.schema.analytics.Scope}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.Scope)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.Scope)
         io.bloombox.schema.telemetry.AnalyticsScope.ScopeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_analytics_Scope_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_analytics_Scope_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsScope.Scope.class, io.bloombox.schema.telemetry.AnalyticsScope.Scope.Builder.class);
       }
@@ -542,7 +543,7 @@ public final class AnalyticsScope {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_analytics_Scope_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsScope.internal_static_bloombox_schema_analytics_Scope_descriptor;
       }
 
       public io.bloombox.schema.telemetry.AnalyticsScope.Scope getDefaultInstanceForType() {
@@ -929,10 +930,10 @@ public final class AnalyticsScope {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.Scope)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.Scope)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.Scope)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.Scope)
     private static final io.bloombox.schema.telemetry.AnalyticsScope.Scope DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsScope.Scope();
@@ -968,10 +969,10 @@ public final class AnalyticsScope {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_Scope_descriptor;
+    internal_static_bloombox_schema_analytics_Scope_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_Scope_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_Scope_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -981,22 +982,22 @@ public final class AnalyticsScope {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025analytics/Scope.proto\022\tanalytics\032\016bq_f" +
-      "ield.proto\"\371\003\n\005Scope\022\310\001\n\007partner\030\001 \001(\tB\266" +
-      "\001\212@\262\001Partner scope. Specifies, each-if-a" +
-      "pplicable and only in the following orde" +
-      "r-of-scope, the partner code, location c" +
-      "ode, and partner co-located device UUID " +
-      "that reported an event.\022\240\001\n\ncommercial\030\002" +
-      " \001(\tB\213\001\212@\207\001Commercial scope. Specifies, " +
-      "each-if-applicable and only in the follo" +
-      "wing order-of-scope, the section name, p" +
-      "roduct key, and order key.\022\201\001\n\005order\030\003 \001" +
-      "(\tBr\212@oOrder scope. Specifies, only if t" +
-      "here is an active order, the order ID th" +
-      "at was active when the event was sent.B5" +
-      "\n\034io.bloombox.schema.telemetryB\016Analytic" +
-      "sScopeH\001P\000\370\001\001b\006proto3"
+      "\n\025analytics/Scope.proto\022\031bloombox.schema" +
+      ".analytics\032\016bq_field.proto\"\371\003\n\005Scope\022\310\001\n" +
+      "\007partner\030\001 \001(\tB\266\001\212@\262\001Partner scope. Spec" +
+      "ifies, each-if-applicable and only in th" +
+      "e following order-of-scope, the partner " +
+      "code, location code, and partner co-loca" +
+      "ted device UUID that reported an event.\022" +
+      "\240\001\n\ncommercial\030\002 \001(\tB\213\001\212@\207\001Commercial sc" +
+      "ope. Specifies, each-if-applicable and o" +
+      "nly in the following order-of-scope, the" +
+      " section name, product key, and order ke" +
+      "y.\022\201\001\n\005order\030\003 \001(\tBr\212@oOrder scope. Spec" +
+      "ifies, only if there is an active order," +
+      " the order ID that was active when the e" +
+      "vent was sent.B5\n\034io.bloombox.schema.tel" +
+      "emetryB\016AnalyticsScopeH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1011,11 +1012,11 @@ public final class AnalyticsScope {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
-    internal_static_analytics_Scope_descriptor =
+    internal_static_bloombox_schema_analytics_Scope_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_Scope_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_Scope_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_Scope_descriptor,
+        internal_static_bloombox_schema_analytics_Scope_descriptor,
         new java.lang.String[] { "Partner", "Commercial", "Order", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

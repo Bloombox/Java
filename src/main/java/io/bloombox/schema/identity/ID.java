@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * Specifies an object for expressing a user's government ID information.
  * </pre>
  *
- * Protobuf type {@code identity.ID}
+ * Protobuf type {@code bloombox.schema.identity.ID}
  */
 public  final class ID extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.ID)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ID)
     IDOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ID.newBuilder() to construct.
@@ -85,11 +84,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.bloombox.schema.temporal.Date.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Date.Builder subBuilder = null;
             if (expireDate_ != null) {
               subBuilder = expireDate_.toBuilder();
             }
-            expireDate_ = input.readMessage(io.bloombox.schema.temporal.Date.parser(), extensionRegistry);
+            expireDate_ = input.readMessage(io.opencannabis.schema.temporal.Date.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(expireDate_);
               expireDate_ = subBuilder.buildPartial();
@@ -98,11 +97,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            io.bloombox.schema.temporal.Date.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Date.Builder subBuilder = null;
             if (birthDate_ != null) {
               subBuilder = birthDate_.toBuilder();
             }
-            birthDate_ = input.readMessage(io.bloombox.schema.temporal.Date.parser(), extensionRegistry);
+            birthDate_ = input.readMessage(io.opencannabis.schema.temporal.Date.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(birthDate_);
               birthDate_ = subBuilder.buildPartial();
@@ -152,12 +151,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.IDOuterClass.internal_static_identity_ID_descriptor;
+    return io.bloombox.schema.identity.IDOuterClass.internal_static_bloombox_schema_identity_ID_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.IDOuterClass.internal_static_identity_ID_fieldAccessorTable
+    return io.bloombox.schema.identity.IDOuterClass.internal_static_bloombox_schema_identity_ID_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.ID.class, io.bloombox.schema.identity.ID.Builder.class);
   }
@@ -207,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * Type of ID we're specifying.
    * </pre>
    *
-   * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+   * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
    */
   public int getTypeValue() {
     return type_;
@@ -217,7 +216,7 @@ private static final long serialVersionUID = 0L;
    * Type of ID we're specifying.
    * </pre>
    *
-   * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+   * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
    */
   public io.bloombox.schema.identity.IDType getType() {
     io.bloombox.schema.identity.IDType result = io.bloombox.schema.identity.IDType.valueOf(type_);
@@ -267,13 +266,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXPIRE_DATE_FIELD_NUMBER = 3;
-  private io.bloombox.schema.temporal.Date expireDate_;
+  private io.opencannabis.schema.temporal.Date expireDate_;
   /**
    * <pre>
    * Expiration date for this document.
    * </pre>
    *
-   * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+   * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
    */
   public boolean hasExpireDate() {
     return expireDate_ != null;
@@ -283,30 +282,30 @@ private static final long serialVersionUID = 0L;
    * Expiration date for this document.
    * </pre>
    *
-   * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+   * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
    */
-  public io.bloombox.schema.temporal.Date getExpireDate() {
-    return expireDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : expireDate_;
+  public io.opencannabis.schema.temporal.Date getExpireDate() {
+    return expireDate_ == null ? io.opencannabis.schema.temporal.Date.getDefaultInstance() : expireDate_;
   }
   /**
    * <pre>
    * Expiration date for this document.
    * </pre>
    *
-   * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+   * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
    */
-  public io.bloombox.schema.temporal.DateOrBuilder getExpireDateOrBuilder() {
+  public io.opencannabis.schema.temporal.DateOrBuilder getExpireDateOrBuilder() {
     return getExpireDate();
   }
 
   public static final int BIRTH_DATE_FIELD_NUMBER = 4;
-  private io.bloombox.schema.temporal.Date birthDate_;
+  private io.opencannabis.schema.temporal.Date birthDate_;
   /**
    * <pre>
    * Birth date listed on this document.
    * </pre>
    *
-   * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+   * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
    */
   public boolean hasBirthDate() {
     return birthDate_ != null;
@@ -316,19 +315,19 @@ private static final long serialVersionUID = 0L;
    * Birth date listed on this document.
    * </pre>
    *
-   * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+   * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
    */
-  public io.bloombox.schema.temporal.Date getBirthDate() {
-    return birthDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : birthDate_;
+  public io.opencannabis.schema.temporal.Date getBirthDate() {
+    return birthDate_ == null ? io.opencannabis.schema.temporal.Date.getDefaultInstance() : birthDate_;
   }
   /**
    * <pre>
    * Birth date listed on this document.
    * </pre>
    *
-   * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+   * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
    */
-  public io.bloombox.schema.temporal.DateOrBuilder getBirthDateOrBuilder() {
+  public io.opencannabis.schema.temporal.DateOrBuilder getBirthDateOrBuilder() {
     return getBirthDate();
   }
 
@@ -338,7 +337,7 @@ private static final long serialVersionUID = 0L;
    * United States Driver's License.
    * </pre>
    *
-   * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+   * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
    */
   public boolean hasLicense() {
     return documentCase_ == 20;
@@ -348,7 +347,7 @@ private static final long serialVersionUID = 0L;
    * United States Driver's License.
    * </pre>
    *
-   * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+   * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
    */
   public io.bloombox.schema.identity.ids.USDL getLicense() {
     if (documentCase_ == 20) {
@@ -361,7 +360,7 @@ private static final long serialVersionUID = 0L;
    * United States Driver's License.
    * </pre>
    *
-   * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+   * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
    */
   public io.bloombox.schema.identity.ids.USDLOrBuilder getLicenseOrBuilder() {
     if (documentCase_ == 20) {
@@ -376,7 +375,7 @@ private static final long serialVersionUID = 0L;
    * National passport.
    * </pre>
    *
-   * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+   * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
    */
   public boolean hasPassport() {
     return documentCase_ == 21;
@@ -386,7 +385,7 @@ private static final long serialVersionUID = 0L;
    * National passport.
    * </pre>
    *
-   * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+   * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
    */
   public io.bloombox.schema.identity.ids.Passport getPassport() {
     if (documentCase_ == 21) {
@@ -399,7 +398,7 @@ private static final long serialVersionUID = 0L;
    * National passport.
    * </pre>
    *
-   * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+   * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
    */
   public io.bloombox.schema.identity.ids.PassportOrBuilder getPassportOrBuilder() {
     if (documentCase_ == 21) {
@@ -646,20 +645,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an object for expressing a user's government ID information.
    * </pre>
    *
-   * Protobuf type {@code identity.ID}
+   * Protobuf type {@code bloombox.schema.identity.ID}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.ID)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ID)
       io.bloombox.schema.identity.IDOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.IDOuterClass.internal_static_identity_ID_descriptor;
+      return io.bloombox.schema.identity.IDOuterClass.internal_static_bloombox_schema_identity_ID_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.IDOuterClass.internal_static_identity_ID_fieldAccessorTable
+      return io.bloombox.schema.identity.IDOuterClass.internal_static_bloombox_schema_identity_ID_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ID.class, io.bloombox.schema.identity.ID.Builder.class);
     }
@@ -704,7 +703,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.IDOuterClass.internal_static_identity_ID_descriptor;
+      return io.bloombox.schema.identity.IDOuterClass.internal_static_bloombox_schema_identity_ID_descriptor;
     }
 
     public io.bloombox.schema.identity.ID getDefaultInstanceForType() {
@@ -863,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -873,7 +872,7 @@ private static final long serialVersionUID = 0L;
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -885,7 +884,7 @@ private static final long serialVersionUID = 0L;
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public io.bloombox.schema.identity.IDType getType() {
       io.bloombox.schema.identity.IDType result = io.bloombox.schema.identity.IDType.valueOf(type_);
@@ -896,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public Builder setType(io.bloombox.schema.identity.IDType value) {
       if (value == null) {
@@ -912,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * Type of ID we're specifying.
      * </pre>
      *
-     * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
      */
     public Builder clearType() {
       
@@ -1010,15 +1009,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.temporal.Date expireDate_ = null;
+    private io.opencannabis.schema.temporal.Date expireDate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> expireDateBuilder_;
+        io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder> expireDateBuilder_;
     /**
      * <pre>
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
     public boolean hasExpireDate() {
       return expireDateBuilder_ != null || expireDate_ != null;
@@ -1028,11 +1027,11 @@ private static final long serialVersionUID = 0L;
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
-    public io.bloombox.schema.temporal.Date getExpireDate() {
+    public io.opencannabis.schema.temporal.Date getExpireDate() {
       if (expireDateBuilder_ == null) {
-        return expireDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : expireDate_;
+        return expireDate_ == null ? io.opencannabis.schema.temporal.Date.getDefaultInstance() : expireDate_;
       } else {
         return expireDateBuilder_.getMessage();
       }
@@ -1042,9 +1041,9 @@ private static final long serialVersionUID = 0L;
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
-    public Builder setExpireDate(io.bloombox.schema.temporal.Date value) {
+    public Builder setExpireDate(io.opencannabis.schema.temporal.Date value) {
       if (expireDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1062,10 +1061,10 @@ private static final long serialVersionUID = 0L;
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
     public Builder setExpireDate(
-        io.bloombox.schema.temporal.Date.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Date.Builder builderForValue) {
       if (expireDateBuilder_ == null) {
         expireDate_ = builderForValue.build();
         onChanged();
@@ -1080,13 +1079,13 @@ private static final long serialVersionUID = 0L;
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
-    public Builder mergeExpireDate(io.bloombox.schema.temporal.Date value) {
+    public Builder mergeExpireDate(io.opencannabis.schema.temporal.Date value) {
       if (expireDateBuilder_ == null) {
         if (expireDate_ != null) {
           expireDate_ =
-            io.bloombox.schema.temporal.Date.newBuilder(expireDate_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Date.newBuilder(expireDate_).mergeFrom(value).buildPartial();
         } else {
           expireDate_ = value;
         }
@@ -1102,7 +1101,7 @@ private static final long serialVersionUID = 0L;
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
     public Builder clearExpireDate() {
       if (expireDateBuilder_ == null) {
@@ -1120,9 +1119,9 @@ private static final long serialVersionUID = 0L;
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
-    public io.bloombox.schema.temporal.Date.Builder getExpireDateBuilder() {
+    public io.opencannabis.schema.temporal.Date.Builder getExpireDateBuilder() {
       
       onChanged();
       return getExpireDateFieldBuilder().getBuilder();
@@ -1132,14 +1131,14 @@ private static final long serialVersionUID = 0L;
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
-    public io.bloombox.schema.temporal.DateOrBuilder getExpireDateOrBuilder() {
+    public io.opencannabis.schema.temporal.DateOrBuilder getExpireDateOrBuilder() {
       if (expireDateBuilder_ != null) {
         return expireDateBuilder_.getMessageOrBuilder();
       } else {
         return expireDate_ == null ?
-            io.bloombox.schema.temporal.Date.getDefaultInstance() : expireDate_;
+            io.opencannabis.schema.temporal.Date.getDefaultInstance() : expireDate_;
       }
     }
     /**
@@ -1147,14 +1146,14 @@ private static final long serialVersionUID = 0L;
      * Expiration date for this document.
      * </pre>
      *
-     * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> 
+        io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder> 
         getExpireDateFieldBuilder() {
       if (expireDateBuilder_ == null) {
         expireDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder>(
+            io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder>(
                 getExpireDate(),
                 getParentForChildren(),
                 isClean());
@@ -1163,15 +1162,15 @@ private static final long serialVersionUID = 0L;
       return expireDateBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Date birthDate_ = null;
+    private io.opencannabis.schema.temporal.Date birthDate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> birthDateBuilder_;
+        io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder> birthDateBuilder_;
     /**
      * <pre>
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
     public boolean hasBirthDate() {
       return birthDateBuilder_ != null || birthDate_ != null;
@@ -1181,11 +1180,11 @@ private static final long serialVersionUID = 0L;
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
-    public io.bloombox.schema.temporal.Date getBirthDate() {
+    public io.opencannabis.schema.temporal.Date getBirthDate() {
       if (birthDateBuilder_ == null) {
-        return birthDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : birthDate_;
+        return birthDate_ == null ? io.opencannabis.schema.temporal.Date.getDefaultInstance() : birthDate_;
       } else {
         return birthDateBuilder_.getMessage();
       }
@@ -1195,9 +1194,9 @@ private static final long serialVersionUID = 0L;
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
-    public Builder setBirthDate(io.bloombox.schema.temporal.Date value) {
+    public Builder setBirthDate(io.opencannabis.schema.temporal.Date value) {
       if (birthDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1215,10 +1214,10 @@ private static final long serialVersionUID = 0L;
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
     public Builder setBirthDate(
-        io.bloombox.schema.temporal.Date.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Date.Builder builderForValue) {
       if (birthDateBuilder_ == null) {
         birthDate_ = builderForValue.build();
         onChanged();
@@ -1233,13 +1232,13 @@ private static final long serialVersionUID = 0L;
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
-    public Builder mergeBirthDate(io.bloombox.schema.temporal.Date value) {
+    public Builder mergeBirthDate(io.opencannabis.schema.temporal.Date value) {
       if (birthDateBuilder_ == null) {
         if (birthDate_ != null) {
           birthDate_ =
-            io.bloombox.schema.temporal.Date.newBuilder(birthDate_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Date.newBuilder(birthDate_).mergeFrom(value).buildPartial();
         } else {
           birthDate_ = value;
         }
@@ -1255,7 +1254,7 @@ private static final long serialVersionUID = 0L;
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
     public Builder clearBirthDate() {
       if (birthDateBuilder_ == null) {
@@ -1273,9 +1272,9 @@ private static final long serialVersionUID = 0L;
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
-    public io.bloombox.schema.temporal.Date.Builder getBirthDateBuilder() {
+    public io.opencannabis.schema.temporal.Date.Builder getBirthDateBuilder() {
       
       onChanged();
       return getBirthDateFieldBuilder().getBuilder();
@@ -1285,14 +1284,14 @@ private static final long serialVersionUID = 0L;
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
-    public io.bloombox.schema.temporal.DateOrBuilder getBirthDateOrBuilder() {
+    public io.opencannabis.schema.temporal.DateOrBuilder getBirthDateOrBuilder() {
       if (birthDateBuilder_ != null) {
         return birthDateBuilder_.getMessageOrBuilder();
       } else {
         return birthDate_ == null ?
-            io.bloombox.schema.temporal.Date.getDefaultInstance() : birthDate_;
+            io.opencannabis.schema.temporal.Date.getDefaultInstance() : birthDate_;
       }
     }
     /**
@@ -1300,14 +1299,14 @@ private static final long serialVersionUID = 0L;
      * Birth date listed on this document.
      * </pre>
      *
-     * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> 
+        io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder> 
         getBirthDateFieldBuilder() {
       if (birthDateBuilder_ == null) {
         birthDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder>(
+            io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder>(
                 getBirthDate(),
                 getParentForChildren(),
                 isClean());
@@ -1323,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public boolean hasLicense() {
       return documentCase_ == 20;
@@ -1333,7 +1332,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public io.bloombox.schema.identity.ids.USDL getLicense() {
       if (licenseBuilder_ == null) {
@@ -1353,7 +1352,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public Builder setLicense(io.bloombox.schema.identity.ids.USDL value) {
       if (licenseBuilder_ == null) {
@@ -1373,7 +1372,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public Builder setLicense(
         io.bloombox.schema.identity.ids.USDL.Builder builderForValue) {
@@ -1391,7 +1390,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public Builder mergeLicense(io.bloombox.schema.identity.ids.USDL value) {
       if (licenseBuilder_ == null) {
@@ -1417,7 +1416,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public Builder clearLicense() {
       if (licenseBuilder_ == null) {
@@ -1440,7 +1439,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public io.bloombox.schema.identity.ids.USDL.Builder getLicenseBuilder() {
       return getLicenseFieldBuilder().getBuilder();
@@ -1450,7 +1449,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     public io.bloombox.schema.identity.ids.USDLOrBuilder getLicenseOrBuilder() {
       if ((documentCase_ == 20) && (licenseBuilder_ != null)) {
@@ -1467,7 +1466,7 @@ private static final long serialVersionUID = 0L;
      * United States Driver's License.
      * </pre>
      *
-     * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.ids.USDL, io.bloombox.schema.identity.ids.USDL.Builder, io.bloombox.schema.identity.ids.USDLOrBuilder> 
@@ -1495,7 +1494,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public boolean hasPassport() {
       return documentCase_ == 21;
@@ -1505,7 +1504,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public io.bloombox.schema.identity.ids.Passport getPassport() {
       if (passportBuilder_ == null) {
@@ -1525,7 +1524,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public Builder setPassport(io.bloombox.schema.identity.ids.Passport value) {
       if (passportBuilder_ == null) {
@@ -1545,7 +1544,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public Builder setPassport(
         io.bloombox.schema.identity.ids.Passport.Builder builderForValue) {
@@ -1563,7 +1562,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public Builder mergePassport(io.bloombox.schema.identity.ids.Passport value) {
       if (passportBuilder_ == null) {
@@ -1589,7 +1588,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public Builder clearPassport() {
       if (passportBuilder_ == null) {
@@ -1612,7 +1611,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public io.bloombox.schema.identity.ids.Passport.Builder getPassportBuilder() {
       return getPassportFieldBuilder().getBuilder();
@@ -1622,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     public io.bloombox.schema.identity.ids.PassportOrBuilder getPassportOrBuilder() {
       if ((documentCase_ == 21) && (passportBuilder_ != null)) {
@@ -1639,7 +1638,7 @@ private static final long serialVersionUID = 0L;
      * National passport.
      * </pre>
      *
-     * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.ids.Passport, io.bloombox.schema.identity.ids.Passport.Builder, io.bloombox.schema.identity.ids.PassportOrBuilder> 
@@ -1670,10 +1669,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.ID)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ID)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.ID)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ID)
   private static final io.bloombox.schema.identity.ID DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.ID();

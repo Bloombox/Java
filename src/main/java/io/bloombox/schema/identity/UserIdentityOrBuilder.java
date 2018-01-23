@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.identity;
 
 public interface UserIdentityOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.UserIdentity)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.UserIdentity)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +28,7 @@ public interface UserIdentityOrBuilder extends
    * Provider for this external/foreign account.
    * </pre>
    *
-   * <code>.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+   * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
    */
   int getProviderValue();
   /**
@@ -37,7 +36,7 @@ public interface UserIdentityOrBuilder extends
    * Provider for this external/foreign account.
    * </pre>
    *
-   * <code>.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
+   * <code>.bloombox.schema.identity.IdentityProvider provider = 1 [(.gen_bq_schema.description) = "Provider for this external/foreign account."];</code>
    */
   io.bloombox.schema.identity.IdentityProvider getProvider();
 
@@ -64,7 +63,7 @@ public interface UserIdentityOrBuilder extends
    * Timestamp for when this identity was last user to authenticate the underlying user.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 3 [(.gen_bq_schema.description) = "Timestamp for when this identity was last user to authenticate the underlying user."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 3 [(.gen_bq_schema.description) = "Timestamp for when this identity was last user to authenticate the underlying user."];</code>
    */
   boolean hasSeen();
   /**
@@ -72,15 +71,15 @@ public interface UserIdentityOrBuilder extends
    * Timestamp for when this identity was last user to authenticate the underlying user.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 3 [(.gen_bq_schema.description) = "Timestamp for when this identity was last user to authenticate the underlying user."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 3 [(.gen_bq_schema.description) = "Timestamp for when this identity was last user to authenticate the underlying user."];</code>
    */
-  io.bloombox.schema.temporal.Instant getSeen();
+  io.opencannabis.schema.temporal.Instant getSeen();
   /**
    * <pre>
    * Timestamp for when this identity was last user to authenticate the underlying user.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 3 [(.gen_bq_schema.description) = "Timestamp for when this identity was last user to authenticate the underlying user."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 3 [(.gen_bq_schema.description) = "Timestamp for when this identity was last user to authenticate the underlying user."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder();
 }

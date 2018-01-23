@@ -25,13 +25,13 @@ import io.bloombox.schema.base.ProductKey
 import io.bloombox.schema.identity.UserKey
 import io.bloombox.schema.menu.section.Section
 import io.bloombox.schema.services.telemetry.v1beta3.*
-import io.bloombox.schema.struct.VersionSpec
 import io.bloombox.schema.telemetry.AnalyticsContext
 import io.bloombox.schema.telemetry.AnalyticsEvent
 import io.bloombox.schema.telemetry.AnalyticsException
 import io.bloombox.schema.telemetry.AnalyticsScope
 import io.bloombox.schema.telemetry.context.*
-import io.bloombox.schema.temporal.Instant
+import io.opencannabis.schema.struct.VersionSpec
+import io.opencannabis.schema.temporal.Instant
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.NegotiationType

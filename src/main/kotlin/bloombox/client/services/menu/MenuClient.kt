@@ -19,7 +19,6 @@ package bloombox.client.services.menu
 import bloombox.client.interfaces.ServiceClient
 import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.internals.rpc.RPCClient
-import com.google.common.util.concurrent.ListenableFuture
 import io.bloombox.schema.services.menu.v1beta1.GetMenu
 import io.bloombox.schema.services.menu.v1beta1.MenuGrpc
 import io.grpc.*

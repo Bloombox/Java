@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.shop.v1;
 
 public interface PingOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.shop.v1.Ping)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.Ping)
     com.google.protobuf.MessageOrBuilder {
 }

@@ -25,7 +25,7 @@ package io.bloombox.schema.services.checkin.v1beta1;
  * Enumerates known errors that may be thrown by checkin operations.
  * </pre>
  *
- * Protobuf enum {@code services.checkin.v1beta1.CheckinError}
+ * Protobuf enum {@code bloombox.schema.services.checkin.v1beta1.CheckinError}
  */
 public enum CheckinError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -358,6 +358,6 @@ public enum CheckinError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.checkin.v1beta1.CheckinError)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.checkin.v1beta1.CheckinError)
 }
 
