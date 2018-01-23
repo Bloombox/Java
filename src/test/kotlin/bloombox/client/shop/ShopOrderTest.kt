@@ -58,7 +58,7 @@ class ShopOrderTest: ClientRPCTest() {
                               order: CommercialOrder.Order? = null): SubmitOrder.Response {
     val now = java.time.Instant.now()
 
-    val order = order ?: CommercialOrder.Order.newBuilder()
+    val orderObj = order ?: CommercialOrder.Order.newBuilder()
 
           .setCustomer(OrderCustomer.Customer.newBuilder()
                 .setPerson(Person.newBuilder()
@@ -113,7 +113,7 @@ class ShopOrderTest: ClientRPCTest() {
                       .setVariant(OrderItem.ProductVariant.WEIGHT)
                       .setWeight(OrderItem.ProductWeight.EIGHTH))).build()
 
-    return client.submitOrder(order)
+    return client.submitOrder(orderObj)
   }
 
   @test
