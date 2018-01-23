@@ -23,7 +23,6 @@ import io.bloombox.schema.services.shop.v1.VerifyMember
 import java.util.concurrent.TimeUnit
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
-import org.junit.Ignore as ignore
 import org.junit.Test as test
 
 
@@ -48,7 +47,7 @@ class ShopVerifyTest: ClientRPCTest() {
   /**
    * Test verifying a known good account.
    */
-  @test @ignore
+  @test
   fun testGoodAccountVerify() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
@@ -69,7 +68,7 @@ class ShopVerifyTest: ClientRPCTest() {
   /**
    * Test verifying a known good account with a second partner.
    */
-  @test @ignore
+  @test
   fun testGoodAccountVerifyOtherPartner() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
@@ -90,7 +89,7 @@ class ShopVerifyTest: ClientRPCTest() {
   /**
    * Test verifying a known good account, asynchronously.
    */
-  @test @ignore
+  @test
   fun testGoodAccountVerifyAsync() {
     // prep a client for prod
     val prodClient = BloomboxClient(BloomboxClient.Settings(
@@ -120,7 +119,7 @@ class ShopVerifyTest: ClientRPCTest() {
   /**
    * Test verifying a known bad account.
    */
-  @test @ignore
+  @test
   fun testBadAccountVerify() {
     // run a known-good account verification
     val response = testMemberVerifyBadAccount(client.platform.shop())
@@ -131,7 +130,7 @@ class ShopVerifyTest: ClientRPCTest() {
   /**
    * Test verifying a known bad account, asynchronously.
    */
-  @test @ignore
+  @test
   fun testBadAccountVerifyAsync() {
     // run a known-good account verification
     val operation = client.platform.shop().verifyMember("does-not-exist@error.com", { response ->
