@@ -31,6 +31,7 @@ import java.util.concurrent.TimeUnit
  * Cloud Platform. At the time of writing, this includes:
  *
  * - `shop/v1`: Shop service. For submitting orders, verifying customers, enrolling customers, etc.
+ * - `menu/v1beta1`: Menu service. For downloading product catalog data, subscribing to changes, and publishing updates.
  * - `telemetry/v1beta3`: Telemetry service. For submitting telemetry event data of different kinds.
  */
 class BloomboxClient(
@@ -48,12 +49,42 @@ class BloomboxClient(
     /**
      * Version for the library.
      */
-    internal const val VERSION = "1.0-beta9"
+    internal const val VERSION = "1.0-beta10"
 
     /**
      * API client variant name.
      */
     internal const val VARIANT = "full"
+  }
+
+  /**
+   * Describes available API regions.
+   */
+  enum class APIRegion {
+    USW1,
+    USC1;
+
+    /**
+     * Fetch the region code for a given region.
+     */
+    val code: String get() = this.name.toLowerCase()
+  }
+
+  /**
+   * Describes available API environments.
+   */
+  enum class APIEnvironment {
+    PRODUCTION,
+    STAGING,
+    SANDBOX;
+
+    /**
+     * Fetch the region code for a given region.
+     */
+    val code: String get() = when (this) {
+      PRODUCTION -> "prod"
+      else -> { this.name.toLowerCase() }
+    }
   }
 
   /**
@@ -79,6 +110,16 @@ class BloomboxClient(
          * Device UUID. Optional, and if specified, requires a partner and location code.
          */
         internal val device: String? = null,
+
+        /**
+         * Where needed, an explicit API region to prefer.
+         */
+        internal val region: APIRegion = APIRegion.USW1,
+
+        /**
+         * API environment to prefer.
+         */
+        internal val environment: APIEnvironment = APIEnvironment.PRODUCTION,
 
         /**
          * Executor to use for followup tasks and client RPC execution.
@@ -110,6 +151,11 @@ class BloomboxClient(
     SANDBOX,
 
     /**
+     * Send RPCs to internal gRPC endpoints. Requires special auth.
+     */
+    INTERNAL,
+
+    /**
      * Send RPCs to production. This is the default.
      */
     PRODUCTION;
@@ -119,10 +165,12 @@ class BloomboxClient(
   /**
    * Resolve the host endpoint for the selected client target.
    */
-  private fun ClientTarget.host(): String =
+  private fun ClientTarget.host(region: APIRegion = APIRegion.USW1,
+                                environment: APIEnvironment = APIEnvironment.PRODUCTION): String =
         when (this) {
           ClientTarget.LOCAL -> "127.0.0.1"
           ClientTarget.PRODUCTION -> Bloombox.Endpoints.production
+          ClientTarget.INTERNAL -> "${environment.code}.${region.code}.${Bloombox.Endpoints.internal}"
           ClientTarget.SANDBOX -> Bloombox.Endpoints.sandbox
         }
 
@@ -147,10 +195,10 @@ class BloomboxClient(
             defaultLocation = settings.location)
     } else {
       ShopClient(
-            if (ct == ClientTarget.SANDBOX) {
-              "shop.rpc.$domain"
-            } else {
-              "shop.$domain"
+            when (ct) {
+              ClientTarget.SANDBOX,
+              ClientTarget.INTERNAL -> { "shop.rpc.$domain" }
+              else -> { "shop.$domain" }
             },
             Bloombox.Endpoints.grpcPort,
             apiKey,
@@ -175,10 +223,10 @@ class BloomboxClient(
             deviceUUID = settings.device)
     } else {
       TelemetryClient(
-            if (ct == ClientTarget.SANDBOX) {
-              "telemetry.rpc.$domain"
-            } else {
-              "telemetry.$domain"
+            when (ct) {
+              ClientTarget.SANDBOX,
+              ClientTarget.INTERNAL -> { "telemetry.rpc.$domain" }
+              else -> { "telemetry.$domain" }
             },
             Bloombox.Endpoints.grpcPort,
             apiKey,
@@ -203,10 +251,10 @@ class BloomboxClient(
             defaultLocation = settings.location)
     } else {
       MenuClient(
-            if (ct == ClientTarget.SANDBOX) {
-              "menu.rpc.$domain"
-            } else {
-              "menu.$domain"
+            when (ct) {
+              ClientTarget.SANDBOX,
+              ClientTarget.INTERNAL -> { "menu.rpc.$domain" }
+              else -> { "menu.$domain" }
             },
             Bloombox.Endpoints.grpcPort,
             apiKey,
@@ -225,7 +273,10 @@ class BloomboxClient(
   /**
    * Private access to service clients.
    */
-  private val services = Services(target.host(), settings.apiKey, target)
+  private val services = Services(
+        target.host(settings.region, settings.environment),
+        settings.apiKey,
+        target)
 
   // -- Public Methods -- //
   /**

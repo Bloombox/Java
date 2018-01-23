@@ -48,6 +48,11 @@ object Bloombox {
     /**
      * Sandbox endpoint. Requires special auth.
      */
+    internal const val internal = "private.bloombox.services"
+
+    /**
+     * Sandbox endpoint. Requires special auth.
+     */
     internal const val sandbox = "sandbox.usw1.bloombox.services"
 
     /**
