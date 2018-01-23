@@ -50,7 +50,7 @@ public interface ProductKeyOrBuilder extends
    * Type of product the ID is referring to. In most cases this entry can be omitted.
    * </pre>
    *
-   * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   boolean hasType();
   /**
@@ -58,7 +58,7 @@ public interface ProductKeyOrBuilder extends
    * Type of product the ID is referring to. In most cases this entry can be omitted.
    * </pre>
    *
-   * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   io.opencannabis.schema.base.ProductType getType();
   /**
@@ -66,7 +66,7 @@ public interface ProductKeyOrBuilder extends
    * Type of product the ID is referring to. In most cases this entry can be omitted.
    * </pre>
    *
-   * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   io.opencannabis.schema.base.ProductTypeOrBuilder getTypeOrBuilder();
 }

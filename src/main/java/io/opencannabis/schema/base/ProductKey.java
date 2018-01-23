@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * Type of product the ID is referring to. In most cases this entry can be omitted.
    * </pre>
    *
-   * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   public boolean hasType() {
     return type_ != null;
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
    * Type of product the ID is referring to. In most cases this entry can be omitted.
    * </pre>
    *
-   * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   public io.opencannabis.schema.base.ProductType getType() {
     return type_ == null ? io.opencannabis.schema.base.ProductType.getDefaultInstance() : type_;
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * Type of product the ID is referring to. In most cases this entry can be omitted.
    * </pre>
    *
-   * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   public io.opencannabis.schema.base.ProductTypeOrBuilder getTypeOrBuilder() {
     return getType();
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public boolean hasType() {
       return typeBuilder_ != null || type_ != null;
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.opencannabis.schema.base.ProductType getType() {
       if (typeBuilder_ == null) {
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder setType(io.opencannabis.schema.base.ProductType value) {
       if (typeBuilder_ == null) {
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder setType(
         io.opencannabis.schema.base.ProductType.Builder builderForValue) {
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder mergeType(io.opencannabis.schema.base.ProductType value) {
       if (typeBuilder_ == null) {
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder clearType() {
       if (typeBuilder_ == null) {
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.opencannabis.schema.base.ProductType.Builder getTypeBuilder() {
       
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.opencannabis.schema.base.ProductTypeOrBuilder getTypeOrBuilder() {
       if (typeBuilder_ != null) {
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.base.ProductType, io.opencannabis.schema.base.ProductType.Builder, io.opencannabis.schema.base.ProductTypeOrBuilder> 

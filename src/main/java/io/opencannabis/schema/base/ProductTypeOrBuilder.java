@@ -20,7 +20,7 @@
 package io.opencannabis.schema.base;
 
 public interface ProductTypeOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:opencannabis.ProductType)
+    // @@protoc_insertion_point(interface_extends:opencannabis.base.ProductType)
     com.google.protobuf.MessageOrBuilder {
 
   /**

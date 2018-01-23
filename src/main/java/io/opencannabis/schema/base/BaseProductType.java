@@ -31,10 +31,10 @@ public final class BaseProductType {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_opencannabis_ProductType_descriptor;
+    internal_static_opencannabis_base_ProductType_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_opencannabis_ProductType_fieldAccessorTable;
+      internal_static_opencannabis_base_ProductType_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -44,11 +44,11 @@ public final class BaseProductType {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026base/ProductType.proto\022\014opencannabis\032\026" +
-      "base/ProductKind.proto\";\n\013ProductType\022,\n" +
-      "\004kind\030\001 \001(\0162\036.opencannabis.base.ProductK" +
-      "indB5\n\033io.opencannabis.schema.baseB\017Base" +
-      "ProductTypeH\001P\001\370\001\001b\006proto3"
+      "\n\026base/ProductType.proto\022\021opencannabis.b" +
+      "ase\032\026base/ProductKind.proto\";\n\013ProductTy" +
+      "pe\022,\n\004kind\030\001 \001(\0162\036.opencannabis.base.Pro" +
+      "ductKindB5\n\033io.opencannabis.schema.baseB" +
+      "\017BaseProductTypeH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -63,11 +63,11 @@ public final class BaseProductType {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.base.BaseProductKind.getDescriptor(),
         }, assigner);
-    internal_static_opencannabis_ProductType_descriptor =
+    internal_static_opencannabis_base_ProductType_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_opencannabis_ProductType_fieldAccessorTable = new
+    internal_static_opencannabis_base_ProductType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_opencannabis_ProductType_descriptor,
+        internal_static_opencannabis_base_ProductType_descriptor,
         new java.lang.String[] { "Kind", });
     io.opencannabis.schema.base.BaseProductKind.getDescriptor();
   }

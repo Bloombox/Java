@@ -25,11 +25,11 @@ package io.opencannabis.schema.base;
  * identity, along with any additional metadata.
  * </pre>
  *
- * Protobuf type {@code opencannabis.ProductType}
+ * Protobuf type {@code opencannabis.base.ProductType}
  */
 public  final class ProductType extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:opencannabis.ProductType)
+    // @@protoc_insertion_point(message_implements:opencannabis.base.ProductType)
     ProductTypeOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ProductType.newBuilder() to construct.
@@ -91,12 +91,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_ProductType_descriptor;
+    return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_base_ProductType_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_ProductType_fieldAccessorTable
+    return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_base_ProductType_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.opencannabis.schema.base.ProductType.class, io.opencannabis.schema.base.ProductType.Builder.class);
   }
@@ -281,20 +281,20 @@ private static final long serialVersionUID = 0L;
    * identity, along with any additional metadata.
    * </pre>
    *
-   * Protobuf type {@code opencannabis.ProductType}
+   * Protobuf type {@code opencannabis.base.ProductType}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:opencannabis.ProductType)
+      // @@protoc_insertion_point(builder_implements:opencannabis.base.ProductType)
       io.opencannabis.schema.base.ProductTypeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_ProductType_descriptor;
+      return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_base_ProductType_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_ProductType_fieldAccessorTable
+      return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_base_ProductType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.opencannabis.schema.base.ProductType.class, io.opencannabis.schema.base.ProductType.Builder.class);
     }
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_ProductType_descriptor;
+      return io.opencannabis.schema.base.BaseProductType.internal_static_opencannabis_base_ProductType_descriptor;
     }
 
     public io.opencannabis.schema.base.ProductType getDefaultInstanceForType() {
@@ -486,10 +486,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:opencannabis.ProductType)
+    // @@protoc_insertion_point(builder_scope:opencannabis.base.ProductType)
   }
 
-  // @@protoc_insertion_point(class_scope:opencannabis.ProductType)
+  // @@protoc_insertion_point(class_scope:opencannabis.base.ProductType)
   private static final io.opencannabis.schema.base.ProductType DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.opencannabis.schema.base.ProductType();
