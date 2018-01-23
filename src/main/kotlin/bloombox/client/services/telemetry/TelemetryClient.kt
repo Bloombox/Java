@@ -16,7 +16,7 @@
 
 package bloombox.client.services.telemetry
 
-import bloombox.client.BloomboxClient
+import bloombox.client.Bloombox
 import bloombox.client.interfaces.ServiceClient
 import bloombox.client.internals.rpc.RPCClient
 import com.google.protobuf.Struct
@@ -289,8 +289,8 @@ class TelemetryClient(override val host: String,
   private val _baseContext: AnalyticsContext.Context = AnalyticsContext.Context.newBuilder()
         .setLibrary(LibraryContext.DeviceLibrary.newBuilder()
               .setClient(LibraryContext.APIClient.JAVA)
-              .setVariant(BloomboxClient.VARIANT)
-              .setVersion(VersionSpec.newBuilder().setName(BloomboxClient.VERSION)))
+              .setVariant(Bloombox.VARIANT)
+              .setVersion(VersionSpec.newBuilder().setName(Bloombox.VERSION)))
         .setNative(DeviceContext.NativeDeviceContext.newBuilder()
               .setRole(DeviceContext.DeviceRole.SERVER)
               .setOs(OperatingSystemContext.DeviceOS.newBuilder()

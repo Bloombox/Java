@@ -16,7 +16,7 @@
 
 package bloombox.client.shop
 
-import bloombox.client.BloomboxClient
+import bloombox.client.Bloombox
 import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
@@ -80,9 +80,9 @@ class ShopInfoTest: ClientRPCTest() {
   @test(expected = ServiceClientException::class)
   fun testShopHoursInvalidPartner() {
     // prep a client for prod
-    val prodClient = BloomboxClient(BloomboxClient.Settings(
+    val prodClient = Bloombox(Bloombox.Settings(
           "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM"),
-          BloomboxClient.ClientTarget.PRODUCTION)
+          Bloombox.ClientTarget.PRODUCTION)
     try {
       prodClient.shop().info()
     } finally {
@@ -96,10 +96,10 @@ class ShopInfoTest: ClientRPCTest() {
   @test(expected = ServiceClientException::class)
   fun testShopHoursInvalidLocation() {
     // prep a client for prod
-    val prodClient = BloomboxClient(BloomboxClient.Settings(
+    val prodClient = Bloombox(Bloombox.Settings(
           "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
           partner = "mm"),
-          BloomboxClient.ClientTarget.PRODUCTION)
+          Bloombox.ClientTarget.PRODUCTION)
     try {
       prodClient.shop().info()
     } finally {

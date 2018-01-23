@@ -16,7 +16,7 @@
 
 package bloombox.client.shop
 
-import bloombox.client.BloomboxClient
+import bloombox.client.Bloombox
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import io.bloombox.schema.services.shop.v1.VerifyMember
@@ -50,11 +50,11 @@ class ShopVerifyTest: ClientRPCTest() {
   @test
   fun testGoodAccountVerify() {
     // prep a client for prod
-    val prodClient = BloomboxClient(BloomboxClient.Settings(
+    val prodClient = Bloombox(Bloombox.Settings(
           "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
           partner = "caliva",
           location = "sjc"),
-          BloomboxClient.ClientTarget.PRODUCTION)
+          Bloombox.ClientTarget.PRODUCTION)
 
     // run a known-good account verification
     val response = testMemberVerifyGoodAccount(prodClient.shop())
@@ -71,11 +71,11 @@ class ShopVerifyTest: ClientRPCTest() {
   @test
   fun testGoodAccountVerifyOtherPartner() {
     // prep a client for prod
-    val prodClient = BloomboxClient(BloomboxClient.Settings(
+    val prodClient = Bloombox(Bloombox.Settings(
           "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
           partner = "abatin",
           location = "sacramento"),
-          BloomboxClient.ClientTarget.PRODUCTION)
+          Bloombox.ClientTarget.PRODUCTION)
 
     // run a known-good account verification
     val response = testMemberVerifyGoodAccount(prodClient.shop())
@@ -92,11 +92,11 @@ class ShopVerifyTest: ClientRPCTest() {
   @test
   fun testGoodAccountVerifyAsync() {
     // prep a client for prod
-    val prodClient = BloomboxClient(BloomboxClient.Settings(
+    val prodClient = Bloombox(Bloombox.Settings(
           "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
           partner = "caliva",
           location = "sjc"),
-          BloomboxClient.ClientTarget.PRODUCTION)
+          Bloombox.ClientTarget.PRODUCTION)
 
     try {
       // run a known-good account verification
