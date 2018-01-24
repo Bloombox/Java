@@ -245,6 +245,7 @@
                     <excludes>
                         <exclude>gen_bq_schema/**/*</exclude>
                         <exclude>io/bloombox/schema/**/*</exclude>
+                        <exclude>io/opencannabis/**/*</exclude>
                         <exclude>bloombox/client/Bloombox.java</exclude>
                     </excludes>
                 </configuration>
