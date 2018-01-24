@@ -25,11 +25,11 @@ package io.bloombox.schema.services.telemetry.v1beta3;
  * Specifies an RPC operation to submit one or more error report payloads to an unenumerated collection.
  * </pre>
  *
- * Protobuf type {@code services.telemetry.v1beta3.Exception}
+ * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Exception}
  */
 public  final class Exception extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.Exception)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.Exception)
     ExceptionOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Exception.newBuilder() to construct.
@@ -117,12 +117,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Exception_descriptor;
+    return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Exception_fieldAccessorTable
+    return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.telemetry.v1beta3.Exception.class, io.bloombox.schema.services.telemetry.v1beta3.Exception.Builder.class);
   }
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * Context to submit for these events.
    * </pre>
    *
-   * <code>.analytics.Context context = 1;</code>
+   * <code>.bloombox.schema.analytics.Context context = 1;</code>
    */
   public boolean hasContext() {
     return context_ != null;
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * Context to submit for these events.
    * </pre>
    *
-   * <code>.analytics.Context context = 1;</code>
+   * <code>.bloombox.schema.analytics.Context context = 1;</code>
    */
   public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
     return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
    * Context to submit for these events.
    * </pre>
    *
-   * <code>.analytics.Context context = 1;</code>
+   * <code>.bloombox.schema.analytics.Context context = 1;</code>
    */
   public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
     return getContext();
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * Error to submit.
    * </pre>
    *
-   * <code>.analytics.generic.Exception error = 2;</code>
+   * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
    */
   public boolean hasError() {
     return error_ != null;
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
    * Error to submit.
    * </pre>
    *
-   * <code>.analytics.generic.Exception error = 2;</code>
+   * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
    */
   public io.bloombox.schema.telemetry.AnalyticsException.Exception getError() {
     return error_ == null ? io.bloombox.schema.telemetry.AnalyticsException.Exception.getDefaultInstance() : error_;
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * Error to submit.
    * </pre>
    *
-   * <code>.analytics.generic.Exception error = 2;</code>
+   * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
    */
   public io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder getErrorOrBuilder() {
     return getError();
@@ -422,20 +422,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to submit one or more error report payloads to an unenumerated collection.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.Exception}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Exception}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.Exception)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.Exception)
       io.bloombox.schema.services.telemetry.v1beta3.ExceptionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Exception_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Exception_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.Exception.class, io.bloombox.schema.services.telemetry.v1beta3.Exception.Builder.class);
     }
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Exception_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Exception_descriptor;
     }
 
     public io.bloombox.schema.services.telemetry.v1beta3.Exception getDefaultInstanceForType() {
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public boolean hasContext() {
       return contextBuilder_ != null || context_ != null;
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
       if (contextBuilder_ == null) {
@@ -614,7 +614,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
       if (contextBuilder_ == null) {
@@ -634,7 +634,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public Builder setContext(
         io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
       if (contextBuilder_ == null) {
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public Builder clearContext() {
       if (contextBuilder_ == null) {
@@ -692,7 +692,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
       
@@ -704,7 +704,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
       if (contextBuilder_ != null) {
@@ -719,7 +719,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     public boolean hasError() {
       return errorBuilder_ != null || error_ != null;
@@ -753,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.Exception getError() {
       if (errorBuilder_ == null) {
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     public Builder setError(io.bloombox.schema.telemetry.AnalyticsException.Exception value) {
       if (errorBuilder_ == null) {
@@ -787,7 +787,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     public Builder setError(
         io.bloombox.schema.telemetry.AnalyticsException.Exception.Builder builderForValue) {
@@ -805,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     public Builder mergeError(io.bloombox.schema.telemetry.AnalyticsException.Exception value) {
       if (errorBuilder_ == null) {
@@ -827,7 +827,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     public Builder clearError() {
       if (errorBuilder_ == null) {
@@ -845,7 +845,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.Exception.Builder getErrorBuilder() {
       
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder getErrorOrBuilder() {
       if (errorBuilder_ != null) {
@@ -872,7 +872,7 @@ private static final long serialVersionUID = 0L;
      * Error to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Exception error = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.telemetry.AnalyticsException.Exception, io.bloombox.schema.telemetry.AnalyticsException.Exception.Builder, io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder> 
@@ -987,10 +987,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.Exception)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.Exception)
   }
 
-  // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.Exception)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.Exception)
   private static final io.bloombox.schema.services.telemetry.v1beta3.Exception DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.Exception();

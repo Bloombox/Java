@@ -26,11 +26,11 @@ package io.bloombox.schema.services.menu.v1beta1;
  * for a given set of specified sections.
  * </pre>
  *
- * Protobuf type {@code services.menu.v1beta1.GetMenu}
+ * Protobuf type {@code bloombox.schema.services.menu.v1beta1.GetMenu}
  */
 public  final class GetMenu extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.menu.v1beta1.GetMenu)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.menu.v1beta1.GetMenu)
     GetMenuOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use GetMenu.newBuilder() to construct.
@@ -84,18 +84,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_descriptor;
+    return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_fieldAccessorTable
+    return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.menu.v1beta1.GetMenu.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.menu.v1beta1.GetMenu.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.menu.v1beta1.GetMenu.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Retrieve the full menu.
+     * Flag indicating a full menu, including hidden/out-of-stock items.
      * </pre>
      *
      * <code>bool full = 2;</code>
@@ -127,69 +127,76 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Retrieve partial menu data specified by section specs.
+     * Only include menu keys, no detail data.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 3;</code>
+     * <code>bool keys_only = 3;</code>
      */
-    boolean hasSpec();
-    /**
-     * <pre>
-     * Retrieve partial menu data specified by section specs.
-     * </pre>
-     *
-     * <code>.products.menu.section.SectionSpec spec = 3;</code>
-     */
-    io.bloombox.schema.menu.section.SectionSpec getSpec();
-    /**
-     * <pre>
-     * Retrieve partial menu data specified by section specs.
-     * </pre>
-     *
-     * <code>.products.menu.section.SectionSpec spec = 3;</code>
-     */
-    io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder();
+    boolean getKeysOnly();
 
     /**
      * <pre>
-     * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-     * digest of active menu data, including the algorithm in use and hash.
+     * Don't return the menu if it's identical to this fingerprint.
      * </pre>
      *
-     * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+     * <code>string snapshot = 4;</code>
      */
-    boolean hasSnapshot();
+    java.lang.String getSnapshot();
     /**
      * <pre>
-     * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-     * digest of active menu data, including the algorithm in use and hash.
+     * Don't return the menu if it's identical to this fingerprint.
      * </pre>
      *
-     * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+     * <code>string snapshot = 4;</code>
      */
-    io.bloombox.schema.crypto.primitives.integrity.Hash getSnapshot();
-    /**
-     * <pre>
-     * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-     * digest of active menu data, including the algorithm in use and hash.
-     * </pre>
-     *
-     * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
-     */
-    io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder getSnapshotOrBuilder();
+    com.google.protobuf.ByteString
+        getSnapshotBytes();
 
-    public io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.MenuScopeCase getMenuScopeCase();
+    /**
+     * <pre>
+     * Bloom filter to consider when returning or processing menu items.
+     * </pre>
+     *
+     * <code>string fingerprint = 5;</code>
+     */
+    java.lang.String getFingerprint();
+    /**
+     * <pre>
+     * Bloom filter to consider when returning or processing menu items.
+     * </pre>
+     *
+     * <code>string fingerprint = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getFingerprintBytes();
+
+    /**
+     * <pre>
+     * Sections to include in the menu. If unspecified, include all sections.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+     */
+    int getSectionValue();
+    /**
+     * <pre>
+     * Sections to include in the menu. If unspecified, include all sections.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+     */
+    io.opencannabis.schema.menu.section.Section getSection();
   }
   /**
    * <pre>
    * Request payload to retrieve a menu.
    * </pre>
    *
-   * Protobuf type {@code services.menu.v1beta1.GetMenu.Request}
+   * Protobuf type {@code bloombox.schema.services.menu.v1beta1.GetMenu.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.menu.v1beta1.GetMenu.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.menu.v1beta1.GetMenu.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -198,6 +205,11 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       scope_ = "";
+      full_ = false;
+      keysOnly_ = false;
+      snapshot_ = "";
+      fingerprint_ = "";
+      section_ = 0;
     }
 
     @java.lang.Override
@@ -238,35 +250,31 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 16: {
-              menuScopeCase_ = 2;
-              menuScope_ = input.readBool();
+
+              full_ = input.readBool();
               break;
             }
-            case 26: {
-              io.bloombox.schema.menu.section.SectionSpec.Builder subBuilder = null;
-              if (menuScopeCase_ == 3) {
-                subBuilder = ((io.bloombox.schema.menu.section.SectionSpec) menuScope_).toBuilder();
-              }
-              menuScope_ =
-                  input.readMessage(io.bloombox.schema.menu.section.SectionSpec.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.menu.section.SectionSpec) menuScope_);
-                menuScope_ = subBuilder.buildPartial();
-              }
-              menuScopeCase_ = 3;
+            case 24: {
+
+              keysOnly_ = input.readBool();
               break;
             }
             case 34: {
-              io.bloombox.schema.crypto.primitives.integrity.Hash.Builder subBuilder = null;
-              if (snapshot_ != null) {
-                subBuilder = snapshot_.toBuilder();
-              }
-              snapshot_ = input.readMessage(io.bloombox.schema.crypto.primitives.integrity.Hash.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(snapshot_);
-                snapshot_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              snapshot_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fingerprint_ = s;
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              section_ = rawValue;
               break;
             }
           }
@@ -283,52 +291,14 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Request_descriptor;
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Request_fieldAccessorTable
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.Builder.class);
-    }
-
-    private int menuScopeCase_ = 0;
-    private java.lang.Object menuScope_;
-    public enum MenuScopeCase
-        implements com.google.protobuf.Internal.EnumLite {
-      FULL(2),
-      SPEC(3),
-      MENUSCOPE_NOT_SET(0);
-      private final int value;
-      private MenuScopeCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static MenuScopeCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static MenuScopeCase forNumber(int value) {
-        switch (value) {
-          case 2: return FULL;
-          case 3: return SPEC;
-          case 0: return MENUSCOPE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public MenuScopeCase
-    getMenuScopeCase() {
-      return MenuScopeCase.forNumber(
-          menuScopeCase_);
     }
 
     public static final int SCOPE_FIELD_NUMBER = 1;
@@ -374,92 +344,137 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int FULL_FIELD_NUMBER = 2;
+    private boolean full_;
     /**
      * <pre>
-     * Retrieve the full menu.
+     * Flag indicating a full menu, including hidden/out-of-stock items.
      * </pre>
      *
      * <code>bool full = 2;</code>
      */
     public boolean getFull() {
-      if (menuScopeCase_ == 2) {
-        return (java.lang.Boolean) menuScope_;
-      }
-      return false;
+      return full_;
     }
 
-    public static final int SPEC_FIELD_NUMBER = 3;
+    public static final int KEYS_ONLY_FIELD_NUMBER = 3;
+    private boolean keysOnly_;
     /**
      * <pre>
-     * Retrieve partial menu data specified by section specs.
+     * Only include menu keys, no detail data.
      * </pre>
      *
-     * <code>.products.menu.section.SectionSpec spec = 3;</code>
+     * <code>bool keys_only = 3;</code>
      */
-    public boolean hasSpec() {
-      return menuScopeCase_ == 3;
-    }
-    /**
-     * <pre>
-     * Retrieve partial menu data specified by section specs.
-     * </pre>
-     *
-     * <code>.products.menu.section.SectionSpec spec = 3;</code>
-     */
-    public io.bloombox.schema.menu.section.SectionSpec getSpec() {
-      if (menuScopeCase_ == 3) {
-         return (io.bloombox.schema.menu.section.SectionSpec) menuScope_;
-      }
-      return io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Retrieve partial menu data specified by section specs.
-     * </pre>
-     *
-     * <code>.products.menu.section.SectionSpec spec = 3;</code>
-     */
-    public io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
-      if (menuScopeCase_ == 3) {
-         return (io.bloombox.schema.menu.section.SectionSpec) menuScope_;
-      }
-      return io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance();
+    public boolean getKeysOnly() {
+      return keysOnly_;
     }
 
     public static final int SNAPSHOT_FIELD_NUMBER = 4;
-    private io.bloombox.schema.crypto.primitives.integrity.Hash snapshot_;
+    private volatile java.lang.Object snapshot_;
     /**
      * <pre>
-     * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-     * digest of active menu data, including the algorithm in use and hash.
+     * Don't return the menu if it's identical to this fingerprint.
      * </pre>
      *
-     * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+     * <code>string snapshot = 4;</code>
      */
-    public boolean hasSnapshot() {
-      return snapshot_ != null;
+    public java.lang.String getSnapshot() {
+      java.lang.Object ref = snapshot_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        snapshot_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-     * digest of active menu data, including the algorithm in use and hash.
+     * Don't return the menu if it's identical to this fingerprint.
      * </pre>
      *
-     * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+     * <code>string snapshot = 4;</code>
      */
-    public io.bloombox.schema.crypto.primitives.integrity.Hash getSnapshot() {
-      return snapshot_ == null ? io.bloombox.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : snapshot_;
+    public com.google.protobuf.ByteString
+        getSnapshotBytes() {
+      java.lang.Object ref = snapshot_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        snapshot_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FINGERPRINT_FIELD_NUMBER = 5;
+    private volatile java.lang.Object fingerprint_;
+    /**
+     * <pre>
+     * Bloom filter to consider when returning or processing menu items.
+     * </pre>
+     *
+     * <code>string fingerprint = 5;</code>
+     */
+    public java.lang.String getFingerprint() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fingerprint_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-     * digest of active menu data, including the algorithm in use and hash.
+     * Bloom filter to consider when returning or processing menu items.
      * </pre>
      *
-     * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+     * <code>string fingerprint = 5;</code>
      */
-    public io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder getSnapshotOrBuilder() {
-      return getSnapshot();
+    public com.google.protobuf.ByteString
+        getFingerprintBytes() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fingerprint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECTION_FIELD_NUMBER = 6;
+    private int section_;
+    /**
+     * <pre>
+     * Sections to include in the menu. If unspecified, include all sections.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+     */
+    public int getSectionValue() {
+      return section_;
+    }
+    /**
+     * <pre>
+     * Sections to include in the menu. If unspecified, include all sections.
+     * </pre>
+     *
+     * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+     */
+    public io.opencannabis.schema.menu.section.Section getSection() {
+      io.opencannabis.schema.menu.section.Section result = io.opencannabis.schema.menu.section.Section.valueOf(section_);
+      return result == null ? io.opencannabis.schema.menu.section.Section.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -477,15 +492,20 @@ private static final long serialVersionUID = 0L;
       if (!getScopeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
       }
-      if (menuScopeCase_ == 2) {
-        output.writeBool(
-            2, (boolean)((java.lang.Boolean) menuScope_));
+      if (full_ != false) {
+        output.writeBool(2, full_);
       }
-      if (menuScopeCase_ == 3) {
-        output.writeMessage(3, (io.bloombox.schema.menu.section.SectionSpec) menuScope_);
+      if (keysOnly_ != false) {
+        output.writeBool(3, keysOnly_);
       }
-      if (snapshot_ != null) {
-        output.writeMessage(4, getSnapshot());
+      if (!getSnapshotBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, snapshot_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, fingerprint_);
+      }
+      if (section_ != io.opencannabis.schema.menu.section.Section.UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, section_);
       }
       unknownFields.writeTo(output);
     }
@@ -498,18 +518,23 @@ private static final long serialVersionUID = 0L;
       if (!getScopeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
       }
-      if (menuScopeCase_ == 2) {
+      if (full_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(
-              2, (boolean)((java.lang.Boolean) menuScope_));
+          .computeBoolSize(2, full_);
       }
-      if (menuScopeCase_ == 3) {
+      if (keysOnly_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (io.bloombox.schema.menu.section.SectionSpec) menuScope_);
+          .computeBoolSize(3, keysOnly_);
       }
-      if (snapshot_ != null) {
+      if (!getSnapshotBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, snapshot_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, fingerprint_);
+      }
+      if (section_ != io.opencannabis.schema.menu.section.Section.UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getSnapshot());
+          .computeEnumSize(6, section_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -529,26 +554,15 @@ private static final long serialVersionUID = 0L;
       boolean result = true;
       result = result && getScope()
           .equals(other.getScope());
-      result = result && (hasSnapshot() == other.hasSnapshot());
-      if (hasSnapshot()) {
-        result = result && getSnapshot()
-            .equals(other.getSnapshot());
-      }
-      result = result && getMenuScopeCase().equals(
-          other.getMenuScopeCase());
-      if (!result) return false;
-      switch (menuScopeCase_) {
-        case 2:
-          result = result && (getFull()
-              == other.getFull());
-          break;
-        case 3:
-          result = result && getSpec()
-              .equals(other.getSpec());
-          break;
-        case 0:
-        default:
-      }
+      result = result && (getFull()
+          == other.getFull());
+      result = result && (getKeysOnly()
+          == other.getKeysOnly());
+      result = result && getSnapshot()
+          .equals(other.getSnapshot());
+      result = result && getFingerprint()
+          .equals(other.getFingerprint());
+      result = result && section_ == other.section_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -562,23 +576,18 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SCOPE_FIELD_NUMBER;
       hash = (53 * hash) + getScope().hashCode();
-      if (hasSnapshot()) {
-        hash = (37 * hash) + SNAPSHOT_FIELD_NUMBER;
-        hash = (53 * hash) + getSnapshot().hashCode();
-      }
-      switch (menuScopeCase_) {
-        case 2:
-          hash = (37 * hash) + FULL_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getFull());
-          break;
-        case 3:
-          hash = (37 * hash) + SPEC_FIELD_NUMBER;
-          hash = (53 * hash) + getSpec().hashCode();
-          break;
-        case 0:
-        default:
-      }
+      hash = (37 * hash) + FULL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFull());
+      hash = (37 * hash) + KEYS_ONLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getKeysOnly());
+      hash = (37 * hash) + SNAPSHOT_FIELD_NUMBER;
+      hash = (53 * hash) + getSnapshot().hashCode();
+      hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
+      hash = (53 * hash) + getFingerprint().hashCode();
+      hash = (37 * hash) + SECTION_FIELD_NUMBER;
+      hash = (53 * hash) + section_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -677,20 +686,20 @@ private static final long serialVersionUID = 0L;
      * Request payload to retrieve a menu.
      * </pre>
      *
-     * Protobuf type {@code services.menu.v1beta1.GetMenu.Request}
+     * Protobuf type {@code bloombox.schema.services.menu.v1beta1.GetMenu.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.menu.v1beta1.GetMenu.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.menu.v1beta1.GetMenu.Request)
         io.bloombox.schema.services.menu.v1beta1.GetMenu.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Request_descriptor;
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Request_fieldAccessorTable
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.Builder.class);
       }
@@ -714,20 +723,22 @@ private static final long serialVersionUID = 0L;
         super.clear();
         scope_ = "";
 
-        if (snapshotBuilder_ == null) {
-          snapshot_ = null;
-        } else {
-          snapshot_ = null;
-          snapshotBuilder_ = null;
-        }
-        menuScopeCase_ = 0;
-        menuScope_ = null;
+        full_ = false;
+
+        keysOnly_ = false;
+
+        snapshot_ = "";
+
+        fingerprint_ = "";
+
+        section_ = 0;
+
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Request_descriptor;
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Request_descriptor;
       }
 
       public io.bloombox.schema.services.menu.v1beta1.GetMenu.Request getDefaultInstanceForType() {
@@ -745,22 +756,11 @@ private static final long serialVersionUID = 0L;
       public io.bloombox.schema.services.menu.v1beta1.GetMenu.Request buildPartial() {
         io.bloombox.schema.services.menu.v1beta1.GetMenu.Request result = new io.bloombox.schema.services.menu.v1beta1.GetMenu.Request(this);
         result.scope_ = scope_;
-        if (menuScopeCase_ == 2) {
-          result.menuScope_ = menuScope_;
-        }
-        if (menuScopeCase_ == 3) {
-          if (specBuilder_ == null) {
-            result.menuScope_ = menuScope_;
-          } else {
-            result.menuScope_ = specBuilder_.build();
-          }
-        }
-        if (snapshotBuilder_ == null) {
-          result.snapshot_ = snapshot_;
-        } else {
-          result.snapshot_ = snapshotBuilder_.build();
-        }
-        result.menuScopeCase_ = menuScopeCase_;
+        result.full_ = full_;
+        result.keysOnly_ = keysOnly_;
+        result.snapshot_ = snapshot_;
+        result.fingerprint_ = fingerprint_;
+        result.section_ = section_;
         onBuilt();
         return result;
       }
@@ -806,21 +806,22 @@ private static final long serialVersionUID = 0L;
           scope_ = other.scope_;
           onChanged();
         }
-        if (other.hasSnapshot()) {
-          mergeSnapshot(other.getSnapshot());
+        if (other.getFull() != false) {
+          setFull(other.getFull());
         }
-        switch (other.getMenuScopeCase()) {
-          case FULL: {
-            setFull(other.getFull());
-            break;
-          }
-          case SPEC: {
-            mergeSpec(other.getSpec());
-            break;
-          }
-          case MENUSCOPE_NOT_SET: {
-            break;
-          }
+        if (other.getKeysOnly() != false) {
+          setKeysOnly(other.getKeysOnly());
+        }
+        if (!other.getSnapshot().isEmpty()) {
+          snapshot_ = other.snapshot_;
+          onChanged();
+        }
+        if (!other.getFingerprint().isEmpty()) {
+          fingerprint_ = other.fingerprint_;
+          onChanged();
+        }
+        if (other.section_ != 0) {
+          setSectionValue(other.getSectionValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -848,21 +849,6 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
-      private int menuScopeCase_ = 0;
-      private java.lang.Object menuScope_;
-      public MenuScopeCase
-          getMenuScopeCase() {
-        return MenuScopeCase.forNumber(
-            menuScopeCase_);
-      }
-
-      public Builder clearMenuScope() {
-        menuScopeCase_ = 0;
-        menuScope_ = null;
-        onChanged();
-        return this;
-      }
-
 
       private java.lang.Object scope_ = "";
       /**
@@ -953,380 +939,322 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      private boolean full_ ;
       /**
        * <pre>
-       * Retrieve the full menu.
+       * Flag indicating a full menu, including hidden/out-of-stock items.
        * </pre>
        *
        * <code>bool full = 2;</code>
        */
       public boolean getFull() {
-        if (menuScopeCase_ == 2) {
-          return (java.lang.Boolean) menuScope_;
-        }
-        return false;
+        return full_;
       }
       /**
        * <pre>
-       * Retrieve the full menu.
+       * Flag indicating a full menu, including hidden/out-of-stock items.
        * </pre>
        *
        * <code>bool full = 2;</code>
        */
       public Builder setFull(boolean value) {
-        menuScopeCase_ = 2;
-        menuScope_ = value;
+        
+        full_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Retrieve the full menu.
+       * Flag indicating a full menu, including hidden/out-of-stock items.
        * </pre>
        *
        * <code>bool full = 2;</code>
        */
       public Builder clearFull() {
-        if (menuScopeCase_ == 2) {
-          menuScopeCase_ = 0;
-          menuScope_ = null;
-          onChanged();
-        }
+        
+        full_ = false;
+        onChanged();
         return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder> specBuilder_;
+      private boolean keysOnly_ ;
       /**
        * <pre>
-       * Retrieve partial menu data specified by section specs.
+       * Only include menu keys, no detail data.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
+       * <code>bool keys_only = 3;</code>
        */
-      public boolean hasSpec() {
-        return menuScopeCase_ == 3;
+      public boolean getKeysOnly() {
+        return keysOnly_;
       }
       /**
        * <pre>
-       * Retrieve partial menu data specified by section specs.
+       * Only include menu keys, no detail data.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
+       * <code>bool keys_only = 3;</code>
        */
-      public io.bloombox.schema.menu.section.SectionSpec getSpec() {
-        if (specBuilder_ == null) {
-          if (menuScopeCase_ == 3) {
-            return (io.bloombox.schema.menu.section.SectionSpec) menuScope_;
-          }
-          return io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance();
-        } else {
-          if (menuScopeCase_ == 3) {
-            return specBuilder_.getMessage();
-          }
-          return io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Retrieve partial menu data specified by section specs.
-       * </pre>
-       *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
-       */
-      public Builder setSpec(io.bloombox.schema.menu.section.SectionSpec value) {
-        if (specBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          menuScope_ = value;
-          onChanged();
-        } else {
-          specBuilder_.setMessage(value);
-        }
-        menuScopeCase_ = 3;
+      public Builder setKeysOnly(boolean value) {
+        
+        keysOnly_ = value;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Retrieve partial menu data specified by section specs.
+       * Only include menu keys, no detail data.
        * </pre>
        *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
+       * <code>bool keys_only = 3;</code>
        */
-      public Builder setSpec(
-          io.bloombox.schema.menu.section.SectionSpec.Builder builderForValue) {
-        if (specBuilder_ == null) {
-          menuScope_ = builderForValue.build();
-          onChanged();
-        } else {
-          specBuilder_.setMessage(builderForValue.build());
-        }
-        menuScopeCase_ = 3;
+      public Builder clearKeysOnly() {
+        
+        keysOnly_ = false;
+        onChanged();
         return this;
-      }
-      /**
-       * <pre>
-       * Retrieve partial menu data specified by section specs.
-       * </pre>
-       *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
-       */
-      public Builder mergeSpec(io.bloombox.schema.menu.section.SectionSpec value) {
-        if (specBuilder_ == null) {
-          if (menuScopeCase_ == 3 &&
-              menuScope_ != io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance()) {
-            menuScope_ = io.bloombox.schema.menu.section.SectionSpec.newBuilder((io.bloombox.schema.menu.section.SectionSpec) menuScope_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            menuScope_ = value;
-          }
-          onChanged();
-        } else {
-          if (menuScopeCase_ == 3) {
-            specBuilder_.mergeFrom(value);
-          }
-          specBuilder_.setMessage(value);
-        }
-        menuScopeCase_ = 3;
-        return this;
-      }
-      /**
-       * <pre>
-       * Retrieve partial menu data specified by section specs.
-       * </pre>
-       *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
-       */
-      public Builder clearSpec() {
-        if (specBuilder_ == null) {
-          if (menuScopeCase_ == 3) {
-            menuScopeCase_ = 0;
-            menuScope_ = null;
-            onChanged();
-          }
-        } else {
-          if (menuScopeCase_ == 3) {
-            menuScopeCase_ = 0;
-            menuScope_ = null;
-          }
-          specBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Retrieve partial menu data specified by section specs.
-       * </pre>
-       *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
-       */
-      public io.bloombox.schema.menu.section.SectionSpec.Builder getSpecBuilder() {
-        return getSpecFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Retrieve partial menu data specified by section specs.
-       * </pre>
-       *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
-       */
-      public io.bloombox.schema.menu.section.SectionSpecOrBuilder getSpecOrBuilder() {
-        if ((menuScopeCase_ == 3) && (specBuilder_ != null)) {
-          return specBuilder_.getMessageOrBuilder();
-        } else {
-          if (menuScopeCase_ == 3) {
-            return (io.bloombox.schema.menu.section.SectionSpec) menuScope_;
-          }
-          return io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Retrieve partial menu data specified by section specs.
-       * </pre>
-       *
-       * <code>.products.menu.section.SectionSpec spec = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder> 
-          getSpecFieldBuilder() {
-        if (specBuilder_ == null) {
-          if (!(menuScopeCase_ == 3)) {
-            menuScope_ = io.bloombox.schema.menu.section.SectionSpec.getDefaultInstance();
-          }
-          specBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.menu.section.SectionSpec, io.bloombox.schema.menu.section.SectionSpec.Builder, io.bloombox.schema.menu.section.SectionSpecOrBuilder>(
-                  (io.bloombox.schema.menu.section.SectionSpec) menuScope_,
-                  getParentForChildren(),
-                  isClean());
-          menuScope_ = null;
-        }
-        menuScopeCase_ = 3;
-        onChanged();;
-        return specBuilder_;
       }
 
-      private io.bloombox.schema.crypto.primitives.integrity.Hash snapshot_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.crypto.primitives.integrity.Hash, io.bloombox.schema.crypto.primitives.integrity.Hash.Builder, io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder> snapshotBuilder_;
+      private java.lang.Object snapshot_ = "";
       /**
        * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
+       * Don't return the menu if it's identical to this fingerprint.
        * </pre>
        *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+       * <code>string snapshot = 4;</code>
        */
-      public boolean hasSnapshot() {
-        return snapshotBuilder_ != null || snapshot_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
-       */
-      public io.bloombox.schema.crypto.primitives.integrity.Hash getSnapshot() {
-        if (snapshotBuilder_ == null) {
-          return snapshot_ == null ? io.bloombox.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : snapshot_;
+      public java.lang.String getSnapshot() {
+        java.lang.Object ref = snapshot_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          snapshot_ = s;
+          return s;
         } else {
-          return snapshotBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
        * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
+       * Don't return the menu if it's identical to this fingerprint.
        * </pre>
        *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+       * <code>string snapshot = 4;</code>
        */
-      public Builder setSnapshot(io.bloombox.schema.crypto.primitives.integrity.Hash value) {
-        if (snapshotBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          snapshot_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getSnapshotBytes() {
+        java.lang.Object ref = snapshot_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          snapshot_ = b;
+          return b;
         } else {
-          snapshotBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
        * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
+       * Don't return the menu if it's identical to this fingerprint.
        * </pre>
        *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+       * <code>string snapshot = 4;</code>
        */
       public Builder setSnapshot(
-          io.bloombox.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
-        if (snapshotBuilder_ == null) {
-          snapshot_ = builderForValue.build();
-          onChanged();
-        } else {
-          snapshotBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        snapshot_ = value;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
+       * Don't return the menu if it's identical to this fingerprint.
        * </pre>
        *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
-       */
-      public Builder mergeSnapshot(io.bloombox.schema.crypto.primitives.integrity.Hash value) {
-        if (snapshotBuilder_ == null) {
-          if (snapshot_ != null) {
-            snapshot_ =
-              io.bloombox.schema.crypto.primitives.integrity.Hash.newBuilder(snapshot_).mergeFrom(value).buildPartial();
-          } else {
-            snapshot_ = value;
-          }
-          onChanged();
-        } else {
-          snapshotBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+       * <code>string snapshot = 4;</code>
        */
       public Builder clearSnapshot() {
-        if (snapshotBuilder_ == null) {
-          snapshot_ = null;
-          onChanged();
-        } else {
-          snapshot_ = null;
-          snapshotBuilder_ = null;
-        }
-
+        
+        snapshot_ = getDefaultInstance().getSnapshot();
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
+       * Don't return the menu if it's identical to this fingerprint.
        * </pre>
        *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+       * <code>string snapshot = 4;</code>
        */
-      public io.bloombox.schema.crypto.primitives.integrity.Hash.Builder getSnapshotBuilder() {
+      public Builder setSnapshotBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        snapshot_ = value;
         onChanged();
-        return getSnapshotFieldBuilder().getBuilder();
+        return this;
       }
+
+      private java.lang.Object fingerprint_ = "";
       /**
        * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
+       * Bloom filter to consider when returning or processing menu items.
        * </pre>
        *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+       * <code>string fingerprint = 5;</code>
        */
-      public io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder getSnapshotOrBuilder() {
-        if (snapshotBuilder_ != null) {
-          return snapshotBuilder_.getMessageOrBuilder();
+      public java.lang.String getFingerprint() {
+        java.lang.Object ref = fingerprint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fingerprint_ = s;
+          return s;
         } else {
-          return snapshot_ == null ?
-              io.bloombox.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : snapshot_;
+          return (java.lang.String) ref;
         }
       }
       /**
        * <pre>
-       * Specifies the current snapshot of menu data being requested, if applicable to the requesting entity, with a
-       * digest of active menu data, including the algorithm in use and hash.
+       * Bloom filter to consider when returning or processing menu items.
        * </pre>
        *
-       * <code>.crypto.primitives.integrity.Hash snapshot = 4;</code>
+       * <code>string fingerprint = 5;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.crypto.primitives.integrity.Hash, io.bloombox.schema.crypto.primitives.integrity.Hash.Builder, io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder> 
-          getSnapshotFieldBuilder() {
-        if (snapshotBuilder_ == null) {
-          snapshotBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.crypto.primitives.integrity.Hash, io.bloombox.schema.crypto.primitives.integrity.Hash.Builder, io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder>(
-                  getSnapshot(),
-                  getParentForChildren(),
-                  isClean());
-          snapshot_ = null;
+      public com.google.protobuf.ByteString
+          getFingerprintBytes() {
+        java.lang.Object ref = fingerprint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fingerprint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
-        return snapshotBuilder_;
+      }
+      /**
+       * <pre>
+       * Bloom filter to consider when returning or processing menu items.
+       * </pre>
+       *
+       * <code>string fingerprint = 5;</code>
+       */
+      public Builder setFingerprint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Bloom filter to consider when returning or processing menu items.
+       * </pre>
+       *
+       * <code>string fingerprint = 5;</code>
+       */
+      public Builder clearFingerprint() {
+        
+        fingerprint_ = getDefaultInstance().getFingerprint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Bloom filter to consider when returning or processing menu items.
+       * </pre>
+       *
+       * <code>string fingerprint = 5;</code>
+       */
+      public Builder setFingerprintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int section_ = 0;
+      /**
+       * <pre>
+       * Sections to include in the menu. If unspecified, include all sections.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+       */
+      public int getSectionValue() {
+        return section_;
+      }
+      /**
+       * <pre>
+       * Sections to include in the menu. If unspecified, include all sections.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+       */
+      public Builder setSectionValue(int value) {
+        section_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sections to include in the menu. If unspecified, include all sections.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+       */
+      public io.opencannabis.schema.menu.section.Section getSection() {
+        io.opencannabis.schema.menu.section.Section result = io.opencannabis.schema.menu.section.Section.valueOf(section_);
+        return result == null ? io.opencannabis.schema.menu.section.Section.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Sections to include in the menu. If unspecified, include all sections.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+       */
+      public Builder setSection(io.opencannabis.schema.menu.section.Section value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        section_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sections to include in the menu. If unspecified, include all sections.
+       * </pre>
+       *
+       * <code>.opencannabis.products.menu.section.Section section = 6;</code>
+       */
+      public Builder clearSection() {
+        
+        section_ = 0;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1339,10 +1267,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.menu.v1beta1.GetMenu.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.menu.v1beta1.GetMenu.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.menu.v1beta1.GetMenu.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.GetMenu.Request)
     private static final io.bloombox.schema.services.menu.v1beta1.GetMenu.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.menu.v1beta1.GetMenu.Request();
@@ -1378,36 +1306,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.menu.v1beta1.GetMenu.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.menu.v1beta1.GetMenu.Response)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-     * applying them through a hash function (usually specified as MD5).
-     * </pre>
-     *
-     * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-     */
-    boolean hasFingerprint();
-    /**
-     * <pre>
-     * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-     * applying them through a hash function (usually specified as MD5).
-     * </pre>
-     *
-     * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-     */
-    io.bloombox.schema.crypto.primitives.integrity.Hash getFingerprint();
-    /**
-     * <pre>
-     * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-     * applying them through a hash function (usually specified as MD5).
-     * </pre>
-     *
-     * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-     */
-    io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder();
 
     /**
      * <pre>
@@ -1415,7 +1315,7 @@ private static final long serialVersionUID = 0L;
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu catalog = 2;</code>
+     * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
      */
     boolean hasCatalog();
     /**
@@ -1424,25 +1324,25 @@ private static final long serialVersionUID = 0L;
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu catalog = 2;</code>
+     * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
      */
-    io.bloombox.schema.menu.Menu getCatalog();
+    io.opencannabis.schema.menu.Menu getCatalog();
     /**
      * <pre>
      * Specifies the actual menu data payload returned in this response. The menu payload is independently usable, and
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu catalog = 2;</code>
+     * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
      */
-    io.bloombox.schema.menu.MenuOrBuilder getCatalogOrBuilder();
+    io.opencannabis.schema.menu.MenuOrBuilder getCatalogOrBuilder();
 
     /**
      * <pre>
      * Total count of products included in this response, across all menu sections.
      * </pre>
      *
-     * <code>int32 count = 3;</code>
+     * <code>int32 count = 2;</code>
      */
     int getCount();
   }
@@ -1451,11 +1351,11 @@ private static final long serialVersionUID = 0L;
    * Specifies the response to a request to retrieve menu data.
    * </pre>
    *
-   * Protobuf type {@code services.menu.v1beta1.GetMenu.Response}
+   * Protobuf type {@code bloombox.schema.services.menu.v1beta1.GetMenu.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.menu.v1beta1.GetMenu.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.menu.v1beta1.GetMenu.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1498,24 +1398,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.bloombox.schema.crypto.primitives.integrity.Hash.Builder subBuilder = null;
-              if (fingerprint_ != null) {
-                subBuilder = fingerprint_.toBuilder();
-              }
-              fingerprint_ = input.readMessage(io.bloombox.schema.crypto.primitives.integrity.Hash.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(fingerprint_);
-                fingerprint_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              io.bloombox.schema.menu.Menu.Builder subBuilder = null;
+              io.opencannabis.schema.menu.Menu.Builder subBuilder = null;
               if (catalog_ != null) {
                 subBuilder = catalog_.toBuilder();
               }
-              catalog_ = input.readMessage(io.bloombox.schema.menu.Menu.parser(), extensionRegistry);
+              catalog_ = input.readMessage(io.opencannabis.schema.menu.Menu.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(catalog_);
                 catalog_ = subBuilder.buildPartial();
@@ -1523,7 +1410,7 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
-            case 24: {
+            case 16: {
 
               count_ = input.readInt32();
               break;
@@ -1542,61 +1429,25 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Response_descriptor;
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Response_fieldAccessorTable
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.Builder.class);
     }
 
-    public static final int FINGERPRINT_FIELD_NUMBER = 1;
-    private io.bloombox.schema.crypto.primitives.integrity.Hash fingerprint_;
-    /**
-     * <pre>
-     * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-     * applying them through a hash function (usually specified as MD5).
-     * </pre>
-     *
-     * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-     */
-    public boolean hasFingerprint() {
-      return fingerprint_ != null;
-    }
-    /**
-     * <pre>
-     * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-     * applying them through a hash function (usually specified as MD5).
-     * </pre>
-     *
-     * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-     */
-    public io.bloombox.schema.crypto.primitives.integrity.Hash getFingerprint() {
-      return fingerprint_ == null ? io.bloombox.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
-    }
-    /**
-     * <pre>
-     * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-     * applying them through a hash function (usually specified as MD5).
-     * </pre>
-     *
-     * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-     */
-    public io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
-      return getFingerprint();
-    }
-
-    public static final int CATALOG_FIELD_NUMBER = 2;
-    private io.bloombox.schema.menu.Menu catalog_;
+    public static final int CATALOG_FIELD_NUMBER = 1;
+    private io.opencannabis.schema.menu.Menu catalog_;
     /**
      * <pre>
      * Specifies the actual menu data payload returned in this response. The menu payload is independently usable, and
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu catalog = 2;</code>
+     * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
      */
     public boolean hasCatalog() {
       return catalog_ != null;
@@ -1607,10 +1458,10 @@ private static final long serialVersionUID = 0L;
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu catalog = 2;</code>
+     * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
      */
-    public io.bloombox.schema.menu.Menu getCatalog() {
-      return catalog_ == null ? io.bloombox.schema.menu.Menu.getDefaultInstance() : catalog_;
+    public io.opencannabis.schema.menu.Menu getCatalog() {
+      return catalog_ == null ? io.opencannabis.schema.menu.Menu.getDefaultInstance() : catalog_;
     }
     /**
      * <pre>
@@ -1618,20 +1469,20 @@ private static final long serialVersionUID = 0L;
      * includes any raw data or metadata needed to process the menu.
      * </pre>
      *
-     * <code>.products.menu.Menu catalog = 2;</code>
+     * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
      */
-    public io.bloombox.schema.menu.MenuOrBuilder getCatalogOrBuilder() {
+    public io.opencannabis.schema.menu.MenuOrBuilder getCatalogOrBuilder() {
       return getCatalog();
     }
 
-    public static final int COUNT_FIELD_NUMBER = 3;
+    public static final int COUNT_FIELD_NUMBER = 2;
     private int count_;
     /**
      * <pre>
      * Total count of products included in this response, across all menu sections.
      * </pre>
      *
-     * <code>int32 count = 3;</code>
+     * <code>int32 count = 2;</code>
      */
     public int getCount() {
       return count_;
@@ -1649,14 +1500,11 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (fingerprint_ != null) {
-        output.writeMessage(1, getFingerprint());
-      }
       if (catalog_ != null) {
-        output.writeMessage(2, getCatalog());
+        output.writeMessage(1, getCatalog());
       }
       if (count_ != 0) {
-        output.writeInt32(3, count_);
+        output.writeInt32(2, count_);
       }
       unknownFields.writeTo(output);
     }
@@ -1666,17 +1514,13 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (fingerprint_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getFingerprint());
-      }
       if (catalog_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getCatalog());
+          .computeMessageSize(1, getCatalog());
       }
       if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, count_);
+          .computeInt32Size(2, count_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1694,11 +1538,6 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.menu.v1beta1.GetMenu.Response other = (io.bloombox.schema.services.menu.v1beta1.GetMenu.Response) obj;
 
       boolean result = true;
-      result = result && (hasFingerprint() == other.hasFingerprint());
-      if (hasFingerprint()) {
-        result = result && getFingerprint()
-            .equals(other.getFingerprint());
-      }
       result = result && (hasCatalog() == other.hasCatalog());
       if (hasCatalog()) {
         result = result && getCatalog()
@@ -1717,10 +1556,6 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasFingerprint()) {
-        hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
-        hash = (53 * hash) + getFingerprint().hashCode();
-      }
       if (hasCatalog()) {
         hash = (37 * hash) + CATALOG_FIELD_NUMBER;
         hash = (53 * hash) + getCatalog().hashCode();
@@ -1825,20 +1660,20 @@ private static final long serialVersionUID = 0L;
      * Specifies the response to a request to retrieve menu data.
      * </pre>
      *
-     * Protobuf type {@code services.menu.v1beta1.GetMenu.Response}
+     * Protobuf type {@code bloombox.schema.services.menu.v1beta1.GetMenu.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.menu.v1beta1.GetMenu.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.menu.v1beta1.GetMenu.Response)
         io.bloombox.schema.services.menu.v1beta1.GetMenu.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Response_descriptor;
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Response_fieldAccessorTable
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.Builder.class);
       }
@@ -1860,12 +1695,6 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        if (fingerprintBuilder_ == null) {
-          fingerprint_ = null;
-        } else {
-          fingerprint_ = null;
-          fingerprintBuilder_ = null;
-        }
         if (catalogBuilder_ == null) {
           catalog_ = null;
         } else {
@@ -1879,7 +1708,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_Response_descriptor;
+        return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Response_descriptor;
       }
 
       public io.bloombox.schema.services.menu.v1beta1.GetMenu.Response getDefaultInstanceForType() {
@@ -1896,11 +1725,6 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.menu.v1beta1.GetMenu.Response buildPartial() {
         io.bloombox.schema.services.menu.v1beta1.GetMenu.Response result = new io.bloombox.schema.services.menu.v1beta1.GetMenu.Response(this);
-        if (fingerprintBuilder_ == null) {
-          result.fingerprint_ = fingerprint_;
-        } else {
-          result.fingerprint_ = fingerprintBuilder_.build();
-        }
         if (catalogBuilder_ == null) {
           result.catalog_ = catalog_;
         } else {
@@ -1948,9 +1772,6 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.menu.v1beta1.GetMenu.Response other) {
         if (other == io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.getDefaultInstance()) return this;
-        if (other.hasFingerprint()) {
-          mergeFingerprint(other.getFingerprint());
-        }
         if (other.hasCatalog()) {
           mergeCatalog(other.getCatalog());
         }
@@ -1984,178 +1805,16 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.crypto.primitives.integrity.Hash fingerprint_ = null;
+      private io.opencannabis.schema.menu.Menu catalog_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.crypto.primitives.integrity.Hash, io.bloombox.schema.crypto.primitives.integrity.Hash.Builder, io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder> fingerprintBuilder_;
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      public boolean hasFingerprint() {
-        return fingerprintBuilder_ != null || fingerprint_ != null;
-      }
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      public io.bloombox.schema.crypto.primitives.integrity.Hash getFingerprint() {
-        if (fingerprintBuilder_ == null) {
-          return fingerprint_ == null ? io.bloombox.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
-        } else {
-          return fingerprintBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      public Builder setFingerprint(io.bloombox.schema.crypto.primitives.integrity.Hash value) {
-        if (fingerprintBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          fingerprint_ = value;
-          onChanged();
-        } else {
-          fingerprintBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      public Builder setFingerprint(
-          io.bloombox.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
-        if (fingerprintBuilder_ == null) {
-          fingerprint_ = builderForValue.build();
-          onChanged();
-        } else {
-          fingerprintBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      public Builder mergeFingerprint(io.bloombox.schema.crypto.primitives.integrity.Hash value) {
-        if (fingerprintBuilder_ == null) {
-          if (fingerprint_ != null) {
-            fingerprint_ =
-              io.bloombox.schema.crypto.primitives.integrity.Hash.newBuilder(fingerprint_).mergeFrom(value).buildPartial();
-          } else {
-            fingerprint_ = value;
-          }
-          onChanged();
-        } else {
-          fingerprintBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      public Builder clearFingerprint() {
-        if (fingerprintBuilder_ == null) {
-          fingerprint_ = null;
-          onChanged();
-        } else {
-          fingerprint_ = null;
-          fingerprintBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      public io.bloombox.schema.crypto.primitives.integrity.Hash.Builder getFingerprintBuilder() {
-        
-        onChanged();
-        return getFingerprintFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      public io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
-        if (fingerprintBuilder_ != null) {
-          return fingerprintBuilder_.getMessageOrBuilder();
-        } else {
-          return fingerprint_ == null ?
-              io.bloombox.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
-        }
-      }
-      /**
-       * <pre>
-       * Unique hashed fingerprint for this batch of menu data. Calculated by sorting all menu keys lexicographically, and
-       * applying them through a hash function (usually specified as MD5).
-       * </pre>
-       *
-       * <code>.crypto.primitives.integrity.Hash fingerprint = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.crypto.primitives.integrity.Hash, io.bloombox.schema.crypto.primitives.integrity.Hash.Builder, io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder> 
-          getFingerprintFieldBuilder() {
-        if (fingerprintBuilder_ == null) {
-          fingerprintBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.crypto.primitives.integrity.Hash, io.bloombox.schema.crypto.primitives.integrity.Hash.Builder, io.bloombox.schema.crypto.primitives.integrity.HashOrBuilder>(
-                  getFingerprint(),
-                  getParentForChildren(),
-                  isClean());
-          fingerprint_ = null;
-        }
-        return fingerprintBuilder_;
-      }
-
-      private io.bloombox.schema.menu.Menu catalog_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.Menu, io.bloombox.schema.menu.Menu.Builder, io.bloombox.schema.menu.MenuOrBuilder> catalogBuilder_;
+          io.opencannabis.schema.menu.Menu, io.opencannabis.schema.menu.Menu.Builder, io.opencannabis.schema.menu.MenuOrBuilder> catalogBuilder_;
       /**
        * <pre>
        * Specifies the actual menu data payload returned in this response. The menu payload is independently usable, and
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
       public boolean hasCatalog() {
         return catalogBuilder_ != null || catalog_ != null;
@@ -2166,11 +1825,11 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
-      public io.bloombox.schema.menu.Menu getCatalog() {
+      public io.opencannabis.schema.menu.Menu getCatalog() {
         if (catalogBuilder_ == null) {
-          return catalog_ == null ? io.bloombox.schema.menu.Menu.getDefaultInstance() : catalog_;
+          return catalog_ == null ? io.opencannabis.schema.menu.Menu.getDefaultInstance() : catalog_;
         } else {
           return catalogBuilder_.getMessage();
         }
@@ -2181,9 +1840,9 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
-      public Builder setCatalog(io.bloombox.schema.menu.Menu value) {
+      public Builder setCatalog(io.opencannabis.schema.menu.Menu value) {
         if (catalogBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2202,10 +1861,10 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
       public Builder setCatalog(
-          io.bloombox.schema.menu.Menu.Builder builderForValue) {
+          io.opencannabis.schema.menu.Menu.Builder builderForValue) {
         if (catalogBuilder_ == null) {
           catalog_ = builderForValue.build();
           onChanged();
@@ -2221,13 +1880,13 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
-      public Builder mergeCatalog(io.bloombox.schema.menu.Menu value) {
+      public Builder mergeCatalog(io.opencannabis.schema.menu.Menu value) {
         if (catalogBuilder_ == null) {
           if (catalog_ != null) {
             catalog_ =
-              io.bloombox.schema.menu.Menu.newBuilder(catalog_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.menu.Menu.newBuilder(catalog_).mergeFrom(value).buildPartial();
           } else {
             catalog_ = value;
           }
@@ -2244,7 +1903,7 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
       public Builder clearCatalog() {
         if (catalogBuilder_ == null) {
@@ -2263,9 +1922,9 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
-      public io.bloombox.schema.menu.Menu.Builder getCatalogBuilder() {
+      public io.opencannabis.schema.menu.Menu.Builder getCatalogBuilder() {
         
         onChanged();
         return getCatalogFieldBuilder().getBuilder();
@@ -2276,14 +1935,14 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
-      public io.bloombox.schema.menu.MenuOrBuilder getCatalogOrBuilder() {
+      public io.opencannabis.schema.menu.MenuOrBuilder getCatalogOrBuilder() {
         if (catalogBuilder_ != null) {
           return catalogBuilder_.getMessageOrBuilder();
         } else {
           return catalog_ == null ?
-              io.bloombox.schema.menu.Menu.getDefaultInstance() : catalog_;
+              io.opencannabis.schema.menu.Menu.getDefaultInstance() : catalog_;
         }
       }
       /**
@@ -2292,14 +1951,14 @@ private static final long serialVersionUID = 0L;
        * includes any raw data or metadata needed to process the menu.
        * </pre>
        *
-       * <code>.products.menu.Menu catalog = 2;</code>
+       * <code>.opencannabis.products.menu.Menu catalog = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.menu.Menu, io.bloombox.schema.menu.Menu.Builder, io.bloombox.schema.menu.MenuOrBuilder> 
+          io.opencannabis.schema.menu.Menu, io.opencannabis.schema.menu.Menu.Builder, io.opencannabis.schema.menu.MenuOrBuilder> 
           getCatalogFieldBuilder() {
         if (catalogBuilder_ == null) {
           catalogBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.menu.Menu, io.bloombox.schema.menu.Menu.Builder, io.bloombox.schema.menu.MenuOrBuilder>(
+              io.opencannabis.schema.menu.Menu, io.opencannabis.schema.menu.Menu.Builder, io.opencannabis.schema.menu.MenuOrBuilder>(
                   getCatalog(),
                   getParentForChildren(),
                   isClean());
@@ -2314,7 +1973,7 @@ private static final long serialVersionUID = 0L;
        * Total count of products included in this response, across all menu sections.
        * </pre>
        *
-       * <code>int32 count = 3;</code>
+       * <code>int32 count = 2;</code>
        */
       public int getCount() {
         return count_;
@@ -2324,7 +1983,7 @@ private static final long serialVersionUID = 0L;
        * Total count of products included in this response, across all menu sections.
        * </pre>
        *
-       * <code>int32 count = 3;</code>
+       * <code>int32 count = 2;</code>
        */
       public Builder setCount(int value) {
         
@@ -2337,7 +1996,7 @@ private static final long serialVersionUID = 0L;
        * Total count of products included in this response, across all menu sections.
        * </pre>
        *
-       * <code>int32 count = 3;</code>
+       * <code>int32 count = 2;</code>
        */
       public Builder clearCount() {
         
@@ -2356,10 +2015,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.menu.v1beta1.GetMenu.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.menu.v1beta1.GetMenu.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:services.menu.v1beta1.GetMenu.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.GetMenu.Response)
     private static final io.bloombox.schema.services.menu.v1beta1.GetMenu.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.menu.v1beta1.GetMenu.Response();
@@ -2540,20 +2199,20 @@ private static final long serialVersionUID = 0L;
    * for a given set of specified sections.
    * </pre>
    *
-   * Protobuf type {@code services.menu.v1beta1.GetMenu}
+   * Protobuf type {@code bloombox.schema.services.menu.v1beta1.GetMenu}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.menu.v1beta1.GetMenu)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.menu.v1beta1.GetMenu)
       io.bloombox.schema.services.menu.v1beta1.GetMenuOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_descriptor;
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_fieldAccessorTable
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.menu.v1beta1.GetMenu.class, io.bloombox.schema.services.menu.v1beta1.GetMenu.Builder.class);
     }
@@ -2580,7 +2239,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_services_menu_v1beta1_GetMenu_descriptor;
+      return io.bloombox.schema.services.menu.v1beta1.MenuServiceBeta1.internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_descriptor;
     }
 
     public io.bloombox.schema.services.menu.v1beta1.GetMenu getDefaultInstanceForType() {
@@ -2675,10 +2334,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.menu.v1beta1.GetMenu)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.menu.v1beta1.GetMenu)
   }
 
-  // @@protoc_insertion_point(class_scope:services.menu.v1beta1.GetMenu)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.menu.v1beta1.GetMenu)
   private static final io.bloombox.schema.services.menu.v1beta1.GetMenu DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.menu.v1beta1.GetMenu();

@@ -25,11 +25,11 @@ package io.bloombox.schema.services.telemetry.v1beta3;
  * Specifies an event related to commercial services. This includes product events, section events, and order events.
  * </pre>
  *
- * Protobuf type {@code services.telemetry.v1beta3.CommercialEvent}
+ * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.CommercialEvent}
  */
 public  final class CommercialEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.CommercialEvent)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.CommercialEvent)
     CommercialEventOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CommercialEvent.newBuilder() to construct.
@@ -83,18 +83,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_descriptor;
+    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_fieldAccessorTable
+    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.class, io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Builder.class);
   }
 
   public interface ImpressionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.CommercialEvent.Impression)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     boolean hasContext();
     /**
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
     /**
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
 
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Impression section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
      */
     boolean hasSection();
     /**
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Impression section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
      */
     io.bloombox.schema.analytics.section.SectionAnalytics.Impression getSection();
     /**
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Impression section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
      */
     io.bloombox.schema.analytics.section.SectionAnalytics.ImpressionOrBuilder getSectionOrBuilder();
 
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Impression product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
      */
     boolean hasProduct();
     /**
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Impression product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
      */
     io.bloombox.schema.analytics.product.ProductAnalytics.Impression getProduct();
     /**
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Impression product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
      */
     io.bloombox.schema.analytics.product.ProductAnalytics.ImpressionOrBuilder getProductOrBuilder();
 
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
      * Impression event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Impression shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
      */
     boolean hasShop();
     /**
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
      * Impression event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Impression shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
      */
     io.bloombox.schema.analytics.shop.ShopAnalytics.Impression getShop();
     /**
@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
      * Impression event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Impression shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
      */
     io.bloombox.schema.analytics.shop.ShopAnalytics.ImpressionOrBuilder getShopOrBuilder();
 
@@ -204,11 +204,11 @@ private static final long serialVersionUID = 0L;
    * Specifies an impression-type event.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.CommercialEvent.Impression}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression}
    */
   public  static final class Impression extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.CommercialEvent.Impression)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression)
       ImpressionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Impression.newBuilder() to construct.
@@ -318,12 +318,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Impression_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Impression_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Impression_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Impression_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression.class, io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression.Builder.class);
     }
@@ -375,7 +375,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public boolean hasContext() {
       return context_ != null;
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
       return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
@@ -395,7 +395,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
       return getContext();
@@ -407,7 +407,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Impression section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
      */
     public boolean hasSection() {
       return eventCase_ == 10;
@@ -417,7 +417,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Impression section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
      */
     public io.bloombox.schema.analytics.section.SectionAnalytics.Impression getSection() {
       if (eventCase_ == 10) {
@@ -430,7 +430,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Impression section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
      */
     public io.bloombox.schema.analytics.section.SectionAnalytics.ImpressionOrBuilder getSectionOrBuilder() {
       if (eventCase_ == 10) {
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Impression product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
      */
     public boolean hasProduct() {
       return eventCase_ == 11;
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Impression product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
      */
     public io.bloombox.schema.analytics.product.ProductAnalytics.Impression getProduct() {
       if (eventCase_ == 11) {
@@ -468,7 +468,7 @@ private static final long serialVersionUID = 0L;
      * Impression event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Impression product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
      */
     public io.bloombox.schema.analytics.product.ProductAnalytics.ImpressionOrBuilder getProductOrBuilder() {
       if (eventCase_ == 11) {
@@ -483,7 +483,7 @@ private static final long serialVersionUID = 0L;
      * Impression event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Impression shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
      */
     public boolean hasShop() {
       return eventCase_ == 12;
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
      * Impression event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Impression shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
      */
     public io.bloombox.schema.analytics.shop.ShopAnalytics.Impression getShop() {
       if (eventCase_ == 12) {
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
      * Impression event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Impression shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
      */
     public io.bloombox.schema.analytics.shop.ShopAnalytics.ImpressionOrBuilder getShopOrBuilder() {
       if (eventCase_ == 12) {
@@ -732,20 +732,20 @@ private static final long serialVersionUID = 0L;
      * Specifies an impression-type event.
      * </pre>
      *
-     * Protobuf type {@code services.telemetry.v1beta3.CommercialEvent.Impression}
+     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.CommercialEvent.Impression)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression)
         io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.ImpressionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Impression_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Impression_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Impression_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Impression_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression.class, io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression.Builder.class);
       }
@@ -780,7 +780,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Impression_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Impression_descriptor;
       }
 
       public io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression getDefaultInstanceForType() {
@@ -935,7 +935,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public boolean hasContext() {
         return contextBuilder_ != null || context_ != null;
@@ -945,7 +945,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
         if (contextBuilder_ == null) {
@@ -959,7 +959,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -979,7 +979,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder setContext(
           io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -1019,7 +1019,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder clearContext() {
         if (contextBuilder_ == null) {
@@ -1037,7 +1037,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
         
@@ -1049,7 +1049,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
         if (contextBuilder_ != null) {
@@ -1064,7 +1064,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
@@ -1087,7 +1087,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       public boolean hasSection() {
         return eventCase_ == 10;
@@ -1097,7 +1097,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.Impression getSection() {
         if (sectionBuilder_ == null) {
@@ -1117,7 +1117,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       public Builder setSection(io.bloombox.schema.analytics.section.SectionAnalytics.Impression value) {
         if (sectionBuilder_ == null) {
@@ -1137,7 +1137,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       public Builder setSection(
           io.bloombox.schema.analytics.section.SectionAnalytics.Impression.Builder builderForValue) {
@@ -1155,7 +1155,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       public Builder mergeSection(io.bloombox.schema.analytics.section.SectionAnalytics.Impression value) {
         if (sectionBuilder_ == null) {
@@ -1181,7 +1181,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       public Builder clearSection() {
         if (sectionBuilder_ == null) {
@@ -1204,7 +1204,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.Impression.Builder getSectionBuilder() {
         return getSectionFieldBuilder().getBuilder();
@@ -1214,7 +1214,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.ImpressionOrBuilder getSectionOrBuilder() {
         if ((eventCase_ == 10) && (sectionBuilder_ != null)) {
@@ -1231,7 +1231,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Impression section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Impression section = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.section.SectionAnalytics.Impression, io.bloombox.schema.analytics.section.SectionAnalytics.Impression.Builder, io.bloombox.schema.analytics.section.SectionAnalytics.ImpressionOrBuilder> 
@@ -1259,7 +1259,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       public boolean hasProduct() {
         return eventCase_ == 11;
@@ -1269,7 +1269,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.Impression getProduct() {
         if (productBuilder_ == null) {
@@ -1289,7 +1289,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       public Builder setProduct(io.bloombox.schema.analytics.product.ProductAnalytics.Impression value) {
         if (productBuilder_ == null) {
@@ -1309,7 +1309,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       public Builder setProduct(
           io.bloombox.schema.analytics.product.ProductAnalytics.Impression.Builder builderForValue) {
@@ -1327,7 +1327,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       public Builder mergeProduct(io.bloombox.schema.analytics.product.ProductAnalytics.Impression value) {
         if (productBuilder_ == null) {
@@ -1353,7 +1353,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       public Builder clearProduct() {
         if (productBuilder_ == null) {
@@ -1376,7 +1376,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.Impression.Builder getProductBuilder() {
         return getProductFieldBuilder().getBuilder();
@@ -1386,7 +1386,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.ImpressionOrBuilder getProductOrBuilder() {
         if ((eventCase_ == 11) && (productBuilder_ != null)) {
@@ -1403,7 +1403,7 @@ private static final long serialVersionUID = 0L;
        * Impression event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Impression product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Impression product = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.product.ProductAnalytics.Impression, io.bloombox.schema.analytics.product.ProductAnalytics.Impression.Builder, io.bloombox.schema.analytics.product.ProductAnalytics.ImpressionOrBuilder> 
@@ -1431,7 +1431,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       public boolean hasShop() {
         return eventCase_ == 12;
@@ -1441,7 +1441,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Impression getShop() {
         if (shopBuilder_ == null) {
@@ -1461,7 +1461,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       public Builder setShop(io.bloombox.schema.analytics.shop.ShopAnalytics.Impression value) {
         if (shopBuilder_ == null) {
@@ -1481,7 +1481,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       public Builder setShop(
           io.bloombox.schema.analytics.shop.ShopAnalytics.Impression.Builder builderForValue) {
@@ -1499,7 +1499,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       public Builder mergeShop(io.bloombox.schema.analytics.shop.ShopAnalytics.Impression value) {
         if (shopBuilder_ == null) {
@@ -1525,7 +1525,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       public Builder clearShop() {
         if (shopBuilder_ == null) {
@@ -1548,7 +1548,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Impression.Builder getShopBuilder() {
         return getShopFieldBuilder().getBuilder();
@@ -1558,7 +1558,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.ImpressionOrBuilder getShopOrBuilder() {
         if ((eventCase_ == 12) && (shopBuilder_ != null)) {
@@ -1575,7 +1575,7 @@ private static final long serialVersionUID = 0L;
        * Impression event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Impression shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Impression shop = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.shop.ShopAnalytics.Impression, io.bloombox.schema.analytics.shop.ShopAnalytics.Impression.Builder, io.bloombox.schema.analytics.shop.ShopAnalytics.ImpressionOrBuilder> 
@@ -1606,10 +1606,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.CommercialEvent.Impression)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression)
     }
 
-    // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.CommercialEvent.Impression)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression)
     private static final io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Impression();
@@ -1645,7 +1645,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ViewOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.CommercialEvent.View)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1653,7 +1653,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     boolean hasContext();
     /**
@@ -1661,7 +1661,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
     /**
@@ -1669,7 +1669,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
 
@@ -1678,7 +1678,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.View section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.View section = 10;</code>
      */
     boolean hasSection();
     /**
@@ -1686,7 +1686,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.View section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.View section = 10;</code>
      */
     io.bloombox.schema.analytics.section.SectionAnalytics.View getSection();
     /**
@@ -1694,7 +1694,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.View section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.View section = 10;</code>
      */
     io.bloombox.schema.analytics.section.SectionAnalytics.ViewOrBuilder getSectionOrBuilder();
 
@@ -1703,7 +1703,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.View product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.View product = 11;</code>
      */
     boolean hasProduct();
     /**
@@ -1711,7 +1711,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.View product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.View product = 11;</code>
      */
     io.bloombox.schema.analytics.product.ProductAnalytics.View getProduct();
     /**
@@ -1719,7 +1719,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.View product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.View product = 11;</code>
      */
     io.bloombox.schema.analytics.product.ProductAnalytics.ViewOrBuilder getProductOrBuilder();
 
@@ -1728,7 +1728,7 @@ private static final long serialVersionUID = 0L;
      * View event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.View shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
      */
     boolean hasShop();
     /**
@@ -1736,7 +1736,7 @@ private static final long serialVersionUID = 0L;
      * View event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.View shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
      */
     io.bloombox.schema.analytics.shop.ShopAnalytics.View getShop();
     /**
@@ -1744,7 +1744,7 @@ private static final long serialVersionUID = 0L;
      * View event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.View shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
      */
     io.bloombox.schema.analytics.shop.ShopAnalytics.ViewOrBuilder getShopOrBuilder();
 
@@ -1755,11 +1755,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a view-type event.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.CommercialEvent.View}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View}
    */
   public  static final class View extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.CommercialEvent.View)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View)
       ViewOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use View.newBuilder() to construct.
@@ -1869,12 +1869,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_View_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_View_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_View_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_View_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View.class, io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View.Builder.class);
     }
@@ -1926,7 +1926,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public boolean hasContext() {
       return context_ != null;
@@ -1936,7 +1936,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
       return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
@@ -1946,7 +1946,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
       return getContext();
@@ -1958,7 +1958,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.View section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.View section = 10;</code>
      */
     public boolean hasSection() {
       return eventCase_ == 10;
@@ -1968,7 +1968,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.View section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.View section = 10;</code>
      */
     public io.bloombox.schema.analytics.section.SectionAnalytics.View getSection() {
       if (eventCase_ == 10) {
@@ -1981,7 +1981,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.View section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.View section = 10;</code>
      */
     public io.bloombox.schema.analytics.section.SectionAnalytics.ViewOrBuilder getSectionOrBuilder() {
       if (eventCase_ == 10) {
@@ -1996,7 +1996,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.View product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.View product = 11;</code>
      */
     public boolean hasProduct() {
       return eventCase_ == 11;
@@ -2006,7 +2006,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.View product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.View product = 11;</code>
      */
     public io.bloombox.schema.analytics.product.ProductAnalytics.View getProduct() {
       if (eventCase_ == 11) {
@@ -2019,7 +2019,7 @@ private static final long serialVersionUID = 0L;
      * View event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.View product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.View product = 11;</code>
      */
     public io.bloombox.schema.analytics.product.ProductAnalytics.ViewOrBuilder getProductOrBuilder() {
       if (eventCase_ == 11) {
@@ -2034,7 +2034,7 @@ private static final long serialVersionUID = 0L;
      * View event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.View shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
      */
     public boolean hasShop() {
       return eventCase_ == 12;
@@ -2044,7 +2044,7 @@ private static final long serialVersionUID = 0L;
      * View event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.View shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
      */
     public io.bloombox.schema.analytics.shop.ShopAnalytics.View getShop() {
       if (eventCase_ == 12) {
@@ -2057,7 +2057,7 @@ private static final long serialVersionUID = 0L;
      * View event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.View shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
      */
     public io.bloombox.schema.analytics.shop.ShopAnalytics.ViewOrBuilder getShopOrBuilder() {
       if (eventCase_ == 12) {
@@ -2283,20 +2283,20 @@ private static final long serialVersionUID = 0L;
      * Specifies a view-type event.
      * </pre>
      *
-     * Protobuf type {@code services.telemetry.v1beta3.CommercialEvent.View}
+     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.CommercialEvent.View)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View)
         io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.ViewOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_View_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_View_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_View_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_View_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View.class, io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View.Builder.class);
       }
@@ -2331,7 +2331,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_View_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_View_descriptor;
       }
 
       public io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View getDefaultInstanceForType() {
@@ -2486,7 +2486,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public boolean hasContext() {
         return contextBuilder_ != null || context_ != null;
@@ -2496,7 +2496,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
         if (contextBuilder_ == null) {
@@ -2510,7 +2510,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -2530,7 +2530,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder setContext(
           io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
@@ -2548,7 +2548,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -2570,7 +2570,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder clearContext() {
         if (contextBuilder_ == null) {
@@ -2588,7 +2588,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
         
@@ -2600,7 +2600,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
         if (contextBuilder_ != null) {
@@ -2615,7 +2615,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
@@ -2638,7 +2638,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       public boolean hasSection() {
         return eventCase_ == 10;
@@ -2648,7 +2648,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.View getSection() {
         if (sectionBuilder_ == null) {
@@ -2668,7 +2668,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       public Builder setSection(io.bloombox.schema.analytics.section.SectionAnalytics.View value) {
         if (sectionBuilder_ == null) {
@@ -2688,7 +2688,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       public Builder setSection(
           io.bloombox.schema.analytics.section.SectionAnalytics.View.Builder builderForValue) {
@@ -2706,7 +2706,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       public Builder mergeSection(io.bloombox.schema.analytics.section.SectionAnalytics.View value) {
         if (sectionBuilder_ == null) {
@@ -2732,7 +2732,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       public Builder clearSection() {
         if (sectionBuilder_ == null) {
@@ -2755,7 +2755,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.View.Builder getSectionBuilder() {
         return getSectionFieldBuilder().getBuilder();
@@ -2765,7 +2765,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.ViewOrBuilder getSectionOrBuilder() {
         if ((eventCase_ == 10) && (sectionBuilder_ != null)) {
@@ -2782,7 +2782,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.View section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.View section = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.section.SectionAnalytics.View, io.bloombox.schema.analytics.section.SectionAnalytics.View.Builder, io.bloombox.schema.analytics.section.SectionAnalytics.ViewOrBuilder> 
@@ -2810,7 +2810,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       public boolean hasProduct() {
         return eventCase_ == 11;
@@ -2820,7 +2820,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.View getProduct() {
         if (productBuilder_ == null) {
@@ -2840,7 +2840,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       public Builder setProduct(io.bloombox.schema.analytics.product.ProductAnalytics.View value) {
         if (productBuilder_ == null) {
@@ -2860,7 +2860,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       public Builder setProduct(
           io.bloombox.schema.analytics.product.ProductAnalytics.View.Builder builderForValue) {
@@ -2878,7 +2878,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       public Builder mergeProduct(io.bloombox.schema.analytics.product.ProductAnalytics.View value) {
         if (productBuilder_ == null) {
@@ -2904,7 +2904,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       public Builder clearProduct() {
         if (productBuilder_ == null) {
@@ -2927,7 +2927,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.View.Builder getProductBuilder() {
         return getProductFieldBuilder().getBuilder();
@@ -2937,7 +2937,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.ViewOrBuilder getProductOrBuilder() {
         if ((eventCase_ == 11) && (productBuilder_ != null)) {
@@ -2954,7 +2954,7 @@ private static final long serialVersionUID = 0L;
        * View event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.View product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.View product = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.product.ProductAnalytics.View, io.bloombox.schema.analytics.product.ProductAnalytics.View.Builder, io.bloombox.schema.analytics.product.ProductAnalytics.ViewOrBuilder> 
@@ -2982,7 +2982,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       public boolean hasShop() {
         return eventCase_ == 12;
@@ -2992,7 +2992,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.View getShop() {
         if (shopBuilder_ == null) {
@@ -3012,7 +3012,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       public Builder setShop(io.bloombox.schema.analytics.shop.ShopAnalytics.View value) {
         if (shopBuilder_ == null) {
@@ -3032,7 +3032,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       public Builder setShop(
           io.bloombox.schema.analytics.shop.ShopAnalytics.View.Builder builderForValue) {
@@ -3050,7 +3050,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       public Builder mergeShop(io.bloombox.schema.analytics.shop.ShopAnalytics.View value) {
         if (shopBuilder_ == null) {
@@ -3076,7 +3076,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       public Builder clearShop() {
         if (shopBuilder_ == null) {
@@ -3099,7 +3099,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.View.Builder getShopBuilder() {
         return getShopFieldBuilder().getBuilder();
@@ -3109,7 +3109,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.ViewOrBuilder getShopOrBuilder() {
         if ((eventCase_ == 12) && (shopBuilder_ != null)) {
@@ -3126,7 +3126,7 @@ private static final long serialVersionUID = 0L;
        * View event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.View shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.View shop = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.shop.ShopAnalytics.View, io.bloombox.schema.analytics.shop.ShopAnalytics.View.Builder, io.bloombox.schema.analytics.shop.ShopAnalytics.ViewOrBuilder> 
@@ -3157,10 +3157,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.CommercialEvent.View)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View)
     }
 
-    // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.CommercialEvent.View)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View)
     private static final io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.View();
@@ -3196,7 +3196,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.CommercialEvent.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3222,7 +3222,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     boolean hasContext();
     /**
@@ -3230,7 +3230,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
     /**
@@ -3238,7 +3238,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
 
@@ -3247,7 +3247,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Action section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
      */
     boolean hasSection();
     /**
@@ -3255,7 +3255,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Action section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
      */
     io.bloombox.schema.analytics.section.SectionAnalytics.Action getSection();
     /**
@@ -3263,7 +3263,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Action section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
      */
     io.bloombox.schema.analytics.section.SectionAnalytics.ActionOrBuilder getSectionOrBuilder();
 
@@ -3272,7 +3272,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Action product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
      */
     boolean hasProduct();
     /**
@@ -3280,7 +3280,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Action product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
      */
     io.bloombox.schema.analytics.product.ProductAnalytics.Action getProduct();
     /**
@@ -3288,7 +3288,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Action product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
      */
     io.bloombox.schema.analytics.product.ProductAnalytics.ActionOrBuilder getProductOrBuilder();
 
@@ -3297,7 +3297,7 @@ private static final long serialVersionUID = 0L;
      * Action event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Action shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
      */
     boolean hasShop();
     /**
@@ -3305,7 +3305,7 @@ private static final long serialVersionUID = 0L;
      * Action event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Action shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
      */
     io.bloombox.schema.analytics.shop.ShopAnalytics.Action getShop();
     /**
@@ -3313,7 +3313,7 @@ private static final long serialVersionUID = 0L;
      * Action event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Action shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
      */
     io.bloombox.schema.analytics.shop.ShopAnalytics.ActionOrBuilder getShopOrBuilder();
 
@@ -3322,7 +3322,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a user order.
      * </pre>
      *
-     * <code>.analytics.order.Action order = 13;</code>
+     * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
      */
     boolean hasOrder();
     /**
@@ -3330,7 +3330,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a user order.
      * </pre>
      *
-     * <code>.analytics.order.Action order = 13;</code>
+     * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
      */
     io.bloombox.schema.analytics.order.OrderAnalytics.Action getOrder();
     /**
@@ -3338,7 +3338,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a user order.
      * </pre>
      *
-     * <code>.analytics.order.Action order = 13;</code>
+     * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
      */
     io.bloombox.schema.analytics.order.OrderAnalytics.ActionOrBuilder getOrderOrBuilder();
 
@@ -3349,11 +3349,11 @@ private static final long serialVersionUID = 0L;
    * Specifies an action-type event.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.CommercialEvent.Action}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.CommercialEvent.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -3484,12 +3484,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Action_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Action_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Action_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action.class, io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action.Builder.class);
     }
@@ -3585,7 +3585,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     public boolean hasContext() {
       return context_ != null;
@@ -3595,7 +3595,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
       return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
@@ -3605,7 +3605,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
       return getContext();
@@ -3617,7 +3617,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Action section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
      */
     public boolean hasSection() {
       return eventCase_ == 10;
@@ -3627,7 +3627,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Action section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
      */
     public io.bloombox.schema.analytics.section.SectionAnalytics.Action getSection() {
       if (eventCase_ == 10) {
@@ -3640,7 +3640,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu section.
      * </pre>
      *
-     * <code>.analytics.section.Action section = 10;</code>
+     * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
      */
     public io.bloombox.schema.analytics.section.SectionAnalytics.ActionOrBuilder getSectionOrBuilder() {
       if (eventCase_ == 10) {
@@ -3655,7 +3655,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Action product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
      */
     public boolean hasProduct() {
       return eventCase_ == 11;
@@ -3665,7 +3665,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Action product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
      */
     public io.bloombox.schema.analytics.product.ProductAnalytics.Action getProduct() {
       if (eventCase_ == 11) {
@@ -3678,7 +3678,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a menu product.
      * </pre>
      *
-     * <code>.analytics.product.Action product = 11;</code>
+     * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
      */
     public io.bloombox.schema.analytics.product.ProductAnalytics.ActionOrBuilder getProductOrBuilder() {
       if (eventCase_ == 11) {
@@ -3693,7 +3693,7 @@ private static final long serialVersionUID = 0L;
      * Action event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Action shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
      */
     public boolean hasShop() {
       return eventCase_ == 12;
@@ -3703,7 +3703,7 @@ private static final long serialVersionUID = 0L;
      * Action event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Action shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
      */
     public io.bloombox.schema.analytics.shop.ShopAnalytics.Action getShop() {
       if (eventCase_ == 12) {
@@ -3716,7 +3716,7 @@ private static final long serialVersionUID = 0L;
      * Action event for a commercial shop.
      * </pre>
      *
-     * <code>.analytics.shop.Action shop = 12;</code>
+     * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
      */
     public io.bloombox.schema.analytics.shop.ShopAnalytics.ActionOrBuilder getShopOrBuilder() {
       if (eventCase_ == 12) {
@@ -3731,7 +3731,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a user order.
      * </pre>
      *
-     * <code>.analytics.order.Action order = 13;</code>
+     * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
      */
     public boolean hasOrder() {
       return eventCase_ == 13;
@@ -3741,7 +3741,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a user order.
      * </pre>
      *
-     * <code>.analytics.order.Action order = 13;</code>
+     * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
      */
     public io.bloombox.schema.analytics.order.OrderAnalytics.Action getOrder() {
       if (eventCase_ == 13) {
@@ -3754,7 +3754,7 @@ private static final long serialVersionUID = 0L;
      * Action event on a user order.
      * </pre>
      *
-     * <code>.analytics.order.Action order = 13;</code>
+     * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
      */
     public io.bloombox.schema.analytics.order.OrderAnalytics.ActionOrBuilder getOrderOrBuilder() {
       if (eventCase_ == 13) {
@@ -4005,20 +4005,20 @@ private static final long serialVersionUID = 0L;
      * Specifies an action-type event.
      * </pre>
      *
-     * Protobuf type {@code services.telemetry.v1beta3.CommercialEvent.Action}
+     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.CommercialEvent.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action)
         io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Action_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Action_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Action_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action.class, io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action.Builder.class);
       }
@@ -4055,7 +4055,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_Action_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_Action_descriptor;
       }
 
       public io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action getDefaultInstanceForType() {
@@ -4315,7 +4315,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public boolean hasContext() {
         return contextBuilder_ != null || context_ != null;
@@ -4325,7 +4325,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
         if (contextBuilder_ == null) {
@@ -4339,7 +4339,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -4359,7 +4359,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public Builder setContext(
           io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
@@ -4377,7 +4377,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -4399,7 +4399,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public Builder clearContext() {
         if (contextBuilder_ == null) {
@@ -4417,7 +4417,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
         
@@ -4429,7 +4429,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
         if (contextBuilder_ != null) {
@@ -4444,7 +4444,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
@@ -4467,7 +4467,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       public boolean hasSection() {
         return eventCase_ == 10;
@@ -4477,7 +4477,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.Action getSection() {
         if (sectionBuilder_ == null) {
@@ -4497,7 +4497,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       public Builder setSection(io.bloombox.schema.analytics.section.SectionAnalytics.Action value) {
         if (sectionBuilder_ == null) {
@@ -4517,7 +4517,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       public Builder setSection(
           io.bloombox.schema.analytics.section.SectionAnalytics.Action.Builder builderForValue) {
@@ -4535,7 +4535,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       public Builder mergeSection(io.bloombox.schema.analytics.section.SectionAnalytics.Action value) {
         if (sectionBuilder_ == null) {
@@ -4561,7 +4561,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       public Builder clearSection() {
         if (sectionBuilder_ == null) {
@@ -4584,7 +4584,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.Action.Builder getSectionBuilder() {
         return getSectionFieldBuilder().getBuilder();
@@ -4594,7 +4594,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       public io.bloombox.schema.analytics.section.SectionAnalytics.ActionOrBuilder getSectionOrBuilder() {
         if ((eventCase_ == 10) && (sectionBuilder_ != null)) {
@@ -4611,7 +4611,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu section.
        * </pre>
        *
-       * <code>.analytics.section.Action section = 10;</code>
+       * <code>.bloombox.schema.analytics.section.Action section = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.section.SectionAnalytics.Action, io.bloombox.schema.analytics.section.SectionAnalytics.Action.Builder, io.bloombox.schema.analytics.section.SectionAnalytics.ActionOrBuilder> 
@@ -4639,7 +4639,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       public boolean hasProduct() {
         return eventCase_ == 11;
@@ -4649,7 +4649,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.Action getProduct() {
         if (productBuilder_ == null) {
@@ -4669,7 +4669,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       public Builder setProduct(io.bloombox.schema.analytics.product.ProductAnalytics.Action value) {
         if (productBuilder_ == null) {
@@ -4689,7 +4689,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       public Builder setProduct(
           io.bloombox.schema.analytics.product.ProductAnalytics.Action.Builder builderForValue) {
@@ -4707,7 +4707,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       public Builder mergeProduct(io.bloombox.schema.analytics.product.ProductAnalytics.Action value) {
         if (productBuilder_ == null) {
@@ -4733,7 +4733,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       public Builder clearProduct() {
         if (productBuilder_ == null) {
@@ -4756,7 +4756,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.Action.Builder getProductBuilder() {
         return getProductFieldBuilder().getBuilder();
@@ -4766,7 +4766,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       public io.bloombox.schema.analytics.product.ProductAnalytics.ActionOrBuilder getProductOrBuilder() {
         if ((eventCase_ == 11) && (productBuilder_ != null)) {
@@ -4783,7 +4783,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a menu product.
        * </pre>
        *
-       * <code>.analytics.product.Action product = 11;</code>
+       * <code>.bloombox.schema.analytics.product.Action product = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.product.ProductAnalytics.Action, io.bloombox.schema.analytics.product.ProductAnalytics.Action.Builder, io.bloombox.schema.analytics.product.ProductAnalytics.ActionOrBuilder> 
@@ -4811,7 +4811,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       public boolean hasShop() {
         return eventCase_ == 12;
@@ -4821,7 +4821,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Action getShop() {
         if (shopBuilder_ == null) {
@@ -4841,7 +4841,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       public Builder setShop(io.bloombox.schema.analytics.shop.ShopAnalytics.Action value) {
         if (shopBuilder_ == null) {
@@ -4861,7 +4861,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       public Builder setShop(
           io.bloombox.schema.analytics.shop.ShopAnalytics.Action.Builder builderForValue) {
@@ -4879,7 +4879,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       public Builder mergeShop(io.bloombox.schema.analytics.shop.ShopAnalytics.Action value) {
         if (shopBuilder_ == null) {
@@ -4905,7 +4905,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       public Builder clearShop() {
         if (shopBuilder_ == null) {
@@ -4928,7 +4928,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.Action.Builder getShopBuilder() {
         return getShopFieldBuilder().getBuilder();
@@ -4938,7 +4938,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       public io.bloombox.schema.analytics.shop.ShopAnalytics.ActionOrBuilder getShopOrBuilder() {
         if ((eventCase_ == 12) && (shopBuilder_ != null)) {
@@ -4955,7 +4955,7 @@ private static final long serialVersionUID = 0L;
        * Action event for a commercial shop.
        * </pre>
        *
-       * <code>.analytics.shop.Action shop = 12;</code>
+       * <code>.bloombox.schema.analytics.shop.Action shop = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.shop.ShopAnalytics.Action, io.bloombox.schema.analytics.shop.ShopAnalytics.Action.Builder, io.bloombox.schema.analytics.shop.ShopAnalytics.ActionOrBuilder> 
@@ -4983,7 +4983,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       public boolean hasOrder() {
         return eventCase_ == 13;
@@ -4993,7 +4993,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       public io.bloombox.schema.analytics.order.OrderAnalytics.Action getOrder() {
         if (orderBuilder_ == null) {
@@ -5013,7 +5013,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       public Builder setOrder(io.bloombox.schema.analytics.order.OrderAnalytics.Action value) {
         if (orderBuilder_ == null) {
@@ -5033,7 +5033,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       public Builder setOrder(
           io.bloombox.schema.analytics.order.OrderAnalytics.Action.Builder builderForValue) {
@@ -5051,7 +5051,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       public Builder mergeOrder(io.bloombox.schema.analytics.order.OrderAnalytics.Action value) {
         if (orderBuilder_ == null) {
@@ -5077,7 +5077,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       public Builder clearOrder() {
         if (orderBuilder_ == null) {
@@ -5100,7 +5100,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       public io.bloombox.schema.analytics.order.OrderAnalytics.Action.Builder getOrderBuilder() {
         return getOrderFieldBuilder().getBuilder();
@@ -5110,7 +5110,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       public io.bloombox.schema.analytics.order.OrderAnalytics.ActionOrBuilder getOrderOrBuilder() {
         if ((eventCase_ == 13) && (orderBuilder_ != null)) {
@@ -5127,7 +5127,7 @@ private static final long serialVersionUID = 0L;
        * Action event on a user order.
        * </pre>
        *
-       * <code>.analytics.order.Action order = 13;</code>
+       * <code>.bloombox.schema.analytics.order.Action order = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.order.OrderAnalytics.Action, io.bloombox.schema.analytics.order.OrderAnalytics.Action.Builder, io.bloombox.schema.analytics.order.OrderAnalytics.ActionOrBuilder> 
@@ -5158,10 +5158,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.CommercialEvent.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.CommercialEvent.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action)
     private static final io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Action();
@@ -5341,20 +5341,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an event related to commercial services. This includes product events, section events, and order events.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.CommercialEvent}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.CommercialEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.CommercialEvent)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.CommercialEvent)
       io.bloombox.schema.services.telemetry.v1beta3.CommercialEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.class, io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent.Builder.class);
     }
@@ -5381,7 +5381,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_CommercialEvent_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_CommercialEvent_descriptor;
     }
 
     public io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent getDefaultInstanceForType() {
@@ -5476,10 +5476,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.CommercialEvent)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.CommercialEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.CommercialEvent)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.CommercialEvent)
   private static final io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.CommercialEvent();

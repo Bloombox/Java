@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.devices.v1beta1;
 
 public interface ActivationOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.devices.v1beta1.Activation)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.devices.v1beta1.Activation)
     com.google.protobuf.MessageOrBuilder {
 }

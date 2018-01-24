@@ -17,7 +17,8 @@
 ## Bloombox: Java API Client
 #
 
-RELEASE_VERSION ?= 1.0-beta9
+TESTS ?= yes
+RELEASE_VERSION ?= 1.0-beta10
 CLIENT_VERSION ?= 1.0-SNAPSHOT
 TARGET ?= target/
 TARGET_JAR ?= $(TARGET)java-client-$(CLIENT_VERSION).jar
@@ -31,13 +32,20 @@ EMBEDDED_SCHEMA ?= yes
 
 all: build
 
+EXTRA_FLAGS ?=
+
+ifeq ($(TESTS),no)
+EXTRA_FLAGS += -DskipTests
+endif
+
+
 ifeq ($(EMBEDDED_SCHEMA),yes)
 POMFILE ?= pom-public.xml
-build: sync-schema $(TARGET_JAR)
 else
 POMFILE ?= pom.xml
-build: $(TARGET_JAR)
 endif
+
+build: $(TARGET_JAR)
 
 clean:
 	@echo "Cleaning Java client artifacts..."
@@ -46,13 +54,13 @@ clean:
 ifeq ($(EMBEDDED_SCHEMA),yes)
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox..."
-	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
+	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
 else
 $(TARGET_JAR):
 	@echo "Cleaning embedded schema..."
 	@rm -frv src/main/java/io
 	@echo "Building Java client for Bloombox..."
-	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS)
+	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
 endif
 
 release:

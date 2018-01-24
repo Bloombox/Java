@@ -26,11 +26,11 @@ package io.bloombox.schema.services.telemetry.v1beta3;
  * addressability, authentication, and relevace of a user's experience with Bloombox.
  * </pre>
  *
- * Protobuf type {@code services.telemetry.v1beta3.IdentityEvent}
+ * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.IdentityEvent}
  */
 public  final class IdentityEvent extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.IdentityEvent)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.IdentityEvent)
     IdentityEventOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use IdentityEvent.newBuilder() to construct.
@@ -84,18 +84,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_descriptor;
+    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_fieldAccessorTable
+    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.class, io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Builder.class);
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.IdentityEvent.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     boolean hasContext();
     /**
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
     /**
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
 
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
      * Action taken by or on a user.
      * </pre>
      *
-     * <code>.analytics.identity.Action action = 10;</code>
+     * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
      */
     boolean hasAction();
     /**
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
      * Action taken by or on a user.
      * </pre>
      *
-     * <code>.analytics.identity.Action action = 10;</code>
+     * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
      */
     io.bloombox.schema.analytics.user.UserAnalytics.Action getAction();
     /**
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
      * Action taken by or on a user.
      * </pre>
      *
-     * <code>.analytics.identity.Action action = 10;</code>
+     * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
      */
     io.bloombox.schema.analytics.user.UserAnalytics.ActionOrBuilder getActionOrBuilder();
 
@@ -165,11 +165,11 @@ private static final long serialVersionUID = 0L;
    * Action taken by or on a user.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.IdentityEvent.Action}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.IdentityEvent.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -258,12 +258,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_Action_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_Action_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_Action_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action.class, io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action.Builder.class);
     }
@@ -345,7 +345,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     public boolean hasContext() {
       return context_ != null;
@@ -355,7 +355,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
       return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
@@ -365,7 +365,7 @@ private static final long serialVersionUID = 0L;
      * Event context to specify for this event.
      * </pre>
      *
-     * <code>.analytics.Context context = 2;</code>
+     * <code>.bloombox.schema.analytics.Context context = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
       return getContext();
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
      * Action taken by or on a user.
      * </pre>
      *
-     * <code>.analytics.identity.Action action = 10;</code>
+     * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
      */
     public boolean hasAction() {
       return eventCase_ == 10;
@@ -387,7 +387,7 @@ private static final long serialVersionUID = 0L;
      * Action taken by or on a user.
      * </pre>
      *
-     * <code>.analytics.identity.Action action = 10;</code>
+     * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
      */
     public io.bloombox.schema.analytics.user.UserAnalytics.Action getAction() {
       if (eventCase_ == 10) {
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
      * Action taken by or on a user.
      * </pre>
      *
-     * <code>.analytics.identity.Action action = 10;</code>
+     * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
      */
     public io.bloombox.schema.analytics.user.UserAnalytics.ActionOrBuilder getActionOrBuilder() {
       if (eventCase_ == 10) {
@@ -606,20 +606,20 @@ private static final long serialVersionUID = 0L;
      * Action taken by or on a user.
      * </pre>
      *
-     * Protobuf type {@code services.telemetry.v1beta3.IdentityEvent.Action}
+     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.IdentityEvent.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action)
         io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_Action_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_Action_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_Action_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action.class, io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action.Builder.class);
       }
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_Action_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_Action_descriptor;
       }
 
       public io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action getDefaultInstanceForType() {
@@ -863,7 +863,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public boolean hasContext() {
         return contextBuilder_ != null || context_ != null;
@@ -873,7 +873,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
         if (contextBuilder_ == null) {
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public Builder setContext(
           io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
@@ -925,7 +925,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -947,7 +947,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public Builder clearContext() {
         if (contextBuilder_ == null) {
@@ -965,7 +965,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
         
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
         if (contextBuilder_ != null) {
@@ -992,7 +992,7 @@ private static final long serialVersionUID = 0L;
        * Event context to specify for this event.
        * </pre>
        *
-       * <code>.analytics.Context context = 2;</code>
+       * <code>.bloombox.schema.analytics.Context context = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
@@ -1015,7 +1015,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       public boolean hasAction() {
         return eventCase_ == 10;
@@ -1025,7 +1025,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       public io.bloombox.schema.analytics.user.UserAnalytics.Action getAction() {
         if (actionBuilder_ == null) {
@@ -1045,7 +1045,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       public Builder setAction(io.bloombox.schema.analytics.user.UserAnalytics.Action value) {
         if (actionBuilder_ == null) {
@@ -1065,7 +1065,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       public Builder setAction(
           io.bloombox.schema.analytics.user.UserAnalytics.Action.Builder builderForValue) {
@@ -1083,7 +1083,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       public Builder mergeAction(io.bloombox.schema.analytics.user.UserAnalytics.Action value) {
         if (actionBuilder_ == null) {
@@ -1109,7 +1109,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       public Builder clearAction() {
         if (actionBuilder_ == null) {
@@ -1132,7 +1132,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       public io.bloombox.schema.analytics.user.UserAnalytics.Action.Builder getActionBuilder() {
         return getActionFieldBuilder().getBuilder();
@@ -1142,7 +1142,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       public io.bloombox.schema.analytics.user.UserAnalytics.ActionOrBuilder getActionOrBuilder() {
         if ((eventCase_ == 10) && (actionBuilder_ != null)) {
@@ -1159,7 +1159,7 @@ private static final long serialVersionUID = 0L;
        * Action taken by or on a user.
        * </pre>
        *
-       * <code>.analytics.identity.Action action = 10;</code>
+       * <code>.bloombox.schema.analytics.identity.Action action = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.analytics.user.UserAnalytics.Action, io.bloombox.schema.analytics.user.UserAnalytics.Action.Builder, io.bloombox.schema.analytics.user.UserAnalytics.ActionOrBuilder> 
@@ -1190,10 +1190,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.IdentityEvent.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.IdentityEvent.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action)
     private static final io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action();
@@ -1374,20 +1374,20 @@ private static final long serialVersionUID = 0L;
    * addressability, authentication, and relevace of a user's experience with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.IdentityEvent}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.IdentityEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.IdentityEvent)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.IdentityEvent)
       io.bloombox.schema.services.telemetry.v1beta3.IdentityEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.class, io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Builder.class);
     }
@@ -1414,7 +1414,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_IdentityEvent_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_IdentityEvent_descriptor;
     }
 
     public io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent getDefaultInstanceForType() {
@@ -1509,10 +1509,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.IdentityEvent)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.IdentityEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.IdentityEvent)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.IdentityEvent)
   private static final io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent();

@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class OrderAnalytics {
    * Specifies actions that may be taken on an order.
    * </pre>
    *
-   * Protobuf enum {@code analytics.order.OrderAction}
+   * Protobuf enum {@code bloombox.schema.analytics.order.OrderAction}
    */
   public enum OrderAction
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -315,11 +316,11 @@ public final class OrderAnalytics {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.order.OrderAction)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.order.OrderAction)
   }
 
   public interface ActionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.order.Action)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.order.Action)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -327,7 +328,7 @@ public final class OrderAnalytics {
      * Order being referenced for action, if any.
      * </pre>
      *
-     * <code>.commerce.OrderKey order_key = 1;</code>
+     * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
      */
     boolean hasOrderKey();
     /**
@@ -335,24 +336,24 @@ public final class OrderAnalytics {
      * Order being referenced for action, if any.
      * </pre>
      *
-     * <code>.commerce.OrderKey order_key = 1;</code>
+     * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
      */
-    io.bloombox.schema.commerce.CommercialOrder.OrderKey getOrderKey();
+    io.opencannabis.schema.commerce.CommercialOrder.OrderKey getOrderKey();
     /**
      * <pre>
      * Order being referenced for action, if any.
      * </pre>
      *
-     * <code>.commerce.OrderKey order_key = 1;</code>
+     * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
      */
-    io.bloombox.schema.commerce.CommercialOrder.OrderKeyOrBuilder getOrderKeyOrBuilder();
+    io.opencannabis.schema.commerce.CommercialOrder.OrderKeyOrBuilder getOrderKeyOrBuilder();
 
     /**
      * <pre>
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.analytics.order.OrderAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
      */
     int getVerbValue();
     /**
@@ -360,7 +361,7 @@ public final class OrderAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.analytics.order.OrderAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
      */
     io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction getVerb();
 
@@ -369,7 +370,7 @@ public final class OrderAnalytics {
      * Customer that took this action.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 3;</code>
+     * <code>.opencannabis.commerce.Customer customer = 3;</code>
      */
     boolean hasCustomer();
     /**
@@ -377,24 +378,24 @@ public final class OrderAnalytics {
      * Customer that took this action.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 3;</code>
+     * <code>.opencannabis.commerce.Customer customer = 3;</code>
      */
-    io.bloombox.schema.commerce.OrderCustomer.Customer getCustomer();
+    io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer();
     /**
      * <pre>
      * Customer that took this action.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 3;</code>
+     * <code>.opencannabis.commerce.Customer customer = 3;</code>
      */
-    io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder();
+    io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder();
 
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
     boolean hasOccurred();
     /**
@@ -402,17 +403,17 @@ public final class OrderAnalytics {
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -420,11 +421,11 @@ public final class OrderAnalytics {
    * regarding a commercial order to be submitted or previously submitted by an end user.
    * </pre>
    *
-   * Protobuf type {@code analytics.order.Action}
+   * Protobuf type {@code bloombox.schema.analytics.order.Action}
    */
   public  static final class Action extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.order.Action)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.order.Action)
       ActionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Action.newBuilder() to construct.
@@ -467,11 +468,11 @@ public final class OrderAnalytics {
               break;
             }
             case 10: {
-              io.bloombox.schema.commerce.CommercialOrder.OrderKey.Builder subBuilder = null;
+              io.opencannabis.schema.commerce.CommercialOrder.OrderKey.Builder subBuilder = null;
               if (orderKey_ != null) {
                 subBuilder = orderKey_.toBuilder();
               }
-              orderKey_ = input.readMessage(io.bloombox.schema.commerce.CommercialOrder.OrderKey.parser(), extensionRegistry);
+              orderKey_ = input.readMessage(io.opencannabis.schema.commerce.CommercialOrder.OrderKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(orderKey_);
                 orderKey_ = subBuilder.buildPartial();
@@ -486,11 +487,11 @@ public final class OrderAnalytics {
               break;
             }
             case 26: {
-              io.bloombox.schema.commerce.OrderCustomer.Customer.Builder subBuilder = null;
+              io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder subBuilder = null;
               if (customer_ != null) {
                 subBuilder = customer_.toBuilder();
               }
-              customer_ = input.readMessage(io.bloombox.schema.commerce.OrderCustomer.Customer.parser(), extensionRegistry);
+              customer_ = input.readMessage(io.opencannabis.schema.commerce.OrderCustomer.Customer.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(customer_);
                 customer_ = subBuilder.buildPartial();
@@ -499,11 +500,11 @@ public final class OrderAnalytics {
               break;
             }
             case 34: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -525,24 +526,24 @@ public final class OrderAnalytics {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_analytics_order_Action_descriptor;
+      return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_analytics_order_Action_fieldAccessorTable
+      return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.analytics.order.OrderAnalytics.Action.class, io.bloombox.schema.analytics.order.OrderAnalytics.Action.Builder.class);
     }
 
     public static final int ORDER_KEY_FIELD_NUMBER = 1;
-    private io.bloombox.schema.commerce.CommercialOrder.OrderKey orderKey_;
+    private io.opencannabis.schema.commerce.CommercialOrder.OrderKey orderKey_;
     /**
      * <pre>
      * Order being referenced for action, if any.
      * </pre>
      *
-     * <code>.commerce.OrderKey order_key = 1;</code>
+     * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
      */
     public boolean hasOrderKey() {
       return orderKey_ != null;
@@ -552,19 +553,19 @@ public final class OrderAnalytics {
      * Order being referenced for action, if any.
      * </pre>
      *
-     * <code>.commerce.OrderKey order_key = 1;</code>
+     * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
      */
-    public io.bloombox.schema.commerce.CommercialOrder.OrderKey getOrderKey() {
-      return orderKey_ == null ? io.bloombox.schema.commerce.CommercialOrder.OrderKey.getDefaultInstance() : orderKey_;
+    public io.opencannabis.schema.commerce.CommercialOrder.OrderKey getOrderKey() {
+      return orderKey_ == null ? io.opencannabis.schema.commerce.CommercialOrder.OrderKey.getDefaultInstance() : orderKey_;
     }
     /**
      * <pre>
      * Order being referenced for action, if any.
      * </pre>
      *
-     * <code>.commerce.OrderKey order_key = 1;</code>
+     * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
      */
-    public io.bloombox.schema.commerce.CommercialOrder.OrderKeyOrBuilder getOrderKeyOrBuilder() {
+    public io.opencannabis.schema.commerce.CommercialOrder.OrderKeyOrBuilder getOrderKeyOrBuilder() {
       return getOrderKey();
     }
 
@@ -575,7 +576,7 @@ public final class OrderAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.analytics.order.OrderAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
      */
     public int getVerbValue() {
       return verb_;
@@ -585,7 +586,7 @@ public final class OrderAnalytics {
      * Action that was taken upon or regarding the order.
      * </pre>
      *
-     * <code>.analytics.order.OrderAction verb = 2;</code>
+     * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
      */
     public io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction getVerb() {
       io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction result = io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction.valueOf(verb_);
@@ -593,13 +594,13 @@ public final class OrderAnalytics {
     }
 
     public static final int CUSTOMER_FIELD_NUMBER = 3;
-    private io.bloombox.schema.commerce.OrderCustomer.Customer customer_;
+    private io.opencannabis.schema.commerce.OrderCustomer.Customer customer_;
     /**
      * <pre>
      * Customer that took this action.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 3;</code>
+     * <code>.opencannabis.commerce.Customer customer = 3;</code>
      */
     public boolean hasCustomer() {
       return customer_ != null;
@@ -609,30 +610,30 @@ public final class OrderAnalytics {
      * Customer that took this action.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 3;</code>
+     * <code>.opencannabis.commerce.Customer customer = 3;</code>
      */
-    public io.bloombox.schema.commerce.OrderCustomer.Customer getCustomer() {
-      return customer_ == null ? io.bloombox.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
+    public io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer() {
+      return customer_ == null ? io.opencannabis.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
     }
     /**
      * <pre>
      * Customer that took this action.
      * </pre>
      *
-     * <code>.commerce.Customer customer = 3;</code>
+     * <code>.opencannabis.commerce.Customer customer = 3;</code>
      */
-    public io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
+    public io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
       return getCustomer();
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 4;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -642,19 +643,19 @@ public final class OrderAnalytics {
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Specifies when this view event occurred.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -862,20 +863,20 @@ public final class OrderAnalytics {
      * regarding a commercial order to be submitted or previously submitted by an end user.
      * </pre>
      *
-     * Protobuf type {@code analytics.order.Action}
+     * Protobuf type {@code bloombox.schema.analytics.order.Action}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.order.Action)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.order.Action)
         io.bloombox.schema.analytics.order.OrderAnalytics.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_analytics_order_Action_descriptor;
+        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_analytics_order_Action_fieldAccessorTable
+        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.analytics.order.OrderAnalytics.Action.class, io.bloombox.schema.analytics.order.OrderAnalytics.Action.Builder.class);
       }
@@ -922,7 +923,7 @@ public final class OrderAnalytics {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_analytics_order_Action_descriptor;
+        return io.bloombox.schema.analytics.order.OrderAnalytics.internal_static_bloombox_schema_analytics_order_Action_descriptor;
       }
 
       public io.bloombox.schema.analytics.order.OrderAnalytics.Action getDefaultInstanceForType() {
@@ -1035,15 +1036,15 @@ public final class OrderAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.commerce.CommercialOrder.OrderKey orderKey_ = null;
+      private io.opencannabis.schema.commerce.CommercialOrder.OrderKey orderKey_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.CommercialOrder.OrderKey, io.bloombox.schema.commerce.CommercialOrder.OrderKey.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderKeyOrBuilder> orderKeyBuilder_;
+          io.opencannabis.schema.commerce.CommercialOrder.OrderKey, io.opencannabis.schema.commerce.CommercialOrder.OrderKey.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderKeyOrBuilder> orderKeyBuilder_;
       /**
        * <pre>
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
       public boolean hasOrderKey() {
         return orderKeyBuilder_ != null || orderKey_ != null;
@@ -1053,11 +1054,11 @@ public final class OrderAnalytics {
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.OrderKey getOrderKey() {
+      public io.opencannabis.schema.commerce.CommercialOrder.OrderKey getOrderKey() {
         if (orderKeyBuilder_ == null) {
-          return orderKey_ == null ? io.bloombox.schema.commerce.CommercialOrder.OrderKey.getDefaultInstance() : orderKey_;
+          return orderKey_ == null ? io.opencannabis.schema.commerce.CommercialOrder.OrderKey.getDefaultInstance() : orderKey_;
         } else {
           return orderKeyBuilder_.getMessage();
         }
@@ -1067,9 +1068,9 @@ public final class OrderAnalytics {
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
-      public Builder setOrderKey(io.bloombox.schema.commerce.CommercialOrder.OrderKey value) {
+      public Builder setOrderKey(io.opencannabis.schema.commerce.CommercialOrder.OrderKey value) {
         if (orderKeyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1087,10 +1088,10 @@ public final class OrderAnalytics {
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
       public Builder setOrderKey(
-          io.bloombox.schema.commerce.CommercialOrder.OrderKey.Builder builderForValue) {
+          io.opencannabis.schema.commerce.CommercialOrder.OrderKey.Builder builderForValue) {
         if (orderKeyBuilder_ == null) {
           orderKey_ = builderForValue.build();
           onChanged();
@@ -1105,13 +1106,13 @@ public final class OrderAnalytics {
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
-      public Builder mergeOrderKey(io.bloombox.schema.commerce.CommercialOrder.OrderKey value) {
+      public Builder mergeOrderKey(io.opencannabis.schema.commerce.CommercialOrder.OrderKey value) {
         if (orderKeyBuilder_ == null) {
           if (orderKey_ != null) {
             orderKey_ =
-              io.bloombox.schema.commerce.CommercialOrder.OrderKey.newBuilder(orderKey_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.commerce.CommercialOrder.OrderKey.newBuilder(orderKey_).mergeFrom(value).buildPartial();
           } else {
             orderKey_ = value;
           }
@@ -1127,7 +1128,7 @@ public final class OrderAnalytics {
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
       public Builder clearOrderKey() {
         if (orderKeyBuilder_ == null) {
@@ -1145,9 +1146,9 @@ public final class OrderAnalytics {
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.OrderKey.Builder getOrderKeyBuilder() {
+      public io.opencannabis.schema.commerce.CommercialOrder.OrderKey.Builder getOrderKeyBuilder() {
         
         onChanged();
         return getOrderKeyFieldBuilder().getBuilder();
@@ -1157,14 +1158,14 @@ public final class OrderAnalytics {
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.OrderKeyOrBuilder getOrderKeyOrBuilder() {
+      public io.opencannabis.schema.commerce.CommercialOrder.OrderKeyOrBuilder getOrderKeyOrBuilder() {
         if (orderKeyBuilder_ != null) {
           return orderKeyBuilder_.getMessageOrBuilder();
         } else {
           return orderKey_ == null ?
-              io.bloombox.schema.commerce.CommercialOrder.OrderKey.getDefaultInstance() : orderKey_;
+              io.opencannabis.schema.commerce.CommercialOrder.OrderKey.getDefaultInstance() : orderKey_;
         }
       }
       /**
@@ -1172,14 +1173,14 @@ public final class OrderAnalytics {
        * Order being referenced for action, if any.
        * </pre>
        *
-       * <code>.commerce.OrderKey order_key = 1;</code>
+       * <code>.opencannabis.commerce.OrderKey order_key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.CommercialOrder.OrderKey, io.bloombox.schema.commerce.CommercialOrder.OrderKey.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderKeyOrBuilder> 
+          io.opencannabis.schema.commerce.CommercialOrder.OrderKey, io.opencannabis.schema.commerce.CommercialOrder.OrderKey.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderKeyOrBuilder> 
           getOrderKeyFieldBuilder() {
         if (orderKeyBuilder_ == null) {
           orderKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.commerce.CommercialOrder.OrderKey, io.bloombox.schema.commerce.CommercialOrder.OrderKey.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderKeyOrBuilder>(
+              io.opencannabis.schema.commerce.CommercialOrder.OrderKey, io.opencannabis.schema.commerce.CommercialOrder.OrderKey.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderKeyOrBuilder>(
                   getOrderKey(),
                   getParentForChildren(),
                   isClean());
@@ -1194,7 +1195,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
        */
       public int getVerbValue() {
         return verb_;
@@ -1204,7 +1205,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
        */
       public Builder setVerbValue(int value) {
         verb_ = value;
@@ -1216,7 +1217,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
        */
       public io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction getVerb() {
         io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction result = io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction.valueOf(verb_);
@@ -1227,7 +1228,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
        */
       public Builder setVerb(io.bloombox.schema.analytics.order.OrderAnalytics.OrderAction value) {
         if (value == null) {
@@ -1243,7 +1244,7 @@ public final class OrderAnalytics {
        * Action that was taken upon or regarding the order.
        * </pre>
        *
-       * <code>.analytics.order.OrderAction verb = 2;</code>
+       * <code>.bloombox.schema.analytics.order.OrderAction verb = 2;</code>
        */
       public Builder clearVerb() {
         
@@ -1252,15 +1253,15 @@ public final class OrderAnalytics {
         return this;
       }
 
-      private io.bloombox.schema.commerce.OrderCustomer.Customer customer_ = null;
+      private io.opencannabis.schema.commerce.OrderCustomer.Customer customer_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.OrderCustomer.Customer, io.bloombox.schema.commerce.OrderCustomer.Customer.Builder, io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder> customerBuilder_;
+          io.opencannabis.schema.commerce.OrderCustomer.Customer, io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder, io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder> customerBuilder_;
       /**
        * <pre>
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
       public boolean hasCustomer() {
         return customerBuilder_ != null || customer_ != null;
@@ -1270,11 +1271,11 @@ public final class OrderAnalytics {
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
-      public io.bloombox.schema.commerce.OrderCustomer.Customer getCustomer() {
+      public io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer() {
         if (customerBuilder_ == null) {
-          return customer_ == null ? io.bloombox.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
+          return customer_ == null ? io.opencannabis.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
         } else {
           return customerBuilder_.getMessage();
         }
@@ -1284,9 +1285,9 @@ public final class OrderAnalytics {
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
-      public Builder setCustomer(io.bloombox.schema.commerce.OrderCustomer.Customer value) {
+      public Builder setCustomer(io.opencannabis.schema.commerce.OrderCustomer.Customer value) {
         if (customerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1304,10 +1305,10 @@ public final class OrderAnalytics {
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
       public Builder setCustomer(
-          io.bloombox.schema.commerce.OrderCustomer.Customer.Builder builderForValue) {
+          io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder builderForValue) {
         if (customerBuilder_ == null) {
           customer_ = builderForValue.build();
           onChanged();
@@ -1322,13 +1323,13 @@ public final class OrderAnalytics {
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
-      public Builder mergeCustomer(io.bloombox.schema.commerce.OrderCustomer.Customer value) {
+      public Builder mergeCustomer(io.opencannabis.schema.commerce.OrderCustomer.Customer value) {
         if (customerBuilder_ == null) {
           if (customer_ != null) {
             customer_ =
-              io.bloombox.schema.commerce.OrderCustomer.Customer.newBuilder(customer_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.commerce.OrderCustomer.Customer.newBuilder(customer_).mergeFrom(value).buildPartial();
           } else {
             customer_ = value;
           }
@@ -1344,7 +1345,7 @@ public final class OrderAnalytics {
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
       public Builder clearCustomer() {
         if (customerBuilder_ == null) {
@@ -1362,9 +1363,9 @@ public final class OrderAnalytics {
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
-      public io.bloombox.schema.commerce.OrderCustomer.Customer.Builder getCustomerBuilder() {
+      public io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder getCustomerBuilder() {
         
         onChanged();
         return getCustomerFieldBuilder().getBuilder();
@@ -1374,14 +1375,14 @@ public final class OrderAnalytics {
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
-      public io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
+      public io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
         if (customerBuilder_ != null) {
           return customerBuilder_.getMessageOrBuilder();
         } else {
           return customer_ == null ?
-              io.bloombox.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
+              io.opencannabis.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
         }
       }
       /**
@@ -1389,14 +1390,14 @@ public final class OrderAnalytics {
        * Customer that took this action.
        * </pre>
        *
-       * <code>.commerce.Customer customer = 3;</code>
+       * <code>.opencannabis.commerce.Customer customer = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.OrderCustomer.Customer, io.bloombox.schema.commerce.OrderCustomer.Customer.Builder, io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder> 
+          io.opencannabis.schema.commerce.OrderCustomer.Customer, io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder, io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder> 
           getCustomerFieldBuilder() {
         if (customerBuilder_ == null) {
           customerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.commerce.OrderCustomer.Customer, io.bloombox.schema.commerce.OrderCustomer.Customer.Builder, io.bloombox.schema.commerce.OrderCustomer.CustomerOrBuilder>(
+              io.opencannabis.schema.commerce.OrderCustomer.Customer, io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder, io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder>(
                   getCustomer(),
                   getParentForChildren(),
                   isClean());
@@ -1405,15 +1406,15 @@ public final class OrderAnalytics {
         return customerBuilder_;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -1423,11 +1424,11 @@ public final class OrderAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -1437,9 +1438,9 @@ public final class OrderAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1457,10 +1458,10 @@ public final class OrderAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -1475,13 +1476,13 @@ public final class OrderAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -1497,7 +1498,7 @@ public final class OrderAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -1515,9 +1516,9 @@ public final class OrderAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -1527,14 +1528,14 @@ public final class OrderAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1542,14 +1543,14 @@ public final class OrderAnalytics {
        * Specifies when this view event occurred.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -1568,10 +1569,10 @@ public final class OrderAnalytics {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.order.Action)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.order.Action)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.order.Action)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.order.Action)
     private static final io.bloombox.schema.analytics.order.OrderAnalytics.Action DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.analytics.order.OrderAnalytics.Action();
@@ -1607,10 +1608,10 @@ public final class OrderAnalytics {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_order_Action_descriptor;
+    internal_static_bloombox_schema_analytics_order_Action_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_order_Action_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_order_Action_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1621,21 +1622,23 @@ public final class OrderAnalytics {
   static {
     java.lang.String[] descriptorData = {
       "\n\'analytics/commerce/OrderAnalytics.prot" +
-      "o\022\017analytics.order\032\024commerce/Order.proto" +
-      "\032\026temporal/Instant.proto\032\027commerce/Custo" +
-      "mer.proto\"\246\001\n\006Action\022%\n\torder_key\030\001 \001(\0132" +
-      "\022.commerce.OrderKey\022*\n\004verb\030\002 \001(\0162\034.anal" +
-      "ytics.order.OrderAction\022$\n\010customer\030\003 \001(" +
-      "\0132\022.commerce.Customer\022#\n\010occurred\030\004 \001(\0132" +
-      "\021.temporal.Instant*\377\001\n\013OrderAction\022\017\n\013AD" +
-      "D_TO_CART\020\000\022\024\n\020REMOVE_FROM_CART\020\001\022\020\n\014RES" +
-      "TORE_CART\020\002\022\021\n\rVERIFY_MEMBER\020\003\022\020\n\014ORDER_" +
-      "SUBMIT\020\004\022\020\n\014ORDER_STATUS\020\005\022\020\n\014ORDER_CANC" +
-      "EL\020\006\022\022\n\016ORDER_ACCEPTED\020\007\022\022\n\016ORDER_REJECT" +
-      "ED\020\010\022\025\n\021ORDER_IN_PROGERSS\020\t\022\032\n\026ORDER_OUT" +
-      "_FOR_DELIVERY\020\n\022\023\n\017ORDER_FULFILLED\020\013B;\n\"" +
-      "io.bloombox.schema.analytics.orderB\016Orde" +
-      "rAnalyticsH\001P\000\370\001\001b\006proto3"
+      "o\022\037bloombox.schema.analytics.order\032\024comm" +
+      "erce/Order.proto\032\026temporal/Instant.proto" +
+      "\032\027commerce/Customer.proto\"\335\001\n\006Action\0222\n\t" +
+      "order_key\030\001 \001(\0132\037.opencannabis.commerce." +
+      "OrderKey\022:\n\004verb\030\002 \001(\0162,.bloombox.schema" +
+      ".analytics.order.OrderAction\0221\n\010customer" +
+      "\030\003 \001(\0132\037.opencannabis.commerce.Customer\022" +
+      "0\n\010occurred\030\004 \001(\0132\036.opencannabis.tempora" +
+      "l.Instant*\377\001\n\013OrderAction\022\017\n\013ADD_TO_CART" +
+      "\020\000\022\024\n\020REMOVE_FROM_CART\020\001\022\020\n\014RESTORE_CART" +
+      "\020\002\022\021\n\rVERIFY_MEMBER\020\003\022\020\n\014ORDER_SUBMIT\020\004\022" +
+      "\020\n\014ORDER_STATUS\020\005\022\020\n\014ORDER_CANCEL\020\006\022\022\n\016O" +
+      "RDER_ACCEPTED\020\007\022\022\n\016ORDER_REJECTED\020\010\022\025\n\021O" +
+      "RDER_IN_PROGERSS\020\t\022\032\n\026ORDER_OUT_FOR_DELI" +
+      "VERY\020\n\022\023\n\017ORDER_FULFILLED\020\013B;\n\"io.bloomb" +
+      "ox.schema.analytics.orderB\016OrderAnalytic" +
+      "sH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1648,19 +1651,19 @@ public final class OrderAnalytics {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.commerce.CommercialOrder.getDescriptor(),
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
-          io.bloombox.schema.commerce.OrderCustomer.getDescriptor(),
+          io.opencannabis.schema.commerce.CommercialOrder.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.commerce.OrderCustomer.getDescriptor(),
         }, assigner);
-    internal_static_analytics_order_Action_descriptor =
+    internal_static_bloombox_schema_analytics_order_Action_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_order_Action_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_order_Action_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_order_Action_descriptor,
+        internal_static_bloombox_schema_analytics_order_Action_descriptor,
         new java.lang.String[] { "OrderKey", "Verb", "Customer", "Occurred", });
-    io.bloombox.schema.commerce.CommercialOrder.getDescriptor();
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
-    io.bloombox.schema.commerce.OrderCustomer.getDescriptor();
+    io.opencannabis.schema.commerce.CommercialOrder.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.commerce.OrderCustomer.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

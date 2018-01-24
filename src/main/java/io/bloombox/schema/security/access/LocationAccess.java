@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,11 +20,11 @@
 package io.bloombox.schema.security.access;
 
 /**
- * Protobuf type {@code security.access.LocationAccess}
+ * Protobuf type {@code bloombox.schema.security.access.LocationAccess}
  */
 public  final class LocationAccess extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:security.access.LocationAccess)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.security.access.LocationAccess)
     LocationAccessOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use LocationAccess.newBuilder() to construct.
@@ -81,11 +80,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (grantedAt_ != null) {
               subBuilder = grantedAt_.toBuilder();
             }
-            grantedAt_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            grantedAt_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(grantedAt_);
               grantedAt_ = subBuilder.buildPartial();
@@ -112,12 +111,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_LocationAccess_descriptor;
+    return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_LocationAccess_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_LocationAccess_fieldAccessorTable
+    return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_LocationAccess_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.security.access.LocationAccess.class, io.bloombox.schema.security.access.LocationAccess.Builder.class);
   }
@@ -166,23 +165,23 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GRANTED_AT_FIELD_NUMBER = 3;
-  private io.bloombox.schema.temporal.Instant grantedAt_;
+  private io.opencannabis.schema.temporal.Instant grantedAt_;
   /**
-   * <code>.temporal.Instant granted_at = 3;</code>
+   * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
    */
   public boolean hasGrantedAt() {
     return grantedAt_ != null;
   }
   /**
-   * <code>.temporal.Instant granted_at = 3;</code>
+   * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
    */
-  public io.bloombox.schema.temporal.Instant getGrantedAt() {
-    return grantedAt_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
+  public io.opencannabis.schema.temporal.Instant getGrantedAt() {
+    return grantedAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
   }
   /**
-   * <code>.temporal.Instant granted_at = 3;</code>
+   * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getGrantedAtOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getGrantedAtOrBuilder() {
     return getGrantedAt();
   }
 
@@ -386,20 +385,20 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code security.access.LocationAccess}
+   * Protobuf type {@code bloombox.schema.security.access.LocationAccess}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:security.access.LocationAccess)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.security.access.LocationAccess)
       io.bloombox.schema.security.access.LocationAccessOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_LocationAccess_descriptor;
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_LocationAccess_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_LocationAccess_fieldAccessorTable
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_LocationAccess_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.security.access.LocationAccess.class, io.bloombox.schema.security.access.LocationAccess.Builder.class);
     }
@@ -438,7 +437,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_security_access_LocationAccess_descriptor;
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_LocationAccess_descriptor;
     }
 
     public io.bloombox.schema.security.access.LocationAccess getDefaultInstanceForType() {
@@ -639,29 +638,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.temporal.Instant grantedAt_ = null;
+    private io.opencannabis.schema.temporal.Instant grantedAt_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> grantedAtBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> grantedAtBuilder_;
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
     public boolean hasGrantedAt() {
       return grantedAtBuilder_ != null || grantedAt_ != null;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant getGrantedAt() {
+    public io.opencannabis.schema.temporal.Instant getGrantedAt() {
       if (grantedAtBuilder_ == null) {
-        return grantedAt_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
+        return grantedAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
       } else {
         return grantedAtBuilder_.getMessage();
       }
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public Builder setGrantedAt(io.bloombox.schema.temporal.Instant value) {
+    public Builder setGrantedAt(io.opencannabis.schema.temporal.Instant value) {
       if (grantedAtBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -675,10 +674,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
     public Builder setGrantedAt(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (grantedAtBuilder_ == null) {
         grantedAt_ = builderForValue.build();
         onChanged();
@@ -689,13 +688,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public Builder mergeGrantedAt(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeGrantedAt(io.opencannabis.schema.temporal.Instant value) {
       if (grantedAtBuilder_ == null) {
         if (grantedAt_ != null) {
           grantedAt_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(grantedAt_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(grantedAt_).mergeFrom(value).buildPartial();
         } else {
           grantedAt_ = value;
         }
@@ -707,7 +706,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
     public Builder clearGrantedAt() {
       if (grantedAtBuilder_ == null) {
@@ -721,33 +720,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getGrantedAtBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getGrantedAtBuilder() {
       
       onChanged();
       return getGrantedAtFieldBuilder().getBuilder();
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getGrantedAtOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getGrantedAtOrBuilder() {
       if (grantedAtBuilder_ != null) {
         return grantedAtBuilder_.getMessageOrBuilder();
       } else {
         return grantedAt_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : grantedAt_;
       }
     }
     /**
-     * <code>.temporal.Instant granted_at = 3;</code>
+     * <code>.opencannabis.temporal.Instant granted_at = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getGrantedAtFieldBuilder() {
       if (grantedAtBuilder_ == null) {
         grantedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getGrantedAt(),
                 getParentForChildren(),
                 isClean());
@@ -792,10 +791,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:security.access.LocationAccess)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.security.access.LocationAccess)
   }
 
-  // @@protoc_insertion_point(class_scope:security.access.LocationAccess)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.security.access.LocationAccess)
   private static final io.bloombox.schema.security.access.LocationAccess DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.security.access.LocationAccess();

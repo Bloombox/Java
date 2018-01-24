@@ -16,22 +16,22 @@
 
 package bloombox.client.services.telemetry
 
-import bloombox.client.BloomboxClient
+import bloombox.client.Bloombox
 import bloombox.client.interfaces.ServiceClient
 import bloombox.client.internals.rpc.RPCClient
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
-import io.bloombox.schema.base.ProductKey
+import io.opencannabis.schema.base.ProductKey
+import io.opencannabis.schema.menu.section.Section
 import io.bloombox.schema.identity.UserKey
-import io.bloombox.schema.menu.section.Section
 import io.bloombox.schema.services.telemetry.v1beta3.*
-import io.bloombox.schema.struct.VersionSpec
 import io.bloombox.schema.telemetry.AnalyticsContext
 import io.bloombox.schema.telemetry.AnalyticsEvent
 import io.bloombox.schema.telemetry.AnalyticsException
 import io.bloombox.schema.telemetry.AnalyticsScope
 import io.bloombox.schema.telemetry.context.*
-import io.bloombox.schema.temporal.Instant
+import io.opencannabis.schema.struct.VersionSpec
+import io.opencannabis.schema.temporal.Instant
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.NegotiationType
@@ -289,8 +289,8 @@ class TelemetryClient(override val host: String,
   private val _baseContext: AnalyticsContext.Context = AnalyticsContext.Context.newBuilder()
         .setLibrary(LibraryContext.DeviceLibrary.newBuilder()
               .setClient(LibraryContext.APIClient.JAVA)
-              .setVariant(BloomboxClient.VARIANT)
-              .setVersion(VersionSpec.newBuilder().setName(BloomboxClient.VERSION)))
+              .setVariant(Bloombox.VARIANT)
+              .setVersion(VersionSpec.newBuilder().setName(Bloombox.VERSION)))
         .setNative(DeviceContext.NativeDeviceContext.newBuilder()
               .setRole(DeviceContext.DeviceRole.SERVER)
               .setOs(OperatingSystemContext.DeviceOS.newBuilder()

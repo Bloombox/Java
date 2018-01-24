@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.identity.ids;
 
 public interface UserDoctorRecOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.ids.UserDoctorRec)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.UserDoctorRec)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -47,7 +46,7 @@ public interface UserDoctorRecOrBuilder extends
    * Expiration date for the recommendation.
    * </pre>
    *
-   * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+   * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
    */
   boolean hasExpirationDate();
   /**
@@ -55,17 +54,17 @@ public interface UserDoctorRecOrBuilder extends
    * Expiration date for the recommendation.
    * </pre>
    *
-   * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+   * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
    */
-  io.bloombox.schema.temporal.Date getExpirationDate();
+  io.opencannabis.schema.temporal.Date getExpirationDate();
   /**
    * <pre>
    * Expiration date for the recommendation.
    * </pre>
    *
-   * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+   * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
    */
-  io.bloombox.schema.temporal.DateOrBuilder getExpirationDateOrBuilder();
+  io.opencannabis.schema.temporal.DateOrBuilder getExpirationDateOrBuilder();
 
   /**
    * <pre>
@@ -90,7 +89,7 @@ public interface UserDoctorRecOrBuilder extends
    * US state where the recommendation is valid.
    * </pre>
    *
-   * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+   * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
    */
   int getStateValue();
   /**
@@ -98,9 +97,9 @@ public interface UserDoctorRecOrBuilder extends
    * US state where the recommendation is valid.
    * </pre>
    *
-   * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+   * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
    */
-  io.bloombox.schema.geo.usa.USState getState();
+  io.opencannabis.schema.geo.usa.USState getState();
 
   /**
    * <pre>
@@ -143,7 +142,7 @@ public interface UserDoctorRecOrBuilder extends
    * Personal information about the physician.
    * </pre>
    *
-   * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+   * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
    */
   boolean hasDoctor();
   /**
@@ -151,15 +150,15 @@ public interface UserDoctorRecOrBuilder extends
    * Personal information about the physician.
    * </pre>
    *
-   * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+   * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
    */
-  io.bloombox.schema.person.Person getDoctor();
+  io.opencannabis.schema.person.Person getDoctor();
   /**
    * <pre>
    * Personal information about the physician.
    * </pre>
    *
-   * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+   * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
    */
-  io.bloombox.schema.person.PersonOrBuilder getDoctorOrBuilder();
+  io.opencannabis.schema.person.PersonOrBuilder getDoctorOrBuilder();
 }

@@ -25,7 +25,7 @@ package io.bloombox.schema.services.devices.v1beta1;
  * Enumerates errors that may be yielded when working when the device service.
  * </pre>
  *
- * Protobuf enum {@code services.devices.v1beta1.DeviceError}
+ * Protobuf enum {@code bloombox.schema.services.devices.v1beta1.DeviceError}
  */
 public enum DeviceError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -186,6 +186,6 @@ public enum DeviceError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.devices.v1beta1.DeviceError)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.devices.v1beta1.DeviceError)
 }
 

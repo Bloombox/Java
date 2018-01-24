@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.partner;
 
 public interface PartnerDeviceOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:partner.PartnerDevice)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerDevice)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -35,89 +34,89 @@ public interface PartnerDeviceOrBuilder extends
       getUuidBytes();
 
   /**
-   * <code>.partner.Partner partner = 2;</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2;</code>
    */
   boolean hasPartner();
   /**
-   * <code>.partner.Partner partner = 2;</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2;</code>
    */
   io.bloombox.schema.partner.Partner getPartner();
   /**
-   * <code>.partner.Partner partner = 2;</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2;</code>
    */
   io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder();
 
   /**
-   * <code>.partner.PartnerLocation location = 3;</code>
+   * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
    */
   boolean hasLocation();
   /**
-   * <code>.partner.PartnerLocation location = 3;</code>
+   * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
    */
   io.bloombox.schema.partner.PartnerLocation getLocation();
   /**
-   * <code>.partner.PartnerLocation location = 3;</code>
+   * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
    */
   io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder();
 
   /**
-   * <code>.partner.PartnerDeviceType type = 4;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
    */
   int getTypeValue();
   /**
-   * <code>.partner.PartnerDeviceType type = 4;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
    */
   io.bloombox.schema.partner.PartnerDeviceType getType();
 
   /**
-   * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
    */
   boolean hasFlags();
   /**
-   * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
    */
   io.bloombox.schema.partner.PartnerDeviceFlags getFlags();
   /**
-   * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
    */
   io.bloombox.schema.partner.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder();
 
   /**
-   * <code>.device.Device device = 6;</code>
+   * <code>.opencannabis.device.Device device = 6;</code>
    */
   boolean hasDevice();
   /**
-   * <code>.device.Device device = 6;</code>
+   * <code>.opencannabis.device.Device device = 6;</code>
    */
-  io.bloombox.schema.device.Device getDevice();
+  io.opencannabis.schema.device.Device getDevice();
   /**
-   * <code>.device.Device device = 6;</code>
+   * <code>.opencannabis.device.Device device = 6;</code>
    */
-  io.bloombox.schema.device.DeviceOrBuilder getDeviceOrBuilder();
+  io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder();
 
   /**
-   * <code>.temporal.Instant seen = 7;</code>
+   * <code>.opencannabis.temporal.Instant seen = 7;</code>
    */
   boolean hasSeen();
   /**
-   * <code>.temporal.Instant seen = 7;</code>
+   * <code>.opencannabis.temporal.Instant seen = 7;</code>
    */
-  io.bloombox.schema.temporal.Instant getSeen();
+  io.opencannabis.schema.temporal.Instant getSeen();
   /**
-   * <code>.temporal.Instant seen = 7;</code>
+   * <code>.opencannabis.temporal.Instant seen = 7;</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder();
 
   /**
-   * <code>.temporal.Instant registered = 8;</code>
+   * <code>.opencannabis.temporal.Instant registered = 8;</code>
    */
   boolean hasRegistered();
   /**
-   * <code>.temporal.Instant registered = 8;</code>
+   * <code>.opencannabis.temporal.Instant registered = 8;</code>
    */
-  io.bloombox.schema.temporal.Instant getRegistered();
+  io.opencannabis.schema.temporal.Instant getRegistered();
   /**
-   * <code>.temporal.Instant registered = 8;</code>
+   * <code>.opencannabis.temporal.Instant registered = 8;</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getRegisteredOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getRegisteredOrBuilder();
 }

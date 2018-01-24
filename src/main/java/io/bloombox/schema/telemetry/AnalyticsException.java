@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class AnalyticsException {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface SourceLineReferenceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.generic.SourceLineReference)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.generic.SourceLineReference)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -57,11 +58,11 @@ public final class AnalyticsException {
    * References a line and column number in a source file that is mentioned in an error report.
    * </pre>
    *
-   * Protobuf type {@code analytics.generic.SourceLineReference}
+   * Protobuf type {@code bloombox.schema.analytics.generic.SourceLineReference}
    */
   public  static final class SourceLineReference extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.generic.SourceLineReference)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.generic.SourceLineReference)
       SourceLineReferenceOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SourceLineReference.newBuilder() to construct.
@@ -128,12 +129,12 @@ public final class AnalyticsException {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLineReference_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLineReference_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLineReference_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLineReference_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference.class, io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference.Builder.class);
     }
@@ -331,20 +332,20 @@ public final class AnalyticsException {
      * References a line and column number in a source file that is mentioned in an error report.
      * </pre>
      *
-     * Protobuf type {@code analytics.generic.SourceLineReference}
+     * Protobuf type {@code bloombox.schema.analytics.generic.SourceLineReference}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.generic.SourceLineReference)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.generic.SourceLineReference)
         io.bloombox.schema.telemetry.AnalyticsException.SourceLineReferenceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLineReference_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLineReference_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLineReference_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLineReference_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference.class, io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference.Builder.class);
       }
@@ -375,7 +376,7 @@ public final class AnalyticsException {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLineReference_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLineReference_descriptor;
       }
 
       public io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference getDefaultInstanceForType() {
@@ -554,10 +555,10 @@ public final class AnalyticsException {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.generic.SourceLineReference)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.generic.SourceLineReference)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.generic.SourceLineReference)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.generic.SourceLineReference)
     private static final io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference();
@@ -593,7 +594,7 @@ public final class AnalyticsException {
   }
 
   public interface SourceLocationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.generic.SourceLocation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.generic.SourceLocation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -637,7 +638,7 @@ public final class AnalyticsException {
      * Reference to a line/column in that file.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
      */
     boolean hasLineref();
     /**
@@ -645,7 +646,7 @@ public final class AnalyticsException {
      * Reference to a line/column in that file.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference getLineref();
     /**
@@ -653,7 +654,7 @@ public final class AnalyticsException {
      * Reference to a line/column in that file.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsException.SourceLineReferenceOrBuilder getLinerefOrBuilder();
 
@@ -673,11 +674,11 @@ public final class AnalyticsException {
    * References a location for source code that is mentioned in an error report.
    * </pre>
    *
-   * Protobuf type {@code analytics.generic.SourceLocation}
+   * Protobuf type {@code bloombox.schema.analytics.generic.SourceLocation}
    */
   public  static final class SourceLocation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.generic.SourceLocation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.generic.SourceLocation)
       SourceLocationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SourceLocation.newBuilder() to construct.
@@ -765,12 +766,12 @@ public final class AnalyticsException {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLocation_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLocation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLocation_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLocation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.class, io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.Builder.class);
     }
@@ -903,7 +904,7 @@ public final class AnalyticsException {
      * Reference to a line/column in that file.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
      */
     public boolean hasLineref() {
       return pinpointCase_ == 3;
@@ -913,7 +914,7 @@ public final class AnalyticsException {
      * Reference to a line/column in that file.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference getLineref() {
       if (pinpointCase_ == 3) {
@@ -926,7 +927,7 @@ public final class AnalyticsException {
      * Reference to a line/column in that file.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.SourceLineReferenceOrBuilder getLinerefOrBuilder() {
       if (pinpointCase_ == 3) {
@@ -1159,20 +1160,20 @@ public final class AnalyticsException {
      * References a location for source code that is mentioned in an error report.
      * </pre>
      *
-     * Protobuf type {@code analytics.generic.SourceLocation}
+     * Protobuf type {@code bloombox.schema.analytics.generic.SourceLocation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.generic.SourceLocation)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.generic.SourceLocation)
         io.bloombox.schema.telemetry.AnalyticsException.SourceLocationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLocation_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLocation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLocation_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLocation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.class, io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.Builder.class);
       }
@@ -1205,7 +1206,7 @@ public final class AnalyticsException {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_SourceLocation_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_SourceLocation_descriptor;
       }
 
       public io.bloombox.schema.telemetry.AnalyticsException.SourceLocation getDefaultInstanceForType() {
@@ -1524,7 +1525,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       public boolean hasLineref() {
         return pinpointCase_ == 3;
@@ -1534,7 +1535,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference getLineref() {
         if (linerefBuilder_ == null) {
@@ -1554,7 +1555,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       public Builder setLineref(io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference value) {
         if (linerefBuilder_ == null) {
@@ -1574,7 +1575,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       public Builder setLineref(
           io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference.Builder builderForValue) {
@@ -1592,7 +1593,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       public Builder mergeLineref(io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference value) {
         if (linerefBuilder_ == null) {
@@ -1618,7 +1619,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       public Builder clearLineref() {
         if (linerefBuilder_ == null) {
@@ -1641,7 +1642,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference.Builder getLinerefBuilder() {
         return getLinerefFieldBuilder().getBuilder();
@@ -1651,7 +1652,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.SourceLineReferenceOrBuilder getLinerefOrBuilder() {
         if ((pinpointCase_ == 3) && (linerefBuilder_ != null)) {
@@ -1668,7 +1669,7 @@ public final class AnalyticsException {
        * Reference to a line/column in that file.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLineReference lineref = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLineReference lineref = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference, io.bloombox.schema.telemetry.AnalyticsException.SourceLineReference.Builder, io.bloombox.schema.telemetry.AnalyticsException.SourceLineReferenceOrBuilder> 
@@ -1741,10 +1742,10 @@ public final class AnalyticsException {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.generic.SourceLocation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.generic.SourceLocation)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.generic.SourceLocation)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.generic.SourceLocation)
     private static final io.bloombox.schema.telemetry.AnalyticsException.SourceLocation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsException.SourceLocation();
@@ -1780,7 +1781,7 @@ public final class AnalyticsException {
   }
 
   public interface ExceptionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.generic.Exception)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.generic.Exception)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1815,7 +1816,7 @@ public final class AnalyticsException {
      * Source location context for this failure.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLocation location = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
      */
     boolean hasLocation();
     /**
@@ -1823,7 +1824,7 @@ public final class AnalyticsException {
      * Source location context for this failure.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLocation location = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsException.SourceLocation getLocation();
     /**
@@ -1831,7 +1832,7 @@ public final class AnalyticsException {
      * Source location context for this failure.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLocation location = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsException.SourceLocationOrBuilder getLocationOrBuilder();
 
@@ -1840,7 +1841,7 @@ public final class AnalyticsException {
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
     boolean hasOccurred();
     /**
@@ -1848,28 +1849,28 @@ public final class AnalyticsException {
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
    * Represents an error event.
    * </pre>
    *
-   * Protobuf type {@code analytics.generic.Exception}
+   * Protobuf type {@code bloombox.schema.analytics.generic.Exception}
    */
   public  static final class Exception extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.generic.Exception)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.generic.Exception)
       ExceptionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Exception.newBuilder() to construct.
@@ -1937,11 +1938,11 @@ public final class AnalyticsException {
               break;
             }
             case 34: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -1963,12 +1964,12 @@ public final class AnalyticsException {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_Exception_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_Exception_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_Exception_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_Exception_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsException.Exception.class, io.bloombox.schema.telemetry.AnalyticsException.Exception.Builder.class);
     }
@@ -2035,7 +2036,7 @@ public final class AnalyticsException {
      * Source location context for this failure.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLocation location = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -2045,7 +2046,7 @@ public final class AnalyticsException {
      * Source location context for this failure.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLocation location = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.SourceLocation getLocation() {
       return location_ == null ? io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.getDefaultInstance() : location_;
@@ -2055,20 +2056,20 @@ public final class AnalyticsException {
      * Source location context for this failure.
      * </pre>
      *
-     * <code>.analytics.generic.SourceLocation location = 3;</code>
+     * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsException.SourceLocationOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 4;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -2078,19 +2079,19 @@ public final class AnalyticsException {
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 4;</code>
+     * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -2292,20 +2293,20 @@ public final class AnalyticsException {
      * Represents an error event.
      * </pre>
      *
-     * Protobuf type {@code analytics.generic.Exception}
+     * Protobuf type {@code bloombox.schema.analytics.generic.Exception}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.generic.Exception)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.generic.Exception)
         io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_Exception_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_Exception_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_Exception_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_Exception_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsException.Exception.class, io.bloombox.schema.telemetry.AnalyticsException.Exception.Builder.class);
       }
@@ -2348,7 +2349,7 @@ public final class AnalyticsException {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_analytics_generic_Exception_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsException.internal_static_bloombox_schema_analytics_generic_Exception_descriptor;
       }
 
       public io.bloombox.schema.telemetry.AnalyticsException.Exception getDefaultInstanceForType() {
@@ -2593,7 +2594,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -2603,7 +2604,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.SourceLocation getLocation() {
         if (locationBuilder_ == null) {
@@ -2617,7 +2618,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       public Builder setLocation(io.bloombox.schema.telemetry.AnalyticsException.SourceLocation value) {
         if (locationBuilder_ == null) {
@@ -2637,7 +2638,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.Builder builderForValue) {
@@ -2655,7 +2656,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.telemetry.AnalyticsException.SourceLocation value) {
         if (locationBuilder_ == null) {
@@ -2677,7 +2678,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -2695,7 +2696,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.Builder getLocationBuilder() {
         
@@ -2707,7 +2708,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsException.SourceLocationOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -2722,7 +2723,7 @@ public final class AnalyticsException {
        * Source location context for this failure.
        * </pre>
        *
-       * <code>.analytics.generic.SourceLocation location = 3;</code>
+       * <code>.bloombox.schema.analytics.generic.SourceLocation location = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsException.SourceLocation, io.bloombox.schema.telemetry.AnalyticsException.SourceLocation.Builder, io.bloombox.schema.telemetry.AnalyticsException.SourceLocationOrBuilder> 
@@ -2738,15 +2739,15 @@ public final class AnalyticsException {
         return locationBuilder_;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -2756,11 +2757,11 @@ public final class AnalyticsException {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -2770,9 +2771,9 @@ public final class AnalyticsException {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2790,10 +2791,10 @@ public final class AnalyticsException {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -2808,13 +2809,13 @@ public final class AnalyticsException {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -2830,7 +2831,7 @@ public final class AnalyticsException {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -2848,9 +2849,9 @@ public final class AnalyticsException {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -2860,14 +2861,14 @@ public final class AnalyticsException {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -2875,14 +2876,14 @@ public final class AnalyticsException {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 4;</code>
+       * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -2901,10 +2902,10 @@ public final class AnalyticsException {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.generic.Exception)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.generic.Exception)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.generic.Exception)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.generic.Exception)
     private static final io.bloombox.schema.telemetry.AnalyticsException.Exception DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsException.Exception();
@@ -2940,20 +2941,20 @@ public final class AnalyticsException {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_generic_SourceLineReference_descriptor;
+    internal_static_bloombox_schema_analytics_generic_SourceLineReference_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_generic_SourceLineReference_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_generic_SourceLineReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_generic_SourceLocation_descriptor;
+    internal_static_bloombox_schema_analytics_generic_SourceLocation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_generic_SourceLocation_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_generic_SourceLocation_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_generic_Exception_descriptor;
+    internal_static_bloombox_schema_analytics_generic_Exception_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_generic_Exception_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_generic_Exception_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2963,19 +2964,20 @@ public final class AnalyticsException {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n!analytics/generic/Exception.proto\022\021ana" +
-      "lytics.generic\032\026temporal/Instant.proto\032\027" +
-      "analytics/Context.proto\"3\n\023SourceLineRef" +
-      "erence\022\014\n\004line\030\003 \001(\005\022\016\n\006column\030\004 \001(\005\"\213\001\n" +
-      "\016SourceLocation\022\016\n\006module\030\001 \001(\t\022\020\n\010filep" +
-      "ath\030\002 \001(\t\0229\n\007lineref\030\003 \001(\0132&.analytics.g" +
-      "eneric.SourceLineReferenceH\000\022\020\n\006offset\030\004" +
-      " \001(\003H\000B\n\n\010pinpoint\"\203\001\n\tException\022\016\n\006doma" +
-      "in\030\001 \001(\t\022\014\n\004code\030\002 \001(\005\0223\n\010location\030\003 \001(\013" +
-      "2!.analytics.generic.SourceLocation\022#\n\010o" +
-      "ccurred\030\004 \001(\0132\021.temporal.InstantB9\n\034io.b" +
-      "loombox.schema.telemetryB\022AnalyticsExcep" +
-      "tionH\001P\000\370\001\001b\006proto3"
+      "\n!analytics/generic/Exception.proto\022!blo" +
+      "ombox.schema.analytics.generic\032\026temporal" +
+      "/Instant.proto\"3\n\023SourceLineReference\022\014\n" +
+      "\004line\030\003 \001(\005\022\016\n\006column\030\004 \001(\005\"\233\001\n\016SourceLo" +
+      "cation\022\016\n\006module\030\001 \001(\t\022\020\n\010filepath\030\002 \001(\t" +
+      "\022I\n\007lineref\030\003 \001(\01326.bloombox.schema.anal" +
+      "ytics.generic.SourceLineReferenceH\000\022\020\n\006o" +
+      "ffset\030\004 \001(\003H\000B\n\n\010pinpoint\"\240\001\n\tException\022" +
+      "\016\n\006domain\030\001 \001(\t\022\014\n\004code\030\002 \001(\005\022C\n\010locatio" +
+      "n\030\003 \001(\01321.bloombox.schema.analytics.gene" +
+      "ric.SourceLocation\0220\n\010occurred\030\004 \001(\0132\036.o" +
+      "pencannabis.temporal.InstantB9\n\034io.bloom" +
+      "box.schema.telemetryB\022AnalyticsException" +
+      "H\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2988,29 +2990,27 @@ public final class AnalyticsException {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
-          io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_analytics_generic_SourceLineReference_descriptor =
+    internal_static_bloombox_schema_analytics_generic_SourceLineReference_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_generic_SourceLineReference_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_generic_SourceLineReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_generic_SourceLineReference_descriptor,
+        internal_static_bloombox_schema_analytics_generic_SourceLineReference_descriptor,
         new java.lang.String[] { "Line", "Column", });
-    internal_static_analytics_generic_SourceLocation_descriptor =
+    internal_static_bloombox_schema_analytics_generic_SourceLocation_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_analytics_generic_SourceLocation_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_generic_SourceLocation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_generic_SourceLocation_descriptor,
+        internal_static_bloombox_schema_analytics_generic_SourceLocation_descriptor,
         new java.lang.String[] { "Module", "Filepath", "Lineref", "Offset", "Pinpoint", });
-    internal_static_analytics_generic_Exception_descriptor =
+    internal_static_bloombox_schema_analytics_generic_Exception_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_analytics_generic_Exception_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_generic_Exception_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_generic_Exception_descriptor,
+        internal_static_bloombox_schema_analytics_generic_Exception_descriptor,
         new java.lang.String[] { "Domain", "Code", "Location", "Occurred", });
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
-    io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

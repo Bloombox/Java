@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.checkin.v1beta1;
 
 public interface IDCheckinOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.checkin.v1beta1.IDCheckin)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.checkin.v1beta1.IDCheckin)
     com.google.protobuf.MessageOrBuilder {
 }

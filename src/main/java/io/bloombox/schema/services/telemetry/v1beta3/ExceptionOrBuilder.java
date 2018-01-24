@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.telemetry.v1beta3;
 
 public interface ExceptionOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.Exception)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.Exception)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +29,7 @@ public interface ExceptionOrBuilder extends
    * Context to submit for these events.
    * </pre>
    *
-   * <code>.analytics.Context context = 1;</code>
+   * <code>.bloombox.schema.analytics.Context context = 1;</code>
    */
   boolean hasContext();
   /**
@@ -37,7 +37,7 @@ public interface ExceptionOrBuilder extends
    * Context to submit for these events.
    * </pre>
    *
-   * <code>.analytics.Context context = 1;</code>
+   * <code>.bloombox.schema.analytics.Context context = 1;</code>
    */
   io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
   /**
@@ -45,7 +45,7 @@ public interface ExceptionOrBuilder extends
    * Context to submit for these events.
    * </pre>
    *
-   * <code>.analytics.Context context = 1;</code>
+   * <code>.bloombox.schema.analytics.Context context = 1;</code>
    */
   io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
 
@@ -54,7 +54,7 @@ public interface ExceptionOrBuilder extends
    * Error to submit.
    * </pre>
    *
-   * <code>.analytics.generic.Exception error = 2;</code>
+   * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
    */
   boolean hasError();
   /**
@@ -62,7 +62,7 @@ public interface ExceptionOrBuilder extends
    * Error to submit.
    * </pre>
    *
-   * <code>.analytics.generic.Exception error = 2;</code>
+   * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
    */
   io.bloombox.schema.telemetry.AnalyticsException.Exception getError();
   /**
@@ -70,7 +70,7 @@ public interface ExceptionOrBuilder extends
    * Error to submit.
    * </pre>
    *
-   * <code>.analytics.generic.Exception error = 2;</code>
+   * <code>.bloombox.schema.analytics.generic.Exception error = 2;</code>
    */
   io.bloombox.schema.telemetry.AnalyticsException.ExceptionOrBuilder getErrorOrBuilder();
 

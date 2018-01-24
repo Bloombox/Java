@@ -32,25 +32,25 @@ public final class POSService {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_pos_v1beta1_Ping_descriptor;
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_pos_v1beta1_Ping_fieldAccessorTable;
+      internal_static_bloombox_schema_services_pos_v1beta1_Ping_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_pos_v1beta1_Ping_Request_descriptor;
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Request_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_pos_v1beta1_Ping_Request_fieldAccessorTable;
+      internal_static_bloombox_schema_services_pos_v1beta1_Ping_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_pos_v1beta1_Ping_Response_descriptor;
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_pos_v1beta1_Ping_Response_fieldAccessorTable;
+      internal_static_bloombox_schema_services_pos_v1beta1_Ping_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_services_pos_v1beta1_Ping_Operation_descriptor;
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Operation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_services_pos_v1beta1_Ping_Operation_fieldAccessorTable;
+      internal_static_bloombox_schema_services_pos_v1beta1_Ping_Operation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -60,23 +60,25 @@ public final class POSService {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034pos/v1beta1/POSService.proto\022\024services" +
-      ".pos.v1beta1\032\034services/ServiceStatus.pro" +
-      "to\032\034google/api/annotations.proto\"\277\001\n\004Pin" +
-      "g\032\t\n\007Request\0323\n\010Response\022\'\n\006status\030\001 \001(\016" +
-      "2\027.services.ServiceStatus\032w\n\tOperation\0223" +
-      "\n\007request\030\001 \001(\0132\".services.pos.v1beta1.P" +
-      "ing.Request\0225\n\010response\030\002 \001(\0132#.services" +
-      ".pos.v1beta1.Ping.Response*\262\001\n\010POSError\022" +
-      "\013\n\007UNKNOWN\020\000\022\026\n\022INVALID_COLLECTION\020\001\022\023\n\017" +
-      "INVALID_PARTNER\020\002\022\024\n\020INVALID_LOCATION\020\003\022" +
-      "\022\n\016INVALID_DEVICE\020\004\022\025\n\021PARTNER_NOT_FOUND" +
-      "\020\005\022\026\n\022LOCATION_NOT_FOUND\020\006\022\023\n\017INVALID_PA" +
-      "YLOAD\020c2u\n\013PointOfSale\022f\n\004Ping\022\".service" +
-      "s.pos.v1beta1.Ping.Request\032#.services.po" +
-      "s.v1beta1.Ping.Response\"\025\202\323\344\223\002\017\022\r/v1beta" +
-      "1/pingB-\n\'io.bloombox.schema.services.po" +
-      "s.v1beta1H\001P\001b\006proto3"
+      "\n\034pos/v1beta1/POSService.proto\022$bloombox" +
+      ".schema.services.pos.v1beta1\032\034services/S" +
+      "erviceStatus.proto\032\034google/api/annotatio" +
+      "ns.proto\"\360\001\n\004Ping\032\t\n\007Request\032C\n\010Response" +
+      "\0227\n\006status\030\001 \001(\0162\'.bloombox.schema.servi" +
+      "ces.ServiceStatus\032\227\001\n\tOperation\022C\n\007reque" +
+      "st\030\001 \001(\01322.bloombox.schema.services.pos." +
+      "v1beta1.Ping.Request\022E\n\010response\030\002 \001(\01323" +
+      ".bloombox.schema.services.pos.v1beta1.Pi" +
+      "ng.Response*\262\001\n\010POSError\022\013\n\007UNKNOWN\020\000\022\026\n" +
+      "\022INVALID_COLLECTION\020\001\022\023\n\017INVALID_PARTNER" +
+      "\020\002\022\024\n\020INVALID_LOCATION\020\003\022\022\n\016INVALID_DEVI" +
+      "CE\020\004\022\025\n\021PARTNER_NOT_FOUND\020\005\022\026\n\022LOCATION_" +
+      "NOT_FOUND\020\006\022\023\n\017INVALID_PAYLOAD\020c2\226\001\n\013Poi" +
+      "ntOfSale\022\206\001\n\004Ping\0222.bloombox.schema.serv" +
+      "ices.pos.v1beta1.Ping.Request\0323.bloombox" +
+      ".schema.services.pos.v1beta1.Ping.Respon" +
+      "se\"\025\202\323\344\223\002\017\022\r/v1beta1/pingB-\n\'io.bloombox" +
+      ".schema.services.pos.v1beta1H\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -92,29 +94,29 @@ public final class POSService {
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
-    internal_static_services_pos_v1beta1_Ping_descriptor =
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_services_pos_v1beta1_Ping_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_pos_v1beta1_Ping_descriptor,
+        internal_static_bloombox_schema_services_pos_v1beta1_Ping_descriptor,
         new java.lang.String[] { });
-    internal_static_services_pos_v1beta1_Ping_Request_descriptor =
-      internal_static_services_pos_v1beta1_Ping_descriptor.getNestedTypes().get(0);
-    internal_static_services_pos_v1beta1_Ping_Request_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Request_descriptor =
+      internal_static_bloombox_schema_services_pos_v1beta1_Ping_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_pos_v1beta1_Ping_Request_descriptor,
+        internal_static_bloombox_schema_services_pos_v1beta1_Ping_Request_descriptor,
         new java.lang.String[] { });
-    internal_static_services_pos_v1beta1_Ping_Response_descriptor =
-      internal_static_services_pos_v1beta1_Ping_descriptor.getNestedTypes().get(1);
-    internal_static_services_pos_v1beta1_Ping_Response_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Response_descriptor =
+      internal_static_bloombox_schema_services_pos_v1beta1_Ping_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_pos_v1beta1_Ping_Response_descriptor,
+        internal_static_bloombox_schema_services_pos_v1beta1_Ping_Response_descriptor,
         new java.lang.String[] { "Status", });
-    internal_static_services_pos_v1beta1_Ping_Operation_descriptor =
-      internal_static_services_pos_v1beta1_Ping_descriptor.getNestedTypes().get(2);
-    internal_static_services_pos_v1beta1_Ping_Operation_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Operation_descriptor =
+      internal_static_bloombox_schema_services_pos_v1beta1_Ping_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_schema_services_pos_v1beta1_Ping_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_services_pos_v1beta1_Ping_Operation_descriptor,
+        internal_static_bloombox_schema_services_pos_v1beta1_Ping_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

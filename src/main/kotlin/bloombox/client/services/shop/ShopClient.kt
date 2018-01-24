@@ -20,7 +20,7 @@ import bloombox.client.interfaces.ServiceClient
 import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.internals.rpc.RPCClient
 import com.google.common.util.concurrent.ListenableFuture
-import io.bloombox.schema.commerce.CommercialOrder
+import io.opencannabis.schema.commerce.CommercialOrder
 import io.bloombox.schema.partner.PartnerKey
 import io.bloombox.schema.partner.PartnerLocationKey
 import io.bloombox.schema.services.shop.v1.*

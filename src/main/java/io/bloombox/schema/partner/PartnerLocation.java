@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,11 +25,11 @@ package io.bloombox.schema.partner;
  * with Bloombox.
  * </pre>
  *
- * Protobuf type {@code partner.PartnerLocation}
+ * Protobuf type {@code bloombox.schema.partner.PartnerLocation}
  */
 public  final class PartnerLocation extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:partner.PartnerLocation)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerLocation)
     PartnerLocationOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use PartnerLocation.newBuilder() to construct.
@@ -119,11 +118,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 50: {
-            io.bloombox.schema.media.MediaItem.Builder subBuilder = null;
+            io.opencannabis.schema.media.MediaItem.Builder subBuilder = null;
             if (branding_ != null) {
               subBuilder = branding_.toBuilder();
             }
-            branding_ = input.readMessage(io.bloombox.schema.media.MediaItem.parser(), extensionRegistry);
+            branding_ = input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(branding_);
               branding_ = subBuilder.buildPartial();
@@ -132,11 +131,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            io.bloombox.schema.contact.ContactInfo.Builder subBuilder = null;
+            io.opencannabis.schema.contact.ContactInfo.Builder subBuilder = null;
             if (contact_ != null) {
               subBuilder = contact_.toBuilder();
             }
-            contact_ = input.readMessage(io.bloombox.schema.contact.ContactInfo.parser(), extensionRegistry);
+            contact_ = input.readMessage(io.opencannabis.schema.contact.ContactInfo.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(contact_);
               contact_ = subBuilder.buildPartial();
@@ -145,11 +144,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (created_ != null) {
               subBuilder = created_.toBuilder();
             }
-            created_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            created_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(created_);
               created_ = subBuilder.buildPartial();
@@ -158,11 +157,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 74: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (modified_ != null) {
               subBuilder = modified_.toBuilder();
             }
-            modified_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            modified_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(modified_);
               modified_ = subBuilder.buildPartial();
@@ -184,12 +183,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocation_descriptor;
+    return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocation_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocation_fieldAccessorTable
+    return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.partner.PartnerLocation.class, io.bloombox.schema.partner.PartnerLocation.Builder.class);
   }
@@ -243,7 +242,7 @@ private static final long serialVersionUID = 0L;
    * Partner record that owns this location.
    * </pre>
    *
-   * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   public boolean hasPartner() {
     return partner_ != null;
@@ -253,7 +252,7 @@ private static final long serialVersionUID = 0L;
    * Partner record that owns this location.
    * </pre>
    *
-   * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   public io.bloombox.schema.partner.Partner getPartner() {
     return partner_ == null ? io.bloombox.schema.partner.Partner.getDefaultInstance() : partner_;
@@ -263,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * Partner record that owns this location.
    * </pre>
    *
-   * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
   public io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder() {
     return getPartner();
@@ -360,7 +359,7 @@ private static final long serialVersionUID = 0L;
    * Flags that specify conditions applied to this partner location.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
    */
   public boolean hasFlags() {
     return flags_ != null;
@@ -370,7 +369,7 @@ private static final long serialVersionUID = 0L;
    * Flags that specify conditions applied to this partner location.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
    */
   public io.bloombox.schema.partner.PartnerFlags getFlags() {
     return flags_ == null ? io.bloombox.schema.partner.PartnerFlags.getDefaultInstance() : flags_;
@@ -380,20 +379,20 @@ private static final long serialVersionUID = 0L;
    * Flags that specify conditions applied to this partner location.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
    */
   public io.bloombox.schema.partner.PartnerFlagsOrBuilder getFlagsOrBuilder() {
     return getFlags();
   }
 
   public static final int CONTACT_FIELD_NUMBER = 7;
-  private io.bloombox.schema.contact.ContactInfo contact_;
+  private io.opencannabis.schema.contact.ContactInfo contact_;
   /**
    * <pre>
    * Contact information for this location.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
    */
   public boolean hasContact() {
     return contact_ != null;
@@ -403,30 +402,30 @@ private static final long serialVersionUID = 0L;
    * Contact information for this location.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
    */
-  public io.bloombox.schema.contact.ContactInfo getContact() {
-    return contact_ == null ? io.bloombox.schema.contact.ContactInfo.getDefaultInstance() : contact_;
+  public io.opencannabis.schema.contact.ContactInfo getContact() {
+    return contact_ == null ? io.opencannabis.schema.contact.ContactInfo.getDefaultInstance() : contact_;
   }
   /**
    * <pre>
    * Contact information for this location.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
    */
-  public io.bloombox.schema.contact.ContactInfoOrBuilder getContactOrBuilder() {
+  public io.opencannabis.schema.contact.ContactInfoOrBuilder getContactOrBuilder() {
     return getContact();
   }
 
   public static final int BRANDING_FIELD_NUMBER = 6;
-  private io.bloombox.schema.media.MediaItem branding_;
+  private io.opencannabis.schema.media.MediaItem branding_;
   /**
    * <pre>
    * Branding specific to this location. Partner-level branding is used if this is left unspecified.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
    */
   public boolean hasBranding() {
     return branding_ != null;
@@ -436,30 +435,30 @@ private static final long serialVersionUID = 0L;
    * Branding specific to this location. Partner-level branding is used if this is left unspecified.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
    */
-  public io.bloombox.schema.media.MediaItem getBranding() {
-    return branding_ == null ? io.bloombox.schema.media.MediaItem.getDefaultInstance() : branding_;
+  public io.opencannabis.schema.media.MediaItem getBranding() {
+    return branding_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
   }
   /**
    * <pre>
    * Branding specific to this location. Partner-level branding is used if this is left unspecified.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
    */
-  public io.bloombox.schema.media.MediaItemOrBuilder getBrandingOrBuilder() {
+  public io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder() {
     return getBranding();
   }
 
   public static final int CREATED_FIELD_NUMBER = 8;
-  private io.bloombox.schema.temporal.Instant created_;
+  private io.opencannabis.schema.temporal.Instant created_;
   /**
    * <pre>
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
   public boolean hasCreated() {
     return created_ != null;
@@ -469,30 +468,30 @@ private static final long serialVersionUID = 0L;
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
-  public io.bloombox.schema.temporal.Instant getCreated() {
-    return created_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : created_;
+  public io.opencannabis.schema.temporal.Instant getCreated() {
+    return created_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : created_;
   }
   /**
    * <pre>
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getCreatedOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getCreatedOrBuilder() {
     return getCreated();
   }
 
   public static final int MODIFIED_FIELD_NUMBER = 9;
-  private io.bloombox.schema.temporal.Instant modified_;
+  private io.opencannabis.schema.temporal.Instant modified_;
   /**
    * <pre>
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
   public boolean hasModified() {
     return modified_ != null;
@@ -502,19 +501,19 @@ private static final long serialVersionUID = 0L;
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
-  public io.bloombox.schema.temporal.Instant getModified() {
-    return modified_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : modified_;
+  public io.opencannabis.schema.temporal.Instant getModified() {
+    return modified_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
   }
   /**
    * <pre>
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getModifiedOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder() {
     return getModified();
   }
 
@@ -790,20 +789,20 @@ private static final long serialVersionUID = 0L;
    * with Bloombox.
    * </pre>
    *
-   * Protobuf type {@code partner.PartnerLocation}
+   * Protobuf type {@code bloombox.schema.partner.PartnerLocation}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:partner.PartnerLocation)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerLocation)
       io.bloombox.schema.partner.PartnerLocationOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocation_descriptor;
+      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocation_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerLocation.class, io.bloombox.schema.partner.PartnerLocation.Builder.class);
     }
@@ -872,7 +871,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_partner_PartnerLocation_descriptor;
+      return io.bloombox.schema.partner.PartnerLocationOuterClass.internal_static_bloombox_schema_partner_PartnerLocation_descriptor;
     }
 
     public io.bloombox.schema.partner.PartnerLocation getDefaultInstanceForType() {
@@ -1117,7 +1116,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public boolean hasPartner() {
       return partnerBuilder_ != null || partner_ != null;
@@ -1127,7 +1126,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.bloombox.schema.partner.Partner getPartner() {
       if (partnerBuilder_ == null) {
@@ -1141,7 +1140,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder setPartner(io.bloombox.schema.partner.Partner value) {
       if (partnerBuilder_ == null) {
@@ -1161,7 +1160,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder setPartner(
         io.bloombox.schema.partner.Partner.Builder builderForValue) {
@@ -1179,7 +1178,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder mergePartner(io.bloombox.schema.partner.Partner value) {
       if (partnerBuilder_ == null) {
@@ -1201,7 +1200,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder clearPartner() {
       if (partnerBuilder_ == null) {
@@ -1219,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.bloombox.schema.partner.Partner.Builder getPartnerBuilder() {
       
@@ -1231,7 +1230,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder() {
       if (partnerBuilder_ != null) {
@@ -1246,7 +1245,7 @@ private static final long serialVersionUID = 0L;
      * Partner record that owns this location.
      * </pre>
      *
-     * <code>.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.Partner, io.bloombox.schema.partner.Partner.Builder, io.bloombox.schema.partner.PartnerOrBuilder> 
@@ -1448,7 +1447,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     public boolean hasFlags() {
       return flagsBuilder_ != null || flags_ != null;
@@ -1458,7 +1457,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     public io.bloombox.schema.partner.PartnerFlags getFlags() {
       if (flagsBuilder_ == null) {
@@ -1472,7 +1471,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     public Builder setFlags(io.bloombox.schema.partner.PartnerFlags value) {
       if (flagsBuilder_ == null) {
@@ -1492,7 +1491,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     public Builder setFlags(
         io.bloombox.schema.partner.PartnerFlags.Builder builderForValue) {
@@ -1510,7 +1509,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     public Builder mergeFlags(io.bloombox.schema.partner.PartnerFlags value) {
       if (flagsBuilder_ == null) {
@@ -1532,7 +1531,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     public Builder clearFlags() {
       if (flagsBuilder_ == null) {
@@ -1550,7 +1549,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     public io.bloombox.schema.partner.PartnerFlags.Builder getFlagsBuilder() {
       
@@ -1562,7 +1561,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     public io.bloombox.schema.partner.PartnerFlagsOrBuilder getFlagsOrBuilder() {
       if (flagsBuilder_ != null) {
@@ -1577,7 +1576,7 @@ private static final long serialVersionUID = 0L;
      * Flags that specify conditions applied to this partner location.
      * </pre>
      *
-     * <code>.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
+     * <code>.bloombox.schema.partner.PartnerFlags flags = 5 [(.gen_bq_schema.description) = "Flags that specify conditions applied to this partner location."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.PartnerFlags, io.bloombox.schema.partner.PartnerFlags.Builder, io.bloombox.schema.partner.PartnerFlagsOrBuilder> 
@@ -1593,15 +1592,15 @@ private static final long serialVersionUID = 0L;
       return flagsBuilder_;
     }
 
-    private io.bloombox.schema.contact.ContactInfo contact_ = null;
+    private io.opencannabis.schema.contact.ContactInfo contact_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.contact.ContactInfo, io.bloombox.schema.contact.ContactInfo.Builder, io.bloombox.schema.contact.ContactInfoOrBuilder> contactBuilder_;
+        io.opencannabis.schema.contact.ContactInfo, io.opencannabis.schema.contact.ContactInfo.Builder, io.opencannabis.schema.contact.ContactInfoOrBuilder> contactBuilder_;
     /**
      * <pre>
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
     public boolean hasContact() {
       return contactBuilder_ != null || contact_ != null;
@@ -1611,11 +1610,11 @@ private static final long serialVersionUID = 0L;
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
-    public io.bloombox.schema.contact.ContactInfo getContact() {
+    public io.opencannabis.schema.contact.ContactInfo getContact() {
       if (contactBuilder_ == null) {
-        return contact_ == null ? io.bloombox.schema.contact.ContactInfo.getDefaultInstance() : contact_;
+        return contact_ == null ? io.opencannabis.schema.contact.ContactInfo.getDefaultInstance() : contact_;
       } else {
         return contactBuilder_.getMessage();
       }
@@ -1625,9 +1624,9 @@ private static final long serialVersionUID = 0L;
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
-    public Builder setContact(io.bloombox.schema.contact.ContactInfo value) {
+    public Builder setContact(io.opencannabis.schema.contact.ContactInfo value) {
       if (contactBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1645,10 +1644,10 @@ private static final long serialVersionUID = 0L;
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
     public Builder setContact(
-        io.bloombox.schema.contact.ContactInfo.Builder builderForValue) {
+        io.opencannabis.schema.contact.ContactInfo.Builder builderForValue) {
       if (contactBuilder_ == null) {
         contact_ = builderForValue.build();
         onChanged();
@@ -1663,13 +1662,13 @@ private static final long serialVersionUID = 0L;
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
-    public Builder mergeContact(io.bloombox.schema.contact.ContactInfo value) {
+    public Builder mergeContact(io.opencannabis.schema.contact.ContactInfo value) {
       if (contactBuilder_ == null) {
         if (contact_ != null) {
           contact_ =
-            io.bloombox.schema.contact.ContactInfo.newBuilder(contact_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.contact.ContactInfo.newBuilder(contact_).mergeFrom(value).buildPartial();
         } else {
           contact_ = value;
         }
@@ -1685,7 +1684,7 @@ private static final long serialVersionUID = 0L;
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
     public Builder clearContact() {
       if (contactBuilder_ == null) {
@@ -1703,9 +1702,9 @@ private static final long serialVersionUID = 0L;
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
-    public io.bloombox.schema.contact.ContactInfo.Builder getContactBuilder() {
+    public io.opencannabis.schema.contact.ContactInfo.Builder getContactBuilder() {
       
       onChanged();
       return getContactFieldBuilder().getBuilder();
@@ -1715,14 +1714,14 @@ private static final long serialVersionUID = 0L;
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
-    public io.bloombox.schema.contact.ContactInfoOrBuilder getContactOrBuilder() {
+    public io.opencannabis.schema.contact.ContactInfoOrBuilder getContactOrBuilder() {
       if (contactBuilder_ != null) {
         return contactBuilder_.getMessageOrBuilder();
       } else {
         return contact_ == null ?
-            io.bloombox.schema.contact.ContactInfo.getDefaultInstance() : contact_;
+            io.opencannabis.schema.contact.ContactInfo.getDefaultInstance() : contact_;
       }
     }
     /**
@@ -1730,14 +1729,14 @@ private static final long serialVersionUID = 0L;
      * Contact information for this location.
      * </pre>
      *
-     * <code>.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
+     * <code>.opencannabis.contact.ContactInfo contact = 7 [(.gen_bq_schema.description) = "Contact information for this location."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.contact.ContactInfo, io.bloombox.schema.contact.ContactInfo.Builder, io.bloombox.schema.contact.ContactInfoOrBuilder> 
+        io.opencannabis.schema.contact.ContactInfo, io.opencannabis.schema.contact.ContactInfo.Builder, io.opencannabis.schema.contact.ContactInfoOrBuilder> 
         getContactFieldBuilder() {
       if (contactBuilder_ == null) {
         contactBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.contact.ContactInfo, io.bloombox.schema.contact.ContactInfo.Builder, io.bloombox.schema.contact.ContactInfoOrBuilder>(
+            io.opencannabis.schema.contact.ContactInfo, io.opencannabis.schema.contact.ContactInfo.Builder, io.opencannabis.schema.contact.ContactInfoOrBuilder>(
                 getContact(),
                 getParentForChildren(),
                 isClean());
@@ -1746,15 +1745,15 @@ private static final long serialVersionUID = 0L;
       return contactBuilder_;
     }
 
-    private io.bloombox.schema.media.MediaItem branding_ = null;
+    private io.opencannabis.schema.media.MediaItem branding_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.media.MediaItem, io.bloombox.schema.media.MediaItem.Builder, io.bloombox.schema.media.MediaItemOrBuilder> brandingBuilder_;
+        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> brandingBuilder_;
     /**
      * <pre>
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
     public boolean hasBranding() {
       return brandingBuilder_ != null || branding_ != null;
@@ -1764,11 +1763,11 @@ private static final long serialVersionUID = 0L;
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
-    public io.bloombox.schema.media.MediaItem getBranding() {
+    public io.opencannabis.schema.media.MediaItem getBranding() {
       if (brandingBuilder_ == null) {
-        return branding_ == null ? io.bloombox.schema.media.MediaItem.getDefaultInstance() : branding_;
+        return branding_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
       } else {
         return brandingBuilder_.getMessage();
       }
@@ -1778,9 +1777,9 @@ private static final long serialVersionUID = 0L;
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
-    public Builder setBranding(io.bloombox.schema.media.MediaItem value) {
+    public Builder setBranding(io.opencannabis.schema.media.MediaItem value) {
       if (brandingBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1798,10 +1797,10 @@ private static final long serialVersionUID = 0L;
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
     public Builder setBranding(
-        io.bloombox.schema.media.MediaItem.Builder builderForValue) {
+        io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
       if (brandingBuilder_ == null) {
         branding_ = builderForValue.build();
         onChanged();
@@ -1816,13 +1815,13 @@ private static final long serialVersionUID = 0L;
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
-    public Builder mergeBranding(io.bloombox.schema.media.MediaItem value) {
+    public Builder mergeBranding(io.opencannabis.schema.media.MediaItem value) {
       if (brandingBuilder_ == null) {
         if (branding_ != null) {
           branding_ =
-            io.bloombox.schema.media.MediaItem.newBuilder(branding_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.media.MediaItem.newBuilder(branding_).mergeFrom(value).buildPartial();
         } else {
           branding_ = value;
         }
@@ -1838,7 +1837,7 @@ private static final long serialVersionUID = 0L;
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
     public Builder clearBranding() {
       if (brandingBuilder_ == null) {
@@ -1856,9 +1855,9 @@ private static final long serialVersionUID = 0L;
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
-    public io.bloombox.schema.media.MediaItem.Builder getBrandingBuilder() {
+    public io.opencannabis.schema.media.MediaItem.Builder getBrandingBuilder() {
       
       onChanged();
       return getBrandingFieldBuilder().getBuilder();
@@ -1868,14 +1867,14 @@ private static final long serialVersionUID = 0L;
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
-    public io.bloombox.schema.media.MediaItemOrBuilder getBrandingOrBuilder() {
+    public io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder() {
       if (brandingBuilder_ != null) {
         return brandingBuilder_.getMessageOrBuilder();
       } else {
         return branding_ == null ?
-            io.bloombox.schema.media.MediaItem.getDefaultInstance() : branding_;
+            io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
       }
     }
     /**
@@ -1883,14 +1882,14 @@ private static final long serialVersionUID = 0L;
      * Branding specific to this location. Partner-level branding is used if this is left unspecified.
      * </pre>
      *
-     * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
+     * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding specific to this location. Partner-level branding is used if this is left unspecified."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.media.MediaItem, io.bloombox.schema.media.MediaItem.Builder, io.bloombox.schema.media.MediaItemOrBuilder> 
+        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
         getBrandingFieldBuilder() {
       if (brandingBuilder_ == null) {
         brandingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.media.MediaItem, io.bloombox.schema.media.MediaItem.Builder, io.bloombox.schema.media.MediaItemOrBuilder>(
+            io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
                 getBranding(),
                 getParentForChildren(),
                 isClean());
@@ -1899,15 +1898,15 @@ private static final long serialVersionUID = 0L;
       return brandingBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant created_ = null;
+    private io.opencannabis.schema.temporal.Instant created_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> createdBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> createdBuilder_;
     /**
      * <pre>
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
     public boolean hasCreated() {
       return createdBuilder_ != null || created_ != null;
@@ -1917,11 +1916,11 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
-    public io.bloombox.schema.temporal.Instant getCreated() {
+    public io.opencannabis.schema.temporal.Instant getCreated() {
       if (createdBuilder_ == null) {
-        return created_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : created_;
+        return created_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : created_;
       } else {
         return createdBuilder_.getMessage();
       }
@@ -1931,9 +1930,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
-    public Builder setCreated(io.bloombox.schema.temporal.Instant value) {
+    public Builder setCreated(io.opencannabis.schema.temporal.Instant value) {
       if (createdBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1951,10 +1950,10 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
     public Builder setCreated(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (createdBuilder_ == null) {
         created_ = builderForValue.build();
         onChanged();
@@ -1969,13 +1968,13 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
-    public Builder mergeCreated(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeCreated(io.opencannabis.schema.temporal.Instant value) {
       if (createdBuilder_ == null) {
         if (created_ != null) {
           created_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(created_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(created_).mergeFrom(value).buildPartial();
         } else {
           created_ = value;
         }
@@ -1991,7 +1990,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
     public Builder clearCreated() {
       if (createdBuilder_ == null) {
@@ -2009,9 +2008,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getCreatedBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getCreatedBuilder() {
       
       onChanged();
       return getCreatedFieldBuilder().getBuilder();
@@ -2021,14 +2020,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getCreatedOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getCreatedOrBuilder() {
       if (createdBuilder_ != null) {
         return createdBuilder_.getMessageOrBuilder();
       } else {
         return created_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : created_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : created_;
       }
     }
     /**
@@ -2036,14 +2035,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was created.
      * </pre>
      *
-     * <code>.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+     * <code>.opencannabis.temporal.Instant created = 8 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getCreatedFieldBuilder() {
       if (createdBuilder_ == null) {
         createdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getCreated(),
                 getParentForChildren(),
                 isClean());
@@ -2052,15 +2051,15 @@ private static final long serialVersionUID = 0L;
       return createdBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant modified_ = null;
+    private io.opencannabis.schema.temporal.Instant modified_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> modifiedBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> modifiedBuilder_;
     /**
      * <pre>
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
     public boolean hasModified() {
       return modifiedBuilder_ != null || modified_ != null;
@@ -2070,11 +2069,11 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
-    public io.bloombox.schema.temporal.Instant getModified() {
+    public io.opencannabis.schema.temporal.Instant getModified() {
       if (modifiedBuilder_ == null) {
-        return modified_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : modified_;
+        return modified_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
       } else {
         return modifiedBuilder_.getMessage();
       }
@@ -2084,9 +2083,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
-    public Builder setModified(io.bloombox.schema.temporal.Instant value) {
+    public Builder setModified(io.opencannabis.schema.temporal.Instant value) {
       if (modifiedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2104,10 +2103,10 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
     public Builder setModified(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (modifiedBuilder_ == null) {
         modified_ = builderForValue.build();
         onChanged();
@@ -2122,13 +2121,13 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
-    public Builder mergeModified(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeModified(io.opencannabis.schema.temporal.Instant value) {
       if (modifiedBuilder_ == null) {
         if (modified_ != null) {
           modified_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(modified_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(modified_).mergeFrom(value).buildPartial();
         } else {
           modified_ = value;
         }
@@ -2144,7 +2143,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
     public Builder clearModified() {
       if (modifiedBuilder_ == null) {
@@ -2162,9 +2161,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getModifiedBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getModifiedBuilder() {
       
       onChanged();
       return getModifiedFieldBuilder().getBuilder();
@@ -2174,14 +2173,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getModifiedOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder() {
       if (modifiedBuilder_ != null) {
         return modifiedBuilder_.getMessageOrBuilder();
       } else {
         return modified_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : modified_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
       }
     }
     /**
@@ -2189,14 +2188,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this record was last modified.
      * </pre>
      *
-     * <code>.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+     * <code>.opencannabis.temporal.Instant modified = 9 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getModifiedFieldBuilder() {
       if (modifiedBuilder_ == null) {
         modifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getModified(),
                 getParentForChildren(),
                 isClean());
@@ -2215,10 +2214,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:partner.PartnerLocation)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerLocation)
   }
 
-  // @@protoc_insertion_point(class_scope:partner.PartnerLocation)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerLocation)
   private static final io.bloombox.schema.partner.PartnerLocation DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerLocation();

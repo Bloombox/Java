@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.identity;
 
 public interface IDOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.ID)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ID)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +28,7 @@ public interface IDOrBuilder extends
    * Type of ID we're specifying.
    * </pre>
    *
-   * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+   * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
    */
   int getTypeValue();
   /**
@@ -37,7 +36,7 @@ public interface IDOrBuilder extends
    * Type of ID we're specifying.
    * </pre>
    *
-   * <code>.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+   * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
    */
   io.bloombox.schema.identity.IDType getType();
 
@@ -64,7 +63,7 @@ public interface IDOrBuilder extends
    * Expiration date for this document.
    * </pre>
    *
-   * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+   * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
    */
   boolean hasExpireDate();
   /**
@@ -72,24 +71,24 @@ public interface IDOrBuilder extends
    * Expiration date for this document.
    * </pre>
    *
-   * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+   * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
    */
-  io.bloombox.schema.temporal.Date getExpireDate();
+  io.opencannabis.schema.temporal.Date getExpireDate();
   /**
    * <pre>
    * Expiration date for this document.
    * </pre>
    *
-   * <code>.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+   * <code>.opencannabis.temporal.Date expire_date = 3 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
    */
-  io.bloombox.schema.temporal.DateOrBuilder getExpireDateOrBuilder();
+  io.opencannabis.schema.temporal.DateOrBuilder getExpireDateOrBuilder();
 
   /**
    * <pre>
    * Birth date listed on this document.
    * </pre>
    *
-   * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+   * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
    */
   boolean hasBirthDate();
   /**
@@ -97,24 +96,24 @@ public interface IDOrBuilder extends
    * Birth date listed on this document.
    * </pre>
    *
-   * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+   * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
    */
-  io.bloombox.schema.temporal.Date getBirthDate();
+  io.opencannabis.schema.temporal.Date getBirthDate();
   /**
    * <pre>
    * Birth date listed on this document.
    * </pre>
    *
-   * <code>.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+   * <code>.opencannabis.temporal.Date birth_date = 4 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
    */
-  io.bloombox.schema.temporal.DateOrBuilder getBirthDateOrBuilder();
+  io.opencannabis.schema.temporal.DateOrBuilder getBirthDateOrBuilder();
 
   /**
    * <pre>
    * United States Driver's License.
    * </pre>
    *
-   * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+   * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
    */
   boolean hasLicense();
   /**
@@ -122,7 +121,7 @@ public interface IDOrBuilder extends
    * United States Driver's License.
    * </pre>
    *
-   * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+   * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
    */
   io.bloombox.schema.identity.ids.USDL getLicense();
   /**
@@ -130,7 +129,7 @@ public interface IDOrBuilder extends
    * United States Driver's License.
    * </pre>
    *
-   * <code>.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+   * <code>.bloombox.schema.identity.ids.USDL license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
    */
   io.bloombox.schema.identity.ids.USDLOrBuilder getLicenseOrBuilder();
 
@@ -139,7 +138,7 @@ public interface IDOrBuilder extends
    * National passport.
    * </pre>
    *
-   * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+   * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
    */
   boolean hasPassport();
   /**
@@ -147,7 +146,7 @@ public interface IDOrBuilder extends
    * National passport.
    * </pre>
    *
-   * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+   * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
    */
   io.bloombox.schema.identity.ids.Passport getPassport();
   /**
@@ -155,7 +154,7 @@ public interface IDOrBuilder extends
    * National passport.
    * </pre>
    *
-   * <code>.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+   * <code>.bloombox.schema.identity.ids.Passport passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
    */
   io.bloombox.schema.identity.ids.PassportOrBuilder getPassportOrBuilder();
 

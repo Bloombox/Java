@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.security;
 
 public interface DeviceTokenOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:security.DeviceToken)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.security.DeviceToken)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +28,7 @@ public interface DeviceTokenOrBuilder extends
    * Authentication token, usable by this device to authenticate to the API, etc.
    * </pre>
    *
-   * <code>.security.AuthToken token = 1;</code>
+   * <code>.bloombox.schema.security.AuthToken token = 1;</code>
    */
   boolean hasToken();
   /**
@@ -37,7 +36,7 @@ public interface DeviceTokenOrBuilder extends
    * Authentication token, usable by this device to authenticate to the API, etc.
    * </pre>
    *
-   * <code>.security.AuthToken token = 1;</code>
+   * <code>.bloombox.schema.security.AuthToken token = 1;</code>
    */
   io.bloombox.schema.security.AuthToken getToken();
   /**
@@ -45,7 +44,7 @@ public interface DeviceTokenOrBuilder extends
    * Authentication token, usable by this device to authenticate to the API, etc.
    * </pre>
    *
-   * <code>.security.AuthToken token = 1;</code>
+   * <code>.bloombox.schema.security.AuthToken token = 1;</code>
    */
   io.bloombox.schema.security.AuthTokenOrBuilder getTokenOrBuilder();
 
@@ -54,7 +53,7 @@ public interface DeviceTokenOrBuilder extends
    * Information passed from the server to this device, including credentials, stateful flags, and so on.
    * </pre>
    *
-   * <code>.device.Device device = 2;</code>
+   * <code>.opencannabis.device.Device device = 2;</code>
    */
   boolean hasDevice();
   /**
@@ -62,24 +61,24 @@ public interface DeviceTokenOrBuilder extends
    * Information passed from the server to this device, including credentials, stateful flags, and so on.
    * </pre>
    *
-   * <code>.device.Device device = 2;</code>
+   * <code>.opencannabis.device.Device device = 2;</code>
    */
-  io.bloombox.schema.device.Device getDevice();
+  io.opencannabis.schema.device.Device getDevice();
   /**
    * <pre>
    * Information passed from the server to this device, including credentials, stateful flags, and so on.
    * </pre>
    *
-   * <code>.device.Device device = 2;</code>
+   * <code>.opencannabis.device.Device device = 2;</code>
    */
-  io.bloombox.schema.device.DeviceOrBuilder getDeviceOrBuilder();
+  io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder();
 
   /**
    * <pre>
    * Issuance timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant issued = 3;</code>
+   * <code>.opencannabis.temporal.Instant issued = 3;</code>
    */
   boolean hasIssued();
   /**
@@ -87,24 +86,24 @@ public interface DeviceTokenOrBuilder extends
    * Issuance timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant issued = 3;</code>
+   * <code>.opencannabis.temporal.Instant issued = 3;</code>
    */
-  io.bloombox.schema.temporal.Instant getIssued();
+  io.opencannabis.schema.temporal.Instant getIssued();
   /**
    * <pre>
    * Issuance timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant issued = 3;</code>
+   * <code>.opencannabis.temporal.Instant issued = 3;</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getIssuedOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getIssuedOrBuilder();
 
   /**
    * <pre>
    * Expiry timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant expires = 4;</code>
+   * <code>.opencannabis.temporal.Instant expires = 4;</code>
    */
   boolean hasExpires();
   /**
@@ -112,15 +111,15 @@ public interface DeviceTokenOrBuilder extends
    * Expiry timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant expires = 4;</code>
+   * <code>.opencannabis.temporal.Instant expires = 4;</code>
    */
-  io.bloombox.schema.temporal.Instant getExpires();
+  io.opencannabis.schema.temporal.Instant getExpires();
   /**
    * <pre>
    * Expiry timestamp for this device token.
    * </pre>
    *
-   * <code>.temporal.Instant expires = 4;</code>
+   * <code>.opencannabis.temporal.Instant expires = 4;</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getExpiresOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getExpiresOrBuilder();
 }

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,20 +31,20 @@ public final class PartnerDeviceOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partner_PartnerDeviceKey_descriptor;
+    internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partner_PartnerDeviceKey_fieldAccessorTable;
+      internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partner_PartnerDevice_descriptor;
+    internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partner_PartnerDevice_fieldAccessorTable;
+      internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_partner_PartnerDeviceFlags_descriptor;
+    internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_partner_PartnerDeviceFlags_fieldAccessorTable;
+      internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -55,26 +54,30 @@ public final class PartnerDeviceOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033partner/PartnerDevice.proto\022\007partner\032\023" +
-      "device/Device.proto\032\025partner/Partner.pro" +
-      "to\032\035partner/PartnerLocation.proto\032\026tempo" +
-      "ral/Instant.proto\"O\n\020PartnerDeviceKey\022-\n" +
-      "\010location\030\001 \001(\0132\033.partner.PartnerLocatio" +
-      "nKey\022\014\n\004uuid\030\002 \001(\t\"\252\002\n\rPartnerDevice\022\014\n\004" +
-      "uuid\030\001 \001(\t\022!\n\007partner\030\002 \001(\0132\020.partner.Pa" +
-      "rtner\022*\n\010location\030\003 \001(\0132\030.partner.Partne" +
-      "rLocation\022(\n\004type\030\004 \001(\0162\032.partner.Partne" +
-      "rDeviceType\022*\n\005flags\030\005 \001(\0132\033.partner.Par" +
-      "tnerDeviceFlags\022\036\n\006device\030\006 \001(\0132\016.device" +
-      ".Device\022\037\n\004seen\030\007 \001(\0132\021.temporal.Instant" +
-      "\022%\n\nregistered\030\010 \001(\0132\021.temporal.Instant\"" +
-      "V\n\022PartnerDeviceFlags\022\016\n\006active\030\001 \001(\010\022\021\n" +
-      "\tsuspended\030\002 \001(\010\022\014\n\004beta\030\003 \001(\010\022\017\n\007sandbo" +
-      "x\030\004 \001(\010*\223\001\n\021PartnerDeviceType\022\033\n\027UNSPECI" +
-      "FIED_DEVICE_TYPE\020\000\022\014\n\010INTERNAL\020\001\022\017\n\013MENU" +
-      "_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n\017CHECKIN_STATIO" +
-      "N\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014POS_REGISTER\020\036B \n" +
-      "\032io.bloombox.schema.partnerH\001P\001b\006proto3"
+      "\n\033partner/PartnerDevice.proto\022\027bloombox." +
+      "schema.partner\032\023device/Device.proto\032\025par" +
+      "tner/Partner.proto\032\035partner/PartnerLocat" +
+      "ion.proto\032\026temporal/Instant.proto\"_\n\020Par" +
+      "tnerDeviceKey\022=\n\010location\030\001 \001(\0132+.bloomb" +
+      "ox.schema.partner.PartnerLocationKey\022\014\n\004" +
+      "uuid\030\002 \001(\t\"\221\003\n\rPartnerDevice\022\014\n\004uuid\030\001 \001" +
+      "(\t\0221\n\007partner\030\002 \001(\0132 .bloombox.schema.pa" +
+      "rtner.Partner\022:\n\010location\030\003 \001(\0132(.bloomb" +
+      "ox.schema.partner.PartnerLocation\0228\n\004typ" +
+      "e\030\004 \001(\0162*.bloombox.schema.partner.Partne" +
+      "rDeviceType\022:\n\005flags\030\005 \001(\0132+.bloombox.sc" +
+      "hema.partner.PartnerDeviceFlags\022+\n\006devic" +
+      "e\030\006 \001(\0132\033.opencannabis.device.Device\022,\n\004" +
+      "seen\030\007 \001(\0132\036.opencannabis.temporal.Insta" +
+      "nt\0222\n\nregistered\030\010 \001(\0132\036.opencannabis.te" +
+      "mporal.Instant\"V\n\022PartnerDeviceFlags\022\016\n\006" +
+      "active\030\001 \001(\010\022\021\n\tsuspended\030\002 \001(\010\022\014\n\004beta\030" +
+      "\003 \001(\010\022\017\n\007sandbox\030\004 \001(\010*\223\001\n\021PartnerDevice" +
+      "Type\022\033\n\027UNSPECIFIED_DEVICE_TYPE\020\000\022\014\n\010INT" +
+      "ERNAL\020\001\022\017\n\013MENU_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n" +
+      "\017CHECKIN_STATION\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014PO" +
+      "S_REGISTER\020\036B \n\032io.bloombox.schema.partn" +
+      "erH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -87,33 +90,33 @@ public final class PartnerDeviceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.device.DeviceOuterClass.getDescriptor(),
+          io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
           io.bloombox.schema.partner.PartnerOuterClass.getDescriptor(),
           io.bloombox.schema.partner.PartnerLocationOuterClass.getDescriptor(),
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_partner_PartnerDeviceKey_descriptor =
+    internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_partner_PartnerDeviceKey_fieldAccessorTable = new
+    internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partner_PartnerDeviceKey_descriptor,
+        internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor,
         new java.lang.String[] { "Location", "Uuid", });
-    internal_static_partner_PartnerDevice_descriptor =
+    internal_static_bloombox_schema_partner_PartnerDevice_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_partner_PartnerDevice_fieldAccessorTable = new
+    internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partner_PartnerDevice_descriptor,
+        internal_static_bloombox_schema_partner_PartnerDevice_descriptor,
         new java.lang.String[] { "Uuid", "Partner", "Location", "Type", "Flags", "Device", "Seen", "Registered", });
-    internal_static_partner_PartnerDeviceFlags_descriptor =
+    internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_partner_PartnerDeviceFlags_fieldAccessorTable = new
+    internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_partner_PartnerDeviceFlags_descriptor,
+        internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor,
         new java.lang.String[] { "Active", "Suspended", "Beta", "Sandbox", });
-    io.bloombox.schema.device.DeviceOuterClass.getDescriptor();
+    io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
     io.bloombox.schema.partner.PartnerOuterClass.getDescriptor();
     io.bloombox.schema.partner.PartnerLocationOuterClass.getDescriptor();
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

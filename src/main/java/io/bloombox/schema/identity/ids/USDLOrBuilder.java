@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.identity.ids;
 
 public interface USDLOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.ids.USDL)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.USDL)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -65,7 +64,7 @@ public interface USDLOrBuilder extends
    * State that issued this Driver's License.
    * </pre>
    *
-   * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+   * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
    */
   int getJurisdictionValue();
   /**
@@ -73,9 +72,9 @@ public interface USDLOrBuilder extends
    * State that issued this Driver's License.
    * </pre>
    *
-   * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+   * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
    */
-  io.bloombox.schema.geo.usa.USState getJurisdiction();
+  io.opencannabis.schema.geo.usa.USState getJurisdiction();
 
   /**
    * <pre>
@@ -91,7 +90,7 @@ public interface USDLOrBuilder extends
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   java.util.List<io.bloombox.schema.identity.ids.USDLFieldValue> 
       getFieldsList();
@@ -100,7 +99,7 @@ public interface USDLOrBuilder extends
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   io.bloombox.schema.identity.ids.USDLFieldValue getFields(int index);
   /**
@@ -108,7 +107,7 @@ public interface USDLOrBuilder extends
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   int getFieldsCount();
   /**
@@ -116,7 +115,7 @@ public interface USDLOrBuilder extends
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   java.util.List<? extends io.bloombox.schema.identity.ids.USDLFieldValueOrBuilder> 
       getFieldsOrBuilderList();
@@ -125,7 +124,7 @@ public interface USDLOrBuilder extends
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   io.bloombox.schema.identity.ids.USDLFieldValueOrBuilder getFieldsOrBuilder(
       int index);

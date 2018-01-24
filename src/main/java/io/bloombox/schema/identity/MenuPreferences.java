@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * Consumer preferences related to menus and products.
  * </pre>
  *
- * Protobuf type {@code identity.MenuPreferences}
+ * Protobuf type {@code bloombox.schema.identity.MenuPreferences}
  */
 public  final class MenuPreferences extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.MenuPreferences)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.MenuPreferences)
     MenuPreferencesOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use MenuPreferences.newBuilder() to construct.
@@ -233,12 +232,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_MenuPreferences_descriptor;
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_MenuPreferences_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_MenuPreferences_fieldAccessorTable
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_MenuPreferences_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.MenuPreferences.class, io.bloombox.schema.identity.MenuPreferences.Builder.class);
   }
@@ -247,12 +246,12 @@ private static final long serialVersionUID = 0L;
   public static final int SECTION_FIELD_NUMBER = 1;
   private java.util.List<java.lang.Integer> section_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, io.bloombox.schema.menu.section.Section> section_converter_ =
+      java.lang.Integer, io.opencannabis.schema.menu.section.Section> section_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, io.bloombox.schema.menu.section.Section>() {
-            public io.bloombox.schema.menu.section.Section convert(java.lang.Integer from) {
-              io.bloombox.schema.menu.section.Section result = io.bloombox.schema.menu.section.Section.valueOf(from);
-              return result == null ? io.bloombox.schema.menu.section.Section.UNRECOGNIZED : result;
+              java.lang.Integer, io.opencannabis.schema.menu.section.Section>() {
+            public io.opencannabis.schema.menu.section.Section convert(java.lang.Integer from) {
+              io.opencannabis.schema.menu.section.Section result = io.opencannabis.schema.menu.section.Section.valueOf(from);
+              return result == null ? io.opencannabis.schema.menu.section.Section.UNRECOGNIZED : result;
             }
           };
   /**
@@ -260,18 +259,18 @@ private static final long serialVersionUID = 0L;
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
-  public java.util.List<io.bloombox.schema.menu.section.Section> getSectionList() {
+  public java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, io.bloombox.schema.menu.section.Section>(section_, section_converter_);
+        java.lang.Integer, io.opencannabis.schema.menu.section.Section>(section_, section_converter_);
   }
   /**
    * <pre>
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
   public int getSectionCount() {
     return section_.size();
@@ -281,9 +280,9 @@ private static final long serialVersionUID = 0L;
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
-  public io.bloombox.schema.menu.section.Section getSection(int index) {
+  public io.opencannabis.schema.menu.section.Section getSection(int index) {
     return section_converter_.convert(section_.get(index));
   }
   /**
@@ -291,7 +290,7 @@ private static final long serialVersionUID = 0L;
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
   public java.util.List<java.lang.Integer>
   getSectionValueList() {
@@ -302,7 +301,7 @@ private static final long serialVersionUID = 0L;
    * Preferred menu sections or product types.
    * </pre>
    *
-   * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+   * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
    */
   public int getSectionValue(int index) {
     return section_.get(index);
@@ -312,12 +311,12 @@ private static final long serialVersionUID = 0L;
   public static final int FEELING_FIELD_NUMBER = 2;
   private java.util.List<java.lang.Integer> feeling_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, io.bloombox.schema.product.struct.testing.Feeling> feeling_converter_ =
+      java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling> feeling_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, io.bloombox.schema.product.struct.testing.Feeling>() {
-            public io.bloombox.schema.product.struct.testing.Feeling convert(java.lang.Integer from) {
-              io.bloombox.schema.product.struct.testing.Feeling result = io.bloombox.schema.product.struct.testing.Feeling.valueOf(from);
-              return result == null ? io.bloombox.schema.product.struct.testing.Feeling.UNRECOGNIZED : result;
+              java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>() {
+            public io.opencannabis.schema.product.struct.testing.Feeling convert(java.lang.Integer from) {
+              io.opencannabis.schema.product.struct.testing.Feeling result = io.opencannabis.schema.product.struct.testing.Feeling.valueOf(from);
+              return result == null ? io.opencannabis.schema.product.struct.testing.Feeling.UNRECOGNIZED : result;
             }
           };
   /**
@@ -325,18 +324,18 @@ private static final long serialVersionUID = 0L;
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
-  public java.util.List<io.bloombox.schema.product.struct.testing.Feeling> getFeelingList() {
+  public java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, io.bloombox.schema.product.struct.testing.Feeling>(feeling_, feeling_converter_);
+        java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>(feeling_, feeling_converter_);
   }
   /**
    * <pre>
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
   public int getFeelingCount() {
     return feeling_.size();
@@ -346,9 +345,9 @@ private static final long serialVersionUID = 0L;
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
-  public io.bloombox.schema.product.struct.testing.Feeling getFeeling(int index) {
+  public io.opencannabis.schema.product.struct.testing.Feeling getFeeling(int index) {
     return feeling_converter_.convert(feeling_.get(index));
   }
   /**
@@ -356,7 +355,7 @@ private static final long serialVersionUID = 0L;
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
   public java.util.List<java.lang.Integer>
   getFeelingValueList() {
@@ -367,7 +366,7 @@ private static final long serialVersionUID = 0L;
    * Preferred feelings or experiential states.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
    */
   public int getFeelingValue(int index) {
     return feeling_.get(index);
@@ -377,12 +376,12 @@ private static final long serialVersionUID = 0L;
   public static final int TASTE_NOTE_FIELD_NUMBER = 3;
   private java.util.List<java.lang.Integer> tasteNote_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, io.bloombox.schema.product.struct.testing.TasteNote> tasteNote_converter_ =
+      java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote> tasteNote_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, io.bloombox.schema.product.struct.testing.TasteNote>() {
-            public io.bloombox.schema.product.struct.testing.TasteNote convert(java.lang.Integer from) {
-              io.bloombox.schema.product.struct.testing.TasteNote result = io.bloombox.schema.product.struct.testing.TasteNote.valueOf(from);
-              return result == null ? io.bloombox.schema.product.struct.testing.TasteNote.UNRECOGNIZED : result;
+              java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>() {
+            public io.opencannabis.schema.product.struct.testing.TasteNote convert(java.lang.Integer from) {
+              io.opencannabis.schema.product.struct.testing.TasteNote result = io.opencannabis.schema.product.struct.testing.TasteNote.valueOf(from);
+              return result == null ? io.opencannabis.schema.product.struct.testing.TasteNote.UNRECOGNIZED : result;
             }
           };
   /**
@@ -390,18 +389,18 @@ private static final long serialVersionUID = 0L;
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
-  public java.util.List<io.bloombox.schema.product.struct.testing.TasteNote> getTasteNoteList() {
+  public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getTasteNoteList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, io.bloombox.schema.product.struct.testing.TasteNote>(tasteNote_, tasteNote_converter_);
+        java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(tasteNote_, tasteNote_converter_);
   }
   /**
    * <pre>
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
   public int getTasteNoteCount() {
     return tasteNote_.size();
@@ -411,9 +410,9 @@ private static final long serialVersionUID = 0L;
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
-  public io.bloombox.schema.product.struct.testing.TasteNote getTasteNote(int index) {
+  public io.opencannabis.schema.product.struct.testing.TasteNote getTasteNote(int index) {
     return tasteNote_converter_.convert(tasteNote_.get(index));
   }
   /**
@@ -421,7 +420,7 @@ private static final long serialVersionUID = 0L;
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
   public java.util.List<java.lang.Integer>
   getTasteNoteValueList() {
@@ -432,7 +431,7 @@ private static final long serialVersionUID = 0L;
    * Preferred tasting notes.
    * </pre>
    *
-   * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
    */
   public int getTasteNoteValue(int index) {
     return tasteNote_.get(index);
@@ -446,7 +445,7 @@ private static final long serialVersionUID = 0L;
    * Desired potency level.
    * </pre>
    *
-   * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+   * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
    */
   public int getDesiredPotencyValue() {
     return desiredPotency_;
@@ -456,11 +455,11 @@ private static final long serialVersionUID = 0L;
    * Desired potency level.
    * </pre>
    *
-   * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+   * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
    */
-  public io.bloombox.schema.product.struct.testing.PotencyEstimate getDesiredPotency() {
-    io.bloombox.schema.product.struct.testing.PotencyEstimate result = io.bloombox.schema.product.struct.testing.PotencyEstimate.valueOf(desiredPotency_);
-    return result == null ? io.bloombox.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
+  public io.opencannabis.schema.product.struct.testing.PotencyEstimate getDesiredPotency() {
+    io.opencannabis.schema.product.struct.testing.PotencyEstimate result = io.opencannabis.schema.product.struct.testing.PotencyEstimate.valueOf(desiredPotency_);
+    return result == null ? io.opencannabis.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
   }
 
   public static final int CANNABINOID_RATIO_FIELD_NUMBER = 5;
@@ -470,7 +469,7 @@ private static final long serialVersionUID = 0L;
    * Desired cannabinoid ratio.
    * </pre>
    *
-   * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+   * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
    */
   public int getCannabinoidRatioValue() {
     return cannabinoidRatio_;
@@ -480,22 +479,22 @@ private static final long serialVersionUID = 0L;
    * Desired cannabinoid ratio.
    * </pre>
    *
-   * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+   * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
    */
-  public io.bloombox.schema.product.struct.testing.CannabinoidRatio getCannabinoidRatio() {
-    io.bloombox.schema.product.struct.testing.CannabinoidRatio result = io.bloombox.schema.product.struct.testing.CannabinoidRatio.valueOf(cannabinoidRatio_);
-    return result == null ? io.bloombox.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
+  public io.opencannabis.schema.product.struct.testing.CannabinoidRatio getCannabinoidRatio() {
+    io.opencannabis.schema.product.struct.testing.CannabinoidRatio result = io.opencannabis.schema.product.struct.testing.CannabinoidRatio.valueOf(cannabinoidRatio_);
+    return result == null ? io.opencannabis.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
   }
 
   public static final int SPECIES_FIELD_NUMBER = 6;
   private java.util.List<java.lang.Integer> species_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, io.bloombox.schema.product.struct.Species> species_converter_ =
+      java.lang.Integer, io.opencannabis.schema.product.struct.Species> species_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, io.bloombox.schema.product.struct.Species>() {
-            public io.bloombox.schema.product.struct.Species convert(java.lang.Integer from) {
-              io.bloombox.schema.product.struct.Species result = io.bloombox.schema.product.struct.Species.valueOf(from);
-              return result == null ? io.bloombox.schema.product.struct.Species.UNRECOGNIZED : result;
+              java.lang.Integer, io.opencannabis.schema.product.struct.Species>() {
+            public io.opencannabis.schema.product.struct.Species convert(java.lang.Integer from) {
+              io.opencannabis.schema.product.struct.Species result = io.opencannabis.schema.product.struct.Species.valueOf(from);
+              return result == null ? io.opencannabis.schema.product.struct.Species.UNRECOGNIZED : result;
             }
           };
   /**
@@ -503,18 +502,18 @@ private static final long serialVersionUID = 0L;
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
-  public java.util.List<io.bloombox.schema.product.struct.Species> getSpeciesList() {
+  public java.util.List<io.opencannabis.schema.product.struct.Species> getSpeciesList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, io.bloombox.schema.product.struct.Species>(species_, species_converter_);
+        java.lang.Integer, io.opencannabis.schema.product.struct.Species>(species_, species_converter_);
   }
   /**
    * <pre>
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
   public int getSpeciesCount() {
     return species_.size();
@@ -524,9 +523,9 @@ private static final long serialVersionUID = 0L;
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
-  public io.bloombox.schema.product.struct.Species getSpecies(int index) {
+  public io.opencannabis.schema.product.struct.Species getSpecies(int index) {
     return species_converter_.convert(species_.get(index));
   }
   /**
@@ -534,7 +533,7 @@ private static final long serialVersionUID = 0L;
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
   public java.util.List<java.lang.Integer>
   getSpeciesValueList() {
@@ -545,7 +544,7 @@ private static final long serialVersionUID = 0L;
    * Preferred species types.
    * </pre>
    *
-   * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+   * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
    */
   public int getSpeciesValue(int index) {
     return species_.get(index);
@@ -555,12 +554,12 @@ private static final long serialVersionUID = 0L;
   public static final int GROW_FIELD_NUMBER = 7;
   private java.util.List<java.lang.Integer> grow_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, io.bloombox.schema.product.struct.Grow> grow_converter_ =
+      java.lang.Integer, io.opencannabis.schema.product.struct.Grow> grow_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, io.bloombox.schema.product.struct.Grow>() {
-            public io.bloombox.schema.product.struct.Grow convert(java.lang.Integer from) {
-              io.bloombox.schema.product.struct.Grow result = io.bloombox.schema.product.struct.Grow.valueOf(from);
-              return result == null ? io.bloombox.schema.product.struct.Grow.UNRECOGNIZED : result;
+              java.lang.Integer, io.opencannabis.schema.product.struct.Grow>() {
+            public io.opencannabis.schema.product.struct.Grow convert(java.lang.Integer from) {
+              io.opencannabis.schema.product.struct.Grow result = io.opencannabis.schema.product.struct.Grow.valueOf(from);
+              return result == null ? io.opencannabis.schema.product.struct.Grow.UNRECOGNIZED : result;
             }
           };
   /**
@@ -568,18 +567,18 @@ private static final long serialVersionUID = 0L;
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
-  public java.util.List<io.bloombox.schema.product.struct.Grow> getGrowList() {
+  public java.util.List<io.opencannabis.schema.product.struct.Grow> getGrowList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, io.bloombox.schema.product.struct.Grow>(grow_, grow_converter_);
+        java.lang.Integer, io.opencannabis.schema.product.struct.Grow>(grow_, grow_converter_);
   }
   /**
    * <pre>
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
   public int getGrowCount() {
     return grow_.size();
@@ -589,9 +588,9 @@ private static final long serialVersionUID = 0L;
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
-  public io.bloombox.schema.product.struct.Grow getGrow(int index) {
+  public io.opencannabis.schema.product.struct.Grow getGrow(int index) {
     return grow_converter_.convert(grow_.get(index));
   }
   /**
@@ -599,7 +598,7 @@ private static final long serialVersionUID = 0L;
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
   public java.util.List<java.lang.Integer>
   getGrowValueList() {
@@ -610,7 +609,7 @@ private static final long serialVersionUID = 0L;
    * Preferred grow types.
    * </pre>
    *
-   * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+   * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
    */
   public int getGrowValue(int index) {
     return grow_.get(index);
@@ -651,10 +650,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < tasteNote_.size(); i++) {
       output.writeEnumNoTag(tasteNote_.get(i));
     }
-    if (desiredPotency_ != io.bloombox.schema.product.struct.testing.PotencyEstimate.LIGHT.getNumber()) {
+    if (desiredPotency_ != io.opencannabis.schema.product.struct.testing.PotencyEstimate.LIGHT.getNumber()) {
       output.writeEnum(4, desiredPotency_);
     }
-    if (cannabinoidRatio_ != io.bloombox.schema.product.struct.testing.CannabinoidRatio.NO_CANNABINOID_PREFERENCE.getNumber()) {
+    if (cannabinoidRatio_ != io.opencannabis.schema.product.struct.testing.CannabinoidRatio.NO_CANNABINOID_PREFERENCE.getNumber()) {
       output.writeEnum(5, cannabinoidRatio_);
     }
     if (getSpeciesList().size() > 0) {
@@ -715,11 +714,11 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }tasteNoteMemoizedSerializedSize = dataSize;
     }
-    if (desiredPotency_ != io.bloombox.schema.product.struct.testing.PotencyEstimate.LIGHT.getNumber()) {
+    if (desiredPotency_ != io.opencannabis.schema.product.struct.testing.PotencyEstimate.LIGHT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, desiredPotency_);
     }
-    if (cannabinoidRatio_ != io.bloombox.schema.product.struct.testing.CannabinoidRatio.NO_CANNABINOID_PREFERENCE.getNumber()) {
+    if (cannabinoidRatio_ != io.opencannabis.schema.product.struct.testing.CannabinoidRatio.NO_CANNABINOID_PREFERENCE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, cannabinoidRatio_);
     }
@@ -903,20 +902,20 @@ private static final long serialVersionUID = 0L;
    * Consumer preferences related to menus and products.
    * </pre>
    *
-   * Protobuf type {@code identity.MenuPreferences}
+   * Protobuf type {@code bloombox.schema.identity.MenuPreferences}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.MenuPreferences)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.MenuPreferences)
       io.bloombox.schema.identity.MenuPreferencesOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_MenuPreferences_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_MenuPreferences_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_MenuPreferences_fieldAccessorTable
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_MenuPreferences_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.MenuPreferences.class, io.bloombox.schema.identity.MenuPreferences.Builder.class);
     }
@@ -957,7 +956,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_MenuPreferences_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_MenuPreferences_descriptor;
     }
 
     public io.bloombox.schema.identity.MenuPreferences getDefaultInstanceForType() {
@@ -1142,18 +1141,18 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
-    public java.util.List<io.bloombox.schema.menu.section.Section> getSectionList() {
+    public java.util.List<io.opencannabis.schema.menu.section.Section> getSectionList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, io.bloombox.schema.menu.section.Section>(section_, section_converter_);
+          java.lang.Integer, io.opencannabis.schema.menu.section.Section>(section_, section_converter_);
     }
     /**
      * <pre>
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public int getSectionCount() {
       return section_.size();
@@ -1163,9 +1162,9 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
-    public io.bloombox.schema.menu.section.Section getSection(int index) {
+    public io.opencannabis.schema.menu.section.Section getSection(int index) {
       return section_converter_.convert(section_.get(index));
     }
     /**
@@ -1173,10 +1172,10 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public Builder setSection(
-        int index, io.bloombox.schema.menu.section.Section value) {
+        int index, io.opencannabis.schema.menu.section.Section value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1190,9 +1189,9 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
-    public Builder addSection(io.bloombox.schema.menu.section.Section value) {
+    public Builder addSection(io.opencannabis.schema.menu.section.Section value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1206,12 +1205,12 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public Builder addAllSection(
-        java.lang.Iterable<? extends io.bloombox.schema.menu.section.Section> values) {
+        java.lang.Iterable<? extends io.opencannabis.schema.menu.section.Section> values) {
       ensureSectionIsMutable();
-      for (io.bloombox.schema.menu.section.Section value : values) {
+      for (io.opencannabis.schema.menu.section.Section value : values) {
         section_.add(value.getNumber());
       }
       onChanged();
@@ -1222,7 +1221,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public Builder clearSection() {
       section_ = java.util.Collections.emptyList();
@@ -1235,7 +1234,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public java.util.List<java.lang.Integer>
     getSectionValueList() {
@@ -1246,7 +1245,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public int getSectionValue(int index) {
       return section_.get(index);
@@ -1256,7 +1255,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public Builder setSectionValue(
         int index, int value) {
@@ -1270,7 +1269,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public Builder addSectionValue(int value) {
       ensureSectionIsMutable();
@@ -1283,7 +1282,7 @@ private static final long serialVersionUID = 0L;
      * Preferred menu sections or product types.
      * </pre>
      *
-     * <code>repeated .products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
+     * <code>repeated .opencannabis.products.menu.section.Section section = 1 [(.gen_bq_schema.description) = "Preferred menu sections or product types."];</code>
      */
     public Builder addAllSectionValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -1308,18 +1307,18 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
-    public java.util.List<io.bloombox.schema.product.struct.testing.Feeling> getFeelingList() {
+    public java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, io.bloombox.schema.product.struct.testing.Feeling>(feeling_, feeling_converter_);
+          java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>(feeling_, feeling_converter_);
     }
     /**
      * <pre>
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public int getFeelingCount() {
       return feeling_.size();
@@ -1329,9 +1328,9 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
-    public io.bloombox.schema.product.struct.testing.Feeling getFeeling(int index) {
+    public io.opencannabis.schema.product.struct.testing.Feeling getFeeling(int index) {
       return feeling_converter_.convert(feeling_.get(index));
     }
     /**
@@ -1339,10 +1338,10 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public Builder setFeeling(
-        int index, io.bloombox.schema.product.struct.testing.Feeling value) {
+        int index, io.opencannabis.schema.product.struct.testing.Feeling value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1356,9 +1355,9 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
-    public Builder addFeeling(io.bloombox.schema.product.struct.testing.Feeling value) {
+    public Builder addFeeling(io.opencannabis.schema.product.struct.testing.Feeling value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1372,12 +1371,12 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public Builder addAllFeeling(
-        java.lang.Iterable<? extends io.bloombox.schema.product.struct.testing.Feeling> values) {
+        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.Feeling> values) {
       ensureFeelingIsMutable();
-      for (io.bloombox.schema.product.struct.testing.Feeling value : values) {
+      for (io.opencannabis.schema.product.struct.testing.Feeling value : values) {
         feeling_.add(value.getNumber());
       }
       onChanged();
@@ -1388,7 +1387,7 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public Builder clearFeeling() {
       feeling_ = java.util.Collections.emptyList();
@@ -1401,7 +1400,7 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public java.util.List<java.lang.Integer>
     getFeelingValueList() {
@@ -1412,7 +1411,7 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public int getFeelingValue(int index) {
       return feeling_.get(index);
@@ -1422,7 +1421,7 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public Builder setFeelingValue(
         int index, int value) {
@@ -1436,7 +1435,7 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public Builder addFeelingValue(int value) {
       ensureFeelingIsMutable();
@@ -1449,7 +1448,7 @@ private static final long serialVersionUID = 0L;
      * Preferred feelings or experiential states.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2 [(.gen_bq_schema.description) = "Preferred feelings or experiential states."];</code>
      */
     public Builder addAllFeelingValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -1474,18 +1473,18 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
-    public java.util.List<io.bloombox.schema.product.struct.testing.TasteNote> getTasteNoteList() {
+    public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getTasteNoteList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, io.bloombox.schema.product.struct.testing.TasteNote>(tasteNote_, tasteNote_converter_);
+          java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(tasteNote_, tasteNote_converter_);
     }
     /**
      * <pre>
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public int getTasteNoteCount() {
       return tasteNote_.size();
@@ -1495,9 +1494,9 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
-    public io.bloombox.schema.product.struct.testing.TasteNote getTasteNote(int index) {
+    public io.opencannabis.schema.product.struct.testing.TasteNote getTasteNote(int index) {
       return tasteNote_converter_.convert(tasteNote_.get(index));
     }
     /**
@@ -1505,10 +1504,10 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public Builder setTasteNote(
-        int index, io.bloombox.schema.product.struct.testing.TasteNote value) {
+        int index, io.opencannabis.schema.product.struct.testing.TasteNote value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1522,9 +1521,9 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
-    public Builder addTasteNote(io.bloombox.schema.product.struct.testing.TasteNote value) {
+    public Builder addTasteNote(io.opencannabis.schema.product.struct.testing.TasteNote value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1538,12 +1537,12 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public Builder addAllTasteNote(
-        java.lang.Iterable<? extends io.bloombox.schema.product.struct.testing.TasteNote> values) {
+        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.TasteNote> values) {
       ensureTasteNoteIsMutable();
-      for (io.bloombox.schema.product.struct.testing.TasteNote value : values) {
+      for (io.opencannabis.schema.product.struct.testing.TasteNote value : values) {
         tasteNote_.add(value.getNumber());
       }
       onChanged();
@@ -1554,7 +1553,7 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public Builder clearTasteNote() {
       tasteNote_ = java.util.Collections.emptyList();
@@ -1567,7 +1566,7 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public java.util.List<java.lang.Integer>
     getTasteNoteValueList() {
@@ -1578,7 +1577,7 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public int getTasteNoteValue(int index) {
       return tasteNote_.get(index);
@@ -1588,7 +1587,7 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public Builder setTasteNoteValue(
         int index, int value) {
@@ -1602,7 +1601,7 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public Builder addTasteNoteValue(int value) {
       ensureTasteNoteIsMutable();
@@ -1615,7 +1614,7 @@ private static final long serialVersionUID = 0L;
      * Preferred tasting notes.
      * </pre>
      *
-     * <code>repeated .structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote taste_note = 3 [(.gen_bq_schema.description) = "Preferred tasting notes."];</code>
      */
     public Builder addAllTasteNoteValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -1633,7 +1632,7 @@ private static final long serialVersionUID = 0L;
      * Desired potency level.
      * </pre>
      *
-     * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
      */
     public int getDesiredPotencyValue() {
       return desiredPotency_;
@@ -1643,7 +1642,7 @@ private static final long serialVersionUID = 0L;
      * Desired potency level.
      * </pre>
      *
-     * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
      */
     public Builder setDesiredPotencyValue(int value) {
       desiredPotency_ = value;
@@ -1655,20 +1654,20 @@ private static final long serialVersionUID = 0L;
      * Desired potency level.
      * </pre>
      *
-     * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
      */
-    public io.bloombox.schema.product.struct.testing.PotencyEstimate getDesiredPotency() {
-      io.bloombox.schema.product.struct.testing.PotencyEstimate result = io.bloombox.schema.product.struct.testing.PotencyEstimate.valueOf(desiredPotency_);
-      return result == null ? io.bloombox.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
+    public io.opencannabis.schema.product.struct.testing.PotencyEstimate getDesiredPotency() {
+      io.opencannabis.schema.product.struct.testing.PotencyEstimate result = io.opencannabis.schema.product.struct.testing.PotencyEstimate.valueOf(desiredPotency_);
+      return result == null ? io.opencannabis.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Desired potency level.
      * </pre>
      *
-     * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
      */
-    public Builder setDesiredPotency(io.bloombox.schema.product.struct.testing.PotencyEstimate value) {
+    public Builder setDesiredPotency(io.opencannabis.schema.product.struct.testing.PotencyEstimate value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1682,7 +1681,7 @@ private static final long serialVersionUID = 0L;
      * Desired potency level.
      * </pre>
      *
-     * <code>.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate desired_potency = 4 [(.gen_bq_schema.description) = "Desired potency level."];</code>
      */
     public Builder clearDesiredPotency() {
       
@@ -1697,7 +1696,7 @@ private static final long serialVersionUID = 0L;
      * Desired cannabinoid ratio.
      * </pre>
      *
-     * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
      */
     public int getCannabinoidRatioValue() {
       return cannabinoidRatio_;
@@ -1707,7 +1706,7 @@ private static final long serialVersionUID = 0L;
      * Desired cannabinoid ratio.
      * </pre>
      *
-     * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
      */
     public Builder setCannabinoidRatioValue(int value) {
       cannabinoidRatio_ = value;
@@ -1719,20 +1718,20 @@ private static final long serialVersionUID = 0L;
      * Desired cannabinoid ratio.
      * </pre>
      *
-     * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
      */
-    public io.bloombox.schema.product.struct.testing.CannabinoidRatio getCannabinoidRatio() {
-      io.bloombox.schema.product.struct.testing.CannabinoidRatio result = io.bloombox.schema.product.struct.testing.CannabinoidRatio.valueOf(cannabinoidRatio_);
-      return result == null ? io.bloombox.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
+    public io.opencannabis.schema.product.struct.testing.CannabinoidRatio getCannabinoidRatio() {
+      io.opencannabis.schema.product.struct.testing.CannabinoidRatio result = io.opencannabis.schema.product.struct.testing.CannabinoidRatio.valueOf(cannabinoidRatio_);
+      return result == null ? io.opencannabis.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Desired cannabinoid ratio.
      * </pre>
      *
-     * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
      */
-    public Builder setCannabinoidRatio(io.bloombox.schema.product.struct.testing.CannabinoidRatio value) {
+    public Builder setCannabinoidRatio(io.opencannabis.schema.product.struct.testing.CannabinoidRatio value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1746,7 +1745,7 @@ private static final long serialVersionUID = 0L;
      * Desired cannabinoid ratio.
      * </pre>
      *
-     * <code>.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio cannabinoid_ratio = 5 [(.gen_bq_schema.description) = "Desired cannabinoid ratio."];</code>
      */
     public Builder clearCannabinoidRatio() {
       
@@ -1768,18 +1767,18 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
-    public java.util.List<io.bloombox.schema.product.struct.Species> getSpeciesList() {
+    public java.util.List<io.opencannabis.schema.product.struct.Species> getSpeciesList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, io.bloombox.schema.product.struct.Species>(species_, species_converter_);
+          java.lang.Integer, io.opencannabis.schema.product.struct.Species>(species_, species_converter_);
     }
     /**
      * <pre>
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public int getSpeciesCount() {
       return species_.size();
@@ -1789,9 +1788,9 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
-    public io.bloombox.schema.product.struct.Species getSpecies(int index) {
+    public io.opencannabis.schema.product.struct.Species getSpecies(int index) {
       return species_converter_.convert(species_.get(index));
     }
     /**
@@ -1799,10 +1798,10 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public Builder setSpecies(
-        int index, io.bloombox.schema.product.struct.Species value) {
+        int index, io.opencannabis.schema.product.struct.Species value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1816,9 +1815,9 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
-    public Builder addSpecies(io.bloombox.schema.product.struct.Species value) {
+    public Builder addSpecies(io.opencannabis.schema.product.struct.Species value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1832,12 +1831,12 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public Builder addAllSpecies(
-        java.lang.Iterable<? extends io.bloombox.schema.product.struct.Species> values) {
+        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.Species> values) {
       ensureSpeciesIsMutable();
-      for (io.bloombox.schema.product.struct.Species value : values) {
+      for (io.opencannabis.schema.product.struct.Species value : values) {
         species_.add(value.getNumber());
       }
       onChanged();
@@ -1848,7 +1847,7 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public Builder clearSpecies() {
       species_ = java.util.Collections.emptyList();
@@ -1861,7 +1860,7 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public java.util.List<java.lang.Integer>
     getSpeciesValueList() {
@@ -1872,7 +1871,7 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public int getSpeciesValue(int index) {
       return species_.get(index);
@@ -1882,7 +1881,7 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public Builder setSpeciesValue(
         int index, int value) {
@@ -1896,7 +1895,7 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public Builder addSpeciesValue(int value) {
       ensureSpeciesIsMutable();
@@ -1909,7 +1908,7 @@ private static final long serialVersionUID = 0L;
      * Preferred species types.
      * </pre>
      *
-     * <code>repeated .structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
+     * <code>repeated .opencannabis.structs.Species species = 6 [(.gen_bq_schema.description) = "Preferred species types."];</code>
      */
     public Builder addAllSpeciesValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -1934,18 +1933,18 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
-    public java.util.List<io.bloombox.schema.product.struct.Grow> getGrowList() {
+    public java.util.List<io.opencannabis.schema.product.struct.Grow> getGrowList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, io.bloombox.schema.product.struct.Grow>(grow_, grow_converter_);
+          java.lang.Integer, io.opencannabis.schema.product.struct.Grow>(grow_, grow_converter_);
     }
     /**
      * <pre>
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public int getGrowCount() {
       return grow_.size();
@@ -1955,9 +1954,9 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
-    public io.bloombox.schema.product.struct.Grow getGrow(int index) {
+    public io.opencannabis.schema.product.struct.Grow getGrow(int index) {
       return grow_converter_.convert(grow_.get(index));
     }
     /**
@@ -1965,10 +1964,10 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public Builder setGrow(
-        int index, io.bloombox.schema.product.struct.Grow value) {
+        int index, io.opencannabis.schema.product.struct.Grow value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1982,9 +1981,9 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
-    public Builder addGrow(io.bloombox.schema.product.struct.Grow value) {
+    public Builder addGrow(io.opencannabis.schema.product.struct.Grow value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1998,12 +1997,12 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public Builder addAllGrow(
-        java.lang.Iterable<? extends io.bloombox.schema.product.struct.Grow> values) {
+        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.Grow> values) {
       ensureGrowIsMutable();
-      for (io.bloombox.schema.product.struct.Grow value : values) {
+      for (io.opencannabis.schema.product.struct.Grow value : values) {
         grow_.add(value.getNumber());
       }
       onChanged();
@@ -2014,7 +2013,7 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public Builder clearGrow() {
       grow_ = java.util.Collections.emptyList();
@@ -2027,7 +2026,7 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public java.util.List<java.lang.Integer>
     getGrowValueList() {
@@ -2038,7 +2037,7 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public int getGrowValue(int index) {
       return grow_.get(index);
@@ -2048,7 +2047,7 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public Builder setGrowValue(
         int index, int value) {
@@ -2062,7 +2061,7 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public Builder addGrowValue(int value) {
       ensureGrowIsMutable();
@@ -2075,7 +2074,7 @@ private static final long serialVersionUID = 0L;
      * Preferred grow types.
      * </pre>
      *
-     * <code>repeated .structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
+     * <code>repeated .opencannabis.structs.Grow grow = 7 [(.gen_bq_schema.description) = "Preferred grow types."];</code>
      */
     public Builder addAllGrowValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -2097,10 +2096,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.MenuPreferences)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.MenuPreferences)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.MenuPreferences)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.MenuPreferences)
   private static final io.bloombox.schema.identity.MenuPreferences DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.MenuPreferences();

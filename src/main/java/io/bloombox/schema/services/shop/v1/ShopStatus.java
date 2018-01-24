@@ -26,7 +26,7 @@ package io.bloombox.schema.services.shop.v1;
  * delivery.
  * </pre>
  *
- * Protobuf enum {@code services.shop.v1.ShopStatus}
+ * Protobuf enum {@code bloombox.schema.services.shop.v1.ShopStatus}
  */
 public enum ShopStatus
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -170,6 +170,6 @@ public enum ShopStatus
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.shop.v1.ShopStatus)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.shop.v1.ShopStatus)
 }
 

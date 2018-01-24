@@ -26,11 +26,11 @@ package io.bloombox.schema.services.checkin.v1beta1;
  * with enough information for a salutation.
  * </pre>
  *
- * Protobuf type {@code services.checkin.v1beta1.CheckinUser}
+ * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CheckinUser}
  */
 public  final class CheckinUser extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.checkin.v1beta1.CheckinUser)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.checkin.v1beta1.CheckinUser)
     CheckinUserOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CheckinUser.newBuilder() to construct.
@@ -98,11 +98,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.bloombox.schema.person.Name.Builder subBuilder = null;
+            io.opencannabis.schema.person.Name.Builder subBuilder = null;
             if (name_ != null) {
               subBuilder = name_.toBuilder();
             }
-            name_ = input.readMessage(io.bloombox.schema.person.Name.parser(), extensionRegistry);
+            name_ = input.readMessage(io.opencannabis.schema.person.Name.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(name_);
               name_ = subBuilder.buildPartial();
@@ -124,12 +124,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinUser_descriptor;
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinUser_fieldAccessorTable
+    return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.checkin.v1beta1.CheckinUser.class, io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder.class);
   }
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.identity.UserKey key = 1;</code>
+   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
   public boolean hasKey() {
     return key_ != null;
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.identity.UserKey key = 1;</code>
+   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
   public io.bloombox.schema.identity.UserKey getKey() {
     return key_ == null ? io.bloombox.schema.identity.UserKey.getDefaultInstance() : key_;
@@ -161,7 +161,7 @@ private static final long serialVersionUID = 0L;
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.identity.UserKey key = 1;</code>
+   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
   public io.bloombox.schema.identity.UserKeyOrBuilder getKeyOrBuilder() {
     return getKey();
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * Active account flags.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
    */
   public boolean hasFlags() {
     return flags_ != null;
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * Active account flags.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
    */
   public io.bloombox.schema.identity.UserFlags getFlags() {
     return flags_ == null ? io.bloombox.schema.identity.UserFlags.getDefaultInstance() : flags_;
@@ -194,20 +194,20 @@ private static final long serialVersionUID = 0L;
    * Active account flags.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
    */
   public io.bloombox.schema.identity.UserFlagsOrBuilder getFlagsOrBuilder() {
     return getFlags();
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  private io.bloombox.schema.person.Name name_;
+  private io.opencannabis.schema.person.Name name_;
   /**
    * <pre>
    * Person's name information, for display purposes.
    * </pre>
    *
-   * <code>.person.Name name = 3;</code>
+   * <code>.opencannabis.person.Name name = 3;</code>
    */
   public boolean hasName() {
     return name_ != null;
@@ -217,19 +217,19 @@ private static final long serialVersionUID = 0L;
    * Person's name information, for display purposes.
    * </pre>
    *
-   * <code>.person.Name name = 3;</code>
+   * <code>.opencannabis.person.Name name = 3;</code>
    */
-  public io.bloombox.schema.person.Name getName() {
-    return name_ == null ? io.bloombox.schema.person.Name.getDefaultInstance() : name_;
+  public io.opencannabis.schema.person.Name getName() {
+    return name_ == null ? io.opencannabis.schema.person.Name.getDefaultInstance() : name_;
   }
   /**
    * <pre>
    * Person's name information, for display purposes.
    * </pre>
    *
-   * <code>.person.Name name = 3;</code>
+   * <code>.opencannabis.person.Name name = 3;</code>
    */
-  public io.bloombox.schema.person.NameOrBuilder getNameOrBuilder() {
+  public io.opencannabis.schema.person.NameOrBuilder getNameOrBuilder() {
     return getName();
   }
 
@@ -427,20 +427,20 @@ private static final long serialVersionUID = 0L;
    * with enough information for a salutation.
    * </pre>
    *
-   * Protobuf type {@code services.checkin.v1beta1.CheckinUser}
+   * Protobuf type {@code bloombox.schema.services.checkin.v1beta1.CheckinUser}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.checkin.v1beta1.CheckinUser)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.checkin.v1beta1.CheckinUser)
       io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinUser_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinUser_fieldAccessorTable
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.checkin.v1beta1.CheckinUser.class, io.bloombox.schema.services.checkin.v1beta1.CheckinUser.Builder.class);
     }
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_services_checkin_v1beta1_CheckinUser_descriptor;
+      return io.bloombox.schema.services.checkin.v1beta1.CheckinServiceBeta1.internal_static_bloombox_schema_services_checkin_v1beta1_CheckinUser_descriptor;
     }
 
     public io.bloombox.schema.services.checkin.v1beta1.CheckinUser getDefaultInstanceForType() {
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public boolean hasKey() {
       return keyBuilder_ != null || key_ != null;
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public io.bloombox.schema.identity.UserKey getKey() {
       if (keyBuilder_ == null) {
@@ -626,7 +626,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public Builder setKey(io.bloombox.schema.identity.UserKey value) {
       if (keyBuilder_ == null) {
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public Builder setKey(
         io.bloombox.schema.identity.UserKey.Builder builderForValue) {
@@ -664,7 +664,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public Builder mergeKey(io.bloombox.schema.identity.UserKey value) {
       if (keyBuilder_ == null) {
@@ -686,7 +686,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public Builder clearKey() {
       if (keyBuilder_ == null) {
@@ -704,7 +704,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public io.bloombox.schema.identity.UserKey.Builder getKeyBuilder() {
       
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public io.bloombox.schema.identity.UserKeyOrBuilder getKeyOrBuilder() {
       if (keyBuilder_ != null) {
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * Key and identity ID for the user who was checked in.
      * </pre>
      *
-     * <code>.identity.UserKey key = 1;</code>
+     * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.UserKey, io.bloombox.schema.identity.UserKey.Builder, io.bloombox.schema.identity.UserKeyOrBuilder> 
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     public boolean hasFlags() {
       return flagsBuilder_ != null || flags_ != null;
@@ -765,7 +765,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     public io.bloombox.schema.identity.UserFlags getFlags() {
       if (flagsBuilder_ == null) {
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     public Builder setFlags(io.bloombox.schema.identity.UserFlags value) {
       if (flagsBuilder_ == null) {
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     public Builder setFlags(
         io.bloombox.schema.identity.UserFlags.Builder builderForValue) {
@@ -817,7 +817,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     public Builder mergeFlags(io.bloombox.schema.identity.UserFlags value) {
       if (flagsBuilder_ == null) {
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     public Builder clearFlags() {
       if (flagsBuilder_ == null) {
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     public io.bloombox.schema.identity.UserFlags.Builder getFlagsBuilder() {
       
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     public io.bloombox.schema.identity.UserFlagsOrBuilder getFlagsOrBuilder() {
       if (flagsBuilder_ != null) {
@@ -884,7 +884,7 @@ private static final long serialVersionUID = 0L;
      * Active account flags.
      * </pre>
      *
-     * <code>.identity.UserFlags flags = 2;</code>
+     * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.identity.UserFlags, io.bloombox.schema.identity.UserFlags.Builder, io.bloombox.schema.identity.UserFlagsOrBuilder> 
@@ -900,15 +900,15 @@ private static final long serialVersionUID = 0L;
       return flagsBuilder_;
     }
 
-    private io.bloombox.schema.person.Name name_ = null;
+    private io.opencannabis.schema.person.Name name_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.person.Name, io.bloombox.schema.person.Name.Builder, io.bloombox.schema.person.NameOrBuilder> nameBuilder_;
+        io.opencannabis.schema.person.Name, io.opencannabis.schema.person.Name.Builder, io.opencannabis.schema.person.NameOrBuilder> nameBuilder_;
     /**
      * <pre>
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -918,11 +918,11 @@ private static final long serialVersionUID = 0L;
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
-    public io.bloombox.schema.person.Name getName() {
+    public io.opencannabis.schema.person.Name getName() {
       if (nameBuilder_ == null) {
-        return name_ == null ? io.bloombox.schema.person.Name.getDefaultInstance() : name_;
+        return name_ == null ? io.opencannabis.schema.person.Name.getDefaultInstance() : name_;
       } else {
         return nameBuilder_.getMessage();
       }
@@ -932,9 +932,9 @@ private static final long serialVersionUID = 0L;
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
-    public Builder setName(io.bloombox.schema.person.Name value) {
+    public Builder setName(io.opencannabis.schema.person.Name value) {
       if (nameBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -952,10 +952,10 @@ private static final long serialVersionUID = 0L;
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
     public Builder setName(
-        io.bloombox.schema.person.Name.Builder builderForValue) {
+        io.opencannabis.schema.person.Name.Builder builderForValue) {
       if (nameBuilder_ == null) {
         name_ = builderForValue.build();
         onChanged();
@@ -970,13 +970,13 @@ private static final long serialVersionUID = 0L;
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
-    public Builder mergeName(io.bloombox.schema.person.Name value) {
+    public Builder mergeName(io.opencannabis.schema.person.Name value) {
       if (nameBuilder_ == null) {
         if (name_ != null) {
           name_ =
-            io.bloombox.schema.person.Name.newBuilder(name_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.person.Name.newBuilder(name_).mergeFrom(value).buildPartial();
         } else {
           name_ = value;
         }
@@ -992,7 +992,7 @@ private static final long serialVersionUID = 0L;
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -1010,9 +1010,9 @@ private static final long serialVersionUID = 0L;
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
-    public io.bloombox.schema.person.Name.Builder getNameBuilder() {
+    public io.opencannabis.schema.person.Name.Builder getNameBuilder() {
       
       onChanged();
       return getNameFieldBuilder().getBuilder();
@@ -1022,14 +1022,14 @@ private static final long serialVersionUID = 0L;
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
-    public io.bloombox.schema.person.NameOrBuilder getNameOrBuilder() {
+    public io.opencannabis.schema.person.NameOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
         return nameBuilder_.getMessageOrBuilder();
       } else {
         return name_ == null ?
-            io.bloombox.schema.person.Name.getDefaultInstance() : name_;
+            io.opencannabis.schema.person.Name.getDefaultInstance() : name_;
       }
     }
     /**
@@ -1037,14 +1037,14 @@ private static final long serialVersionUID = 0L;
      * Person's name information, for display purposes.
      * </pre>
      *
-     * <code>.person.Name name = 3;</code>
+     * <code>.opencannabis.person.Name name = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.person.Name, io.bloombox.schema.person.Name.Builder, io.bloombox.schema.person.NameOrBuilder> 
+        io.opencannabis.schema.person.Name, io.opencannabis.schema.person.Name.Builder, io.opencannabis.schema.person.NameOrBuilder> 
         getNameFieldBuilder() {
       if (nameBuilder_ == null) {
         nameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.person.Name, io.bloombox.schema.person.Name.Builder, io.bloombox.schema.person.NameOrBuilder>(
+            io.opencannabis.schema.person.Name, io.opencannabis.schema.person.Name.Builder, io.opencannabis.schema.person.NameOrBuilder>(
                 getName(),
                 getParentForChildren(),
                 isClean());
@@ -1063,10 +1063,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.checkin.v1beta1.CheckinUser)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.checkin.v1beta1.CheckinUser)
   }
 
-  // @@protoc_insertion_point(class_scope:services.checkin.v1beta1.CheckinUser)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.checkin.v1beta1.CheckinUser)
   private static final io.bloombox.schema.services.checkin.v1beta1.CheckinUser DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.checkin.v1beta1.CheckinUser();

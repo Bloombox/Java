@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * Represents a consumer's membership at a particular dispensary.
  * </pre>
  *
- * Protobuf type {@code identity.ConsumerMembership}
+ * Protobuf type {@code bloombox.schema.identity.ConsumerMembership}
  */
 public  final class ConsumerMembership extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.ConsumerMembership)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ConsumerMembership)
     ConsumerMembershipOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ConsumerMembership.newBuilder() to construct.
@@ -86,11 +85,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (signedUpAt_ != null) {
               subBuilder = signedUpAt_.toBuilder();
             }
-            signedUpAt_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            signedUpAt_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(signedUpAt_);
               signedUpAt_ = subBuilder.buildPartial();
@@ -99,11 +98,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (seen_ != null) {
               subBuilder = seen_.toBuilder();
             }
-            seen_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            seen_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(seen_);
               seen_ = subBuilder.buildPartial();
@@ -131,12 +130,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerMembership_descriptor;
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerMembership_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerMembership_fieldAccessorTable
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerMembership_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.ConsumerMembership.class, io.bloombox.schema.identity.ConsumerMembership.Builder.class);
   }
@@ -148,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * Referral source for this enrollment.
    * </pre>
    *
-   * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+   * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
    */
   public int getReferralSourceValue() {
     return referralSource_;
@@ -158,7 +157,7 @@ private static final long serialVersionUID = 0L;
    * Referral source for this enrollment.
    * </pre>
    *
-   * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+   * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
    */
   public io.bloombox.schema.identity.EnrollmentSource getReferralSource() {
     io.bloombox.schema.identity.EnrollmentSource result = io.bloombox.schema.identity.EnrollmentSource.valueOf(referralSource_);
@@ -208,13 +207,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIGNED_UP_AT_FIELD_NUMBER = 3;
-  private io.bloombox.schema.temporal.Instant signedUpAt_;
+  private io.opencannabis.schema.temporal.Instant signedUpAt_;
   /**
    * <pre>
    * Timestamp for when this profile enrolled.
    * </pre>
    *
-   * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+   * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
    */
   public boolean hasSignedUpAt() {
     return signedUpAt_ != null;
@@ -224,30 +223,30 @@ private static final long serialVersionUID = 0L;
    * Timestamp for when this profile enrolled.
    * </pre>
    *
-   * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+   * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
    */
-  public io.bloombox.schema.temporal.Instant getSignedUpAt() {
-    return signedUpAt_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : signedUpAt_;
+  public io.opencannabis.schema.temporal.Instant getSignedUpAt() {
+    return signedUpAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : signedUpAt_;
   }
   /**
    * <pre>
    * Timestamp for when this profile enrolled.
    * </pre>
    *
-   * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+   * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getSignedUpAtOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getSignedUpAtOrBuilder() {
     return getSignedUpAt();
   }
 
   public static final int SEEN_FIELD_NUMBER = 4;
-  private io.bloombox.schema.temporal.Instant seen_;
+  private io.opencannabis.schema.temporal.Instant seen_;
   /**
    * <pre>
    * Timestamp for when this profile was last seen.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
    */
   public boolean hasSeen() {
     return seen_ != null;
@@ -257,19 +256,19 @@ private static final long serialVersionUID = 0L;
    * Timestamp for when this profile was last seen.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
    */
-  public io.bloombox.schema.temporal.Instant getSeen() {
-    return seen_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+  public io.opencannabis.schema.temporal.Instant getSeen() {
+    return seen_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
   }
   /**
    * <pre>
    * Timestamp for when this profile was last seen.
    * </pre>
    *
-   * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+   * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
     return getSeen();
   }
 
@@ -522,20 +521,20 @@ private static final long serialVersionUID = 0L;
    * Represents a consumer's membership at a particular dispensary.
    * </pre>
    *
-   * Protobuf type {@code identity.ConsumerMembership}
+   * Protobuf type {@code bloombox.schema.identity.ConsumerMembership}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.ConsumerMembership)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ConsumerMembership)
       io.bloombox.schema.identity.ConsumerMembershipOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerMembership_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerMembership_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerMembership_fieldAccessorTable
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerMembership_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ConsumerMembership.class, io.bloombox.schema.identity.ConsumerMembership.Builder.class);
     }
@@ -580,7 +579,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_ConsumerMembership_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_ConsumerMembership_descriptor;
     }
 
     public io.bloombox.schema.identity.ConsumerMembership getDefaultInstanceForType() {
@@ -701,7 +700,7 @@ private static final long serialVersionUID = 0L;
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     public int getReferralSourceValue() {
       return referralSource_;
@@ -711,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     public Builder setReferralSourceValue(int value) {
       referralSource_ = value;
@@ -723,7 +722,7 @@ private static final long serialVersionUID = 0L;
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     public io.bloombox.schema.identity.EnrollmentSource getReferralSource() {
       io.bloombox.schema.identity.EnrollmentSource result = io.bloombox.schema.identity.EnrollmentSource.valueOf(referralSource_);
@@ -734,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     public Builder setReferralSource(io.bloombox.schema.identity.EnrollmentSource value) {
       if (value == null) {
@@ -750,7 +749,7 @@ private static final long serialVersionUID = 0L;
      * Referral source for this enrollment.
      * </pre>
      *
-     * <code>.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
+     * <code>.bloombox.schema.identity.EnrollmentSource referral_source = 1 [(.gen_bq_schema.description) = "Referral source for this enrollment."];</code>
      */
     public Builder clearReferralSource() {
       
@@ -848,15 +847,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.temporal.Instant signedUpAt_ = null;
+    private io.opencannabis.schema.temporal.Instant signedUpAt_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> signedUpAtBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> signedUpAtBuilder_;
     /**
      * <pre>
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
     public boolean hasSignedUpAt() {
       return signedUpAtBuilder_ != null || signedUpAt_ != null;
@@ -866,11 +865,11 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
-    public io.bloombox.schema.temporal.Instant getSignedUpAt() {
+    public io.opencannabis.schema.temporal.Instant getSignedUpAt() {
       if (signedUpAtBuilder_ == null) {
-        return signedUpAt_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : signedUpAt_;
+        return signedUpAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : signedUpAt_;
       } else {
         return signedUpAtBuilder_.getMessage();
       }
@@ -880,9 +879,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
-    public Builder setSignedUpAt(io.bloombox.schema.temporal.Instant value) {
+    public Builder setSignedUpAt(io.opencannabis.schema.temporal.Instant value) {
       if (signedUpAtBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -900,10 +899,10 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
     public Builder setSignedUpAt(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (signedUpAtBuilder_ == null) {
         signedUpAt_ = builderForValue.build();
         onChanged();
@@ -918,13 +917,13 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
-    public Builder mergeSignedUpAt(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeSignedUpAt(io.opencannabis.schema.temporal.Instant value) {
       if (signedUpAtBuilder_ == null) {
         if (signedUpAt_ != null) {
           signedUpAt_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(signedUpAt_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(signedUpAt_).mergeFrom(value).buildPartial();
         } else {
           signedUpAt_ = value;
         }
@@ -940,7 +939,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
     public Builder clearSignedUpAt() {
       if (signedUpAtBuilder_ == null) {
@@ -958,9 +957,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getSignedUpAtBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getSignedUpAtBuilder() {
       
       onChanged();
       return getSignedUpAtFieldBuilder().getBuilder();
@@ -970,14 +969,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getSignedUpAtOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getSignedUpAtOrBuilder() {
       if (signedUpAtBuilder_ != null) {
         return signedUpAtBuilder_.getMessageOrBuilder();
       } else {
         return signedUpAt_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : signedUpAt_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : signedUpAt_;
       }
     }
     /**
@@ -985,14 +984,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile enrolled.
      * </pre>
      *
-     * <code>.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
+     * <code>.opencannabis.temporal.Instant signed_up_at = 3 [(.gen_bq_schema.description) = "Timestamp for when this profile enrolled."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getSignedUpAtFieldBuilder() {
       if (signedUpAtBuilder_ == null) {
         signedUpAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getSignedUpAt(),
                 getParentForChildren(),
                 isClean());
@@ -1001,15 +1000,15 @@ private static final long serialVersionUID = 0L;
       return signedUpAtBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant seen_ = null;
+    private io.opencannabis.schema.temporal.Instant seen_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> seenBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> seenBuilder_;
     /**
      * <pre>
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
     public boolean hasSeen() {
       return seenBuilder_ != null || seen_ != null;
@@ -1019,11 +1018,11 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
-    public io.bloombox.schema.temporal.Instant getSeen() {
+    public io.opencannabis.schema.temporal.Instant getSeen() {
       if (seenBuilder_ == null) {
-        return seen_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+        return seen_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
       } else {
         return seenBuilder_.getMessage();
       }
@@ -1033,9 +1032,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
-    public Builder setSeen(io.bloombox.schema.temporal.Instant value) {
+    public Builder setSeen(io.opencannabis.schema.temporal.Instant value) {
       if (seenBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1053,10 +1052,10 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
     public Builder setSeen(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (seenBuilder_ == null) {
         seen_ = builderForValue.build();
         onChanged();
@@ -1071,13 +1070,13 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
-    public Builder mergeSeen(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeSeen(io.opencannabis.schema.temporal.Instant value) {
       if (seenBuilder_ == null) {
         if (seen_ != null) {
           seen_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(seen_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(seen_).mergeFrom(value).buildPartial();
         } else {
           seen_ = value;
         }
@@ -1093,7 +1092,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
     public Builder clearSeen() {
       if (seenBuilder_ == null) {
@@ -1111,9 +1110,9 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getSeenBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getSeenBuilder() {
       
       onChanged();
       return getSeenFieldBuilder().getBuilder();
@@ -1123,14 +1122,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
       if (seenBuilder_ != null) {
         return seenBuilder_.getMessageOrBuilder();
       } else {
         return seen_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
       }
     }
     /**
@@ -1138,14 +1137,14 @@ private static final long serialVersionUID = 0L;
      * Timestamp for when this profile was last seen.
      * </pre>
      *
-     * <code>.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
+     * <code>.opencannabis.temporal.Instant seen = 4 [(.gen_bq_schema.description) = "Timestamp for when this profile was last seen."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getSeenFieldBuilder() {
       if (seenBuilder_ == null) {
         seenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getSeen(),
                 getParentForChildren(),
                 isClean());
@@ -1253,10 +1252,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.ConsumerMembership)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ConsumerMembership)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.ConsumerMembership)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ConsumerMembership)
   private static final io.bloombox.schema.identity.ConsumerMembership DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.ConsumerMembership();

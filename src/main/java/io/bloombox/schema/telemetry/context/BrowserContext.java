@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class BrowserContext {
    * Specifies types of browsers or known browser engines.
    * </pre>
    *
-   * Protobuf enum {@code analytics.context.BrowserType}
+   * Protobuf enum {@code bloombox.schema.analytics.context.BrowserType}
    */
   public enum BrowserType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -213,11 +214,11 @@ public final class BrowserContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.context.BrowserType)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.BrowserType)
   }
 
   public interface BrowserDeviceContextOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.context.BrowserDeviceContext)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.BrowserDeviceContext)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -225,7 +226,7 @@ public final class BrowserContext {
      * Specifies the general browser type.
      * </pre>
      *
-     * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+     * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
      */
     int getBrowserTypeValue();
     /**
@@ -233,7 +234,7 @@ public final class BrowserContext {
      * Specifies the general browser type.
      * </pre>
      *
-     * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+     * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
      */
     io.bloombox.schema.telemetry.context.BrowserContext.BrowserType getBrowserType();
 
@@ -242,7 +243,7 @@ public final class BrowserContext {
      * Version info for the browser.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
      */
     boolean hasVersion();
     /**
@@ -250,17 +251,17 @@ public final class BrowserContext {
      * Version info for the browser.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
      */
-    io.bloombox.schema.struct.VersionSpec getVersion();
+    io.opencannabis.schema.struct.VersionSpec getVersion();
     /**
      * <pre>
      * Version info for the browser.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
      */
-    io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder();
+    io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder();
 
     /**
      * <pre>
@@ -330,11 +331,11 @@ public final class BrowserContext {
    * Specifies a structure describing JavaScript code running in a web browser of some kind.
    * </pre>
    *
-   * Protobuf type {@code analytics.context.BrowserDeviceContext}
+   * Protobuf type {@code bloombox.schema.analytics.context.BrowserDeviceContext}
    */
   public  static final class BrowserDeviceContext extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.context.BrowserDeviceContext)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.BrowserDeviceContext)
       BrowserDeviceContextOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use BrowserDeviceContext.newBuilder() to construct.
@@ -388,11 +389,11 @@ public final class BrowserContext {
               break;
             }
             case 18: {
-              io.bloombox.schema.struct.VersionSpec.Builder subBuilder = null;
+              io.opencannabis.schema.struct.VersionSpec.Builder subBuilder = null;
               if (version_ != null) {
                 subBuilder = version_.toBuilder();
               }
-              version_ = input.readMessage(io.bloombox.schema.struct.VersionSpec.parser(), extensionRegistry);
+              version_ = input.readMessage(io.opencannabis.schema.struct.VersionSpec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(version_);
                 version_ = subBuilder.buildPartial();
@@ -441,12 +442,12 @@ public final class BrowserContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_analytics_context_BrowserDeviceContext_descriptor;
+      return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_analytics_context_BrowserDeviceContext_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.class, io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.Builder.class);
     }
@@ -458,7 +459,7 @@ public final class BrowserContext {
      * Specifies the general browser type.
      * </pre>
      *
-     * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+     * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
      */
     public int getBrowserTypeValue() {
       return browserType_;
@@ -468,7 +469,7 @@ public final class BrowserContext {
      * Specifies the general browser type.
      * </pre>
      *
-     * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+     * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
      */
     public io.bloombox.schema.telemetry.context.BrowserContext.BrowserType getBrowserType() {
       io.bloombox.schema.telemetry.context.BrowserContext.BrowserType result = io.bloombox.schema.telemetry.context.BrowserContext.BrowserType.valueOf(browserType_);
@@ -476,13 +477,13 @@ public final class BrowserContext {
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private io.bloombox.schema.struct.VersionSpec version_;
+    private io.opencannabis.schema.struct.VersionSpec version_;
     /**
      * <pre>
      * Version info for the browser.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
      */
     public boolean hasVersion() {
       return version_ != null;
@@ -492,19 +493,19 @@ public final class BrowserContext {
      * Version info for the browser.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
      */
-    public io.bloombox.schema.struct.VersionSpec getVersion() {
-      return version_ == null ? io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+    public io.opencannabis.schema.struct.VersionSpec getVersion() {
+      return version_ == null ? io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
     }
     /**
      * <pre>
      * Version info for the browser.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
      */
-    public io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
+    public io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
       return getVersion();
     }
 
@@ -855,20 +856,20 @@ public final class BrowserContext {
      * Specifies a structure describing JavaScript code running in a web browser of some kind.
      * </pre>
      *
-     * Protobuf type {@code analytics.context.BrowserDeviceContext}
+     * Protobuf type {@code bloombox.schema.analytics.context.BrowserDeviceContext}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.context.BrowserDeviceContext)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.BrowserDeviceContext)
         io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContextOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_analytics_context_BrowserDeviceContext_descriptor;
+        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_analytics_context_BrowserDeviceContext_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.class, io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext.Builder.class);
       }
@@ -913,7 +914,7 @@ public final class BrowserContext {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_analytics_context_BrowserDeviceContext_descriptor;
+        return io.bloombox.schema.telemetry.context.BrowserContext.internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor;
       }
 
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext getDefaultInstanceForType() {
@@ -1038,7 +1039,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public int getBrowserTypeValue() {
         return browserType_;
@@ -1048,7 +1049,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public Builder setBrowserTypeValue(int value) {
         browserType_ = value;
@@ -1060,7 +1061,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public io.bloombox.schema.telemetry.context.BrowserContext.BrowserType getBrowserType() {
         io.bloombox.schema.telemetry.context.BrowserContext.BrowserType result = io.bloombox.schema.telemetry.context.BrowserContext.BrowserType.valueOf(browserType_);
@@ -1071,7 +1072,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public Builder setBrowserType(io.bloombox.schema.telemetry.context.BrowserContext.BrowserType value) {
         if (value == null) {
@@ -1087,7 +1088,7 @@ public final class BrowserContext {
        * Specifies the general browser type.
        * </pre>
        *
-       * <code>.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
+       * <code>.bloombox.schema.analytics.context.BrowserType browser_type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the general browser type."];</code>
        */
       public Builder clearBrowserType() {
         
@@ -1096,15 +1097,15 @@ public final class BrowserContext {
         return this;
       }
 
-      private io.bloombox.schema.struct.VersionSpec version_ = null;
+      private io.opencannabis.schema.struct.VersionSpec version_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder> versionBuilder_;
+          io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder> versionBuilder_;
       /**
        * <pre>
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
       public boolean hasVersion() {
         return versionBuilder_ != null || version_ != null;
@@ -1114,11 +1115,11 @@ public final class BrowserContext {
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpec getVersion() {
+      public io.opencannabis.schema.struct.VersionSpec getVersion() {
         if (versionBuilder_ == null) {
-          return version_ == null ? io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+          return version_ == null ? io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
         } else {
           return versionBuilder_.getMessage();
         }
@@ -1128,9 +1129,9 @@ public final class BrowserContext {
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
-      public Builder setVersion(io.bloombox.schema.struct.VersionSpec value) {
+      public Builder setVersion(io.opencannabis.schema.struct.VersionSpec value) {
         if (versionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1148,10 +1149,10 @@ public final class BrowserContext {
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
       public Builder setVersion(
-          io.bloombox.schema.struct.VersionSpec.Builder builderForValue) {
+          io.opencannabis.schema.struct.VersionSpec.Builder builderForValue) {
         if (versionBuilder_ == null) {
           version_ = builderForValue.build();
           onChanged();
@@ -1166,13 +1167,13 @@ public final class BrowserContext {
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
-      public Builder mergeVersion(io.bloombox.schema.struct.VersionSpec value) {
+      public Builder mergeVersion(io.opencannabis.schema.struct.VersionSpec value) {
         if (versionBuilder_ == null) {
           if (version_ != null) {
             version_ =
-              io.bloombox.schema.struct.VersionSpec.newBuilder(version_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.struct.VersionSpec.newBuilder(version_).mergeFrom(value).buildPartial();
           } else {
             version_ = value;
           }
@@ -1188,7 +1189,7 @@ public final class BrowserContext {
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
       public Builder clearVersion() {
         if (versionBuilder_ == null) {
@@ -1206,9 +1207,9 @@ public final class BrowserContext {
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpec.Builder getVersionBuilder() {
+      public io.opencannabis.schema.struct.VersionSpec.Builder getVersionBuilder() {
         
         onChanged();
         return getVersionFieldBuilder().getBuilder();
@@ -1218,14 +1219,14 @@ public final class BrowserContext {
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
+      public io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
         if (versionBuilder_ != null) {
           return versionBuilder_.getMessageOrBuilder();
         } else {
           return version_ == null ?
-              io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+              io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
         }
       }
       /**
@@ -1233,14 +1234,14 @@ public final class BrowserContext {
        * Version info for the browser.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version info for the browser."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder> 
+          io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder> 
           getVersionFieldBuilder() {
         if (versionBuilder_ == null) {
           versionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder>(
+              io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder>(
                   getVersion(),
                   getParentForChildren(),
                   isClean());
@@ -1551,10 +1552,10 @@ public final class BrowserContext {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.context.BrowserDeviceContext)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.BrowserDeviceContext)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.context.BrowserDeviceContext)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.BrowserDeviceContext)
     private static final io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.BrowserContext.BrowserDeviceContext();
@@ -1590,10 +1591,10 @@ public final class BrowserContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_context_BrowserDeviceContext_descriptor;
+    internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_context_BrowserDeviceContext_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1603,30 +1604,31 @@ public final class BrowserContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\037analytics/context/Browser.proto\022\021analy" +
-      "tics.context\032\016bq_field.proto\032\025structs/Ve" +
-      "rsion.proto\032\032analytics/context/OS.proto\032" +
-      "\037analytics/context/Library.proto\032#analyt" +
-      "ics/context/Application.proto\032$analytics" +
-      "/context/NativeDevice.proto\"\250\004\n\024BrowserD" +
-      "eviceContext\022_\n\014browser_type\030\001 \001(\0162\036.ana" +
-      "lytics.context.BrowserTypeB)\360?\001\212@#Specif" +
-      "ies the general browser type.\022G\n\007version" +
-      "\030\002 \001(\0132\024.structs.VersionSpecB \212@\035Version" +
-      " info for the browser.\022A\n\010language\030\003 \001(\t" +
-      "B/\212@,Active language, as reported by the" +
-      " browser.\022M\n\nuser_agent\030\004 \001(\tB9\212@6Raw us" +
-      "er-agent string sent or embedded by the " +
-      "browser.\022F\n\013touchpoints\030\005 \001(\rB1\212@.Maximu" +
-      "m touch points for a particular browser." +
-      "\022N\n\024hardware_concurrency\030\006 \001(\rB0\212@-Hardw" +
-      "are concurrency reported by the browser." +
-      "\022<\n\013color_depth\030\007 \001(\rB\'\212@$Color depth re" +
-      "ported by the browser.*b\n\013BrowserType\022\023\n" +
-      "\017BROWSER_UNKNOWN\020\000\022\n\n\006CHROME\020\001\022\n\n\006SAFARI" +
-      "\020\002\022\013\n\007FIREFOX\020\003\022\t\n\005OPERA\020\004\022\016\n\nIE_OR_EDGE" +
-      "\020\005B=\n$io.bloombox.schema.telemetry.conte" +
-      "xtB\016BrowserContextH\001P\000\370\001\001b\006proto3"
+      "\n\037analytics/context/Browser.proto\022!bloom" +
+      "box.schema.analytics.context\032\016bq_field.p" +
+      "roto\032\025structs/Version.proto\032\032analytics/c" +
+      "ontext/OS.proto\032\037analytics/context/Libra" +
+      "ry.proto\032#analytics/context/Application." +
+      "proto\032$analytics/context/NativeDevice.pr" +
+      "oto\"\305\004\n\024BrowserDeviceContext\022o\n\014browser_" +
+      "type\030\001 \001(\0162..bloombox.schema.analytics.c" +
+      "ontext.BrowserTypeB)\360?\001\212@#Specifies the " +
+      "general browser type.\022T\n\007version\030\002 \001(\0132!" +
+      ".opencannabis.structs.VersionSpecB \212@\035Ve" +
+      "rsion info for the browser.\022A\n\010language\030" +
+      "\003 \001(\tB/\212@,Active language, as reported b" +
+      "y the browser.\022M\n\nuser_agent\030\004 \001(\tB9\212@6R" +
+      "aw user-agent string sent or embedded by" +
+      " the browser.\022F\n\013touchpoints\030\005 \001(\rB1\212@.M" +
+      "aximum touch points for a particular bro" +
+      "wser.\022N\n\024hardware_concurrency\030\006 \001(\rB0\212@-" +
+      "Hardware concurrency reported by the bro" +
+      "wser.\022<\n\013color_depth\030\007 \001(\rB\'\212@$Color dep" +
+      "th reported by the browser.*b\n\013BrowserTy" +
+      "pe\022\023\n\017BROWSER_UNKNOWN\020\000\022\n\n\006CHROME\020\001\022\n\n\006S" +
+      "AFARI\020\002\022\013\n\007FIREFOX\020\003\022\t\n\005OPERA\020\004\022\016\n\nIE_OR" +
+      "_EDGE\020\005B=\n$io.bloombox.schema.telemetry." +
+      "contextB\016BrowserContextH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1640,17 +1642,17 @@ public final class BrowserContext {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.struct.Version.getDescriptor(),
+          io.opencannabis.schema.struct.Version.getDescriptor(),
           io.bloombox.schema.telemetry.context.OperatingSystemContext.getDescriptor(),
           io.bloombox.schema.telemetry.context.LibraryContext.getDescriptor(),
           io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor(),
           io.bloombox.schema.telemetry.context.DeviceContext.getDescriptor(),
         }, assigner);
-    internal_static_analytics_context_BrowserDeviceContext_descriptor =
+    internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_context_BrowserDeviceContext_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_context_BrowserDeviceContext_descriptor,
+        internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor,
         new java.lang.String[] { "BrowserType", "Version", "Language", "UserAgent", "Touchpoints", "HardwareConcurrency", "ColorDepth", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -1659,7 +1661,7 @@ public final class BrowserContext {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.struct.Version.getDescriptor();
+    io.opencannabis.schema.struct.Version.getDescriptor();
     io.bloombox.schema.telemetry.context.OperatingSystemContext.getDescriptor();
     io.bloombox.schema.telemetry.context.LibraryContext.getDescriptor();
     io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor();

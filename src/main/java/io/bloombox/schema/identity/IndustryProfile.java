@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * Profile for a cannabis industry professional of some sort.
  * </pre>
  *
- * Protobuf type {@code identity.IndustryProfile}
+ * Protobuf type {@code bloombox.schema.identity.IndustryProfile}
  */
 public  final class IndustryProfile extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.IndustryProfile)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.IndustryProfile)
     IndustryProfileOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use IndustryProfile.newBuilder() to construct.
@@ -103,7 +102,7 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_IndustryProfile_descriptor;
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_IndustryProfile_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -119,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_IndustryProfile_fieldAccessorTable
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_IndustryProfile_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.IndustryProfile.class, io.bloombox.schema.identity.IndustryProfile.Builder.class);
   }
@@ -144,7 +143,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String, io.bloombox.schema.security.access.PartnerAccess> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>newDefaultInstance(
-                io.bloombox.schema.identity.UserOuterClass.internal_static_identity_IndustryProfile_PartnersEntry_descriptor, 
+                io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_IndustryProfile_PartnersEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
@@ -169,7 +168,7 @@ private static final long serialVersionUID = 0L;
    * Map of partner accesses levels to partner codes.
    * </pre>
    *
-   * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+   * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
    */
 
   public boolean containsPartners(
@@ -189,7 +188,7 @@ private static final long serialVersionUID = 0L;
    * Map of partner accesses levels to partner codes.
    * </pre>
    *
-   * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+   * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
    */
 
   public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> getPartnersMap() {
@@ -200,7 +199,7 @@ private static final long serialVersionUID = 0L;
    * Map of partner accesses levels to partner codes.
    * </pre>
    *
-   * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+   * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
    */
 
   public io.bloombox.schema.security.access.PartnerAccess getPartnersOrDefault(
@@ -216,7 +215,7 @@ private static final long serialVersionUID = 0L;
    * Map of partner accesses levels to partner codes.
    * </pre>
    *
-   * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+   * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
    */
 
   public io.bloombox.schema.security.access.PartnerAccess getPartnersOrThrow(
@@ -409,15 +408,15 @@ private static final long serialVersionUID = 0L;
    * Profile for a cannabis industry professional of some sort.
    * </pre>
    *
-   * Protobuf type {@code identity.IndustryProfile}
+   * Protobuf type {@code bloombox.schema.identity.IndustryProfile}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.IndustryProfile)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.IndustryProfile)
       io.bloombox.schema.identity.IndustryProfileOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_IndustryProfile_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_IndustryProfile_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -444,7 +443,7 @@ private static final long serialVersionUID = 0L;
     }
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_IndustryProfile_fieldAccessorTable
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_IndustryProfile_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.IndustryProfile.class, io.bloombox.schema.identity.IndustryProfile.Builder.class);
     }
@@ -474,7 +473,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_IndustryProfile_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_IndustryProfile_descriptor;
     }
 
     public io.bloombox.schema.identity.IndustryProfile getDefaultInstanceForType() {
@@ -640,7 +639,7 @@ private static final long serialVersionUID = 0L;
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
     public boolean containsPartners(
@@ -660,7 +659,7 @@ private static final long serialVersionUID = 0L;
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> getPartnersMap() {
@@ -671,7 +670,7 @@ private static final long serialVersionUID = 0L;
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
     public io.bloombox.schema.security.access.PartnerAccess getPartnersOrDefault(
@@ -687,7 +686,7 @@ private static final long serialVersionUID = 0L;
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
     public io.bloombox.schema.security.access.PartnerAccess getPartnersOrThrow(
@@ -711,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
     public Builder removePartners(
@@ -734,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
     public Builder putPartners(
         java.lang.String key,
@@ -750,7 +749,7 @@ private static final long serialVersionUID = 0L;
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
     public Builder putAllPartners(
@@ -770,10 +769,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.IndustryProfile)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.IndustryProfile)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.IndustryProfile)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.IndustryProfile)
   private static final io.bloombox.schema.identity.IndustryProfile DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.IndustryProfile();

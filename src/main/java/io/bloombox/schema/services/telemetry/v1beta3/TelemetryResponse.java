@@ -25,11 +25,11 @@ package io.bloombox.schema.services.telemetry.v1beta3;
  * Specifies a response to a request to submit telemetry data.
  * </pre>
  *
- * Protobuf type {@code services.telemetry.v1beta3.TelemetryResponse}
+ * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.TelemetryResponse}
  */
 public  final class TelemetryResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.TelemetryResponse)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.TelemetryResponse)
     TelemetryResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use TelemetryResponse.newBuilder() to construct.
@@ -104,12 +104,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_TelemetryResponse_descriptor;
+    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_TelemetryResponse_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_TelemetryResponse_fieldAccessorTable
+    return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_TelemetryResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponse.class, io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponse.Builder.class);
   }
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
    * Status of the operation.
    * </pre>
    *
-   * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+   * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
    */
   public int getStatusValue() {
     return status_;
@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
    * Status of the operation.
    * </pre>
    *
-   * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+   * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
    */
   public io.bloombox.schema.services.telemetry.v1beta3.OperationStatus getStatus() {
     io.bloombox.schema.services.telemetry.v1beta3.OperationStatus result = io.bloombox.schema.services.telemetry.v1beta3.OperationStatus.valueOf(status_);
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
    * Service maintenance status, if applicable.
    * </pre>
    *
-   * <code>.services.ServiceStatus service = 3;</code>
+   * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
    */
   public int getServiceValue() {
     return service_;
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
    * Service maintenance status, if applicable.
    * </pre>
    *
-   * <code>.services.ServiceStatus service = 3;</code>
+   * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
    */
   public io.bloombox.schema.services.ServiceStatus getService() {
     io.bloombox.schema.services.ServiceStatus result = io.bloombox.schema.services.ServiceStatus.valueOf(service_);
@@ -351,20 +351,20 @@ private static final long serialVersionUID = 0L;
    * Specifies a response to a request to submit telemetry data.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.TelemetryResponse}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.TelemetryResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.TelemetryResponse)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.TelemetryResponse)
       io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_TelemetryResponse_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_TelemetryResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_TelemetryResponse_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_TelemetryResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponse.class, io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponse.Builder.class);
     }
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_services_telemetry_v1beta3_TelemetryResponse_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.TelemetryServiceBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_TelemetryResponse_descriptor;
     }
 
     public io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponse getDefaultInstanceForType() {
@@ -500,7 +500,7 @@ private static final long serialVersionUID = 0L;
      * Status of the operation.
      * </pre>
      *
-     * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+     * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
      * Status of the operation.
      * </pre>
      *
-     * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+     * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
      * Status of the operation.
      * </pre>
      *
-     * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+     * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta3.OperationStatus getStatus() {
       io.bloombox.schema.services.telemetry.v1beta3.OperationStatus result = io.bloombox.schema.services.telemetry.v1beta3.OperationStatus.valueOf(status_);
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
      * Status of the operation.
      * </pre>
      *
-     * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+     * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
      */
     public Builder setStatus(io.bloombox.schema.services.telemetry.v1beta3.OperationStatus value) {
       if (value == null) {
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
      * Status of the operation.
      * </pre>
      *
-     * <code>.services.telemetry.v1beta3.OperationStatus status = 1;</code>
+     * <code>.bloombox.schema.services.telemetry.v1beta3.OperationStatus status = 1;</code>
      */
     public Builder clearStatus() {
       
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
      * Service maintenance status, if applicable.
      * </pre>
      *
-     * <code>.services.ServiceStatus service = 3;</code>
+     * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
      */
     public int getServiceValue() {
       return service_;
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * Service maintenance status, if applicable.
      * </pre>
      *
-     * <code>.services.ServiceStatus service = 3;</code>
+     * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
      */
     public Builder setServiceValue(int value) {
       service_ = value;
@@ -624,7 +624,7 @@ private static final long serialVersionUID = 0L;
      * Service maintenance status, if applicable.
      * </pre>
      *
-     * <code>.services.ServiceStatus service = 3;</code>
+     * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
      */
     public io.bloombox.schema.services.ServiceStatus getService() {
       io.bloombox.schema.services.ServiceStatus result = io.bloombox.schema.services.ServiceStatus.valueOf(service_);
@@ -635,7 +635,7 @@ private static final long serialVersionUID = 0L;
      * Service maintenance status, if applicable.
      * </pre>
      *
-     * <code>.services.ServiceStatus service = 3;</code>
+     * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
      */
     public Builder setService(io.bloombox.schema.services.ServiceStatus value) {
       if (value == null) {
@@ -651,7 +651,7 @@ private static final long serialVersionUID = 0L;
      * Service maintenance status, if applicable.
      * </pre>
      *
-     * <code>.services.ServiceStatus service = 3;</code>
+     * <code>.bloombox.schema.services.ServiceStatus service = 3;</code>
      */
     public Builder clearService() {
       
@@ -670,10 +670,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.TelemetryResponse)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.TelemetryResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.TelemetryResponse)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.TelemetryResponse)
   private static final io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.TelemetryResponse();

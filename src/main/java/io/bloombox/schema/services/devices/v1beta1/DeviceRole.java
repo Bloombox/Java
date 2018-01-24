@@ -25,7 +25,7 @@ package io.bloombox.schema.services.devices.v1beta1;
  * Specifies the role of a device, and therefore how it should behave.
  * </pre>
  *
- * Protobuf enum {@code services.devices.v1beta1.DeviceRole}
+ * Protobuf enum {@code bloombox.schema.services.devices.v1beta1.DeviceRole}
  */
 public enum DeviceRole
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -169,6 +169,6 @@ public enum DeviceRole
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.devices.v1beta1.DeviceRole)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.devices.v1beta1.DeviceRole)
 }
 

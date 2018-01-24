@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,11 +20,11 @@
 package io.bloombox.schema.partner;
 
 /**
- * Protobuf type {@code partner.PartnerDevice}
+ * Protobuf type {@code bloombox.schema.partner.PartnerDevice}
  */
 public  final class PartnerDevice extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:partner.PartnerDevice)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerDevice)
     PartnerDeviceOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use PartnerDevice.newBuilder() to construct.
@@ -120,11 +119,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 50: {
-            io.bloombox.schema.device.Device.Builder subBuilder = null;
+            io.opencannabis.schema.device.Device.Builder subBuilder = null;
             if (device_ != null) {
               subBuilder = device_.toBuilder();
             }
-            device_ = input.readMessage(io.bloombox.schema.device.Device.parser(), extensionRegistry);
+            device_ = input.readMessage(io.opencannabis.schema.device.Device.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(device_);
               device_ = subBuilder.buildPartial();
@@ -133,11 +132,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (seen_ != null) {
               subBuilder = seen_.toBuilder();
             }
-            seen_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            seen_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(seen_);
               seen_ = subBuilder.buildPartial();
@@ -146,11 +145,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 66: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (registered_ != null) {
               subBuilder = registered_.toBuilder();
             }
-            registered_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            registered_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(registered_);
               registered_ = subBuilder.buildPartial();
@@ -172,12 +171,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDevice_descriptor;
+    return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDevice_fieldAccessorTable
+    return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.partner.PartnerDevice.class, io.bloombox.schema.partner.PartnerDevice.Builder.class);
   }
@@ -219,19 +218,19 @@ private static final long serialVersionUID = 0L;
   public static final int PARTNER_FIELD_NUMBER = 2;
   private io.bloombox.schema.partner.Partner partner_;
   /**
-   * <code>.partner.Partner partner = 2;</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2;</code>
    */
   public boolean hasPartner() {
     return partner_ != null;
   }
   /**
-   * <code>.partner.Partner partner = 2;</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2;</code>
    */
   public io.bloombox.schema.partner.Partner getPartner() {
     return partner_ == null ? io.bloombox.schema.partner.Partner.getDefaultInstance() : partner_;
   }
   /**
-   * <code>.partner.Partner partner = 2;</code>
+   * <code>.bloombox.schema.partner.Partner partner = 2;</code>
    */
   public io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder() {
     return getPartner();
@@ -240,19 +239,19 @@ private static final long serialVersionUID = 0L;
   public static final int LOCATION_FIELD_NUMBER = 3;
   private io.bloombox.schema.partner.PartnerLocation location_;
   /**
-   * <code>.partner.PartnerLocation location = 3;</code>
+   * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
    */
   public boolean hasLocation() {
     return location_ != null;
   }
   /**
-   * <code>.partner.PartnerLocation location = 3;</code>
+   * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
    */
   public io.bloombox.schema.partner.PartnerLocation getLocation() {
     return location_ == null ? io.bloombox.schema.partner.PartnerLocation.getDefaultInstance() : location_;
   }
   /**
-   * <code>.partner.PartnerLocation location = 3;</code>
+   * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
    */
   public io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder() {
     return getLocation();
@@ -261,13 +260,13 @@ private static final long serialVersionUID = 0L;
   public static final int TYPE_FIELD_NUMBER = 4;
   private int type_;
   /**
-   * <code>.partner.PartnerDeviceType type = 4;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
-   * <code>.partner.PartnerDeviceType type = 4;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
    */
   public io.bloombox.schema.partner.PartnerDeviceType getType() {
     io.bloombox.schema.partner.PartnerDeviceType result = io.bloombox.schema.partner.PartnerDeviceType.valueOf(type_);
@@ -277,84 +276,84 @@ private static final long serialVersionUID = 0L;
   public static final int FLAGS_FIELD_NUMBER = 5;
   private io.bloombox.schema.partner.PartnerDeviceFlags flags_;
   /**
-   * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
    */
   public boolean hasFlags() {
     return flags_ != null;
   }
   /**
-   * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
    */
   public io.bloombox.schema.partner.PartnerDeviceFlags getFlags() {
     return flags_ == null ? io.bloombox.schema.partner.PartnerDeviceFlags.getDefaultInstance() : flags_;
   }
   /**
-   * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+   * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
    */
   public io.bloombox.schema.partner.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder() {
     return getFlags();
   }
 
   public static final int DEVICE_FIELD_NUMBER = 6;
-  private io.bloombox.schema.device.Device device_;
+  private io.opencannabis.schema.device.Device device_;
   /**
-   * <code>.device.Device device = 6;</code>
+   * <code>.opencannabis.device.Device device = 6;</code>
    */
   public boolean hasDevice() {
     return device_ != null;
   }
   /**
-   * <code>.device.Device device = 6;</code>
+   * <code>.opencannabis.device.Device device = 6;</code>
    */
-  public io.bloombox.schema.device.Device getDevice() {
-    return device_ == null ? io.bloombox.schema.device.Device.getDefaultInstance() : device_;
+  public io.opencannabis.schema.device.Device getDevice() {
+    return device_ == null ? io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
   }
   /**
-   * <code>.device.Device device = 6;</code>
+   * <code>.opencannabis.device.Device device = 6;</code>
    */
-  public io.bloombox.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
+  public io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
     return getDevice();
   }
 
   public static final int SEEN_FIELD_NUMBER = 7;
-  private io.bloombox.schema.temporal.Instant seen_;
+  private io.opencannabis.schema.temporal.Instant seen_;
   /**
-   * <code>.temporal.Instant seen = 7;</code>
+   * <code>.opencannabis.temporal.Instant seen = 7;</code>
    */
   public boolean hasSeen() {
     return seen_ != null;
   }
   /**
-   * <code>.temporal.Instant seen = 7;</code>
+   * <code>.opencannabis.temporal.Instant seen = 7;</code>
    */
-  public io.bloombox.schema.temporal.Instant getSeen() {
-    return seen_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+  public io.opencannabis.schema.temporal.Instant getSeen() {
+    return seen_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
   }
   /**
-   * <code>.temporal.Instant seen = 7;</code>
+   * <code>.opencannabis.temporal.Instant seen = 7;</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
     return getSeen();
   }
 
   public static final int REGISTERED_FIELD_NUMBER = 8;
-  private io.bloombox.schema.temporal.Instant registered_;
+  private io.opencannabis.schema.temporal.Instant registered_;
   /**
-   * <code>.temporal.Instant registered = 8;</code>
+   * <code>.opencannabis.temporal.Instant registered = 8;</code>
    */
   public boolean hasRegistered() {
     return registered_ != null;
   }
   /**
-   * <code>.temporal.Instant registered = 8;</code>
+   * <code>.opencannabis.temporal.Instant registered = 8;</code>
    */
-  public io.bloombox.schema.temporal.Instant getRegistered() {
-    return registered_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : registered_;
+  public io.opencannabis.schema.temporal.Instant getRegistered() {
+    return registered_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : registered_;
   }
   /**
-   * <code>.temporal.Instant registered = 8;</code>
+   * <code>.opencannabis.temporal.Instant registered = 8;</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getRegisteredOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getRegisteredOrBuilder() {
     return getRegistered();
   }
 
@@ -615,20 +614,20 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code partner.PartnerDevice}
+   * Protobuf type {@code bloombox.schema.partner.PartnerDevice}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:partner.PartnerDevice)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerDevice)
       io.bloombox.schema.partner.PartnerDeviceOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDevice_descriptor;
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDevice_fieldAccessorTable
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.PartnerDevice.class, io.bloombox.schema.partner.PartnerDevice.Builder.class);
     }
@@ -695,7 +694,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_partner_PartnerDevice_descriptor;
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
     }
 
     public io.bloombox.schema.partner.PartnerDevice getDefaultInstanceForType() {
@@ -910,13 +909,13 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.Partner, io.bloombox.schema.partner.Partner.Builder, io.bloombox.schema.partner.PartnerOrBuilder> partnerBuilder_;
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     public boolean hasPartner() {
       return partnerBuilder_ != null || partner_ != null;
     }
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     public io.bloombox.schema.partner.Partner getPartner() {
       if (partnerBuilder_ == null) {
@@ -926,7 +925,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     public Builder setPartner(io.bloombox.schema.partner.Partner value) {
       if (partnerBuilder_ == null) {
@@ -942,7 +941,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     public Builder setPartner(
         io.bloombox.schema.partner.Partner.Builder builderForValue) {
@@ -956,7 +955,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     public Builder mergePartner(io.bloombox.schema.partner.Partner value) {
       if (partnerBuilder_ == null) {
@@ -974,7 +973,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     public Builder clearPartner() {
       if (partnerBuilder_ == null) {
@@ -988,7 +987,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     public io.bloombox.schema.partner.Partner.Builder getPartnerBuilder() {
       
@@ -996,7 +995,7 @@ private static final long serialVersionUID = 0L;
       return getPartnerFieldBuilder().getBuilder();
     }
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder() {
       if (partnerBuilder_ != null) {
@@ -1007,7 +1006,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.partner.Partner partner = 2;</code>
+     * <code>.bloombox.schema.partner.Partner partner = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.Partner, io.bloombox.schema.partner.Partner.Builder, io.bloombox.schema.partner.PartnerOrBuilder> 
@@ -1027,13 +1026,13 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.PartnerLocation, io.bloombox.schema.partner.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOrBuilder> locationBuilder_;
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     public boolean hasLocation() {
       return locationBuilder_ != null || location_ != null;
     }
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     public io.bloombox.schema.partner.PartnerLocation getLocation() {
       if (locationBuilder_ == null) {
@@ -1043,7 +1042,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     public Builder setLocation(io.bloombox.schema.partner.PartnerLocation value) {
       if (locationBuilder_ == null) {
@@ -1059,7 +1058,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     public Builder setLocation(
         io.bloombox.schema.partner.PartnerLocation.Builder builderForValue) {
@@ -1073,7 +1072,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocation value) {
       if (locationBuilder_ == null) {
@@ -1091,7 +1090,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     public Builder clearLocation() {
       if (locationBuilder_ == null) {
@@ -1105,7 +1104,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     public io.bloombox.schema.partner.PartnerLocation.Builder getLocationBuilder() {
       
@@ -1113,7 +1112,7 @@ private static final long serialVersionUID = 0L;
       return getLocationFieldBuilder().getBuilder();
     }
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder() {
       if (locationBuilder_ != null) {
@@ -1124,7 +1123,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.partner.PartnerLocation location = 3;</code>
+     * <code>.bloombox.schema.partner.PartnerLocation location = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.PartnerLocation, io.bloombox.schema.partner.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOrBuilder> 
@@ -1142,13 +1141,13 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
-     * <code>.partner.PartnerDeviceType type = 4;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>.partner.PartnerDeviceType type = 4;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -1156,14 +1155,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerDeviceType type = 4;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
      */
     public io.bloombox.schema.partner.PartnerDeviceType getType() {
       io.bloombox.schema.partner.PartnerDeviceType result = io.bloombox.schema.partner.PartnerDeviceType.valueOf(type_);
       return result == null ? io.bloombox.schema.partner.PartnerDeviceType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.partner.PartnerDeviceType type = 4;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
      */
     public Builder setType(io.bloombox.schema.partner.PartnerDeviceType value) {
       if (value == null) {
@@ -1175,7 +1174,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerDeviceType type = 4;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 4;</code>
      */
     public Builder clearType() {
       
@@ -1188,13 +1187,13 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.PartnerDeviceFlags, io.bloombox.schema.partner.PartnerDeviceFlags.Builder, io.bloombox.schema.partner.PartnerDeviceFlagsOrBuilder> flagsBuilder_;
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     public boolean hasFlags() {
       return flagsBuilder_ != null || flags_ != null;
     }
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     public io.bloombox.schema.partner.PartnerDeviceFlags getFlags() {
       if (flagsBuilder_ == null) {
@@ -1204,7 +1203,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     public Builder setFlags(io.bloombox.schema.partner.PartnerDeviceFlags value) {
       if (flagsBuilder_ == null) {
@@ -1220,7 +1219,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     public Builder setFlags(
         io.bloombox.schema.partner.PartnerDeviceFlags.Builder builderForValue) {
@@ -1234,7 +1233,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     public Builder mergeFlags(io.bloombox.schema.partner.PartnerDeviceFlags value) {
       if (flagsBuilder_ == null) {
@@ -1252,7 +1251,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     public Builder clearFlags() {
       if (flagsBuilder_ == null) {
@@ -1266,7 +1265,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     public io.bloombox.schema.partner.PartnerDeviceFlags.Builder getFlagsBuilder() {
       
@@ -1274,7 +1273,7 @@ private static final long serialVersionUID = 0L;
       return getFlagsFieldBuilder().getBuilder();
     }
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     public io.bloombox.schema.partner.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder() {
       if (flagsBuilder_ != null) {
@@ -1285,7 +1284,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.partner.PartnerDeviceFlags flags = 5;</code>
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.PartnerDeviceFlags, io.bloombox.schema.partner.PartnerDeviceFlags.Builder, io.bloombox.schema.partner.PartnerDeviceFlagsOrBuilder> 
@@ -1301,29 +1300,29 @@ private static final long serialVersionUID = 0L;
       return flagsBuilder_;
     }
 
-    private io.bloombox.schema.device.Device device_ = null;
+    private io.opencannabis.schema.device.Device device_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.device.Device, io.bloombox.schema.device.Device.Builder, io.bloombox.schema.device.DeviceOrBuilder> deviceBuilder_;
+        io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder> deviceBuilder_;
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
     public boolean hasDevice() {
       return deviceBuilder_ != null || device_ != null;
     }
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
-    public io.bloombox.schema.device.Device getDevice() {
+    public io.opencannabis.schema.device.Device getDevice() {
       if (deviceBuilder_ == null) {
-        return device_ == null ? io.bloombox.schema.device.Device.getDefaultInstance() : device_;
+        return device_ == null ? io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
       } else {
         return deviceBuilder_.getMessage();
       }
     }
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
-    public Builder setDevice(io.bloombox.schema.device.Device value) {
+    public Builder setDevice(io.opencannabis.schema.device.Device value) {
       if (deviceBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1337,10 +1336,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
     public Builder setDevice(
-        io.bloombox.schema.device.Device.Builder builderForValue) {
+        io.opencannabis.schema.device.Device.Builder builderForValue) {
       if (deviceBuilder_ == null) {
         device_ = builderForValue.build();
         onChanged();
@@ -1351,13 +1350,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
-    public Builder mergeDevice(io.bloombox.schema.device.Device value) {
+    public Builder mergeDevice(io.opencannabis.schema.device.Device value) {
       if (deviceBuilder_ == null) {
         if (device_ != null) {
           device_ =
-            io.bloombox.schema.device.Device.newBuilder(device_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.device.Device.newBuilder(device_).mergeFrom(value).buildPartial();
         } else {
           device_ = value;
         }
@@ -1369,7 +1368,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
     public Builder clearDevice() {
       if (deviceBuilder_ == null) {
@@ -1383,33 +1382,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
-    public io.bloombox.schema.device.Device.Builder getDeviceBuilder() {
+    public io.opencannabis.schema.device.Device.Builder getDeviceBuilder() {
       
       onChanged();
       return getDeviceFieldBuilder().getBuilder();
     }
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
-    public io.bloombox.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
+    public io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
       if (deviceBuilder_ != null) {
         return deviceBuilder_.getMessageOrBuilder();
       } else {
         return device_ == null ?
-            io.bloombox.schema.device.Device.getDefaultInstance() : device_;
+            io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
       }
     }
     /**
-     * <code>.device.Device device = 6;</code>
+     * <code>.opencannabis.device.Device device = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.device.Device, io.bloombox.schema.device.Device.Builder, io.bloombox.schema.device.DeviceOrBuilder> 
+        io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder> 
         getDeviceFieldBuilder() {
       if (deviceBuilder_ == null) {
         deviceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.device.Device, io.bloombox.schema.device.Device.Builder, io.bloombox.schema.device.DeviceOrBuilder>(
+            io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder>(
                 getDevice(),
                 getParentForChildren(),
                 isClean());
@@ -1418,29 +1417,29 @@ private static final long serialVersionUID = 0L;
       return deviceBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant seen_ = null;
+    private io.opencannabis.schema.temporal.Instant seen_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> seenBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> seenBuilder_;
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
     public boolean hasSeen() {
       return seenBuilder_ != null || seen_ != null;
     }
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
-    public io.bloombox.schema.temporal.Instant getSeen() {
+    public io.opencannabis.schema.temporal.Instant getSeen() {
       if (seenBuilder_ == null) {
-        return seen_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+        return seen_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
       } else {
         return seenBuilder_.getMessage();
       }
     }
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
-    public Builder setSeen(io.bloombox.schema.temporal.Instant value) {
+    public Builder setSeen(io.opencannabis.schema.temporal.Instant value) {
       if (seenBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1454,10 +1453,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
     public Builder setSeen(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (seenBuilder_ == null) {
         seen_ = builderForValue.build();
         onChanged();
@@ -1468,13 +1467,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
-    public Builder mergeSeen(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeSeen(io.opencannabis.schema.temporal.Instant value) {
       if (seenBuilder_ == null) {
         if (seen_ != null) {
           seen_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(seen_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(seen_).mergeFrom(value).buildPartial();
         } else {
           seen_ = value;
         }
@@ -1486,7 +1485,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
     public Builder clearSeen() {
       if (seenBuilder_ == null) {
@@ -1500,33 +1499,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getSeenBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getSeenBuilder() {
       
       onChanged();
       return getSeenFieldBuilder().getBuilder();
     }
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
       if (seenBuilder_ != null) {
         return seenBuilder_.getMessageOrBuilder();
       } else {
         return seen_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : seen_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
       }
     }
     /**
-     * <code>.temporal.Instant seen = 7;</code>
+     * <code>.opencannabis.temporal.Instant seen = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getSeenFieldBuilder() {
       if (seenBuilder_ == null) {
         seenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getSeen(),
                 getParentForChildren(),
                 isClean());
@@ -1535,29 +1534,29 @@ private static final long serialVersionUID = 0L;
       return seenBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant registered_ = null;
+    private io.opencannabis.schema.temporal.Instant registered_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> registeredBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> registeredBuilder_;
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
     public boolean hasRegistered() {
       return registeredBuilder_ != null || registered_ != null;
     }
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
-    public io.bloombox.schema.temporal.Instant getRegistered() {
+    public io.opencannabis.schema.temporal.Instant getRegistered() {
       if (registeredBuilder_ == null) {
-        return registered_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : registered_;
+        return registered_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : registered_;
       } else {
         return registeredBuilder_.getMessage();
       }
     }
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
-    public Builder setRegistered(io.bloombox.schema.temporal.Instant value) {
+    public Builder setRegistered(io.opencannabis.schema.temporal.Instant value) {
       if (registeredBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1571,10 +1570,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
     public Builder setRegistered(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (registeredBuilder_ == null) {
         registered_ = builderForValue.build();
         onChanged();
@@ -1585,13 +1584,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
-    public Builder mergeRegistered(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeRegistered(io.opencannabis.schema.temporal.Instant value) {
       if (registeredBuilder_ == null) {
         if (registered_ != null) {
           registered_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(registered_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(registered_).mergeFrom(value).buildPartial();
         } else {
           registered_ = value;
         }
@@ -1603,7 +1602,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
     public Builder clearRegistered() {
       if (registeredBuilder_ == null) {
@@ -1617,33 +1616,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getRegisteredBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getRegisteredBuilder() {
       
       onChanged();
       return getRegisteredFieldBuilder().getBuilder();
     }
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getRegisteredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getRegisteredOrBuilder() {
       if (registeredBuilder_ != null) {
         return registeredBuilder_.getMessageOrBuilder();
       } else {
         return registered_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : registered_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : registered_;
       }
     }
     /**
-     * <code>.temporal.Instant registered = 8;</code>
+     * <code>.opencannabis.temporal.Instant registered = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getRegisteredFieldBuilder() {
       if (registeredBuilder_ == null) {
         registeredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getRegistered(),
                 getParentForChildren(),
                 isClean());
@@ -1662,10 +1661,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:partner.PartnerDevice)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerDevice)
   }
 
-  // @@protoc_insertion_point(class_scope:partner.PartnerDevice)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerDevice)
   private static final io.bloombox.schema.partner.PartnerDevice DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerDevice();

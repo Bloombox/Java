@@ -16,7 +16,7 @@
 
 package bloombox.client.test
 
-import bloombox.client.BloomboxClient
+import bloombox.client.Bloombox
 import java.util.logging.Logger
 import org.junit.After as after
 
@@ -39,28 +39,28 @@ open class ClientRPCTest {
     /**
      * Local client.
      */
-    val local: BloomboxClient = BloomboxClient(
-          BloomboxClient.Settings(testApiKey, testPartner, testLocation),
-          BloomboxClient.ClientTarget.LOCAL)
+    val local: Bloombox = Bloombox(
+          Bloombox.Settings(testApiKey, testPartner, testLocation),
+          Bloombox.ClientTarget.LOCAL)
 
     /**
      * Sandbox client.
      */
-    val sandbox: BloomboxClient = BloomboxClient(
-          BloomboxClient.Settings(testApiKey, testPartner, testLocation),
-          BloomboxClient.ClientTarget.SANDBOX)
+    val sandbox: Bloombox = Bloombox(
+          Bloombox.Settings(testApiKey, testPartner, testLocation),
+          Bloombox.ClientTarget.SANDBOX)
 
     /**
      * Production client.
      */
-    val platform: BloomboxClient = BloomboxClient(
-          BloomboxClient.Settings(testApiKey, testPartner, testLocation),
-          BloomboxClient.ClientTarget.PRODUCTION)
+    val platform: Bloombox = Bloombox(
+          Bloombox.Settings(testApiKey, testPartner, testLocation),
+          Bloombox.ClientTarget.PRODUCTION)
 
     /**
      * Reference to all supported clients.
      */
-    private val _allClients: Array<BloomboxClient> = arrayOf(local, sandbox, platform)
+    private val _allClients: Array<Bloombox> = arrayOf(local, sandbox, platform)
 
     /**
      * Close connections on all clients.

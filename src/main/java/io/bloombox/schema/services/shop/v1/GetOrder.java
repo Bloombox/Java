@@ -25,11 +25,11 @@ package io.bloombox.schema.services.shop.v1;
  * Specifies an RPC operation to retrieve information about an existing express pickup or delivery order.
  * </pre>
  *
- * Protobuf type {@code services.shop.v1.GetOrder}
+ * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder}
  */
 public  final class GetOrder extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.shop.v1.GetOrder)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.GetOrder)
     GetOrderOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use GetOrder.newBuilder() to construct.
@@ -83,18 +83,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_descriptor;
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_fieldAccessorTable
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.shop.v1.GetOrder.class, io.bloombox.schema.services.shop.v1.GetOrder.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.GetOrder.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.GetOrder.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
      * Partner/location code.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     boolean hasLocation();
     /**
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
      * Partner/location code.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     io.bloombox.schema.partner.PartnerLocationKey getLocation();
     /**
@@ -136,16 +136,16 @@ private static final long serialVersionUID = 0L;
      * Partner/location code.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.GetOrder.Request}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.GetOrder.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.GetOrder.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -220,12 +220,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Request_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Request_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.GetOrder.Request.class, io.bloombox.schema.services.shop.v1.GetOrder.Request.Builder.class);
     }
@@ -279,7 +279,7 @@ private static final long serialVersionUID = 0L;
      * Partner/location code.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
      * Partner/location code.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
       return location_ == null ? io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance() : location_;
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
      * Partner/location code.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
@@ -472,20 +472,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.GetOrder.Request}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.GetOrder.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.GetOrder.Request)
         io.bloombox.schema.services.shop.v1.GetOrder.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Request_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.GetOrder.Request.class, io.bloombox.schema.services.shop.v1.GetOrder.Request.Builder.class);
       }
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Request_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.GetOrder.Request getDefaultInstanceForType() {
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -725,7 +725,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
@@ -759,7 +759,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.PartnerLocationKey.Builder builderForValue) {
@@ -777,7 +777,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -817,7 +817,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKey.Builder getLocationBuilder() {
         
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
        * Partner/location code.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> 
@@ -870,10 +870,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.GetOrder.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.GetOrder.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.GetOrder.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.GetOrder.Request)
     private static final io.bloombox.schema.services.shop.v1.GetOrder.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.GetOrder.Request();
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.GetOrder.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.GetOrder.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -926,7 +926,7 @@ private static final long serialVersionUID = 0L;
      * Order identified by that ID, if it could be found.
      * </pre>
      *
-     * <code>.commerce.Order order = 2;</code>
+     * <code>.opencannabis.commerce.Order order = 2;</code>
      */
     boolean hasOrder();
     /**
@@ -934,24 +934,24 @@ private static final long serialVersionUID = 0L;
      * Order identified by that ID, if it could be found.
      * </pre>
      *
-     * <code>.commerce.Order order = 2;</code>
+     * <code>.opencannabis.commerce.Order order = 2;</code>
      */
-    io.bloombox.schema.commerce.CommercialOrder.Order getOrder();
+    io.opencannabis.schema.commerce.CommercialOrder.Order getOrder();
     /**
      * <pre>
      * Order identified by that ID, if it could be found.
      * </pre>
      *
-     * <code>.commerce.Order order = 2;</code>
+     * <code>.opencannabis.commerce.Order order = 2;</code>
      */
-    io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder();
+    io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.GetOrder.Response}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.GetOrder.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.GetOrder.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -999,11 +999,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              io.bloombox.schema.commerce.CommercialOrder.Order.Builder subBuilder = null;
+              io.opencannabis.schema.commerce.CommercialOrder.Order.Builder subBuilder = null;
               if (order_ != null) {
                 subBuilder = order_.toBuilder();
               }
-              order_ = input.readMessage(io.bloombox.schema.commerce.CommercialOrder.Order.parser(), extensionRegistry);
+              order_ = input.readMessage(io.opencannabis.schema.commerce.CommercialOrder.Order.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(order_);
                 order_ = subBuilder.buildPartial();
@@ -1025,12 +1025,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Response_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Response_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.GetOrder.Response.class, io.bloombox.schema.services.shop.v1.GetOrder.Response.Builder.class);
     }
@@ -1049,13 +1049,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ORDER_FIELD_NUMBER = 2;
-    private io.bloombox.schema.commerce.CommercialOrder.Order order_;
+    private io.opencannabis.schema.commerce.CommercialOrder.Order order_;
     /**
      * <pre>
      * Order identified by that ID, if it could be found.
      * </pre>
      *
-     * <code>.commerce.Order order = 2;</code>
+     * <code>.opencannabis.commerce.Order order = 2;</code>
      */
     public boolean hasOrder() {
       return order_ != null;
@@ -1065,19 +1065,19 @@ private static final long serialVersionUID = 0L;
      * Order identified by that ID, if it could be found.
      * </pre>
      *
-     * <code>.commerce.Order order = 2;</code>
+     * <code>.opencannabis.commerce.Order order = 2;</code>
      */
-    public io.bloombox.schema.commerce.CommercialOrder.Order getOrder() {
-      return order_ == null ? io.bloombox.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
+    public io.opencannabis.schema.commerce.CommercialOrder.Order getOrder() {
+      return order_ == null ? io.opencannabis.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
     }
     /**
      * <pre>
      * Order identified by that ID, if it could be found.
      * </pre>
      *
-     * <code>.commerce.Order order = 2;</code>
+     * <code>.opencannabis.commerce.Order order = 2;</code>
      */
-    public io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder() {
+    public io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder() {
       return getOrder();
     }
 
@@ -1250,20 +1250,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.GetOrder.Response}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.GetOrder.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.GetOrder.Response)
         io.bloombox.schema.services.shop.v1.GetOrder.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Response_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.GetOrder.Response.class, io.bloombox.schema.services.shop.v1.GetOrder.Response.Builder.class);
       }
@@ -1298,7 +1298,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.GetOrder.Response getDefaultInstanceForType() {
@@ -1433,15 +1433,15 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.commerce.CommercialOrder.Order order_ = null;
+      private io.opencannabis.schema.commerce.CommercialOrder.Order order_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.CommercialOrder.Order, io.bloombox.schema.commerce.CommercialOrder.Order.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder> orderBuilder_;
+          io.opencannabis.schema.commerce.CommercialOrder.Order, io.opencannabis.schema.commerce.CommercialOrder.Order.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder> orderBuilder_;
       /**
        * <pre>
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
       public boolean hasOrder() {
         return orderBuilder_ != null || order_ != null;
@@ -1451,11 +1451,11 @@ private static final long serialVersionUID = 0L;
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.Order getOrder() {
+      public io.opencannabis.schema.commerce.CommercialOrder.Order getOrder() {
         if (orderBuilder_ == null) {
-          return order_ == null ? io.bloombox.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
+          return order_ == null ? io.opencannabis.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
         } else {
           return orderBuilder_.getMessage();
         }
@@ -1465,9 +1465,9 @@ private static final long serialVersionUID = 0L;
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
-      public Builder setOrder(io.bloombox.schema.commerce.CommercialOrder.Order value) {
+      public Builder setOrder(io.opencannabis.schema.commerce.CommercialOrder.Order value) {
         if (orderBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1485,10 +1485,10 @@ private static final long serialVersionUID = 0L;
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
       public Builder setOrder(
-          io.bloombox.schema.commerce.CommercialOrder.Order.Builder builderForValue) {
+          io.opencannabis.schema.commerce.CommercialOrder.Order.Builder builderForValue) {
         if (orderBuilder_ == null) {
           order_ = builderForValue.build();
           onChanged();
@@ -1503,13 +1503,13 @@ private static final long serialVersionUID = 0L;
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
-      public Builder mergeOrder(io.bloombox.schema.commerce.CommercialOrder.Order value) {
+      public Builder mergeOrder(io.opencannabis.schema.commerce.CommercialOrder.Order value) {
         if (orderBuilder_ == null) {
           if (order_ != null) {
             order_ =
-              io.bloombox.schema.commerce.CommercialOrder.Order.newBuilder(order_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.commerce.CommercialOrder.Order.newBuilder(order_).mergeFrom(value).buildPartial();
           } else {
             order_ = value;
           }
@@ -1525,7 +1525,7 @@ private static final long serialVersionUID = 0L;
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
       public Builder clearOrder() {
         if (orderBuilder_ == null) {
@@ -1543,9 +1543,9 @@ private static final long serialVersionUID = 0L;
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.Order.Builder getOrderBuilder() {
+      public io.opencannabis.schema.commerce.CommercialOrder.Order.Builder getOrderBuilder() {
         
         onChanged();
         return getOrderFieldBuilder().getBuilder();
@@ -1555,14 +1555,14 @@ private static final long serialVersionUID = 0L;
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder() {
+      public io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder() {
         if (orderBuilder_ != null) {
           return orderBuilder_.getMessageOrBuilder();
         } else {
           return order_ == null ?
-              io.bloombox.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
+              io.opencannabis.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
         }
       }
       /**
@@ -1570,14 +1570,14 @@ private static final long serialVersionUID = 0L;
        * Order identified by that ID, if it could be found.
        * </pre>
        *
-       * <code>.commerce.Order order = 2;</code>
+       * <code>.opencannabis.commerce.Order order = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.CommercialOrder.Order, io.bloombox.schema.commerce.CommercialOrder.Order.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder> 
+          io.opencannabis.schema.commerce.CommercialOrder.Order, io.opencannabis.schema.commerce.CommercialOrder.Order.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder> 
           getOrderFieldBuilder() {
         if (orderBuilder_ == null) {
           orderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.commerce.CommercialOrder.Order, io.bloombox.schema.commerce.CommercialOrder.Order.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder>(
+              io.opencannabis.schema.commerce.CommercialOrder.Order, io.opencannabis.schema.commerce.CommercialOrder.Order.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder>(
                   getOrder(),
                   getParentForChildren(),
                   isClean());
@@ -1596,10 +1596,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.GetOrder.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.GetOrder.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.GetOrder.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.GetOrder.Response)
     private static final io.bloombox.schema.services.shop.v1.GetOrder.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.GetOrder.Response();
@@ -1635,7 +1635,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.GetOrder.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.GetOrder.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1643,7 +1643,7 @@ private static final long serialVersionUID = 0L;
      * Request for order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1651,7 +1651,7 @@ private static final long serialVersionUID = 0L;
      * Request for order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.GetOrder.Request getRequest();
     /**
@@ -1659,7 +1659,7 @@ private static final long serialVersionUID = 0L;
      * Request for order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.GetOrder.RequestOrBuilder getRequestOrBuilder();
 
@@ -1668,7 +1668,7 @@ private static final long serialVersionUID = 0L;
      * Response describing order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1676,7 +1676,7 @@ private static final long serialVersionUID = 0L;
      * Response describing order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.GetOrder.Response getResponse();
     /**
@@ -1684,16 +1684,16 @@ private static final long serialVersionUID = 0L;
      * Response describing order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.GetOrder.ResponseOrBuilder getResponseOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.GetOrder.Operation}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.GetOrder.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.GetOrder.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1774,12 +1774,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Operation_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.GetOrder.Operation.class, io.bloombox.schema.services.shop.v1.GetOrder.Operation.Builder.class);
     }
@@ -1791,7 +1791,7 @@ private static final long serialVersionUID = 0L;
      * Request for order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1801,7 +1801,7 @@ private static final long serialVersionUID = 0L;
      * Request for order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.GetOrder.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.shop.v1.GetOrder.Request.getDefaultInstance() : request_;
@@ -1811,7 +1811,7 @@ private static final long serialVersionUID = 0L;
      * Request for order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.GetOrder.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1824,7 +1824,7 @@ private static final long serialVersionUID = 0L;
      * Response describing order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1834,7 +1834,7 @@ private static final long serialVersionUID = 0L;
      * Response describing order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.GetOrder.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.shop.v1.GetOrder.Response.getDefaultInstance() : response_;
@@ -1844,7 +1844,7 @@ private static final long serialVersionUID = 0L;
      * Response describing order status.
      * </pre>
      *
-     * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.GetOrder.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
@@ -2023,20 +2023,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.GetOrder.Operation}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.GetOrder.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.GetOrder.Operation)
         io.bloombox.schema.services.shop.v1.GetOrder.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.GetOrder.Operation.class, io.bloombox.schema.services.shop.v1.GetOrder.Operation.Builder.class);
       }
@@ -2075,7 +2075,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.GetOrder.Operation getDefaultInstanceForType() {
@@ -2184,7 +2184,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -2194,7 +2194,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.GetOrder.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -2208,7 +2208,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.shop.v1.GetOrder.Request value) {
         if (requestBuilder_ == null) {
@@ -2228,7 +2228,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.shop.v1.GetOrder.Request.Builder builderForValue) {
@@ -2246,7 +2246,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.shop.v1.GetOrder.Request value) {
         if (requestBuilder_ == null) {
@@ -2268,7 +2268,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2286,7 +2286,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.GetOrder.Request.Builder getRequestBuilder() {
         
@@ -2298,7 +2298,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.GetOrder.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2313,7 +2313,7 @@ private static final long serialVersionUID = 0L;
        * Request for order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.GetOrder.Request, io.bloombox.schema.services.shop.v1.GetOrder.Request.Builder, io.bloombox.schema.services.shop.v1.GetOrder.RequestOrBuilder> 
@@ -2337,7 +2337,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2347,7 +2347,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.GetOrder.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -2361,7 +2361,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.shop.v1.GetOrder.Response value) {
         if (responseBuilder_ == null) {
@@ -2381,7 +2381,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.shop.v1.GetOrder.Response.Builder builderForValue) {
@@ -2399,7 +2399,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.shop.v1.GetOrder.Response value) {
         if (responseBuilder_ == null) {
@@ -2421,7 +2421,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2439,7 +2439,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.GetOrder.Response.Builder getResponseBuilder() {
         
@@ -2451,7 +2451,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.GetOrder.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2466,7 +2466,7 @@ private static final long serialVersionUID = 0L;
        * Response describing order status.
        * </pre>
        *
-       * <code>.services.shop.v1.GetOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.GetOrder.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.GetOrder.Response, io.bloombox.schema.services.shop.v1.GetOrder.Response.Builder, io.bloombox.schema.services.shop.v1.GetOrder.ResponseOrBuilder> 
@@ -2492,10 +2492,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.GetOrder.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.GetOrder.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.GetOrder.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.GetOrder.Operation)
     private static final io.bloombox.schema.services.shop.v1.GetOrder.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.GetOrder.Operation();
@@ -2675,20 +2675,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to retrieve information about an existing express pickup or delivery order.
    * </pre>
    *
-   * Protobuf type {@code services.shop.v1.GetOrder}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.shop.v1.GetOrder)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.GetOrder)
       io.bloombox.schema.services.shop.v1.GetOrderOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.GetOrder.class, io.bloombox.schema.services.shop.v1.GetOrder.Builder.class);
     }
@@ -2715,7 +2715,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_GetOrder_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor;
     }
 
     public io.bloombox.schema.services.shop.v1.GetOrder getDefaultInstanceForType() {
@@ -2810,10 +2810,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.shop.v1.GetOrder)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.GetOrder)
   }
 
-  // @@protoc_insertion_point(class_scope:services.shop.v1.GetOrder)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.GetOrder)
   private static final io.bloombox.schema.services.shop.v1.GetOrder DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.GetOrder();

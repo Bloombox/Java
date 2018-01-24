@@ -18,27 +18,27 @@ package bloombox.client.shop
 
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
-import io.bloombox.schema.base.ProductKey
-import io.bloombox.schema.base.ProductKind
-import io.bloombox.schema.base.ProductType
-import io.bloombox.schema.commerce.CommercialOrder
-import io.bloombox.schema.commerce.OrderCustomer
-import io.bloombox.schema.commerce.OrderDelivery
-import io.bloombox.schema.commerce.OrderItem
-import io.bloombox.schema.contact.ContactInfo
-import io.bloombox.schema.contact.EmailAddress
-import io.bloombox.schema.contact.PhoneNumber
-import io.bloombox.schema.geo.Address
-import io.bloombox.schema.person.Name
-import io.bloombox.schema.person.Person
+import io.opencannabis.schema.base.ProductKey
+import io.opencannabis.schema.base.ProductKind
+import io.opencannabis.schema.base.ProductType
+import io.opencannabis.schema.commerce.CommercialOrder
+import io.opencannabis.schema.commerce.OrderCustomer
+import io.opencannabis.schema.commerce.OrderDelivery
+import io.opencannabis.schema.commerce.OrderItem
+import io.opencannabis.schema.contact.ContactInfo
+import io.opencannabis.schema.contact.EmailAddress
+import io.opencannabis.schema.contact.PhoneNumber
+import io.opencannabis.schema.geo.Address
+import io.opencannabis.schema.person.Name
+import io.opencannabis.schema.person.Person
+import io.opencannabis.schema.temporal.Instant
 import io.bloombox.schema.services.shop.v1.SubmitOrder
-import io.bloombox.schema.temporal.Instant
 import java.util.concurrent.TimeUnit
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
-import org.junit.Ignore as ignore
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 
 
 /**
@@ -59,7 +59,7 @@ class ShopOrderTest: ClientRPCTest() {
                               order: CommercialOrder.Order? = null): SubmitOrder.Response {
     val now = java.time.Instant.now()
 
-    val order = order ?: CommercialOrder.Order.newBuilder()
+    val orderObj = order ?: CommercialOrder.Order.newBuilder()
 
           .setCustomer(OrderCustomer.Customer.newBuilder()
                 .setPerson(Person.newBuilder()
@@ -114,7 +114,7 @@ class ShopOrderTest: ClientRPCTest() {
                       .setVariant(OrderItem.ProductVariant.WEIGHT)
                       .setWeight(OrderItem.ProductWeight.EIGHTH))).build()
 
-    return client.submitOrder(order)
+    return client.submitOrder(orderObj)
   }
 
   @test @ignore

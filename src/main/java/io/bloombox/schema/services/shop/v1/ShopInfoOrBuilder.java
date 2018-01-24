@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.shop.v1;
 
 public interface ShopInfoOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.shop.v1.ShopInfo)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.ShopInfo)
     com.google.protobuf.MessageOrBuilder {
 }

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,10 +31,10 @@ public final class IDMediaOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_identity_IDMediaAttachment_descriptor;
+    internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_identity_IDMediaAttachment_fieldAccessorTable;
+      internal_static_bloombox_schema_identity_IDMediaAttachment_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,15 +44,16 @@ public final class IDMediaOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026identity/IDMedia.proto\022\010identity\032\034medi" +
-      "a/MediaOrientation.proto\"\225\001\n\021IDMediaAtta" +
-      "chment\022\037\n\004type\030\001 \001(\0162\021.identity.IDMedia\022" +
-      ",\n\013orientation\030\002 \001(\0162\027.media.MediaOrient" +
-      "ation\022\014\n\004data\030\003 \001(\014\022\022\n\nimage_type\030\004 \001(\r\022" +
-      "\017\n\007quality\030\005 \001(\001*>\n\007IDMedia\022\022\n\016DOCUMENT_" +
-      "FRONT\020\000\022\021\n\rDOCUMENT_REAR\020\001\022\014\n\010PORTRAIT\020\002" +
-      "B!\n\033io.bloombox.schema.identityH\001P\001b\006pro" +
-      "to3"
+      "\n\026identity/IDMedia.proto\022\030bloombox.schem" +
+      "a.identity\032\034media/MediaOrientation.proto" +
+      "\"\262\001\n\021IDMediaAttachment\022/\n\004type\030\001 \001(\0162!.b" +
+      "loombox.schema.identity.IDMedia\0229\n\013orien" +
+      "tation\030\002 \001(\0162$.opencannabis.media.MediaO" +
+      "rientation\022\014\n\004data\030\003 \001(\014\022\022\n\nimage_type\030\004" +
+      " \001(\r\022\017\n\007quality\030\005 \001(\001*>\n\007IDMedia\022\022\n\016DOCU" +
+      "MENT_FRONT\020\000\022\021\n\rDOCUMENT_REAR\020\001\022\014\n\010PORTR" +
+      "AIT\020\002B!\n\033io.bloombox.schema.identityH\001P\001" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,15 +66,15 @@ public final class IDMediaOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.media.MediaOrientationOuterClass.getDescriptor(),
+          io.opencannabis.schema.media.MediaOrientationOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_identity_IDMediaAttachment_descriptor =
+    internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_identity_IDMediaAttachment_fieldAccessorTable = new
+    internal_static_bloombox_schema_identity_IDMediaAttachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_identity_IDMediaAttachment_descriptor,
+        internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor,
         new java.lang.String[] { "Type", "Orientation", "Data", "ImageType", "Quality", });
-    io.bloombox.schema.media.MediaOrientationOuterClass.getDescriptor();
+    io.opencannabis.schema.media.MediaOrientationOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity;
  * Represents a key that refers to a user account.
  * </pre>
  *
- * Protobuf type {@code identity.UserKey}
+ * Protobuf type {@code bloombox.schema.identity.UserKey}
  */
 public  final class UserKey extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.UserKey)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.UserKey)
     UserKeyOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use UserKey.newBuilder() to construct.
@@ -98,12 +97,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_UserKey_descriptor;
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_UserKey_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_UserKey_fieldAccessorTable
+    return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.UserKey.class, io.bloombox.schema.identity.UserKey.Builder.class);
   }
@@ -357,20 +356,20 @@ private static final long serialVersionUID = 0L;
    * Represents a key that refers to a user account.
    * </pre>
    *
-   * Protobuf type {@code identity.UserKey}
+   * Protobuf type {@code bloombox.schema.identity.UserKey}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.UserKey)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.UserKey)
       io.bloombox.schema.identity.UserKeyOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_UserKey_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_UserKey_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_UserKey_fieldAccessorTable
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.UserKey.class, io.bloombox.schema.identity.UserKey.Builder.class);
     }
@@ -401,7 +400,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.UserOuterClass.internal_static_identity_UserKey_descriptor;
+      return io.bloombox.schema.identity.UserOuterClass.internal_static_bloombox_schema_identity_UserKey_descriptor;
     }
 
     public io.bloombox.schema.identity.UserKey getDefaultInstanceForType() {
@@ -684,10 +683,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.UserKey)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.UserKey)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.UserKey)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.UserKey)
   private static final io.bloombox.schema.identity.UserKey DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.UserKey();

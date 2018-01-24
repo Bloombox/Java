@@ -45,7 +45,7 @@ public final class IdentityTelemetryGrpc {
 
   private IdentityTelemetryGrpc() {}
 
-  public static final String SERVICE_NAME = "services.telemetry.v1beta3.IdentityTelemetry";
+  public static final String SERVICE_NAME = "bloombox.schema.services.telemetry.v1beta3.IdentityTelemetry";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -54,7 +54,7 @@ public final class IdentityTelemetryGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action, com.google.protobuf.Empty>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.telemetry.v1beta3.IdentityTelemetry", "Action"))
+              "bloombox.schema.services.telemetry.v1beta3.IdentityTelemetry", "Action"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.telemetry.v1beta3.IdentityEvent.Action.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

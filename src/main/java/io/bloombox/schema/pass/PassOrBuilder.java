@@ -20,19 +20,19 @@
 package io.bloombox.schema.pass;
 
 public interface PassOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:identity.pass.Pass)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.pass.Pass)
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.identity.pass.PassKey key = 1;</code>
+   * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
    */
   boolean hasKey();
   /**
-   * <code>.identity.pass.PassKey key = 1;</code>
+   * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
    */
   io.bloombox.schema.pass.PassKey getKey();
   /**
-   * <code>.identity.pass.PassKey key = 1;</code>
+   * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
    */
   io.bloombox.schema.pass.PassKeyOrBuilder getKeyOrBuilder();
 
@@ -62,28 +62,28 @@ public interface PassOrBuilder extends
   boolean getActive();
 
   /**
-   * <code>.temporal.Instant issued = 5;</code>
+   * <code>.opencannabis.temporal.Instant issued = 5;</code>
    */
   boolean hasIssued();
   /**
-   * <code>.temporal.Instant issued = 5;</code>
+   * <code>.opencannabis.temporal.Instant issued = 5;</code>
    */
-  io.bloombox.schema.temporal.Instant getIssued();
+  io.opencannabis.schema.temporal.Instant getIssued();
   /**
-   * <code>.temporal.Instant issued = 5;</code>
+   * <code>.opencannabis.temporal.Instant issued = 5;</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getIssuedOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getIssuedOrBuilder();
 
   /**
-   * <code>.temporal.Instant suspended = 6;</code>
+   * <code>.opencannabis.temporal.Instant suspended = 6;</code>
    */
   boolean hasSuspended();
   /**
-   * <code>.temporal.Instant suspended = 6;</code>
+   * <code>.opencannabis.temporal.Instant suspended = 6;</code>
    */
-  io.bloombox.schema.temporal.Instant getSuspended();
+  io.opencannabis.schema.temporal.Instant getSuspended();
   /**
-   * <code>.temporal.Instant suspended = 6;</code>
+   * <code>.opencannabis.temporal.Instant suspended = 6;</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getSuspendedOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getSuspendedOrBuilder();
 }

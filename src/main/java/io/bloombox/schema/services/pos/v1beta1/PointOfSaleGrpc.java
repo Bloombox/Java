@@ -41,7 +41,7 @@ public final class PointOfSaleGrpc {
 
   private PointOfSaleGrpc() {}
 
-  public static final String SERVICE_NAME = "services.pos.v1beta1.PointOfSale";
+  public static final String SERVICE_NAME = "bloombox.schema.services.pos.v1beta1.PointOfSale";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -50,7 +50,7 @@ public final class PointOfSaleGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.Ping.Request, io.bloombox.schema.services.pos.v1beta1.Ping.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.pos.v1beta1.PointOfSale", "Ping"))
+              "bloombox.schema.services.pos.v1beta1.PointOfSale", "Ping"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.pos.v1beta1.Ping.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

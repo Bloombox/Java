@@ -20,11 +20,11 @@
 package io.bloombox.schema.pass;
 
 /**
- * Protobuf type {@code identity.pass.Pass}
+ * Protobuf type {@code bloombox.schema.identity.pass.Pass}
  */
 public  final class Pass extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.pass.Pass)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.pass.Pass)
     PassOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Pass.newBuilder() to construct.
@@ -99,11 +99,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (issued_ != null) {
               subBuilder = issued_.toBuilder();
             }
-            issued_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            issued_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(issued_);
               issued_ = subBuilder.buildPartial();
@@ -112,11 +112,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 50: {
-            io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
             if (suspended_ != null) {
               subBuilder = suspended_.toBuilder();
             }
-            suspended_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+            suspended_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(suspended_);
               suspended_ = subBuilder.buildPartial();
@@ -138,12 +138,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.pass.PassOuterClass.internal_static_identity_pass_Pass_descriptor;
+    return io.bloombox.schema.pass.PassOuterClass.internal_static_bloombox_schema_identity_pass_Pass_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.pass.PassOuterClass.internal_static_identity_pass_Pass_fieldAccessorTable
+    return io.bloombox.schema.pass.PassOuterClass.internal_static_bloombox_schema_identity_pass_Pass_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.pass.Pass.class, io.bloombox.schema.pass.Pass.Builder.class);
   }
@@ -151,19 +151,19 @@ private static final long serialVersionUID = 0L;
   public static final int KEY_FIELD_NUMBER = 1;
   private io.bloombox.schema.pass.PassKey key_;
   /**
-   * <code>.identity.pass.PassKey key = 1;</code>
+   * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
    */
   public boolean hasKey() {
     return key_ != null;
   }
   /**
-   * <code>.identity.pass.PassKey key = 1;</code>
+   * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
    */
   public io.bloombox.schema.pass.PassKey getKey() {
     return key_ == null ? io.bloombox.schema.pass.PassKey.getDefaultInstance() : key_;
   }
   /**
-   * <code>.identity.pass.PassKey key = 1;</code>
+   * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
    */
   public io.bloombox.schema.pass.PassKeyOrBuilder getKeyOrBuilder() {
     return getKey();
@@ -247,44 +247,44 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISSUED_FIELD_NUMBER = 5;
-  private io.bloombox.schema.temporal.Instant issued_;
+  private io.opencannabis.schema.temporal.Instant issued_;
   /**
-   * <code>.temporal.Instant issued = 5;</code>
+   * <code>.opencannabis.temporal.Instant issued = 5;</code>
    */
   public boolean hasIssued() {
     return issued_ != null;
   }
   /**
-   * <code>.temporal.Instant issued = 5;</code>
+   * <code>.opencannabis.temporal.Instant issued = 5;</code>
    */
-  public io.bloombox.schema.temporal.Instant getIssued() {
-    return issued_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : issued_;
+  public io.opencannabis.schema.temporal.Instant getIssued() {
+    return issued_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : issued_;
   }
   /**
-   * <code>.temporal.Instant issued = 5;</code>
+   * <code>.opencannabis.temporal.Instant issued = 5;</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getIssuedOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getIssuedOrBuilder() {
     return getIssued();
   }
 
   public static final int SUSPENDED_FIELD_NUMBER = 6;
-  private io.bloombox.schema.temporal.Instant suspended_;
+  private io.opencannabis.schema.temporal.Instant suspended_;
   /**
-   * <code>.temporal.Instant suspended = 6;</code>
+   * <code>.opencannabis.temporal.Instant suspended = 6;</code>
    */
   public boolean hasSuspended() {
     return suspended_ != null;
   }
   /**
-   * <code>.temporal.Instant suspended = 6;</code>
+   * <code>.opencannabis.temporal.Instant suspended = 6;</code>
    */
-  public io.bloombox.schema.temporal.Instant getSuspended() {
-    return suspended_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : suspended_;
+  public io.opencannabis.schema.temporal.Instant getSuspended() {
+    return suspended_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : suspended_;
   }
   /**
-   * <code>.temporal.Instant suspended = 6;</code>
+   * <code>.opencannabis.temporal.Instant suspended = 6;</code>
    */
-  public io.bloombox.schema.temporal.InstantOrBuilder getSuspendedOrBuilder() {
+  public io.opencannabis.schema.temporal.InstantOrBuilder getSuspendedOrBuilder() {
     return getSuspended();
   }
 
@@ -509,20 +509,20 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code identity.pass.Pass}
+   * Protobuf type {@code bloombox.schema.identity.pass.Pass}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.pass.Pass)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.pass.Pass)
       io.bloombox.schema.pass.PassOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.pass.PassOuterClass.internal_static_identity_pass_Pass_descriptor;
+      return io.bloombox.schema.pass.PassOuterClass.internal_static_bloombox_schema_identity_pass_Pass_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.pass.PassOuterClass.internal_static_identity_pass_Pass_fieldAccessorTable
+      return io.bloombox.schema.pass.PassOuterClass.internal_static_bloombox_schema_identity_pass_Pass_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.pass.Pass.class, io.bloombox.schema.pass.Pass.Builder.class);
     }
@@ -573,7 +573,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.pass.PassOuterClass.internal_static_identity_pass_Pass_descriptor;
+      return io.bloombox.schema.pass.PassOuterClass.internal_static_bloombox_schema_identity_pass_Pass_descriptor;
     }
 
     public io.bloombox.schema.pass.Pass getDefaultInstanceForType() {
@@ -700,13 +700,13 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.pass.PassKey, io.bloombox.schema.pass.PassKey.Builder, io.bloombox.schema.pass.PassKeyOrBuilder> keyBuilder_;
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     public boolean hasKey() {
       return keyBuilder_ != null || key_ != null;
     }
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     public io.bloombox.schema.pass.PassKey getKey() {
       if (keyBuilder_ == null) {
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     public Builder setKey(io.bloombox.schema.pass.PassKey value) {
       if (keyBuilder_ == null) {
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     public Builder setKey(
         io.bloombox.schema.pass.PassKey.Builder builderForValue) {
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     public Builder mergeKey(io.bloombox.schema.pass.PassKey value) {
       if (keyBuilder_ == null) {
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     public Builder clearKey() {
       if (keyBuilder_ == null) {
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     public io.bloombox.schema.pass.PassKey.Builder getKeyBuilder() {
       
@@ -786,7 +786,7 @@ private static final long serialVersionUID = 0L;
       return getKeyFieldBuilder().getBuilder();
     }
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     public io.bloombox.schema.pass.PassKeyOrBuilder getKeyOrBuilder() {
       if (keyBuilder_ != null) {
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.identity.pass.PassKey key = 1;</code>
+     * <code>.bloombox.schema.identity.pass.PassKey key = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.pass.PassKey, io.bloombox.schema.pass.PassKey.Builder, io.bloombox.schema.pass.PassKeyOrBuilder> 
@@ -977,29 +977,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.temporal.Instant issued_ = null;
+    private io.opencannabis.schema.temporal.Instant issued_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> issuedBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> issuedBuilder_;
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
     public boolean hasIssued() {
       return issuedBuilder_ != null || issued_ != null;
     }
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
-    public io.bloombox.schema.temporal.Instant getIssued() {
+    public io.opencannabis.schema.temporal.Instant getIssued() {
       if (issuedBuilder_ == null) {
-        return issued_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : issued_;
+        return issued_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : issued_;
       } else {
         return issuedBuilder_.getMessage();
       }
     }
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
-    public Builder setIssued(io.bloombox.schema.temporal.Instant value) {
+    public Builder setIssued(io.opencannabis.schema.temporal.Instant value) {
       if (issuedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1013,10 +1013,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
     public Builder setIssued(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (issuedBuilder_ == null) {
         issued_ = builderForValue.build();
         onChanged();
@@ -1027,13 +1027,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
-    public Builder mergeIssued(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeIssued(io.opencannabis.schema.temporal.Instant value) {
       if (issuedBuilder_ == null) {
         if (issued_ != null) {
           issued_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(issued_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(issued_).mergeFrom(value).buildPartial();
         } else {
           issued_ = value;
         }
@@ -1045,7 +1045,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
     public Builder clearIssued() {
       if (issuedBuilder_ == null) {
@@ -1059,33 +1059,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getIssuedBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getIssuedBuilder() {
       
       onChanged();
       return getIssuedFieldBuilder().getBuilder();
     }
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getIssuedOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getIssuedOrBuilder() {
       if (issuedBuilder_ != null) {
         return issuedBuilder_.getMessageOrBuilder();
       } else {
         return issued_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : issued_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : issued_;
       }
     }
     /**
-     * <code>.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getIssuedFieldBuilder() {
       if (issuedBuilder_ == null) {
         issuedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getIssued(),
                 getParentForChildren(),
                 isClean());
@@ -1094,29 +1094,29 @@ private static final long serialVersionUID = 0L;
       return issuedBuilder_;
     }
 
-    private io.bloombox.schema.temporal.Instant suspended_ = null;
+    private io.opencannabis.schema.temporal.Instant suspended_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> suspendedBuilder_;
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> suspendedBuilder_;
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
     public boolean hasSuspended() {
       return suspendedBuilder_ != null || suspended_ != null;
     }
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
-    public io.bloombox.schema.temporal.Instant getSuspended() {
+    public io.opencannabis.schema.temporal.Instant getSuspended() {
       if (suspendedBuilder_ == null) {
-        return suspended_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : suspended_;
+        return suspended_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : suspended_;
       } else {
         return suspendedBuilder_.getMessage();
       }
     }
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
-    public Builder setSuspended(io.bloombox.schema.temporal.Instant value) {
+    public Builder setSuspended(io.opencannabis.schema.temporal.Instant value) {
       if (suspendedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1130,10 +1130,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
     public Builder setSuspended(
-        io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
       if (suspendedBuilder_ == null) {
         suspended_ = builderForValue.build();
         onChanged();
@@ -1144,13 +1144,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
-    public Builder mergeSuspended(io.bloombox.schema.temporal.Instant value) {
+    public Builder mergeSuspended(io.opencannabis.schema.temporal.Instant value) {
       if (suspendedBuilder_ == null) {
         if (suspended_ != null) {
           suspended_ =
-            io.bloombox.schema.temporal.Instant.newBuilder(suspended_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Instant.newBuilder(suspended_).mergeFrom(value).buildPartial();
         } else {
           suspended_ = value;
         }
@@ -1162,7 +1162,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
     public Builder clearSuspended() {
       if (suspendedBuilder_ == null) {
@@ -1176,33 +1176,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
-    public io.bloombox.schema.temporal.Instant.Builder getSuspendedBuilder() {
+    public io.opencannabis.schema.temporal.Instant.Builder getSuspendedBuilder() {
       
       onChanged();
       return getSuspendedFieldBuilder().getBuilder();
     }
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getSuspendedOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getSuspendedOrBuilder() {
       if (suspendedBuilder_ != null) {
         return suspendedBuilder_.getMessageOrBuilder();
       } else {
         return suspended_ == null ?
-            io.bloombox.schema.temporal.Instant.getDefaultInstance() : suspended_;
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : suspended_;
       }
     }
     /**
-     * <code>.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
         getSuspendedFieldBuilder() {
       if (suspendedBuilder_ == null) {
         suspendedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                 getSuspended(),
                 getParentForChildren(),
                 isClean());
@@ -1221,10 +1221,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.pass.Pass)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.pass.Pass)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.pass.Pass)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.pass.Pass)
   private static final io.bloombox.schema.pass.Pass DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.pass.Pass();

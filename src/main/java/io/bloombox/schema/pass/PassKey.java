@@ -20,11 +20,11 @@
 package io.bloombox.schema.pass;
 
 /**
- * Protobuf type {@code identity.pass.PassKey}
+ * Protobuf type {@code bloombox.schema.identity.pass.PassKey}
  */
 public  final class PassKey extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.pass.PassKey)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.pass.PassKey)
     PassKeyOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use PassKey.newBuilder() to construct.
@@ -100,12 +100,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_identity_pass_PassKey_descriptor;
+    return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_identity_pass_PassKey_fieldAccessorTable
+    return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.pass.PassKey.class, io.bloombox.schema.pass.PassKey.Builder.class);
   }
@@ -383,20 +383,20 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code identity.pass.PassKey}
+   * Protobuf type {@code bloombox.schema.identity.pass.PassKey}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.pass.PassKey)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.pass.PassKey)
       io.bloombox.schema.pass.PassKeyOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_identity_pass_PassKey_descriptor;
+      return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_identity_pass_PassKey_fieldAccessorTable
+      return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.pass.PassKey.class, io.bloombox.schema.pass.PassKey.Builder.class);
     }
@@ -429,7 +429,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_identity_pass_PassKey_descriptor;
+      return io.bloombox.schema.pass.PassKeyOuterClass.internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
     }
 
     public io.bloombox.schema.pass.PassKey getDefaultInstanceForType() {
@@ -746,10 +746,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.pass.PassKey)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.pass.PassKey)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.pass.PassKey)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.pass.PassKey)
   private static final io.bloombox.schema.pass.PassKey DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.pass.PassKey();

@@ -25,11 +25,11 @@ package io.bloombox.schema.services.shop.v1;
  * Specifies a request and response cycle to validate a US zipcode for delivery eligibility.
  * </pre>
  *
- * Protobuf type {@code services.shop.v1.CheckZipcode}
+ * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode}
  */
 public  final class CheckZipcode extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.shop.v1.CheckZipcode)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.CheckZipcode)
     CheckZipcodeOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use CheckZipcode.newBuilder() to construct.
@@ -83,18 +83,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_descriptor;
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_fieldAccessorTable
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.shop.v1.CheckZipcode.class, io.bloombox.schema.services.shop.v1.CheckZipcode.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.CheckZipcode.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.CheckZipcode.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     boolean hasLocation();
     /**
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     io.bloombox.schema.partner.PartnerLocationKey getLocation();
     /**
@@ -136,16 +136,16 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.CheckZipcode.Request}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.CheckZipcode.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.CheckZipcode.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -220,12 +220,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Request_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Request_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.CheckZipcode.Request.class, io.bloombox.schema.services.shop.v1.CheckZipcode.Request.Builder.class);
     }
@@ -279,7 +279,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
       return location_ == null ? io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance() : location_;
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
@@ -472,20 +472,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.CheckZipcode.Request}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.CheckZipcode.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.CheckZipcode.Request)
         io.bloombox.schema.services.shop.v1.CheckZipcode.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Request_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.CheckZipcode.Request.class, io.bloombox.schema.services.shop.v1.CheckZipcode.Request.Builder.class);
       }
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Request_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.CheckZipcode.Request getDefaultInstanceForType() {
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -725,7 +725,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
@@ -759,7 +759,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.PartnerLocationKey.Builder builderForValue) {
@@ -777,7 +777,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -817,7 +817,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKey.Builder getLocationBuilder() {
         
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> 
@@ -870,10 +870,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.CheckZipcode.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.CheckZipcode.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.CheckZipcode.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.CheckZipcode.Request)
     private static final io.bloombox.schema.services.shop.v1.CheckZipcode.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.CheckZipcode.Request();
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.CheckZipcode.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.CheckZipcode.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -931,11 +931,11 @@ private static final long serialVersionUID = 0L;
     float getDeliveryMinimum();
   }
   /**
-   * Protobuf type {@code services.shop.v1.CheckZipcode.Response}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.CheckZipcode.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.CheckZipcode.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1002,12 +1002,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Response_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Response_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.CheckZipcode.Response.class, io.bloombox.schema.services.shop.v1.CheckZipcode.Response.Builder.class);
     }
@@ -1205,20 +1205,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.CheckZipcode.Response}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.CheckZipcode.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.CheckZipcode.Response)
         io.bloombox.schema.services.shop.v1.CheckZipcode.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Response_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.CheckZipcode.Response.class, io.bloombox.schema.services.shop.v1.CheckZipcode.Response.Builder.class);
       }
@@ -1249,7 +1249,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Response_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.CheckZipcode.Response getDefaultInstanceForType() {
@@ -1428,10 +1428,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.CheckZipcode.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.CheckZipcode.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.CheckZipcode.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.CheckZipcode.Response)
     private static final io.bloombox.schema.services.shop.v1.CheckZipcode.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.CheckZipcode.Response();
@@ -1467,7 +1467,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.CheckZipcode.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.CheckZipcode.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1475,7 +1475,7 @@ private static final long serialVersionUID = 0L;
      * Request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1483,7 +1483,7 @@ private static final long serialVersionUID = 0L;
      * Request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.CheckZipcode.Request getRequest();
     /**
@@ -1491,7 +1491,7 @@ private static final long serialVersionUID = 0L;
      * Request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.CheckZipcode.RequestOrBuilder getRequestOrBuilder();
 
@@ -1500,7 +1500,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1508,7 +1508,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.CheckZipcode.Response getResponse();
     /**
@@ -1516,16 +1516,16 @@ private static final long serialVersionUID = 0L;
      * Response to a request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.CheckZipcode.ResponseOrBuilder getResponseOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.CheckZipcode.Operation}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.CheckZipcode.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.CheckZipcode.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1606,12 +1606,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Operation_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.CheckZipcode.Operation.class, io.bloombox.schema.services.shop.v1.CheckZipcode.Operation.Builder.class);
     }
@@ -1623,7 +1623,7 @@ private static final long serialVersionUID = 0L;
      * Request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1633,7 +1633,7 @@ private static final long serialVersionUID = 0L;
      * Request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.CheckZipcode.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.shop.v1.CheckZipcode.Request.getDefaultInstance() : request_;
@@ -1643,7 +1643,7 @@ private static final long serialVersionUID = 0L;
      * Request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.CheckZipcode.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1656,7 +1656,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1666,7 +1666,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.CheckZipcode.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.shop.v1.CheckZipcode.Response.getDefaultInstance() : response_;
@@ -1676,7 +1676,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for zipcode eligibility verification.
      * </pre>
      *
-     * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.CheckZipcode.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
@@ -1855,20 +1855,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.CheckZipcode.Operation}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.CheckZipcode.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.CheckZipcode.Operation)
         io.bloombox.schema.services.shop.v1.CheckZipcode.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.CheckZipcode.Operation.class, io.bloombox.schema.services.shop.v1.CheckZipcode.Operation.Builder.class);
       }
@@ -1907,7 +1907,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_Operation_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.CheckZipcode.Operation getDefaultInstanceForType() {
@@ -2016,7 +2016,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -2026,7 +2026,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.CheckZipcode.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -2040,7 +2040,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.shop.v1.CheckZipcode.Request value) {
         if (requestBuilder_ == null) {
@@ -2060,7 +2060,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.shop.v1.CheckZipcode.Request.Builder builderForValue) {
@@ -2078,7 +2078,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.shop.v1.CheckZipcode.Request value) {
         if (requestBuilder_ == null) {
@@ -2100,7 +2100,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2118,7 +2118,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.CheckZipcode.Request.Builder getRequestBuilder() {
         
@@ -2130,7 +2130,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.CheckZipcode.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2145,7 +2145,7 @@ private static final long serialVersionUID = 0L;
        * Request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.CheckZipcode.Request, io.bloombox.schema.services.shop.v1.CheckZipcode.Request.Builder, io.bloombox.schema.services.shop.v1.CheckZipcode.RequestOrBuilder> 
@@ -2169,7 +2169,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2179,7 +2179,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.CheckZipcode.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -2193,7 +2193,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.shop.v1.CheckZipcode.Response value) {
         if (responseBuilder_ == null) {
@@ -2213,7 +2213,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.shop.v1.CheckZipcode.Response.Builder builderForValue) {
@@ -2231,7 +2231,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.shop.v1.CheckZipcode.Response value) {
         if (responseBuilder_ == null) {
@@ -2253,7 +2253,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2271,7 +2271,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.CheckZipcode.Response.Builder getResponseBuilder() {
         
@@ -2283,7 +2283,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.CheckZipcode.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2298,7 +2298,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for zipcode eligibility verification.
        * </pre>
        *
-       * <code>.services.shop.v1.CheckZipcode.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.CheckZipcode.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.CheckZipcode.Response, io.bloombox.schema.services.shop.v1.CheckZipcode.Response.Builder, io.bloombox.schema.services.shop.v1.CheckZipcode.ResponseOrBuilder> 
@@ -2324,10 +2324,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.CheckZipcode.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.CheckZipcode.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.CheckZipcode.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.CheckZipcode.Operation)
     private static final io.bloombox.schema.services.shop.v1.CheckZipcode.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.CheckZipcode.Operation();
@@ -2507,20 +2507,20 @@ private static final long serialVersionUID = 0L;
    * Specifies a request and response cycle to validate a US zipcode for delivery eligibility.
    * </pre>
    *
-   * Protobuf type {@code services.shop.v1.CheckZipcode}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.shop.v1.CheckZipcode)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.CheckZipcode)
       io.bloombox.schema.services.shop.v1.CheckZipcodeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.CheckZipcode.class, io.bloombox.schema.services.shop.v1.CheckZipcode.Builder.class);
     }
@@ -2547,7 +2547,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_CheckZipcode_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_CheckZipcode_descriptor;
     }
 
     public io.bloombox.schema.services.shop.v1.CheckZipcode getDefaultInstanceForType() {
@@ -2642,10 +2642,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.shop.v1.CheckZipcode)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.CheckZipcode)
   }
 
-  // @@protoc_insertion_point(class_scope:services.shop.v1.CheckZipcode)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.CheckZipcode)
   private static final io.bloombox.schema.services.shop.v1.CheckZipcode DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.CheckZipcode();

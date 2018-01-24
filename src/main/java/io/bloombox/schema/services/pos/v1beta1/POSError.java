@@ -25,7 +25,7 @@ package io.bloombox.schema.services.pos.v1beta1;
  * Enumerated error states that may be served from the POS service.
  * </pre>
  *
- * Protobuf enum {@code services.pos.v1beta1.POSError}
+ * Protobuf enum {@code bloombox.schema.services.pos.v1beta1.POSError}
  */
 public enum POSError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -237,6 +237,6 @@ public enum POSError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.pos.v1beta1.POSError)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.pos.v1beta1.POSError)
 }
 

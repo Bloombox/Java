@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.menu.v1beta1;
 
 public interface GetMenuOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.menu.v1beta1.GetMenu)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.menu.v1beta1.GetMenu)
     com.google.protobuf.MessageOrBuilder {
 }

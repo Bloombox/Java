@@ -25,7 +25,7 @@ package io.bloombox.schema.services.telemetry.v1beta3;
  * Specifies status codes that a response may provide.
  * </pre>
  *
- * Protobuf enum {@code services.telemetry.v1beta3.OperationStatus}
+ * Protobuf enum {@code bloombox.schema.services.telemetry.v1beta3.OperationStatus}
  */
 public enum OperationStatus
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -135,6 +135,6 @@ public enum OperationStatus
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.telemetry.v1beta3.OperationStatus)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.telemetry.v1beta3.OperationStatus)
 }
 

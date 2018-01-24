@@ -40,10 +40,11 @@ public final class ServiceStatusOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034services/ServiceStatus.proto\022\010services" +
-      "*?\n\rServiceStatus\022\013\n\007UNKNOWN\020\000\022\006\n\002UP\020\001\022\010" +
-      "\n\004DOWN\020\002\022\017\n\013MAINTENANCE\020\003B!\n\033io.bloombox" +
-      ".schema.servicesH\001P\001b\006proto3"
+      "\n\034services/ServiceStatus.proto\022\030bloombox" +
+      ".schema.services*?\n\rServiceStatus\022\013\n\007UNK" +
+      "NOWN\020\000\022\006\n\002UP\020\001\022\010\n\004DOWN\020\002\022\017\n\013MAINTENANCE\020" +
+      "\003B!\n\033io.bloombox.schema.servicesH\001P\001b\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

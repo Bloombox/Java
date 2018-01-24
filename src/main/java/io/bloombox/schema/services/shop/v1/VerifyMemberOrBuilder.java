@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.shop.v1;
 
 public interface VerifyMemberOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.shop.v1.VerifyMember)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.VerifyMember)
     com.google.protobuf.MessageOrBuilder {
 }

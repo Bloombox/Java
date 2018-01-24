@@ -26,11 +26,11 @@ package io.bloombox.schema.services.devices.v1beta1;
  * with.
  * </pre>
  *
- * Protobuf type {@code services.devices.v1beta1.DeviceAssignment}
+ * Protobuf type {@code bloombox.schema.services.devices.v1beta1.DeviceAssignment}
  */
 public  final class DeviceAssignment extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.devices.v1beta1.DeviceAssignment)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.devices.v1beta1.DeviceAssignment)
     DeviceAssignmentOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use DeviceAssignment.newBuilder() to construct.
@@ -106,12 +106,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_DeviceAssignment_descriptor;
+    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_DeviceAssignment_fieldAccessorTable
+    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.class, io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.Builder.class);
   }
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * Role setting for the device.
    * </pre>
    *
-   * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
    */
   public int getRoleValue() {
     return role_;
@@ -217,7 +217,7 @@ private static final long serialVersionUID = 0L;
    * Role setting for the device.
    * </pre>
    *
-   * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
    */
   public io.bloombox.schema.services.devices.v1beta1.DeviceRole getRole() {
     io.bloombox.schema.services.devices.v1beta1.DeviceRole result = io.bloombox.schema.services.devices.v1beta1.DeviceRole.valueOf(role_);
@@ -400,20 +400,20 @@ private static final long serialVersionUID = 0L;
    * with.
    * </pre>
    *
-   * Protobuf type {@code services.devices.v1beta1.DeviceAssignment}
+   * Protobuf type {@code bloombox.schema.services.devices.v1beta1.DeviceAssignment}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.devices.v1beta1.DeviceAssignment)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.devices.v1beta1.DeviceAssignment)
       io.bloombox.schema.services.devices.v1beta1.DeviceAssignmentOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_DeviceAssignment_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_DeviceAssignment_fieldAccessorTable
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.class, io.bloombox.schema.services.devices.v1beta1.DeviceAssignment.Builder.class);
     }
@@ -446,7 +446,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_DeviceAssignment_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_descriptor;
     }
 
     public io.bloombox.schema.services.devices.v1beta1.DeviceAssignment getDefaultInstanceForType() {
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * Role setting for the device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
      */
     public int getRoleValue() {
       return role_;
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
      * Role setting for the device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
      */
     public Builder setRoleValue(int value) {
       role_ = value;
@@ -751,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * Role setting for the device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceRole getRole() {
       io.bloombox.schema.services.devices.v1beta1.DeviceRole result = io.bloombox.schema.services.devices.v1beta1.DeviceRole.valueOf(role_);
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
      * Role setting for the device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
      */
     public Builder setRole(io.bloombox.schema.services.devices.v1beta1.DeviceRole value) {
       if (value == null) {
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
      * Role setting for the device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceRole role = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
      */
     public Builder clearRole() {
       
@@ -797,10 +797,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.devices.v1beta1.DeviceAssignment)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.devices.v1beta1.DeviceAssignment)
   }
 
-  // @@protoc_insertion_point(class_scope:services.devices.v1beta1.DeviceAssignment)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.devices.v1beta1.DeviceAssignment)
   private static final io.bloombox.schema.services.devices.v1beta1.DeviceAssignment DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.devices.v1beta1.DeviceAssignment();

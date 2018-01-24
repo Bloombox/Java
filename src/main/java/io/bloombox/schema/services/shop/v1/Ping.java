@@ -25,11 +25,11 @@ package io.bloombox.schema.services.shop.v1;
  * Specifies an RPC operation to retrieve status information for the Shop API.
  * </pre>
  *
- * Protobuf type {@code services.shop.v1.Ping}
+ * Protobuf type {@code bloombox.schema.services.shop.v1.Ping}
  */
 public  final class Ping extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.shop.v1.Ping)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.Ping)
     PingOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Ping.newBuilder() to construct.
@@ -83,26 +83,26 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_descriptor;
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_fieldAccessorTable
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.shop.v1.Ping.class, io.bloombox.schema.services.shop.v1.Ping.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.Ping.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.Ping.Request)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code services.shop.v1.Ping.Request}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.Ping.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.Ping.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.Ping.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -156,12 +156,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Request_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Request_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.Ping.Request.class, io.bloombox.schema.services.shop.v1.Ping.Request.Builder.class);
     }
@@ -307,20 +307,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.Ping.Request}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.Ping.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.Ping.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.Ping.Request)
         io.bloombox.schema.services.shop.v1.Ping.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Request_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.Ping.Request.class, io.bloombox.schema.services.shop.v1.Ping.Request.Builder.class);
       }
@@ -347,7 +347,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Request_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.Ping.Request getDefaultInstanceForType() {
@@ -442,10 +442,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.Ping.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.Ping.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.Ping.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.Ping.Request)
     private static final io.bloombox.schema.services.shop.v1.Ping.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.Ping.Request();
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.Ping.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.Ping.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -489,7 +489,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.services.ServiceStatus status = 1;</code>
+     * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
      */
     int getStatusValue();
     /**
@@ -497,16 +497,16 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.services.ServiceStatus status = 1;</code>
+     * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
      */
     io.bloombox.schema.services.ServiceStatus getStatus();
   }
   /**
-   * Protobuf type {@code services.shop.v1.Ping.Response}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.Ping.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.Ping.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.Ping.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -568,12 +568,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Response_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Response_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.Ping.Response.class, io.bloombox.schema.services.shop.v1.Ping.Response.Builder.class);
     }
@@ -585,7 +585,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.services.ServiceStatus status = 1;</code>
+     * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -595,7 +595,7 @@ private static final long serialVersionUID = 0L;
      * Current service status.
      * </pre>
      *
-     * <code>.services.ServiceStatus status = 1;</code>
+     * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
      */
     public io.bloombox.schema.services.ServiceStatus getStatus() {
       io.bloombox.schema.services.ServiceStatus result = io.bloombox.schema.services.ServiceStatus.valueOf(status_);
@@ -753,20 +753,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.Ping.Response}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.Ping.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.Ping.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.Ping.Response)
         io.bloombox.schema.services.shop.v1.Ping.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Response_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.Ping.Response.class, io.bloombox.schema.services.shop.v1.Ping.Response.Builder.class);
       }
@@ -795,7 +795,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Response_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.Ping.Response getDefaultInstanceForType() {
@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
        */
       public int getStatusValue() {
         return status_;
@@ -900,7 +900,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
        */
       public io.bloombox.schema.services.ServiceStatus getStatus() {
         io.bloombox.schema.services.ServiceStatus result = io.bloombox.schema.services.ServiceStatus.valueOf(status_);
@@ -923,7 +923,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
        */
       public Builder setStatus(io.bloombox.schema.services.ServiceStatus value) {
         if (value == null) {
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
        * Current service status.
        * </pre>
        *
-       * <code>.services.ServiceStatus status = 1;</code>
+       * <code>.bloombox.schema.services.ServiceStatus status = 1;</code>
        */
       public Builder clearStatus() {
         
@@ -958,10 +958,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.Ping.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.Ping.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.Ping.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.Ping.Response)
     private static final io.bloombox.schema.services.shop.v1.Ping.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.Ping.Response();
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.Ping.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.Ping.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1005,7 +1005,7 @@ private static final long serialVersionUID = 0L;
      * Request for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1013,7 +1013,7 @@ private static final long serialVersionUID = 0L;
      * Request for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.Ping.Request getRequest();
     /**
@@ -1021,7 +1021,7 @@ private static final long serialVersionUID = 0L;
      * Request for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.Ping.RequestOrBuilder getRequestOrBuilder();
 
@@ -1030,7 +1030,7 @@ private static final long serialVersionUID = 0L;
      * Response for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1038,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      * Response for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.Ping.Response getResponse();
     /**
@@ -1046,16 +1046,16 @@ private static final long serialVersionUID = 0L;
      * Response for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.Ping.ResponseOrBuilder getResponseOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.Ping.Operation}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.Ping.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.Ping.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.Ping.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1136,12 +1136,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Operation_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Operation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.Ping.Operation.class, io.bloombox.schema.services.shop.v1.Ping.Operation.Builder.class);
     }
@@ -1153,7 +1153,7 @@ private static final long serialVersionUID = 0L;
      * Request for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1163,7 +1163,7 @@ private static final long serialVersionUID = 0L;
      * Request for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.Ping.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.shop.v1.Ping.Request.getDefaultInstance() : request_;
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
      * Request for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.Ping.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1186,7 +1186,7 @@ private static final long serialVersionUID = 0L;
      * Response for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1196,7 +1196,7 @@ private static final long serialVersionUID = 0L;
      * Response for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.Ping.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.shop.v1.Ping.Response.getDefaultInstance() : response_;
@@ -1206,7 +1206,7 @@ private static final long serialVersionUID = 0L;
      * Response for member verification.
      * </pre>
      *
-     * <code>.services.shop.v1.Ping.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.Ping.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
@@ -1385,20 +1385,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.Ping.Operation}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.Ping.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.Ping.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.Ping.Operation)
         io.bloombox.schema.services.shop.v1.Ping.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Operation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.Ping.Operation.class, io.bloombox.schema.services.shop.v1.Ping.Operation.Builder.class);
       }
@@ -1437,7 +1437,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_Operation_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.Ping.Operation getDefaultInstanceForType() {
@@ -1546,7 +1546,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -1556,7 +1556,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.Ping.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -1570,7 +1570,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.shop.v1.Ping.Request value) {
         if (requestBuilder_ == null) {
@@ -1590,7 +1590,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.shop.v1.Ping.Request.Builder builderForValue) {
@@ -1608,7 +1608,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.shop.v1.Ping.Request value) {
         if (requestBuilder_ == null) {
@@ -1630,7 +1630,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -1648,7 +1648,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.Ping.Request.Builder getRequestBuilder() {
         
@@ -1660,7 +1660,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.Ping.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -1675,7 +1675,7 @@ private static final long serialVersionUID = 0L;
        * Request for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.Ping.Request, io.bloombox.schema.services.shop.v1.Ping.Request.Builder, io.bloombox.schema.services.shop.v1.Ping.RequestOrBuilder> 
@@ -1699,7 +1699,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -1709,7 +1709,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.Ping.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -1723,7 +1723,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.shop.v1.Ping.Response value) {
         if (responseBuilder_ == null) {
@@ -1743,7 +1743,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.shop.v1.Ping.Response.Builder builderForValue) {
@@ -1761,7 +1761,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.shop.v1.Ping.Response value) {
         if (responseBuilder_ == null) {
@@ -1783,7 +1783,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -1801,7 +1801,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.Ping.Response.Builder getResponseBuilder() {
         
@@ -1813,7 +1813,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.Ping.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -1828,7 +1828,7 @@ private static final long serialVersionUID = 0L;
        * Response for member verification.
        * </pre>
        *
-       * <code>.services.shop.v1.Ping.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.Ping.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.Ping.Response, io.bloombox.schema.services.shop.v1.Ping.Response.Builder, io.bloombox.schema.services.shop.v1.Ping.ResponseOrBuilder> 
@@ -1854,10 +1854,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.Ping.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.Ping.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.Ping.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.Ping.Operation)
     private static final io.bloombox.schema.services.shop.v1.Ping.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.Ping.Operation();
@@ -2037,20 +2037,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to retrieve status information for the Shop API.
    * </pre>
    *
-   * Protobuf type {@code services.shop.v1.Ping}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.Ping}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.shop.v1.Ping)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.Ping)
       io.bloombox.schema.services.shop.v1.PingOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.Ping.class, io.bloombox.schema.services.shop.v1.Ping.Builder.class);
     }
@@ -2077,7 +2077,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_Ping_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_Ping_descriptor;
     }
 
     public io.bloombox.schema.services.shop.v1.Ping getDefaultInstanceForType() {
@@ -2172,10 +2172,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.shop.v1.Ping)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.Ping)
   }
 
-  // @@protoc_insertion_point(class_scope:services.shop.v1.Ping)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.Ping)
   private static final io.bloombox.schema.services.shop.v1.Ping DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.Ping();

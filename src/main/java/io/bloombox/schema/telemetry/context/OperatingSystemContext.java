@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -36,7 +37,7 @@ public final class OperatingSystemContext {
    * server applications.
    * </pre>
    *
-   * Protobuf enum {@code analytics.context.OSType}
+   * Protobuf enum {@code bloombox.schema.analytics.context.OSType}
    */
   public enum OSType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -282,11 +283,11 @@ public final class OperatingSystemContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.context.OSType)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.OSType)
   }
 
   public interface DeviceOSOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.context.DeviceOS)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.DeviceOS)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -294,7 +295,7 @@ public final class OperatingSystemContext {
      * Type of Operating System being expressed or specified.
      * </pre>
      *
-     * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+     * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
      */
     int getTypeValue();
     /**
@@ -302,7 +303,7 @@ public final class OperatingSystemContext {
      * Type of Operating System being expressed or specified.
      * </pre>
      *
-     * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+     * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
      */
     io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType getType();
 
@@ -311,7 +312,7 @@ public final class OperatingSystemContext {
      * Version of the OS running on the device.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
      */
     boolean hasVersion();
     /**
@@ -319,28 +320,28 @@ public final class OperatingSystemContext {
      * Version of the OS running on the device.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
      */
-    io.bloombox.schema.struct.VersionSpec getVersion();
+    io.opencannabis.schema.struct.VersionSpec getVersion();
     /**
      * <pre>
      * Version of the OS running on the device.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
      */
-    io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder();
+    io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder();
   }
   /**
    * <pre>
    * Structure describing a device's operating system, including type and version.
    * </pre>
    *
-   * Protobuf type {@code analytics.context.DeviceOS}
+   * Protobuf type {@code bloombox.schema.analytics.context.DeviceOS}
    */
   public  static final class DeviceOS extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.context.DeviceOS)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.DeviceOS)
       DeviceOSOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeviceOS.newBuilder() to construct.
@@ -389,11 +390,11 @@ public final class OperatingSystemContext {
               break;
             }
             case 18: {
-              io.bloombox.schema.struct.VersionSpec.Builder subBuilder = null;
+              io.opencannabis.schema.struct.VersionSpec.Builder subBuilder = null;
               if (version_ != null) {
                 subBuilder = version_.toBuilder();
               }
-              version_ = input.readMessage(io.bloombox.schema.struct.VersionSpec.parser(), extensionRegistry);
+              version_ = input.readMessage(io.opencannabis.schema.struct.VersionSpec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(version_);
                 version_ = subBuilder.buildPartial();
@@ -415,12 +416,12 @@ public final class OperatingSystemContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_analytics_context_DeviceOS_descriptor;
+      return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_analytics_context_DeviceOS_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.class, io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.Builder.class);
     }
@@ -432,7 +433,7 @@ public final class OperatingSystemContext {
      * Type of Operating System being expressed or specified.
      * </pre>
      *
-     * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+     * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -442,7 +443,7 @@ public final class OperatingSystemContext {
      * Type of Operating System being expressed or specified.
      * </pre>
      *
-     * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+     * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
      */
     public io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType getType() {
       io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType result = io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType.valueOf(type_);
@@ -450,13 +451,13 @@ public final class OperatingSystemContext {
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private io.bloombox.schema.struct.VersionSpec version_;
+    private io.opencannabis.schema.struct.VersionSpec version_;
     /**
      * <pre>
      * Version of the OS running on the device.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
      */
     public boolean hasVersion() {
       return version_ != null;
@@ -466,19 +467,19 @@ public final class OperatingSystemContext {
      * Version of the OS running on the device.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
      */
-    public io.bloombox.schema.struct.VersionSpec getVersion() {
-      return version_ == null ? io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+    public io.opencannabis.schema.struct.VersionSpec getVersion() {
+      return version_ == null ? io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
     }
     /**
      * <pre>
      * Version of the OS running on the device.
      * </pre>
      *
-     * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+     * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
      */
-    public io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
+    public io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
       return getVersion();
     }
 
@@ -653,20 +654,20 @@ public final class OperatingSystemContext {
      * Structure describing a device's operating system, including type and version.
      * </pre>
      *
-     * Protobuf type {@code analytics.context.DeviceOS}
+     * Protobuf type {@code bloombox.schema.analytics.context.DeviceOS}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.context.DeviceOS)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.DeviceOS)
         io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOSOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_analytics_context_DeviceOS_descriptor;
+        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_analytics_context_DeviceOS_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.class, io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.Builder.class);
       }
@@ -701,7 +702,7 @@ public final class OperatingSystemContext {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_analytics_context_DeviceOS_descriptor;
+        return io.bloombox.schema.telemetry.context.OperatingSystemContext.internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor;
       }
 
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS getDefaultInstanceForType() {
@@ -804,7 +805,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -814,7 +815,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -826,7 +827,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType getType() {
         io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType result = io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType.valueOf(type_);
@@ -837,7 +838,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public Builder setType(io.bloombox.schema.telemetry.context.OperatingSystemContext.OSType value) {
         if (value == null) {
@@ -853,7 +854,7 @@ public final class OperatingSystemContext {
        * Type of Operating System being expressed or specified.
        * </pre>
        *
-       * <code>.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
+       * <code>.bloombox.schema.analytics.context.OSType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of Operating System being expressed or specified."];</code>
        */
       public Builder clearType() {
         
@@ -862,15 +863,15 @@ public final class OperatingSystemContext {
         return this;
       }
 
-      private io.bloombox.schema.struct.VersionSpec version_ = null;
+      private io.opencannabis.schema.struct.VersionSpec version_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder> versionBuilder_;
+          io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder> versionBuilder_;
       /**
        * <pre>
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
       public boolean hasVersion() {
         return versionBuilder_ != null || version_ != null;
@@ -880,11 +881,11 @@ public final class OperatingSystemContext {
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpec getVersion() {
+      public io.opencannabis.schema.struct.VersionSpec getVersion() {
         if (versionBuilder_ == null) {
-          return version_ == null ? io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+          return version_ == null ? io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
         } else {
           return versionBuilder_.getMessage();
         }
@@ -894,9 +895,9 @@ public final class OperatingSystemContext {
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
-      public Builder setVersion(io.bloombox.schema.struct.VersionSpec value) {
+      public Builder setVersion(io.opencannabis.schema.struct.VersionSpec value) {
         if (versionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -914,10 +915,10 @@ public final class OperatingSystemContext {
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
       public Builder setVersion(
-          io.bloombox.schema.struct.VersionSpec.Builder builderForValue) {
+          io.opencannabis.schema.struct.VersionSpec.Builder builderForValue) {
         if (versionBuilder_ == null) {
           version_ = builderForValue.build();
           onChanged();
@@ -932,13 +933,13 @@ public final class OperatingSystemContext {
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
-      public Builder mergeVersion(io.bloombox.schema.struct.VersionSpec value) {
+      public Builder mergeVersion(io.opencannabis.schema.struct.VersionSpec value) {
         if (versionBuilder_ == null) {
           if (version_ != null) {
             version_ =
-              io.bloombox.schema.struct.VersionSpec.newBuilder(version_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.struct.VersionSpec.newBuilder(version_).mergeFrom(value).buildPartial();
           } else {
             version_ = value;
           }
@@ -954,7 +955,7 @@ public final class OperatingSystemContext {
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
       public Builder clearVersion() {
         if (versionBuilder_ == null) {
@@ -972,9 +973,9 @@ public final class OperatingSystemContext {
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpec.Builder getVersionBuilder() {
+      public io.opencannabis.schema.struct.VersionSpec.Builder getVersionBuilder() {
         
         onChanged();
         return getVersionFieldBuilder().getBuilder();
@@ -984,14 +985,14 @@ public final class OperatingSystemContext {
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
-      public io.bloombox.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
+      public io.opencannabis.schema.struct.VersionSpecOrBuilder getVersionOrBuilder() {
         if (versionBuilder_ != null) {
           return versionBuilder_.getMessageOrBuilder();
         } else {
           return version_ == null ?
-              io.bloombox.schema.struct.VersionSpec.getDefaultInstance() : version_;
+              io.opencannabis.schema.struct.VersionSpec.getDefaultInstance() : version_;
         }
       }
       /**
@@ -999,14 +1000,14 @@ public final class OperatingSystemContext {
        * Version of the OS running on the device.
        * </pre>
        *
-       * <code>.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
+       * <code>.opencannabis.structs.VersionSpec version = 2 [(.gen_bq_schema.description) = "Version of the OS running on the device."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder> 
+          io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder> 
           getVersionFieldBuilder() {
         if (versionBuilder_ == null) {
           versionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.struct.VersionSpec, io.bloombox.schema.struct.VersionSpec.Builder, io.bloombox.schema.struct.VersionSpecOrBuilder>(
+              io.opencannabis.schema.struct.VersionSpec, io.opencannabis.schema.struct.VersionSpec.Builder, io.opencannabis.schema.struct.VersionSpecOrBuilder>(
                   getVersion(),
                   getParentForChildren(),
                   isClean());
@@ -1025,10 +1026,10 @@ public final class OperatingSystemContext {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.context.DeviceOS)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.DeviceOS)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.context.DeviceOS)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.DeviceOS)
     private static final io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS();
@@ -1064,10 +1065,10 @@ public final class OperatingSystemContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_context_DeviceOS_descriptor;
+    internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_context_DeviceOS_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_context_DeviceOS_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1077,19 +1078,20 @@ public final class OperatingSystemContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032analytics/context/OS.proto\022\021analytics." +
-      "context\032\016bq_field.proto\032\025structs/Version" +
-      ".proto\"\305\001\n\010DeviceOS\022e\n\004type\030\001 \001(\0162\031.anal" +
-      "ytics.context.OSTypeB<\360?\001\212@6Type of Oper" +
-      "ating System being expressed or specifie" +
-      "d.\022R\n\007version\030\002 \001(\0132\024.structs.VersionSpe" +
-      "cB+\212@(Version of the OS running on the d" +
-      "evice.*\217\001\n\006OSType\022\016\n\nOS_UNKNOWN\020\000\022\007\n\003iOS" +
-      "\020d\022\t\n\005macOS\020e\022\010\n\004tvOS\020f\022\013\n\007watchOS\020g\022\014\n\007" +
-      "ANDROID\020\310\001\022\021\n\014ANDROID_WEAR\020\311\001\022\013\n\007WINDOWS" +
-      "\020\004\022\021\n\rWINDOWS_PHONE\020\005\022\t\n\005LINUX\020\006BE\n$io.b" +
-      "loombox.schema.telemetry.contextB\026Operat" +
-      "ingSystemContextH\001P\000\370\001\001b\006proto3"
+      "\n\032analytics/context/OS.proto\022!bloombox.s" +
+      "chema.analytics.context\032\016bq_field.proto\032" +
+      "\025structs/Version.proto\"\342\001\n\010DeviceOS\022u\n\004t" +
+      "ype\030\001 \001(\0162).bloombox.schema.analytics.co" +
+      "ntext.OSTypeB<\360?\001\212@6Type of Operating Sy" +
+      "stem being expressed or specified.\022_\n\007ve" +
+      "rsion\030\002 \001(\0132!.opencannabis.structs.Versi" +
+      "onSpecB+\212@(Version of the OS running on " +
+      "the device.*\217\001\n\006OSType\022\016\n\nOS_UNKNOWN\020\000\022\007" +
+      "\n\003iOS\020d\022\t\n\005macOS\020e\022\010\n\004tvOS\020f\022\013\n\007watchOS\020" +
+      "g\022\014\n\007ANDROID\020\310\001\022\021\n\014ANDROID_WEAR\020\311\001\022\013\n\007WI" +
+      "NDOWS\020\004\022\021\n\rWINDOWS_PHONE\020\005\022\t\n\005LINUX\020\006BE\n" +
+      "$io.bloombox.schema.telemetry.contextB\026O" +
+      "peratingSystemContextH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1103,13 +1105,13 @@ public final class OperatingSystemContext {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.struct.Version.getDescriptor(),
+          io.opencannabis.schema.struct.Version.getDescriptor(),
         }, assigner);
-    internal_static_analytics_context_DeviceOS_descriptor =
+    internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_context_DeviceOS_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_context_DeviceOS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_context_DeviceOS_descriptor,
+        internal_static_bloombox_schema_analytics_context_DeviceOS_descriptor,
         new java.lang.String[] { "Type", "Version", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -1118,7 +1120,7 @@ public final class OperatingSystemContext {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.struct.Version.getDescriptor();
+    io.opencannabis.schema.struct.Version.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

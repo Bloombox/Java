@@ -25,11 +25,11 @@ package io.bloombox.schema.services.devices.v1beta1;
  * Specifies an RPC operation to activate a hardware device for use.
  * </pre>
  *
- * Protobuf type {@code services.devices.v1beta1.Activation}
+ * Protobuf type {@code bloombox.schema.services.devices.v1beta1.Activation}
  */
 public  final class Activation extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.devices.v1beta1.Activation)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.devices.v1beta1.Activation)
     ActivationOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Activation.newBuilder() to construct.
@@ -83,18 +83,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_descriptor;
+    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_fieldAccessorTable
+    return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.devices.v1beta1.Activation.class, io.bloombox.schema.services.devices.v1beta1.Activation.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.devices.v1beta1.Activation.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.devices.v1beta1.Activation.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -138,11 +138,11 @@ private static final long serialVersionUID = 0L;
    * Request to activate a hardware device.
    * </pre>
    *
-   * Protobuf type {@code services.devices.v1beta1.Activation.Request}
+   * Protobuf type {@code bloombox.schema.services.devices.v1beta1.Activation.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.devices.v1beta1.Activation.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.devices.v1beta1.Activation.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -211,12 +211,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Request_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Request_fieldAccessorTable
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.devices.v1beta1.Activation.Request.class, io.bloombox.schema.services.devices.v1beta1.Activation.Request.Builder.class);
     }
@@ -470,20 +470,20 @@ private static final long serialVersionUID = 0L;
      * Request to activate a hardware device.
      * </pre>
      *
-     * Protobuf type {@code services.devices.v1beta1.Activation.Request}
+     * Protobuf type {@code bloombox.schema.services.devices.v1beta1.Activation.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.devices.v1beta1.Activation.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.devices.v1beta1.Activation.Request)
         io.bloombox.schema.services.devices.v1beta1.Activation.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Request_descriptor;
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Request_fieldAccessorTable
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.devices.v1beta1.Activation.Request.class, io.bloombox.schema.services.devices.v1beta1.Activation.Request.Builder.class);
       }
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Request_descriptor;
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_descriptor;
       }
 
       public io.bloombox.schema.services.devices.v1beta1.Activation.Request getDefaultInstanceForType() {
@@ -797,10 +797,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.devices.v1beta1.Activation.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.devices.v1beta1.Activation.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.devices.v1beta1.Activation.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.devices.v1beta1.Activation.Request)
     private static final io.bloombox.schema.services.devices.v1beta1.Activation.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.devices.v1beta1.Activation.Request();
@@ -836,7 +836,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.devices.v1beta1.Activation.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.devices.v1beta1.Activation.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
      * Error that occurred while activating, if any.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
      */
     int getErrorValue();
     /**
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
      * Error that occurred while activating, if any.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
      */
     io.bloombox.schema.services.devices.v1beta1.DeviceError getError();
 
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
      * Device activation information, including its assignment/role.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
      */
     boolean hasManifest();
     /**
@@ -878,7 +878,7 @@ private static final long serialVersionUID = 0L;
      * Device activation information, including its assignment/role.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
      */
     io.bloombox.schema.services.devices.v1beta1.DeviceActivation getManifest();
     /**
@@ -886,7 +886,7 @@ private static final long serialVersionUID = 0L;
      * Device activation information, including its assignment/role.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
      */
     io.bloombox.schema.services.devices.v1beta1.DeviceActivationOrBuilder getManifestOrBuilder();
   }
@@ -895,11 +895,11 @@ private static final long serialVersionUID = 0L;
    * Response to a request to activate a hardware device.
    * </pre>
    *
-   * Protobuf type {@code services.devices.v1beta1.Activation.Response}
+   * Protobuf type {@code bloombox.schema.services.devices.v1beta1.Activation.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.devices.v1beta1.Activation.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.devices.v1beta1.Activation.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -980,12 +980,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Response_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Response_fieldAccessorTable
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.devices.v1beta1.Activation.Response.class, io.bloombox.schema.services.devices.v1beta1.Activation.Response.Builder.class);
     }
@@ -1010,7 +1010,7 @@ private static final long serialVersionUID = 0L;
      * Error that occurred while activating, if any.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
      */
     public int getErrorValue() {
       return error_;
@@ -1020,7 +1020,7 @@ private static final long serialVersionUID = 0L;
      * Error that occurred while activating, if any.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceError getError() {
       io.bloombox.schema.services.devices.v1beta1.DeviceError result = io.bloombox.schema.services.devices.v1beta1.DeviceError.valueOf(error_);
@@ -1034,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      * Device activation information, including its assignment/role.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
      */
     public boolean hasManifest() {
       return manifest_ != null;
@@ -1044,7 +1044,7 @@ private static final long serialVersionUID = 0L;
      * Device activation information, including its assignment/role.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceActivation getManifest() {
       return manifest_ == null ? io.bloombox.schema.services.devices.v1beta1.DeviceActivation.getDefaultInstance() : manifest_;
@@ -1054,7 +1054,7 @@ private static final long serialVersionUID = 0L;
      * Device activation information, including its assignment/role.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.DeviceActivationOrBuilder getManifestOrBuilder() {
       return getManifest();
@@ -1243,20 +1243,20 @@ private static final long serialVersionUID = 0L;
      * Response to a request to activate a hardware device.
      * </pre>
      *
-     * Protobuf type {@code services.devices.v1beta1.Activation.Response}
+     * Protobuf type {@code bloombox.schema.services.devices.v1beta1.Activation.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.devices.v1beta1.Activation.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.devices.v1beta1.Activation.Response)
         io.bloombox.schema.services.devices.v1beta1.Activation.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Response_descriptor;
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Response_fieldAccessorTable
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.devices.v1beta1.Activation.Response.class, io.bloombox.schema.services.devices.v1beta1.Activation.Response.Builder.class);
       }
@@ -1293,7 +1293,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Response_descriptor;
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_descriptor;
       }
 
       public io.bloombox.schema.services.devices.v1beta1.Activation.Response getDefaultInstanceForType() {
@@ -1438,7 +1438,7 @@ private static final long serialVersionUID = 0L;
        * Error that occurred while activating, if any.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
        */
       public int getErrorValue() {
         return error_;
@@ -1448,7 +1448,7 @@ private static final long serialVersionUID = 0L;
        * Error that occurred while activating, if any.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
        */
       public Builder setErrorValue(int value) {
         error_ = value;
@@ -1460,7 +1460,7 @@ private static final long serialVersionUID = 0L;
        * Error that occurred while activating, if any.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.DeviceError getError() {
         io.bloombox.schema.services.devices.v1beta1.DeviceError result = io.bloombox.schema.services.devices.v1beta1.DeviceError.valueOf(error_);
@@ -1471,7 +1471,7 @@ private static final long serialVersionUID = 0L;
        * Error that occurred while activating, if any.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
        */
       public Builder setError(io.bloombox.schema.services.devices.v1beta1.DeviceError value) {
         if (value == null) {
@@ -1487,7 +1487,7 @@ private static final long serialVersionUID = 0L;
        * Error that occurred while activating, if any.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceError error = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceError error = 2;</code>
        */
       public Builder clearError() {
         
@@ -1504,7 +1504,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       public boolean hasManifest() {
         return manifestBuilder_ != null || manifest_ != null;
@@ -1514,7 +1514,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.DeviceActivation getManifest() {
         if (manifestBuilder_ == null) {
@@ -1528,7 +1528,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       public Builder setManifest(io.bloombox.schema.services.devices.v1beta1.DeviceActivation value) {
         if (manifestBuilder_ == null) {
@@ -1548,7 +1548,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       public Builder setManifest(
           io.bloombox.schema.services.devices.v1beta1.DeviceActivation.Builder builderForValue) {
@@ -1566,7 +1566,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       public Builder mergeManifest(io.bloombox.schema.services.devices.v1beta1.DeviceActivation value) {
         if (manifestBuilder_ == null) {
@@ -1588,7 +1588,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       public Builder clearManifest() {
         if (manifestBuilder_ == null) {
@@ -1606,7 +1606,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.DeviceActivation.Builder getManifestBuilder() {
         
@@ -1618,7 +1618,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.DeviceActivationOrBuilder getManifestOrBuilder() {
         if (manifestBuilder_ != null) {
@@ -1633,7 +1633,7 @@ private static final long serialVersionUID = 0L;
        * Device activation information, including its assignment/role.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.DeviceActivation manifest = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.devices.v1beta1.DeviceActivation, io.bloombox.schema.services.devices.v1beta1.DeviceActivation.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceActivationOrBuilder> 
@@ -1659,10 +1659,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.devices.v1beta1.Activation.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.devices.v1beta1.Activation.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:services.devices.v1beta1.Activation.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.devices.v1beta1.Activation.Response)
     private static final io.bloombox.schema.services.devices.v1beta1.Activation.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.devices.v1beta1.Activation.Response();
@@ -1698,7 +1698,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.devices.v1beta1.Activation.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.devices.v1beta1.Activation.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1706,7 +1706,7 @@ private static final long serialVersionUID = 0L;
      * Request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1714,7 +1714,7 @@ private static final long serialVersionUID = 0L;
      * Request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
      */
     io.bloombox.schema.services.devices.v1beta1.Activation.Request getRequest();
     /**
@@ -1722,7 +1722,7 @@ private static final long serialVersionUID = 0L;
      * Request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
      */
     io.bloombox.schema.services.devices.v1beta1.Activation.RequestOrBuilder getRequestOrBuilder();
 
@@ -1731,7 +1731,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1739,7 +1739,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
      */
     io.bloombox.schema.services.devices.v1beta1.Activation.Response getResponse();
     /**
@@ -1747,7 +1747,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
      */
     io.bloombox.schema.services.devices.v1beta1.Activation.ResponseOrBuilder getResponseOrBuilder();
   }
@@ -1756,11 +1756,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a device activation operation, consisting of one request and one response.
    * </pre>
    *
-   * Protobuf type {@code services.devices.v1beta1.Activation.Operation}
+   * Protobuf type {@code bloombox.schema.services.devices.v1beta1.Activation.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.devices.v1beta1.Activation.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.devices.v1beta1.Activation.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1841,12 +1841,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Operation_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Operation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.devices.v1beta1.Activation.Operation.class, io.bloombox.schema.services.devices.v1beta1.Activation.Operation.Builder.class);
     }
@@ -1858,7 +1858,7 @@ private static final long serialVersionUID = 0L;
      * Request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1868,7 +1868,7 @@ private static final long serialVersionUID = 0L;
      * Request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.Activation.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.devices.v1beta1.Activation.Request.getDefaultInstance() : request_;
@@ -1878,7 +1878,7 @@ private static final long serialVersionUID = 0L;
      * Request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.Activation.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1891,7 +1891,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1901,7 +1901,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.Activation.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.devices.v1beta1.Activation.Response.getDefaultInstance() : response_;
@@ -1911,7 +1911,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request to activate a device.
      * </pre>
      *
-     * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+     * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
      */
     public io.bloombox.schema.services.devices.v1beta1.Activation.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
@@ -2094,20 +2094,20 @@ private static final long serialVersionUID = 0L;
      * Specifies a device activation operation, consisting of one request and one response.
      * </pre>
      *
-     * Protobuf type {@code services.devices.v1beta1.Activation.Operation}
+     * Protobuf type {@code bloombox.schema.services.devices.v1beta1.Activation.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.devices.v1beta1.Activation.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.devices.v1beta1.Activation.Operation)
         io.bloombox.schema.services.devices.v1beta1.Activation.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Operation_descriptor;
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Operation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.devices.v1beta1.Activation.Operation.class, io.bloombox.schema.services.devices.v1beta1.Activation.Operation.Builder.class);
       }
@@ -2146,7 +2146,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_Operation_descriptor;
+        return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_Operation_descriptor;
       }
 
       public io.bloombox.schema.services.devices.v1beta1.Activation.Operation getDefaultInstanceForType() {
@@ -2255,7 +2255,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -2265,7 +2265,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.Activation.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -2279,7 +2279,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.devices.v1beta1.Activation.Request value) {
         if (requestBuilder_ == null) {
@@ -2299,7 +2299,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.devices.v1beta1.Activation.Request.Builder builderForValue) {
@@ -2317,7 +2317,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.devices.v1beta1.Activation.Request value) {
         if (requestBuilder_ == null) {
@@ -2339,7 +2339,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2357,7 +2357,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.Activation.Request.Builder getRequestBuilder() {
         
@@ -2369,7 +2369,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.Activation.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2384,7 +2384,7 @@ private static final long serialVersionUID = 0L;
        * Request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Request request = 1;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.devices.v1beta1.Activation.Request, io.bloombox.schema.services.devices.v1beta1.Activation.Request.Builder, io.bloombox.schema.services.devices.v1beta1.Activation.RequestOrBuilder> 
@@ -2408,7 +2408,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2418,7 +2418,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.Activation.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -2432,7 +2432,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.devices.v1beta1.Activation.Response value) {
         if (responseBuilder_ == null) {
@@ -2452,7 +2452,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.devices.v1beta1.Activation.Response.Builder builderForValue) {
@@ -2470,7 +2470,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.devices.v1beta1.Activation.Response value) {
         if (responseBuilder_ == null) {
@@ -2492,7 +2492,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2510,7 +2510,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.Activation.Response.Builder getResponseBuilder() {
         
@@ -2522,7 +2522,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       public io.bloombox.schema.services.devices.v1beta1.Activation.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2537,7 +2537,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request to activate a device.
        * </pre>
        *
-       * <code>.services.devices.v1beta1.Activation.Response response = 2;</code>
+       * <code>.bloombox.schema.services.devices.v1beta1.Activation.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.devices.v1beta1.Activation.Response, io.bloombox.schema.services.devices.v1beta1.Activation.Response.Builder, io.bloombox.schema.services.devices.v1beta1.Activation.ResponseOrBuilder> 
@@ -2563,10 +2563,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.devices.v1beta1.Activation.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.devices.v1beta1.Activation.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:services.devices.v1beta1.Activation.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.devices.v1beta1.Activation.Operation)
     private static final io.bloombox.schema.services.devices.v1beta1.Activation.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.devices.v1beta1.Activation.Operation();
@@ -2746,20 +2746,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to activate a hardware device for use.
    * </pre>
    *
-   * Protobuf type {@code services.devices.v1beta1.Activation}
+   * Protobuf type {@code bloombox.schema.services.devices.v1beta1.Activation}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.devices.v1beta1.Activation)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.devices.v1beta1.Activation)
       io.bloombox.schema.services.devices.v1beta1.ActivationOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_fieldAccessorTable
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.devices.v1beta1.Activation.class, io.bloombox.schema.services.devices.v1beta1.Activation.Builder.class);
     }
@@ -2786,7 +2786,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_services_devices_v1beta1_Activation_descriptor;
+      return io.bloombox.schema.services.devices.v1beta1.DevicesServiceBeta1.internal_static_bloombox_schema_services_devices_v1beta1_Activation_descriptor;
     }
 
     public io.bloombox.schema.services.devices.v1beta1.Activation getDefaultInstanceForType() {
@@ -2881,10 +2881,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.devices.v1beta1.Activation)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.devices.v1beta1.Activation)
   }
 
-  // @@protoc_insertion_point(class_scope:services.devices.v1beta1.Activation)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.devices.v1beta1.Activation)
   private static final io.bloombox.schema.services.devices.v1beta1.Activation DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.devices.v1beta1.Activation();

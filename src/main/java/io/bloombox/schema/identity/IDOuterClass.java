@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,10 +31,10 @@ public final class IDOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_identity_ID_descriptor;
+    internal_static_bloombox_schema_identity_ID_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_identity_ID_fieldAccessorTable;
+      internal_static_bloombox_schema_identity_ID_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,23 +44,25 @@ public final class IDOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021identity/ID.proto\022\010identity\032\016bq_field." +
-      "proto\032\023temporal/Date.proto\032\027identity/ids" +
-      "/USDL.proto\032\033identity/ids/Passport.proto" +
-      "\"\277\003\n\002ID\022?\n\004type\030\001 \001(\0162\020.identity.IDTypeB" +
-      "\037\212@\034Type of ID we\'re specifying.\022F\n\002id\030\002" +
-      " \001(\tB:\212@7ID number or string identifying" +
-      " this identity document.\022J\n\013expire_date\030" +
-      "\003 \001(\0132\016.temporal.DateB%\212@\"Expiration dat" +
-      "e for this document.\022J\n\nbirth_date\030\004 \001(\013" +
-      "2\016.temporal.DateB&\212@#Birth date listed o" +
-      "n this document.\022I\n\007license\030\024 \001(\0132\022.iden" +
-      "tity.ids.USDLB\"\212@\037United States Driver\'s" +
-      " License.H\000\022A\n\010passport\030\025 \001(\0132\026.identity" +
-      ".ids.PassportB\025\212@\022National passport.H\000B\n" +
-      "\n\010document* \n\006IDType\022\010\n\004USDL\020\000\022\014\n\010PASSPO" +
-      "RT\020\001B!\n\033io.bloombox.schema.identityH\001P\001b" +
-      "\006proto3"
+      "\n\021identity/ID.proto\022\030bloombox.schema.ide" +
+      "ntity\032\016bq_field.proto\032\023temporal/Date.pro" +
+      "to\032\027identity/ids/USDL.proto\032\033identity/id" +
+      "s/Passport.proto\"\211\004\n\002ID\022O\n\004type\030\001 \001(\0162 ." +
+      "bloombox.schema.identity.IDTypeB\037\212@\034Type" +
+      " of ID we\'re specifying.\022F\n\002id\030\002 \001(\tB:\212@" +
+      "7ID number or string identifying this id" +
+      "entity document.\022W\n\013expire_date\030\003 \001(\0132\033." +
+      "opencannabis.temporal.DateB%\212@\"Expiratio" +
+      "n date for this document.\022W\n\nbirth_date\030" +
+      "\004 \001(\0132\033.opencannabis.temporal.DateB&\212@#B" +
+      "irth date listed on this document.\022Y\n\007li" +
+      "cense\030\024 \001(\0132\".bloombox.schema.identity.i" +
+      "ds.USDLB\"\212@\037United States Driver\'s Licen" +
+      "se.H\000\022Q\n\010passport\030\025 \001(\0132&.bloombox.schem" +
+      "a.identity.ids.PassportB\025\212@\022National pas" +
+      "sport.H\000B\n\n\010document* \n\006IDType\022\010\n\004USDL\020\000" +
+      "\022\014\n\010PASSPORT\020\001B!\n\033io.bloombox.schema.ide" +
+      "ntityH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -75,15 +76,15 @@ public final class IDOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.temporal.DateOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.DateOuterClass.getDescriptor(),
           io.bloombox.schema.identity.ids.USDLOuterClass.getDescriptor(),
           io.bloombox.schema.identity.ids.PassportOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_identity_ID_descriptor =
+    internal_static_bloombox_schema_identity_ID_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_identity_ID_fieldAccessorTable = new
+    internal_static_bloombox_schema_identity_ID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_identity_ID_descriptor,
+        internal_static_bloombox_schema_identity_ID_descriptor,
         new java.lang.String[] { "Type", "Id", "ExpireDate", "BirthDate", "License", "Passport", "Document", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -91,7 +92,7 @@ public final class IDOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.temporal.DateOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.DateOuterClass.getDescriptor();
     io.bloombox.schema.identity.ids.USDLOuterClass.getDescriptor();
     io.bloombox.schema.identity.ids.PassportOuterClass.getDescriptor();
   }

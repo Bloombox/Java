@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.telemetry.v1beta3;
 
 public interface TelemetryPingOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.TelemetryPing)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.TelemetryPing)
     com.google.protobuf.MessageOrBuilder {
 }

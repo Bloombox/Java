@@ -45,7 +45,7 @@ public final class DevicesGrpc {
 
   private DevicesGrpc() {}
 
-  public static final String SERVICE_NAME = "services.devices.v1beta1.Devices";
+  public static final String SERVICE_NAME = "bloombox.schema.services.devices.v1beta1.Devices";
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
@@ -54,7 +54,7 @@ public final class DevicesGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.devices.v1beta1.Ping.Request, io.bloombox.schema.services.devices.v1beta1.Ping.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.devices.v1beta1.Devices", "Ping"))
+              "bloombox.schema.services.devices.v1beta1.Devices", "Ping"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.devices.v1beta1.Ping.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -66,7 +66,7 @@ public final class DevicesGrpc {
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.devices.v1beta1.Activation.Request, io.bloombox.schema.services.devices.v1beta1.Activation.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "services.devices.v1beta1.Devices", "Activate"))
+              "bloombox.schema.services.devices.v1beta1.Devices", "Activate"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.devices.v1beta1.Activation.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(

@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.checkin.v1beta1;
 
 public interface CheckinUserOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.checkin.v1beta1.CheckinUser)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.checkin.v1beta1.CheckinUser)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -29,7 +29,7 @@ public interface CheckinUserOrBuilder extends
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.identity.UserKey key = 1;</code>
+   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
   boolean hasKey();
   /**
@@ -37,7 +37,7 @@ public interface CheckinUserOrBuilder extends
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.identity.UserKey key = 1;</code>
+   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
   io.bloombox.schema.identity.UserKey getKey();
   /**
@@ -45,7 +45,7 @@ public interface CheckinUserOrBuilder extends
    * Key and identity ID for the user who was checked in.
    * </pre>
    *
-   * <code>.identity.UserKey key = 1;</code>
+   * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
   io.bloombox.schema.identity.UserKeyOrBuilder getKeyOrBuilder();
 
@@ -54,7 +54,7 @@ public interface CheckinUserOrBuilder extends
    * Active account flags.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
    */
   boolean hasFlags();
   /**
@@ -62,7 +62,7 @@ public interface CheckinUserOrBuilder extends
    * Active account flags.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
    */
   io.bloombox.schema.identity.UserFlags getFlags();
   /**
@@ -70,7 +70,7 @@ public interface CheckinUserOrBuilder extends
    * Active account flags.
    * </pre>
    *
-   * <code>.identity.UserFlags flags = 2;</code>
+   * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
    */
   io.bloombox.schema.identity.UserFlagsOrBuilder getFlagsOrBuilder();
 
@@ -79,7 +79,7 @@ public interface CheckinUserOrBuilder extends
    * Person's name information, for display purposes.
    * </pre>
    *
-   * <code>.person.Name name = 3;</code>
+   * <code>.opencannabis.person.Name name = 3;</code>
    */
   boolean hasName();
   /**
@@ -87,15 +87,15 @@ public interface CheckinUserOrBuilder extends
    * Person's name information, for display purposes.
    * </pre>
    *
-   * <code>.person.Name name = 3;</code>
+   * <code>.opencannabis.person.Name name = 3;</code>
    */
-  io.bloombox.schema.person.Name getName();
+  io.opencannabis.schema.person.Name getName();
   /**
    * <pre>
    * Person's name information, for display purposes.
    * </pre>
    *
-   * <code>.person.Name name = 3;</code>
+   * <code>.opencannabis.person.Name name = 3;</code>
    */
-  io.bloombox.schema.person.NameOrBuilder getNameOrBuilder();
+  io.opencannabis.schema.person.NameOrBuilder getNameOrBuilder();
 }

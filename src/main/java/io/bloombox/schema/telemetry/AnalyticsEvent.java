@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +32,7 @@ public final class AnalyticsEvent {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface EventOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.generic.Event)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.generic.Event)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -64,7 +65,7 @@ public final class AnalyticsEvent {
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     boolean hasOccurred();
     /**
@@ -72,28 +73,28 @@ public final class AnalyticsEvent {
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
-    io.bloombox.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.Instant getOccurred();
     /**
      * <pre>
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
-    io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
    * Represents a generic event, which can carry an arbitrary payload and is bound to an unenumerated collection.
    * </pre>
    *
-   * Protobuf type {@code analytics.generic.Event}
+   * Protobuf type {@code bloombox.schema.analytics.generic.Event}
    */
   public  static final class Event extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.generic.Event)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.generic.Event)
       EventOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Event.newBuilder() to construct.
@@ -148,11 +149,11 @@ public final class AnalyticsEvent {
               break;
             }
             case 18: {
-              io.bloombox.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.bloombox.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -174,12 +175,12 @@ public final class AnalyticsEvent {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_analytics_generic_Event_descriptor;
+      return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_analytics_generic_Event_fieldAccessorTable
+      return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.AnalyticsEvent.Event.class, io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder.class);
     }
@@ -218,13 +219,13 @@ public final class AnalyticsEvent {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 2;
-    private io.bloombox.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.Instant occurred_;
     /**
      * <pre>
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public boolean hasOccurred() {
       return occurred_ != null;
@@ -234,19 +235,19 @@ public final class AnalyticsEvent {
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
-    public io.bloombox.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
      * Occurrence timestamp.
      * </pre>
      *
-     * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
-    public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -427,20 +428,20 @@ public final class AnalyticsEvent {
      * Represents a generic event, which can carry an arbitrary payload and is bound to an unenumerated collection.
      * </pre>
      *
-     * Protobuf type {@code analytics.generic.Event}
+     * Protobuf type {@code bloombox.schema.analytics.generic.Event}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.generic.Event)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.generic.Event)
         io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_analytics_generic_Event_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_analytics_generic_Event_fieldAccessorTable
+        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.AnalyticsEvent.Event.class, io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder.class);
       }
@@ -479,7 +480,7 @@ public final class AnalyticsEvent {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_analytics_generic_Event_descriptor;
+        return io.bloombox.schema.telemetry.AnalyticsEvent.internal_static_bloombox_schema_analytics_generic_Event_descriptor;
       }
 
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event getDefaultInstanceForType() {
@@ -733,15 +734,15 @@ public final class AnalyticsEvent {
         return payloadBuilder_;
       }
 
-      private io.bloombox.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public boolean hasOccurred() {
         return occurredBuilder_ != null || occurred_ != null;
@@ -751,11 +752,11 @@ public final class AnalyticsEvent {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
-      public io.bloombox.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -765,9 +766,9 @@ public final class AnalyticsEvent {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
-      public Builder setOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -785,10 +786,10 @@ public final class AnalyticsEvent {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setOccurred(
-          io.bloombox.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -803,13 +804,13 @@ public final class AnalyticsEvent {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
-      public Builder mergeOccurred(io.bloombox.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.bloombox.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -825,7 +826,7 @@ public final class AnalyticsEvent {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder clearOccurred() {
         if (occurredBuilder_ == null) {
@@ -843,9 +844,9 @@ public final class AnalyticsEvent {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
-      public io.bloombox.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -855,14 +856,14 @@ public final class AnalyticsEvent {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
-      public io.bloombox.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.bloombox.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -870,14 +871,14 @@ public final class AnalyticsEvent {
        * Occurrence timestamp.
        * </pre>
        *
-       * <code>.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
+       * <code>.opencannabis.temporal.Instant occurred = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.temporal.Instant, io.bloombox.schema.temporal.Instant.Builder, io.bloombox.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -896,10 +897,10 @@ public final class AnalyticsEvent {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.generic.Event)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.generic.Event)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.generic.Event)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.generic.Event)
     private static final io.bloombox.schema.telemetry.AnalyticsEvent.Event DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.AnalyticsEvent.Event();
@@ -935,10 +936,10 @@ public final class AnalyticsEvent {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_generic_Event_descriptor;
+    internal_static_bloombox_schema_analytics_generic_Event_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_generic_Event_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_generic_Event_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -948,14 +949,14 @@ public final class AnalyticsEvent {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035analytics/generic/Event.proto\022\021analyti" +
-      "cs.generic\032\016bq_field.proto\032\026temporal/Ins" +
-      "tant.proto\032\027analytics/Context.proto\032\034goo" +
-      "gle/protobuf/struct.proto\"`\n\005Event\022-\n\007pa" +
-      "yload\030\001 \001(\0132\027.google.protobuf.StructB\003\200@" +
-      "\001\022(\n\010occurred\030\002 \001(\0132\021.temporal.InstantB\003" +
-      "\200@\001B5\n\034io.bloombox.schema.telemetryB\016Ana" +
-      "lyticsEventH\001P\000\370\001\001b\006proto3"
+      "\n\035analytics/generic/Event.proto\022!bloombo" +
+      "x.schema.analytics.generic\032\016bq_field.pro" +
+      "to\032\026temporal/Instant.proto\032\034google/proto" +
+      "buf/struct.proto\"m\n\005Event\022-\n\007payload\030\001 \001" +
+      "(\0132\027.google.protobuf.StructB\003\200@\001\0225\n\010occu" +
+      "rred\030\002 \001(\0132\036.opencannabis.temporal.Insta" +
+      "ntB\003\200@\001B5\n\034io.bloombox.schema.telemetryB" +
+      "\016AnalyticsEventH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -969,15 +970,14 @@ public final class AnalyticsEvent {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.temporal.InstantOuterClass.getDescriptor(),
-          io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
         }, assigner);
-    internal_static_analytics_generic_Event_descriptor =
+    internal_static_bloombox_schema_analytics_generic_Event_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_generic_Event_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_generic_Event_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_generic_Event_descriptor,
+        internal_static_bloombox_schema_analytics_generic_Event_descriptor,
         new java.lang.String[] { "Payload", "Occurred", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -985,8 +985,7 @@ public final class AnalyticsEvent {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.temporal.InstantOuterClass.getDescriptor();
-    io.bloombox.schema.telemetry.AnalyticsContext.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();
   }
 

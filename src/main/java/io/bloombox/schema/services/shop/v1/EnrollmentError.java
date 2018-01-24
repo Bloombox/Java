@@ -25,7 +25,7 @@ package io.bloombox.schema.services.shop.v1;
  * Specifies errors that may be encountered during enrollment of a new user.
  * </pre>
  *
- * Protobuf enum {@code services.shop.v1.EnrollmentError}
+ * Protobuf enum {@code bloombox.schema.services.shop.v1.EnrollmentError}
  */
 public enum EnrollmentError
     implements com.google.protobuf.ProtocolMessageEnum {
@@ -373,6 +373,6 @@ public enum EnrollmentError
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:services.shop.v1.EnrollmentError)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.shop.v1.EnrollmentError)
 }
 

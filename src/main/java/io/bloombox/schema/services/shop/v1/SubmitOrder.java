@@ -25,11 +25,11 @@ package io.bloombox.schema.services.shop.v1;
  * Specifies an RPC operation to submit an express pickup or delivery order.
  * </pre>
  *
- * Protobuf type {@code services.shop.v1.SubmitOrder}
+ * Protobuf type {@code bloombox.schema.services.shop.v1.SubmitOrder}
  */
 public  final class SubmitOrder extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.shop.v1.SubmitOrder)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.SubmitOrder)
     SubmitOrderOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use SubmitOrder.newBuilder() to construct.
@@ -83,18 +83,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_descriptor;
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_fieldAccessorTable
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.shop.v1.SubmitOrder.class, io.bloombox.schema.services.shop.v1.SubmitOrder.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.SubmitOrder.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.SubmitOrder.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
      * Order to submit.
      * </pre>
      *
-     * <code>.commerce.Order order = 1;</code>
+     * <code>.opencannabis.commerce.Order order = 1;</code>
      */
     boolean hasOrder();
     /**
@@ -110,24 +110,24 @@ private static final long serialVersionUID = 0L;
      * Order to submit.
      * </pre>
      *
-     * <code>.commerce.Order order = 1;</code>
+     * <code>.opencannabis.commerce.Order order = 1;</code>
      */
-    io.bloombox.schema.commerce.CommercialOrder.Order getOrder();
+    io.opencannabis.schema.commerce.CommercialOrder.Order getOrder();
     /**
      * <pre>
      * Order to submit.
      * </pre>
      *
-     * <code>.commerce.Order order = 1;</code>
+     * <code>.opencannabis.commerce.Order order = 1;</code>
      */
-    io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder();
+    io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder();
 
     /**
      * <pre>
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     boolean hasLocation();
     /**
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     io.bloombox.schema.partner.PartnerLocationKey getLocation();
     /**
@@ -143,16 +143,16 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.SubmitOrder.Request}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.SubmitOrder.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.SubmitOrder.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.SubmitOrder.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -194,11 +194,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.bloombox.schema.commerce.CommercialOrder.Order.Builder subBuilder = null;
+              io.opencannabis.schema.commerce.CommercialOrder.Order.Builder subBuilder = null;
               if (order_ != null) {
                 subBuilder = order_.toBuilder();
               }
-              order_ = input.readMessage(io.bloombox.schema.commerce.CommercialOrder.Order.parser(), extensionRegistry);
+              order_ = input.readMessage(io.opencannabis.schema.commerce.CommercialOrder.Order.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(order_);
                 order_ = subBuilder.buildPartial();
@@ -233,24 +233,24 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Request_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Request_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.SubmitOrder.Request.class, io.bloombox.schema.services.shop.v1.SubmitOrder.Request.Builder.class);
     }
 
     public static final int ORDER_FIELD_NUMBER = 1;
-    private io.bloombox.schema.commerce.CommercialOrder.Order order_;
+    private io.opencannabis.schema.commerce.CommercialOrder.Order order_;
     /**
      * <pre>
      * Order to submit.
      * </pre>
      *
-     * <code>.commerce.Order order = 1;</code>
+     * <code>.opencannabis.commerce.Order order = 1;</code>
      */
     public boolean hasOrder() {
       return order_ != null;
@@ -260,19 +260,19 @@ private static final long serialVersionUID = 0L;
      * Order to submit.
      * </pre>
      *
-     * <code>.commerce.Order order = 1;</code>
+     * <code>.opencannabis.commerce.Order order = 1;</code>
      */
-    public io.bloombox.schema.commerce.CommercialOrder.Order getOrder() {
-      return order_ == null ? io.bloombox.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
+    public io.opencannabis.schema.commerce.CommercialOrder.Order getOrder() {
+      return order_ == null ? io.opencannabis.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
     }
     /**
      * <pre>
      * Order to submit.
      * </pre>
      *
-     * <code>.commerce.Order order = 1;</code>
+     * <code>.opencannabis.commerce.Order order = 1;</code>
      */
-    public io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder() {
+    public io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder() {
       return getOrder();
     }
 
@@ -283,7 +283,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -293,7 +293,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
       return location_ == null ? io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance() : location_;
@@ -303,7 +303,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
@@ -482,20 +482,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.SubmitOrder.Request}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.SubmitOrder.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.SubmitOrder.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.SubmitOrder.Request)
         io.bloombox.schema.services.shop.v1.SubmitOrder.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Request_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.SubmitOrder.Request.class, io.bloombox.schema.services.shop.v1.SubmitOrder.Request.Builder.class);
       }
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Request_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.SubmitOrder.Request getDefaultInstanceForType() {
@@ -635,15 +635,15 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.commerce.CommercialOrder.Order order_ = null;
+      private io.opencannabis.schema.commerce.CommercialOrder.Order order_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.CommercialOrder.Order, io.bloombox.schema.commerce.CommercialOrder.Order.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder> orderBuilder_;
+          io.opencannabis.schema.commerce.CommercialOrder.Order, io.opencannabis.schema.commerce.CommercialOrder.Order.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder> orderBuilder_;
       /**
        * <pre>
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
       public boolean hasOrder() {
         return orderBuilder_ != null || order_ != null;
@@ -653,11 +653,11 @@ private static final long serialVersionUID = 0L;
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.Order getOrder() {
+      public io.opencannabis.schema.commerce.CommercialOrder.Order getOrder() {
         if (orderBuilder_ == null) {
-          return order_ == null ? io.bloombox.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
+          return order_ == null ? io.opencannabis.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
         } else {
           return orderBuilder_.getMessage();
         }
@@ -667,9 +667,9 @@ private static final long serialVersionUID = 0L;
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
-      public Builder setOrder(io.bloombox.schema.commerce.CommercialOrder.Order value) {
+      public Builder setOrder(io.opencannabis.schema.commerce.CommercialOrder.Order value) {
         if (orderBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -687,10 +687,10 @@ private static final long serialVersionUID = 0L;
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
       public Builder setOrder(
-          io.bloombox.schema.commerce.CommercialOrder.Order.Builder builderForValue) {
+          io.opencannabis.schema.commerce.CommercialOrder.Order.Builder builderForValue) {
         if (orderBuilder_ == null) {
           order_ = builderForValue.build();
           onChanged();
@@ -705,13 +705,13 @@ private static final long serialVersionUID = 0L;
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
-      public Builder mergeOrder(io.bloombox.schema.commerce.CommercialOrder.Order value) {
+      public Builder mergeOrder(io.opencannabis.schema.commerce.CommercialOrder.Order value) {
         if (orderBuilder_ == null) {
           if (order_ != null) {
             order_ =
-              io.bloombox.schema.commerce.CommercialOrder.Order.newBuilder(order_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.commerce.CommercialOrder.Order.newBuilder(order_).mergeFrom(value).buildPartial();
           } else {
             order_ = value;
           }
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
       public Builder clearOrder() {
         if (orderBuilder_ == null) {
@@ -745,9 +745,9 @@ private static final long serialVersionUID = 0L;
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.Order.Builder getOrderBuilder() {
+      public io.opencannabis.schema.commerce.CommercialOrder.Order.Builder getOrderBuilder() {
         
         onChanged();
         return getOrderFieldBuilder().getBuilder();
@@ -757,14 +757,14 @@ private static final long serialVersionUID = 0L;
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
-      public io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder() {
+      public io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder() {
         if (orderBuilder_ != null) {
           return orderBuilder_.getMessageOrBuilder();
         } else {
           return order_ == null ?
-              io.bloombox.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
+              io.opencannabis.schema.commerce.CommercialOrder.Order.getDefaultInstance() : order_;
         }
       }
       /**
@@ -772,14 +772,14 @@ private static final long serialVersionUID = 0L;
        * Order to submit.
        * </pre>
        *
-       * <code>.commerce.Order order = 1;</code>
+       * <code>.opencannabis.commerce.Order order = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.commerce.CommercialOrder.Order, io.bloombox.schema.commerce.CommercialOrder.Order.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder> 
+          io.opencannabis.schema.commerce.CommercialOrder.Order, io.opencannabis.schema.commerce.CommercialOrder.Order.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder> 
           getOrderFieldBuilder() {
         if (orderBuilder_ == null) {
           orderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.commerce.CommercialOrder.Order, io.bloombox.schema.commerce.CommercialOrder.Order.Builder, io.bloombox.schema.commerce.CommercialOrder.OrderOrBuilder>(
+              io.opencannabis.schema.commerce.CommercialOrder.Order, io.opencannabis.schema.commerce.CommercialOrder.Order.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder>(
                   getOrder(),
                   getParentForChildren(),
                   isClean());
@@ -796,7 +796,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -806,7 +806,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -820,7 +820,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
@@ -840,7 +840,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.PartnerLocationKey.Builder builderForValue) {
@@ -858,7 +858,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKey.Builder getLocationBuilder() {
         
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -925,7 +925,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> 
@@ -951,10 +951,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.SubmitOrder.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.SubmitOrder.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.SubmitOrder.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.SubmitOrder.Request)
     private static final io.bloombox.schema.services.shop.v1.SubmitOrder.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.SubmitOrder.Request();
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.SubmitOrder.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.SubmitOrder.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -998,7 +998,7 @@ private static final long serialVersionUID = 0L;
      * Error, if any.
      * </pre>
      *
-     * <code>.services.shop.v1.OrderError error = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
      */
     int getErrorValue();
     /**
@@ -1006,7 +1006,7 @@ private static final long serialVersionUID = 0L;
      * Error, if any.
      * </pre>
      *
-     * <code>.services.shop.v1.OrderError error = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.OrderError getError();
 
@@ -1029,11 +1029,11 @@ private static final long serialVersionUID = 0L;
         getOrderIdBytes();
   }
   /**
-   * Protobuf type {@code services.shop.v1.SubmitOrder.Response}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.SubmitOrder.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.SubmitOrder.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.SubmitOrder.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1102,12 +1102,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Response_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Response_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.SubmitOrder.Response.class, io.bloombox.schema.services.shop.v1.SubmitOrder.Response.Builder.class);
     }
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
      * Error, if any.
      * </pre>
      *
-     * <code>.services.shop.v1.OrderError error = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
      */
     public int getErrorValue() {
       return error_;
@@ -1129,7 +1129,7 @@ private static final long serialVersionUID = 0L;
      * Error, if any.
      * </pre>
      *
-     * <code>.services.shop.v1.OrderError error = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.OrderError getError() {
       io.bloombox.schema.services.shop.v1.OrderError result = io.bloombox.schema.services.shop.v1.OrderError.valueOf(error_);
@@ -1339,20 +1339,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.SubmitOrder.Response}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.SubmitOrder.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.SubmitOrder.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.SubmitOrder.Response)
         io.bloombox.schema.services.shop.v1.SubmitOrder.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Response_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.SubmitOrder.Response.class, io.bloombox.schema.services.shop.v1.SubmitOrder.Response.Builder.class);
       }
@@ -1383,7 +1383,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Response_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.SubmitOrder.Response getDefaultInstanceForType() {
@@ -1483,7 +1483,7 @@ private static final long serialVersionUID = 0L;
        * Error, if any.
        * </pre>
        *
-       * <code>.services.shop.v1.OrderError error = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
        */
       public int getErrorValue() {
         return error_;
@@ -1493,7 +1493,7 @@ private static final long serialVersionUID = 0L;
        * Error, if any.
        * </pre>
        *
-       * <code>.services.shop.v1.OrderError error = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
        */
       public Builder setErrorValue(int value) {
         error_ = value;
@@ -1505,7 +1505,7 @@ private static final long serialVersionUID = 0L;
        * Error, if any.
        * </pre>
        *
-       * <code>.services.shop.v1.OrderError error = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.OrderError getError() {
         io.bloombox.schema.services.shop.v1.OrderError result = io.bloombox.schema.services.shop.v1.OrderError.valueOf(error_);
@@ -1516,7 +1516,7 @@ private static final long serialVersionUID = 0L;
        * Error, if any.
        * </pre>
        *
-       * <code>.services.shop.v1.OrderError error = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
        */
       public Builder setError(io.bloombox.schema.services.shop.v1.OrderError value) {
         if (value == null) {
@@ -1532,7 +1532,7 @@ private static final long serialVersionUID = 0L;
        * Error, if any.
        * </pre>
        *
-       * <code>.services.shop.v1.OrderError error = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 1;</code>
        */
       public Builder clearError() {
         
@@ -1640,10 +1640,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.SubmitOrder.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.SubmitOrder.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.SubmitOrder.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.SubmitOrder.Response)
     private static final io.bloombox.schema.services.shop.v1.SubmitOrder.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.SubmitOrder.Response();
@@ -1679,7 +1679,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.SubmitOrder.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.SubmitOrder.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1687,7 +1687,7 @@ private static final long serialVersionUID = 0L;
      * Request for order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1695,7 +1695,7 @@ private static final long serialVersionUID = 0L;
      * Request for order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.SubmitOrder.Request getRequest();
     /**
@@ -1703,7 +1703,7 @@ private static final long serialVersionUID = 0L;
      * Request for order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.SubmitOrder.RequestOrBuilder getRequestOrBuilder();
 
@@ -1712,7 +1712,7 @@ private static final long serialVersionUID = 0L;
      * Response from order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1720,7 +1720,7 @@ private static final long serialVersionUID = 0L;
      * Response from order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.SubmitOrder.Response getResponse();
     /**
@@ -1728,16 +1728,16 @@ private static final long serialVersionUID = 0L;
      * Response from order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.SubmitOrder.ResponseOrBuilder getResponseOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.SubmitOrder.Operation}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.SubmitOrder.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.SubmitOrder.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.SubmitOrder.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1818,12 +1818,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Operation_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.SubmitOrder.Operation.class, io.bloombox.schema.services.shop.v1.SubmitOrder.Operation.Builder.class);
     }
@@ -1835,7 +1835,7 @@ private static final long serialVersionUID = 0L;
      * Request for order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      * Request for order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.SubmitOrder.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.shop.v1.SubmitOrder.Request.getDefaultInstance() : request_;
@@ -1855,7 +1855,7 @@ private static final long serialVersionUID = 0L;
      * Request for order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.SubmitOrder.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1868,7 +1868,7 @@ private static final long serialVersionUID = 0L;
      * Response from order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1878,7 +1878,7 @@ private static final long serialVersionUID = 0L;
      * Response from order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.SubmitOrder.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.shop.v1.SubmitOrder.Response.getDefaultInstance() : response_;
@@ -1888,7 +1888,7 @@ private static final long serialVersionUID = 0L;
      * Response from order submission.
      * </pre>
      *
-     * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.SubmitOrder.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
@@ -2067,20 +2067,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.SubmitOrder.Operation}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.SubmitOrder.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.SubmitOrder.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.SubmitOrder.Operation)
         io.bloombox.schema.services.shop.v1.SubmitOrder.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.SubmitOrder.Operation.class, io.bloombox.schema.services.shop.v1.SubmitOrder.Operation.Builder.class);
       }
@@ -2119,7 +2119,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_Operation_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.SubmitOrder.Operation getDefaultInstanceForType() {
@@ -2228,7 +2228,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -2238,7 +2238,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.SubmitOrder.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -2252,7 +2252,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.shop.v1.SubmitOrder.Request value) {
         if (requestBuilder_ == null) {
@@ -2272,7 +2272,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.shop.v1.SubmitOrder.Request.Builder builderForValue) {
@@ -2290,7 +2290,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.shop.v1.SubmitOrder.Request value) {
         if (requestBuilder_ == null) {
@@ -2312,7 +2312,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2330,7 +2330,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.SubmitOrder.Request.Builder getRequestBuilder() {
         
@@ -2342,7 +2342,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.SubmitOrder.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -2357,7 +2357,7 @@ private static final long serialVersionUID = 0L;
        * Request for order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.SubmitOrder.Request, io.bloombox.schema.services.shop.v1.SubmitOrder.Request.Builder, io.bloombox.schema.services.shop.v1.SubmitOrder.RequestOrBuilder> 
@@ -2381,7 +2381,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -2391,7 +2391,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.SubmitOrder.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -2405,7 +2405,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.shop.v1.SubmitOrder.Response value) {
         if (responseBuilder_ == null) {
@@ -2425,7 +2425,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.shop.v1.SubmitOrder.Response.Builder builderForValue) {
@@ -2443,7 +2443,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.shop.v1.SubmitOrder.Response value) {
         if (responseBuilder_ == null) {
@@ -2465,7 +2465,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2483,7 +2483,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.SubmitOrder.Response.Builder getResponseBuilder() {
         
@@ -2495,7 +2495,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.SubmitOrder.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2510,7 +2510,7 @@ private static final long serialVersionUID = 0L;
        * Response from order submission.
        * </pre>
        *
-       * <code>.services.shop.v1.SubmitOrder.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.SubmitOrder.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.SubmitOrder.Response, io.bloombox.schema.services.shop.v1.SubmitOrder.Response.Builder, io.bloombox.schema.services.shop.v1.SubmitOrder.ResponseOrBuilder> 
@@ -2536,10 +2536,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.SubmitOrder.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.SubmitOrder.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.SubmitOrder.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.SubmitOrder.Operation)
     private static final io.bloombox.schema.services.shop.v1.SubmitOrder.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.SubmitOrder.Operation();
@@ -2719,20 +2719,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to submit an express pickup or delivery order.
    * </pre>
    *
-   * Protobuf type {@code services.shop.v1.SubmitOrder}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.SubmitOrder}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.shop.v1.SubmitOrder)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.SubmitOrder)
       io.bloombox.schema.services.shop.v1.SubmitOrderOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.SubmitOrder.class, io.bloombox.schema.services.shop.v1.SubmitOrder.Builder.class);
     }
@@ -2759,7 +2759,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_SubmitOrder_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_SubmitOrder_descriptor;
     }
 
     public io.bloombox.schema.services.shop.v1.SubmitOrder getDefaultInstanceForType() {
@@ -2854,10 +2854,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.shop.v1.SubmitOrder)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.SubmitOrder)
   }
 
-  // @@protoc_insertion_point(class_scope:services.shop.v1.SubmitOrder)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.SubmitOrder)
   private static final io.bloombox.schema.services.shop.v1.SubmitOrder DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.SubmitOrder();

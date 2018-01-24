@@ -25,11 +25,11 @@ package io.bloombox.schema.services.shop.v1;
  * Specifies an RPC operation to check the status of an online store, for availability/hours status, etc.
  * </pre>
  *
- * Protobuf type {@code services.shop.v1.ShopInfo}
+ * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo}
  */
 public  final class ShopInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.shop.v1.ShopInfo)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.ShopInfo)
     ShopInfoOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ShopInfo.newBuilder() to construct.
@@ -83,18 +83,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_descriptor;
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_fieldAccessorTable
+    return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.shop.v1.ShopInfo.class, io.bloombox.schema.services.shop.v1.ShopInfo.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.ShopInfo.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.ShopInfo.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
      * Location key.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     boolean hasLocation();
     /**
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
      * Location key.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     io.bloombox.schema.partner.PartnerLocationKey getLocation();
     /**
@@ -118,16 +118,16 @@ private static final long serialVersionUID = 0L;
      * Location key.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.ShopInfo.Request}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.ShopInfo.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.ShopInfo.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -195,12 +195,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Request_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Request_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.ShopInfo.Request.class, io.bloombox.schema.services.shop.v1.ShopInfo.Request.Builder.class);
     }
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
      * Location key.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
      * Location key.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
       return location_ == null ? io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance() : location_;
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
      * Location key.
      * </pre>
      *
-     * <code>.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
      */
     public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
@@ -395,20 +395,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.ShopInfo.Request}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.ShopInfo.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.ShopInfo.Request)
         io.bloombox.schema.services.shop.v1.ShopInfo.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Request_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.ShopInfo.Request.class, io.bloombox.schema.services.shop.v1.ShopInfo.Request.Builder.class);
       }
@@ -441,7 +441,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Request_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Request_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.ShopInfo.Request getDefaultInstanceForType() {
@@ -542,7 +542,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
         if (locationBuilder_ == null) {
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       public Builder setLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
@@ -586,7 +586,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       public Builder setLocation(
           io.bloombox.schema.partner.PartnerLocationKey.Builder builderForValue) {
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
@@ -626,7 +626,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -644,7 +644,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKey.Builder getLocationBuilder() {
         
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
        * Location key.
        * </pre>
        *
-       * <code>.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> 
@@ -697,10 +697,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.ShopInfo.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.ShopInfo.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.ShopInfo.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.ShopInfo.Request)
     private static final io.bloombox.schema.services.shop.v1.ShopInfo.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.ShopInfo.Request();
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.ShopInfo.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.ShopInfo.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -744,7 +744,7 @@ private static final long serialVersionUID = 0L;
      * Indicates the current status of the online shop in question.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
      */
     int getShopStatusValue();
     /**
@@ -752,16 +752,16 @@ private static final long serialVersionUID = 0L;
      * Indicates the current status of the online shop in question.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.ShopStatus getShopStatus();
   }
   /**
-   * Protobuf type {@code services.shop.v1.ShopInfo.Response}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.ShopInfo.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.ShopInfo.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -823,12 +823,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Response_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Response_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.ShopInfo.Response.class, io.bloombox.schema.services.shop.v1.ShopInfo.Response.Builder.class);
     }
@@ -840,7 +840,7 @@ private static final long serialVersionUID = 0L;
      * Indicates the current status of the online shop in question.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
      */
     public int getShopStatusValue() {
       return shopStatus_;
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
      * Indicates the current status of the online shop in question.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.ShopStatus getShopStatus() {
       io.bloombox.schema.services.shop.v1.ShopStatus result = io.bloombox.schema.services.shop.v1.ShopStatus.valueOf(shopStatus_);
@@ -1008,20 +1008,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.ShopInfo.Response}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.ShopInfo.Response)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.ShopInfo.Response)
         io.bloombox.schema.services.shop.v1.ShopInfo.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Response_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.ShopInfo.Response.class, io.bloombox.schema.services.shop.v1.ShopInfo.Response.Builder.class);
       }
@@ -1050,7 +1050,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Response_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Response_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.ShopInfo.Response getDefaultInstanceForType() {
@@ -1145,7 +1145,7 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
        */
       public int getShopStatusValue() {
         return shopStatus_;
@@ -1155,7 +1155,7 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
        */
       public Builder setShopStatusValue(int value) {
         shopStatus_ = value;
@@ -1167,7 +1167,7 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.ShopStatus getShopStatus() {
         io.bloombox.schema.services.shop.v1.ShopStatus result = io.bloombox.schema.services.shop.v1.ShopStatus.valueOf(shopStatus_);
@@ -1178,7 +1178,7 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
        */
       public Builder setShopStatus(io.bloombox.schema.services.shop.v1.ShopStatus value) {
         if (value == null) {
@@ -1194,7 +1194,7 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
        */
       public Builder clearShopStatus() {
         
@@ -1213,10 +1213,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.ShopInfo.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.ShopInfo.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.ShopInfo.Response)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.ShopInfo.Response)
     private static final io.bloombox.schema.services.shop.v1.ShopInfo.Response DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.ShopInfo.Response();
@@ -1252,7 +1252,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.shop.v1.ShopInfo.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.shop.v1.ShopInfo.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1260,7 +1260,7 @@ private static final long serialVersionUID = 0L;
      * Request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
@@ -1268,7 +1268,7 @@ private static final long serialVersionUID = 0L;
      * Request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.ShopInfo.Request getRequest();
     /**
@@ -1276,7 +1276,7 @@ private static final long serialVersionUID = 0L;
      * Request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
      */
     io.bloombox.schema.services.shop.v1.ShopInfo.RequestOrBuilder getRequestOrBuilder();
 
@@ -1285,7 +1285,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
@@ -1293,7 +1293,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.ShopInfo.Response getResponse();
     /**
@@ -1301,16 +1301,16 @@ private static final long serialVersionUID = 0L;
      * Response to a request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
      */
     io.bloombox.schema.services.shop.v1.ShopInfo.ResponseOrBuilder getResponseOrBuilder();
   }
   /**
-   * Protobuf type {@code services.shop.v1.ShopInfo.Operation}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.shop.v1.ShopInfo.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.shop.v1.ShopInfo.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -1391,12 +1391,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Operation_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.ShopInfo.Operation.class, io.bloombox.schema.services.shop.v1.ShopInfo.Operation.Builder.class);
     }
@@ -1408,7 +1408,7 @@ private static final long serialVersionUID = 0L;
      * Request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
@@ -1418,7 +1418,7 @@ private static final long serialVersionUID = 0L;
      * Request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.ShopInfo.Request getRequest() {
       return request_ == null ? io.bloombox.schema.services.shop.v1.ShopInfo.Request.getDefaultInstance() : request_;
@@ -1428,7 +1428,7 @@ private static final long serialVersionUID = 0L;
      * Request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
      */
     public io.bloombox.schema.services.shop.v1.ShopInfo.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
@@ -1441,7 +1441,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
@@ -1451,7 +1451,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.ShopInfo.Response getResponse() {
       return response_ == null ? io.bloombox.schema.services.shop.v1.ShopInfo.Response.getDefaultInstance() : response_;
@@ -1461,7 +1461,7 @@ private static final long serialVersionUID = 0L;
      * Response to a request for shop status.
      * </pre>
      *
-     * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+     * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
      */
     public io.bloombox.schema.services.shop.v1.ShopInfo.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
@@ -1640,20 +1640,20 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
-     * Protobuf type {@code services.shop.v1.ShopInfo.Operation}
+     * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.shop.v1.ShopInfo.Operation)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.ShopInfo.Operation)
         io.bloombox.schema.services.shop.v1.ShopInfo.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.shop.v1.ShopInfo.Operation.class, io.bloombox.schema.services.shop.v1.ShopInfo.Operation.Builder.class);
       }
@@ -1692,7 +1692,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_Operation_descriptor;
+        return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_Operation_descriptor;
       }
 
       public io.bloombox.schema.services.shop.v1.ShopInfo.Operation getDefaultInstanceForType() {
@@ -1801,7 +1801,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
@@ -1811,7 +1811,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.ShopInfo.Request getRequest() {
         if (requestBuilder_ == null) {
@@ -1825,7 +1825,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       public Builder setRequest(io.bloombox.schema.services.shop.v1.ShopInfo.Request value) {
         if (requestBuilder_ == null) {
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       public Builder setRequest(
           io.bloombox.schema.services.shop.v1.ShopInfo.Request.Builder builderForValue) {
@@ -1863,7 +1863,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       public Builder mergeRequest(io.bloombox.schema.services.shop.v1.ShopInfo.Request value) {
         if (requestBuilder_ == null) {
@@ -1885,7 +1885,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -1903,7 +1903,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.ShopInfo.Request.Builder getRequestBuilder() {
         
@@ -1915,7 +1915,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       public io.bloombox.schema.services.shop.v1.ShopInfo.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
@@ -1930,7 +1930,7 @@ private static final long serialVersionUID = 0L;
        * Request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Request request = 1;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.ShopInfo.Request, io.bloombox.schema.services.shop.v1.ShopInfo.Request.Builder, io.bloombox.schema.services.shop.v1.ShopInfo.RequestOrBuilder> 
@@ -1954,7 +1954,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
@@ -1964,7 +1964,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.ShopInfo.Response getResponse() {
         if (responseBuilder_ == null) {
@@ -1978,7 +1978,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       public Builder setResponse(io.bloombox.schema.services.shop.v1.ShopInfo.Response value) {
         if (responseBuilder_ == null) {
@@ -1998,7 +1998,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       public Builder setResponse(
           io.bloombox.schema.services.shop.v1.ShopInfo.Response.Builder builderForValue) {
@@ -2016,7 +2016,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       public Builder mergeResponse(io.bloombox.schema.services.shop.v1.ShopInfo.Response value) {
         if (responseBuilder_ == null) {
@@ -2038,7 +2038,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2056,7 +2056,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.ShopInfo.Response.Builder getResponseBuilder() {
         
@@ -2068,7 +2068,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       public io.bloombox.schema.services.shop.v1.ShopInfo.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
@@ -2083,7 +2083,7 @@ private static final long serialVersionUID = 0L;
        * Response to a request for shop status.
        * </pre>
        *
-       * <code>.services.shop.v1.ShopInfo.Response response = 2;</code>
+       * <code>.bloombox.schema.services.shop.v1.ShopInfo.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.services.shop.v1.ShopInfo.Response, io.bloombox.schema.services.shop.v1.ShopInfo.Response.Builder, io.bloombox.schema.services.shop.v1.ShopInfo.ResponseOrBuilder> 
@@ -2109,10 +2109,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.shop.v1.ShopInfo.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.ShopInfo.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:services.shop.v1.ShopInfo.Operation)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.ShopInfo.Operation)
     private static final io.bloombox.schema.services.shop.v1.ShopInfo.Operation DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.ShopInfo.Operation();
@@ -2292,20 +2292,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to check the status of an online store, for availability/hours status, etc.
    * </pre>
    *
-   * Protobuf type {@code services.shop.v1.ShopInfo}
+   * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.shop.v1.ShopInfo)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.shop.v1.ShopInfo)
       io.bloombox.schema.services.shop.v1.ShopInfoOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_fieldAccessorTable
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.shop.v1.ShopInfo.class, io.bloombox.schema.services.shop.v1.ShopInfo.Builder.class);
     }
@@ -2332,7 +2332,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_services_shop_v1_ShopInfo_descriptor;
+      return io.bloombox.schema.services.shop.v1.ShopServiceV1.internal_static_bloombox_schema_services_shop_v1_ShopInfo_descriptor;
     }
 
     public io.bloombox.schema.services.shop.v1.ShopInfo getDefaultInstanceForType() {
@@ -2427,10 +2427,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.shop.v1.ShopInfo)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.shop.v1.ShopInfo)
   }
 
-  // @@protoc_insertion_point(class_scope:services.shop.v1.ShopInfo)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.shop.v1.ShopInfo)
   private static final io.bloombox.schema.services.shop.v1.ShopInfo DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.shop.v1.ShopInfo();

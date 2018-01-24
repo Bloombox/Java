@@ -41,8 +41,11 @@
     public *;
 }
 
+-keep public class io.opencannabis.** {
+    public *;
+}
+
 -keep class bloombox.client.Bloombox { public *; }
--keep class bloombox.client.BloomboxClient { public *; }
 -keep class bloombox.client.CLITool { public *; }
 -keep class bloombox.client.services.** { public *; }
 -keep class bloombox.client.interfaces.** { *; }

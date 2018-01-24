@@ -21,6 +21,6 @@
 package io.bloombox.schema.services.telemetry.v1beta3;
 
 public interface EventOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.Event)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.Event)
     com.google.protobuf.MessageOrBuilder {
 }

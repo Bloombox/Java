@@ -29,7 +29,7 @@ object KotlinClientExample {
 
   /**
    * API client. This is where we set everything up. There are a lot more options, all specified on
-   * `BloomboxClient.Settings`. Of note:
+   * `Bloombox.Settings`. Of note:
    *
    * - You can set your own `Executor` for dispatching RPCs.
    * - You can set a custom request or close timeout for RPCs.

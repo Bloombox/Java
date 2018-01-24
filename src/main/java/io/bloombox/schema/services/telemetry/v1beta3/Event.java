@@ -25,11 +25,11 @@ package io.bloombox.schema.services.telemetry.v1beta3;
  * Specifies an RPC operation to submit one or more generic events to an unenumerated collection.
  * </pre>
  *
- * Protobuf type {@code services.telemetry.v1beta3.Event}
+ * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Event}
  */
 public  final class Event extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.Event)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.Event)
     EventOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Event.newBuilder() to construct.
@@ -83,18 +83,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_descriptor;
+    return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_fieldAccessorTable
+    return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.services.telemetry.v1beta3.Event.class, io.bloombox.schema.services.telemetry.v1beta3.Event.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.Event.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.Event.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     boolean hasContext();
     /**
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
     /**
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
 
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
      * Generic event to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Event event = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     boolean hasEvent();
     /**
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
      * Generic event to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Event event = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsEvent.Event getEvent();
     /**
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
      * Generic event to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Event event = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getEventOrBuilder();
 
@@ -170,11 +170,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a request to submit a generic telemetry event record.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.Event.Request}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Event.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.Event.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.Event.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -262,12 +262,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Request_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Request_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.Event.Request.class, io.bloombox.schema.services.telemetry.v1beta3.Event.Request.Builder.class);
     }
@@ -279,7 +279,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public boolean hasContext() {
       return context_ != null;
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
       return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
       return getContext();
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
      * Generic event to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Event event = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     public boolean hasEvent() {
       return event_ != null;
@@ -322,7 +322,7 @@ private static final long serialVersionUID = 0L;
      * Generic event to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Event event = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsEvent.Event getEvent() {
       return event_ == null ? io.bloombox.schema.telemetry.AnalyticsEvent.Event.getDefaultInstance() : event_;
@@ -332,7 +332,7 @@ private static final long serialVersionUID = 0L;
      * Generic event to submit.
      * </pre>
      *
-     * <code>.analytics.generic.Event event = 2;</code>
+     * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getEventOrBuilder() {
       return getEvent();
@@ -567,20 +567,20 @@ private static final long serialVersionUID = 0L;
      * Specifies a request to submit a generic telemetry event record.
      * </pre>
      *
-     * Protobuf type {@code services.telemetry.v1beta3.Event.Request}
+     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Event.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.Event.Request)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.Event.Request)
         io.bloombox.schema.services.telemetry.v1beta3.Event.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Request_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Request_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta3.Event.Request.class, io.bloombox.schema.services.telemetry.v1beta3.Event.Request.Builder.class);
       }
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Request_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Request_descriptor;
       }
 
       public io.bloombox.schema.services.telemetry.v1beta3.Event.Request getDefaultInstanceForType() {
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public boolean hasContext() {
         return contextBuilder_ != null || context_ != null;
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
         if (contextBuilder_ == null) {
@@ -759,7 +759,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder setContext(
           io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -819,7 +819,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder clearContext() {
         if (contextBuilder_ == null) {
@@ -837,7 +837,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
         
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
         if (contextBuilder_ != null) {
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public boolean hasEvent() {
         return eventBuilder_ != null || event_ != null;
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event getEvent() {
         if (eventBuilder_ == null) {
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder setEvent(io.bloombox.schema.telemetry.AnalyticsEvent.Event value) {
         if (eventBuilder_ == null) {
@@ -932,7 +932,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder setEvent(
           io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder builderForValue) {
@@ -950,7 +950,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder mergeEvent(io.bloombox.schema.telemetry.AnalyticsEvent.Event value) {
         if (eventBuilder_ == null) {
@@ -972,7 +972,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder clearEvent() {
         if (eventBuilder_ == null) {
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder getEventBuilder() {
         
@@ -1002,7 +1002,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getEventOrBuilder() {
         if (eventBuilder_ != null) {
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
        * Generic event to submit.
        * </pre>
        *
-       * <code>.analytics.generic.Event event = 2;</code>
+       * <code>.bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsEvent.Event, io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder, io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder> 
@@ -1132,10 +1132,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.Event.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.Event.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.Event.Request)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.Event.Request)
     private static final io.bloombox.schema.services.telemetry.v1beta3.Event.Request DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.Event.Request();
@@ -1171,7 +1171,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface BatchOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.Event.Batch)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.Event.Batch)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1179,7 +1179,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     java.util.List<io.bloombox.schema.telemetry.AnalyticsEvent.Event> 
         getEventList();
@@ -1188,7 +1188,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsEvent.Event getEvent(int index);
     /**
@@ -1196,7 +1196,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     int getEventCount();
     /**
@@ -1204,7 +1204,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     java.util.List<? extends io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder> 
         getEventOrBuilderList();
@@ -1213,7 +1213,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getEventOrBuilder(
         int index);
@@ -1223,11 +1223,11 @@ private static final long serialVersionUID = 0L;
    * Specifies a request one or more generic telemetry event records.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.Event.Batch}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Event.Batch}
    */
   public  static final class Batch extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.Event.Batch)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.Event.Batch)
       BatchOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Batch.newBuilder() to construct.
@@ -1295,12 +1295,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Batch_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Batch_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.class, io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder.class);
     }
@@ -1312,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     public java.util.List<io.bloombox.schema.telemetry.AnalyticsEvent.Event> getEventList() {
       return event_;
@@ -1322,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     public java.util.List<? extends io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder> 
         getEventOrBuilderList() {
@@ -1333,7 +1333,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     public int getEventCount() {
       return event_.size();
@@ -1343,7 +1343,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsEvent.Event getEvent(int index) {
       return event_.get(index);
@@ -1353,7 +1353,7 @@ private static final long serialVersionUID = 0L;
      * Events to submit.
      * </pre>
      *
-     * <code>repeated .analytics.generic.Event event = 2;</code>
+     * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getEventOrBuilder(
         int index) {
@@ -1518,20 +1518,20 @@ private static final long serialVersionUID = 0L;
      * Specifies a request one or more generic telemetry event records.
      * </pre>
      *
-     * Protobuf type {@code services.telemetry.v1beta3.Event.Batch}
+     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Event.Batch}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.Event.Batch)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.Event.Batch)
         io.bloombox.schema.services.telemetry.v1beta3.Event.BatchOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Batch_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Batch_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.class, io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder.class);
       }
@@ -1565,7 +1565,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_Batch_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_Batch_descriptor;
       }
 
       public io.bloombox.schema.services.telemetry.v1beta3.Event.Batch getDefaultInstanceForType() {
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public java.util.List<io.bloombox.schema.telemetry.AnalyticsEvent.Event> getEventList() {
         if (eventBuilder_ == null) {
@@ -1718,7 +1718,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public int getEventCount() {
         if (eventBuilder_ == null) {
@@ -1732,7 +1732,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event getEvent(int index) {
         if (eventBuilder_ == null) {
@@ -1746,7 +1746,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder setEvent(
           int index, io.bloombox.schema.telemetry.AnalyticsEvent.Event value) {
@@ -1767,7 +1767,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder setEvent(
           int index, io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder builderForValue) {
@@ -1785,7 +1785,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder addEvent(io.bloombox.schema.telemetry.AnalyticsEvent.Event value) {
         if (eventBuilder_ == null) {
@@ -1805,7 +1805,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder addEvent(
           int index, io.bloombox.schema.telemetry.AnalyticsEvent.Event value) {
@@ -1826,7 +1826,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder addEvent(
           io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder builderForValue) {
@@ -1844,7 +1844,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder addEvent(
           int index, io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder builderForValue) {
@@ -1862,7 +1862,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder addAllEvent(
           java.lang.Iterable<? extends io.bloombox.schema.telemetry.AnalyticsEvent.Event> values) {
@@ -1881,7 +1881,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder clearEvent() {
         if (eventBuilder_ == null) {
@@ -1898,7 +1898,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public Builder removeEvent(int index) {
         if (eventBuilder_ == null) {
@@ -1915,7 +1915,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder getEventBuilder(
           int index) {
@@ -1926,7 +1926,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder getEventOrBuilder(
           int index) {
@@ -1940,7 +1940,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public java.util.List<? extends io.bloombox.schema.telemetry.AnalyticsEvent.EventOrBuilder> 
            getEventOrBuilderList() {
@@ -1955,7 +1955,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder addEventBuilder() {
         return getEventFieldBuilder().addBuilder(
@@ -1966,7 +1966,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder addEventBuilder(
           int index) {
@@ -1978,7 +1978,7 @@ private static final long serialVersionUID = 0L;
        * Events to submit.
        * </pre>
        *
-       * <code>repeated .analytics.generic.Event event = 2;</code>
+       * <code>repeated .bloombox.schema.analytics.generic.Event event = 2;</code>
        */
       public java.util.List<io.bloombox.schema.telemetry.AnalyticsEvent.Event.Builder> 
            getEventBuilderList() {
@@ -2009,10 +2009,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.Event.Batch)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.Event.Batch)
     }
 
-    // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.Event.Batch)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.Event.Batch)
     private static final io.bloombox.schema.services.telemetry.v1beta3.Event.Batch DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.Event.Batch();
@@ -2048,7 +2048,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public interface BatchRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:services.telemetry.v1beta3.Event.BatchRequest)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2056,7 +2056,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     boolean hasContext();
     /**
@@ -2064,7 +2064,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.Context getContext();
     /**
@@ -2072,7 +2072,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder();
 
@@ -2081,7 +2081,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     java.util.List<io.bloombox.schema.services.telemetry.v1beta3.Event.Batch> 
         getBatchList();
@@ -2090,7 +2090,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta3.Event.Batch getBatch(int index);
     /**
@@ -2098,7 +2098,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     int getBatchCount();
     /**
@@ -2106,7 +2106,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     java.util.List<? extends io.bloombox.schema.services.telemetry.v1beta3.Event.BatchOrBuilder> 
         getBatchOrBuilderList();
@@ -2115,7 +2115,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     io.bloombox.schema.services.telemetry.v1beta3.Event.BatchOrBuilder getBatchOrBuilder(
         int index);
@@ -2125,11 +2125,11 @@ private static final long serialVersionUID = 0L;
    * Wraps an event batch in a request.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.Event.BatchRequest}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest}
    */
   public  static final class BatchRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:services.telemetry.v1beta3.Event.BatchRequest)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest)
       BatchRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use BatchRequest.newBuilder() to construct.
@@ -2210,12 +2210,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_BatchRequest_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_BatchRequest_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest.class, io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest.Builder.class);
     }
@@ -2228,7 +2228,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public boolean hasContext() {
       return context_ != null;
@@ -2238,7 +2238,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
       return context_ == null ? io.bloombox.schema.telemetry.AnalyticsContext.Context.getDefaultInstance() : context_;
@@ -2248,7 +2248,7 @@ private static final long serialVersionUID = 0L;
      * Context to submit for these events.
      * </pre>
      *
-     * <code>.analytics.Context context = 1;</code>
+     * <code>.bloombox.schema.analytics.Context context = 1;</code>
      */
     public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
       return getContext();
@@ -2261,7 +2261,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     public java.util.List<io.bloombox.schema.services.telemetry.v1beta3.Event.Batch> getBatchList() {
       return batch_;
@@ -2271,7 +2271,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     public java.util.List<? extends io.bloombox.schema.services.telemetry.v1beta3.Event.BatchOrBuilder> 
         getBatchOrBuilderList() {
@@ -2282,7 +2282,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     public int getBatchCount() {
       return batch_.size();
@@ -2292,7 +2292,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta3.Event.Batch getBatch(int index) {
       return batch_.get(index);
@@ -2302,7 +2302,7 @@ private static final long serialVersionUID = 0L;
      * Event batch.
      * </pre>
      *
-     * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+     * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
      */
     public io.bloombox.schema.services.telemetry.v1beta3.Event.BatchOrBuilder getBatchOrBuilder(
         int index) {
@@ -2483,20 +2483,20 @@ private static final long serialVersionUID = 0L;
      * Wraps an event batch in a request.
      * </pre>
      *
-     * Protobuf type {@code services.telemetry.v1beta3.Event.BatchRequest}
+     * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.Event.BatchRequest)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest)
         io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_BatchRequest_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_BatchRequest_fieldAccessorTable
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest.class, io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest.Builder.class);
       }
@@ -2536,7 +2536,7 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_BatchRequest_descriptor;
+        return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_BatchRequest_descriptor;
       }
 
       public io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest getDefaultInstanceForType() {
@@ -2676,7 +2676,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public boolean hasContext() {
         return contextBuilder_ != null || context_ != null;
@@ -2686,7 +2686,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context getContext() {
         if (contextBuilder_ == null) {
@@ -2700,7 +2700,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder setContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -2720,7 +2720,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder setContext(
           io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder builderForValue) {
@@ -2738,7 +2738,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder mergeContext(io.bloombox.schema.telemetry.AnalyticsContext.Context value) {
         if (contextBuilder_ == null) {
@@ -2760,7 +2760,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public Builder clearContext() {
         if (contextBuilder_ == null) {
@@ -2778,7 +2778,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder getContextBuilder() {
         
@@ -2790,7 +2790,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       public io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder getContextOrBuilder() {
         if (contextBuilder_ != null) {
@@ -2805,7 +2805,7 @@ private static final long serialVersionUID = 0L;
        * Context to submit for these events.
        * </pre>
        *
-       * <code>.analytics.Context context = 1;</code>
+       * <code>.bloombox.schema.analytics.Context context = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.AnalyticsContext.Context, io.bloombox.schema.telemetry.AnalyticsContext.Context.Builder, io.bloombox.schema.telemetry.AnalyticsContext.ContextOrBuilder> 
@@ -2838,7 +2838,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public java.util.List<io.bloombox.schema.services.telemetry.v1beta3.Event.Batch> getBatchList() {
         if (batchBuilder_ == null) {
@@ -2852,7 +2852,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public int getBatchCount() {
         if (batchBuilder_ == null) {
@@ -2866,7 +2866,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta3.Event.Batch getBatch(int index) {
         if (batchBuilder_ == null) {
@@ -2880,7 +2880,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder setBatch(
           int index, io.bloombox.schema.services.telemetry.v1beta3.Event.Batch value) {
@@ -2901,7 +2901,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder setBatch(
           int index, io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder builderForValue) {
@@ -2919,7 +2919,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder addBatch(io.bloombox.schema.services.telemetry.v1beta3.Event.Batch value) {
         if (batchBuilder_ == null) {
@@ -2939,7 +2939,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder addBatch(
           int index, io.bloombox.schema.services.telemetry.v1beta3.Event.Batch value) {
@@ -2960,7 +2960,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder addBatch(
           io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder builderForValue) {
@@ -2978,7 +2978,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder addBatch(
           int index, io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder builderForValue) {
@@ -2996,7 +2996,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder addAllBatch(
           java.lang.Iterable<? extends io.bloombox.schema.services.telemetry.v1beta3.Event.Batch> values) {
@@ -3015,7 +3015,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder clearBatch() {
         if (batchBuilder_ == null) {
@@ -3032,7 +3032,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public Builder removeBatch(int index) {
         if (batchBuilder_ == null) {
@@ -3049,7 +3049,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder getBatchBuilder(
           int index) {
@@ -3060,7 +3060,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta3.Event.BatchOrBuilder getBatchOrBuilder(
           int index) {
@@ -3074,7 +3074,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public java.util.List<? extends io.bloombox.schema.services.telemetry.v1beta3.Event.BatchOrBuilder> 
            getBatchOrBuilderList() {
@@ -3089,7 +3089,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder addBatchBuilder() {
         return getBatchFieldBuilder().addBuilder(
@@ -3100,7 +3100,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder addBatchBuilder(
           int index) {
@@ -3112,7 +3112,7 @@ private static final long serialVersionUID = 0L;
        * Event batch.
        * </pre>
        *
-       * <code>repeated .services.telemetry.v1beta3.Event.Batch batch = 2;</code>
+       * <code>repeated .bloombox.schema.services.telemetry.v1beta3.Event.Batch batch = 2;</code>
        */
       public java.util.List<io.bloombox.schema.services.telemetry.v1beta3.Event.Batch.Builder> 
            getBatchBuilderList() {
@@ -3143,10 +3143,10 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.Event.BatchRequest)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.Event.BatchRequest)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest)
     private static final io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.Event.BatchRequest();
@@ -3326,20 +3326,20 @@ private static final long serialVersionUID = 0L;
    * Specifies an RPC operation to submit one or more generic events to an unenumerated collection.
    * </pre>
    *
-   * Protobuf type {@code services.telemetry.v1beta3.Event}
+   * Protobuf type {@code bloombox.schema.services.telemetry.v1beta3.Event}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:services.telemetry.v1beta3.Event)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.telemetry.v1beta3.Event)
       io.bloombox.schema.services.telemetry.v1beta3.EventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_fieldAccessorTable
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.telemetry.v1beta3.Event.class, io.bloombox.schema.services.telemetry.v1beta3.Event.Builder.class);
     }
@@ -3366,7 +3366,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_services_telemetry_v1beta3_Event_descriptor;
+      return io.bloombox.schema.services.telemetry.v1beta3.GenericEventsBeta3.internal_static_bloombox_schema_services_telemetry_v1beta3_Event_descriptor;
     }
 
     public io.bloombox.schema.services.telemetry.v1beta3.Event getDefaultInstanceForType() {
@@ -3461,10 +3461,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:services.telemetry.v1beta3.Event)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.telemetry.v1beta3.Event)
   }
 
-  // @@protoc_insertion_point(class_scope:services.telemetry.v1beta3.Event)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.telemetry.v1beta3.Event)
   private static final io.bloombox.schema.services.telemetry.v1beta3.Event DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.services.telemetry.v1beta3.Event();

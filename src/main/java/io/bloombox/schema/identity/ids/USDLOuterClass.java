@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -32,15 +31,15 @@ public final class USDLOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_identity_ids_USDLFieldValue_descriptor;
+    internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_identity_ids_USDLFieldValue_fieldAccessorTable;
+      internal_static_bloombox_schema_identity_ids_USDLFieldValue_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_identity_ids_USDL_descriptor;
+    internal_static_bloombox_schema_identity_ids_USDL_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_identity_ids_USDL_fieldAccessorTable;
+      internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,40 +49,41 @@ public final class USDLOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027identity/ids/USDL.proto\022\014identity.ids\032" +
-      "\016bq_field.proto\032\021geo/USState.proto\"\263\001\n\016U" +
-      "SDLFieldValue\022N\n\005field\030\001 \001(\0162\027.identity." +
-      "ids.USDLFieldB&\212@#Field that we are stor" +
-      "ing data for.\022/\n\005value\030\002 \001(\tB\036\212@\033String " +
-      "data for this field.H\000\022\030\n\traw_value\030\003 \001(" +
-      "\014B\003\200@\001H\000B\006\n\004data\"\311\002\n\004USDL\022\024\n\007barcode\030\001 \001" +
-      "(\tB\003\200@\001\022\026\n\tmagstripe\030\002 \001(\tB\003\200@\001\022S\n\014juris" +
-      "diction\030\003 \001(\0162\020.geo.usa.USStateB+\212@(Stat" +
-      "e that issued this Driver\'s License.\022k\n\023" +
-      "identification_card\030\004 \001(\010BN\212@KFlag that " +
-      "indicates this is an identification card" +
-      ", not a Driver\'s License.\022Q\n\006fields\030d \003(" +
-      "\0132\034.identity.ids.USDLFieldValueB#\212@ Raw " +
-      "field data for this license.*\270\005\n\tUSDLFie" +
-      "ld\022\020\n\014BACK_BARCODE\020\000\022\017\n\013FAMILY_NAME\020\001\022\016\n" +
-      "\nGIVEN_NAME\020\002\022\017\n\013MIDDLE_NAME\020\003\022\r\n\tFULL_N" +
-      "AME\020\004\022\017\n\013NAME_PREFIX\020\005\022\017\n\013NAME_SUFFIX\020\006\022" +
-      "\021\n\rDATE_OF_BIRTH\020\n\022\007\n\003SEX\020\013\022\n\n\006HEIGHT\020\014\022" +
-      "\n\n\006WEIGHT\020\r\022\r\n\tEYE_COLOR\020\016\022\016\n\nHAIR_COLOR" +
-      "\020\017\022\020\n\014FULL_ADDRESS\020\024\022\020\n\014ADDRESS_LINE\020\025\022\021" +
-      "\n\rADDRESS_LINE2\020\026\022\020\n\014ADDRESS_CITY\020\027\022\017\n\013P" +
-      "OSTAL_CODE\020\030\022\026\n\022STATE_JURISDICTION\020\031\022\016\n\n" +
-      "LICENSE_ID\020\036\022\026\n\022LICENSE_ISSUE_DATE\020\037\022\027\n\023" +
-      "LICENSE_EXPIRY_DATE\020 \022\027\n\023ISSUER_JURISDIC" +
-      "TION\020!\022&\n\"ISSUER_JURISDICTION_FORMAT_VER" +
-      "SION\020\"\022\030\n\024UNIQUE_DOCUMENT_CODE\020(\022\032\n\026INVE" +
-      "NTORY_CONTROL_CODE\020)\022\021\n\rUNDER_18_DATE\0202\022" +
-      "\021\n\rUNDER_19_DATE\0203\022\021\n\rUNDER_21_DATE\0204\022\014\n" +
-      "\010UNDER_18\020<\022\014\n\010UNDER_19\020=\022\014\n\010UNDER_21\020>\022" +
-      "\017\n\013ORGAN_DONOR\020?\022\013\n\007VETERAN\020@\022\017\n\013NONRESI" +
-      "DENT\020A\022\022\n\016RACE_ETHNICITY\020F\022\023\n\017COMPLIANCE" +
-      "_TYPE\020GB%\n\037io.bloombox.schema.identity.i" +
-      "dsH\001P\001b\006proto3"
+      "\n\027identity/ids/USDL.proto\022\034bloombox.sche" +
+      "ma.identity.ids\032\016bq_field.proto\032\021geo/USS" +
+      "tate.proto\"\303\001\n\016USDLFieldValue\022^\n\005field\030\001" +
+      " \001(\0162\'.bloombox.schema.identity.ids.USDL" +
+      "FieldB&\212@#Field that we are storing data" +
+      " for.\022/\n\005value\030\002 \001(\tB\036\212@\033String data for" +
+      " this field.H\000\022\030\n\traw_value\030\003 \001(\014B\003\200@\001H\000" +
+      "B\006\n\004data\"\346\002\n\004USDL\022\024\n\007barcode\030\001 \001(\tB\003\200@\001\022" +
+      "\026\n\tmagstripe\030\002 \001(\tB\003\200@\001\022`\n\014jurisdiction\030" +
+      "\003 \001(\0162\035.opencannabis.geo.usa.USStateB+\212@" +
+      "(State that issued this Driver\'s License" +
+      ".\022k\n\023identification_card\030\004 \001(\010BN\212@KFlag " +
+      "that indicates this is an identification" +
+      " card, not a Driver\'s License.\022a\n\006fields" +
+      "\030d \003(\0132,.bloombox.schema.identity.ids.US" +
+      "DLFieldValueB#\212@ Raw field data for this" +
+      " license.*\270\005\n\tUSDLField\022\020\n\014BACK_BARCODE\020" +
+      "\000\022\017\n\013FAMILY_NAME\020\001\022\016\n\nGIVEN_NAME\020\002\022\017\n\013MI" +
+      "DDLE_NAME\020\003\022\r\n\tFULL_NAME\020\004\022\017\n\013NAME_PREFI" +
+      "X\020\005\022\017\n\013NAME_SUFFIX\020\006\022\021\n\rDATE_OF_BIRTH\020\n\022" +
+      "\007\n\003SEX\020\013\022\n\n\006HEIGHT\020\014\022\n\n\006WEIGHT\020\r\022\r\n\tEYE_" +
+      "COLOR\020\016\022\016\n\nHAIR_COLOR\020\017\022\020\n\014FULL_ADDRESS\020" +
+      "\024\022\020\n\014ADDRESS_LINE\020\025\022\021\n\rADDRESS_LINE2\020\026\022\020" +
+      "\n\014ADDRESS_CITY\020\027\022\017\n\013POSTAL_CODE\020\030\022\026\n\022STA" +
+      "TE_JURISDICTION\020\031\022\016\n\nLICENSE_ID\020\036\022\026\n\022LIC" +
+      "ENSE_ISSUE_DATE\020\037\022\027\n\023LICENSE_EXPIRY_DATE" +
+      "\020 \022\027\n\023ISSUER_JURISDICTION\020!\022&\n\"ISSUER_JU" +
+      "RISDICTION_FORMAT_VERSION\020\"\022\030\n\024UNIQUE_DO" +
+      "CUMENT_CODE\020(\022\032\n\026INVENTORY_CONTROL_CODE\020" +
+      ")\022\021\n\rUNDER_18_DATE\0202\022\021\n\rUNDER_19_DATE\0203\022" +
+      "\021\n\rUNDER_21_DATE\0204\022\014\n\010UNDER_18\020<\022\014\n\010UNDE" +
+      "R_19\020=\022\014\n\010UNDER_21\020>\022\017\n\013ORGAN_DONOR\020?\022\013\n" +
+      "\007VETERAN\020@\022\017\n\013NONRESIDENT\020A\022\022\n\016RACE_ETHN" +
+      "ICITY\020F\022\023\n\017COMPLIANCE_TYPE\020GB%\n\037io.bloom" +
+      "box.schema.identity.idsH\001P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -97,19 +97,19 @@ public final class USDLOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.geo.usa.USStateOuterClass.getDescriptor(),
+          io.opencannabis.schema.geo.usa.USStateOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_identity_ids_USDLFieldValue_descriptor =
+    internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_identity_ids_USDLFieldValue_fieldAccessorTable = new
+    internal_static_bloombox_schema_identity_ids_USDLFieldValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_identity_ids_USDLFieldValue_descriptor,
+        internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor,
         new java.lang.String[] { "Field", "Value", "RawValue", "Data", });
-    internal_static_identity_ids_USDL_descriptor =
+    internal_static_bloombox_schema_identity_ids_USDL_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_identity_ids_USDL_fieldAccessorTable = new
+    internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_identity_ids_USDL_descriptor,
+        internal_static_bloombox_schema_identity_ids_USDL_descriptor,
         new java.lang.String[] { "Barcode", "Magstripe", "Jurisdiction", "IdentificationCard", "Fields", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -118,7 +118,7 @@ public final class USDLOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.geo.usa.USStateOuterClass.getDescriptor();
+    io.opencannabis.schema.geo.usa.USStateOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

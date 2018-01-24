@@ -21,7 +21,7 @@
 package io.bloombox.schema.services.checkin.v1beta1;
 
 public interface CheckinResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:services.checkin.v1beta1.CheckinResponse)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.checkin.v1beta1.CheckinResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -47,7 +47,7 @@ public interface CheckinResponseOrBuilder extends
    * Specifies a known checkin error that occurred, if applicable.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
+   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
    */
   int getErrorValue();
   /**
@@ -55,7 +55,7 @@ public interface CheckinResponseOrBuilder extends
    * Specifies a known checkin error that occurred, if applicable.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinError error = 3;</code>
+   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinError error = 3;</code>
    */
   io.bloombox.schema.services.checkin.v1beta1.CheckinError getError();
 
@@ -64,7 +64,7 @@ public interface CheckinResponseOrBuilder extends
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
+   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   boolean hasUser();
   /**
@@ -72,7 +72,7 @@ public interface CheckinResponseOrBuilder extends
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
+   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   io.bloombox.schema.services.checkin.v1beta1.CheckinUser getUser();
   /**
@@ -80,7 +80,7 @@ public interface CheckinResponseOrBuilder extends
    * Information about the resulting user account.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinUser user = 4;</code>
+   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinUser user = 4;</code>
    */
   io.bloombox.schema.services.checkin.v1beta1.CheckinUserOrBuilder getUserOrBuilder();
 
@@ -89,7 +89,7 @@ public interface CheckinResponseOrBuilder extends
    * Information related to the user's next enrollment action, if required.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
    */
   boolean hasEnrollment();
   /**
@@ -97,7 +97,7 @@ public interface CheckinResponseOrBuilder extends
    * Information related to the user's next enrollment action, if required.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
    */
   io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment getEnrollment();
   /**
@@ -105,7 +105,7 @@ public interface CheckinResponseOrBuilder extends
    * Information related to the user's next enrollment action, if required.
    * </pre>
    *
-   * <code>.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
+   * <code>.bloombox.schema.services.checkin.v1beta1.CheckinEnrollment enrollment = 5;</code>
    */
   io.bloombox.schema.services.checkin.v1beta1.CheckinEnrollmentOrBuilder getEnrollmentOrBuilder();
 }

@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity.ids;
  * Doctor recommendation to allow a consumer to purchase cannabis in a restricted market.
  * </pre>
  *
- * Protobuf type {@code identity.ids.UserDoctorRec}
+ * Protobuf type {@code bloombox.schema.identity.ids.UserDoctorRec}
  */
 public  final class UserDoctorRec extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.ids.UserDoctorRec)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.UserDoctorRec)
     UserDoctorRecOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use UserDoctorRec.newBuilder() to construct.
@@ -82,11 +81,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.bloombox.schema.temporal.Date.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.Date.Builder subBuilder = null;
             if (expirationDate_ != null) {
               subBuilder = expirationDate_.toBuilder();
             }
-            expirationDate_ = input.readMessage(io.bloombox.schema.temporal.Date.parser(), extensionRegistry);
+            expirationDate_ = input.readMessage(io.opencannabis.schema.temporal.Date.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(expirationDate_);
               expirationDate_ = subBuilder.buildPartial();
@@ -119,11 +118,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            io.bloombox.schema.person.Person.Builder subBuilder = null;
+            io.opencannabis.schema.person.Person.Builder subBuilder = null;
             if (doctor_ != null) {
               subBuilder = doctor_.toBuilder();
             }
-            doctor_ = input.readMessage(io.bloombox.schema.person.Person.parser(), extensionRegistry);
+            doctor_ = input.readMessage(io.opencannabis.schema.person.Person.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(doctor_);
               doctor_ = subBuilder.buildPartial();
@@ -145,12 +144,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_identity_ids_UserDoctorRec_descriptor;
+    return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_identity_ids_UserDoctorRec_fieldAccessorTable
+    return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_bloombox_schema_identity_ids_UserDoctorRec_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.ids.UserDoctorRec.class, io.bloombox.schema.identity.ids.UserDoctorRec.Builder.class);
   }
@@ -198,13 +197,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXPIRATION_DATE_FIELD_NUMBER = 2;
-  private io.bloombox.schema.temporal.Date expirationDate_;
+  private io.opencannabis.schema.temporal.Date expirationDate_;
   /**
    * <pre>
    * Expiration date for the recommendation.
    * </pre>
    *
-   * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+   * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
    */
   public boolean hasExpirationDate() {
     return expirationDate_ != null;
@@ -214,19 +213,19 @@ private static final long serialVersionUID = 0L;
    * Expiration date for the recommendation.
    * </pre>
    *
-   * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+   * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
    */
-  public io.bloombox.schema.temporal.Date getExpirationDate() {
-    return expirationDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : expirationDate_;
+  public io.opencannabis.schema.temporal.Date getExpirationDate() {
+    return expirationDate_ == null ? io.opencannabis.schema.temporal.Date.getDefaultInstance() : expirationDate_;
   }
   /**
    * <pre>
    * Expiration date for the recommendation.
    * </pre>
    *
-   * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+   * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
    */
-  public io.bloombox.schema.temporal.DateOrBuilder getExpirationDateOrBuilder() {
+  public io.opencannabis.schema.temporal.DateOrBuilder getExpirationDateOrBuilder() {
     return getExpirationDate();
   }
 
@@ -279,7 +278,7 @@ private static final long serialVersionUID = 0L;
    * US state where the recommendation is valid.
    * </pre>
    *
-   * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+   * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
    */
   public int getStateValue() {
     return state_;
@@ -289,11 +288,11 @@ private static final long serialVersionUID = 0L;
    * US state where the recommendation is valid.
    * </pre>
    *
-   * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+   * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
    */
-  public io.bloombox.schema.geo.usa.USState getState() {
-    io.bloombox.schema.geo.usa.USState result = io.bloombox.schema.geo.usa.USState.valueOf(state_);
-    return result == null ? io.bloombox.schema.geo.usa.USState.UNRECOGNIZED : result;
+  public io.opencannabis.schema.geo.usa.USState getState() {
+    io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(state_);
+    return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
   }
 
   public static final int COUNTRY_FIELD_NUMBER = 5;
@@ -381,13 +380,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DOCTOR_FIELD_NUMBER = 7;
-  private io.bloombox.schema.person.Person doctor_;
+  private io.opencannabis.schema.person.Person doctor_;
   /**
    * <pre>
    * Personal information about the physician.
    * </pre>
    *
-   * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+   * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
    */
   public boolean hasDoctor() {
     return doctor_ != null;
@@ -397,19 +396,19 @@ private static final long serialVersionUID = 0L;
    * Personal information about the physician.
    * </pre>
    *
-   * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+   * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
    */
-  public io.bloombox.schema.person.Person getDoctor() {
-    return doctor_ == null ? io.bloombox.schema.person.Person.getDefaultInstance() : doctor_;
+  public io.opencannabis.schema.person.Person getDoctor() {
+    return doctor_ == null ? io.opencannabis.schema.person.Person.getDefaultInstance() : doctor_;
   }
   /**
    * <pre>
    * Personal information about the physician.
    * </pre>
    *
-   * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+   * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
    */
-  public io.bloombox.schema.person.PersonOrBuilder getDoctorOrBuilder() {
+  public io.opencannabis.schema.person.PersonOrBuilder getDoctorOrBuilder() {
     return getDoctor();
   }
 
@@ -434,7 +433,7 @@ private static final long serialVersionUID = 0L;
     if (!getBarcodeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, barcode_);
     }
-    if (state_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
+    if (state_ != io.opencannabis.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
       output.writeEnum(4, state_);
     }
     if (!getCountryBytes().isEmpty()) {
@@ -464,7 +463,7 @@ private static final long serialVersionUID = 0L;
     if (!getBarcodeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, barcode_);
     }
-    if (state_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
+    if (state_ != io.opencannabis.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, state_);
     }
@@ -640,20 +639,20 @@ private static final long serialVersionUID = 0L;
    * Doctor recommendation to allow a consumer to purchase cannabis in a restricted market.
    * </pre>
    *
-   * Protobuf type {@code identity.ids.UserDoctorRec}
+   * Protobuf type {@code bloombox.schema.identity.ids.UserDoctorRec}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.ids.UserDoctorRec)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.UserDoctorRec)
       io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_identity_ids_UserDoctorRec_descriptor;
+      return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_identity_ids_UserDoctorRec_fieldAccessorTable
+      return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_bloombox_schema_identity_ids_UserDoctorRec_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ids.UserDoctorRec.class, io.bloombox.schema.identity.ids.UserDoctorRec.Builder.class);
     }
@@ -702,7 +701,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_identity_ids_UserDoctorRec_descriptor;
+      return io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.internal_static_bloombox_schema_identity_ids_UserDoctorRec_descriptor;
     }
 
     public io.bloombox.schema.identity.ids.UserDoctorRec getDefaultInstanceForType() {
@@ -916,15 +915,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.temporal.Date expirationDate_ = null;
+    private io.opencannabis.schema.temporal.Date expirationDate_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> expirationDateBuilder_;
+        io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder> expirationDateBuilder_;
     /**
      * <pre>
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
     public boolean hasExpirationDate() {
       return expirationDateBuilder_ != null || expirationDate_ != null;
@@ -934,11 +933,11 @@ private static final long serialVersionUID = 0L;
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
-    public io.bloombox.schema.temporal.Date getExpirationDate() {
+    public io.opencannabis.schema.temporal.Date getExpirationDate() {
       if (expirationDateBuilder_ == null) {
-        return expirationDate_ == null ? io.bloombox.schema.temporal.Date.getDefaultInstance() : expirationDate_;
+        return expirationDate_ == null ? io.opencannabis.schema.temporal.Date.getDefaultInstance() : expirationDate_;
       } else {
         return expirationDateBuilder_.getMessage();
       }
@@ -948,9 +947,9 @@ private static final long serialVersionUID = 0L;
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
-    public Builder setExpirationDate(io.bloombox.schema.temporal.Date value) {
+    public Builder setExpirationDate(io.opencannabis.schema.temporal.Date value) {
       if (expirationDateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -968,10 +967,10 @@ private static final long serialVersionUID = 0L;
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
     public Builder setExpirationDate(
-        io.bloombox.schema.temporal.Date.Builder builderForValue) {
+        io.opencannabis.schema.temporal.Date.Builder builderForValue) {
       if (expirationDateBuilder_ == null) {
         expirationDate_ = builderForValue.build();
         onChanged();
@@ -986,13 +985,13 @@ private static final long serialVersionUID = 0L;
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
-    public Builder mergeExpirationDate(io.bloombox.schema.temporal.Date value) {
+    public Builder mergeExpirationDate(io.opencannabis.schema.temporal.Date value) {
       if (expirationDateBuilder_ == null) {
         if (expirationDate_ != null) {
           expirationDate_ =
-            io.bloombox.schema.temporal.Date.newBuilder(expirationDate_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.Date.newBuilder(expirationDate_).mergeFrom(value).buildPartial();
         } else {
           expirationDate_ = value;
         }
@@ -1008,7 +1007,7 @@ private static final long serialVersionUID = 0L;
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
     public Builder clearExpirationDate() {
       if (expirationDateBuilder_ == null) {
@@ -1026,9 +1025,9 @@ private static final long serialVersionUID = 0L;
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
-    public io.bloombox.schema.temporal.Date.Builder getExpirationDateBuilder() {
+    public io.opencannabis.schema.temporal.Date.Builder getExpirationDateBuilder() {
       
       onChanged();
       return getExpirationDateFieldBuilder().getBuilder();
@@ -1038,14 +1037,14 @@ private static final long serialVersionUID = 0L;
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
-    public io.bloombox.schema.temporal.DateOrBuilder getExpirationDateOrBuilder() {
+    public io.opencannabis.schema.temporal.DateOrBuilder getExpirationDateOrBuilder() {
       if (expirationDateBuilder_ != null) {
         return expirationDateBuilder_.getMessageOrBuilder();
       } else {
         return expirationDate_ == null ?
-            io.bloombox.schema.temporal.Date.getDefaultInstance() : expirationDate_;
+            io.opencannabis.schema.temporal.Date.getDefaultInstance() : expirationDate_;
       }
     }
     /**
@@ -1053,14 +1052,14 @@ private static final long serialVersionUID = 0L;
      * Expiration date for the recommendation.
      * </pre>
      *
-     * <code>.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
+     * <code>.opencannabis.temporal.Date expiration_date = 2 [(.gen_bq_schema.description) = "Expiration date for the recommendation."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder> 
+        io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder> 
         getExpirationDateFieldBuilder() {
       if (expirationDateBuilder_ == null) {
         expirationDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.temporal.Date, io.bloombox.schema.temporal.Date.Builder, io.bloombox.schema.temporal.DateOrBuilder>(
+            io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder>(
                 getExpirationDate(),
                 getParentForChildren(),
                 isClean());
@@ -1164,7 +1163,7 @@ private static final long serialVersionUID = 0L;
      * US state where the recommendation is valid.
      * </pre>
      *
-     * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+     * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
      */
     public int getStateValue() {
       return state_;
@@ -1174,7 +1173,7 @@ private static final long serialVersionUID = 0L;
      * US state where the recommendation is valid.
      * </pre>
      *
-     * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+     * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
      */
     public Builder setStateValue(int value) {
       state_ = value;
@@ -1186,20 +1185,20 @@ private static final long serialVersionUID = 0L;
      * US state where the recommendation is valid.
      * </pre>
      *
-     * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+     * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
      */
-    public io.bloombox.schema.geo.usa.USState getState() {
-      io.bloombox.schema.geo.usa.USState result = io.bloombox.schema.geo.usa.USState.valueOf(state_);
-      return result == null ? io.bloombox.schema.geo.usa.USState.UNRECOGNIZED : result;
+    public io.opencannabis.schema.geo.usa.USState getState() {
+      io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(state_);
+      return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * US state where the recommendation is valid.
      * </pre>
      *
-     * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+     * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
      */
-    public Builder setState(io.bloombox.schema.geo.usa.USState value) {
+    public Builder setState(io.opencannabis.schema.geo.usa.USState value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1213,7 +1212,7 @@ private static final long serialVersionUID = 0L;
      * US state where the recommendation is valid.
      * </pre>
      *
-     * <code>.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
+     * <code>.opencannabis.geo.usa.USState state = 4 [(.gen_bq_schema.description) = "US state where the recommendation is valid."];</code>
      */
     public Builder clearState() {
       
@@ -1400,15 +1399,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.person.Person doctor_ = null;
+    private io.opencannabis.schema.person.Person doctor_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.person.Person, io.bloombox.schema.person.Person.Builder, io.bloombox.schema.person.PersonOrBuilder> doctorBuilder_;
+        io.opencannabis.schema.person.Person, io.opencannabis.schema.person.Person.Builder, io.opencannabis.schema.person.PersonOrBuilder> doctorBuilder_;
     /**
      * <pre>
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
     public boolean hasDoctor() {
       return doctorBuilder_ != null || doctor_ != null;
@@ -1418,11 +1417,11 @@ private static final long serialVersionUID = 0L;
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
-    public io.bloombox.schema.person.Person getDoctor() {
+    public io.opencannabis.schema.person.Person getDoctor() {
       if (doctorBuilder_ == null) {
-        return doctor_ == null ? io.bloombox.schema.person.Person.getDefaultInstance() : doctor_;
+        return doctor_ == null ? io.opencannabis.schema.person.Person.getDefaultInstance() : doctor_;
       } else {
         return doctorBuilder_.getMessage();
       }
@@ -1432,9 +1431,9 @@ private static final long serialVersionUID = 0L;
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
-    public Builder setDoctor(io.bloombox.schema.person.Person value) {
+    public Builder setDoctor(io.opencannabis.schema.person.Person value) {
       if (doctorBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1452,10 +1451,10 @@ private static final long serialVersionUID = 0L;
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
     public Builder setDoctor(
-        io.bloombox.schema.person.Person.Builder builderForValue) {
+        io.opencannabis.schema.person.Person.Builder builderForValue) {
       if (doctorBuilder_ == null) {
         doctor_ = builderForValue.build();
         onChanged();
@@ -1470,13 +1469,13 @@ private static final long serialVersionUID = 0L;
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
-    public Builder mergeDoctor(io.bloombox.schema.person.Person value) {
+    public Builder mergeDoctor(io.opencannabis.schema.person.Person value) {
       if (doctorBuilder_ == null) {
         if (doctor_ != null) {
           doctor_ =
-            io.bloombox.schema.person.Person.newBuilder(doctor_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.person.Person.newBuilder(doctor_).mergeFrom(value).buildPartial();
         } else {
           doctor_ = value;
         }
@@ -1492,7 +1491,7 @@ private static final long serialVersionUID = 0L;
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
     public Builder clearDoctor() {
       if (doctorBuilder_ == null) {
@@ -1510,9 +1509,9 @@ private static final long serialVersionUID = 0L;
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
-    public io.bloombox.schema.person.Person.Builder getDoctorBuilder() {
+    public io.opencannabis.schema.person.Person.Builder getDoctorBuilder() {
       
       onChanged();
       return getDoctorFieldBuilder().getBuilder();
@@ -1522,14 +1521,14 @@ private static final long serialVersionUID = 0L;
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
-    public io.bloombox.schema.person.PersonOrBuilder getDoctorOrBuilder() {
+    public io.opencannabis.schema.person.PersonOrBuilder getDoctorOrBuilder() {
       if (doctorBuilder_ != null) {
         return doctorBuilder_.getMessageOrBuilder();
       } else {
         return doctor_ == null ?
-            io.bloombox.schema.person.Person.getDefaultInstance() : doctor_;
+            io.opencannabis.schema.person.Person.getDefaultInstance() : doctor_;
       }
     }
     /**
@@ -1537,14 +1536,14 @@ private static final long serialVersionUID = 0L;
      * Personal information about the physician.
      * </pre>
      *
-     * <code>.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
+     * <code>.opencannabis.person.Person doctor = 7 [(.gen_bq_schema.description) = "Personal information about the physician."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.person.Person, io.bloombox.schema.person.Person.Builder, io.bloombox.schema.person.PersonOrBuilder> 
+        io.opencannabis.schema.person.Person, io.opencannabis.schema.person.Person.Builder, io.opencannabis.schema.person.PersonOrBuilder> 
         getDoctorFieldBuilder() {
       if (doctorBuilder_ == null) {
         doctorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.person.Person, io.bloombox.schema.person.Person.Builder, io.bloombox.schema.person.PersonOrBuilder>(
+            io.opencannabis.schema.person.Person, io.opencannabis.schema.person.Person.Builder, io.opencannabis.schema.person.PersonOrBuilder>(
                 getDoctor(),
                 getParentForChildren(),
                 isClean());
@@ -1563,10 +1562,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.ids.UserDoctorRec)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.UserDoctorRec)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.ids.UserDoctorRec)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.UserDoctorRec)
   private static final io.bloombox.schema.identity.ids.UserDoctorRec DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.UserDoctorRec();

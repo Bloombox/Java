@@ -21,9 +21,8 @@ import bloombox.client.services.menu.MenuClient
 import bloombox.client.test.ClientRPCTest
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
-
-import org.junit.Ignore as ignore
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 
 
 /**
@@ -69,7 +68,7 @@ class GetMenuTest: ClientRPCTest() {
   /**
    * Test fetching basic menu, but with an invalid partner.
    */
-  @test(expected = ServiceClientException::class) @ignore
+  @test(expected = ServiceClientException::class)
   fun testGetBasicMenuInvalidPartner() {
     client.platform.menu().retrieve(
           MenuClient.MenuContext(
@@ -80,7 +79,7 @@ class GetMenuTest: ClientRPCTest() {
   /**
    * Test fetching basic menu, but with an invalid location.
    */
-  @test(expected = ServiceClientException::class) @ignore
+  @test(expected = ServiceClientException::class)
   fun testGetBasicMenuInvalidLocation() {
     client.platform.menu().retrieve(
           MenuClient.MenuContext(

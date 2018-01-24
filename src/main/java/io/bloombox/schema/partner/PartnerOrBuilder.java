@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,7 +20,7 @@
 package io.bloombox.schema.partner;
 
 public interface PartnerOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:partner.Partner)
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.Partner)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -65,7 +64,7 @@ public interface PartnerOrBuilder extends
    * Flags for various things about this partner account.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account."];</code>
    */
   boolean hasFlags();
   /**
@@ -73,7 +72,7 @@ public interface PartnerOrBuilder extends
    * Flags for various things about this partner account.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account."];</code>
    */
   io.bloombox.schema.partner.PartnerFlags getFlags();
   /**
@@ -81,7 +80,7 @@ public interface PartnerOrBuilder extends
    * Flags for various things about this partner account.
    * </pre>
    *
-   * <code>.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account."];</code>
+   * <code>.bloombox.schema.partner.PartnerFlags flags = 3 [(.gen_bq_schema.description) = "Flags for various things about this partner account."];</code>
    */
   io.bloombox.schema.partner.PartnerFlagsOrBuilder getFlagsOrBuilder();
 
@@ -108,7 +107,7 @@ public interface PartnerOrBuilder extends
    * Contact information for this organization.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 5 [(.gen_bq_schema.description) = "Contact information for this organization."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 5 [(.gen_bq_schema.description) = "Contact information for this organization."];</code>
    */
   boolean hasContact();
   /**
@@ -116,24 +115,24 @@ public interface PartnerOrBuilder extends
    * Contact information for this organization.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 5 [(.gen_bq_schema.description) = "Contact information for this organization."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 5 [(.gen_bq_schema.description) = "Contact information for this organization."];</code>
    */
-  io.bloombox.schema.contact.ContactInfo getContact();
+  io.opencannabis.schema.contact.ContactInfo getContact();
   /**
    * <pre>
    * Contact information for this organization.
    * </pre>
    *
-   * <code>.contact.ContactInfo contact = 5 [(.gen_bq_schema.description) = "Contact information for this organization."];</code>
+   * <code>.opencannabis.contact.ContactInfo contact = 5 [(.gen_bq_schema.description) = "Contact information for this organization."];</code>
    */
-  io.bloombox.schema.contact.ContactInfoOrBuilder getContactOrBuilder();
+  io.opencannabis.schema.contact.ContactInfoOrBuilder getContactOrBuilder();
 
   /**
    * <pre>
    * Branding information for this organization.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
    */
   boolean hasBranding();
   /**
@@ -141,24 +140,24 @@ public interface PartnerOrBuilder extends
    * Branding information for this organization.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
    */
-  io.bloombox.schema.media.MediaItem getBranding();
+  io.opencannabis.schema.media.MediaItem getBranding();
   /**
    * <pre>
    * Branding information for this organization.
    * </pre>
    *
-   * <code>.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
+   * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
    */
-  io.bloombox.schema.media.MediaItemOrBuilder getBrandingOrBuilder();
+  io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder();
 
   /**
    * <pre>
    * Channel through which this partner organization interacts with Bloombox.
    * </pre>
    *
-   * <code>.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+   * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
    */
   int getChannelValue();
   /**
@@ -166,7 +165,7 @@ public interface PartnerOrBuilder extends
    * Channel through which this partner organization interacts with Bloombox.
    * </pre>
    *
-   * <code>.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
+   * <code>.bloombox.schema.partner.PartnerChannel channel = 7 [(.gen_bq_schema.description) = "Channel through which this partner organization interacts with Bloombox."];</code>
    */
   io.bloombox.schema.partner.PartnerChannel getChannel();
 
@@ -175,7 +174,7 @@ public interface PartnerOrBuilder extends
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 100 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 100 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
   boolean hasCreated();
   /**
@@ -183,24 +182,24 @@ public interface PartnerOrBuilder extends
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 100 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 100 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
-  io.bloombox.schema.temporal.Instant getCreated();
+  io.opencannabis.schema.temporal.Instant getCreated();
   /**
    * <pre>
    * Timestamp for when this record was created.
    * </pre>
    *
-   * <code>.temporal.Instant created = 100 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
+   * <code>.opencannabis.temporal.Instant created = 100 [(.gen_bq_schema.description) = "Timestamp for when this record was created."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getCreatedOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getCreatedOrBuilder();
 
   /**
    * <pre>
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 101 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 101 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
   boolean hasModified();
   /**
@@ -208,15 +207,15 @@ public interface PartnerOrBuilder extends
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 101 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 101 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
-  io.bloombox.schema.temporal.Instant getModified();
+  io.opencannabis.schema.temporal.Instant getModified();
   /**
    * <pre>
    * Timestamp for when this record was last modified.
    * </pre>
    *
-   * <code>.temporal.Instant modified = 101 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
+   * <code>.opencannabis.temporal.Instant modified = 101 [(.gen_bq_schema.description) = "Timestamp for when this record was last modified."];</code>
    */
-  io.bloombox.schema.temporal.InstantOrBuilder getModifiedOrBuilder();
+  io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder();
 }

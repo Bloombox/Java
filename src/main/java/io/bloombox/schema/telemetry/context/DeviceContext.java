@@ -1,11 +1,12 @@
 /*
- * Copyright 2018, Bloombox, LLC.
+ * Copyright 2018, Bloombox, LLC. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * Source and object computer code contained herein is the private intellectual
+ * property of Bloombox, a California Limited Liability Corporation. Use of this
+ * code in source form requires permission in writing before use or the
+ * assembly, distribution, or publishing of derivative works, for commercial
+ * purposes or any other purpose, from a duly authorized officer of Momentum
+ * Ideas Co.
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,7 +36,7 @@ public final class DeviceContext {
    * Specifies generic types of native devices that can be described.
    * </pre>
    *
-   * Protobuf enum {@code analytics.context.DeviceRole}
+   * Protobuf enum {@code bloombox.schema.analytics.context.DeviceRole}
    */
   public enum DeviceRole
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -145,7 +146,7 @@ public final class DeviceContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.context.DeviceRole)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.DeviceRole)
   }
 
   /**
@@ -153,7 +154,7 @@ public final class DeviceContext {
    * Specifies the screen orientation at the time an event was captured.
    * </pre>
    *
-   * Protobuf enum {@code analytics.context.ScreenOrientation}
+   * Protobuf enum {@code bloombox.schema.analytics.context.ScreenOrientation}
    */
   public enum ScreenOrientation
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -280,11 +281,11 @@ public final class DeviceContext {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:analytics.context.ScreenOrientation)
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.analytics.context.ScreenOrientation)
   }
 
   public interface PixelSizeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.context.PixelSize)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.PixelSize)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -310,11 +311,11 @@ public final class DeviceContext {
    * Carries information about a device display, including resolution, pixel density, and viewport size, if applicable.
    * </pre>
    *
-   * Protobuf type {@code analytics.context.PixelSize}
+   * Protobuf type {@code bloombox.schema.analytics.context.PixelSize}
    */
   public  static final class PixelSize extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.context.PixelSize)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.PixelSize)
       PixelSizeOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use PixelSize.newBuilder() to construct.
@@ -381,12 +382,12 @@ public final class DeviceContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_PixelSize_descriptor;
+      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_PixelSize_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_PixelSize_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_PixelSize_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.class, io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.Builder.class);
     }
@@ -584,20 +585,20 @@ public final class DeviceContext {
      * Carries information about a device display, including resolution, pixel density, and viewport size, if applicable.
      * </pre>
      *
-     * Protobuf type {@code analytics.context.PixelSize}
+     * Protobuf type {@code bloombox.schema.analytics.context.PixelSize}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.context.PixelSize)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.PixelSize)
         io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_PixelSize_descriptor;
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_PixelSize_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_PixelSize_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_PixelSize_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.class, io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.Builder.class);
       }
@@ -628,7 +629,7 @@ public final class DeviceContext {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_PixelSize_descriptor;
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_PixelSize_descriptor;
       }
 
       public io.bloombox.schema.telemetry.context.DeviceContext.PixelSize getDefaultInstanceForType() {
@@ -807,10 +808,10 @@ public final class DeviceContext {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.context.PixelSize)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.PixelSize)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.context.PixelSize)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.PixelSize)
     private static final io.bloombox.schema.telemetry.context.DeviceContext.PixelSize DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.DeviceContext.PixelSize();
@@ -846,7 +847,7 @@ public final class DeviceContext {
   }
 
   public interface DeviceScreenOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.context.DeviceScreen)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.DeviceScreen)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -854,7 +855,7 @@ public final class DeviceContext {
      * Size of the screen.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
      */
     boolean hasScreen();
     /**
@@ -862,7 +863,7 @@ public final class DeviceContext {
      * Size of the screen.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.PixelSize getScreen();
     /**
@@ -870,7 +871,7 @@ public final class DeviceContext {
      * Size of the screen.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder getScreenOrBuilder();
 
@@ -879,7 +880,7 @@ public final class DeviceContext {
      * Size of the viewport.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
      */
     boolean hasViewport();
     /**
@@ -887,7 +888,7 @@ public final class DeviceContext {
      * Size of the viewport.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.PixelSize getViewport();
     /**
@@ -895,7 +896,7 @@ public final class DeviceContext {
      * Size of the viewport.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder getViewportOrBuilder();
 
@@ -913,7 +914,7 @@ public final class DeviceContext {
      * Specifies the orientation of the screen at the time an event was captured.
      * </pre>
      *
-     * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+     * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
      */
     int getOrientationValue();
     /**
@@ -921,7 +922,7 @@ public final class DeviceContext {
      * Specifies the orientation of the screen at the time an event was captured.
      * </pre>
      *
-     * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+     * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.ScreenOrientation getOrientation();
   }
@@ -930,11 +931,11 @@ public final class DeviceContext {
    * Carries information about the screen being used on the device to display whatever is being instrumented.
    * </pre>
    *
-   * Protobuf type {@code analytics.context.DeviceScreen}
+   * Protobuf type {@code bloombox.schema.analytics.context.DeviceScreen}
    */
   public  static final class DeviceScreen extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.context.DeviceScreen)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.DeviceScreen)
       DeviceScreenOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use DeviceScreen.newBuilder() to construct.
@@ -1028,12 +1029,12 @@ public final class DeviceContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_DeviceScreen_descriptor;
+      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_DeviceScreen_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_DeviceScreen_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_DeviceScreen_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen.class, io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen.Builder.class);
     }
@@ -1045,7 +1046,7 @@ public final class DeviceContext {
      * Size of the screen.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
      */
     public boolean hasScreen() {
       return screen_ != null;
@@ -1055,7 +1056,7 @@ public final class DeviceContext {
      * Size of the screen.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.PixelSize getScreen() {
       return screen_ == null ? io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.getDefaultInstance() : screen_;
@@ -1065,7 +1066,7 @@ public final class DeviceContext {
      * Size of the screen.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder getScreenOrBuilder() {
       return getScreen();
@@ -1078,7 +1079,7 @@ public final class DeviceContext {
      * Size of the viewport.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
      */
     public boolean hasViewport() {
       return viewport_ != null;
@@ -1088,7 +1089,7 @@ public final class DeviceContext {
      * Size of the viewport.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.PixelSize getViewport() {
       return viewport_ == null ? io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.getDefaultInstance() : viewport_;
@@ -1098,7 +1099,7 @@ public final class DeviceContext {
      * Size of the viewport.
      * </pre>
      *
-     * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+     * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder getViewportOrBuilder() {
       return getViewport();
@@ -1124,7 +1125,7 @@ public final class DeviceContext {
      * Specifies the orientation of the screen at the time an event was captured.
      * </pre>
      *
-     * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+     * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
      */
     public int getOrientationValue() {
       return orientation_;
@@ -1134,7 +1135,7 @@ public final class DeviceContext {
      * Specifies the orientation of the screen at the time an event was captured.
      * </pre>
      *
-     * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+     * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.ScreenOrientation getOrientation() {
       io.bloombox.schema.telemetry.context.DeviceContext.ScreenOrientation result = io.bloombox.schema.telemetry.context.DeviceContext.ScreenOrientation.valueOf(orientation_);
@@ -1339,20 +1340,20 @@ public final class DeviceContext {
      * Carries information about the screen being used on the device to display whatever is being instrumented.
      * </pre>
      *
-     * Protobuf type {@code analytics.context.DeviceScreen}
+     * Protobuf type {@code bloombox.schema.analytics.context.DeviceScreen}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.context.DeviceScreen)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.DeviceScreen)
         io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreenOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_DeviceScreen_descriptor;
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_DeviceScreen_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_DeviceScreen_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_DeviceScreen_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen.class, io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen.Builder.class);
       }
@@ -1395,7 +1396,7 @@ public final class DeviceContext {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_DeviceScreen_descriptor;
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_DeviceScreen_descriptor;
       }
 
       public io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen getDefaultInstanceForType() {
@@ -1512,7 +1513,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       public boolean hasScreen() {
         return screenBuilder_ != null || screen_ != null;
@@ -1522,7 +1523,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.PixelSize getScreen() {
         if (screenBuilder_ == null) {
@@ -1536,7 +1537,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       public Builder setScreen(io.bloombox.schema.telemetry.context.DeviceContext.PixelSize value) {
         if (screenBuilder_ == null) {
@@ -1556,7 +1557,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       public Builder setScreen(
           io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.Builder builderForValue) {
@@ -1574,7 +1575,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       public Builder mergeScreen(io.bloombox.schema.telemetry.context.DeviceContext.PixelSize value) {
         if (screenBuilder_ == null) {
@@ -1596,7 +1597,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       public Builder clearScreen() {
         if (screenBuilder_ == null) {
@@ -1614,7 +1615,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.Builder getScreenBuilder() {
         
@@ -1626,7 +1627,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder getScreenOrBuilder() {
         if (screenBuilder_ != null) {
@@ -1641,7 +1642,7 @@ public final class DeviceContext {
        * Size of the screen.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize screen = 1 [(.gen_bq_schema.description) = "Size of the screen."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.DeviceContext.PixelSize, io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.Builder, io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder> 
@@ -1665,7 +1666,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       public boolean hasViewport() {
         return viewportBuilder_ != null || viewport_ != null;
@@ -1675,7 +1676,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.PixelSize getViewport() {
         if (viewportBuilder_ == null) {
@@ -1689,7 +1690,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       public Builder setViewport(io.bloombox.schema.telemetry.context.DeviceContext.PixelSize value) {
         if (viewportBuilder_ == null) {
@@ -1709,7 +1710,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       public Builder setViewport(
           io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.Builder builderForValue) {
@@ -1727,7 +1728,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       public Builder mergeViewport(io.bloombox.schema.telemetry.context.DeviceContext.PixelSize value) {
         if (viewportBuilder_ == null) {
@@ -1749,7 +1750,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       public Builder clearViewport() {
         if (viewportBuilder_ == null) {
@@ -1767,7 +1768,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.Builder getViewportBuilder() {
         
@@ -1779,7 +1780,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder getViewportOrBuilder() {
         if (viewportBuilder_ != null) {
@@ -1794,7 +1795,7 @@ public final class DeviceContext {
        * Size of the viewport.
        * </pre>
        *
-       * <code>.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
+       * <code>.bloombox.schema.analytics.context.PixelSize viewport = 2 [(.gen_bq_schema.description) = "Size of the viewport."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.DeviceContext.PixelSize, io.bloombox.schema.telemetry.context.DeviceContext.PixelSize.Builder, io.bloombox.schema.telemetry.context.DeviceContext.PixelSizeOrBuilder> 
@@ -1854,7 +1855,7 @@ public final class DeviceContext {
        * Specifies the orientation of the screen at the time an event was captured.
        * </pre>
        *
-       * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+       * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
        */
       public int getOrientationValue() {
         return orientation_;
@@ -1864,7 +1865,7 @@ public final class DeviceContext {
        * Specifies the orientation of the screen at the time an event was captured.
        * </pre>
        *
-       * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+       * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
        */
       public Builder setOrientationValue(int value) {
         orientation_ = value;
@@ -1876,7 +1877,7 @@ public final class DeviceContext {
        * Specifies the orientation of the screen at the time an event was captured.
        * </pre>
        *
-       * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+       * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.ScreenOrientation getOrientation() {
         io.bloombox.schema.telemetry.context.DeviceContext.ScreenOrientation result = io.bloombox.schema.telemetry.context.DeviceContext.ScreenOrientation.valueOf(orientation_);
@@ -1887,7 +1888,7 @@ public final class DeviceContext {
        * Specifies the orientation of the screen at the time an event was captured.
        * </pre>
        *
-       * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+       * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
        */
       public Builder setOrientation(io.bloombox.schema.telemetry.context.DeviceContext.ScreenOrientation value) {
         if (value == null) {
@@ -1903,7 +1904,7 @@ public final class DeviceContext {
        * Specifies the orientation of the screen at the time an event was captured.
        * </pre>
        *
-       * <code>.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
+       * <code>.bloombox.schema.analytics.context.ScreenOrientation orientation = 4 [(.gen_bq_schema.description) = "Specifies the orientation of the screen at the time an event was captured."];</code>
        */
       public Builder clearOrientation() {
         
@@ -1922,10 +1923,10 @@ public final class DeviceContext {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.context.DeviceScreen)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.DeviceScreen)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.context.DeviceScreen)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.DeviceScreen)
     private static final io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen();
@@ -1961,7 +1962,7 @@ public final class DeviceContext {
   }
 
   public interface NativeDeviceContextOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:analytics.context.NativeDeviceContext)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.analytics.context.NativeDeviceContext)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1969,7 +1970,7 @@ public final class DeviceContext {
      * Specifies the type of native device.
      * </pre>
      *
-     * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+     * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
      */
     int getTypeValue();
     /**
@@ -1977,16 +1978,16 @@ public final class DeviceContext {
      * Specifies the type of native device.
      * </pre>
      *
-     * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+     * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
      */
-    io.bloombox.schema.device.DeviceType getType();
+    io.opencannabis.schema.device.DeviceType getType();
 
     /**
      * <pre>
      * Specifies the type of native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
      */
     int getRoleValue();
     /**
@@ -1994,7 +1995,7 @@ public final class DeviceContext {
      * Specifies the type of native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole getRole();
 
@@ -2003,7 +2004,7 @@ public final class DeviceContext {
      * Specifies the OS of the native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
      */
     boolean hasOs();
     /**
@@ -2011,7 +2012,7 @@ public final class DeviceContext {
      * Specifies the OS of the native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
      */
     io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS getOs();
     /**
@@ -2019,7 +2020,7 @@ public final class DeviceContext {
      * Specifies the OS of the native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
      */
     io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOSOrBuilder getOsOrBuilder();
 
@@ -2028,7 +2029,7 @@ public final class DeviceContext {
      * Bluetooth Low Energy broadcast being emitted by this device.
      * </pre>
      *
-     * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
      */
     boolean hasBeacon();
     /**
@@ -2036,41 +2037,41 @@ public final class DeviceContext {
      * Bluetooth Low Energy broadcast being emitted by this device.
      * </pre>
      *
-     * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
      */
-    io.bloombox.schema.proximity.BluetoothBeacon getBeacon();
+    io.opencannabis.schema.proximity.BluetoothBeacon getBeacon();
     /**
      * <pre>
      * Bluetooth Low Energy broadcast being emitted by this device.
      * </pre>
      *
-     * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
      */
-    io.bloombox.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder();
+    io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder();
 
     /**
      * <pre>
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
-    java.util.List<io.bloombox.schema.proximity.BluetoothBeacon> 
+    java.util.List<io.opencannabis.schema.proximity.BluetoothBeacon> 
         getWitnessedList();
     /**
      * <pre>
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
-    io.bloombox.schema.proximity.BluetoothBeacon getWitnessed(int index);
+    io.opencannabis.schema.proximity.BluetoothBeacon getWitnessed(int index);
     /**
      * <pre>
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
     int getWitnessedCount();
     /**
@@ -2078,18 +2079,18 @@ public final class DeviceContext {
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
-    java.util.List<? extends io.bloombox.schema.proximity.BluetoothBeaconOrBuilder> 
+    java.util.List<? extends io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> 
         getWitnessedOrBuilderList();
     /**
      * <pre>
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
-    io.bloombox.schema.proximity.BluetoothBeaconOrBuilder getWitnessedOrBuilder(
+    io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getWitnessedOrBuilder(
         int index);
 
     /**
@@ -2097,7 +2098,7 @@ public final class DeviceContext {
      * Information about the device screen.
      * </pre>
      *
-     * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
      */
     boolean hasScreen();
     /**
@@ -2105,7 +2106,7 @@ public final class DeviceContext {
      * Information about the device screen.
      * </pre>
      *
-     * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen getScreen();
     /**
@@ -2113,7 +2114,7 @@ public final class DeviceContext {
      * Information about the device screen.
      * </pre>
      *
-     * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
      */
     io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreenOrBuilder getScreenOrBuilder();
   }
@@ -2122,11 +2123,11 @@ public final class DeviceContext {
    * Specifies a structure describing code running in some form of a native context.
    * </pre>
    *
-   * Protobuf type {@code analytics.context.NativeDeviceContext}
+   * Protobuf type {@code bloombox.schema.analytics.context.NativeDeviceContext}
    */
   public  static final class NativeDeviceContext extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:analytics.context.NativeDeviceContext)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.analytics.context.NativeDeviceContext)
       NativeDeviceContextOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use NativeDeviceContext.newBuilder() to construct.
@@ -2209,11 +2210,11 @@ public final class DeviceContext {
               break;
             }
             case 50: {
-              io.bloombox.schema.proximity.BluetoothBeacon.Builder subBuilder = null;
+              io.opencannabis.schema.proximity.BluetoothBeacon.Builder subBuilder = null;
               if (beacon_ != null) {
                 subBuilder = beacon_.toBuilder();
               }
-              beacon_ = input.readMessage(io.bloombox.schema.proximity.BluetoothBeacon.parser(), extensionRegistry);
+              beacon_ = input.readMessage(io.opencannabis.schema.proximity.BluetoothBeacon.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(beacon_);
                 beacon_ = subBuilder.buildPartial();
@@ -2223,11 +2224,11 @@ public final class DeviceContext {
             }
             case 58: {
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                witnessed_ = new java.util.ArrayList<io.bloombox.schema.proximity.BluetoothBeacon>();
+                witnessed_ = new java.util.ArrayList<io.opencannabis.schema.proximity.BluetoothBeacon>();
                 mutable_bitField0_ |= 0x00000010;
               }
               witnessed_.add(
-                  input.readMessage(io.bloombox.schema.proximity.BluetoothBeacon.parser(), extensionRegistry));
+                  input.readMessage(io.opencannabis.schema.proximity.BluetoothBeacon.parser(), extensionRegistry));
               break;
             }
           }
@@ -2247,12 +2248,12 @@ public final class DeviceContext {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_NativeDeviceContext_descriptor;
+      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_NativeDeviceContext_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_NativeDeviceContext_fieldAccessorTable
+      return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_NativeDeviceContext_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.class, io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.Builder.class);
     }
@@ -2265,7 +2266,7 @@ public final class DeviceContext {
      * Specifies the type of native device.
      * </pre>
      *
-     * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+     * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
      */
     public int getTypeValue() {
       return type_;
@@ -2275,11 +2276,11 @@ public final class DeviceContext {
      * Specifies the type of native device.
      * </pre>
      *
-     * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+     * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
      */
-    public io.bloombox.schema.device.DeviceType getType() {
-      io.bloombox.schema.device.DeviceType result = io.bloombox.schema.device.DeviceType.valueOf(type_);
-      return result == null ? io.bloombox.schema.device.DeviceType.UNRECOGNIZED : result;
+    public io.opencannabis.schema.device.DeviceType getType() {
+      io.opencannabis.schema.device.DeviceType result = io.opencannabis.schema.device.DeviceType.valueOf(type_);
+      return result == null ? io.opencannabis.schema.device.DeviceType.UNRECOGNIZED : result;
     }
 
     public static final int ROLE_FIELD_NUMBER = 2;
@@ -2289,7 +2290,7 @@ public final class DeviceContext {
      * Specifies the type of native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
      */
     public int getRoleValue() {
       return role_;
@@ -2299,7 +2300,7 @@ public final class DeviceContext {
      * Specifies the type of native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole getRole() {
       io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole result = io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole.valueOf(role_);
@@ -2313,7 +2314,7 @@ public final class DeviceContext {
      * Specifies the OS of the native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
      */
     public boolean hasOs() {
       return os_ != null;
@@ -2323,7 +2324,7 @@ public final class DeviceContext {
      * Specifies the OS of the native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
      */
     public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS getOs() {
       return os_ == null ? io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.getDefaultInstance() : os_;
@@ -2333,20 +2334,20 @@ public final class DeviceContext {
      * Specifies the OS of the native device.
      * </pre>
      *
-     * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
      */
     public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOSOrBuilder getOsOrBuilder() {
       return getOs();
     }
 
     public static final int BEACON_FIELD_NUMBER = 6;
-    private io.bloombox.schema.proximity.BluetoothBeacon beacon_;
+    private io.opencannabis.schema.proximity.BluetoothBeacon beacon_;
     /**
      * <pre>
      * Bluetooth Low Energy broadcast being emitted by this device.
      * </pre>
      *
-     * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
      */
     public boolean hasBeacon() {
       return beacon_ != null;
@@ -2356,32 +2357,32 @@ public final class DeviceContext {
      * Bluetooth Low Energy broadcast being emitted by this device.
      * </pre>
      *
-     * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
      */
-    public io.bloombox.schema.proximity.BluetoothBeacon getBeacon() {
-      return beacon_ == null ? io.bloombox.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
+    public io.opencannabis.schema.proximity.BluetoothBeacon getBeacon() {
+      return beacon_ == null ? io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
     }
     /**
      * <pre>
      * Bluetooth Low Energy broadcast being emitted by this device.
      * </pre>
      *
-     * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
      */
-    public io.bloombox.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder() {
+    public io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder() {
       return getBeacon();
     }
 
     public static final int WITNESSED_FIELD_NUMBER = 7;
-    private java.util.List<io.bloombox.schema.proximity.BluetoothBeacon> witnessed_;
+    private java.util.List<io.opencannabis.schema.proximity.BluetoothBeacon> witnessed_;
     /**
      * <pre>
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
-    public java.util.List<io.bloombox.schema.proximity.BluetoothBeacon> getWitnessedList() {
+    public java.util.List<io.opencannabis.schema.proximity.BluetoothBeacon> getWitnessedList() {
       return witnessed_;
     }
     /**
@@ -2389,9 +2390,9 @@ public final class DeviceContext {
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
-    public java.util.List<? extends io.bloombox.schema.proximity.BluetoothBeaconOrBuilder> 
+    public java.util.List<? extends io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> 
         getWitnessedOrBuilderList() {
       return witnessed_;
     }
@@ -2400,7 +2401,7 @@ public final class DeviceContext {
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
     public int getWitnessedCount() {
       return witnessed_.size();
@@ -2410,9 +2411,9 @@ public final class DeviceContext {
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
-    public io.bloombox.schema.proximity.BluetoothBeacon getWitnessed(int index) {
+    public io.opencannabis.schema.proximity.BluetoothBeacon getWitnessed(int index) {
       return witnessed_.get(index);
     }
     /**
@@ -2420,9 +2421,9 @@ public final class DeviceContext {
      * BLE signals witnessed by this device.
      * </pre>
      *
-     * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+     * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
      */
-    public io.bloombox.schema.proximity.BluetoothBeaconOrBuilder getWitnessedOrBuilder(
+    public io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getWitnessedOrBuilder(
         int index) {
       return witnessed_.get(index);
     }
@@ -2434,7 +2435,7 @@ public final class DeviceContext {
      * Information about the device screen.
      * </pre>
      *
-     * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
      */
     public boolean hasScreen() {
       return screen_ != null;
@@ -2444,7 +2445,7 @@ public final class DeviceContext {
      * Information about the device screen.
      * </pre>
      *
-     * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen getScreen() {
       return screen_ == null ? io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen.getDefaultInstance() : screen_;
@@ -2454,7 +2455,7 @@ public final class DeviceContext {
      * Information about the device screen.
      * </pre>
      *
-     * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+     * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
      */
     public io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreenOrBuilder getScreenOrBuilder() {
       return getScreen();
@@ -2472,7 +2473,7 @@ public final class DeviceContext {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != io.bloombox.schema.device.DeviceType.UNKNOWN_DEVICE_TYPE.getNumber()) {
+      if (type_ != io.opencannabis.schema.device.DeviceType.UNKNOWN_DEVICE_TYPE.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (role_ != io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole.CLIENT.getNumber()) {
@@ -2498,7 +2499,7 @@ public final class DeviceContext {
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != io.bloombox.schema.device.DeviceType.UNKNOWN_DEVICE_TYPE.getNumber()) {
+      if (type_ != io.opencannabis.schema.device.DeviceType.UNKNOWN_DEVICE_TYPE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
@@ -2686,20 +2687,20 @@ public final class DeviceContext {
      * Specifies a structure describing code running in some form of a native context.
      * </pre>
      *
-     * Protobuf type {@code analytics.context.NativeDeviceContext}
+     * Protobuf type {@code bloombox.schema.analytics.context.NativeDeviceContext}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:analytics.context.NativeDeviceContext)
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.analytics.context.NativeDeviceContext)
         io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContextOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_NativeDeviceContext_descriptor;
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_NativeDeviceContext_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_NativeDeviceContext_fieldAccessorTable
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_NativeDeviceContext_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.class, io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext.Builder.class);
       }
@@ -2755,7 +2756,7 @@ public final class DeviceContext {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_analytics_context_NativeDeviceContext_descriptor;
+        return io.bloombox.schema.telemetry.context.DeviceContext.internal_static_bloombox_schema_analytics_context_NativeDeviceContext_descriptor;
       }
 
       public io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext getDefaultInstanceForType() {
@@ -2917,7 +2918,7 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+       * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
        */
       public int getTypeValue() {
         return type_;
@@ -2927,7 +2928,7 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+       * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -2939,20 +2940,20 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+       * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
        */
-      public io.bloombox.schema.device.DeviceType getType() {
-        io.bloombox.schema.device.DeviceType result = io.bloombox.schema.device.DeviceType.valueOf(type_);
-        return result == null ? io.bloombox.schema.device.DeviceType.UNRECOGNIZED : result;
+      public io.opencannabis.schema.device.DeviceType getType() {
+        io.opencannabis.schema.device.DeviceType result = io.opencannabis.schema.device.DeviceType.valueOf(type_);
+        return result == null ? io.opencannabis.schema.device.DeviceType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+       * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
        */
-      public Builder setType(io.bloombox.schema.device.DeviceType value) {
+      public Builder setType(io.opencannabis.schema.device.DeviceType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2966,7 +2967,7 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
+       * <code>.opencannabis.device.DeviceType type = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the type of native device."];</code>
        */
       public Builder clearType() {
         
@@ -2981,7 +2982,7 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
        */
       public int getRoleValue() {
         return role_;
@@ -2991,7 +2992,7 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
        */
       public Builder setRoleValue(int value) {
         role_ = value;
@@ -3003,7 +3004,7 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole getRole() {
         io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole result = io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole.valueOf(role_);
@@ -3014,7 +3015,7 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
        */
       public Builder setRole(io.bloombox.schema.telemetry.context.DeviceContext.DeviceRole value) {
         if (value == null) {
@@ -3030,7 +3031,7 @@ public final class DeviceContext {
        * Specifies the type of native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceRole role = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the role of the native device."];</code>
        */
       public Builder clearRole() {
         
@@ -3047,7 +3048,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       public boolean hasOs() {
         return osBuilder_ != null || os_ != null;
@@ -3057,7 +3058,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS getOs() {
         if (osBuilder_ == null) {
@@ -3071,7 +3072,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       public Builder setOs(io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS value) {
         if (osBuilder_ == null) {
@@ -3091,7 +3092,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       public Builder setOs(
           io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.Builder builderForValue) {
@@ -3109,7 +3110,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       public Builder mergeOs(io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS value) {
         if (osBuilder_ == null) {
@@ -3131,7 +3132,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       public Builder clearOs() {
         if (osBuilder_ == null) {
@@ -3149,7 +3150,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.Builder getOsBuilder() {
         
@@ -3161,7 +3162,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       public io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOSOrBuilder getOsOrBuilder() {
         if (osBuilder_ != null) {
@@ -3176,7 +3177,7 @@ public final class DeviceContext {
        * Specifies the OS of the native device.
        * </pre>
        *
-       * <code>.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceOS os = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Specifies the OS of the native device."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS, io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOS.Builder, io.bloombox.schema.telemetry.context.OperatingSystemContext.DeviceOSOrBuilder> 
@@ -3192,15 +3193,15 @@ public final class DeviceContext {
         return osBuilder_;
       }
 
-      private io.bloombox.schema.proximity.BluetoothBeacon beacon_ = null;
+      private io.opencannabis.schema.proximity.BluetoothBeacon beacon_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.proximity.BluetoothBeacon, io.bloombox.schema.proximity.BluetoothBeacon.Builder, io.bloombox.schema.proximity.BluetoothBeaconOrBuilder> beaconBuilder_;
+          io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> beaconBuilder_;
       /**
        * <pre>
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
       public boolean hasBeacon() {
         return beaconBuilder_ != null || beacon_ != null;
@@ -3210,11 +3211,11 @@ public final class DeviceContext {
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
-      public io.bloombox.schema.proximity.BluetoothBeacon getBeacon() {
+      public io.opencannabis.schema.proximity.BluetoothBeacon getBeacon() {
         if (beaconBuilder_ == null) {
-          return beacon_ == null ? io.bloombox.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
+          return beacon_ == null ? io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
         } else {
           return beaconBuilder_.getMessage();
         }
@@ -3224,9 +3225,9 @@ public final class DeviceContext {
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
-      public Builder setBeacon(io.bloombox.schema.proximity.BluetoothBeacon value) {
+      public Builder setBeacon(io.opencannabis.schema.proximity.BluetoothBeacon value) {
         if (beaconBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3244,10 +3245,10 @@ public final class DeviceContext {
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
       public Builder setBeacon(
-          io.bloombox.schema.proximity.BluetoothBeacon.Builder builderForValue) {
+          io.opencannabis.schema.proximity.BluetoothBeacon.Builder builderForValue) {
         if (beaconBuilder_ == null) {
           beacon_ = builderForValue.build();
           onChanged();
@@ -3262,13 +3263,13 @@ public final class DeviceContext {
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
-      public Builder mergeBeacon(io.bloombox.schema.proximity.BluetoothBeacon value) {
+      public Builder mergeBeacon(io.opencannabis.schema.proximity.BluetoothBeacon value) {
         if (beaconBuilder_ == null) {
           if (beacon_ != null) {
             beacon_ =
-              io.bloombox.schema.proximity.BluetoothBeacon.newBuilder(beacon_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.proximity.BluetoothBeacon.newBuilder(beacon_).mergeFrom(value).buildPartial();
           } else {
             beacon_ = value;
           }
@@ -3284,7 +3285,7 @@ public final class DeviceContext {
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
       public Builder clearBeacon() {
         if (beaconBuilder_ == null) {
@@ -3302,9 +3303,9 @@ public final class DeviceContext {
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
-      public io.bloombox.schema.proximity.BluetoothBeacon.Builder getBeaconBuilder() {
+      public io.opencannabis.schema.proximity.BluetoothBeacon.Builder getBeaconBuilder() {
         
         onChanged();
         return getBeaconFieldBuilder().getBuilder();
@@ -3314,14 +3315,14 @@ public final class DeviceContext {
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
-      public io.bloombox.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder() {
+      public io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder() {
         if (beaconBuilder_ != null) {
           return beaconBuilder_.getMessageOrBuilder();
         } else {
           return beacon_ == null ?
-              io.bloombox.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
+              io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
         }
       }
       /**
@@ -3329,14 +3330,14 @@ public final class DeviceContext {
        * Bluetooth Low Energy broadcast being emitted by this device.
        * </pre>
        *
-       * <code>.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signal broadcasting from this device."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.proximity.BluetoothBeacon, io.bloombox.schema.proximity.BluetoothBeacon.Builder, io.bloombox.schema.proximity.BluetoothBeaconOrBuilder> 
+          io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> 
           getBeaconFieldBuilder() {
         if (beaconBuilder_ == null) {
           beaconBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.proximity.BluetoothBeacon, io.bloombox.schema.proximity.BluetoothBeacon.Builder, io.bloombox.schema.proximity.BluetoothBeaconOrBuilder>(
+              io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder>(
                   getBeacon(),
                   getParentForChildren(),
                   isClean());
@@ -3345,26 +3346,26 @@ public final class DeviceContext {
         return beaconBuilder_;
       }
 
-      private java.util.List<io.bloombox.schema.proximity.BluetoothBeacon> witnessed_ =
+      private java.util.List<io.opencannabis.schema.proximity.BluetoothBeacon> witnessed_ =
         java.util.Collections.emptyList();
       private void ensureWitnessedIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          witnessed_ = new java.util.ArrayList<io.bloombox.schema.proximity.BluetoothBeacon>(witnessed_);
+          witnessed_ = new java.util.ArrayList<io.opencannabis.schema.proximity.BluetoothBeacon>(witnessed_);
           bitField0_ |= 0x00000010;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.proximity.BluetoothBeacon, io.bloombox.schema.proximity.BluetoothBeacon.Builder, io.bloombox.schema.proximity.BluetoothBeaconOrBuilder> witnessedBuilder_;
+          io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> witnessedBuilder_;
 
       /**
        * <pre>
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public java.util.List<io.bloombox.schema.proximity.BluetoothBeacon> getWitnessedList() {
+      public java.util.List<io.opencannabis.schema.proximity.BluetoothBeacon> getWitnessedList() {
         if (witnessedBuilder_ == null) {
           return java.util.Collections.unmodifiableList(witnessed_);
         } else {
@@ -3376,7 +3377,7 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public int getWitnessedCount() {
         if (witnessedBuilder_ == null) {
@@ -3390,9 +3391,9 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public io.bloombox.schema.proximity.BluetoothBeacon getWitnessed(int index) {
+      public io.opencannabis.schema.proximity.BluetoothBeacon getWitnessed(int index) {
         if (witnessedBuilder_ == null) {
           return witnessed_.get(index);
         } else {
@@ -3404,10 +3405,10 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public Builder setWitnessed(
-          int index, io.bloombox.schema.proximity.BluetoothBeacon value) {
+          int index, io.opencannabis.schema.proximity.BluetoothBeacon value) {
         if (witnessedBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3425,10 +3426,10 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public Builder setWitnessed(
-          int index, io.bloombox.schema.proximity.BluetoothBeacon.Builder builderForValue) {
+          int index, io.opencannabis.schema.proximity.BluetoothBeacon.Builder builderForValue) {
         if (witnessedBuilder_ == null) {
           ensureWitnessedIsMutable();
           witnessed_.set(index, builderForValue.build());
@@ -3443,9 +3444,9 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public Builder addWitnessed(io.bloombox.schema.proximity.BluetoothBeacon value) {
+      public Builder addWitnessed(io.opencannabis.schema.proximity.BluetoothBeacon value) {
         if (witnessedBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3463,10 +3464,10 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public Builder addWitnessed(
-          int index, io.bloombox.schema.proximity.BluetoothBeacon value) {
+          int index, io.opencannabis.schema.proximity.BluetoothBeacon value) {
         if (witnessedBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3484,10 +3485,10 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public Builder addWitnessed(
-          io.bloombox.schema.proximity.BluetoothBeacon.Builder builderForValue) {
+          io.opencannabis.schema.proximity.BluetoothBeacon.Builder builderForValue) {
         if (witnessedBuilder_ == null) {
           ensureWitnessedIsMutable();
           witnessed_.add(builderForValue.build());
@@ -3502,10 +3503,10 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public Builder addWitnessed(
-          int index, io.bloombox.schema.proximity.BluetoothBeacon.Builder builderForValue) {
+          int index, io.opencannabis.schema.proximity.BluetoothBeacon.Builder builderForValue) {
         if (witnessedBuilder_ == null) {
           ensureWitnessedIsMutable();
           witnessed_.add(index, builderForValue.build());
@@ -3520,10 +3521,10 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public Builder addAllWitnessed(
-          java.lang.Iterable<? extends io.bloombox.schema.proximity.BluetoothBeacon> values) {
+          java.lang.Iterable<? extends io.opencannabis.schema.proximity.BluetoothBeacon> values) {
         if (witnessedBuilder_ == null) {
           ensureWitnessedIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3539,7 +3540,7 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public Builder clearWitnessed() {
         if (witnessedBuilder_ == null) {
@@ -3556,7 +3557,7 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
       public Builder removeWitnessed(int index) {
         if (witnessedBuilder_ == null) {
@@ -3573,9 +3574,9 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public io.bloombox.schema.proximity.BluetoothBeacon.Builder getWitnessedBuilder(
+      public io.opencannabis.schema.proximity.BluetoothBeacon.Builder getWitnessedBuilder(
           int index) {
         return getWitnessedFieldBuilder().getBuilder(index);
       }
@@ -3584,9 +3585,9 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public io.bloombox.schema.proximity.BluetoothBeaconOrBuilder getWitnessedOrBuilder(
+      public io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getWitnessedOrBuilder(
           int index) {
         if (witnessedBuilder_ == null) {
           return witnessed_.get(index);  } else {
@@ -3598,9 +3599,9 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public java.util.List<? extends io.bloombox.schema.proximity.BluetoothBeaconOrBuilder> 
+      public java.util.List<? extends io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> 
            getWitnessedOrBuilderList() {
         if (witnessedBuilder_ != null) {
           return witnessedBuilder_.getMessageOrBuilderList();
@@ -3613,41 +3614,41 @@ public final class DeviceContext {
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public io.bloombox.schema.proximity.BluetoothBeacon.Builder addWitnessedBuilder() {
+      public io.opencannabis.schema.proximity.BluetoothBeacon.Builder addWitnessedBuilder() {
         return getWitnessedFieldBuilder().addBuilder(
-            io.bloombox.schema.proximity.BluetoothBeacon.getDefaultInstance());
+            io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance());
       }
       /**
        * <pre>
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public io.bloombox.schema.proximity.BluetoothBeacon.Builder addWitnessedBuilder(
+      public io.opencannabis.schema.proximity.BluetoothBeacon.Builder addWitnessedBuilder(
           int index) {
         return getWitnessedFieldBuilder().addBuilder(
-            index, io.bloombox.schema.proximity.BluetoothBeacon.getDefaultInstance());
+            index, io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance());
       }
       /**
        * <pre>
        * BLE signals witnessed by this device.
        * </pre>
        *
-       * <code>repeated .proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
+       * <code>repeated .opencannabis.proximity.BluetoothBeacon witnessed = 7 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "BLE signals witnessed by this device."];</code>
        */
-      public java.util.List<io.bloombox.schema.proximity.BluetoothBeacon.Builder> 
+      public java.util.List<io.opencannabis.schema.proximity.BluetoothBeacon.Builder> 
            getWitnessedBuilderList() {
         return getWitnessedFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.proximity.BluetoothBeacon, io.bloombox.schema.proximity.BluetoothBeacon.Builder, io.bloombox.schema.proximity.BluetoothBeaconOrBuilder> 
+          io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> 
           getWitnessedFieldBuilder() {
         if (witnessedBuilder_ == null) {
           witnessedBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.bloombox.schema.proximity.BluetoothBeacon, io.bloombox.schema.proximity.BluetoothBeacon.Builder, io.bloombox.schema.proximity.BluetoothBeaconOrBuilder>(
+              io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder>(
                   witnessed_,
                   ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
@@ -3665,7 +3666,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       public boolean hasScreen() {
         return screenBuilder_ != null || screen_ != null;
@@ -3675,7 +3676,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen getScreen() {
         if (screenBuilder_ == null) {
@@ -3689,7 +3690,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       public Builder setScreen(io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen value) {
         if (screenBuilder_ == null) {
@@ -3709,7 +3710,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       public Builder setScreen(
           io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen.Builder builderForValue) {
@@ -3727,7 +3728,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       public Builder mergeScreen(io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen value) {
         if (screenBuilder_ == null) {
@@ -3749,7 +3750,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       public Builder clearScreen() {
         if (screenBuilder_ == null) {
@@ -3767,7 +3768,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen.Builder getScreenBuilder() {
         
@@ -3779,7 +3780,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       public io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreenOrBuilder getScreenOrBuilder() {
         if (screenBuilder_ != null) {
@@ -3794,7 +3795,7 @@ public final class DeviceContext {
        * Information about the device screen.
        * </pre>
        *
-       * <code>.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
+       * <code>.bloombox.schema.analytics.context.DeviceScreen screen = 4 [(.gen_bq_schema.description) = "Information about the device screen."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen, io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreen.Builder, io.bloombox.schema.telemetry.context.DeviceContext.DeviceScreenOrBuilder> 
@@ -3820,10 +3821,10 @@ public final class DeviceContext {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:analytics.context.NativeDeviceContext)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.analytics.context.NativeDeviceContext)
     }
 
-    // @@protoc_insertion_point(class_scope:analytics.context.NativeDeviceContext)
+    // @@protoc_insertion_point(class_scope:bloombox.schema.analytics.context.NativeDeviceContext)
     private static final io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new io.bloombox.schema.telemetry.context.DeviceContext.NativeDeviceContext();
@@ -3859,20 +3860,20 @@ public final class DeviceContext {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_context_PixelSize_descriptor;
+    internal_static_bloombox_schema_analytics_context_PixelSize_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_context_PixelSize_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_context_PixelSize_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_context_DeviceScreen_descriptor;
+    internal_static_bloombox_schema_analytics_context_DeviceScreen_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_context_DeviceScreen_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_context_DeviceScreen_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_analytics_context_NativeDeviceContext_descriptor;
+    internal_static_bloombox_schema_analytics_context_NativeDeviceContext_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_analytics_context_NativeDeviceContext_fieldAccessorTable;
+      internal_static_bloombox_schema_analytics_context_NativeDeviceContext_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3882,43 +3883,47 @@ public final class DeviceContext {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n$analytics/context/NativeDevice.proto\022\021" +
-      "analytics.context\032\016bq_field.proto\032\023devic" +
-      "e/Device.proto\032\025structs/Version.proto\032\032a" +
-      "nalytics/context/OS.proto\032#analytics/con" +
-      "text/Application.proto\032\037proximity/Blueto" +
-      "othBeacon.proto\"\223\001\n\tPixelSize\022A\n\005width\030\001" +
-      " \001(\rB2\360?\001\212@,Specifies the width portion " +
-      "of a pixel size.\022C\n\006height\030\002 \001(\rB3\360?\001\212@-" +
-      "Specifies the height portion of a pixel " +
-      "size.\"\354\002\n\014DeviceScreen\022D\n\006screen\030\001 \001(\0132\034" +
-      ".analytics.context.PixelSizeB\026\212@\023Size of" +
-      " the screen.\022H\n\010viewport\030\002 \001(\0132\034.analyti" +
-      "cs.context.PixelSizeB\030\212@\025Size of the vie" +
-      "wport.\022A\n\007density\030\003 \001(\rB0\212@-Specifies th" +
-      "e height portion of a pixel size.\022\210\001\n\013or" +
-      "ientation\030\004 \001(\0162$.analytics.context.Scre" +
-      "enOrientationBM\212@JSpecifies the orientat" +
-      "ion of the screen at the time an event w" +
-      "as captured.\"\247\004\n\023NativeDeviceContext\022L\n\004" +
-      "type\030\001 \001(\0162\022.device.DeviceTypeB*\360?\001\212@$Sp" +
-      "ecifies the type of native device.\022[\n\004ro" +
-      "le\030\002 \001(\0162\035.analytics.context.DeviceRoleB" +
-      ".\360?\001\212@(Specifies the role of the native " +
-      "device.\022U\n\002os\030\003 \001(\0132\033.analytics.context." +
-      "DeviceOSB,\360?\001\212@&Specifies the OS of the " +
-      "native device.\022X\n\006beacon\030\006 \001(\0132\032.proximi" +
-      "ty.BluetoothBeaconB,\212@)BLE signal broadc" +
-      "asting from this device.\022Z\n\twitnessed\030\007 " +
-      "\003(\0132\032.proximity.BluetoothBeaconB+\360?\001\212@%B" +
-      "LE signals witnessed by this device.\022X\n\006" +
-      "screen\030\004 \001(\0132\037.analytics.context.DeviceS" +
-      "creenB\'\212@$Information about the device s" +
-      "creen.*$\n\nDeviceRole\022\n\n\006CLIENT\020\000\022\n\n\006SERV" +
-      "ER\020\001*M\n\021ScreenOrientation\022\033\n\027UNSPECIFIED" +
-      "_ORIENTATION\020\000\022\014\n\010PORTRAIT\020\001\022\r\n\tLANDSCAP" +
-      "E\020\002B<\n$io.bloombox.schema.telemetry.cont" +
-      "extB\rDeviceContextH\001P\000\370\001\001b\006proto3"
+      "\n$analytics/context/NativeDevice.proto\022!" +
+      "bloombox.schema.analytics.context\032\016bq_fi" +
+      "eld.proto\032\023device/Device.proto\032\025structs/" +
+      "Version.proto\032\032analytics/context/OS.prot" +
+      "o\032#analytics/context/Application.proto\032\037" +
+      "proximity/BluetoothBeacon.proto\"\223\001\n\tPixe" +
+      "lSize\022A\n\005width\030\001 \001(\rB2\360?\001\212@,Specifies th" +
+      "e width portion of a pixel size.\022C\n\006heig" +
+      "ht\030\002 \001(\rB3\360?\001\212@-Specifies the height por" +
+      "tion of a pixel size.\"\234\003\n\014DeviceScreen\022T" +
+      "\n\006screen\030\001 \001(\0132,.bloombox.schema.analyti" +
+      "cs.context.PixelSizeB\026\212@\023Size of the scr" +
+      "een.\022X\n\010viewport\030\002 \001(\0132,.bloombox.schema" +
+      ".analytics.context.PixelSizeB\030\212@\025Size of" +
+      " the viewport.\022A\n\007density\030\003 \001(\rB0\212@-Spec" +
+      "ifies the height portion of a pixel size" +
+      ".\022\230\001\n\013orientation\030\004 \001(\01624.bloombox.schem" +
+      "a.analytics.context.ScreenOrientationBM\212" +
+      "@JSpecifies the orientation of the scree" +
+      "n at the time an event was captured.\"\201\005\n" +
+      "\023NativeDeviceContext\022Y\n\004type\030\001 \001(\0162\037.ope" +
+      "ncannabis.device.DeviceTypeB*\360?\001\212@$Speci" +
+      "fies the type of native device.\022k\n\004role\030" +
+      "\002 \001(\0162-.bloombox.schema.analytics.contex" +
+      "t.DeviceRoleB.\360?\001\212@(Specifies the role o" +
+      "f the native device.\022e\n\002os\030\003 \001(\0132+.bloom" +
+      "box.schema.analytics.context.DeviceOSB,\360" +
+      "?\001\212@&Specifies the OS of the native devi" +
+      "ce.\022h\n\006beacon\030\006 \001(\0132\'.opencannabis.proxi" +
+      "mity.BluetoothBeaconB/\200@\001\212@)BLE signal b" +
+      "roadcasting from this device.\022g\n\twitness" +
+      "ed\030\007 \003(\0132\'.opencannabis.proximity.Blueto" +
+      "othBeaconB+\200@\001\212@%BLE signals witnessed b" +
+      "y this device.\022h\n\006screen\030\004 \001(\0132/.bloombo" +
+      "x.schema.analytics.context.DeviceScreenB" +
+      "\'\212@$Information about the device screen." +
+      "*$\n\nDeviceRole\022\n\n\006CLIENT\020\000\022\n\n\006SERVER\020\001*M" +
+      "\n\021ScreenOrientation\022\033\n\027UNSPECIFIED_ORIEN" +
+      "TATION\020\000\022\014\n\010PORTRAIT\020\001\022\r\n\tLANDSCAPE\020\002B<\n" +
+      "$io.bloombox.schema.telemetry.contextB\rD" +
+      "eviceContextH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3932,42 +3937,43 @@ public final class DeviceContext {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.bloombox.schema.device.DeviceOuterClass.getDescriptor(),
-          io.bloombox.schema.struct.Version.getDescriptor(),
+          io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
+          io.opencannabis.schema.struct.Version.getDescriptor(),
           io.bloombox.schema.telemetry.context.OperatingSystemContext.getDescriptor(),
           io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor(),
-          io.bloombox.schema.proximity.BluetoothBeaconOuterClass.getDescriptor(),
+          io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_analytics_context_PixelSize_descriptor =
+    internal_static_bloombox_schema_analytics_context_PixelSize_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_analytics_context_PixelSize_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_context_PixelSize_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_context_PixelSize_descriptor,
+        internal_static_bloombox_schema_analytics_context_PixelSize_descriptor,
         new java.lang.String[] { "Width", "Height", });
-    internal_static_analytics_context_DeviceScreen_descriptor =
+    internal_static_bloombox_schema_analytics_context_DeviceScreen_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_analytics_context_DeviceScreen_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_context_DeviceScreen_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_context_DeviceScreen_descriptor,
+        internal_static_bloombox_schema_analytics_context_DeviceScreen_descriptor,
         new java.lang.String[] { "Screen", "Viewport", "Density", "Orientation", });
-    internal_static_analytics_context_NativeDeviceContext_descriptor =
+    internal_static_bloombox_schema_analytics_context_NativeDeviceContext_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_analytics_context_NativeDeviceContext_fieldAccessorTable = new
+    internal_static_bloombox_schema_analytics_context_NativeDeviceContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_analytics_context_NativeDeviceContext_descriptor,
+        internal_static_bloombox_schema_analytics_context_NativeDeviceContext_descriptor,
         new java.lang.String[] { "Type", "Role", "Os", "Beacon", "Witnessed", "Screen", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);
+    registry.add(gen_bq_schema.BqField.ignore);
     registry.add(gen_bq_schema.BqField.require);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.bloombox.schema.device.DeviceOuterClass.getDescriptor();
-    io.bloombox.schema.struct.Version.getDescriptor();
+    io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
+    io.opencannabis.schema.struct.Version.getDescriptor();
     io.bloombox.schema.telemetry.context.OperatingSystemContext.getDescriptor();
     io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor();
-    io.bloombox.schema.proximity.BluetoothBeaconOuterClass.getDescriptor();
+    io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

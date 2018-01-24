@@ -1,12 +1,11 @@
 /*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
+ * Copyright 2018, Bloombox, LLC.
  *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,11 +24,11 @@ package io.bloombox.schema.identity.ids;
  * Specifies a United States Driver's License.
  * </pre>
  *
- * Protobuf type {@code identity.ids.USDL}
+ * Protobuf type {@code bloombox.schema.identity.ids.USDL}
  */
 public  final class USDL extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:identity.ids.USDL)
+    // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.USDL)
     USDLOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use USDL.newBuilder() to construct.
@@ -124,12 +123,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_identity_ids_USDL_descriptor;
+    return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_bloombox_schema_identity_ids_USDL_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_identity_ids_USDL_fieldAccessorTable
+    return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.identity.ids.USDL.class, io.bloombox.schema.identity.ids.USDL.Builder.class);
   }
@@ -226,7 +225,7 @@ private static final long serialVersionUID = 0L;
    * State that issued this Driver's License.
    * </pre>
    *
-   * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+   * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
    */
   public int getJurisdictionValue() {
     return jurisdiction_;
@@ -236,11 +235,11 @@ private static final long serialVersionUID = 0L;
    * State that issued this Driver's License.
    * </pre>
    *
-   * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+   * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
    */
-  public io.bloombox.schema.geo.usa.USState getJurisdiction() {
-    io.bloombox.schema.geo.usa.USState result = io.bloombox.schema.geo.usa.USState.valueOf(jurisdiction_);
-    return result == null ? io.bloombox.schema.geo.usa.USState.UNRECOGNIZED : result;
+  public io.opencannabis.schema.geo.usa.USState getJurisdiction() {
+    io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(jurisdiction_);
+    return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
   }
 
   public static final int IDENTIFICATION_CARD_FIELD_NUMBER = 4;
@@ -263,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   public java.util.List<io.bloombox.schema.identity.ids.USDLFieldValue> getFieldsList() {
     return fields_;
@@ -273,7 +272,7 @@ private static final long serialVersionUID = 0L;
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   public java.util.List<? extends io.bloombox.schema.identity.ids.USDLFieldValueOrBuilder> 
       getFieldsOrBuilderList() {
@@ -284,7 +283,7 @@ private static final long serialVersionUID = 0L;
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   public int getFieldsCount() {
     return fields_.size();
@@ -294,7 +293,7 @@ private static final long serialVersionUID = 0L;
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   public io.bloombox.schema.identity.ids.USDLFieldValue getFields(int index) {
     return fields_.get(index);
@@ -304,7 +303,7 @@ private static final long serialVersionUID = 0L;
    * Raw field data for this license.
    * </pre>
    *
-   * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+   * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
    */
   public io.bloombox.schema.identity.ids.USDLFieldValueOrBuilder getFieldsOrBuilder(
       int index) {
@@ -329,7 +328,7 @@ private static final long serialVersionUID = 0L;
     if (!getMagstripeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, magstripe_);
     }
-    if (jurisdiction_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
+    if (jurisdiction_ != io.opencannabis.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
       output.writeEnum(3, jurisdiction_);
     }
     if (identificationCard_ != false) {
@@ -352,7 +351,7 @@ private static final long serialVersionUID = 0L;
     if (!getMagstripeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, magstripe_);
     }
-    if (jurisdiction_ != io.bloombox.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
+    if (jurisdiction_ != io.opencannabis.schema.geo.usa.USState.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, jurisdiction_);
     }
@@ -511,20 +510,20 @@ private static final long serialVersionUID = 0L;
    * Specifies a United States Driver's License.
    * </pre>
    *
-   * Protobuf type {@code identity.ids.USDL}
+   * Protobuf type {@code bloombox.schema.identity.ids.USDL}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:identity.ids.USDL)
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.USDL)
       io.bloombox.schema.identity.ids.USDLOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_identity_ids_USDL_descriptor;
+      return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_bloombox_schema_identity_ids_USDL_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_identity_ids_USDL_fieldAccessorTable
+      return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.identity.ids.USDL.class, io.bloombox.schema.identity.ids.USDL.Builder.class);
     }
@@ -566,7 +565,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_identity_ids_USDL_descriptor;
+      return io.bloombox.schema.identity.ids.USDLOuterClass.internal_static_bloombox_schema_identity_ids_USDL_descriptor;
     }
 
     public io.bloombox.schema.identity.ids.USDL getDefaultInstanceForType() {
@@ -892,7 +891,7 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public int getJurisdictionValue() {
       return jurisdiction_;
@@ -902,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public Builder setJurisdictionValue(int value) {
       jurisdiction_ = value;
@@ -914,20 +913,20 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
-    public io.bloombox.schema.geo.usa.USState getJurisdiction() {
-      io.bloombox.schema.geo.usa.USState result = io.bloombox.schema.geo.usa.USState.valueOf(jurisdiction_);
-      return result == null ? io.bloombox.schema.geo.usa.USState.UNRECOGNIZED : result;
+    public io.opencannabis.schema.geo.usa.USState getJurisdiction() {
+      io.opencannabis.schema.geo.usa.USState result = io.opencannabis.schema.geo.usa.USState.valueOf(jurisdiction_);
+      return result == null ? io.opencannabis.schema.geo.usa.USState.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
-    public Builder setJurisdiction(io.bloombox.schema.geo.usa.USState value) {
+    public Builder setJurisdiction(io.opencannabis.schema.geo.usa.USState value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -941,7 +940,7 @@ private static final long serialVersionUID = 0L;
      * State that issued this Driver's License.
      * </pre>
      *
-     * <code>.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
+     * <code>.opencannabis.geo.usa.USState jurisdiction = 3 [(.gen_bq_schema.description) = "State that issued this Driver&#92;'s License."];</code>
      */
     public Builder clearJurisdiction() {
       
@@ -1005,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public java.util.List<io.bloombox.schema.identity.ids.USDLFieldValue> getFieldsList() {
       if (fieldsBuilder_ == null) {
@@ -1019,7 +1018,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public int getFieldsCount() {
       if (fieldsBuilder_ == null) {
@@ -1033,7 +1032,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public io.bloombox.schema.identity.ids.USDLFieldValue getFields(int index) {
       if (fieldsBuilder_ == null) {
@@ -1047,7 +1046,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder setFields(
         int index, io.bloombox.schema.identity.ids.USDLFieldValue value) {
@@ -1068,7 +1067,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder setFields(
         int index, io.bloombox.schema.identity.ids.USDLFieldValue.Builder builderForValue) {
@@ -1086,7 +1085,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder addFields(io.bloombox.schema.identity.ids.USDLFieldValue value) {
       if (fieldsBuilder_ == null) {
@@ -1106,7 +1105,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder addFields(
         int index, io.bloombox.schema.identity.ids.USDLFieldValue value) {
@@ -1127,7 +1126,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder addFields(
         io.bloombox.schema.identity.ids.USDLFieldValue.Builder builderForValue) {
@@ -1145,7 +1144,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder addFields(
         int index, io.bloombox.schema.identity.ids.USDLFieldValue.Builder builderForValue) {
@@ -1163,7 +1162,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder addAllFields(
         java.lang.Iterable<? extends io.bloombox.schema.identity.ids.USDLFieldValue> values) {
@@ -1182,7 +1181,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder clearFields() {
       if (fieldsBuilder_ == null) {
@@ -1199,7 +1198,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public Builder removeFields(int index) {
       if (fieldsBuilder_ == null) {
@@ -1216,7 +1215,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public io.bloombox.schema.identity.ids.USDLFieldValue.Builder getFieldsBuilder(
         int index) {
@@ -1227,7 +1226,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public io.bloombox.schema.identity.ids.USDLFieldValueOrBuilder getFieldsOrBuilder(
         int index) {
@@ -1241,7 +1240,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public java.util.List<? extends io.bloombox.schema.identity.ids.USDLFieldValueOrBuilder> 
          getFieldsOrBuilderList() {
@@ -1256,7 +1255,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public io.bloombox.schema.identity.ids.USDLFieldValue.Builder addFieldsBuilder() {
       return getFieldsFieldBuilder().addBuilder(
@@ -1267,7 +1266,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public io.bloombox.schema.identity.ids.USDLFieldValue.Builder addFieldsBuilder(
         int index) {
@@ -1279,7 +1278,7 @@ private static final long serialVersionUID = 0L;
      * Raw field data for this license.
      * </pre>
      *
-     * <code>repeated .identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
+     * <code>repeated .bloombox.schema.identity.ids.USDLFieldValue fields = 100 [(.gen_bq_schema.description) = "Raw field data for this license."];</code>
      */
     public java.util.List<io.bloombox.schema.identity.ids.USDLFieldValue.Builder> 
          getFieldsBuilderList() {
@@ -1310,10 +1309,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:identity.ids.USDL)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.USDL)
   }
 
-  // @@protoc_insertion_point(class_scope:identity.ids.USDL)
+  // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.USDL)
   private static final io.bloombox.schema.identity.ids.USDL DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.USDL();

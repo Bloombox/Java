@@ -16,7 +16,7 @@
 
 package bloombox.client.shop
 
-import bloombox.client.BloomboxClient
+import bloombox.client.Bloombox
 import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
@@ -24,8 +24,8 @@ import java.util.concurrent.TimeUnit
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
-import org.junit.Ignore as ignore
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 
 
 /**
@@ -78,12 +78,12 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid partner.
    */
-  @test(expected = ServiceClientException::class) @ignore
+  @test(expected = ServiceClientException::class)
   fun testShopHoursInvalidPartner() {
     // prep a client for prod
-    val prodClient = BloomboxClient(BloomboxClient.Settings(
+    val prodClient = Bloombox(Bloombox.Settings(
           "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM"),
-          BloomboxClient.ClientTarget.PRODUCTION)
+          Bloombox.ClientTarget.PRODUCTION)
     try {
       prodClient.shop().info()
     } finally {
@@ -94,13 +94,13 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid location.
    */
-  @test(expected = ServiceClientException::class) @ignore
+  @test(expected = ServiceClientException::class)
   fun testShopHoursInvalidLocation() {
     // prep a client for prod
-    val prodClient = BloomboxClient(BloomboxClient.Settings(
+    val prodClient = Bloombox(Bloombox.Settings(
           "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
           partner = "mm"),
-          BloomboxClient.ClientTarget.PRODUCTION)
+          Bloombox.ClientTarget.PRODUCTION)
     try {
       prodClient.shop().info()
     } finally {
