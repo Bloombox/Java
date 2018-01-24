@@ -23,4 +23,3 @@ after_script:
   - cp -frv ./src/main/kotlin/* ./
   - cp -frv ./src/main/java/* ./
   - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco --prefix /home/travis/build/Bloombox/Java/src/main/java
-
