@@ -17,6 +17,7 @@ cache:
     - $HOME/.m2
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - curl -L https://github.com/codacy/codacy-coverage-reporter/releases/download/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar > ./codacy-coverage-reporter.jar
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 install:
@@ -29,3 +30,5 @@ after_script:
   - cp -frv ./src/main/kotlin/* ./
   - cp -frv ./src/main/java/* ./
   - ./cc-test-reporter after-build -d --exit-code $TRAVIS_TEST_RESULT --coverage-input-type jacoco --prefix /home/travis/build/Bloombox/Java/src/main/java
+  - java -cp codacy-coverage-reporter.jar com.codacy.CodacyCoverageReporter -l Java -r jacoco.xml
+
