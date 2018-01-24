@@ -7,6 +7,11 @@ git:
 jdk:
   - oraclejdk8
   - openjdk8
+matrix:
+  fast_finish: true
+  allow_failures:
+  - java: "openjdk9"
+  - java: "oraclejdk9"
 cache:
   directories:
     - $HOME/.m2
