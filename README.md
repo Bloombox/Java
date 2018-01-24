@@ -1,4 +1,4 @@
-# Bloombox Client for Java
+# Bloombox for Java
 
 [![Build Status](https://travis-ci.org/Bloombox/Java.svg?branch=master)](https://travis-ci.org/Bloombox/Java) [![Maven Central](https://img.shields.io/maven-central/v/io.bloombox/java-client.svg)](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.bloombox%22%20AND%20a%3A%22java-client%22) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e76289cfda1c44deb7fed137f504e164)](https://www.codacy.com/app/bloombox/Java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Bloombox/Java&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/e76289cfda1c44deb7fed137f504e164)](https://www.codacy.com/app/bloombox/Java?utm_source=github.com&utm_medium=referral&utm_content=Bloombox/Java&utm_campaign=Badge_Coverage)
 
