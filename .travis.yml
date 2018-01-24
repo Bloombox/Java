@@ -19,7 +19,7 @@ install:
 script:
   - mvn -f pom-public.xml test jacoco:report -B
 after_script:
-  - rm -fv ./target/site/jacoco/jacoco.xml
+  - rm -fv ./jacoco.xml
   - cp -fv ./target/site/jacoco/jacoco.xml ./
   - cp -frv ./src/main/kotlin/* ./
   - cp -frv ./src/main/java/* ./
