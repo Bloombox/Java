@@ -1,5 +1,6 @@
 # Bloombox Client for Java
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b61ce006b9444d58929dff058f06be2d)](https://www.codacy.com/app/bloombox/Java?utm_source=github.com&utm_medium=referral&utm_content=Bloombox/Java&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/Bloombox/Java.svg?branch=master)](https://travis-ci.org/Bloombox/Java) [![Maven Central](https://img.shields.io/maven-central/v/io.bloombox/java-client.svg)](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.bloombox%22%20AND%20a%3A%22java-client%22) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Maintainability](https://api.codeclimate.com/v1/badges/97f47bd5c867f368414a/maintainability)](https://codeclimate.com/github/Bloombox/Java/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/97f47bd5c867f368414a/test_coverage)](https://codeclimate.com/github/Bloombox/Java/test_coverage)
 
 Latest Version: `1.0-beta10`
