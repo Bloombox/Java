@@ -17,7 +17,25 @@ wouldn't work in earlier versions of the JDK or JRE, but YMMV as it's tested for
 
 ### Using the code
 
-Published libs coming soon. In the meantime, see `Building the code`.
+Library JARs, source JARs, and documentation JARs are available via [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.bloombox%22%20AND%20a%3A%22java-client%22) and, if you want snapshots or a faster release track, Nexus.
+
+Via Maven:
+
+```xml
+  <dependencies>
+    <dependency>
+      <groupId>io.bloombox</groupId>
+      <artifactId>java-client</artifactId>
+      <version>1.0-beta10</version>
+    </dependency>
+  </dependencies>
+```
+
+Via Gradle:
+
+```
+  compile 'io.bloombox:java-client:1.0-beta10'
+```
 
 
 ### Building the code
