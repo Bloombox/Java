@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Bloombox/Java.svg?branch=master)](https://travis-ci.org/Bloombox/Java) [![Maven Central](https://img.shields.io/maven-central/v/io.bloombox/java-client.svg)](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.bloombox%22%20AND%20a%3A%22java-client%22) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e76289cfda1c44deb7fed137f504e164)](https://www.codacy.com/app/bloombox/Java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Bloombox/Java&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/e76289cfda1c44deb7fed137f504e164)](https://www.codacy.com/app/bloombox/Java?utm_source=github.com&utm_medium=referral&utm_content=Bloombox/Java&utm_campaign=Badge_Coverage)
 
-Latest Version: `1.0-beta10`
+Latest Version: `1.0`
 
 This Maven project and resulting JAR provide Java clients API access to the [Bloombox](https://bloombox.io) platform.
 Bloombox APIs are built and served using [gRPC](https://grpc.io) and exposed in client libraries like this one with a
@@ -12,7 +12,7 @@ That being said, you can always opt to use the lower level gRPC APIs, either via
 REST, using transcoding (docs coming soon on this too).
 
 In terms of Javaland, this client is built on Kotlin/Java and tested on JDK8. There isn't any particular reason it
-wouldn't work in earlier versions of the JDK or JRE, but YMMV as it's tested for now on JDK8.
+wouldn't work in earlier versions of the JDK or JRE, but YMMV as it's tested for now on Open JDK and Oracle JDK 8.
 
 
 ### Using the code
@@ -26,7 +26,7 @@ Via Maven:
     <dependency>
       <groupId>io.bloombox</groupId>
       <artifactId>java-client</artifactId>
-      <version>1.0-beta10</version>
+      <version>1.0</version>
     </dependency>
   </dependencies>
 ```
@@ -34,7 +34,7 @@ Via Maven:
 Via Gradle:
 
 ```
-  compile 'io.bloombox:java-client:1.0-beta10'
+  compile 'io.bloombox:java-client:1.0'
 ```
 
 
@@ -45,7 +45,7 @@ If you're developing on the code, you'll use `make`.
 
 #### Required tools:
 
-- `java` (tested on JDK8)
+- `java` (Oracle or OpenJDK 8)
 - `maven`
 
 
