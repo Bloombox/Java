@@ -35,7 +35,7 @@ open class ClientRPCTest {
   /**
    * RPC client object.
    */
-  protected class RPCClient {
+  class RPCClient {
     /**
      * Local client.
      */
@@ -71,12 +71,16 @@ open class ClientRPCTest {
   }
 
   /**
-   * API client object.
+   * Provide a callback with a setup client, and then immediately
+   * close it afterwards.
    */
-  protected val client = RPCClient()
-
-  @after
-  fun teardownClient() {
-    client.close()
+  fun withClient(block: (RPCClient) -> Unit) {
+    var client: RPCClient? = null
+    try {
+      client = RPCClient()
+      block(client)
+    } finally {
+      client?.close()
+    }
   }
 }

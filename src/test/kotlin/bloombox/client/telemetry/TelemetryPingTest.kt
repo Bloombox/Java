@@ -34,6 +34,8 @@ class TelemetryPingTest : ClientRPCTest() {
 
   @test
   fun testBasicPing() {
-    testPing(client.platform.telemetry())
+    withClient({ client ->
+      testPing(client.platform.telemetry())
+    })
   }
 }

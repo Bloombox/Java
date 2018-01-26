@@ -45,13 +45,15 @@ class GetMenuTest: ClientRPCTest() {
    */
   @test
   fun testGetBasicMenu() {
-    val response = client.platform.menu().retrieve(
-          MenuClient.MenuContext(
-                partner = partnerID,
-                location = locationID))
+    withClient({ client ->
+      val response = client.platform.menu().retrieve(
+            MenuClient.MenuContext(
+                  partner = partnerID,
+                  location = locationID))
 
-    assertNotNull(response, "response from server for menu should not be null")
-    assertTrue(response.hasCatalog(), "response from server should specify menu data")
+      assertNotNull(response, "response from server for menu should not be null")
+      assertTrue(response.hasCatalog(), "response from server should specify menu data")
+    })
   }
 
   /**
@@ -59,9 +61,11 @@ class GetMenuTest: ClientRPCTest() {
    */
   @test
   fun testGetBasicMenuDefaultContext() {
-    val response = client.platform.menu().retrieve()
-    assertNotNull(response, "response from server for menu should not be null")
-    assertTrue(response.hasCatalog(), "response from server should specify menu data")
+    withClient({ client ->
+      val response = client.platform.menu().retrieve()
+      assertNotNull(response, "response from server for menu should not be null")
+      assertTrue(response.hasCatalog(), "response from server should specify menu data")
+    })
   }
 
   /**
@@ -69,10 +73,12 @@ class GetMenuTest: ClientRPCTest() {
    */
   @test(expected = ServiceClientException::class)
   fun testGetBasicMenuInvalidPartner() {
-    client.platform.menu().retrieve(
-          MenuClient.MenuContext(
-                partner = "",
-                location = locationID))
+    withClient({ client ->
+      client.platform.menu().retrieve(
+            MenuClient.MenuContext(
+                  partner = "",
+                  location = locationID))
+    })
   }
 
   /**
@@ -80,9 +86,11 @@ class GetMenuTest: ClientRPCTest() {
    */
   @test(expected = ServiceClientException::class)
   fun testGetBasicMenuInvalidLocation() {
-    client.platform.menu().retrieve(
-          MenuClient.MenuContext(
-                partner = partnerID,
-                location = ""))
+    withClient({ client ->
+      client.platform.menu().retrieve(
+            MenuClient.MenuContext(
+                  partner = partnerID,
+                  location = ""))
+    })
   }
 }
