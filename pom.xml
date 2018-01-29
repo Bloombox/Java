@@ -101,7 +101,7 @@
         <maven.release.version>2.5.3</maven.release.version>
         <maven.github.version>0.9</maven.github.version>
         <maven.gpg.version>1.4</maven.gpg.version>
-        <maven.javadoc.version>2.10.4</maven.javadoc.version>
+        <maven.javadoc.version>3.0.0</maven.javadoc.version>
         <maven.nexus.version>1.6.7</maven.nexus.version>
 
         <!-- Settings -->
