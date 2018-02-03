@@ -43,7 +43,7 @@ class Bloombox(
       /**
        * Target to use for RPCs.
        */
-      target: ClientTarget = ClientTarget.LOCAL) {
+      target: ClientTarget = ClientTarget.PRODUCTION) {
   // -- Settings -- //
   companion object {
     /**
@@ -84,7 +84,7 @@ class Bloombox(
     /**
      * Sandbox endpoint. Requires special auth.
      */
-    internal const val internal = "private.bloombox.services"
+    internal const val internal = production
 
     /**
      * Sandbox endpoint. Requires special auth.
