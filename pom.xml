@@ -102,7 +102,7 @@
         <maven.github.version>0.9</maven.github.version>
         <maven.gpg.version>1.4</maven.gpg.version>
         <maven.javadoc.version>3.0.0</maven.javadoc.version>
-        <maven.nexus.version>1.6.7</maven.nexus.version>
+        <maven.nexus.version>1.6.8</maven.nexus.version>
 
         <!-- Settings -->
         <jvm.source>1.8</jvm.source>
