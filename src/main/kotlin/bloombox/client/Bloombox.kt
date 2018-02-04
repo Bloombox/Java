@@ -84,7 +84,7 @@ class Bloombox(
     /**
      * Sandbox endpoint. Requires special auth.
      */
-    internal const val internal = production
+    internal const val internal = "private.bloombox.cloud"
 
     /**
      * Sandbox endpoint. Requires special auth.
@@ -322,7 +322,7 @@ class Bloombox(
     /**
      * Reference to all mounted/supported services.
      */
-    internal val allServices: Array<ServiceClient> = arrayOf(shop, telemetry)
+    internal val allServices: Array<ServiceClient> = arrayOf(shop, telemetry, menu)
   }
 
   /**

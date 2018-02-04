@@ -1,20 +1,3 @@
-/*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
- *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package io.bloombox.schema.services.pos.v1beta1;
 
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
@@ -36,7 +19,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
-    comments = "Source: pos/v1beta1/POSService.proto")
+    comments = "Source: pos/v1beta1/POSService_Beta1.proto")
 public final class PointOfSaleGrpc {
 
   private PointOfSaleGrpc() {}
@@ -238,7 +221,7 @@ public final class PointOfSaleGrpc {
   private static final class PointOfSaleDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSService.getDescriptor();
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.getDescriptor();
     }
   }
 

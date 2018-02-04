@@ -1,4 +1,4 @@
 [submodule "schema"]
 	path = schema
 	url = git@github.com:bloombox/schema.git
-	branch = feature/opencannabis
+	branch = release/1.4.6

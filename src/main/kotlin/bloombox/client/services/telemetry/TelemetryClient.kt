@@ -342,12 +342,9 @@ class TelemetryClient(override val host: String,
             .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
 
       // note when the pong came back
-      if (callback != null) {
-        val done = System.currentTimeMillis()
-        callback(done - start!!)
-      }
+      callback?.invoke(System.currentTimeMillis() - start!!)
     } catch (e: StatusRuntimeException) {
-
+      callback?.invoke(null)
     }
   }
 
