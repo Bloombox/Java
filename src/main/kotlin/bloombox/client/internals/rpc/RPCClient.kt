@@ -160,7 +160,7 @@ abstract class RPCClient {
                   .build())
           } else {
             if (clientCredentials == null)
-              throw RuntimeException("Configuration error: Client auth is active, but no credentials were provided.")
+              throw IllegalArgumentException("Configuration error: Client auth is active, but no credentials were provided.")
             builder
                   .negotiationType(NegotiationType.TLS)
                   .sslContext(GrpcSslContexts.forClient()

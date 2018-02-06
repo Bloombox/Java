@@ -335,19 +335,16 @@ class TelemetryClient(override val host: String,
    */
   fun ping(callback: PingCallback? = null) {
     // take a starting timestamp
-    val start: Long? = if (callback != null) {
-      System.currentTimeMillis()
-    } else {
-      null
-    }
+    val start: Long = System.currentTimeMillis()
 
     try {
       // send the event
       eventService.ping(TelemetryPing.Request.getDefaultInstance())
             .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
+      val end = System.currentTimeMillis()
 
       // note when the pong came back
-      callback?.invoke(System.currentTimeMillis() - start!!)
+      callback?.invoke(end - start)
     } catch (e: StatusRuntimeException) {
       callback?.invoke(null)
     }
