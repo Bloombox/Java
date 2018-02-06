@@ -17,6 +17,7 @@
 package bloombox.client
 
 import bloombox.client.interfaces.ServiceClient
+import bloombox.client.internals.rpc.RPCClient
 import bloombox.client.services.menu.MenuClient
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.services.telemetry.TelemetryClient
@@ -189,7 +190,12 @@ class Bloombox(
         /**
          * Timeout to wait for a client to close its connection.
          */
-        internal val closeTimeout: Duration = Duration.ofSeconds(10))
+        internal val closeTimeout: Duration = Duration.ofSeconds(10),
+
+        /**
+         * Client-side TLS credentials, for mTLS functionality.
+         */
+        internal val clientCredentials: RPCClient.ClientCredentials? = null)
 
   /**
    * Specifies client target settings understood by the Java/Kotlin client.
