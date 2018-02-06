@@ -29,6 +29,7 @@ SCHEMA ?= schema/
 RELEASE_ARGS ?= -DperformRelease=true
 RELEASE_GOALS ?= release:prepare release:perform
 EMBEDDED_SCHEMA ?= yes
+CURRENT_BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
 
 all: build
 
@@ -83,3 +84,8 @@ sync-schema: $(SCHEMA)
 	@mkdir -p src/main/java/
 	@rm -fr src/main/java/*
 	@cp -fr schema/languages/java/ src/main/java/
+
+embedded:
+	@echo "Building embedded library..."
+	@mvn clean package && echo "Cutting new branch..." && git branch -D embedded && git checkout -b embedded && echo "Removing schema..." && rm -fr src/main/java/* && echo "Schema is not included with embedded library." > src/main/README.md && git add . && git commit -m "Embedded: $(CLIENT_VERSION)" && git push origin embedded --force && git checkout $(CURRENT_BRANCH)
+
