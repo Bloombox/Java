@@ -25,6 +25,8 @@ import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.NegotiationType
 import io.grpc.netty.NettyChannelBuilder
+import io.netty.handler.ssl.ClientAuth
+import java.io.InputStream
 import java.time.Duration
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
@@ -39,6 +41,10 @@ class MenuClient(override val host: String,
                  override val port: Int,
                  override val apiKey: String,
                  override val timeout: Duration,
+                 override val transportMode: TransportMode = TransportMode.SECURE,
+                 override val clientAuth: ClientAuth = ClientAuth.NONE,
+                 override val clientCredentials: RPCClient.ClientCredentials? = null,
+                 override val clientAuthorityRoots: InputStream? = null,
                  override val executor: Executor = Executors.newSingleThreadExecutor(),
                  internal val defaultPartner: String? = null,
                  internal val defaultLocation: String? = null) : RPCClient(), ServiceClient {
@@ -66,12 +72,21 @@ class MenuClient(override val host: String,
   }
 
   /**
-   * Auth interceptor for menu requests.
+   * Menu header interceptor.
    */
   class MenuInterceptor(val apikey: String?) : ClientInterceptor {
     companion object {
+      /**
+       * API key header sentinel.
+       */
       val apiKeyHeader: io.grpc.Metadata.Key<String> = io.grpc.Metadata.Key.of(
             "x-api-key", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
+
+      /**
+       * Menu fingerprint header sentinel.
+       */
+      val menuFingerprintHeader: io.grpc.Metadata.Key<String> = io.grpc.Metadata.Key.of(
+            "x-menu-fingerprint", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
     }
 
     override fun <ReqT : Any?, RespT : Any?> interceptCall(method: MethodDescriptor<ReqT, RespT>?,
@@ -98,15 +113,14 @@ class MenuClient(override val host: String,
   /**
    * Channel for client->server traffic.
    */
-  override val channel: ManagedChannel = NettyChannelBuilder
-        .forAddress(host, port)
-        .executor(executor)
-        .sslContext(GrpcSslContexts.forClient()
-              .trustManager(this.javaClass.getResourceAsStream(authorityRoots))
-              .build())
-        .negotiationType(NegotiationType.TLS)
-        .intercept(interceptor)
-        .build()
+  override val channel: ManagedChannel = channelBuilder(
+        host = host,
+        port = port,
+        executor = executor,
+        clientAuth = clientAuth,
+        transportMode = transportMode,
+        clientCredentials = clientCredentials,
+        clientAuthorityRoots = clientAuthorityRoots).intercept(interceptor).build()
 
   /**
    * Main function to run the server.

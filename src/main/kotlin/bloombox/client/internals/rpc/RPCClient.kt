@@ -16,7 +16,16 @@
 
 package bloombox.client.internals.rpc
 
+import io.grpc.Codec
+import io.grpc.CompressorRegistry
+import io.grpc.DecompressorRegistry
 import io.grpc.ManagedChannel
+import io.grpc.netty.GrpcSslContexts
+import io.grpc.netty.NegotiationType
+import io.grpc.netty.NettyChannelBuilder
+import io.netty.handler.ssl.ClientAuth
+import java.io.InputStream
+import java.util.concurrent.Executor
 import java.util.concurrent.TimeUnit
 
 
@@ -25,6 +34,22 @@ import java.util.concurrent.TimeUnit
  */
 @Suppress("unused")
 abstract class RPCClient {
+  /**
+   * Modes for communication transport for RPCs.
+   */
+  enum class TransportMode {
+    SECURE,
+    CLEARTEXT;
+  }
+
+  /**
+   * Client credentials specification.
+   */
+  data class ClientCredentials(
+        internal val privateKey: InputStream,
+        internal val certificate: InputStream,
+        internal val keyPassword: String?)
+
   /**
    * Managed channel.
    */
@@ -44,6 +69,118 @@ abstract class RPCClient {
       }
       if (block)
         channel.awaitTermination(timeout.first, timeout.second)
+    }
+  }
+
+  companion object {
+    /**
+     * Default authority roots file.
+     */
+    private const val defaultAuthorityRoots = "/authority-roots.pem"
+
+    /**
+     * Session cache size.
+     */
+    private const val sessionCacheSize: Long = 100
+
+    /**
+     * Session cache timeout.
+     */
+    private const val sessionCacheTimeout: Long = 3600
+
+    /**
+     * Whether to enable keepalive for RPC connections.
+     */
+    private const val keepalive: Boolean = true
+
+    /**
+     * Keepalive time, in seconds, defined as "the delay time for sending the next keepalive ping."
+     */
+    private const val keepaliveTime: Long = 60
+
+    /**
+     * Keepalive timeout, in seconds, defined as "the timeout for keepalive ping requests."
+     */
+    private const val keepaliveTimeout: Long = 90
+
+    /**
+     * Idle connection timeout, in seconds, after which an idle RPC connection will be severed.
+     */
+    private const val idleConnectionTimeout: Long = 120
+
+    /**
+     * Resolve a set of client authority roots, either via a custom input stream,
+     * or an asset embedded in the RPC client JAR.
+     */
+    private fun authorityRoots(custom: InputStream?): InputStream {
+      return custom ?: RPCClient::class.java.getResourceAsStream(defaultAuthorityRoots)
+    }
+
+    /**
+     * Prepare a channel builder according to standard settings.
+     */
+    fun channelBuilder(host: String,
+                       port: Int,
+                       transportMode: TransportMode,
+                       clientAuth: ClientAuth,
+                       clientCredentials: ClientCredentials? = null,
+                       clientAuthorityRoots: InputStream?,
+                       executor: Executor): NettyChannelBuilder {
+      val builder = NettyChannelBuilder
+            .forAddress(host, port)
+            .executor(executor)
+            .idleTimeout(idleConnectionTimeout, TimeUnit.SECONDS)
+
+      @Suppress("ConstantConditionIf")
+      if (keepalive)
+        builder
+              .keepAliveTime(keepaliveTime, TimeUnit.SECONDS)
+              .keepAliveTimeout(keepaliveTimeout, TimeUnit.SECONDS)
+
+      val compressionRegistry = CompressorRegistry.newEmptyInstance()
+      val decompressorRegistry = DecompressorRegistry.emptyInstance()
+            .with(Codec.Gzip(), true)
+            .with(Codec.Identity.NONE, false)
+
+      // register gzip and 'identity' (no compression) as available transport encodings
+      compressionRegistry.register(Codec.Gzip())
+      compressionRegistry.register(Codec.Identity.NONE)
+
+      // install both sides of the codec registry set
+      builder.compressorRegistry(compressionRegistry)
+      builder.decompressorRegistry(decompressorRegistry)
+
+      return when (transportMode) {
+        RPCClient.TransportMode.SECURE -> {
+          return if (clientAuth == ClientAuth.NONE) {
+            builder
+                  .negotiationType(NegotiationType.TLS)
+                  .sslContext(GrpcSslContexts.forClient()
+                  .trustManager(authorityRoots(clientAuthorityRoots))
+                  .build())
+          } else {
+            if (clientCredentials == null)
+              throw RuntimeException("Configuration error: Client auth is active, but no credentials were provided.")
+            builder
+                  .negotiationType(NegotiationType.TLS)
+                  .sslContext(GrpcSslContexts.forClient()
+                        .trustManager(authorityRoots(clientAuthorityRoots))
+                        .clientAuth(clientAuth)
+                        .keyManager(clientCredentials.certificate, clientCredentials.privateKey, clientCredentials.keyPassword)
+                        .sessionCacheSize(sessionCacheSize)
+                        .sessionTimeout(sessionCacheTimeout)
+                        .build())
+          }
+        }
+
+        RPCClient.TransportMode.CLEARTEXT ->
+          NettyChannelBuilder
+                .forAddress(host, port)
+                .executor(executor)
+                .sslContext(GrpcSslContexts.forClient()
+                      .trustManager(authorityRoots(clientAuthorityRoots))
+                      .build())
+      }
     }
   }
 }

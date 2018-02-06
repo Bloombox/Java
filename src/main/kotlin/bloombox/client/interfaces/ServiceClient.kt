@@ -16,6 +16,9 @@
 
 package bloombox.client.interfaces
 
+import bloombox.client.internals.rpc.RPCClient
+import io.netty.handler.ssl.ClientAuth
+import java.io.InputStream
 import java.time.Duration
 import java.util.concurrent.Executor
 import java.util.concurrent.TimeUnit
@@ -50,6 +53,26 @@ internal interface ServiceClient {
    * RPC request timeout to apply.
    */
   val timeout: Duration
+
+  /**
+   * Transport mode setting.
+   */
+  val transportMode: RPCClient.TransportMode
+
+  /**
+   * Client TLS auth mode.
+   */
+  val clientAuth: ClientAuth
+
+  /**
+   * Client credential information. First position is the private client key, second is the certificate.
+   */
+  val clientCredentials: RPCClient.ClientCredentials?
+
+  /**
+   * Authority roots to accept from the client-side. Defaults to the embedded 'authority-roots.pem'.
+   */
+  val clientAuthorityRoots: InputStream?
 
   /**
    * Utility function to close any existing client connection.
