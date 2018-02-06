@@ -18,7 +18,6 @@ package bloombox.client.test
 
 import bloombox.client.Bloombox
 import java.util.logging.Logger
-import org.junit.After as after
 
 
 /**
