@@ -33,9 +33,6 @@ import io.bloombox.schema.telemetry.context.*
 import io.opencannabis.schema.struct.VersionSpec
 import io.opencannabis.schema.temporal.Instant
 import io.grpc.*
-import io.grpc.netty.GrpcSslContexts
-import io.grpc.netty.NegotiationType
-import io.grpc.netty.NettyChannelBuilder
 import io.netty.handler.ssl.ClientAuth
 import java.io.InputStream
 import java.time.Duration
