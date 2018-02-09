@@ -18,7 +18,6 @@ package bloombox.client.test
 
 import bloombox.client.Bloombox
 import java.util.logging.Logger
-import org.junit.After as after
 
 
 /**
@@ -35,26 +34,26 @@ open class ClientRPCTest {
   /**
    * RPC client object.
    */
-  class RPCClient {
+  class RPCClient(settings: Bloombox.Settings? = null) {
     /**
      * Local client.
      */
     val local: Bloombox = Bloombox(
-          Bloombox.Settings(testApiKey, testPartner, testLocation),
+          settings ?: Bloombox.Settings(testApiKey, testPartner, testLocation),
           Bloombox.ClientTarget.LOCAL)
 
     /**
      * Sandbox client.
      */
     val sandbox: Bloombox = Bloombox(
-          Bloombox.Settings(testApiKey, testPartner, testLocation),
+          settings ?: Bloombox.Settings(testApiKey, testPartner, testLocation),
           Bloombox.ClientTarget.SANDBOX)
 
     /**
      * Production client.
      */
     val platform: Bloombox = Bloombox(
-          Bloombox.Settings(testApiKey, testPartner, testLocation),
+          settings ?: Bloombox.Settings(testApiKey, testPartner, testLocation),
           Bloombox.ClientTarget.PRODUCTION)
 
     /**
@@ -75,9 +74,17 @@ open class ClientRPCTest {
    * close it afterwards.
    */
   fun withClient(block: (RPCClient) -> Unit) {
+    withClient(null, block)
+  }
+
+  /**
+   * Provide a callback with a setup client, and then immediately
+   * close it afterwards.
+   */
+  fun withClient(settings: Bloombox.Settings? = null, block: (RPCClient) -> Unit) {
     var client: RPCClient? = null
     try {
-      client = RPCClient()
+      client = RPCClient(settings)
       block(client)
     } finally {
       client?.close()
