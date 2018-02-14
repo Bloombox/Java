@@ -1,4 +1,5 @@
 [submodule "schema"]
 	path = schema
 	url = git@github.com:bloombox/schema.git
-	branch = release/1.4.6
+	branch = master
+
