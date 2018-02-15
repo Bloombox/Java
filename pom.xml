@@ -78,7 +78,7 @@
         <bloombox.telemetry.endpoint>telemetry.api.bloombox.cloud</bloombox.telemetry.endpoint>
 
         <!-- Dependencies -->
-        <grpc.version>1.8.0</grpc.version>
+        <grpc.version>1.10.0</grpc.version>
         <protobuf.version>3.5.1</protobuf.version>
         <netty.boringssl.version>2.0.6.Final</netty.boringssl.version>
         <kotlin.version>1.2.21</kotlin.version>
