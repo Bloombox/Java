@@ -86,6 +86,26 @@ public final class AuthServiceBeta1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Operation_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Operation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Operation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -113,32 +133,47 @@ public final class AuthServiceBeta1 {
       "1.EmailPasswordAssertionH\000\022Q\n\010firebase\030\002" +
       " \001(\0132=.bloombox.schema.services.auth.v1b" +
       "eta1.FirebaseTokenAssertionH\000B\013\n\tasserti" +
-      "on\"\324\003\n\020AuthenticateUser\032\223\001\n\007Request\022<\n\010p" +
+      "on\"\322\003\n\020AuthenticateUser\032\223\001\n\007Request\022<\n\010p" +
       "rovider\030\001 \001(\0162*.bloombox.schema.identity" +
       ".IdentityProvider\022J\n\tassertion\030\002 \001(\01327.b" +
       "loombox.schema.services.auth.v1beta1.Acc" +
-      "ountAssertion\032v\n\010Response\022A\n\006status\030\001 \001(" +
-      "\01621.bloombox.schema.services.auth.v1beta" +
-      "1.AuthStatus\022\013\n\003uid\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\r" +
-      "\n\005token\030\004 \001(\t\032\261\001\n\tOperation\022P\n\007request\030\001" +
-      " \001(\0132?.bloombox.schema.services.auth.v1b" +
-      "eta1.AuthenticateUser.Request\022R\n\010respons" +
-      "e\030\002 \001(\0132@.bloombox.schema.services.auth." +
-      "v1beta1.AuthenticateUser.Response*\031\n\tAut" +
-      "hError\022\014\n\010NO_ERROR\020\000*W\n\nAuthStatus\022\013\n\007UN" +
-      "KNOWN\020\000\022\022\n\016ACCESS_GRANTED\020\001\022\021\n\rACCESS_DE" +
-      "NIED\020\002\022\025\n\021ACCOUNT_SUSPENDED\020\0032\335\002\n\004Auth\022\215" +
-      "\001\n\004Ping\0223.bloombox.schema.services.auth." +
-      "v1beta1.Ping.Request\0324.bloombox.schema.s" +
-      "ervices.auth.v1beta1.Ping.Response\"\032\202\323\344\223" +
-      "\002\024\022\022/auth/v1beta1/ping\022\304\001\n\014Authenticate\022" +
-      "?.bloombox.schema.services.auth.v1beta1." +
-      "AuthenticateUser.Request\032@.bloombox.sche" +
-      "ma.services.auth.v1beta1.AuthenticateUse" +
-      "r.Response\"1\202\323\344\223\002+\"\036/auth/v1beta1/login/" +
-      "{provider}:\tassertionB4\n(io.bloombox.sch" +
-      "ema.services.auth.v1beta1H\001P\001\242\002\003BBSb\006pro" +
-      "to3"
+      "ountAssertion\032t\n\010Response\022?\n\005error\030\001 \001(\016" +
+      "20.bloombox.schema.services.auth.v1beta1" +
+      ".AuthError\022\013\n\003uid\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\r\n\005" +
+      "token\030\004 \001(\t\032\261\001\n\tOperation\022P\n\007request\030\001 \001" +
+      "(\0132?.bloombox.schema.services.auth.v1bet" +
+      "a1.AuthenticateUser.Request\022R\n\010response\030" +
+      "\002 \001(\0132@.bloombox.schema.services.auth.v1" +
+      "beta1.AuthenticateUser.Response\"\312\002\n\nGetP" +
+      "rofile\032\026\n\007Request\022\013\n\003key\030\001 \001(\t\032|\n\010Respon" +
+      "se\022?\n\005error\030\001 \001(\01620.bloombox.schema.serv" +
+      "ices.auth.v1beta1.AuthError\022/\n\007profile\030\002" +
+      " \001(\0132\036.bloombox.schema.identity.User\032\245\001\n" +
+      "\tOperation\022J\n\007request\030\001 \001(\01329.bloombox.s" +
+      "chema.services.auth.v1beta1.GetProfile.R" +
+      "equest\022L\n\010response\030\002 \001(\0132:.bloombox.sche" +
+      "ma.services.auth.v1beta1.GetProfile.Resp" +
+      "onse*\220\001\n\tAuthError\022\014\n\010NO_ERROR\020\000\022\025\n\021ACCO" +
+      "UNT_SUSPENDED\020\001\022\025\n\021PROFILE_NOT_FOUND\020\002\022\024" +
+      "\n\020INVALID_USER_KEY\020\003\022\025\n\021INVALID_ASSERTIO" +
+      "N\020\004\022\032\n\026UNSUPPORTED_LOGIN_TYPE\020\005*G\n\nAuthS" +
+      "tatus\022\022\n\016STATUS_UNKNOWN\020\000\022\022\n\016ACCESS_GRAN" +
+      "TED\020\001\022\021\n\rACCESS_DENIED\020\0022\205\004\n\004Auth\022\215\001\n\004Pi" +
+      "ng\0223.bloombox.schema.services.auth.v1bet" +
+      "a1.Ping.Request\0324.bloombox.schema.servic" +
+      "es.auth.v1beta1.Ping.Response\"\032\202\323\344\223\002\024\022\022/" +
+      "auth/v1beta1/ping\022\304\001\n\014Authenticate\022?.blo" +
+      "ombox.schema.services.auth.v1beta1.Authe" +
+      "nticateUser.Request\032@.bloombox.schema.se" +
+      "rvices.auth.v1beta1.AuthenticateUser.Res" +
+      "ponse\"1\202\323\344\223\002+\"\036/auth/v1beta1/login/{prov" +
+      "ider}:\tassertion\022\245\001\n\007Profile\0229.bloombox." +
+      "schema.services.auth.v1beta1.GetProfile." +
+      "Request\032:.bloombox.schema.services.auth." +
+      "v1beta1.GetProfile.Response\"#\202\323\344\223\002\035\022\033/au" +
+      "th/v1beta1/profile/{key}B4\n(io.bloombox." +
+      "schema.services.auth.v1beta1H\001P\001\242\002\003BBSb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -214,12 +249,36 @@ public final class AuthServiceBeta1 {
     internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Response_descriptor,
-        new java.lang.String[] { "Status", "Uid", "Key", "Token", });
+        new java.lang.String[] { "Error", "Uid", "Key", "Token", });
     internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Operation_descriptor =
       internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_descriptor.getNestedTypes().get(2);
     internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Operation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_auth_v1beta1_AuthenticateUser_Operation_descriptor,
+        new java.lang.String[] { "Request", "Response", });
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Request_descriptor =
+      internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Request_descriptor,
+        new java.lang.String[] { "Key", });
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Response_descriptor =
+      internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Response_descriptor,
+        new java.lang.String[] { "Error", "Profile", });
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Operation_descriptor =
+      internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Operation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

@@ -72,6 +72,18 @@ public final class AuthGrpc {
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.getDefaultInstance()))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.GetProfile.Request,
+      io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> METHOD_PROFILE =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.GetProfile.Request, io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.auth.v1beta1.Auth", "Profile"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.GetProfile.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.GetProfile.Response.getDefaultInstance()))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -125,6 +137,16 @@ public final class AuthGrpc {
       asyncUnimplementedUnaryCall(METHOD_AUTHENTICATE, responseObserver);
     }
 
+    /**
+     * <pre>
+     * comment here
+     * </pre>
+     */
+    public void profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_PROFILE, responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -141,6 +163,13 @@ public final class AuthGrpc {
                 io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request,
                 io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response>(
                   this, METHODID_AUTHENTICATE)))
+          .addMethod(
+            METHOD_PROFILE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.auth.v1beta1.GetProfile.Request,
+                io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>(
+                  this, METHODID_PROFILE)))
           .build();
     }
   }
@@ -189,6 +218,17 @@ public final class AuthGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_AUTHENTICATE, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * comment here
+     * </pre>
+     */
+    public void profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_PROFILE, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -232,6 +272,16 @@ public final class AuthGrpc {
     public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response authenticate(io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_AUTHENTICATE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * comment here
+     * </pre>
+     */
+    public io.bloombox.schema.services.auth.v1beta1.GetProfile.Response profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_PROFILE, getCallOptions(), request);
     }
   }
 
@@ -279,10 +329,22 @@ public final class AuthGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_AUTHENTICATE, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * comment here
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> profile(
+        io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_PROFILE, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PING = 0;
   private static final int METHODID_AUTHENTICATE = 1;
+  private static final int METHODID_PROFILE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -308,6 +370,10 @@ public final class AuthGrpc {
         case METHODID_AUTHENTICATE:
           serviceImpl.authenticate((io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response>) responseObserver);
+          break;
+        case METHODID_PROFILE:
+          serviceImpl.profile((io.bloombox.schema.services.auth.v1beta1.GetProfile.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -344,6 +410,7 @@ public final class AuthGrpc {
               .setSchemaDescriptor(new AuthDescriptorSupplier())
               .addMethod(METHOD_PING)
               .addMethod(METHOD_AUTHENTICATE)
+              .addMethod(METHOD_PROFILE)
               .build();
         }
       }

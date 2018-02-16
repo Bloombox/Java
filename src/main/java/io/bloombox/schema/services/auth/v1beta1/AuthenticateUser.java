@@ -880,17 +880,17 @@ private static final long serialVersionUID = 0L;
      * Resulting status from the user's authentication request.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+     * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
      */
-    int getStatusValue();
+    int getErrorValue();
     /**
      * <pre>
      * Resulting status from the user's authentication request.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+     * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
      */
-    io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus();
+    io.bloombox.schema.services.auth.v1beta1.AuthError getError();
 
     /**
      * <pre>
@@ -963,7 +963,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      status_ = 0;
+      error_ = 0;
       uid_ = "";
       key_ = "";
       token_ = "";
@@ -1003,7 +1003,7 @@ private static final long serialVersionUID = 0L;
             case 8: {
               int rawValue = input.readEnum();
 
-              status_ = rawValue;
+              error_ = rawValue;
               break;
             }
             case 18: {
@@ -1048,28 +1048,28 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.class, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.Builder.class);
     }
 
-    public static final int STATUS_FIELD_NUMBER = 1;
-    private int status_;
+    public static final int ERROR_FIELD_NUMBER = 1;
+    private int error_;
     /**
      * <pre>
      * Resulting status from the user's authentication request.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+     * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
      */
-    public int getStatusValue() {
-      return status_;
+    public int getErrorValue() {
+      return error_;
     }
     /**
      * <pre>
      * Resulting status from the user's authentication request.
      * </pre>
      *
-     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+     * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
      */
-    public io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus() {
-      io.bloombox.schema.services.auth.v1beta1.AuthStatus result = io.bloombox.schema.services.auth.v1beta1.AuthStatus.valueOf(status_);
-      return result == null ? io.bloombox.schema.services.auth.v1beta1.AuthStatus.UNRECOGNIZED : result;
+    public io.bloombox.schema.services.auth.v1beta1.AuthError getError() {
+      io.bloombox.schema.services.auth.v1beta1.AuthError result = io.bloombox.schema.services.auth.v1beta1.AuthError.valueOf(error_);
+      return result == null ? io.bloombox.schema.services.auth.v1beta1.AuthError.UNRECOGNIZED : result;
     }
 
     public static final int UID_FIELD_NUMBER = 2;
@@ -1210,8 +1210,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (status_ != io.bloombox.schema.services.auth.v1beta1.AuthStatus.UNKNOWN.getNumber()) {
-        output.writeEnum(1, status_);
+      if (error_ != io.bloombox.schema.services.auth.v1beta1.AuthError.NO_ERROR.getNumber()) {
+        output.writeEnum(1, error_);
       }
       if (!getUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
@@ -1230,9 +1230,9 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (status_ != io.bloombox.schema.services.auth.v1beta1.AuthStatus.UNKNOWN.getNumber()) {
+      if (error_ != io.bloombox.schema.services.auth.v1beta1.AuthError.NO_ERROR.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, status_);
+          .computeEnumSize(1, error_);
       }
       if (!getUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
@@ -1259,7 +1259,7 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response other = (io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response) obj;
 
       boolean result = true;
-      result = result && status_ == other.status_;
+      result = result && error_ == other.error_;
       result = result && getUid()
           .equals(other.getUid());
       result = result && getKey()
@@ -1277,8 +1277,8 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + error_;
       hash = (37 * hash) + UID_FIELD_NUMBER;
       hash = (53 * hash) + getUid().hashCode();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
@@ -1418,7 +1418,7 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        status_ = 0;
+        error_ = 0;
 
         uid_ = "";
 
@@ -1448,7 +1448,7 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response result = new io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response(this);
-        result.status_ = status_;
+        result.error_ = error_;
         result.uid_ = uid_;
         result.key_ = key_;
         result.token_ = token_;
@@ -1493,8 +1493,8 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response other) {
         if (other == io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response.getDefaultInstance()) return this;
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
+        if (other.error_ != 0) {
+          setErrorValue(other.getErrorValue());
         }
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
@@ -1535,26 +1535,26 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private int status_ = 0;
+      private int error_ = 0;
       /**
        * <pre>
        * Resulting status from the user's authentication request.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
        */
-      public int getStatusValue() {
-        return status_;
+      public int getErrorValue() {
+        return error_;
       }
       /**
        * <pre>
        * Resulting status from the user's authentication request.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
        */
-      public Builder setStatusValue(int value) {
-        status_ = value;
+      public Builder setErrorValue(int value) {
+        error_ = value;
         onChanged();
         return this;
       }
@@ -1563,25 +1563,25 @@ private static final long serialVersionUID = 0L;
        * Resulting status from the user's authentication request.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
        */
-      public io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus() {
-        io.bloombox.schema.services.auth.v1beta1.AuthStatus result = io.bloombox.schema.services.auth.v1beta1.AuthStatus.valueOf(status_);
-        return result == null ? io.bloombox.schema.services.auth.v1beta1.AuthStatus.UNRECOGNIZED : result;
+      public io.bloombox.schema.services.auth.v1beta1.AuthError getError() {
+        io.bloombox.schema.services.auth.v1beta1.AuthError result = io.bloombox.schema.services.auth.v1beta1.AuthError.valueOf(error_);
+        return result == null ? io.bloombox.schema.services.auth.v1beta1.AuthError.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Resulting status from the user's authentication request.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
        */
-      public Builder setStatus(io.bloombox.schema.services.auth.v1beta1.AuthStatus value) {
+      public Builder setError(io.bloombox.schema.services.auth.v1beta1.AuthError value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        status_ = value.getNumber();
+        error_ = value.getNumber();
         onChanged();
         return this;
       }
@@ -1590,11 +1590,11 @@ private static final long serialVersionUID = 0L;
        * Resulting status from the user's authentication request.
        * </pre>
        *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthError error = 1;</code>
        */
-      public Builder clearStatus() {
+      public Builder clearError() {
         
-        status_ = 0;
+        error_ = 0;
         onChanged();
         return this;
       }

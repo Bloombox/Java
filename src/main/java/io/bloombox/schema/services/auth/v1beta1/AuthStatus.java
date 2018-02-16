@@ -22,7 +22,7 @@ package io.bloombox.schema.services.auth.v1beta1;
 
 /**
  * <pre>
- * Enumerates statuses for a user's authorization after an authentication or authorization routine has been performed.
+ * Enumerates statuses for a given user auth context.
  * </pre>
  *
  * Protobuf enum {@code bloombox.schema.services.auth.v1beta1.AuthStatus}
@@ -31,12 +31,12 @@ public enum AuthStatus
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * The user's auth status is currently unknown.
+   * The user's auth status is not currently known.
    * </pre>
    *
-   * <code>UNKNOWN = 0;</code>
+   * <code>STATUS_UNKNOWN = 0;</code>
    */
-  UNKNOWN(0),
+  STATUS_UNKNOWN(0),
   /**
    * <pre>
    * Access is/was granted to the user.
@@ -53,25 +53,17 @@ public enum AuthStatus
    * <code>ACCESS_DENIED = 2;</code>
    */
   ACCESS_DENIED(2),
-  /**
-   * <pre>
-   * Access was denied: the user's account is suspended.
-   * </pre>
-   *
-   * <code>ACCOUNT_SUSPENDED = 3;</code>
-   */
-  ACCOUNT_SUSPENDED(3),
   UNRECOGNIZED(-1),
   ;
 
   /**
    * <pre>
-   * The user's auth status is currently unknown.
+   * The user's auth status is not currently known.
    * </pre>
    *
-   * <code>UNKNOWN = 0;</code>
+   * <code>STATUS_UNKNOWN = 0;</code>
    */
-  public static final int UNKNOWN_VALUE = 0;
+  public static final int STATUS_UNKNOWN_VALUE = 0;
   /**
    * <pre>
    * Access is/was granted to the user.
@@ -88,14 +80,6 @@ public enum AuthStatus
    * <code>ACCESS_DENIED = 2;</code>
    */
   public static final int ACCESS_DENIED_VALUE = 2;
-  /**
-   * <pre>
-   * Access was denied: the user's account is suspended.
-   * </pre>
-   *
-   * <code>ACCOUNT_SUSPENDED = 3;</code>
-   */
-  public static final int ACCOUNT_SUSPENDED_VALUE = 3;
 
 
   public final int getNumber() {
@@ -116,10 +100,9 @@ public enum AuthStatus
 
   public static AuthStatus forNumber(int value) {
     switch (value) {
-      case 0: return UNKNOWN;
+      case 0: return STATUS_UNKNOWN;
       case 1: return ACCESS_GRANTED;
       case 2: return ACCESS_DENIED;
-      case 3: return ACCOUNT_SUSPENDED;
       default: return null;
     }
   }

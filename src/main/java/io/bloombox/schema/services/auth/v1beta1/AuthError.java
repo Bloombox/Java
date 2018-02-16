@@ -31,23 +31,103 @@ public enum AuthError
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * No error was encountered.
+   * There was no error.
    * </pre>
    *
    * <code>NO_ERROR = 0;</code>
    */
   NO_ERROR(0),
+  /**
+   * <pre>
+   * Access was denied: the user's account is suspended.
+   * </pre>
+   *
+   * <code>ACCOUNT_SUSPENDED = 1;</code>
+   */
+  ACCOUNT_SUSPENDED(1),
+  /**
+   * <pre>
+   * Profile could not be located.
+   * </pre>
+   *
+   * <code>PROFILE_NOT_FOUND = 2;</code>
+   */
+  PROFILE_NOT_FOUND(2),
+  /**
+   * <pre>
+   * The provided user key was found to be invalid.
+   * </pre>
+   *
+   * <code>INVALID_USER_KEY = 3;</code>
+   */
+  INVALID_USER_KEY(3),
+  /**
+   * <pre>
+   * The provided auth assertion was deemed to be invalid.
+   * </pre>
+   *
+   * <code>INVALID_ASSERTION = 4;</code>
+   */
+  INVALID_ASSERTION(4),
+  /**
+   * <pre>
+   * The specified authentication type is not currently supported.
+   * </pre>
+   *
+   * <code>UNSUPPORTED_LOGIN_TYPE = 5;</code>
+   */
+  UNSUPPORTED_LOGIN_TYPE(5),
   UNRECOGNIZED(-1),
   ;
 
   /**
    * <pre>
-   * No error was encountered.
+   * There was no error.
    * </pre>
    *
    * <code>NO_ERROR = 0;</code>
    */
   public static final int NO_ERROR_VALUE = 0;
+  /**
+   * <pre>
+   * Access was denied: the user's account is suspended.
+   * </pre>
+   *
+   * <code>ACCOUNT_SUSPENDED = 1;</code>
+   */
+  public static final int ACCOUNT_SUSPENDED_VALUE = 1;
+  /**
+   * <pre>
+   * Profile could not be located.
+   * </pre>
+   *
+   * <code>PROFILE_NOT_FOUND = 2;</code>
+   */
+  public static final int PROFILE_NOT_FOUND_VALUE = 2;
+  /**
+   * <pre>
+   * The provided user key was found to be invalid.
+   * </pre>
+   *
+   * <code>INVALID_USER_KEY = 3;</code>
+   */
+  public static final int INVALID_USER_KEY_VALUE = 3;
+  /**
+   * <pre>
+   * The provided auth assertion was deemed to be invalid.
+   * </pre>
+   *
+   * <code>INVALID_ASSERTION = 4;</code>
+   */
+  public static final int INVALID_ASSERTION_VALUE = 4;
+  /**
+   * <pre>
+   * The specified authentication type is not currently supported.
+   * </pre>
+   *
+   * <code>UNSUPPORTED_LOGIN_TYPE = 5;</code>
+   */
+  public static final int UNSUPPORTED_LOGIN_TYPE_VALUE = 5;
 
 
   public final int getNumber() {
@@ -69,6 +149,11 @@ public enum AuthError
   public static AuthError forNumber(int value) {
     switch (value) {
       case 0: return NO_ERROR;
+      case 1: return ACCOUNT_SUSPENDED;
+      case 2: return PROFILE_NOT_FOUND;
+      case 3: return INVALID_USER_KEY;
+      case 4: return INVALID_ASSERTION;
+      case 5: return UNSUPPORTED_LOGIN_TYPE;
       default: return null;
     }
   }
