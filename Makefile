@@ -17,19 +17,30 @@
 ## Bloombox: Java API Client
 #
 
+BUILDMODE ?= maven
 TESTS ?= yes
 RELEASE_VERSION ?= 1.0
 CLIENT_VERSION ?= 1.0-SNAPSHOT
-TARGET ?= target/
-TARGET_JAR ?= $(TARGET)java-client-$(CLIENT_VERSION).jar
 SERVICE_ARGS ?= -Dbloombox.shop.version=$(SHOP_VERSION) -Dbloombox.telemetry.version=$(TELEMETRY_VERSION)
-DEFAULT_GOALS = clean package install
-GOALS ?= $(DEFAULT_GOALS)
 SCHEMA ?= schema/
 RELEASE_ARGS ?= -DperformRelease=true
 RELEASE_GOALS ?= release:prepare release:perform
 EMBEDDED_SCHEMA ?= yes
 CURRENT_BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
+
+ifeq ($(BUILDMODE),maven)
+TARGET ?= target/
+TARGET_JAR ?= $(TARGET)java-client-$(CLIENT_VERSION).jar
+DEFAULT_GOALS = clean package install
+endif
+ifeq ($(BUILDMODE),gradle)
+TARGET ?= build/
+TARGET_JAR ?= $(TARGET)java-client-$(CLIENT_VERSION).jar
+DEFAULT_GOALS = clean build
+endif
+
+GOALS ?= $(DEFAULT_GOALS)
+
 
 all: build
 
