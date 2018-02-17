@@ -3020,6 +3020,31 @@ public final class CommercialOrder {
      * <code>double subtotal = 11;</code>
      */
     double getSubtotal();
+
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+     */
+    io.opencannabis.schema.temporal.Instant getUpdatedAt();
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+     */
+    io.opencannabis.schema.temporal.InstantOrBuilder getUpdatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -3175,6 +3200,19 @@ public final class CommercialOrder {
             case 89: {
 
               subtotal_ = input.readDouble();
+              break;
+            }
+            case 98: {
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              if (updatedAt_ != null) {
+                subBuilder = updatedAt_.toBuilder();
+              }
+              updatedAt_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updatedAt_);
+                updatedAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
           }
@@ -3595,6 +3633,39 @@ public final class CommercialOrder {
       return subtotal_;
     }
 
+    public static final int UPDATED_AT_FIELD_NUMBER = 12;
+    private io.opencannabis.schema.temporal.Instant updatedAt_;
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+     */
+    public boolean hasUpdatedAt() {
+      return updatedAt_ != null;
+    }
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+     */
+    public io.opencannabis.schema.temporal.Instant getUpdatedAt() {
+      return updatedAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+     */
+    public io.opencannabis.schema.temporal.InstantOrBuilder getUpdatedAtOrBuilder() {
+      return getUpdatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3639,6 +3710,9 @@ public final class CommercialOrder {
       }
       if (subtotal_ != 0D) {
         output.writeDouble(11, subtotal_);
+      }
+      if (updatedAt_ != null) {
+        output.writeMessage(12, getUpdatedAt());
       }
       unknownFields.writeTo(output);
     }
@@ -3690,6 +3764,10 @@ public final class CommercialOrder {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(11, subtotal_);
       }
+      if (updatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getUpdatedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3740,6 +3818,11 @@ public final class CommercialOrder {
           java.lang.Double.doubleToLongBits(getSubtotal())
           == java.lang.Double.doubleToLongBits(
               other.getSubtotal()));
+      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt()) {
+        result = result && getUpdatedAt()
+            .equals(other.getUpdatedAt());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3786,6 +3869,10 @@ public final class CommercialOrder {
       hash = (37 * hash) + SUBTOTAL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getSubtotal()));
+      if (hasUpdatedAt()) {
+        hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3967,6 +4054,12 @@ public final class CommercialOrder {
         }
         subtotal_ = 0D;
 
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -4034,6 +4127,11 @@ public final class CommercialOrder {
           result.createdAt_ = createdAtBuilder_.build();
         }
         result.subtotal_ = subtotal_;
+        if (updatedAtBuilder_ == null) {
+          result.updatedAt_ = updatedAt_;
+        } else {
+          result.updatedAt_ = updatedAtBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4156,6 +4254,9 @@ public final class CommercialOrder {
         }
         if (other.getSubtotal() != 0D) {
           setSubtotal(other.getSubtotal());
+        }
+        if (other.hasUpdatedAt()) {
+          mergeUpdatedAt(other.getUpdatedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5764,6 +5865,159 @@ public final class CommercialOrder {
         onChanged();
         return this;
       }
+
+      private io.opencannabis.schema.temporal.Instant updatedAt_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> updatedAtBuilder_;
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      public boolean hasUpdatedAt() {
+        return updatedAtBuilder_ != null || updatedAt_ != null;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      public io.opencannabis.schema.temporal.Instant getUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          return updatedAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : updatedAt_;
+        } else {
+          return updatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      public Builder setUpdatedAt(io.opencannabis.schema.temporal.Instant value) {
+        if (updatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedAt_ = value;
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      public Builder setUpdatedAt(
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      public Builder mergeUpdatedAt(io.opencannabis.schema.temporal.Instant value) {
+        if (updatedAtBuilder_ == null) {
+          if (updatedAt_ != null) {
+            updatedAt_ =
+              io.opencannabis.schema.temporal.Instant.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            updatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          updatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      public Builder clearUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+          onChanged();
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      public io.opencannabis.schema.temporal.Instant.Builder getUpdatedAtBuilder() {
+        
+        onChanged();
+        return getUpdatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      public io.opencannabis.schema.temporal.InstantOrBuilder getUpdatedAtOrBuilder() {
+        if (updatedAtBuilder_ != null) {
+          return updatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedAt_ == null ?
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : updatedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          getUpdatedAtFieldBuilder() {
+        if (updatedAtBuilder_ == null) {
+          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+                  getUpdatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          updatedAt_ = null;
+        }
+        return updatedAtBuilder_;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -5854,7 +6108,7 @@ public final class CommercialOrder {
       "/\n\007instant\030\002 \001(\0132\036.opencannabis.temporal" +
       ".Instant\022\017\n\007message\030\003 \001(\t\"J\n\010OrderKey\022>\n" +
       "\002id\030\001 \001(\tB2\212@/Order ID, assigned by the " +
-      "server upon creation.\"\341\003\n\005Order\022\n\n\002id\030\001 " +
+      "server upon creation.\"\225\004\n\005Order\022\n\n\002id\030\001 " +
       "\001(\t\022.\n\004type\030\002 \001(\0162 .opencannabis.commerc" +
       "e.OrderType\0222\n\006status\030\003 \001(\0162\".opencannab" +
       "is.commerce.OrderStatus\0221\n\010customer\030\004 \001(" +
@@ -5866,13 +6120,15 @@ public final class CommercialOrder {
       "bis.commerce.Item\0228\n\naction_log\030\t \003(\0132$." +
       "opencannabis.commerce.StatusCheckin\0222\n\nc" +
       "reated_at\030\n \001(\0132\036.opencannabis.temporal." +
-      "Instant\022\020\n\010subtotal\030\013 \001(\001*%\n\tOrderType\022\n" +
-      "\n\006PICKUP\020\000\022\014\n\010DELIVERY\020\001*%\n\016SchedulingTy" +
-      "pe\022\010\n\004ASAP\020\000\022\t\n\005TIMED\020\001*a\n\013OrderStatus\022\013" +
-      "\n\007PENDING\020\000\022\014\n\010APPROVED\020\001\022\014\n\010REJECTED\020\002\022" +
-      "\014\n\010ASSIGNED\020\003\022\014\n\010EN_ROUTE\020\004\022\r\n\tFULFILLED" +
-      "\020\005B<\n\037io.opencannabis.schema.commerceB\017C" +
-      "ommercialOrderH\001P\000\242\002\003OCSb\006proto3"
+      "Instant\022\020\n\010subtotal\030\013 \001(\001\0222\n\nupdated_at\030" +
+      "\014 \001(\0132\036.opencannabis.temporal.Instant*%\n" +
+      "\tOrderType\022\n\n\006PICKUP\020\000\022\014\n\010DELIVERY\020\001*%\n\016" +
+      "SchedulingType\022\010\n\004ASAP\020\000\022\t\n\005TIMED\020\001*a\n\013O" +
+      "rderStatus\022\013\n\007PENDING\020\000\022\014\n\010APPROVED\020\001\022\014\n" +
+      "\010REJECTED\020\002\022\014\n\010ASSIGNED\020\003\022\014\n\010EN_ROUTE\020\004\022" +
+      "\r\n\tFULFILLED\020\005B<\n\037io.opencannabis.schema" +
+      ".commerceB\017CommercialOrderH\001P\000\242\002\003OCSb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5914,7 +6170,7 @@ public final class CommercialOrder {
     internal_static_opencannabis_commerce_Order_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_Order_descriptor,
-        new java.lang.String[] { "Id", "Type", "Status", "Customer", "Scheduling", "Destination", "Notes", "Item", "ActionLog", "CreatedAt", "Subtotal", });
+        new java.lang.String[] { "Id", "Type", "Status", "Customer", "Scheduling", "Destination", "Notes", "Item", "ActionLog", "CreatedAt", "Subtotal", "UpdatedAt", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);
