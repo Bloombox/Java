@@ -64,23 +64,44 @@ clean:
 	@rm -fr $(TARGET)
 
 ifeq ($(EMBEDDED_SCHEMA),yes)
+ifeq ($(BUILDMODE),maven)
 $(TARGET_JAR):
-	@echo "Building Java Client for Bloombox..."
+	@echo "Building Java Client for Bloombox (Maven)..."
 	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
+endif
+ifeq ($(BUILDMODE),gradle)
+$(TARGET_JAR):
+	@echo "Building Java Client for Bloombox (Gradle)..."
+	@gradle $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
+endif
 else
+ifeq ($(BUILDMODE),maven)
 $(TARGET_JAR):
 	@echo "Cleaning embedded schema..."
 	@rm -frv src/main/java/io
-	@echo "Building Java client for Bloombox..."
+	@echo "Building Java client for Bloombox (Maven)..."
 	@mvn -f $(POMFILE) $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
 endif
+ifeq ($(BUILDMODE),gradle)
+$(TARGET_JAR):
+	@echo "Cleaning embedded schema..."
+	@rm -frv src/main/java/io
+	@echo "Building Java client for Bloombox (Gradle)..."
+	@gradle $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
+endif
+endif
 
+ifeq ($(BUILDMODE),maven)
 release:
 	@echo "Building release for Bloombox Java Client 'v$(RELEASE_VERSION)'..."
 	@mvn -f $(POMFILE) clean package install site:site $(RELEASE_GOALS) -Dproject.version=$(RELEASE_VERSION) -Dbloombox.release $(SERVICE_ARGS) $(RELEASE_ARGS)
 	@mvn site:site
 	@cd target/site && git init && git add . && git commit -m "Update docs" && git checkout -b gh-pages && git remote add origin git@github.com:bloombox/java.git && git push origin gh-pages --force && rm -fr .git
 	@echo "Docs published."
+else
+release:
+	@echo "Releases not supported via any tool other than Maven. Please run with BUILDMODE=maven."
+endif
 
 $(SCHEMA):
 	@echo "Syncing schema..."
