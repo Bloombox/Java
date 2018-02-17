@@ -35,6 +35,7 @@ import io.opencannabis.schema.temporal.Instant
 import io.grpc.*
 import io.netty.handler.ssl.ClientAuth
 import java.io.InputStream
+import java.nio.charset.StandardCharsets
 import java.time.Duration
 import java.util.*
 import java.util.concurrent.Executor
@@ -165,6 +166,11 @@ class TelemetryClient(override val host: String,
       return call
     }
   }
+
+  /**
+   * Base64 tools.
+   */
+  private val b64 = org.apache.commons.codec.binary.Base64()
 
   /**
    * Interceptor object.
@@ -317,7 +323,7 @@ class TelemetryClient(override val host: String,
       merged.setCollection(AnalyticsCollection.Collection.newBuilder()
             .setInternal(collection.startsWith(internalPrefix))
             .setType(AnalyticsCollection.EventType.GENERIC)
-            .setName(collection))
+            .setName(b64.encodeAsString(collection.toByteArray(StandardCharsets.UTF_8))))
 
     if (merged.fingerprint == null || merged.fingerprint.isEmpty() || merged.fingerprint.isBlank())
       merged.fingerprint = fingerprint
