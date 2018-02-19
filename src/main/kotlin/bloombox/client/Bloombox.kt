@@ -56,6 +56,21 @@ class Bloombox(
      * API client variant name.
      */
     internal const val VARIANT = "full"
+
+    /**
+     * Shop client singleton.
+     */
+    internal var shopClientSingleton: ShopClient? = null
+
+    /**
+     * Menu client singleton.
+     */
+    internal var menuClientSingleton: MenuClient? = null
+
+    /**
+     * Telemetry client singleton.
+     */
+    internal var telemetryClientSingleton: TelemetryClient? = null
   }
 
   /**
@@ -238,97 +253,142 @@ class Bloombox(
   /**
    * Holds references to each RPC service, so calls may be proxied to them.
    */
-  private inner class Services(domain: String,
-                               apiKey: String,
-                               ct: ClientTarget) {
+  private inner class Services(private val domain: String,
+                               private val apiKey: String,
+                               private val ct: ClientTarget) {
     /**
      * Shop client. Offers the ability to submit or query orders, verify or enroll users, check shop status and zipcode
      * delivery eligibility, and so on.
      */
-    internal val shop = if (ct == ClientTarget.LOCAL) {
-      ShopClient(
-            domain,
-            Bloombox.Endpoints.localShopPort,
-            apiKey,
-            timeout = settings.requestTimeout,
-            executor = settings.executor,
-            defaultPartner = settings.partner,
-            defaultLocation = settings.location)
-    } else {
-      ShopClient(
-            when (ct) {
-              ClientTarget.SANDBOX,
-              ClientTarget.INTERNAL -> { "shop.rpc.$domain" }
-              else -> { "shop.$domain" }
-            },
-            Bloombox.Endpoints.grpcPort,
-            apiKey,
-            timeout = settings.requestTimeout,
-            executor = settings.executor,
-            defaultPartner = settings.partner,
-            defaultLocation = settings.location)
+    private fun shopClient(): ShopClient {
+      return if (ct == ClientTarget.LOCAL) {
+        ShopClient(
+              domain,
+              Bloombox.Endpoints.localShopPort,
+              apiKey,
+              timeout = settings.requestTimeout,
+              executor = settings.executor,
+              defaultPartner = settings.partner,
+              defaultLocation = settings.location)
+      } else {
+        ShopClient(
+              when (ct) {
+                ClientTarget.SANDBOX,
+                ClientTarget.INTERNAL -> {
+                  "shop.rpc.$domain"
+                }
+                else -> {
+                  "shop.$domain"
+                }
+              },
+              Bloombox.Endpoints.grpcPort,
+              apiKey,
+              timeout = settings.requestTimeout,
+              executor = settings.executor,
+              defaultPartner = settings.partner,
+              defaultLocation = settings.location)
+      }
+    }
+
+    /**
+     * Fetch a Shop client singleton.
+     */
+    internal fun shop(): ShopClient {
+      if (shopClientSingleton == null) {
+        shopClientSingleton = shopClient()
+      }
+      return shopClientSingleton!!
     }
 
     /**
      * Telemetry client. Offers RPC access to telemetry data ingest services.
      */
-    internal val telemetry = if (ct == ClientTarget.LOCAL) {
-      TelemetryClient(
-            domain,
-            Bloombox.Endpoints.localTelemetryPort,
-            apiKey,
-            timeout = settings.requestTimeout,
-            executor = settings.executor,
-            defaultPartner = settings.partner,
-            defaultLocation = settings.location,
-            deviceUUID = settings.device)
-    } else {
-      TelemetryClient(
-            when (ct) {
-              ClientTarget.SANDBOX,
-              ClientTarget.INTERNAL -> { "telemetry.rpc.$domain" }
-              else -> { "telemetry.$domain" }
-            },
-            Bloombox.Endpoints.grpcPort,
-            apiKey,
-            timeout = settings.requestTimeout,
-            executor = settings.executor,
-            defaultPartner = settings.partner,
-            defaultLocation = settings.location,
-            deviceUUID = settings.device)
+    private fun telemetryClient(): TelemetryClient {
+      return if (ct == ClientTarget.LOCAL) {
+        TelemetryClient(
+              domain,
+              Bloombox.Endpoints.localTelemetryPort,
+              apiKey,
+              timeout = settings.requestTimeout,
+              executor = settings.executor,
+              defaultPartner = settings.partner,
+              defaultLocation = settings.location,
+              deviceUUID = settings.device)
+      } else {
+        TelemetryClient(
+              when (ct) {
+                ClientTarget.SANDBOX,
+                ClientTarget.INTERNAL -> {
+                  "telemetry.rpc.$domain"
+                }
+                else -> {
+                  "telemetry.$domain"
+                }
+              },
+              Bloombox.Endpoints.grpcPort,
+              apiKey,
+              timeout = settings.requestTimeout,
+              executor = settings.executor,
+              defaultPartner = settings.partner,
+              defaultLocation = settings.location,
+              deviceUUID = settings.device)
+      }
+    }
+
+    /**
+     * Fetch a Telemetry client singleton.
+     */
+    internal fun telemetry(): TelemetryClient {
+      if (telemetryClientSingleton == null) {
+        telemetryClientSingleton = telemetryClient()
+      }
+      return telemetryClientSingleton!!
     }
 
     /**
      * Menu client. Offers RPC access to retrieve and update menu data.
      */
-    internal val menu = if (ct == ClientTarget.LOCAL) {
-      MenuClient(
-            domain,
-            Bloombox.Endpoints.localMenuPort,
-            apiKey,
-            timeout = settings.requestTimeout,
-            executor = settings.executor,
-            defaultPartner = settings.partner,
-            defaultLocation = settings.location)
-    } else {
-      MenuClient(
-            when (ct) {
-              ClientTarget.SANDBOX,
-              ClientTarget.INTERNAL -> { "menu.rpc.$domain" }
-              else -> { "menu.$domain" }
-            },
-            Bloombox.Endpoints.grpcPort,
-            apiKey,
-            timeout = settings.requestTimeout,
-            executor = settings.executor,
-            defaultPartner = settings.partner,
-            defaultLocation = settings.location)
+    private fun menuClient(): MenuClient {
+      return if (ct == ClientTarget.LOCAL) {
+        MenuClient(
+              domain,
+              Bloombox.Endpoints.localMenuPort,
+              apiKey,
+              timeout = settings.requestTimeout,
+              executor = settings.executor,
+              defaultPartner = settings.partner,
+              defaultLocation = settings.location)
+      } else {
+        MenuClient(
+              when (ct) {
+                ClientTarget.SANDBOX,
+                ClientTarget.INTERNAL -> { "menu.rpc.$domain" }
+                else -> { "menu.$domain" }
+              },
+              Bloombox.Endpoints.grpcPort,
+              apiKey,
+              timeout = settings.requestTimeout,
+              executor = settings.executor,
+              defaultPartner = settings.partner,
+              defaultLocation = settings.location)
+      }
+    }
+
+    /**
+     * Fetch a Menu client singleton.
+     */
+    internal fun menu(): MenuClient {
+      if (menuClientSingleton == null) {
+        menuClientSingleton = menuClient()
+      }
+      return menuClientSingleton!!
     }
 
     /**
      * Reference to all mounted/supported services.
      */
-    internal val allServices: Array<ServiceClient> = arrayOf(shop, telemetry, menu)
+    internal fun allServices(): Array<ServiceClient?> = arrayOf(
+          shopClientSingleton, menuClientSingleton, telemetryClientSingleton)
   }
 
   /**
@@ -347,8 +407,8 @@ class Bloombox(
             block: Boolean = true,
             timeout: Duration? = null) {
     val closeTimeout: Duration = timeout ?: settings.closeTimeout
-    services.allServices.forEach {
-      it.close(
+    services.allServices().forEach {
+      it?.close(
             soft,
             block,
             Pair(closeTimeout.toMillis(), TimeUnit.MILLISECONDS))
@@ -359,15 +419,15 @@ class Bloombox(
   /**
    * Fetch a reference to the Shop API client.
    */
-  fun shop(): ShopClient = services.shop
+  fun shop(): ShopClient = services.shop()
 
   /**
    * Fetch a reference to the Telemetry API client.
    */
-  fun telemetry(): TelemetryClient = services.telemetry
+  fun telemetry(): TelemetryClient = services.telemetry()
 
   /**
    * Fetch a reference to the Menu API client.
    */
-  fun menu(): MenuClient = services.menu
+  fun menu(): MenuClient = services.menu()
 }
