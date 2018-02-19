@@ -17,6 +17,7 @@
 package bloombox.client.test
 
 import bloombox.client.Bloombox
+import io.grpc.StatusRuntimeException
 import java.util.logging.Logger
 
 
@@ -86,6 +87,8 @@ open class ClientRPCTest {
     try {
       client = RPCClient(settings)
       block(client)
+    } catch (e: StatusRuntimeException) {
+      logging.severe("Call failed (status: ${e.status}): '${e.message}'.")
     } finally {
       client?.close()
     }
