@@ -38,6 +38,7 @@ import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 
 
 /**
@@ -116,7 +117,7 @@ class ShopOrderTest: ClientRPCTest() {
     return client.submitOrder(orderObj)
   }
 
-  @test
+  @test @ignore
   fun testFetchKnownOrder() {
     withClient({ client ->
       // fetch a known-good order ID
@@ -128,7 +129,7 @@ class ShopOrderTest: ClientRPCTest() {
     })
   }
 
-  @test
+  @test @ignore
   fun testFetchKnownOrderAsync() {
     withClient({ client ->
       // fetch a known-good order ID
