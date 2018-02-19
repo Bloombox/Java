@@ -147,7 +147,7 @@ class ShopOrderTest: ClientRPCTest() {
     })
   }
 
-  @test
+  @test @ignore
   fun testFetchOrderNotFound() {
     withClient({ client ->
       // fetch a known-good order ID
@@ -157,7 +157,7 @@ class ShopOrderTest: ClientRPCTest() {
     })
   }
 
-  @test
+  @test @ignore
   fun testFetchOrderNotFoundAsync() {
     withClient({ client ->
       // fetch a known-good order ID
