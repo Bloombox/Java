@@ -21,6 +21,7 @@ import bloombox.client.test.ClientRPCTest
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 
 
 /**
@@ -39,7 +40,7 @@ class TelemetryGenericEventTest: ClientRPCTest() {
     private const val locationID = "sacramento"
   }
 
-  @test
+  @test @ignore
   fun testBasicEvent() {
     withClient({ client ->
       // we should be able to send a basic event

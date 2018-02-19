@@ -19,6 +19,7 @@ package bloombox.client.telemetry
 import bloombox.client.services.telemetry.TelemetryClient
 import bloombox.client.test.ClientRPCTest
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 
 
 /**
@@ -32,7 +33,7 @@ class TelemetryPingTest : ClientRPCTest() {
     client.ping()
   }
 
-  @test
+  @test @ignore
   fun testBasicPing() {
     withClient({ client ->
       testPing(client.platform.telemetry())

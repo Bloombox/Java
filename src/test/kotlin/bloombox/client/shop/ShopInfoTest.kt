@@ -25,6 +25,7 @@ import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
 import org.junit.Test as test
+import org.junit.Ignore as ignore
 
 
 /**
@@ -47,7 +48,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours.
    */
-  @test
+  @test @ignore
   fun testShopHours() {
     withClient({ client ->
       val response = client.platform.shop().info(
@@ -63,7 +64,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours asynchronously.
    */
-  @test
+  @test @ignore
   fun testShopHoursAsync() {
     withClient({ client ->
       val operation = client.platform.shop().info({ response ->
@@ -81,7 +82,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid partner.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ServiceClientException::class) @ignore
   fun testShopHoursInvalidPartner() {
     // prep a client for prod
     val prodClient = Bloombox(Bloombox.Settings(
@@ -97,7 +98,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid location.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ServiceClientException::class) @ignore
   fun testShopHoursInvalidLocation() {
     // prep a client for prod
     val prodClient = Bloombox(Bloombox.Settings(
@@ -114,7 +115,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test a known-good zipcode via zipcheck.
    */
-  @test
+  @test @ignore
   fun testZipcheckKnownGood() {
     withClient({ client ->
       val responseOne = client.platform.shop().checkZipcode("95120", ShopClient.ShopContext(
@@ -137,7 +138,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test a known-good zipcode via zipcheck, asynchronously.
    */
-  @test
+  @test @ignore
   fun testZipcheckKnownGoodAsync() {
     withClient({ client ->
       val opOne = client.platform.shop().checkZipcode("95120", { response ->
@@ -165,7 +166,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test a known-bad zipcode via zipcheck.
    */
-  @test
+  @test @ignore
   fun testZipcheckKnownBad() {
     withClient({ client ->
       val responseOne = client.platform.shop().checkZipcode("12345",
@@ -179,7 +180,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test a known-bad zipcode via zipcheck.
    */
-  @test
+  @test @ignore
   fun testZipcheckKnownBadAsync() {
     withClient({ client ->
       val operation = client.platform.shop().checkZipcode("12345", { response ->
