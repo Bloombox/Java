@@ -19,6 +19,9 @@ package bloombox.client.test
 import bloombox.client.Bloombox
 import io.grpc.StatusRuntimeException
 import java.util.logging.Logger
+import java.util.concurrent.Executor
+
+
 
 
 /**
@@ -32,29 +35,43 @@ open class ClientRPCTest {
     val logging: Logger = Logger.getAnonymousLogger()
   }
 
+  class CurrentThreadExecutor: Executor {
+    override fun execute(r: Runnable) {
+      r.run()
+    }
+  }
+
   /**
    * RPC client object.
    */
   class RPCClient(settings: Bloombox.Settings? = null) {
     /**
+     * Executor for tests.
+     */
+    private val directExecutor = CurrentThreadExecutor()
+
+    /**
      * Local client.
      */
     val local: Bloombox = Bloombox(
-          settings ?: Bloombox.Settings(testApiKey, testPartner, testLocation),
+          settings ?: Bloombox.Settings(
+                testApiKey, testPartner, testLocation, executor = directExecutor),
           Bloombox.ClientTarget.LOCAL)
 
     /**
      * Sandbox client.
      */
     val sandbox: Bloombox = Bloombox(
-          settings ?: Bloombox.Settings(testApiKey, testPartner, testLocation),
+          settings ?: Bloombox.Settings(
+                testApiKey, testPartner, testLocation, executor = directExecutor),
           Bloombox.ClientTarget.SANDBOX)
 
     /**
      * Production client.
      */
     val platform: Bloombox = Bloombox(
-          settings ?: Bloombox.Settings(testApiKey, testPartner, testLocation),
+          settings ?: Bloombox.Settings(
+                testApiKey, testPartner, testLocation, executor = directExecutor),
           Bloombox.ClientTarget.PRODUCTION)
 
     /**
@@ -87,6 +104,13 @@ open class ClientRPCTest {
     try {
       client = RPCClient(settings)
       block(client)
+    } catch (e: java.util.concurrent.ExecutionException) {
+      val inner = e.cause
+      if (inner is StatusRuntimeException) {
+        logging.severe("Call failed (status: ${inner.status}): '${inner.message}'.")
+      } else {
+        logging.severe("Error in dispatch thread: ${e.cause} ${e.message}")
+      }
     } catch (e: StatusRuntimeException) {
       logging.severe("Call failed (status: ${e.status}): '${e.message}'.")
     } finally {

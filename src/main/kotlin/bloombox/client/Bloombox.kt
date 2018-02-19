@@ -56,21 +56,6 @@ class Bloombox(
      * API client variant name.
      */
     internal const val VARIANT = "full"
-
-    /**
-     * Shop client singleton.
-     */
-    internal var shopClientSingleton: ShopClient? = null
-
-    /**
-     * Menu client singleton.
-     */
-    internal var menuClientSingleton: MenuClient? = null
-
-    /**
-     * Telemetry client singleton.
-     */
-    internal var telemetryClientSingleton: TelemetryClient? = null
   }
 
   /**
@@ -257,138 +242,145 @@ class Bloombox(
                                private val apiKey: String,
                                private val ct: ClientTarget) {
     /**
+     * Service list, to shutdown services when not needed.
+     */
+    private var services: ArrayList<ServiceClient> = ArrayList()
+
+    /**
+     * Service map, where we can lookup services as they are added to the services list.
+     */
+    private var serviceMap: HashMap<String, Int> = HashMap()
+
+    /**
      * Shop client. Offers the ability to submit or query orders, verify or enroll users, check shop status and zipcode
      * delivery eligibility, and so on.
      */
-    private fun shopClient(): ShopClient {
-      return if (ct == ClientTarget.LOCAL) {
-        ShopClient(
-              domain,
-              Bloombox.Endpoints.localShopPort,
-              apiKey,
-              timeout = settings.requestTimeout,
-              executor = settings.executor,
-              defaultPartner = settings.partner,
-              defaultLocation = settings.location)
-      } else {
-        ShopClient(
-              when (ct) {
-                ClientTarget.SANDBOX,
-                ClientTarget.INTERNAL -> {
-                  "shop.rpc.$domain"
-                }
-                else -> {
-                  "shop.$domain"
-                }
-              },
-              Bloombox.Endpoints.grpcPort,
-              apiKey,
-              timeout = settings.requestTimeout,
-              executor = settings.executor,
-              defaultPartner = settings.partner,
-              defaultLocation = settings.location)
-      }
-    }
+    internal fun shopClient(): ShopClient {
+      return if (serviceMap["shop"] == null) {
+        // we have no shop service yet
+        val shopClient = if (ct == ClientTarget.LOCAL) {
+          ShopClient(
+                domain,
+                Bloombox.Endpoints.localShopPort,
+                apiKey,
+                timeout = settings.requestTimeout,
+                executor = settings.executor,
+                defaultPartner = settings.partner,
+                defaultLocation = settings.location)
+        } else {
+          ShopClient(
+                when (ct) {
+                  ClientTarget.SANDBOX,
+                  ClientTarget.INTERNAL -> {
+                    "shop.rpc.$domain"
+                  }
+                  else -> {
+                    "shop.$domain"
+                  }
+                },
+                Bloombox.Endpoints.grpcPort,
+                apiKey,
+                timeout = settings.requestTimeout,
+                executor = settings.executor,
+                defaultPartner = settings.partner,
+                defaultLocation = settings.location)
+        }
 
-    /**
-     * Fetch a Shop client singleton.
-     */
-    internal fun shop(): ShopClient {
-      if (shopClientSingleton == null) {
-        shopClientSingleton = shopClient()
+        services.add(shopClient)
+        serviceMap["shop"] = services.size - 1
+        shopClient
+      } else {
+        // use existing shop service
+        services[serviceMap["shop"]!!] as ShopClient
       }
-      return shopClientSingleton!!
     }
 
     /**
      * Telemetry client. Offers RPC access to telemetry data ingest services.
      */
-    private fun telemetryClient(): TelemetryClient {
-      return if (ct == ClientTarget.LOCAL) {
-        TelemetryClient(
-              domain,
-              Bloombox.Endpoints.localTelemetryPort,
-              apiKey,
-              timeout = settings.requestTimeout,
-              executor = settings.executor,
-              defaultPartner = settings.partner,
-              defaultLocation = settings.location,
-              deviceUUID = settings.device)
-      } else {
-        TelemetryClient(
-              when (ct) {
-                ClientTarget.SANDBOX,
-                ClientTarget.INTERNAL -> {
-                  "telemetry.rpc.$domain"
-                }
-                else -> {
-                  "telemetry.$domain"
-                }
-              },
-              Bloombox.Endpoints.grpcPort,
-              apiKey,
-              timeout = settings.requestTimeout,
-              executor = settings.executor,
-              defaultPartner = settings.partner,
-              defaultLocation = settings.location,
-              deviceUUID = settings.device)
-      }
-    }
+    internal fun telemetryClient(): TelemetryClient {
+      return if (serviceMap["telemetry"] == null) {
+        val telemetryClient = if (ct == ClientTarget.LOCAL) {
+          TelemetryClient(
+                domain,
+                Bloombox.Endpoints.localTelemetryPort,
+                apiKey,
+                timeout = settings.requestTimeout,
+                executor = settings.executor,
+                defaultPartner = settings.partner,
+                defaultLocation = settings.location,
+                deviceUUID = settings.device)
+        } else {
+          TelemetryClient(
+                when (ct) {
+                  ClientTarget.SANDBOX,
+                  ClientTarget.INTERNAL -> {
+                    "telemetry.rpc.$domain"
+                  }
+                  else -> {
+                    "telemetry.$domain"
+                  }
+                },
+                Bloombox.Endpoints.grpcPort,
+                apiKey,
+                timeout = settings.requestTimeout,
+                executor = settings.executor,
+                defaultPartner = settings.partner,
+                defaultLocation = settings.location,
+                deviceUUID = settings.device)
+        }
 
-    /**
-     * Fetch a Telemetry client singleton.
-     */
-    internal fun telemetry(): TelemetryClient {
-      if (telemetryClientSingleton == null) {
-        telemetryClientSingleton = telemetryClient()
+        services.add(telemetryClient)
+        serviceMap["telemetry"] = services.size - 1
+        telemetryClient
+      } else {
+        services[serviceMap["telemetry"]!!] as TelemetryClient
       }
-      return telemetryClientSingleton!!
     }
 
     /**
      * Menu client. Offers RPC access to retrieve and update menu data.
      */
-    private fun menuClient(): MenuClient {
-      return if (ct == ClientTarget.LOCAL) {
-        MenuClient(
-              domain,
-              Bloombox.Endpoints.localMenuPort,
-              apiKey,
-              timeout = settings.requestTimeout,
-              executor = settings.executor,
-              defaultPartner = settings.partner,
-              defaultLocation = settings.location)
-      } else {
-        MenuClient(
-              when (ct) {
-                ClientTarget.SANDBOX,
-                ClientTarget.INTERNAL -> { "menu.rpc.$domain" }
-                else -> { "menu.$domain" }
-              },
-              Bloombox.Endpoints.grpcPort,
-              apiKey,
-              timeout = settings.requestTimeout,
-              executor = settings.executor,
-              defaultPartner = settings.partner,
-              defaultLocation = settings.location)
-      }
-    }
+    internal fun menuClient(): MenuClient {
+      return if (serviceMap["menu"] == null) {
+        val menuClient = if (ct == ClientTarget.LOCAL) {
+          MenuClient(
+                domain,
+                Bloombox.Endpoints.localMenuPort,
+                apiKey,
+                timeout = settings.requestTimeout,
+                executor = settings.executor,
+                defaultPartner = settings.partner,
+                defaultLocation = settings.location)
+        } else {
+          MenuClient(
+                when (ct) {
+                  ClientTarget.SANDBOX,
+                  ClientTarget.INTERNAL -> { "menu.rpc.$domain" }
+                  else -> { "menu.$domain" }
+                },
+                Bloombox.Endpoints.grpcPort,
+                apiKey,
+                timeout = settings.requestTimeout,
+                executor = settings.executor,
+                defaultPartner = settings.partner,
+                defaultLocation = settings.location)
+        }
 
-    /**
-     * Fetch a Menu client singleton.
-     */
-    internal fun menu(): MenuClient {
-      if (menuClientSingleton == null) {
-        menuClientSingleton = menuClient()
+        services.add(menuClient)
+        serviceMap["menu"] = services.size - 1
+        menuClient
+      } else {
+        services[serviceMap["menu"]!!] as MenuClient
       }
-      return menuClientSingleton!!
     }
 
     /**
      * Reference to all mounted/supported services.
      */
-    internal fun allServices(): Array<ServiceClient?> = arrayOf(
-          shopClientSingleton, menuClientSingleton, telemetryClientSingleton)
+    internal fun allServices(): Array<ServiceClient?> = Array(services.size, {
+      services[it]
+    })
   }
 
   /**
@@ -419,15 +411,15 @@ class Bloombox(
   /**
    * Fetch a reference to the Shop API client.
    */
-  fun shop(): ShopClient = services.shop()
+  fun shop(): ShopClient = services.shopClient()
 
   /**
    * Fetch a reference to the Telemetry API client.
    */
-  fun telemetry(): TelemetryClient = services.telemetry()
+  fun telemetry(): TelemetryClient = services.telemetryClient()
 
   /**
    * Fetch a reference to the Menu API client.
    */
-  fun menu(): MenuClient = services.menu()
+  fun menu(): MenuClient = services.menuClient()
 }
