@@ -22,8 +22,6 @@ import java.util.logging.Logger
 import java.util.concurrent.Executor
 
 
-
-
 /**
  * Sets up various details related to gRPC testing from the client-side.
  */
@@ -35,6 +33,10 @@ open class ClientRPCTest {
     val logging: Logger = Logger.getAnonymousLogger()
   }
 
+  /**
+   * Test executor that immediately executes each runnable on the current
+   * thread.
+   */
   class CurrentThreadExecutor: Executor {
     override fun execute(r: Runnable) {
       r.run()
@@ -45,9 +47,6 @@ open class ClientRPCTest {
    * RPC client object.
    */
   class RPCClient(settings: Bloombox.Settings? = null) {
-    /**
-     * Executor for tests.
-     */
     private val directExecutor = CurrentThreadExecutor()
 
     /**
