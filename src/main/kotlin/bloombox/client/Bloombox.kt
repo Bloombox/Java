@@ -287,8 +287,8 @@ class Bloombox(
         shopClient
       } else {
         // use existing shop service
-        services[serviceMap["shop"] ?: throw IllegalStateException()] as ShopClient
-      }
+        services[serviceMap["shop"] ?: throw IllegalStateException()] as? ShopClient
+      } ?: throw IllegalStateException("Failed to initialize shop client.")
     }
 
     /**
@@ -326,8 +326,8 @@ class Bloombox(
         serviceMap["telemetry"] = services.size - 1
         telemetryClient
       } else {
-        services[serviceMap["telemetry"] ?: throw IllegalStateException()] as TelemetryClient
-      }
+        services[serviceMap["telemetry"] ?: throw IllegalStateException()] as? TelemetryClient
+      } ?: throw IllegalStateException("Failed to initialize telemetry client.")
     }
 
     /**
@@ -363,8 +363,8 @@ class Bloombox(
         serviceMap["menu"] = services.size - 1
         menuClient
       } else {
-        services[serviceMap["menu"] ?: throw IllegalStateException()] as MenuClient
-      }
+        services[serviceMap["menu"] ?: throw IllegalStateException()] as? MenuClient
+      } ?: throw IllegalStateException("Failed to initialize menu client.")
     }
 
     /**
