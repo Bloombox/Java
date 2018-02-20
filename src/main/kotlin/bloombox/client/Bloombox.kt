@@ -271,12 +271,8 @@ class Bloombox(
           ShopClient(
                 when (ct) {
                   ClientTarget.SANDBOX,
-                  ClientTarget.INTERNAL -> {
-                    "shop.rpc.$domain"
-                  }
-                  else -> {
-                    "shop.$domain"
-                  }
+                  ClientTarget.INTERNAL -> "shop.rpc.$domain"
+                  else -> "shop.$domain"
                 },
                 Bloombox.Endpoints.grpcPort,
                 apiKey,
@@ -291,7 +287,7 @@ class Bloombox(
         shopClient
       } else {
         // use existing shop service
-        services[serviceMap["shop"]!!] as ShopClient
+        services[serviceMap["shop"] ?: throw IllegalStateException()] as ShopClient
       }
     }
 
@@ -314,12 +310,8 @@ class Bloombox(
           TelemetryClient(
                 when (ct) {
                   ClientTarget.SANDBOX,
-                  ClientTarget.INTERNAL -> {
-                    "telemetry.rpc.$domain"
-                  }
-                  else -> {
-                    "telemetry.$domain"
-                  }
+                  ClientTarget.INTERNAL -> "telemetry.rpc.$domain"
+                  else -> "telemetry.$domain"
                 },
                 Bloombox.Endpoints.grpcPort,
                 apiKey,
@@ -334,7 +326,7 @@ class Bloombox(
         serviceMap["telemetry"] = services.size - 1
         telemetryClient
       } else {
-        services[serviceMap["telemetry"]!!] as TelemetryClient
+        services[serviceMap["telemetry"] ?: throw IllegalStateException()] as TelemetryClient
       }
     }
 
@@ -356,8 +348,8 @@ class Bloombox(
           MenuClient(
                 when (ct) {
                   ClientTarget.SANDBOX,
-                  ClientTarget.INTERNAL -> { "menu.rpc.$domain" }
-                  else -> { "menu.$domain" }
+                  ClientTarget.INTERNAL -> "menu.rpc.$domain"
+                  else -> "menu.$domain"
                 },
                 Bloombox.Endpoints.grpcPort,
                 apiKey,
@@ -371,7 +363,7 @@ class Bloombox(
         serviceMap["menu"] = services.size - 1
         menuClient
       } else {
-        services[serviceMap["menu"]!!] as MenuClient
+        services[serviceMap["menu"] ?: throw IllegalStateException()] as MenuClient
       }
     }
 
