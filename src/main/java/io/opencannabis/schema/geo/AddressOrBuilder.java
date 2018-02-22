@@ -24,61 +24,109 @@ public interface AddressOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string first_line = 1;</code>
+   * <pre>
+   * First line of the address.
+   * </pre>
+   *
+   * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
    */
   java.lang.String getFirstLine();
   /**
-   * <code>string first_line = 1;</code>
+   * <pre>
+   * First line of the address.
+   * </pre>
+   *
+   * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
    */
   com.google.protobuf.ByteString
       getFirstLineBytes();
 
   /**
-   * <code>string second_line = 2;</code>
+   * <pre>
+   * Second line of the address, if applicable.
+   * </pre>
+   *
+   * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
    */
   java.lang.String getSecondLine();
   /**
-   * <code>string second_line = 2;</code>
+   * <pre>
+   * Second line of the address, if applicable.
+   * </pre>
+   *
+   * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
    */
   com.google.protobuf.ByteString
       getSecondLineBytes();
 
   /**
-   * <code>string city = 3;</code>
+   * <pre>
+   * City or municipality name for the address.
+   * </pre>
+   *
+   * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
    */
   java.lang.String getCity();
   /**
-   * <code>string city = 3;</code>
+   * <pre>
+   * City or municipality name for the address.
+   * </pre>
+   *
+   * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
    */
   com.google.protobuf.ByteString
       getCityBytes();
 
   /**
-   * <code>string state = 4;</code>
+   * <pre>
+   * State that contains the city or municipality for this address.
+   * </pre>
+   *
+   * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
    */
   java.lang.String getState();
   /**
-   * <code>string state = 4;</code>
+   * <pre>
+   * State that contains the city or municipality for this address.
+   * </pre>
+   *
+   * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
    */
   com.google.protobuf.ByteString
       getStateBytes();
 
   /**
-   * <code>string zipcode = 5;</code>
+   * <pre>
+   * USPS zipcode associated with this address.
+   * </pre>
+   *
+   * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
    */
   java.lang.String getZipcode();
   /**
-   * <code>string zipcode = 5;</code>
+   * <pre>
+   * USPS zipcode associated with this address.
+   * </pre>
+   *
+   * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
    */
   com.google.protobuf.ByteString
       getZipcodeBytes();
 
   /**
-   * <code>string country = 6;</code>
+   * <pre>
+   * Country code associated with this address ('US' or 'USA' for United States, for instance).
+   * </pre>
+   *
+   * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
    */
   java.lang.String getCountry();
   /**
-   * <code>string country = 6;</code>
+   * <pre>
+   * Country code associated with this address ('US' or 'USA' for United States, for instance).
+   * </pre>
+   *
+   * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
    */
   com.google.protobuf.ByteString
       getCountryBytes();

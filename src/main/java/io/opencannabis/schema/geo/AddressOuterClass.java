@@ -44,11 +44,20 @@ public final class AddressOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021geo/Address.proto\022\020opencannabis.geo\"q\n" +
-      "\007Address\022\022\n\nfirst_line\030\001 \001(\t\022\023\n\013second_l" +
-      "ine\030\002 \001(\t\022\014\n\004city\030\003 \001(\t\022\r\n\005state\030\004 \001(\t\022\017" +
-      "\n\007zipcode\030\005 \001(\t\022\017\n\007country\030\006 \001(\tB&\n\032io.o" +
-      "pencannabis.schema.geoH\001P\001\242\002\003OCSb\006proto3"
+      "\n\021geo/Address.proto\022\020opencannabis.geo\032\016b" +
+      "q_field.proto\"\277\003\n\007Address\0221\n\nfirst_line\030" +
+      "\001 \001(\tB\035\212@\032First line of the address.\022B\n\013" +
+      "second_line\030\002 \001(\tB-\212@*Second line of the" +
+      " address, if applicable.\022;\n\004city\030\003 \001(\tB-" +
+      "\212@*City or municipality name for the add" +
+      "ress.\022P\n\005state\030\004 \001(\tBA\212@>State that cont" +
+      "ains the city or municipality for this a" +
+      "ddress.\022>\n\007zipcode\030\005 \001(\tB-\212@*USPS zipcod" +
+      "e associated with this address.\022n\n\007count" +
+      "ry\030\006 \001(\tB]\212@ZCountry code associated wit" +
+      "h this address (\'US\' or \'USA\' for United" +
+      " States, for instance).B&\n\032io.opencannab" +
+      "is.schema.geoH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,6 +70,7 @@ public final class AddressOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_geo_Address_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -68,6 +78,12 @@ public final class AddressOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_geo_Address_descriptor,
         new java.lang.String[] { "FirstLine", "SecondLine", "City", "State", "Zipcode", "Country", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.description);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

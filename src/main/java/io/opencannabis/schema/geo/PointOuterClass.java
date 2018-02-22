@@ -44,11 +44,15 @@ public final class PointOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017geo/Point.proto\022\020opencannabis.geo\"Q\n\005P" +
-      "oint\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(" +
-      "\001\022\021\n\televation\030\003 \001(\001\022\020\n\010accuracy\030\004 \001(\001B&" +
-      "\n\032io.opencannabis.schema.geoH\001P\001\242\002\003OCSb\006" +
-      "proto3"
+      "\n\017geo/Point.proto\022\020opencannabis.geo\032\016bq_" +
+      "field.proto\"\357\001\n\005Point\0222\n\010latitude\030\001 \001(\001B" +
+      " \212@\035Latitude value of this point.\0224\n\tlon" +
+      "gitude\030\002 \001(\001B!\212@\036Longitude value of this" +
+      " point.\0226\n\televation\030\003 \001(\001B#\212@ Elevation" +
+      " of this point, if any.\022D\n\010accuracy\030\004 \001(" +
+      "\001B2\212@/Accuracy rating attached to this p" +
+      "oint, if any.B&\n\032io.opencannabis.schema." +
+      "geoH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,6 +65,7 @@ public final class PointOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_geo_Point_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -68,6 +73,12 @@ public final class PointOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_geo_Point_descriptor,
         new java.lang.String[] { "Latitude", "Longitude", "Elevation", "Accuracy", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.description);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

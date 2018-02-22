@@ -36,26 +36,26 @@ public final class OrderDelivery {
 
     /**
      * <pre>
-     * Location/address.
+     * Location/address to send a delivery order.
      * </pre>
      *
-     * <code>.opencannabis.geo.Address address = 1;</code>
+     * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
      */
     boolean hasAddress();
     /**
      * <pre>
-     * Location/address.
+     * Location/address to send a delivery order.
      * </pre>
      *
-     * <code>.opencannabis.geo.Address address = 1;</code>
+     * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
      */
     io.opencannabis.schema.geo.Address getAddress();
     /**
      * <pre>
-     * Location/address.
+     * Location/address to send a delivery order.
      * </pre>
      *
-     * <code>.opencannabis.geo.Address address = 1;</code>
+     * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
      */
     io.opencannabis.schema.geo.AddressOrBuilder getAddressOrBuilder();
 
@@ -64,7 +64,7 @@ public final class OrderDelivery {
      * Special delivery instructions
      * </pre>
      *
-     * <code>string instructions = 2;</code>
+     * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     java.lang.String getInstructions();
     /**
@@ -72,7 +72,7 @@ public final class OrderDelivery {
      * Special delivery instructions
      * </pre>
      *
-     * <code>string instructions = 2;</code>
+     * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     com.google.protobuf.ByteString
         getInstructionsBytes();
@@ -175,30 +175,30 @@ public final class OrderDelivery {
     private io.opencannabis.schema.geo.Address address_;
     /**
      * <pre>
-     * Location/address.
+     * Location/address to send a delivery order.
      * </pre>
      *
-     * <code>.opencannabis.geo.Address address = 1;</code>
+     * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
      */
     public boolean hasAddress() {
       return address_ != null;
     }
     /**
      * <pre>
-     * Location/address.
+     * Location/address to send a delivery order.
      * </pre>
      *
-     * <code>.opencannabis.geo.Address address = 1;</code>
+     * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
      */
     public io.opencannabis.schema.geo.Address getAddress() {
       return address_ == null ? io.opencannabis.schema.geo.Address.getDefaultInstance() : address_;
     }
     /**
      * <pre>
-     * Location/address.
+     * Location/address to send a delivery order.
      * </pre>
      *
-     * <code>.opencannabis.geo.Address address = 1;</code>
+     * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
      */
     public io.opencannabis.schema.geo.AddressOrBuilder getAddressOrBuilder() {
       return getAddress();
@@ -211,7 +211,7 @@ public final class OrderDelivery {
      * Special delivery instructions
      * </pre>
      *
-     * <code>string instructions = 2;</code>
+     * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public java.lang.String getInstructions() {
       java.lang.Object ref = instructions_;
@@ -230,7 +230,7 @@ public final class OrderDelivery {
      * Special delivery instructions
      * </pre>
      *
-     * <code>string instructions = 2;</code>
+     * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public com.google.protobuf.ByteString
         getInstructionsBytes() {
@@ -568,20 +568,20 @@ public final class OrderDelivery {
           io.opencannabis.schema.geo.Address, io.opencannabis.schema.geo.Address.Builder, io.opencannabis.schema.geo.AddressOrBuilder> addressBuilder_;
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       public boolean hasAddress() {
         return addressBuilder_ != null || address_ != null;
       }
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       public io.opencannabis.schema.geo.Address getAddress() {
         if (addressBuilder_ == null) {
@@ -592,10 +592,10 @@ public final class OrderDelivery {
       }
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       public Builder setAddress(io.opencannabis.schema.geo.Address value) {
         if (addressBuilder_ == null) {
@@ -612,10 +612,10 @@ public final class OrderDelivery {
       }
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       public Builder setAddress(
           io.opencannabis.schema.geo.Address.Builder builderForValue) {
@@ -630,10 +630,10 @@ public final class OrderDelivery {
       }
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       public Builder mergeAddress(io.opencannabis.schema.geo.Address value) {
         if (addressBuilder_ == null) {
@@ -652,10 +652,10 @@ public final class OrderDelivery {
       }
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       public Builder clearAddress() {
         if (addressBuilder_ == null) {
@@ -670,10 +670,10 @@ public final class OrderDelivery {
       }
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       public io.opencannabis.schema.geo.Address.Builder getAddressBuilder() {
         
@@ -682,10 +682,10 @@ public final class OrderDelivery {
       }
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       public io.opencannabis.schema.geo.AddressOrBuilder getAddressOrBuilder() {
         if (addressBuilder_ != null) {
@@ -697,10 +697,10 @@ public final class OrderDelivery {
       }
       /**
        * <pre>
-       * Location/address.
+       * Location/address to send a delivery order.
        * </pre>
        *
-       * <code>.opencannabis.geo.Address address = 1;</code>
+       * <code>.opencannabis.geo.Address address = 1 [(.gen_bq_schema.description) = "Location/address to send a delivery order."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.geo.Address, io.opencannabis.schema.geo.Address.Builder, io.opencannabis.schema.geo.AddressOrBuilder> 
@@ -722,7 +722,7 @@ public final class OrderDelivery {
        * Special delivery instructions
        * </pre>
        *
-       * <code>string instructions = 2;</code>
+       * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public java.lang.String getInstructions() {
         java.lang.Object ref = instructions_;
@@ -741,7 +741,7 @@ public final class OrderDelivery {
        * Special delivery instructions
        * </pre>
        *
-       * <code>string instructions = 2;</code>
+       * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public com.google.protobuf.ByteString
           getInstructionsBytes() {
@@ -761,7 +761,7 @@ public final class OrderDelivery {
        * Special delivery instructions
        * </pre>
        *
-       * <code>string instructions = 2;</code>
+       * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setInstructions(
           java.lang.String value) {
@@ -778,7 +778,7 @@ public final class OrderDelivery {
        * Special delivery instructions
        * </pre>
        *
-       * <code>string instructions = 2;</code>
+       * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder clearInstructions() {
         
@@ -791,7 +791,7 @@ public final class OrderDelivery {
        * Special delivery instructions
        * </pre>
        *
-       * <code>string instructions = 2;</code>
+       * <code>string instructions = 2 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setInstructionsBytes(
           com.google.protobuf.ByteString value) {
@@ -868,11 +868,13 @@ public final class OrderDelivery {
   static {
     java.lang.String[] descriptorData = {
       "\n\027commerce/Delivery.proto\022\025opencannabis." +
-      "commerce\032\021geo/Address.proto\"W\n\023DeliveryD" +
-      "estination\022*\n\007address\030\001 \001(\0132\031.opencannab" +
-      "is.geo.Address\022\024\n\014instructions\030\002 \001(\tB:\n\037" +
-      "io.opencannabis.schema.commerceB\rOrderDe" +
-      "liveryH\001P\000\242\002\003OCSb\006proto3"
+      "commerce\032\016bq_field.proto\032\021geo/Address.pr" +
+      "oto\"\213\001\n\023DeliveryDestination\022Y\n\007address\030\001" +
+      " \001(\0132\031.opencannabis.geo.AddressB-\212@*Loca" +
+      "tion/address to send a delivery order.\022\031" +
+      "\n\014instructions\030\002 \001(\tB\003\200@\001B:\n\037io.opencann" +
+      "abis.schema.commerceB\rOrderDeliveryH\001P\000\242" +
+      "\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -885,6 +887,7 @@ public final class OrderDelivery {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.geo.AddressOuterClass.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_commerce_DeliveryDestination_descriptor =
@@ -893,6 +896,13 @@ public final class OrderDelivery {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_DeliveryDestination_descriptor,
         new java.lang.String[] { "Address", "Instructions", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.description);
+    registry.add(gen_bq_schema.BqField.ignore);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
     io.opencannabis.schema.geo.AddressOuterClass.getDescriptor();
   }
 

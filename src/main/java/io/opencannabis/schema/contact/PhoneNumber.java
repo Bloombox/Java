@@ -20,6 +20,11 @@
 package io.opencannabis.schema.contact;
 
 /**
+ * <pre>
+ * Payload that specifies a phone number, and any additional information to be carried with it (including verification
+ * state, if applicable).
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.contact.PhoneNumber}
  */
 public  final class PhoneNumber extends
@@ -105,7 +110,11 @@ private static final long serialVersionUID = 0L;
   public static final int E164_FIELD_NUMBER = 1;
   private volatile java.lang.Object e164_;
   /**
-   * <code>string e164 = 1;</code>
+   * <pre>
+   * E164-formatted telephone number.
+   * </pre>
+   *
+   * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
    */
   public java.lang.String getE164() {
     java.lang.Object ref = e164_;
@@ -120,7 +129,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string e164 = 1;</code>
+   * <pre>
+   * E164-formatted telephone number.
+   * </pre>
+   *
+   * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
    */
   public com.google.protobuf.ByteString
       getE164Bytes() {
@@ -139,7 +152,12 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDATED_FIELD_NUMBER = 2;
   private boolean validated_;
   /**
-   * <code>bool validated = 2;</code>
+   * <pre>
+   * Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone
+   * number remains unvalidated.
+   * </pre>
+   *
+   * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this phone number."];</code>
    */
   public boolean getValidated() {
     return validated_;
@@ -308,6 +326,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Payload that specifies a phone number, and any additional information to be carried with it (including verification
+   * state, if applicable).
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.contact.PhoneNumber}
    */
   public static final class Builder extends
@@ -448,7 +471,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object e164_ = "";
     /**
-     * <code>string e164 = 1;</code>
+     * <pre>
+     * E164-formatted telephone number.
+     * </pre>
+     *
+     * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
      */
     public java.lang.String getE164() {
       java.lang.Object ref = e164_;
@@ -463,7 +490,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string e164 = 1;</code>
+     * <pre>
+     * E164-formatted telephone number.
+     * </pre>
+     *
+     * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
      */
     public com.google.protobuf.ByteString
         getE164Bytes() {
@@ -479,7 +510,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string e164 = 1;</code>
+     * <pre>
+     * E164-formatted telephone number.
+     * </pre>
+     *
+     * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
      */
     public Builder setE164(
         java.lang.String value) {
@@ -492,7 +527,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string e164 = 1;</code>
+     * <pre>
+     * E164-formatted telephone number.
+     * </pre>
+     *
+     * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
      */
     public Builder clearE164() {
       
@@ -501,7 +540,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string e164 = 1;</code>
+     * <pre>
+     * E164-formatted telephone number.
+     * </pre>
+     *
+     * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
      */
     public Builder setE164Bytes(
         com.google.protobuf.ByteString value) {
@@ -517,13 +560,23 @@ private static final long serialVersionUID = 0L;
 
     private boolean validated_ ;
     /**
-     * <code>bool validated = 2;</code>
+     * <pre>
+     * Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone
+     * number remains unvalidated.
+     * </pre>
+     *
+     * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this phone number."];</code>
      */
     public boolean getValidated() {
       return validated_;
     }
     /**
-     * <code>bool validated = 2;</code>
+     * <pre>
+     * Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone
+     * number remains unvalidated.
+     * </pre>
+     *
+     * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this phone number."];</code>
      */
     public Builder setValidated(boolean value) {
       
@@ -532,7 +585,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool validated = 2;</code>
+     * <pre>
+     * Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone
+     * number remains unvalidated.
+     * </pre>
+     *
+     * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this phone number."];</code>
      */
     public Builder clearValidated() {
       

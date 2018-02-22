@@ -24,22 +24,38 @@ public interface PointOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>double latitude = 1;</code>
+   * <pre>
+   * Latitude value of this point.
+   * </pre>
+   *
+   * <code>double latitude = 1 [(.gen_bq_schema.description) = "Latitude value of this point."];</code>
    */
   double getLatitude();
 
   /**
-   * <code>double longitude = 2;</code>
+   * <pre>
+   * Longitude value of this point.
+   * </pre>
+   *
+   * <code>double longitude = 2 [(.gen_bq_schema.description) = "Longitude value of this point."];</code>
    */
   double getLongitude();
 
   /**
-   * <code>double elevation = 3;</code>
+   * <pre>
+   * Elevation of this point, if any.
+   * </pre>
+   *
+   * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
    */
   double getElevation();
 
   /**
-   * <code>double accuracy = 4;</code>
+   * <pre>
+   * Accuracy rating attached to this point, if any.
+   * </pre>
+   *
+   * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
    */
   double getAccuracy();
 }

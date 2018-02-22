@@ -20,6 +20,11 @@
 package io.opencannabis.schema.geo;
 
 /**
+ * <pre>
+ * Specifies a specific point on the earth, via a standard set of latitude/longitude coordinates, an elevation, and
+ * optionally an accuracy rating. Accuracy and elevation are interpreted in 'feet' by default.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.geo.Point}
  */
 public  final class Point extends
@@ -116,7 +121,11 @@ private static final long serialVersionUID = 0L;
   public static final int LATITUDE_FIELD_NUMBER = 1;
   private double latitude_;
   /**
-   * <code>double latitude = 1;</code>
+   * <pre>
+   * Latitude value of this point.
+   * </pre>
+   *
+   * <code>double latitude = 1 [(.gen_bq_schema.description) = "Latitude value of this point."];</code>
    */
   public double getLatitude() {
     return latitude_;
@@ -125,7 +134,11 @@ private static final long serialVersionUID = 0L;
   public static final int LONGITUDE_FIELD_NUMBER = 2;
   private double longitude_;
   /**
-   * <code>double longitude = 2;</code>
+   * <pre>
+   * Longitude value of this point.
+   * </pre>
+   *
+   * <code>double longitude = 2 [(.gen_bq_schema.description) = "Longitude value of this point."];</code>
    */
   public double getLongitude() {
     return longitude_;
@@ -134,7 +147,11 @@ private static final long serialVersionUID = 0L;
   public static final int ELEVATION_FIELD_NUMBER = 3;
   private double elevation_;
   /**
-   * <code>double elevation = 3;</code>
+   * <pre>
+   * Elevation of this point, if any.
+   * </pre>
+   *
+   * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
    */
   public double getElevation() {
     return elevation_;
@@ -143,7 +160,11 @@ private static final long serialVersionUID = 0L;
   public static final int ACCURACY_FIELD_NUMBER = 4;
   private double accuracy_;
   /**
-   * <code>double accuracy = 4;</code>
+   * <pre>
+   * Accuracy rating attached to this point, if any.
+   * </pre>
+   *
+   * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
    */
   public double getAccuracy() {
     return accuracy_;
@@ -346,6 +367,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies a specific point on the earth, via a standard set of latitude/longitude coordinates, an elevation, and
+   * optionally an accuracy rating. Accuracy and elevation are interpreted in 'feet' by default.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.geo.Point}
    */
   public static final class Builder extends
@@ -497,13 +523,21 @@ private static final long serialVersionUID = 0L;
 
     private double latitude_ ;
     /**
-     * <code>double latitude = 1;</code>
+     * <pre>
+     * Latitude value of this point.
+     * </pre>
+     *
+     * <code>double latitude = 1 [(.gen_bq_schema.description) = "Latitude value of this point."];</code>
      */
     public double getLatitude() {
       return latitude_;
     }
     /**
-     * <code>double latitude = 1;</code>
+     * <pre>
+     * Latitude value of this point.
+     * </pre>
+     *
+     * <code>double latitude = 1 [(.gen_bq_schema.description) = "Latitude value of this point."];</code>
      */
     public Builder setLatitude(double value) {
       
@@ -512,7 +546,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double latitude = 1;</code>
+     * <pre>
+     * Latitude value of this point.
+     * </pre>
+     *
+     * <code>double latitude = 1 [(.gen_bq_schema.description) = "Latitude value of this point."];</code>
      */
     public Builder clearLatitude() {
       
@@ -523,13 +561,21 @@ private static final long serialVersionUID = 0L;
 
     private double longitude_ ;
     /**
-     * <code>double longitude = 2;</code>
+     * <pre>
+     * Longitude value of this point.
+     * </pre>
+     *
+     * <code>double longitude = 2 [(.gen_bq_schema.description) = "Longitude value of this point."];</code>
      */
     public double getLongitude() {
       return longitude_;
     }
     /**
-     * <code>double longitude = 2;</code>
+     * <pre>
+     * Longitude value of this point.
+     * </pre>
+     *
+     * <code>double longitude = 2 [(.gen_bq_schema.description) = "Longitude value of this point."];</code>
      */
     public Builder setLongitude(double value) {
       
@@ -538,7 +584,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double longitude = 2;</code>
+     * <pre>
+     * Longitude value of this point.
+     * </pre>
+     *
+     * <code>double longitude = 2 [(.gen_bq_schema.description) = "Longitude value of this point."];</code>
      */
     public Builder clearLongitude() {
       
@@ -549,13 +599,21 @@ private static final long serialVersionUID = 0L;
 
     private double elevation_ ;
     /**
-     * <code>double elevation = 3;</code>
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
      */
     public double getElevation() {
       return elevation_;
     }
     /**
-     * <code>double elevation = 3;</code>
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
      */
     public Builder setElevation(double value) {
       
@@ -564,7 +622,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double elevation = 3;</code>
+     * <pre>
+     * Elevation of this point, if any.
+     * </pre>
+     *
+     * <code>double elevation = 3 [(.gen_bq_schema.description) = "Elevation of this point, if any."];</code>
      */
     public Builder clearElevation() {
       
@@ -575,13 +637,21 @@ private static final long serialVersionUID = 0L;
 
     private double accuracy_ ;
     /**
-     * <code>double accuracy = 4;</code>
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
      */
     public double getAccuracy() {
       return accuracy_;
     }
     /**
-     * <code>double accuracy = 4;</code>
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
      */
     public Builder setAccuracy(double value) {
       
@@ -590,7 +660,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>double accuracy = 4;</code>
+     * <pre>
+     * Accuracy rating attached to this point, if any.
+     * </pre>
+     *
+     * <code>double accuracy = 4 [(.gen_bq_schema.description) = "Accuracy rating attached to this point, if any."];</code>
      */
     public Builder clearAccuracy() {
       
