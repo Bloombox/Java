@@ -56,6 +56,16 @@ class Bloombox(
      * API client variant name.
      */
     internal const val VARIANT = "full"
+
+    /**
+     * Number of seconds to set the close timeout to.
+     */
+    internal const val defaultCloseTimeoutDuration: Long = 10
+
+    /**
+     * Number of seconds to set the request timeout to.
+     */
+    internal const val defaultRequestTimeoutDuration: Long = 30
   }
 
   /**
@@ -139,7 +149,7 @@ class Bloombox(
      */
     val code: String get() = when (this) {
       PRODUCTION -> "prod"
-      else -> { this.name.toLowerCase() }
+      else -> this.name.toLowerCase()
     }
   }
 
@@ -185,12 +195,12 @@ class Bloombox(
         /**
          * Timeout value for unary (i.e., non-streaming) requests.
          */
-        internal val requestTimeout: Duration = Duration.ofSeconds(30),
+        internal val requestTimeout: Duration = Duration.ofSeconds(defaultRequestTimeoutDuration),
 
         /**
          * Timeout to wait for a client to close its connection.
          */
-        internal val closeTimeout: Duration = Duration.ofSeconds(10),
+        internal val closeTimeout: Duration = Duration.ofSeconds(defaultCloseTimeoutDuration),
 
         /**
          * Client-side TLS credentials, for mTLS functionality.
