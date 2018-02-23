@@ -12,19 +12,10 @@ cache:
 git:
   submodules: false
 jdk:
-  - oraclejdk9
   - oraclejdk8
-  - oraclejdk7
   - openjdk8
-  - openjdk7
-  - openjdk6
 matrix:
   fast_finish: true
-  allow_failures:
-  - java: "openjdk9"
-  - java: "oraclejdk9"
-  - java: "openjdk7"
-  - java: "oraclejdk7"
 cache:
   directories:
     - $HOME/.m2
