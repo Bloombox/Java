@@ -125,9 +125,18 @@ ifeq ($(BUILDMODE),maven)
 build-ci:
 	@echo "Building from CI (Maven)..."
 	@mvn -f pom.xml install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip -B -V
+
+run-ci:
+	@echo "Running tests from CI (Maven)..."
+	@mvn -f pom.xml test jacoco:report -B
+
 else
 build-ci:
 	@echo "Building from CI (Gradle)..."
 	@gradle build
+
+run-ci:
+	@echo "Running tests from CI (Gradle)..."
+	@gradle test
 endif
 
