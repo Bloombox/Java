@@ -52,9 +52,9 @@ endif
 
 
 ifeq ($(EMBEDDED_SCHEMA),yes)
-POMFILE ?= pom-public.xml
-else
 POMFILE ?= pom.xml
+else
+POMFILE ?= pom-embedded.xml
 endif
 
 build: $(TARGET_JAR)
@@ -120,4 +120,14 @@ sync-schema: $(SCHEMA)
 embedded:
 	@echo "Building embedded library..."
 	@mvn clean package && echo "Cutting new branch..." && git branch -D embedded && git checkout -b embedded && echo "Removing schema..." && rm -fr src/main/java/* && echo "Schema is not included with embedded library." > src/main/README.md && git add . && git commit -m "Embedded: $(CLIENT_VERSION)" && git push origin embedded --force && git checkout $(CURRENT_BRANCH)
+
+ifeq ($(BUILDMODE),maven)
+build-ci:
+	@echo "Building from CI (Maven)..."
+	@mvn -f pom.xml install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip -B -V
+else
+build-ci:
+	@echo "Building from CI (Gradle)..."
+	@gradle build
+endif
 
