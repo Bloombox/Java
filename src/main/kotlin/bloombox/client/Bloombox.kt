@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit
  * - `menu/v1beta1`: Menu service. For downloading product catalog data, subscribing to changes, and publishing updates.
  * - `telemetry/v1beta3`: Telemetry service. For submitting telemetry event data of different kinds.
  */
-class Bloombox(
+class Bloombox constructor (
       /**
        * Settings to use for RPCs.
        */
@@ -183,6 +183,11 @@ class Bloombox(
         internal val region: APIRegion = APIRegion.USW1,
 
         /**
+         * Enable or disable debug logging.
+         */
+        internal val enableLogging: Boolean = false,
+
+        /**
          * API environment to prefer.
          */
         internal val environment: APIEnvironment = APIEnvironment.PRODUCTION,
@@ -205,7 +210,36 @@ class Bloombox(
         /**
          * Client-side TLS credentials, for mTLS functionality.
          */
-        internal val clientCredentials: RPCClient.ClientCredentials? = null)
+        internal val clientCredentials: RPCClient.ClientCredentials? = null) {
+    companion object {
+      /**
+       * Generate default settings for a given partner, location, and API key,
+       * which is the minimum amount of configuration for a given API settings
+       * instance.
+       */
+      fun defaults(apiKey: String,
+                   partner: String,
+                   location: String): Settings =
+        Settings(
+              apiKey = apiKey,
+              partner = partner,
+              location = location)
+
+      /**
+       * Generate default settings for a given partner, location, and API key,
+       * which is the minimum amount of configuration for a given API settings
+       * instance.
+       */
+      fun withLogging(apiKey: String,
+                      partner: String,
+                      location: String): Settings =
+            Settings(
+                  apiKey = apiKey,
+                  partner = partner,
+                  location = location,
+                  enableLogging = true)
+    }
+  }
 
   /**
    * Specifies client target settings understood by the Java/Kotlin client.
