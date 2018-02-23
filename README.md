@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Bloombox/Java.svg?branch=master)](https://travis-ci.org/Bloombox/Java) [![Maven Central](https://img.shields.io/maven-central/v/io.bloombox/java-client.svg)](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.bloombox%22%20AND%20a%3A%22java-client%22) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e76289cfda1c44deb7fed137f504e164)](https://www.codacy.com/app/bloombox/Java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Bloombox/Java&amp;utm_campaign=Badge_Grade) [![Test Coverage](https://api.codeclimate.com/v1/badges/97f47bd5c867f368414a/test_coverage)](https://codeclimate.com/github/Bloombox/Java/test_coverage)
 
-Latest Version: `1.0`
+Latest Version: `1.0-rc7`
 
 This Java project and resulting JAR provide Java clients API access to the [Bloombox](https://bloombox.io) platform.
 Bloombox APIs are built and served using [gRPC](https://grpc.io) and exposed in client libraries like this one with a
@@ -20,7 +20,6 @@ wouldn't work in earlier versions of the JDK or JRE, but YMMV as it's tested for
 Library JARs, source JARs, and documentation JARs are available via [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.bloombox%22%20AND%20a%3A%22java-client%22) and, if you want snapshots or a faster release track, Nexus.
 
 Via Maven:
-
 ```xml
   <dependencies>
     <dependency>
@@ -32,9 +31,26 @@ Via Maven:
 ```
 
 Via Gradle:
-
-```
+```gradle
   compile 'io.bloombox:java-client:1.0'
+```
+
+Then, in your app, simply create a client (with your desired settings), and begin using services:
+
+Java:
+
+```java
+  final Bloombox client = new Bloombox(
+    Bloombox.Settings.defaults("[your-api-key]", "[your-partner-id]", "[your-location-id]"))
+```
+
+Kotlin:
+```kotlin
+  val client = Bloombox(
+        settings = Bloombox.Settings(
+              apiKey = "[your-api-key]",
+              partner = "[your-partner-id]",
+              location = "[your-location-id]"))
 ```
 
 
@@ -46,29 +62,39 @@ If you're developing on the code, you'll use `make`.
 #### Required tools:
 
 - `java` (Oracle or OpenJDK 8)
-- `maven`
-
-
-#### Optional tools:
-
-Steps:
-
-- `git clone [...] && cd [project root]`
-- `git submodule update --init --remote`
-- `make`
-
-
-#### Debug mode
-
-Add a note here about debug mode, and how to activate it.
+- `maven` or `gradle`
 
 
 ## Services
 
+After you've setup the SDK and client object, you can access a given service via a top-level function named after the
+service. For instance, the Shop API is available at `client.shop()`.
+
+The object handed back by this method call is structured with callable methods for each API call available for the given
+service. Below you'll find some samples.
+
 
 ### Shop API
 
-Demo code coming soon.
+The Shop API is what powers online ordering services with Bloombox. It enables features for **managing and operating an
+integrated digital storefront**, with user signup, login, support for hours, zipcode verification, and full on pickup or
+delivery ordering orchestration.
+
+#### Getting hours info
+
+Java:
+```java
+  // with our client object, obtain shop info synchronously
+  final ShopInfo.Response infoResponse = client.shop().info();
+  if (infoResponse.getStatus() == ShopStatus.OPEN) System.out.println("The shop is OPEN.");
+```
+
+Kotlin:
+```kotlin
+  // with our client object, obtain shop info synchronously
+  val info = client.shop().info();
+  if (info.getStatus() == ShopStatus.OPEN) print("The shop is OPEN.")
+```
 
 
 ### Telemetry API
@@ -76,9 +102,27 @@ Demo code coming soon.
 Demo code coming soon.
 
 
+### Tooling nodes
+
+#### Debug mode
+
+Setting the `enableLogging` property to `true` in your `Bloombox.Settings` object will enable a bunch of logging to
+stdout (by default), via the standard Java logging interface. If you install a default adapter via Log4j2 or another
+mechanism, it should work fine and begin receiving logs from the `Bloombox` object and it's child service objects.
+
+
+### Development tools:
+
+This is an open source codebase. If you'd like to file a PR or just get it building, here's how you do that:
+
+- `git clone [...] && cd [project root]`
+- `git submodule update --init --remote`
+- `make`
+
+
 ## Licensing
 
-Copyright © 2017 Bloombox, LLC.
+Copyright © 2018 Bloombox, LLC.
 
 A copy of the Apache 2.0 license is enclosed at `LICENSE.txt`, along with
 additional notices in `NOTICE.txt`.
