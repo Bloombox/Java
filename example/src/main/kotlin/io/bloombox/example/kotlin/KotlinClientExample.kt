@@ -1,6 +1,6 @@
 package io.bloombox.example
 
-import bloombox.client.BloomboxClient
+import bloombox.client.Bloombox
 import java.util.logging.Logger
 
 
@@ -34,13 +34,13 @@ object KotlinClientExample {
    * - You can set your own `Executor` for dispatching RPCs.
    * - You can set a custom request or close timeout for RPCs.
    */
-  private val client = BloomboxClient(
-        settings = BloomboxClient.Settings(
+  private val client = Bloombox(
+        settings = Bloombox.Settings(
               apiKey = apiKey!!,
               enableLogging = true,
               partner = partnerCode!!,
               location = locationCode!!),
-        target = BloomboxClient.ClientTarget.PRODUCTION)
+        target = Bloombox.Target.PRODUCTION)
 
   /**
    * Private logger.
@@ -51,7 +51,7 @@ object KotlinClientExample {
    * CLI tool. Run it, with definitions set for `example.apiKey`, `example.partnerCode`, and `example.locationCode`. For
    * example:
    *
-   * `java -Dexample.apiKey="xyz" -Dexample.partnerCode="mm" -Dexample.locationCode="sacramento"`
+   * `java [...] -Dexample.apiKey="xyz" -Dexample.partnerCode="mm" -Dexample.locationCode="sacramento"`
    */
   @JvmStatic
   fun main(args: Array<String>) {
