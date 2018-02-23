@@ -72,6 +72,7 @@
 
     <properties>
         <!-- Configuration -->
+        <bloombox.version>${project.version}</bloombox.version>
         <bloombox.shop.version>v1</bloombox.shop.version>
         <bloombox.shop.endpoint>shop.api.bloombox.cloud</bloombox.shop.endpoint>
         <bloombox.telemetry.version>v1beta3</bloombox.telemetry.version>
