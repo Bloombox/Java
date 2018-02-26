@@ -19,6 +19,8 @@ package bloombox.client.menu
 import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.services.menu.MenuClient
 import bloombox.client.test.ClientRPCTest
+import java.util.concurrent.TimeUnit
+import kotlin.test.assertFalse
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
 import org.junit.Test as test
@@ -57,10 +59,44 @@ class GetMenuTest: ClientRPCTest() {
   }
 
   /**
+   * Test fetching basic menu asynchronously.
+   */
+  @test
+  fun testGetBasicMenuAsync() {
+    withClient({ client ->
+      val operation = client.platform.menu().retrieve(
+            MenuClient.MenuContext(
+                  partner = partnerID,
+                  location = locationID), false, {
+        // menu response
+        assertNotNull(it, "response from server for menu should not be null")
+        assertTrue(it.hasCatalog(), "response from server should specify menu data")
+      }, {
+        // error callback
+        assertTrue(false, "async menu retrieval failed")
+      })
+
+      operation.get(10000, TimeUnit.SECONDS)
+    })
+  }
+
+  /**
    * Test fetching basic menu with default context.
    */
   @test
   fun testGetBasicMenuDefaultContext() {
+    withClient({ client ->
+      val response = client.platform.menu().retrieve()
+      assertNotNull(response, "response from server for menu should not be null")
+      assertTrue(response.hasCatalog(), "response from server should specify menu data")
+    })
+  }
+
+  /**
+   * Test fetching basic menu, asynchronously, with default context.
+   */
+  @test
+  fun testGetBasicMenuDefaultContextAsync() {
     withClient({ client ->
       val response = client.platform.menu().retrieve()
       assertNotNull(response, "response from server for menu should not be null")
@@ -91,6 +127,21 @@ class GetMenuTest: ClientRPCTest() {
             MenuClient.MenuContext(
                   partner = partnerID,
                   location = ""))
+    })
+  }
+
+  /**
+   * Test fetching basic menu, but with a partner and location that are known not to exist.
+   */
+  @test
+  fun testGetBasicMenuDoesNotExist() {
+    withClient({ client ->
+      val result = client.platform.menu().retrieve(
+            MenuClient.MenuContext(
+                  partner = "bunk-partner-id",
+                  location = "bunk-location-id"))
+
+      assertFalse("catalog should not be returned when it could not be found", { result.hasCatalog() })
     })
   }
 }
