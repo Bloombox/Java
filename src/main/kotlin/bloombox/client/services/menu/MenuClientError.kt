@@ -39,16 +39,6 @@ enum class MenuClientError : ClientError {
     override fun domain(cause: Throwable?): String = menuDomain
     override fun code(cause: Throwable?): Int = 1
     override fun message(cause: Throwable?): String = "Must provide a valid location code."
-  },
-
-  /**
-   * An error was encountered in the underlying framework.
-   */
-  RUNTIME_ERROR {
-    override fun domain(cause: Throwable?): String = menuDomain
-    override fun code(cause: Throwable?): Int = 2
-    override fun message(cause: Throwable?): String =
-          cause?.localizedMessage ?: cause?.message ?: "Runtime error."
   };
 
   companion object {

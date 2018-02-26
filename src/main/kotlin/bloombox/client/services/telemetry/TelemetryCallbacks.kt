@@ -14,20 +14,12 @@
  * limitations under the License.
  */
 
-package bloombox.client
+package bloombox.client.services.telemetry
 
 
 /**
- * Command line tool for the Bloombox Client for Java.
+ * Callback to a simple telemetry ping, which warms an RPC connection and tests latency between the invoking client and
+ * the telemetry server. In some cases, a ping can also be used to establish default context information for a newly
+ * established streaming or unary telemetry session.
  */
-class CLITool {
-  companion object {
-    /**
-     * Main function, entrypoint for the CLI.
-     */
-    @JvmStatic
-    fun main(args: Array<String>) {
-      println("Coming soon.")
-    }
-  }
-}
+typealias PingCallback = (Long?) -> Unit

@@ -107,11 +107,9 @@ open class ClientRPCTest {
       val inner = e.cause
       if (inner is StatusRuntimeException) {
         logging.severe("Call failed (status: ${inner.status}): '${inner.message}'.")
-      } else {
-        logging.severe("Error in dispatch thread: ${e.cause} ${e.message}")
+      } else if (inner != null) {
+        throw inner
       }
-    } catch (e: StatusRuntimeException) {
-      logging.severe("Call failed (status: ${e.status}): '${e.message}'.")
     } finally {
       client?.close()
     }

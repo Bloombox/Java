@@ -27,7 +27,6 @@ import io.bloombox.schema.identity.UserKey
 import io.bloombox.schema.services.telemetry.v1beta3.*
 import io.bloombox.schema.telemetry.AnalyticsContext
 import io.bloombox.schema.telemetry.AnalyticsEvent
-import io.bloombox.schema.telemetry.AnalyticsException
 import io.bloombox.schema.telemetry.AnalyticsScope
 import io.bloombox.schema.telemetry.context.*
 import io.opencannabis.schema.struct.VersionSpec
@@ -43,12 +42,10 @@ import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
 
-// Method Callbacks
-typealias PingCallback = (Long?) -> Unit
-
-
 /**
- * RPC client for the Telemetry API.
+ * Telemetry API client, which allows developers to send telemetry event data to the Bloombox Telemetry service, so it
+ * may be considered with other built-in telemetry data during analytics and reporting calculations. Partners are also
+ * enabled to send their own arbitrary events and later perform analysis over them.
  */
 @Suppress("unused", "CanBeParameter", "MemberVisibilityCanPrivate")
 class TelemetryClient(override val host: String,
@@ -62,123 +59,92 @@ class TelemetryClient(override val host: String,
                       override val executor: Executor = Executors.newSingleThreadExecutor(),
                       internal val defaultPartner: String? = null,
                       internal val defaultLocation: String? = null,
-                      internal val deviceUUID: String? = null) : RPCClient(), ServiceClient {
+                      internal val deviceUUID: String? = null) : RPCClient(apiKey), ServiceClient {
   // -- Settings & Context -- //
   /**
-   * Context for an event, with the opportunity to override settings.
+   * Context for an event, with the opportunity to override settings and configuration for the telemetry client. This is
+   * different from other API clients and services, in that it offers many more settings than usual - these values (i.e.
+   * the 'userKey', 'deviceUUID', and so on) are automatically attached as "event context" to events sent with the
+   * resulting client object.
    */
   data class EventContext(
         /**
-         * Partner code for an event. Explicitly overrides `defaultPartner`.
+         * Partner code for an event. Explicitly overrides `defaultPartner`. Specifies the partner account scope for a
+         * given RPC transaction.
          */
         val partner: String? = null,
 
         /**
-         * Location code for an event. Explicitly overrides `defaultLocation`.
+         * Location code for an event. Explicitly overrides `defaultLocation`. Specifies the partner's location record
+         * scope for a given RPC transaction.
          */
         val location: String? = null,
 
         /**
-         * Device UUID to report. Requires a value for `partner` and `location`.
+         * Device UUID to report. Requires a value for `partner` and `location`. Used to signify events sent from a
+         * specific, known, partner-co-located device.
          */
         val deviceUUID: String? = null,
 
         /**
-         * User key to report as active for this event.
+         * Active user account key, if applicable. In scenarios where an end-user logs in, their key is set as soon as
+         * their account is validated or otherwise resolved.
          */
         val userKey: String? = null,
 
         /**
-         * Order key to report as active for this event.
+         * Order key to report as active for this event. In general, this ID may not exist - it is sent with any and all
+         * events by the client and can be generated client-side, without consulting the server. A conversion is
+         * recorded when the order itself is submitted.
          */
         val orderKey: String? = null,
 
         /**
-         * Menu section to report as active for this event.
+         * Menu section to report as active for this event. In cases where an event is a commercial-style occurrence
+         * (i.e. an impression, view, or action on a section or product), this section key is included as context. All
+         * commercial events with a product scope have a section scope, too.
          */
         val section: Section? = null,
 
         /**
-         * Item key to report as active for this event.
+         * Item key to report as active for this event. In cases where an event is a commercial-style occurrence (i.e.
+         * an impression, view, or action on a section or product), this product key is included as context, where
+         * applicable.
          */
         val item: ProductKey? = null,
 
         /**
-         * Unique fingerprint for an anonymous device.
+         * Unique fingerprint for an anonymous device. This is generated client-side and not guaranteed to be unique
+         * globally - only in the scope of a single partner/location account. Usually a hashed UUID is used for this
+         * value so as to guarantee a reasonable level of collision resistance.
          */
         val fingerprint: String? = null,
 
         /**
-         * Group or session ID for an event.
+         * Group or session ID for an event. Generated upon initialization of a new session, which happens client-side,
+         * without consulting the server. Basically, it can be specified as any string to correlate events of a single
+         * "session." It is usually implemented as a hashed UUID to guarantee a reasonable level of collision
+         * resistance.
          */
         val group: String? = null,
 
         /**
-         * Native device context to use for an event.
+         * Native device context to use for an event. This specifies information about the native hardware on which the
+         * reported event occurred. Native device context includes things like device screen resolution, window size,
+         * OS name and version, the active telemetry client library language and version, and so on.
          */
         val nativeContext: DeviceContext.NativeDeviceContext? = null,
 
         /**
-         * Browser context to send for an event.
+         * Browser context to send for an event. In circumstances where an event is relayed or originally sent from an
+         * internet-facing browser agent, this context structure specifies items like the browser name, version, pixel
+         * density, capabilities, and vendor.
          */
         val browserContext: BrowserContext.BrowserDeviceContext? = null)
 
-  // -- Internals -- //
   /**
-   * Interceptor for telemetry auth.
-   */
-  class TelemetryInterceptor(val apikey: String?) : ClientInterceptor {
-    companion object {
-      /**
-       * Bloombox library API key header, at X-Bloom-Key.
-       */
-      private val bloomApiKeyHeader: io.grpc.Metadata.Key<String> = io.grpc.Metadata.Key.of(
-            "x-bloom-key", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
-
-      /**
-       * Bloombox debug header, at X-Bloom-Debug.
-       */
-      private val debugModeHeader: io.grpc.Metadata.Key<String> = io.grpc.Metadata.Key.of(
-            "x-bloom-debug", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
-
-      /**
-       * Bloombox event context header, at X-Bloom-Context.
-       */
-      private val contextHeader: io.grpc.Metadata.Key<String> = io.grpc.Metadata.Key.of(
-            "x-bloom-context", io.grpc.Metadata.ASCII_STRING_MARSHALLER)
-    }
-
-    /**
-     * Intercept and rewrite a gRPC call.
-     */
-    override fun <ReqT : Any?, RespT : Any?> interceptCall(method: MethodDescriptor<ReqT, RespT>?,
-                                                           callOptions: CallOptions?,
-                                                           next: Channel): ClientCall<ReqT, RespT>? {
-      var call: ClientCall<ReqT, RespT> = next.newCall(method, callOptions)
-      call = object : ForwardingClientCall.SimpleForwardingClientCall<ReqT, RespT>(call) {
-        override fun start(responseListener: Listener<RespT>, headers: Metadata) {
-          if (apikey != null && apikey.length > 2) {
-            headers.put(bloomApiKeyHeader, apikey)
-          }
-          super.start(responseListener, headers)
-        }
-      }
-      return call
-    }
-  }
-
-  /**
-   * Base64 tools.
-   */
-  private val b64 = org.apache.commons.codec.binary.Base64()
-
-  /**
-   * Interceptor object.
-   */
-  private val interceptor = TelemetryInterceptor(apiKey)
-
-  /**
-   * Channel for client->server traffic.
+   * Channel for client->server traffic. Construction of this object is handled by the base RPC client class, which adds
+   * necessary items like base interceptors and crypto assets.
    */
   override val channel: ManagedChannel = channelBuilder(
         host = host,
@@ -187,51 +153,41 @@ class TelemetryClient(override val host: String,
         clientAuth = clientAuth,
         transportMode = transportMode,
         clientCredentials = clientCredentials,
-        clientAuthorityRoots = clientAuthorityRoots).intercept(interceptor).build()
+        clientAuthorityRoots = clientAuthorityRoots).build()
 
-  /**
-   * Main function to run the server.
-   */
+  // -- Internals -- //
+  private val b64 = org.apache.commons.codec.binary.Base64()
+
   companion object {
-    /**
-     * Authority root certificates location.
-     */
-    private const val authorityRoots = "/authority-roots.pem"
-
-    /**
-     * Internal collection prefix.
-     */
     private const val internalPrefix = "_bloom_"
 
-    /**
-     * Server-side event fingerprint.
-     */
     private val fingerprint = UUID.randomUUID().toString().toUpperCase()
+
+    private val baseContext: AnalyticsContext.Context = AnalyticsContext.Context.newBuilder()
+          .setLibrary(LibraryContext.DeviceLibrary.newBuilder()
+                .setClient(LibraryContext.APIClient.JAVA)
+                .setVariant(Bloombox.VARIANT)
+                .setVersion(VersionSpec.newBuilder().setName(Bloombox.VERSION)))
+          .setNative(DeviceContext.NativeDeviceContext.newBuilder()
+                .setRole(DeviceContext.DeviceRole.SERVER)
+                .setOs(OperatingSystemContext.DeviceOS.newBuilder()
+                      .setType(OperatingSystemContext.OSType.LINUX)))
+          .build()
   }
 
   // -- Protocol Stubs -- //
-  /**
-   * Event telemetry service stub.
-   */
-  private val event = EventTelemetryGrpc.newStub(channel)
-
-  /**
-   * Commercial telemetry service stub.
-   */
-  private val commercial = CommercialTelemetryGrpc.newStub(channel)
-
-  /**
-   * Identity telemetry service stub.
-   */
-  private val identity = IdentityTelemetryGrpc.newStub(channel)
+  private val eventService = EventTelemetryGrpc.newFutureStub(channel)
+  private val commercialService = CommercialTelemetryGrpc.newFutureStub(channel)
+  private val identityService = IdentityTelemetryGrpc.newFutureStub(channel)
 
   /**
    * Serialize individual event context into a final analytics context, considering default values passed in when
-   * creating the service.
+   * creating the service. This prepares and merges global context with explicitly-specified context and readies it for
+   * transmission to the telemetry service.
    */
-  internal fun EventContext.serialize(defaultPartner: String? = null,
-                                      defaultLocation: String? = null,
-                                      deviceUUID: String? = null): AnalyticsContext.Context.Builder {
+  private fun EventContext.serialize(defaultPartner: String? = null,
+                                     defaultLocation: String? = null,
+                                     deviceUUID: String? = null): AnalyticsContext.Context.Builder {
     // build and return according to defaults
     val builder = AnalyticsContext.Context.newBuilder()
     val scope = AnalyticsScope.Scope.newBuilder()
@@ -285,37 +241,17 @@ class TelemetryClient(override val host: String,
     return builder
   }
 
-  // -- Service: Generic Telemetry -- //
   /**
-   * Event telemetry service stub.
-   */
-  private val eventService = EventTelemetryGrpc.newFutureStub(channel)
-
-  /**
-   * Base context to use.
-   */
-  private val _baseContext: AnalyticsContext.Context = AnalyticsContext.Context.newBuilder()
-        .setLibrary(LibraryContext.DeviceLibrary.newBuilder()
-              .setClient(LibraryContext.APIClient.JAVA)
-              .setVariant(Bloombox.VARIANT)
-              .setVersion(VersionSpec.newBuilder().setName(Bloombox.VERSION)))
-        .setNative(DeviceContext.NativeDeviceContext.newBuilder()
-              .setRole(DeviceContext.DeviceRole.SERVER)
-              .setOs(OperatingSystemContext.DeviceOS.newBuilder()
-                    .setType(OperatingSystemContext.OSType.LINUX)))
-        .build()
-
-  /**
-   * Resolve event context, according to global settings, and also explicit
-   * context passed into whatever higher-order method is calling this.
+   * Resolve event context, according to global settings, and also explicit context passed into whatever higher-order
+   * method is calling this. Ensure that a device fingerprint, session group, and valid set of partner/location context
+   * are resolved before proceeding.
    */
   private fun resolveContext(collection: String,
                              context: EventContext? = null): AnalyticsContext.Context.Builder {
     val merged: AnalyticsContext.Context.Builder = if (context != null) {
-      context.serialize(defaultPartner, defaultLocation, deviceUUID)
-            .mergeFrom(_baseContext)
+      context.serialize(defaultPartner, defaultLocation, deviceUUID).mergeFrom(baseContext)
     } else {
-      _baseContext.toBuilder()
+      baseContext.toBuilder()
     }
 
     // add event collection
@@ -334,7 +270,9 @@ class TelemetryClient(override val host: String,
 
   // -- API: Ping -- //
   /**
-   * Ping the service.
+   * Ping the service. This emits a lightweight message and asks the server to respond ASAP. In some cases, a telemetry
+   * ping may be used to establish session-level default context, by specifying global context in headers/trailers
+   * alongside the ping request.
    */
   fun ping(callback: PingCallback? = null) {
     // take a starting timestamp
@@ -355,7 +293,9 @@ class TelemetryClient(override val host: String,
 
   // -- API: Events -- //
   /**
-   * Record a generic event.
+   * Record a generic event. A "generic event" is any JSON-compatible payload, plus an "event collection," which is
+   * simply a string name. Additionally, context may be sent along with an event about how and where the event was
+   * recorded - i.e. native and browser-oriented device information, and so on.
    */
   fun event(collection: String,
             uuid: String? = null,
@@ -381,35 +321,6 @@ class TelemetryClient(override val host: String,
           .build()
 
     eventService.event(req)
-          .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
-  }
-
-  // -- API: Errors -- //
-  /**
-   * Record a generic error report.
-   */
-  fun exception(collection: String,
-                uuid: String? = null,
-                domain: String = "global",
-                code: Int = -1,
-                occurred: Long? = null,
-                context: EventContext? = null) {
-    val merged = resolveContext(collection, context)
-    val errorUUID = uuid?.toUpperCase() ?: UUID.randomUUID().toString().toUpperCase()
-
-    val instant = Instant.newBuilder().setTimestamp(
-          occurred ?: System.currentTimeMillis())
-
-    val ev = Exception.newBuilder()
-          .setUuid(errorUUID)
-          .setError(AnalyticsException.Exception.newBuilder()
-                .setOccurred(instant)
-                .setCode(code)
-                .setDomain(domain))
-          .setContext(merged)
-          .build()
-
-    eventService.error(ev)
           .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
   }
 }
