@@ -19,7 +19,7 @@
 
 BUILDMODE ?= maven
 TESTS ?= yes
-RELEASE_VERSION ?= 1.0
+RELEASE_VERSION ?= 1.0-rc8
 CLIENT_VERSION ?= 1.0-SNAPSHOT
 SERVICE_ARGS ?= -Dbloombox.shop.version=$(SHOP_VERSION) -Dbloombox.telemetry.version=$(TELEMETRY_VERSION)
 SCHEMA ?= schema/
