@@ -150,6 +150,19 @@ abstract class RPCClient(apiKey: String) {
     }
 
     /**
+     * Handle an exception encountered in an RPC operation, dispatching the error callback appropriately.
+     */
+    @JvmStatic
+    private fun handleError(err: Throwable?,
+                            cbk: ((ClientException?) -> Unit)?) {
+      when {
+        err is ClientException -> cbk?.invoke(err)
+        err != null -> throw err
+        else -> throw IllegalStateException("Invalid null failure result.")
+      }
+    }
+
+    /**
      * Execute an operation, and dispatch a user callback accordingly, handling underlying
      * errors according to the provided error callback.
      */
@@ -170,19 +183,6 @@ abstract class RPCClient(apiKey: String) {
         handleError(e, err)
       }
       return op
-    }
-
-    /**
-     * Handle an exception encountered in an RPC operation, dispatching the error callback appropriately.
-     */
-    @JvmStatic
-    protected fun handleError(err: Throwable?,
-                              cbk: ((ClientException?) -> Unit)?) {
-      when {
-        err is ClientException -> cbk?.invoke(err)
-        err != null -> throw err
-        else -> throw IllegalStateException("Invalid null failure result.")
-      }
     }
   }
 
@@ -223,7 +223,7 @@ abstract class RPCClient(apiKey: String) {
     builder.decompressorRegistry(decompressorRegistry)
 
     return when (transportMode) {
-      RPCClient.TransportMode.SECURE -> {
+      RPCClient.TransportMode.SECURE ->
         return if (clientAuth == ClientAuth.NONE) {
           builder
                 .negotiationType(NegotiationType.TLS)
@@ -232,18 +232,19 @@ abstract class RPCClient(apiKey: String) {
                       .build())
         } else {
           if (clientCredentials == null)
-            throw IllegalArgumentException("Configuration error: Client auth is active, but no credentials were provided.")
+            throw IllegalArgumentException(
+                  "Configuration error: Client auth is active, but no credentials were provided.")
           builder
                 .negotiationType(NegotiationType.TLS)
                 .sslContext(GrpcSslContexts.forClient()
                       .trustManager(authorityRoots(clientAuthorityRoots))
                       .clientAuth(clientAuth)
-                      .keyManager(clientCredentials.certificate, clientCredentials.privateKey, clientCredentials.keyPassword)
+                      .keyManager(
+                            clientCredentials.certificate, clientCredentials.privateKey, clientCredentials.keyPassword)
                       .sessionCacheSize(sessionCacheSize)
                       .sessionTimeout(sessionCacheTimeout)
                       .build())
         }
-      }
 
       RPCClient.TransportMode.CLEARTEXT ->
         NettyChannelBuilder
