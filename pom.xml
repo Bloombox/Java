@@ -246,9 +246,9 @@
                 <configuration>
                     <excludes>
                         <exclude>gen_bq_schema/**/*</exclude>
+                        <exclude>io/bloombox/test/**/*</exclude>
                         <exclude>io/bloombox/schema/**/*</exclude>
                         <exclude>io/opencannabis/**/*</exclude>
-                        <exclude>bloombox/client/Bloombox.java</exclude>
                     </excludes>
                 </configuration>
             </plugin>
@@ -464,7 +464,7 @@
                     <classifier>javadoc</classifier>
                     <level>public</level>
                     <outputDirectory>target/site/schema</outputDirectory>
-                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*</excludePackageNames>
+                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*:io.bloombox.test.*</excludePackageNames>
                 </configuration>
             </plugin>
         </plugins>
@@ -480,7 +480,7 @@
                     <classifier>docs</classifier>
                     <level>public</level>
                     <outputDirectory>target/site/schema</outputDirectory>
-                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*</excludePackageNames>
+                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*:io.bloombox.test.*</excludePackageNames>
                 </configuration>
             </plugin>
             <plugin>

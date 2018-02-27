@@ -17,7 +17,7 @@
 package bloombox.client.shop
 
 import bloombox.client.Bloombox
-import bloombox.client.internals.err.ServiceClientException
+import bloombox.client.ClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import java.util.concurrent.TimeUnit
@@ -81,7 +81,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid partner.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ClientException::class)
   fun testShopHoursInvalidPartner() {
     // prep a client for prod
     val prodClient = Bloombox(Bloombox.Settings(
@@ -97,7 +97,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid location.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ClientException::class)
   fun testShopHoursInvalidLocation() {
     // prep a client for prod
     val prodClient = Bloombox(Bloombox.Settings(

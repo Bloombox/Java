@@ -16,10 +16,13 @@
 
 package bloombox.client.menu
 
-import bloombox.client.internals.err.ServiceClientException
+import bloombox.client.ClientException
 import bloombox.client.services.menu.MenuClient
+import bloombox.client.services.menu.MenuClientError
 import bloombox.client.test.ClientRPCTest
+import io.grpc.Status
 import java.util.concurrent.TimeUnit
+import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertNotNull
 import kotlin.test.assertTrue
@@ -107,33 +110,47 @@ class GetMenuTest: ClientRPCTest() {
   /**
    * Test fetching basic menu, but with an invalid partner.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ClientException::class)
   fun testGetBasicMenuInvalidPartner() {
     withClient({ client ->
-      client.platform.menu().retrieve(
-            MenuClient.MenuContext(
-                  partner = "",
-                  location = locationID))
+      try {
+        client.platform.menu().retrieve(
+              MenuClient.MenuContext(
+                    partner = "",
+                    location = locationID))
+      } catch (ce: ClientException) {
+        // make sure it fails for the right reasons
+        assertEquals(Status.INVALID_ARGUMENT, ce.status(), "status should match INVALID_ARGUMENT")
+        assertEquals(MenuClientError.PARTNER_INVALID.message(), ce.message(), "message for INVALID_PARTNER should be used")
+        throw ce
+      }
     })
   }
 
   /**
    * Test fetching basic menu, but with an invalid location.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ClientException::class)
   fun testGetBasicMenuInvalidLocation() {
     withClient({ client ->
-      client.platform.menu().retrieve(
-            MenuClient.MenuContext(
-                  partner = partnerID,
-                  location = ""))
+      try {
+        client.platform.menu().retrieve(
+              MenuClient.MenuContext(
+                    partner = partnerID,
+                    location = ""))
+      } catch (ce: ClientException) {
+        // make sure it fails for the right reasons
+        assertEquals(Status.INVALID_ARGUMENT, ce.status(), "status should match INVALID_ARGUMENT")
+        assertEquals(MenuClientError.LOCATION_INVALID.message(), ce.message(), "message for INVALID_LOCATION should be used")
+        throw ce
+      }
     })
   }
 
   /**
    * Test fetching basic menu, but with a partner and location that are known not to exist.
    */
-  @test
+  @test(expected = ClientException::class)
   fun testGetBasicMenuDoesNotExist() {
     withClient({ client ->
       val result = client.platform.menu().retrieve(

@@ -16,6 +16,8 @@
 
 package bloombox.client.interfaces
 
+import io.grpc.Status
+
 
 /**
  * Specifies a Bloombox client error that is known and identifiable. This interface is implemented by service-specific
@@ -23,17 +25,14 @@ package bloombox.client.interfaces
  */
 interface ClientError {
   /**
-   * The "domain" of the error is usually the name of the service.
+   * Underlying gRPC status code that resulted from this error. These error codes rougly map to HTTP errors, and can be
+   * found in gRPC's docs at https://grpc.io.
    */
-  fun domain(cause: Throwable?): String
+  fun status(): Status
 
   /**
-   * Integer error code. Usually derived from an enum's value.
+   * Error message to return or display. The service's error code is sent for this value. In rare circumstances, the
+   * name of the resulting gRPC status may be returned if no specific error status is available.
    */
-  fun code(cause: Throwable?): Int
-
-  /**
-   * Error message to return or display.
-   */
-  fun message(cause: Throwable?): String
+  fun message(): String
 }

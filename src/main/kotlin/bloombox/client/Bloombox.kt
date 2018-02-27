@@ -76,24 +76,6 @@ class Bloombox constructor (
   }
 
   /**
-   * Information about the Bloombox. In general these values are used internally, but they are kept accessible to the
-   * user in case they are needed for other purposes.
-   */
-  object Company {
-    /**
-     * Human-friendly company name. This is always "Bloombox." You can learn more about Bloombox at https://bloombox.io.
-     * We make cutting edge technology for the retail cannabis industry, this library included.
-     */
-    const val name = "Bloombox"
-
-    /**
-     * Company legal name. This is always "Bloombox, LLC." This might be used in some cases where a privacy policy or
-     * other UI element must mention Bloombox by its legal entity name.
-     */
-    const val legalName = "Bloombox, LLC"
-  }
-
-  /**
    * Describes available API regions. In some cases, library users may want to force-direct (or at least prefer) a
    * particular API hosting region. Available options are "USW1" (hosted in Oregon, USA) or "USC1" (hosted in South
    * Carolina, USA).
@@ -285,7 +267,7 @@ class Bloombox constructor (
    * Statically-set RPC client endpoints. Different API client targets consume and send data from/to these various
    * endpoints, depending on the circumstances and active environment.
    */
-  private object Endpoints {
+  internal object Endpoints {
     /**
      * Production client endpoint.
      */

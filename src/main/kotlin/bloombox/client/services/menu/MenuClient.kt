@@ -16,8 +16,8 @@
 
 package bloombox.client.services.menu
 
+import bloombox.client.ClientException
 import bloombox.client.interfaces.ServiceClient
-import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.internals.rpc.RPCClient
 import com.google.common.util.concurrent.ListenableFuture
 import io.bloombox.schema.services.menu.v1beta1.GetMenu
@@ -81,16 +81,16 @@ class MenuClient(override val host: String,
    * Validate menu context required values before sending. These consist of the partner and location code. The API key
    * is validated by the underlying RPC client. All values are also validated by the server before processing begins.
    */
-  @Throws(ServiceClientException::class)
+  @Throws(ClientException::class)
   private fun validateMenuContext(context: MenuContext,
                                   defaultPartner: String?,
                                   defaultLocation: String?): Pair<String, String> {
     val partner = context.partner ?: defaultPartner
     val location = context.location ?: defaultLocation
-    partner ?: throw ServiceClientException(MenuClientError.PARTNER_INVALID)
-    location ?: throw ServiceClientException(MenuClientError.LOCATION_INVALID)
-    if (partner.length < 2) throw ServiceClientException(MenuClientError.PARTNER_INVALID)
-    if (location.length < 2) throw ServiceClientException(MenuClientError.LOCATION_INVALID)
+    partner ?: throw ClientException.fromClientError(MenuClientError.PARTNER_INVALID)
+    location ?: throw ClientException.fromClientError(MenuClientError.LOCATION_INVALID)
+    if (partner.length < 2) throw ClientException.fromClientError(MenuClientError.PARTNER_INVALID)
+    if (location.length < 2) throw ClientException.fromClientError(MenuClientError.LOCATION_INVALID)
     return partner to location
   }
 
@@ -103,7 +103,7 @@ class MenuClient(override val host: String,
    * default, items marked as "invisible" (i.e. out of stock, or not carried any longer) are not returned. To fetch all
    * product catalog entries including these items, pass `true` for `full`.
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun retrieve(context: MenuContext = MenuContext.defaultContext(),
                full: Boolean = false,
                callback: MenuCallback?,
@@ -114,17 +114,7 @@ class MenuClient(override val host: String,
           .setScope("partners/$partnerKey/locations/$locationKey")
 
     if (full) request.full = true
-
-    val op = this.future.retrieve(request.build())
-    op.addListener(Runnable {
-      executeAndDispatchCallback(op, callback, {
-        handleError(it, {
-          err?.invoke(it)
-        })
-      }, timeout)
-    }, executor)
-
-    return op
+    return executeAndDispatchCallback(this.future.retrieve(request.build()), callback, err, timeout)
   }
 
   /**
@@ -132,7 +122,7 @@ class MenuClient(override val host: String,
    * default, items marked as "invisible" (i.e. out of stock, or not carried any longer) are not returned. To fetch all
    * product catalog entries including these items, pass `true` for `full`.
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun retrieve(context: MenuContext = MenuContext.defaultContext(),
                full: Boolean = false): GetMenu.Response =
         this.retrieve(context, full, null, null)

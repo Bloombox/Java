@@ -16,7 +16,7 @@
 
 package bloombox.client.services.menu
 
-import bloombox.client.internals.err.ServiceClientException
+import bloombox.client.ClientException
 import io.bloombox.schema.services.menu.v1beta1.GetMenu
 
 
@@ -30,4 +30,4 @@ typealias MenuCallback = (GetMenu.Response) -> Unit
  * Error case callback type that handles `ServiceClientException`-compliant throwables. Accepts a compliant instance of
  * `ServiceClientException` and provides no return value.
  */
-typealias MenuErrorCallback = (ServiceClientException?) -> Unit
+typealias MenuErrorCallback = (ClientException?) -> Unit

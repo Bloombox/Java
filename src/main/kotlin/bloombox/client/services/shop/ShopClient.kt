@@ -16,8 +16,8 @@
 
 package bloombox.client.services.shop
 
+import bloombox.client.ClientException
 import bloombox.client.interfaces.ServiceClient
-import bloombox.client.internals.err.ServiceClientException
 import bloombox.client.internals.rpc.RPCClient
 import com.google.common.util.concurrent.ListenableFuture
 import io.opencannabis.schema.commerce.CommercialOrder
@@ -85,16 +85,16 @@ class ShopClient(override val host: String,
    * Validate shop context required values before sending. These consist of the partner and location code. The API key
    * is validated by the underlying RPC client. All values are also validated by the server before processing begins.
    */
-  @Throws(ServiceClientException::class)
+  @Throws(ClientException::class)
   private fun validateShopContext(context: ShopContext,
                                   defaultPartner: String?,
                                   defaultLocation: String?): Pair<String, String> {
     val partner = context.partner ?: defaultPartner
     val location = context.location ?: defaultLocation
-    partner ?: throw ServiceClientException(ShopClientError.PARTNER_INVALID)
-    location ?: throw ServiceClientException(ShopClientError.LOCATION_INVALID)
-    if (partner.length < 2) throw ServiceClientException(ShopClientError.PARTNER_INVALID)
-    if (location.length < 2) throw ServiceClientException(ShopClientError.LOCATION_INVALID)
+    partner ?: throw ClientException.fromClientError(ShopClientError.PARTNER_INVALID)
+    location ?: throw ClientException.fromClientError(ShopClientError.LOCATION_INVALID)
+    if (partner.length < 2) throw ClientException.fromClientError(ShopClientError.PARTNER_INVALID)
+    if (location.length < 2) throw ClientException.fromClientError(ShopClientError.LOCATION_INVALID)
     return partner to location
   }
 
@@ -107,7 +107,7 @@ class ShopClient(override val host: String,
    * This includes its current status (OPEN/CLOSED/{PICKUP|DELIVERY}_ONLY) and any other requisite information to render
    * a page. This may change in the future.
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun info(callback: InfoCallback?,
            err: ShopErrorCallback?,
            context: ShopContext = ShopContext.defaultContext()): ListenableFuture<ShopInfo.Response> {
@@ -120,12 +120,7 @@ class ShopClient(override val host: String,
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()
 
-    val op = this.service.shopInfo(request)
-    op.addListener(Runnable {
-      // dispatch user callback
-      executeAndDispatchCallback(op, callback, err, timeout)
-    }, executor)
-    return op
+    return executeAndDispatchCallback(this.service.shopInfo(request), callback, err, timeout)
   }
 
   /**
@@ -133,7 +128,7 @@ class ShopClient(override val host: String,
    * its current status (OPEN/CLOSED/{PICKUP|DELIVERY}_ONLY) and any other requisite information to render a page. This
    * may change in the future.
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun info(context: ShopContext = ShopContext.defaultContext()): ShopInfo.Response =
     this.info(null, null, context)
           .get(timeout.toMillis(), TimeUnit.MILLISECONDS)
@@ -144,7 +139,7 @@ class ShopClient(override val host: String,
    * contains support status for delivery to the subject zipcode, and any delivery minimum subtotal value, if specified.
    * "NOT_FOUND", or 404 when operating over HTTP, is interpreted to mean the zipcode is not supported.
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun checkZipcode(zipcode: String,
                    callback: ZipcheckCallback?,
                    err: ShopErrorCallback?,
@@ -159,12 +154,7 @@ class ShopClient(override val host: String,
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()
 
-    val op = this.service.checkZipcode(request)
-    op.addListener(Runnable {
-      // handle user callback
-      executeAndDispatchCallback(op, callback, err, timeout)
-    }, executor)
-    return op
+    return executeAndDispatchCallback(this.service.checkZipcode(request), callback, err, timeout)
   }
 
   /**
@@ -172,7 +162,7 @@ class ShopClient(override val host: String,
    * status for delivery to the subject zipcode, and any delivery minimum subtotal value, if specified. "NOT_FOUND", or
    * 404 when operating over HTTP, is interpreted to mean the zipcode is not supported.
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun checkZipcode(zipcode: String,
                    context: ShopContext = ShopContext.defaultContext()): CheckZipcode.Response =
     this.checkZipcode(zipcode, null, null, context)
@@ -185,7 +175,7 @@ class ShopClient(override val host: String,
    * checking to make sure they are an active member of the specified digital storefront (addressed by its partner and
    * location code pair).
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun verifyMember(email: String,
                    callback: VerifyMemberCallback?,
                    err: ShopErrorCallback?,
@@ -201,12 +191,7 @@ class ShopClient(override val host: String,
                       .setCode(partnerKey)))
           .build()
 
-    val op = this.service.verifyMember(request)
-    op.addListener(Runnable {
-      // dispatch user callback
-      executeAndDispatchCallback(op, callback, err, timeout)
-    }, executor)
-    return op
+    return executeAndDispatchCallback(this.service.verifyMember(request), callback, err, timeout)
   }
 
   /**
@@ -215,7 +200,7 @@ class ShopClient(override val host: String,
    * checking to make sure they are an active member of the specified digital storefront (addressed by its partner and
    * location code pair).
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun verifyMember(email: String,
                    context: ShopContext = ShopContext.defaultContext()): VerifyMember.Response =
     this.verifyMember(email, null, null, context)
@@ -229,7 +214,7 @@ class ShopClient(override val host: String,
    * identification, medical recommendation if applicable, and good account standing). Items in the order are specified
    * as product keys with an associated desired count.
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun submitOrder(order: CommercialOrder.Order,
                   callback: SubmitOrderCallback?,
                   err: ShopErrorCallback?,
@@ -245,12 +230,7 @@ class ShopClient(override val host: String,
                       .setCode(partnerKey)))
           .build()
 
-    val op = this.service.submitOrder(request)
-    op.addListener(Runnable {
-      // dispatch user callback
-      executeAndDispatchCallback(op, callback, err, timeout)
-    }, executor)
-    return op
+    return executeAndDispatchCallback(this.service.submitOrder(request), callback, err, timeout)
   }
 
   /**
@@ -260,7 +240,7 @@ class ShopClient(override val host: String,
    * identification, medical recommendation if applicable, and good account standing). Items in the order are specified
    * as product keys with an associated desired count.
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun submitOrder(order: CommercialOrder.Order,
                   context: ShopContext = ShopContext.defaultContext()): SubmitOrder.Response =
     this.submitOrder(order, null, null, context)
@@ -272,7 +252,7 @@ class ShopClient(override val host: String,
    * customer info, and constituent order items. If the order could not be found, or the invoking client does not have
    * access to the order, a "NOT_FOUND" status is returned (code 404 if operating over HTTP).
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun getOrder(id: String,
                callback: GetOrderCallback?,
                err: ShopErrorCallback?,
@@ -287,11 +267,7 @@ class ShopClient(override val host: String,
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()
 
-    val op = this.service.getOrder(request)
-    op.addListener(Runnable {
-      executeAndDispatchCallback(op, callback, err, timeout)
-    }, executor)
-    return op
+    return executeAndDispatchCallback(this.service.getOrder(request), callback, err, timeout)
   }
 
   /**
@@ -299,7 +275,7 @@ class ShopClient(override val host: String,
    * customer info, and constituent order items. If the order could not be found, or the invoking client does not have
    * access to the order, a "NOT_FOUND" status is returned (code 404 if operating over HTTP).
    */
-  @Throws(ServiceClientException::class, StatusRuntimeException::class)
+  @Throws(ClientException::class)
   fun getOrder(id: String,
                context: ShopContext = ShopContext.defaultContext()): GetOrder.Response =
     this.getOrder(id, null, null, context)

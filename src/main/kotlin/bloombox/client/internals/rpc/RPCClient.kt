@@ -16,7 +16,7 @@
 
 package bloombox.client.internals.rpc
 
-import bloombox.client.internals.err.ServiceClientException
+import bloombox.client.ClientException
 import com.google.common.util.concurrent.ListenableFuture
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
@@ -156,21 +156,20 @@ abstract class RPCClient(apiKey: String) {
     @JvmStatic
     fun <T> executeAndDispatchCallback(op: ListenableFuture<T>,
                                        callback: ((T) -> Unit)?,
-                                       err: ((ServiceClientException?) -> Unit)?,
-                                       timeout: Duration) {
+                                       err: ((ClientException?) -> Unit)?,
+                                       timeout: Duration): ListenableFuture<T> {
       try {
         val response = op.get(timeout.toMillis(), TimeUnit.MILLISECONDS)
         if (response != null) {
           if (callback != null)
             callback(response)
-        } else {
-          handleError(null, err)
         }
-      } catch (e: ServiceClientException) {
+      } catch (e: ClientException) {
         handleError(e, err)
       } catch (e: StatusRuntimeException) {
         handleError(e, err)
       }
+      return op
     }
 
     /**
@@ -178,9 +177,9 @@ abstract class RPCClient(apiKey: String) {
      */
     @JvmStatic
     protected fun handleError(err: Throwable?,
-                              cbk: ((ServiceClientException?) -> Unit)?) {
+                              cbk: ((ClientException?) -> Unit)?) {
       when {
-        err is ServiceClientException -> cbk?.invoke(err)
+        err is ClientException -> cbk?.invoke(err)
         err != null -> throw err
         else -> throw RuntimeException("Invalid null failure result.")
       }

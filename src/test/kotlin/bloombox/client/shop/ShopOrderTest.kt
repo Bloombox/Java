@@ -16,6 +16,7 @@
 
 package bloombox.client.shop
 
+import bloombox.client.ClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import io.opencannabis.schema.base.ProductKey
@@ -146,7 +147,7 @@ class ShopOrderTest: ClientRPCTest() {
     })
   }
 
-  @test
+  @test(expected = ClientException::class)
   fun testFetchOrderNotFound() {
     withClient({ client ->
       // fetch a known-good order ID
@@ -156,7 +157,7 @@ class ShopOrderTest: ClientRPCTest() {
     })
   }
 
-  @test
+  @test(expected = ClientException::class)
   fun testFetchOrderNotFoundAsync() {
     withClient({ client ->
       // fetch a known-good order ID

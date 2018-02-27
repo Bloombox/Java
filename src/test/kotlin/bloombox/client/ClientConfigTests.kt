@@ -41,6 +41,87 @@ class ClientConfigTests : ClientRPCTest() {
   }
 
   @test
+  fun testApiRegionCodes() {
+    assertEquals(
+          "usw1",
+          Bloombox.APIRegion.USW1.code,
+          "USW1 region code should be 'usw1'")
+
+    assertEquals(
+          "usc1",
+          Bloombox.APIRegion.USC1.code,
+          "USC1 region code should be 'usc1'")
+  }
+
+  @test
+  fun testApiEnvironmentCodes() {
+    assertEquals(
+          "prod",
+          Bloombox.APIEnvironment.PRODUCTION.code,
+          "PRODUCTION environment code should be 'prod'")
+
+    assertEquals(
+          "staging",
+          Bloombox.APIEnvironment.STAGING.code,
+          "STAGING environment code should be 'staging'")
+
+    assertEquals(
+          "sandbox",
+          Bloombox.APIEnvironment.SANDBOX.code,
+          "SANDBOX environment code should be 'sandbox'")
+  }
+
+  @test
+  fun testClientDefaultSettings() {
+    val defauls = Bloombox.Settings.defaults(
+          "apikey123", "partner123", "location123")
+    assertEquals(
+          "apikey123",
+          defauls.apiKey,
+          "API key should be adopted via 'defaults'")
+
+    assertEquals(
+          "partner123",
+          defauls.partner,
+          "partner code should be adopted via 'defaults'")
+
+    assertEquals(
+          "location123",
+          defauls.location,
+          "location code should be adopted via 'defaults'")
+
+    assertEquals(
+          false,
+          defauls.enableLogging,
+          "logging should default to being off")
+  }
+
+  @test
+  fun testClientEnableLogging() {
+    val defauls = Bloombox.Settings.withLogging(
+          "apikey123", "partner123", "location123")
+    assertEquals(
+          "apikey123",
+          defauls.apiKey,
+          "API key should be adopted via 'defaults'")
+
+    assertEquals(
+          "partner123",
+          defauls.partner,
+          "partner code should be adopted via 'defaults'")
+
+    assertEquals(
+          "location123",
+          defauls.location,
+          "location code should be adopted via 'defaults'")
+
+    assertEquals(
+          true,
+          defauls.enableLogging,
+          "logging should be active when it is requested")
+  }
+
+  @test
   fun testProductionSandboxEndpoints() {
     assertEquals(
           "api.bloombox.cloud",

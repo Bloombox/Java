@@ -16,7 +16,7 @@
 
 package bloombox.client.services.shop
 
-import bloombox.client.internals.err.ServiceClientException
+import bloombox.client.ClientException
 import io.bloombox.schema.services.shop.v1.*
 
 
@@ -53,4 +53,4 @@ typealias VerifyMemberCallback = (VerifyMember.Response) -> Unit
  * Error case callback type that handles `ServiceClientException`-compliant throwables. Accepts a compliant instance of
  * `ServiceClientException` and provides no return value.
  */
-typealias ShopErrorCallback = (ServiceClientException?) -> Unit
+typealias ShopErrorCallback = (ClientException?) -> Unit

@@ -17,6 +17,7 @@
 package bloombox.client.test
 
 import bloombox.client.Bloombox
+import bloombox.client.ClientException
 import io.grpc.StatusRuntimeException
 import java.util.logging.Logger
 import java.util.concurrent.Executor
@@ -105,10 +106,12 @@ open class ClientRPCTest {
       block(client)
     } catch (e: java.util.concurrent.ExecutionException) {
       val inner = e.cause
-      if (inner is StatusRuntimeException) {
-        logging.severe("Call failed (status: ${inner.status}): '${inner.message}'.")
-      } else if (inner != null) {
-        throw inner
+      if (inner != null) {
+        if (inner is StatusRuntimeException) {
+          logging.warning("Call failed (status: ${inner.status.code}): ${inner.message?.replace("${inner.status.code}: ", "")}")
+          throw ClientException.fromStatusRuntimeException(inner)
+        }
+        throw ClientException.fromUncaughtException(inner)
       }
     } finally {
       client?.close()
