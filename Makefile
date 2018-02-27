@@ -91,6 +91,13 @@ $(TARGET_JAR):
 endif
 endif
 
+docs:
+	@echo "Building docs and publishing site..."
+	@mvn dokka:dokka javadoc:javadoc
+	@mvn site:site
+	@cd target/site && git init && git add . && git commit -m "Update docs" && git checkout -b gh-pages && git remote add origin git@github.com:bloombox/java.git && git push origin gh-pages --force && rm -fr .git
+	@echo "Docs published."
+
 ifeq ($(BUILDMODE),maven)
 release:
 	@echo "Building release for Bloombox Java Client 'v$(RELEASE_VERSION)'..."
