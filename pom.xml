@@ -105,6 +105,7 @@
         <maven.gpg.version>1.4</maven.gpg.version>
         <maven.javadoc.version>2.10.4</maven.javadoc.version>
         <maven.nexus.version>1.6.7</maven.nexus.version>
+        <maven.proguard.version>2.0.14</maven.proguard.version>
 
         <!-- Settings -->
         <jvm.source>1.8</jvm.source>
@@ -264,6 +265,33 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.wvengen</groupId>
+                <artifactId>proguard-maven-plugin</artifactId>
+                <version>${maven.proguard.version}</version>
+                <executions>
+                    <execution>
+                        <id>shaded-small</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>proguard</goal>
+                        </goals>
+                        <configuration>
+                            <proguardVersion>5.2</proguardVersion>
+                            <attach>true</attach>
+                            <obfuscate>true</obfuscate>
+                            <appendClassifier>true</appendClassifier>
+                            <attachArtifactClassifier>opt</attachArtifactClassifier>
+                            <proguardInclude>${project.basedir}/client.pro</proguardInclude>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <options>
+                        <option>-target ${jvm.target}</option>
+                    </options>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
