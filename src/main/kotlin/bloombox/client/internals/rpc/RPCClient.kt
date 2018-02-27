@@ -181,7 +181,7 @@ abstract class RPCClient(apiKey: String) {
       when {
         err is ClientException -> cbk?.invoke(err)
         err != null -> throw err
-        else -> throw RuntimeException("Invalid null failure result.")
+        else -> throw IllegalStateException("Invalid null failure result.")
       }
     }
   }
