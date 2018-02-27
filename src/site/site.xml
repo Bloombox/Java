@@ -28,7 +28,7 @@
         </menu>
 
         <menu name="API Docs">
-            <item name="Client (Dokka)" href="client/java-client/index.html"/>
+            <item name="Client (Dokka)" href="client/java-client/bloombox.client/index.html"/>
             <item name="Schema (Javadoc)" href="apidocs/index.html"/>
         </menu>
 
@@ -41,7 +41,7 @@
             <item name="Bloombox" href="https://bloombox.io"/>
         </breadcrumbs>
 
-        <footer>Copyright © 2017, Momentum Ideas Co. All rights reserved.</footer>
+        <footer>Copyright © 2018, Momentum Ideas Co. All rights reserved.</footer>
     </body>
 
     <custom>
