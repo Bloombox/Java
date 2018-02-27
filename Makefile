@@ -126,6 +126,8 @@ sync-schema: $(SCHEMA)
 
 embedded:
 	@echo "Building embedded library..."
+	@mv pom.xml pom-standard.xml
+	@mv pom-embedded.xml pom.xml
 	@mvn clean package && echo "Cutting new branch..." && git branch -D embedded && git checkout -b embedded && echo "Removing schema..." && rm -fr src/main/java/* && echo "Schema is not included with embedded library." > src/main/README.md && git add . && git commit -m "Embedded: $(CLIENT_VERSION)" && git push origin embedded --force && git checkout $(CURRENT_BRANCH)
 
 ifeq ($(BUILDMODE),maven)
