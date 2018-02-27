@@ -478,7 +478,7 @@
                     <sourceLinks>
                         <link>
                             <dir>${project.basedir}/src/main/kotlin</dir>
-                            <url>http://github.com/bloombox/java</url>
+                            <url>https://github.com/Bloombox/Java/blob/master/src/main/kotlin</url>
                             <urlSuffix>#L</urlSuffix>
                         </link>
                         <link>
@@ -571,7 +571,7 @@
                     <sourceLinks>
                         <link>
                             <dir>${project.basedir}/src/main/kotlin</dir>
-                            <url>http://github.com/bloombox/java</url>
+                            <url>https://github.com/Bloombox/Java/blob/master/src/main/kotlin</url>
                             <urlSuffix>#L</urlSuffix>
                         </link>
                         <link>

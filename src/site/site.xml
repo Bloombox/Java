@@ -28,7 +28,7 @@
         </menu>
 
         <menu name="API Docs">
-            <item name="Client (Dokka)" href="client/java-client/bloombox.client/index.html"/>
+            <item name="Client (Dokka)" href="client/bloombox/bloombox.client/index.html"/>
             <item name="Schema (Javadoc)" href="apidocs/index.html"/>
         </menu>
 
