@@ -1,4 +1,4 @@
-# Module java-client
+# Module bloombox
 
 This package provides a Java/Kotlin client for Bloombox Cloud services. Integrators have the option of using this (or 
 other language SDKs, like [JS](https://bloombox.github.io/JS) or [Swift](https://github.com/bloombox/swift)), or
