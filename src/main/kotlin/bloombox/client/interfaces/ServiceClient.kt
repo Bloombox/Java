@@ -16,6 +16,7 @@
 
 package bloombox.client.interfaces
 
+import bloombox.client.internals.mtls.ClientCredentials
 import bloombox.client.internals.rpc.RPCClient
 import io.netty.handler.ssl.ClientAuth
 import java.io.InputStream
@@ -77,7 +78,7 @@ internal interface ServiceClient {
    * credential data. In particular, this includes a private key and identity certificate chain. First position is the
    * private client key, second is the certificate.
    */
-  val clientCredentials: RPCClient.ClientCredentials?
+  val clientCredentials: ClientCredentials?
 
   /**
    * Authority roots to accept from the client-side. Defaults to the embedded 'authority-roots.pem', which includes

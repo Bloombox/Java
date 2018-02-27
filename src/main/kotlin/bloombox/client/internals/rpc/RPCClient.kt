@@ -17,6 +17,7 @@
 package bloombox.client.internals.rpc
 
 import bloombox.client.ClientException
+import bloombox.client.internals.mtls.ClientCredentials
 import com.google.common.util.concurrent.ListenableFuture
 import io.grpc.*
 import io.grpc.netty.GrpcSslContexts
@@ -41,14 +42,6 @@ abstract class RPCClient(apiKey: String) {
     SECURE,
     CLEARTEXT;
   }
-
-  /**
-   * Client credentials specification.
-   */
-  data class ClientCredentials(
-        internal val privateKey: InputStream,
-        internal val certificate: InputStream,
-        internal val keyPassword: String?)
 
   /**
    * API key header interceptor.

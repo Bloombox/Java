@@ -18,6 +18,7 @@ package bloombox.client.services.menu
 
 import bloombox.client.ClientException
 import bloombox.client.interfaces.ServiceClient
+import bloombox.client.internals.mtls.ClientCredentials
 import bloombox.client.internals.rpc.RPCClient
 import com.google.common.util.concurrent.ListenableFuture
 import io.bloombox.schema.services.menu.v1beta1.GetMenu
@@ -43,7 +44,7 @@ class MenuClient(override val host: String,
                  override val timeout: Duration,
                  override val transportMode: TransportMode = TransportMode.SECURE,
                  override val clientAuth: ClientAuth = ClientAuth.NONE,
-                 override val clientCredentials: RPCClient.ClientCredentials? = null,
+                 override val clientCredentials: ClientCredentials? = null,
                  override val clientAuthorityRoots: InputStream? = null,
                  override val executor: Executor = Executors.newSingleThreadExecutor(),
                  internal val defaultPartner: String? = null,

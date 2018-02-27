@@ -17,10 +17,11 @@
 package bloombox.client
 
 import bloombox.client.interfaces.ServiceClient
-import bloombox.client.internals.rpc.RPCClient
+import bloombox.client.internals.mtls.ClientCredentials
 import bloombox.client.services.menu.MenuClient
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.services.telemetry.TelemetryClient
+
 import java.time.Duration
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
@@ -29,8 +30,10 @@ import java.util.concurrent.TimeUnit
 
 /**
  * Specifies a unified Bloombox API client, that is capable of calling methods on any service exposed by the Bloombox
- * Cloud Platform. At the time of writing, this includes:
+ * Cloud Platform. This is accomplished by integrating with lower-level gRPC-based APIs. Under the hood, Protobuf is
+ * used over HTTP2. Services are lazy-loaded and maintain a live connection with a reasonable keepalive (10 minutes).
  *
+ * At the time of writing, supported services include:
  * - `shop/v1`: Shop service. For submitting orders, verifying customers, enrolling customers, etc.
  * - `menu/v1beta1`: Menu service. For downloading product catalog data, subscribing to changes, and publishing updates.
  * - `telemetry/v1beta3`: Telemetry service. For submitting telemetry event data of different kinds.
@@ -234,7 +237,7 @@ class Bloombox constructor (
          * for use in identifying this particular client (includes a private key and certificate chain). Authority
          * information is embedded in the API client.
          */
-        internal val clientCredentials: RPCClient.ClientCredentials? = null) {
+        internal val clientCredentials: ClientCredentials? = null) {
     companion object {
       /**
        * Generate default settings for a given partner, location, and API key, which is the minimum amount of

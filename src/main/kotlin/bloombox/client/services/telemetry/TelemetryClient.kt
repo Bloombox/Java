@@ -18,6 +18,7 @@ package bloombox.client.services.telemetry
 
 import bloombox.client.Bloombox
 import bloombox.client.interfaces.ServiceClient
+import bloombox.client.internals.mtls.ClientCredentials
 import bloombox.client.internals.rpc.RPCClient
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
@@ -54,7 +55,7 @@ class TelemetryClient(override val host: String,
                       override val timeout: Duration,
                       override val transportMode: TransportMode = TransportMode.SECURE,
                       override val clientAuth: ClientAuth = ClientAuth.NONE,
-                      override val clientCredentials: RPCClient.ClientCredentials? = null,
+                      override val clientCredentials: ClientCredentials? = null,
                       override val clientAuthorityRoots: InputStream? = null,
                       override val executor: Executor = Executors.newSingleThreadExecutor(),
                       internal val defaultPartner: String? = null,
