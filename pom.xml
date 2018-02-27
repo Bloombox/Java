@@ -96,7 +96,7 @@
         <maven.jacoco.version>0.7.9</maven.jacoco.version>
         <maven.shade.version>3.1.0</maven.shade.version>
         <maven.source.version>3.0.1</maven.source.version>
-        <maven.dokka.version>0.9.15</maven.dokka.version>
+        <maven.dokka.version>0.9.16</maven.dokka.version>
         <maven.site.version>3.6</maven.site.version>
         <maven.reports.version>2.9</maven.reports.version>
         <maven.deploy.version>2.8.2</maven.deploy.version>
@@ -110,7 +110,6 @@
         <!-- Settings -->
         <jvm.source>1.8</jvm.source>
         <jvm.target>1.8</jvm.target>
-        <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -456,20 +455,53 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <moduleName>java-client</moduleName>
+                    <moduleName>bloombox</moduleName>
                     <outputFormat>html</outputFormat>
-
                     <jdkVersion>8</jdkVersion>
                     <sourceDirectories>
                         <sourceDirectory>src/main/kotlin</sourceDirectory>
                     </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
+                    <jdkVersion>8</jdkVersion>
+                    <includes>
+                        <include>src/main/README.md</include>
+                    </includes>
+                    <reportNotDocumented>false</reportNotDocumented>
+                    <impliedPlatforms>
+                        <impliedPlatform>JVM</impliedPlatform>
+                    </impliedPlatforms>
+
+                    <samplesDirs>
+                        <dir>example/src/main</dir>
+                    </samplesDirs>
+
+                    <sourceLinks>
+                        <link>
+                            <dir>${project.basedir}/src/main/kotlin</dir>
+                            <url>http://github.com/bloombox/java</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                        <link>
+                            <dir>${project.basedir}/src/main/java/io</dir>
+                            <url>http://github.com/bloombox/schema</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                    </sourceLinks>
+
                     <perPackageOptions>
                         <packageOptions>
-                            <prefix>bloombox</prefix>
+                            <prefix>bloombox.client</prefix>
                             <skipDeprecated>false</skipDeprecated>
                             <reportUndocumented>true</reportUndocumented>
                             <includeNonPublic>false</includeNonPublic>
+                        </packageOptions>
+                        <packageOptions>
+                            <prefix>bloombox.client.internals</prefix>
+                            <suppress>true</suppress>
+                        </packageOptions>
+                        <packageOptions>
+                            <prefix>bloombox.client.test</prefix>
+                            <suppress>true</suppress>
                         </packageOptions>
                     </perPackageOptions>
                 </configuration>
@@ -516,20 +548,53 @@
                 <artifactId>dokka-maven-plugin</artifactId>
                 <version>${maven.dokka.version}</version>
                 <configuration>
-                    <moduleName>java-client</moduleName>
+                    <moduleName>bloombox</moduleName>
                     <outputFormat>html</outputFormat>
-
                     <jdkVersion>8</jdkVersion>
                     <sourceDirectories>
                         <sourceDirectory>src/main/kotlin</sourceDirectory>
                     </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
+                    <jdkVersion>8</jdkVersion>
+                    <includes>
+                        <include>src/main/README.md</include>
+                    </includes>
+                    <reportNotDocumented>false</reportNotDocumented>
+                    <impliedPlatforms>
+                        <impliedPlatform>JVM</impliedPlatform>
+                    </impliedPlatforms>
+
+                    <samplesDirs>
+                        <dir>example/src/main</dir>
+                    </samplesDirs>
+
+                    <sourceLinks>
+                        <link>
+                            <dir>${project.basedir}/src/main/kotlin</dir>
+                            <url>http://github.com/bloombox/java</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                        <link>
+                            <dir>${project.basedir}/src/main/java/io</dir>
+                            <url>http://github.com/bloombox/schema</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                    </sourceLinks>
+
                     <perPackageOptions>
                         <packageOptions>
-                            <prefix>bloombox</prefix>
+                            <prefix>bloombox.client</prefix>
                             <skipDeprecated>false</skipDeprecated>
                             <reportUndocumented>true</reportUndocumented>
                             <includeNonPublic>false</includeNonPublic>
+                        </packageOptions>
+                        <packageOptions>
+                            <prefix>bloombox.client.internals</prefix>
+                            <suppress>true</suppress>
+                        </packageOptions>
+                        <packageOptions>
+                            <prefix>bloombox.client.test</prefix>
+                            <suppress>true</suppress>
                         </packageOptions>
                     </perPackageOptions>
                 </configuration>
