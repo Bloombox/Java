@@ -53,7 +53,7 @@
     </issueManagement>
 
     <properties>
-        <bloombox.version>1.0-beta3</bloombox.version>
+        <bloombox.version>1.0</bloombox.version>
 
         <!-- Dependencies -->
         <kotlin.version>1.2.0</kotlin.version>
