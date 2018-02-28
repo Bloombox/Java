@@ -8,27 +8,57 @@
   <part id="general">
     <title>General</title>
 
-    <faq id="whats-foo">
-      <question>What is Foo?</question>
+    <faq id="whats-bloombox">
+      <question>What is Bloombox?</question>
       <answer>
-        <p>some markup goes here</p>
-        <source>some source code</source>
-        <p>some markup goes here</p>
+        <p>Bloombox is a company based in California that makes software for <b>retail cannabis</b> dispensaries. Our
+        Java library allows integrating with Bloombox APIs from Java and Kotlin.</p>
       </answer>
     </faq>
 
-    <faq id="whats-bar">
-      <question>What is Bar?</question>
-      <answer><p>some markup goes here</p></answer>
+    <faq id="what-can-i-do-with-bloombox">
+      <question>What can I do with Bloombox for Java?</question>
+      <answer>
+        <p>Supported APIs by this client library include the <b>Shop API</b>, <b>Menu API</b> and <b>Telemetry API.</b>
+        With the Shop service, you can do things like retrieve shop info, verify or enroll members, and submit and
+        retrieve commercial orders. The Menu API allows retrieval of product catalog data. With the Telemetry API,
+        developers can send their own telemetry events for later analysis.</p>
+      </answer>
+    </faq>
+
+    <faq id="how-do-i-get-an-account">
+      <question>How do I get a Bloombox account?</question>
+      <answer>
+        <p>This library works with existing Bloombox accounts, and requires an API key. If you work for a dispensary and
+        want to sign up, take a look at <a href="https://bloombox.io">our website</a>. If you're a developer or integrator
+        and you want to build a product against Bloombox, <a href="https://bloombox.io/contact">drop us a line</a>. We
+        love APIs and share them freely! :)</p>
+      </answer>
     </faq>
   </part>
 
-  <part id="install">
-    <title>Installation</title>
+  <part id="credentials">
+    <title>Credentials</title>
 
-    <faq id="how-install">
-      <question>How do I install Foo?</question>
-      <answer><p>some markup goes here</p></answer>
+    <faq id="how-do-i-get-an-api-key">
+      <question>How do I get an API key?</question>
+      <answer>
+        <p>There are a few ways you can get an API key:</p>
+        <ul>
+          <li>Via the <a href="https://manage.bloombox.io">Bloombox Dashboard</a>, in the <i>Settings</i> pane.</li>
+          <li>With an integrated <a href="https://console.cloud.google.com">Google Cloud</a> project.</li>
+          <li>From <a href="https://bloombox.atlassian.net/servicedesk">Bloombox Helpdesk</a> staff.</li>
+        </ul>
+      </answer>
+    </faq>
+
+    <faq id="where-do-i-find-partner-location-codes">
+      <question>Where do I find my partner ID and location ID?</question>
+      <answer>
+        <p>Your <i>partner ID</i> is a short string of text that you pick when you create your Bloombox organization
+        account. You can find it in URLs related to your account, listed in the <i>Settings</i> pane of your Bloombox
+        dashboard, or via the <i>Helpdesk</i>.</p>
+      </answer>
     </faq>
   </part>
 </faqs>
