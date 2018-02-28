@@ -193,16 +193,15 @@ class TelemetryClient(override val host: String,
     val builder = AnalyticsContext.Context.newBuilder()
     val scope = AnalyticsScope.Scope.newBuilder()
 
+    val partner = defaultPartner ?: this.partner
+    val location = defaultLocation ?: this.location
+    val device = deviceUUID ?: this.deviceUUID
+
     // partner scope first
-    if ((defaultPartner ?: this.partner) != null) {
-      val partner = (defaultPartner ?: this.partner)!!
-
-      if ((defaultLocation ?: this.location) != null) {
-        val location = (defaultLocation ?: this.location)!!
-
-        if ((deviceUUID ?: this.deviceUUID) != null) {
+    if (partner != null) {
+      if (location != null) {
+        if (device != null) {
           // full set of partner/device context
-          val device = (deviceUUID ?: this.deviceUUID)!!
           scope.partner = "partner/$partner/location/$location/device/$device"
         } else {
           // partner/location only
