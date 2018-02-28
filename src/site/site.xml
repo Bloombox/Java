@@ -14,10 +14,6 @@
     <publishDate position="right"/>
     <version position="right"/>
 
-    <googleSearch>
-        <sitesearch/>
-    </googleSearch>
-
     <googleAnalyticsAccountId>UA-73412840-4</googleAnalyticsAccountId>
 
     <body>
@@ -70,6 +66,9 @@
                 <src>https://storage.googleapis.com/bloom-static/branding/logo-bloombox-v2-pms-muted-small.png</src>
                 <href>/index.html</href>
             </topBarIcon>
+            <googleSearch>
+                <sitesearch/>
+            </googleSearch>
             <gitHub>
                 <projectId>bloombox/Java</projectId>
                 <ribbonOrientation>right</ribbonOrientation>
