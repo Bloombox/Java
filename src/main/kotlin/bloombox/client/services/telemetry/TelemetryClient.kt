@@ -215,7 +215,7 @@ class TelemetryClient(override val host: String,
 
     // commercial scope second
     if (section != null) {
-      if (item != null && item.id != null && item.id.isNotEmpty() && item.id.isNotBlank()) {
+      if (item?.id?.isNotBlank() == true) {
         // section and item
         scope.commercial = "section/${section.name}/item/${item.id}"
       } else {
@@ -223,19 +223,19 @@ class TelemetryClient(override val host: String,
         scope.commercial = section.name
       }
     }
-    if (orderKey != null && orderKey.isNotBlank() && orderKey.isNotEmpty())
+    if (orderKey?.isNotBlank() == true)
     // set order key
       scope.order = orderKey
     builder.setScope(scope)
 
     // handle user and order key
-    if (userKey != null && userKey.isNotEmpty() && userKey.isNotEmpty())
+    if (userKey?.isNotBlank() == true)
       builder.setUserKey(UserKey.newBuilder().setUid(userKey))
 
     // set fingerprint and group
-    if (fingerprint != null && fingerprint.isNotEmpty() && fingerprint.isNotBlank())
+    if (fingerprint?.isNotBlank() == true)
       builder.fingerprint = fingerprint
-    if (group != null && group.isNotBlank() && group.isNotBlank())
+    if (group?.isNotBlank() == true)
       builder.group = group
 
     return builder
