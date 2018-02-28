@@ -54,7 +54,7 @@
 
     <custom>
         <fluidoSkin>
-            <profile>pre-release</profile>
+            <profile>production</profile>
             <skipGenerationDate>true</skipGenerationDate>
             <breadcrumbDivider>»</breadcrumbDivider>
             <topBarEnabled>false</topBarEnabled>
