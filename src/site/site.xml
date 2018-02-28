@@ -31,8 +31,8 @@
         </menu>
 
         <menu name="Examples">
-            <item name="Java" href="https://github.com/Bloombox/Java/blob/master/example/src/main/java/io/bloombox/example/JavaClientExample.kt"/>
-            <item name="Kotlin" href="https://github.com/Bloombox/Java/blob/master/example/src/main/kotlin/io/bloombox/example/KotlinClientExample.kt"/>
+            <item name="Java" href="https://github.com/Bloombox/Java/blob/master/example/src/main/java/io/bloombox/example/java/JavaClientExample.java"/>
+            <item name="Kotlin" href="https://github.com/Bloombox/Java/blob/master/example/src/main/kotlin/io/bloombox/example/kotlin/KotlinClientExample.kt"/>
         </menu>
 
         <menu name="API Docs">
