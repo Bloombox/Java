@@ -5,8 +5,6 @@
         <version>1.6</version>
     </skin>
 
-    <url>https://bloombox.github.io/Java/</url>
-
     <bannerLeft>
         <name>Bloombox for Java</name>
         <src>https://storage.googleapis.com/bloom-static/branding/java/logo-bloombox-java.png</src>
