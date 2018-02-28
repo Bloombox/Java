@@ -61,8 +61,8 @@ public final class IDOuterClass {
       "se.H\000\022Q\n\010passport\030\025 \001(\0132&.bloombox.schem" +
       "a.identity.ids.PassportB\025\212@\022National pas" +
       "sport.H\000B\n\n\010document* \n\006IDType\022\010\n\004USDL\020\000" +
-      "\022\014\n\010PASSPORT\020\001B!\n\033io.bloombox.schema.ide" +
-      "ntityH\001P\001b\006proto3"
+      "\022\014\n\010PASSPORT\020\001B\'\n\033io.bloombox.schema.ide" +
+      "ntityH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1636,9 +1636,9 @@ public final class OrderAnalytics {
       "\020\n\014ORDER_STATUS\020\005\022\020\n\014ORDER_CANCEL\020\006\022\022\n\016O" +
       "RDER_ACCEPTED\020\007\022\022\n\016ORDER_REJECTED\020\010\022\025\n\021O" +
       "RDER_IN_PROGERSS\020\t\022\032\n\026ORDER_OUT_FOR_DELI" +
-      "VERY\020\n\022\023\n\017ORDER_FULFILLED\020\013B;\n\"io.bloomb" +
+      "VERY\020\n\022\023\n\017ORDER_FULFILLED\020\013B>\n\"io.bloomb" +
       "ox.schema.analytics.orderB\016OrderAnalytic" +
-      "sH\001P\000\370\001\001b\006proto3"
+      "sH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

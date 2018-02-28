@@ -36,7 +36,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.6.0-SNAPSHOT)",
-    comments = "Source: pos/v1beta1/POSService.proto")
+    comments = "Source: pos/v1beta1/POSService_Beta1.proto")
 public final class PointOfSaleGrpc {
 
   private PointOfSaleGrpc() {}
@@ -238,7 +238,7 @@ public final class PointOfSaleGrpc {
   private static final class PointOfSaleDescriptorSupplier implements io.grpc.protobuf.ProtoFileDescriptorSupplier {
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSService.getDescriptor();
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.getDescriptor();
     }
   }
 

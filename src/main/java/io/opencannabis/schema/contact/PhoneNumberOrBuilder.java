@@ -24,17 +24,30 @@ public interface PhoneNumberOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string e164 = 1;</code>
+   * <pre>
+   * E164-formatted telephone number.
+   * </pre>
+   *
+   * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
    */
   java.lang.String getE164();
   /**
-   * <code>string e164 = 1;</code>
+   * <pre>
+   * E164-formatted telephone number.
+   * </pre>
+   *
+   * <code>string e164 = 1 [(.gen_bq_schema.description) = "E164-formatted telephone number."];</code>
    */
   com.google.protobuf.ByteString
       getE164Bytes();
 
   /**
-   * <code>bool validated = 2;</code>
+   * <pre>
+   * Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone
+   * number remains unvalidated.
+   * </pre>
+   *
+   * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this phone number."];</code>
    */
   boolean getValidated();
 }

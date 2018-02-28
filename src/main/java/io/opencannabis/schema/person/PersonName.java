@@ -54,8 +54,8 @@ public final class PersonName {
       "\001(\tB\030\212@\025Person\'s middle name.\022.\n\006prefix\030" +
       "\005 \001(\tB\036\212@\033Prefix for a person\'s name.\0220\n" +
       "\007postfix\030\006 \001(\tB\037\212@\034Postfix for a person\'" +
-      "s name.B#\n\035io.opencannabis.schema.person" +
-      "H\001P\001b\006proto3"
+      "s name.B)\n\035io.opencannabis.schema.person" +
+      "H\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1741,9 +1741,9 @@ public final class MerchandiseProduct {
       "ED_MERCHANDISE\020\000\022\014\n\010CLOTHING\020\001\022\r\n\tGLASSW" +
       "ARE\020\002\022\r\n\tCONTAINER\020\003\022\013\n\007LIGHTER\020\004*M\n\017Mer" +
       "chandiseFlag\022\030\n\024NO_MERCHANDISE_FLAGS\020\000\022\020" +
-      "\n\014MEDICAL_ONLY\020\001\022\016\n\nBRAND_SWAG\020\002B;\n\036io.o" +
+      "\n\014MEDICAL_ONLY\020\001\022\016\n\nBRAND_SWAG\020\002B>\n\036io.o" +
       "pencannabis.schema.productB\022MerchandiseP" +
-      "roductH\001P\000\370\001\001b\006proto3"
+      "roductH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

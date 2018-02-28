@@ -164,8 +164,8 @@ public final class CheckinServiceBeta1 {
       "in.v1beta1.CardCheckin.Request\0329.bloombo" +
       "x.schema.services.checkin.v1beta1.Checki" +
       "nResponse\"\'\202\323\344\223\002!\"\034/checkin/v1beta1/glob" +
-      "al:card:\001*B1\n+io.bloombox.schema.service" +
-      "s.checkin.v1beta1H\001P\001b\006proto3"
+      "al:card:\001*B7\n+io.bloombox.schema.service" +
+      "s.checkin.v1beta1H\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

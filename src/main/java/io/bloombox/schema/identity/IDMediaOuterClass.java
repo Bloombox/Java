@@ -52,8 +52,8 @@ public final class IDMediaOuterClass {
       "rientation\022\014\n\004data\030\003 \001(\014\022\022\n\nimage_type\030\004" +
       " \001(\r\022\017\n\007quality\030\005 \001(\001*>\n\007IDMedia\022\022\n\016DOCU" +
       "MENT_FRONT\020\000\022\021\n\rDOCUMENT_REAR\020\001\022\014\n\010PORTR" +
-      "AIT\020\002B!\n\033io.bloombox.schema.identityH\001P\001" +
-      "b\006proto3"
+      "AIT\020\002B\'\n\033io.bloombox.schema.identityH\001P\001" +
+      "\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

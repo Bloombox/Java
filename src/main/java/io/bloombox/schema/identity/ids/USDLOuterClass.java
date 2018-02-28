@@ -82,8 +82,9 @@ public final class USDLOuterClass {
       "\021\n\rUNDER_21_DATE\0204\022\014\n\010UNDER_18\020<\022\014\n\010UNDE" +
       "R_19\020=\022\014\n\010UNDER_21\020>\022\017\n\013ORGAN_DONOR\020?\022\013\n" +
       "\007VETERAN\020@\022\017\n\013NONRESIDENT\020A\022\022\n\016RACE_ETHN" +
-      "ICITY\020F\022\023\n\017COMPLIANCE_TYPE\020GB%\n\037io.bloom" +
-      "box.schema.identity.idsH\001P\001b\006proto3"
+      "ICITY\020F\022\023\n\017COMPLIANCE_TYPE\020GB+\n\037io.bloom" +
+      "box.schema.identity.idsH\001P\001\242\002\003BBSb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

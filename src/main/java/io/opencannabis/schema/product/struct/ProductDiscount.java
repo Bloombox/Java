@@ -75,9 +75,9 @@ public final class ProductDiscount {
       "ts.pricing.BOGODiscountH\000\022@\n\007loyalty\030\006 \001" +
       "(\0132-.opencannabis.structs.pricing.Loyalt" +
       "yDiscountH\000B\006\n\004sale*5\n\010SaleType\022\022\n\016PERCE" +
-      "NTAGE_OFF\020\000\022\010\n\004BOGO\020\001\022\013\n\007LOYALTY\020\002B?\n%io" +
+      "NTAGE_OFF\020\000\022\010\n\004BOGO\020\001\022\013\n\007LOYALTY\020\002BB\n%io" +
       ".opencannabis.schema.product.structB\017Pro" +
-      "ductDiscountH\001P\001\370\001\001b\006proto3"
+      "ductDiscountH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -99,9 +99,9 @@ public final class ProductPricingSpec {
       "IE\020\002*\211\001\n\021PricingWeightTier\022\t\n\005OTHER\020\000\022\010\n" +
       "\004GRAM\020\001\022\014\n\010HALFGRAM\020\002\022\017\n\013QUARTERGRAM\020\003\022\007" +
       "\n\003DUB\020\004\022\n\n\006EIGHTH\020\005\022\013\n\007QUARTER\020\006\022\010\n\004HALF" +
-      "\020\007\022\t\n\005OUNCE\020\010\022\t\n\005POUND\020\tBB\n%io.opencanna" +
+      "\020\007\022\t\n\005OUNCE\020\010\022\t\n\005POUND\020\tBE\n%io.opencanna" +
       "bis.schema.product.structB\022ProductPricin" +
-      "gSpecH\001P\001\370\001\001b\006proto3"
+      "gSpecH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

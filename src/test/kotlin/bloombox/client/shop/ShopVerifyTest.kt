@@ -121,10 +121,12 @@ class ShopVerifyTest: ClientRPCTest() {
    */
   @test
   fun testBadAccountVerify() {
-    // run a known-good account verification
-    val response = testMemberVerifyBadAccount(client.platform.shop())
-    assertNotNull(response, "response from server for known-bad verify should not be null")
-    assertTrue(!response.verified, "known-bad account should fail verification")
+    withClient({ client ->
+      // run a known-good account verification
+      val response = testMemberVerifyBadAccount(client.platform.shop())
+      assertNotNull(response, "response from server for known-bad verify should not be null")
+      assertTrue(!response.verified, "known-bad account should fail verification")
+    })
   }
 
   /**
@@ -132,15 +134,17 @@ class ShopVerifyTest: ClientRPCTest() {
    */
   @test
   fun testBadAccountVerifyAsync() {
-    // run a known-good account verification
-    val operation = client.platform.shop().verifyMember("does-not-exist@error.com", { response ->
-      assertNotNull(response, "response from server for known-bad verify should not be null")
-      assertTrue(!response.verified, "known-bad account should fail verification")
-    }, { err ->
-      logging.severe("Severe error fetching order: $err")
-    })
+    withClient({ client ->
+      // run a known-good account verification
+      val operation = client.platform.shop().verifyMember("does-not-exist@error.com", { response ->
+        assertNotNull(response, "response from server for known-bad verify should not be null")
+        assertTrue(!response.verified, "known-bad account should fail verification")
+      }, { err ->
+        logging.severe("Severe error fetching order: $err")
+      })
 
-    // make sure it executes, with a 10-second timeout
-    operation.get(10, TimeUnit.SECONDS)
+      // make sure it executes, with a 10-second timeout
+      operation.get(10, TimeUnit.SECONDS)
+    })
   }
 }

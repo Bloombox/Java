@@ -39,7 +39,7 @@ public final class OrderCustomer {
      * Person attached to this customer.
      * </pre>
      *
-     * <code>.opencannabis.person.Person person = 1;</code>
+     * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
      */
     boolean hasPerson();
     /**
@@ -47,7 +47,7 @@ public final class OrderCustomer {
      * Person attached to this customer.
      * </pre>
      *
-     * <code>.opencannabis.person.Person person = 1;</code>
+     * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
      */
     io.opencannabis.schema.person.Person getPerson();
     /**
@@ -55,42 +55,42 @@ public final class OrderCustomer {
      * Person attached to this customer.
      * </pre>
      *
-     * <code>.opencannabis.person.Person person = 1;</code>
+     * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
      */
     io.opencannabis.schema.person.PersonOrBuilder getPersonOrBuilder();
 
     /**
      * <pre>
-     * Foreign system ID.
+     * Partner-scoped foreign system ID.
      * </pre>
      *
-     * <code>string foreign_id = 2;</code>
+     * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
      */
     java.lang.String getForeignId();
     /**
      * <pre>
-     * Foreign system ID.
+     * Partner-scoped foreign system ID.
      * </pre>
      *
-     * <code>string foreign_id = 2;</code>
+     * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
      */
     com.google.protobuf.ByteString
         getForeignIdBytes();
 
     /**
      * <pre>
-     * Logged-in user, if any.
+     * Resolved subject user key.
      * </pre>
      *
-     * <code>string user_key = 3;</code>
+     * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
      */
     java.lang.String getUserKey();
     /**
      * <pre>
-     * Logged-in user, if any.
+     * Resolved subject user key.
      * </pre>
      *
-     * <code>string user_key = 3;</code>
+     * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
      */
     com.google.protobuf.ByteString
         getUserKeyBytes();
@@ -203,7 +203,7 @@ public final class OrderCustomer {
      * Person attached to this customer.
      * </pre>
      *
-     * <code>.opencannabis.person.Person person = 1;</code>
+     * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
      */
     public boolean hasPerson() {
       return person_ != null;
@@ -213,7 +213,7 @@ public final class OrderCustomer {
      * Person attached to this customer.
      * </pre>
      *
-     * <code>.opencannabis.person.Person person = 1;</code>
+     * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
      */
     public io.opencannabis.schema.person.Person getPerson() {
       return person_ == null ? io.opencannabis.schema.person.Person.getDefaultInstance() : person_;
@@ -223,7 +223,7 @@ public final class OrderCustomer {
      * Person attached to this customer.
      * </pre>
      *
-     * <code>.opencannabis.person.Person person = 1;</code>
+     * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
      */
     public io.opencannabis.schema.person.PersonOrBuilder getPersonOrBuilder() {
       return getPerson();
@@ -233,10 +233,10 @@ public final class OrderCustomer {
     private volatile java.lang.Object foreignId_;
     /**
      * <pre>
-     * Foreign system ID.
+     * Partner-scoped foreign system ID.
      * </pre>
      *
-     * <code>string foreign_id = 2;</code>
+     * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
      */
     public java.lang.String getForeignId() {
       java.lang.Object ref = foreignId_;
@@ -252,10 +252,10 @@ public final class OrderCustomer {
     }
     /**
      * <pre>
-     * Foreign system ID.
+     * Partner-scoped foreign system ID.
      * </pre>
      *
-     * <code>string foreign_id = 2;</code>
+     * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
      */
     public com.google.protobuf.ByteString
         getForeignIdBytes() {
@@ -275,10 +275,10 @@ public final class OrderCustomer {
     private volatile java.lang.Object userKey_;
     /**
      * <pre>
-     * Logged-in user, if any.
+     * Resolved subject user key.
      * </pre>
      *
-     * <code>string user_key = 3;</code>
+     * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
      */
     public java.lang.String getUserKey() {
       java.lang.Object ref = userKey_;
@@ -294,10 +294,10 @@ public final class OrderCustomer {
     }
     /**
      * <pre>
-     * Logged-in user, if any.
+     * Resolved subject user key.
      * </pre>
      *
-     * <code>string user_key = 3;</code>
+     * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
      */
     public com.google.protobuf.ByteString
         getUserKeyBytes() {
@@ -655,7 +655,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       public boolean hasPerson() {
         return personBuilder_ != null || person_ != null;
@@ -665,7 +665,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       public io.opencannabis.schema.person.Person getPerson() {
         if (personBuilder_ == null) {
@@ -679,7 +679,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       public Builder setPerson(io.opencannabis.schema.person.Person value) {
         if (personBuilder_ == null) {
@@ -699,7 +699,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       public Builder setPerson(
           io.opencannabis.schema.person.Person.Builder builderForValue) {
@@ -717,7 +717,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       public Builder mergePerson(io.opencannabis.schema.person.Person value) {
         if (personBuilder_ == null) {
@@ -739,7 +739,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       public Builder clearPerson() {
         if (personBuilder_ == null) {
@@ -757,7 +757,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       public io.opencannabis.schema.person.Person.Builder getPersonBuilder() {
         
@@ -769,7 +769,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       public io.opencannabis.schema.person.PersonOrBuilder getPersonOrBuilder() {
         if (personBuilder_ != null) {
@@ -784,7 +784,7 @@ public final class OrderCustomer {
        * Person attached to this customer.
        * </pre>
        *
-       * <code>.opencannabis.person.Person person = 1;</code>
+       * <code>.opencannabis.person.Person person = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Person attached to this customer."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.person.Person, io.opencannabis.schema.person.Person.Builder, io.opencannabis.schema.person.PersonOrBuilder> 
@@ -803,10 +803,10 @@ public final class OrderCustomer {
       private java.lang.Object foreignId_ = "";
       /**
        * <pre>
-       * Foreign system ID.
+       * Partner-scoped foreign system ID.
        * </pre>
        *
-       * <code>string foreign_id = 2;</code>
+       * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
        */
       public java.lang.String getForeignId() {
         java.lang.Object ref = foreignId_;
@@ -822,10 +822,10 @@ public final class OrderCustomer {
       }
       /**
        * <pre>
-       * Foreign system ID.
+       * Partner-scoped foreign system ID.
        * </pre>
        *
-       * <code>string foreign_id = 2;</code>
+       * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
        */
       public com.google.protobuf.ByteString
           getForeignIdBytes() {
@@ -842,10 +842,10 @@ public final class OrderCustomer {
       }
       /**
        * <pre>
-       * Foreign system ID.
+       * Partner-scoped foreign system ID.
        * </pre>
        *
-       * <code>string foreign_id = 2;</code>
+       * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
        */
       public Builder setForeignId(
           java.lang.String value) {
@@ -859,10 +859,10 @@ public final class OrderCustomer {
       }
       /**
        * <pre>
-       * Foreign system ID.
+       * Partner-scoped foreign system ID.
        * </pre>
        *
-       * <code>string foreign_id = 2;</code>
+       * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
        */
       public Builder clearForeignId() {
         
@@ -872,10 +872,10 @@ public final class OrderCustomer {
       }
       /**
        * <pre>
-       * Foreign system ID.
+       * Partner-scoped foreign system ID.
        * </pre>
        *
-       * <code>string foreign_id = 2;</code>
+       * <code>string foreign_id = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Partner-scoped foreign system ID."];</code>
        */
       public Builder setForeignIdBytes(
           com.google.protobuf.ByteString value) {
@@ -892,10 +892,10 @@ public final class OrderCustomer {
       private java.lang.Object userKey_ = "";
       /**
        * <pre>
-       * Logged-in user, if any.
+       * Resolved subject user key.
        * </pre>
        *
-       * <code>string user_key = 3;</code>
+       * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
        */
       public java.lang.String getUserKey() {
         java.lang.Object ref = userKey_;
@@ -911,10 +911,10 @@ public final class OrderCustomer {
       }
       /**
        * <pre>
-       * Logged-in user, if any.
+       * Resolved subject user key.
        * </pre>
        *
-       * <code>string user_key = 3;</code>
+       * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
        */
       public com.google.protobuf.ByteString
           getUserKeyBytes() {
@@ -931,10 +931,10 @@ public final class OrderCustomer {
       }
       /**
        * <pre>
-       * Logged-in user, if any.
+       * Resolved subject user key.
        * </pre>
        *
-       * <code>string user_key = 3;</code>
+       * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
        */
       public Builder setUserKey(
           java.lang.String value) {
@@ -948,10 +948,10 @@ public final class OrderCustomer {
       }
       /**
        * <pre>
-       * Logged-in user, if any.
+       * Resolved subject user key.
        * </pre>
        *
-       * <code>string user_key = 3;</code>
+       * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
        */
       public Builder clearUserKey() {
         
@@ -961,10 +961,10 @@ public final class OrderCustomer {
       }
       /**
        * <pre>
-       * Logged-in user, if any.
+       * Resolved subject user key.
        * </pre>
        *
-       * <code>string user_key = 3;</code>
+       * <code>string user_key = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Resolved subject user key."];</code>
        */
       public Builder setUserKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -1041,11 +1041,15 @@ public final class OrderCustomer {
   static {
     java.lang.String[] descriptorData = {
       "\n\027commerce/Customer.proto\022\025opencannabis." +
-      "commerce\032\023person/Person.proto\"]\n\010Custome" +
-      "r\022+\n\006person\030\001 \001(\0132\033.opencannabis.person." +
-      "Person\022\022\n\nforeign_id\030\002 \001(\t\022\020\n\010user_key\030\003" +
-      " \001(\tB7\n\037io.opencannabis.schema.commerceB" +
-      "\rOrderCustomerH\001P\000\370\001\001b\006proto3"
+      "commerce\032\016bq_field.proto\032\023person/Person." +
+      "proto\"\321\001\n\010Customer\022T\n\006person\030\001 \001(\0132\033.ope" +
+      "ncannabis.person.PersonB\'\360?\001\212@!Person at" +
+      "tached to this customer.\022;\n\nforeign_id\030\002" +
+      " \001(\tB\'\360?\001\212@!Partner-scoped foreign syste" +
+      "m ID.\0222\n\010user_key\030\003 \001(\tB \360?\001\212@\032Resolved " +
+      "subject user key.B:\n\037io.opencannabis.sch" +
+      "ema.commerceB\rOrderCustomerH\001P\000\242\002\003OCSb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1058,6 +1062,7 @@ public final class OrderCustomer {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.person.PersonOuterClass.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_commerce_Customer_descriptor =
@@ -1066,6 +1071,13 @@ public final class OrderCustomer {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_Customer_descriptor,
         new java.lang.String[] { "Person", "ForeignId", "UserKey", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.description);
+    registry.add(gen_bq_schema.BqField.require);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
     io.opencannabis.schema.person.PersonOuterClass.getDescriptor();
   }
 

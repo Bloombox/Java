@@ -1282,9 +1282,9 @@ public final class UserAnalytics {
       "t*\230\001\n\nUserAction\022\n\n\006ENGAGE\020\000\022\n\n\006ENROLL\020\n" +
       "\022\014\n\010ACTIVATE\020\013\022\010\n\004JOIN\020\014\022\n\n\006VERIFY\020\r\022\013\n\007" +
       "CHECKIN\020\016\022\017\n\013PREFERENCES\020\017\022\014\n\010PURCHASE\020\020" +
-      "\022\t\n\005ORDER\020\021\022\n\n\006OPT_IN\020\022\022\013\n\007OPT_OUT\020\023B9\n!" +
+      "\022\t\n\005ORDER\020\021\022\n\n\006OPT_IN\020\022\022\013\n\007OPT_OUT\020\023B<\n!" +
       "io.bloombox.schema.analytics.userB\rUserA" +
-      "nalyticsH\001P\000\370\001\001b\006proto3"
+      "nalyticsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

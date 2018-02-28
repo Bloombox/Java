@@ -186,9 +186,9 @@ public final class TelemetryServiceBeta3 {
       "lemetry.v1beta3.IdentityEvent.Action\032\026.g" +
       "oogle.protobuf.Empty\"K\202\323\344\223\002E\"@/telemetry" +
       "/v1beta3/identity/{name}/{context.user_k" +
-      "ey.uid}:action:\001*BG\n-io.bloombox.schema." +
-      "services.telemetry.v1beta3H\001P\001\252\002\021Telemet" +
-      "ry.v1beta3b\006proto3"
+      "ey.uid}:action:\001*BM\n-io.bloombox.schema." +
+      "services.telemetry.v1beta3H\001P\001\242\002\003BBS\252\002\021T" +
+      "elemetry.v1beta3b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

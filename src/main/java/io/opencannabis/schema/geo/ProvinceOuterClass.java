@@ -47,8 +47,8 @@ public final class ProvinceOuterClass {
       "\n\022geo/Province.proto\022\020opencannabis.geo\032\021" +
       "geo/USState.proto\"V\n\010Province\022.\n\005state\030\001" +
       " \001(\0162\035.opencannabis.geo.usa.USStateH\000\022\022\n" +
-      "\010province\030\002 \001(\tH\000B\006\n\004specB \n\032io.opencann" +
-      "abis.schema.geoH\001P\001b\006proto3"
+      "\010province\030\002 \001(\tH\000B\006\n\004specB&\n\032io.opencann" +
+      "abis.schema.geoH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

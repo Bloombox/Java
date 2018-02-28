@@ -41,6 +41,87 @@ class ClientConfigTests : ClientRPCTest() {
   }
 
   @test
+  fun testApiRegionCodes() {
+    assertEquals(
+          "usw1",
+          Bloombox.APIRegion.USW1.code,
+          "USW1 region code should be 'usw1'")
+
+    assertEquals(
+          "usc1",
+          Bloombox.APIRegion.USC1.code,
+          "USC1 region code should be 'usc1'")
+  }
+
+  @test
+  fun testApiEnvironmentCodes() {
+    assertEquals(
+          "prod",
+          Bloombox.APIEnvironment.PRODUCTION.code,
+          "PRODUCTION environment code should be 'prod'")
+
+    assertEquals(
+          "staging",
+          Bloombox.APIEnvironment.STAGING.code,
+          "STAGING environment code should be 'staging'")
+
+    assertEquals(
+          "sandbox",
+          Bloombox.APIEnvironment.SANDBOX.code,
+          "SANDBOX environment code should be 'sandbox'")
+  }
+
+  @test
+  fun testClientDefaultSettings() {
+    val defauls = Bloombox.Settings.defaults(
+          "apikey123", "partner123", "location123")
+    assertEquals(
+          "apikey123",
+          defauls.apiKey,
+          "API key should be adopted via 'defaults'")
+
+    assertEquals(
+          "partner123",
+          defauls.partner,
+          "partner code should be adopted via 'defaults'")
+
+    assertEquals(
+          "location123",
+          defauls.location,
+          "location code should be adopted via 'defaults'")
+
+    assertEquals(
+          false,
+          defauls.enableLogging,
+          "logging should default to being off")
+  }
+
+  @test
+  fun testClientEnableLogging() {
+    val defauls = Bloombox.Settings.withLogging(
+          "apikey123", "partner123", "location123")
+    assertEquals(
+          "apikey123",
+          defauls.apiKey,
+          "API key should be adopted via 'defaults'")
+
+    assertEquals(
+          "partner123",
+          defauls.partner,
+          "partner code should be adopted via 'defaults'")
+
+    assertEquals(
+          "location123",
+          defauls.location,
+          "location code should be adopted via 'defaults'")
+
+    assertEquals(
+          true,
+          defauls.enableLogging,
+          "logging should be active when it is requested")
+  }
+
+  @test
   fun testProductionSandboxEndpoints() {
     assertEquals(
           "api.bloombox.cloud",
@@ -55,90 +136,94 @@ class ClientConfigTests : ClientRPCTest() {
 
   @test
   fun testConfigPassthroughProduction() {
-    assertEquals(
-          "telemetry.api.bloombox.cloud",
-          client.platform.telemetry().host,
-          "production telemetry domain should be properly set")
+    withClient({ client ->
+      assertEquals(
+            "telemetry.api.bloombox.cloud",
+            client.platform.telemetry().host,
+            "production telemetry domain should be properly set")
 
-    assertEquals(
-          "shop.api.bloombox.cloud",
-          client.platform.shop().host,
-          "production shop domain should be properly set")
+      assertEquals(
+            "shop.api.bloombox.cloud",
+            client.platform.shop().host,
+            "production shop domain should be properly set")
 
-    assertEquals(
-          expectedPort,
-          client.platform.telemetry().port,
-          "production telemetry port should be properly set")
+      assertEquals(
+            expectedPort,
+            client.platform.telemetry().port,
+            "production telemetry port should be properly set")
 
-    assertEquals(
-          expectedPort,
-          client.platform.shop().port,
-          "production shop port should be properly set")
+      assertEquals(
+            expectedPort,
+            client.platform.shop().port,
+            "production shop port should be properly set")
+    })
   }
 
   @test
   fun testConfigEnvironments() {
     // prod
-    assertEquals(
-          "telemetry.api.bloombox.cloud",
-          client.platform.telemetry().host,
-          "production telemetry domain should be properly set")
+    withClient({ client ->
+      assertEquals(
+            "telemetry.api.bloombox.cloud",
+            client.platform.telemetry().host,
+            "production telemetry domain should be properly set")
 
-    assertEquals(
-          "shop.api.bloombox.cloud",
-          client.platform.shop().host,
-          "production shop domain should be properly set")
+      assertEquals(
+            "shop.api.bloombox.cloud",
+            client.platform.shop().host,
+            "production shop domain should be properly set")
 
-    assertEquals(
-          expectedPort,
-          client.platform.telemetry().port,
-          "production telemetry port should be properly set")
+      assertEquals(
+            expectedPort,
+            client.platform.telemetry().port,
+            "production telemetry port should be properly set")
 
-    assertEquals(
-          expectedPort,
-          client.platform.shop().port,
-          "production shop port should be properly set")
+      assertEquals(
+            expectedPort,
+            client.platform.shop().port,
+            "production shop port should be properly set")
 
-    // sandbox
-    assertEquals(
-          "telemetry.rpc.sandbox.usw1.bloombox.services",
-          client.sandbox.telemetry().host,
-          "sandbox telemetry domain should be properly set")
+      // sandbox
+      assertEquals(
+            "telemetry.rpc.sandbox.usw1.bloombox.services",
+            client.sandbox.telemetry().host,
+            "sandbox telemetry domain should be properly set")
 
-    assertEquals(
-          "shop.rpc.sandbox.usw1.bloombox.services",
-          client.sandbox.shop().host,
-          "sandbox shop domain should be properly set")
+      assertEquals(
+            "shop.rpc.sandbox.usw1.bloombox.services",
+            client.sandbox.shop().host,
+            "sandbox shop domain should be properly set")
 
-    assertEquals(
-          expectedPort,
-          client.sandbox.telemetry().port,
-          "sandbox telemetry port should be properly set")
+      assertEquals(
+            expectedPort,
+            client.sandbox.telemetry().port,
+            "sandbox telemetry port should be properly set")
 
-    assertEquals(
-          expectedPort,
-          client.sandbox.shop().port,
-          "sandbox shop port should be properly set")
+      assertEquals(
+            expectedPort,
+            client.sandbox.shop().port,
+            "sandbox shop port should be properly set")
 
-    // local
-    assertEquals(
-          "127.0.0.1",
-          client.local.telemetry().host,
-          "local telemetry domain should be properly set")
+      // local
+      assertEquals(
+            "127.0.0.1",
+            client.local.telemetry().host,
+            "local telemetry domain should be properly set")
 
-    assertEquals(
-          "127.0.0.1",
-          client.local.shop().host,
-          "local shop domain should be properly set")
+      assertEquals(
+            "127.0.0.1",
+            client.local.shop().host,
+            "local shop domain should be properly set")
 
-    assertEquals(
-          expectedLocalTelemetryPort,
-          client.local.telemetry().port,
-          "local telemetry port should be properly set")
+      assertEquals(
+            expectedLocalTelemetryPort,
+            client.local.telemetry().port,
+            "local telemetry port should be properly set")
 
-    assertEquals(
-          expectedLocalShopPort,
-          client.local.shop().port,
-          "local shop port should be properly set")
+      assertEquals(
+            expectedLocalShopPort,
+            client.local.shop().port,
+            "local shop port should be properly set")
+    })
   }
 }

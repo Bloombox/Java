@@ -46,8 +46,9 @@ public final class PassKeyOuterClass {
     java.lang.String[] descriptorData = {
       "\n\033identity/pass/PassKey.proto\022\035bloombox." +
       "schema.identity.pass\"7\n\007PassKey\022\017\n\007encod" +
-      "ed\030\001 \001(\t\022\016\n\006serial\030\002 \001(\t\022\013\n\003uid\030\003 \001(\tB\035\n" +
-      "\027io.bloombox.schema.passH\001P\001b\006proto3"
+      "ed\030\001 \001(\t\022\016\n\006serial\030\002 \001(\t\022\013\n\003uid\030\003 \001(\tB#\n" +
+      "\027io.bloombox.schema.passH\001P\001\242\002\003BBSb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

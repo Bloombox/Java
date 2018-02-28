@@ -55,9 +55,9 @@ public final class BasicTestingSpec {
       "Instant\022C\n\014cannabinoids\030\024 \001(\0132-.opencann" +
       "abis.structs.labtesting.Cannabinoids\022?\n\n" +
       "subjective\030\036 \001(\0132+.opencannabis.structs." +
-      "labtesting.SubjectiveBH\n-io.opencannabis" +
+      "labtesting.SubjectiveBK\n-io.opencannabis" +
       ".schema.product.struct.testingB\020BasicTes" +
-      "tingSpecH\001P\001\370\001\001b\006proto3"
+      "tingSpecH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

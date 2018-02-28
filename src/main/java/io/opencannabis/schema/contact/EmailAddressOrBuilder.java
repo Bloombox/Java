@@ -24,17 +24,30 @@ public interface EmailAddressOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string address = 1;</code>
+   * <pre>
+   * Email address, in standard format ('example&#64;sample.com').
+   * </pre>
+   *
+   * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
    */
   java.lang.String getAddress();
   /**
-   * <code>string address = 1;</code>
+   * <pre>
+   * Email address, in standard format ('example&#64;sample.com').
+   * </pre>
+   *
+   * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
    */
   com.google.protobuf.ByteString
       getAddressBytes();
 
   /**
-   * <code>bool validated = 2;</code>
+   * <pre>
+   * Validation status. Usable by providers to indicate an email address that has already been validated, or that an
+   * address remains unvalidated.
+   * </pre>
+   *
+   * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this email address."];</code>
    */
   boolean getValidated();
 }

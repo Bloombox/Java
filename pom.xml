@@ -4,7 +4,7 @@
 
     <groupId>io.bloombox</groupId>
     <artifactId>java-client</artifactId>
-    <name>Base: Client</name>
+    <name>Bloombox: Java Client</name>
     <version>1.0-SNAPSHOT</version>
     <url>https://bloombox.github.io/Java</url>
     <description>Java RPCAPI client for the Bloombox Cloud.</description>
@@ -16,6 +16,10 @@
         <developerConnection>scm:git:git@github.com:bloombox/java.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
+
+    <prerequisites>
+        <maven>3.1.0</maven>
+    </prerequisites>
 
     <organization>
         <url>https://bloombox.io</url>
@@ -72,6 +76,7 @@
 
     <properties>
         <!-- Configuration -->
+        <bloombox.version>${project.version}</bloombox.version>
         <bloombox.shop.version>v1</bloombox.shop.version>
         <bloombox.shop.endpoint>shop.api.bloombox.cloud</bloombox.shop.endpoint>
         <bloombox.telemetry.version>v1beta3</bloombox.telemetry.version>
@@ -80,34 +85,36 @@
         <!-- Dependencies -->
         <grpc.version>1.8.0</grpc.version>
         <protobuf.version>3.5.1</protobuf.version>
-        <netty.boringssl.version>2.0.6.Final</netty.boringssl.version>
+        <netty.boringssl.version>2.0.7.Final</netty.boringssl.version>
         <kotlin.version>1.2.21</kotlin.version>
+        <commons-codec.version>1.11</commons-codec.version>
 
         <!-- Testing -->
         <junit.version>4.12</junit.version>
 
         <!-- Plugins -->
-        <maven.jar.version>3.0.2</maven.jar.version>
         <maven.clean.version>3.0.0</maven.clean.version>
-        <maven.surefire.version>2.20.1</maven.surefire.version>
         <maven.compiler.version>3.7.0</maven.compiler.version>
-        <maven.jacoco.version>0.8.0</maven.jacoco.version>
-        <maven.shade.version>3.1.0</maven.shade.version>
-        <maven.source.version>3.0.1</maven.source.version>
-        <maven.dokka.version>0.9.15</maven.dokka.version>
-        <maven.site.version>3.7</maven.site.version>
-        <maven.reports.version>2.9</maven.reports.version>
-        <maven.deploy.version>2.8.2</maven.deploy.version>
-        <maven.release.version>2.5.3</maven.release.version>
-        <maven.github.version>0.9</maven.github.version>
-        <maven.gpg.version>1.4</maven.gpg.version>
+        <maven.jar.version>3.0.2</maven.jar.version>
         <maven.javadoc.version>3.0.0</maven.javadoc.version>
+        <maven.reports.version>2.9</maven.reports.version>
+        <maven.release.version>2.5.3</maven.release.version>
+        <maven.resources.version>3.0.2</maven.resources.version>
+        <maven.install.version>2.5.2</maven.install.version>
+        <maven.shade.version>3.1.0</maven.shade.version>
+        <maven.site.version>3.7</maven.site.version>
+        <maven.source.version>3.0.1</maven.source.version>
+        <maven.surefire.version>2.20.1</maven.surefire.version>
+        <maven.jacoco.version>0.8.0</maven.jacoco.version>
+        <maven.dokka.version>0.9.16</maven.dokka.version>
+        <maven.deploy.version>2.8.2</maven.deploy.version>
+        <maven.gpg.version>1.6</maven.gpg.version>
         <maven.nexus.version>1.6.8</maven.nexus.version>
+        <maven.proguard.version>2.0.14</maven.proguard.version>
 
         <!-- Settings -->
         <jvm.source>1.8</jvm.source>
         <jvm.target>1.8</jvm.target>
-        <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -125,7 +132,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
+                        <version>${maven.gpg.version}</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -142,13 +149,6 @@
     </profiles>
 
     <dependencies>
-        <!-- Schema -->
-        <dependency>
-            <groupId>io.bloombox.labs.platform</groupId>
-            <artifactId>schema</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
         <!-- Protobuf -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
@@ -181,6 +181,13 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-tcnative-boringssl-static</artifactId>
             <version>${netty.boringssl.version}</version>
+        </dependency>
+
+        <!-- Util -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
         </dependency>
 
         <!-- Kotlin Stdlib -->
@@ -234,15 +241,8 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>report</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>post-unit-test</id>
-                        <phase>test</phase>
+                        <id>jacoco-site</id>
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -251,9 +251,9 @@
                 <configuration>
                     <excludes>
                         <exclude>gen_bq_schema/**/*</exclude>
+                        <exclude>io/bloombox/test/**/*</exclude>
                         <exclude>io/bloombox/schema/**/*</exclude>
                         <exclude>io/opencannabis/**/*</exclude>
-                        <exclude>bloombox/client/Bloombox.java</exclude>
                     </excludes>
                 </configuration>
             </plugin>
@@ -269,6 +269,33 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.wvengen</groupId>
+                <artifactId>proguard-maven-plugin</artifactId>
+                <version>${maven.proguard.version}</version>
+                <executions>
+                    <execution>
+                        <id>shaded-small</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>proguard</goal>
+                        </goals>
+                        <configuration>
+                            <proguardVersion>5.2</proguardVersion>
+                            <attach>true</attach>
+                            <obfuscate>true</obfuscate>
+                            <appendClassifier>true</appendClassifier>
+                            <attachArtifactClassifier>opt</attachArtifactClassifier>
+                            <proguardInclude>${project.basedir}/client.pro</proguardInclude>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <options>
+                        <option>-target ${jvm.target}</option>
+                    </options>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -355,11 +382,6 @@
 
                     <!-- Transformers -->
                     <transformers>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <manifestEntries>
-                                <Main-Class>bloombox.client.CLITool</Main-Class>
-                            </manifestEntries>
-                        </transformer>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer">
                         </transformer>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
@@ -377,24 +399,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>${maven.github.version}</version>
-                <configuration>
-                    <message>Update site.</message>
-                    <project>bloombox/java</project>
-                    <server>github</server>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site-deploy</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>${maven.reports.version}</version>
@@ -403,6 +407,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven.deploy.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>${maven.install.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -438,20 +452,53 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <moduleName>java-client</moduleName>
+                    <moduleName>bloombox</moduleName>
                     <outputFormat>html</outputFormat>
-
                     <jdkVersion>8</jdkVersion>
                     <sourceDirectories>
-                        <sourceDirectory>base/client/src/main/kotlin</sourceDirectory>
+                        <sourceDirectory>src/main/kotlin</sourceDirectory>
                     </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
+                    <jdkVersion>8</jdkVersion>
+                    <includes>
+                        <include>src/main/README.md</include>
+                    </includes>
+                    <reportNotDocumented>false</reportNotDocumented>
+                    <impliedPlatforms>
+                        <impliedPlatform>JVM</impliedPlatform>
+                    </impliedPlatforms>
+
+                    <samplesDirs>
+                        <dir>example/src/main</dir>
+                    </samplesDirs>
+
+                    <sourceLinks>
+                        <link>
+                            <dir>${project.basedir}/src/main/kotlin</dir>
+                            <url>https://github.com/Bloombox/Java/blob/master/src/main/kotlin</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                        <link>
+                            <dir>${project.basedir}/src/main/java/io</dir>
+                            <url>http://github.com/bloombox/schema</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                    </sourceLinks>
+
                     <perPackageOptions>
                         <packageOptions>
-                            <prefix>bloombox</prefix>
+                            <prefix>bloombox.client</prefix>
                             <skipDeprecated>false</skipDeprecated>
                             <reportUndocumented>true</reportUndocumented>
                             <includeNonPublic>false</includeNonPublic>
+                        </packageOptions>
+                        <packageOptions>
+                            <prefix>bloombox.client.internals</prefix>
+                            <suppress>true</suppress>
+                        </packageOptions>
+                        <packageOptions>
+                            <prefix>bloombox.client.test</prefix>
+                            <suppress>true</suppress>
                         </packageOptions>
                     </perPackageOptions>
                 </configuration>
@@ -474,7 +521,7 @@
                     <classifier>javadoc</classifier>
                     <level>public</level>
                     <outputDirectory>target/site/schema</outputDirectory>
-                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*</excludePackageNames>
+                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*:io.bloombox.test.*</excludePackageNames>
                 </configuration>
             </plugin>
         </plugins>
@@ -490,7 +537,7 @@
                     <classifier>docs</classifier>
                     <level>public</level>
                     <outputDirectory>target/site/schema</outputDirectory>
-                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*</excludePackageNames>
+                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*:io.bloombox.test.*</excludePackageNames>
                 </configuration>
             </plugin>
             <plugin>
@@ -498,20 +545,53 @@
                 <artifactId>dokka-maven-plugin</artifactId>
                 <version>${maven.dokka.version}</version>
                 <configuration>
-                    <moduleName>java-client</moduleName>
+                    <moduleName>bloombox</moduleName>
                     <outputFormat>html</outputFormat>
-
                     <jdkVersion>8</jdkVersion>
                     <sourceDirectories>
                         <sourceDirectory>src/main/kotlin</sourceDirectory>
                     </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
+                    <jdkVersion>8</jdkVersion>
+                    <includes>
+                        <include>src/main/README.md</include>
+                    </includes>
+                    <reportNotDocumented>false</reportNotDocumented>
+                    <impliedPlatforms>
+                        <impliedPlatform>JVM</impliedPlatform>
+                    </impliedPlatforms>
+
+                    <samplesDirs>
+                        <dir>example/src/main</dir>
+                    </samplesDirs>
+
+                    <sourceLinks>
+                        <link>
+                            <dir>${project.basedir}/src/main/kotlin</dir>
+                            <url>https://github.com/Bloombox/Java/blob/master/src/main/kotlin</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                        <link>
+                            <dir>${project.basedir}/src/main/java/io</dir>
+                            <url>http://github.com/bloombox/schema</url>
+                            <urlSuffix>#L</urlSuffix>
+                        </link>
+                    </sourceLinks>
+
                     <perPackageOptions>
                         <packageOptions>
-                            <prefix>bloombox</prefix>
+                            <prefix>bloombox.client</prefix>
                             <skipDeprecated>false</skipDeprecated>
                             <reportUndocumented>true</reportUndocumented>
                             <includeNonPublic>false</includeNonPublic>
+                        </packageOptions>
+                        <packageOptions>
+                            <prefix>bloombox.client.internals</prefix>
+                            <suppress>true</suppress>
+                        </packageOptions>
+                        <packageOptions>
+                            <prefix>bloombox.client.test</prefix>
+                            <suppress>true</suppress>
                         </packageOptions>
                     </perPackageOptions>
                 </configuration>

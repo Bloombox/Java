@@ -58,8 +58,8 @@ public final class PersonOuterClass {
       "!.opencannabis.contact.ContactInfoB \212@\035P" +
       "erson\'s contact information.\022E\n\rdate_of_" +
       "birth\030\005 \001(\0132\033.opencannabis.temporal.Date" +
-      "B\021\212@\016Date of birth.B#\n\035io.opencannabis.s" +
-      "chema.personH\001P\001b\006proto3"
+      "B\021\212@\016Date of birth.B)\n\035io.opencannabis.s" +
+      "chema.personH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

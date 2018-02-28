@@ -52,8 +52,8 @@ public final class DeviceTokenOuterClass {
       "ice\030\002 \001(\0132\033.opencannabis.device.Device\022." +
       "\n\006issued\030\003 \001(\0132\036.opencannabis.temporal.I" +
       "nstant\022/\n\007expires\030\004 \001(\0132\036.opencannabis.t" +
-      "emporal.InstantB!\n\033io.bloombox.schema.se" +
-      "curityH\001P\001b\006proto3"
+      "emporal.InstantB\'\n\033io.bloombox.schema.se" +
+      "curityH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

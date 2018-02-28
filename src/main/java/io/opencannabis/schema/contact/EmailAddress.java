@@ -20,6 +20,10 @@
 package io.opencannabis.schema.contact;
 
 /**
+ * <pre>
+ * Specifies information about an electronic mail (email) address, and optionally, its validation status.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.contact.EmailAddress}
  */
 public  final class EmailAddress extends
@@ -105,7 +109,11 @@ private static final long serialVersionUID = 0L;
   public static final int ADDRESS_FIELD_NUMBER = 1;
   private volatile java.lang.Object address_;
   /**
-   * <code>string address = 1;</code>
+   * <pre>
+   * Email address, in standard format ('example&#64;sample.com').
+   * </pre>
+   *
+   * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
    */
   public java.lang.String getAddress() {
     java.lang.Object ref = address_;
@@ -120,7 +128,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string address = 1;</code>
+   * <pre>
+   * Email address, in standard format ('example&#64;sample.com').
+   * </pre>
+   *
+   * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
    */
   public com.google.protobuf.ByteString
       getAddressBytes() {
@@ -139,7 +151,12 @@ private static final long serialVersionUID = 0L;
   public static final int VALIDATED_FIELD_NUMBER = 2;
   private boolean validated_;
   /**
-   * <code>bool validated = 2;</code>
+   * <pre>
+   * Validation status. Usable by providers to indicate an email address that has already been validated, or that an
+   * address remains unvalidated.
+   * </pre>
+   *
+   * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this email address."];</code>
    */
   public boolean getValidated() {
     return validated_;
@@ -308,6 +325,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies information about an electronic mail (email) address, and optionally, its validation status.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.contact.EmailAddress}
    */
   public static final class Builder extends
@@ -448,7 +469,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object address_ = "";
     /**
-     * <code>string address = 1;</code>
+     * <pre>
+     * Email address, in standard format ('example&#64;sample.com').
+     * </pre>
+     *
+     * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
      */
     public java.lang.String getAddress() {
       java.lang.Object ref = address_;
@@ -463,7 +488,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 1;</code>
+     * <pre>
+     * Email address, in standard format ('example&#64;sample.com').
+     * </pre>
+     *
+     * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
      */
     public com.google.protobuf.ByteString
         getAddressBytes() {
@@ -479,7 +508,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string address = 1;</code>
+     * <pre>
+     * Email address, in standard format ('example&#64;sample.com').
+     * </pre>
+     *
+     * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
      */
     public Builder setAddress(
         java.lang.String value) {
@@ -492,7 +525,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 1;</code>
+     * <pre>
+     * Email address, in standard format ('example&#64;sample.com').
+     * </pre>
+     *
+     * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
      */
     public Builder clearAddress() {
       
@@ -501,7 +538,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string address = 1;</code>
+     * <pre>
+     * Email address, in standard format ('example&#64;sample.com').
+     * </pre>
+     *
+     * <code>string address = 1 [(.gen_bq_schema.description) = "Email address, in standard format (&#92;'example&#64;sample.com&#92;')."];</code>
      */
     public Builder setAddressBytes(
         com.google.protobuf.ByteString value) {
@@ -517,13 +558,23 @@ private static final long serialVersionUID = 0L;
 
     private boolean validated_ ;
     /**
-     * <code>bool validated = 2;</code>
+     * <pre>
+     * Validation status. Usable by providers to indicate an email address that has already been validated, or that an
+     * address remains unvalidated.
+     * </pre>
+     *
+     * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this email address."];</code>
      */
     public boolean getValidated() {
       return validated_;
     }
     /**
-     * <code>bool validated = 2;</code>
+     * <pre>
+     * Validation status. Usable by providers to indicate an email address that has already been validated, or that an
+     * address remains unvalidated.
+     * </pre>
+     *
+     * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this email address."];</code>
      */
     public Builder setValidated(boolean value) {
       
@@ -532,7 +583,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool validated = 2;</code>
+     * <pre>
+     * Validation status. Usable by providers to indicate an email address that has already been validated, or that an
+     * address remains unvalidated.
+     * </pre>
+     *
+     * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this email address."];</code>
      */
     public Builder clearValidated() {
       

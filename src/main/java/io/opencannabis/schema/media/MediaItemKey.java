@@ -46,9 +46,9 @@ public final class MediaItemKey {
     java.lang.String[] descriptorData = {
       "\n\024media/MediaKey.proto\022\022opencannabis.med" +
       "ia\032\016bq_field.proto\"9\n\010MediaKey\022-\n\002id\030\001 \001" +
-      "(\tB!\212@\036Unique ID for this media item.B3\n" +
+      "(\tB!\212@\036Unique ID for this media item.B6\n" +
       "\034io.opencannabis.schema.mediaB\014MediaItem" +
-      "KeyH\001P\001\370\001\001b\006proto3"
+      "KeyH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

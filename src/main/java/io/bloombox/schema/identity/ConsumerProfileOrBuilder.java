@@ -143,4 +143,39 @@ public interface ConsumerProfileOrBuilder extends
    * <code>.bloombox.schema.identity.ConsumerType type = 6 [(.gen_bq_schema.description) = "Specifies the primary consumer type for this account."];</code>
    */
   io.bloombox.schema.identity.ConsumerType getType();
+
+  /**
+   * <pre>
+   * Specifies referral source attribution information.
+   * </pre>
+   *
+   * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+   */
+  int getReferralSourceValue();
+  /**
+   * <pre>
+   * Specifies referral source attribution information.
+   * </pre>
+   *
+   * <code>.bloombox.schema.identity.ReferralSource referral_source = 7 [(.gen_bq_schema.description) = "Specifies referral source attribution information."];</code>
+   */
+  io.bloombox.schema.identity.ReferralSource getReferralSource();
+
+  /**
+   * <pre>
+   * Specifies the referrer's name.
+   * </pre>
+   *
+   * <code>string referral_detail = 8 [(.gen_bq_schema.description) = "Specifies the referrer&#92;'s name."];</code>
+   */
+  java.lang.String getReferralDetail();
+  /**
+   * <pre>
+   * Specifies the referrer's name.
+   * </pre>
+   *
+   * <code>string referral_detail = 8 [(.gen_bq_schema.description) = "Specifies the referrer&#92;'s name."];</code>
+   */
+  com.google.protobuf.ByteString
+      getReferralDetailBytes();
 }

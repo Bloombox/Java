@@ -83,8 +83,8 @@ public final class SectionOuterClass {
       "\n\nCARTRIDGES\020\004\022\016\n\nAPOTHECARY\020\005\022\014\n\010PREROL" +
       "LS\020\006\022\n\n\006PLANTS\020\007\022\017\n\013MERCHANDISE\020\010*2\n\017Fil" +
       "teredSection\022\013\n\007ON_SALE\020\000\022\t\n\005HOUSE\020\001\022\007\n\003" +
-      "CBD\020\002B)\n#io.opencannabis.schema.menu.sec" +
-      "tionH\001P\001b\006proto3"
+      "CBD\020\002B/\n#io.opencannabis.schema.menu.sec" +
+      "tionH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

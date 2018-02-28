@@ -45,8 +45,8 @@ public final class CountryOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\021geo/Country.proto\022\020opencannabis.geo\"\027\n" +
-      "\007Country\022\014\n\004code\030\001 \001(\tB \n\032io.opencannabi" +
-      "s.schema.geoH\001P\001b\006proto3"
+      "\007Country\022\014\n\004code\030\001 \001(\tB&\n\032io.opencannabi" +
+      "s.schema.geoH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

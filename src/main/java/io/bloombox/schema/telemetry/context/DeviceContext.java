@@ -3921,9 +3921,9 @@ public final class DeviceContext {
       "\'\212@$Information about the device screen." +
       "*$\n\nDeviceRole\022\n\n\006CLIENT\020\000\022\n\n\006SERVER\020\001*M" +
       "\n\021ScreenOrientation\022\033\n\027UNSPECIFIED_ORIEN" +
-      "TATION\020\000\022\014\n\010PORTRAIT\020\001\022\r\n\tLANDSCAPE\020\002B<\n" +
+      "TATION\020\000\022\014\n\010PORTRAIT\020\001\022\r\n\tLANDSCAPE\020\002B?\n" +
       "$io.bloombox.schema.telemetry.contextB\rD" +
-      "eviceContextH\001P\000\370\001\001b\006proto3"
+      "eviceContextH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1960,8 +1960,8 @@ public final class PlantProduct {
       "nt.ProductContent\0225\n\010material\030\005 \001(\0132#.op" +
       "encannabis.content.MaterialsData*7\n\tPlan" +
       "tType\022\025\n\021UNSPECIFIED_PLANT\020\000\022\010\n\004SEED\020\001\022\t" +
-      "\n\005CLONE\020\002B5\n\036io.opencannabis.schema.prod" +
-      "uctB\014PlantProductH\001P\000\370\001\001b\006proto3"
+      "\n\005CLONE\020\002B8\n\036io.opencannabis.schema.prod" +
+      "uctB\014PlantProductH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

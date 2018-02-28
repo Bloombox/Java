@@ -63,8 +63,9 @@ public final class PartnerPermissions {
       "\ngranted_at\030\003 \001(\0132\036.opencannabis.tempora" +
       "l.Instant\022\r\n\005admin\030d \001(\010*T\n\021PartnerPermi" +
       "ssion\022\t\n\005OWNER\020\000\022\016\n\nSUPERVISOR\020\001\022\013\n\007BILL" +
-      "ING\020\002\022\t\n\005AUDIT\020\003\022\014\n\010READONLY\020\004B(\n\"io.blo" +
-      "ombox.schema.security.accessH\001P\001b\006proto3"
+      "ING\020\002\022\t\n\005AUDIT\020\003\022\014\n\010READONLY\020\004B.\n\"io.blo" +
+      "ombox.schema.security.accessH\001P\001\242\002\003BBSb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

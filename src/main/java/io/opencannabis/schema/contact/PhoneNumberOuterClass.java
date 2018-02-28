@@ -45,9 +45,12 @@ public final class PhoneNumberOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\031contact/PhoneNumber.proto\022\024opencannabi" +
-      "s.contact\".\n\013PhoneNumber\022\014\n\004e164\030\001 \001(\t\022\021" +
-      "\n\tvalidated\030\002 \001(\010B$\n\036io.opencannabis.sch" +
-      "ema.contactH\001P\001b\006proto3"
+      "s.contact\032\016bq_field.proto\"\200\001\n\013PhoneNumbe" +
+      "r\0221\n\004e164\030\001 \001(\tB#\212@ E164-formatted telep" +
+      "hone number.\022>\n\tvalidated\030\002 \001(\010B+\212@(Vali" +
+      "dation status for this phone number.B*\n\036" +
+      "io.opencannabis.schema.contactH\001P\001\242\002\003OCS" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -60,6 +63,7 @@ public final class PhoneNumberOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_contact_PhoneNumber_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -67,6 +71,12 @@ public final class PhoneNumberOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_contact_PhoneNumber_descriptor,
         new java.lang.String[] { "E164", "Validated", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.description);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

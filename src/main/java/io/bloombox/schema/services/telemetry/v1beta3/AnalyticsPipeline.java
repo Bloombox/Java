@@ -3394,9 +3394,9 @@ public final class AnalyticsPipeline {
       ".CommercialEvent.ActionH\000\022W\n\013user_action" +
       "\030\036 \001(\0132@.bloombox.schema.services.teleme" +
       "try.v1beta3.IdentityEvent.ActionH\000B\007\n\005ev" +
-      "entB]\n-io.bloombox.schema.services.telem" +
-      "etry.v1beta3B\021AnalyticsPipelineH\001P\000\370\001\001\252\002" +
-      "\021Telemetry.v1beta3b\006proto3"
+      "entBc\n-io.bloombox.schema.services.telem" +
+      "etry.v1beta3B\021AnalyticsPipelineH\001P\000\370\001\001\242\002" +
+      "\003BBS\252\002\021Telemetry.v1beta3b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

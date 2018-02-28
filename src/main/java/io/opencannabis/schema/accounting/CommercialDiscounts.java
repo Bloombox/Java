@@ -3115,8 +3115,8 @@ public final class CommercialDiscounts {
       "9\n\014DiscountType\022\n\n\006CUSTOM\020\000\022\r\n\tSTATUTORY" +
       "\020\001\022\016\n\nCOMMERCIAL\020\002*>\n\rDiscountBasis\022\010\n\004I" +
       "TEM\020\000\022\022\n\016ORDER_SUBTOTAL\020\001\022\017\n\013ORDER_TOTAL" +
-      "\020\002B?\n!io.opencannabis.schema.accountingB" +
-      "\023CommercialDiscountsH\001P\000\370\001\001b\006proto3"
+      "\020\002BB\n!io.opencannabis.schema.accountingB" +
+      "\023CommercialDiscountsH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -49,8 +49,8 @@ public final class PassportOuterClass {
       "Passport\022\024\n\007barcode\030\001 \001(\014B\003\200@\001\022f\n\006nation" +
       "\030\002 \001(\tBV\212@SNation that issued this passp" +
       "ort, as an abbreviated string code, like" +
-      " \"US\" or \"UK\".B%\n\037io.bloombox.schema.ide" +
-      "ntity.idsH\001P\001b\006proto3"
+      " \"US\" or \"UK\".B+\n\037io.bloombox.schema.ide" +
+      "ntity.idsH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

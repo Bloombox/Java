@@ -2179,8 +2179,8 @@ public final class PrerollProduct {
       "erollFlag\022\024\n\020NO_PREROLL_FLAGS\020\000\022\020\n\014HASH_" +
       "INFUSED\020\001\022\020\n\014KIEF_INFUSED\020\002\022\r\n\tFORTIFIED" +
       "\020\003\022\017\n\013FULL_FLOWER\020\004\022\024\n\020CONTAINS_TOBACCO\020" +
-      "\005B7\n\036io.opencannabis.schema.productB\016Pre" +
-      "rollProductH\001P\000\370\001\001b\006proto3"
+      "\005B:\n\036io.opencannabis.schema.productB\016Pre" +
+      "rollProductH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

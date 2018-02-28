@@ -3153,9 +3153,9 @@ public final class ApplicationContext {
       "\022android_package_id\030\036 \001(\tB:\212@7Specifies " +
       "an application ID for an Android applica" +
       "tion.H\000B\006\n\004spec*,\n\017ApplicationType\022\014\n\010IN" +
-      "TERNAL\020\000\022\013\n\007PARTNER\020\001BA\n$io.bloombox.sch" +
+      "TERNAL\020\000\022\013\n\007PARTNER\020\001BD\n$io.bloombox.sch" +
       "ema.telemetry.contextB\022ApplicationContex" +
-      "tH\001P\000\370\001\001b\006proto3"
+      "tH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

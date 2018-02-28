@@ -57,8 +57,8 @@ public final class ClientOuterClass {
       "\n\022oauth/Client.proto\022\022opencannabis.oauth" +
       "\"2\n\006Client\022\021\n\tclient_id\030\001 \001(\t\022\025\n\rclient_" +
       "secret\030\002 \001(\t\"\026\n\010ClientID\022\n\n\002id\030\001 \001(\t\"\036\n\014" +
-      "ClientSecret\022\016\n\006secret\030\001 \001(\tB\"\n\034io.openc" +
-      "annabis.schema.oauthH\001P\001b\006proto3"
+      "ClientSecret\022\016\n\006secret\030\001 \001(\tB(\n\034io.openc" +
+      "annabis.schema.oauthH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -59,8 +59,8 @@ public final class UserDoctorRecOuterClass {
       "on.\022)\n\tdoctor_id\030\006 \001(\tB\026\212@\023Doctor\'s uniq" +
       "ue ID.\022Y\n\006doctor\030\007 \001(\0132\033.opencannabis.pe" +
       "rson.PersonB,\212@)Personal information abo" +
-      "ut the physician.B%\n\037io.bloombox.schema." +
-      "identity.idsH\001P\001b\006proto3"
+      "ut the physician.B+\n\037io.bloombox.schema." +
+      "identity.idsH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -51,9 +51,9 @@ public final class BrandContent {
       "e\022+\n\006parent\030\002 \001(\0132\033.opencannabis.content" +
       ".Brand\022.\n\007summary\030\003 \001(\0132\035.opencannabis.c" +
       "ontent.Content\022,\n\005media\030\024 \003(\0132\035.opencann" +
-      "abis.media.MediaItemB5\n\036io.opencannabis." +
-      "schema.contentB\014BrandContentH\001P\001\370\001\001b\006pro" +
-      "to3"
+      "abis.media.MediaItemB8\n\036io.opencannabis." +
+      "schema.contentB\014BrandContentH\001P\001\242\002\003OCSb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

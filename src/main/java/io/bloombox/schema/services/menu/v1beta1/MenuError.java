@@ -85,6 +85,14 @@ public enum MenuError
    * <code>INTERNAL_ERROR = 6;</code>
    */
   INTERNAL_ERROR(6),
+  /**
+   * <pre>
+   * Search services are currently unavailable.
+   * </pre>
+   *
+   * <code>SEARCH_UNAVAILABLE = 7;</code>
+   */
+  SEARCH_UNAVAILABLE(7),
   UNRECOGNIZED(-1),
   ;
 
@@ -144,6 +152,14 @@ public enum MenuError
    * <code>INTERNAL_ERROR = 6;</code>
    */
   public static final int INTERNAL_ERROR_VALUE = 6;
+  /**
+   * <pre>
+   * Search services are currently unavailable.
+   * </pre>
+   *
+   * <code>SEARCH_UNAVAILABLE = 7;</code>
+   */
+  public static final int SEARCH_UNAVAILABLE_VALUE = 7;
 
 
   public final int getNumber() {
@@ -171,6 +187,7 @@ public enum MenuError
       case 4: return SECTION_NOT_FOUND;
       case 5: return MENU_NOT_FOUND;
       case 6: return INTERNAL_ERROR;
+      case 7: return SEARCH_UNAVAILABLE;
       default: return null;
     }
   }

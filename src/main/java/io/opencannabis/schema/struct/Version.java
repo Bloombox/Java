@@ -47,8 +47,9 @@ public final class Version {
       "\n\025structs/Version.proto\022\024opencannabis.st" +
       "ructs\032\016bq_field.proto\"N\n\013VersionSpec\0227\n\004" +
       "name\030\001 \001(\tB\'\212@$Version specified by arbi" +
-      "trary name.H\000B\006\n\004specB/\n\035io.opencannabis" +
-      ".schema.structB\007VersionH\001P\001\370\001\001b\006proto3"
+      "trary name.H\000B\006\n\004specB2\n\035io.opencannabis" +
+      ".schema.structB\007VersionH\001P\001\242\002\003OCSb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

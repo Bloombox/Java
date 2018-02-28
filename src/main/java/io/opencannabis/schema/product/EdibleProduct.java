@@ -3294,9 +3294,9 @@ public final class EdibleProduct {
       "\n\nBAKED_GOOD\020\002\022\t\n\005CANDY\020\003\022\t\n\005DRINK\020\004*t\n\n" +
       "EdibleFlag\022\022\n\016NO_EDIBLE_FLAG\020\000\022\t\n\005VEGAN\020" +
       "\001\022\017\n\013GLUTEN_FREE\020\002\022\016\n\nSUGAR_FREE\020\003\022\016\n\nFA" +
-      "IR_TRADE\020\004\022\013\n\007ORGANIC\020\005\022\t\n\005LOCAL\020\006B6\n\036io" +
+      "IR_TRADE\020\004\022\013\n\007ORGANIC\020\005\022\t\n\005LOCAL\020\006B9\n\036io" +
       ".opencannabis.schema.productB\rEdibleProd" +
-      "uctH\001P\000\370\001\001b\006proto3"
+      "uctH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

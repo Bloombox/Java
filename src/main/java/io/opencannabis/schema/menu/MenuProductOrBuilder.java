@@ -47,4 +47,206 @@ public interface MenuProductOrBuilder extends
    * <code>.opencannabis.base.ProductKey key = 1;</code>
    */
   io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+
+  /**
+   * <pre>
+   * Apothecary product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+   */
+  boolean hasApothecary();
+  /**
+   * <pre>
+   * Apothecary product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+   */
+  io.opencannabis.schema.product.ApothecaryProduct.Apothecary getApothecary();
+  /**
+   * <pre>
+   * Apothecary product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+   */
+  io.opencannabis.schema.product.ApothecaryProduct.ApothecaryOrBuilder getApothecaryOrBuilder();
+
+  /**
+   * <pre>
+   * Cartridge product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+   */
+  boolean hasCartridge();
+  /**
+   * <pre>
+   * Cartridge product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+   */
+  io.opencannabis.schema.product.CartridgeProduct.Cartridge getCartridge();
+  /**
+   * <pre>
+   * Cartridge product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+   */
+  io.opencannabis.schema.product.CartridgeProduct.CartridgeOrBuilder getCartridgeOrBuilder();
+
+  /**
+   * <pre>
+   * Edible product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Edible edible = 12;</code>
+   */
+  boolean hasEdible();
+  /**
+   * <pre>
+   * Edible product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Edible edible = 12;</code>
+   */
+  io.opencannabis.schema.product.EdibleProduct.Edible getEdible();
+  /**
+   * <pre>
+   * Edible product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Edible edible = 12;</code>
+   */
+  io.opencannabis.schema.product.EdibleProduct.EdibleOrBuilder getEdibleOrBuilder();
+
+  /**
+   * <pre>
+   * Extract product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Extract extract = 13;</code>
+   */
+  boolean hasExtract();
+  /**
+   * <pre>
+   * Extract product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Extract extract = 13;</code>
+   */
+  io.opencannabis.schema.product.ExtractProduct.Extract getExtract();
+  /**
+   * <pre>
+   * Extract product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Extract extract = 13;</code>
+   */
+  io.opencannabis.schema.product.ExtractProduct.ExtractOrBuilder getExtractOrBuilder();
+
+  /**
+   * <pre>
+   * Flower product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Flower flower = 14;</code>
+   */
+  boolean hasFlower();
+  /**
+   * <pre>
+   * Flower product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Flower flower = 14;</code>
+   */
+  io.opencannabis.schema.product.FlowerProduct.Flower getFlower();
+  /**
+   * <pre>
+   * Flower product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Flower flower = 14;</code>
+   */
+  io.opencannabis.schema.product.FlowerProduct.FlowerOrBuilder getFlowerOrBuilder();
+
+  /**
+   * <pre>
+   * Merchandise product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+   */
+  boolean hasMerchandise();
+  /**
+   * <pre>
+   * Merchandise product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+   */
+  io.opencannabis.schema.product.MerchandiseProduct.Merchandise getMerchandise();
+  /**
+   * <pre>
+   * Merchandise product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+   */
+  io.opencannabis.schema.product.MerchandiseProduct.MerchandiseOrBuilder getMerchandiseOrBuilder();
+
+  /**
+   * <pre>
+   * Plant product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Plant plant = 16;</code>
+   */
+  boolean hasPlant();
+  /**
+   * <pre>
+   * Plant product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Plant plant = 16;</code>
+   */
+  io.opencannabis.schema.product.PlantProduct.Plant getPlant();
+  /**
+   * <pre>
+   * Plant product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Plant plant = 16;</code>
+   */
+  io.opencannabis.schema.product.PlantProduct.PlantOrBuilder getPlantOrBuilder();
+
+  /**
+   * <pre>
+   * Preroll product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Preroll preroll = 17;</code>
+   */
+  boolean hasPreroll();
+  /**
+   * <pre>
+   * Preroll product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Preroll preroll = 17;</code>
+   */
+  io.opencannabis.schema.product.PrerollProduct.Preroll getPreroll();
+  /**
+   * <pre>
+   * Preroll product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Preroll preroll = 17;</code>
+   */
+  io.opencannabis.schema.product.PrerollProduct.PrerollOrBuilder getPrerollOrBuilder();
+
+  public io.opencannabis.schema.menu.MenuProduct.ProductCase getProductCase();
 }

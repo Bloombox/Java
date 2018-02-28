@@ -42,9 +42,9 @@ public final class MaterialSpecies {
       "\n\025structs/Species.proto\022\024opencannabis.st" +
       "ructs*d\n\007Species\022\017\n\013UNSPECIFIED\020\000\022\n\n\006SAT" +
       "IVA\020\001\022\021\n\rHYBRID_SATIVA\020\002\022\n\n\006HYBRID\020\003\022\021\n\r" +
-      "HYBRID_INDICA\020\004\022\n\n\006INDICA\020\005B?\n%io.openca" +
+      "HYBRID_INDICA\020\004\022\n\n\006INDICA\020\005BB\n%io.openca" +
       "nnabis.schema.product.structB\017MaterialSp" +
-      "eciesH\001P\001\370\001\001b\006proto3"
+      "eciesH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

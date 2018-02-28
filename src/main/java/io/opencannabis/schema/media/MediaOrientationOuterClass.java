@@ -43,8 +43,8 @@ public final class MediaOrientationOuterClass {
       "abis.media*\204\001\n\020MediaOrientation\022\006\n\002UP\020\000\022" +
       "\010\n\004DOWN\020\001\022\010\n\004LEFT\020\002\022\t\n\005RIGHT\020\003\022\017\n\013UP_MIR" +
       "RORED\020\004\022\021\n\rDOWN_MIRRORED\020\005\022\021\n\rLEFT_MIRRO" +
-      "RED\020\006\022\022\n\016RIGHT_MIRRORED\020\007B%\n\034io.opencann" +
-      "abis.schema.mediaH\001P\001\370\001\001b\006proto3"
+      "RED\020\006\022\022\n\016RIGHT_MIRRORED\020\007B(\n\034io.opencann" +
+      "abis.schema.mediaH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

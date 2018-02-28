@@ -55,9 +55,9 @@ public final class MaterialsContent {
       ".opencannabis.structs.Grow\022*\n\005shelf\030\004 \001(" +
       "\0162\033.opencannabis.structs.Shelf\022H\n\010channe" +
       "ls\030\005 \003(\01326.opencannabis.products.distrib" +
-      "ution.DistributionPolicyB9\n\036io.opencanna" +
+      "ution.DistributionPolicyB<\n\036io.opencanna" +
       "bis.schema.contentB\020MaterialsContentH\001P\001" +
-      "\370\001\001b\006proto3"
+      "\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

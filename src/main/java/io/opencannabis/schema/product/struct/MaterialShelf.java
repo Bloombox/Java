@@ -41,9 +41,9 @@ public final class MaterialShelf {
     java.lang.String[] descriptorData = {
       "\n\023structs/Shelf.proto\022\024opencannabis.stru" +
       "cts*0\n\005Shelf\022\013\n\007ECONOMY\020\000\022\014\n\010MIDSHELF\020\001\022" +
-      "\014\n\010TOPSHELF\020\002B=\n%io.opencannabis.schema." +
-      "product.structB\rMaterialShelfH\001P\001\370\001\001b\006pr" +
-      "oto3"
+      "\014\n\010TOPSHELF\020\002B@\n%io.opencannabis.schema." +
+      "product.structB\rMaterialShelfH\001P\001\242\002\003OCSb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

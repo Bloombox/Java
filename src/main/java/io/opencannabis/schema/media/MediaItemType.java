@@ -89,9 +89,9 @@ public final class MediaItemType {
       "d\030\001 \001(\0162\'.opencannabis.media.VideoType.V" +
       "ideoKindB;\212@8Specifies the kind of video" +
       " being attached or described.\"&\n\tVideoKi" +
-      "nd\022\007\n\003MP4\020\000\022\007\n\003FLV\020\001\022\007\n\003HLS\020\002B4\n\034io.open" +
+      "nd\022\007\n\003MP4\020\000\022\007\n\003FLV\020\001\022\007\n\003HLS\020\002B7\n\034io.open" +
       "cannabis.schema.mediaB\rMediaItemTypeH\001P\001" +
-      "\370\001\001b\006proto3"
+      "\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

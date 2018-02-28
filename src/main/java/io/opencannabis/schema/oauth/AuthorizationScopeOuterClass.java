@@ -46,8 +46,8 @@ public final class AuthorizationScopeOuterClass {
     java.lang.String[] descriptorData = {
       "\n\036oauth/AuthorizationScope.proto\022\022openca" +
       "nnabis.oauth\"0\n\022AuthorizationScope\022\r\n\005la" +
-      "bel\030\001 \001(\t\022\013\n\003uri\030\002 \001(\tB\"\n\034io.opencannabi" +
-      "s.schema.oauthH\001P\001b\006proto3"
+      "bel\030\001 \001(\t\022\013\n\003uri\030\002 \001(\tB(\n\034io.opencannabi" +
+      "s.schema.oauthH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

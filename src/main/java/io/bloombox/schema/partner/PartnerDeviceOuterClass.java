@@ -76,8 +76,8 @@ public final class PartnerDeviceOuterClass {
       "Type\022\033\n\027UNSPECIFIED_DEVICE_TYPE\020\000\022\014\n\010INT" +
       "ERNAL\020\001\022\017\n\013MENU_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n" +
       "\017CHECKIN_STATION\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014PO" +
-      "S_REGISTER\020\036B \n\032io.bloombox.schema.partn" +
-      "erH\001P\001b\006proto3"
+      "S_REGISTER\020\036B&\n\032io.bloombox.schema.partn" +
+      "erH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

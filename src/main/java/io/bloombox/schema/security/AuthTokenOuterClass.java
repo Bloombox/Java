@@ -46,8 +46,8 @@ public final class AuthTokenOuterClass {
     java.lang.String[] descriptorData = {
       "\n\030security/AuthToken.proto\022\030bloombox.sch" +
       "ema.security\"\034\n\tAuthToken\022\017\n\007encoded\030\001 \001" +
-      "(\tB!\n\033io.bloombox.schema.securityH\001P\001b\006p" +
-      "roto3"
+      "(\tB\'\n\033io.bloombox.schema.securityH\001P\001\242\002\003" +
+      "BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

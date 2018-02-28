@@ -1211,8 +1211,8 @@ public final class FlowerProduct {
       "annabis.base.ProductKey\0225\n\007product\030\002 \001(\013" +
       "2$.opencannabis.content.ProductContent\0225" +
       "\n\010material\030\003 \001(\0132#.opencannabis.content." +
-      "MaterialsDataB6\n\036io.opencannabis.schema." +
-      "productB\rFlowerProductH\001P\000\370\001\001b\006proto3"
+      "MaterialsDataB9\n\036io.opencannabis.schema." +
+      "productB\rFlowerProductH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

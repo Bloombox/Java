@@ -1529,9 +1529,9 @@ public final class ApothecaryProduct {
       "opencannabis.content.MaterialsData*r\n\016Ap" +
       "othecaryType\022\032\n\026UNSPECIFIED_APOTHECARY\020\000" +
       "\022\013\n\007TOPICAL\020\001\022\014\n\010TINCTURE\020\002\022\013\n\007CAPSULE\020\003" +
-      "\022\014\n\010INJECTOR\020\004\022\016\n\nSUBLINGUAL\020\005B:\n\036io.ope" +
+      "\022\014\n\010INJECTOR\020\004\022\016\n\nSUBLINGUAL\020\005B=\n\036io.ope" +
       "ncannabis.schema.productB\021ApothecaryProd" +
-      "uctH\001P\000\370\001\001b\006proto3"
+      "uctH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

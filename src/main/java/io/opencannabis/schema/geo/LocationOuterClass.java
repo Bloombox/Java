@@ -95,8 +95,9 @@ public final class LocationOuterClass {
       "he terminating location for a distance s" +
       "pan.*m\n\014DistanceUnit\022\n\n\006METERS\020\000\022\n\n\006INCH" +
       "ES\020\001\022\010\n\004FEET\020\002\022\017\n\013MILLIMETERS\020\003\022\017\n\013CENTI" +
-      "METERS\020\004\022\016\n\nKILOMETERS\020\005\022\t\n\005MILES\020\006B \n\032i" +
-      "o.opencannabis.schema.geoH\001P\001b\006proto3"
+      "METERS\020\004\022\016\n\nKILOMETERS\020\005\022\t\n\005MILES\020\006B&\n\032i" +
+      "o.opencannabis.schema.geoH\001P\001\242\002\003OCSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

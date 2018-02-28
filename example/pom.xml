@@ -53,7 +53,7 @@
     </issueManagement>
 
     <properties>
-        <bloombox.version>1.0-beta3</bloombox.version>
+        <bloombox.version>1.0</bloombox.version>
 
         <!-- Dependencies -->
         <kotlin.version>1.2.0</kotlin.version>
@@ -231,11 +231,6 @@
 
                     <!-- Transformers -->
                     <transformers>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <manifestEntries>
-                                <Main-Class>bloombox.client.CLITool</Main-Class>
-                            </manifestEntries>
-                        </transformer>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer">
                         </transformer>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">

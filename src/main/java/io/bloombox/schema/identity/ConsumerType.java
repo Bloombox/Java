@@ -128,7 +128,7 @@ public enum ConsumerType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.identity.UserOuterClass.getDescriptor().getEnumTypes().get(3);
+    return io.bloombox.schema.identity.UserOuterClass.getDescriptor().getEnumTypes().get(4);
   }
 
   private static final ConsumerType[] VALUES = values();

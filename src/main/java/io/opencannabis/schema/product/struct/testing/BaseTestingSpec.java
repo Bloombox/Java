@@ -60,9 +60,9 @@ public final class BaseTestingSpec {
       "cannabis.media.MediaItem*=\n\rTestValueTyp" +
       "e\022\016\n\nMILLIGRAMS\020\000\022\016\n\nPERCENTAGE\020\001\022\014\n\010PRE" +
       "SENCE\020\003*@\n\rTestMediaType\022\017\n\013CERTIFICATE\020" +
-      "\000\022\013\n\007RESULTS\020\001\022\021\n\rPRODUCT_IMAGE\020\002BG\n-io." +
+      "\000\022\013\n\007RESULTS\020\001\022\021\n\rPRODUCT_IMAGE\020\002BJ\n-io." +
       "opencannabis.schema.product.struct.testi" +
-      "ngB\017BaseTestingSpecH\001P\001\370\001\001b\006proto3"
+      "ngB\017BaseTestingSpecH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

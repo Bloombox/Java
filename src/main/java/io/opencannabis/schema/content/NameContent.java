@@ -46,8 +46,8 @@ public final class NameContent {
     java.lang.String[] descriptorData = {
       "\n\022content/Name.proto\022\024opencannabis.conte" +
       "nt\"(\n\004Name\022\017\n\007primary\030\001 \001(\t\022\017\n\007display\030\002" +
-      " \001(\tB4\n\036io.opencannabis.schema.contentB\013" +
-      "NameContentH\001P\001\370\001\001b\006proto3"
+      " \001(\tB7\n\036io.opencannabis.schema.contentB\013" +
+      "NameContentH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

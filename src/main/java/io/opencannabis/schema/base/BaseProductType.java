@@ -47,8 +47,8 @@ public final class BaseProductType {
       "\n\026base/ProductType.proto\022\021opencannabis.b" +
       "ase\032\026base/ProductKind.proto\";\n\013ProductTy" +
       "pe\022,\n\004kind\030\001 \001(\0162\036.opencannabis.base.Pro" +
-      "ductKindB5\n\033io.opencannabis.schema.baseB" +
-      "\017BaseProductTypeH\001P\001\370\001\001b\006proto3"
+      "ductKindB8\n\033io.opencannabis.schema.baseB" +
+      "\017BaseProductTypeH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

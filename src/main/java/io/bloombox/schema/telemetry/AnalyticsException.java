@@ -2975,9 +2975,9 @@ public final class AnalyticsException {
       "\016\n\006domain\030\001 \001(\t\022\014\n\004code\030\002 \001(\005\022C\n\010locatio" +
       "n\030\003 \001(\01321.bloombox.schema.analytics.gene" +
       "ric.SourceLocation\0220\n\010occurred\030\004 \001(\0132\036.o" +
-      "pencannabis.temporal.InstantB9\n\034io.bloom" +
+      "pencannabis.temporal.InstantB<\n\034io.bloom" +
       "box.schema.telemetryB\022AnalyticsException" +
-      "H\001P\000\370\001\001b\006proto3"
+      "H\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

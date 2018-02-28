@@ -47,9 +47,9 @@ public final class DateOuterClass {
       "\n\023temporal/Date.proto\022\025opencannabis.temp" +
       "oral\032\016bq_field.proto\"]\n\004Date\022M\n\007iso8601\030" +
       "\001 \001(\tB:\212@7ISO8601-formatted calendar dat" +
-      "e value, like YYYY-MM-DD.H\000B\006\n\004specB%\n\037i" +
-      "o.opencannabis.schema.temporalH\001P\001b\006prot" +
-      "o3"
+      "e value, like YYYY-MM-DD.H\000B\006\n\004specB+\n\037i" +
+      "o.opencannabis.schema.temporalH\001P\001\242\002\003OCS" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

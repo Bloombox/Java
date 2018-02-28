@@ -40,11 +40,12 @@ public final class PartnerScopeOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032partner/PartnerScope.proto\022\027bloombox.s" +
-      "chema.partner*\202\001\n\014PartnerScope\022\010\n\004AUTH\020\000" +
+      "chema.partner*\217\001\n\014PartnerScope\022\010\n\004AUTH\020\000" +
       "\022\013\n\007CONTACT\020\001\022\r\n\tDASHBOARD\020\002\022\022\n\016MENU_DAT" +
-      "A_READ\020\n\022\023\n\017MENU_DATA_WRITE\020\024\022\014\n\010SETTING" +
-      "S\0202\022\n\n\006ACCESS\0203\022\t\n\005ADMIN\020dB \n\032io.bloombo" +
-      "x.schema.partnerH\001P\001b\006proto3"
+      "A_READ\020\n\022\023\n\017MENU_DATA_WRITE\020\024\022\021\n\rSETTING" +
+      "S_READ\0202\022\022\n\016SETTINGS_WRITE\0203\022\t\n\005ADMIN\020dB" +
+      "&\n\032io.bloombox.schema.partnerH\001P\001\242\002\003BBSb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

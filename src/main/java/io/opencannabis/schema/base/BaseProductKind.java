@@ -43,8 +43,8 @@ public final class BaseProductKind {
       "ase*\200\001\n\013ProductKind\022\013\n\007FLOWERS\020\000\022\013\n\007EDIB" +
       "LES\020\001\022\014\n\010EXTRACTS\020\002\022\014\n\010PREROLLS\020\003\022\016\n\nAPO" +
       "THECARY\020\004\022\016\n\nCARTRIDGES\020\005\022\n\n\006PLANTS\020\006\022\017\n" +
-      "\013MERCHANDISE\020\007B5\n\033io.opencannabis.schema" +
-      ".baseB\017BaseProductKindH\001P\001\370\001\001b\006proto3"
+      "\013MERCHANDISE\020\007B8\n\033io.opencannabis.schema" +
+      ".baseB\017BaseProductKindH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

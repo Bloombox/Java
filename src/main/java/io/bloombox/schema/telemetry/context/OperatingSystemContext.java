@@ -1089,9 +1089,9 @@ public final class OperatingSystemContext {
       "the device.*\217\001\n\006OSType\022\016\n\nOS_UNKNOWN\020\000\022\007" +
       "\n\003iOS\020d\022\t\n\005macOS\020e\022\010\n\004tvOS\020f\022\013\n\007watchOS\020" +
       "g\022\014\n\007ANDROID\020\310\001\022\021\n\014ANDROID_WEAR\020\311\001\022\013\n\007WI" +
-      "NDOWS\020\004\022\021\n\rWINDOWS_PHONE\020\005\022\t\n\005LINUX\020\006BE\n" +
+      "NDOWS\020\004\022\021\n\rWINDOWS_PHONE\020\005\022\t\n\005LINUX\020\006BH\n" +
       "$io.bloombox.schema.telemetry.contextB\026O" +
-      "peratingSystemContextH\001P\000\370\001\001b\006proto3"
+      "peratingSystemContextH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

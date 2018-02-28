@@ -43,8 +43,8 @@ public final class ServiceStatusOuterClass {
       "\n\034services/ServiceStatus.proto\022\030bloombox" +
       ".schema.services*?\n\rServiceStatus\022\013\n\007UNK" +
       "NOWN\020\000\022\006\n\002UP\020\001\022\010\n\004DOWN\020\002\022\017\n\013MAINTENANCE\020" +
-      "\003B!\n\033io.bloombox.schema.servicesH\001P\001b\006pr" +
-      "oto3"
+      "\003B\'\n\033io.bloombox.schema.servicesH\001P\001\242\002\003B" +
+      "BSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

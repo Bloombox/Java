@@ -53,9 +53,9 @@ public final class AttachedMedia {
       "ia.MediaTypeB$\212@!Type of media this is d" +
       "escribing.\022.\n\004name\030\003 \001(\tB \212@\035Friendly na" +
       "me for this media.\022+\n\003uri\030\004 \001(\tB\036\212@\033Abso" +
-      "lute URI to this media.B4\n\034io.opencannab" +
-      "is.schema.mediaB\rAttachedMediaH\001P\001\370\001\001b\006p" +
-      "roto3"
+      "lute URI to this media.B7\n\034io.opencannab" +
+      "is.schema.mediaB\rAttachedMediaH\001P\001\242\002\003OCS" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

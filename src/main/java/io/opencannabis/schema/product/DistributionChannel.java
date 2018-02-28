@@ -1171,9 +1171,9 @@ public final class DistributionChannel {
       "\027\n\023UNSPECIFIED_CHANNEL\020\000\022\n\n\006RETAIL\020\001\022\r\n\t" +
       "WHOLESALE\020\002\022\010\n\004BULK\020\003*H\n\013ChannelType\022\034\n\030" +
       "UNSPECIFIED_CHANNEL_TYPE\020\000\022\n\n\006DIRECT\020\001\022\017" +
-      "\n\013MARKETPLACE\020\002B<\n\036io.opencannabis.schem" +
-      "a.productB\023DistributionChannelH\001P\000\370\001\001b\006p" +
-      "roto3"
+      "\n\013MARKETPLACE\020\002B?\n\036io.opencannabis.schem" +
+      "a.productB\023DistributionChannelH\001P\000\242\002\003OCS" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

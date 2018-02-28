@@ -49,8 +49,8 @@ public final class InstantOuterClass {
       "so8601\030\001 \001(\tB\037\212@\034ISO8601-formatted times" +
       "tamp.H\000\022H\n\ttimestamp\030\002 \001(\004B3\212@0Unix epoc" +
       "h timestamp, at millisecond resolution.H" +
-      "\000B\006\n\004specB%\n\037io.opencannabis.schema.temp" +
-      "oralH\001P\001b\006proto3"
+      "\000B\006\n\004specB+\n\037io.opencannabis.schema.temp" +
+      "oralH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -82,8 +82,8 @@ public final class PartnerLocationOuterClass {
       "mp for when this record was created.\022f\n\010" +
       "modified\030\t \001(\0132\036.opencannabis.temporal.I" +
       "nstantB4\212@1Timestamp for when this recor" +
-      "d was last modified.B \n\032io.bloombox.sche" +
-      "ma.partnerH\001P\001b\006proto3"
+      "d was last modified.B&\n\032io.bloombox.sche" +
+      "ma.partnerH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

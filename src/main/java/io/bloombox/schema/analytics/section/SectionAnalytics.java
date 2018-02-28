@@ -3131,9 +3131,9 @@ public final class SectionAnalytics {
       "erb\030\002 \001(\01620.bloombox.schema.analytics.se" +
       "ction.SectionAction\0220\n\010occurred\030\003 \001(\0132\036." +
       "opencannabis.temporal.Instant*/\n\rSection" +
-      "Action\022\010\n\004VIEW\020\000\022\010\n\004SORT\020\001\022\n\n\006FILTER\020\002B?" +
+      "Action\022\010\n\004VIEW\020\000\022\010\n\004SORT\020\001\022\n\n\006FILTER\020\002BB" +
       "\n$io.bloombox.schema.analytics.sectionB\020" +
-      "SectionAnalyticsH\001P\000\370\001\001b\006proto3"
+      "SectionAnalyticsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

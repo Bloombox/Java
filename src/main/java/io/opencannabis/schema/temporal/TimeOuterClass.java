@@ -46,8 +46,8 @@ public final class TimeOuterClass {
     java.lang.String[] descriptorData = {
       "\n\023temporal/Time.proto\022\025opencannabis.temp" +
       "oral\"!\n\004Time\022\021\n\007iso8601\030\001 \001(\tH\000B\006\n\004specB" +
-      "%\n\037io.opencannabis.schema.temporalH\001P\001b\006" +
-      "proto3"
+      "+\n\037io.opencannabis.schema.temporalH\001P\001\242\002" +
+      "\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

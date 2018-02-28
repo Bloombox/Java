@@ -955,8 +955,8 @@ public final class AnalyticsEvent {
       "buf/struct.proto\"m\n\005Event\022-\n\007payload\030\001 \001" +
       "(\0132\027.google.protobuf.StructB\003\200@\001\0225\n\010occu" +
       "rred\030\002 \001(\0132\036.opencannabis.temporal.Insta" +
-      "ntB\003\200@\001B5\n\034io.bloombox.schema.telemetryB" +
-      "\016AnalyticsEventH\001P\000\370\001\001b\006proto3"
+      "ntB\003\200@\001B8\n\034io.bloombox.schema.telemetryB" +
+      "\016AnalyticsEventH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

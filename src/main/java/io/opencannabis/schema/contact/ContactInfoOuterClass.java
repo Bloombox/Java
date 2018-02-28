@@ -57,8 +57,8 @@ public final class ContactInfoOuterClass {
       "bis.contact.EmailAddressB\'\212@$Electronic " +
       "mail contact information.\022O\n\007website\030\004 \001" +
       "(\0132\035.opencannabis.contact.WebsiteB\037\212@\034We" +
-      "bsite contact information.B$\n\036io.opencan" +
-      "nabis.schema.contactH\001P\001b\006proto3"
+      "bsite contact information.B*\n\036io.opencan" +
+      "nabis.schema.contactH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

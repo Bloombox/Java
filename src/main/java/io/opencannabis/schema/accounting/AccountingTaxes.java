@@ -6993,8 +6993,8 @@ public final class AccountingTaxes {
       "n\030\005 \001(\t*;\n\023TaxJurisdictionMode\022\t\n\005LOCAL\020" +
       "\000\022\014\n\010PROVINCE\020\001\022\013\n\007FEDERAL\020\002*9\n\010TaxBasis" +
       "\022\010\n\004ITEM\020\000\022\022\n\016ORDER_SUBTOTAL\020\001\022\017\n\013ORDER_" +
-      "TOTAL\020\002B;\n!io.opencannabis.schema.accoun" +
-      "tingB\017AccountingTaxesH\001P\000\370\001\001b\006proto3"
+      "TOTAL\020\002B>\n!io.opencannabis.schema.accoun" +
+      "tingB\017AccountingTaxesH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

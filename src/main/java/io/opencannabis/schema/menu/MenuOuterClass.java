@@ -135,54 +135,65 @@ public final class MenuOuterClass {
       "\0162 .opencannabis.products.menu.Flag\0221\n\tp" +
       "ublished\030\005 \001(\0132\036.opencannabis.temporal.I" +
       "nstant\022:\n\010settings\030\006 \001(\0132(.opencannabis." +
-      "products.menu.MenuSettings\"9\n\013MenuProduc" +
-      "t\022*\n\003key\030\001 \001(\0132\035.opencannabis.base.Produ" +
-      "ctKey\"\230\001\n\013SectionData\022\r\n\005count\030\001 \001(\005\022@\n\007" +
-      "section\030\002 \001(\0132/.opencannabis.products.me" +
-      "nu.section.SectionSpec\0228\n\007product\030\003 \003(\0132" +
-      "\'.opencannabis.products.menu.MenuProduct" +
-      "\"X\n\rSectionedMenu\022\r\n\005count\030\001 \001(\005\0228\n\007payl" +
-      "oad\030\002 \003(\0132\'.opencannabis.products.menu.S" +
-      "ectionData\"\342\t\n\nStaticMenu\022J\n\napothecary\030" +
-      "\001 \003(\01326.opencannabis.products.menu.Stati" +
-      "cMenu.ApothecaryEntry\022J\n\ncartridges\030\002 \003(" +
-      "\01326.opencannabis.products.menu.StaticMen" +
-      "u.CartridgesEntry\022D\n\007edibles\030\003 \003(\01323.ope" +
-      "ncannabis.products.menu.StaticMenu.Edibl" +
-      "esEntry\022F\n\010extracts\030\004 \003(\01324.opencannabis" +
-      ".products.menu.StaticMenu.ExtractsEntry\022" +
-      "D\n\007flowers\030\005 \003(\01323.opencannabis.products" +
-      ".menu.StaticMenu.FlowersEntry\022L\n\013merchan" +
-      "dise\030\006 \003(\01327.opencannabis.products.menu." +
-      "StaticMenu.MerchandiseEntry\022B\n\006plants\030\007 " +
-      "\003(\01322.opencannabis.products.menu.StaticM" +
-      "enu.PlantsEntry\022F\n\010prerolls\030\010 \003(\01324.open" +
-      "cannabis.products.menu.StaticMenu.Prerol" +
-      "lsEntry\032T\n\017ApothecaryEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "0\n\005value\030\002 \001(\0132!.opencannabis.products.A" +
-      "pothecary:\0028\001\032S\n\017CartridgesEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022/\n\005value\030\002 \001(\0132 .opencannabis.prod" +
-      "ucts.Cartridge:\0028\001\032M\n\014EdiblesEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022,\n\005value\030\002 \001(\0132\035.opencannabis.pr" +
-      "oducts.Edible:\0028\001\032O\n\rExtractsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022-\n\005value\030\002 \001(\0132\036.opencannabis.pr" +
-      "oducts.Extract:\0028\001\032M\n\014FlowersEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022,\n\005value\030\002 \001(\0132\035.opencannabis.pr" +
-      "oducts.Flower:\0028\001\032V\n\020MerchandiseEntry\022\013\n" +
-      "\003key\030\001 \001(\t\0221\n\005value\030\002 \001(\0132\".opencannabis" +
-      ".products.Merchandise:\0028\001\032K\n\013PlantsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022+\n\005value\030\002 \001(\0132\034.opencanna" +
-      "bis.products.Plant:\0028\001\032O\n\rPrerollsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022-\n\005value\030\002 \001(\0132\036.opencannab" +
-      "is.products.Preroll:\0028\001\"\277\001\n\004Menu\0226\n\010meta" +
-      "data\030\001 \001(\0132$.opencannabis.products.menu." +
-      "Metadata\022<\n\007payload\030\003 \001(\0132).opencannabis" +
-      ".products.menu.SectionedMenuH\000\0226\n\004menu\030\004" +
-      " \001(\0132&.opencannabis.products.menu.Static" +
-      "MenuH\000B\t\n\007content*#\n\006Status\022\017\n\013UNPUBLISH" +
-      "ED\020\000\022\010\n\004LIVE\020\001*/\n\004Flag\022\t\n\005DRAFT\020\000\022\013\n\007PRI" +
-      "VATE\020\001\022\017\n\013OUT_OF_DATE\020\002B!\n\033io.opencannab" +
-      "is.schema.menuH\001P\001b\006proto3"
+      "products.menu.MenuSettings\"\346\003\n\013MenuProdu" +
+      "ct\022*\n\003key\030\001 \001(\0132\035.opencannabis.base.Prod" +
+      "uctKey\0227\n\napothecary\030\n \001(\0132!.opencannabi" +
+      "s.products.ApothecaryH\000\0225\n\tcartridge\030\013 \001" +
+      "(\0132 .opencannabis.products.CartridgeH\000\022/" +
+      "\n\006edible\030\014 \001(\0132\035.opencannabis.products.E" +
+      "dibleH\000\0221\n\007extract\030\r \001(\0132\036.opencannabis." +
+      "products.ExtractH\000\022/\n\006flower\030\016 \001(\0132\035.ope" +
+      "ncannabis.products.FlowerH\000\0229\n\013merchandi" +
+      "se\030\017 \001(\0132\".opencannabis.products.Merchan" +
+      "diseH\000\022-\n\005plant\030\020 \001(\0132\034.opencannabis.pro" +
+      "ducts.PlantH\000\0221\n\007preroll\030\021 \001(\0132\036.opencan" +
+      "nabis.products.PrerollH\000B\t\n\007product\"\230\001\n\013" +
+      "SectionData\022\r\n\005count\030\001 \001(\005\022@\n\007section\030\002 " +
+      "\001(\0132/.opencannabis.products.menu.section" +
+      ".SectionSpec\0228\n\007product\030\003 \003(\0132\'.opencann" +
+      "abis.products.menu.MenuProduct\"X\n\rSectio" +
+      "nedMenu\022\r\n\005count\030\001 \001(\005\0228\n\007payload\030\002 \003(\0132" +
+      "\'.opencannabis.products.menu.SectionData" +
+      "\"\342\t\n\nStaticMenu\022J\n\napothecary\030\001 \003(\01326.op" +
+      "encannabis.products.menu.StaticMenu.Apot" +
+      "hecaryEntry\022J\n\ncartridges\030\002 \003(\01326.openca" +
+      "nnabis.products.menu.StaticMenu.Cartridg" +
+      "esEntry\022D\n\007edibles\030\003 \003(\01323.opencannabis." +
+      "products.menu.StaticMenu.EdiblesEntry\022F\n" +
+      "\010extracts\030\004 \003(\01324.opencannabis.products." +
+      "menu.StaticMenu.ExtractsEntry\022D\n\007flowers" +
+      "\030\005 \003(\01323.opencannabis.products.menu.Stat" +
+      "icMenu.FlowersEntry\022L\n\013merchandise\030\006 \003(\013" +
+      "27.opencannabis.products.menu.StaticMenu" +
+      ".MerchandiseEntry\022B\n\006plants\030\007 \003(\01322.open" +
+      "cannabis.products.menu.StaticMenu.Plants" +
+      "Entry\022F\n\010prerolls\030\010 \003(\01324.opencannabis.p" +
+      "roducts.menu.StaticMenu.PrerollsEntry\032T\n" +
+      "\017ApothecaryEntry\022\013\n\003key\030\001 \001(\t\0220\n\005value\030\002" +
+      " \001(\0132!.opencannabis.products.Apothecary:" +
+      "\0028\001\032S\n\017CartridgesEntry\022\013\n\003key\030\001 \001(\t\022/\n\005v" +
+      "alue\030\002 \001(\0132 .opencannabis.products.Cartr" +
+      "idge:\0028\001\032M\n\014EdiblesEntry\022\013\n\003key\030\001 \001(\t\022,\n" +
+      "\005value\030\002 \001(\0132\035.opencannabis.products.Edi" +
+      "ble:\0028\001\032O\n\rExtractsEntry\022\013\n\003key\030\001 \001(\t\022-\n" +
+      "\005value\030\002 \001(\0132\036.opencannabis.products.Ext" +
+      "ract:\0028\001\032M\n\014FlowersEntry\022\013\n\003key\030\001 \001(\t\022,\n" +
+      "\005value\030\002 \001(\0132\035.opencannabis.products.Flo" +
+      "wer:\0028\001\032V\n\020MerchandiseEntry\022\013\n\003key\030\001 \001(\t" +
+      "\0221\n\005value\030\002 \001(\0132\".opencannabis.products." +
+      "Merchandise:\0028\001\032K\n\013PlantsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022+\n\005value\030\002 \001(\0132\034.opencannabis.produc" +
+      "ts.Plant:\0028\001\032O\n\rPrerollsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022-\n\005value\030\002 \001(\0132\036.opencannabis.product" +
+      "s.Preroll:\0028\001\"\277\001\n\004Menu\0226\n\010metadata\030\001 \001(\013" +
+      "2$.opencannabis.products.menu.Metadata\022<" +
+      "\n\007payload\030\003 \001(\0132).opencannabis.products." +
+      "menu.SectionedMenuH\000\0226\n\004menu\030\004 \001(\0132&.ope" +
+      "ncannabis.products.menu.StaticMenuH\000B\t\n\007" +
+      "content*#\n\006Status\022\017\n\013UNPUBLISHED\020\000\022\010\n\004LI" +
+      "VE\020\001*/\n\004Flag\022\t\n\005DRAFT\020\000\022\013\n\007PRIVATE\020\001\022\017\n\013" +
+      "OUT_OF_DATE\020\002B\'\n\033io.opencannabis.schema." +
+      "menuH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -225,7 +236,7 @@ public final class MenuOuterClass {
     internal_static_opencannabis_products_menu_MenuProduct_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_products_menu_MenuProduct_descriptor,
-        new java.lang.String[] { "Key", });
+        new java.lang.String[] { "Key", "Apothecary", "Cartridge", "Edible", "Extract", "Flower", "Merchandise", "Plant", "Preroll", "Product", });
     internal_static_opencannabis_products_menu_SectionData_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_opencannabis_products_menu_SectionData_fieldAccessorTable = new

@@ -49,8 +49,9 @@ public final class GeneticsStructs {
       "Key.proto\"r\n\010Genetics\0221\n\004male\030\001 \001(\0132#.op" +
       "encannabis.base.ProductReference\0223\n\006fema" +
       "le\030\002 \001(\0132#.opencannabis.base.ProductRefe" +
-      "renceB?\n%io.opencannabis.schema.product." +
-      "structB\017GeneticsStructsH\001P\001\370\001\001b\006proto3"
+      "renceBB\n%io.opencannabis.schema.product." +
+      "structB\017GeneticsStructsH\001P\001\242\002\003OCSb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

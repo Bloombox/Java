@@ -41,8 +41,8 @@ public final class BaseLanguage {
     java.lang.String[] descriptorData = {
       "\n\023base/Language.proto\022\021opencannabis.base" +
       "*0\n\010Language\022\013\n\007ENGLISH\020\000\022\013\n\007SPANISH\020\001\022\n" +
-      "\n\006FRENCH\020\002B2\n\033io.opencannabis.schema.bas" +
-      "eB\014BaseLanguageH\001P\001\370\001\001b\006proto3"
+      "\n\006FRENCH\020\002B5\n\033io.opencannabis.schema.bas" +
+      "eB\014BaseLanguageH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

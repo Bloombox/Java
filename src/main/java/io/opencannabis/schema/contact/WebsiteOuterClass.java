@@ -48,8 +48,8 @@ public final class WebsiteOuterClass {
       "ntact\032\016bq_field.proto\"v\n\007Website\022$\n\003uri\030" +
       "\001 \001(\tB\027\212@\024URI for the website.\0222\n\005title\030" +
       "\002 \001(\tB#\212@ Title from the HTML page at UR" +
-      "I.\022\021\n\004icon\030\003 \001(\014B\003\200@\001B$\n\036io.opencannabis" +
-      ".schema.contactH\001P\001b\006proto3"
+      "I.\022\021\n\004icon\030\003 \001(\014B\003\200@\001B*\n\036io.opencannabis" +
+      ".schema.contactH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

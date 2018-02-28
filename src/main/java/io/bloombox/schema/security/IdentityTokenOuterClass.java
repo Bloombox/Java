@@ -49,8 +49,8 @@ public final class IdentityTokenOuterClass {
       "\030\001 \001(\t\022\017\n\007encoded\030\002 \001(\t\022=\n\006issuer\030\003 \001(\0162" +
       "-.bloombox.schema.security.IdentityToken" +
       "Issuer*<\n\023IdentityTokenIssuer\022\014\n\010INTERNA" +
-      "L\020\000\022\014\n\010FIREBASE\020\001\022\t\n\005AUTH0\020\002B!\n\033io.bloom" +
-      "box.schema.securityH\001P\001b\006proto3"
+      "L\020\000\022\014\n\010FIREBASE\020\001\022\t\n\005AUTH0\020\002B\'\n\033io.bloom" +
+      "box.schema.securityH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

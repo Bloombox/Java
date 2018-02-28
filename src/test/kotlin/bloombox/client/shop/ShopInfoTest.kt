@@ -17,7 +17,7 @@
 package bloombox.client.shop
 
 import bloombox.client.Bloombox
-import bloombox.client.internals.err.ServiceClientException
+import bloombox.client.ClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import java.util.concurrent.TimeUnit
@@ -49,13 +49,15 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testShopHours() {
-    val response = client.platform.shop().info(
-          ShopClient.ShopContext(
-                partner = partnerID,
-                location = locationID))
+    withClient({ client ->
+      val response = client.platform.shop().info(
+            ShopClient.ShopContext(
+                  partner = partnerID,
+                  location = locationID))
 
-    assertNotNull(response, "response from server for hours should not be null")
-    assertNotNull(response.shopStatus, "response from server should specify shop status")
+      assertNotNull(response, "response from server for hours should not be null")
+      assertNotNull(response.shopStatus, "response from server should specify shop status")
+    })
   }
 
   /**
@@ -63,21 +65,23 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testShopHoursAsync() {
-    val operation = client.platform.shop().info({ response ->
-      assertNotNull(response, "response from server for hours should not be null")
-      assertNotNull(response.shopStatus, "response from server should specify shop status")
-    }, { err ->
-      logging.severe("Severe error fetching order: $err")
-    }, ShopClient.ShopContext(partner = partnerID, location = locationID))
+    withClient({ client ->
+      val operation = client.platform.shop().info({ response ->
+        assertNotNull(response, "response from server for hours should not be null")
+        assertNotNull(response.shopStatus, "response from server should specify shop status")
+      }, { err ->
+        logging.severe("Severe error fetching order: $err")
+      }, ShopClient.ShopContext(partner = partnerID, location = locationID))
 
-    // make sure it executes, with a 10-second timeout
-    operation.get(10, TimeUnit.SECONDS)
+      // make sure it executes, with a 10-second timeout
+      operation.get(10, TimeUnit.SECONDS)
+    })
   }
 
   /**
    * Test fetching shop hours, but with an invalid partner.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ClientException::class)
   fun testShopHoursInvalidPartner() {
     // prep a client for prod
     val prodClient = Bloombox(Bloombox.Settings(
@@ -93,7 +97,7 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid location.
    */
-  @test(expected = ServiceClientException::class)
+  @test(expected = ClientException::class)
   fun testShopHoursInvalidLocation() {
     // prep a client for prod
     val prodClient = Bloombox(Bloombox.Settings(
@@ -112,20 +116,22 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testZipcheckKnownGood() {
-    val responseOne = client.platform.shop().checkZipcode("95120", ShopClient.ShopContext(
-          partner = partnerID,
-          location = locationID))
+    withClient({ client ->
+      val responseOne = client.platform.shop().checkZipcode("95120", ShopClient.ShopContext(
+            partner = partnerID,
+            location = locationID))
 
-    val responseTwo = client.platform.shop().checkZipcode("94404", ShopClient.ShopContext(
-          partner = partnerID,
-          location = locationID))
+      val responseTwo = client.platform.shop().checkZipcode("94404", ShopClient.ShopContext(
+            partner = partnerID,
+            location = locationID))
 
-    assertNotNull(responseOne, "response from server for zipcheck 1 should not be null")
-    assertNotNull(responseTwo, "response from server for zipcheck 2 should not be null")
-    assertTrue(responseOne.supported, "response from server for zipcheck 1 should grant access")
-    assertTrue(responseTwo.supported, "response from server for zipcheck 2 should grant access")
-    assertEquals(responseOne.deliveryMinimum, (50.0).toFloat(), "response should specify correct delivery minimum for zipcheck 1")
-    assertEquals(responseTwo.deliveryMinimum, (200.0).toFloat(), "response should specify correct delivery minimum for zipcheck 2")
+      assertNotNull(responseOne, "response from server for zipcheck 1 should not be null")
+      assertNotNull(responseTwo, "response from server for zipcheck 2 should not be null")
+      assertTrue(responseOne.supported, "response from server for zipcheck 1 should grant access")
+      assertTrue(responseTwo.supported, "response from server for zipcheck 2 should grant access")
+      assertEquals(responseOne.deliveryMinimum, (50.0).toFloat(), "response should specify correct delivery minimum for zipcheck 1")
+      assertEquals(responseTwo.deliveryMinimum, (200.0).toFloat(), "response should specify correct delivery minimum for zipcheck 2")
+    })
   }
 
   /**
@@ -133,25 +139,27 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testZipcheckKnownGoodAsync() {
-    val opOne = client.platform.shop().checkZipcode("95120", { response ->
-      assertNotNull(response, "response from server for zipcheck 1 should not be null")
-      assertTrue(response.supported, "response from server for zipcheck 1 should grant access")
-      assertEquals(response.deliveryMinimum, (50.0).toFloat(), "response should specify correct delivery minimum for zipcheck 1")
-    }, { err ->
-      logging.severe("Severe error fetching order: $err")
-    }, ShopClient.ShopContext(partner = partnerID, location = locationID))
+    withClient({ client ->
+      val opOne = client.platform.shop().checkZipcode("95120", { response ->
+        assertNotNull(response, "response from server for zipcheck 1 should not be null")
+        assertTrue(response.supported, "response from server for zipcheck 1 should grant access")
+        assertEquals(response.deliveryMinimum, (50.0).toFloat(), "response should specify correct delivery minimum for zipcheck 1")
+      }, { err ->
+        logging.severe("Severe error fetching order: $err")
+      }, ShopClient.ShopContext(partner = partnerID, location = locationID))
 
-    val opTwo = client.platform.shop().checkZipcode("94404", { response ->
-      assertNotNull(response, "response from server for zipcheck 2 should not be null")
-      assertTrue(response.supported, "response from server for zipcheck 2 should grant access")
-      assertEquals(response.deliveryMinimum, (200.0).toFloat(), "response should specify correct delivery minimum for zipcheck 2")
-    }, { err ->
-      logging.severe("Severe error fetching order: $err")
-    }, ShopClient.ShopContext(partner = partnerID, location = locationID))
+      val opTwo = client.platform.shop().checkZipcode("94404", { response ->
+        assertNotNull(response, "response from server for zipcheck 2 should not be null")
+        assertTrue(response.supported, "response from server for zipcheck 2 should grant access")
+        assertEquals(response.deliveryMinimum, (200.0).toFloat(), "response should specify correct delivery minimum for zipcheck 2")
+      }, { err ->
+        logging.severe("Severe error fetching order: $err")
+      }, ShopClient.ShopContext(partner = partnerID, location = locationID))
 
-    // make sure both ops execute, with a 5-second timeout each
-    opOne.get(5, TimeUnit.SECONDS)
-    opTwo.get(5, TimeUnit.SECONDS)
+      // make sure both ops execute, with a 5-second timeout each
+      opOne.get(5, TimeUnit.SECONDS)
+      opTwo.get(5, TimeUnit.SECONDS)
+    })
   }
 
   /**
@@ -159,11 +167,13 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testZipcheckKnownBad() {
-    val responseOne = client.platform.shop().checkZipcode("12345",
-          ShopClient.ShopContext(partner = partnerID, location = locationID))
+    withClient({ client ->
+      val responseOne = client.platform.shop().checkZipcode("12345",
+            ShopClient.ShopContext(partner = partnerID, location = locationID))
 
-    assertNotNull(responseOne, "response from server for bad zipcheck should not be null")
-    assertTrue(!responseOne.supported, "response from server for bad zipcheck should withhold access")
+      assertNotNull(responseOne, "response from server for bad zipcheck should not be null")
+      assertTrue(!responseOne.supported, "response from server for bad zipcheck should withhold access")
+    })
   }
 
   /**
@@ -171,14 +181,16 @@ class ShopInfoTest: ClientRPCTest() {
    */
   @test
   fun testZipcheckKnownBadAsync() {
-    val operation = client.platform.shop().checkZipcode("12345", { response ->
-      assertNotNull(response, "response from server for bad zipcheck should not be null")
-      assertTrue(!response.supported, "response from server for bad zipcheck should withhold access")
-    }, { err ->
-      logging.severe("Severe error fetching order: $err")
-    }, ShopClient.ShopContext(partner = partnerID, location = locationID))
+    withClient({ client ->
+      val operation = client.platform.shop().checkZipcode("12345", { response ->
+        assertNotNull(response, "response from server for bad zipcheck should not be null")
+        assertTrue(!response.supported, "response from server for bad zipcheck should withhold access")
+      }, { err ->
+        logging.severe("Severe error fetching order: $err")
+      }, ShopClient.ShopContext(partner = partnerID, location = locationID))
 
-    // make sure it executes, with a 10-second timeout
-    operation.get(10, TimeUnit.SECONDS)
+      // make sure it executes, with a 10-second timeout
+      operation.get(10, TimeUnit.SECONDS)
+    })
   }
 }

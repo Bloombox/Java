@@ -186,142 +186,143 @@ public final class ShopServiceV1 {
       "er.proto\032\027commerce/Customer.proto\032\021ident" +
       "ity/ID.proto\032 identity/ids/UserDoctorRec" +
       ".proto\032\034services/ServiceStatus.proto\032\035pa" +
-      "rtner/PartnerLocation.proto\032\034google/api/" +
-      "annotations.proto\"\350\001\n\004Ping\032\t\n\007Request\032C\n" +
-      "\010Response\0227\n\006status\030\001 \001(\0162\'.bloombox.sch" +
-      "ema.services.ServiceStatus\032\217\001\n\tOperation" +
-      "\022?\n\007request\030\001 \001(\0132..bloombox.schema.serv" +
-      "ices.shop.v1.Ping.Request\022A\n\010response\030\002 " +
-      "\001(\0132/.bloombox.schema.services.shop.v1.P" +
-      "ing.Response\"\275\002\n\010ShopInfo\032H\n\007Request\022=\n\010" +
-      "location\030\001 \001(\0132+.bloombox.schema.partner" +
-      ".PartnerLocationKey\032M\n\010Response\022A\n\013shop_" +
-      "status\030\001 \001(\0162,.bloombox.schema.services." +
-      "shop.v1.ShopStatus\032\227\001\n\tOperation\022C\n\007requ" +
-      "est\030\001 \001(\01322.bloombox.schema.services.sho" +
-      "p.v1.ShopInfo.Request\022E\n\010response\030\002 \001(\0132" +
-      "3.bloombox.schema.services.shop.v1.ShopI" +
-      "nfo.Response\"\317\005\n\014EnrollMember\032\240\003\n\007Reques" +
-      "t\022+\n\006person\030\001 \001(\0132\033.opencannabis.person." +
-      "Person\022:\n\006source\030\002 \001(\0162*.bloombox.schema" +
-      ".identity.EnrollmentSource\022\017\n\007channel\030\003 " +
-      "\001(\t\022?\n\ndoctor_rec\030\004 \001(\0132+.bloombox.schem" +
-      "a.identity.ids.UserDoctorRec\0223\n\rgovernme" +
-      "nt_id\030\005 \001(\0132\034.bloombox.schema.identity.I" +
-      "D\022=\n\010location\030\006 \001(\0132+.bloombox.schema.pa" +
-      "rtner.PartnerLocationKey\022\020\n\010password\030\007 \001" +
-      "(\t\022\017\n\007dry_run\030\010 \001(\010\022C\n\020consumer_profile\030" +
-      "\t \001(\0132).bloombox.schema.identity.Consume" +
-      "rProfile\032z\n\010Response\022\n\n\002id\030\001 \001(\t\022\024\n\nfore" +
-      "ign_id\030\002 \001(\tH\000\022B\n\005error\030\003 \001(\01621.bloombox" +
-      ".schema.services.shop.v1.EnrollmentError" +
-      "H\000B\010\n\006result\032\237\001\n\tOperation\022G\n\007request\030\001 " +
-      "\001(\01326.bloombox.schema.services.shop.v1.E" +
-      "nrollMember.Request\022I\n\010response\030\002 \001(\01327." +
-      "bloombox.schema.services.shop.v1.EnrollM" +
-      "ember.Response\"\257\003\n\014VerifyMember\032_\n\007Reque" +
-      "st\022\025\n\remail_address\030\001 \001(\t\022=\n\010location\030\002 " +
-      "\001(\0132+.bloombox.schema.partner.PartnerLoc" +
-      "ationKey\032\233\001\n\010Response\022\020\n\010verified\030\001 \001(\010\022" +
-      "3\n\010customer\030\002 \001(\0132\037.opencannabis.commerc" +
-      "e.CustomerH\000\022>\n\005error\030\003 \001(\0162-.bloombox.s" +
-      "chema.services.shop.v1.VerifyErrorH\000B\010\n\006" +
-      "result\032\237\001\n\tOperation\022G\n\007request\030\001 \001(\01326." +
-      "bloombox.schema.services.shop.v1.VerifyM" +
-      "ember.Request\022I\n\010response\030\002 \001(\01327.bloomb" +
-      "ox.schema.services.shop.v1.VerifyMember." +
-      "Response\"\304\002\n\014CheckZipcode\032Y\n\007Request\022\017\n\007" +
-      "zipcode\030\001 \001(\t\022=\n\010location\030\002 \001(\0132+.bloomb" +
-      "ox.schema.partner.PartnerLocationKey\0327\n\010" +
-      "Response\022\021\n\tsupported\030\001 \001(\010\022\030\n\020delivery_" +
-      "minimum\030\002 \001(\002\032\237\001\n\tOperation\022G\n\007request\030\001" +
-      " \001(\01326.bloombox.schema.services.shop.v1." +
-      "CheckZipcode.Request\022I\n\010response\030\002 \001(\01327" +
-      ".bloombox.schema.services.shop.v1.CheckZ" +
-      "ipcode.Response\"\377\002\n\013SubmitOrder\032u\n\007Reque" +
-      "st\022+\n\005order\030\001 \001(\0132\034.opencannabis.commerc" +
-      "e.Order\022=\n\010location\030\002 \001(\0132+.bloombox.sch" +
-      "ema.partner.PartnerLocationKey\032Y\n\010Respon" +
-      "se\022;\n\005error\030\001 \001(\0162,.bloombox.schema.serv" +
-      "ices.shop.v1.OrderError\022\020\n\010order_id\030\002 \001(" +
-      "\t\032\235\001\n\tOperation\022F\n\007request\030\001 \001(\01325.bloom" +
-      "box.schema.services.shop.v1.SubmitOrder." +
-      "Request\022H\n\010response\030\002 \001(\01326.bloombox.sch" +
-      "ema.services.shop.v1.SubmitOrder.Respons" +
-      "e\"\312\002\n\010GetOrder\032Z\n\007Request\022\020\n\010order_id\030\001 " +
-      "\001(\t\022=\n\010location\030\002 \001(\0132+.bloombox.schema." +
-      "partner.PartnerLocationKey\032H\n\010Response\022\017" +
-      "\n\007success\030\001 \001(\010\022+\n\005order\030\002 \001(\0132\034.opencan" +
-      "nabis.commerce.Order\032\227\001\n\tOperation\022C\n\007re" +
-      "quest\030\001 \001(\01322.bloombox.schema.services.s" +
-      "hop.v1.GetOrder.Request\022E\n\010response\030\002 \001(" +
-      "\01323.bloombox.schema.services.shop.v1.Get" +
-      "Order.Response*d\n\013VerifyError\022\r\n\tNOT_FOU" +
-      "ND\020\000\022\017\n\013REC_EXPIRED\020\001\022\016\n\nID_EXPIRED\020\002\022\023\n" +
-      "\017INVALID_PAYLOAD\020\003\022\020\n\014NOT_ELIGIBLE\020\004*\313\002\n" +
-      "\nOrderError\022\014\n\010NO_ERROR\020\000\022\021\n\rINVALID_ORD" +
-      "ER\020\001\022\025\n\021USER_NOT_ELIGIBLE\020\002\022\030\n\024ZIPCODE_N" +
-      "OT_ELIGIBLE\020\003\022\026\n\022ZIPCODE_NOT_ACTIVE\020\004\022\033\n" +
-      "\027ZIPCODE_MINIMUM_NOT_MET\020\005\022\023\n\017INVALID_PA" +
-      "RTNER\020\006\022\024\n\020INVALID_LOCATION\020\007\022\024\n\020INVALID" +
-      "_CUSTOMER\020\010\022\027\n\023MISSING_DESTINATION\020\t\022\021\n\r" +
-      "SHOP_NOT_OPEN\020\n\022\032\n\026GLOBAL_MINIMUM_NOT_ME" +
-      "T\020\013\022\030\n\024MEMBERSHIP_NOT_FOUND\020\014\022\023\n\017DUPLICA" +
-      "TE_ORDER\020\r*\247\003\n\017EnrollmentError\022\027\n\023NO_ENR" +
-      "OLLMENT_ERROR\020\000\022\021\n\rINVALID_EMAIL\020\001\022\020\n\014IN" +
-      "VALID_NAME\020\002\022\021\n\rINVALID_PHONE\020\003\022\031\n\025INVAL" +
-      "ID_DATE_OF_BIRTH\020\004\022\022\n\016INVALID_REC_ID\020\005\022\032" +
-      "\n\026INVALID_REC_EXPIRATION\020\006\022\033\n\027INVALID_RE" +
-      "C_DOCTOR_NAME\020\007\022\034\n\030INVALID_REC_DOCTOR_PH" +
-      "ONE\020\010\022\023\n\017INVALID_USDL_ID\020\t\022\033\n\027INVALID_US" +
-      "DL_EXPIRATION\020\013\022\035\n\031INVALID_USDL_JURISDIC" +
-      "TION\020\014\022\024\n\020ACCOUNT_CONFLICT\020\r\022\032\n\026ACCOUNT_" +
-      "CONFLICT_EMAIL\020\016\022\032\n\026ACCOUNT_CONFLICT_PHO" +
-      "NE\020\017\022\036\n\032INVALID_ENROLLMENT_PAYLOAD\020c*F\n\n" +
-      "ShopStatus\022\010\n\004OPEN\020\000\022\n\n\006CLOSED\020\001\022\021\n\rDELI" +
-      "VERY_ONLY\020\002\022\017\n\013PICKUP_ONLY\020\0032\303\014\n\004Shop\022~\n" +
-      "\004Ping\022..bloombox.schema.services.shop.v1" +
-      ".Ping.Request\032/.bloombox.schema.services" +
-      ".shop.v1.Ping.Response\"\025\202\323\344\223\002\017\022\r/shop/v1" +
-      "/ping\022\312\001\n\010ShopInfo\0222.bloombox.schema.ser" +
-      "vices.shop.v1.ShopInfo.Request\0323.bloombo" +
-      "x.schema.services.shop.v1.ShopInfo.Respo" +
-      "nse\"U\202\323\344\223\002O\022M/shop/v1/partners/{location" +
-      ".partner.code}/locations/{location.code}" +
-      "/shop/info\022\356\001\n\014EnrollMember\0226.bloombox.s" +
-      "chema.services.shop.v1.EnrollMember.Requ" +
-      "est\0327.bloombox.schema.services.shop.v1.E" +
-      "nrollMember.Response\"m\202\323\344\223\002g\"K/shop/v1/p" +
-      "artners/{location.partner.code}/location" +
-      "s/{location.code}/members:\001*Z\025\"\020/shop/v1" +
-      "/members:\001*\022\337\001\n\014CheckZipcode\0226.bloombox." +
-      "schema.services.shop.v1.CheckZipcode.Req" +
-      "uest\0327.bloombox.schema.services.shop.v1." +
-      "CheckZipcode.Response\"^\202\323\344\223\002X\022V/shop/v1/" +
-      "partners/{location.partner.code}/locatio" +
-      "ns/{location.code}/zipcheck/{zipcode}\022\353\001" +
-      "\n\014VerifyMember\0226.bloombox.schema.service" +
-      "s.shop.v1.VerifyMember.Request\0327.bloombo" +
-      "x.schema.services.shop.v1.VerifyMember.R" +
-      "esponse\"j\202\323\344\223\002d\022b/shop/v1/partners/{loca" +
+      "rtner/PartnerLocation.proto\032.partner/set" +
+      "tings/PartnerLocationSettings.proto\032\034goo" +
+      "gle/api/annotations.proto\"\350\001\n\004Ping\032\t\n\007Re" +
+      "quest\032C\n\010Response\0227\n\006status\030\001 \001(\0162\'.bloo" +
+      "mbox.schema.services.ServiceStatus\032\217\001\n\tO" +
+      "peration\022?\n\007request\030\001 \001(\0132..bloombox.sch" +
+      "ema.services.shop.v1.Ping.Request\022A\n\010res" +
+      "ponse\030\002 \001(\0132/.bloombox.schema.services.s" +
+      "hop.v1.Ping.Response\"\275\002\n\010ShopInfo\032H\n\007Req" +
+      "uest\022=\n\010location\030\001 \001(\0132+.bloombox.schema" +
+      ".partner.PartnerLocationKey\032M\n\010Response\022" +
+      "A\n\013shop_status\030\001 \001(\0162,.bloombox.schema.p" +
+      "artner.settings.ShopStatus\032\227\001\n\tOperation" +
+      "\022C\n\007request\030\001 \001(\01322.bloombox.schema.serv" +
+      "ices.shop.v1.ShopInfo.Request\022E\n\010respons" +
+      "e\030\002 \001(\01323.bloombox.schema.services.shop." +
+      "v1.ShopInfo.Response\"\317\005\n\014EnrollMember\032\240\003" +
+      "\n\007Request\022+\n\006person\030\001 \001(\0132\033.opencannabis" +
+      ".person.Person\022:\n\006source\030\002 \001(\0162*.bloombo" +
+      "x.schema.identity.EnrollmentSource\022\017\n\007ch" +
+      "annel\030\003 \001(\t\022?\n\ndoctor_rec\030\004 \001(\0132+.bloomb" +
+      "ox.schema.identity.ids.UserDoctorRec\0223\n\r" +
+      "government_id\030\005 \001(\0132\034.bloombox.schema.id" +
+      "entity.ID\022=\n\010location\030\006 \001(\0132+.bloombox.s" +
+      "chema.partner.PartnerLocationKey\022\020\n\010pass" +
+      "word\030\007 \001(\t\022\017\n\007dry_run\030\010 \001(\010\022C\n\020consumer_" +
+      "profile\030\t \001(\0132).bloombox.schema.identity" +
+      ".ConsumerProfile\032z\n\010Response\022\n\n\002id\030\001 \001(\t" +
+      "\022\024\n\nforeign_id\030\002 \001(\tH\000\022B\n\005error\030\003 \001(\01621." +
+      "bloombox.schema.services.shop.v1.Enrollm" +
+      "entErrorH\000B\010\n\006result\032\237\001\n\tOperation\022G\n\007re" +
+      "quest\030\001 \001(\01326.bloombox.schema.services.s" +
+      "hop.v1.EnrollMember.Request\022I\n\010response\030" +
+      "\002 \001(\01327.bloombox.schema.services.shop.v1" +
+      ".EnrollMember.Response\"\257\003\n\014VerifyMember\032" +
+      "_\n\007Request\022\025\n\remail_address\030\001 \001(\t\022=\n\010loc" +
+      "ation\030\002 \001(\0132+.bloombox.schema.partner.Pa" +
+      "rtnerLocationKey\032\233\001\n\010Response\022\020\n\010verifie" +
+      "d\030\001 \001(\010\0223\n\010customer\030\002 \001(\0132\037.opencannabis" +
+      ".commerce.CustomerH\000\022>\n\005error\030\003 \001(\0162-.bl" +
+      "oombox.schema.services.shop.v1.VerifyErr" +
+      "orH\000B\010\n\006result\032\237\001\n\tOperation\022G\n\007request\030" +
+      "\001 \001(\01326.bloombox.schema.services.shop.v1" +
+      ".VerifyMember.Request\022I\n\010response\030\002 \001(\0132" +
+      "7.bloombox.schema.services.shop.v1.Verif" +
+      "yMember.Response\"\304\002\n\014CheckZipcode\032Y\n\007Req" +
+      "uest\022\017\n\007zipcode\030\001 \001(\t\022=\n\010location\030\002 \001(\0132" +
+      "+.bloombox.schema.partner.PartnerLocatio" +
+      "nKey\0327\n\010Response\022\021\n\tsupported\030\001 \001(\010\022\030\n\020d" +
+      "elivery_minimum\030\002 \001(\002\032\237\001\n\tOperation\022G\n\007r" +
+      "equest\030\001 \001(\01326.bloombox.schema.services." +
+      "shop.v1.CheckZipcode.Request\022I\n\010response" +
+      "\030\002 \001(\01327.bloombox.schema.services.shop.v" +
+      "1.CheckZipcode.Response\"\377\002\n\013SubmitOrder\032" +
+      "u\n\007Request\022+\n\005order\030\001 \001(\0132\034.opencannabis" +
+      ".commerce.Order\022=\n\010location\030\002 \001(\0132+.bloo" +
+      "mbox.schema.partner.PartnerLocationKey\032Y" +
+      "\n\010Response\022;\n\005error\030\001 \001(\0162,.bloombox.sch" +
+      "ema.services.shop.v1.OrderError\022\020\n\010order" +
+      "_id\030\002 \001(\t\032\235\001\n\tOperation\022F\n\007request\030\001 \001(\013" +
+      "25.bloombox.schema.services.shop.v1.Subm" +
+      "itOrder.Request\022H\n\010response\030\002 \001(\01326.bloo" +
+      "mbox.schema.services.shop.v1.SubmitOrder" +
+      ".Response\"\210\003\n\010GetOrder\032Z\n\007Request\022\020\n\010ord" +
+      "er_id\030\001 \001(\t\022=\n\010location\030\002 \001(\0132+.bloombox" +
+      ".schema.partner.PartnerLocationKey\032\205\001\n\010R" +
+      "esponse\022\017\n\007success\030\001 \001(\010\022+\n\005order\030\002 \001(\0132" +
+      "\034.opencannabis.commerce.Order\022;\n\005error\030\003" +
+      " \001(\0162,.bloombox.schema.services.shop.v1." +
+      "OrderError\032\227\001\n\tOperation\022C\n\007request\030\001 \001(" +
+      "\01322.bloombox.schema.services.shop.v1.Get" +
+      "Order.Request\022E\n\010response\030\002 \001(\01323.bloomb" +
+      "ox.schema.services.shop.v1.GetOrder.Resp" +
+      "onse*d\n\013VerifyError\022\r\n\tNOT_FOUND\020\000\022\017\n\013RE" +
+      "C_EXPIRED\020\001\022\016\n\nID_EXPIRED\020\002\022\023\n\017INVALID_P" +
+      "AYLOAD\020\003\022\020\n\014NOT_ELIGIBLE\020\004*\313\002\n\nOrderErro" +
+      "r\022\014\n\010NO_ERROR\020\000\022\021\n\rINVALID_ORDER\020\001\022\025\n\021US" +
+      "ER_NOT_ELIGIBLE\020\002\022\030\n\024ZIPCODE_NOT_ELIGIBL" +
+      "E\020\003\022\026\n\022ZIPCODE_NOT_ACTIVE\020\004\022\033\n\027ZIPCODE_M" +
+      "INIMUM_NOT_MET\020\005\022\023\n\017INVALID_PARTNER\020\006\022\024\n" +
+      "\020INVALID_LOCATION\020\007\022\024\n\020INVALID_CUSTOMER\020" +
+      "\010\022\027\n\023MISSING_DESTINATION\020\t\022\021\n\rSHOP_NOT_O" +
+      "PEN\020\n\022\032\n\026GLOBAL_MINIMUM_NOT_MET\020\013\022\030\n\024MEM" +
+      "BERSHIP_NOT_FOUND\020\014\022\023\n\017DUPLICATE_ORDER\020\r" +
+      "*\247\003\n\017EnrollmentError\022\027\n\023NO_ENROLLMENT_ER" +
+      "ROR\020\000\022\021\n\rINVALID_EMAIL\020\001\022\020\n\014INVALID_NAME" +
+      "\020\002\022\021\n\rINVALID_PHONE\020\003\022\031\n\025INVALID_DATE_OF" +
+      "_BIRTH\020\004\022\022\n\016INVALID_REC_ID\020\005\022\032\n\026INVALID_" +
+      "REC_EXPIRATION\020\006\022\033\n\027INVALID_REC_DOCTOR_N" +
+      "AME\020\007\022\034\n\030INVALID_REC_DOCTOR_PHONE\020\010\022\023\n\017I" +
+      "NVALID_USDL_ID\020\t\022\033\n\027INVALID_USDL_EXPIRAT" +
+      "ION\020\013\022\035\n\031INVALID_USDL_JURISDICTION\020\014\022\024\n\020" +
+      "ACCOUNT_CONFLICT\020\r\022\032\n\026ACCOUNT_CONFLICT_E" +
+      "MAIL\020\016\022\032\n\026ACCOUNT_CONFLICT_PHONE\020\017\022\036\n\032IN" +
+      "VALID_ENROLLMENT_PAYLOAD\020c2\303\014\n\004Shop\022~\n\004P" +
+      "ing\022..bloombox.schema.services.shop.v1.P" +
+      "ing.Request\032/.bloombox.schema.services.s" +
+      "hop.v1.Ping.Response\"\025\202\323\344\223\002\017\022\r/shop/v1/p" +
+      "ing\022\312\001\n\010ShopInfo\0222.bloombox.schema.servi" +
+      "ces.shop.v1.ShopInfo.Request\0323.bloombox." +
+      "schema.services.shop.v1.ShopInfo.Respons" +
+      "e\"U\202\323\344\223\002O\022M/shop/v1/partners/{location.p" +
+      "artner.code}/locations/{location.code}/s" +
+      "hop/info\022\356\001\n\014EnrollMember\0226.bloombox.sch" +
+      "ema.services.shop.v1.EnrollMember.Reques" +
+      "t\0327.bloombox.schema.services.shop.v1.Enr" +
+      "ollMember.Response\"m\202\323\344\223\002g\"K/shop/v1/par" +
+      "tners/{location.partner.code}/locations/" +
+      "{location.code}/members:\001*Z\025\"\020/shop/v1/m" +
+      "embers:\001*\022\337\001\n\014CheckZipcode\0226.bloombox.sc" +
+      "hema.services.shop.v1.CheckZipcode.Reque" +
+      "st\0327.bloombox.schema.services.shop.v1.Ch" +
+      "eckZipcode.Response\"^\202\323\344\223\002X\022V/shop/v1/pa" +
+      "rtners/{location.partner.code}/locations" +
+      "/{location.code}/zipcheck/{zipcode}\022\353\001\n\014" +
+      "VerifyMember\0226.bloombox.schema.services." +
+      "shop.v1.VerifyMember.Request\0327.bloombox." +
+      "schema.services.shop.v1.VerifyMember.Res" +
+      "ponse\"j\202\323\344\223\002d\022b/shop/v1/partners/{locati" +
+      "on.partner.code}/locations/{location.cod" +
+      "e}/members/{email_address}/verify\022\271\002\n\013Su" +
+      "bmitOrder\0225.bloombox.schema.services.sho" +
+      "p.v1.SubmitOrder.Request\0326.bloombox.sche" +
+      "ma.services.shop.v1.SubmitOrder.Response" +
+      "\"\272\001\202\323\344\223\002\263\001\"J/shop/v1/partners/{location." +
+      "partner.code}/locations/{location.code}/" +
+      "orders:\005orderZ^\"U/shop/v1/partners/{loca" +
       "tion.partner.code}/locations/{location.c" +
-      "ode}/members/{email_address}/verify\022\271\002\n\013" +
-      "SubmitOrder\0225.bloombox.schema.services.s" +
-      "hop.v1.SubmitOrder.Request\0326.bloombox.sc" +
-      "hema.services.shop.v1.SubmitOrder.Respon" +
-      "se\"\272\001\202\323\344\223\002\263\001\"J/shop/v1/partners/{locatio" +
-      "n.partner.code}/locations/{location.code" +
-      "}/orders:\005orderZ^\"U/shop/v1/partners/{lo" +
-      "cation.partner.code}/locations/{location" +
-      ".code}/orders/{order.id}:\005order\022\360\001\n\010GetO" +
-      "rder\0222.bloombox.schema.services.shop.v1." +
-      "GetOrder.Request\0323.bloombox.schema.servi" +
-      "ces.shop.v1.GetOrder.Response\"{\202\323\344\223\002u\022U/" +
-      "shop/v1/partners/{location.partner.code}" +
-      "/locations/{location.code}/orders/{order" +
-      "_id}Z\034\022\032/shop/v1/orders/{order_id}B)\n#io" +
-      ".bloombox.schema.services.shop.v1H\001P\001b\006p" +
-      "roto3"
+      "ode}/orders/{order.id}:\005order\022\360\001\n\010GetOrd" +
+      "er\0222.bloombox.schema.services.shop.v1.Ge" +
+      "tOrder.Request\0323.bloombox.schema.service" +
+      "s.shop.v1.GetOrder.Response\"{\202\323\344\223\002u\022U/sh" +
+      "op/v1/partners/{location.partner.code}/l" +
+      "ocations/{location.code}/orders/{order_i" +
+      "d}Z\034\022\032/shop/v1/orders/{order_id}B/\n#io.b" +
+      "loombox.schema.services.shop.v1H\001P\001\242\002\003BB" +
+      "Sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -342,6 +343,7 @@ public final class ShopServiceV1 {
           io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.getDescriptor(),
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
           io.bloombox.schema.partner.PartnerLocationOuterClass.getDescriptor(),
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_services_shop_v1_Ping_descriptor =
@@ -505,7 +507,7 @@ public final class ShopServiceV1 {
     internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_shop_v1_GetOrder_Response_descriptor,
-        new java.lang.String[] { "Success", "Order", });
+        new java.lang.String[] { "Success", "Order", "Error", });
     internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_descriptor =
       internal_static_bloombox_schema_services_shop_v1_GetOrder_descriptor.getNestedTypes().get(2);
     internal_static_bloombox_schema_services_shop_v1_GetOrder_Operation_fieldAccessorTable = new
@@ -525,6 +527,7 @@ public final class ShopServiceV1 {
     io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.getDescriptor();
     io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();
     io.bloombox.schema.partner.PartnerLocationOuterClass.getDescriptor();
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

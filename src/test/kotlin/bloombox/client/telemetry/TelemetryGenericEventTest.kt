@@ -41,19 +41,21 @@ class TelemetryGenericEventTest: ClientRPCTest() {
 
   @test
   fun testBasicEvent() {
-    // we should be able to send a basic event
-    client.platform.telemetry().event(
-          "testsuite",
-          occurred = System.currentTimeMillis(),
-          payload = mapOf(
-                Pair("sample", Value.newBuilder().setNumberValue(5.0).build()),
-                Pair("sample_string", Value.newBuilder().setStringValue("hello").build()),
-                Pair("sample_so", Value.newBuilder().setStructValue(Struct.newBuilder()
-                      .putFields("sample_substring", Value.newBuilder().setStringValue("hello2").build())
-                      .putFields("sample_sn", Value.newBuilder().setNumberValue(5.0).build()).build())
-                      .build())),
-          context = TelemetryClient.EventContext(
-                partner = partnerID,
-                location = locationID))
+    withClient({ client ->
+      // we should be able to send a basic event
+      client.platform.telemetry().event(
+            "testsuite",
+            occurred = System.currentTimeMillis(),
+            payload = mapOf(
+                  Pair("sample", Value.newBuilder().setNumberValue(5.0).build()),
+                  Pair("sample_string", Value.newBuilder().setStringValue("hello").build()),
+                  Pair("sample_so", Value.newBuilder().setStructValue(Struct.newBuilder()
+                        .putFields("sample_substring", Value.newBuilder().setStringValue("hello2").build())
+                        .putFields("sample_sn", Value.newBuilder().setNumberValue(5.0).build()).build())
+                        .build())),
+            context = TelemetryClient.EventContext(
+                  partner = partnerID,
+                  location = locationID))
+    })
   }
 }

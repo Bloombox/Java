@@ -74,8 +74,8 @@ public final class DeviceOuterClass {
       "ic key.\022\025\n\010identity\030\004 \001(\tB\003\200@\001\022\030\n\013author" +
       "ities\030\005 \003(\014B\003\200@\001*Q\n\nDeviceType\022\027\n\023UNKNOW" +
       "N_DEVICE_TYPE\020\000\022\013\n\007DESKTOP\020\001\022\t\n\005PHONE\020\002\022" +
-      "\n\n\006TABLET\020\003\022\006\n\002TV\020\004B#\n\035io.opencannabis.s" +
-      "chema.deviceH\001P\001b\006proto3"
+      "\n\n\006TABLET\020\003\022\006\n\002TV\020\004B)\n\035io.opencannabis.s" +
+      "chema.deviceH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

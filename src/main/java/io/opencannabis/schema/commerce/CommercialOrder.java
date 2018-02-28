@@ -461,7 +461,7 @@ public final class CommercialOrder {
      * Scheduling type, either 'ASAP' or a target time.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+     * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
      */
     int getSchedulingValue();
     /**
@@ -469,32 +469,32 @@ public final class CommercialOrder {
      * Scheduling type, either 'ASAP' or a target time.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+     * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
      */
     io.opencannabis.schema.commerce.CommercialOrder.SchedulingType getScheduling();
 
     /**
      * <pre>
-     * Desired delivery time.
+     * Desired delivery time, if specified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+     * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
      */
     boolean hasDesiredTime();
     /**
      * <pre>
-     * Desired delivery time.
+     * Desired delivery time, if specified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+     * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
      */
     io.opencannabis.schema.temporal.Instant getDesiredTime();
     /**
      * <pre>
-     * Desired delivery time.
+     * Desired delivery time, if specified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+     * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
      */
     io.opencannabis.schema.temporal.InstantOrBuilder getDesiredTimeOrBuilder();
   }
@@ -599,7 +599,7 @@ public final class CommercialOrder {
      * Scheduling type, either 'ASAP' or a target time.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+     * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
      */
     public int getSchedulingValue() {
       return scheduling_;
@@ -609,7 +609,7 @@ public final class CommercialOrder {
      * Scheduling type, either 'ASAP' or a target time.
      * </pre>
      *
-     * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+     * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
      */
     public io.opencannabis.schema.commerce.CommercialOrder.SchedulingType getScheduling() {
       io.opencannabis.schema.commerce.CommercialOrder.SchedulingType result = io.opencannabis.schema.commerce.CommercialOrder.SchedulingType.valueOf(scheduling_);
@@ -620,30 +620,30 @@ public final class CommercialOrder {
     private io.opencannabis.schema.temporal.Instant desiredTime_;
     /**
      * <pre>
-     * Desired delivery time.
+     * Desired delivery time, if specified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+     * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
      */
     public boolean hasDesiredTime() {
       return desiredTime_ != null;
     }
     /**
      * <pre>
-     * Desired delivery time.
+     * Desired delivery time, if specified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+     * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
      */
     public io.opencannabis.schema.temporal.Instant getDesiredTime() {
       return desiredTime_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : desiredTime_;
     }
     /**
      * <pre>
-     * Desired delivery time.
+     * Desired delivery time, if specified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+     * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
      */
     public io.opencannabis.schema.temporal.InstantOrBuilder getDesiredTimeOrBuilder() {
       return getDesiredTime();
@@ -971,7 +971,7 @@ public final class CommercialOrder {
        * Scheduling type, either 'ASAP' or a target time.
        * </pre>
        *
-       * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+       * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
        */
       public int getSchedulingValue() {
         return scheduling_;
@@ -981,7 +981,7 @@ public final class CommercialOrder {
        * Scheduling type, either 'ASAP' or a target time.
        * </pre>
        *
-       * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+       * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
        */
       public Builder setSchedulingValue(int value) {
         scheduling_ = value;
@@ -993,7 +993,7 @@ public final class CommercialOrder {
        * Scheduling type, either 'ASAP' or a target time.
        * </pre>
        *
-       * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+       * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.SchedulingType getScheduling() {
         io.opencannabis.schema.commerce.CommercialOrder.SchedulingType result = io.opencannabis.schema.commerce.CommercialOrder.SchedulingType.valueOf(scheduling_);
@@ -1004,7 +1004,7 @@ public final class CommercialOrder {
        * Scheduling type, either 'ASAP' or a target time.
        * </pre>
        *
-       * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+       * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
        */
       public Builder setScheduling(io.opencannabis.schema.commerce.CommercialOrder.SchedulingType value) {
         if (value == null) {
@@ -1020,7 +1020,7 @@ public final class CommercialOrder {
        * Scheduling type, either 'ASAP' or a target time.
        * </pre>
        *
-       * <code>.opencannabis.commerce.SchedulingType scheduling = 1;</code>
+       * <code>.opencannabis.commerce.SchedulingType scheduling = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling type, either &#92;'ASAP&#92;' or a target time."];</code>
        */
       public Builder clearScheduling() {
         
@@ -1034,20 +1034,20 @@ public final class CommercialOrder {
           io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> desiredTimeBuilder_;
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       public boolean hasDesiredTime() {
         return desiredTimeBuilder_ != null || desiredTime_ != null;
       }
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       public io.opencannabis.schema.temporal.Instant getDesiredTime() {
         if (desiredTimeBuilder_ == null) {
@@ -1058,10 +1058,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       public Builder setDesiredTime(io.opencannabis.schema.temporal.Instant value) {
         if (desiredTimeBuilder_ == null) {
@@ -1078,10 +1078,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       public Builder setDesiredTime(
           io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
@@ -1096,10 +1096,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       public Builder mergeDesiredTime(io.opencannabis.schema.temporal.Instant value) {
         if (desiredTimeBuilder_ == null) {
@@ -1118,10 +1118,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       public Builder clearDesiredTime() {
         if (desiredTimeBuilder_ == null) {
@@ -1136,10 +1136,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       public io.opencannabis.schema.temporal.Instant.Builder getDesiredTimeBuilder() {
         
@@ -1148,10 +1148,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       public io.opencannabis.schema.temporal.InstantOrBuilder getDesiredTimeOrBuilder() {
         if (desiredTimeBuilder_ != null) {
@@ -1163,10 +1163,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Desired delivery time.
+       * Desired delivery time, if specified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant desired_time = 2;</code>
+       * <code>.opencannabis.temporal.Instant desired_time = 2 [(.gen_bq_schema.description) = "Desired delivery time, if specified."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
@@ -2756,36 +2756,36 @@ public final class CommercialOrder {
 
     /**
      * <pre>
-     * ID assigned to the order by the server.
+     * ID assigned to the order by the server, and potentially nominated by the client.
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
      */
     java.lang.String getId();
     /**
      * <pre>
-     * ID assigned to the order by the server.
+     * ID assigned to the order by the server, and potentially nominated by the client.
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <pre>
-     * Type of order requested.
+     * Type of order requested - either PICKUP or DELIVERY.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderType type = 2;</code>
+     * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
      */
     int getTypeValue();
     /**
      * <pre>
-     * Type of order requested.
+     * Type of order requested - either PICKUP or DELIVERY.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderType type = 2;</code>
+     * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
      */
     io.opencannabis.schema.commerce.CommercialOrder.OrderType getType();
 
@@ -2794,7 +2794,7 @@ public final class CommercialOrder {
      * Current status of this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+     * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
      */
     int getStatusValue();
     /**
@@ -2802,7 +2802,7 @@ public final class CommercialOrder {
      * Current status of this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+     * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
      */
     io.opencannabis.schema.commerce.CommercialOrder.OrderStatus getStatus();
 
@@ -2811,7 +2811,7 @@ public final class CommercialOrder {
      * Customer that submitted this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.Customer customer = 4;</code>
+     * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
      */
     boolean hasCustomer();
     /**
@@ -2819,7 +2819,7 @@ public final class CommercialOrder {
      * Customer that submitted this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.Customer customer = 4;</code>
+     * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
      */
     io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer();
     /**
@@ -2827,7 +2827,7 @@ public final class CommercialOrder {
      * Customer that submitted this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.Customer customer = 4;</code>
+     * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
      */
     io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder();
 
@@ -2836,7 +2836,7 @@ public final class CommercialOrder {
      * Scheduling spec for this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
      */
     boolean hasScheduling();
     /**
@@ -2844,7 +2844,7 @@ public final class CommercialOrder {
      * Scheduling spec for this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
      */
     io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling getScheduling();
     /**
@@ -2852,7 +2852,7 @@ public final class CommercialOrder {
      * Scheduling spec for this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
      */
     io.opencannabis.schema.commerce.CommercialOrder.OrderSchedulingOrBuilder getSchedulingOrBuilder();
 
@@ -2861,7 +2861,7 @@ public final class CommercialOrder {
      * Location for delivery, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+     * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
      */
     boolean hasDestination();
     /**
@@ -2869,7 +2869,7 @@ public final class CommercialOrder {
      * Location for delivery, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+     * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
      */
     io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination getDestination();
     /**
@@ -2877,24 +2877,24 @@ public final class CommercialOrder {
      * Location for delivery, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+     * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
      */
     io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestinationOrBuilder getDestinationOrBuilder();
 
     /**
      * <pre>
-     * User-provided notes or questions.
+     * User-provided notes or questions, if any.
      * </pre>
      *
-     * <code>string notes = 7;</code>
+     * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
      */
     java.lang.String getNotes();
     /**
      * <pre>
-     * User-provided notes or questions.
+     * User-provided notes or questions, if any.
      * </pre>
      *
-     * <code>string notes = 7;</code>
+     * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
      */
     com.google.protobuf.ByteString
         getNotesBytes();
@@ -2904,7 +2904,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     java.util.List<io.opencannabis.schema.commerce.OrderItem.Item> 
         getItemList();
@@ -2913,7 +2913,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     io.opencannabis.schema.commerce.OrderItem.Item getItem(int index);
     /**
@@ -2921,7 +2921,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     int getItemCount();
     /**
@@ -2929,7 +2929,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     java.util.List<? extends io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> 
         getItemOrBuilderList();
@@ -2938,7 +2938,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
         int index);
@@ -2948,7 +2948,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     java.util.List<io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin> 
         getActionLogList();
@@ -2957,7 +2957,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin getActionLog(int index);
     /**
@@ -2965,7 +2965,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     int getActionLogCount();
     /**
@@ -2973,7 +2973,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     java.util.List<? extends io.opencannabis.schema.commerce.CommercialOrder.StatusCheckinOrBuilder> 
         getActionLogOrBuilderList();
@@ -2982,7 +2982,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     io.opencannabis.schema.commerce.CommercialOrder.StatusCheckinOrBuilder getActionLogOrBuilder(
         int index);
@@ -2992,7 +2992,7 @@ public final class CommercialOrder {
      * When this order was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
      */
     boolean hasCreatedAt();
     /**
@@ -3000,7 +3000,7 @@ public final class CommercialOrder {
      * When this order was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
      */
     io.opencannabis.schema.temporal.Instant getCreatedAt();
     /**
@@ -3008,7 +3008,7 @@ public final class CommercialOrder {
      * When this order was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
      */
     io.opencannabis.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder();
 
@@ -3017,9 +3017,52 @@ public final class CommercialOrder {
      * Order subtotal.
      * </pre>
      *
-     * <code>double subtotal = 11;</code>
+     * <code>double subtotal = 11 [(.gen_bq_schema.description) = "Order subtotal."];</code>
      */
     double getSubtotal();
+
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    io.opencannabis.schema.temporal.Instant getUpdatedAt();
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    io.opencannabis.schema.temporal.InstantOrBuilder getUpdatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Session ID that was active when this order was submitted.
+     * </pre>
+     *
+     * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+     */
+    java.lang.String getSid();
+    /**
+     * <pre>
+     * Session ID that was active when this order was submitted.
+     * </pre>
+     *
+     * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+     */
+    com.google.protobuf.ByteString
+        getSidBytes();
   }
   /**
    * <pre>
@@ -3045,6 +3088,7 @@ public final class CommercialOrder {
       item_ = java.util.Collections.emptyList();
       actionLog_ = java.util.Collections.emptyList();
       subtotal_ = 0D;
+      sid_ = "";
     }
 
     @java.lang.Override
@@ -3177,6 +3221,25 @@ public final class CommercialOrder {
               subtotal_ = input.readDouble();
               break;
             }
+            case 98: {
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              if (updatedAt_ != null) {
+                subBuilder = updatedAt_.toBuilder();
+              }
+              updatedAt_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updatedAt_);
+                updatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sid_ = s;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3212,10 +3275,10 @@ public final class CommercialOrder {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID assigned to the order by the server.
+     * ID assigned to the order by the server, and potentially nominated by the client.
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -3231,10 +3294,10 @@ public final class CommercialOrder {
     }
     /**
      * <pre>
-     * ID assigned to the order by the server.
+     * ID assigned to the order by the server, and potentially nominated by the client.
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -3254,20 +3317,20 @@ public final class CommercialOrder {
     private int type_;
     /**
      * <pre>
-     * Type of order requested.
+     * Type of order requested - either PICKUP or DELIVERY.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderType type = 2;</code>
+     * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * Type of order requested.
+     * Type of order requested - either PICKUP or DELIVERY.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderType type = 2;</code>
+     * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
      */
     public io.opencannabis.schema.commerce.CommercialOrder.OrderType getType() {
       io.opencannabis.schema.commerce.CommercialOrder.OrderType result = io.opencannabis.schema.commerce.CommercialOrder.OrderType.valueOf(type_);
@@ -3281,7 +3344,7 @@ public final class CommercialOrder {
      * Current status of this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+     * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
      */
     public int getStatusValue() {
       return status_;
@@ -3291,7 +3354,7 @@ public final class CommercialOrder {
      * Current status of this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+     * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.opencannabis.schema.commerce.CommercialOrder.OrderStatus getStatus() {
       io.opencannabis.schema.commerce.CommercialOrder.OrderStatus result = io.opencannabis.schema.commerce.CommercialOrder.OrderStatus.valueOf(status_);
@@ -3305,7 +3368,7 @@ public final class CommercialOrder {
      * Customer that submitted this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.Customer customer = 4;</code>
+     * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
      */
     public boolean hasCustomer() {
       return customer_ != null;
@@ -3315,7 +3378,7 @@ public final class CommercialOrder {
      * Customer that submitted this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.Customer customer = 4;</code>
+     * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
      */
     public io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer() {
       return customer_ == null ? io.opencannabis.schema.commerce.OrderCustomer.Customer.getDefaultInstance() : customer_;
@@ -3325,7 +3388,7 @@ public final class CommercialOrder {
      * Customer that submitted this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.Customer customer = 4;</code>
+     * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
      */
     public io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
       return getCustomer();
@@ -3338,7 +3401,7 @@ public final class CommercialOrder {
      * Scheduling spec for this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
      */
     public boolean hasScheduling() {
       return scheduling_ != null;
@@ -3348,7 +3411,7 @@ public final class CommercialOrder {
      * Scheduling spec for this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
      */
     public io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling getScheduling() {
       return scheduling_ == null ? io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling.getDefaultInstance() : scheduling_;
@@ -3358,7 +3421,7 @@ public final class CommercialOrder {
      * Scheduling spec for this order.
      * </pre>
      *
-     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+     * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
      */
     public io.opencannabis.schema.commerce.CommercialOrder.OrderSchedulingOrBuilder getSchedulingOrBuilder() {
       return getScheduling();
@@ -3371,7 +3434,7 @@ public final class CommercialOrder {
      * Location for delivery, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+     * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
      */
     public boolean hasDestination() {
       return destination_ != null;
@@ -3381,7 +3444,7 @@ public final class CommercialOrder {
      * Location for delivery, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+     * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
      */
     public io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination getDestination() {
       return destination_ == null ? io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination.getDefaultInstance() : destination_;
@@ -3391,7 +3454,7 @@ public final class CommercialOrder {
      * Location for delivery, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+     * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
      */
     public io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestinationOrBuilder getDestinationOrBuilder() {
       return getDestination();
@@ -3401,10 +3464,10 @@ public final class CommercialOrder {
     private volatile java.lang.Object notes_;
     /**
      * <pre>
-     * User-provided notes or questions.
+     * User-provided notes or questions, if any.
      * </pre>
      *
-     * <code>string notes = 7;</code>
+     * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
      */
     public java.lang.String getNotes() {
       java.lang.Object ref = notes_;
@@ -3420,10 +3483,10 @@ public final class CommercialOrder {
     }
     /**
      * <pre>
-     * User-provided notes or questions.
+     * User-provided notes or questions, if any.
      * </pre>
      *
-     * <code>string notes = 7;</code>
+     * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
      */
     public com.google.protobuf.ByteString
         getNotesBytes() {
@@ -3446,7 +3509,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     public java.util.List<io.opencannabis.schema.commerce.OrderItem.Item> getItemList() {
       return item_;
@@ -3456,7 +3519,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     public java.util.List<? extends io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> 
         getItemOrBuilderList() {
@@ -3467,7 +3530,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     public int getItemCount() {
       return item_.size();
@@ -3477,7 +3540,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.opencannabis.schema.commerce.OrderItem.Item getItem(int index) {
       return item_.get(index);
@@ -3487,7 +3550,7 @@ public final class CommercialOrder {
      * Items being ordered.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+     * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
         int index) {
@@ -3501,7 +3564,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     public java.util.List<io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin> getActionLogList() {
       return actionLog_;
@@ -3511,7 +3574,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     public java.util.List<? extends io.opencannabis.schema.commerce.CommercialOrder.StatusCheckinOrBuilder> 
         getActionLogOrBuilderList() {
@@ -3522,7 +3585,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     public int getActionLogCount() {
       return actionLog_.size();
@@ -3532,7 +3595,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin getActionLog(int index) {
       return actionLog_.get(index);
@@ -3542,7 +3605,7 @@ public final class CommercialOrder {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+     * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
      */
     public io.opencannabis.schema.commerce.CommercialOrder.StatusCheckinOrBuilder getActionLogOrBuilder(
         int index) {
@@ -3556,7 +3619,7 @@ public final class CommercialOrder {
      * When this order was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
@@ -3566,7 +3629,7 @@ public final class CommercialOrder {
      * When this order was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
      */
     public io.opencannabis.schema.temporal.Instant getCreatedAt() {
       return createdAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : createdAt_;
@@ -3576,7 +3639,7 @@ public final class CommercialOrder {
      * When this order was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+     * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
      */
     public io.opencannabis.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
@@ -3589,10 +3652,85 @@ public final class CommercialOrder {
      * Order subtotal.
      * </pre>
      *
-     * <code>double subtotal = 11;</code>
+     * <code>double subtotal = 11 [(.gen_bq_schema.description) = "Order subtotal."];</code>
      */
     public double getSubtotal() {
       return subtotal_;
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 12;
+    private io.opencannabis.schema.temporal.Instant updatedAt_;
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public boolean hasUpdatedAt() {
+      return updatedAt_ != null;
+    }
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public io.opencannabis.schema.temporal.Instant getUpdatedAt() {
+      return updatedAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <pre>
+     * When this order was created.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public io.opencannabis.schema.temporal.InstantOrBuilder getUpdatedAtOrBuilder() {
+      return getUpdatedAt();
+    }
+
+    public static final int SID_FIELD_NUMBER = 13;
+    private volatile java.lang.Object sid_;
+    /**
+     * <pre>
+     * Session ID that was active when this order was submitted.
+     * </pre>
+     *
+     * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+     */
+    public java.lang.String getSid() {
+      java.lang.Object ref = sid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Session ID that was active when this order was submitted.
+     * </pre>
+     *
+     * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+     */
+    public com.google.protobuf.ByteString
+        getSidBytes() {
+      java.lang.Object ref = sid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3639,6 +3777,12 @@ public final class CommercialOrder {
       }
       if (subtotal_ != 0D) {
         output.writeDouble(11, subtotal_);
+      }
+      if (updatedAt_ != null) {
+        output.writeMessage(12, getUpdatedAt());
+      }
+      if (!getSidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, sid_);
       }
       unknownFields.writeTo(output);
     }
@@ -3690,6 +3834,13 @@ public final class CommercialOrder {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(11, subtotal_);
       }
+      if (updatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getUpdatedAt());
+      }
+      if (!getSidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, sid_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3740,6 +3891,13 @@ public final class CommercialOrder {
           java.lang.Double.doubleToLongBits(getSubtotal())
           == java.lang.Double.doubleToLongBits(
               other.getSubtotal()));
+      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt()) {
+        result = result && getUpdatedAt()
+            .equals(other.getUpdatedAt());
+      }
+      result = result && getSid()
+          .equals(other.getSid());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3786,6 +3944,12 @@ public final class CommercialOrder {
       hash = (37 * hash) + SUBTOTAL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getSubtotal()));
+      if (hasUpdatedAt()) {
+        hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      hash = (37 * hash) + SID_FIELD_NUMBER;
+      hash = (53 * hash) + getSid().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3967,6 +4131,14 @@ public final class CommercialOrder {
         }
         subtotal_ = 0D;
 
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+        sid_ = "";
+
         return this;
       }
 
@@ -4034,6 +4206,12 @@ public final class CommercialOrder {
           result.createdAt_ = createdAtBuilder_.build();
         }
         result.subtotal_ = subtotal_;
+        if (updatedAtBuilder_ == null) {
+          result.updatedAt_ = updatedAt_;
+        } else {
+          result.updatedAt_ = updatedAtBuilder_.build();
+        }
+        result.sid_ = sid_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4157,6 +4335,13 @@ public final class CommercialOrder {
         if (other.getSubtotal() != 0D) {
           setSubtotal(other.getSubtotal());
         }
+        if (other.hasUpdatedAt()) {
+          mergeUpdatedAt(other.getUpdatedAt());
+        }
+        if (!other.getSid().isEmpty()) {
+          sid_ = other.sid_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4188,10 +4373,10 @@ public final class CommercialOrder {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID assigned to the order by the server.
+       * ID assigned to the order by the server, and potentially nominated by the client.
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -4207,10 +4392,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * ID assigned to the order by the server.
+       * ID assigned to the order by the server, and potentially nominated by the client.
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -4227,10 +4412,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * ID assigned to the order by the server.
+       * ID assigned to the order by the server, and potentially nominated by the client.
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
        */
       public Builder setId(
           java.lang.String value) {
@@ -4244,10 +4429,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * ID assigned to the order by the server.
+       * ID assigned to the order by the server, and potentially nominated by the client.
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
        */
       public Builder clearId() {
         
@@ -4257,10 +4442,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * ID assigned to the order by the server.
+       * ID assigned to the order by the server, and potentially nominated by the client.
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "ID assigned to the order by the server, and potentially nominated by the client."];</code>
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4277,20 +4462,20 @@ public final class CommercialOrder {
       private int type_ = 0;
       /**
        * <pre>
-       * Type of order requested.
+       * Type of order requested - either PICKUP or DELIVERY.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderType type = 2;</code>
+       * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
        */
       public int getTypeValue() {
         return type_;
       }
       /**
        * <pre>
-       * Type of order requested.
+       * Type of order requested - either PICKUP or DELIVERY.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderType type = 2;</code>
+       * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -4299,10 +4484,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Type of order requested.
+       * Type of order requested - either PICKUP or DELIVERY.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderType type = 2;</code>
+       * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.OrderType getType() {
         io.opencannabis.schema.commerce.CommercialOrder.OrderType result = io.opencannabis.schema.commerce.CommercialOrder.OrderType.valueOf(type_);
@@ -4310,10 +4495,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Type of order requested.
+       * Type of order requested - either PICKUP or DELIVERY.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderType type = 2;</code>
+       * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
        */
       public Builder setType(io.opencannabis.schema.commerce.CommercialOrder.OrderType value) {
         if (value == null) {
@@ -4326,10 +4511,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * Type of order requested.
+       * Type of order requested - either PICKUP or DELIVERY.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderType type = 2;</code>
+       * <code>.opencannabis.commerce.OrderType type = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Type of order requested - either PICKUP or DELIVERY."];</code>
        */
       public Builder clearType() {
         
@@ -4344,7 +4529,7 @@ public final class CommercialOrder {
        * Current status of this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+       * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
        */
       public int getStatusValue() {
         return status_;
@@ -4354,7 +4539,7 @@ public final class CommercialOrder {
        * Current status of this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+       * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setStatusValue(int value) {
         status_ = value;
@@ -4366,7 +4551,7 @@ public final class CommercialOrder {
        * Current status of this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+       * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.OrderStatus getStatus() {
         io.opencannabis.schema.commerce.CommercialOrder.OrderStatus result = io.opencannabis.schema.commerce.CommercialOrder.OrderStatus.valueOf(status_);
@@ -4377,7 +4562,7 @@ public final class CommercialOrder {
        * Current status of this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+       * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setStatus(io.opencannabis.schema.commerce.CommercialOrder.OrderStatus value) {
         if (value == null) {
@@ -4393,7 +4578,7 @@ public final class CommercialOrder {
        * Current status of this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderStatus status = 3;</code>
+       * <code>.opencannabis.commerce.OrderStatus status = 3 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder clearStatus() {
         
@@ -4410,7 +4595,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       public boolean hasCustomer() {
         return customerBuilder_ != null || customer_ != null;
@@ -4420,7 +4605,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       public io.opencannabis.schema.commerce.OrderCustomer.Customer getCustomer() {
         if (customerBuilder_ == null) {
@@ -4434,7 +4619,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       public Builder setCustomer(io.opencannabis.schema.commerce.OrderCustomer.Customer value) {
         if (customerBuilder_ == null) {
@@ -4454,7 +4639,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       public Builder setCustomer(
           io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder builderForValue) {
@@ -4472,7 +4657,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       public Builder mergeCustomer(io.opencannabis.schema.commerce.OrderCustomer.Customer value) {
         if (customerBuilder_ == null) {
@@ -4494,7 +4679,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       public Builder clearCustomer() {
         if (customerBuilder_ == null) {
@@ -4512,7 +4697,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       public io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder getCustomerBuilder() {
         
@@ -4524,7 +4709,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       public io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder getCustomerOrBuilder() {
         if (customerBuilder_ != null) {
@@ -4539,7 +4724,7 @@ public final class CommercialOrder {
        * Customer that submitted this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.Customer customer = 4;</code>
+       * <code>.opencannabis.commerce.Customer customer = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Customer that submitted this order."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.OrderCustomer.Customer, io.opencannabis.schema.commerce.OrderCustomer.Customer.Builder, io.opencannabis.schema.commerce.OrderCustomer.CustomerOrBuilder> 
@@ -4563,7 +4748,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       public boolean hasScheduling() {
         return schedulingBuilder_ != null || scheduling_ != null;
@@ -4573,7 +4758,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling getScheduling() {
         if (schedulingBuilder_ == null) {
@@ -4587,7 +4772,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       public Builder setScheduling(io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling value) {
         if (schedulingBuilder_ == null) {
@@ -4607,7 +4792,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       public Builder setScheduling(
           io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling.Builder builderForValue) {
@@ -4625,7 +4810,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       public Builder mergeScheduling(io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling value) {
         if (schedulingBuilder_ == null) {
@@ -4647,7 +4832,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       public Builder clearScheduling() {
         if (schedulingBuilder_ == null) {
@@ -4665,7 +4850,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling.Builder getSchedulingBuilder() {
         
@@ -4677,7 +4862,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.OrderSchedulingOrBuilder getSchedulingOrBuilder() {
         if (schedulingBuilder_ != null) {
@@ -4692,7 +4877,7 @@ public final class CommercialOrder {
        * Scheduling spec for this order.
        * </pre>
        *
-       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5;</code>
+       * <code>.opencannabis.commerce.OrderScheduling scheduling = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Scheduling spec for this order."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling, io.opencannabis.schema.commerce.CommercialOrder.OrderScheduling.Builder, io.opencannabis.schema.commerce.CommercialOrder.OrderSchedulingOrBuilder> 
@@ -4716,7 +4901,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       public boolean hasDestination() {
         return destinationBuilder_ != null || destination_ != null;
@@ -4726,7 +4911,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       public io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination getDestination() {
         if (destinationBuilder_ == null) {
@@ -4740,7 +4925,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       public Builder setDestination(io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination value) {
         if (destinationBuilder_ == null) {
@@ -4760,7 +4945,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       public Builder setDestination(
           io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination.Builder builderForValue) {
@@ -4778,7 +4963,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       public Builder mergeDestination(io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination value) {
         if (destinationBuilder_ == null) {
@@ -4800,7 +4985,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       public Builder clearDestination() {
         if (destinationBuilder_ == null) {
@@ -4818,7 +5003,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       public io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination.Builder getDestinationBuilder() {
         
@@ -4830,7 +5015,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       public io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestinationOrBuilder getDestinationOrBuilder() {
         if (destinationBuilder_ != null) {
@@ -4845,7 +5030,7 @@ public final class CommercialOrder {
        * Location for delivery, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.commerce.DeliveryDestination destination = 6;</code>
+       * <code>.opencannabis.commerce.DeliveryDestination destination = 6 [(.gen_bq_schema.description) = "Location for delivery, if applicable."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination, io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestination.Builder, io.opencannabis.schema.commerce.OrderDelivery.DeliveryDestinationOrBuilder> 
@@ -4864,10 +5049,10 @@ public final class CommercialOrder {
       private java.lang.Object notes_ = "";
       /**
        * <pre>
-       * User-provided notes or questions.
+       * User-provided notes or questions, if any.
        * </pre>
        *
-       * <code>string notes = 7;</code>
+       * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
        */
       public java.lang.String getNotes() {
         java.lang.Object ref = notes_;
@@ -4883,10 +5068,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * User-provided notes or questions.
+       * User-provided notes or questions, if any.
        * </pre>
        *
-       * <code>string notes = 7;</code>
+       * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
        */
       public com.google.protobuf.ByteString
           getNotesBytes() {
@@ -4903,10 +5088,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * User-provided notes or questions.
+       * User-provided notes or questions, if any.
        * </pre>
        *
-       * <code>string notes = 7;</code>
+       * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setNotes(
           java.lang.String value) {
@@ -4920,10 +5105,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * User-provided notes or questions.
+       * User-provided notes or questions, if any.
        * </pre>
        *
-       * <code>string notes = 7;</code>
+       * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder clearNotes() {
         
@@ -4933,10 +5118,10 @@ public final class CommercialOrder {
       }
       /**
        * <pre>
-       * User-provided notes or questions.
+       * User-provided notes or questions, if any.
        * </pre>
        *
-       * <code>string notes = 7;</code>
+       * <code>string notes = 7 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setNotesBytes(
           com.google.protobuf.ByteString value) {
@@ -4967,7 +5152,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.OrderItem.Item> getItemList() {
         if (itemBuilder_ == null) {
@@ -4981,7 +5166,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public int getItemCount() {
         if (itemBuilder_ == null) {
@@ -4995,7 +5180,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.OrderItem.Item getItem(int index) {
         if (itemBuilder_ == null) {
@@ -5009,7 +5194,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setItem(
           int index, io.opencannabis.schema.commerce.OrderItem.Item value) {
@@ -5030,7 +5215,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setItem(
           int index, io.opencannabis.schema.commerce.OrderItem.Item.Builder builderForValue) {
@@ -5048,7 +5233,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addItem(io.opencannabis.schema.commerce.OrderItem.Item value) {
         if (itemBuilder_ == null) {
@@ -5068,7 +5253,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addItem(
           int index, io.opencannabis.schema.commerce.OrderItem.Item value) {
@@ -5089,7 +5274,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addItem(
           io.opencannabis.schema.commerce.OrderItem.Item.Builder builderForValue) {
@@ -5107,7 +5292,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addItem(
           int index, io.opencannabis.schema.commerce.OrderItem.Item.Builder builderForValue) {
@@ -5125,7 +5310,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addAllItem(
           java.lang.Iterable<? extends io.opencannabis.schema.commerce.OrderItem.Item> values) {
@@ -5144,7 +5329,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder clearItem() {
         if (itemBuilder_ == null) {
@@ -5161,7 +5346,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder removeItem(int index) {
         if (itemBuilder_ == null) {
@@ -5178,7 +5363,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.OrderItem.Item.Builder getItemBuilder(
           int index) {
@@ -5189,7 +5374,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder getItemOrBuilder(
           int index) {
@@ -5203,7 +5388,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public java.util.List<? extends io.opencannabis.schema.commerce.OrderItem.ItemOrBuilder> 
            getItemOrBuilderList() {
@@ -5218,7 +5403,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.OrderItem.Item.Builder addItemBuilder() {
         return getItemFieldBuilder().addBuilder(
@@ -5229,7 +5414,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.OrderItem.Item.Builder addItemBuilder(
           int index) {
@@ -5241,7 +5426,7 @@ public final class CommercialOrder {
        * Items being ordered.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Item item = 8;</code>
+       * <code>repeated .opencannabis.commerce.Item item = 8 [(.gen_bq_schema.ignore) = true];</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.OrderItem.Item.Builder> 
            getItemBuilderList() {
@@ -5279,7 +5464,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin> getActionLogList() {
         if (actionLogBuilder_ == null) {
@@ -5293,7 +5478,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public int getActionLogCount() {
         if (actionLogBuilder_ == null) {
@@ -5307,7 +5492,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin getActionLog(int index) {
         if (actionLogBuilder_ == null) {
@@ -5321,7 +5506,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setActionLog(
           int index, io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin value) {
@@ -5342,7 +5527,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder setActionLog(
           int index, io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin.Builder builderForValue) {
@@ -5360,7 +5545,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addActionLog(io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin value) {
         if (actionLogBuilder_ == null) {
@@ -5380,7 +5565,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addActionLog(
           int index, io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin value) {
@@ -5401,7 +5586,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addActionLog(
           io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin.Builder builderForValue) {
@@ -5419,7 +5604,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addActionLog(
           int index, io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin.Builder builderForValue) {
@@ -5437,7 +5622,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder addAllActionLog(
           java.lang.Iterable<? extends io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin> values) {
@@ -5456,7 +5641,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder clearActionLog() {
         if (actionLogBuilder_ == null) {
@@ -5473,7 +5658,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public Builder removeActionLog(int index) {
         if (actionLogBuilder_ == null) {
@@ -5490,7 +5675,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin.Builder getActionLogBuilder(
           int index) {
@@ -5501,7 +5686,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.StatusCheckinOrBuilder getActionLogOrBuilder(
           int index) {
@@ -5515,7 +5700,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public java.util.List<? extends io.opencannabis.schema.commerce.CommercialOrder.StatusCheckinOrBuilder> 
            getActionLogOrBuilderList() {
@@ -5530,7 +5715,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin.Builder addActionLogBuilder() {
         return getActionLogFieldBuilder().addBuilder(
@@ -5541,7 +5726,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin.Builder addActionLogBuilder(
           int index) {
@@ -5553,7 +5738,7 @@ public final class CommercialOrder {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9;</code>
+       * <code>repeated .opencannabis.commerce.StatusCheckin action_log = 9 [(.gen_bq_schema.ignore) = true];</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.CommercialOrder.StatusCheckin.Builder> 
            getActionLogBuilderList() {
@@ -5582,7 +5767,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
@@ -5592,7 +5777,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       public io.opencannabis.schema.temporal.Instant getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -5606,7 +5791,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       public Builder setCreatedAt(io.opencannabis.schema.temporal.Instant value) {
         if (createdAtBuilder_ == null) {
@@ -5626,7 +5811,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       public Builder setCreatedAt(
           io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
@@ -5644,7 +5829,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       public Builder mergeCreatedAt(io.opencannabis.schema.temporal.Instant value) {
         if (createdAtBuilder_ == null) {
@@ -5666,7 +5851,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       public Builder clearCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -5684,7 +5869,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       public io.opencannabis.schema.temporal.Instant.Builder getCreatedAtBuilder() {
         
@@ -5696,7 +5881,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       public io.opencannabis.schema.temporal.InstantOrBuilder getCreatedAtOrBuilder() {
         if (createdAtBuilder_ != null) {
@@ -5711,7 +5896,7 @@ public final class CommercialOrder {
        * When this order was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created_at = 10;</code>
+       * <code>.opencannabis.temporal.Instant created_at = 10 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "When this order was created."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
@@ -5733,7 +5918,7 @@ public final class CommercialOrder {
        * Order subtotal.
        * </pre>
        *
-       * <code>double subtotal = 11;</code>
+       * <code>double subtotal = 11 [(.gen_bq_schema.description) = "Order subtotal."];</code>
        */
       public double getSubtotal() {
         return subtotal_;
@@ -5743,7 +5928,7 @@ public final class CommercialOrder {
        * Order subtotal.
        * </pre>
        *
-       * <code>double subtotal = 11;</code>
+       * <code>double subtotal = 11 [(.gen_bq_schema.description) = "Order subtotal."];</code>
        */
       public Builder setSubtotal(double value) {
         
@@ -5756,11 +5941,253 @@ public final class CommercialOrder {
        * Order subtotal.
        * </pre>
        *
-       * <code>double subtotal = 11;</code>
+       * <code>double subtotal = 11 [(.gen_bq_schema.description) = "Order subtotal."];</code>
        */
       public Builder clearSubtotal() {
         
         subtotal_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private io.opencannabis.schema.temporal.Instant updatedAt_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> updatedAtBuilder_;
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      public boolean hasUpdatedAt() {
+        return updatedAtBuilder_ != null || updatedAt_ != null;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      public io.opencannabis.schema.temporal.Instant getUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          return updatedAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : updatedAt_;
+        } else {
+          return updatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      public Builder setUpdatedAt(io.opencannabis.schema.temporal.Instant value) {
+        if (updatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedAt_ = value;
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      public Builder setUpdatedAt(
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      public Builder mergeUpdatedAt(io.opencannabis.schema.temporal.Instant value) {
+        if (updatedAtBuilder_ == null) {
+          if (updatedAt_ != null) {
+            updatedAt_ =
+              io.opencannabis.schema.temporal.Instant.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            updatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          updatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      public Builder clearUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+          onChanged();
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      public io.opencannabis.schema.temporal.Instant.Builder getUpdatedAtBuilder() {
+        
+        onChanged();
+        return getUpdatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      public io.opencannabis.schema.temporal.InstantOrBuilder getUpdatedAtOrBuilder() {
+        if (updatedAtBuilder_ != null) {
+          return updatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedAt_ == null ?
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : updatedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * When this order was created.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant updated_at = 12 [(.gen_bq_schema.ignore) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          getUpdatedAtFieldBuilder() {
+        if (updatedAtBuilder_ == null) {
+          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+                  getUpdatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          updatedAt_ = null;
+        }
+        return updatedAtBuilder_;
+      }
+
+      private java.lang.Object sid_ = "";
+      /**
+       * <pre>
+       * Session ID that was active when this order was submitted.
+       * </pre>
+       *
+       * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+       */
+      public java.lang.String getSid() {
+        java.lang.Object ref = sid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Session ID that was active when this order was submitted.
+       * </pre>
+       *
+       * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+       */
+      public com.google.protobuf.ByteString
+          getSidBytes() {
+        java.lang.Object ref = sid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Session ID that was active when this order was submitted.
+       * </pre>
+       *
+       * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+       */
+      public Builder setSid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Session ID that was active when this order was submitted.
+       * </pre>
+       *
+       * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+       */
+      public Builder clearSid() {
+        
+        sid_ = getDefaultInstance().getSid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Session ID that was active when this order was submitted.
+       * </pre>
+       *
+       * <code>string sid = 13 [(.gen_bq_schema.description) = "Session ID that was active when this order was submitted."];</code>
+       */
+      public Builder setSidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sid_ = value;
         onChanged();
         return this;
       }
@@ -5845,34 +6272,49 @@ public final class CommercialOrder {
       "\n\024commerce/Order.proto\022\025opencannabis.com" +
       "merce\032\016bq_field.proto\032\023commerce/Item.pro" +
       "to\032\027commerce/Delivery.proto\032\027commerce/Cu" +
-      "stomer.proto\032\026temporal/Instant.proto\"\202\001\n" +
-      "\017OrderScheduling\0229\n\nscheduling\030\001 \001(\0162%.o" +
-      "pencannabis.commerce.SchedulingType\0224\n\014d" +
-      "esired_time\030\002 \001(\0132\036.opencannabis.tempora" +
-      "l.Instant\"\205\001\n\rStatusCheckin\0222\n\006status\030\001 " +
-      "\001(\0162\".opencannabis.commerce.OrderStatus\022" +
-      "/\n\007instant\030\002 \001(\0132\036.opencannabis.temporal" +
-      ".Instant\022\017\n\007message\030\003 \001(\t\"J\n\010OrderKey\022>\n" +
-      "\002id\030\001 \001(\tB2\212@/Order ID, assigned by the " +
-      "server upon creation.\"\341\003\n\005Order\022\n\n\002id\030\001 " +
-      "\001(\t\022.\n\004type\030\002 \001(\0162 .opencannabis.commerc" +
-      "e.OrderType\0222\n\006status\030\003 \001(\0162\".opencannab" +
-      "is.commerce.OrderStatus\0221\n\010customer\030\004 \001(" +
-      "\0132\037.opencannabis.commerce.Customer\022:\n\nsc" +
-      "heduling\030\005 \001(\0132&.opencannabis.commerce.O" +
-      "rderScheduling\022?\n\013destination\030\006 \001(\0132*.op" +
-      "encannabis.commerce.DeliveryDestination\022" +
-      "\r\n\005notes\030\007 \001(\t\022)\n\004item\030\010 \003(\0132\033.opencanna" +
-      "bis.commerce.Item\0228\n\naction_log\030\t \003(\0132$." +
-      "opencannabis.commerce.StatusCheckin\0222\n\nc" +
-      "reated_at\030\n \001(\0132\036.opencannabis.temporal." +
-      "Instant\022\020\n\010subtotal\030\013 \001(\001*%\n\tOrderType\022\n" +
-      "\n\006PICKUP\020\000\022\014\n\010DELIVERY\020\001*%\n\016SchedulingTy" +
-      "pe\022\010\n\004ASAP\020\000\022\t\n\005TIMED\020\001*a\n\013OrderStatus\022\013" +
-      "\n\007PENDING\020\000\022\014\n\010APPROVED\020\001\022\014\n\010REJECTED\020\002\022" +
-      "\014\n\010ASSIGNED\020\003\022\014\n\010EN_ROUTE\020\004\022\r\n\tFULFILLED" +
-      "\020\005B9\n\037io.opencannabis.schema.commerceB\017C" +
-      "ommercialOrderH\001P\000\370\001\001b\006proto3"
+      "stomer.proto\032\026temporal/Instant.proto\"\343\001\n" +
+      "\017OrderScheduling\022q\n\nscheduling\030\001 \001(\0162%.o" +
+      "pencannabis.commerce.SchedulingTypeB6\360?\001" +
+      "\212@0Scheduling type, either \'ASAP\' or a t" +
+      "arget time.\022]\n\014desired_time\030\002 \001(\0132\036.open" +
+      "cannabis.temporal.InstantB\'\212@$Desired de" +
+      "livery time, if specified.\"\205\001\n\rStatusChe" +
+      "ckin\0222\n\006status\030\001 \001(\0162\".opencannabis.comm" +
+      "erce.OrderStatus\022/\n\007instant\030\002 \001(\0132\036.open" +
+      "cannabis.temporal.Instant\022\017\n\007message\030\003 \001" +
+      "(\t\"J\n\010OrderKey\022>\n\002id\030\001 \001(\tB2\212@/Order ID," +
+      " assigned by the server upon creation.\"\301" +
+      "\007\n\005Order\022b\n\002id\030\001 \001(\tBV\360?\001\212@PID assigned " +
+      "to the order by the server, and potentia" +
+      "lly nominated by the client.\022j\n\004type\030\002 \001" +
+      "(\0162 .opencannabis.commerce.OrderTypeB:\360?" +
+      "\001\212@4Type of order requested - either PIC" +
+      "KUP or DELIVERY.\0227\n\006status\030\003 \001(\0162\".openc" +
+      "annabis.commerce.OrderStatusB\003\200@\001\022\\\n\010cus" +
+      "tomer\030\004 \001(\0132\037.opencannabis.commerce.Cust" +
+      "omerB)\360?\001\212@#Customer that submitted this" +
+      " order.\022a\n\nscheduling\030\005 \001(\0132&.opencannab" +
+      "is.commerce.OrderSchedulingB%\360?\001\212@\037Sched" +
+      "uling spec for this order.\022i\n\013destinatio" +
+      "n\030\006 \001(\0132*.opencannabis.commerce.Delivery" +
+      "DestinationB(\212@%Location for delivery, i" +
+      "f applicable.\022\022\n\005notes\030\007 \001(\tB\003\200@\001\022.\n\004ite" +
+      "m\030\010 \003(\0132\033.opencannabis.commerce.ItemB\003\200@" +
+      "\001\022=\n\naction_log\030\t \003(\0132$.opencannabis.com" +
+      "merce.StatusCheckinB\003\200@\001\022V\n\ncreated_at\030\n" +
+      " \001(\0132\036.opencannabis.temporal.InstantB\"\360?" +
+      "\001\212@\034When this order was created.\022$\n\010subt" +
+      "otal\030\013 \001(\001B\022\212@\017Order subtotal.\0227\n\nupdate" +
+      "d_at\030\014 \001(\0132\036.opencannabis.temporal.Insta" +
+      "ntB\003\200@\001\022I\n\003sid\030\r \001(\tB<\212@9Session ID that" +
+      " was active when this order was submitte" +
+      "d.*%\n\tOrderType\022\n\n\006PICKUP\020\000\022\014\n\010DELIVERY\020" +
+      "\001*%\n\016SchedulingType\022\010\n\004ASAP\020\000\022\t\n\005TIMED\020\001" +
+      "*a\n\013OrderStatus\022\013\n\007PENDING\020\000\022\014\n\010APPROVED" +
+      "\020\001\022\014\n\010REJECTED\020\002\022\014\n\010ASSIGNED\020\003\022\014\n\010EN_ROU" +
+      "TE\020\004\022\r\n\tFULFILLED\020\005B<\n\037io.opencannabis.s" +
+      "chema.commerceB\017CommercialOrderH\001P\000\242\002\003OC" +
+      "Sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5914,10 +6356,12 @@ public final class CommercialOrder {
     internal_static_opencannabis_commerce_Order_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_Order_descriptor,
-        new java.lang.String[] { "Id", "Type", "Status", "Customer", "Scheduling", "Destination", "Notes", "Item", "ActionLog", "CreatedAt", "Subtotal", });
+        new java.lang.String[] { "Id", "Type", "Status", "Customer", "Scheduling", "Destination", "Notes", "Item", "ActionLog", "CreatedAt", "Subtotal", "UpdatedAt", "Sid", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);
+    registry.add(gen_bq_schema.BqField.ignore);
+    registry.add(gen_bq_schema.BqField.require);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();

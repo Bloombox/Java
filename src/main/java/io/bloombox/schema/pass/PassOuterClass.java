@@ -51,8 +51,8 @@ public final class PassOuterClass {
       "pass.PassKey\022\r\n\005token\030\002 \001(\t\022\013\n\003uri\030\003 \001(\t" +
       "\022\016\n\006active\030\004 \001(\010\022.\n\006issued\030\005 \001(\0132\036.openc" +
       "annabis.temporal.Instant\0221\n\tsuspended\030\006 " +
-      "\001(\0132\036.opencannabis.temporal.InstantB\035\n\027i" +
-      "o.bloombox.schema.passH\001P\001b\006proto3"
+      "\001(\0132\036.opencannabis.temporal.InstantB#\n\027i" +
+      "o.bloombox.schema.passH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

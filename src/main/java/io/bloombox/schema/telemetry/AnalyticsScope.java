@@ -996,8 +996,8 @@ public final class AnalyticsScope {
       "y.\022\201\001\n\005order\030\003 \001(\tBr\212@oOrder scope. Spec" +
       "ifies, only if there is an active order," +
       " the order ID that was active when the e" +
-      "vent was sent.B5\n\034io.bloombox.schema.tel" +
-      "emetryB\016AnalyticsScopeH\001P\000\370\001\001b\006proto3"
+      "vent was sent.B8\n\034io.bloombox.schema.tel" +
+      "emetryB\016AnalyticsScopeH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

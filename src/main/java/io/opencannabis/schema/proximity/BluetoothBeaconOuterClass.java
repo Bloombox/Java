@@ -51,8 +51,9 @@ public final class BluetoothBeaconOuterClass {
       "\003 \001(\r\022,\n\004seen\030\004 \001(\0132\036.opencannabis.tempo" +
       "ral.Instant\022,\n\010location\030\005 \001(\0132\032.opencann" +
       "abis.geo.Location\0224\n\010accuracy\030\006 \001(\0132\".op" +
-      "encannabis.geo.LocationAccuracyB&\n io.op" +
-      "encannabis.schema.proximityH\001P\001b\006proto3"
+      "encannabis.geo.LocationAccuracyB,\n io.op" +
+      "encannabis.schema.proximityH\001P\001\242\002\003OCSb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -58,9 +58,9 @@ public final class Integrity {
       "\001 \001(\014\022<\n\004hash\030\002 \001(\0132..opencannabis.crypt" +
       "o.primitives.integrity.Hash*R\n\rHashAlgor" +
       "ithm\022\010\n\004SHA1\020\000\022\007\n\003MD5\020\001\022\n\n\006SHA256\020\002\022\n\n\006S" +
-      "HA384\020\003\022\n\n\006SHA512\020\004\022\n\n\006MURMUR\020\006B8\n2io.op" +
+      "HA384\020\003\022\n\n\006SHA512\020\004\022\n\n\006MURMUR\020\006B>\n2io.op" +
       "encannabis.schema.crypto.primitives.inte" +
-      "grityH\001P\001b\006proto3"
+      "grityH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

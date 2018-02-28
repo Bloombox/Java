@@ -20,6 +20,11 @@
 package io.opencannabis.schema.geo;
 
 /**
+ * <pre>
+ * Specifies a standard postal address, with two address lines, and space for a municipality ('city'), provincial
+ * authority ('state'), and national authority ('country').
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.geo.Address}
  */
 public  final class Address extends
@@ -134,7 +139,11 @@ private static final long serialVersionUID = 0L;
   public static final int FIRST_LINE_FIELD_NUMBER = 1;
   private volatile java.lang.Object firstLine_;
   /**
-   * <code>string first_line = 1;</code>
+   * <pre>
+   * First line of the address.
+   * </pre>
+   *
+   * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
    */
   public java.lang.String getFirstLine() {
     java.lang.Object ref = firstLine_;
@@ -149,7 +158,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string first_line = 1;</code>
+   * <pre>
+   * First line of the address.
+   * </pre>
+   *
+   * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
    */
   public com.google.protobuf.ByteString
       getFirstLineBytes() {
@@ -168,7 +181,11 @@ private static final long serialVersionUID = 0L;
   public static final int SECOND_LINE_FIELD_NUMBER = 2;
   private volatile java.lang.Object secondLine_;
   /**
-   * <code>string second_line = 2;</code>
+   * <pre>
+   * Second line of the address, if applicable.
+   * </pre>
+   *
+   * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
    */
   public java.lang.String getSecondLine() {
     java.lang.Object ref = secondLine_;
@@ -183,7 +200,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string second_line = 2;</code>
+   * <pre>
+   * Second line of the address, if applicable.
+   * </pre>
+   *
+   * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
    */
   public com.google.protobuf.ByteString
       getSecondLineBytes() {
@@ -202,7 +223,11 @@ private static final long serialVersionUID = 0L;
   public static final int CITY_FIELD_NUMBER = 3;
   private volatile java.lang.Object city_;
   /**
-   * <code>string city = 3;</code>
+   * <pre>
+   * City or municipality name for the address.
+   * </pre>
+   *
+   * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
    */
   public java.lang.String getCity() {
     java.lang.Object ref = city_;
@@ -217,7 +242,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string city = 3;</code>
+   * <pre>
+   * City or municipality name for the address.
+   * </pre>
+   *
+   * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
    */
   public com.google.protobuf.ByteString
       getCityBytes() {
@@ -236,7 +265,11 @@ private static final long serialVersionUID = 0L;
   public static final int STATE_FIELD_NUMBER = 4;
   private volatile java.lang.Object state_;
   /**
-   * <code>string state = 4;</code>
+   * <pre>
+   * State that contains the city or municipality for this address.
+   * </pre>
+   *
+   * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
    */
   public java.lang.String getState() {
     java.lang.Object ref = state_;
@@ -251,7 +284,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string state = 4;</code>
+   * <pre>
+   * State that contains the city or municipality for this address.
+   * </pre>
+   *
+   * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
    */
   public com.google.protobuf.ByteString
       getStateBytes() {
@@ -270,7 +307,11 @@ private static final long serialVersionUID = 0L;
   public static final int ZIPCODE_FIELD_NUMBER = 5;
   private volatile java.lang.Object zipcode_;
   /**
-   * <code>string zipcode = 5;</code>
+   * <pre>
+   * USPS zipcode associated with this address.
+   * </pre>
+   *
+   * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
    */
   public java.lang.String getZipcode() {
     java.lang.Object ref = zipcode_;
@@ -285,7 +326,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string zipcode = 5;</code>
+   * <pre>
+   * USPS zipcode associated with this address.
+   * </pre>
+   *
+   * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
    */
   public com.google.protobuf.ByteString
       getZipcodeBytes() {
@@ -304,7 +349,11 @@ private static final long serialVersionUID = 0L;
   public static final int COUNTRY_FIELD_NUMBER = 6;
   private volatile java.lang.Object country_;
   /**
-   * <code>string country = 6;</code>
+   * <pre>
+   * Country code associated with this address ('US' or 'USA' for United States, for instance).
+   * </pre>
+   *
+   * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
    */
   public java.lang.String getCountry() {
     java.lang.Object ref = country_;
@@ -319,7 +368,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string country = 6;</code>
+   * <pre>
+   * Country code associated with this address ('US' or 'USA' for United States, for instance).
+   * </pre>
+   *
+   * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
    */
   public com.google.protobuf.ByteString
       getCountryBytes() {
@@ -536,6 +589,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies a standard postal address, with two address lines, and space for a municipality ('city'), provincial
+   * authority ('state'), and national authority ('country').
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.geo.Address}
    */
   public static final class Builder extends
@@ -705,7 +763,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object firstLine_ = "";
     /**
-     * <code>string first_line = 1;</code>
+     * <pre>
+     * First line of the address.
+     * </pre>
+     *
+     * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
      */
     public java.lang.String getFirstLine() {
       java.lang.Object ref = firstLine_;
@@ -720,7 +782,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string first_line = 1;</code>
+     * <pre>
+     * First line of the address.
+     * </pre>
+     *
+     * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
      */
     public com.google.protobuf.ByteString
         getFirstLineBytes() {
@@ -736,7 +802,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string first_line = 1;</code>
+     * <pre>
+     * First line of the address.
+     * </pre>
+     *
+     * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
      */
     public Builder setFirstLine(
         java.lang.String value) {
@@ -749,7 +819,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string first_line = 1;</code>
+     * <pre>
+     * First line of the address.
+     * </pre>
+     *
+     * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
      */
     public Builder clearFirstLine() {
       
@@ -758,7 +832,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string first_line = 1;</code>
+     * <pre>
+     * First line of the address.
+     * </pre>
+     *
+     * <code>string first_line = 1 [(.gen_bq_schema.description) = "First line of the address."];</code>
      */
     public Builder setFirstLineBytes(
         com.google.protobuf.ByteString value) {
@@ -774,7 +852,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object secondLine_ = "";
     /**
-     * <code>string second_line = 2;</code>
+     * <pre>
+     * Second line of the address, if applicable.
+     * </pre>
+     *
+     * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
      */
     public java.lang.String getSecondLine() {
       java.lang.Object ref = secondLine_;
@@ -789,7 +871,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string second_line = 2;</code>
+     * <pre>
+     * Second line of the address, if applicable.
+     * </pre>
+     *
+     * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
      */
     public com.google.protobuf.ByteString
         getSecondLineBytes() {
@@ -805,7 +891,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string second_line = 2;</code>
+     * <pre>
+     * Second line of the address, if applicable.
+     * </pre>
+     *
+     * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
      */
     public Builder setSecondLine(
         java.lang.String value) {
@@ -818,7 +908,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string second_line = 2;</code>
+     * <pre>
+     * Second line of the address, if applicable.
+     * </pre>
+     *
+     * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
      */
     public Builder clearSecondLine() {
       
@@ -827,7 +921,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string second_line = 2;</code>
+     * <pre>
+     * Second line of the address, if applicable.
+     * </pre>
+     *
+     * <code>string second_line = 2 [(.gen_bq_schema.description) = "Second line of the address, if applicable."];</code>
      */
     public Builder setSecondLineBytes(
         com.google.protobuf.ByteString value) {
@@ -843,7 +941,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object city_ = "";
     /**
-     * <code>string city = 3;</code>
+     * <pre>
+     * City or municipality name for the address.
+     * </pre>
+     *
+     * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
      */
     public java.lang.String getCity() {
       java.lang.Object ref = city_;
@@ -858,7 +960,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string city = 3;</code>
+     * <pre>
+     * City or municipality name for the address.
+     * </pre>
+     *
+     * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
      */
     public com.google.protobuf.ByteString
         getCityBytes() {
@@ -874,7 +980,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string city = 3;</code>
+     * <pre>
+     * City or municipality name for the address.
+     * </pre>
+     *
+     * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
      */
     public Builder setCity(
         java.lang.String value) {
@@ -887,7 +997,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string city = 3;</code>
+     * <pre>
+     * City or municipality name for the address.
+     * </pre>
+     *
+     * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
      */
     public Builder clearCity() {
       
@@ -896,7 +1010,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string city = 3;</code>
+     * <pre>
+     * City or municipality name for the address.
+     * </pre>
+     *
+     * <code>string city = 3 [(.gen_bq_schema.description) = "City or municipality name for the address."];</code>
      */
     public Builder setCityBytes(
         com.google.protobuf.ByteString value) {
@@ -912,7 +1030,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object state_ = "";
     /**
-     * <code>string state = 4;</code>
+     * <pre>
+     * State that contains the city or municipality for this address.
+     * </pre>
+     *
+     * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
      */
     public java.lang.String getState() {
       java.lang.Object ref = state_;
@@ -927,7 +1049,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string state = 4;</code>
+     * <pre>
+     * State that contains the city or municipality for this address.
+     * </pre>
+     *
+     * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
      */
     public com.google.protobuf.ByteString
         getStateBytes() {
@@ -943,7 +1069,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string state = 4;</code>
+     * <pre>
+     * State that contains the city or municipality for this address.
+     * </pre>
+     *
+     * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
      */
     public Builder setState(
         java.lang.String value) {
@@ -956,7 +1086,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string state = 4;</code>
+     * <pre>
+     * State that contains the city or municipality for this address.
+     * </pre>
+     *
+     * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
      */
     public Builder clearState() {
       
@@ -965,7 +1099,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string state = 4;</code>
+     * <pre>
+     * State that contains the city or municipality for this address.
+     * </pre>
+     *
+     * <code>string state = 4 [(.gen_bq_schema.description) = "State that contains the city or municipality for this address."];</code>
      */
     public Builder setStateBytes(
         com.google.protobuf.ByteString value) {
@@ -981,7 +1119,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object zipcode_ = "";
     /**
-     * <code>string zipcode = 5;</code>
+     * <pre>
+     * USPS zipcode associated with this address.
+     * </pre>
+     *
+     * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
      */
     public java.lang.String getZipcode() {
       java.lang.Object ref = zipcode_;
@@ -996,7 +1138,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string zipcode = 5;</code>
+     * <pre>
+     * USPS zipcode associated with this address.
+     * </pre>
+     *
+     * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
      */
     public com.google.protobuf.ByteString
         getZipcodeBytes() {
@@ -1012,7 +1158,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string zipcode = 5;</code>
+     * <pre>
+     * USPS zipcode associated with this address.
+     * </pre>
+     *
+     * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
      */
     public Builder setZipcode(
         java.lang.String value) {
@@ -1025,7 +1175,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string zipcode = 5;</code>
+     * <pre>
+     * USPS zipcode associated with this address.
+     * </pre>
+     *
+     * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
      */
     public Builder clearZipcode() {
       
@@ -1034,7 +1188,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string zipcode = 5;</code>
+     * <pre>
+     * USPS zipcode associated with this address.
+     * </pre>
+     *
+     * <code>string zipcode = 5 [(.gen_bq_schema.description) = "USPS zipcode associated with this address."];</code>
      */
     public Builder setZipcodeBytes(
         com.google.protobuf.ByteString value) {
@@ -1050,7 +1208,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object country_ = "";
     /**
-     * <code>string country = 6;</code>
+     * <pre>
+     * Country code associated with this address ('US' or 'USA' for United States, for instance).
+     * </pre>
+     *
+     * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
      */
     public java.lang.String getCountry() {
       java.lang.Object ref = country_;
@@ -1065,7 +1227,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string country = 6;</code>
+     * <pre>
+     * Country code associated with this address ('US' or 'USA' for United States, for instance).
+     * </pre>
+     *
+     * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
      */
     public com.google.protobuf.ByteString
         getCountryBytes() {
@@ -1081,7 +1247,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string country = 6;</code>
+     * <pre>
+     * Country code associated with this address ('US' or 'USA' for United States, for instance).
+     * </pre>
+     *
+     * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
      */
     public Builder setCountry(
         java.lang.String value) {
@@ -1094,7 +1264,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string country = 6;</code>
+     * <pre>
+     * Country code associated with this address ('US' or 'USA' for United States, for instance).
+     * </pre>
+     *
+     * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
      */
     public Builder clearCountry() {
       
@@ -1103,7 +1277,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string country = 6;</code>
+     * <pre>
+     * Country code associated with this address ('US' or 'USA' for United States, for instance).
+     * </pre>
+     *
+     * <code>string country = 6 [(.gen_bq_schema.description) = "Country code associated with this address (&#92;'US&#92;' or &#92;'USA&#92;' for United States, for instance)."];</code>
      */
     public Builder setCountryBytes(
         com.google.protobuf.ByteString value) {

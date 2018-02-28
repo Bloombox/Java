@@ -82,6 +82,118 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 82: {
+            io.opencannabis.schema.product.ApothecaryProduct.Apothecary.Builder subBuilder = null;
+            if (productCase_ == 10) {
+              subBuilder = ((io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_).toBuilder();
+            }
+            product_ =
+                input.readMessage(io.opencannabis.schema.product.ApothecaryProduct.Apothecary.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_);
+              product_ = subBuilder.buildPartial();
+            }
+            productCase_ = 10;
+            break;
+          }
+          case 90: {
+            io.opencannabis.schema.product.CartridgeProduct.Cartridge.Builder subBuilder = null;
+            if (productCase_ == 11) {
+              subBuilder = ((io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_).toBuilder();
+            }
+            product_ =
+                input.readMessage(io.opencannabis.schema.product.CartridgeProduct.Cartridge.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_);
+              product_ = subBuilder.buildPartial();
+            }
+            productCase_ = 11;
+            break;
+          }
+          case 98: {
+            io.opencannabis.schema.product.EdibleProduct.Edible.Builder subBuilder = null;
+            if (productCase_ == 12) {
+              subBuilder = ((io.opencannabis.schema.product.EdibleProduct.Edible) product_).toBuilder();
+            }
+            product_ =
+                input.readMessage(io.opencannabis.schema.product.EdibleProduct.Edible.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((io.opencannabis.schema.product.EdibleProduct.Edible) product_);
+              product_ = subBuilder.buildPartial();
+            }
+            productCase_ = 12;
+            break;
+          }
+          case 106: {
+            io.opencannabis.schema.product.ExtractProduct.Extract.Builder subBuilder = null;
+            if (productCase_ == 13) {
+              subBuilder = ((io.opencannabis.schema.product.ExtractProduct.Extract) product_).toBuilder();
+            }
+            product_ =
+                input.readMessage(io.opencannabis.schema.product.ExtractProduct.Extract.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((io.opencannabis.schema.product.ExtractProduct.Extract) product_);
+              product_ = subBuilder.buildPartial();
+            }
+            productCase_ = 13;
+            break;
+          }
+          case 114: {
+            io.opencannabis.schema.product.FlowerProduct.Flower.Builder subBuilder = null;
+            if (productCase_ == 14) {
+              subBuilder = ((io.opencannabis.schema.product.FlowerProduct.Flower) product_).toBuilder();
+            }
+            product_ =
+                input.readMessage(io.opencannabis.schema.product.FlowerProduct.Flower.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((io.opencannabis.schema.product.FlowerProduct.Flower) product_);
+              product_ = subBuilder.buildPartial();
+            }
+            productCase_ = 14;
+            break;
+          }
+          case 122: {
+            io.opencannabis.schema.product.MerchandiseProduct.Merchandise.Builder subBuilder = null;
+            if (productCase_ == 15) {
+              subBuilder = ((io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_).toBuilder();
+            }
+            product_ =
+                input.readMessage(io.opencannabis.schema.product.MerchandiseProduct.Merchandise.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_);
+              product_ = subBuilder.buildPartial();
+            }
+            productCase_ = 15;
+            break;
+          }
+          case 130: {
+            io.opencannabis.schema.product.PlantProduct.Plant.Builder subBuilder = null;
+            if (productCase_ == 16) {
+              subBuilder = ((io.opencannabis.schema.product.PlantProduct.Plant) product_).toBuilder();
+            }
+            product_ =
+                input.readMessage(io.opencannabis.schema.product.PlantProduct.Plant.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((io.opencannabis.schema.product.PlantProduct.Plant) product_);
+              product_ = subBuilder.buildPartial();
+            }
+            productCase_ = 16;
+            break;
+          }
+          case 138: {
+            io.opencannabis.schema.product.PrerollProduct.Preroll.Builder subBuilder = null;
+            if (productCase_ == 17) {
+              subBuilder = ((io.opencannabis.schema.product.PrerollProduct.Preroll) product_).toBuilder();
+            }
+            product_ =
+                input.readMessage(io.opencannabis.schema.product.PrerollProduct.Preroll.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((io.opencannabis.schema.product.PrerollProduct.Preroll) product_);
+              product_ = subBuilder.buildPartial();
+            }
+            productCase_ = 17;
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -104,6 +216,56 @@ private static final long serialVersionUID = 0L;
     return io.opencannabis.schema.menu.MenuOuterClass.internal_static_opencannabis_products_menu_MenuProduct_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.opencannabis.schema.menu.MenuProduct.class, io.opencannabis.schema.menu.MenuProduct.Builder.class);
+  }
+
+  private int productCase_ = 0;
+  private java.lang.Object product_;
+  public enum ProductCase
+      implements com.google.protobuf.Internal.EnumLite {
+    APOTHECARY(10),
+    CARTRIDGE(11),
+    EDIBLE(12),
+    EXTRACT(13),
+    FLOWER(14),
+    MERCHANDISE(15),
+    PLANT(16),
+    PREROLL(17),
+    PRODUCT_NOT_SET(0);
+    private final int value;
+    private ProductCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ProductCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static ProductCase forNumber(int value) {
+      switch (value) {
+        case 10: return APOTHECARY;
+        case 11: return CARTRIDGE;
+        case 12: return EDIBLE;
+        case 13: return EXTRACT;
+        case 14: return FLOWER;
+        case 15: return MERCHANDISE;
+        case 16: return PLANT;
+        case 17: return PREROLL;
+        case 0: return PRODUCT_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public ProductCase
+  getProductCase() {
+    return ProductCase.forNumber(
+        productCase_);
   }
 
   public static final int KEY_FIELD_NUMBER = 1;
@@ -139,6 +301,310 @@ private static final long serialVersionUID = 0L;
     return getKey();
   }
 
+  public static final int APOTHECARY_FIELD_NUMBER = 10;
+  /**
+   * <pre>
+   * Apothecary product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+   */
+  public boolean hasApothecary() {
+    return productCase_ == 10;
+  }
+  /**
+   * <pre>
+   * Apothecary product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+   */
+  public io.opencannabis.schema.product.ApothecaryProduct.Apothecary getApothecary() {
+    if (productCase_ == 10) {
+       return (io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_;
+    }
+    return io.opencannabis.schema.product.ApothecaryProduct.Apothecary.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Apothecary product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+   */
+  public io.opencannabis.schema.product.ApothecaryProduct.ApothecaryOrBuilder getApothecaryOrBuilder() {
+    if (productCase_ == 10) {
+       return (io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_;
+    }
+    return io.opencannabis.schema.product.ApothecaryProduct.Apothecary.getDefaultInstance();
+  }
+
+  public static final int CARTRIDGE_FIELD_NUMBER = 11;
+  /**
+   * <pre>
+   * Cartridge product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+   */
+  public boolean hasCartridge() {
+    return productCase_ == 11;
+  }
+  /**
+   * <pre>
+   * Cartridge product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+   */
+  public io.opencannabis.schema.product.CartridgeProduct.Cartridge getCartridge() {
+    if (productCase_ == 11) {
+       return (io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_;
+    }
+    return io.opencannabis.schema.product.CartridgeProduct.Cartridge.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Cartridge product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+   */
+  public io.opencannabis.schema.product.CartridgeProduct.CartridgeOrBuilder getCartridgeOrBuilder() {
+    if (productCase_ == 11) {
+       return (io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_;
+    }
+    return io.opencannabis.schema.product.CartridgeProduct.Cartridge.getDefaultInstance();
+  }
+
+  public static final int EDIBLE_FIELD_NUMBER = 12;
+  /**
+   * <pre>
+   * Edible product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Edible edible = 12;</code>
+   */
+  public boolean hasEdible() {
+    return productCase_ == 12;
+  }
+  /**
+   * <pre>
+   * Edible product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Edible edible = 12;</code>
+   */
+  public io.opencannabis.schema.product.EdibleProduct.Edible getEdible() {
+    if (productCase_ == 12) {
+       return (io.opencannabis.schema.product.EdibleProduct.Edible) product_;
+    }
+    return io.opencannabis.schema.product.EdibleProduct.Edible.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Edible product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Edible edible = 12;</code>
+   */
+  public io.opencannabis.schema.product.EdibleProduct.EdibleOrBuilder getEdibleOrBuilder() {
+    if (productCase_ == 12) {
+       return (io.opencannabis.schema.product.EdibleProduct.Edible) product_;
+    }
+    return io.opencannabis.schema.product.EdibleProduct.Edible.getDefaultInstance();
+  }
+
+  public static final int EXTRACT_FIELD_NUMBER = 13;
+  /**
+   * <pre>
+   * Extract product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Extract extract = 13;</code>
+   */
+  public boolean hasExtract() {
+    return productCase_ == 13;
+  }
+  /**
+   * <pre>
+   * Extract product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Extract extract = 13;</code>
+   */
+  public io.opencannabis.schema.product.ExtractProduct.Extract getExtract() {
+    if (productCase_ == 13) {
+       return (io.opencannabis.schema.product.ExtractProduct.Extract) product_;
+    }
+    return io.opencannabis.schema.product.ExtractProduct.Extract.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Extract product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Extract extract = 13;</code>
+   */
+  public io.opencannabis.schema.product.ExtractProduct.ExtractOrBuilder getExtractOrBuilder() {
+    if (productCase_ == 13) {
+       return (io.opencannabis.schema.product.ExtractProduct.Extract) product_;
+    }
+    return io.opencannabis.schema.product.ExtractProduct.Extract.getDefaultInstance();
+  }
+
+  public static final int FLOWER_FIELD_NUMBER = 14;
+  /**
+   * <pre>
+   * Flower product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Flower flower = 14;</code>
+   */
+  public boolean hasFlower() {
+    return productCase_ == 14;
+  }
+  /**
+   * <pre>
+   * Flower product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Flower flower = 14;</code>
+   */
+  public io.opencannabis.schema.product.FlowerProduct.Flower getFlower() {
+    if (productCase_ == 14) {
+       return (io.opencannabis.schema.product.FlowerProduct.Flower) product_;
+    }
+    return io.opencannabis.schema.product.FlowerProduct.Flower.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Flower product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Flower flower = 14;</code>
+   */
+  public io.opencannabis.schema.product.FlowerProduct.FlowerOrBuilder getFlowerOrBuilder() {
+    if (productCase_ == 14) {
+       return (io.opencannabis.schema.product.FlowerProduct.Flower) product_;
+    }
+    return io.opencannabis.schema.product.FlowerProduct.Flower.getDefaultInstance();
+  }
+
+  public static final int MERCHANDISE_FIELD_NUMBER = 15;
+  /**
+   * <pre>
+   * Merchandise product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+   */
+  public boolean hasMerchandise() {
+    return productCase_ == 15;
+  }
+  /**
+   * <pre>
+   * Merchandise product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+   */
+  public io.opencannabis.schema.product.MerchandiseProduct.Merchandise getMerchandise() {
+    if (productCase_ == 15) {
+       return (io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_;
+    }
+    return io.opencannabis.schema.product.MerchandiseProduct.Merchandise.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Merchandise product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+   */
+  public io.opencannabis.schema.product.MerchandiseProduct.MerchandiseOrBuilder getMerchandiseOrBuilder() {
+    if (productCase_ == 15) {
+       return (io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_;
+    }
+    return io.opencannabis.schema.product.MerchandiseProduct.Merchandise.getDefaultInstance();
+  }
+
+  public static final int PLANT_FIELD_NUMBER = 16;
+  /**
+   * <pre>
+   * Plant product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Plant plant = 16;</code>
+   */
+  public boolean hasPlant() {
+    return productCase_ == 16;
+  }
+  /**
+   * <pre>
+   * Plant product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Plant plant = 16;</code>
+   */
+  public io.opencannabis.schema.product.PlantProduct.Plant getPlant() {
+    if (productCase_ == 16) {
+       return (io.opencannabis.schema.product.PlantProduct.Plant) product_;
+    }
+    return io.opencannabis.schema.product.PlantProduct.Plant.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Plant product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Plant plant = 16;</code>
+   */
+  public io.opencannabis.schema.product.PlantProduct.PlantOrBuilder getPlantOrBuilder() {
+    if (productCase_ == 16) {
+       return (io.opencannabis.schema.product.PlantProduct.Plant) product_;
+    }
+    return io.opencannabis.schema.product.PlantProduct.Plant.getDefaultInstance();
+  }
+
+  public static final int PREROLL_FIELD_NUMBER = 17;
+  /**
+   * <pre>
+   * Preroll product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Preroll preroll = 17;</code>
+   */
+  public boolean hasPreroll() {
+    return productCase_ == 17;
+  }
+  /**
+   * <pre>
+   * Preroll product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Preroll preroll = 17;</code>
+   */
+  public io.opencannabis.schema.product.PrerollProduct.Preroll getPreroll() {
+    if (productCase_ == 17) {
+       return (io.opencannabis.schema.product.PrerollProduct.Preroll) product_;
+    }
+    return io.opencannabis.schema.product.PrerollProduct.Preroll.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Preroll product.
+   * </pre>
+   *
+   * <code>.opencannabis.products.Preroll preroll = 17;</code>
+   */
+  public io.opencannabis.schema.product.PrerollProduct.PrerollOrBuilder getPrerollOrBuilder() {
+    if (productCase_ == 17) {
+       return (io.opencannabis.schema.product.PrerollProduct.Preroll) product_;
+    }
+    return io.opencannabis.schema.product.PrerollProduct.Preroll.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -154,6 +620,30 @@ private static final long serialVersionUID = 0L;
     if (key_ != null) {
       output.writeMessage(1, getKey());
     }
+    if (productCase_ == 10) {
+      output.writeMessage(10, (io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_);
+    }
+    if (productCase_ == 11) {
+      output.writeMessage(11, (io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_);
+    }
+    if (productCase_ == 12) {
+      output.writeMessage(12, (io.opencannabis.schema.product.EdibleProduct.Edible) product_);
+    }
+    if (productCase_ == 13) {
+      output.writeMessage(13, (io.opencannabis.schema.product.ExtractProduct.Extract) product_);
+    }
+    if (productCase_ == 14) {
+      output.writeMessage(14, (io.opencannabis.schema.product.FlowerProduct.Flower) product_);
+    }
+    if (productCase_ == 15) {
+      output.writeMessage(15, (io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_);
+    }
+    if (productCase_ == 16) {
+      output.writeMessage(16, (io.opencannabis.schema.product.PlantProduct.Plant) product_);
+    }
+    if (productCase_ == 17) {
+      output.writeMessage(17, (io.opencannabis.schema.product.PrerollProduct.Preroll) product_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -165,6 +655,38 @@ private static final long serialVersionUID = 0L;
     if (key_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getKey());
+    }
+    if (productCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_);
+    }
+    if (productCase_ == 11) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, (io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_);
+    }
+    if (productCase_ == 12) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, (io.opencannabis.schema.product.EdibleProduct.Edible) product_);
+    }
+    if (productCase_ == 13) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, (io.opencannabis.schema.product.ExtractProduct.Extract) product_);
+    }
+    if (productCase_ == 14) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(14, (io.opencannabis.schema.product.FlowerProduct.Flower) product_);
+    }
+    if (productCase_ == 15) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, (io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_);
+    }
+    if (productCase_ == 16) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(16, (io.opencannabis.schema.product.PlantProduct.Plant) product_);
+    }
+    if (productCase_ == 17) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, (io.opencannabis.schema.product.PrerollProduct.Preroll) product_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -187,6 +709,45 @@ private static final long serialVersionUID = 0L;
       result = result && getKey()
           .equals(other.getKey());
     }
+    result = result && getProductCase().equals(
+        other.getProductCase());
+    if (!result) return false;
+    switch (productCase_) {
+      case 10:
+        result = result && getApothecary()
+            .equals(other.getApothecary());
+        break;
+      case 11:
+        result = result && getCartridge()
+            .equals(other.getCartridge());
+        break;
+      case 12:
+        result = result && getEdible()
+            .equals(other.getEdible());
+        break;
+      case 13:
+        result = result && getExtract()
+            .equals(other.getExtract());
+        break;
+      case 14:
+        result = result && getFlower()
+            .equals(other.getFlower());
+        break;
+      case 15:
+        result = result && getMerchandise()
+            .equals(other.getMerchandise());
+        break;
+      case 16:
+        result = result && getPlant()
+            .equals(other.getPlant());
+        break;
+      case 17:
+        result = result && getPreroll()
+            .equals(other.getPreroll());
+        break;
+      case 0:
+      default:
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -201,6 +762,42 @@ private static final long serialVersionUID = 0L;
     if (hasKey()) {
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey().hashCode();
+    }
+    switch (productCase_) {
+      case 10:
+        hash = (37 * hash) + APOTHECARY_FIELD_NUMBER;
+        hash = (53 * hash) + getApothecary().hashCode();
+        break;
+      case 11:
+        hash = (37 * hash) + CARTRIDGE_FIELD_NUMBER;
+        hash = (53 * hash) + getCartridge().hashCode();
+        break;
+      case 12:
+        hash = (37 * hash) + EDIBLE_FIELD_NUMBER;
+        hash = (53 * hash) + getEdible().hashCode();
+        break;
+      case 13:
+        hash = (37 * hash) + EXTRACT_FIELD_NUMBER;
+        hash = (53 * hash) + getExtract().hashCode();
+        break;
+      case 14:
+        hash = (37 * hash) + FLOWER_FIELD_NUMBER;
+        hash = (53 * hash) + getFlower().hashCode();
+        break;
+      case 15:
+        hash = (37 * hash) + MERCHANDISE_FIELD_NUMBER;
+        hash = (53 * hash) + getMerchandise().hashCode();
+        break;
+      case 16:
+        hash = (37 * hash) + PLANT_FIELD_NUMBER;
+        hash = (53 * hash) + getPlant().hashCode();
+        break;
+      case 17:
+        hash = (37 * hash) + PREROLL_FIELD_NUMBER;
+        hash = (53 * hash) + getPreroll().hashCode();
+        break;
+      case 0:
+      default:
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -341,6 +938,8 @@ private static final long serialVersionUID = 0L;
         key_ = null;
         keyBuilder_ = null;
       }
+      productCase_ = 0;
+      product_ = null;
       return this;
     }
 
@@ -368,6 +967,63 @@ private static final long serialVersionUID = 0L;
       } else {
         result.key_ = keyBuilder_.build();
       }
+      if (productCase_ == 10) {
+        if (apothecaryBuilder_ == null) {
+          result.product_ = product_;
+        } else {
+          result.product_ = apothecaryBuilder_.build();
+        }
+      }
+      if (productCase_ == 11) {
+        if (cartridgeBuilder_ == null) {
+          result.product_ = product_;
+        } else {
+          result.product_ = cartridgeBuilder_.build();
+        }
+      }
+      if (productCase_ == 12) {
+        if (edibleBuilder_ == null) {
+          result.product_ = product_;
+        } else {
+          result.product_ = edibleBuilder_.build();
+        }
+      }
+      if (productCase_ == 13) {
+        if (extractBuilder_ == null) {
+          result.product_ = product_;
+        } else {
+          result.product_ = extractBuilder_.build();
+        }
+      }
+      if (productCase_ == 14) {
+        if (flowerBuilder_ == null) {
+          result.product_ = product_;
+        } else {
+          result.product_ = flowerBuilder_.build();
+        }
+      }
+      if (productCase_ == 15) {
+        if (merchandiseBuilder_ == null) {
+          result.product_ = product_;
+        } else {
+          result.product_ = merchandiseBuilder_.build();
+        }
+      }
+      if (productCase_ == 16) {
+        if (plantBuilder_ == null) {
+          result.product_ = product_;
+        } else {
+          result.product_ = plantBuilder_.build();
+        }
+      }
+      if (productCase_ == 17) {
+        if (prerollBuilder_ == null) {
+          result.product_ = product_;
+        } else {
+          result.product_ = prerollBuilder_.build();
+        }
+      }
+      result.productCase_ = productCase_;
       onBuilt();
       return result;
     }
@@ -412,6 +1068,43 @@ private static final long serialVersionUID = 0L;
       if (other.hasKey()) {
         mergeKey(other.getKey());
       }
+      switch (other.getProductCase()) {
+        case APOTHECARY: {
+          mergeApothecary(other.getApothecary());
+          break;
+        }
+        case CARTRIDGE: {
+          mergeCartridge(other.getCartridge());
+          break;
+        }
+        case EDIBLE: {
+          mergeEdible(other.getEdible());
+          break;
+        }
+        case EXTRACT: {
+          mergeExtract(other.getExtract());
+          break;
+        }
+        case FLOWER: {
+          mergeFlower(other.getFlower());
+          break;
+        }
+        case MERCHANDISE: {
+          mergeMerchandise(other.getMerchandise());
+          break;
+        }
+        case PLANT: {
+          mergePlant(other.getPlant());
+          break;
+        }
+        case PREROLL: {
+          mergePreroll(other.getPreroll());
+          break;
+        }
+        case PRODUCT_NOT_SET: {
+          break;
+        }
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -438,6 +1131,21 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int productCase_ = 0;
+    private java.lang.Object product_;
+    public ProductCase
+        getProductCase() {
+      return ProductCase.forNumber(
+          productCase_);
+    }
+
+    public Builder clearProduct() {
+      productCase_ = 0;
+      product_ = null;
+      onChanged();
+      return this;
+    }
+
 
     private io.opencannabis.schema.base.ProductKey key_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -590,6 +1298,1382 @@ private static final long serialVersionUID = 0L;
         key_ = null;
       }
       return keyBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.ApothecaryProduct.Apothecary, io.opencannabis.schema.product.ApothecaryProduct.Apothecary.Builder, io.opencannabis.schema.product.ApothecaryProduct.ApothecaryOrBuilder> apothecaryBuilder_;
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    public boolean hasApothecary() {
+      return productCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    public io.opencannabis.schema.product.ApothecaryProduct.Apothecary getApothecary() {
+      if (apothecaryBuilder_ == null) {
+        if (productCase_ == 10) {
+          return (io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_;
+        }
+        return io.opencannabis.schema.product.ApothecaryProduct.Apothecary.getDefaultInstance();
+      } else {
+        if (productCase_ == 10) {
+          return apothecaryBuilder_.getMessage();
+        }
+        return io.opencannabis.schema.product.ApothecaryProduct.Apothecary.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    public Builder setApothecary(io.opencannabis.schema.product.ApothecaryProduct.Apothecary value) {
+      if (apothecaryBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        product_ = value;
+        onChanged();
+      } else {
+        apothecaryBuilder_.setMessage(value);
+      }
+      productCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    public Builder setApothecary(
+        io.opencannabis.schema.product.ApothecaryProduct.Apothecary.Builder builderForValue) {
+      if (apothecaryBuilder_ == null) {
+        product_ = builderForValue.build();
+        onChanged();
+      } else {
+        apothecaryBuilder_.setMessage(builderForValue.build());
+      }
+      productCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    public Builder mergeApothecary(io.opencannabis.schema.product.ApothecaryProduct.Apothecary value) {
+      if (apothecaryBuilder_ == null) {
+        if (productCase_ == 10 &&
+            product_ != io.opencannabis.schema.product.ApothecaryProduct.Apothecary.getDefaultInstance()) {
+          product_ = io.opencannabis.schema.product.ApothecaryProduct.Apothecary.newBuilder((io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          product_ = value;
+        }
+        onChanged();
+      } else {
+        if (productCase_ == 10) {
+          apothecaryBuilder_.mergeFrom(value);
+        }
+        apothecaryBuilder_.setMessage(value);
+      }
+      productCase_ = 10;
+      return this;
+    }
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    public Builder clearApothecary() {
+      if (apothecaryBuilder_ == null) {
+        if (productCase_ == 10) {
+          productCase_ = 0;
+          product_ = null;
+          onChanged();
+        }
+      } else {
+        if (productCase_ == 10) {
+          productCase_ = 0;
+          product_ = null;
+        }
+        apothecaryBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    public io.opencannabis.schema.product.ApothecaryProduct.Apothecary.Builder getApothecaryBuilder() {
+      return getApothecaryFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    public io.opencannabis.schema.product.ApothecaryProduct.ApothecaryOrBuilder getApothecaryOrBuilder() {
+      if ((productCase_ == 10) && (apothecaryBuilder_ != null)) {
+        return apothecaryBuilder_.getMessageOrBuilder();
+      } else {
+        if (productCase_ == 10) {
+          return (io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_;
+        }
+        return io.opencannabis.schema.product.ApothecaryProduct.Apothecary.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Apothecary product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Apothecary apothecary = 10;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.ApothecaryProduct.Apothecary, io.opencannabis.schema.product.ApothecaryProduct.Apothecary.Builder, io.opencannabis.schema.product.ApothecaryProduct.ApothecaryOrBuilder> 
+        getApothecaryFieldBuilder() {
+      if (apothecaryBuilder_ == null) {
+        if (!(productCase_ == 10)) {
+          product_ = io.opencannabis.schema.product.ApothecaryProduct.Apothecary.getDefaultInstance();
+        }
+        apothecaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.ApothecaryProduct.Apothecary, io.opencannabis.schema.product.ApothecaryProduct.Apothecary.Builder, io.opencannabis.schema.product.ApothecaryProduct.ApothecaryOrBuilder>(
+                (io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_,
+                getParentForChildren(),
+                isClean());
+        product_ = null;
+      }
+      productCase_ = 10;
+      onChanged();;
+      return apothecaryBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.CartridgeProduct.Cartridge, io.opencannabis.schema.product.CartridgeProduct.Cartridge.Builder, io.opencannabis.schema.product.CartridgeProduct.CartridgeOrBuilder> cartridgeBuilder_;
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    public boolean hasCartridge() {
+      return productCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    public io.opencannabis.schema.product.CartridgeProduct.Cartridge getCartridge() {
+      if (cartridgeBuilder_ == null) {
+        if (productCase_ == 11) {
+          return (io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_;
+        }
+        return io.opencannabis.schema.product.CartridgeProduct.Cartridge.getDefaultInstance();
+      } else {
+        if (productCase_ == 11) {
+          return cartridgeBuilder_.getMessage();
+        }
+        return io.opencannabis.schema.product.CartridgeProduct.Cartridge.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    public Builder setCartridge(io.opencannabis.schema.product.CartridgeProduct.Cartridge value) {
+      if (cartridgeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        product_ = value;
+        onChanged();
+      } else {
+        cartridgeBuilder_.setMessage(value);
+      }
+      productCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    public Builder setCartridge(
+        io.opencannabis.schema.product.CartridgeProduct.Cartridge.Builder builderForValue) {
+      if (cartridgeBuilder_ == null) {
+        product_ = builderForValue.build();
+        onChanged();
+      } else {
+        cartridgeBuilder_.setMessage(builderForValue.build());
+      }
+      productCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    public Builder mergeCartridge(io.opencannabis.schema.product.CartridgeProduct.Cartridge value) {
+      if (cartridgeBuilder_ == null) {
+        if (productCase_ == 11 &&
+            product_ != io.opencannabis.schema.product.CartridgeProduct.Cartridge.getDefaultInstance()) {
+          product_ = io.opencannabis.schema.product.CartridgeProduct.Cartridge.newBuilder((io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          product_ = value;
+        }
+        onChanged();
+      } else {
+        if (productCase_ == 11) {
+          cartridgeBuilder_.mergeFrom(value);
+        }
+        cartridgeBuilder_.setMessage(value);
+      }
+      productCase_ = 11;
+      return this;
+    }
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    public Builder clearCartridge() {
+      if (cartridgeBuilder_ == null) {
+        if (productCase_ == 11) {
+          productCase_ = 0;
+          product_ = null;
+          onChanged();
+        }
+      } else {
+        if (productCase_ == 11) {
+          productCase_ = 0;
+          product_ = null;
+        }
+        cartridgeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    public io.opencannabis.schema.product.CartridgeProduct.Cartridge.Builder getCartridgeBuilder() {
+      return getCartridgeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    public io.opencannabis.schema.product.CartridgeProduct.CartridgeOrBuilder getCartridgeOrBuilder() {
+      if ((productCase_ == 11) && (cartridgeBuilder_ != null)) {
+        return cartridgeBuilder_.getMessageOrBuilder();
+      } else {
+        if (productCase_ == 11) {
+          return (io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_;
+        }
+        return io.opencannabis.schema.product.CartridgeProduct.Cartridge.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Cartridge product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Cartridge cartridge = 11;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.CartridgeProduct.Cartridge, io.opencannabis.schema.product.CartridgeProduct.Cartridge.Builder, io.opencannabis.schema.product.CartridgeProduct.CartridgeOrBuilder> 
+        getCartridgeFieldBuilder() {
+      if (cartridgeBuilder_ == null) {
+        if (!(productCase_ == 11)) {
+          product_ = io.opencannabis.schema.product.CartridgeProduct.Cartridge.getDefaultInstance();
+        }
+        cartridgeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.CartridgeProduct.Cartridge, io.opencannabis.schema.product.CartridgeProduct.Cartridge.Builder, io.opencannabis.schema.product.CartridgeProduct.CartridgeOrBuilder>(
+                (io.opencannabis.schema.product.CartridgeProduct.Cartridge) product_,
+                getParentForChildren(),
+                isClean());
+        product_ = null;
+      }
+      productCase_ = 11;
+      onChanged();;
+      return cartridgeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.EdibleProduct.Edible, io.opencannabis.schema.product.EdibleProduct.Edible.Builder, io.opencannabis.schema.product.EdibleProduct.EdibleOrBuilder> edibleBuilder_;
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    public boolean hasEdible() {
+      return productCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    public io.opencannabis.schema.product.EdibleProduct.Edible getEdible() {
+      if (edibleBuilder_ == null) {
+        if (productCase_ == 12) {
+          return (io.opencannabis.schema.product.EdibleProduct.Edible) product_;
+        }
+        return io.opencannabis.schema.product.EdibleProduct.Edible.getDefaultInstance();
+      } else {
+        if (productCase_ == 12) {
+          return edibleBuilder_.getMessage();
+        }
+        return io.opencannabis.schema.product.EdibleProduct.Edible.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    public Builder setEdible(io.opencannabis.schema.product.EdibleProduct.Edible value) {
+      if (edibleBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        product_ = value;
+        onChanged();
+      } else {
+        edibleBuilder_.setMessage(value);
+      }
+      productCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    public Builder setEdible(
+        io.opencannabis.schema.product.EdibleProduct.Edible.Builder builderForValue) {
+      if (edibleBuilder_ == null) {
+        product_ = builderForValue.build();
+        onChanged();
+      } else {
+        edibleBuilder_.setMessage(builderForValue.build());
+      }
+      productCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    public Builder mergeEdible(io.opencannabis.schema.product.EdibleProduct.Edible value) {
+      if (edibleBuilder_ == null) {
+        if (productCase_ == 12 &&
+            product_ != io.opencannabis.schema.product.EdibleProduct.Edible.getDefaultInstance()) {
+          product_ = io.opencannabis.schema.product.EdibleProduct.Edible.newBuilder((io.opencannabis.schema.product.EdibleProduct.Edible) product_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          product_ = value;
+        }
+        onChanged();
+      } else {
+        if (productCase_ == 12) {
+          edibleBuilder_.mergeFrom(value);
+        }
+        edibleBuilder_.setMessage(value);
+      }
+      productCase_ = 12;
+      return this;
+    }
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    public Builder clearEdible() {
+      if (edibleBuilder_ == null) {
+        if (productCase_ == 12) {
+          productCase_ = 0;
+          product_ = null;
+          onChanged();
+        }
+      } else {
+        if (productCase_ == 12) {
+          productCase_ = 0;
+          product_ = null;
+        }
+        edibleBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    public io.opencannabis.schema.product.EdibleProduct.Edible.Builder getEdibleBuilder() {
+      return getEdibleFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    public io.opencannabis.schema.product.EdibleProduct.EdibleOrBuilder getEdibleOrBuilder() {
+      if ((productCase_ == 12) && (edibleBuilder_ != null)) {
+        return edibleBuilder_.getMessageOrBuilder();
+      } else {
+        if (productCase_ == 12) {
+          return (io.opencannabis.schema.product.EdibleProduct.Edible) product_;
+        }
+        return io.opencannabis.schema.product.EdibleProduct.Edible.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Edible product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Edible edible = 12;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.EdibleProduct.Edible, io.opencannabis.schema.product.EdibleProduct.Edible.Builder, io.opencannabis.schema.product.EdibleProduct.EdibleOrBuilder> 
+        getEdibleFieldBuilder() {
+      if (edibleBuilder_ == null) {
+        if (!(productCase_ == 12)) {
+          product_ = io.opencannabis.schema.product.EdibleProduct.Edible.getDefaultInstance();
+        }
+        edibleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.EdibleProduct.Edible, io.opencannabis.schema.product.EdibleProduct.Edible.Builder, io.opencannabis.schema.product.EdibleProduct.EdibleOrBuilder>(
+                (io.opencannabis.schema.product.EdibleProduct.Edible) product_,
+                getParentForChildren(),
+                isClean());
+        product_ = null;
+      }
+      productCase_ = 12;
+      onChanged();;
+      return edibleBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.ExtractProduct.Extract, io.opencannabis.schema.product.ExtractProduct.Extract.Builder, io.opencannabis.schema.product.ExtractProduct.ExtractOrBuilder> extractBuilder_;
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    public boolean hasExtract() {
+      return productCase_ == 13;
+    }
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    public io.opencannabis.schema.product.ExtractProduct.Extract getExtract() {
+      if (extractBuilder_ == null) {
+        if (productCase_ == 13) {
+          return (io.opencannabis.schema.product.ExtractProduct.Extract) product_;
+        }
+        return io.opencannabis.schema.product.ExtractProduct.Extract.getDefaultInstance();
+      } else {
+        if (productCase_ == 13) {
+          return extractBuilder_.getMessage();
+        }
+        return io.opencannabis.schema.product.ExtractProduct.Extract.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    public Builder setExtract(io.opencannabis.schema.product.ExtractProduct.Extract value) {
+      if (extractBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        product_ = value;
+        onChanged();
+      } else {
+        extractBuilder_.setMessage(value);
+      }
+      productCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    public Builder setExtract(
+        io.opencannabis.schema.product.ExtractProduct.Extract.Builder builderForValue) {
+      if (extractBuilder_ == null) {
+        product_ = builderForValue.build();
+        onChanged();
+      } else {
+        extractBuilder_.setMessage(builderForValue.build());
+      }
+      productCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    public Builder mergeExtract(io.opencannabis.schema.product.ExtractProduct.Extract value) {
+      if (extractBuilder_ == null) {
+        if (productCase_ == 13 &&
+            product_ != io.opencannabis.schema.product.ExtractProduct.Extract.getDefaultInstance()) {
+          product_ = io.opencannabis.schema.product.ExtractProduct.Extract.newBuilder((io.opencannabis.schema.product.ExtractProduct.Extract) product_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          product_ = value;
+        }
+        onChanged();
+      } else {
+        if (productCase_ == 13) {
+          extractBuilder_.mergeFrom(value);
+        }
+        extractBuilder_.setMessage(value);
+      }
+      productCase_ = 13;
+      return this;
+    }
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    public Builder clearExtract() {
+      if (extractBuilder_ == null) {
+        if (productCase_ == 13) {
+          productCase_ = 0;
+          product_ = null;
+          onChanged();
+        }
+      } else {
+        if (productCase_ == 13) {
+          productCase_ = 0;
+          product_ = null;
+        }
+        extractBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    public io.opencannabis.schema.product.ExtractProduct.Extract.Builder getExtractBuilder() {
+      return getExtractFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    public io.opencannabis.schema.product.ExtractProduct.ExtractOrBuilder getExtractOrBuilder() {
+      if ((productCase_ == 13) && (extractBuilder_ != null)) {
+        return extractBuilder_.getMessageOrBuilder();
+      } else {
+        if (productCase_ == 13) {
+          return (io.opencannabis.schema.product.ExtractProduct.Extract) product_;
+        }
+        return io.opencannabis.schema.product.ExtractProduct.Extract.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Extract product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Extract extract = 13;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.ExtractProduct.Extract, io.opencannabis.schema.product.ExtractProduct.Extract.Builder, io.opencannabis.schema.product.ExtractProduct.ExtractOrBuilder> 
+        getExtractFieldBuilder() {
+      if (extractBuilder_ == null) {
+        if (!(productCase_ == 13)) {
+          product_ = io.opencannabis.schema.product.ExtractProduct.Extract.getDefaultInstance();
+        }
+        extractBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.ExtractProduct.Extract, io.opencannabis.schema.product.ExtractProduct.Extract.Builder, io.opencannabis.schema.product.ExtractProduct.ExtractOrBuilder>(
+                (io.opencannabis.schema.product.ExtractProduct.Extract) product_,
+                getParentForChildren(),
+                isClean());
+        product_ = null;
+      }
+      productCase_ = 13;
+      onChanged();;
+      return extractBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.FlowerProduct.Flower, io.opencannabis.schema.product.FlowerProduct.Flower.Builder, io.opencannabis.schema.product.FlowerProduct.FlowerOrBuilder> flowerBuilder_;
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    public boolean hasFlower() {
+      return productCase_ == 14;
+    }
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    public io.opencannabis.schema.product.FlowerProduct.Flower getFlower() {
+      if (flowerBuilder_ == null) {
+        if (productCase_ == 14) {
+          return (io.opencannabis.schema.product.FlowerProduct.Flower) product_;
+        }
+        return io.opencannabis.schema.product.FlowerProduct.Flower.getDefaultInstance();
+      } else {
+        if (productCase_ == 14) {
+          return flowerBuilder_.getMessage();
+        }
+        return io.opencannabis.schema.product.FlowerProduct.Flower.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    public Builder setFlower(io.opencannabis.schema.product.FlowerProduct.Flower value) {
+      if (flowerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        product_ = value;
+        onChanged();
+      } else {
+        flowerBuilder_.setMessage(value);
+      }
+      productCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    public Builder setFlower(
+        io.opencannabis.schema.product.FlowerProduct.Flower.Builder builderForValue) {
+      if (flowerBuilder_ == null) {
+        product_ = builderForValue.build();
+        onChanged();
+      } else {
+        flowerBuilder_.setMessage(builderForValue.build());
+      }
+      productCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    public Builder mergeFlower(io.opencannabis.schema.product.FlowerProduct.Flower value) {
+      if (flowerBuilder_ == null) {
+        if (productCase_ == 14 &&
+            product_ != io.opencannabis.schema.product.FlowerProduct.Flower.getDefaultInstance()) {
+          product_ = io.opencannabis.schema.product.FlowerProduct.Flower.newBuilder((io.opencannabis.schema.product.FlowerProduct.Flower) product_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          product_ = value;
+        }
+        onChanged();
+      } else {
+        if (productCase_ == 14) {
+          flowerBuilder_.mergeFrom(value);
+        }
+        flowerBuilder_.setMessage(value);
+      }
+      productCase_ = 14;
+      return this;
+    }
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    public Builder clearFlower() {
+      if (flowerBuilder_ == null) {
+        if (productCase_ == 14) {
+          productCase_ = 0;
+          product_ = null;
+          onChanged();
+        }
+      } else {
+        if (productCase_ == 14) {
+          productCase_ = 0;
+          product_ = null;
+        }
+        flowerBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    public io.opencannabis.schema.product.FlowerProduct.Flower.Builder getFlowerBuilder() {
+      return getFlowerFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    public io.opencannabis.schema.product.FlowerProduct.FlowerOrBuilder getFlowerOrBuilder() {
+      if ((productCase_ == 14) && (flowerBuilder_ != null)) {
+        return flowerBuilder_.getMessageOrBuilder();
+      } else {
+        if (productCase_ == 14) {
+          return (io.opencannabis.schema.product.FlowerProduct.Flower) product_;
+        }
+        return io.opencannabis.schema.product.FlowerProduct.Flower.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Flower product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Flower flower = 14;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.FlowerProduct.Flower, io.opencannabis.schema.product.FlowerProduct.Flower.Builder, io.opencannabis.schema.product.FlowerProduct.FlowerOrBuilder> 
+        getFlowerFieldBuilder() {
+      if (flowerBuilder_ == null) {
+        if (!(productCase_ == 14)) {
+          product_ = io.opencannabis.schema.product.FlowerProduct.Flower.getDefaultInstance();
+        }
+        flowerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.FlowerProduct.Flower, io.opencannabis.schema.product.FlowerProduct.Flower.Builder, io.opencannabis.schema.product.FlowerProduct.FlowerOrBuilder>(
+                (io.opencannabis.schema.product.FlowerProduct.Flower) product_,
+                getParentForChildren(),
+                isClean());
+        product_ = null;
+      }
+      productCase_ = 14;
+      onChanged();;
+      return flowerBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.MerchandiseProduct.Merchandise, io.opencannabis.schema.product.MerchandiseProduct.Merchandise.Builder, io.opencannabis.schema.product.MerchandiseProduct.MerchandiseOrBuilder> merchandiseBuilder_;
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    public boolean hasMerchandise() {
+      return productCase_ == 15;
+    }
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    public io.opencannabis.schema.product.MerchandiseProduct.Merchandise getMerchandise() {
+      if (merchandiseBuilder_ == null) {
+        if (productCase_ == 15) {
+          return (io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_;
+        }
+        return io.opencannabis.schema.product.MerchandiseProduct.Merchandise.getDefaultInstance();
+      } else {
+        if (productCase_ == 15) {
+          return merchandiseBuilder_.getMessage();
+        }
+        return io.opencannabis.schema.product.MerchandiseProduct.Merchandise.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    public Builder setMerchandise(io.opencannabis.schema.product.MerchandiseProduct.Merchandise value) {
+      if (merchandiseBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        product_ = value;
+        onChanged();
+      } else {
+        merchandiseBuilder_.setMessage(value);
+      }
+      productCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    public Builder setMerchandise(
+        io.opencannabis.schema.product.MerchandiseProduct.Merchandise.Builder builderForValue) {
+      if (merchandiseBuilder_ == null) {
+        product_ = builderForValue.build();
+        onChanged();
+      } else {
+        merchandiseBuilder_.setMessage(builderForValue.build());
+      }
+      productCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    public Builder mergeMerchandise(io.opencannabis.schema.product.MerchandiseProduct.Merchandise value) {
+      if (merchandiseBuilder_ == null) {
+        if (productCase_ == 15 &&
+            product_ != io.opencannabis.schema.product.MerchandiseProduct.Merchandise.getDefaultInstance()) {
+          product_ = io.opencannabis.schema.product.MerchandiseProduct.Merchandise.newBuilder((io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          product_ = value;
+        }
+        onChanged();
+      } else {
+        if (productCase_ == 15) {
+          merchandiseBuilder_.mergeFrom(value);
+        }
+        merchandiseBuilder_.setMessage(value);
+      }
+      productCase_ = 15;
+      return this;
+    }
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    public Builder clearMerchandise() {
+      if (merchandiseBuilder_ == null) {
+        if (productCase_ == 15) {
+          productCase_ = 0;
+          product_ = null;
+          onChanged();
+        }
+      } else {
+        if (productCase_ == 15) {
+          productCase_ = 0;
+          product_ = null;
+        }
+        merchandiseBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    public io.opencannabis.schema.product.MerchandiseProduct.Merchandise.Builder getMerchandiseBuilder() {
+      return getMerchandiseFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    public io.opencannabis.schema.product.MerchandiseProduct.MerchandiseOrBuilder getMerchandiseOrBuilder() {
+      if ((productCase_ == 15) && (merchandiseBuilder_ != null)) {
+        return merchandiseBuilder_.getMessageOrBuilder();
+      } else {
+        if (productCase_ == 15) {
+          return (io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_;
+        }
+        return io.opencannabis.schema.product.MerchandiseProduct.Merchandise.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Merchandise product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Merchandise merchandise = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.MerchandiseProduct.Merchandise, io.opencannabis.schema.product.MerchandiseProduct.Merchandise.Builder, io.opencannabis.schema.product.MerchandiseProduct.MerchandiseOrBuilder> 
+        getMerchandiseFieldBuilder() {
+      if (merchandiseBuilder_ == null) {
+        if (!(productCase_ == 15)) {
+          product_ = io.opencannabis.schema.product.MerchandiseProduct.Merchandise.getDefaultInstance();
+        }
+        merchandiseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.MerchandiseProduct.Merchandise, io.opencannabis.schema.product.MerchandiseProduct.Merchandise.Builder, io.opencannabis.schema.product.MerchandiseProduct.MerchandiseOrBuilder>(
+                (io.opencannabis.schema.product.MerchandiseProduct.Merchandise) product_,
+                getParentForChildren(),
+                isClean());
+        product_ = null;
+      }
+      productCase_ = 15;
+      onChanged();;
+      return merchandiseBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.PlantProduct.Plant, io.opencannabis.schema.product.PlantProduct.Plant.Builder, io.opencannabis.schema.product.PlantProduct.PlantOrBuilder> plantBuilder_;
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    public boolean hasPlant() {
+      return productCase_ == 16;
+    }
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    public io.opencannabis.schema.product.PlantProduct.Plant getPlant() {
+      if (plantBuilder_ == null) {
+        if (productCase_ == 16) {
+          return (io.opencannabis.schema.product.PlantProduct.Plant) product_;
+        }
+        return io.opencannabis.schema.product.PlantProduct.Plant.getDefaultInstance();
+      } else {
+        if (productCase_ == 16) {
+          return plantBuilder_.getMessage();
+        }
+        return io.opencannabis.schema.product.PlantProduct.Plant.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    public Builder setPlant(io.opencannabis.schema.product.PlantProduct.Plant value) {
+      if (plantBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        product_ = value;
+        onChanged();
+      } else {
+        plantBuilder_.setMessage(value);
+      }
+      productCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    public Builder setPlant(
+        io.opencannabis.schema.product.PlantProduct.Plant.Builder builderForValue) {
+      if (plantBuilder_ == null) {
+        product_ = builderForValue.build();
+        onChanged();
+      } else {
+        plantBuilder_.setMessage(builderForValue.build());
+      }
+      productCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    public Builder mergePlant(io.opencannabis.schema.product.PlantProduct.Plant value) {
+      if (plantBuilder_ == null) {
+        if (productCase_ == 16 &&
+            product_ != io.opencannabis.schema.product.PlantProduct.Plant.getDefaultInstance()) {
+          product_ = io.opencannabis.schema.product.PlantProduct.Plant.newBuilder((io.opencannabis.schema.product.PlantProduct.Plant) product_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          product_ = value;
+        }
+        onChanged();
+      } else {
+        if (productCase_ == 16) {
+          plantBuilder_.mergeFrom(value);
+        }
+        plantBuilder_.setMessage(value);
+      }
+      productCase_ = 16;
+      return this;
+    }
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    public Builder clearPlant() {
+      if (plantBuilder_ == null) {
+        if (productCase_ == 16) {
+          productCase_ = 0;
+          product_ = null;
+          onChanged();
+        }
+      } else {
+        if (productCase_ == 16) {
+          productCase_ = 0;
+          product_ = null;
+        }
+        plantBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    public io.opencannabis.schema.product.PlantProduct.Plant.Builder getPlantBuilder() {
+      return getPlantFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    public io.opencannabis.schema.product.PlantProduct.PlantOrBuilder getPlantOrBuilder() {
+      if ((productCase_ == 16) && (plantBuilder_ != null)) {
+        return plantBuilder_.getMessageOrBuilder();
+      } else {
+        if (productCase_ == 16) {
+          return (io.opencannabis.schema.product.PlantProduct.Plant) product_;
+        }
+        return io.opencannabis.schema.product.PlantProduct.Plant.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Plant product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Plant plant = 16;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.PlantProduct.Plant, io.opencannabis.schema.product.PlantProduct.Plant.Builder, io.opencannabis.schema.product.PlantProduct.PlantOrBuilder> 
+        getPlantFieldBuilder() {
+      if (plantBuilder_ == null) {
+        if (!(productCase_ == 16)) {
+          product_ = io.opencannabis.schema.product.PlantProduct.Plant.getDefaultInstance();
+        }
+        plantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.PlantProduct.Plant, io.opencannabis.schema.product.PlantProduct.Plant.Builder, io.opencannabis.schema.product.PlantProduct.PlantOrBuilder>(
+                (io.opencannabis.schema.product.PlantProduct.Plant) product_,
+                getParentForChildren(),
+                isClean());
+        product_ = null;
+      }
+      productCase_ = 16;
+      onChanged();;
+      return plantBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.PrerollProduct.Preroll, io.opencannabis.schema.product.PrerollProduct.Preroll.Builder, io.opencannabis.schema.product.PrerollProduct.PrerollOrBuilder> prerollBuilder_;
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    public boolean hasPreroll() {
+      return productCase_ == 17;
+    }
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    public io.opencannabis.schema.product.PrerollProduct.Preroll getPreroll() {
+      if (prerollBuilder_ == null) {
+        if (productCase_ == 17) {
+          return (io.opencannabis.schema.product.PrerollProduct.Preroll) product_;
+        }
+        return io.opencannabis.schema.product.PrerollProduct.Preroll.getDefaultInstance();
+      } else {
+        if (productCase_ == 17) {
+          return prerollBuilder_.getMessage();
+        }
+        return io.opencannabis.schema.product.PrerollProduct.Preroll.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    public Builder setPreroll(io.opencannabis.schema.product.PrerollProduct.Preroll value) {
+      if (prerollBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        product_ = value;
+        onChanged();
+      } else {
+        prerollBuilder_.setMessage(value);
+      }
+      productCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    public Builder setPreroll(
+        io.opencannabis.schema.product.PrerollProduct.Preroll.Builder builderForValue) {
+      if (prerollBuilder_ == null) {
+        product_ = builderForValue.build();
+        onChanged();
+      } else {
+        prerollBuilder_.setMessage(builderForValue.build());
+      }
+      productCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    public Builder mergePreroll(io.opencannabis.schema.product.PrerollProduct.Preroll value) {
+      if (prerollBuilder_ == null) {
+        if (productCase_ == 17 &&
+            product_ != io.opencannabis.schema.product.PrerollProduct.Preroll.getDefaultInstance()) {
+          product_ = io.opencannabis.schema.product.PrerollProduct.Preroll.newBuilder((io.opencannabis.schema.product.PrerollProduct.Preroll) product_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          product_ = value;
+        }
+        onChanged();
+      } else {
+        if (productCase_ == 17) {
+          prerollBuilder_.mergeFrom(value);
+        }
+        prerollBuilder_.setMessage(value);
+      }
+      productCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    public Builder clearPreroll() {
+      if (prerollBuilder_ == null) {
+        if (productCase_ == 17) {
+          productCase_ = 0;
+          product_ = null;
+          onChanged();
+        }
+      } else {
+        if (productCase_ == 17) {
+          productCase_ = 0;
+          product_ = null;
+        }
+        prerollBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    public io.opencannabis.schema.product.PrerollProduct.Preroll.Builder getPrerollBuilder() {
+      return getPrerollFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    public io.opencannabis.schema.product.PrerollProduct.PrerollOrBuilder getPrerollOrBuilder() {
+      if ((productCase_ == 17) && (prerollBuilder_ != null)) {
+        return prerollBuilder_.getMessageOrBuilder();
+      } else {
+        if (productCase_ == 17) {
+          return (io.opencannabis.schema.product.PrerollProduct.Preroll) product_;
+        }
+        return io.opencannabis.schema.product.PrerollProduct.Preroll.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Preroll product.
+     * </pre>
+     *
+     * <code>.opencannabis.products.Preroll preroll = 17;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.PrerollProduct.Preroll, io.opencannabis.schema.product.PrerollProduct.Preroll.Builder, io.opencannabis.schema.product.PrerollProduct.PrerollOrBuilder> 
+        getPrerollFieldBuilder() {
+      if (prerollBuilder_ == null) {
+        if (!(productCase_ == 17)) {
+          product_ = io.opencannabis.schema.product.PrerollProduct.Preroll.getDefaultInstance();
+        }
+        prerollBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.PrerollProduct.Preroll, io.opencannabis.schema.product.PrerollProduct.Preroll.Builder, io.opencannabis.schema.product.PrerollProduct.PrerollOrBuilder>(
+                (io.opencannabis.schema.product.PrerollProduct.Preroll) product_,
+                getParentForChildren(),
+                isClean());
+        product_ = null;
+      }
+      productCase_ = 17;
+      onChanged();;
+      return prerollBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

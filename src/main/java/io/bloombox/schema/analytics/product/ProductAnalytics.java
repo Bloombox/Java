@@ -3420,9 +3420,9 @@ public final class ProductAnalytics {
       "*\212\001\n\rProductAction\022\010\n\004VIEW\020\000\022\t\n\005SHARE\020\001\022" +
       "\014\n\010FAVORITE\020\002\022\013\n\007COMPARE\020\003\022\010\n\004CART\020\004\022\014\n\010" +
       "PURCHASE\020\005\022\r\n\tSUBSCRIBE\020\006\022\010\n\004ZOOM\020\007\022\013\n\007R" +
-      "EPORTS\020\010\022\013\n\007SIMILAR\020\tB?\n$io.bloombox.sch" +
+      "EPORTS\020\010\022\013\n\007SIMILAR\020\tBB\n$io.bloombox.sch" +
       "ema.analytics.productB\020ProductAnalyticsH" +
-      "\001P\000\370\001\001b\006proto3"
+      "\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

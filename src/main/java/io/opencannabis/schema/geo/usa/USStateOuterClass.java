@@ -69,8 +69,9 @@ public final class USStateOuterClass {
       "\004UTAH\020-\022\006\n\002VT\020.\022\013\n\007VERMONT\020.\022\006\n\002VA\020/\022\014\n\010" +
       "VIRGINIA\020/\022\006\n\002WA\0200\022\016\n\nWASHINGTON\0200\022\006\n\002WV" +
       "\0201\022\021\n\rWEST_VIRGINIA\0201\022\006\n\002WI\0202\022\r\n\tWISCONS" +
-      "IN\0202\022\013\n\007WYOMING\0203\022\006\n\002WY\0203\032\002\020\001B$\n\036io.open" +
-      "cannabis.schema.geo.usaH\001P\001b\006proto3"
+      "IN\0202\022\013\n\007WYOMING\0203\022\006\n\002WY\0203\032\002\020\001B*\n\036io.open" +
+      "cannabis.schema.geo.usaH\001P\001\242\002\003OCSb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1006,9 +1006,9 @@ public final class AnalyticsCollection {
       "DSpecifies the type of event. Usually ad" +
       "ded by the telemetry backend.*W\n\tEventTy" +
       "pe\022\013\n\007GENERIC\020\000\022\016\n\nCOMMERCIAL\020\001\022\014\n\010IDENT" +
-      "ITY\020\002\022\016\n\nEXPERIENCE\020\003\022\017\n\013OPERATIONAL\020\004BB" +
+      "ITY\020\002\022\016\n\nEXPERIENCE\020\003\022\017\n\013OPERATIONAL\020\004BE" +
       "\n$io.bloombox.schema.telemetry.contextB\023" +
-      "AnalyticsCollectionH\001P\000\370\001\001b\006proto3"
+      "AnalyticsCollectionH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -14,6 +14,8 @@
     <publishDate position="right"/>
     <version position="right"/>
 
+    <googleAnalyticsAccountId>UA-73412840-4</googleAnalyticsAccountId>
+
     <body>
         <menu name="Overview">
             <item name="Home" href="index.html" />
@@ -22,13 +24,19 @@
             <item name="FAQ" href="faq.html" />
         </menu>
 
-        <menu name="Tools &amp; Services">
+        <menu name="Services">
             <item name="Shop API" href="services/shop.html"/>
+            <item name="Menu API" href="services/menu.html"/>
             <item name="Telemetry API" href="services/telemetry.html"/>
         </menu>
 
+        <menu name="Examples">
+            <item name="Java" href="https://github.com/Bloombox/Java/blob/master/example/src/main/java/io/bloombox/example/java/JavaClientExample.java"/>
+            <item name="Kotlin" href="https://github.com/Bloombox/Java/blob/master/example/src/main/kotlin/io/bloombox/example/kotlin/KotlinClientExample.kt"/>
+        </menu>
+
         <menu name="API Docs">
-            <item name="Client (Dokka)" href="client/java-client/index.html"/>
+            <item name="Client (Dokka)" href="client/bloombox/bloombox.client/index.html"/>
             <item name="Schema (Javadoc)" href="apidocs/index.html"/>
         </menu>
 
@@ -41,11 +49,12 @@
             <item name="Bloombox" href="https://bloombox.io"/>
         </breadcrumbs>
 
-        <footer>Copyright © 2017, Momentum Ideas Co. All rights reserved.</footer>
+        <footer>Copyright © 2018, Momentum Ideas Co. All rights reserved.</footer>
     </body>
 
     <custom>
         <fluidoSkin>
+            <profile>production</profile>
             <skipGenerationDate>true</skipGenerationDate>
             <breadcrumbDivider>»</breadcrumbDivider>
             <topBarEnabled>false</topBarEnabled>

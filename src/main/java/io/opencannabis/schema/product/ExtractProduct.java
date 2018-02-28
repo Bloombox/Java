@@ -2286,9 +2286,9 @@ public final class ExtractProduct {
       "XTRACT\020\000\022\007\n\003OIL\020\001\022\007\n\003WAX\020\002\022\013\n\007SHATTER\020\003\022" +
       "\010\n\004KIEF\020\004\022\010\n\004HASH\020\005\022\016\n\nLIVE_RESIN\020\006\022\t\n\005R" +
       "OSIN\020\007*4\n\013ExtractFlag\022\024\n\020NO_EXTRACT_FLAG" +
-      "S\020\000\022\017\n\013SOLVENTLESS\020\001B7\n\036io.opencannabis." +
-      "schema.productB\016ExtractProductH\001P\000\370\001\001b\006p" +
-      "roto3"
+      "S\020\000\022\017\n\013SOLVENTLESS\020\001B:\n\036io.opencannabis." +
+      "schema.productB\016ExtractProductH\001P\000\242\002\003OCS" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

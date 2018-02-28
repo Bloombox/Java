@@ -1161,9 +1161,9 @@ public final class LibraryContext {
       "Specifies which internal Bloombox librar" +
       "y sent this event, if any.*C\n\tAPIClient\022" +
       "\020\n\014UNIDENTIFIED\020\000\022\017\n\013JAVA_SCRIPT\020\001\022\t\n\005SW" +
-      "IFT\020\002\022\010\n\004JAVA\020\003B=\n$io.bloombox.schema.te" +
-      "lemetry.contextB\016LibraryContextH\001P\000\370\001\001b\006" +
-      "proto3"
+      "IFT\020\002\022\010\n\004JAVA\020\003B@\n$io.bloombox.schema.te" +
+      "lemetry.contextB\016LibraryContextH\001P\000\242\002\003BB" +
+      "Sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

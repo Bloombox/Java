@@ -1496,9 +1496,9 @@ public final class CartridgeProduct {
       "t.ProductContent\0225\n\010material\030\004 \001(\0132#.ope" +
       "ncannabis.content.MaterialsData*O\n\rCartr" +
       "idgeType\022\031\n\025UNSPECIFIED_CARTRIDGE\020\000\022\r\n\tC" +
-      "ARTRIDGE\020\001\022\013\n\007BATTERY\020\002\022\007\n\003KIT\020\003B9\n\036io.o" +
+      "ARTRIDGE\020\001\022\013\n\007BATTERY\020\002\022\007\n\003KIT\020\003B<\n\036io.o" +
       "pencannabis.schema.productB\020CartridgePro" +
-      "ductH\001P\000\370\001\001b\006proto3"
+      "ductH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

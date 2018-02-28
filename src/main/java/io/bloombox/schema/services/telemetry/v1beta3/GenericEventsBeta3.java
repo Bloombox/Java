@@ -81,9 +81,10 @@ public final class GenericEventsBeta3 {
       "a3.Event.Batch\"\213\001\n\tException\0223\n\007context\030" +
       "\001 \001(\0132\".bloombox.schema.analytics.Contex" +
       "t\022;\n\005error\030\002 \001(\0132,.bloombox.schema.analy" +
-      "tics.generic.Exception\022\014\n\004uuid\030\003 \001(\tBG\n-" +
+      "tics.generic.Exception\022\014\n\004uuid\030\003 \001(\tBM\n-" +
       "io.bloombox.schema.services.telemetry.v1" +
-      "beta3H\001P\001\252\002\021Telemetry.v1beta3b\006proto3"
+      "beta3H\001P\001\242\002\003BBS\252\002\021Telemetry.v1beta3b\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -131,8 +131,8 @@ public final class DevicesServiceBeta1 {
       "v1beta1.Activation.Response\"a\202\323\344\223\002[\")/de" +
       "vices/v1beta1/{serial}/device:activate:\001" +
       "*Z+\022)/devices/v1beta1/{serial}/device:ac" +
-      "tivateB1\n+io.bloombox.schema.services.de" +
-      "vices.v1beta1H\001P\001b\006proto3"
+      "tivateB7\n+io.bloombox.schema.services.de" +
+      "vices.v1beta1H\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

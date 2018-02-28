@@ -1627,8 +1627,9 @@ public final class BrowserContext {
       "th reported by the browser.*b\n\013BrowserTy" +
       "pe\022\023\n\017BROWSER_UNKNOWN\020\000\022\n\n\006CHROME\020\001\022\n\n\006S" +
       "AFARI\020\002\022\013\n\007FIREFOX\020\003\022\t\n\005OPERA\020\004\022\016\n\nIE_OR" +
-      "_EDGE\020\005B=\n$io.bloombox.schema.telemetry." +
-      "contextB\016BrowserContextH\001P\000\370\001\001b\006proto3"
+      "_EDGE\020\005B@\n$io.bloombox.schema.telemetry." +
+      "contextB\016BrowserContextH\001P\000\242\002\003BBSb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

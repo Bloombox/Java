@@ -73,8 +73,8 @@ public final class AttachedContent {
       "btesting.TestResults\0220\n\005flags\030\t \003(\0162!.op" +
       "encannabis.structs.ProductFlag\0223\n\002ts\030\n \001" +
       "(\0132\'.opencannabis.content.ProductTimesta" +
-      "mpsB8\n\036io.opencannabis.schema.contentB\017A" +
-      "ttachedContentH\001P\001\370\001\001b\006proto3"
+      "mpsB;\n\036io.opencannabis.schema.contentB\017A" +
+      "ttachedContentH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

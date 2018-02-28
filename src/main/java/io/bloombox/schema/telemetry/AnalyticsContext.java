@@ -5503,8 +5503,8 @@ public final class AnalyticsContext {
       "eo.LocationBk\212@hOrigin location for this" +
       " event, as determined by geolocation or " +
       "explicit inclusion in the event payload." +
-      "B7\n\034io.bloombox.schema.telemetryB\020Analyt" +
-      "icsContextH\001P\000\370\001\001b\006proto3"
+      "B:\n\034io.bloombox.schema.telemetryB\020Analyt" +
+      "icsContextH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

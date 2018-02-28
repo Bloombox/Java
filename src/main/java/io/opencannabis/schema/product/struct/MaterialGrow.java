@@ -41,9 +41,9 @@ public final class MaterialGrow {
     java.lang.String[] descriptorData = {
       "\n\022structs/Grow.proto\022\024opencannabis.struc" +
       "ts*<\n\004Grow\022\013\n\007GENERIC\020\000\022\n\n\006INDOOR\020\001\022\016\n\nG" +
-      "REENHOUSE\020\002\022\013\n\007OUTDOOR\020\003B<\n%io.opencanna" +
+      "REENHOUSE\020\002\022\013\n\007OUTDOOR\020\003B?\n%io.opencanna" +
       "bis.schema.product.structB\014MaterialGrowH" +
-      "\001P\001\370\001\001b\006proto3"
+      "\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

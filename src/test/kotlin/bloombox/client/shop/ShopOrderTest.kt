@@ -16,6 +16,7 @@
 
 package bloombox.client.shop
 
+import bloombox.client.ClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import io.opencannabis.schema.base.ProductKey
@@ -118,49 +119,57 @@ class ShopOrderTest: ClientRPCTest() {
 
   @test
   fun testFetchKnownOrder() {
-    // fetch a known-good order ID
-    val response = client.platform.shop().getOrder(knownOrderId)
-    assertNotNull(response, "response from server for known-good order fetch should not be null")
-    assertTrue(response.success, "response from server for known-good order fetch should be successful")
-    assertNotNull(response.order, "response from server for known-good order should contain order")
-    assertEquals(response.order.id, knownOrderId, "response from server for known-good order should match requested ID")
-  }
-
-  @test
-  fun testFetchKnownOrderAsync() {
-    // fetch a known-good order ID
-    val operation = client.platform.shop().getOrder(knownOrderId, { response ->
+    withClient({ client ->
+      // fetch a known-good order ID
+      val response = client.platform.shop().getOrder(knownOrderId)
       assertNotNull(response, "response from server for known-good order fetch should not be null")
       assertTrue(response.success, "response from server for known-good order fetch should be successful")
       assertNotNull(response.order, "response from server for known-good order should contain order")
       assertEquals(response.order.id, knownOrderId, "response from server for known-good order should match requested ID")
-    }, { err ->
-      logging.severe("Severe error fetching order: $err")
     })
-
-    // make sure it executes, with a 10-second timeout
-    operation.get(10, TimeUnit.SECONDS)
   }
 
   @test
+  fun testFetchKnownOrderAsync() {
+    withClient({ client ->
+      // fetch a known-good order ID
+      val operation = client.platform.shop().getOrder(knownOrderId, { response ->
+        assertNotNull(response, "response from server for known-good order fetch should not be null")
+        assertTrue(response.success, "response from server for known-good order fetch should be successful")
+        assertNotNull(response.order, "response from server for known-good order should contain order")
+        assertEquals(response.order.id, knownOrderId, "response from server for known-good order should match requested ID")
+      }, { err ->
+        logging.severe("Severe error fetching order: $err")
+      })
+
+      // make sure it executes, with a 10-second timeout
+      operation.get(10, TimeUnit.SECONDS)
+    })
+  }
+
+  @test(expected = ClientException::class)
   fun testFetchOrderNotFound() {
-    // fetch a known-good order ID
-    val response = client.platform.shop().getOrder("blablablanotfound")
-    assertNotNull(response, "response from server for known-not-found order fetch should not be null")
-    assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
-  }
-
-  @test
-  fun testFetchOrderNotFoundAsync() {
-    // fetch a known-good order ID
-    val operation = client.platform.shop().getOrder("blablablanotfound", { response ->
+    withClient({ client ->
+      // fetch a known-good order ID
+      val response = client.platform.shop().getOrder("blablablanotfound")
       assertNotNull(response, "response from server for known-not-found order fetch should not be null")
       assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
-    }, { err ->
-      logging.severe("Severe error fetching order: $err")
     })
+  }
 
-    // make sure it executes, with a 10-second timeout
-    operation.get(10, TimeUnit.SECONDS)
+  @test(expected = ClientException::class)
+  fun testFetchOrderNotFoundAsync() {
+    withClient({ client ->
+      // fetch a known-good order ID
+      val operation = client.platform.shop().getOrder("blablablanotfound", { response ->
+        assertNotNull(response, "response from server for known-not-found order fetch should not be null")
+        assertTrue(!response.success, "response from server for known-good order fetch should be unsuccessful")
+      }, { err ->
+        logging.severe("Severe error fetching order: $err")
+      })
+
+      // make sure it executes, with a 10-second timeout
+      operation.get(10, TimeUnit.SECONDS)
+    })
   }
 }

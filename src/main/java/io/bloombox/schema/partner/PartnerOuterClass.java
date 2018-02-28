@@ -100,8 +100,9 @@ public final class PartnerOuterClass {
       "es that the subject partner organization" +
       " is a testing account held and managed i" +
       "nternally by Bloombox, or by selected pa" +
-      "rtners.*\034\n\016PartnerChannel\022\n\n\006DIRECT\020\000B \n" +
-      "\032io.bloombox.schema.partnerH\001P\001b\006proto3"
+      "rtners.*\034\n\016PartnerChannel\022\n\n\006DIRECT\020\000B&\n" +
+      "\032io.bloombox.schema.partnerH\001P\001\242\002\003BBSb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

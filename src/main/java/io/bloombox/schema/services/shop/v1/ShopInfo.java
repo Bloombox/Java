@@ -744,7 +744,7 @@ private static final long serialVersionUID = 0L;
      * Indicates the current status of the online shop in question.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+     * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
      */
     int getShopStatusValue();
     /**
@@ -752,9 +752,9 @@ private static final long serialVersionUID = 0L;
      * Indicates the current status of the online shop in question.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+     * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
      */
-    io.bloombox.schema.services.shop.v1.ShopStatus getShopStatus();
+    io.bloombox.schema.partner.settings.ShopStatus getShopStatus();
   }
   /**
    * Protobuf type {@code bloombox.schema.services.shop.v1.ShopInfo.Response}
@@ -840,7 +840,7 @@ private static final long serialVersionUID = 0L;
      * Indicates the current status of the online shop in question.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+     * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
      */
     public int getShopStatusValue() {
       return shopStatus_;
@@ -850,11 +850,11 @@ private static final long serialVersionUID = 0L;
      * Indicates the current status of the online shop in question.
      * </pre>
      *
-     * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+     * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
      */
-    public io.bloombox.schema.services.shop.v1.ShopStatus getShopStatus() {
-      io.bloombox.schema.services.shop.v1.ShopStatus result = io.bloombox.schema.services.shop.v1.ShopStatus.valueOf(shopStatus_);
-      return result == null ? io.bloombox.schema.services.shop.v1.ShopStatus.UNRECOGNIZED : result;
+    public io.bloombox.schema.partner.settings.ShopStatus getShopStatus() {
+      io.bloombox.schema.partner.settings.ShopStatus result = io.bloombox.schema.partner.settings.ShopStatus.valueOf(shopStatus_);
+      return result == null ? io.bloombox.schema.partner.settings.ShopStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (shopStatus_ != io.bloombox.schema.services.shop.v1.ShopStatus.OPEN.getNumber()) {
+      if (shopStatus_ != io.bloombox.schema.partner.settings.ShopStatus.OPEN.getNumber()) {
         output.writeEnum(1, shopStatus_);
       }
       unknownFields.writeTo(output);
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (shopStatus_ != io.bloombox.schema.services.shop.v1.ShopStatus.OPEN.getNumber()) {
+      if (shopStatus_ != io.bloombox.schema.partner.settings.ShopStatus.OPEN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, shopStatus_);
       }
@@ -1145,7 +1145,7 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
        */
       public int getShopStatusValue() {
         return shopStatus_;
@@ -1155,7 +1155,7 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
        */
       public Builder setShopStatusValue(int value) {
         shopStatus_ = value;
@@ -1167,20 +1167,20 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
        */
-      public io.bloombox.schema.services.shop.v1.ShopStatus getShopStatus() {
-        io.bloombox.schema.services.shop.v1.ShopStatus result = io.bloombox.schema.services.shop.v1.ShopStatus.valueOf(shopStatus_);
-        return result == null ? io.bloombox.schema.services.shop.v1.ShopStatus.UNRECOGNIZED : result;
+      public io.bloombox.schema.partner.settings.ShopStatus getShopStatus() {
+        io.bloombox.schema.partner.settings.ShopStatus result = io.bloombox.schema.partner.settings.ShopStatus.valueOf(shopStatus_);
+        return result == null ? io.bloombox.schema.partner.settings.ShopStatus.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
        */
-      public Builder setShopStatus(io.bloombox.schema.services.shop.v1.ShopStatus value) {
+      public Builder setShopStatus(io.bloombox.schema.partner.settings.ShopStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1194,7 +1194,7 @@ private static final long serialVersionUID = 0L;
        * Indicates the current status of the online shop in question.
        * </pre>
        *
-       * <code>.bloombox.schema.services.shop.v1.ShopStatus shop_status = 1;</code>
+       * <code>.bloombox.schema.partner.settings.ShopStatus shop_status = 1;</code>
        */
       public Builder clearShopStatus() {
         

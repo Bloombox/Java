@@ -157,8 +157,8 @@ public final class LabTesting {
       "NE\020\014\022\020\n\014ALPHA_PINENE\020\r\022\017\n\013BETA_PINENE\020\016\022" +
       "\023\n\017ALPHA_TERPINEOL\020\017\022\023\n\017ALPHA_TERPININE\020" +
       "\020\022\023\n\017GAMMA_TERPININE\020\021\022\017\n\013TERPINOLENE\020\022B" +
-      "B\n-io.opencannabis.schema.product.struct" +
-      ".testingB\nLabTestingH\001P\001\370\001\001b\006proto3"
+      "E\n-io.opencannabis.schema.product.struct" +
+      ".testingB\nLabTestingH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

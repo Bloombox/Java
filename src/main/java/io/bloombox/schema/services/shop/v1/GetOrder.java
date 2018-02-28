@@ -945,6 +945,23 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.commerce.Order order = 2;</code>
      */
     io.opencannabis.schema.commerce.CommercialOrder.OrderOrBuilder getOrderOrBuilder();
+
+    /**
+     * <pre>
+     * Error, if any.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+     */
+    int getErrorValue();
+    /**
+     * <pre>
+     * Error, if any.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+     */
+    io.bloombox.schema.services.shop.v1.OrderError getError();
   }
   /**
    * Protobuf type {@code bloombox.schema.services.shop.v1.GetOrder.Response}
@@ -960,6 +977,7 @@ private static final long serialVersionUID = 0L;
     }
     private Response() {
       success_ = false;
+      error_ = 0;
     }
 
     @java.lang.Override
@@ -1009,6 +1027,12 @@ private static final long serialVersionUID = 0L;
                 order_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              error_ = rawValue;
               break;
             }
           }
@@ -1081,6 +1105,30 @@ private static final long serialVersionUID = 0L;
       return getOrder();
     }
 
+    public static final int ERROR_FIELD_NUMBER = 3;
+    private int error_;
+    /**
+     * <pre>
+     * Error, if any.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+     */
+    public int getErrorValue() {
+      return error_;
+    }
+    /**
+     * <pre>
+     * Error, if any.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+     */
+    public io.bloombox.schema.services.shop.v1.OrderError getError() {
+      io.bloombox.schema.services.shop.v1.OrderError result = io.bloombox.schema.services.shop.v1.OrderError.valueOf(error_);
+      return result == null ? io.bloombox.schema.services.shop.v1.OrderError.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1099,6 +1147,9 @@ private static final long serialVersionUID = 0L;
       if (order_ != null) {
         output.writeMessage(2, getOrder());
       }
+      if (error_ != io.bloombox.schema.services.shop.v1.OrderError.NO_ERROR.getNumber()) {
+        output.writeEnum(3, error_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1114,6 +1165,10 @@ private static final long serialVersionUID = 0L;
       if (order_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOrder());
+      }
+      if (error_ != io.bloombox.schema.services.shop.v1.OrderError.NO_ERROR.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, error_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1138,6 +1193,7 @@ private static final long serialVersionUID = 0L;
         result = result && getOrder()
             .equals(other.getOrder());
       }
+      result = result && error_ == other.error_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1156,6 +1212,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + ORDER_FIELD_NUMBER;
         hash = (53 * hash) + getOrder().hashCode();
       }
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + error_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1293,6 +1351,8 @@ private static final long serialVersionUID = 0L;
           order_ = null;
           orderBuilder_ = null;
         }
+        error_ = 0;
+
         return this;
       }
 
@@ -1321,6 +1381,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.order_ = orderBuilder_.build();
         }
+        result.error_ = error_;
         onBuilt();
         return result;
       }
@@ -1367,6 +1428,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasOrder()) {
           mergeOrder(other.getOrder());
+        }
+        if (other.error_ != 0) {
+          setErrorValue(other.getErrorValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1584,6 +1648,70 @@ private static final long serialVersionUID = 0L;
           order_ = null;
         }
         return orderBuilder_;
+      }
+
+      private int error_ = 0;
+      /**
+       * <pre>
+       * Error, if any.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+       */
+      public int getErrorValue() {
+        return error_;
+      }
+      /**
+       * <pre>
+       * Error, if any.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+       */
+      public Builder setErrorValue(int value) {
+        error_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Error, if any.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+       */
+      public io.bloombox.schema.services.shop.v1.OrderError getError() {
+        io.bloombox.schema.services.shop.v1.OrderError result = io.bloombox.schema.services.shop.v1.OrderError.valueOf(error_);
+        return result == null ? io.bloombox.schema.services.shop.v1.OrderError.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Error, if any.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+       */
+      public Builder setError(io.bloombox.schema.services.shop.v1.OrderError value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        error_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Error, if any.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.shop.v1.OrderError error = 3;</code>
+       */
+      public Builder clearError() {
+        
+        error_ = 0;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

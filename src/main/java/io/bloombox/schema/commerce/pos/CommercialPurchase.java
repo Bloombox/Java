@@ -5737,9 +5737,9 @@ public final class CommercialPurchase {
       "os.PurchaseEvent\0222\n\ncreated_at\030\n \001(\0132\036.o" +
       "pencannabis.temporal.Instant*?\n\016Purchase" +
       "Status\022\013\n\007DORMANT\020\000\022\010\n\004OPEN\020\001\022\n\n\006VOIDED\020" +
-      "\002\022\n\n\006CLOSED\020\003B<\n\037io.bloombox.schema.comm" +
-      "erce.posB\022CommercialPurchaseH\001P\000\370\001\001b\006pro" +
-      "to3"
+      "\002\022\n\n\006CLOSED\020\003B?\n\037io.bloombox.schema.comm" +
+      "erce.posB\022CommercialPurchaseH\001P\000\242\002\003BBSb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
