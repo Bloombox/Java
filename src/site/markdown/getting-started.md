@@ -145,3 +145,19 @@ Take a look at the API docs via Dokka to learn more.
 Setting the `enableLogging` property to `true` in your `Bloombox.Settings` object will enable a bunch of logging to
 stdout (by default), via the standard Java logging interface. If you install a default adapter via Log4j2 or another
 mechanism, it should work fine and begin receiving logs from the `Bloombox` object and it's child service objects.
+
+
+### Client Lifecycle
+
+Keep in mind that any services initialized via the Java client stay alive for the lifetime of the outer API client
+object. This is to say, connections and other resources are kept around while the `client` variable above is.
+
+It's best to use the client in a singleton pattern, and that exercise is left to the user and their application-level
+architecture. Inside Bloombox, the library is either loaded statically or injected via Guice/Dagger.
+
+#### Closing Down
+
+When you're ready to get rid of an API client, simply call `close()`. There are additional parameters to the method that
+enable soft shutdown, blocking/non-blocking shutdown, and an optional await timeout.
+
+The API client is also compatible with `Closeable` and `AutoCloseable`, so you can do stuff like this:
