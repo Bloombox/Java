@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Bloombox/Java.svg?branch=master)](https://travis-ci.org/Bloombox/Java) [![Maven Central](https://img.shields.io/maven-central/v/io.bloombox/java-client.svg)](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.bloombox%22%20AND%20a%3A%22java-client%22) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e76289cfda1c44deb7fed137f504e164)](https://www.codacy.com/app/bloombox/Java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Bloombox/Java&amp;utm_campaign=Badge_Grade) [![Test Coverage](https://api.codeclimate.com/v1/badges/97f47bd5c867f368414a/test_coverage)](https://codeclimate.com/github/Bloombox/Java/test_coverage)
 
-Latest Version: `1.0-rc7`
+Latest Version: `1.0`
 
 This Java project and resulting JAR provide Java clients API access to the [Bloombox](https://bloombox.io) platform.
 Bloombox APIs are built and served using [gRPC](https://grpc.io) and exposed in client libraries like this one with a
@@ -82,24 +82,71 @@ delivery ordering orchestration.
 
 #### Getting hours info
 
-Java:
+Each Bloombox digital storefront maintains a set of hours that the user can control. Using the *info()* method, an
+integrating system can check to see the current status of the storefront, according to those hours:
+
+###### Java
 ```java
   // with our client object, obtain shop info synchronously
   final ShopInfo.Response infoResponse = client.shop().info();
   if (infoResponse.getStatus() == ShopStatus.OPEN) System.out.println("The shop is OPEN.");
 ```
 
-Kotlin:
+###### Kotlin
 ```kotlin
   // with our client object, obtain shop info synchronously
-  val info = client.shop().info();
+  val info = client.shop().info()
   if (info.getStatus() == ShopStatus.OPEN) print("The shop is OPEN.")
 ```
+
+#### Enumerated shop statuses
+
+According to the current set of _regular hours_ (recurring hours rules that apply everyday, on weekdays, weekends, or
+specific days of the week), and _special hours_ (hours for specific dates, like _New Year's Day_ or _Thanksgiving_), a
+digital storefront may take on the following statuses:
+
+##### Shop statuses
+- `OPEN`: The storefront is open for any and all configured order types.
+- `DELIVERY_ONLY`: The storefront is currently open only for delivery orders.
+- `PICKUP_ONLY`: The storefront is currently open only for pickup orders.
+- `CLOSED`: The storefront is currently closed and not accepting orders of any type.
+
+When an order is submitted to a shop that is `CLOSED` (or a `PICKUP` order is submitted during `DELIVERY_ONLY`, or a
+`DELIVERY` order is submitted during `PICKUP_ONLY`), Bloombox will reject the order with an error.
 
 
 ### Telemetry API
 
-Demo code coming soon.
+Using the Telemetry system, developers can send telemetry event data to Bloombox. This allows events from in-house
+systems to be considered during event analysis. Developers can also send their own events for later ad-hoc querying
+using the *Generic Events* service:
+
+###### Java
+```java
+// make an event payload map...
+final HashMap<String, Value> eventMap = new HashMap<>();
+eventMap.put("some-key", Value.newBuilder().setStringValue("string-value").build());
+
+client.telemetry().event("[event-collection-name]", eventMap);
+```
+
+###### Kotlin
+```kotlin
+client.telemetry().event(
+   collection = "[event-collection-name]",
+   context = TelemetryClient.EventContext(
+         partner = "[partner-code]",
+         location = "[location-key]"),
+   payload = hashMapOf(
+         Pair("some-key", Value.newBuilder().setStringValue("string-value").build()),
+         Pair("subobject-key", Value.newBuilder().setStructValue(Struct.newBuilder()
+               .putFields("number-key", Value.newBuilder().setNumberValue(id).build())).build())))
+```
+
+
+### Menu API
+
+Docs coming soon.
 
 
 ### Tooling nodes

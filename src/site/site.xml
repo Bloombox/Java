@@ -22,8 +22,9 @@
             <item name="FAQ" href="faq.html" />
         </menu>
 
-        <menu name="Tools &amp; Services">
+        <menu name="Services">
             <item name="Shop API" href="services/shop.html"/>
+            <item name="Menu API" href="services/menu.html"/>
             <item name="Telemetry API" href="services/telemetry.html"/>
         </menu>
 

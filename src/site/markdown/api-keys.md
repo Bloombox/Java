@@ -33,13 +33,14 @@ If you _do_ choose to lock it down by API, **make sure** the following APIs are 
 and [JavaScript](https://bloombox.github.io/JS) libraries. All of the following services must be enabled:
 
 - [Shop API](https://console.cloud.google.com/apis/library/shop.api.bloombox.cloud)
+- [Menu API](https://console.cloud.google.com/apis/library/menu.api.bloombox.cloud)
 - [Telemetry API](https://console.cloud.google.com/apis/library/telemetry.api.bloombox.cloud) 
 
 
 ### Partner and Location
 
 The values `partner` and `location` are frequently referenced in the code and docs. These values describe your partner
-acocunt with Bloombox, and can be acquired via the [Bloombox Dashboard](https://manage.bloombox.io).
+account with Bloombox, and can be acquired via the [Bloombox Dashboard](https://manage.bloombox.io).
 
 Both are short strings. Your `partner` code identifies your organization, and the `location` code identifies which
 Bloombox location you wish to work with for whatever underlying API operation you're executing.

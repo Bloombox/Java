@@ -292,11 +292,32 @@ class TelemetryClient(override val host: String,
     }
   }
 
-  // -- API: Events -- //
+  /**
+   * Record a generic event. A "generic event" is any JSON-compatible payload, plus an "event collection," which is
+   * simply a string name.
+   */
+  fun event(collection: String,
+            payload: Map<String, Value>? = null) {
+    event(collection, null, null, payload, null)
+  }
+
   /**
    * Record a generic event. A "generic event" is any JSON-compatible payload, plus an "event collection," which is
    * simply a string name. Additionally, context may be sent along with an event about how and where the event was
    * recorded - i.e. native and browser-oriented device information, and so on.
+   */
+  fun event(collection: String,
+            payload: Map<String, Value>? = null,
+            context: EventContext? = null) {
+    event(collection, null, null, payload, context)
+  }
+
+  // -- API: Events -- //
+  /**
+   * Record a generic event. A "generic event" is any JSON-compatible payload, plus an "event collection," which is
+   * simply a string name. Additionally, context may be sent along with an event about how and where the event was
+   * recorded - i.e. native and browser-oriented device information, and so on. This variant allows the additional
+   * specification of an explicit event UUID and occurrence timestamp.
    */
   fun event(collection: String,
             uuid: String? = null,
