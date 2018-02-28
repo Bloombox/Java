@@ -5,6 +5,8 @@
         <version>1.6</version>
     </skin>
 
+    <url>https://bloombox.github.io/Java/</url>
+
     <bannerLeft>
         <name>Bloombox for Java</name>
         <src>https://storage.googleapis.com/bloom-static/branding/java/logo-bloombox-java.png</src>
@@ -13,6 +15,12 @@
 
     <publishDate position="right"/>
     <version position="right"/>
+
+    <googleSearch>
+        <sitesearch/>
+    </googleSearch>
+
+    <googleAnalyticsAccountId>UA-73412840-4</googleAnalyticsAccountId>
 
     <body>
         <menu name="Overview">
@@ -52,6 +60,7 @@
 
     <custom>
         <fluidoSkin>
+            <profile>pre-release</profile>
             <skipGenerationDate>true</skipGenerationDate>
             <breadcrumbDivider>»</breadcrumbDivider>
             <topBarEnabled>false</topBarEnabled>
