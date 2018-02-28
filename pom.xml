@@ -17,6 +17,10 @@
         <tag>HEAD</tag>
     </scm>
 
+    <prerequisites>
+        <maven>3.1.0</maven>
+    </prerequisites>
+
     <organization>
         <url>https://bloombox.io</url>
         <name>Bloombox</name>
@@ -89,22 +93,23 @@
         <junit.version>4.12</junit.version>
 
         <!-- Plugins -->
-        <maven.jar.version>3.0.2</maven.jar.version>
-        <maven.clean.version>2.6.1</maven.clean.version>
-        <maven.surefire.version>2.20</maven.surefire.version>
+        <maven.clean.version>3.0.0</maven.clean.version>
         <maven.compiler.version>3.7.0</maven.compiler.version>
-        <maven.jacoco.version>0.7.9</maven.jacoco.version>
-        <maven.shade.version>3.1.0</maven.shade.version>
-        <maven.source.version>3.0.1</maven.source.version>
-        <maven.dokka.version>0.9.16</maven.dokka.version>
-        <maven.site.version>3.6</maven.site.version>
+        <maven.jar.version>3.0.2</maven.jar.version>
+        <maven.javadoc.version>3.0.0</maven.javadoc.version>
         <maven.reports.version>2.9</maven.reports.version>
-        <maven.deploy.version>2.8.2</maven.deploy.version>
         <maven.release.version>2.5.3</maven.release.version>
-        <maven.github.version>0.9</maven.github.version>
-        <maven.gpg.version>1.4</maven.gpg.version>
-        <maven.javadoc.version>2.10.4</maven.javadoc.version>
-        <maven.nexus.version>1.6.7</maven.nexus.version>
+        <maven.resources.version>3.0.2</maven.resources.version>
+        <maven.install.version>2.5.2</maven.install.version>
+        <maven.shade.version>3.1.0</maven.shade.version>
+        <maven.site.version>3.7</maven.site.version>
+        <maven.source.version>3.0.1</maven.source.version>
+        <maven.surefire.version>2.20.1</maven.surefire.version>
+        <maven.jacoco.version>0.8.0</maven.jacoco.version>
+        <maven.dokka.version>0.9.16</maven.dokka.version>
+        <maven.deploy.version>2.8.2</maven.deploy.version>
+        <maven.gpg.version>1.6</maven.gpg.version>
+        <maven.nexus.version>1.6.8</maven.nexus.version>
         <maven.proguard.version>2.0.14</maven.proguard.version>
 
         <!-- Settings -->
@@ -127,7 +132,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.4</version>
+                        <version>${maven.gpg.version}</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -394,24 +399,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>${maven.github.version}</version>
-                <configuration>
-                    <message>Update site.</message>
-                    <project>bloombox/java</project>
-                    <server>github</server>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site-deploy</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>${maven.reports.version}</version>
@@ -420,6 +407,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven.deploy.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>${maven.install.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
