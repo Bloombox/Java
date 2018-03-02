@@ -76,7 +76,7 @@ to detect in advance.
 If the code change results in a test failure, we will make our best effort to
 correct the error. If a fix cannot be determined and committed within 24 hours
 of its discovery, the commit(s) responsible _may_ be reverted, at the
-discretion of the committer and Puppet maintainers. This action would be taken
+discretion of the committer and Bloombox staff. This action would be taken
 to help maintain passing states in our testing pipelines.
 
 The original contributor will be notified of the revert in the Jira ticket
