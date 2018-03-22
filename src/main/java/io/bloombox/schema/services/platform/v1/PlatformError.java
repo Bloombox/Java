@@ -45,6 +45,22 @@ public enum PlatformError
    * <code>SEARCH_NOT_AVAILABLE = 1;</code>
    */
   SEARCH_NOT_AVAILABLE(1),
+  /**
+   * <pre>
+   * The domain origin value was missing or invalid.
+   * </pre>
+   *
+   * <code>ORIGIN_INVALID = 2;</code>
+   */
+  ORIGIN_INVALID(2),
+  /**
+   * <pre>
+   * The specified domain or origin could not be resolved.
+   * </pre>
+   *
+   * <code>ORIGIN_NOT_FOUND = 3;</code>
+   */
+  ORIGIN_NOT_FOUND(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -64,6 +80,22 @@ public enum PlatformError
    * <code>SEARCH_NOT_AVAILABLE = 1;</code>
    */
   public static final int SEARCH_NOT_AVAILABLE_VALUE = 1;
+  /**
+   * <pre>
+   * The domain origin value was missing or invalid.
+   * </pre>
+   *
+   * <code>ORIGIN_INVALID = 2;</code>
+   */
+  public static final int ORIGIN_INVALID_VALUE = 2;
+  /**
+   * <pre>
+   * The specified domain or origin could not be resolved.
+   * </pre>
+   *
+   * <code>ORIGIN_NOT_FOUND = 3;</code>
+   */
+  public static final int ORIGIN_NOT_FOUND_VALUE = 3;
 
 
   public final int getNumber() {
@@ -86,6 +118,8 @@ public enum PlatformError
     switch (value) {
       case 0: return NO_ERROR;
       case 1: return SEARCH_NOT_AVAILABLE;
+      case 2: return ORIGIN_INVALID;
+      case 3: return ORIGIN_NOT_FOUND;
       default: return null;
     }
   }
