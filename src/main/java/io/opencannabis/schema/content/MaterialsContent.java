@@ -47,17 +47,19 @@ public final class MaterialsContent {
       "\n\033content/MaterialsData.proto\022\024opencanna" +
       "bis.content\032\022structs/Grow.proto\032\023structs" +
       "/Shelf.proto\032\025structs/Species.proto\032\026str" +
-      "ucts/Genetics.proto\032/products/distributi" +
-      "on/DistributionChannel.proto\"\221\002\n\rMateria" +
-      "lsData\022.\n\007species\030\001 \001(\0162\035.opencannabis.s" +
-      "tructs.Species\0220\n\010genetics\030\002 \001(\0132\036.openc" +
-      "annabis.structs.Genetics\022(\n\004grow\030\003 \001(\0162\032" +
-      ".opencannabis.structs.Grow\022*\n\005shelf\030\004 \001(" +
-      "\0162\033.opencannabis.structs.Shelf\022H\n\010channe" +
-      "ls\030\005 \003(\01326.opencannabis.products.distrib" +
-      "ution.DistributionPolicyB<\n\036io.opencanna" +
-      "bis.schema.contentB\020MaterialsContentH\001P\001" +
-      "\242\002\003OCSb\006proto3"
+      "ucts/Genetics.proto\032$structs/labtesting/" +
+      "TestResults.proto\032/products/distribution" +
+      "/DistributionChannel.proto\"\315\002\n\rMaterials" +
+      "Data\022.\n\007species\030\001 \001(\0162\035.opencannabis.str" +
+      "ucts.Species\0220\n\010genetics\030\002 \001(\0132\036.opencan" +
+      "nabis.structs.Genetics\022(\n\004grow\030\003 \001(\0162\032.o" +
+      "pencannabis.structs.Grow\022*\n\005shelf\030\004 \001(\0162" +
+      "\033.opencannabis.structs.Shelf\022G\n\007channel\030" +
+      "\005 \003(\01326.opencannabis.products.distributi" +
+      "on.DistributionPolicy\022;\n\005tests\030\006 \001(\0132,.o" +
+      "pencannabis.structs.labtesting.TestResul" +
+      "tsB<\n\036io.opencannabis.schema.contentB\020Ma" +
+      "terialsContentH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -74,6 +76,7 @@ public final class MaterialsContent {
           io.opencannabis.schema.product.struct.MaterialShelf.getDescriptor(),
           io.opencannabis.schema.product.struct.MaterialSpecies.getDescriptor(),
           io.opencannabis.schema.product.struct.GeneticsStructs.getDescriptor(),
+          io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor(),
           io.opencannabis.schema.product.DistributionChannel.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_content_MaterialsData_descriptor =
@@ -81,11 +84,12 @@ public final class MaterialsContent {
     internal_static_opencannabis_content_MaterialsData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_content_MaterialsData_descriptor,
-        new java.lang.String[] { "Species", "Genetics", "Grow", "Shelf", "Channels", });
+        new java.lang.String[] { "Species", "Genetics", "Grow", "Shelf", "Channel", "Tests", });
     io.opencannabis.schema.product.struct.MaterialGrow.getDescriptor();
     io.opencannabis.schema.product.struct.MaterialShelf.getDescriptor();
     io.opencannabis.schema.product.struct.MaterialSpecies.getDescriptor();
     io.opencannabis.schema.product.struct.GeneticsStructs.getDescriptor();
+    io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor();
     io.opencannabis.schema.product.DistributionChannel.getDescriptor();
   }
 

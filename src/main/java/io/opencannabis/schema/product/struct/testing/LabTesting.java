@@ -36,6 +36,11 @@ public final class LabTesting {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_opencannabis_structs_labtesting_TestResults_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_opencannabis_structs_labtesting_TestCoordinates_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_opencannabis_structs_labtesting_TestCoordinates_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_opencannabis_structs_labtesting_Cannabinoids_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -87,78 +92,84 @@ public final class LabTesting {
       "\n$structs/labtesting/TestResults.proto\022\037" +
       "opencannabis.structs.labtesting\032\025content" +
       "/Content.proto\032\026temporal/Instant.proto\032\"" +
-      "structs/labtesting/TestValue.proto\"\215\004\n\013T" +
+      "structs/labtesting/TestValue.proto\"\300\005\n\013T" +
       "estResults\022\021\n\tavailable\030\001 \001(\010\0229\n\005media\030\002" +
       " \003(\0132*.opencannabis.structs.labtesting.T" +
       "estMedia\0224\n\014last_updated\030\003 \001(\0132\036.opencan" +
-      "nabis.temporal.Instant\022C\n\014cannabinoids\030\036" +
-      " \001(\0132-.opencannabis.structs.labtesting.C" +
-      "annabinoids\022;\n\010terpenes\030\037 \001(\0132).opencann" +
-      "abis.structs.labtesting.Terpenes\022?\n\npest" +
-      "icides\030  \001(\0132+.opencannabis.structs.labt" +
-      "esting.Pesticides\022;\n\010moisture\030! \001(\0132).op" +
-      "encannabis.structs.labtesting.Moisture\0229" +
-      "\n\005aroma\030\" \003(\0162*.opencannabis.structs.lab" +
-      "testing.TasteNote\022?\n\nsubjective\030# \001(\0132+." +
-      "opencannabis.structs.labtesting.Subjecti" +
-      "ve\"\230\003\n\014Cannabinoids\0227\n\003thc\030\001 \001(\0132*.openc" +
-      "annabis.structs.labtesting.TestValue\0227\n\003" +
-      "cbd\030\002 \001(\0132*.opencannabis.structs.labtest" +
-      "ing.TestValue\022E\n\007results\030\003 \003(\01324.opencan" +
-      "nabis.structs.labtesting.Cannabinoids.Re" +
-      "sult\032\316\001\n\006Result\022A\n\013cannabinoid\030\001 \001(\0162,.o" +
-      "pencannabis.structs.labtesting.Cannabino" +
-      "id\022@\n\005ratio\030\002 \001(\01621.opencannabis.structs" +
-      ".labtesting.CannabinoidRatio\022?\n\013measurem" +
-      "ent\030\003 \001(\0132*.opencannabis.structs.labtest" +
-      "ing.TestValue\"\264\002\n\nSubjective\0222\n\013descript" +
-      "ion\030\001 \001(\0132\035.opencannabis.content.Content" +
-      "\022,\n\005taste\030\002 \001(\0132\035.opencannabis.content.C" +
-      "ontent\022A\n\007potency\030\003 \001(\01620.opencannabis.s" +
-      "tructs.labtesting.PotencyEstimate\022>\n\014fee" +
-      "ling_tags\030\004 \003(\0162(.opencannabis.structs.l" +
-      "abtesting.Feeling\022A\n\rtasting_notes\030\005 \003(\016" +
-      "2*.opencannabis.structs.labtesting.Taste" +
-      "Note\"\350\001\n\010Terpenes\022\021\n\tavailable\030\001 \001(\010\022B\n\010" +
-      "terpenes\030\n \003(\01320.opencannabis.structs.la" +
-      "btesting.Terpenes.Result\032\204\001\n\006Result\0229\n\007t" +
-      "erpene\030\001 \001(\0162(.opencannabis.structs.labt" +
-      "esting.Terpene\022?\n\013measurement\030\002 \001(\0132*.op" +
-      "encannabis.structs.labtesting.TestValue\"" +
-      "\332\001\n\nPesticides\022\026\n\016pesticide_free\030\001 \001(\010\022S" +
-      "\n\014measurements\030\002 \003(\0132=.opencannabis.stru" +
-      "cts.labtesting.Pesticides.MeasurementsEn" +
-      "try\032_\n\021MeasurementsEntry\022\013\n\003key\030\001 \001(\t\0229\n" +
-      "\005value\030\002 \001(\0132*.opencannabis.structs.labt" +
-      "esting.TestValue:\0028\001\"K\n\010Moisture\022?\n\013meas" +
-      "urement\030\001 \001(\0132*.opencannabis.structs.lab" +
-      "testing.TestValue*\221\001\n\013Cannabinoid\022\007\n\003THC" +
-      "\020\000\022\t\n\005THC_A\020\001\022\t\n\005THC_V\020\002\022\007\n\003CBD\020\n\022\t\n\005CBD" +
-      "_A\020\013\022\t\n\005CBD_V\020\014\022\n\n\006CBD_VA\020\r\022\007\n\003CBC\020\024\022\007\n\003" +
-      "CBG\020\036\022\t\n\005CBG_A\020\037\022\007\n\003CBN\020(\022\007\n\003CBV\0202\022\t\n\005CB" +
-      "V_A\0203*|\n\020CannabinoidRatio\022\035\n\031NO_CANNABIN" +
-      "OID_PREFERENCE\020\000\022\014\n\010THC_ONLY\020\001\022\020\n\014THC_OV" +
-      "ER_CBD\020\002\022\t\n\005EQUAL\020\003\022\020\n\014CBD_OVER_THC\020\004\022\014\n" +
-      "\010CBD_ONLY\020\005*\177\n\007Feeling\022\031\n\025NO_FEELING_PRE" +
-      "FERENCE\020\000\022\r\n\tGROUNDING\020\001\022\t\n\005SLEEP\020\002\022\013\n\007C" +
-      "ALMING\020\003\022\017\n\013STIMULATING\020\004\022\t\n\005FUNNY\020\005\022\t\n\005" +
-      "FOCUS\020\006\022\013\n\007PASSION\020\007*\237\001\n\tTasteNote\022\027\n\023NO" +
-      "_TASTE_PREFERENCE\020\000\022\t\n\005SWEET\020\001\022\010\n\004SOUR\020\002" +
-      "\022\t\n\005SPICE\020\003\022\n\n\006SMOOTH\020\004\022\n\n\006CITRUS\020\005\022\010\n\004P" +
-      "INE\020\006\022\t\n\005FRUIT\020\007\022\013\n\007TROPICS\020\010\022\n\n\006FLORAL\020" +
-      "\t\022\010\n\004HERB\020\n\022\t\n\005EARTH\020\013*>\n\017PotencyEstimat" +
-      "e\022\t\n\005LIGHT\020\000\022\n\n\006MEDIUM\020\001\022\t\n\005HEAVY\020\002\022\t\n\005S" +
-      "UPER\020\003*\336\002\n\007Terpene\022\014\n\010CAMPHENE\020\000\022\n\n\006CARE" +
-      "NE\020\001\022\026\n\022BETA_CARYOPHYLLENE\020\002\022\027\n\023CARYOPHY" +
-      "LLENE_OXIDE\020\003\022\016\n\nEUCALYPTOL\020\004\022\013\n\007FENCHOL" +
-      "\020\005\022\022\n\016ALPHA_HUMULENE\020\006\022\014\n\010LIMONENE\020\007\022\014\n\010" +
-      "LINALOOL\020\010\022\013\n\007MYRCENE\020\t\022\021\n\rALPHA_OCIMENE" +
-      "\020\n\022\020\n\014BETA_OCIMENE\020\013\022\026\n\022ALPHA_PHELLANDRE" +
-      "NE\020\014\022\020\n\014ALPHA_PINENE\020\r\022\017\n\013BETA_PINENE\020\016\022" +
-      "\023\n\017ALPHA_TERPINEOL\020\017\022\023\n\017ALPHA_TERPININE\020" +
-      "\020\022\023\n\017GAMMA_TERPININE\020\021\022\017\n\013TERPINOLENE\020\022B" +
-      "E\n-io.opencannabis.schema.product.struct" +
-      ".testingB\nLabTestingH\001P\001\242\002\003OCSb\006proto3"
+      "nabis.temporal.Instant\022.\n\006sealed\030\004 \001(\0132\036" +
+      ".opencannabis.temporal.Instant\022E\n\013coordi" +
+      "nates\030\005 \001(\01320.opencannabis.structs.labte" +
+      "sting.TestCoordinates\022C\n\014cannabinoids\030\036 " +
+      "\001(\0132-.opencannabis.structs.labtesting.Ca" +
+      "nnabinoids\022;\n\010terpenes\030\037 \001(\0132).opencanna" +
+      "bis.structs.labtesting.Terpenes\022?\n\npesti" +
+      "cides\030  \001(\0132+.opencannabis.structs.labte" +
+      "sting.Pesticides\022;\n\010moisture\030! \001(\0132).ope" +
+      "ncannabis.structs.labtesting.Moisture\022?\n" +
+      "\nsubjective\030\" \001(\0132+.opencannabis.structs" +
+      ".labtesting.Subjective\0229\n\005aroma\030# \003(\0162*." +
+      "opencannabis.structs.labtesting.TasteNot" +
+      "e\022:\n\004data\030$ \003(\0132,.opencannabis.structs.l" +
+      "abtesting.TestResults\".\n\017TestCoordinates" +
+      "\022\014\n\004zone\030\001 \001(\t\022\r\n\005group\030\002 \001(\t\"\230\003\n\014Cannab" +
+      "inoids\0227\n\003thc\030\001 \001(\0132*.opencannabis.struc" +
+      "ts.labtesting.TestValue\0227\n\003cbd\030\002 \001(\0132*.o" +
+      "pencannabis.structs.labtesting.TestValue" +
+      "\022E\n\007results\030\003 \003(\01324.opencannabis.structs" +
+      ".labtesting.Cannabinoids.Result\032\316\001\n\006Resu" +
+      "lt\022A\n\013cannabinoid\030\001 \001(\0162,.opencannabis.s" +
+      "tructs.labtesting.Cannabinoid\022@\n\005ratio\030\002" +
+      " \001(\01621.opencannabis.structs.labtesting.C" +
+      "annabinoidRatio\022?\n\013measurement\030\003 \001(\0132*.o" +
+      "pencannabis.structs.labtesting.TestValue" +
+      "\"\264\002\n\nSubjective\0222\n\013description\030\001 \001(\0132\035.o" +
+      "pencannabis.content.Content\022,\n\005taste\030\002 \001" +
+      "(\0132\035.opencannabis.content.Content\022A\n\007pot" +
+      "ency\030\003 \001(\01620.opencannabis.structs.labtes" +
+      "ting.PotencyEstimate\022>\n\014feeling_tags\030\004 \003" +
+      "(\0162(.opencannabis.structs.labtesting.Fee" +
+      "ling\022A\n\rtasting_notes\030\005 \003(\0162*.opencannab" +
+      "is.structs.labtesting.TasteNote\"\350\001\n\010Terp" +
+      "enes\022\021\n\tavailable\030\001 \001(\010\022B\n\010terpenes\030\n \003(" +
+      "\01320.opencannabis.structs.labtesting.Terp" +
+      "enes.Result\032\204\001\n\006Result\0229\n\007terpene\030\001 \001(\0162" +
+      "(.opencannabis.structs.labtesting.Terpen" +
+      "e\022?\n\013measurement\030\002 \001(\0132*.opencannabis.st" +
+      "ructs.labtesting.TestValue\"\332\001\n\nPesticide" +
+      "s\022\026\n\016pesticide_free\030\001 \001(\010\022S\n\014measurement" +
+      "s\030\002 \003(\0132=.opencannabis.structs.labtestin" +
+      "g.Pesticides.MeasurementsEntry\032_\n\021Measur" +
+      "ementsEntry\022\013\n\003key\030\001 \001(\t\0229\n\005value\030\002 \001(\0132" +
+      "*.opencannabis.structs.labtesting.TestVa" +
+      "lue:\0028\001\"K\n\010Moisture\022?\n\013measurement\030\001 \001(\013" +
+      "2*.opencannabis.structs.labtesting.TestV" +
+      "alue*\221\001\n\013Cannabinoid\022\007\n\003THC\020\000\022\t\n\005THC_A\020\001" +
+      "\022\t\n\005THC_V\020\002\022\007\n\003CBD\020\n\022\t\n\005CBD_A\020\013\022\t\n\005CBD_V" +
+      "\020\014\022\n\n\006CBD_VA\020\r\022\007\n\003CBC\020\024\022\007\n\003CBG\020\036\022\t\n\005CBG_" +
+      "A\020\037\022\007\n\003CBN\020(\022\007\n\003CBV\0202\022\t\n\005CBV_A\0203*|\n\020Cann" +
+      "abinoidRatio\022\035\n\031NO_CANNABINOID_PREFERENC" +
+      "E\020\000\022\014\n\010THC_ONLY\020\001\022\020\n\014THC_OVER_CBD\020\002\022\t\n\005E" +
+      "QUAL\020\003\022\020\n\014CBD_OVER_THC\020\004\022\014\n\010CBD_ONLY\020\005*\177" +
+      "\n\007Feeling\022\031\n\025NO_FEELING_PREFERENCE\020\000\022\r\n\t" +
+      "GROUNDING\020\001\022\t\n\005SLEEP\020\002\022\013\n\007CALMING\020\003\022\017\n\013S" +
+      "TIMULATING\020\004\022\t\n\005FUNNY\020\005\022\t\n\005FOCUS\020\006\022\013\n\007PA" +
+      "SSION\020\007*\237\001\n\tTasteNote\022\027\n\023NO_TASTE_PREFER" +
+      "ENCE\020\000\022\t\n\005SWEET\020\001\022\010\n\004SOUR\020\002\022\t\n\005SPICE\020\003\022\n" +
+      "\n\006SMOOTH\020\004\022\n\n\006CITRUS\020\005\022\010\n\004PINE\020\006\022\t\n\005FRUI" +
+      "T\020\007\022\013\n\007TROPICS\020\010\022\n\n\006FLORAL\020\t\022\010\n\004HERB\020\n\022\t" +
+      "\n\005EARTH\020\013*>\n\017PotencyEstimate\022\t\n\005LIGHT\020\000\022" +
+      "\n\n\006MEDIUM\020\001\022\t\n\005HEAVY\020\002\022\t\n\005SUPER\020\003*\336\002\n\007Te" +
+      "rpene\022\014\n\010CAMPHENE\020\000\022\n\n\006CARENE\020\001\022\026\n\022BETA_" +
+      "CARYOPHYLLENE\020\002\022\027\n\023CARYOPHYLLENE_OXIDE\020\003" +
+      "\022\016\n\nEUCALYPTOL\020\004\022\013\n\007FENCHOL\020\005\022\022\n\016ALPHA_H" +
+      "UMULENE\020\006\022\014\n\010LIMONENE\020\007\022\014\n\010LINALOOL\020\010\022\013\n" +
+      "\007MYRCENE\020\t\022\021\n\rALPHA_OCIMENE\020\n\022\020\n\014BETA_OC" +
+      "IMENE\020\013\022\026\n\022ALPHA_PHELLANDRENE\020\014\022\020\n\014ALPHA" +
+      "_PINENE\020\r\022\017\n\013BETA_PINENE\020\016\022\023\n\017ALPHA_TERP" +
+      "INEOL\020\017\022\023\n\017ALPHA_TERPININE\020\020\022\023\n\017GAMMA_TE" +
+      "RPININE\020\021\022\017\n\013TERPINOLENE\020\022BE\n-io.opencan" +
+      "nabis.schema.product.struct.testingB\nLab" +
+      "TestingH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -180,9 +191,15 @@ public final class LabTesting {
     internal_static_opencannabis_structs_labtesting_TestResults_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_structs_labtesting_TestResults_descriptor,
-        new java.lang.String[] { "Available", "Media", "LastUpdated", "Cannabinoids", "Terpenes", "Pesticides", "Moisture", "Aroma", "Subjective", });
-    internal_static_opencannabis_structs_labtesting_Cannabinoids_descriptor =
+        new java.lang.String[] { "Available", "Media", "LastUpdated", "Sealed", "Coordinates", "Cannabinoids", "Terpenes", "Pesticides", "Moisture", "Subjective", "Aroma", "Data", });
+    internal_static_opencannabis_structs_labtesting_TestCoordinates_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_opencannabis_structs_labtesting_TestCoordinates_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_opencannabis_structs_labtesting_TestCoordinates_descriptor,
+        new java.lang.String[] { "Zone", "Group", });
+    internal_static_opencannabis_structs_labtesting_Cannabinoids_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_opencannabis_structs_labtesting_Cannabinoids_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_structs_labtesting_Cannabinoids_descriptor,
@@ -194,13 +211,13 @@ public final class LabTesting {
         internal_static_opencannabis_structs_labtesting_Cannabinoids_Result_descriptor,
         new java.lang.String[] { "Cannabinoid", "Ratio", "Measurement", });
     internal_static_opencannabis_structs_labtesting_Subjective_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_opencannabis_structs_labtesting_Subjective_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_structs_labtesting_Subjective_descriptor,
         new java.lang.String[] { "Description", "Taste", "Potency", "FeelingTags", "TastingNotes", });
     internal_static_opencannabis_structs_labtesting_Terpenes_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_opencannabis_structs_labtesting_Terpenes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_structs_labtesting_Terpenes_descriptor,
@@ -212,7 +229,7 @@ public final class LabTesting {
         internal_static_opencannabis_structs_labtesting_Terpenes_Result_descriptor,
         new java.lang.String[] { "Terpene", "Measurement", });
     internal_static_opencannabis_structs_labtesting_Pesticides_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_opencannabis_structs_labtesting_Pesticides_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_structs_labtesting_Pesticides_descriptor,
@@ -224,7 +241,7 @@ public final class LabTesting {
         internal_static_opencannabis_structs_labtesting_Pesticides_MeasurementsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_opencannabis_structs_labtesting_Moisture_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_opencannabis_structs_labtesting_Moisture_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_structs_labtesting_Moisture_descriptor,

@@ -21,7 +21,8 @@ package io.opencannabis.schema.product.struct.testing;
 
 /**
  * <pre>
- * -- Testing: Full Protocol
+ * Lab testing results for a given product. Includes cannabinoid, terpene, pesticide, moisture, and subjective testing
+ * properties. Only cannabinoid testing is considered required.
  * </pre>
  *
  * Protobuf type {@code opencannabis.structs.labtesting.TestResults}
@@ -39,6 +40,7 @@ private static final long serialVersionUID = 0L;
     available_ = false;
     media_ = java.util.Collections.emptyList();
     aroma_ = java.util.Collections.emptyList();
+    data_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -99,6 +101,32 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 34: {
+            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+            if (sealed_ != null) {
+              subBuilder = sealed_.toBuilder();
+            }
+            sealed_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(sealed_);
+              sealed_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            io.opencannabis.schema.product.struct.testing.TestCoordinates.Builder subBuilder = null;
+            if (coordinates_ != null) {
+              subBuilder = coordinates_.toBuilder();
+            }
+            coordinates_ = input.readMessage(io.opencannabis.schema.product.struct.testing.TestCoordinates.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(coordinates_);
+              coordinates_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 242: {
             io.opencannabis.schema.product.struct.testing.Cannabinoids.Builder subBuilder = null;
             if (cannabinoids_ != null) {
@@ -151,30 +179,7 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 272: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
-              aroma_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000080;
-            }
-            aroma_.add(rawValue);
-            break;
-          }
           case 274: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
-                aroma_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000080;
-              }
-              aroma_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 282: {
             io.opencannabis.schema.product.struct.testing.Subjective.Builder subBuilder = null;
             if (subjective_ != null) {
               subBuilder = subjective_.toBuilder();
@@ -185,6 +190,38 @@ private static final long serialVersionUID = 0L;
               subjective_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 280: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              aroma_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000400;
+            }
+            aroma_.add(rawValue);
+            break;
+          }
+          case 282: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                aroma_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              aroma_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 290: {
+            if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              data_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.TestResults>();
+              mutable_bitField0_ |= 0x00000800;
+            }
+            data_.add(
+                input.readMessage(io.opencannabis.schema.product.struct.testing.TestResults.parser(), extensionRegistry));
             break;
           }
         }
@@ -198,8 +235,11 @@ private static final long serialVersionUID = 0L;
       if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         media_ = java.util.Collections.unmodifiableList(media_);
       }
-      if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
         aroma_ = java.util.Collections.unmodifiableList(aroma_);
+      }
+      if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        data_ = java.util.Collections.unmodifiableList(data_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -221,6 +261,10 @@ private static final long serialVersionUID = 0L;
   public static final int AVAILABLE_FIELD_NUMBER = 1;
   private boolean available_;
   /**
+   * <pre>
+   * Boolean flag indicating whether results are available for lab testing at all.
+   * </pre>
+   *
    * <code>bool available = 1;</code>
    */
   public boolean getAvailable() {
@@ -230,12 +274,22 @@ private static final long serialVersionUID = 0L;
   public static final int MEDIA_FIELD_NUMBER = 2;
   private java.util.List<io.opencannabis.schema.product.struct.testing.TestMedia> media_;
   /**
+   * <pre>
+   * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+   * specifying test results, and so on.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
    */
   public java.util.List<io.opencannabis.schema.product.struct.testing.TestMedia> getMediaList() {
     return media_;
   }
   /**
+   * <pre>
+   * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+   * specifying test results, and so on.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
    */
   public java.util.List<? extends io.opencannabis.schema.product.struct.testing.TestMediaOrBuilder> 
@@ -243,18 +297,33 @@ private static final long serialVersionUID = 0L;
     return media_;
   }
   /**
+   * <pre>
+   * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+   * specifying test results, and so on.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
    */
   public int getMediaCount() {
     return media_.size();
   }
   /**
+   * <pre>
+   * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+   * specifying test results, and so on.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestMedia getMedia(int index) {
     return media_.get(index);
   }
   /**
+   * <pre>
+   * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+   * specifying test results, and so on.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestMediaOrBuilder getMediaOrBuilder(
@@ -265,29 +334,114 @@ private static final long serialVersionUID = 0L;
   public static final int LAST_UPDATED_FIELD_NUMBER = 3;
   private io.opencannabis.schema.temporal.Instant lastUpdated_;
   /**
+   * <pre>
+   * Last-updated value for these lab test results. Updated each time the record is updated.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
    */
   public boolean hasLastUpdated() {
     return lastUpdated_ != null;
   }
   /**
+   * <pre>
+   * Last-updated value for these lab test results. Updated each time the record is updated.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
    */
   public io.opencannabis.schema.temporal.Instant getLastUpdated() {
     return lastUpdated_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : lastUpdated_;
   }
   /**
+   * <pre>
+   * Last-updated value for these lab test results. Updated each time the record is updated.
+   * </pre>
+   *
    * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
    */
   public io.opencannabis.schema.temporal.InstantOrBuilder getLastUpdatedOrBuilder() {
     return getLastUpdated();
   }
 
+  public static final int SEALED_FIELD_NUMBER = 4;
+  private io.opencannabis.schema.temporal.Instant sealed_;
+  /**
+   * <pre>
+   * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+   * test results (unique by their coordinates) is considered immutable.
+   * </pre>
+   *
+   * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+   */
+  public boolean hasSealed() {
+    return sealed_ != null;
+  }
+  /**
+   * <pre>
+   * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+   * test results (unique by their coordinates) is considered immutable.
+   * </pre>
+   *
+   * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+   */
+  public io.opencannabis.schema.temporal.Instant getSealed() {
+    return sealed_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : sealed_;
+  }
+  /**
+   * <pre>
+   * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+   * test results (unique by their coordinates) is considered immutable.
+   * </pre>
+   *
+   * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+   */
+  public io.opencannabis.schema.temporal.InstantOrBuilder getSealedOrBuilder() {
+    return getSealed();
+  }
+
+  public static final int COORDINATES_FIELD_NUMBER = 5;
+  private io.opencannabis.schema.product.struct.testing.TestCoordinates coordinates_;
+  /**
+   * <pre>
+   * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+   * indicates the coordinates for the active set of test results.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+   */
+  public boolean hasCoordinates() {
+    return coordinates_ != null;
+  }
+  /**
+   * <pre>
+   * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+   * indicates the coordinates for the active set of test results.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TestCoordinates getCoordinates() {
+    return coordinates_ == null ? io.opencannabis.schema.product.struct.testing.TestCoordinates.getDefaultInstance() : coordinates_;
+  }
+  /**
+   * <pre>
+   * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+   * indicates the coordinates for the active set of test results.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TestCoordinatesOrBuilder getCoordinatesOrBuilder() {
+    return getCoordinates();
+  }
+
   public static final int CANNABINOIDS_FIELD_NUMBER = 30;
   private io.opencannabis.schema.product.struct.testing.Cannabinoids cannabinoids_;
   /**
    * <pre>
-   * --- Testing Extensions
+   * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+   * compounds.
    * </pre>
    *
    * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -297,7 +451,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * --- Testing Extensions
+   * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+   * compounds.
    * </pre>
    *
    * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -307,7 +462,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * --- Testing Extensions
+   * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+   * compounds.
    * </pre>
    *
    * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -319,18 +475,30 @@ private static final long serialVersionUID = 0L;
   public static final int TERPENES_FIELD_NUMBER = 31;
   private io.opencannabis.schema.product.struct.testing.Terpenes terpenes_;
   /**
+   * <pre>
+   * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
    */
   public boolean hasTerpenes() {
     return terpenes_ != null;
   }
   /**
+   * <pre>
+   * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
    */
   public io.opencannabis.schema.product.struct.testing.Terpenes getTerpenes() {
     return terpenes_ == null ? io.opencannabis.schema.product.struct.testing.Terpenes.getDefaultInstance() : terpenes_;
   }
   /**
+   * <pre>
+   * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TerpenesOrBuilder getTerpenesOrBuilder() {
@@ -340,18 +508,30 @@ private static final long serialVersionUID = 0L;
   public static final int PESTICIDES_FIELD_NUMBER = 32;
   private io.opencannabis.schema.product.struct.testing.Pesticides pesticides_;
   /**
+   * <pre>
+   * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
    */
   public boolean hasPesticides() {
     return pesticides_ != null;
   }
   /**
+   * <pre>
+   * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
    */
   public io.opencannabis.schema.product.struct.testing.Pesticides getPesticides() {
     return pesticides_ == null ? io.opencannabis.schema.product.struct.testing.Pesticides.getDefaultInstance() : pesticides_;
   }
   /**
+   * <pre>
+   * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
    */
   public io.opencannabis.schema.product.struct.testing.PesticidesOrBuilder getPesticidesOrBuilder() {
@@ -361,25 +541,70 @@ private static final long serialVersionUID = 0L;
   public static final int MOISTURE_FIELD_NUMBER = 33;
   private io.opencannabis.schema.product.struct.testing.Moisture moisture_;
   /**
+   * <pre>
+   * Moisture rating and test results.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
    */
   public boolean hasMoisture() {
     return moisture_ != null;
   }
   /**
+   * <pre>
+   * Moisture rating and test results.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
    */
   public io.opencannabis.schema.product.struct.testing.Moisture getMoisture() {
     return moisture_ == null ? io.opencannabis.schema.product.struct.testing.Moisture.getDefaultInstance() : moisture_;
   }
   /**
+   * <pre>
+   * Moisture rating and test results.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
    */
   public io.opencannabis.schema.product.struct.testing.MoistureOrBuilder getMoistureOrBuilder() {
     return getMoisture();
   }
 
-  public static final int AROMA_FIELD_NUMBER = 34;
+  public static final int SUBJECTIVE_FIELD_NUMBER = 34;
+  private io.opencannabis.schema.product.struct.testing.Subjective subjective_;
+  /**
+   * <pre>
+   * Results from subjective testing - i.e, opinionated human evaluation.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
+   */
+  public boolean hasSubjective() {
+    return subjective_ != null;
+  }
+  /**
+   * <pre>
+   * Results from subjective testing - i.e, opinionated human evaluation.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.Subjective getSubjective() {
+    return subjective_ == null ? io.opencannabis.schema.product.struct.testing.Subjective.getDefaultInstance() : subjective_;
+  }
+  /**
+   * <pre>
+   * Results from subjective testing - i.e, opinionated human evaluation.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.SubjectiveOrBuilder getSubjectiveOrBuilder() {
+    return getSubjective();
+  }
+
+  public static final int AROMA_FIELD_NUMBER = 35;
   private java.util.List<java.lang.Integer> aroma_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote> aroma_converter_ =
@@ -391,58 +616,117 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
+   * <pre>
+   * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+   * available.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
    */
   public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getAromaList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(aroma_, aroma_converter_);
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
+   * <pre>
+   * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+   * available.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
    */
   public int getAromaCount() {
     return aroma_.size();
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
+   * <pre>
+   * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+   * available.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TasteNote getAroma(int index) {
     return aroma_converter_.convert(aroma_.get(index));
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
+   * <pre>
+   * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+   * available.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
    */
   public java.util.List<java.lang.Integer>
   getAromaValueList() {
     return aroma_;
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
+   * <pre>
+   * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+   * available.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
    */
   public int getAromaValue(int index) {
     return aroma_.get(index);
   }
   private int aromaMemoizedSerializedSize;
 
-  public static final int SUBJECTIVE_FIELD_NUMBER = 35;
-  private io.opencannabis.schema.product.struct.testing.Subjective subjective_;
+  public static final int DATA_FIELD_NUMBER = 36;
+  private java.util.List<io.opencannabis.schema.product.struct.testing.TestResults> data_;
   /**
-   * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+   * <pre>
+   * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
    */
-  public boolean hasSubjective() {
-    return subjective_ != null;
+  public java.util.List<io.opencannabis.schema.product.struct.testing.TestResults> getDataList() {
+    return data_;
   }
   /**
-   * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+   * <pre>
+   * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.Subjective getSubjective() {
-    return subjective_ == null ? io.opencannabis.schema.product.struct.testing.Subjective.getDefaultInstance() : subjective_;
+  public java.util.List<? extends io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> 
+      getDataOrBuilderList() {
+    return data_;
   }
   /**
-   * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+   * <pre>
+   * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.SubjectiveOrBuilder getSubjectiveOrBuilder() {
-    return getSubjective();
+  public int getDataCount() {
+    return data_.size();
+  }
+  /**
+   * <pre>
+   * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TestResults getData(int index) {
+    return data_.get(index);
+  }
+  /**
+   * <pre>
+   * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getDataOrBuilder(
+      int index) {
+    return data_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -467,6 +751,12 @@ private static final long serialVersionUID = 0L;
     if (lastUpdated_ != null) {
       output.writeMessage(3, getLastUpdated());
     }
+    if (sealed_ != null) {
+      output.writeMessage(4, getSealed());
+    }
+    if (coordinates_ != null) {
+      output.writeMessage(5, getCoordinates());
+    }
     if (cannabinoids_ != null) {
       output.writeMessage(30, getCannabinoids());
     }
@@ -479,15 +769,18 @@ private static final long serialVersionUID = 0L;
     if (moisture_ != null) {
       output.writeMessage(33, getMoisture());
     }
+    if (subjective_ != null) {
+      output.writeMessage(34, getSubjective());
+    }
     if (getAromaList().size() > 0) {
-      output.writeUInt32NoTag(274);
+      output.writeUInt32NoTag(282);
       output.writeUInt32NoTag(aromaMemoizedSerializedSize);
     }
     for (int i = 0; i < aroma_.size(); i++) {
       output.writeEnumNoTag(aroma_.get(i));
     }
-    if (subjective_ != null) {
-      output.writeMessage(35, getSubjective());
+    for (int i = 0; i < data_.size(); i++) {
+      output.writeMessage(36, data_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -509,6 +802,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLastUpdated());
     }
+    if (sealed_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getSealed());
+    }
+    if (coordinates_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getCoordinates());
+    }
     if (cannabinoids_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(30, getCannabinoids());
@@ -525,6 +826,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(33, getMoisture());
     }
+    if (subjective_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, getSubjective());
+    }
     {
       int dataSize = 0;
       for (int i = 0; i < aroma_.size(); i++) {
@@ -537,9 +842,9 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }aromaMemoizedSerializedSize = dataSize;
     }
-    if (subjective_ != null) {
+    for (int i = 0; i < data_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(35, getSubjective());
+        .computeMessageSize(36, data_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -566,6 +871,16 @@ private static final long serialVersionUID = 0L;
       result = result && getLastUpdated()
           .equals(other.getLastUpdated());
     }
+    result = result && (hasSealed() == other.hasSealed());
+    if (hasSealed()) {
+      result = result && getSealed()
+          .equals(other.getSealed());
+    }
+    result = result && (hasCoordinates() == other.hasCoordinates());
+    if (hasCoordinates()) {
+      result = result && getCoordinates()
+          .equals(other.getCoordinates());
+    }
     result = result && (hasCannabinoids() == other.hasCannabinoids());
     if (hasCannabinoids()) {
       result = result && getCannabinoids()
@@ -586,12 +901,14 @@ private static final long serialVersionUID = 0L;
       result = result && getMoisture()
           .equals(other.getMoisture());
     }
-    result = result && aroma_.equals(other.aroma_);
     result = result && (hasSubjective() == other.hasSubjective());
     if (hasSubjective()) {
       result = result && getSubjective()
           .equals(other.getSubjective());
     }
+    result = result && aroma_.equals(other.aroma_);
+    result = result && getDataList()
+        .equals(other.getDataList());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -614,6 +931,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LAST_UPDATED_FIELD_NUMBER;
       hash = (53 * hash) + getLastUpdated().hashCode();
     }
+    if (hasSealed()) {
+      hash = (37 * hash) + SEALED_FIELD_NUMBER;
+      hash = (53 * hash) + getSealed().hashCode();
+    }
+    if (hasCoordinates()) {
+      hash = (37 * hash) + COORDINATES_FIELD_NUMBER;
+      hash = (53 * hash) + getCoordinates().hashCode();
+    }
     if (hasCannabinoids()) {
       hash = (37 * hash) + CANNABINOIDS_FIELD_NUMBER;
       hash = (53 * hash) + getCannabinoids().hashCode();
@@ -630,13 +955,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MOISTURE_FIELD_NUMBER;
       hash = (53 * hash) + getMoisture().hashCode();
     }
+    if (hasSubjective()) {
+      hash = (37 * hash) + SUBJECTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + getSubjective().hashCode();
+    }
     if (getAromaCount() > 0) {
       hash = (37 * hash) + AROMA_FIELD_NUMBER;
       hash = (53 * hash) + aroma_.hashCode();
     }
-    if (hasSubjective()) {
-      hash = (37 * hash) + SUBJECTIVE_FIELD_NUMBER;
-      hash = (53 * hash) + getSubjective().hashCode();
+    if (getDataCount() > 0) {
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getDataList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -733,7 +1062,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * -- Testing: Full Protocol
+   * Lab testing results for a given product. Includes cannabinoid, terpene, pesticide, moisture, and subjective testing
+   * properties. Only cannabinoid testing is considered required.
    * </pre>
    *
    * Protobuf type {@code opencannabis.structs.labtesting.TestResults}
@@ -768,6 +1098,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getMediaFieldBuilder();
+        getDataFieldBuilder();
       }
     }
     public Builder clear() {
@@ -785,6 +1116,18 @@ private static final long serialVersionUID = 0L;
       } else {
         lastUpdated_ = null;
         lastUpdatedBuilder_ = null;
+      }
+      if (sealedBuilder_ == null) {
+        sealed_ = null;
+      } else {
+        sealed_ = null;
+        sealedBuilder_ = null;
+      }
+      if (coordinatesBuilder_ == null) {
+        coordinates_ = null;
+      } else {
+        coordinates_ = null;
+        coordinatesBuilder_ = null;
       }
       if (cannabinoidsBuilder_ == null) {
         cannabinoids_ = null;
@@ -810,13 +1153,19 @@ private static final long serialVersionUID = 0L;
         moisture_ = null;
         moistureBuilder_ = null;
       }
-      aroma_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000080);
       if (subjectiveBuilder_ == null) {
         subjective_ = null;
       } else {
         subjective_ = null;
         subjectiveBuilder_ = null;
+      }
+      aroma_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      if (dataBuilder_ == null) {
+        data_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
+      } else {
+        dataBuilder_.clear();
       }
       return this;
     }
@@ -857,6 +1206,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.lastUpdated_ = lastUpdatedBuilder_.build();
       }
+      if (sealedBuilder_ == null) {
+        result.sealed_ = sealed_;
+      } else {
+        result.sealed_ = sealedBuilder_.build();
+      }
+      if (coordinatesBuilder_ == null) {
+        result.coordinates_ = coordinates_;
+      } else {
+        result.coordinates_ = coordinatesBuilder_.build();
+      }
       if (cannabinoidsBuilder_ == null) {
         result.cannabinoids_ = cannabinoids_;
       } else {
@@ -877,15 +1236,24 @@ private static final long serialVersionUID = 0L;
       } else {
         result.moisture_ = moistureBuilder_.build();
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        aroma_ = java.util.Collections.unmodifiableList(aroma_);
-        bitField0_ = (bitField0_ & ~0x00000080);
-      }
-      result.aroma_ = aroma_;
       if (subjectiveBuilder_ == null) {
         result.subjective_ = subjective_;
       } else {
         result.subjective_ = subjectiveBuilder_.build();
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        aroma_ = java.util.Collections.unmodifiableList(aroma_);
+        bitField0_ = (bitField0_ & ~0x00000400);
+      }
+      result.aroma_ = aroma_;
+      if (dataBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          data_ = java.util.Collections.unmodifiableList(data_);
+          bitField0_ = (bitField0_ & ~0x00000800);
+        }
+        result.data_ = data_;
+      } else {
+        result.data_ = dataBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -961,6 +1329,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastUpdated()) {
         mergeLastUpdated(other.getLastUpdated());
       }
+      if (other.hasSealed()) {
+        mergeSealed(other.getSealed());
+      }
+      if (other.hasCoordinates()) {
+        mergeCoordinates(other.getCoordinates());
+      }
       if (other.hasCannabinoids()) {
         mergeCannabinoids(other.getCannabinoids());
       }
@@ -973,18 +1347,44 @@ private static final long serialVersionUID = 0L;
       if (other.hasMoisture()) {
         mergeMoisture(other.getMoisture());
       }
+      if (other.hasSubjective()) {
+        mergeSubjective(other.getSubjective());
+      }
       if (!other.aroma_.isEmpty()) {
         if (aroma_.isEmpty()) {
           aroma_ = other.aroma_;
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
           ensureAromaIsMutable();
           aroma_.addAll(other.aroma_);
         }
         onChanged();
       }
-      if (other.hasSubjective()) {
-        mergeSubjective(other.getSubjective());
+      if (dataBuilder_ == null) {
+        if (!other.data_.isEmpty()) {
+          if (data_.isEmpty()) {
+            data_ = other.data_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+          } else {
+            ensureDataIsMutable();
+            data_.addAll(other.data_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.data_.isEmpty()) {
+          if (dataBuilder_.isEmpty()) {
+            dataBuilder_.dispose();
+            dataBuilder_ = null;
+            data_ = other.data_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+            dataBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getDataFieldBuilder() : null;
+          } else {
+            dataBuilder_.addAllMessages(other.data_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1016,12 +1416,20 @@ private static final long serialVersionUID = 0L;
 
     private boolean available_ ;
     /**
+     * <pre>
+     * Boolean flag indicating whether results are available for lab testing at all.
+     * </pre>
+     *
      * <code>bool available = 1;</code>
      */
     public boolean getAvailable() {
       return available_;
     }
     /**
+     * <pre>
+     * Boolean flag indicating whether results are available for lab testing at all.
+     * </pre>
+     *
      * <code>bool available = 1;</code>
      */
     public Builder setAvailable(boolean value) {
@@ -1031,6 +1439,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Boolean flag indicating whether results are available for lab testing at all.
+     * </pre>
+     *
      * <code>bool available = 1;</code>
      */
     public Builder clearAvailable() {
@@ -1053,6 +1465,11 @@ private static final long serialVersionUID = 0L;
         io.opencannabis.schema.product.struct.testing.TestMedia, io.opencannabis.schema.product.struct.testing.TestMedia.Builder, io.opencannabis.schema.product.struct.testing.TestMediaOrBuilder> mediaBuilder_;
 
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.testing.TestMedia> getMediaList() {
@@ -1063,6 +1480,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public int getMediaCount() {
@@ -1073,6 +1495,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestMedia getMedia(int index) {
@@ -1083,6 +1510,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder setMedia(
@@ -1100,6 +1532,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder setMedia(
@@ -1114,6 +1551,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder addMedia(io.opencannabis.schema.product.struct.testing.TestMedia value) {
@@ -1130,6 +1572,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder addMedia(
@@ -1147,6 +1594,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder addMedia(
@@ -1161,6 +1613,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder addMedia(
@@ -1175,6 +1632,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder addAllMedia(
@@ -1190,6 +1652,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder clearMedia() {
@@ -1203,6 +1670,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public Builder removeMedia(int index) {
@@ -1216,6 +1688,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestMedia.Builder getMediaBuilder(
@@ -1223,6 +1700,11 @@ private static final long serialVersionUID = 0L;
       return getMediaFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestMediaOrBuilder getMediaOrBuilder(
@@ -1233,6 +1715,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.product.struct.testing.TestMediaOrBuilder> 
@@ -1244,6 +1731,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestMedia.Builder addMediaBuilder() {
@@ -1251,6 +1743,11 @@ private static final long serialVersionUID = 0L;
           io.opencannabis.schema.product.struct.testing.TestMedia.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestMedia.Builder addMediaBuilder(
@@ -1259,6 +1756,11 @@ private static final long serialVersionUID = 0L;
           index, io.opencannabis.schema.product.struct.testing.TestMedia.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Media attached to a set of lab results. This might include images taken during testing, documents (such as PDFs)
+     * specifying test results, and so on.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.TestMedia media = 2;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.testing.TestMedia.Builder> 
@@ -1284,12 +1786,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> lastUpdatedBuilder_;
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public boolean hasLastUpdated() {
       return lastUpdatedBuilder_ != null || lastUpdated_ != null;
     }
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public io.opencannabis.schema.temporal.Instant getLastUpdated() {
@@ -1300,6 +1810,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public Builder setLastUpdated(io.opencannabis.schema.temporal.Instant value) {
@@ -1316,6 +1830,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public Builder setLastUpdated(
@@ -1330,6 +1848,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public Builder mergeLastUpdated(io.opencannabis.schema.temporal.Instant value) {
@@ -1348,6 +1870,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public Builder clearLastUpdated() {
@@ -1362,6 +1888,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public io.opencannabis.schema.temporal.Instant.Builder getLastUpdatedBuilder() {
@@ -1370,6 +1900,10 @@ private static final long serialVersionUID = 0L;
       return getLastUpdatedFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public io.opencannabis.schema.temporal.InstantOrBuilder getLastUpdatedOrBuilder() {
@@ -1381,6 +1915,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Last-updated value for these lab test results. Updated each time the record is updated.
+     * </pre>
+     *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1397,12 +1935,337 @@ private static final long serialVersionUID = 0L;
       return lastUpdatedBuilder_;
     }
 
+    private io.opencannabis.schema.temporal.Instant sealed_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> sealedBuilder_;
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    public boolean hasSealed() {
+      return sealedBuilder_ != null || sealed_ != null;
+    }
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    public io.opencannabis.schema.temporal.Instant getSealed() {
+      if (sealedBuilder_ == null) {
+        return sealed_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : sealed_;
+      } else {
+        return sealedBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    public Builder setSealed(io.opencannabis.schema.temporal.Instant value) {
+      if (sealedBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        sealed_ = value;
+        onChanged();
+      } else {
+        sealedBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    public Builder setSealed(
+        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+      if (sealedBuilder_ == null) {
+        sealed_ = builderForValue.build();
+        onChanged();
+      } else {
+        sealedBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    public Builder mergeSealed(io.opencannabis.schema.temporal.Instant value) {
+      if (sealedBuilder_ == null) {
+        if (sealed_ != null) {
+          sealed_ =
+            io.opencannabis.schema.temporal.Instant.newBuilder(sealed_).mergeFrom(value).buildPartial();
+        } else {
+          sealed_ = value;
+        }
+        onChanged();
+      } else {
+        sealedBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    public Builder clearSealed() {
+      if (sealedBuilder_ == null) {
+        sealed_ = null;
+        onChanged();
+      } else {
+        sealed_ = null;
+        sealedBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    public io.opencannabis.schema.temporal.Instant.Builder getSealedBuilder() {
+      
+      onChanged();
+      return getSealedFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    public io.opencannabis.schema.temporal.InstantOrBuilder getSealedOrBuilder() {
+      if (sealedBuilder_ != null) {
+        return sealedBuilder_.getMessageOrBuilder();
+      } else {
+        return sealed_ == null ?
+            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : sealed_;
+      }
+    }
+    /**
+     * <pre>
+     * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
+     * test results (unique by their coordinates) is considered immutable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant sealed = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+        getSealedFieldBuilder() {
+      if (sealedBuilder_ == null) {
+        sealedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+                getSealed(),
+                getParentForChildren(),
+                isClean());
+        sealed_ = null;
+      }
+      return sealedBuilder_;
+    }
+
+    private io.opencannabis.schema.product.struct.testing.TestCoordinates coordinates_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.struct.testing.TestCoordinates, io.opencannabis.schema.product.struct.testing.TestCoordinates.Builder, io.opencannabis.schema.product.struct.testing.TestCoordinatesOrBuilder> coordinatesBuilder_;
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    public boolean hasCoordinates() {
+      return coordinatesBuilder_ != null || coordinates_ != null;
+    }
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestCoordinates getCoordinates() {
+      if (coordinatesBuilder_ == null) {
+        return coordinates_ == null ? io.opencannabis.schema.product.struct.testing.TestCoordinates.getDefaultInstance() : coordinates_;
+      } else {
+        return coordinatesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    public Builder setCoordinates(io.opencannabis.schema.product.struct.testing.TestCoordinates value) {
+      if (coordinatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        coordinates_ = value;
+        onChanged();
+      } else {
+        coordinatesBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    public Builder setCoordinates(
+        io.opencannabis.schema.product.struct.testing.TestCoordinates.Builder builderForValue) {
+      if (coordinatesBuilder_ == null) {
+        coordinates_ = builderForValue.build();
+        onChanged();
+      } else {
+        coordinatesBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    public Builder mergeCoordinates(io.opencannabis.schema.product.struct.testing.TestCoordinates value) {
+      if (coordinatesBuilder_ == null) {
+        if (coordinates_ != null) {
+          coordinates_ =
+            io.opencannabis.schema.product.struct.testing.TestCoordinates.newBuilder(coordinates_).mergeFrom(value).buildPartial();
+        } else {
+          coordinates_ = value;
+        }
+        onChanged();
+      } else {
+        coordinatesBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    public Builder clearCoordinates() {
+      if (coordinatesBuilder_ == null) {
+        coordinates_ = null;
+        onChanged();
+      } else {
+        coordinates_ = null;
+        coordinatesBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestCoordinates.Builder getCoordinatesBuilder() {
+      
+      onChanged();
+      return getCoordinatesFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestCoordinatesOrBuilder getCoordinatesOrBuilder() {
+      if (coordinatesBuilder_ != null) {
+        return coordinatesBuilder_.getMessageOrBuilder();
+      } else {
+        return coordinates_ == null ?
+            io.opencannabis.schema.product.struct.testing.TestCoordinates.getDefaultInstance() : coordinates_;
+      }
+    }
+    /**
+     * <pre>
+     * Coordinate, or ID values, for this set of test results. When specified at the top-level of a set of lab tests,
+     * indicates the coordinates for the active set of test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestCoordinates coordinates = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.struct.testing.TestCoordinates, io.opencannabis.schema.product.struct.testing.TestCoordinates.Builder, io.opencannabis.schema.product.struct.testing.TestCoordinatesOrBuilder> 
+        getCoordinatesFieldBuilder() {
+      if (coordinatesBuilder_ == null) {
+        coordinatesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.struct.testing.TestCoordinates, io.opencannabis.schema.product.struct.testing.TestCoordinates.Builder, io.opencannabis.schema.product.struct.testing.TestCoordinatesOrBuilder>(
+                getCoordinates(),
+                getParentForChildren(),
+                isClean());
+        coordinates_ = null;
+      }
+      return coordinatesBuilder_;
+    }
+
     private io.opencannabis.schema.product.struct.testing.Cannabinoids cannabinoids_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Cannabinoids, io.opencannabis.schema.product.struct.testing.Cannabinoids.Builder, io.opencannabis.schema.product.struct.testing.CannabinoidsOrBuilder> cannabinoidsBuilder_;
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1412,7 +2275,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1426,7 +2290,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1446,7 +2311,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1464,7 +2330,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1486,7 +2353,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1504,7 +2372,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1516,7 +2385,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1531,7 +2401,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * --- Testing Extensions
+     * Standard cannabinoid testing, with reading results at least for THC and CBD, and optionally additional cannabinoid
+     * compounds.
      * </pre>
      *
      * <code>.opencannabis.structs.labtesting.Cannabinoids cannabinoids = 30;</code>
@@ -1554,12 +2425,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Terpenes, io.opencannabis.schema.product.struct.testing.Terpenes.Builder, io.opencannabis.schema.product.struct.testing.TerpenesOrBuilder> terpenesBuilder_;
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     public boolean hasTerpenes() {
       return terpenesBuilder_ != null || terpenes_ != null;
     }
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Terpenes getTerpenes() {
@@ -1570,6 +2449,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     public Builder setTerpenes(io.opencannabis.schema.product.struct.testing.Terpenes value) {
@@ -1586,6 +2469,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     public Builder setTerpenes(
@@ -1600,6 +2487,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     public Builder mergeTerpenes(io.opencannabis.schema.product.struct.testing.Terpenes value) {
@@ -1618,6 +2509,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     public Builder clearTerpenes() {
@@ -1632,6 +2527,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Terpenes.Builder getTerpenesBuilder() {
@@ -1640,6 +2539,10 @@ private static final long serialVersionUID = 0L;
       return getTerpenesFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TerpenesOrBuilder getTerpenesOrBuilder() {
@@ -1651,6 +2554,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Testing for terpene volatiles, which might indicate aroma or flavor notes.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpenes terpenes = 31;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1671,12 +2578,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Pesticides, io.opencannabis.schema.product.struct.testing.Pesticides.Builder, io.opencannabis.schema.product.struct.testing.PesticidesOrBuilder> pesticidesBuilder_;
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     public boolean hasPesticides() {
       return pesticidesBuilder_ != null || pesticides_ != null;
     }
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Pesticides getPesticides() {
@@ -1687,6 +2602,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     public Builder setPesticides(io.opencannabis.schema.product.struct.testing.Pesticides value) {
@@ -1703,6 +2622,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     public Builder setPesticides(
@@ -1717,6 +2640,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     public Builder mergePesticides(io.opencannabis.schema.product.struct.testing.Pesticides value) {
@@ -1735,6 +2662,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     public Builder clearPesticides() {
@@ -1749,6 +2680,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Pesticides.Builder getPesticidesBuilder() {
@@ -1757,6 +2692,10 @@ private static final long serialVersionUID = 0L;
       return getPesticidesFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     public io.opencannabis.schema.product.struct.testing.PesticidesOrBuilder getPesticidesOrBuilder() {
@@ -1768,6 +2707,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1788,12 +2731,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Moisture, io.opencannabis.schema.product.struct.testing.Moisture.Builder, io.opencannabis.schema.product.struct.testing.MoistureOrBuilder> moistureBuilder_;
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     public boolean hasMoisture() {
       return moistureBuilder_ != null || moisture_ != null;
     }
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Moisture getMoisture() {
@@ -1804,6 +2755,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     public Builder setMoisture(io.opencannabis.schema.product.struct.testing.Moisture value) {
@@ -1820,6 +2775,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     public Builder setMoisture(
@@ -1834,6 +2793,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     public Builder mergeMoisture(io.opencannabis.schema.product.struct.testing.Moisture value) {
@@ -1852,6 +2815,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     public Builder clearMoisture() {
@@ -1866,6 +2833,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Moisture.Builder getMoistureBuilder() {
@@ -1874,6 +2845,10 @@ private static final long serialVersionUID = 0L;
       return getMoistureFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     public io.opencannabis.schema.product.struct.testing.MoistureOrBuilder getMoistureOrBuilder() {
@@ -1885,6 +2860,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Moisture rating and test results.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Moisture moisture = 33;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1901,135 +2880,25 @@ private static final long serialVersionUID = 0L;
       return moistureBuilder_;
     }
 
-    private java.util.List<java.lang.Integer> aroma_ =
-      java.util.Collections.emptyList();
-    private void ensureAromaIsMutable() {
-      if (!((bitField0_ & 0x00000080) == 0x00000080)) {
-        aroma_ = new java.util.ArrayList<java.lang.Integer>(aroma_);
-        bitField0_ |= 0x00000080;
-      }
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getAromaList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(aroma_, aroma_converter_);
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public int getAromaCount() {
-      return aroma_.size();
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public io.opencannabis.schema.product.struct.testing.TasteNote getAroma(int index) {
-      return aroma_converter_.convert(aroma_.get(index));
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public Builder setAroma(
-        int index, io.opencannabis.schema.product.struct.testing.TasteNote value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureAromaIsMutable();
-      aroma_.set(index, value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public Builder addAroma(io.opencannabis.schema.product.struct.testing.TasteNote value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureAromaIsMutable();
-      aroma_.add(value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public Builder addAllAroma(
-        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.TasteNote> values) {
-      ensureAromaIsMutable();
-      for (io.opencannabis.schema.product.struct.testing.TasteNote value : values) {
-        aroma_.add(value.getNumber());
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public Builder clearAroma() {
-      aroma_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000080);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public java.util.List<java.lang.Integer>
-    getAromaValueList() {
-      return java.util.Collections.unmodifiableList(aroma_);
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public int getAromaValue(int index) {
-      return aroma_.get(index);
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public Builder setAromaValue(
-        int index, int value) {
-      ensureAromaIsMutable();
-      aroma_.set(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public Builder addAromaValue(int value) {
-      ensureAromaIsMutable();
-      aroma_.add(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 34;</code>
-     */
-    public Builder addAllAromaValue(
-        java.lang.Iterable<java.lang.Integer> values) {
-      ensureAromaIsMutable();
-      for (int value : values) {
-        aroma_.add(value);
-      }
-      onChanged();
-      return this;
-    }
-
     private io.opencannabis.schema.product.struct.testing.Subjective subjective_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Subjective, io.opencannabis.schema.product.struct.testing.Subjective.Builder, io.opencannabis.schema.product.struct.testing.SubjectiveOrBuilder> subjectiveBuilder_;
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     public boolean hasSubjective() {
       return subjectiveBuilder_ != null || subjective_ != null;
     }
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Subjective getSubjective() {
       if (subjectiveBuilder_ == null) {
@@ -2039,7 +2908,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     public Builder setSubjective(io.opencannabis.schema.product.struct.testing.Subjective value) {
       if (subjectiveBuilder_ == null) {
@@ -2055,7 +2928,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     public Builder setSubjective(
         io.opencannabis.schema.product.struct.testing.Subjective.Builder builderForValue) {
@@ -2069,7 +2946,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     public Builder mergeSubjective(io.opencannabis.schema.product.struct.testing.Subjective value) {
       if (subjectiveBuilder_ == null) {
@@ -2087,7 +2968,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     public Builder clearSubjective() {
       if (subjectiveBuilder_ == null) {
@@ -2101,7 +2986,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Subjective.Builder getSubjectiveBuilder() {
       
@@ -2109,7 +2998,11 @@ private static final long serialVersionUID = 0L;
       return getSubjectiveFieldBuilder().getBuilder();
     }
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     public io.opencannabis.schema.product.struct.testing.SubjectiveOrBuilder getSubjectiveOrBuilder() {
       if (subjectiveBuilder_ != null) {
@@ -2120,7 +3013,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.opencannabis.structs.labtesting.Subjective subjective = 35;</code>
+     * <pre>
+     * Results from subjective testing - i.e, opinionated human evaluation.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.Subjective subjective = 34;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Subjective, io.opencannabis.schema.product.struct.testing.Subjective.Builder, io.opencannabis.schema.product.struct.testing.SubjectiveOrBuilder> 
@@ -2134,6 +3031,496 @@ private static final long serialVersionUID = 0L;
         subjective_ = null;
       }
       return subjectiveBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> aroma_ =
+      java.util.Collections.emptyList();
+    private void ensureAromaIsMutable() {
+      if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        aroma_ = new java.util.ArrayList<java.lang.Integer>(aroma_);
+        bitField0_ |= 0x00000400;
+      }
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getAromaList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(aroma_, aroma_converter_);
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public int getAromaCount() {
+      return aroma_.size();
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TasteNote getAroma(int index) {
+      return aroma_converter_.convert(aroma_.get(index));
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public Builder setAroma(
+        int index, io.opencannabis.schema.product.struct.testing.TasteNote value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureAromaIsMutable();
+      aroma_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public Builder addAroma(io.opencannabis.schema.product.struct.testing.TasteNote value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureAromaIsMutable();
+      aroma_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public Builder addAllAroma(
+        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.TasteNote> values) {
+      ensureAromaIsMutable();
+      for (io.opencannabis.schema.product.struct.testing.TasteNote value : values) {
+        aroma_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public Builder clearAroma() {
+      aroma_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getAromaValueList() {
+      return java.util.Collections.unmodifiableList(aroma_);
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public int getAromaValue(int index) {
+      return aroma_.get(index);
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public Builder setAromaValue(
+        int index, int value) {
+      ensureAromaIsMutable();
+      aroma_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public Builder addAromaValue(int value) {
+      ensureAromaIsMutable();
+      aroma_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Computed taste notes for this product, based on the combination of terpene testing and subjective testing, if
+     * available.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 35;</code>
+     */
+    public Builder addAllAromaValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureAromaIsMutable();
+      for (int value : values) {
+        aroma_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<io.opencannabis.schema.product.struct.testing.TestResults> data_ =
+      java.util.Collections.emptyList();
+    private void ensureDataIsMutable() {
+      if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        data_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.TestResults>(data_);
+        bitField0_ |= 0x00000800;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> dataBuilder_;
+
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public java.util.List<io.opencannabis.schema.product.struct.testing.TestResults> getDataList() {
+      if (dataBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(data_);
+      } else {
+        return dataBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public int getDataCount() {
+      if (dataBuilder_ == null) {
+        return data_.size();
+      } else {
+        return dataBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestResults getData(int index) {
+      if (dataBuilder_ == null) {
+        return data_.get(index);
+      } else {
+        return dataBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder setData(
+        int index, io.opencannabis.schema.product.struct.testing.TestResults value) {
+      if (dataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDataIsMutable();
+        data_.set(index, value);
+        onChanged();
+      } else {
+        dataBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder setData(
+        int index, io.opencannabis.schema.product.struct.testing.TestResults.Builder builderForValue) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        data_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        dataBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder addData(io.opencannabis.schema.product.struct.testing.TestResults value) {
+      if (dataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDataIsMutable();
+        data_.add(value);
+        onChanged();
+      } else {
+        dataBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder addData(
+        int index, io.opencannabis.schema.product.struct.testing.TestResults value) {
+      if (dataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureDataIsMutable();
+        data_.add(index, value);
+        onChanged();
+      } else {
+        dataBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder addData(
+        io.opencannabis.schema.product.struct.testing.TestResults.Builder builderForValue) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        data_.add(builderForValue.build());
+        onChanged();
+      } else {
+        dataBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder addData(
+        int index, io.opencannabis.schema.product.struct.testing.TestResults.Builder builderForValue) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        data_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        dataBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder addAllData(
+        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.TestResults> values) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, data_);
+        onChanged();
+      } else {
+        dataBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder clearData() {
+      if (dataBuilder_ == null) {
+        data_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+      } else {
+        dataBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public Builder removeData(int index) {
+      if (dataBuilder_ == null) {
+        ensureDataIsMutable();
+        data_.remove(index);
+        onChanged();
+      } else {
+        dataBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestResults.Builder getDataBuilder(
+        int index) {
+      return getDataFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getDataOrBuilder(
+        int index) {
+      if (dataBuilder_ == null) {
+        return data_.get(index);  } else {
+        return dataBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public java.util.List<? extends io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> 
+         getDataOrBuilderList() {
+      if (dataBuilder_ != null) {
+        return dataBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(data_);
+      }
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestResults.Builder addDataBuilder() {
+      return getDataFieldBuilder().addBuilder(
+          io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestResults.Builder addDataBuilder(
+        int index) {
+      return getDataFieldBuilder().addBuilder(
+          index, io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Raw test result data, stored under a master set of test results. Only one level of nesting is allowed.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TestResults data = 36;</code>
+     */
+    public java.util.List<io.opencannabis.schema.product.struct.testing.TestResults.Builder> 
+         getDataBuilderList() {
+      return getDataFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> 
+        getDataFieldBuilder() {
+      if (dataBuilder_ == null) {
+        dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder>(
+                data_,
+                ((bitField0_ & 0x00000800) == 0x00000800),
+                getParentForChildren(),
+                isClean());
+        data_ = null;
+      }
+      return dataBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
