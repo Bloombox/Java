@@ -21,7 +21,6 @@ import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
 import io.opencannabis.schema.base.ProductKey
 import io.opencannabis.schema.base.ProductKind
-import io.opencannabis.schema.base.ProductType
 import io.opencannabis.schema.commerce.CommercialOrder
 import io.opencannabis.schema.commerce.OrderCustomer
 import io.opencannabis.schema.commerce.OrderDelivery
@@ -34,6 +33,7 @@ import io.opencannabis.schema.person.Name
 import io.opencannabis.schema.person.Person
 import io.opencannabis.schema.temporal.Instant
 import io.bloombox.schema.services.shop.v1.SubmitOrder
+import io.opencannabis.schema.product.struct.PricingWeightTier
 import java.util.concurrent.TimeUnit
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -55,6 +55,7 @@ class ShopOrderTest: ClientRPCTest() {
   /**
    * Test an order submission operation.
    */
+  @Suppress("unused")
   private fun testOrderSubmit(client: ShopClient,
                               order: CommercialOrder.Order? = null): SubmitOrder.Response {
     val now = java.time.Instant.now()
@@ -93,26 +94,24 @@ class ShopOrderTest: ClientRPCTest() {
           .addItem(OrderItem.Item.newBuilder()
                 .setKey(ProductKey.newBuilder()
                       .setId("-Ke0_QF5bpmyos_N6oK7")
-                      .setType(ProductType.newBuilder()
-                            .setKind(ProductKind.FLOWERS)))
+                      .setType(ProductKind.FLOWERS))
 
                 .setCount(1)
 
                 .addVariant(OrderItem.VariantSpec.newBuilder()
                       .setVariant(OrderItem.ProductVariant.WEIGHT)
-                      .setWeight(OrderItem.ProductWeight.EIGHTH)))
+                      .setWeight(PricingWeightTier.EIGHTH)))
 
           .addItem(OrderItem.Item.newBuilder()
                 .setKey(ProductKey.newBuilder()
                       .setId("-Ke1AGB-CUApxLHqi-9X")
-                      .setType(ProductType.newBuilder()
-                            .setKind(ProductKind.FLOWERS)))
+                      .setType(ProductKind.FLOWERS))
 
                 .setCount(1)
 
                 .addVariant(OrderItem.VariantSpec.newBuilder()
                       .setVariant(OrderItem.ProductVariant.WEIGHT)
-                      .setWeight(OrderItem.ProductWeight.EIGHTH))).build()
+                      .setWeight(PricingWeightTier.EIGHTH))).build()
 
     return client.submitOrder(orderObj)
   }
