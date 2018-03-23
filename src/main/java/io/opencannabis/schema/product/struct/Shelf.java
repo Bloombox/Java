@@ -20,37 +20,84 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * Enumerates available 'shelf' entries, for use in retail contexts, to indicate the quality of a particular product
+ * entry (usually flowers).
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.structs.Shelf}
  */
 public enum Shelf
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>ECONOMY = 0;</code>
+   * <pre>
+   * Default value, indicating no specific shelf choice.
+   * </pre>
+   *
+   * <code>GENERIC_SHELF = 0;</code>
    */
-  ECONOMY(0),
+  GENERIC_SHELF(0),
   /**
-   * <code>MIDSHELF = 1;</code>
+   * <pre>
+   * 'Economy' shelf. Best value for the money, generally with a focus on THC-per-gram.
+   * </pre>
+   *
+   * <code>ECONOMY = 1;</code>
    */
-  MIDSHELF(1),
+  ECONOMY(1),
   /**
-   * <code>TOPSHELF = 2;</code>
+   * <pre>
+   * 'Midshelf'. Medium-grade products that strike a balance between cost and potency/quality.
+   * </pre>
+   *
+   * <code>MIDSHELF = 2;</code>
    */
-  TOPSHELF(2),
+  MIDSHELF(2),
+  /**
+   * <pre>
+   * 'Topshelf'. High-grade, or highly-refined products, that focus on potency or quality to the exclusion or detriment
+   * of cost.
+   * </pre>
+   *
+   * <code>TOPSHELF = 3;</code>
+   */
+  TOPSHELF(3),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>ECONOMY = 0;</code>
+   * <pre>
+   * Default value, indicating no specific shelf choice.
+   * </pre>
+   *
+   * <code>GENERIC_SHELF = 0;</code>
    */
-  public static final int ECONOMY_VALUE = 0;
+  public static final int GENERIC_SHELF_VALUE = 0;
   /**
-   * <code>MIDSHELF = 1;</code>
+   * <pre>
+   * 'Economy' shelf. Best value for the money, generally with a focus on THC-per-gram.
+   * </pre>
+   *
+   * <code>ECONOMY = 1;</code>
    */
-  public static final int MIDSHELF_VALUE = 1;
+  public static final int ECONOMY_VALUE = 1;
   /**
-   * <code>TOPSHELF = 2;</code>
+   * <pre>
+   * 'Midshelf'. Medium-grade products that strike a balance between cost and potency/quality.
+   * </pre>
+   *
+   * <code>MIDSHELF = 2;</code>
    */
-  public static final int TOPSHELF_VALUE = 2;
+  public static final int MIDSHELF_VALUE = 2;
+  /**
+   * <pre>
+   * 'Topshelf'. High-grade, or highly-refined products, that focus on potency or quality to the exclusion or detriment
+   * of cost.
+   * </pre>
+   *
+   * <code>TOPSHELF = 3;</code>
+   */
+  public static final int TOPSHELF_VALUE = 3;
 
 
   public final int getNumber() {
@@ -71,9 +118,10 @@ public enum Shelf
 
   public static Shelf forNumber(int value) {
     switch (value) {
-      case 0: return ECONOMY;
-      case 1: return MIDSHELF;
-      case 2: return TOPSHELF;
+      case 0: return GENERIC_SHELF;
+      case 1: return ECONOMY;
+      case 2: return MIDSHELF;
+      case 3: return TOPSHELF;
       default: return null;
     }
   }

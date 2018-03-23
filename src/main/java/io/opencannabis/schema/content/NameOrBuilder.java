@@ -43,7 +43,7 @@ public interface NameOrBuilder extends
 
   /**
    * <pre>
-   * Display name.
+   * Display name, if different from the 'primary name'.
    * </pre>
    *
    * <code>string display = 2;</code>
@@ -51,7 +51,7 @@ public interface NameOrBuilder extends
   java.lang.String getDisplay();
   /**
    * <pre>
-   * Display name.
+   * Display name, if different from the 'primary name'.
    * </pre>
    *
    * <code>string display = 2;</code>

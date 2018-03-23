@@ -45,11 +45,12 @@ public final class BaseCompression {
   static {
     java.lang.String[] descriptorData = {
       "\n\026base/Compression.proto\022\021opencannabis.b" +
-      "ase\"c\n\013Compression\022\017\n\007enabled\030\001 \001(\010\0221\n\004t" +
-      "ype\030\002 \001(\0162#.opencannabis.base.Compressio" +
-      "n.Type\"\020\n\004Type\022\010\n\004GZIP\020\000B8\n\033io.opencanna" +
-      "bis.schema.baseB\017BaseCompressionH\001P\001\242\002\003O" +
-      "CSb\006proto3"
+      "ase\"\217\001\n\013Compression\022\017\n\007enabled\030\001 \001(\010\0221\n\004" +
+      "type\030\002 \001(\0162#.opencannabis.base.Compressi" +
+      "on.Type\"<\n\004Type\022\022\n\016NO_COMPRESSION\020\000\022\010\n\004G" +
+      "ZIP\020\001\022\n\n\006BROTLI\020\002\022\n\n\006SNAPPY\020\003B8\n\033io.open" +
+      "cannabis.schema.baseB\017BaseCompressionH\001P" +
+      "\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

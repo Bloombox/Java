@@ -24,19 +24,35 @@ public interface ProvinceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * US state, specified by enumerated ID.
+   * </pre>
+   *
    * <code>.opencannabis.geo.usa.USState state = 1;</code>
    */
   int getStateValue();
   /**
+   * <pre>
+   * US state, specified by enumerated ID.
+   * </pre>
+   *
    * <code>.opencannabis.geo.usa.USState state = 1;</code>
    */
   io.opencannabis.schema.geo.usa.USState getState();
 
   /**
+   * <pre>
+   * Generic province reference, by name.
+   * </pre>
+   *
    * <code>string province = 2;</code>
    */
   java.lang.String getProvince();
   /**
+   * <pre>
+   * Generic province reference, by name.
+   * </pre>
+   *
    * <code>string province = 2;</code>
    */
   com.google.protobuf.ByteString

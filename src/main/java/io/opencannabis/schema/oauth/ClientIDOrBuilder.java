@@ -24,10 +24,18 @@ public interface ClientIDOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * ID for the OAuth2 client.
+   * </pre>
+   *
    * <code>string id = 1;</code>
    */
   java.lang.String getId();
   /**
+   * <pre>
+   * ID for the OAuth2 client.
+   * </pre>
+   *
    * <code>string id = 1;</code>
    */
   com.google.protobuf.ByteString

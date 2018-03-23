@@ -108,8 +108,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Enumerates available types of compression, or strategies
-   * or algorithms for compressing data.
+   * Enumerates available types of compression, or strategies or algorithms for compressing data.
    * </pre>
    *
    * Protobuf enum {@code opencannabis.base.Compression.Type}
@@ -117,16 +116,72 @@ private static final long serialVersionUID = 0L;
   public enum Type
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>GZIP = 0;</code>
+     * <pre>
+     * No compression.
+     * </pre>
+     *
+     * <code>NO_COMPRESSION = 0;</code>
      */
-    GZIP(0),
+    NO_COMPRESSION(0),
+    /**
+     * <pre>
+     * Gzip-based compression.
+     * </pre>
+     *
+     * <code>GZIP = 1;</code>
+     */
+    GZIP(1),
+    /**
+     * <pre>
+     * Brotli-based compression.
+     * </pre>
+     *
+     * <code>BROTLI = 2;</code>
+     */
+    BROTLI(2),
+    /**
+     * <pre>
+     * Snappy-based compression.
+     * </pre>
+     *
+     * <code>SNAPPY = 3;</code>
+     */
+    SNAPPY(3),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>GZIP = 0;</code>
+     * <pre>
+     * No compression.
+     * </pre>
+     *
+     * <code>NO_COMPRESSION = 0;</code>
      */
-    public static final int GZIP_VALUE = 0;
+    public static final int NO_COMPRESSION_VALUE = 0;
+    /**
+     * <pre>
+     * Gzip-based compression.
+     * </pre>
+     *
+     * <code>GZIP = 1;</code>
+     */
+    public static final int GZIP_VALUE = 1;
+    /**
+     * <pre>
+     * Brotli-based compression.
+     * </pre>
+     *
+     * <code>BROTLI = 2;</code>
+     */
+    public static final int BROTLI_VALUE = 2;
+    /**
+     * <pre>
+     * Snappy-based compression.
+     * </pre>
+     *
+     * <code>SNAPPY = 3;</code>
+     */
+    public static final int SNAPPY_VALUE = 3;
 
 
     public final int getNumber() {
@@ -147,7 +202,10 @@ private static final long serialVersionUID = 0L;
 
     public static Type forNumber(int value) {
       switch (value) {
-        case 0: return GZIP;
+        case 0: return NO_COMPRESSION;
+        case 1: return GZIP;
+        case 2: return BROTLI;
+        case 3: return SNAPPY;
         default: return null;
       }
     }
@@ -252,7 +310,7 @@ private static final long serialVersionUID = 0L;
     if (enabled_ != false) {
       output.writeBool(1, enabled_);
     }
-    if (type_ != io.opencannabis.schema.base.Compression.Type.GZIP.getNumber()) {
+    if (type_ != io.opencannabis.schema.base.Compression.Type.NO_COMPRESSION.getNumber()) {
       output.writeEnum(2, type_);
     }
     unknownFields.writeTo(output);
@@ -267,7 +325,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, enabled_);
     }
-    if (type_ != io.opencannabis.schema.base.Compression.Type.GZIP.getNumber()) {
+    if (type_ != io.opencannabis.schema.base.Compression.Type.NO_COMPRESSION.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, type_);
     }

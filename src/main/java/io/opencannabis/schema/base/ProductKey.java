@@ -38,6 +38,7 @@ private static final long serialVersionUID = 0L;
   }
   private ProductKey() {
     id_ = "";
+    type_ = 0;
   }
 
   @java.lang.Override
@@ -77,17 +78,10 @@ private static final long serialVersionUID = 0L;
             id_ = s;
             break;
           }
-          case 18: {
-            io.opencannabis.schema.base.ProductType.Builder subBuilder = null;
-            if (type_ != null) {
-              subBuilder = type_.toBuilder();
-            }
-            type_ = input.readMessage(io.opencannabis.schema.base.ProductType.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(type_);
-              type_ = subBuilder.buildPartial();
-            }
+          case 16: {
+            int rawValue = input.readEnum();
 
+            type_ = rawValue;
             break;
           }
         }
@@ -161,36 +155,27 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 2;
-  private io.opencannabis.schema.base.ProductType type_;
+  private int type_;
   /**
    * <pre>
    * Type of product the ID is referring to. In most cases this entry can be omitted.
    * </pre>
    *
-   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
-  public boolean hasType() {
-    return type_ != null;
+  public int getTypeValue() {
+    return type_;
   }
   /**
    * <pre>
    * Type of product the ID is referring to. In most cases this entry can be omitted.
    * </pre>
    *
-   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+   * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
    */
-  public io.opencannabis.schema.base.ProductType getType() {
-    return type_ == null ? io.opencannabis.schema.base.ProductType.getDefaultInstance() : type_;
-  }
-  /**
-   * <pre>
-   * Type of product the ID is referring to. In most cases this entry can be omitted.
-   * </pre>
-   *
-   * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
-   */
-  public io.opencannabis.schema.base.ProductTypeOrBuilder getTypeOrBuilder() {
-    return getType();
+  public io.opencannabis.schema.base.ProductKind getType() {
+    io.opencannabis.schema.base.ProductKind result = io.opencannabis.schema.base.ProductKind.valueOf(type_);
+    return result == null ? io.opencannabis.schema.base.ProductKind.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -208,8 +193,8 @@ private static final long serialVersionUID = 0L;
     if (!getIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
-    if (type_ != null) {
-      output.writeMessage(2, getType());
+    if (type_ != io.opencannabis.schema.base.ProductKind.FLOWERS.getNumber()) {
+      output.writeEnum(2, type_);
     }
     unknownFields.writeTo(output);
   }
@@ -222,9 +207,9 @@ private static final long serialVersionUID = 0L;
     if (!getIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
     }
-    if (type_ != null) {
+    if (type_ != io.opencannabis.schema.base.ProductKind.FLOWERS.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getType());
+        .computeEnumSize(2, type_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -244,11 +229,7 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getId()
         .equals(other.getId());
-    result = result && (hasType() == other.hasType());
-    if (hasType()) {
-      result = result && getType()
-          .equals(other.getType());
-    }
+    result = result && type_ == other.type_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -262,10 +243,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
-    if (hasType()) {
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
-    }
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + type_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -402,12 +381,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       id_ = "";
 
-      if (typeBuilder_ == null) {
-        type_ = null;
-      } else {
-        type_ = null;
-        typeBuilder_ = null;
-      }
+      type_ = 0;
+
       return this;
     }
 
@@ -431,11 +406,7 @@ private static final long serialVersionUID = 0L;
     public io.opencannabis.schema.base.ProductKey buildPartial() {
       io.opencannabis.schema.base.ProductKey result = new io.opencannabis.schema.base.ProductKey(this);
       result.id_ = id_;
-      if (typeBuilder_ == null) {
-        result.type_ = type_;
-      } else {
-        result.type_ = typeBuilder_.build();
-      }
+      result.type_ = type_;
       onBuilt();
       return result;
     }
@@ -481,8 +452,8 @@ private static final long serialVersionUID = 0L;
         id_ = other.id_;
         onChanged();
       }
-      if (other.hasType()) {
-        mergeType(other.getType());
+      if (other.type_ != 0) {
+        setTypeValue(other.getTypeValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -610,51 +581,27 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.base.ProductType type_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.base.ProductType, io.opencannabis.schema.base.ProductType.Builder, io.opencannabis.schema.base.ProductTypeOrBuilder> typeBuilder_;
+    private int type_ = 0;
     /**
      * <pre>
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
-    public boolean hasType() {
-      return typeBuilder_ != null || type_ != null;
+    public int getTypeValue() {
+      return type_;
     }
     /**
      * <pre>
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
-    public io.opencannabis.schema.base.ProductType getType() {
-      if (typeBuilder_ == null) {
-        return type_ == null ? io.opencannabis.schema.base.ProductType.getDefaultInstance() : type_;
-      } else {
-        return typeBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Type of product the ID is referring to. In most cases this entry can be omitted.
-     * </pre>
-     *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
-     */
-    public Builder setType(io.opencannabis.schema.base.ProductType value) {
-      if (typeBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        type_ = value;
-        onChanged();
-      } else {
-        typeBuilder_.setMessage(value);
-      }
-
+    public Builder setTypeValue(int value) {
+      type_ = value;
+      onChanged();
       return this;
     }
     /**
@@ -662,17 +609,26 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
-    public Builder setType(
-        io.opencannabis.schema.base.ProductType.Builder builderForValue) {
-      if (typeBuilder_ == null) {
-        type_ = builderForValue.build();
-        onChanged();
-      } else {
-        typeBuilder_.setMessage(builderForValue.build());
+    public io.opencannabis.schema.base.ProductKind getType() {
+      io.opencannabis.schema.base.ProductKind result = io.opencannabis.schema.base.ProductKind.valueOf(type_);
+      return result == null ? io.opencannabis.schema.base.ProductKind.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Type of product the ID is referring to. In most cases this entry can be omitted.
+     * </pre>
+     *
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     */
+    public Builder setType(io.opencannabis.schema.base.ProductKind value) {
+      if (value == null) {
+        throw new NullPointerException();
       }
-
+      
+      type_ = value.getNumber();
+      onChanged();
       return this;
     }
     /**
@@ -680,87 +636,13 @@ private static final long serialVersionUID = 0L;
      * Type of product the ID is referring to. In most cases this entry can be omitted.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
-     */
-    public Builder mergeType(io.opencannabis.schema.base.ProductType value) {
-      if (typeBuilder_ == null) {
-        if (type_ != null) {
-          type_ =
-            io.opencannabis.schema.base.ProductType.newBuilder(type_).mergeFrom(value).buildPartial();
-        } else {
-          type_ = value;
-        }
-        onChanged();
-      } else {
-        typeBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Type of product the ID is referring to. In most cases this entry can be omitted.
-     * </pre>
-     *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
+     * <code>.opencannabis.base.ProductKind type = 2 [(.gen_bq_schema.ignore) = true];</code>
      */
     public Builder clearType() {
-      if (typeBuilder_ == null) {
-        type_ = null;
-        onChanged();
-      } else {
-        type_ = null;
-        typeBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Type of product the ID is referring to. In most cases this entry can be omitted.
-     * </pre>
-     *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
-     */
-    public io.opencannabis.schema.base.ProductType.Builder getTypeBuilder() {
       
+      type_ = 0;
       onChanged();
-      return getTypeFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Type of product the ID is referring to. In most cases this entry can be omitted.
-     * </pre>
-     *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
-     */
-    public io.opencannabis.schema.base.ProductTypeOrBuilder getTypeOrBuilder() {
-      if (typeBuilder_ != null) {
-        return typeBuilder_.getMessageOrBuilder();
-      } else {
-        return type_ == null ?
-            io.opencannabis.schema.base.ProductType.getDefaultInstance() : type_;
-      }
-    }
-    /**
-     * <pre>
-     * Type of product the ID is referring to. In most cases this entry can be omitted.
-     * </pre>
-     *
-     * <code>.opencannabis.base.ProductType type = 2 [(.gen_bq_schema.ignore) = true];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.base.ProductType, io.opencannabis.schema.base.ProductType.Builder, io.opencannabis.schema.base.ProductTypeOrBuilder> 
-        getTypeFieldBuilder() {
-      if (typeBuilder_ == null) {
-        typeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.base.ProductType, io.opencannabis.schema.base.ProductType.Builder, io.opencannabis.schema.base.ProductTypeOrBuilder>(
-                getType(),
-                getParentForChildren(),
-                isClean());
-        type_ = null;
-      }
-      return typeBuilder_;
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

@@ -322,7 +322,7 @@ private static final long serialVersionUID = 0L;
     if (grow_ != io.opencannabis.schema.product.struct.Grow.GENERIC.getNumber()) {
       output.writeEnum(3, grow_);
     }
-    if (shelf_ != io.opencannabis.schema.product.struct.Shelf.ECONOMY.getNumber()) {
+    if (shelf_ != io.opencannabis.schema.product.struct.Shelf.GENERIC_SHELF.getNumber()) {
       output.writeEnum(4, shelf_);
     }
     for (int i = 0; i < channels_.size(); i++) {
@@ -348,7 +348,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, grow_);
     }
-    if (shelf_ != io.opencannabis.schema.product.struct.Shelf.ECONOMY.getNumber()) {
+    if (shelf_ != io.opencannabis.schema.product.struct.Shelf.GENERIC_SHELF.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, shelf_);
     }

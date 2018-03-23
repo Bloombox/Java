@@ -21,7 +21,8 @@ package io.opencannabis.schema.product.struct;
 
 /**
  * <pre>
- * -- Pricing: Main Descriptor
+ * Specifies a descriptor for product pricing, which specifies the price configuration for one independent price tier
+ * in a given set of pricing tiers for a product.
  * </pre>
  *
  * Protobuf type {@code opencannabis.structs.pricing.PricingDescriptor}
@@ -78,44 +79,30 @@ private static final long serialVersionUID = 0L;
           }
           case 162: {
             io.opencannabis.schema.product.struct.UnitPricingDescriptor.Builder subBuilder = null;
-            if (pricingCase_ == 20) {
-              subBuilder = ((io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_).toBuilder();
+            if (tierCase_ == 20) {
+              subBuilder = ((io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_).toBuilder();
             }
-            pricing_ =
+            tier_ =
                 input.readMessage(io.opencannabis.schema.product.struct.UnitPricingDescriptor.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom((io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_);
-              pricing_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom((io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_);
+              tier_ = subBuilder.buildPartial();
             }
-            pricingCase_ = 20;
+            tierCase_ = 20;
             break;
           }
           case 170: {
             io.opencannabis.schema.product.struct.WeightedPricingDescriptor.Builder subBuilder = null;
-            if (pricingCase_ == 21) {
-              subBuilder = ((io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_).toBuilder();
+            if (tierCase_ == 21) {
+              subBuilder = ((io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_).toBuilder();
             }
-            pricing_ =
+            tier_ =
                 input.readMessage(io.opencannabis.schema.product.struct.WeightedPricingDescriptor.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom((io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_);
-              pricing_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom((io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_);
+              tier_ = subBuilder.buildPartial();
             }
-            pricingCase_ = 21;
-            break;
-          }
-          case 178: {
-            io.opencannabis.schema.product.struct.FreebiePricingDescriptor.Builder subBuilder = null;
-            if (pricingCase_ == 22) {
-              subBuilder = ((io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_).toBuilder();
-            }
-            pricing_ =
-                input.readMessage(io.opencannabis.schema.product.struct.FreebiePricingDescriptor.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_);
-              pricing_ = subBuilder.buildPartial();
-            }
-            pricingCase_ = 22;
+            tierCase_ = 21;
             break;
           }
         }
@@ -142,32 +129,30 @@ private static final long serialVersionUID = 0L;
             io.opencannabis.schema.product.struct.PricingDescriptor.class, io.opencannabis.schema.product.struct.PricingDescriptor.Builder.class);
   }
 
-  private int pricingCase_ = 0;
-  private java.lang.Object pricing_;
-  public enum PricingCase
+  private int tierCase_ = 0;
+  private java.lang.Object tier_;
+  public enum TierCase
       implements com.google.protobuf.Internal.EnumLite {
     UNIT(20),
     WEIGHTED(21),
-    FREEBIE(22),
-    PRICING_NOT_SET(0);
+    TIER_NOT_SET(0);
     private final int value;
-    private PricingCase(int value) {
+    private TierCase(int value) {
       this.value = value;
     }
     /**
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static PricingCase valueOf(int value) {
+    public static TierCase valueOf(int value) {
       return forNumber(value);
     }
 
-    public static PricingCase forNumber(int value) {
+    public static TierCase forNumber(int value) {
       switch (value) {
         case 20: return UNIT;
         case 21: return WEIGHTED;
-        case 22: return FREEBIE;
-        case 0: return PRICING_NOT_SET;
+        case 0: return TIER_NOT_SET;
         default: return null;
       }
     }
@@ -176,21 +161,29 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public PricingCase
-  getPricingCase() {
-    return PricingCase.forNumber(
-        pricingCase_);
+  public TierCase
+  getTierCase() {
+    return TierCase.forNumber(
+        tierCase_);
   }
 
   public static final int TYPE_FIELD_NUMBER = 1;
   private int type_;
   /**
+   * <pre>
+   * Type of pricing tier this descriptor is specifying.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingType type = 1;</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
+   * <pre>
+   * Type of pricing tier this descriptor is specifying.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingType type = 1;</code>
    */
   public io.opencannabis.schema.product.struct.PricingType getType() {
@@ -201,91 +194,77 @@ private static final long serialVersionUID = 0L;
   public static final int UNIT_FIELD_NUMBER = 20;
   /**
    * <pre>
-   * -- descriptors
+   * Unit-based pricing information, with no variance in price change.
    * </pre>
    *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
    */
   public boolean hasUnit() {
-    return pricingCase_ == 20;
+    return tierCase_ == 20;
   }
   /**
    * <pre>
-   * -- descriptors
+   * Unit-based pricing information, with no variance in price change.
    * </pre>
    *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
    */
   public io.opencannabis.schema.product.struct.UnitPricingDescriptor getUnit() {
-    if (pricingCase_ == 20) {
-       return (io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_;
+    if (tierCase_ == 20) {
+       return (io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_;
     }
     return io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance();
   }
   /**
    * <pre>
-   * -- descriptors
+   * Unit-based pricing information, with no variance in price change.
    * </pre>
    *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
    */
   public io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder getUnitOrBuilder() {
-    if (pricingCase_ == 20) {
-       return (io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_;
+    if (tierCase_ == 20) {
+       return (io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_;
     }
     return io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance();
   }
 
   public static final int WEIGHTED_FIELD_NUMBER = 21;
   /**
+   * <pre>
+   * Weight-based pricing information, with prices assgined to specific or known weights.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
    */
   public boolean hasWeighted() {
-    return pricingCase_ == 21;
+    return tierCase_ == 21;
   }
   /**
+   * <pre>
+   * Weight-based pricing information, with prices assgined to specific or known weights.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
    */
   public io.opencannabis.schema.product.struct.WeightedPricingDescriptor getWeighted() {
-    if (pricingCase_ == 21) {
-       return (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_;
+    if (tierCase_ == 21) {
+       return (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_;
     }
     return io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance();
   }
   /**
+   * <pre>
+   * Weight-based pricing information, with prices assgined to specific or known weights.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
    */
   public io.opencannabis.schema.product.struct.WeightedPricingDescriptorOrBuilder getWeightedOrBuilder() {
-    if (pricingCase_ == 21) {
-       return (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_;
+    if (tierCase_ == 21) {
+       return (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_;
     }
     return io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance();
-  }
-
-  public static final int FREEBIE_FIELD_NUMBER = 22;
-  /**
-   * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-   */
-  public boolean hasFreebie() {
-    return pricingCase_ == 22;
-  }
-  /**
-   * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-   */
-  public io.opencannabis.schema.product.struct.FreebiePricingDescriptor getFreebie() {
-    if (pricingCase_ == 22) {
-       return (io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_;
-    }
-    return io.opencannabis.schema.product.struct.FreebiePricingDescriptor.getDefaultInstance();
-  }
-  /**
-   * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-   */
-  public io.opencannabis.schema.product.struct.FreebiePricingDescriptorOrBuilder getFreebieOrBuilder() {
-    if (pricingCase_ == 22) {
-       return (io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_;
-    }
-    return io.opencannabis.schema.product.struct.FreebiePricingDescriptor.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -303,14 +282,11 @@ private static final long serialVersionUID = 0L;
     if (type_ != io.opencannabis.schema.product.struct.PricingType.UNIT.getNumber()) {
       output.writeEnum(1, type_);
     }
-    if (pricingCase_ == 20) {
-      output.writeMessage(20, (io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_);
+    if (tierCase_ == 20) {
+      output.writeMessage(20, (io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_);
     }
-    if (pricingCase_ == 21) {
-      output.writeMessage(21, (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_);
-    }
-    if (pricingCase_ == 22) {
-      output.writeMessage(22, (io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_);
+    if (tierCase_ == 21) {
+      output.writeMessage(21, (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_);
     }
     unknownFields.writeTo(output);
   }
@@ -324,17 +300,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, type_);
     }
-    if (pricingCase_ == 20) {
+    if (tierCase_ == 20) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(20, (io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_);
+        .computeMessageSize(20, (io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_);
     }
-    if (pricingCase_ == 21) {
+    if (tierCase_ == 21) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(21, (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_);
-    }
-    if (pricingCase_ == 22) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(22, (io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_);
+        .computeMessageSize(21, (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -353,10 +325,10 @@ private static final long serialVersionUID = 0L;
 
     boolean result = true;
     result = result && type_ == other.type_;
-    result = result && getPricingCase().equals(
-        other.getPricingCase());
+    result = result && getTierCase().equals(
+        other.getTierCase());
     if (!result) return false;
-    switch (pricingCase_) {
+    switch (tierCase_) {
       case 20:
         result = result && getUnit()
             .equals(other.getUnit());
@@ -364,10 +336,6 @@ private static final long serialVersionUID = 0L;
       case 21:
         result = result && getWeighted()
             .equals(other.getWeighted());
-        break;
-      case 22:
-        result = result && getFreebie()
-            .equals(other.getFreebie());
         break;
       case 0:
       default:
@@ -385,7 +353,7 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
-    switch (pricingCase_) {
+    switch (tierCase_) {
       case 20:
         hash = (37 * hash) + UNIT_FIELD_NUMBER;
         hash = (53 * hash) + getUnit().hashCode();
@@ -393,10 +361,6 @@ private static final long serialVersionUID = 0L;
       case 21:
         hash = (37 * hash) + WEIGHTED_FIELD_NUMBER;
         hash = (53 * hash) + getWeighted().hashCode();
-        break;
-      case 22:
-        hash = (37 * hash) + FREEBIE_FIELD_NUMBER;
-        hash = (53 * hash) + getFreebie().hashCode();
         break;
       case 0:
       default:
@@ -496,7 +460,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * -- Pricing: Main Descriptor
+   * Specifies a descriptor for product pricing, which specifies the price configuration for one independent price tier
+   * in a given set of pricing tiers for a product.
    * </pre>
    *
    * Protobuf type {@code opencannabis.structs.pricing.PricingDescriptor}
@@ -536,8 +501,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       type_ = 0;
 
-      pricingCase_ = 0;
-      pricing_ = null;
+      tierCase_ = 0;
+      tier_ = null;
       return this;
     }
 
@@ -561,28 +526,21 @@ private static final long serialVersionUID = 0L;
     public io.opencannabis.schema.product.struct.PricingDescriptor buildPartial() {
       io.opencannabis.schema.product.struct.PricingDescriptor result = new io.opencannabis.schema.product.struct.PricingDescriptor(this);
       result.type_ = type_;
-      if (pricingCase_ == 20) {
+      if (tierCase_ == 20) {
         if (unitBuilder_ == null) {
-          result.pricing_ = pricing_;
+          result.tier_ = tier_;
         } else {
-          result.pricing_ = unitBuilder_.build();
+          result.tier_ = unitBuilder_.build();
         }
       }
-      if (pricingCase_ == 21) {
+      if (tierCase_ == 21) {
         if (weightedBuilder_ == null) {
-          result.pricing_ = pricing_;
+          result.tier_ = tier_;
         } else {
-          result.pricing_ = weightedBuilder_.build();
+          result.tier_ = weightedBuilder_.build();
         }
       }
-      if (pricingCase_ == 22) {
-        if (freebieBuilder_ == null) {
-          result.pricing_ = pricing_;
-        } else {
-          result.pricing_ = freebieBuilder_.build();
-        }
-      }
-      result.pricingCase_ = pricingCase_;
+      result.tierCase_ = tierCase_;
       onBuilt();
       return result;
     }
@@ -627,7 +585,7 @@ private static final long serialVersionUID = 0L;
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
-      switch (other.getPricingCase()) {
+      switch (other.getTierCase()) {
         case UNIT: {
           mergeUnit(other.getUnit());
           break;
@@ -636,11 +594,7 @@ private static final long serialVersionUID = 0L;
           mergeWeighted(other.getWeighted());
           break;
         }
-        case FREEBIE: {
-          mergeFreebie(other.getFreebie());
-          break;
-        }
-        case PRICING_NOT_SET: {
+        case TIER_NOT_SET: {
           break;
         }
       }
@@ -670,17 +624,17 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
-    private int pricingCase_ = 0;
-    private java.lang.Object pricing_;
-    public PricingCase
-        getPricingCase() {
-      return PricingCase.forNumber(
-          pricingCase_);
+    private int tierCase_ = 0;
+    private java.lang.Object tier_;
+    public TierCase
+        getTierCase() {
+      return TierCase.forNumber(
+          tierCase_);
     }
 
-    public Builder clearPricing() {
-      pricingCase_ = 0;
-      pricing_ = null;
+    public Builder clearTier() {
+      tierCase_ = 0;
+      tier_ = null;
       onChanged();
       return this;
     }
@@ -688,12 +642,20 @@ private static final long serialVersionUID = 0L;
 
     private int type_ = 0;
     /**
+     * <pre>
+     * Type of pricing tier this descriptor is specifying.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingType type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
+     * <pre>
+     * Type of pricing tier this descriptor is specifying.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingType type = 1;</code>
      */
     public Builder setTypeValue(int value) {
@@ -702,6 +664,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type of pricing tier this descriptor is specifying.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingType type = 1;</code>
      */
     public io.opencannabis.schema.product.struct.PricingType getType() {
@@ -709,6 +675,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? io.opencannabis.schema.product.struct.PricingType.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * Type of pricing tier this descriptor is specifying.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingType type = 1;</code>
      */
     public Builder setType(io.opencannabis.schema.product.struct.PricingType value) {
@@ -721,6 +691,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Type of pricing tier this descriptor is specifying.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingType type = 1;</code>
      */
     public Builder clearType() {
@@ -734,29 +708,29 @@ private static final long serialVersionUID = 0L;
         io.opencannabis.schema.product.struct.UnitPricingDescriptor, io.opencannabis.schema.product.struct.UnitPricingDescriptor.Builder, io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder> unitBuilder_;
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
      */
     public boolean hasUnit() {
-      return pricingCase_ == 20;
+      return tierCase_ == 20;
     }
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
      */
     public io.opencannabis.schema.product.struct.UnitPricingDescriptor getUnit() {
       if (unitBuilder_ == null) {
-        if (pricingCase_ == 20) {
-          return (io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_;
+        if (tierCase_ == 20) {
+          return (io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_;
         }
         return io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance();
       } else {
-        if (pricingCase_ == 20) {
+        if (tierCase_ == 20) {
           return unitBuilder_.getMessage();
         }
         return io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance();
@@ -764,7 +738,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
@@ -774,17 +748,17 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        pricing_ = value;
+        tier_ = value;
         onChanged();
       } else {
         unitBuilder_.setMessage(value);
       }
-      pricingCase_ = 20;
+      tierCase_ = 20;
       return this;
     }
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
@@ -792,58 +766,58 @@ private static final long serialVersionUID = 0L;
     public Builder setUnit(
         io.opencannabis.schema.product.struct.UnitPricingDescriptor.Builder builderForValue) {
       if (unitBuilder_ == null) {
-        pricing_ = builderForValue.build();
+        tier_ = builderForValue.build();
         onChanged();
       } else {
         unitBuilder_.setMessage(builderForValue.build());
       }
-      pricingCase_ = 20;
+      tierCase_ = 20;
       return this;
     }
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
      */
     public Builder mergeUnit(io.opencannabis.schema.product.struct.UnitPricingDescriptor value) {
       if (unitBuilder_ == null) {
-        if (pricingCase_ == 20 &&
-            pricing_ != io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance()) {
-          pricing_ = io.opencannabis.schema.product.struct.UnitPricingDescriptor.newBuilder((io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_)
+        if (tierCase_ == 20 &&
+            tier_ != io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance()) {
+          tier_ = io.opencannabis.schema.product.struct.UnitPricingDescriptor.newBuilder((io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_)
               .mergeFrom(value).buildPartial();
         } else {
-          pricing_ = value;
+          tier_ = value;
         }
         onChanged();
       } else {
-        if (pricingCase_ == 20) {
+        if (tierCase_ == 20) {
           unitBuilder_.mergeFrom(value);
         }
         unitBuilder_.setMessage(value);
       }
-      pricingCase_ = 20;
+      tierCase_ = 20;
       return this;
     }
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
      */
     public Builder clearUnit() {
       if (unitBuilder_ == null) {
-        if (pricingCase_ == 20) {
-          pricingCase_ = 0;
-          pricing_ = null;
+        if (tierCase_ == 20) {
+          tierCase_ = 0;
+          tier_ = null;
           onChanged();
         }
       } else {
-        if (pricingCase_ == 20) {
-          pricingCase_ = 0;
-          pricing_ = null;
+        if (tierCase_ == 20) {
+          tierCase_ = 0;
+          tier_ = null;
         }
         unitBuilder_.clear();
       }
@@ -851,7 +825,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
@@ -861,24 +835,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
      */
     public io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder getUnitOrBuilder() {
-      if ((pricingCase_ == 20) && (unitBuilder_ != null)) {
+      if ((tierCase_ == 20) && (unitBuilder_ != null)) {
         return unitBuilder_.getMessageOrBuilder();
       } else {
-        if (pricingCase_ == 20) {
-          return (io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_;
+        if (tierCase_ == 20) {
+          return (io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_;
         }
         return io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * -- descriptors
+     * Unit-based pricing information, with no variance in price change.
      * </pre>
      *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor unit = 20;</code>
@@ -887,17 +861,17 @@ private static final long serialVersionUID = 0L;
         io.opencannabis.schema.product.struct.UnitPricingDescriptor, io.opencannabis.schema.product.struct.UnitPricingDescriptor.Builder, io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder> 
         getUnitFieldBuilder() {
       if (unitBuilder_ == null) {
-        if (!(pricingCase_ == 20)) {
-          pricing_ = io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance();
+        if (!(tierCase_ == 20)) {
+          tier_ = io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance();
         }
         unitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.product.struct.UnitPricingDescriptor, io.opencannabis.schema.product.struct.UnitPricingDescriptor.Builder, io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder>(
-                (io.opencannabis.schema.product.struct.UnitPricingDescriptor) pricing_,
+                (io.opencannabis.schema.product.struct.UnitPricingDescriptor) tier_,
                 getParentForChildren(),
                 isClean());
-        pricing_ = null;
+        tier_ = null;
       }
-      pricingCase_ = 20;
+      tierCase_ = 20;
       onChanged();;
       return unitBuilder_;
     }
@@ -905,28 +879,40 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.WeightedPricingDescriptor, io.opencannabis.schema.product.struct.WeightedPricingDescriptor.Builder, io.opencannabis.schema.product.struct.WeightedPricingDescriptorOrBuilder> weightedBuilder_;
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     public boolean hasWeighted() {
-      return pricingCase_ == 21;
+      return tierCase_ == 21;
     }
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     public io.opencannabis.schema.product.struct.WeightedPricingDescriptor getWeighted() {
       if (weightedBuilder_ == null) {
-        if (pricingCase_ == 21) {
-          return (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_;
+        if (tierCase_ == 21) {
+          return (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_;
         }
         return io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance();
       } else {
-        if (pricingCase_ == 21) {
+        if (tierCase_ == 21) {
           return weightedBuilder_.getMessage();
         }
         return io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance();
       }
     }
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     public Builder setWeighted(io.opencannabis.schema.product.struct.WeightedPricingDescriptor value) {
@@ -934,244 +920,132 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        pricing_ = value;
+        tier_ = value;
         onChanged();
       } else {
         weightedBuilder_.setMessage(value);
       }
-      pricingCase_ = 21;
+      tierCase_ = 21;
       return this;
     }
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     public Builder setWeighted(
         io.opencannabis.schema.product.struct.WeightedPricingDescriptor.Builder builderForValue) {
       if (weightedBuilder_ == null) {
-        pricing_ = builderForValue.build();
+        tier_ = builderForValue.build();
         onChanged();
       } else {
         weightedBuilder_.setMessage(builderForValue.build());
       }
-      pricingCase_ = 21;
+      tierCase_ = 21;
       return this;
     }
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     public Builder mergeWeighted(io.opencannabis.schema.product.struct.WeightedPricingDescriptor value) {
       if (weightedBuilder_ == null) {
-        if (pricingCase_ == 21 &&
-            pricing_ != io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance()) {
-          pricing_ = io.opencannabis.schema.product.struct.WeightedPricingDescriptor.newBuilder((io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_)
+        if (tierCase_ == 21 &&
+            tier_ != io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance()) {
+          tier_ = io.opencannabis.schema.product.struct.WeightedPricingDescriptor.newBuilder((io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_)
               .mergeFrom(value).buildPartial();
         } else {
-          pricing_ = value;
+          tier_ = value;
         }
         onChanged();
       } else {
-        if (pricingCase_ == 21) {
+        if (tierCase_ == 21) {
           weightedBuilder_.mergeFrom(value);
         }
         weightedBuilder_.setMessage(value);
       }
-      pricingCase_ = 21;
+      tierCase_ = 21;
       return this;
     }
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     public Builder clearWeighted() {
       if (weightedBuilder_ == null) {
-        if (pricingCase_ == 21) {
-          pricingCase_ = 0;
-          pricing_ = null;
+        if (tierCase_ == 21) {
+          tierCase_ = 0;
+          tier_ = null;
           onChanged();
         }
       } else {
-        if (pricingCase_ == 21) {
-          pricingCase_ = 0;
-          pricing_ = null;
+        if (tierCase_ == 21) {
+          tierCase_ = 0;
+          tier_ = null;
         }
         weightedBuilder_.clear();
       }
       return this;
     }
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     public io.opencannabis.schema.product.struct.WeightedPricingDescriptor.Builder getWeightedBuilder() {
       return getWeightedFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     public io.opencannabis.schema.product.struct.WeightedPricingDescriptorOrBuilder getWeightedOrBuilder() {
-      if ((pricingCase_ == 21) && (weightedBuilder_ != null)) {
+      if ((tierCase_ == 21) && (weightedBuilder_ != null)) {
         return weightedBuilder_.getMessageOrBuilder();
       } else {
-        if (pricingCase_ == 21) {
-          return (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_;
+        if (tierCase_ == 21) {
+          return (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_;
         }
         return io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance();
       }
     }
     /**
+     * <pre>
+     * Weight-based pricing information, with prices assgined to specific or known weights.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.WeightedPricingDescriptor weighted = 21;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.WeightedPricingDescriptor, io.opencannabis.schema.product.struct.WeightedPricingDescriptor.Builder, io.opencannabis.schema.product.struct.WeightedPricingDescriptorOrBuilder> 
         getWeightedFieldBuilder() {
       if (weightedBuilder_ == null) {
-        if (!(pricingCase_ == 21)) {
-          pricing_ = io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance();
+        if (!(tierCase_ == 21)) {
+          tier_ = io.opencannabis.schema.product.struct.WeightedPricingDescriptor.getDefaultInstance();
         }
         weightedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.product.struct.WeightedPricingDescriptor, io.opencannabis.schema.product.struct.WeightedPricingDescriptor.Builder, io.opencannabis.schema.product.struct.WeightedPricingDescriptorOrBuilder>(
-                (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) pricing_,
+                (io.opencannabis.schema.product.struct.WeightedPricingDescriptor) tier_,
                 getParentForChildren(),
                 isClean());
-        pricing_ = null;
+        tier_ = null;
       }
-      pricingCase_ = 21;
+      tierCase_ = 21;
       onChanged();;
       return weightedBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.product.struct.FreebiePricingDescriptor, io.opencannabis.schema.product.struct.FreebiePricingDescriptor.Builder, io.opencannabis.schema.product.struct.FreebiePricingDescriptorOrBuilder> freebieBuilder_;
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    public boolean hasFreebie() {
-      return pricingCase_ == 22;
-    }
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    public io.opencannabis.schema.product.struct.FreebiePricingDescriptor getFreebie() {
-      if (freebieBuilder_ == null) {
-        if (pricingCase_ == 22) {
-          return (io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_;
-        }
-        return io.opencannabis.schema.product.struct.FreebiePricingDescriptor.getDefaultInstance();
-      } else {
-        if (pricingCase_ == 22) {
-          return freebieBuilder_.getMessage();
-        }
-        return io.opencannabis.schema.product.struct.FreebiePricingDescriptor.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    public Builder setFreebie(io.opencannabis.schema.product.struct.FreebiePricingDescriptor value) {
-      if (freebieBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        pricing_ = value;
-        onChanged();
-      } else {
-        freebieBuilder_.setMessage(value);
-      }
-      pricingCase_ = 22;
-      return this;
-    }
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    public Builder setFreebie(
-        io.opencannabis.schema.product.struct.FreebiePricingDescriptor.Builder builderForValue) {
-      if (freebieBuilder_ == null) {
-        pricing_ = builderForValue.build();
-        onChanged();
-      } else {
-        freebieBuilder_.setMessage(builderForValue.build());
-      }
-      pricingCase_ = 22;
-      return this;
-    }
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    public Builder mergeFreebie(io.opencannabis.schema.product.struct.FreebiePricingDescriptor value) {
-      if (freebieBuilder_ == null) {
-        if (pricingCase_ == 22 &&
-            pricing_ != io.opencannabis.schema.product.struct.FreebiePricingDescriptor.getDefaultInstance()) {
-          pricing_ = io.opencannabis.schema.product.struct.FreebiePricingDescriptor.newBuilder((io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          pricing_ = value;
-        }
-        onChanged();
-      } else {
-        if (pricingCase_ == 22) {
-          freebieBuilder_.mergeFrom(value);
-        }
-        freebieBuilder_.setMessage(value);
-      }
-      pricingCase_ = 22;
-      return this;
-    }
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    public Builder clearFreebie() {
-      if (freebieBuilder_ == null) {
-        if (pricingCase_ == 22) {
-          pricingCase_ = 0;
-          pricing_ = null;
-          onChanged();
-        }
-      } else {
-        if (pricingCase_ == 22) {
-          pricingCase_ = 0;
-          pricing_ = null;
-        }
-        freebieBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    public io.opencannabis.schema.product.struct.FreebiePricingDescriptor.Builder getFreebieBuilder() {
-      return getFreebieFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    public io.opencannabis.schema.product.struct.FreebiePricingDescriptorOrBuilder getFreebieOrBuilder() {
-      if ((pricingCase_ == 22) && (freebieBuilder_ != null)) {
-        return freebieBuilder_.getMessageOrBuilder();
-      } else {
-        if (pricingCase_ == 22) {
-          return (io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_;
-        }
-        return io.opencannabis.schema.product.struct.FreebiePricingDescriptor.getDefaultInstance();
-      }
-    }
-    /**
-     * <code>.opencannabis.structs.pricing.FreebiePricingDescriptor freebie = 22;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.product.struct.FreebiePricingDescriptor, io.opencannabis.schema.product.struct.FreebiePricingDescriptor.Builder, io.opencannabis.schema.product.struct.FreebiePricingDescriptorOrBuilder> 
-        getFreebieFieldBuilder() {
-      if (freebieBuilder_ == null) {
-        if (!(pricingCase_ == 22)) {
-          pricing_ = io.opencannabis.schema.product.struct.FreebiePricingDescriptor.getDefaultInstance();
-        }
-        freebieBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.product.struct.FreebiePricingDescriptor, io.opencannabis.schema.product.struct.FreebiePricingDescriptor.Builder, io.opencannabis.schema.product.struct.FreebiePricingDescriptorOrBuilder>(
-                (io.opencannabis.schema.product.struct.FreebiePricingDescriptor) pricing_,
-                getParentForChildren(),
-                isClean());
-        pricing_ = null;
-      }
-      pricingCase_ = 22;
-      onChanged();;
-      return freebieBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

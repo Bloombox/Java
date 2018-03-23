@@ -20,6 +20,10 @@
 package io.opencannabis.schema.oauth;
 
 /**
+ * <pre>
+ * Independent ID structure for an OAuth2 client.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.oauth.ClientID}
  */
 public  final class ClientID extends
@@ -99,6 +103,10 @@ private static final long serialVersionUID = 0L;
   public static final int ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object id_;
   /**
+   * <pre>
+   * ID for the OAuth2 client.
+   * </pre>
+   *
    * <code>string id = 1;</code>
    */
   public java.lang.String getId() {
@@ -114,6 +122,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * ID for the OAuth2 client.
+   * </pre>
+   *
    * <code>string id = 1;</code>
    */
   public com.google.protobuf.ByteString
@@ -281,6 +293,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Independent ID structure for an OAuth2 client.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.oauth.ClientID}
    */
   public static final class Builder extends
@@ -415,6 +431,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
+     * <pre>
+     * ID for the OAuth2 client.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public java.lang.String getId() {
@@ -430,6 +450,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID for the OAuth2 client.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -446,6 +470,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID for the OAuth2 client.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public Builder setId(
@@ -459,6 +487,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID for the OAuth2 client.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public Builder clearId() {
@@ -468,6 +500,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID for the OAuth2 client.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public Builder setIdBytes(

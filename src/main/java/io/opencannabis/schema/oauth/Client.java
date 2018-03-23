@@ -20,6 +20,10 @@
 package io.opencannabis.schema.oauth;
 
 /**
+ * <pre>
+ * Specifies an OAuth2-client that can perform authorization operations in certain circumstances.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.oauth.Client}
  */
 public  final class Client extends
@@ -106,6 +110,10 @@ private static final long serialVersionUID = 0L;
   public static final int CLIENT_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object clientId_;
   /**
+   * <pre>
+   * ID for this OAuth2 client.
+   * </pre>
+   *
    * <code>string client_id = 1;</code>
    */
   public java.lang.String getClientId() {
@@ -121,6 +129,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * ID for this OAuth2 client.
+   * </pre>
+   *
    * <code>string client_id = 1;</code>
    */
   public com.google.protobuf.ByteString
@@ -140,6 +152,10 @@ private static final long serialVersionUID = 0L;
   public static final int CLIENT_SECRET_FIELD_NUMBER = 2;
   private volatile java.lang.Object clientSecret_;
   /**
+   * <pre>
+   * Secret (password) for this OAuth2 client.
+   * </pre>
+   *
    * <code>string client_secret = 2;</code>
    */
   public java.lang.String getClientSecret() {
@@ -155,6 +171,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Secret (password) for this OAuth2 client.
+   * </pre>
+   *
    * <code>string client_secret = 2;</code>
    */
   public com.google.protobuf.ByteString
@@ -332,6 +352,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies an OAuth2-client that can perform authorization operations in certain circumstances.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.oauth.Client}
    */
   public static final class Builder extends
@@ -473,6 +497,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object clientId_ = "";
     /**
+     * <pre>
+     * ID for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_id = 1;</code>
      */
     public java.lang.String getClientId() {
@@ -488,6 +516,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -504,6 +536,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_id = 1;</code>
      */
     public Builder setClientId(
@@ -517,6 +553,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_id = 1;</code>
      */
     public Builder clearClientId() {
@@ -526,6 +566,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_id = 1;</code>
      */
     public Builder setClientIdBytes(
@@ -542,6 +586,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object clientSecret_ = "";
     /**
+     * <pre>
+     * Secret (password) for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_secret = 2;</code>
      */
     public java.lang.String getClientSecret() {
@@ -557,6 +605,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Secret (password) for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_secret = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -573,6 +625,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Secret (password) for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_secret = 2;</code>
      */
     public Builder setClientSecret(
@@ -586,6 +642,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Secret (password) for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_secret = 2;</code>
      */
     public Builder clearClientSecret() {
@@ -595,6 +655,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Secret (password) for this OAuth2 client.
+     * </pre>
+     *
      * <code>string client_secret = 2;</code>
      */
     public Builder setClientSecretBytes(

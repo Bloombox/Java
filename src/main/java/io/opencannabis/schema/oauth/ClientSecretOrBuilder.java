@@ -24,10 +24,18 @@ public interface ClientSecretOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Secret value for the the OAuth2 client.
+   * </pre>
+   *
    * <code>string secret = 1;</code>
    */
   java.lang.String getSecret();
   /**
+   * <pre>
+   * Secret value for the the OAuth2 client.
+   * </pre>
+   *
    * <code>string secret = 1;</code>
    */
   com.google.protobuf.ByteString

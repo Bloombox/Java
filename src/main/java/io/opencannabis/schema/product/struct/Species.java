@@ -20,31 +20,60 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * Enumerates known cannabis species, that may be applied to products to indicate their general genetic and
+ * pharmacokinetic traits.
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.structs.Species}
  */
 public enum Species
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Unspecified or unknown species value.
+   * </pre>
+   *
    * <code>UNSPECIFIED = 0;</code>
    */
   UNSPECIFIED(0),
   /**
+   * <pre>
+   * Purely Sativa species value.
+   * </pre>
+   *
    * <code>SATIVA = 1;</code>
    */
   SATIVA(1),
   /**
+   * <pre>
+   * Hybrid Indica/Sativa species value, with a focus or predominance towards Sativa.
+   * </pre>
+   *
    * <code>HYBRID_SATIVA = 2;</code>
    */
   HYBRID_SATIVA(2),
   /**
+   * <pre>
+   * Purely hybrid Indica/Sativa species value.
+   * </pre>
+   *
    * <code>HYBRID = 3;</code>
    */
   HYBRID(3),
   /**
+   * <pre>
+   * Hybrid Indica/Sativa species value, with a focus or predominance towards Indica.
+   * </pre>
+   *
    * <code>HYBRID_INDICA = 4;</code>
    */
   HYBRID_INDICA(4),
   /**
+   * <pre>
+   * Purely Indica species value.
+   * </pre>
+   *
    * <code>INDICA = 5;</code>
    */
   INDICA(5),
@@ -52,26 +81,50 @@ public enum Species
   ;
 
   /**
+   * <pre>
+   * Unspecified or unknown species value.
+   * </pre>
+   *
    * <code>UNSPECIFIED = 0;</code>
    */
   public static final int UNSPECIFIED_VALUE = 0;
   /**
+   * <pre>
+   * Purely Sativa species value.
+   * </pre>
+   *
    * <code>SATIVA = 1;</code>
    */
   public static final int SATIVA_VALUE = 1;
   /**
+   * <pre>
+   * Hybrid Indica/Sativa species value, with a focus or predominance towards Sativa.
+   * </pre>
+   *
    * <code>HYBRID_SATIVA = 2;</code>
    */
   public static final int HYBRID_SATIVA_VALUE = 2;
   /**
+   * <pre>
+   * Purely hybrid Indica/Sativa species value.
+   * </pre>
+   *
    * <code>HYBRID = 3;</code>
    */
   public static final int HYBRID_VALUE = 3;
   /**
+   * <pre>
+   * Hybrid Indica/Sativa species value, with a focus or predominance towards Indica.
+   * </pre>
+   *
    * <code>HYBRID_INDICA = 4;</code>
    */
   public static final int HYBRID_INDICA_VALUE = 4;
   /**
+   * <pre>
+   * Purely Indica species value.
+   * </pre>
+   *
    * <code>INDICA = 5;</code>
    */
   public static final int INDICA_VALUE = 5;

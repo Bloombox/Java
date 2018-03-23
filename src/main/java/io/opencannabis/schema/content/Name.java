@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object display_;
   /**
    * <pre>
-   * Display name.
+   * Display name, if different from the 'primary name'.
    * </pre>
    *
    * <code>string display = 2;</code>
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Display name.
+   * Display name, if different from the 'primary name'.
    * </pre>
    *
    * <code>string display = 2;</code>
@@ -587,7 +587,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object display_ = "";
     /**
      * <pre>
-     * Display name.
+     * Display name, if different from the 'primary name'.
      * </pre>
      *
      * <code>string display = 2;</code>
@@ -606,7 +606,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display name.
+     * Display name, if different from the 'primary name'.
      * </pre>
      *
      * <code>string display = 2;</code>
@@ -626,7 +626,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display name.
+     * Display name, if different from the 'primary name'.
      * </pre>
      *
      * <code>string display = 2;</code>
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display name.
+     * Display name, if different from the 'primary name'.
      * </pre>
      *
      * <code>string display = 2;</code>
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display name.
+     * Display name, if different from the 'primary name'.
      * </pre>
      *
      * <code>string display = 2;</code>
