@@ -219,35 +219,10 @@ public interface ProductContentOrBuilder extends
 
   /**
    * <pre>
-   * Lab testing information concerning this product.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
-   */
-  boolean hasTesting();
-  /**
-   * <pre>
-   * Lab testing information concerning this product.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
-   */
-  io.opencannabis.schema.product.struct.testing.TestResults getTesting();
-  /**
-   * <pre>
-   * Lab testing information concerning this product.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
-   */
-  io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestingOrBuilder();
-
-  /**
-   * <pre>
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
    */
   java.util.List<io.opencannabis.schema.product.struct.ProductFlag> getFlagsList();
   /**
@@ -255,7 +230,7 @@ public interface ProductContentOrBuilder extends
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
    */
   int getFlagsCount();
   /**
@@ -263,7 +238,7 @@ public interface ProductContentOrBuilder extends
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
    */
   io.opencannabis.schema.product.struct.ProductFlag getFlags(int index);
   /**
@@ -271,7 +246,7 @@ public interface ProductContentOrBuilder extends
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
    */
   java.util.List<java.lang.Integer>
   getFlagsValueList();
@@ -280,7 +255,7 @@ public interface ProductContentOrBuilder extends
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
    */
   int getFlagsValue(int index);
 
@@ -289,7 +264,7 @@ public interface ProductContentOrBuilder extends
    * Timestamps for this product.
    * </pre>
    *
-   * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
+   * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
    */
   boolean hasTs();
   /**
@@ -297,7 +272,7 @@ public interface ProductContentOrBuilder extends
    * Timestamps for this product.
    * </pre>
    *
-   * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
+   * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
    */
   io.opencannabis.schema.content.ProductTimestamps getTs();
   /**
@@ -305,7 +280,7 @@ public interface ProductContentOrBuilder extends
    * Timestamps for this product.
    * </pre>
    *
-   * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
+   * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
    */
   io.opencannabis.schema.content.ProductTimestampsOrBuilder getTsOrBuilder();
 }

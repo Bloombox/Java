@@ -101,10 +101,35 @@ public interface MaterialsDataOrBuilder extends
 
   /**
    * <pre>
+   * Laboratory testing results for this particular subject material.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
+   */
+  boolean hasTests();
+  /**
+   * <pre>
+   * Laboratory testing results for this particular subject material.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
+   */
+  io.opencannabis.schema.product.struct.testing.TestResults getTests();
+  /**
+   * <pre>
+   * Laboratory testing results for this particular subject material.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
+   */
+  io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder();
+
+  /**
+   * <pre>
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> 
       getChannelList();
@@ -113,7 +138,7 @@ public interface MaterialsDataOrBuilder extends
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   io.opencannabis.schema.product.DistributionChannel.DistributionPolicy getChannel(int index);
   /**
@@ -121,7 +146,7 @@ public interface MaterialsDataOrBuilder extends
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   int getChannelCount();
   /**
@@ -129,7 +154,7 @@ public interface MaterialsDataOrBuilder extends
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   java.util.List<? extends io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> 
       getChannelOrBuilderList();
@@ -138,33 +163,8 @@ public interface MaterialsDataOrBuilder extends
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder getChannelOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * Laboratory testing results for this particular subject material.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
-   */
-  boolean hasTests();
-  /**
-   * <pre>
-   * Laboratory testing results for this particular subject material.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
-   */
-  io.opencannabis.schema.product.struct.testing.TestResults getTests();
-  /**
-   * <pre>
-   * Laboratory testing results for this particular subject material.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
-   */
-  io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder();
 }

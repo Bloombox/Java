@@ -105,15 +105,6 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-              channel_ = new java.util.ArrayList<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy>();
-              mutable_bitField0_ |= 0x00000010;
-            }
-            channel_.add(
-                input.readMessage(io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
             io.opencannabis.schema.product.struct.testing.TestResults.Builder subBuilder = null;
             if (tests_ != null) {
               subBuilder = tests_.toBuilder();
@@ -126,6 +117,15 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 50: {
+            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              channel_ = new java.util.ArrayList<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy>();
+              mutable_bitField0_ |= 0x00000020;
+            }
+            channel_.add(
+                input.readMessage(io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.parser(), extensionRegistry));
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
         channel_ = java.util.Collections.unmodifiableList(channel_);
       }
       this.unknownFields = unknownFields.build();
@@ -259,14 +259,47 @@ private static final long serialVersionUID = 0L;
     return result == null ? io.opencannabis.schema.product.struct.Shelf.UNRECOGNIZED : result;
   }
 
-  public static final int CHANNEL_FIELD_NUMBER = 5;
+  public static final int TESTS_FIELD_NUMBER = 5;
+  private io.opencannabis.schema.product.struct.testing.TestResults tests_;
+  /**
+   * <pre>
+   * Laboratory testing results for this particular subject material.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
+   */
+  public boolean hasTests() {
+    return tests_ != null;
+  }
+  /**
+   * <pre>
+   * Laboratory testing results for this particular subject material.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TestResults getTests() {
+    return tests_ == null ? io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : tests_;
+  }
+  /**
+   * <pre>
+   * Laboratory testing results for this particular subject material.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder() {
+    return getTests();
+  }
+
+  public static final int CHANNEL_FIELD_NUMBER = 6;
   private java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> channel_;
   /**
    * <pre>
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   public java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> getChannelList() {
     return channel_;
@@ -276,7 +309,7 @@ private static final long serialVersionUID = 0L;
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   public java.util.List<? extends io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> 
       getChannelOrBuilderList() {
@@ -287,7 +320,7 @@ private static final long serialVersionUID = 0L;
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   public int getChannelCount() {
     return channel_.size();
@@ -297,7 +330,7 @@ private static final long serialVersionUID = 0L;
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy getChannel(int index) {
     return channel_.get(index);
@@ -307,44 +340,11 @@ private static final long serialVersionUID = 0L;
    * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
    */
   public io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder getChannelOrBuilder(
       int index) {
     return channel_.get(index);
-  }
-
-  public static final int TESTS_FIELD_NUMBER = 6;
-  private io.opencannabis.schema.product.struct.testing.TestResults tests_;
-  /**
-   * <pre>
-   * Laboratory testing results for this particular subject material.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
-   */
-  public boolean hasTests() {
-    return tests_ != null;
-  }
-  /**
-   * <pre>
-   * Laboratory testing results for this particular subject material.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
-   */
-  public io.opencannabis.schema.product.struct.testing.TestResults getTests() {
-    return tests_ == null ? io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : tests_;
-  }
-  /**
-   * <pre>
-   * Laboratory testing results for this particular subject material.
-   * </pre>
-   *
-   * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
-   */
-  public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder() {
-    return getTests();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -371,11 +371,11 @@ private static final long serialVersionUID = 0L;
     if (shelf_ != io.opencannabis.schema.product.struct.Shelf.GENERIC_SHELF.getNumber()) {
       output.writeEnum(4, shelf_);
     }
-    for (int i = 0; i < channel_.size(); i++) {
-      output.writeMessage(5, channel_.get(i));
-    }
     if (tests_ != null) {
-      output.writeMessage(6, getTests());
+      output.writeMessage(5, getTests());
+    }
+    for (int i = 0; i < channel_.size(); i++) {
+      output.writeMessage(6, channel_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -401,13 +401,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, shelf_);
     }
-    for (int i = 0; i < channel_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, channel_.get(i));
-    }
     if (tests_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, getTests());
+        .computeMessageSize(5, getTests());
+    }
+    for (int i = 0; i < channel_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, channel_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -433,13 +433,13 @@ private static final long serialVersionUID = 0L;
     }
     result = result && grow_ == other.grow_;
     result = result && shelf_ == other.shelf_;
-    result = result && getChannelList()
-        .equals(other.getChannelList());
     result = result && (hasTests() == other.hasTests());
     if (hasTests()) {
       result = result && getTests()
           .equals(other.getTests());
     }
+    result = result && getChannelList()
+        .equals(other.getChannelList());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -461,13 +461,13 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + grow_;
     hash = (37 * hash) + SHELF_FIELD_NUMBER;
     hash = (53 * hash) + shelf_;
-    if (getChannelCount() > 0) {
-      hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
-      hash = (53 * hash) + getChannelList().hashCode();
-    }
     if (hasTests()) {
       hash = (37 * hash) + TESTS_FIELD_NUMBER;
       hash = (53 * hash) + getTests().hashCode();
+    }
+    if (getChannelCount() > 0) {
+      hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -615,17 +615,17 @@ private static final long serialVersionUID = 0L;
 
       shelf_ = 0;
 
-      if (channelBuilder_ == null) {
-        channel_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
-      } else {
-        channelBuilder_.clear();
-      }
       if (testsBuilder_ == null) {
         tests_ = null;
       } else {
         tests_ = null;
         testsBuilder_ = null;
+      }
+      if (channelBuilder_ == null) {
+        channel_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+      } else {
+        channelBuilder_.clear();
       }
       return this;
     }
@@ -659,19 +659,19 @@ private static final long serialVersionUID = 0L;
       }
       result.grow_ = grow_;
       result.shelf_ = shelf_;
-      if (channelBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          channel_ = java.util.Collections.unmodifiableList(channel_);
-          bitField0_ = (bitField0_ & ~0x00000010);
-        }
-        result.channel_ = channel_;
-      } else {
-        result.channel_ = channelBuilder_.build();
-      }
       if (testsBuilder_ == null) {
         result.tests_ = tests_;
       } else {
         result.tests_ = testsBuilder_.build();
+      }
+      if (channelBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          channel_ = java.util.Collections.unmodifiableList(channel_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.channel_ = channel_;
+      } else {
+        result.channel_ = channelBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -727,11 +727,14 @@ private static final long serialVersionUID = 0L;
       if (other.shelf_ != 0) {
         setShelfValue(other.getShelfValue());
       }
+      if (other.hasTests()) {
+        mergeTests(other.getTests());
+      }
       if (channelBuilder_ == null) {
         if (!other.channel_.isEmpty()) {
           if (channel_.isEmpty()) {
             channel_ = other.channel_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureChannelIsMutable();
             channel_.addAll(other.channel_);
@@ -744,7 +747,7 @@ private static final long serialVersionUID = 0L;
             channelBuilder_.dispose();
             channelBuilder_ = null;
             channel_ = other.channel_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             channelBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getChannelFieldBuilder() : null;
@@ -752,9 +755,6 @@ private static final long serialVersionUID = 0L;
             channelBuilder_.addAllMessages(other.channel_);
           }
         }
-      }
-      if (other.hasTests()) {
-        mergeTests(other.getTests());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1129,318 +1129,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> channel_ =
-      java.util.Collections.emptyList();
-    private void ensureChannelIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-        channel_ = new java.util.ArrayList<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy>(channel_);
-        bitField0_ |= 0x00000010;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.opencannabis.schema.product.DistributionChannel.DistributionPolicy, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder, io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> channelBuilder_;
-
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> getChannelList() {
-      if (channelBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(channel_);
-      } else {
-        return channelBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public int getChannelCount() {
-      if (channelBuilder_ == null) {
-        return channel_.size();
-      } else {
-        return channelBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy getChannel(int index) {
-      if (channelBuilder_ == null) {
-        return channel_.get(index);
-      } else {
-        return channelBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder setChannel(
-        int index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy value) {
-      if (channelBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureChannelIsMutable();
-        channel_.set(index, value);
-        onChanged();
-      } else {
-        channelBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder setChannel(
-        int index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder builderForValue) {
-      if (channelBuilder_ == null) {
-        ensureChannelIsMutable();
-        channel_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        channelBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder addChannel(io.opencannabis.schema.product.DistributionChannel.DistributionPolicy value) {
-      if (channelBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureChannelIsMutable();
-        channel_.add(value);
-        onChanged();
-      } else {
-        channelBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder addChannel(
-        int index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy value) {
-      if (channelBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureChannelIsMutable();
-        channel_.add(index, value);
-        onChanged();
-      } else {
-        channelBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder addChannel(
-        io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder builderForValue) {
-      if (channelBuilder_ == null) {
-        ensureChannelIsMutable();
-        channel_.add(builderForValue.build());
-        onChanged();
-      } else {
-        channelBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder addChannel(
-        int index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder builderForValue) {
-      if (channelBuilder_ == null) {
-        ensureChannelIsMutable();
-        channel_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        channelBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder addAllChannel(
-        java.lang.Iterable<? extends io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> values) {
-      if (channelBuilder_ == null) {
-        ensureChannelIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, channel_);
-        onChanged();
-      } else {
-        channelBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder clearChannel() {
-      if (channelBuilder_ == null) {
-        channel_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-      } else {
-        channelBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public Builder removeChannel(int index) {
-      if (channelBuilder_ == null) {
-        ensureChannelIsMutable();
-        channel_.remove(index);
-        onChanged();
-      } else {
-        channelBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder getChannelBuilder(
-        int index) {
-      return getChannelFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder getChannelOrBuilder(
-        int index) {
-      if (channelBuilder_ == null) {
-        return channel_.get(index);  } else {
-        return channelBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public java.util.List<? extends io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> 
-         getChannelOrBuilderList() {
-      if (channelBuilder_ != null) {
-        return channelBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(channel_);
-      }
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder addChannelBuilder() {
-      return getChannelFieldBuilder().addBuilder(
-          io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder addChannelBuilder(
-        int index) {
-      return getChannelFieldBuilder().addBuilder(
-          index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Specifies distribution policy for this particular subject material.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
-     */
-    public java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder> 
-         getChannelBuilderList() {
-      return getChannelFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.opencannabis.schema.product.DistributionChannel.DistributionPolicy, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder, io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> 
-        getChannelFieldBuilder() {
-      if (channelBuilder_ == null) {
-        channelBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            io.opencannabis.schema.product.DistributionChannel.DistributionPolicy, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder, io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder>(
-                channel_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
-                getParentForChildren(),
-                isClean());
-        channel_ = null;
-      }
-      return channelBuilder_;
-    }
-
     private io.opencannabis.schema.product.struct.testing.TestResults tests_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> testsBuilder_;
@@ -1449,7 +1137,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     public boolean hasTests() {
       return testsBuilder_ != null || tests_ != null;
@@ -1459,7 +1147,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestResults getTests() {
       if (testsBuilder_ == null) {
@@ -1473,7 +1161,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     public Builder setTests(io.opencannabis.schema.product.struct.testing.TestResults value) {
       if (testsBuilder_ == null) {
@@ -1493,7 +1181,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     public Builder setTests(
         io.opencannabis.schema.product.struct.testing.TestResults.Builder builderForValue) {
@@ -1511,7 +1199,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     public Builder mergeTests(io.opencannabis.schema.product.struct.testing.TestResults value) {
       if (testsBuilder_ == null) {
@@ -1533,7 +1221,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     public Builder clearTests() {
       if (testsBuilder_ == null) {
@@ -1551,7 +1239,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestResults.Builder getTestsBuilder() {
       
@@ -1563,7 +1251,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder() {
       if (testsBuilder_ != null) {
@@ -1578,7 +1266,7 @@ private static final long serialVersionUID = 0L;
      * Laboratory testing results for this particular subject material.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults tests = 6;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> 
@@ -1592,6 +1280,318 @@ private static final long serialVersionUID = 0L;
         tests_ = null;
       }
       return testsBuilder_;
+    }
+
+    private java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> channel_ =
+      java.util.Collections.emptyList();
+    private void ensureChannelIsMutable() {
+      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        channel_ = new java.util.ArrayList<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy>(channel_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.product.DistributionChannel.DistributionPolicy, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder, io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> channelBuilder_;
+
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> getChannelList() {
+      if (channelBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(channel_);
+      } else {
+        return channelBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public int getChannelCount() {
+      if (channelBuilder_ == null) {
+        return channel_.size();
+      } else {
+        return channelBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy getChannel(int index) {
+      if (channelBuilder_ == null) {
+        return channel_.get(index);
+      } else {
+        return channelBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder setChannel(
+        int index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy value) {
+      if (channelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureChannelIsMutable();
+        channel_.set(index, value);
+        onChanged();
+      } else {
+        channelBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder setChannel(
+        int index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder builderForValue) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        channel_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        channelBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder addChannel(io.opencannabis.schema.product.DistributionChannel.DistributionPolicy value) {
+      if (channelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureChannelIsMutable();
+        channel_.add(value);
+        onChanged();
+      } else {
+        channelBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder addChannel(
+        int index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy value) {
+      if (channelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureChannelIsMutable();
+        channel_.add(index, value);
+        onChanged();
+      } else {
+        channelBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder addChannel(
+        io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder builderForValue) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        channel_.add(builderForValue.build());
+        onChanged();
+      } else {
+        channelBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder addChannel(
+        int index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder builderForValue) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        channel_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        channelBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder addAllChannel(
+        java.lang.Iterable<? extends io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> values) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, channel_);
+        onChanged();
+      } else {
+        channelBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder clearChannel() {
+      if (channelBuilder_ == null) {
+        channel_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        channelBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public Builder removeChannel(int index) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        channel_.remove(index);
+        onChanged();
+      } else {
+        channelBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder getChannelBuilder(
+        int index) {
+      return getChannelFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder getChannelOrBuilder(
+        int index) {
+      if (channelBuilder_ == null) {
+        return channel_.get(index);  } else {
+        return channelBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public java.util.List<? extends io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> 
+         getChannelOrBuilderList() {
+      if (channelBuilder_ != null) {
+        return channelBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(channel_);
+      }
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder addChannelBuilder() {
+      return getChannelFieldBuilder().addBuilder(
+          io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder addChannelBuilder(
+        int index) {
+      return getChannelFieldBuilder().addBuilder(
+          index, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Specifies distribution policy for this particular subject material.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 6;</code>
+     */
+    public java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder> 
+         getChannelBuilderList() {
+      return getChannelFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.product.DistributionChannel.DistributionPolicy, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder, io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> 
+        getChannelFieldBuilder() {
+      if (channelBuilder_ == null) {
+        channelBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            io.opencannabis.schema.product.DistributionChannel.DistributionPolicy, io.opencannabis.schema.product.DistributionChannel.DistributionPolicy.Builder, io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder>(
+                channel_,
+                ((bitField0_ & 0x00000020) == 0x00000020),
+                getParentForChildren(),
+                isClean());
+        channel_ = null;
+      }
+      return channelBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

@@ -54,11 +54,11 @@ public final class MaterialsContent {
       "ucts.Species\0220\n\010genetics\030\002 \001(\0132\036.opencan" +
       "nabis.structs.Genetics\022(\n\004grow\030\003 \001(\0162\032.o" +
       "pencannabis.structs.Grow\022*\n\005shelf\030\004 \001(\0162" +
-      "\033.opencannabis.structs.Shelf\022G\n\007channel\030" +
-      "\005 \003(\01326.opencannabis.products.distributi" +
-      "on.DistributionPolicy\022;\n\005tests\030\006 \001(\0132,.o" +
-      "pencannabis.structs.labtesting.TestResul" +
-      "tsB<\n\036io.opencannabis.schema.contentB\020Ma" +
+      "\033.opencannabis.structs.Shelf\022;\n\005tests\030\005 " +
+      "\001(\0132,.opencannabis.structs.labtesting.Te" +
+      "stResults\022G\n\007channel\030\006 \003(\01326.opencannabi" +
+      "s.products.distribution.DistributionPoli" +
+      "cyB<\n\036io.opencannabis.schema.contentB\020Ma" +
       "terialsContentH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
@@ -84,7 +84,7 @@ public final class MaterialsContent {
     internal_static_opencannabis_content_MaterialsData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_content_MaterialsData_descriptor,
-        new java.lang.String[] { "Species", "Genetics", "Grow", "Shelf", "Channel", "Tests", });
+        new java.lang.String[] { "Species", "Genetics", "Grow", "Shelf", "Tests", "Channel", });
     io.opencannabis.schema.product.struct.MaterialGrow.getDescriptor();
     io.opencannabis.schema.product.struct.MaterialShelf.getDescriptor();
     io.opencannabis.schema.product.struct.MaterialSpecies.getDescriptor();

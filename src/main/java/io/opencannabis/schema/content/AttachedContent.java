@@ -53,28 +53,26 @@ public final class AttachedContent {
       "abis.content\032\022content/Name.proto\032\025conten" +
       "t/Content.proto\032\023content/Brand.proto\032\026te" +
       "mporal/Instant.proto\032\025media/MediaItem.pr" +
-      "oto\032\032structs/ProductFlags.proto\032$structs" +
-      "/labtesting/TestResults.proto\032\'structs/p" +
-      "ricing/PricingDescriptor.proto\"\251\001\n\021Produ" +
-      "ctTimestamps\022/\n\007created\030\001 \001(\0132\036.opencann" +
-      "abis.temporal.Instant\0220\n\010modified\030\002 \001(\0132" +
-      "\036.opencannabis.temporal.Instant\0221\n\tpubli" +
-      "shed\030\003 \001(\0132\036.opencannabis.temporal.Insta" +
-      "nt\"\206\004\n\016ProductContent\022(\n\004name\030\001 \001(\0132\032.op" +
-      "encannabis.content.Name\022*\n\005brand\030\002 \001(\0132\033" +
-      ".opencannabis.content.Brand\022.\n\007summary\030\003" +
-      " \001(\0132\035.opencannabis.content.Content\022,\n\005u" +
-      "sage\030\004 \001(\0132\035.opencannabis.content.Conten" +
-      "t\022-\n\006dosage\030\005 \001(\0132\035.opencannabis.content" +
-      ".Content\022,\n\005media\030\006 \003(\0132\035.opencannabis.m" +
-      "edia.MediaItem\022=\n\007pricing\030\007 \001(\0132,.openca" +
-      "nnabis.structs.pricing.ProductPricing\022=\n" +
-      "\007testing\030\010 \001(\0132,.opencannabis.structs.la" +
-      "btesting.TestResults\0220\n\005flags\030\t \003(\0162!.op" +
-      "encannabis.structs.ProductFlag\0223\n\002ts\030\n \001" +
-      "(\0132\'.opencannabis.content.ProductTimesta" +
-      "mpsB;\n\036io.opencannabis.schema.contentB\017A" +
-      "ttachedContentH\001P\001\242\002\003OCSb\006proto3"
+      "oto\032\032structs/ProductFlags.proto\032\'structs" +
+      "/pricing/PricingDescriptor.proto\"\251\001\n\021Pro" +
+      "ductTimestamps\022/\n\007created\030\001 \001(\0132\036.openca" +
+      "nnabis.temporal.Instant\0220\n\010modified\030\002 \001(" +
+      "\0132\036.opencannabis.temporal.Instant\0221\n\tpub" +
+      "lished\030\003 \001(\0132\036.opencannabis.temporal.Ins" +
+      "tant\"\307\003\n\016ProductContent\022(\n\004name\030\001 \001(\0132\032." +
+      "opencannabis.content.Name\022*\n\005brand\030\002 \001(\013" +
+      "2\033.opencannabis.content.Brand\022.\n\007summary" +
+      "\030\003 \001(\0132\035.opencannabis.content.Content\022,\n" +
+      "\005usage\030\004 \001(\0132\035.opencannabis.content.Cont" +
+      "ent\022-\n\006dosage\030\005 \001(\0132\035.opencannabis.conte" +
+      "nt.Content\022,\n\005media\030\006 \003(\0132\035.opencannabis" +
+      ".media.MediaItem\022=\n\007pricing\030\007 \001(\0132,.open" +
+      "cannabis.structs.pricing.ProductPricing\022" +
+      "0\n\005flags\030\010 \003(\0162!.opencannabis.structs.Pr" +
+      "oductFlag\0223\n\002ts\030\t \001(\0132\'.opencannabis.con" +
+      "tent.ProductTimestampsB;\n\036io.opencannabi" +
+      "s.schema.contentB\017AttachedContentH\001P\001\242\002\003" +
+      "OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -93,7 +91,6 @@ public final class AttachedContent {
           io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
           io.opencannabis.schema.media.AttachedMedia.getDescriptor(),
           io.opencannabis.schema.product.struct.BaseStructs.getDescriptor(),
-          io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor(),
           io.opencannabis.schema.product.struct.ProductPricingSpec.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_content_ProductTimestamps_descriptor =
@@ -107,14 +104,13 @@ public final class AttachedContent {
     internal_static_opencannabis_content_ProductContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_content_ProductContent_descriptor,
-        new java.lang.String[] { "Name", "Brand", "Summary", "Usage", "Dosage", "Media", "Pricing", "Testing", "Flags", "Ts", });
+        new java.lang.String[] { "Name", "Brand", "Summary", "Usage", "Dosage", "Media", "Pricing", "Flags", "Ts", });
     io.opencannabis.schema.content.NameContent.getDescriptor();
     io.opencannabis.schema.content.GenericContent.getDescriptor();
     io.opencannabis.schema.content.BrandContent.getDescriptor();
     io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
     io.opencannabis.schema.media.AttachedMedia.getDescriptor();
     io.opencannabis.schema.product.struct.BaseStructs.getDescriptor();
-    io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor();
     io.opencannabis.schema.product.struct.ProductPricingSpec.getDescriptor();
   }
 
