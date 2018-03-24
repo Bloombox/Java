@@ -159,30 +159,43 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 64: {
+          case 66: {
+            io.opencannabis.schema.product.struct.testing.TestResults.Builder subBuilder = null;
+            if (tests_ != null) {
+              subBuilder = tests_.toBuilder();
+            }
+            tests_ = input.readMessage(io.opencannabis.schema.product.struct.testing.TestResults.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(tests_);
+              tests_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 72: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+            if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
               flags_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000100;
             }
             flags_.add(rawValue);
             break;
           }
-          case 66: {
+          case 74: {
             int length = input.readRawVarint32();
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                 flags_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000100;
               }
               flags_.add(rawValue);
             }
             input.popLimit(oldLimit);
             break;
           }
-          case 74: {
+          case 82: {
             io.opencannabis.schema.content.ProductTimestamps.Builder subBuilder = null;
             if (ts_ != null) {
               subBuilder = ts_.toBuilder();
@@ -206,7 +219,7 @@ private static final long serialVersionUID = 0L;
       if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
         media_ = java.util.Collections.unmodifiableList(media_);
       }
-      if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+      if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
         flags_ = java.util.Collections.unmodifiableList(flags_);
       }
       this.unknownFields = unknownFields.build();
@@ -479,7 +492,40 @@ private static final long serialVersionUID = 0L;
     return getPricing();
   }
 
-  public static final int FLAGS_FIELD_NUMBER = 8;
+  public static final int TESTS_FIELD_NUMBER = 8;
+  private io.opencannabis.schema.product.struct.testing.TestResults tests_;
+  /**
+   * <pre>
+   * Lab testing information concerning this product.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+   */
+  public boolean hasTests() {
+    return tests_ != null;
+  }
+  /**
+   * <pre>
+   * Lab testing information concerning this product.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TestResults getTests() {
+    return tests_ == null ? io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : tests_;
+  }
+  /**
+   * <pre>
+   * Lab testing information concerning this product.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder() {
+    return getTests();
+  }
+
+  public static final int FLAGS_FIELD_NUMBER = 9;
   private java.util.List<java.lang.Integer> flags_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, io.opencannabis.schema.product.struct.ProductFlag> flags_converter_ =
@@ -495,7 +541,7 @@ private static final long serialVersionUID = 0L;
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
    */
   public java.util.List<io.opencannabis.schema.product.struct.ProductFlag> getFlagsList() {
     return new com.google.protobuf.Internal.ListAdapter<
@@ -506,7 +552,7 @@ private static final long serialVersionUID = 0L;
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
    */
   public int getFlagsCount() {
     return flags_.size();
@@ -516,7 +562,7 @@ private static final long serialVersionUID = 0L;
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
    */
   public io.opencannabis.schema.product.struct.ProductFlag getFlags(int index) {
     return flags_converter_.convert(flags_.get(index));
@@ -526,7 +572,7 @@ private static final long serialVersionUID = 0L;
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
    */
   public java.util.List<java.lang.Integer>
   getFlagsValueList() {
@@ -537,21 +583,21 @@ private static final long serialVersionUID = 0L;
    * Product flags attached to this content.
    * </pre>
    *
-   * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+   * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
    */
   public int getFlagsValue(int index) {
     return flags_.get(index);
   }
   private int flagsMemoizedSerializedSize;
 
-  public static final int TS_FIELD_NUMBER = 9;
+  public static final int TS_FIELD_NUMBER = 10;
   private io.opencannabis.schema.content.ProductTimestamps ts_;
   /**
    * <pre>
    * Timestamps for this product.
    * </pre>
    *
-   * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+   * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
    */
   public boolean hasTs() {
     return ts_ != null;
@@ -561,7 +607,7 @@ private static final long serialVersionUID = 0L;
    * Timestamps for this product.
    * </pre>
    *
-   * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+   * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
    */
   public io.opencannabis.schema.content.ProductTimestamps getTs() {
     return ts_ == null ? io.opencannabis.schema.content.ProductTimestamps.getDefaultInstance() : ts_;
@@ -571,7 +617,7 @@ private static final long serialVersionUID = 0L;
    * Timestamps for this product.
    * </pre>
    *
-   * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+   * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
    */
   public io.opencannabis.schema.content.ProductTimestampsOrBuilder getTsOrBuilder() {
     return getTs();
@@ -611,15 +657,18 @@ private static final long serialVersionUID = 0L;
     if (pricing_ != null) {
       output.writeMessage(7, getPricing());
     }
+    if (tests_ != null) {
+      output.writeMessage(8, getTests());
+    }
     if (getFlagsList().size() > 0) {
-      output.writeUInt32NoTag(66);
+      output.writeUInt32NoTag(74);
       output.writeUInt32NoTag(flagsMemoizedSerializedSize);
     }
     for (int i = 0; i < flags_.size(); i++) {
       output.writeEnumNoTag(flags_.get(i));
     }
     if (ts_ != null) {
-      output.writeMessage(9, getTs());
+      output.writeMessage(10, getTs());
     }
     unknownFields.writeTo(output);
   }
@@ -657,6 +706,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getPricing());
     }
+    if (tests_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getTests());
+    }
     {
       int dataSize = 0;
       for (int i = 0; i < flags_.size(); i++) {
@@ -671,7 +724,7 @@ private static final long serialVersionUID = 0L;
     }
     if (ts_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, getTs());
+        .computeMessageSize(10, getTs());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -721,6 +774,11 @@ private static final long serialVersionUID = 0L;
       result = result && getPricing()
           .equals(other.getPricing());
     }
+    result = result && (hasTests() == other.hasTests());
+    if (hasTests()) {
+      result = result && getTests()
+          .equals(other.getTests());
+    }
     result = result && flags_.equals(other.flags_);
     result = result && (hasTs() == other.hasTs());
     if (hasTs()) {
@@ -765,6 +823,10 @@ private static final long serialVersionUID = 0L;
     if (hasPricing()) {
       hash = (37 * hash) + PRICING_FIELD_NUMBER;
       hash = (53 * hash) + getPricing().hashCode();
+    }
+    if (hasTests()) {
+      hash = (37 * hash) + TESTS_FIELD_NUMBER;
+      hash = (53 * hash) + getTests().hashCode();
     }
     if (getFlagsCount() > 0) {
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -951,8 +1013,14 @@ private static final long serialVersionUID = 0L;
         pricing_ = null;
         pricingBuilder_ = null;
       }
+      if (testsBuilder_ == null) {
+        tests_ = null;
+      } else {
+        tests_ = null;
+        testsBuilder_ = null;
+      }
       flags_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       if (tsBuilder_ == null) {
         ts_ = null;
       } else {
@@ -1022,9 +1090,14 @@ private static final long serialVersionUID = 0L;
       } else {
         result.pricing_ = pricingBuilder_.build();
       }
-      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (testsBuilder_ == null) {
+        result.tests_ = tests_;
+      } else {
+        result.tests_ = testsBuilder_.build();
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
         flags_ = java.util.Collections.unmodifiableList(flags_);
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
       }
       result.flags_ = flags_;
       if (tsBuilder_ == null) {
@@ -1118,10 +1191,13 @@ private static final long serialVersionUID = 0L;
       if (other.hasPricing()) {
         mergePricing(other.getPricing());
       }
+      if (other.hasTests()) {
+        mergeTests(other.getTests());
+      }
       if (!other.flags_.isEmpty()) {
         if (flags_.isEmpty()) {
           flags_ = other.flags_;
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           ensureFlagsIsMutable();
           flags_.addAll(other.flags_);
@@ -2389,12 +2465,165 @@ private static final long serialVersionUID = 0L;
       return pricingBuilder_;
     }
 
+    private io.opencannabis.schema.product.struct.testing.TestResults tests_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> testsBuilder_;
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    public boolean hasTests() {
+      return testsBuilder_ != null || tests_ != null;
+    }
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestResults getTests() {
+      if (testsBuilder_ == null) {
+        return tests_ == null ? io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : tests_;
+      } else {
+        return testsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    public Builder setTests(io.opencannabis.schema.product.struct.testing.TestResults value) {
+      if (testsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        tests_ = value;
+        onChanged();
+      } else {
+        testsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    public Builder setTests(
+        io.opencannabis.schema.product.struct.testing.TestResults.Builder builderForValue) {
+      if (testsBuilder_ == null) {
+        tests_ = builderForValue.build();
+        onChanged();
+      } else {
+        testsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    public Builder mergeTests(io.opencannabis.schema.product.struct.testing.TestResults value) {
+      if (testsBuilder_ == null) {
+        if (tests_ != null) {
+          tests_ =
+            io.opencannabis.schema.product.struct.testing.TestResults.newBuilder(tests_).mergeFrom(value).buildPartial();
+        } else {
+          tests_ = value;
+        }
+        onChanged();
+      } else {
+        testsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    public Builder clearTests() {
+      if (testsBuilder_ == null) {
+        tests_ = null;
+        onChanged();
+      } else {
+        tests_ = null;
+        testsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestResults.Builder getTestsBuilder() {
+      
+      onChanged();
+      return getTestsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder() {
+      if (testsBuilder_ != null) {
+        return testsBuilder_.getMessageOrBuilder();
+      } else {
+        return tests_ == null ?
+            io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : tests_;
+      }
+    }
+    /**
+     * <pre>
+     * Lab testing information concerning this product.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> 
+        getTestsFieldBuilder() {
+      if (testsBuilder_ == null) {
+        testsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder>(
+                getTests(),
+                getParentForChildren(),
+                isClean());
+        tests_ = null;
+      }
+      return testsBuilder_;
+    }
+
     private java.util.List<java.lang.Integer> flags_ =
       java.util.Collections.emptyList();
     private void ensureFlagsIsMutable() {
-      if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+      if (!((bitField0_ & 0x00000100) == 0x00000100)) {
         flags_ = new java.util.ArrayList<java.lang.Integer>(flags_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
       }
     }
     /**
@@ -2402,7 +2631,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.ProductFlag> getFlagsList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -2413,7 +2642,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public int getFlagsCount() {
       return flags_.size();
@@ -2423,7 +2652,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public io.opencannabis.schema.product.struct.ProductFlag getFlags(int index) {
       return flags_converter_.convert(flags_.get(index));
@@ -2433,7 +2662,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public Builder setFlags(
         int index, io.opencannabis.schema.product.struct.ProductFlag value) {
@@ -2450,7 +2679,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public Builder addFlags(io.opencannabis.schema.product.struct.ProductFlag value) {
       if (value == null) {
@@ -2466,7 +2695,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public Builder addAllFlags(
         java.lang.Iterable<? extends io.opencannabis.schema.product.struct.ProductFlag> values) {
@@ -2482,11 +2711,11 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public Builder clearFlags() {
       flags_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2495,7 +2724,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public java.util.List<java.lang.Integer>
     getFlagsValueList() {
@@ -2506,7 +2735,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public int getFlagsValue(int index) {
       return flags_.get(index);
@@ -2516,7 +2745,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public Builder setFlagsValue(
         int index, int value) {
@@ -2530,7 +2759,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public Builder addFlagsValue(int value) {
       ensureFlagsIsMutable();
@@ -2543,7 +2772,7 @@ private static final long serialVersionUID = 0L;
      * Product flags attached to this content.
      * </pre>
      *
-     * <code>repeated .opencannabis.structs.ProductFlag flags = 8;</code>
+     * <code>repeated .opencannabis.structs.ProductFlag flags = 9;</code>
      */
     public Builder addAllFlagsValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -2563,7 +2792,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     public boolean hasTs() {
       return tsBuilder_ != null || ts_ != null;
@@ -2573,7 +2802,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     public io.opencannabis.schema.content.ProductTimestamps getTs() {
       if (tsBuilder_ == null) {
@@ -2587,7 +2816,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     public Builder setTs(io.opencannabis.schema.content.ProductTimestamps value) {
       if (tsBuilder_ == null) {
@@ -2607,7 +2836,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     public Builder setTs(
         io.opencannabis.schema.content.ProductTimestamps.Builder builderForValue) {
@@ -2625,7 +2854,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     public Builder mergeTs(io.opencannabis.schema.content.ProductTimestamps value) {
       if (tsBuilder_ == null) {
@@ -2647,7 +2876,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     public Builder clearTs() {
       if (tsBuilder_ == null) {
@@ -2665,7 +2894,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     public io.opencannabis.schema.content.ProductTimestamps.Builder getTsBuilder() {
       
@@ -2677,7 +2906,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     public io.opencannabis.schema.content.ProductTimestampsOrBuilder getTsOrBuilder() {
       if (tsBuilder_ != null) {
@@ -2692,7 +2921,7 @@ private static final long serialVersionUID = 0L;
      * Timestamps for this product.
      * </pre>
      *
-     * <code>.opencannabis.content.ProductTimestamps ts = 9;</code>
+     * <code>.opencannabis.content.ProductTimestamps ts = 10;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.content.ProductTimestamps, io.opencannabis.schema.content.ProductTimestamps.Builder, io.opencannabis.schema.content.ProductTimestampsOrBuilder> 
