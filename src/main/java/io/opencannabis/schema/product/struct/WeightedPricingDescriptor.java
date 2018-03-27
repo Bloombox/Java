@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (weight_ != io.opencannabis.schema.product.struct.PricingWeightTier.OTHER.getNumber()) {
+    if (weight_ != io.opencannabis.schema.product.struct.PricingWeightTier.NO_WEIGHT.getNumber()) {
       output.writeEnum(1, weight_);
     }
     if (tier_ != null) {
@@ -219,7 +219,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (weight_ != io.opencannabis.schema.product.struct.PricingWeightTier.OTHER.getNumber()) {
+    if (weight_ != io.opencannabis.schema.product.struct.PricingWeightTier.NO_WEIGHT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, weight_);
     }

@@ -32,12 +32,12 @@ public enum PricingWeightTier
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
-   * 'Other,' or custom weighted pricing.
+   * No weight indicated.
    * </pre>
    *
-   * <code>OTHER = 0;</code>
+   * <code>NO_WEIGHT = 0;</code>
    */
-  OTHER(0),
+  NO_WEIGHT(0),
   /**
    * <pre>
    * Pricing for 'ONE GRAM' of the subject material or merchandise.
@@ -128,17 +128,25 @@ public enum PricingWeightTier
    * <code>TON = 11;</code>
    */
   TON(11),
-  UNRECOGNIZED(-1),
-  ;
-
   /**
    * <pre>
    * 'Other,' or custom weighted pricing.
    * </pre>
    *
-   * <code>OTHER = 0;</code>
+   * <code>OTHER = 12;</code>
    */
-  public static final int OTHER_VALUE = 0;
+  OTHER(12),
+  UNRECOGNIZED(-1),
+  ;
+
+  /**
+   * <pre>
+   * No weight indicated.
+   * </pre>
+   *
+   * <code>NO_WEIGHT = 0;</code>
+   */
+  public static final int NO_WEIGHT_VALUE = 0;
   /**
    * <pre>
    * Pricing for 'ONE GRAM' of the subject material or merchandise.
@@ -229,6 +237,14 @@ public enum PricingWeightTier
    * <code>TON = 11;</code>
    */
   public static final int TON_VALUE = 11;
+  /**
+   * <pre>
+   * 'Other,' or custom weighted pricing.
+   * </pre>
+   *
+   * <code>OTHER = 12;</code>
+   */
+  public static final int OTHER_VALUE = 12;
 
 
   public final int getNumber() {
@@ -249,7 +265,7 @@ public enum PricingWeightTier
 
   public static PricingWeightTier forNumber(int value) {
     switch (value) {
-      case 0: return OTHER;
+      case 0: return NO_WEIGHT;
       case 1: return GRAM;
       case 2: return HALFGRAM;
       case 3: return QUARTERGRAM;
@@ -261,6 +277,7 @@ public enum PricingWeightTier
       case 9: return POUND;
       case 10: return KILO;
       case 11: return TON;
+      case 12: return OTHER;
       default: return null;
     }
   }

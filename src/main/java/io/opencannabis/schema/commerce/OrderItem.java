@@ -431,7 +431,7 @@ public final class OrderItem {
             (java.lang.Integer) spec_);
         return result == null ? io.opencannabis.schema.product.struct.PricingWeightTier.UNRECOGNIZED : result;
       }
-      return io.opencannabis.schema.product.struct.PricingWeightTier.OTHER;
+      return io.opencannabis.schema.product.struct.PricingWeightTier.NO_WEIGHT;
     }
 
     public static final int SIZE_FIELD_NUMBER = 3;
@@ -1027,7 +1027,7 @@ public final class OrderItem {
               (java.lang.Integer) spec_);
           return result == null ? io.opencannabis.schema.product.struct.PricingWeightTier.UNRECOGNIZED : result;
         }
-        return io.opencannabis.schema.product.struct.PricingWeightTier.OTHER;
+        return io.opencannabis.schema.product.struct.PricingWeightTier.NO_WEIGHT;
       }
       /**
        * <pre>
