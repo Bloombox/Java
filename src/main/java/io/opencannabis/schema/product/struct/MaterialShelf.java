@@ -40,10 +40,10 @@ public final class MaterialShelf {
   static {
     java.lang.String[] descriptorData = {
       "\n\023structs/Shelf.proto\022\024opencannabis.stru" +
-      "cts*0\n\005Shelf\022\013\n\007ECONOMY\020\000\022\014\n\010MIDSHELF\020\001\022" +
-      "\014\n\010TOPSHELF\020\002B@\n%io.opencannabis.schema." +
-      "product.structB\rMaterialShelfH\001P\001\242\002\003OCSb" +
-      "\006proto3"
+      "cts*C\n\005Shelf\022\021\n\rGENERIC_SHELF\020\000\022\013\n\007ECONO" +
+      "MY\020\001\022\014\n\010MIDSHELF\020\002\022\014\n\010TOPSHELF\020\003B@\n%io.o" +
+      "pencannabis.schema.product.structB\rMater" +
+      "ialShelfH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

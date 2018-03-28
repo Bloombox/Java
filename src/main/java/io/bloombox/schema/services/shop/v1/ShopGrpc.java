@@ -132,6 +132,18 @@ public final class ShopGrpc {
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.shop.v1.GetOrder.Response.getDefaultInstance()))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.shop.v1.ShareOrder.Request,
+      io.bloombox.schema.services.shop.v1.ShareOrder.Response> METHOD_SHARE_ORDER =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.shop.v1.ShareOrder.Request, io.bloombox.schema.services.shop.v1.ShareOrder.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.shop.v1.Shop", "ShareOrder"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.shop.v1.ShareOrder.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.shop.v1.ShareOrder.Response.getDefaultInstance()))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -234,6 +246,16 @@ public final class ShopGrpc {
       asyncUnimplementedUnaryCall(METHOD_GET_ORDER, responseObserver);
     }
 
+    /**
+     * <pre>
+     * Share a commercial order with a given email address or phone number.
+     * </pre>
+     */
+    public void shareOrder(io.bloombox.schema.services.shop.v1.ShareOrder.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.ShareOrder.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SHARE_ORDER, responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -285,6 +307,13 @@ public final class ShopGrpc {
                 io.bloombox.schema.services.shop.v1.GetOrder.Request,
                 io.bloombox.schema.services.shop.v1.GetOrder.Response>(
                   this, METHODID_GET_ORDER)))
+          .addMethod(
+            METHOD_SHARE_ORDER,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.shop.v1.ShareOrder.Request,
+                io.bloombox.schema.services.shop.v1.ShareOrder.Response>(
+                  this, METHODID_SHARE_ORDER)))
           .build();
     }
   }
@@ -387,6 +416,17 @@ public final class ShopGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_GET_ORDER, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Share a commercial order with a given email address or phone number.
+     * </pre>
+     */
+    public void shareOrder(io.bloombox.schema.services.shop.v1.ShareOrder.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.ShareOrder.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SHARE_ORDER, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -479,6 +519,16 @@ public final class ShopGrpc {
     public io.bloombox.schema.services.shop.v1.GetOrder.Response getOrder(io.bloombox.schema.services.shop.v1.GetOrder.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_GET_ORDER, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Share a commercial order with a given email address or phone number.
+     * </pre>
+     */
+    public io.bloombox.schema.services.shop.v1.ShareOrder.Response shareOrder(io.bloombox.schema.services.shop.v1.ShareOrder.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SHARE_ORDER, getCallOptions(), request);
     }
   }
 
@@ -580,6 +630,17 @@ public final class ShopGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_GET_ORDER, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Share a commercial order with a given email address or phone number.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.shop.v1.ShareOrder.Response> shareOrder(
+        io.bloombox.schema.services.shop.v1.ShareOrder.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SHARE_ORDER, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PING = 0;
@@ -589,6 +650,7 @@ public final class ShopGrpc {
   private static final int METHODID_VERIFY_MEMBER = 4;
   private static final int METHODID_SUBMIT_ORDER = 5;
   private static final int METHODID_GET_ORDER = 6;
+  private static final int METHODID_SHARE_ORDER = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -635,6 +697,10 @@ public final class ShopGrpc {
           serviceImpl.getOrder((io.bloombox.schema.services.shop.v1.GetOrder.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.GetOrder.Response>) responseObserver);
           break;
+        case METHODID_SHARE_ORDER:
+          serviceImpl.shareOrder((io.bloombox.schema.services.shop.v1.ShareOrder.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.shop.v1.ShareOrder.Response>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -675,6 +741,7 @@ public final class ShopGrpc {
               .addMethod(METHOD_VERIFY_MEMBER)
               .addMethod(METHOD_SUBMIT_ORDER)
               .addMethod(METHOD_GET_ORDER)
+              .addMethod(METHOD_SHARE_ORDER)
               .build();
         }
       }

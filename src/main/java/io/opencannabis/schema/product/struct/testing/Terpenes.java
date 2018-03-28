@@ -33,7 +33,7 @@ private static final long serialVersionUID = 0L;
   }
   private Terpenes() {
     available_ = false;
-    terpenes_ = java.util.Collections.emptyList();
+    terpene_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -74,10 +74,10 @@ private static final long serialVersionUID = 0L;
           }
           case 82: {
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-              terpenes_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.Terpenes.Result>();
+              terpene_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.Terpenes.Result>();
               mutable_bitField0_ |= 0x00000002;
             }
-            terpenes_.add(
+            terpene_.add(
                 input.readMessage(io.opencannabis.schema.product.struct.testing.Terpenes.Result.parser(), extensionRegistry));
             break;
           }
@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
           e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-        terpenes_ = java.util.Collections.unmodifiableList(terpenes_);
+        terpene_ = java.util.Collections.unmodifiableList(terpene_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -792,39 +792,39 @@ private static final long serialVersionUID = 0L;
     return available_;
   }
 
-  public static final int TERPENES_FIELD_NUMBER = 10;
-  private java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> terpenes_;
+  public static final int TERPENE_FIELD_NUMBER = 10;
+  private java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> terpene_;
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
-  public java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> getTerpenesList() {
-    return terpenes_;
+  public java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> getTerpeneList() {
+    return terpene_;
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
   public java.util.List<? extends io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> 
-      getTerpenesOrBuilderList() {
-    return terpenes_;
+      getTerpeneOrBuilderList() {
+    return terpene_;
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
-  public int getTerpenesCount() {
-    return terpenes_.size();
+  public int getTerpeneCount() {
+    return terpene_.size();
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.Terpenes.Result getTerpenes(int index) {
-    return terpenes_.get(index);
+  public io.opencannabis.schema.product.struct.testing.Terpenes.Result getTerpene(int index) {
+    return terpene_.get(index);
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder getTerpenesOrBuilder(
+  public io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder getTerpeneOrBuilder(
       int index) {
-    return terpenes_.get(index);
+    return terpene_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -842,8 +842,8 @@ private static final long serialVersionUID = 0L;
     if (available_ != false) {
       output.writeBool(1, available_);
     }
-    for (int i = 0; i < terpenes_.size(); i++) {
-      output.writeMessage(10, terpenes_.get(i));
+    for (int i = 0; i < terpene_.size(); i++) {
+      output.writeMessage(10, terpene_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -857,9 +857,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, available_);
     }
-    for (int i = 0; i < terpenes_.size(); i++) {
+    for (int i = 0; i < terpene_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(10, terpenes_.get(i));
+        .computeMessageSize(10, terpene_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -879,8 +879,8 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && (getAvailable()
         == other.getAvailable());
-    result = result && getTerpenesList()
-        .equals(other.getTerpenesList());
+    result = result && getTerpeneList()
+        .equals(other.getTerpeneList());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -895,9 +895,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AVAILABLE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getAvailable());
-    if (getTerpenesCount() > 0) {
-      hash = (37 * hash) + TERPENES_FIELD_NUMBER;
-      hash = (53 * hash) + getTerpenesList().hashCode();
+    if (getTerpeneCount() > 0) {
+      hash = (37 * hash) + TERPENE_FIELD_NUMBER;
+      hash = (53 * hash) + getTerpeneList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -1024,18 +1024,18 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-        getTerpenesFieldBuilder();
+        getTerpeneFieldBuilder();
       }
     }
     public Builder clear() {
       super.clear();
       available_ = false;
 
-      if (terpenesBuilder_ == null) {
-        terpenes_ = java.util.Collections.emptyList();
+      if (terpeneBuilder_ == null) {
+        terpene_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        terpenesBuilder_.clear();
+        terpeneBuilder_.clear();
       }
       return this;
     }
@@ -1062,14 +1062,14 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       result.available_ = available_;
-      if (terpenesBuilder_ == null) {
+      if (terpeneBuilder_ == null) {
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          terpenes_ = java.util.Collections.unmodifiableList(terpenes_);
+          terpene_ = java.util.Collections.unmodifiableList(terpene_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.terpenes_ = terpenes_;
+        result.terpene_ = terpene_;
       } else {
-        result.terpenes_ = terpenesBuilder_.build();
+        result.terpene_ = terpeneBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -1116,29 +1116,29 @@ private static final long serialVersionUID = 0L;
       if (other.getAvailable() != false) {
         setAvailable(other.getAvailable());
       }
-      if (terpenesBuilder_ == null) {
-        if (!other.terpenes_.isEmpty()) {
-          if (terpenes_.isEmpty()) {
-            terpenes_ = other.terpenes_;
+      if (terpeneBuilder_ == null) {
+        if (!other.terpene_.isEmpty()) {
+          if (terpene_.isEmpty()) {
+            terpene_ = other.terpene_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureTerpenesIsMutable();
-            terpenes_.addAll(other.terpenes_);
+            ensureTerpeneIsMutable();
+            terpene_.addAll(other.terpene_);
           }
           onChanged();
         }
       } else {
-        if (!other.terpenes_.isEmpty()) {
-          if (terpenesBuilder_.isEmpty()) {
-            terpenesBuilder_.dispose();
-            terpenesBuilder_ = null;
-            terpenes_ = other.terpenes_;
+        if (!other.terpene_.isEmpty()) {
+          if (terpeneBuilder_.isEmpty()) {
+            terpeneBuilder_.dispose();
+            terpeneBuilder_ = null;
+            terpene_ = other.terpene_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            terpenesBuilder_ = 
+            terpeneBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getTerpenesFieldBuilder() : null;
+                 getTerpeneFieldBuilder() : null;
           } else {
-            terpenesBuilder_.addAllMessages(other.terpenes_);
+            terpeneBuilder_.addAllMessages(other.terpene_);
           }
         }
       }
@@ -1196,244 +1196,244 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> terpenes_ =
+    private java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> terpene_ =
       java.util.Collections.emptyList();
-    private void ensureTerpenesIsMutable() {
+    private void ensureTerpeneIsMutable() {
       if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-        terpenes_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.Terpenes.Result>(terpenes_);
+        terpene_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.Terpenes.Result>(terpene_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.opencannabis.schema.product.struct.testing.Terpenes.Result, io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder, io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> terpenesBuilder_;
+        io.opencannabis.schema.product.struct.testing.Terpenes.Result, io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder, io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> terpeneBuilder_;
 
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> getTerpenesList() {
-      if (terpenesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(terpenes_);
+    public java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> getTerpeneList() {
+      if (terpeneBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(terpene_);
       } else {
-        return terpenesBuilder_.getMessageList();
+        return terpeneBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public int getTerpenesCount() {
-      if (terpenesBuilder_ == null) {
-        return terpenes_.size();
+    public int getTerpeneCount() {
+      if (terpeneBuilder_ == null) {
+        return terpene_.size();
       } else {
-        return terpenesBuilder_.getCount();
+        return terpeneBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.Terpenes.Result getTerpenes(int index) {
-      if (terpenesBuilder_ == null) {
-        return terpenes_.get(index);
+    public io.opencannabis.schema.product.struct.testing.Terpenes.Result getTerpene(int index) {
+      if (terpeneBuilder_ == null) {
+        return terpene_.get(index);
       } else {
-        return terpenesBuilder_.getMessage(index);
+        return terpeneBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder setTerpenes(
+    public Builder setTerpene(
         int index, io.opencannabis.schema.product.struct.testing.Terpenes.Result value) {
-      if (terpenesBuilder_ == null) {
+      if (terpeneBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTerpenesIsMutable();
-        terpenes_.set(index, value);
+        ensureTerpeneIsMutable();
+        terpene_.set(index, value);
         onChanged();
       } else {
-        terpenesBuilder_.setMessage(index, value);
+        terpeneBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder setTerpenes(
+    public Builder setTerpene(
         int index, io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder builderForValue) {
-      if (terpenesBuilder_ == null) {
-        ensureTerpenesIsMutable();
-        terpenes_.set(index, builderForValue.build());
+      if (terpeneBuilder_ == null) {
+        ensureTerpeneIsMutable();
+        terpene_.set(index, builderForValue.build());
         onChanged();
       } else {
-        terpenesBuilder_.setMessage(index, builderForValue.build());
+        terpeneBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder addTerpenes(io.opencannabis.schema.product.struct.testing.Terpenes.Result value) {
-      if (terpenesBuilder_ == null) {
+    public Builder addTerpene(io.opencannabis.schema.product.struct.testing.Terpenes.Result value) {
+      if (terpeneBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTerpenesIsMutable();
-        terpenes_.add(value);
+        ensureTerpeneIsMutable();
+        terpene_.add(value);
         onChanged();
       } else {
-        terpenesBuilder_.addMessage(value);
+        terpeneBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder addTerpenes(
+    public Builder addTerpene(
         int index, io.opencannabis.schema.product.struct.testing.Terpenes.Result value) {
-      if (terpenesBuilder_ == null) {
+      if (terpeneBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureTerpenesIsMutable();
-        terpenes_.add(index, value);
+        ensureTerpeneIsMutable();
+        terpene_.add(index, value);
         onChanged();
       } else {
-        terpenesBuilder_.addMessage(index, value);
+        terpeneBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder addTerpenes(
+    public Builder addTerpene(
         io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder builderForValue) {
-      if (terpenesBuilder_ == null) {
-        ensureTerpenesIsMutable();
-        terpenes_.add(builderForValue.build());
+      if (terpeneBuilder_ == null) {
+        ensureTerpeneIsMutable();
+        terpene_.add(builderForValue.build());
         onChanged();
       } else {
-        terpenesBuilder_.addMessage(builderForValue.build());
+        terpeneBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder addTerpenes(
+    public Builder addTerpene(
         int index, io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder builderForValue) {
-      if (terpenesBuilder_ == null) {
-        ensureTerpenesIsMutable();
-        terpenes_.add(index, builderForValue.build());
+      if (terpeneBuilder_ == null) {
+        ensureTerpeneIsMutable();
+        terpene_.add(index, builderForValue.build());
         onChanged();
       } else {
-        terpenesBuilder_.addMessage(index, builderForValue.build());
+        terpeneBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder addAllTerpenes(
+    public Builder addAllTerpene(
         java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.Terpenes.Result> values) {
-      if (terpenesBuilder_ == null) {
-        ensureTerpenesIsMutable();
+      if (terpeneBuilder_ == null) {
+        ensureTerpeneIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, terpenes_);
+            values, terpene_);
         onChanged();
       } else {
-        terpenesBuilder_.addAllMessages(values);
+        terpeneBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder clearTerpenes() {
-      if (terpenesBuilder_ == null) {
-        terpenes_ = java.util.Collections.emptyList();
+    public Builder clearTerpene() {
+      if (terpeneBuilder_ == null) {
+        terpene_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
-        terpenesBuilder_.clear();
+        terpeneBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public Builder removeTerpenes(int index) {
-      if (terpenesBuilder_ == null) {
-        ensureTerpenesIsMutable();
-        terpenes_.remove(index);
+    public Builder removeTerpene(int index) {
+      if (terpeneBuilder_ == null) {
+        ensureTerpeneIsMutable();
+        terpene_.remove(index);
         onChanged();
       } else {
-        terpenesBuilder_.remove(index);
+        terpeneBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder getTerpenesBuilder(
+    public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder getTerpeneBuilder(
         int index) {
-      return getTerpenesFieldBuilder().getBuilder(index);
+      return getTerpeneFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder getTerpenesOrBuilder(
+    public io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder getTerpeneOrBuilder(
         int index) {
-      if (terpenesBuilder_ == null) {
-        return terpenes_.get(index);  } else {
-        return terpenesBuilder_.getMessageOrBuilder(index);
+      if (terpeneBuilder_ == null) {
+        return terpene_.get(index);  } else {
+        return terpeneBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> 
-         getTerpenesOrBuilderList() {
-      if (terpenesBuilder_ != null) {
-        return terpenesBuilder_.getMessageOrBuilderList();
+         getTerpeneOrBuilderList() {
+      if (terpeneBuilder_ != null) {
+        return terpeneBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(terpenes_);
+        return java.util.Collections.unmodifiableList(terpene_);
       }
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder addTerpenesBuilder() {
-      return getTerpenesFieldBuilder().addBuilder(
+    public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder addTerpeneBuilder() {
+      return getTerpeneFieldBuilder().addBuilder(
           io.opencannabis.schema.product.struct.testing.Terpenes.Result.getDefaultInstance());
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder addTerpenesBuilder(
+    public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder addTerpeneBuilder(
         int index) {
-      return getTerpenesFieldBuilder().addBuilder(
+      return getTerpeneFieldBuilder().addBuilder(
           index, io.opencannabis.schema.product.struct.testing.Terpenes.Result.getDefaultInstance());
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+     * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder> 
-         getTerpenesBuilderList() {
-      return getTerpenesFieldBuilder().getBuilderList();
+         getTerpeneBuilderList() {
+      return getTerpeneFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.Terpenes.Result, io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder, io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> 
-        getTerpenesFieldBuilder() {
-      if (terpenesBuilder_ == null) {
-        terpenesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getTerpeneFieldBuilder() {
+      if (terpeneBuilder_ == null) {
+        terpeneBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.Terpenes.Result, io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder, io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder>(
-                terpenes_,
+                terpene_,
                 ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),
                 isClean());
-        terpenes_ = null;
+        terpene_ = null;
       }
-      return terpenesBuilder_;
+      return terpeneBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

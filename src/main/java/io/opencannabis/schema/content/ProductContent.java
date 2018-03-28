@@ -161,13 +161,13 @@ private static final long serialVersionUID = 0L;
           }
           case 66: {
             io.opencannabis.schema.product.struct.testing.TestResults.Builder subBuilder = null;
-            if (testing_ != null) {
-              subBuilder = testing_.toBuilder();
+            if (tests_ != null) {
+              subBuilder = tests_.toBuilder();
             }
-            testing_ = input.readMessage(io.opencannabis.schema.product.struct.testing.TestResults.parser(), extensionRegistry);
+            tests_ = input.readMessage(io.opencannabis.schema.product.struct.testing.TestResults.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(testing_);
-              testing_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(tests_);
+              tests_ = subBuilder.buildPartial();
             }
 
             break;
@@ -492,37 +492,37 @@ private static final long serialVersionUID = 0L;
     return getPricing();
   }
 
-  public static final int TESTING_FIELD_NUMBER = 8;
-  private io.opencannabis.schema.product.struct.testing.TestResults testing_;
+  public static final int TESTS_FIELD_NUMBER = 8;
+  private io.opencannabis.schema.product.struct.testing.TestResults tests_;
   /**
    * <pre>
    * Lab testing information concerning this product.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
    */
-  public boolean hasTesting() {
-    return testing_ != null;
+  public boolean hasTests() {
+    return tests_ != null;
   }
   /**
    * <pre>
    * Lab testing information concerning this product.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.TestResults getTesting() {
-    return testing_ == null ? io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : testing_;
+  public io.opencannabis.schema.product.struct.testing.TestResults getTests() {
+    return tests_ == null ? io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : tests_;
   }
   /**
    * <pre>
    * Lab testing information concerning this product.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestingOrBuilder() {
-    return getTesting();
+  public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder() {
+    return getTests();
   }
 
   public static final int FLAGS_FIELD_NUMBER = 9;
@@ -657,8 +657,8 @@ private static final long serialVersionUID = 0L;
     if (pricing_ != null) {
       output.writeMessage(7, getPricing());
     }
-    if (testing_ != null) {
-      output.writeMessage(8, getTesting());
+    if (tests_ != null) {
+      output.writeMessage(8, getTests());
     }
     if (getFlagsList().size() > 0) {
       output.writeUInt32NoTag(74);
@@ -706,9 +706,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getPricing());
     }
-    if (testing_ != null) {
+    if (tests_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, getTesting());
+        .computeMessageSize(8, getTests());
     }
     {
       int dataSize = 0;
@@ -774,10 +774,10 @@ private static final long serialVersionUID = 0L;
       result = result && getPricing()
           .equals(other.getPricing());
     }
-    result = result && (hasTesting() == other.hasTesting());
-    if (hasTesting()) {
-      result = result && getTesting()
-          .equals(other.getTesting());
+    result = result && (hasTests() == other.hasTests());
+    if (hasTests()) {
+      result = result && getTests()
+          .equals(other.getTests());
     }
     result = result && flags_.equals(other.flags_);
     result = result && (hasTs() == other.hasTs());
@@ -824,9 +824,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PRICING_FIELD_NUMBER;
       hash = (53 * hash) + getPricing().hashCode();
     }
-    if (hasTesting()) {
-      hash = (37 * hash) + TESTING_FIELD_NUMBER;
-      hash = (53 * hash) + getTesting().hashCode();
+    if (hasTests()) {
+      hash = (37 * hash) + TESTS_FIELD_NUMBER;
+      hash = (53 * hash) + getTests().hashCode();
     }
     if (getFlagsCount() > 0) {
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -1013,11 +1013,11 @@ private static final long serialVersionUID = 0L;
         pricing_ = null;
         pricingBuilder_ = null;
       }
-      if (testingBuilder_ == null) {
-        testing_ = null;
+      if (testsBuilder_ == null) {
+        tests_ = null;
       } else {
-        testing_ = null;
-        testingBuilder_ = null;
+        tests_ = null;
+        testsBuilder_ = null;
       }
       flags_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000100);
@@ -1090,10 +1090,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.pricing_ = pricingBuilder_.build();
       }
-      if (testingBuilder_ == null) {
-        result.testing_ = testing_;
+      if (testsBuilder_ == null) {
+        result.tests_ = tests_;
       } else {
-        result.testing_ = testingBuilder_.build();
+        result.tests_ = testsBuilder_.build();
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         flags_ = java.util.Collections.unmodifiableList(flags_);
@@ -1191,8 +1191,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasPricing()) {
         mergePricing(other.getPricing());
       }
-      if (other.hasTesting()) {
-        mergeTesting(other.getTesting());
+      if (other.hasTests()) {
+        mergeTests(other.getTests());
       }
       if (!other.flags_.isEmpty()) {
         if (flags_.isEmpty()) {
@@ -2465,31 +2465,31 @@ private static final long serialVersionUID = 0L;
       return pricingBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.testing.TestResults testing_ = null;
+    private io.opencannabis.schema.product.struct.testing.TestResults tests_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> testingBuilder_;
+        io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> testsBuilder_;
     /**
      * <pre>
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
-    public boolean hasTesting() {
-      return testingBuilder_ != null || testing_ != null;
+    public boolean hasTests() {
+      return testsBuilder_ != null || tests_ != null;
     }
     /**
      * <pre>
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.TestResults getTesting() {
-      if (testingBuilder_ == null) {
-        return testing_ == null ? io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : testing_;
+    public io.opencannabis.schema.product.struct.testing.TestResults getTests() {
+      if (testsBuilder_ == null) {
+        return tests_ == null ? io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : tests_;
       } else {
-        return testingBuilder_.getMessage();
+        return testsBuilder_.getMessage();
       }
     }
     /**
@@ -2497,17 +2497,17 @@ private static final long serialVersionUID = 0L;
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
-    public Builder setTesting(io.opencannabis.schema.product.struct.testing.TestResults value) {
-      if (testingBuilder_ == null) {
+    public Builder setTests(io.opencannabis.schema.product.struct.testing.TestResults value) {
+      if (testsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        testing_ = value;
+        tests_ = value;
         onChanged();
       } else {
-        testingBuilder_.setMessage(value);
+        testsBuilder_.setMessage(value);
       }
 
       return this;
@@ -2517,15 +2517,15 @@ private static final long serialVersionUID = 0L;
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
-    public Builder setTesting(
+    public Builder setTests(
         io.opencannabis.schema.product.struct.testing.TestResults.Builder builderForValue) {
-      if (testingBuilder_ == null) {
-        testing_ = builderForValue.build();
+      if (testsBuilder_ == null) {
+        tests_ = builderForValue.build();
         onChanged();
       } else {
-        testingBuilder_.setMessage(builderForValue.build());
+        testsBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
@@ -2535,19 +2535,19 @@ private static final long serialVersionUID = 0L;
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
-    public Builder mergeTesting(io.opencannabis.schema.product.struct.testing.TestResults value) {
-      if (testingBuilder_ == null) {
-        if (testing_ != null) {
-          testing_ =
-            io.opencannabis.schema.product.struct.testing.TestResults.newBuilder(testing_).mergeFrom(value).buildPartial();
+    public Builder mergeTests(io.opencannabis.schema.product.struct.testing.TestResults value) {
+      if (testsBuilder_ == null) {
+        if (tests_ != null) {
+          tests_ =
+            io.opencannabis.schema.product.struct.testing.TestResults.newBuilder(tests_).mergeFrom(value).buildPartial();
         } else {
-          testing_ = value;
+          tests_ = value;
         }
         onChanged();
       } else {
-        testingBuilder_.mergeFrom(value);
+        testsBuilder_.mergeFrom(value);
       }
 
       return this;
@@ -2557,15 +2557,15 @@ private static final long serialVersionUID = 0L;
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
-    public Builder clearTesting() {
-      if (testingBuilder_ == null) {
-        testing_ = null;
+    public Builder clearTests() {
+      if (testsBuilder_ == null) {
+        tests_ = null;
         onChanged();
       } else {
-        testing_ = null;
-        testingBuilder_ = null;
+        tests_ = null;
+        testsBuilder_ = null;
       }
 
       return this;
@@ -2575,26 +2575,26 @@ private static final long serialVersionUID = 0L;
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.TestResults.Builder getTestingBuilder() {
+    public io.opencannabis.schema.product.struct.testing.TestResults.Builder getTestsBuilder() {
       
       onChanged();
-      return getTestingFieldBuilder().getBuilder();
+      return getTestsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestingOrBuilder() {
-      if (testingBuilder_ != null) {
-        return testingBuilder_.getMessageOrBuilder();
+    public io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder() {
+      if (testsBuilder_ != null) {
+        return testsBuilder_.getMessageOrBuilder();
       } else {
-        return testing_ == null ?
-            io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : testing_;
+        return tests_ == null ?
+            io.opencannabis.schema.product.struct.testing.TestResults.getDefaultInstance() : tests_;
       }
     }
     /**
@@ -2602,20 +2602,20 @@ private static final long serialVersionUID = 0L;
      * Lab testing information concerning this product.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+     * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder> 
-        getTestingFieldBuilder() {
-      if (testingBuilder_ == null) {
-        testingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getTestsFieldBuilder() {
+      if (testsBuilder_ == null) {
+        testsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             io.opencannabis.schema.product.struct.testing.TestResults, io.opencannabis.schema.product.struct.testing.TestResults.Builder, io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder>(
-                getTesting(),
+                getTests(),
                 getParentForChildren(),
                 isClean());
-        testing_ = null;
+        tests_ = null;
       }
-      return testingBuilder_;
+      return testsBuilder_;
     }
 
     private java.util.List<java.lang.Integer> flags_ =

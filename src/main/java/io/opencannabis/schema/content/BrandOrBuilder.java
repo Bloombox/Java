@@ -24,47 +24,83 @@ public interface BrandOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Naming information for this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Name name = 1;</code>
    */
   boolean hasName();
   /**
+   * <pre>
+   * Naming information for this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Name name = 1;</code>
    */
   io.opencannabis.schema.content.Name getName();
   /**
+   * <pre>
+   * Naming information for this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Name name = 1;</code>
    */
   io.opencannabis.schema.content.NameOrBuilder getNameOrBuilder();
 
   /**
+   * <pre>
+   * Parent/owning brand, if applicable.
+   * </pre>
+   *
    * <code>.opencannabis.content.Brand parent = 2;</code>
    */
   boolean hasParent();
   /**
+   * <pre>
+   * Parent/owning brand, if applicable.
+   * </pre>
+   *
    * <code>.opencannabis.content.Brand parent = 2;</code>
    */
   io.opencannabis.schema.content.Brand getParent();
   /**
+   * <pre>
+   * Parent/owning brand, if applicable.
+   * </pre>
+   *
    * <code>.opencannabis.content.Brand parent = 2;</code>
    */
   io.opencannabis.schema.content.BrandOrBuilder getParentOrBuilder();
 
   /**
+   * <pre>
+   * Summary information or content about this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content summary = 3;</code>
    */
   boolean hasSummary();
   /**
+   * <pre>
+   * Summary information or content about this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content summary = 3;</code>
    */
   io.opencannabis.schema.content.Content getSummary();
   /**
+   * <pre>
+   * Summary information or content about this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content summary = 3;</code>
    */
   io.opencannabis.schema.content.ContentOrBuilder getSummaryOrBuilder();
 
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -73,7 +109,7 @@ public interface BrandOrBuilder extends
       getMediaList();
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -81,7 +117,7 @@ public interface BrandOrBuilder extends
   io.opencannabis.schema.media.MediaItem getMedia(int index);
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -89,7 +125,7 @@ public interface BrandOrBuilder extends
   int getMediaCount();
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -98,7 +134,7 @@ public interface BrandOrBuilder extends
       getMediaOrBuilderList();
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>

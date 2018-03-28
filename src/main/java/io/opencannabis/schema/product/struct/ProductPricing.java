@@ -21,7 +21,8 @@ package io.opencannabis.schema.product.struct;
 
 /**
  * <pre>
- * -- Pricing: Product-level Object
+ * Pricing manifest for a product, with the combined tiers and top-level discounts that are currently configured for a
+ * given sellable material or unit of merchandise.
  * </pre>
  *
  * Protobuf type {@code opencannabis.structs.pricing.ProductPricing}
@@ -122,12 +123,20 @@ private static final long serialVersionUID = 0L;
   public static final int DISCOUNTS_FIELD_NUMBER = 1;
   private java.util.List<io.opencannabis.schema.product.struct.SaleDescriptor> discounts_;
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   public java.util.List<io.opencannabis.schema.product.struct.SaleDescriptor> getDiscountsList() {
     return discounts_;
   }
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   public java.util.List<? extends io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder> 
@@ -135,18 +144,30 @@ private static final long serialVersionUID = 0L;
     return discounts_;
   }
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   public int getDiscountsCount() {
     return discounts_.size();
   }
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   public io.opencannabis.schema.product.struct.SaleDescriptor getDiscounts(int index) {
     return discounts_.get(index);
   }
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   public io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder getDiscountsOrBuilder(
@@ -157,12 +178,20 @@ private static final long serialVersionUID = 0L;
   public static final int MANIFEST_FIELD_NUMBER = 2;
   private java.util.List<io.opencannabis.schema.product.struct.PricingDescriptor> manifest_;
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   public java.util.List<io.opencannabis.schema.product.struct.PricingDescriptor> getManifestList() {
     return manifest_;
   }
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   public java.util.List<? extends io.opencannabis.schema.product.struct.PricingDescriptorOrBuilder> 
@@ -170,18 +199,30 @@ private static final long serialVersionUID = 0L;
     return manifest_;
   }
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   public int getManifestCount() {
     return manifest_.size();
   }
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   public io.opencannabis.schema.product.struct.PricingDescriptor getManifest(int index) {
     return manifest_.get(index);
   }
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   public io.opencannabis.schema.product.struct.PricingDescriptorOrBuilder getManifestOrBuilder(
@@ -357,7 +398,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * -- Pricing: Product-level Object
+   * Pricing manifest for a product, with the combined tiers and top-level discounts that are currently configured for a
+   * given sellable material or unit of merchandise.
    * </pre>
    *
    * Protobuf type {@code opencannabis.structs.pricing.ProductPricing}
@@ -584,6 +626,10 @@ private static final long serialVersionUID = 0L;
         io.opencannabis.schema.product.struct.SaleDescriptor, io.opencannabis.schema.product.struct.SaleDescriptor.Builder, io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder> discountsBuilder_;
 
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.SaleDescriptor> getDiscountsList() {
@@ -594,6 +640,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public int getDiscountsCount() {
@@ -604,6 +654,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public io.opencannabis.schema.product.struct.SaleDescriptor getDiscounts(int index) {
@@ -614,6 +668,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder setDiscounts(
@@ -631,6 +689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder setDiscounts(
@@ -645,6 +707,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder addDiscounts(io.opencannabis.schema.product.struct.SaleDescriptor value) {
@@ -661,6 +727,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder addDiscounts(
@@ -678,6 +748,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder addDiscounts(
@@ -692,6 +766,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder addDiscounts(
@@ -706,6 +784,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder addAllDiscounts(
@@ -721,6 +803,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder clearDiscounts() {
@@ -734,6 +820,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public Builder removeDiscounts(int index) {
@@ -747,6 +837,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public io.opencannabis.schema.product.struct.SaleDescriptor.Builder getDiscountsBuilder(
@@ -754,6 +848,10 @@ private static final long serialVersionUID = 0L;
       return getDiscountsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder getDiscountsOrBuilder(
@@ -764,6 +862,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder> 
@@ -775,6 +877,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public io.opencannabis.schema.product.struct.SaleDescriptor.Builder addDiscountsBuilder() {
@@ -782,6 +888,10 @@ private static final long serialVersionUID = 0L;
           io.opencannabis.schema.product.struct.SaleDescriptor.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public io.opencannabis.schema.product.struct.SaleDescriptor.Builder addDiscountsBuilder(
@@ -790,6 +900,10 @@ private static final long serialVersionUID = 0L;
           index, io.opencannabis.schema.product.struct.SaleDescriptor.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Discounts that should apply across all pricing tiers for the subject product.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.SaleDescriptor.Builder> 
@@ -824,6 +938,10 @@ private static final long serialVersionUID = 0L;
         io.opencannabis.schema.product.struct.PricingDescriptor, io.opencannabis.schema.product.struct.PricingDescriptor.Builder, io.opencannabis.schema.product.struct.PricingDescriptorOrBuilder> manifestBuilder_;
 
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.PricingDescriptor> getManifestList() {
@@ -834,6 +952,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public int getManifestCount() {
@@ -844,6 +966,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public io.opencannabis.schema.product.struct.PricingDescriptor getManifest(int index) {
@@ -854,6 +980,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder setManifest(
@@ -871,6 +1001,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder setManifest(
@@ -885,6 +1019,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder addManifest(io.opencannabis.schema.product.struct.PricingDescriptor value) {
@@ -901,6 +1039,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder addManifest(
@@ -918,6 +1060,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder addManifest(
@@ -932,6 +1078,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder addManifest(
@@ -946,6 +1096,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder addAllManifest(
@@ -961,6 +1115,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder clearManifest() {
@@ -974,6 +1132,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public Builder removeManifest(int index) {
@@ -987,6 +1149,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public io.opencannabis.schema.product.struct.PricingDescriptor.Builder getManifestBuilder(
@@ -994,6 +1160,10 @@ private static final long serialVersionUID = 0L;
       return getManifestFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public io.opencannabis.schema.product.struct.PricingDescriptorOrBuilder getManifestOrBuilder(
@@ -1004,6 +1174,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.product.struct.PricingDescriptorOrBuilder> 
@@ -1015,6 +1189,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public io.opencannabis.schema.product.struct.PricingDescriptor.Builder addManifestBuilder() {
@@ -1022,6 +1200,10 @@ private static final long serialVersionUID = 0L;
           io.opencannabis.schema.product.struct.PricingDescriptor.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public io.opencannabis.schema.product.struct.PricingDescriptor.Builder addManifestBuilder(
@@ -1030,6 +1212,10 @@ private static final long serialVersionUID = 0L;
           index, io.opencannabis.schema.product.struct.PricingDescriptor.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Pricing tiers attached to this product pricing manifest.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.PricingDescriptor.Builder> 

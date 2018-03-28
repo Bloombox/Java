@@ -20,6 +20,11 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * Specifies pricing information for a weight-priced product, at a particular weight tier, including the price value,
+ * tier status, and, optionally, a custom weight.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.pricing.WeightedPricingDescriptor}
  */
 public  final class WeightedPricingDescriptor extends
@@ -118,12 +123,20 @@ private static final long serialVersionUID = 0L;
   public static final int WEIGHT_FIELD_NUMBER = 1;
   private int weight_;
   /**
+   * <pre>
+   * Weight tier selection.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
    */
   public int getWeightValue() {
     return weight_;
   }
   /**
+   * <pre>
+   * Weight tier selection.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
    */
   public io.opencannabis.schema.product.struct.PricingWeightTier getWeight() {
@@ -134,18 +147,30 @@ private static final long serialVersionUID = 0L;
   public static final int TIER_FIELD_NUMBER = 2;
   private io.opencannabis.schema.product.struct.UnitPricingDescriptor tier_;
   /**
+   * <pre>
+   * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
    */
   public boolean hasTier() {
     return tier_ != null;
   }
   /**
+   * <pre>
+   * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
    */
   public io.opencannabis.schema.product.struct.UnitPricingDescriptor getTier() {
     return tier_ == null ? io.opencannabis.schema.product.struct.UnitPricingDescriptor.getDefaultInstance() : tier_;
   }
   /**
+   * <pre>
+   * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
    */
   public io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder getTierOrBuilder() {
@@ -155,6 +180,10 @@ private static final long serialVersionUID = 0L;
   public static final int WEIGHT_IN_GRAMS_FIELD_NUMBER = 3;
   private float weightInGrams_;
   /**
+   * <pre>
+   * Custom weight in grams, if any.
+   * </pre>
+   *
    * <code>float weight_in_grams = 3;</code>
    */
   public float getWeightInGrams() {
@@ -173,7 +202,7 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (weight_ != io.opencannabis.schema.product.struct.PricingWeightTier.OTHER.getNumber()) {
+    if (weight_ != io.opencannabis.schema.product.struct.PricingWeightTier.NO_WEIGHT.getNumber()) {
       output.writeEnum(1, weight_);
     }
     if (tier_ != null) {
@@ -190,7 +219,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (weight_ != io.opencannabis.schema.product.struct.PricingWeightTier.OTHER.getNumber()) {
+    if (weight_ != io.opencannabis.schema.product.struct.PricingWeightTier.NO_WEIGHT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, weight_);
     }
@@ -342,6 +371,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies pricing information for a weight-priced product, at a particular weight tier, including the price value,
+   * tier status, and, optionally, a custom weight.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.pricing.WeightedPricingDescriptor}
    */
   public static final class Builder extends
@@ -495,12 +529,20 @@ private static final long serialVersionUID = 0L;
 
     private int weight_ = 0;
     /**
+     * <pre>
+     * Weight tier selection.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
      */
     public int getWeightValue() {
       return weight_;
     }
     /**
+     * <pre>
+     * Weight tier selection.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
      */
     public Builder setWeightValue(int value) {
@@ -509,6 +551,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Weight tier selection.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
      */
     public io.opencannabis.schema.product.struct.PricingWeightTier getWeight() {
@@ -516,6 +562,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? io.opencannabis.schema.product.struct.PricingWeightTier.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * Weight tier selection.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
      */
     public Builder setWeight(io.opencannabis.schema.product.struct.PricingWeightTier value) {
@@ -528,6 +578,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Weight tier selection.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
      */
     public Builder clearWeight() {
@@ -541,12 +595,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.UnitPricingDescriptor, io.opencannabis.schema.product.struct.UnitPricingDescriptor.Builder, io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder> tierBuilder_;
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     public boolean hasTier() {
       return tierBuilder_ != null || tier_ != null;
     }
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     public io.opencannabis.schema.product.struct.UnitPricingDescriptor getTier() {
@@ -557,6 +619,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     public Builder setTier(io.opencannabis.schema.product.struct.UnitPricingDescriptor value) {
@@ -573,6 +639,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     public Builder setTier(
@@ -587,6 +657,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     public Builder mergeTier(io.opencannabis.schema.product.struct.UnitPricingDescriptor value) {
@@ -605,6 +679,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     public Builder clearTier() {
@@ -619,6 +697,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     public io.opencannabis.schema.product.struct.UnitPricingDescriptor.Builder getTierBuilder() {
@@ -627,6 +709,10 @@ private static final long serialVersionUID = 0L;
       return getTierFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     public io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder getTierOrBuilder() {
@@ -638,6 +724,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+     * </pre>
+     *
      * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -656,12 +746,20 @@ private static final long serialVersionUID = 0L;
 
     private float weightInGrams_ ;
     /**
+     * <pre>
+     * Custom weight in grams, if any.
+     * </pre>
+     *
      * <code>float weight_in_grams = 3;</code>
      */
     public float getWeightInGrams() {
       return weightInGrams_;
     }
     /**
+     * <pre>
+     * Custom weight in grams, if any.
+     * </pre>
+     *
      * <code>float weight_in_grams = 3;</code>
      */
     public Builder setWeightInGrams(float value) {
@@ -671,6 +769,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Custom weight in grams, if any.
+     * </pre>
+     *
      * <code>float weight_in_grams = 3;</code>
      */
     public Builder clearWeightInGrams() {

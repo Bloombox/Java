@@ -84,7 +84,7 @@ public interface MaterialsDataOrBuilder extends
 
   /**
    * <pre>
-   * Shelf status of this pre-rolled product.
+   * Shelf status of this product.
    * </pre>
    *
    * <code>.opencannabis.structs.Shelf shelf = 4;</code>
@@ -92,7 +92,7 @@ public interface MaterialsDataOrBuilder extends
   int getShelfValue();
   /**
    * <pre>
-   * Shelf status of this pre-rolled product.
+   * Shelf status of this product.
    * </pre>
    *
    * <code>.opencannabis.structs.Shelf shelf = 4;</code>
@@ -101,45 +101,45 @@ public interface MaterialsDataOrBuilder extends
 
   /**
    * <pre>
-   * Specifies distribution policy for this material.
+   * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channels = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
    */
   java.util.List<io.opencannabis.schema.product.DistributionChannel.DistributionPolicy> 
-      getChannelsList();
+      getChannelList();
   /**
    * <pre>
-   * Specifies distribution policy for this material.
+   * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channels = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
    */
-  io.opencannabis.schema.product.DistributionChannel.DistributionPolicy getChannels(int index);
+  io.opencannabis.schema.product.DistributionChannel.DistributionPolicy getChannel(int index);
   /**
    * <pre>
-   * Specifies distribution policy for this material.
+   * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channels = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
    */
-  int getChannelsCount();
+  int getChannelCount();
   /**
    * <pre>
-   * Specifies distribution policy for this material.
+   * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channels = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
    */
   java.util.List<? extends io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder> 
-      getChannelsOrBuilderList();
+      getChannelOrBuilderList();
   /**
    * <pre>
-   * Specifies distribution policy for this material.
+   * Specifies distribution policy for this particular subject material.
    * </pre>
    *
-   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channels = 5;</code>
+   * <code>repeated .opencannabis.products.distribution.DistributionPolicy channel = 5;</code>
    */
-  io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder getChannelsOrBuilder(
+  io.opencannabis.schema.product.DistributionChannel.DistributionPolicyOrBuilder getChannelOrBuilder(
       int index);
 }

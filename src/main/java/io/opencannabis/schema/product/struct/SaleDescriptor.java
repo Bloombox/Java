@@ -360,7 +360,7 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (type_ != io.opencannabis.schema.product.struct.SaleType.PERCENTAGE_OFF.getNumber()) {
+    if (type_ != io.opencannabis.schema.product.struct.SaleType.PERCENTAGE_REDUCTION.getNumber()) {
       output.writeEnum(1, type_);
     }
     if (effective_ != null) {
@@ -386,7 +386,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (type_ != io.opencannabis.schema.product.struct.SaleType.PERCENTAGE_OFF.getNumber()) {
+    if (type_ != io.opencannabis.schema.product.struct.SaleType.PERCENTAGE_REDUCTION.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, type_);
     }

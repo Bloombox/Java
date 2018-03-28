@@ -45,13 +45,12 @@ public final class GeneticsStructs {
   static {
     java.lang.String[] descriptorData = {
       "\n\026structs/Genetics.proto\022\024opencannabis.s" +
-      "tructs\032\022content/Name.proto\032\025base/Product" +
-      "Key.proto\"r\n\010Genetics\0221\n\004male\030\001 \001(\0132#.op" +
-      "encannabis.base.ProductReference\0223\n\006fema" +
-      "le\030\002 \001(\0132#.opencannabis.base.ProductRefe" +
-      "renceBB\n%io.opencannabis.schema.product." +
-      "structB\017GeneticsStructsH\001P\001\242\002\003OCSb\006proto" +
-      "3"
+      "tructs\032\025base/ProductKey.proto\"r\n\010Genetic" +
+      "s\0221\n\004male\030\001 \001(\0132#.opencannabis.base.Prod" +
+      "uctReference\0223\n\006female\030\002 \001(\0132#.opencanna" +
+      "bis.base.ProductReferenceBB\n%io.opencann" +
+      "abis.schema.product.structB\017GeneticsStru" +
+      "ctsH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64,7 +63,6 @@ public final class GeneticsStructs {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.opencannabis.schema.content.NameContent.getDescriptor(),
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_structs_Genetics_descriptor =
@@ -73,7 +71,6 @@ public final class GeneticsStructs {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_structs_Genetics_descriptor,
         new java.lang.String[] { "Male", "Female", });
-    io.opencannabis.schema.content.NameContent.getDescriptor();
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
   }
 

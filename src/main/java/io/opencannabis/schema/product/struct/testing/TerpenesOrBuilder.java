@@ -29,26 +29,26 @@ public interface TerpenesOrBuilder extends
   boolean getAvailable();
 
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
   java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> 
-      getTerpenesList();
+      getTerpeneList();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
-  io.opencannabis.schema.product.struct.testing.Terpenes.Result getTerpenes(int index);
+  io.opencannabis.schema.product.struct.testing.Terpenes.Result getTerpene(int index);
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
-  int getTerpenesCount();
+  int getTerpeneCount();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
   java.util.List<? extends io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> 
-      getTerpenesOrBuilderList();
+      getTerpeneOrBuilderList();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpenes = 10;</code>
+   * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
-  io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder getTerpenesOrBuilder(
+  io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder getTerpeneOrBuilder(
       int index);
 }

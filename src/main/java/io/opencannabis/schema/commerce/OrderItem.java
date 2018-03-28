@@ -165,209 +165,6 @@ public final class OrderItem {
     // @@protoc_insertion_point(enum_scope:opencannabis.commerce.ProductVariant)
   }
 
-  /**
-   * <pre>
-   * Enumeration for potential weight of concentrates and flowers
-   * </pre>
-   *
-   * Protobuf enum {@code opencannabis.commerce.ProductWeight}
-   */
-  public enum ProductWeight
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <pre>
-     * The product has no weight value.
-     * </pre>
-     *
-     * <code>NO_WEIGHT = 0;</code>
-     */
-    NO_WEIGHT(0),
-    /**
-     * <pre>
-     * Half of one gram, usually for concentrates.
-     * </pre>
-     *
-     * <code>HALFGRAM = 1;</code>
-     */
-    HALFGRAM(1),
-    /**
-     * <pre>
-     * One gram.
-     * </pre>
-     *
-     * <code>GRAM = 2;</code>
-     */
-    GRAM(2),
-    /**
-     * <pre>
-     * An eighth of an ounce.
-     * </pre>
-     *
-     * <code>EIGHTH = 3;</code>
-     */
-    EIGHTH(3),
-    /**
-     * <pre>
-     * A quarter of an ounce.
-     * </pre>
-     *
-     * <code>QUARTER = 4;</code>
-     */
-    QUARTER(4),
-    /**
-     * <pre>
-     * A half ounce.
-     * </pre>
-     *
-     * <code>HALF = 5;</code>
-     */
-    HALF(5),
-    /**
-     * <pre>
-     * A full ounce.
-     * </pre>
-     *
-     * <code>OZ = 6;</code>
-     */
-    OZ(6),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <pre>
-     * The product has no weight value.
-     * </pre>
-     *
-     * <code>NO_WEIGHT = 0;</code>
-     */
-    public static final int NO_WEIGHT_VALUE = 0;
-    /**
-     * <pre>
-     * Half of one gram, usually for concentrates.
-     * </pre>
-     *
-     * <code>HALFGRAM = 1;</code>
-     */
-    public static final int HALFGRAM_VALUE = 1;
-    /**
-     * <pre>
-     * One gram.
-     * </pre>
-     *
-     * <code>GRAM = 2;</code>
-     */
-    public static final int GRAM_VALUE = 2;
-    /**
-     * <pre>
-     * An eighth of an ounce.
-     * </pre>
-     *
-     * <code>EIGHTH = 3;</code>
-     */
-    public static final int EIGHTH_VALUE = 3;
-    /**
-     * <pre>
-     * A quarter of an ounce.
-     * </pre>
-     *
-     * <code>QUARTER = 4;</code>
-     */
-    public static final int QUARTER_VALUE = 4;
-    /**
-     * <pre>
-     * A half ounce.
-     * </pre>
-     *
-     * <code>HALF = 5;</code>
-     */
-    public static final int HALF_VALUE = 5;
-    /**
-     * <pre>
-     * A full ounce.
-     * </pre>
-     *
-     * <code>OZ = 6;</code>
-     */
-    public static final int OZ_VALUE = 6;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static ProductWeight valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static ProductWeight forNumber(int value) {
-      switch (value) {
-        case 0: return NO_WEIGHT;
-        case 1: return HALFGRAM;
-        case 2: return GRAM;
-        case 3: return EIGHTH;
-        case 4: return QUARTER;
-        case 5: return HALF;
-        case 6: return OZ;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<ProductWeight>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        ProductWeight> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ProductWeight>() {
-            public ProductWeight findValueByNumber(int number) {
-              return ProductWeight.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return io.opencannabis.schema.commerce.OrderItem.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final ProductWeight[] VALUES = values();
-
-    public static ProductWeight valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private ProductWeight(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:opencannabis.commerce.ProductWeight)
-  }
-
   public interface VariantSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:opencannabis.commerce.VariantSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -394,7 +191,7 @@ public final class OrderItem {
      * Specifies a product weight, when varying by weight.
      * </pre>
      *
-     * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+     * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
      */
     int getWeightValue();
     /**
@@ -402,9 +199,9 @@ public final class OrderItem {
      * Specifies a product weight, when varying by weight.
      * </pre>
      *
-     * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+     * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
      */
-    io.opencannabis.schema.commerce.OrderItem.ProductWeight getWeight();
+    io.opencannabis.schema.product.struct.PricingWeightTier getWeight();
 
     /**
      * <pre>
@@ -613,7 +410,7 @@ public final class OrderItem {
      * Specifies a product weight, when varying by weight.
      * </pre>
      *
-     * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+     * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
      */
     public int getWeightValue() {
       if (specCase_ == 2) {
@@ -626,15 +423,15 @@ public final class OrderItem {
      * Specifies a product weight, when varying by weight.
      * </pre>
      *
-     * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+     * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
      */
-    public io.opencannabis.schema.commerce.OrderItem.ProductWeight getWeight() {
+    public io.opencannabis.schema.product.struct.PricingWeightTier getWeight() {
       if (specCase_ == 2) {
-        io.opencannabis.schema.commerce.OrderItem.ProductWeight result = io.opencannabis.schema.commerce.OrderItem.ProductWeight.valueOf(
+        io.opencannabis.schema.product.struct.PricingWeightTier result = io.opencannabis.schema.product.struct.PricingWeightTier.valueOf(
             (java.lang.Integer) spec_);
-        return result == null ? io.opencannabis.schema.commerce.OrderItem.ProductWeight.UNRECOGNIZED : result;
+        return result == null ? io.opencannabis.schema.product.struct.PricingWeightTier.UNRECOGNIZED : result;
       }
-      return io.opencannabis.schema.commerce.OrderItem.ProductWeight.NO_WEIGHT;
+      return io.opencannabis.schema.product.struct.PricingWeightTier.NO_WEIGHT;
     }
 
     public static final int SIZE_FIELD_NUMBER = 3;
@@ -1196,7 +993,7 @@ public final class OrderItem {
        * Specifies a product weight, when varying by weight.
        * </pre>
        *
-       * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+       * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
        */
       public int getWeightValue() {
         if (specCase_ == 2) {
@@ -1209,7 +1006,7 @@ public final class OrderItem {
        * Specifies a product weight, when varying by weight.
        * </pre>
        *
-       * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+       * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
        */
       public Builder setWeightValue(int value) {
         specCase_ = 2;
@@ -1222,24 +1019,24 @@ public final class OrderItem {
        * Specifies a product weight, when varying by weight.
        * </pre>
        *
-       * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+       * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
        */
-      public io.opencannabis.schema.commerce.OrderItem.ProductWeight getWeight() {
+      public io.opencannabis.schema.product.struct.PricingWeightTier getWeight() {
         if (specCase_ == 2) {
-          io.opencannabis.schema.commerce.OrderItem.ProductWeight result = io.opencannabis.schema.commerce.OrderItem.ProductWeight.valueOf(
+          io.opencannabis.schema.product.struct.PricingWeightTier result = io.opencannabis.schema.product.struct.PricingWeightTier.valueOf(
               (java.lang.Integer) spec_);
-          return result == null ? io.opencannabis.schema.commerce.OrderItem.ProductWeight.UNRECOGNIZED : result;
+          return result == null ? io.opencannabis.schema.product.struct.PricingWeightTier.UNRECOGNIZED : result;
         }
-        return io.opencannabis.schema.commerce.OrderItem.ProductWeight.NO_WEIGHT;
+        return io.opencannabis.schema.product.struct.PricingWeightTier.NO_WEIGHT;
       }
       /**
        * <pre>
        * Specifies a product weight, when varying by weight.
        * </pre>
        *
-       * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+       * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
        */
-      public Builder setWeight(io.opencannabis.schema.commerce.OrderItem.ProductWeight value) {
+      public Builder setWeight(io.opencannabis.schema.product.struct.PricingWeightTier value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1253,7 +1050,7 @@ public final class OrderItem {
        * Specifies a product weight, when varying by weight.
        * </pre>
        *
-       * <code>.opencannabis.commerce.ProductWeight weight = 2;</code>
+       * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 2;</code>
        */
       public Builder clearWeight() {
         if (specCase_ == 2) {
@@ -1593,24 +1390,6 @@ public final class OrderItem {
      * <code>uint32 count = 3;</code>
      */
     int getCount();
-
-    /**
-     * <pre>
-     * Unit price of this item.
-     * </pre>
-     *
-     * <code>double price = 4;</code>
-     */
-    double getPrice();
-
-    /**
-     * <pre>
-     * Line-item cost calculated from count and price.
-     * </pre>
-     *
-     * <code>double cost = 5;</code>
-     */
-    double getCost();
   }
   /**
    * <pre>
@@ -1631,8 +1410,6 @@ public final class OrderItem {
     private Item() {
       variant_ = java.util.Collections.emptyList();
       count_ = 0;
-      price_ = 0D;
-      cost_ = 0D;
     }
 
     @java.lang.Override
@@ -1691,16 +1468,6 @@ public final class OrderItem {
             case 24: {
 
               count_ = input.readUInt32();
-              break;
-            }
-            case 33: {
-
-              price_ = input.readDouble();
-              break;
-            }
-            case 41: {
-
-              cost_ = input.readDouble();
               break;
             }
           }
@@ -1832,32 +1599,6 @@ public final class OrderItem {
       return count_;
     }
 
-    public static final int PRICE_FIELD_NUMBER = 4;
-    private double price_;
-    /**
-     * <pre>
-     * Unit price of this item.
-     * </pre>
-     *
-     * <code>double price = 4;</code>
-     */
-    public double getPrice() {
-      return price_;
-    }
-
-    public static final int COST_FIELD_NUMBER = 5;
-    private double cost_;
-    /**
-     * <pre>
-     * Line-item cost calculated from count and price.
-     * </pre>
-     *
-     * <code>double cost = 5;</code>
-     */
-    public double getCost() {
-      return cost_;
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1879,12 +1620,6 @@ public final class OrderItem {
       if (count_ != 0) {
         output.writeUInt32(3, count_);
       }
-      if (price_ != 0D) {
-        output.writeDouble(4, price_);
-      }
-      if (cost_ != 0D) {
-        output.writeDouble(5, cost_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -1904,14 +1639,6 @@ public final class OrderItem {
       if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(3, count_);
-      }
-      if (price_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, price_);
-      }
-      if (cost_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(5, cost_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1938,14 +1665,6 @@ public final class OrderItem {
           .equals(other.getVariantList());
       result = result && (getCount()
           == other.getCount());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getPrice())
-          == java.lang.Double.doubleToLongBits(
-              other.getPrice()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getCost())
-          == java.lang.Double.doubleToLongBits(
-              other.getCost()));
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1967,12 +1686,6 @@ public final class OrderItem {
       }
       hash = (37 * hash) + COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getCount();
-      hash = (37 * hash) + PRICE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getPrice()));
-      hash = (37 * hash) + COST_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getCost()));
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2121,10 +1834,6 @@ public final class OrderItem {
         }
         count_ = 0;
 
-        price_ = 0D;
-
-        cost_ = 0D;
-
         return this;
       }
 
@@ -2164,8 +1873,6 @@ public final class OrderItem {
           result.variant_ = variantBuilder_.build();
         }
         result.count_ = count_;
-        result.price_ = price_;
-        result.cost_ = cost_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2239,12 +1946,6 @@ public final class OrderItem {
         }
         if (other.getCount() != 0) {
           setCount(other.getCount());
-        }
-        if (other.getPrice() != 0D) {
-          setPrice(other.getPrice());
-        }
-        if (other.getCost() != 0D) {
-          setCost(other.getCost());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2776,82 +2477,6 @@ public final class OrderItem {
         onChanged();
         return this;
       }
-
-      private double price_ ;
-      /**
-       * <pre>
-       * Unit price of this item.
-       * </pre>
-       *
-       * <code>double price = 4;</code>
-       */
-      public double getPrice() {
-        return price_;
-      }
-      /**
-       * <pre>
-       * Unit price of this item.
-       * </pre>
-       *
-       * <code>double price = 4;</code>
-       */
-      public Builder setPrice(double value) {
-        
-        price_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unit price of this item.
-       * </pre>
-       *
-       * <code>double price = 4;</code>
-       */
-      public Builder clearPrice() {
-        
-        price_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private double cost_ ;
-      /**
-       * <pre>
-       * Line-item cost calculated from count and price.
-       * </pre>
-       *
-       * <code>double cost = 5;</code>
-       */
-      public double getCost() {
-        return cost_;
-      }
-      /**
-       * <pre>
-       * Line-item cost calculated from count and price.
-       * </pre>
-       *
-       * <code>double cost = 5;</code>
-       */
-      public Builder setCost(double value) {
-        
-        cost_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Line-item cost calculated from count and price.
-       * </pre>
-       *
-       * <code>double cost = 5;</code>
-       */
-      public Builder clearCost() {
-        
-        cost_ = 0D;
-        onChanged();
-        return this;
-      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -2921,20 +2546,19 @@ public final class OrderItem {
   static {
     java.lang.String[] descriptorData = {
       "\n\023commerce/Item.proto\022\025opencannabis.comm" +
-      "erce\032\025base/ProductKey.proto\"\246\001\n\013VariantS" +
-      "pec\0226\n\007variant\030\001 \001(\0162%.opencannabis.comm" +
-      "erce.ProductVariant\0226\n\006weight\030\002 \001(\0162$.op" +
-      "encannabis.commerce.ProductWeightH\000\022\016\n\004s" +
-      "ize\030\003 \001(\tH\000\022\017\n\005color\030\004 \001(\tH\000B\006\n\004spec\"\223\001\n" +
-      "\004Item\022*\n\003key\030\001 \001(\0132\035.opencannabis.base.P" +
-      "roductKey\0223\n\007variant\030\002 \003(\0132\".opencannabi" +
-      "s.commerce.VariantSpec\022\r\n\005count\030\003 \001(\r\022\r\n" +
-      "\005price\030\004 \001(\001\022\014\n\004cost\030\005 \001(\001*1\n\016ProductVar" +
-      "iant\022\n\n\006WEIGHT\020\000\022\t\n\005COLOR\020\001\022\010\n\004SIZE\020\002*a\n" +
-      "\rProductWeight\022\r\n\tNO_WEIGHT\020\000\022\014\n\010HALFGRA" +
-      "M\020\001\022\010\n\004GRAM\020\002\022\n\n\006EIGHTH\020\003\022\013\n\007QUARTER\020\004\022\010" +
-      "\n\004HALF\020\005\022\006\n\002OZ\020\006B6\n\037io.opencannabis.sche" +
-      "ma.commerceB\tOrderItemH\001P\000\242\002\003OCSb\006proto3"
+      "erce\032\025base/ProductKey.proto\032\'structs/pri" +
+      "cing/PricingDescriptor.proto\"\261\001\n\013Variant" +
+      "Spec\0226\n\007variant\030\001 \001(\0162%.opencannabis.com" +
+      "merce.ProductVariant\022A\n\006weight\030\002 \001(\0162/.o" +
+      "pencannabis.structs.pricing.PricingWeigh" +
+      "tTierH\000\022\016\n\004size\030\003 \001(\tH\000\022\017\n\005color\030\004 \001(\tH\000" +
+      "B\006\n\004spec\"v\n\004Item\022*\n\003key\030\001 \001(\0132\035.opencann" +
+      "abis.base.ProductKey\0223\n\007variant\030\002 \003(\0132\"." +
+      "opencannabis.commerce.VariantSpec\022\r\n\005cou" +
+      "nt\030\003 \001(\r*1\n\016ProductVariant\022\n\n\006WEIGHT\020\000\022\t" +
+      "\n\005COLOR\020\001\022\010\n\004SIZE\020\002B6\n\037io.opencannabis.s" +
+      "chema.commerceB\tOrderItemH\001P\000\242\002\003OCSb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2948,6 +2572,7 @@ public final class OrderItem {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
+          io.opencannabis.schema.product.struct.ProductPricingSpec.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_commerce_VariantSpec_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2960,8 +2585,9 @@ public final class OrderItem {
     internal_static_opencannabis_commerce_Item_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_Item_descriptor,
-        new java.lang.String[] { "Key", "Variant", "Count", "Price", "Cost", });
+        new java.lang.String[] { "Key", "Variant", "Count", });
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
+    io.opencannabis.schema.product.struct.ProductPricingSpec.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

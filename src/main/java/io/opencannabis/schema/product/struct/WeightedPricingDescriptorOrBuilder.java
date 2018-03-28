@@ -24,28 +24,52 @@ public interface WeightedPricingDescriptorOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Weight tier selection.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
    */
   int getWeightValue();
   /**
+   * <pre>
+   * Weight tier selection.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingWeightTier weight = 1;</code>
    */
   io.opencannabis.schema.product.struct.PricingWeightTier getWeight();
 
   /**
+   * <pre>
+   * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
    */
   boolean hasTier();
   /**
+   * <pre>
+   * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
    */
   io.opencannabis.schema.product.struct.UnitPricingDescriptor getTier();
   /**
+   * <pre>
+   * Pricing descriptor for this tier, including the price value, status, and any discounts that should apply.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.UnitPricingDescriptor tier = 2;</code>
    */
   io.opencannabis.schema.product.struct.UnitPricingDescriptorOrBuilder getTierOrBuilder();
 
   /**
+   * <pre>
+   * Custom weight in grams, if any.
+   * </pre>
+   *
    * <code>float weight_in_grams = 3;</code>
    */
   float getWeightInGrams();

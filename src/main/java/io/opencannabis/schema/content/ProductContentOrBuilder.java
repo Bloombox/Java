@@ -222,25 +222,25 @@ public interface ProductContentOrBuilder extends
    * Lab testing information concerning this product.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
    */
-  boolean hasTesting();
+  boolean hasTests();
   /**
    * <pre>
    * Lab testing information concerning this product.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
    */
-  io.opencannabis.schema.product.struct.testing.TestResults getTesting();
+  io.opencannabis.schema.product.struct.testing.TestResults getTests();
   /**
    * <pre>
    * Lab testing information concerning this product.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.TestResults testing = 8;</code>
+   * <code>.opencannabis.structs.labtesting.TestResults tests = 8;</code>
    */
-  io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestingOrBuilder();
+  io.opencannabis.schema.product.struct.testing.TestResultsOrBuilder getTestsOrBuilder();
 
   /**
    * <pre>

@@ -147,7 +147,7 @@ client.telemetry().event(
 Docs coming soon.
 
 
-### Tooling nodes
+### Tooling
 
 #### Debug mode
 

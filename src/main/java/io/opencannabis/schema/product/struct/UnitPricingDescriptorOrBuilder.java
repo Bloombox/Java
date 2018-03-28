@@ -24,42 +24,94 @@ public interface UnitPricingDescriptorOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>float price_value = 1;</code>
+   * <pre>
+   * Unit price value.
+   * </pre>
+   *
+   * <code>.opencannabis.commerce.CurrencyValue price = 1;</code>
    */
-  float getPriceValue();
+  boolean hasPrice();
+  /**
+   * <pre>
+   * Unit price value.
+   * </pre>
+   *
+   * <code>.opencannabis.commerce.CurrencyValue price = 1;</code>
+   */
+  io.opencannabis.schema.currency.CurrencyValue getPrice();
+  /**
+   * <pre>
+   * Unit price value.
+   * </pre>
+   *
+   * <code>.opencannabis.commerce.CurrencyValue price = 1;</code>
+   */
+  io.opencannabis.schema.currency.CurrencyValueOrBuilder getPriceOrBuilder();
 
   /**
+   * <pre>
+   * Availability flags for this unit-priced tier.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingTierAvailability status = 2;</code>
    */
   boolean hasStatus();
   /**
+   * <pre>
+   * Availability flags for this unit-priced tier.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingTierAvailability status = 2;</code>
    */
   io.opencannabis.schema.product.struct.PricingTierAvailability getStatus();
   /**
+   * <pre>
+   * Availability flags for this unit-priced tier.
+   * </pre>
+   *
    * <code>.opencannabis.structs.pricing.PricingTierAvailability status = 2;</code>
    */
   io.opencannabis.schema.product.struct.PricingTierAvailabilityOrBuilder getStatusOrBuilder();
 
   /**
+   * <pre>
+   * Discounts that should apply to this tier.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 3;</code>
    */
   java.util.List<io.opencannabis.schema.product.struct.SaleDescriptor> 
       getDiscountsList();
   /**
+   * <pre>
+   * Discounts that should apply to this tier.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 3;</code>
    */
   io.opencannabis.schema.product.struct.SaleDescriptor getDiscounts(int index);
   /**
+   * <pre>
+   * Discounts that should apply to this tier.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 3;</code>
    */
   int getDiscountsCount();
   /**
+   * <pre>
+   * Discounts that should apply to this tier.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 3;</code>
    */
   java.util.List<? extends io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder> 
       getDiscountsOrBuilderList();
   /**
+   * <pre>
+   * Discounts that should apply to this tier.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 3;</code>
    */
   io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder getDiscountsOrBuilder(

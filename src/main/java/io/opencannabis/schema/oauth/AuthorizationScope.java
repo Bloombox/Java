@@ -20,6 +20,11 @@
 package io.opencannabis.schema.oauth;
 
 /**
+ * <pre>
+ * Specifies a scope of authorization that may be granted, revoked, or otherwise addressed in some way by the
+ * underlying authorization system during a consent or check transaction.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.oauth.AuthorizationScope}
  */
 public  final class AuthorizationScope extends
@@ -32,8 +37,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AuthorizationScope() {
+    id_ = "";
     label_ = "";
     uri_ = "";
+    icon_ = "";
   }
 
   @java.lang.Override
@@ -70,13 +77,25 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            label_ = s;
+            id_ = s;
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
+            label_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
             uri_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            icon_ = s;
             break;
           }
         }
@@ -103,10 +122,56 @@ private static final long serialVersionUID = 0L;
             io.opencannabis.schema.oauth.AuthorizationScope.class, io.opencannabis.schema.oauth.AuthorizationScope.Builder.class);
   }
 
-  public static final int LABEL_FIELD_NUMBER = 1;
+  public static final int ID_FIELD_NUMBER = 1;
+  private volatile java.lang.Object id_;
+  /**
+   * <pre>
+   * Unique ID for this scope.
+   * </pre>
+   *
+   * <code>string id = 1;</code>
+   */
+  public java.lang.String getId() {
+    java.lang.Object ref = id_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      id_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Unique ID for this scope.
+   * </pre>
+   *
+   * <code>string id = 1;</code>
+   */
+  public com.google.protobuf.ByteString
+      getIdBytes() {
+    java.lang.Object ref = id_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      id_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int LABEL_FIELD_NUMBER = 2;
   private volatile java.lang.Object label_;
   /**
-   * <code>string label = 1;</code>
+   * <pre>
+   * Human-friendly label for this scope.
+   * </pre>
+   *
+   * <code>string label = 2;</code>
    */
   public java.lang.String getLabel() {
     java.lang.Object ref = label_;
@@ -121,7 +186,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string label = 1;</code>
+   * <pre>
+   * Human-friendly label for this scope.
+   * </pre>
+   *
+   * <code>string label = 2;</code>
    */
   public com.google.protobuf.ByteString
       getLabelBytes() {
@@ -137,10 +206,14 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int URI_FIELD_NUMBER = 2;
+  public static final int URI_FIELD_NUMBER = 3;
   private volatile java.lang.Object uri_;
   /**
-   * <code>string uri = 2;</code>
+   * <pre>
+   * URL reference for this scope.
+   * </pre>
+   *
+   * <code>string uri = 3;</code>
    */
   public java.lang.String getUri() {
     java.lang.Object ref = uri_;
@@ -155,7 +228,11 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string uri = 2;</code>
+   * <pre>
+   * URL reference for this scope.
+   * </pre>
+   *
+   * <code>string uri = 3;</code>
    */
   public com.google.protobuf.ByteString
       getUriBytes() {
@@ -165,6 +242,48 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       uri_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ICON_FIELD_NUMBER = 4;
+  private volatile java.lang.Object icon_;
+  /**
+   * <pre>
+   * Icon name for this scope. Optional.
+   * </pre>
+   *
+   * <code>string icon = 4;</code>
+   */
+  public java.lang.String getIcon() {
+    java.lang.Object ref = icon_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      icon_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Icon name for this scope. Optional.
+   * </pre>
+   *
+   * <code>string icon = 4;</code>
+   */
+  public com.google.protobuf.ByteString
+      getIconBytes() {
+    java.lang.Object ref = icon_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      icon_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -183,11 +302,17 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!getIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+    }
     if (!getLabelBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, label_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, label_);
     }
     if (!getUriBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uri_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uri_);
+    }
+    if (!getIconBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, icon_);
     }
     unknownFields.writeTo(output);
   }
@@ -197,11 +322,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!getIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+    }
     if (!getLabelBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, label_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, label_);
     }
     if (!getUriBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uri_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uri_);
+    }
+    if (!getIconBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, icon_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -219,10 +350,14 @@ private static final long serialVersionUID = 0L;
     io.opencannabis.schema.oauth.AuthorizationScope other = (io.opencannabis.schema.oauth.AuthorizationScope) obj;
 
     boolean result = true;
+    result = result && getId()
+        .equals(other.getId());
     result = result && getLabel()
         .equals(other.getLabel());
     result = result && getUri()
         .equals(other.getUri());
+    result = result && getIcon()
+        .equals(other.getIcon());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -234,10 +369,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (53 * hash) + getId().hashCode();
     hash = (37 * hash) + LABEL_FIELD_NUMBER;
     hash = (53 * hash) + getLabel().hashCode();
     hash = (37 * hash) + URI_FIELD_NUMBER;
     hash = (53 * hash) + getUri().hashCode();
+    hash = (37 * hash) + ICON_FIELD_NUMBER;
+    hash = (53 * hash) + getIcon().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -332,6 +471,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies a scope of authorization that may be granted, revoked, or otherwise addressed in some way by the
+   * underlying authorization system during a consent or check transaction.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.oauth.AuthorizationScope}
    */
   public static final class Builder extends
@@ -367,9 +511,13 @@ private static final long serialVersionUID = 0L;
     }
     public Builder clear() {
       super.clear();
+      id_ = "";
+
       label_ = "";
 
       uri_ = "";
+
+      icon_ = "";
 
       return this;
     }
@@ -393,8 +541,10 @@ private static final long serialVersionUID = 0L;
 
     public io.opencannabis.schema.oauth.AuthorizationScope buildPartial() {
       io.opencannabis.schema.oauth.AuthorizationScope result = new io.opencannabis.schema.oauth.AuthorizationScope(this);
+      result.id_ = id_;
       result.label_ = label_;
       result.uri_ = uri_;
+      result.icon_ = icon_;
       onBuilt();
       return result;
     }
@@ -436,12 +586,20 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(io.opencannabis.schema.oauth.AuthorizationScope other) {
       if (other == io.opencannabis.schema.oauth.AuthorizationScope.getDefaultInstance()) return this;
+      if (!other.getId().isEmpty()) {
+        id_ = other.id_;
+        onChanged();
+      }
       if (!other.getLabel().isEmpty()) {
         label_ = other.label_;
         onChanged();
       }
       if (!other.getUri().isEmpty()) {
         uri_ = other.uri_;
+        onChanged();
+      }
+      if (!other.getIcon().isEmpty()) {
+        icon_ = other.icon_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -471,9 +629,102 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object id_ = "";
+    /**
+     * <pre>
+     * Unique ID for this scope.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Unique ID for this scope.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Unique ID for this scope.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public Builder setId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      id_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unique ID for this scope.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public Builder clearId() {
+      
+      id_ = getDefaultInstance().getId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unique ID for this scope.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     */
+    public Builder setIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      id_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object label_ = "";
     /**
-     * <code>string label = 1;</code>
+     * <pre>
+     * Human-friendly label for this scope.
+     * </pre>
+     *
+     * <code>string label = 2;</code>
      */
     public java.lang.String getLabel() {
       java.lang.Object ref = label_;
@@ -488,7 +739,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string label = 1;</code>
+     * <pre>
+     * Human-friendly label for this scope.
+     * </pre>
+     *
+     * <code>string label = 2;</code>
      */
     public com.google.protobuf.ByteString
         getLabelBytes() {
@@ -504,7 +759,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string label = 1;</code>
+     * <pre>
+     * Human-friendly label for this scope.
+     * </pre>
+     *
+     * <code>string label = 2;</code>
      */
     public Builder setLabel(
         java.lang.String value) {
@@ -517,7 +776,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string label = 1;</code>
+     * <pre>
+     * Human-friendly label for this scope.
+     * </pre>
+     *
+     * <code>string label = 2;</code>
      */
     public Builder clearLabel() {
       
@@ -526,7 +789,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string label = 1;</code>
+     * <pre>
+     * Human-friendly label for this scope.
+     * </pre>
+     *
+     * <code>string label = 2;</code>
      */
     public Builder setLabelBytes(
         com.google.protobuf.ByteString value) {
@@ -542,7 +809,11 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uri_ = "";
     /**
-     * <code>string uri = 2;</code>
+     * <pre>
+     * URL reference for this scope.
+     * </pre>
+     *
+     * <code>string uri = 3;</code>
      */
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
@@ -557,7 +828,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string uri = 2;</code>
+     * <pre>
+     * URL reference for this scope.
+     * </pre>
+     *
+     * <code>string uri = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUriBytes() {
@@ -573,7 +848,11 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string uri = 2;</code>
+     * <pre>
+     * URL reference for this scope.
+     * </pre>
+     *
+     * <code>string uri = 3;</code>
      */
     public Builder setUri(
         java.lang.String value) {
@@ -586,7 +865,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string uri = 2;</code>
+     * <pre>
+     * URL reference for this scope.
+     * </pre>
+     *
+     * <code>string uri = 3;</code>
      */
     public Builder clearUri() {
       
@@ -595,7 +878,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string uri = 2;</code>
+     * <pre>
+     * URL reference for this scope.
+     * </pre>
+     *
+     * <code>string uri = 3;</code>
      */
     public Builder setUriBytes(
         com.google.protobuf.ByteString value) {
@@ -605,6 +892,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       uri_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object icon_ = "";
+    /**
+     * <pre>
+     * Icon name for this scope. Optional.
+     * </pre>
+     *
+     * <code>string icon = 4;</code>
+     */
+    public java.lang.String getIcon() {
+      java.lang.Object ref = icon_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        icon_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Icon name for this scope. Optional.
+     * </pre>
+     *
+     * <code>string icon = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIconBytes() {
+      java.lang.Object ref = icon_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        icon_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Icon name for this scope. Optional.
+     * </pre>
+     *
+     * <code>string icon = 4;</code>
+     */
+    public Builder setIcon(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      icon_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Icon name for this scope. Optional.
+     * </pre>
+     *
+     * <code>string icon = 4;</code>
+     */
+    public Builder clearIcon() {
+      
+      icon_ = getDefaultInstance().getIcon();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Icon name for this scope. Optional.
+     * </pre>
+     *
+     * <code>string icon = 4;</code>
+     */
+    public Builder setIconBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      icon_ = value;
       onChanged();
       return this;
     }

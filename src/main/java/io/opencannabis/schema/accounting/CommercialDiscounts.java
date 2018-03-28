@@ -1307,8 +1307,8 @@ public final class CommercialDiscounts {
 
     /**
      * <pre>
-     * Narrative description for this discount, to be displayed to back-office and end-users in some
-     * special circumstances.
+     * Narrative description for this discount, to be displayed to back-office and end-users in some special
+     * circumstances.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1316,8 +1316,8 @@ public final class CommercialDiscounts {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Narrative description for this discount, to be displayed to back-office and end-users in some
-     * special circumstances.
+     * Narrative description for this discount, to be displayed to back-office and end-users in some special
+     * circumstances.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1679,8 +1679,8 @@ public final class CommercialDiscounts {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Narrative description for this discount, to be displayed to back-office and end-users in some
-     * special circumstances.
+     * Narrative description for this discount, to be displayed to back-office and end-users in some special
+     * circumstances.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1699,8 +1699,8 @@ public final class CommercialDiscounts {
     }
     /**
      * <pre>
-     * Narrative description for this discount, to be displayed to back-office and end-users in some
-     * special circumstances.
+     * Narrative description for this discount, to be displayed to back-office and end-users in some special
+     * circumstances.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -2636,8 +2636,8 @@ public final class CommercialDiscounts {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Narrative description for this discount, to be displayed to back-office and end-users in some
-       * special circumstances.
+       * Narrative description for this discount, to be displayed to back-office and end-users in some special
+       * circumstances.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2656,8 +2656,8 @@ public final class CommercialDiscounts {
       }
       /**
        * <pre>
-       * Narrative description for this discount, to be displayed to back-office and end-users in some
-       * special circumstances.
+       * Narrative description for this discount, to be displayed to back-office and end-users in some special
+       * circumstances.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2677,8 +2677,8 @@ public final class CommercialDiscounts {
       }
       /**
        * <pre>
-       * Narrative description for this discount, to be displayed to back-office and end-users in some
-       * special circumstances.
+       * Narrative description for this discount, to be displayed to back-office and end-users in some special
+       * circumstances.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2695,8 +2695,8 @@ public final class CommercialDiscounts {
       }
       /**
        * <pre>
-       * Narrative description for this discount, to be displayed to back-office and end-users in some
-       * special circumstances.
+       * Narrative description for this discount, to be displayed to back-office and end-users in some special
+       * circumstances.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2709,8 +2709,8 @@ public final class CommercialDiscounts {
       }
       /**
        * <pre>
-       * Narrative description for this discount, to be displayed to back-office and end-users in some
-       * special circumstances.
+       * Narrative description for this discount, to be displayed to back-office and end-users in some special
+       * circumstances.
        * </pre>
        *
        * <code>string description = 5;</code>

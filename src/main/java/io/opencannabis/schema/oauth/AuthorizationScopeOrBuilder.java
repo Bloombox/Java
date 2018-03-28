@@ -24,22 +24,74 @@ public interface AuthorizationScopeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string label = 1;</code>
+   * <pre>
+   * Unique ID for this scope.
+   * </pre>
+   *
+   * <code>string id = 1;</code>
+   */
+  java.lang.String getId();
+  /**
+   * <pre>
+   * Unique ID for this scope.
+   * </pre>
+   *
+   * <code>string id = 1;</code>
+   */
+  com.google.protobuf.ByteString
+      getIdBytes();
+
+  /**
+   * <pre>
+   * Human-friendly label for this scope.
+   * </pre>
+   *
+   * <code>string label = 2;</code>
    */
   java.lang.String getLabel();
   /**
-   * <code>string label = 1;</code>
+   * <pre>
+   * Human-friendly label for this scope.
+   * </pre>
+   *
+   * <code>string label = 2;</code>
    */
   com.google.protobuf.ByteString
       getLabelBytes();
 
   /**
-   * <code>string uri = 2;</code>
+   * <pre>
+   * URL reference for this scope.
+   * </pre>
+   *
+   * <code>string uri = 3;</code>
    */
   java.lang.String getUri();
   /**
-   * <code>string uri = 2;</code>
+   * <pre>
+   * URL reference for this scope.
+   * </pre>
+   *
+   * <code>string uri = 3;</code>
    */
   com.google.protobuf.ByteString
       getUriBytes();
+
+  /**
+   * <pre>
+   * Icon name for this scope. Optional.
+   * </pre>
+   *
+   * <code>string icon = 4;</code>
+   */
+  java.lang.String getIcon();
+  /**
+   * <pre>
+   * Icon name for this scope. Optional.
+   * </pre>
+   *
+   * <code>string icon = 4;</code>
+   */
+  com.google.protobuf.ByteString
+      getIconBytes();
 }

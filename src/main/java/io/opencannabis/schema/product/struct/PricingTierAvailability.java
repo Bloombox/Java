@@ -20,6 +20,10 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * Specifies availability and stock status flags for a particular pricing tier.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.pricing.PricingTierAvailability}
  */
 public  final class PricingTierAvailability extends
@@ -104,6 +108,11 @@ private static final long serialVersionUID = 0L;
   public static final int OFFERED_FIELD_NUMBER = 1;
   private boolean offered_;
   /**
+   * <pre>
+   * Specifies whether a particular pricing tier is offered at all. This would be interpreted to indicate whether a
+   * particular pricing tier is 'ever available' or 'ever offered.'
+   * </pre>
+   *
    * <code>bool offered = 1;</code>
    */
   public boolean getOffered() {
@@ -113,6 +122,11 @@ private static final long serialVersionUID = 0L;
   public static final int AVAILABLE_FIELD_NUMBER = 2;
   private boolean available_;
   /**
+   * <pre>
+   * Specifies whether a particular pricing tier is currently available. This would be interpreted to indicate whether a
+   * particular pricing tier is 'currently available,' 'currently in stock,' or 'currently offered.'
+   * </pre>
+   *
    * <code>bool available = 2;</code>
    */
   public boolean getAvailable() {
@@ -284,6 +298,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies availability and stock status flags for a particular pricing tier.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.pricing.PricingTierAvailability}
    */
   public static final class Builder extends
@@ -423,12 +441,22 @@ private static final long serialVersionUID = 0L;
 
     private boolean offered_ ;
     /**
+     * <pre>
+     * Specifies whether a particular pricing tier is offered at all. This would be interpreted to indicate whether a
+     * particular pricing tier is 'ever available' or 'ever offered.'
+     * </pre>
+     *
      * <code>bool offered = 1;</code>
      */
     public boolean getOffered() {
       return offered_;
     }
     /**
+     * <pre>
+     * Specifies whether a particular pricing tier is offered at all. This would be interpreted to indicate whether a
+     * particular pricing tier is 'ever available' or 'ever offered.'
+     * </pre>
+     *
      * <code>bool offered = 1;</code>
      */
     public Builder setOffered(boolean value) {
@@ -438,6 +466,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Specifies whether a particular pricing tier is offered at all. This would be interpreted to indicate whether a
+     * particular pricing tier is 'ever available' or 'ever offered.'
+     * </pre>
+     *
      * <code>bool offered = 1;</code>
      */
     public Builder clearOffered() {
@@ -449,12 +482,22 @@ private static final long serialVersionUID = 0L;
 
     private boolean available_ ;
     /**
+     * <pre>
+     * Specifies whether a particular pricing tier is currently available. This would be interpreted to indicate whether a
+     * particular pricing tier is 'currently available,' 'currently in stock,' or 'currently offered.'
+     * </pre>
+     *
      * <code>bool available = 2;</code>
      */
     public boolean getAvailable() {
       return available_;
     }
     /**
+     * <pre>
+     * Specifies whether a particular pricing tier is currently available. This would be interpreted to indicate whether a
+     * particular pricing tier is 'currently available,' 'currently in stock,' or 'currently offered.'
+     * </pre>
+     *
      * <code>bool available = 2;</code>
      */
     public Builder setAvailable(boolean value) {
@@ -464,6 +507,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Specifies whether a particular pricing tier is currently available. This would be interpreted to indicate whether a
+     * particular pricing tier is 'currently available,' 'currently in stock,' or 'currently offered.'
+     * </pre>
+     *
      * <code>bool available = 2;</code>
      */
     public Builder clearAvailable() {

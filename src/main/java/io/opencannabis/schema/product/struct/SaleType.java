@@ -25,32 +25,40 @@ package io.opencannabis.schema.product.struct;
 public enum SaleType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>PERCENTAGE_OFF = 0;</code>
+   * <code>PERCENTAGE_REDUCTION = 0;</code>
    */
-  PERCENTAGE_OFF(0),
+  PERCENTAGE_REDUCTION(0),
   /**
-   * <code>BOGO = 1;</code>
+   * <code>VALUE_REDUCTION = 1;</code>
    */
-  BOGO(1),
+  VALUE_REDUCTION(1),
   /**
-   * <code>LOYALTY = 2;</code>
+   * <code>BOGO = 2;</code>
    */
-  LOYALTY(2),
+  BOGO(2),
+  /**
+   * <code>LOYALTY = 3;</code>
+   */
+  LOYALTY(3),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>PERCENTAGE_OFF = 0;</code>
+   * <code>PERCENTAGE_REDUCTION = 0;</code>
    */
-  public static final int PERCENTAGE_OFF_VALUE = 0;
+  public static final int PERCENTAGE_REDUCTION_VALUE = 0;
   /**
-   * <code>BOGO = 1;</code>
+   * <code>VALUE_REDUCTION = 1;</code>
    */
-  public static final int BOGO_VALUE = 1;
+  public static final int VALUE_REDUCTION_VALUE = 1;
   /**
-   * <code>LOYALTY = 2;</code>
+   * <code>BOGO = 2;</code>
    */
-  public static final int LOYALTY_VALUE = 2;
+  public static final int BOGO_VALUE = 2;
+  /**
+   * <code>LOYALTY = 3;</code>
+   */
+  public static final int LOYALTY_VALUE = 3;
 
 
   public final int getNumber() {
@@ -71,9 +79,10 @@ public enum SaleType
 
   public static SaleType forNumber(int value) {
     switch (value) {
-      case 0: return PERCENTAGE_OFF;
-      case 1: return BOGO;
-      case 2: return LOYALTY;
+      case 0: return PERCENTAGE_REDUCTION;
+      case 1: return VALUE_REDUCTION;
+      case 2: return BOGO;
+      case 3: return LOYALTY;
       default: return null;
     }
   }

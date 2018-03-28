@@ -20,39 +20,76 @@
 package io.opencannabis.schema.media;
 
 /**
+ * <pre>
+ * Orientation status of a piece of media. Provided by camera operations on mobile devices,
+ * in some cases, and also stored along with media sometimes.
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.media.MediaOrientation}
  */
 public enum MediaOrientation
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Media is oriented 'up'.
+   * </pre>
+   *
    * <code>UP = 0;</code>
    */
   UP(0),
   /**
+   * <pre>
+   * Media is oriented 'down'.
+   * </pre>
+   *
    * <code>DOWN = 1;</code>
    */
   DOWN(1),
   /**
+   * <pre>
+   * Media is oriented 'left'.
+   * </pre>
+   *
    * <code>LEFT = 2;</code>
    */
   LEFT(2),
   /**
+   * <pre>
+   * Media is oriented 'right'.
+   * </pre>
+   *
    * <code>RIGHT = 3;</code>
    */
   RIGHT(3),
   /**
+   * <pre>
+   * Media is oriented 'up,' and mirrored.
+   * </pre>
+   *
    * <code>UP_MIRRORED = 4;</code>
    */
   UP_MIRRORED(4),
   /**
+   * <pre>
+   * Media is oriented 'down,' and mirrored.
+   * </pre>
+   *
    * <code>DOWN_MIRRORED = 5;</code>
    */
   DOWN_MIRRORED(5),
   /**
+   * <pre>
+   * Media is oriented 'left,' and mirrored.
+   * </pre>
+   *
    * <code>LEFT_MIRRORED = 6;</code>
    */
   LEFT_MIRRORED(6),
   /**
+   * <pre>
+   * Media is oriented 'right,' and mirrored.
+   * </pre>
+   *
    * <code>RIGHT_MIRRORED = 7;</code>
    */
   RIGHT_MIRRORED(7),
@@ -60,34 +97,66 @@ public enum MediaOrientation
   ;
 
   /**
+   * <pre>
+   * Media is oriented 'up'.
+   * </pre>
+   *
    * <code>UP = 0;</code>
    */
   public static final int UP_VALUE = 0;
   /**
+   * <pre>
+   * Media is oriented 'down'.
+   * </pre>
+   *
    * <code>DOWN = 1;</code>
    */
   public static final int DOWN_VALUE = 1;
   /**
+   * <pre>
+   * Media is oriented 'left'.
+   * </pre>
+   *
    * <code>LEFT = 2;</code>
    */
   public static final int LEFT_VALUE = 2;
   /**
+   * <pre>
+   * Media is oriented 'right'.
+   * </pre>
+   *
    * <code>RIGHT = 3;</code>
    */
   public static final int RIGHT_VALUE = 3;
   /**
+   * <pre>
+   * Media is oriented 'up,' and mirrored.
+   * </pre>
+   *
    * <code>UP_MIRRORED = 4;</code>
    */
   public static final int UP_MIRRORED_VALUE = 4;
   /**
+   * <pre>
+   * Media is oriented 'down,' and mirrored.
+   * </pre>
+   *
    * <code>DOWN_MIRRORED = 5;</code>
    */
   public static final int DOWN_MIRRORED_VALUE = 5;
   /**
+   * <pre>
+   * Media is oriented 'left,' and mirrored.
+   * </pre>
+   *
    * <code>LEFT_MIRRORED = 6;</code>
    */
   public static final int LEFT_MIRRORED_VALUE = 6;
   /**
+   * <pre>
+   * Media is oriented 'right,' and mirrored.
+   * </pre>
+   *
    * <code>RIGHT_MIRRORED = 7;</code>
    */
   public static final int RIGHT_MIRRORED_VALUE = 7;

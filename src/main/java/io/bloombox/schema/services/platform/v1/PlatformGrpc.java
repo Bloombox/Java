@@ -73,6 +73,18 @@ public final class PlatformGrpc {
               com.google.protobuf.Empty.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.DomainResolve.Request,
+      io.bloombox.schema.services.platform.v1.DomainResolve.Response> METHOD_RESOLVE =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.DomainResolve.Request, io.bloombox.schema.services.platform.v1.DomainResolve.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.platform.v1.Platform", "Resolve"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.platform.v1.DomainResolve.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.platform.v1.DomainResolve.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.PlatformStats.Request,
       io.bloombox.schema.services.platform.v1.PlatformStats.Response> METHOD_STATS =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.PlatformStats.Request, io.bloombox.schema.services.platform.v1.PlatformStats.Response>newBuilder()
@@ -153,6 +165,16 @@ public final class PlatformGrpc {
      * Retrieve internal platform statistics.
      * </pre>
      */
+    public void resolve(io.bloombox.schema.services.platform.v1.DomainResolve.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainResolve.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_RESOLVE, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve internal platform statistics.
+     * </pre>
+     */
     public void stats(io.bloombox.schema.services.platform.v1.PlatformStats.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.PlatformStats.Response> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_STATS, responseObserver);
@@ -184,6 +206,13 @@ public final class PlatformGrpc {
                 com.google.protobuf.Empty,
                 com.google.protobuf.Empty>(
                   this, METHODID_HEALTH)))
+          .addMethod(
+            METHOD_RESOLVE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.platform.v1.DomainResolve.Request,
+                io.bloombox.schema.services.platform.v1.DomainResolve.Response>(
+                  this, METHODID_RESOLVE)))
           .addMethod(
             METHOD_STATS,
             asyncUnaryCall(
@@ -244,6 +273,17 @@ public final class PlatformGrpc {
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_HEALTH, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve internal platform statistics.
+     * </pre>
+     */
+    public void resolve(io.bloombox.schema.services.platform.v1.DomainResolve.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainResolve.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_RESOLVE, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -316,6 +356,16 @@ public final class PlatformGrpc {
      * Retrieve internal platform statistics.
      * </pre>
      */
+    public io.bloombox.schema.services.platform.v1.DomainResolve.Response resolve(io.bloombox.schema.services.platform.v1.DomainResolve.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_RESOLVE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve internal platform statistics.
+     * </pre>
+     */
     public io.bloombox.schema.services.platform.v1.PlatformStats.Response stats(io.bloombox.schema.services.platform.v1.PlatformStats.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_STATS, getCallOptions(), request);
@@ -381,6 +431,17 @@ public final class PlatformGrpc {
      * Retrieve internal platform statistics.
      * </pre>
      */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.platform.v1.DomainResolve.Response> resolve(
+        io.bloombox.schema.services.platform.v1.DomainResolve.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_RESOLVE, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve internal platform statistics.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.platform.v1.PlatformStats.Response> stats(
         io.bloombox.schema.services.platform.v1.PlatformStats.Request request) {
       return futureUnaryCall(
@@ -401,8 +462,9 @@ public final class PlatformGrpc {
 
   private static final int METHODID_PING = 0;
   private static final int METHODID_HEALTH = 1;
-  private static final int METHODID_STATS = 2;
-  private static final int METHODID_REINDEX = 3;
+  private static final int METHODID_RESOLVE = 2;
+  private static final int METHODID_STATS = 3;
+  private static final int METHODID_REINDEX = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -428,6 +490,10 @@ public final class PlatformGrpc {
         case METHODID_HEALTH:
           serviceImpl.health((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_RESOLVE:
+          serviceImpl.resolve((io.bloombox.schema.services.platform.v1.DomainResolve.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainResolve.Response>) responseObserver);
           break;
         case METHODID_STATS:
           serviceImpl.stats((io.bloombox.schema.services.platform.v1.PlatformStats.Request) request,
@@ -472,6 +538,7 @@ public final class PlatformGrpc {
               .setSchemaDescriptor(new PlatformDescriptorSupplier())
               .addMethod(METHOD_PING)
               .addMethod(METHOD_HEALTH)
+              .addMethod(METHOD_RESOLVE)
               .addMethod(METHOD_STATS)
               .addMethod(METHOD_REINDEX)
               .build();

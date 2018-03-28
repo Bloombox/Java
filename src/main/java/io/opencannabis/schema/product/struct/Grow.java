@@ -20,23 +20,46 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * Enumerates common/known types or styles of cultivation that might produce a flower for sale, or resale after
+ * manufacture.
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.structs.Grow}
  */
 public enum Grow
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Generic, or unknown, grow circumstances.
+   * </pre>
+   *
    * <code>GENERIC = 0;</code>
    */
   GENERIC(0),
   /**
+   * <pre>
+   * Indoor grow circumstances, implying high-precision environment controls (temperature, humidity, light, and so on)
+   * and close monitoring and optimization.
+   * </pre>
+   *
    * <code>INDOOR = 1;</code>
    */
   INDOOR(1),
   /**
+   * <pre>
+   * Greenhouse-based grow circumstances. This includes any indoor grow operation that makes use of natural light in any
+   * manner, augmenting replacing controlled indoor lighting.
+   * </pre>
+   *
    * <code>GREENHOUSE = 2;</code>
    */
   GREENHOUSE(2),
   /**
+   * <pre>
+   * Outdoor-based grow circumstances, that use entirely natural light from the sun.
+   * </pre>
+   *
    * <code>OUTDOOR = 3;</code>
    */
   OUTDOOR(3),
@@ -44,18 +67,36 @@ public enum Grow
   ;
 
   /**
+   * <pre>
+   * Generic, or unknown, grow circumstances.
+   * </pre>
+   *
    * <code>GENERIC = 0;</code>
    */
   public static final int GENERIC_VALUE = 0;
   /**
+   * <pre>
+   * Indoor grow circumstances, implying high-precision environment controls (temperature, humidity, light, and so on)
+   * and close monitoring and optimization.
+   * </pre>
+   *
    * <code>INDOOR = 1;</code>
    */
   public static final int INDOOR_VALUE = 1;
   /**
+   * <pre>
+   * Greenhouse-based grow circumstances. This includes any indoor grow operation that makes use of natural light in any
+   * manner, augmenting replacing controlled indoor lighting.
+   * </pre>
+   *
    * <code>GREENHOUSE = 2;</code>
    */
   public static final int GREENHOUSE_VALUE = 2;
   /**
+   * <pre>
+   * Outdoor-based grow circumstances, that use entirely natural light from the sun.
+   * </pre>
+   *
    * <code>OUTDOOR = 3;</code>
    */
   public static final int OUTDOOR_VALUE = 3;

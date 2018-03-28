@@ -24,48 +24,88 @@ public interface ProductPricingOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   java.util.List<io.opencannabis.schema.product.struct.SaleDescriptor> 
       getDiscountsList();
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   io.opencannabis.schema.product.struct.SaleDescriptor getDiscounts(int index);
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   int getDiscountsCount();
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   java.util.List<? extends io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder> 
       getDiscountsOrBuilderList();
   /**
+   * <pre>
+   * Discounts that should apply across all pricing tiers for the subject product.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.SaleDescriptor discounts = 1;</code>
    */
   io.opencannabis.schema.product.struct.SaleDescriptorOrBuilder getDiscountsOrBuilder(
       int index);
 
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   java.util.List<io.opencannabis.schema.product.struct.PricingDescriptor> 
       getManifestList();
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   io.opencannabis.schema.product.struct.PricingDescriptor getManifest(int index);
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   int getManifestCount();
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   java.util.List<? extends io.opencannabis.schema.product.struct.PricingDescriptorOrBuilder> 
       getManifestOrBuilderList();
   /**
+   * <pre>
+   * Pricing tiers attached to this product pricing manifest.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.pricing.PricingDescriptor manifest = 2;</code>
    */
   io.opencannabis.schema.product.struct.PricingDescriptorOrBuilder getManifestOrBuilder(

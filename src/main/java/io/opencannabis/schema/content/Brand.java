@@ -21,7 +21,7 @@ package io.opencannabis.schema.content;
 
 /**
  * <pre>
- *Basic Properties
+ * Information about a particular brand or producer of products or materials.
  * </pre>
  *
  * Protobuf type {@code opencannabis.content.Brand}
@@ -149,18 +149,30 @@ private static final long serialVersionUID = 0L;
   public static final int NAME_FIELD_NUMBER = 1;
   private io.opencannabis.schema.content.Name name_;
   /**
+   * <pre>
+   * Naming information for this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Name name = 1;</code>
    */
   public boolean hasName() {
     return name_ != null;
   }
   /**
+   * <pre>
+   * Naming information for this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Name name = 1;</code>
    */
   public io.opencannabis.schema.content.Name getName() {
     return name_ == null ? io.opencannabis.schema.content.Name.getDefaultInstance() : name_;
   }
   /**
+   * <pre>
+   * Naming information for this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Name name = 1;</code>
    */
   public io.opencannabis.schema.content.NameOrBuilder getNameOrBuilder() {
@@ -170,18 +182,30 @@ private static final long serialVersionUID = 0L;
   public static final int PARENT_FIELD_NUMBER = 2;
   private io.opencannabis.schema.content.Brand parent_;
   /**
+   * <pre>
+   * Parent/owning brand, if applicable.
+   * </pre>
+   *
    * <code>.opencannabis.content.Brand parent = 2;</code>
    */
   public boolean hasParent() {
     return parent_ != null;
   }
   /**
+   * <pre>
+   * Parent/owning brand, if applicable.
+   * </pre>
+   *
    * <code>.opencannabis.content.Brand parent = 2;</code>
    */
   public io.opencannabis.schema.content.Brand getParent() {
     return parent_ == null ? io.opencannabis.schema.content.Brand.getDefaultInstance() : parent_;
   }
   /**
+   * <pre>
+   * Parent/owning brand, if applicable.
+   * </pre>
+   *
    * <code>.opencannabis.content.Brand parent = 2;</code>
    */
   public io.opencannabis.schema.content.BrandOrBuilder getParentOrBuilder() {
@@ -191,18 +215,30 @@ private static final long serialVersionUID = 0L;
   public static final int SUMMARY_FIELD_NUMBER = 3;
   private io.opencannabis.schema.content.Content summary_;
   /**
+   * <pre>
+   * Summary information or content about this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content summary = 3;</code>
    */
   public boolean hasSummary() {
     return summary_ != null;
   }
   /**
+   * <pre>
+   * Summary information or content about this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content summary = 3;</code>
    */
   public io.opencannabis.schema.content.Content getSummary() {
     return summary_ == null ? io.opencannabis.schema.content.Content.getDefaultInstance() : summary_;
   }
   /**
+   * <pre>
+   * Summary information or content about this brand.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content summary = 3;</code>
    */
   public io.opencannabis.schema.content.ContentOrBuilder getSummaryOrBuilder() {
@@ -213,7 +249,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<io.opencannabis.schema.media.MediaItem> media_;
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -223,7 +259,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -234,7 +270,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -244,7 +280,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -254,7 +290,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *Media
+   * Media items attached to this brand.
    * </pre>
    *
    * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -467,7 +503,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   *Basic Properties
+   * Information about a particular brand or producer of products or materials.
    * </pre>
    *
    * Protobuf type {@code opencannabis.content.Brand}
@@ -687,12 +723,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.content.Name, io.opencannabis.schema.content.Name.Builder, io.opencannabis.schema.content.NameOrBuilder> nameBuilder_;
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     public io.opencannabis.schema.content.Name getName() {
@@ -703,6 +747,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     public Builder setName(io.opencannabis.schema.content.Name value) {
@@ -719,6 +767,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     public Builder setName(
@@ -733,6 +785,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     public Builder mergeName(io.opencannabis.schema.content.Name value) {
@@ -751,6 +807,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     public Builder clearName() {
@@ -765,6 +825,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     public io.opencannabis.schema.content.Name.Builder getNameBuilder() {
@@ -773,6 +837,10 @@ private static final long serialVersionUID = 0L;
       return getNameFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     public io.opencannabis.schema.content.NameOrBuilder getNameOrBuilder() {
@@ -784,6 +852,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Name name = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -804,12 +876,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.content.Brand, io.opencannabis.schema.content.Brand.Builder, io.opencannabis.schema.content.BrandOrBuilder> parentBuilder_;
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     public boolean hasParent() {
       return parentBuilder_ != null || parent_ != null;
     }
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     public io.opencannabis.schema.content.Brand getParent() {
@@ -820,6 +900,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     public Builder setParent(io.opencannabis.schema.content.Brand value) {
@@ -836,6 +920,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     public Builder setParent(
@@ -850,6 +938,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     public Builder mergeParent(io.opencannabis.schema.content.Brand value) {
@@ -868,6 +960,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     public Builder clearParent() {
@@ -882,6 +978,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     public io.opencannabis.schema.content.Brand.Builder getParentBuilder() {
@@ -890,6 +990,10 @@ private static final long serialVersionUID = 0L;
       return getParentFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     public io.opencannabis.schema.content.BrandOrBuilder getParentOrBuilder() {
@@ -901,6 +1005,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
      * <code>.opencannabis.content.Brand parent = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -921,12 +1029,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder> summaryBuilder_;
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     public boolean hasSummary() {
       return summaryBuilder_ != null || summary_ != null;
     }
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     public io.opencannabis.schema.content.Content getSummary() {
@@ -937,6 +1053,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     public Builder setSummary(io.opencannabis.schema.content.Content value) {
@@ -953,6 +1073,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     public Builder setSummary(
@@ -967,6 +1091,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     public Builder mergeSummary(io.opencannabis.schema.content.Content value) {
@@ -985,6 +1113,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     public Builder clearSummary() {
@@ -999,6 +1131,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     public io.opencannabis.schema.content.Content.Builder getSummaryBuilder() {
@@ -1007,6 +1143,10 @@ private static final long serialVersionUID = 0L;
       return getSummaryFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     public io.opencannabis.schema.content.ContentOrBuilder getSummaryOrBuilder() {
@@ -1018,6 +1158,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content summary = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1048,7 +1192,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1062,7 +1206,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1076,7 +1220,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1090,7 +1234,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1111,7 +1255,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1129,7 +1273,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1149,7 +1293,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1170,7 +1314,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1188,7 +1332,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1206,7 +1350,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1225,7 +1369,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1242,7 +1386,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1259,7 +1403,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1270,7 +1414,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1284,7 +1428,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1299,7 +1443,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1310,7 +1454,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
@@ -1322,7 +1466,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     *Media
+     * Media items attached to this brand.
      * </pre>
      *
      * <code>repeated .opencannabis.media.MediaItem media = 20;</code>

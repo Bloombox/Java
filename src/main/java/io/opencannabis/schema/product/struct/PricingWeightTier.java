@@ -20,93 +20,231 @@
 package io.opencannabis.schema.product.struct;
 
 /**
+ * <pre>
+ * Enumerates supported pricing tiers, when the 'WEIGHTED' pricing scheme is in effect. Each known tier is enumerated,
+ * with an additional defaulted option for 'OTHER,' which would allow a custom weight to be assigned via some other
+ * property or metric.
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.structs.pricing.PricingWeightTier}
  */
 public enum PricingWeightTier
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <code>OTHER = 0;</code>
+   * <pre>
+   * No weight indicated.
+   * </pre>
+   *
+   * <code>NO_WEIGHT = 0;</code>
    */
-  OTHER(0),
+  NO_WEIGHT(0),
   /**
+   * <pre>
+   * Pricing for 'ONE GRAM' of the subject material or merchandise.
+   * </pre>
+   *
    * <code>GRAM = 1;</code>
    */
   GRAM(1),
   /**
+   * <pre>
+   * Pricing for one 'HALF GRAM' of the subject material or merchandise. Usually used only for extracts.
+   * </pre>
+   *
    * <code>HALFGRAM = 2;</code>
    */
   HALFGRAM(2),
   /**
+   * <pre>
+   * Pricing for one 'QUARTER GRAM' of the subject material or merchandise. Usually used only for extracts.
+   * </pre>
+   *
    * <code>QUARTERGRAM = 3;</code>
    */
   QUARTERGRAM(3),
   /**
+   * <pre>
+   * Pricing for TWO GRAMS of the subject material or merchandise. Rarely used.
+   * </pre>
+   *
    * <code>DUB = 4;</code>
    */
   DUB(4),
   /**
+   * <pre>
+   * Pricing for an 'EIGHTH' of the subject material or merchandise, usually defined as 3-and-one-half grams. In some
+   * cases, providers may choose to define their 'EIGHTH' weight value at 4 grams. This functionality is supported via
+   * partner or location-level settings. 'EIGHTH' usually refers to an eighth-of-an-ounce.
+   * </pre>
+   *
    * <code>EIGHTH = 5;</code>
    */
   EIGHTH(5),
   /**
+   * <pre>
+   * Pricing for a 'QUARTER' of the subject material or merchandise, usually defined as 7 grams.
+   * </pre>
+   *
    * <code>QUARTER = 6;</code>
    */
   QUARTER(6),
   /**
+   * <pre>
+   * Pricing for a 'HALF OUNCE' of the subject material or merchandise. Usually defined as 14 grams.
+   * </pre>
+   *
    * <code>HALF = 7;</code>
    */
   HALF(7),
   /**
+   * <pre>
+   * Pricing for 'ONCE OUNCE' of subject material or merchandise. Usually defined as 28 grams.
+   * </pre>
+   *
    * <code>OUNCE = 8;</code>
    */
   OUNCE(8),
   /**
+   * <pre>
+   * Pricing for 'ONE POUND' of subject material or merchandise.
+   * </pre>
+   *
    * <code>POUND = 9;</code>
    */
   POUND(9),
+  /**
+   * <pre>
+   * Pricing for 'ONE KILO' of subject material or merchandise.
+   * </pre>
+   *
+   * <code>KILO = 10;</code>
+   */
+  KILO(10),
+  /**
+   * <pre>
+   * Pricing for 'ONE TON' of subject material or merchandise.
+   * </pre>
+   *
+   * <code>TON = 11;</code>
+   */
+  TON(11),
+  /**
+   * <pre>
+   * 'Other,' or custom weighted pricing.
+   * </pre>
+   *
+   * <code>OTHER = 12;</code>
+   */
+  OTHER(12),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <code>OTHER = 0;</code>
+   * <pre>
+   * No weight indicated.
+   * </pre>
+   *
+   * <code>NO_WEIGHT = 0;</code>
    */
-  public static final int OTHER_VALUE = 0;
+  public static final int NO_WEIGHT_VALUE = 0;
   /**
+   * <pre>
+   * Pricing for 'ONE GRAM' of the subject material or merchandise.
+   * </pre>
+   *
    * <code>GRAM = 1;</code>
    */
   public static final int GRAM_VALUE = 1;
   /**
+   * <pre>
+   * Pricing for one 'HALF GRAM' of the subject material or merchandise. Usually used only for extracts.
+   * </pre>
+   *
    * <code>HALFGRAM = 2;</code>
    */
   public static final int HALFGRAM_VALUE = 2;
   /**
+   * <pre>
+   * Pricing for one 'QUARTER GRAM' of the subject material or merchandise. Usually used only for extracts.
+   * </pre>
+   *
    * <code>QUARTERGRAM = 3;</code>
    */
   public static final int QUARTERGRAM_VALUE = 3;
   /**
+   * <pre>
+   * Pricing for TWO GRAMS of the subject material or merchandise. Rarely used.
+   * </pre>
+   *
    * <code>DUB = 4;</code>
    */
   public static final int DUB_VALUE = 4;
   /**
+   * <pre>
+   * Pricing for an 'EIGHTH' of the subject material or merchandise, usually defined as 3-and-one-half grams. In some
+   * cases, providers may choose to define their 'EIGHTH' weight value at 4 grams. This functionality is supported via
+   * partner or location-level settings. 'EIGHTH' usually refers to an eighth-of-an-ounce.
+   * </pre>
+   *
    * <code>EIGHTH = 5;</code>
    */
   public static final int EIGHTH_VALUE = 5;
   /**
+   * <pre>
+   * Pricing for a 'QUARTER' of the subject material or merchandise, usually defined as 7 grams.
+   * </pre>
+   *
    * <code>QUARTER = 6;</code>
    */
   public static final int QUARTER_VALUE = 6;
   /**
+   * <pre>
+   * Pricing for a 'HALF OUNCE' of the subject material or merchandise. Usually defined as 14 grams.
+   * </pre>
+   *
    * <code>HALF = 7;</code>
    */
   public static final int HALF_VALUE = 7;
   /**
+   * <pre>
+   * Pricing for 'ONCE OUNCE' of subject material or merchandise. Usually defined as 28 grams.
+   * </pre>
+   *
    * <code>OUNCE = 8;</code>
    */
   public static final int OUNCE_VALUE = 8;
   /**
+   * <pre>
+   * Pricing for 'ONE POUND' of subject material or merchandise.
+   * </pre>
+   *
    * <code>POUND = 9;</code>
    */
   public static final int POUND_VALUE = 9;
+  /**
+   * <pre>
+   * Pricing for 'ONE KILO' of subject material or merchandise.
+   * </pre>
+   *
+   * <code>KILO = 10;</code>
+   */
+  public static final int KILO_VALUE = 10;
+  /**
+   * <pre>
+   * Pricing for 'ONE TON' of subject material or merchandise.
+   * </pre>
+   *
+   * <code>TON = 11;</code>
+   */
+  public static final int TON_VALUE = 11;
+  /**
+   * <pre>
+   * 'Other,' or custom weighted pricing.
+   * </pre>
+   *
+   * <code>OTHER = 12;</code>
+   */
+  public static final int OTHER_VALUE = 12;
 
 
   public final int getNumber() {
@@ -127,7 +265,7 @@ public enum PricingWeightTier
 
   public static PricingWeightTier forNumber(int value) {
     switch (value) {
-      case 0: return OTHER;
+      case 0: return NO_WEIGHT;
       case 1: return GRAM;
       case 2: return HALFGRAM;
       case 3: return QUARTERGRAM;
@@ -137,6 +275,9 @@ public enum PricingWeightTier
       case 7: return HALF;
       case 8: return OUNCE;
       case 9: return POUND;
+      case 10: return KILO;
+      case 11: return TON;
+      case 12: return OTHER;
       default: return null;
     }
   }

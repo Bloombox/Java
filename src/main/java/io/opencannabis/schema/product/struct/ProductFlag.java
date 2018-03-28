@@ -21,7 +21,8 @@ package io.opencannabis.schema.product.struct;
 
 /**
  * <pre>
- * top-level flags
+ * Flags that may be applied to an entire product entry, that govern how an independent product and all of its variants
+ * or sub-products are processed or treated.
  * </pre>
  *
  * Protobuf enum {@code opencannabis.structs.ProductFlag}
@@ -29,96 +30,188 @@ package io.opencannabis.schema.product.struct;
 public enum ProductFlag
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Default flag value. Marks a product as 'VISIBLE,' meaning it is eligible to be displayed in public circumstances.
+   * In some cases, this is interpreted to mean 'IN STOCK.' Being that this flag is a default value, the absence of this
+   * flag does not designate an item as non-visible - this is accomplished by explicitly specifying the 'HIDDEN' flag.
+   * </pre>
+   *
    * <code>VISIBLE = 0;</code>
    */
   VISIBLE(0),
   /**
+   * <pre>
+   * Indicates that this entire product entry should be 'HIDDEN' from public view, or considered 'OUT-OF-STOCK' in back-
+   * office systems.
+   * </pre>
+   *
    * <code>HIDDEN = 1;</code>
    */
   HIDDEN(1),
   /**
+   * <pre>
+   * Designates a product as 'PREMIUM,' indicating it is a top-shelf or super-high-quality product. In some cases, this
+   * flag is used to indicate items that are produced in-house.
+   * </pre>
+   *
    * <code>PREMIUM = 2;</code>
    */
   PREMIUM(2),
   /**
+   * <pre>
+   * Designates a product as 'FEATURED,' which makes it eligible for extra promotional display. Featured products are
+   * generally highlighted or displayed top-of-the-fold.
+   * </pre>
+   *
    * <code>FEATURED = 3;</code>
    */
   FEATURED(3),
   /**
-   * <code>ORGANIC = 4;</code>
+   * <pre>
+   * Designates a product as 'EXCLUSIVE,' meaning it is only carried or produced by the owning retailer or manufacturer.
+   * </pre>
+   *
+   * <code>EXCLUSIVE = 4;</code>
    */
-  ORGANIC(4),
+  EXCLUSIVE(4),
   /**
-   * <code>EXCLUSIVE = 5;</code>
+   * <pre>
+   * Designates a product as 'IN-HOUSE,' indicating it is carried and produced by the same organization. In a retail
+   * context, this flag is used to indicate items manufactured by the retailer or the retailer's partners.
+   * </pre>
+   *
+   * <code>IN_HOUSE = 5;</code>
    */
-  EXCLUSIVE(5),
+  IN_HOUSE(5),
   /**
-   * <code>IN_HOUSE = 6;</code>
+   * <pre>
+   * Indicates that a product will not be around long, or that it is running out. In retail contexts, this designates
+   * the product in a way that may trigger extra promotional UI.
+   * </pre>
+   *
+   * <code>LAST_CHANCE = 6;</code>
    */
-  IN_HOUSE(6),
+  LAST_CHANCE(6),
   /**
-   * <code>LAST_CHANCE = 7;</code>
+   * <pre>
+   * Indicates that a particular product will only be available for a limited time, or is available only in limited
+   * batches.
+   * </pre>
+   *
+   * <code>LIMITED_TIME = 7;</code>
    */
-  LAST_CHANCE(7),
+  LIMITED_TIME(7),
   /**
-   * <code>LIMITED_TIME = 8;</code>
+   * <pre>
+   * Indicates that a particular product is produced locally. In retail contexts, this may trigger extra promotional UI.
+   * </pre>
+   *
+   * <code>LOCAL = 8;</code>
    */
-  LIMITED_TIME(8),
+  LOCAL(8),
   /**
-   * <code>ON_SALE = 9;</code>
+   * <pre>
+   * Designates, in general, that a product is 'ON-SALE.' This designation SHOULD be propagated-to by implementing
+   * servers, from a product's weighted pricing sale flags. This means, if ANY product weight or variant is marked on
+   * sale, the 'ON-SALE' flag SHOULD be sent along with the top-level product information.
+   * </pre>
+   *
+   * <code>ON_SALE = 20;</code>
    */
-  ON_SALE(9),
-  /**
-   * <code>LOCAL = 10;</code>
-   */
-  LOCAL(10),
+  ON_SALE(20),
   UNRECOGNIZED(-1),
   ;
 
   /**
+   * <pre>
+   * Default flag value. Marks a product as 'VISIBLE,' meaning it is eligible to be displayed in public circumstances.
+   * In some cases, this is interpreted to mean 'IN STOCK.' Being that this flag is a default value, the absence of this
+   * flag does not designate an item as non-visible - this is accomplished by explicitly specifying the 'HIDDEN' flag.
+   * </pre>
+   *
    * <code>VISIBLE = 0;</code>
    */
   public static final int VISIBLE_VALUE = 0;
   /**
+   * <pre>
+   * Indicates that this entire product entry should be 'HIDDEN' from public view, or considered 'OUT-OF-STOCK' in back-
+   * office systems.
+   * </pre>
+   *
    * <code>HIDDEN = 1;</code>
    */
   public static final int HIDDEN_VALUE = 1;
   /**
+   * <pre>
+   * Designates a product as 'PREMIUM,' indicating it is a top-shelf or super-high-quality product. In some cases, this
+   * flag is used to indicate items that are produced in-house.
+   * </pre>
+   *
    * <code>PREMIUM = 2;</code>
    */
   public static final int PREMIUM_VALUE = 2;
   /**
+   * <pre>
+   * Designates a product as 'FEATURED,' which makes it eligible for extra promotional display. Featured products are
+   * generally highlighted or displayed top-of-the-fold.
+   * </pre>
+   *
    * <code>FEATURED = 3;</code>
    */
   public static final int FEATURED_VALUE = 3;
   /**
-   * <code>ORGANIC = 4;</code>
+   * <pre>
+   * Designates a product as 'EXCLUSIVE,' meaning it is only carried or produced by the owning retailer or manufacturer.
+   * </pre>
+   *
+   * <code>EXCLUSIVE = 4;</code>
    */
-  public static final int ORGANIC_VALUE = 4;
+  public static final int EXCLUSIVE_VALUE = 4;
   /**
-   * <code>EXCLUSIVE = 5;</code>
+   * <pre>
+   * Designates a product as 'IN-HOUSE,' indicating it is carried and produced by the same organization. In a retail
+   * context, this flag is used to indicate items manufactured by the retailer or the retailer's partners.
+   * </pre>
+   *
+   * <code>IN_HOUSE = 5;</code>
    */
-  public static final int EXCLUSIVE_VALUE = 5;
+  public static final int IN_HOUSE_VALUE = 5;
   /**
-   * <code>IN_HOUSE = 6;</code>
+   * <pre>
+   * Indicates that a product will not be around long, or that it is running out. In retail contexts, this designates
+   * the product in a way that may trigger extra promotional UI.
+   * </pre>
+   *
+   * <code>LAST_CHANCE = 6;</code>
    */
-  public static final int IN_HOUSE_VALUE = 6;
+  public static final int LAST_CHANCE_VALUE = 6;
   /**
-   * <code>LAST_CHANCE = 7;</code>
+   * <pre>
+   * Indicates that a particular product will only be available for a limited time, or is available only in limited
+   * batches.
+   * </pre>
+   *
+   * <code>LIMITED_TIME = 7;</code>
    */
-  public static final int LAST_CHANCE_VALUE = 7;
+  public static final int LIMITED_TIME_VALUE = 7;
   /**
-   * <code>LIMITED_TIME = 8;</code>
+   * <pre>
+   * Indicates that a particular product is produced locally. In retail contexts, this may trigger extra promotional UI.
+   * </pre>
+   *
+   * <code>LOCAL = 8;</code>
    */
-  public static final int LIMITED_TIME_VALUE = 8;
+  public static final int LOCAL_VALUE = 8;
   /**
-   * <code>ON_SALE = 9;</code>
+   * <pre>
+   * Designates, in general, that a product is 'ON-SALE.' This designation SHOULD be propagated-to by implementing
+   * servers, from a product's weighted pricing sale flags. This means, if ANY product weight or variant is marked on
+   * sale, the 'ON-SALE' flag SHOULD be sent along with the top-level product information.
+   * </pre>
+   *
+   * <code>ON_SALE = 20;</code>
    */
-  public static final int ON_SALE_VALUE = 9;
-  /**
-   * <code>LOCAL = 10;</code>
-   */
-  public static final int LOCAL_VALUE = 10;
+  public static final int ON_SALE_VALUE = 20;
 
 
   public final int getNumber() {
@@ -143,13 +236,12 @@ public enum ProductFlag
       case 1: return HIDDEN;
       case 2: return PREMIUM;
       case 3: return FEATURED;
-      case 4: return ORGANIC;
-      case 5: return EXCLUSIVE;
-      case 6: return IN_HOUSE;
-      case 7: return LAST_CHANCE;
-      case 8: return LIMITED_TIME;
-      case 9: return ON_SALE;
-      case 10: return LOCAL;
+      case 4: return EXCLUSIVE;
+      case 5: return IN_HOUSE;
+      case 6: return LAST_CHANCE;
+      case 7: return LIMITED_TIME;
+      case 8: return LOCAL;
+      case 20: return ON_SALE;
       default: return null;
     }
   }

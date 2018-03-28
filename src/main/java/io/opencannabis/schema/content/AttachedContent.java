@@ -60,7 +60,7 @@ public final class AttachedContent {
       "abis.temporal.Instant\0220\n\010modified\030\002 \001(\0132" +
       "\036.opencannabis.temporal.Instant\0221\n\tpubli" +
       "shed\030\003 \001(\0132\036.opencannabis.temporal.Insta" +
-      "nt\"\206\004\n\016ProductContent\022(\n\004name\030\001 \001(\0132\032.op" +
+      "nt\"\204\004\n\016ProductContent\022(\n\004name\030\001 \001(\0132\032.op" +
       "encannabis.content.Name\022*\n\005brand\030\002 \001(\0132\033" +
       ".opencannabis.content.Brand\022.\n\007summary\030\003" +
       " \001(\0132\035.opencannabis.content.Content\022,\n\005u" +
@@ -68,13 +68,13 @@ public final class AttachedContent {
       "t\022-\n\006dosage\030\005 \001(\0132\035.opencannabis.content" +
       ".Content\022,\n\005media\030\006 \003(\0132\035.opencannabis.m" +
       "edia.MediaItem\022=\n\007pricing\030\007 \001(\0132,.openca" +
-      "nnabis.structs.pricing.ProductPricing\022=\n" +
-      "\007testing\030\010 \001(\0132,.opencannabis.structs.la" +
-      "btesting.TestResults\0220\n\005flags\030\t \003(\0162!.op" +
-      "encannabis.structs.ProductFlag\0223\n\002ts\030\n \001" +
-      "(\0132\'.opencannabis.content.ProductTimesta" +
-      "mpsB;\n\036io.opencannabis.schema.contentB\017A" +
-      "ttachedContentH\001P\001\242\002\003OCSb\006proto3"
+      "nnabis.structs.pricing.ProductPricing\022;\n" +
+      "\005tests\030\010 \001(\0132,.opencannabis.structs.labt" +
+      "esting.TestResults\0220\n\005flags\030\t \003(\0162!.open" +
+      "cannabis.structs.ProductFlag\0223\n\002ts\030\n \001(\013" +
+      "2\'.opencannabis.content.ProductTimestamp" +
+      "sB;\n\036io.opencannabis.schema.contentB\017Att" +
+      "achedContentH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -107,7 +107,7 @@ public final class AttachedContent {
     internal_static_opencannabis_content_ProductContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_content_ProductContent_descriptor,
-        new java.lang.String[] { "Name", "Brand", "Summary", "Usage", "Dosage", "Media", "Pricing", "Testing", "Flags", "Ts", });
+        new java.lang.String[] { "Name", "Brand", "Summary", "Usage", "Dosage", "Media", "Pricing", "Tests", "Flags", "Ts", });
     io.opencannabis.schema.content.NameContent.getDescriptor();
     io.opencannabis.schema.content.GenericContent.getDescriptor();
     io.opencannabis.schema.content.BrandContent.getDescriptor();
