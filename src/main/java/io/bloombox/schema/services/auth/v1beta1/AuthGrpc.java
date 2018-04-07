@@ -1,20 +1,3 @@
-/*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
- *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package io.bloombox.schema.services.auth.v1beta1;
 
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
@@ -84,6 +67,18 @@ public final class AuthGrpc {
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.auth.v1beta1.GetProfile.Response.getDefaultInstance()))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request,
+      io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> METHOD_CONSENT =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request, io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.auth.v1beta1.Auth", "Consent"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response.getDefaultInstance()))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -139,12 +134,22 @@ public final class AuthGrpc {
 
     /**
      * <pre>
-     * comment here
+     * Retrieve a user's profile by key.
      * </pre>
      */
     public void profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_PROFILE, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Perform a consent flow through Hydra.
+     * </pre>
+     */
+    public void consent(io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_CONSENT, responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -170,6 +175,13 @@ public final class AuthGrpc {
                 io.bloombox.schema.services.auth.v1beta1.GetProfile.Request,
                 io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>(
                   this, METHODID_PROFILE)))
+          .addMethod(
+            METHOD_CONSENT,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request,
+                io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response>(
+                  this, METHODID_CONSENT)))
           .build();
     }
   }
@@ -221,13 +233,24 @@ public final class AuthGrpc {
 
     /**
      * <pre>
-     * comment here
+     * Retrieve a user's profile by key.
      * </pre>
      */
     public void profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_PROFILE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Perform a consent flow through Hydra.
+     * </pre>
+     */
+    public void consent(io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_CONSENT, getCallOptions()), request, responseObserver);
     }
   }
 
@@ -276,12 +299,22 @@ public final class AuthGrpc {
 
     /**
      * <pre>
-     * comment here
+     * Retrieve a user's profile by key.
      * </pre>
      */
     public io.bloombox.schema.services.auth.v1beta1.GetProfile.Response profile(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_PROFILE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Perform a consent flow through Hydra.
+     * </pre>
+     */
+    public io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response consent(io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_CONSENT, getCallOptions(), request);
     }
   }
 
@@ -332,7 +365,7 @@ public final class AuthGrpc {
 
     /**
      * <pre>
-     * comment here
+     * Retrieve a user's profile by key.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response> profile(
@@ -340,11 +373,23 @@ public final class AuthGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_PROFILE, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Perform a consent flow through Hydra.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response> consent(
+        io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_CONSENT, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PING = 0;
   private static final int METHODID_AUTHENTICATE = 1;
   private static final int METHODID_PROFILE = 2;
+  private static final int METHODID_CONSENT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -374,6 +419,10 @@ public final class AuthGrpc {
         case METHODID_PROFILE:
           serviceImpl.profile((io.bloombox.schema.services.auth.v1beta1.GetProfile.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.GetProfile.Response>) responseObserver);
+          break;
+        case METHODID_CONSENT:
+          serviceImpl.consent((io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -411,6 +460,7 @@ public final class AuthGrpc {
               .addMethod(METHOD_PING)
               .addMethod(METHOD_AUTHENTICATE)
               .addMethod(METHOD_PROFILE)
+              .addMethod(METHOD_CONSENT)
               .build();
         }
       }
