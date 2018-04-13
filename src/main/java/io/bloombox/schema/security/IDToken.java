@@ -5,21 +5,21 @@ package io.bloombox.schema.security;
 
 /**
  * <pre>
- * Specifies an authorization token, in the OAuth2 access_token format.
+ * Specifies an ID token, usually structured as a JWT.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.security.AuthToken}
+ * Protobuf type {@code bloombox.schema.security.IDToken}
  */
-public  final class AuthToken extends
+public  final class IDToken extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.security.AuthToken)
-    AuthTokenOrBuilder {
+    // @@protoc_insertion_point(message_implements:bloombox.schema.security.IDToken)
+    IDTokenOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use AuthToken.newBuilder() to construct.
-  private AuthToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use IDToken.newBuilder() to construct.
+  private IDToken(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AuthToken() {
+  private IDToken() {
   }
 
   @java.lang.Override
@@ -27,7 +27,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AuthToken(
+  private IDToken(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -60,14 +60,14 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.bloombox.schema.security.TokenPayload.Builder subBuilder = null;
+            io.bloombox.schema.security.IDTokenPayload.Builder subBuilder = null;
             if (payloadCase_ == 2) {
-              subBuilder = ((io.bloombox.schema.security.TokenPayload) payload_).toBuilder();
+              subBuilder = ((io.bloombox.schema.security.IDTokenPayload) payload_).toBuilder();
             }
             payload_ =
-                input.readMessage(io.bloombox.schema.security.TokenPayload.parser(), extensionRegistry);
+                input.readMessage(io.bloombox.schema.security.IDTokenPayload.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom((io.bloombox.schema.security.TokenPayload) payload_);
+              subBuilder.mergeFrom((io.bloombox.schema.security.IDTokenPayload) payload_);
               payload_ = subBuilder.buildPartial();
             }
             payloadCase_ = 2;
@@ -87,14 +87,14 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_AuthToken_descriptor;
+    return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_IDToken_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_AuthToken_fieldAccessorTable
+    return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_IDToken_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            io.bloombox.schema.security.AuthToken.class, io.bloombox.schema.security.AuthToken.Builder.class);
+            io.bloombox.schema.security.IDToken.class, io.bloombox.schema.security.IDToken.Builder.class);
   }
 
   private int payloadCase_ = 0;
@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   public enum PayloadCase
       implements com.google.protobuf.Internal.EnumLite {
     ENCODED(1),
-    TICKET(2),
+    DATA(2),
     PAYLOAD_NOT_SET(0);
     private final int value;
     private PayloadCase(int value) {
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
     public static PayloadCase forNumber(int value) {
       switch (value) {
         case 1: return ENCODED;
-        case 2: return TICKET;
+        case 2: return DATA;
         case 0: return PAYLOAD_NOT_SET;
         default: return null;
       }
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
   public static final int ENCODED_FIELD_NUMBER = 1;
   /**
    * <pre>
-   * Encoded access token.
+   * Encoded ID token.
    * </pre>
    *
    * <code>string encoded = 1;</code>
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Encoded access token.
+   * Encoded ID token.
    * </pre>
    *
    * <code>string encoded = 1;</code>
@@ -186,42 +186,42 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TICKET_FIELD_NUMBER = 2;
+  public static final int DATA_FIELD_NUMBER = 2;
   /**
    * <pre>
-   * Parsed and structured authorization ticket.
+   * Parsed identity JWT payload.
    * </pre>
    *
-   * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+   * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
    */
-  public boolean hasTicket() {
+  public boolean hasData() {
     return payloadCase_ == 2;
   }
   /**
    * <pre>
-   * Parsed and structured authorization ticket.
+   * Parsed identity JWT payload.
    * </pre>
    *
-   * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+   * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
    */
-  public io.bloombox.schema.security.TokenPayload getTicket() {
+  public io.bloombox.schema.security.IDTokenPayload getData() {
     if (payloadCase_ == 2) {
-       return (io.bloombox.schema.security.TokenPayload) payload_;
+       return (io.bloombox.schema.security.IDTokenPayload) payload_;
     }
-    return io.bloombox.schema.security.TokenPayload.getDefaultInstance();
+    return io.bloombox.schema.security.IDTokenPayload.getDefaultInstance();
   }
   /**
    * <pre>
-   * Parsed and structured authorization ticket.
+   * Parsed identity JWT payload.
    * </pre>
    *
-   * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+   * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
    */
-  public io.bloombox.schema.security.TokenPayloadOrBuilder getTicketOrBuilder() {
+  public io.bloombox.schema.security.IDTokenPayloadOrBuilder getDataOrBuilder() {
     if (payloadCase_ == 2) {
-       return (io.bloombox.schema.security.TokenPayload) payload_;
+       return (io.bloombox.schema.security.IDTokenPayload) payload_;
     }
-    return io.bloombox.schema.security.TokenPayload.getDefaultInstance();
+    return io.bloombox.schema.security.IDTokenPayload.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -240,7 +240,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, payload_);
     }
     if (payloadCase_ == 2) {
-      output.writeMessage(2, (io.bloombox.schema.security.TokenPayload) payload_);
+      output.writeMessage(2, (io.bloombox.schema.security.IDTokenPayload) payload_);
     }
     unknownFields.writeTo(output);
   }
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
     }
     if (payloadCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (io.bloombox.schema.security.TokenPayload) payload_);
+        .computeMessageSize(2, (io.bloombox.schema.security.IDTokenPayload) payload_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -267,10 +267,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof io.bloombox.schema.security.AuthToken)) {
+    if (!(obj instanceof io.bloombox.schema.security.IDToken)) {
       return super.equals(obj);
     }
-    io.bloombox.schema.security.AuthToken other = (io.bloombox.schema.security.AuthToken) obj;
+    io.bloombox.schema.security.IDToken other = (io.bloombox.schema.security.IDToken) obj;
 
     boolean result = true;
     result = result && getPayloadCase().equals(
@@ -282,8 +282,8 @@ private static final long serialVersionUID = 0L;
             .equals(other.getEncoded());
         break;
       case 2:
-        result = result && getTicket()
-            .equals(other.getTicket());
+        result = result && getData()
+            .equals(other.getData());
         break;
       case 0:
       default:
@@ -305,8 +305,8 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getEncoded().hashCode();
         break;
       case 2:
-        hash = (37 * hash) + TICKET_FIELD_NUMBER;
-        hash = (53 * hash) + getTicket().hashCode();
+        hash = (37 * hash) + DATA_FIELD_NUMBER;
+        hash = (53 * hash) + getData().hashCode();
         break;
       case 0:
       default:
@@ -316,69 +316,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static io.bloombox.schema.security.AuthToken parseFrom(
+  public static io.bloombox.schema.security.IDToken parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(
+  public static io.bloombox.schema.security.IDToken parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(
+  public static io.bloombox.schema.security.IDToken parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(
+  public static io.bloombox.schema.security.IDToken parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(byte[] data)
+  public static io.bloombox.schema.security.IDToken parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(
+  public static io.bloombox.schema.security.IDToken parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(java.io.InputStream input)
+  public static io.bloombox.schema.security.IDToken parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(
+  public static io.bloombox.schema.security.IDToken parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.security.AuthToken parseDelimitedFrom(java.io.InputStream input)
+  public static io.bloombox.schema.security.IDToken parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.security.AuthToken parseDelimitedFrom(
+  public static io.bloombox.schema.security.IDToken parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(
+  public static io.bloombox.schema.security.IDToken parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.security.AuthToken parseFrom(
+  public static io.bloombox.schema.security.IDToken parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(io.bloombox.schema.security.AuthToken prototype) {
+  public static Builder newBuilder(io.bloombox.schema.security.IDToken prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -406,28 +406,28 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies an authorization token, in the OAuth2 access_token format.
+   * Specifies an ID token, usually structured as a JWT.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.security.AuthToken}
+   * Protobuf type {@code bloombox.schema.security.IDToken}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.security.AuthToken)
-      io.bloombox.schema.security.AuthTokenOrBuilder {
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.security.IDToken)
+      io.bloombox.schema.security.IDTokenOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_AuthToken_descriptor;
+      return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_IDToken_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_AuthToken_fieldAccessorTable
+      return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_IDToken_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.security.AuthToken.class, io.bloombox.schema.security.AuthToken.Builder.class);
+              io.bloombox.schema.security.IDToken.class, io.bloombox.schema.security.IDToken.Builder.class);
     }
 
-    // Construct using io.bloombox.schema.security.AuthToken.newBuilder()
+    // Construct using io.bloombox.schema.security.IDToken.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -451,31 +451,31 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_AuthToken_descriptor;
+      return io.bloombox.schema.security.Token.internal_static_bloombox_schema_security_IDToken_descriptor;
     }
 
-    public io.bloombox.schema.security.AuthToken getDefaultInstanceForType() {
-      return io.bloombox.schema.security.AuthToken.getDefaultInstance();
+    public io.bloombox.schema.security.IDToken getDefaultInstanceForType() {
+      return io.bloombox.schema.security.IDToken.getDefaultInstance();
     }
 
-    public io.bloombox.schema.security.AuthToken build() {
-      io.bloombox.schema.security.AuthToken result = buildPartial();
+    public io.bloombox.schema.security.IDToken build() {
+      io.bloombox.schema.security.IDToken result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public io.bloombox.schema.security.AuthToken buildPartial() {
-      io.bloombox.schema.security.AuthToken result = new io.bloombox.schema.security.AuthToken(this);
+    public io.bloombox.schema.security.IDToken buildPartial() {
+      io.bloombox.schema.security.IDToken result = new io.bloombox.schema.security.IDToken(this);
       if (payloadCase_ == 1) {
         result.payload_ = payload_;
       }
       if (payloadCase_ == 2) {
-        if (ticketBuilder_ == null) {
+        if (dataBuilder_ == null) {
           result.payload_ = payload_;
         } else {
-          result.payload_ = ticketBuilder_.build();
+          result.payload_ = dataBuilder_.build();
         }
       }
       result.payloadCase_ = payloadCase_;
@@ -510,16 +510,16 @@ private static final long serialVersionUID = 0L;
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof io.bloombox.schema.security.AuthToken) {
-        return mergeFrom((io.bloombox.schema.security.AuthToken)other);
+      if (other instanceof io.bloombox.schema.security.IDToken) {
+        return mergeFrom((io.bloombox.schema.security.IDToken)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(io.bloombox.schema.security.AuthToken other) {
-      if (other == io.bloombox.schema.security.AuthToken.getDefaultInstance()) return this;
+    public Builder mergeFrom(io.bloombox.schema.security.IDToken other) {
+      if (other == io.bloombox.schema.security.IDToken.getDefaultInstance()) return this;
       switch (other.getPayloadCase()) {
         case ENCODED: {
           payloadCase_ = 1;
@@ -527,8 +527,8 @@ private static final long serialVersionUID = 0L;
           onChanged();
           break;
         }
-        case TICKET: {
-          mergeTicket(other.getTicket());
+        case DATA: {
+          mergeData(other.getData());
           break;
         }
         case PAYLOAD_NOT_SET: {
@@ -548,11 +548,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      io.bloombox.schema.security.AuthToken parsedMessage = null;
+      io.bloombox.schema.security.IDToken parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (io.bloombox.schema.security.AuthToken) e.getUnfinishedMessage();
+        parsedMessage = (io.bloombox.schema.security.IDToken) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Encoded access token.
+     * Encoded ID token.
      * </pre>
      *
      * <code>string encoded = 1;</code>
@@ -603,7 +603,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encoded access token.
+     * Encoded ID token.
      * </pre>
      *
      * <code>string encoded = 1;</code>
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encoded access token.
+     * Encoded ID token.
      * </pre>
      *
      * <code>string encoded = 1;</code>
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encoded access token.
+     * Encoded ID token.
      * </pre>
      *
      * <code>string encoded = 1;</code>
@@ -660,7 +660,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encoded access token.
+     * Encoded ID token.
      * </pre>
      *
      * <code>string encoded = 1;</code>
@@ -678,87 +678,87 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.security.TokenPayload, io.bloombox.schema.security.TokenPayload.Builder, io.bloombox.schema.security.TokenPayloadOrBuilder> ticketBuilder_;
+        io.bloombox.schema.security.IDTokenPayload, io.bloombox.schema.security.IDTokenPayload.Builder, io.bloombox.schema.security.IDTokenPayloadOrBuilder> dataBuilder_;
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
-    public boolean hasTicket() {
+    public boolean hasData() {
       return payloadCase_ == 2;
     }
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
-    public io.bloombox.schema.security.TokenPayload getTicket() {
-      if (ticketBuilder_ == null) {
+    public io.bloombox.schema.security.IDTokenPayload getData() {
+      if (dataBuilder_ == null) {
         if (payloadCase_ == 2) {
-          return (io.bloombox.schema.security.TokenPayload) payload_;
+          return (io.bloombox.schema.security.IDTokenPayload) payload_;
         }
-        return io.bloombox.schema.security.TokenPayload.getDefaultInstance();
+        return io.bloombox.schema.security.IDTokenPayload.getDefaultInstance();
       } else {
         if (payloadCase_ == 2) {
-          return ticketBuilder_.getMessage();
+          return dataBuilder_.getMessage();
         }
-        return io.bloombox.schema.security.TokenPayload.getDefaultInstance();
+        return io.bloombox.schema.security.IDTokenPayload.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
-    public Builder setTicket(io.bloombox.schema.security.TokenPayload value) {
-      if (ticketBuilder_ == null) {
+    public Builder setData(io.bloombox.schema.security.IDTokenPayload value) {
+      if (dataBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
         payload_ = value;
         onChanged();
       } else {
-        ticketBuilder_.setMessage(value);
+        dataBuilder_.setMessage(value);
       }
       payloadCase_ = 2;
       return this;
     }
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
-    public Builder setTicket(
-        io.bloombox.schema.security.TokenPayload.Builder builderForValue) {
-      if (ticketBuilder_ == null) {
+    public Builder setData(
+        io.bloombox.schema.security.IDTokenPayload.Builder builderForValue) {
+      if (dataBuilder_ == null) {
         payload_ = builderForValue.build();
         onChanged();
       } else {
-        ticketBuilder_.setMessage(builderForValue.build());
+        dataBuilder_.setMessage(builderForValue.build());
       }
       payloadCase_ = 2;
       return this;
     }
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
-    public Builder mergeTicket(io.bloombox.schema.security.TokenPayload value) {
-      if (ticketBuilder_ == null) {
+    public Builder mergeData(io.bloombox.schema.security.IDTokenPayload value) {
+      if (dataBuilder_ == null) {
         if (payloadCase_ == 2 &&
-            payload_ != io.bloombox.schema.security.TokenPayload.getDefaultInstance()) {
-          payload_ = io.bloombox.schema.security.TokenPayload.newBuilder((io.bloombox.schema.security.TokenPayload) payload_)
+            payload_ != io.bloombox.schema.security.IDTokenPayload.getDefaultInstance()) {
+          payload_ = io.bloombox.schema.security.IDTokenPayload.newBuilder((io.bloombox.schema.security.IDTokenPayload) payload_)
               .mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
@@ -766,22 +766,22 @@ private static final long serialVersionUID = 0L;
         onChanged();
       } else {
         if (payloadCase_ == 2) {
-          ticketBuilder_.mergeFrom(value);
+          dataBuilder_.mergeFrom(value);
         }
-        ticketBuilder_.setMessage(value);
+        dataBuilder_.setMessage(value);
       }
       payloadCase_ = 2;
       return this;
     }
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
-    public Builder clearTicket() {
-      if (ticketBuilder_ == null) {
+    public Builder clearData() {
+      if (dataBuilder_ == null) {
         if (payloadCase_ == 2) {
           payloadCase_ = 0;
           payload_ = null;
@@ -792,61 +792,61 @@ private static final long serialVersionUID = 0L;
           payloadCase_ = 0;
           payload_ = null;
         }
-        ticketBuilder_.clear();
+        dataBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
-    public io.bloombox.schema.security.TokenPayload.Builder getTicketBuilder() {
-      return getTicketFieldBuilder().getBuilder();
+    public io.bloombox.schema.security.IDTokenPayload.Builder getDataBuilder() {
+      return getDataFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
-    public io.bloombox.schema.security.TokenPayloadOrBuilder getTicketOrBuilder() {
-      if ((payloadCase_ == 2) && (ticketBuilder_ != null)) {
-        return ticketBuilder_.getMessageOrBuilder();
+    public io.bloombox.schema.security.IDTokenPayloadOrBuilder getDataOrBuilder() {
+      if ((payloadCase_ == 2) && (dataBuilder_ != null)) {
+        return dataBuilder_.getMessageOrBuilder();
       } else {
         if (payloadCase_ == 2) {
-          return (io.bloombox.schema.security.TokenPayload) payload_;
+          return (io.bloombox.schema.security.IDTokenPayload) payload_;
         }
-        return io.bloombox.schema.security.TokenPayload.getDefaultInstance();
+        return io.bloombox.schema.security.IDTokenPayload.getDefaultInstance();
       }
     }
     /**
      * <pre>
-     * Parsed and structured authorization ticket.
+     * Parsed identity JWT payload.
      * </pre>
      *
-     * <code>.bloombox.schema.security.TokenPayload ticket = 2;</code>
+     * <code>.bloombox.schema.security.IDTokenPayload data = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.security.TokenPayload, io.bloombox.schema.security.TokenPayload.Builder, io.bloombox.schema.security.TokenPayloadOrBuilder> 
-        getTicketFieldBuilder() {
-      if (ticketBuilder_ == null) {
+        io.bloombox.schema.security.IDTokenPayload, io.bloombox.schema.security.IDTokenPayload.Builder, io.bloombox.schema.security.IDTokenPayloadOrBuilder> 
+        getDataFieldBuilder() {
+      if (dataBuilder_ == null) {
         if (!(payloadCase_ == 2)) {
-          payload_ = io.bloombox.schema.security.TokenPayload.getDefaultInstance();
+          payload_ = io.bloombox.schema.security.IDTokenPayload.getDefaultInstance();
         }
-        ticketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.security.TokenPayload, io.bloombox.schema.security.TokenPayload.Builder, io.bloombox.schema.security.TokenPayloadOrBuilder>(
-                (io.bloombox.schema.security.TokenPayload) payload_,
+        dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.bloombox.schema.security.IDTokenPayload, io.bloombox.schema.security.IDTokenPayload.Builder, io.bloombox.schema.security.IDTokenPayloadOrBuilder>(
+                (io.bloombox.schema.security.IDTokenPayload) payload_,
                 getParentForChildren(),
                 isClean());
         payload_ = null;
       }
       payloadCase_ = 2;
       onChanged();;
-      return ticketBuilder_;
+      return dataBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -859,39 +859,39 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.security.AuthToken)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.security.IDToken)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.security.AuthToken)
-  private static final io.bloombox.schema.security.AuthToken DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:bloombox.schema.security.IDToken)
+  private static final io.bloombox.schema.security.IDToken DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new io.bloombox.schema.security.AuthToken();
+    DEFAULT_INSTANCE = new io.bloombox.schema.security.IDToken();
   }
 
-  public static io.bloombox.schema.security.AuthToken getDefaultInstance() {
+  public static io.bloombox.schema.security.IDToken getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AuthToken>
-      PARSER = new com.google.protobuf.AbstractParser<AuthToken>() {
-    public AuthToken parsePartialFrom(
+  private static final com.google.protobuf.Parser<IDToken>
+      PARSER = new com.google.protobuf.AbstractParser<IDToken>() {
+    public IDToken parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AuthToken(input, extensionRegistry);
+      return new IDToken(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<AuthToken> parser() {
+  public static com.google.protobuf.Parser<IDToken> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AuthToken> getParserForType() {
+  public com.google.protobuf.Parser<IDToken> getParserForType() {
     return PARSER;
   }
 
-  public io.bloombox.schema.security.AuthToken getDefaultInstanceForType() {
+  public io.bloombox.schema.security.IDToken getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

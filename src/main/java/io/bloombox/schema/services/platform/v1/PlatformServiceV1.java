@@ -140,55 +140,55 @@ public final class PlatformServiceV1 {
       "ion\022J\n\007request\030\001 \001(\01329.bloombox.schema.s" +
       "ervices.platform.v1.Healthcheck.Request\022" +
       "L\n\010response\030\002 \001(\0132:.bloombox.schema.serv" +
-      "ices.platform.v1.Healthcheck.Response\"\225\002" +
+      "ices.platform.v1.Healthcheck.Response\"\250\002" +
       "\n\rDomainResolve\032\031\n\007Request\022\016\n\006origin\030\001 \001" +
-      "(\t\032=\n\010Response\022\017\n\007partner\030\001 \001(\t\022\020\n\010locat" +
-      "ion\030\002 \001(\t\022\016\n\006apikey\030\003 \001(\t\032\251\001\n\tOperation\022" +
-      "L\n\007request\030\001 \001(\0132;.bloombox.schema.servi" +
-      "ces.platform.v1.DomainResolve.Request\022N\n" +
-      "\010response\030\002 \001(\0132<.bloombox.schema.servic" +
-      "es.platform.v1.DomainResolve.Response\"\317\002" +
-      "\n\rSearchReindex\032b\n\007Request\022\r\n\005scope\030\001 \001(" +
-      "\t\022H\n\005index\030\002 \001(\01629.bloombox.schema.servi" +
-      "ces.platform.v1.SearchReindex.Index\032\n\n\010R" +
-      "esponse\032\251\001\n\tOperation\022L\n\007request\030\001 \001(\0132;" +
-      ".bloombox.schema.services.platform.v1.Se" +
-      "archReindex.Request\022N\n\010response\030\002 \001(\0132<." +
-      "bloombox.schema.services.platform.v1.Sea" +
-      "rchReindex.Response\"\"\n\005Index\022\013\n\007CATALOG\020" +
-      "\000\022\014\n\010ACCOUNTS\020\001\"\276\002\n\rPlatformStats\032\t\n\007Req" +
-      "uest\032v\n\010Response\0223\n\005cache\030\001 \001(\0132$.bloomb" +
-      "ox.schema.platform.CacheStats\0225\n\006search\030" +
-      "\002 \001(\0132%.bloombox.schema.platform.SearchS" +
-      "tats\032\251\001\n\tOperation\022L\n\007request\030\001 \001(\0132;.bl" +
-      "oombox.schema.services.platform.v1.Platf" +
-      "ormStats.Request\022N\n\010response\030\002 \001(\0132<.blo" +
-      "ombox.schema.services.platform.v1.Platfo" +
-      "rmStats.Response*a\n\rPlatformError\022\014\n\010NO_" +
-      "ERROR\020\000\022\030\n\024SEARCH_NOT_AVAILABLE\020\001\022\022\n\016ORI" +
-      "GIN_INVALID\020\002\022\024\n\020ORIGIN_NOT_FOUND\020\0032\242\006\n\010" +
-      "Platform\022\212\001\n\004Ping\0222.bloombox.schema.serv" +
-      "ices.platform.v1.Ping.Request\0323.bloombox" +
-      ".schema.services.platform.v1.Ping.Respon" +
-      "se\"\031\202\323\344\223\002\023\022\021/platform/v1/ping\022U\n\006Health\022" +
-      "\026.google.protobuf.Empty\032\026.google.protobu" +
-      "f.Empty\"\033\202\323\344\223\002\025\022\023/platform/v1/health\022\252\001\n" +
-      "\007Resolve\022;.bloombox.schema.services.plat" +
-      "form.v1.DomainResolve.Request\032<.bloombox" +
-      ".schema.services.platform.v1.DomainResol" +
-      "ve.Response\"$\202\323\344\223\002\036\022\034/platform/v1/domain" +
-      "/{origin}\022\236\001\n\005Stats\022;.bloombox.schema.se" +
-      "rvices.platform.v1.PlatformStats.Request" +
-      "\032<.bloombox.schema.services.platform.v1." +
-      "PlatformStats.Response\"\032\202\323\344\223\002\024\022\022/platfor" +
-      "m/v1/stats\022\343\001\n\007Reindex\022;.bloombox.schema" +
-      ".services.platform.v1.SearchReindex.Requ" +
-      "est\032<.bloombox.schema.services.platform." +
-      "v1.SearchReindex.Response\"]\202\323\344\223\002W\022%/plat" +
-      "form/v1/reindex/{scope=*}/globalZ.\022,/pla" +
-      "tform/v1/reindex/{scope=*}/index/{index}" +
-      "B3\n\'io.bloombox.schema.services.platform" +
-      ".v1H\001P\001\242\002\003BBSb\006proto3"
+      "(\t\032P\n\010Response\022\017\n\007partner\030\001 \001(\t\022\020\n\010locat" +
+      "ion\030\002 \001(\t\022\016\n\006apikey\030\003 \001(\t\022\021\n\tclient_id\030\004" +
+      " \001(\t\032\251\001\n\tOperation\022L\n\007request\030\001 \001(\0132;.bl" +
+      "oombox.schema.services.platform.v1.Domai" +
+      "nResolve.Request\022N\n\010response\030\002 \001(\0132<.blo" +
+      "ombox.schema.services.platform.v1.Domain" +
+      "Resolve.Response\"\317\002\n\rSearchReindex\032b\n\007Re" +
+      "quest\022\r\n\005scope\030\001 \001(\t\022H\n\005index\030\002 \001(\01629.bl" +
+      "oombox.schema.services.platform.v1.Searc" +
+      "hReindex.Index\032\n\n\010Response\032\251\001\n\tOperation" +
+      "\022L\n\007request\030\001 \001(\0132;.bloombox.schema.serv" +
+      "ices.platform.v1.SearchReindex.Request\022N" +
+      "\n\010response\030\002 \001(\0132<.bloombox.schema.servi" +
+      "ces.platform.v1.SearchReindex.Response\"\"" +
+      "\n\005Index\022\013\n\007CATALOG\020\000\022\014\n\010ACCOUNTS\020\001\"\276\002\n\rP" +
+      "latformStats\032\t\n\007Request\032v\n\010Response\0223\n\005c" +
+      "ache\030\001 \001(\0132$.bloombox.schema.platform.Ca" +
+      "cheStats\0225\n\006search\030\002 \001(\0132%.bloombox.sche" +
+      "ma.platform.SearchStats\032\251\001\n\tOperation\022L\n" +
+      "\007request\030\001 \001(\0132;.bloombox.schema.service" +
+      "s.platform.v1.PlatformStats.Request\022N\n\010r" +
+      "esponse\030\002 \001(\0132<.bloombox.schema.services" +
+      ".platform.v1.PlatformStats.Response*a\n\rP" +
+      "latformError\022\014\n\010NO_ERROR\020\000\022\030\n\024SEARCH_NOT" +
+      "_AVAILABLE\020\001\022\022\n\016ORIGIN_INVALID\020\002\022\024\n\020ORIG" +
+      "IN_NOT_FOUND\020\0032\242\006\n\010Platform\022\212\001\n\004Ping\0222.b" +
+      "loombox.schema.services.platform.v1.Ping" +
+      ".Request\0323.bloombox.schema.services.plat" +
+      "form.v1.Ping.Response\"\031\202\323\344\223\002\023\022\021/platform" +
+      "/v1/ping\022U\n\006Health\022\026.google.protobuf.Emp" +
+      "ty\032\026.google.protobuf.Empty\"\033\202\323\344\223\002\025\022\023/pla" +
+      "tform/v1/health\022\252\001\n\007Resolve\022;.bloombox.s" +
+      "chema.services.platform.v1.DomainResolve" +
+      ".Request\032<.bloombox.schema.services.plat" +
+      "form.v1.DomainResolve.Response\"$\202\323\344\223\002\036\022\034" +
+      "/platform/v1/domain/{origin}\022\236\001\n\005Stats\022;" +
+      ".bloombox.schema.services.platform.v1.Pl" +
+      "atformStats.Request\032<.bloombox.schema.se" +
+      "rvices.platform.v1.PlatformStats.Respons" +
+      "e\"\032\202\323\344\223\002\024\022\022/platform/v1/stats\022\343\001\n\007Reinde" +
+      "x\022;.bloombox.schema.services.platform.v1" +
+      ".SearchReindex.Request\032<.bloombox.schema" +
+      ".services.platform.v1.SearchReindex.Resp" +
+      "onse\"]\202\323\344\223\002W\022%/platform/v1/reindex/{scop" +
+      "e=*}/globalZ.\022,/platform/v1/reindex/{sco" +
+      "pe=*}/index/{index}B3\n\'io.bloombox.schem" +
+      "a.services.platform.v1H\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -271,7 +271,7 @@ public final class PlatformServiceV1 {
     internal_static_bloombox_schema_services_platform_v1_DomainResolve_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_platform_v1_DomainResolve_Response_descriptor,
-        new java.lang.String[] { "Partner", "Location", "Apikey", });
+        new java.lang.String[] { "Partner", "Location", "Apikey", "ClientId", });
     internal_static_bloombox_schema_services_platform_v1_DomainResolve_Operation_descriptor =
       internal_static_bloombox_schema_services_platform_v1_DomainResolve_descriptor.getNestedTypes().get(2);
     internal_static_bloombox_schema_services_platform_v1_DomainResolve_Operation_fieldAccessorTable = new

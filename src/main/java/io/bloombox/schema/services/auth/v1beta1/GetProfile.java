@@ -5,6 +5,7 @@ package io.bloombox.schema.services.auth.v1beta1;
 
 /**
  * <pre>
+ * Retrieve a user's profile by their profile key.
  * </pre>
  *
  * Protobuf type {@code bloombox.schema.services.auth.v1beta1.GetProfile}
@@ -1478,6 +1479,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Operation to retrieve a user's profile.
    * </pre>
    *
    * Protobuf type {@code bloombox.schema.services.auth.v1beta1.GetProfile.Operation}
@@ -1815,6 +1817,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
+     * Operation to retrieve a user's profile.
      * </pre>
      *
      * Protobuf type {@code bloombox.schema.services.auth.v1beta1.GetProfile.Operation}
@@ -2466,6 +2469,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
+   * Retrieve a user's profile by their profile key.
    * </pre>
    *
    * Protobuf type {@code bloombox.schema.services.auth.v1beta1.GetProfile}

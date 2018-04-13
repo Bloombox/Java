@@ -79,6 +79,30 @@ public final class AuthGrpc {
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response.getDefaultInstance()))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request,
+      io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> METHOD_TOKEN =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request, io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.auth.v1beta1.Auth", "Token"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.UserContext.Request,
+      io.bloombox.schema.services.auth.v1beta1.UserContext.Response> METHOD_CONTEXT =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.UserContext.Request, io.bloombox.schema.services.auth.v1beta1.UserContext.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.auth.v1beta1.Auth", "Context"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.UserContext.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.UserContext.Response.getDefaultInstance()))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -152,6 +176,26 @@ public final class AuthGrpc {
       asyncUnimplementedUnaryCall(METHOD_CONSENT, responseObserver);
     }
 
+    /**
+     * <pre>
+     * Retrieve an access token, given a completed ID and authorization ticket.
+     * </pre>
+     */
+    public void token(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_TOKEN, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Generate a full user context after a successful ID and authorization flow.
+     * </pre>
+     */
+    public void context(io.bloombox.schema.services.auth.v1beta1.UserContext.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.UserContext.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_CONTEXT, responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -182,6 +226,20 @@ public final class AuthGrpc {
                 io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request,
                 io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response>(
                   this, METHODID_CONSENT)))
+          .addMethod(
+            METHOD_TOKEN,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request,
+                io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response>(
+                  this, METHODID_TOKEN)))
+          .addMethod(
+            METHOD_CONTEXT,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.auth.v1beta1.UserContext.Request,
+                io.bloombox.schema.services.auth.v1beta1.UserContext.Response>(
+                  this, METHODID_CONTEXT)))
           .build();
     }
   }
@@ -252,6 +310,28 @@ public final class AuthGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_CONSENT, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Retrieve an access token, given a completed ID and authorization ticket.
+     * </pre>
+     */
+    public void token(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_TOKEN, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Generate a full user context after a successful ID and authorization flow.
+     * </pre>
+     */
+    public void context(io.bloombox.schema.services.auth.v1beta1.UserContext.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.UserContext.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_CONTEXT, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -315,6 +395,26 @@ public final class AuthGrpc {
     public io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response consent(io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_CONSENT, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an access token, given a completed ID and authorization ticket.
+     * </pre>
+     */
+    public io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response token(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_TOKEN, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generate a full user context after a successful ID and authorization flow.
+     * </pre>
+     */
+    public io.bloombox.schema.services.auth.v1beta1.UserContext.Response context(io.bloombox.schema.services.auth.v1beta1.UserContext.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_CONTEXT, getCallOptions(), request);
     }
   }
 
@@ -384,12 +484,36 @@ public final class AuthGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_CONSENT, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Retrieve an access token, given a completed ID and authorization ticket.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response> token(
+        io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_TOKEN, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Generate a full user context after a successful ID and authorization flow.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.UserContext.Response> context(
+        io.bloombox.schema.services.auth.v1beta1.UserContext.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_CONTEXT, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PING = 0;
   private static final int METHODID_AUTHENTICATE = 1;
   private static final int METHODID_PROFILE = 2;
   private static final int METHODID_CONSENT = 3;
+  private static final int METHODID_TOKEN = 4;
+  private static final int METHODID_CONTEXT = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -423,6 +547,14 @@ public final class AuthGrpc {
         case METHODID_CONSENT:
           serviceImpl.consent((io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Response>) responseObserver);
+          break;
+        case METHODID_TOKEN:
+          serviceImpl.token((io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response>) responseObserver);
+          break;
+        case METHODID_CONTEXT:
+          serviceImpl.context((io.bloombox.schema.services.auth.v1beta1.UserContext.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.UserContext.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -461,6 +593,8 @@ public final class AuthGrpc {
               .addMethod(METHOD_AUTHENTICATE)
               .addMethod(METHOD_PROFILE)
               .addMethod(METHOD_CONSENT)
+              .addMethod(METHOD_TOKEN)
+              .addMethod(METHOD_CONTEXT)
               .build();
         }
       }

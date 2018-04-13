@@ -29,15 +29,15 @@ public final class DeviceTokenOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032security/DeviceToken.proto\022\030bloombox.s" +
-      "chema.security\032\023device/Device.proto\032\026tem" +
-      "poral/Instant.proto\032\030security/AuthToken." +
-      "proto\"\317\001\n\013DeviceToken\0222\n\005token\030\001 \001(\0132#.b" +
-      "loombox.schema.security.AuthToken\022+\n\006dev" +
-      "ice\030\002 \001(\0132\033.opencannabis.device.Device\022." +
-      "\n\006issued\030\003 \001(\0132\036.opencannabis.temporal.I" +
-      "nstant\022/\n\007expires\030\004 \001(\0132\036.opencannabis.t" +
-      "emporal.InstantB\'\n\033io.bloombox.schema.se" +
-      "curityH\001P\001\242\002\003BBSb\006proto3"
+      "chema.security\032\023device/Device.proto\032\024sec" +
+      "urity/Token.proto\032\026temporal/Instant.prot" +
+      "o\"\317\001\n\013DeviceToken\0222\n\005token\030\001 \001(\0132#.bloom" +
+      "box.schema.security.AuthToken\022+\n\006device\030" +
+      "\002 \001(\0132\033.opencannabis.device.Device\022.\n\006is" +
+      "sued\030\003 \001(\0132\036.opencannabis.temporal.Insta" +
+      "nt\022/\n\007expires\030\004 \001(\0132\036.opencannabis.tempo" +
+      "ral.InstantB\'\n\033io.bloombox.schema.securi" +
+      "tyH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -51,8 +51,8 @@ public final class DeviceTokenOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
+          io.bloombox.schema.security.Token.getDescriptor(),
           io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
-          io.bloombox.schema.security.AuthTokenOuterClass.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_security_DeviceToken_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -61,8 +61,8 @@ public final class DeviceTokenOuterClass {
         internal_static_bloombox_schema_security_DeviceToken_descriptor,
         new java.lang.String[] { "Token", "Device", "Issued", "Expires", });
     io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
+    io.bloombox.schema.security.Token.getDescriptor();
     io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
-    io.bloombox.schema.security.AuthTokenOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
