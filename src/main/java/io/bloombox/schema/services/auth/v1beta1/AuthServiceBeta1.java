@@ -211,43 +211,45 @@ public final class AuthServiceBeta1 {
       "bloombox.schema.services.auth.v1beta1.Co" +
       "nsentFlow.Request\022M\n\010response\030\002 \001(\0132;.bl" +
       "oombox.schema.services.auth.v1beta1.Cons" +
-      "entFlow.Response*\352\001\n\tAuthError\022\014\n\010NO_ERR" +
+      "entFlow.Response*\312\002\n\tAuthError\022\014\n\010NO_ERR" +
       "OR\020\000\022\025\n\021ACCOUNT_SUSPENDED\020\001\022\025\n\021PROFILE_N" +
       "OT_FOUND\020\002\022\024\n\020INVALID_USER_KEY\020\003\022\025\n\021INVA" +
       "LID_ASSERTION\020\004\022\032\n\026UNSUPPORTED_LOGIN_TYP" +
       "E\020\005\022\026\n\022INVALID_AUTH_TOKEN\020\006\022\022\n\016INVALID_T" +
       "ICKET\020\007\022\024\n\020CLIENT_NOT_FOUND\020\010\022\026\n\022INVALID" +
-      "_CONSENT_ID\020\t*G\n\nAuthStatus\022\022\n\016STATUS_UN" +
-      "KNOWN\020\000\022\022\n\016ACCESS_GRANTED\020\001\022\021\n\rACCESS_DE" +
-      "NIED\020\0022\247\010\n\004Auth\022\215\001\n\004Ping\0223.bloombox.sche" +
-      "ma.services.auth.v1beta1.Ping.Request\0324." +
-      "bloombox.schema.services.auth.v1beta1.Pi" +
-      "ng.Response\"\032\202\323\344\223\002\024\022\022/auth/v1beta1/ping\022" +
-      "\304\001\n\014Authenticate\022?.bloombox.schema.servi" +
-      "ces.auth.v1beta1.AuthenticateUser.Reques" +
-      "t\032@.bloombox.schema.services.auth.v1beta" +
-      "1.AuthenticateUser.Response\"1\202\323\344\223\002+\"\036/au" +
-      "th/v1beta1/login/{provider}:\tassertion\022\245" +
-      "\001\n\007Profile\0229.bloombox.schema.services.au" +
-      "th.v1beta1.GetProfile.Request\032:.bloombox" +
-      ".schema.services.auth.v1beta1.GetProfile" +
-      ".Response\"#\202\323\344\223\002\035\022\033/auth/v1beta1/profile" +
-      "/{key}\022\246\001\n\007Consent\022:.bloombox.schema.ser" +
-      "vices.auth.v1beta1.ConsentFlow.Request\032;" +
-      ".bloombox.schema.services.auth.v1beta1.C" +
-      "onsentFlow.Response\"\"\202\323\344\223\002\034\022\032/auth/v1bet" +
-      "a1/{consent_id}\022\267\001\n\005Token\022;.bloombox.sch" +
-      "ema.services.auth.v1beta1.ResolveToken.R" +
-      "equest\032<.bloombox.schema.services.auth.v" +
-      "1beta1.ResolveToken.Response\"3\202\323\344\223\002-\"(/a" +
-      "uth/v1beta1/{origin}/{client_id}/token:\001" +
-      "*\022\274\001\n\007Context\022:.bloombox.schema.services" +
-      ".auth.v1beta1.UserContext.Request\032;.bloo" +
-      "mbox.schema.services.auth.v1beta1.UserCo" +
-      "ntext.Response\"8\202\323\344\223\0022\0220/auth/v1beta1/{o" +
-      "rigin}/{client_id}/context/{uid}B4\n(io.b" +
-      "loombox.schema.services.auth.v1beta1H\001P\001" +
-      "\242\002\003BBSb\006proto3"
+      "_CONSENT_ID\020\t\022\024\n\020INVALID_ID_TOKEN\020\n\022\030\n\024I" +
+      "NVALID_ACCESS_TOKEN\020\013\022\024\n\020EXPIRED_ID_TOKE" +
+      "N\020\014\022\030\n\024EXPIRED_ACCESS_TOKEN\020\r*G\n\nAuthSta" +
+      "tus\022\022\n\016STATUS_UNKNOWN\020\000\022\022\n\016ACCESS_GRANTE" +
+      "D\020\001\022\021\n\rACCESS_DENIED\020\0022\247\010\n\004Auth\022\215\001\n\004Ping" +
+      "\0223.bloombox.schema.services.auth.v1beta1" +
+      ".Ping.Request\0324.bloombox.schema.services" +
+      ".auth.v1beta1.Ping.Response\"\032\202\323\344\223\002\024\022\022/au" +
+      "th/v1beta1/ping\022\304\001\n\014Authenticate\022?.bloom" +
+      "box.schema.services.auth.v1beta1.Authent" +
+      "icateUser.Request\032@.bloombox.schema.serv" +
+      "ices.auth.v1beta1.AuthenticateUser.Respo" +
+      "nse\"1\202\323\344\223\002+\"\036/auth/v1beta1/login/{provid" +
+      "er}:\tassertion\022\245\001\n\007Profile\0229.bloombox.sc" +
+      "hema.services.auth.v1beta1.GetProfile.Re" +
+      "quest\032:.bloombox.schema.services.auth.v1" +
+      "beta1.GetProfile.Response\"#\202\323\344\223\002\035\022\033/auth" +
+      "/v1beta1/profile/{key}\022\246\001\n\007Consent\022:.blo" +
+      "ombox.schema.services.auth.v1beta1.Conse" +
+      "ntFlow.Request\032;.bloombox.schema.service" +
+      "s.auth.v1beta1.ConsentFlow.Response\"\"\202\323\344" +
+      "\223\002\034\022\032/auth/v1beta1/{consent_id}\022\267\001\n\005Toke" +
+      "n\022;.bloombox.schema.services.auth.v1beta" +
+      "1.ResolveToken.Request\032<.bloombox.schema" +
+      ".services.auth.v1beta1.ResolveToken.Resp" +
+      "onse\"3\202\323\344\223\002-\"(/auth/v1beta1/{origin}/{cl" +
+      "ient_id}/token:\001*\022\274\001\n\007Context\022:.bloombox" +
+      ".schema.services.auth.v1beta1.UserContex" +
+      "t.Request\032;.bloombox.schema.services.aut" +
+      "h.v1beta1.UserContext.Response\"8\202\323\344\223\0022\0220" +
+      "/auth/v1beta1/{origin}/{client_id}/conte" +
+      "xt/{uid}B4\n(io.bloombox.schema.services." +
+      "auth.v1beta1H\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

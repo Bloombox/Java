@@ -92,6 +92,38 @@ public enum AuthError
    * <code>INVALID_CONSENT_ID = 9;</code>
    */
   INVALID_CONSENT_ID(9),
+  /**
+   * <pre>
+   * The provided ID token information was found to be invalid.
+   * </pre>
+   *
+   * <code>INVALID_ID_TOKEN = 10;</code>
+   */
+  INVALID_ID_TOKEN(10),
+  /**
+   * <pre>
+   * The provided access token information was found to be invalid.
+   * </pre>
+   *
+   * <code>INVALID_ACCESS_TOKEN = 11;</code>
+   */
+  INVALID_ACCESS_TOKEN(11),
+  /**
+   * <pre>
+   * The provided ID token was found to be expired.
+   * </pre>
+   *
+   * <code>EXPIRED_ID_TOKEN = 12;</code>
+   */
+  EXPIRED_ID_TOKEN(12),
+  /**
+   * <pre>
+   * The provided access token was found to be expired.
+   * </pre>
+   *
+   * <code>EXPIRED_ACCESS_TOKEN = 13;</code>
+   */
+  EXPIRED_ACCESS_TOKEN(13),
   UNRECOGNIZED(-1),
   ;
 
@@ -175,6 +207,38 @@ public enum AuthError
    * <code>INVALID_CONSENT_ID = 9;</code>
    */
   public static final int INVALID_CONSENT_ID_VALUE = 9;
+  /**
+   * <pre>
+   * The provided ID token information was found to be invalid.
+   * </pre>
+   *
+   * <code>INVALID_ID_TOKEN = 10;</code>
+   */
+  public static final int INVALID_ID_TOKEN_VALUE = 10;
+  /**
+   * <pre>
+   * The provided access token information was found to be invalid.
+   * </pre>
+   *
+   * <code>INVALID_ACCESS_TOKEN = 11;</code>
+   */
+  public static final int INVALID_ACCESS_TOKEN_VALUE = 11;
+  /**
+   * <pre>
+   * The provided ID token was found to be expired.
+   * </pre>
+   *
+   * <code>EXPIRED_ID_TOKEN = 12;</code>
+   */
+  public static final int EXPIRED_ID_TOKEN_VALUE = 12;
+  /**
+   * <pre>
+   * The provided access token was found to be expired.
+   * </pre>
+   *
+   * <code>EXPIRED_ACCESS_TOKEN = 13;</code>
+   */
+  public static final int EXPIRED_ACCESS_TOKEN_VALUE = 13;
 
 
   public final int getNumber() {
@@ -205,6 +269,10 @@ public enum AuthError
       case 7: return INVALID_TICKET;
       case 8: return CLIENT_NOT_FOUND;
       case 9: return INVALID_CONSENT_ID;
+      case 10: return INVALID_ID_TOKEN;
+      case 11: return INVALID_ACCESS_TOKEN;
+      case 12: return EXPIRED_ID_TOKEN;
+      case 13: return EXPIRED_ACCESS_TOKEN;
       default: return null;
     }
   }
