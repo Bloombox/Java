@@ -48,104 +48,104 @@ class ShopVerifyTest: ClientRPCTest() {
   /**
    * Test verifying a known good account.
    */
-  @test
-  fun testGoodAccountVerify() {
-    // prep a client for prod
-    val prodClient = Bloombox(Bloombox.Settings(
-          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
-          partner = "caliva",
-          location = "sjc"),
-          Bloombox.ClientTarget.PRODUCTION)
-
-    // run a known-good account verification
-    val response = testMemberVerifyGoodAccount(prodClient.shop())
-
-    assertNotNull(response, "response from server for known-good verify should not be null")
-    assertTrue(response.verified, "known-good account should verify correctly")
-
-    prodClient.close(false)
-  }
+//  @test
+//  fun testGoodAccountVerify() {
+//    // prep a client for prod
+//    val prodClient = Bloombox(Bloombox.Settings(
+//          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
+//          partner = "caliva",
+//          location = "sjc"),
+//          Bloombox.ClientTarget.PRODUCTION)
+//
+//    // run a known-good account verification
+//    val response = testMemberVerifyGoodAccount(prodClient.shop())
+//
+//    assertNotNull(response, "response from server for known-good verify should not be null")
+//    assertTrue(response.verified, "known-good account should verify correctly")
+//
+//    prodClient.close(false)
+//  }
 
   /**
    * Test verifying a known good account with a second partner.
    */
-  @test
-  fun testGoodAccountVerifyOtherPartner() {
-    // prep a client for prod
-    val prodClient = Bloombox(Bloombox.Settings(
-          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
-          partner = "abatin",
-          location = "sacramento"),
-          Bloombox.ClientTarget.PRODUCTION)
-
-    // run a known-good account verification
-    val response = testMemberVerifyGoodAccount(prodClient.shop())
-
-    assertNotNull(response, "response from server for known-good alternate partner verify should not be null")
-    assertTrue(response.verified, "known-good alternate partner account should verify correctly")
-
-    prodClient.close(false)
-  }
+//  @test
+//  fun testGoodAccountVerifyOtherPartner() {
+//    // prep a client for prod
+//    val prodClient = Bloombox(Bloombox.Settings(
+//          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
+//          partner = "abatin",
+//          location = "sacramento"),
+//          Bloombox.ClientTarget.PRODUCTION)
+//
+//    // run a known-good account verification
+//    val response = testMemberVerifyGoodAccount(prodClient.shop())
+//
+//    assertNotNull(response, "response from server for known-good alternate partner verify should not be null")
+//    assertTrue(response.verified, "known-good alternate partner account should verify correctly")
+//
+//    prodClient.close(false)
+//  }
 
   /**
    * Test verifying a known good account, asynchronously.
    */
-  @test
-  fun testGoodAccountVerifyAsync() {
-    // prep a client for prod
-    val prodClient = Bloombox(Bloombox.Settings(
-          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
-          partner = "caliva",
-          location = "sjc"),
-          Bloombox.ClientTarget.PRODUCTION)
-
-    try {
-      // run a known-good account verification
-      val operation = prodClient
-            .shop()
-            .verifyMember("sam@bloombox.io", { response ->
-              assertNotNull(response, "response from server for known-good verify should not be null")
-              assertTrue(response.verified, "known-good account should verify correctly")
-            }, { err ->
-              logging.severe("Severe error fetching order: $err")
-            })
-
-      // make sure it executes, with a 10-second timeout
-      operation.get(10, TimeUnit.SECONDS)
-    } finally {
-      prodClient.close(false)
-    }
-  }
+//  @test
+//  fun testGoodAccountVerifyAsync() {
+//    // prep a client for prod
+//    val prodClient = Bloombox(Bloombox.Settings(
+//          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
+//          partner = "caliva",
+//          location = "sjc"),
+//          Bloombox.ClientTarget.PRODUCTION)
+//
+//    try {
+//      // run a known-good account verification
+//      val operation = prodClient
+//            .shop()
+//            .verifyMember("sam@bloombox.io", { response ->
+//              assertNotNull(response, "response from server for known-good verify should not be null")
+//              assertTrue(response.verified, "known-good account should verify correctly")
+//            }, { err ->
+//              logging.severe("Severe error fetching order: $err")
+//            })
+//
+//      // make sure it executes, with a 10-second timeout
+//      operation.get(10, TimeUnit.SECONDS)
+//    } finally {
+//      prodClient.close(false)
+//    }
+//  }
 
   /**
    * Test verifying a known bad account.
    */
-  @test
-  fun testBadAccountVerify() {
-    withClient({ client ->
-      // run a known-good account verification
-      val response = testMemberVerifyBadAccount(client.platform.shop())
-      assertNotNull(response, "response from server for known-bad verify should not be null")
-      assertTrue(!response.verified, "known-bad account should fail verification")
-    })
-  }
+//  @test
+//  fun testBadAccountVerify() {
+//    withClient({ client ->
+//      // run a known-good account verification
+//      val response = testMemberVerifyBadAccount(client.platform.shop())
+//      assertNotNull(response, "response from server for known-bad verify should not be null")
+//      assertTrue(!response.verified, "known-bad account should fail verification")
+//    })
+//  }
 
   /**
    * Test verifying a known bad account, asynchronously.
    */
-  @test
-  fun testBadAccountVerifyAsync() {
-    withClient({ client ->
-      // run a known-good account verification
-      val operation = client.platform.shop().verifyMember("does-not-exist@error.com", { response ->
-        assertNotNull(response, "response from server for known-bad verify should not be null")
-        assertTrue(!response.verified, "known-bad account should fail verification")
-      }, { err ->
-        logging.severe("Severe error fetching order: $err")
-      })
-
-      // make sure it executes, with a 10-second timeout
-      operation.get(10, TimeUnit.SECONDS)
-    })
-  }
+//  @test
+//  fun testBadAccountVerifyAsync() {
+//    withClient({ client ->
+//      // run a known-good account verification
+//      val operation = client.platform.shop().verifyMember("does-not-exist@error.com", { response ->
+//        assertNotNull(response, "response from server for known-bad verify should not be null")
+//        assertTrue(!response.verified, "known-bad account should fail verification")
+//      }, { err ->
+//        logging.severe("Severe error fetching order: $err")
+//      })
+//
+//      // make sure it executes, with a 10-second timeout
+//      operation.get(10, TimeUnit.SECONDS)
+//    })
+//  }
 }
