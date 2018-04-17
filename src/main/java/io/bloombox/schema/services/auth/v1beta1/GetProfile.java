@@ -85,18 +85,18 @@ private static final long serialVersionUID = 0L;
      * key to reference the profile user's object from the database.
      * </pre>
      *
-     * <code>string key = 1;</code>
+     * <code>string user = 1;</code>
      */
-    java.lang.String getKey();
+    java.lang.String getUser();
     /**
      * <pre>
      * key to reference the profile user's object from the database.
      * </pre>
      *
-     * <code>string key = 1;</code>
+     * <code>string user = 1;</code>
      */
     com.google.protobuf.ByteString
-        getKeyBytes();
+        getUserBytes();
   }
   /**
    * <pre>
@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
-      key_ = "";
+      user_ = "";
     }
 
     @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              key_ = s;
+              user_ = s;
               break;
             }
           }
@@ -179,24 +179,24 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.auth.v1beta1.GetProfile.Request.class, io.bloombox.schema.services.auth.v1beta1.GetProfile.Request.Builder.class);
     }
 
-    public static final int KEY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object key_;
+    public static final int USER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object user_;
     /**
      * <pre>
      * key to reference the profile user's object from the database.
      * </pre>
      *
-     * <code>string key = 1;</code>
+     * <code>string user = 1;</code>
      */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
+    public java.lang.String getUser() {
+      java.lang.Object ref = user_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        key_ = s;
+        user_ = s;
         return s;
       }
     }
@@ -205,16 +205,16 @@ private static final long serialVersionUID = 0L;
      * key to reference the profile user's object from the database.
      * </pre>
      *
-     * <code>string key = 1;</code>
+     * <code>string user = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
+        getUserBytes() {
+      java.lang.Object ref = user_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        key_ = b;
+        user_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -233,8 +233,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      if (!getUserBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, user_);
       }
       unknownFields.writeTo(output);
     }
@@ -244,8 +244,8 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      if (!getUserBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, user_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -263,8 +263,8 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.auth.v1beta1.GetProfile.Request other = (io.bloombox.schema.services.auth.v1beta1.GetProfile.Request) obj;
 
       boolean result = true;
-      result = result && getKey()
-          .equals(other.getKey());
+      result = result && getUser()
+          .equals(other.getUser());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -276,8 +276,8 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + USER_FIELD_NUMBER;
+      hash = (53 * hash) + getUser().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -411,7 +411,7 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        key_ = "";
+        user_ = "";
 
         return this;
       }
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.auth.v1beta1.GetProfile.Request buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.GetProfile.Request result = new io.bloombox.schema.services.auth.v1beta1.GetProfile.Request(this);
-        result.key_ = key_;
+        result.user_ = user_;
         onBuilt();
         return result;
       }
@@ -477,8 +477,8 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.auth.v1beta1.GetProfile.Request other) {
         if (other == io.bloombox.schema.services.auth.v1beta1.GetProfile.Request.getDefaultInstance()) return this;
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
+        if (!other.getUser().isEmpty()) {
+          user_ = other.user_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -508,21 +508,21 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object key_ = "";
+      private java.lang.Object user_ = "";
       /**
        * <pre>
        * key to reference the profile user's object from the database.
        * </pre>
        *
-       * <code>string key = 1;</code>
+       * <code>string user = 1;</code>
        */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
+      public java.lang.String getUser() {
+        java.lang.Object ref = user_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          key_ = s;
+          user_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -533,16 +533,16 @@ private static final long serialVersionUID = 0L;
        * key to reference the profile user's object from the database.
        * </pre>
        *
-       * <code>string key = 1;</code>
+       * <code>string user = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
+          getUserBytes() {
+        java.lang.Object ref = user_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          key_ = b;
+          user_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -553,15 +553,15 @@ private static final long serialVersionUID = 0L;
        * key to reference the profile user's object from the database.
        * </pre>
        *
-       * <code>string key = 1;</code>
+       * <code>string user = 1;</code>
        */
-      public Builder setKey(
+      public Builder setUser(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        key_ = value;
+        user_ = value;
         onChanged();
         return this;
       }
@@ -570,11 +570,11 @@ private static final long serialVersionUID = 0L;
        * key to reference the profile user's object from the database.
        * </pre>
        *
-       * <code>string key = 1;</code>
+       * <code>string user = 1;</code>
        */
-      public Builder clearKey() {
+      public Builder clearUser() {
         
-        key_ = getDefaultInstance().getKey();
+        user_ = getDefaultInstance().getUser();
         onChanged();
         return this;
       }
@@ -583,16 +583,16 @@ private static final long serialVersionUID = 0L;
        * key to reference the profile user's object from the database.
        * </pre>
        *
-       * <code>string key = 1;</code>
+       * <code>string user = 1;</code>
        */
-      public Builder setKeyBytes(
+      public Builder setUserBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        key_ = value;
+        user_ = value;
         onChanged();
         return this;
       }

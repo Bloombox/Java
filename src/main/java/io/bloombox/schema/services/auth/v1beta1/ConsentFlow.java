@@ -85,18 +85,18 @@ private static final long serialVersionUID = 0L;
      * ID value of the consent request.
      * </pre>
      *
-     * <code>string consent_id = 1;</code>
+     * <code>string consent = 1;</code>
      */
-    java.lang.String getConsentId();
+    java.lang.String getConsent();
     /**
      * <pre>
      * ID value of the consent request.
      * </pre>
      *
-     * <code>string consent_id = 1;</code>
+     * <code>string consent = 1;</code>
      */
     com.google.protobuf.ByteString
-        getConsentIdBytes();
+        getConsentBytes();
   }
   /**
    * <pre>
@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
-      consentId_ = "";
+      consent_ = "";
     }
 
     @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              consentId_ = s;
+              consent_ = s;
               break;
             }
           }
@@ -179,24 +179,24 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request.class, io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request.Builder.class);
     }
 
-    public static final int CONSENT_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object consentId_;
+    public static final int CONSENT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object consent_;
     /**
      * <pre>
      * ID value of the consent request.
      * </pre>
      *
-     * <code>string consent_id = 1;</code>
+     * <code>string consent = 1;</code>
      */
-    public java.lang.String getConsentId() {
-      java.lang.Object ref = consentId_;
+    public java.lang.String getConsent() {
+      java.lang.Object ref = consent_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        consentId_ = s;
+        consent_ = s;
         return s;
       }
     }
@@ -205,16 +205,16 @@ private static final long serialVersionUID = 0L;
      * ID value of the consent request.
      * </pre>
      *
-     * <code>string consent_id = 1;</code>
+     * <code>string consent = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getConsentIdBytes() {
-      java.lang.Object ref = consentId_;
+        getConsentBytes() {
+      java.lang.Object ref = consent_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        consentId_ = b;
+        consent_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -233,8 +233,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getConsentIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consentId_);
+      if (!getConsentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consent_);
       }
       unknownFields.writeTo(output);
     }
@@ -244,8 +244,8 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getConsentIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consentId_);
+      if (!getConsentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consent_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -263,8 +263,8 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request other = (io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request) obj;
 
       boolean result = true;
-      result = result && getConsentId()
-          .equals(other.getConsentId());
+      result = result && getConsent()
+          .equals(other.getConsent());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -276,8 +276,8 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONSENT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getConsentId().hashCode();
+      hash = (37 * hash) + CONSENT_FIELD_NUMBER;
+      hash = (53 * hash) + getConsent().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -411,7 +411,7 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        consentId_ = "";
+        consent_ = "";
 
         return this;
       }
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request result = new io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request(this);
-        result.consentId_ = consentId_;
+        result.consent_ = consent_;
         onBuilt();
         return result;
       }
@@ -477,8 +477,8 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request other) {
         if (other == io.bloombox.schema.services.auth.v1beta1.ConsentFlow.Request.getDefaultInstance()) return this;
-        if (!other.getConsentId().isEmpty()) {
-          consentId_ = other.consentId_;
+        if (!other.getConsent().isEmpty()) {
+          consent_ = other.consent_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -508,21 +508,21 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object consentId_ = "";
+      private java.lang.Object consent_ = "";
       /**
        * <pre>
        * ID value of the consent request.
        * </pre>
        *
-       * <code>string consent_id = 1;</code>
+       * <code>string consent = 1;</code>
        */
-      public java.lang.String getConsentId() {
-        java.lang.Object ref = consentId_;
+      public java.lang.String getConsent() {
+        java.lang.Object ref = consent_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          consentId_ = s;
+          consent_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -533,16 +533,16 @@ private static final long serialVersionUID = 0L;
        * ID value of the consent request.
        * </pre>
        *
-       * <code>string consent_id = 1;</code>
+       * <code>string consent = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getConsentIdBytes() {
-        java.lang.Object ref = consentId_;
+          getConsentBytes() {
+        java.lang.Object ref = consent_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          consentId_ = b;
+          consent_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -553,15 +553,15 @@ private static final long serialVersionUID = 0L;
        * ID value of the consent request.
        * </pre>
        *
-       * <code>string consent_id = 1;</code>
+       * <code>string consent = 1;</code>
        */
-      public Builder setConsentId(
+      public Builder setConsent(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        consentId_ = value;
+        consent_ = value;
         onChanged();
         return this;
       }
@@ -570,11 +570,11 @@ private static final long serialVersionUID = 0L;
        * ID value of the consent request.
        * </pre>
        *
-       * <code>string consent_id = 1;</code>
+       * <code>string consent = 1;</code>
        */
-      public Builder clearConsentId() {
+      public Builder clearConsent() {
         
-        consentId_ = getDefaultInstance().getConsentId();
+        consent_ = getDefaultInstance().getConsent();
         onChanged();
         return this;
       }
@@ -583,16 +583,16 @@ private static final long serialVersionUID = 0L;
        * ID value of the consent request.
        * </pre>
        *
-       * <code>string consent_id = 1;</code>
+       * <code>string consent = 1;</code>
        */
-      public Builder setConsentIdBytes(
+      public Builder setConsentBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        consentId_ = value;
+        consent_ = value;
         onChanged();
         return this;
       }
