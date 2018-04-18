@@ -1771,27 +1771,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Authentiation status after this operation.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-     */
-    int getStatusValue();
-    /**
-     * <pre>
-     * Authentiation status after this operation.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-     */
-    io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus();
-
-    /**
-     * <pre>
      * Resulting JSON web token.
      * </pre>
      *
-     * <code>string jwt = 2;</code>
+     * <code>string jwt = 1;</code>
      */
     java.lang.String getJwt();
     /**
@@ -1799,7 +1782,7 @@ private static final long serialVersionUID = 0L;
      * Resulting JSON web token.
      * </pre>
      *
-     * <code>string jwt = 2;</code>
+     * <code>string jwt = 1;</code>
      */
     com.google.protobuf.ByteString
         getJwtBytes();
@@ -1821,7 +1804,6 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      status_ = 0;
       jwt_ = "";
     }
 
@@ -1856,13 +1838,7 @@ private static final long serialVersionUID = 0L;
               }
               break;
             }
-            case 8: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 18: {
+            case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
               jwt_ = s;
@@ -1892,38 +1868,14 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.class, io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.Builder.class);
     }
 
-    public static final int STATUS_FIELD_NUMBER = 1;
-    private int status_;
-    /**
-     * <pre>
-     * Authentiation status after this operation.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-     */
-    public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <pre>
-     * Authentiation status after this operation.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-     */
-    public io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus() {
-      io.bloombox.schema.services.auth.v1beta1.AuthStatus result = io.bloombox.schema.services.auth.v1beta1.AuthStatus.valueOf(status_);
-      return result == null ? io.bloombox.schema.services.auth.v1beta1.AuthStatus.UNRECOGNIZED : result;
-    }
-
-    public static final int JWT_FIELD_NUMBER = 2;
+    public static final int JWT_FIELD_NUMBER = 1;
     private volatile java.lang.Object jwt_;
     /**
      * <pre>
      * Resulting JSON web token.
      * </pre>
      *
-     * <code>string jwt = 2;</code>
+     * <code>string jwt = 1;</code>
      */
     public java.lang.String getJwt() {
       java.lang.Object ref = jwt_;
@@ -1942,7 +1894,7 @@ private static final long serialVersionUID = 0L;
      * Resulting JSON web token.
      * </pre>
      *
-     * <code>string jwt = 2;</code>
+     * <code>string jwt = 1;</code>
      */
     public com.google.protobuf.ByteString
         getJwtBytes() {
@@ -1970,11 +1922,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (status_ != io.bloombox.schema.services.auth.v1beta1.AuthStatus.STATUS_UNKNOWN.getNumber()) {
-        output.writeEnum(1, status_);
-      }
       if (!getJwtBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jwt_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jwt_);
       }
       unknownFields.writeTo(output);
     }
@@ -1984,12 +1933,8 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (status_ != io.bloombox.schema.services.auth.v1beta1.AuthStatus.STATUS_UNKNOWN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, status_);
-      }
       if (!getJwtBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jwt_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, jwt_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2007,7 +1952,6 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response other = (io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response) obj;
 
       boolean result = true;
-      result = result && status_ == other.status_;
       result = result && getJwt()
           .equals(other.getJwt());
       result = result && unknownFields.equals(other.unknownFields);
@@ -2021,8 +1965,6 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
       hash = (37 * hash) + JWT_FIELD_NUMBER;
       hash = (53 * hash) + getJwt().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -2158,8 +2100,6 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        status_ = 0;
-
         jwt_ = "";
 
         return this;
@@ -2184,7 +2124,6 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response result = new io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response(this);
-        result.status_ = status_;
         result.jwt_ = jwt_;
         onBuilt();
         return result;
@@ -2227,9 +2166,6 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response other) {
         if (other == io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.getDefaultInstance()) return this;
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
-        }
         if (!other.getJwt().isEmpty()) {
           jwt_ = other.jwt_;
           onChanged();
@@ -2261,77 +2197,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private int status_ = 0;
-      /**
-       * <pre>
-       * Authentiation status after this operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-       */
-      public int getStatusValue() {
-        return status_;
-      }
-      /**
-       * <pre>
-       * Authentiation status after this operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-       */
-      public Builder setStatusValue(int value) {
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Authentiation status after this operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-       */
-      public io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus() {
-        io.bloombox.schema.services.auth.v1beta1.AuthStatus result = io.bloombox.schema.services.auth.v1beta1.AuthStatus.valueOf(status_);
-        return result == null ? io.bloombox.schema.services.auth.v1beta1.AuthStatus.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Authentiation status after this operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-       */
-      public Builder setStatus(io.bloombox.schema.services.auth.v1beta1.AuthStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        status_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Authentiation status after this operation.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
-       */
-      public Builder clearStatus() {
-        
-        status_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object jwt_ = "";
       /**
        * <pre>
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 2;</code>
+       * <code>string jwt = 1;</code>
        */
       public java.lang.String getJwt() {
         java.lang.Object ref = jwt_;
@@ -2350,7 +2222,7 @@ private static final long serialVersionUID = 0L;
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 2;</code>
+       * <code>string jwt = 1;</code>
        */
       public com.google.protobuf.ByteString
           getJwtBytes() {
@@ -2370,7 +2242,7 @@ private static final long serialVersionUID = 0L;
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 2;</code>
+       * <code>string jwt = 1;</code>
        */
       public Builder setJwt(
           java.lang.String value) {
@@ -2387,7 +2259,7 @@ private static final long serialVersionUID = 0L;
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 2;</code>
+       * <code>string jwt = 1;</code>
        */
       public Builder clearJwt() {
         
@@ -2400,7 +2272,7 @@ private static final long serialVersionUID = 0L;
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 2;</code>
+       * <code>string jwt = 1;</code>
        */
       public Builder setJwtBytes(
           com.google.protobuf.ByteString value) {

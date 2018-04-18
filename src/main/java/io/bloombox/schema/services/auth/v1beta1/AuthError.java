@@ -142,12 +142,20 @@ public enum AuthError
   INVALID_ORIGIN(15),
   /**
    * <pre>
+   * Access was denied for unspecified reasons.
+   * </pre>
+   *
+   * <code>ACCESS_DENIED = 16;</code>
+   */
+  ACCESS_DENIED(16),
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
-   * <code>INTERNAL_ERROR = 16;</code>
+   * <code>INTERNAL_ERROR = 17;</code>
    */
-  INTERNAL_ERROR(16),
+  INTERNAL_ERROR(17),
   UNRECOGNIZED(-1),
   ;
 
@@ -281,12 +289,20 @@ public enum AuthError
   public static final int INVALID_ORIGIN_VALUE = 15;
   /**
    * <pre>
+   * Access was denied for unspecified reasons.
+   * </pre>
+   *
+   * <code>ACCESS_DENIED = 16;</code>
+   */
+  public static final int ACCESS_DENIED_VALUE = 16;
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
-   * <code>INTERNAL_ERROR = 16;</code>
+   * <code>INTERNAL_ERROR = 17;</code>
    */
-  public static final int INTERNAL_ERROR_VALUE = 16;
+  public static final int INTERNAL_ERROR_VALUE = 17;
 
 
   public final int getNumber() {
@@ -323,7 +339,8 @@ public enum AuthError
       case 13: return EXPIRED_ACCESS_TOKEN;
       case 14: return INVALID_CLIENT;
       case 15: return INVALID_ORIGIN;
-      case 16: return INTERNAL_ERROR;
+      case 16: return ACCESS_DENIED;
+      case 17: return INTERNAL_ERROR;
       default: return null;
     }
   }
