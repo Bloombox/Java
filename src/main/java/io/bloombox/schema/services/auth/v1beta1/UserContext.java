@@ -86,7 +86,7 @@ private static final long serialVersionUID = 0L;
      * User's identity ID, or 'uid'.
      * </pre>
      *
-     * <code>string uid = 3;</code>
+     * <code>string uid = 1;</code>
      */
     java.lang.String getUid();
     /**
@@ -94,10 +94,28 @@ private static final long serialVersionUID = 0L;
      * User's identity ID, or 'uid'.
      * </pre>
      *
-     * <code>string uid = 3;</code>
+     * <code>string uid = 1;</code>
      */
     com.google.protobuf.ByteString
         getUidBytes();
+
+    /**
+     * <pre>
+     * Active session ID for the user.
+     * </pre>
+     *
+     * <code>string session = 2;</code>
+     */
+    java.lang.String getSession();
+    /**
+     * <pre>
+     * Active session ID for the user.
+     * </pre>
+     *
+     * <code>string session = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getSessionBytes();
   }
   /**
    * <pre>
@@ -118,6 +136,7 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       uid_ = "";
+      session_ = "";
     }
 
     @java.lang.Override
@@ -151,10 +170,16 @@ private static final long serialVersionUID = 0L;
               }
               break;
             }
-            case 26: {
+            case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
               uid_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              session_ = s;
               break;
             }
           }
@@ -181,14 +206,14 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.auth.v1beta1.UserContext.Request.class, io.bloombox.schema.services.auth.v1beta1.UserContext.Request.Builder.class);
     }
 
-    public static final int UID_FIELD_NUMBER = 3;
+    public static final int UID_FIELD_NUMBER = 1;
     private volatile java.lang.Object uid_;
     /**
      * <pre>
      * User's identity ID, or 'uid'.
      * </pre>
      *
-     * <code>string uid = 3;</code>
+     * <code>string uid = 1;</code>
      */
     public java.lang.String getUid() {
       java.lang.Object ref = uid_;
@@ -207,7 +232,7 @@ private static final long serialVersionUID = 0L;
      * User's identity ID, or 'uid'.
      * </pre>
      *
-     * <code>string uid = 3;</code>
+     * <code>string uid = 1;</code>
      */
     public com.google.protobuf.ByteString
         getUidBytes() {
@@ -217,6 +242,48 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         uid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SESSION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object session_;
+    /**
+     * <pre>
+     * Active session ID for the user.
+     * </pre>
+     *
+     * <code>string session = 2;</code>
+     */
+    public java.lang.String getSession() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        session_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Active session ID for the user.
+     * </pre>
+     *
+     * <code>string session = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSessionBytes() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        session_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -236,7 +303,10 @@ private static final long serialVersionUID = 0L;
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
+      }
+      if (!getSessionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, session_);
       }
       unknownFields.writeTo(output);
     }
@@ -247,7 +317,10 @@ private static final long serialVersionUID = 0L;
 
       size = 0;
       if (!getUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
+      }
+      if (!getSessionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, session_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -267,6 +340,8 @@ private static final long serialVersionUID = 0L;
       boolean result = true;
       result = result && getUid()
           .equals(other.getUid());
+      result = result && getSession()
+          .equals(other.getSession());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -280,6 +355,8 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + UID_FIELD_NUMBER;
       hash = (53 * hash) + getUid().hashCode();
+      hash = (37 * hash) + SESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSession().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -416,6 +493,8 @@ private static final long serialVersionUID = 0L;
         super.clear();
         uid_ = "";
 
+        session_ = "";
+
         return this;
       }
 
@@ -439,6 +518,7 @@ private static final long serialVersionUID = 0L;
       public io.bloombox.schema.services.auth.v1beta1.UserContext.Request buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.UserContext.Request result = new io.bloombox.schema.services.auth.v1beta1.UserContext.Request(this);
         result.uid_ = uid_;
+        result.session_ = session_;
         onBuilt();
         return result;
       }
@@ -484,6 +564,10 @@ private static final long serialVersionUID = 0L;
           uid_ = other.uid_;
           onChanged();
         }
+        if (!other.getSession().isEmpty()) {
+          session_ = other.session_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -517,7 +601,7 @@ private static final long serialVersionUID = 0L;
        * User's identity ID, or 'uid'.
        * </pre>
        *
-       * <code>string uid = 3;</code>
+       * <code>string uid = 1;</code>
        */
       public java.lang.String getUid() {
         java.lang.Object ref = uid_;
@@ -536,7 +620,7 @@ private static final long serialVersionUID = 0L;
        * User's identity ID, or 'uid'.
        * </pre>
        *
-       * <code>string uid = 3;</code>
+       * <code>string uid = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUidBytes() {
@@ -556,7 +640,7 @@ private static final long serialVersionUID = 0L;
        * User's identity ID, or 'uid'.
        * </pre>
        *
-       * <code>string uid = 3;</code>
+       * <code>string uid = 1;</code>
        */
       public Builder setUid(
           java.lang.String value) {
@@ -573,7 +657,7 @@ private static final long serialVersionUID = 0L;
        * User's identity ID, or 'uid'.
        * </pre>
        *
-       * <code>string uid = 3;</code>
+       * <code>string uid = 1;</code>
        */
       public Builder clearUid() {
         
@@ -586,7 +670,7 @@ private static final long serialVersionUID = 0L;
        * User's identity ID, or 'uid'.
        * </pre>
        *
-       * <code>string uid = 3;</code>
+       * <code>string uid = 1;</code>
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
@@ -596,6 +680,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
         
         uid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object session_ = "";
+      /**
+       * <pre>
+       * Active session ID for the user.
+       * </pre>
+       *
+       * <code>string session = 2;</code>
+       */
+      public java.lang.String getSession() {
+        java.lang.Object ref = session_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          session_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active session ID for the user.
+       * </pre>
+       *
+       * <code>string session = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSessionBytes() {
+        java.lang.Object ref = session_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          session_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active session ID for the user.
+       * </pre>
+       *
+       * <code>string session = 2;</code>
+       */
+      public Builder setSession(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        session_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active session ID for the user.
+       * </pre>
+       *
+       * <code>string session = 2;</code>
+       */
+      public Builder clearSession() {
+        
+        session_ = getDefaultInstance().getSession();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active session ID for the user.
+       * </pre>
+       *
+       * <code>string session = 2;</code>
+       */
+      public Builder setSessionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        session_ = value;
         onChanged();
         return this;
       }

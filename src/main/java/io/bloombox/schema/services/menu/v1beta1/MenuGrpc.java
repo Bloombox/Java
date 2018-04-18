@@ -31,18 +31,6 @@ public final class MenuGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.Ping.Request,
-      io.bloombox.schema.services.menu.v1beta1.Ping.Response> METHOD_PING =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.Ping.Request, io.bloombox.schema.services.menu.v1beta1.Ping.Response>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Ping"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.Ping.Request.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.menu.v1beta1.Ping.Response.getDefaultInstance()))
-          .build();
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
       io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> METHOD_RETRIEVE =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>newBuilder()
@@ -123,16 +111,6 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Ping the menu service.
-     * </pre>
-     */
-    public void ping(io.bloombox.schema.services.menu.v1beta1.Ping.Request request,
-        io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.Ping.Response> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_PING, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
@@ -153,7 +131,7 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to read a product by its key.
+     * Specifies an operation to read data for product(s) by key.
      * </pre>
      */
     public void products(io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request,
@@ -173,13 +151,6 @@ public final class MenuGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            METHOD_PING,
-            asyncUnaryCall(
-              new MethodHandlers<
-                io.bloombox.schema.services.menu.v1beta1.Ping.Request,
-                io.bloombox.schema.services.menu.v1beta1.Ping.Response>(
-                  this, METHODID_PING)))
           .addMethod(
             METHOD_RETRIEVE,
             asyncUnaryCall(
@@ -235,17 +206,6 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Ping the menu service.
-     * </pre>
-     */
-    public void ping(io.bloombox.schema.services.menu.v1beta1.Ping.Request request,
-        io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.Ping.Response> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
@@ -268,7 +228,7 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to read a product by its key.
+     * Specifies an operation to read data for product(s) by key.
      * </pre>
      */
     public void products(io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request,
@@ -312,16 +272,6 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Ping the menu service.
-     * </pre>
-     */
-    public io.bloombox.schema.services.menu.v1beta1.Ping.Response ping(io.bloombox.schema.services.menu.v1beta1.Ping.Request request) {
-      return blockingUnaryCall(
-          getChannel(), METHOD_PING, getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
@@ -342,7 +292,7 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to read a product by its key.
+     * Specifies an operation to read data for product(s) by key.
      * </pre>
      */
     public io.bloombox.schema.services.menu.v1beta1.GetProduct.Response products(io.bloombox.schema.services.menu.v1beta1.GetProduct.Request request) {
@@ -384,17 +334,6 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Ping the menu service.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.Ping.Response> ping(
-        io.bloombox.schema.services.menu.v1beta1.Ping.Request request) {
-      return futureUnaryCall(
-          getChannel().newCall(METHOD_PING, getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Specifies an operation to read a full or sectioned menu.
      * </pre>
      */
@@ -417,7 +356,7 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to read a product by its key.
+     * Specifies an operation to read data for product(s) by key.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.GetProduct.Response> products(
@@ -438,11 +377,10 @@ public final class MenuGrpc {
     }
   }
 
-  private static final int METHODID_PING = 0;
-  private static final int METHODID_RETRIEVE = 1;
-  private static final int METHODID_FEATURED = 2;
-  private static final int METHODID_PRODUCTS = 3;
-  private static final int METHODID_SEARCH = 4;
+  private static final int METHODID_RETRIEVE = 0;
+  private static final int METHODID_FEATURED = 1;
+  private static final int METHODID_PRODUCTS = 2;
+  private static final int METHODID_SEARCH = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -461,10 +399,6 @@ public final class MenuGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_PING:
-          serviceImpl.ping((io.bloombox.schema.services.menu.v1beta1.Ping.Request) request,
-              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.Ping.Response>) responseObserver);
-          break;
         case METHODID_RETRIEVE:
           serviceImpl.retrieve((io.bloombox.schema.services.menu.v1beta1.GetMenu.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>) responseObserver);
@@ -514,7 +448,6 @@ public final class MenuGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MenuDescriptorSupplier())
-              .addMethod(METHOD_PING)
               .addMethod(METHOD_RETRIEVE)
               .addMethod(METHOD_FEATURED)
               .addMethod(METHOD_PRODUCTS)
