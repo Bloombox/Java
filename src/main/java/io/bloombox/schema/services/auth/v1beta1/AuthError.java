@@ -150,12 +150,52 @@ public enum AuthError
   ACCESS_DENIED(16),
   /**
    * <pre>
+   * The provided session value was invalid.
+   * </pre>
+   *
+   * <code>INVALID_SESSION = 17;</code>
+   */
+  INVALID_SESSION(17),
+  /**
+   * <pre>
+   * The provided session has expired.
+   * </pre>
+   *
+   * <code>EXPIRED_SESSION = 18;</code>
+   */
+  EXPIRED_SESSION(18),
+  /**
+   * <pre>
+   * The provided fingerprint value was invalid.
+   * </pre>
+   *
+   * <code>INVALID_FINGERPRINT = 19;</code>
+   */
+  INVALID_FINGERPRINT(19),
+  /**
+   * <pre>
+   * Captcha verification value was invalid.
+   * </pre>
+   *
+   * <code>INVALID_CAPTCHA = 20;</code>
+   */
+  INVALID_CAPTCHA(20),
+  /**
+   * <pre>
+   * The provided captcha veriication value was not correct.
+   * </pre>
+   *
+   * <code>CAPTCHA_REJECTED = 21;</code>
+   */
+  CAPTCHA_REJECTED(21),
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
-   * <code>INTERNAL_ERROR = 17;</code>
+   * <code>INTERNAL_ERROR = 99;</code>
    */
-  INTERNAL_ERROR(17),
+  INTERNAL_ERROR(99),
   UNRECOGNIZED(-1),
   ;
 
@@ -297,12 +337,52 @@ public enum AuthError
   public static final int ACCESS_DENIED_VALUE = 16;
   /**
    * <pre>
+   * The provided session value was invalid.
+   * </pre>
+   *
+   * <code>INVALID_SESSION = 17;</code>
+   */
+  public static final int INVALID_SESSION_VALUE = 17;
+  /**
+   * <pre>
+   * The provided session has expired.
+   * </pre>
+   *
+   * <code>EXPIRED_SESSION = 18;</code>
+   */
+  public static final int EXPIRED_SESSION_VALUE = 18;
+  /**
+   * <pre>
+   * The provided fingerprint value was invalid.
+   * </pre>
+   *
+   * <code>INVALID_FINGERPRINT = 19;</code>
+   */
+  public static final int INVALID_FINGERPRINT_VALUE = 19;
+  /**
+   * <pre>
+   * Captcha verification value was invalid.
+   * </pre>
+   *
+   * <code>INVALID_CAPTCHA = 20;</code>
+   */
+  public static final int INVALID_CAPTCHA_VALUE = 20;
+  /**
+   * <pre>
+   * The provided captcha veriication value was not correct.
+   * </pre>
+   *
+   * <code>CAPTCHA_REJECTED = 21;</code>
+   */
+  public static final int CAPTCHA_REJECTED_VALUE = 21;
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
-   * <code>INTERNAL_ERROR = 17;</code>
+   * <code>INTERNAL_ERROR = 99;</code>
    */
-  public static final int INTERNAL_ERROR_VALUE = 17;
+  public static final int INTERNAL_ERROR_VALUE = 99;
 
 
   public final int getNumber() {
@@ -340,7 +420,12 @@ public enum AuthError
       case 14: return INVALID_CLIENT;
       case 15: return INVALID_ORIGIN;
       case 16: return ACCESS_DENIED;
-      case 17: return INTERNAL_ERROR;
+      case 17: return INVALID_SESSION;
+      case 18: return EXPIRED_SESSION;
+      case 19: return INVALID_FINGERPRINT;
+      case 20: return INVALID_CAPTCHA;
+      case 21: return CAPTCHA_REJECTED;
+      case 99: return INTERNAL_ERROR;
       default: return null;
     }
   }
