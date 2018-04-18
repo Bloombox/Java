@@ -119,10 +119,82 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * State token for the active authentication flow.
+     * </pre>
+     *
+     * <code>string state = 3;</code>
+     */
+    java.lang.String getState();
+    /**
+     * <pre>
+     * State token for the active authentication flow.
+     * </pre>
+     *
+     * <code>string state = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
+
+    /**
+     * <pre>
+     * Captcha code to be used via reCAPTCHA.
+     * </pre>
+     *
+     * <code>string captcha = 4;</code>
+     */
+    java.lang.String getCaptcha();
+    /**
+     * <pre>
+     * Captcha code to be used via reCAPTCHA.
+     * </pre>
+     *
+     * <code>string captcha = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getCaptchaBytes();
+
+    /**
+     * <pre>
+     * Active session ID.
+     * </pre>
+     *
+     * <code>string session = 5;</code>
+     */
+    java.lang.String getSession();
+    /**
+     * <pre>
+     * Active session ID.
+     * </pre>
+     *
+     * <code>string session = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getSessionBytes();
+
+    /**
+     * <pre>
+     * Active device fingerprint.
+     * </pre>
+     *
+     * <code>string fingerprint = 6;</code>
+     */
+    java.lang.String getFingerprint();
+    /**
+     * <pre>
+     * Active device fingerprint.
+     * </pre>
+     *
+     * <code>string fingerprint = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getFingerprintBytes();
+
+    /**
+     * <pre>
      * Combined authentication/authorization ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+     * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
      */
     boolean hasAuth();
     /**
@@ -130,7 +202,7 @@ private static final long serialVersionUID = 0L;
      * Combined authentication/authorization ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+     * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
      */
     io.bloombox.schema.security.AuthPayload getAuth();
     /**
@@ -138,7 +210,7 @@ private static final long serialVersionUID = 0L;
      * Combined authentication/authorization ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+     * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
      */
     io.bloombox.schema.security.AuthPayloadOrBuilder getAuthOrBuilder();
   }
@@ -161,6 +233,10 @@ private static final long serialVersionUID = 0L;
     private Request() {
       clientId_ = "";
       origin_ = "";
+      state_ = "";
+      captcha_ = "";
+      session_ = "";
+      fingerprint_ = "";
     }
 
     @java.lang.Override
@@ -207,6 +283,30 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              state_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              captcha_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              session_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fingerprint_ = s;
+              break;
+            }
+            case 58: {
               io.bloombox.schema.security.AuthPayload.Builder subBuilder = null;
               if (auth_ != null) {
                 subBuilder = auth_.toBuilder();
@@ -327,14 +427,182 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    public static final int AUTH_FIELD_NUMBER = 3;
+    public static final int STATE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object state_;
+    /**
+     * <pre>
+     * State token for the active authentication flow.
+     * </pre>
+     *
+     * <code>string state = 3;</code>
+     */
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * State token for the active authentication flow.
+     * </pre>
+     *
+     * <code>string state = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CAPTCHA_FIELD_NUMBER = 4;
+    private volatile java.lang.Object captcha_;
+    /**
+     * <pre>
+     * Captcha code to be used via reCAPTCHA.
+     * </pre>
+     *
+     * <code>string captcha = 4;</code>
+     */
+    public java.lang.String getCaptcha() {
+      java.lang.Object ref = captcha_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        captcha_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Captcha code to be used via reCAPTCHA.
+     * </pre>
+     *
+     * <code>string captcha = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCaptchaBytes() {
+      java.lang.Object ref = captcha_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        captcha_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SESSION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object session_;
+    /**
+     * <pre>
+     * Active session ID.
+     * </pre>
+     *
+     * <code>string session = 5;</code>
+     */
+    public java.lang.String getSession() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        session_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Active session ID.
+     * </pre>
+     *
+     * <code>string session = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSessionBytes() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        session_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FINGERPRINT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object fingerprint_;
+    /**
+     * <pre>
+     * Active device fingerprint.
+     * </pre>
+     *
+     * <code>string fingerprint = 6;</code>
+     */
+    public java.lang.String getFingerprint() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fingerprint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Active device fingerprint.
+     * </pre>
+     *
+     * <code>string fingerprint = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFingerprintBytes() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fingerprint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTH_FIELD_NUMBER = 7;
     private io.bloombox.schema.security.AuthPayload auth_;
     /**
      * <pre>
      * Combined authentication/authorization ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+     * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
      */
     public boolean hasAuth() {
       return auth_ != null;
@@ -344,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * Combined authentication/authorization ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+     * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
      */
     public io.bloombox.schema.security.AuthPayload getAuth() {
       return auth_ == null ? io.bloombox.schema.security.AuthPayload.getDefaultInstance() : auth_;
@@ -354,7 +622,7 @@ private static final long serialVersionUID = 0L;
      * Combined authentication/authorization ticket.
      * </pre>
      *
-     * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+     * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
      */
     public io.bloombox.schema.security.AuthPayloadOrBuilder getAuthOrBuilder() {
       return getAuth();
@@ -378,8 +646,20 @@ private static final long serialVersionUID = 0L;
       if (!getOriginBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, origin_);
       }
+      if (!getStateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, state_);
+      }
+      if (!getCaptchaBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, captcha_);
+      }
+      if (!getSessionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, session_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fingerprint_);
+      }
       if (auth_ != null) {
-        output.writeMessage(3, getAuth());
+        output.writeMessage(7, getAuth());
       }
       unknownFields.writeTo(output);
     }
@@ -395,9 +675,21 @@ private static final long serialVersionUID = 0L;
       if (!getOriginBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, origin_);
       }
+      if (!getStateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, state_);
+      }
+      if (!getCaptchaBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, captcha_);
+      }
+      if (!getSessionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, session_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fingerprint_);
+      }
       if (auth_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getAuth());
+          .computeMessageSize(7, getAuth());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -419,6 +711,14 @@ private static final long serialVersionUID = 0L;
           .equals(other.getClientId());
       result = result && getOrigin()
           .equals(other.getOrigin());
+      result = result && getState()
+          .equals(other.getState());
+      result = result && getCaptcha()
+          .equals(other.getCaptcha());
+      result = result && getSession()
+          .equals(other.getSession());
+      result = result && getFingerprint()
+          .equals(other.getFingerprint());
       result = result && (hasAuth() == other.hasAuth());
       if (hasAuth()) {
         result = result && getAuth()
@@ -439,6 +739,14 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getClientId().hashCode();
       hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
       hash = (53 * hash) + getOrigin().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
+      hash = (37 * hash) + CAPTCHA_FIELD_NUMBER;
+      hash = (53 * hash) + getCaptcha().hashCode();
+      hash = (37 * hash) + SESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSession().hashCode();
+      hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
+      hash = (53 * hash) + getFingerprint().hashCode();
       if (hasAuth()) {
         hash = (37 * hash) + AUTH_FIELD_NUMBER;
         hash = (53 * hash) + getAuth().hashCode();
@@ -580,6 +888,14 @@ private static final long serialVersionUID = 0L;
 
         origin_ = "";
 
+        state_ = "";
+
+        captcha_ = "";
+
+        session_ = "";
+
+        fingerprint_ = "";
+
         if (authBuilder_ == null) {
           auth_ = null;
         } else {
@@ -610,6 +926,10 @@ private static final long serialVersionUID = 0L;
         io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request result = new io.bloombox.schema.services.auth.v1beta1.ResolveToken.Request(this);
         result.clientId_ = clientId_;
         result.origin_ = origin_;
+        result.state_ = state_;
+        result.captcha_ = captcha_;
+        result.session_ = session_;
+        result.fingerprint_ = fingerprint_;
         if (authBuilder_ == null) {
           result.auth_ = auth_;
         } else {
@@ -662,6 +982,22 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getOrigin().isEmpty()) {
           origin_ = other.origin_;
+          onChanged();
+        }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          onChanged();
+        }
+        if (!other.getCaptcha().isEmpty()) {
+          captcha_ = other.captcha_;
+          onChanged();
+        }
+        if (!other.getSession().isEmpty()) {
+          session_ = other.session_;
+          onChanged();
+        }
+        if (!other.getFingerprint().isEmpty()) {
+          fingerprint_ = other.fingerprint_;
           onChanged();
         }
         if (other.hasAuth()) {
@@ -872,6 +1208,362 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      private java.lang.Object state_ = "";
+      /**
+       * <pre>
+       * State token for the active authentication flow.
+       * </pre>
+       *
+       * <code>string state = 3;</code>
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * State token for the active authentication flow.
+       * </pre>
+       *
+       * <code>string state = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * State token for the active authentication flow.
+       * </pre>
+       *
+       * <code>string state = 3;</code>
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * State token for the active authentication flow.
+       * </pre>
+       *
+       * <code>string state = 3;</code>
+       */
+      public Builder clearState() {
+        
+        state_ = getDefaultInstance().getState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * State token for the active authentication flow.
+       * </pre>
+       *
+       * <code>string state = 3;</code>
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object captcha_ = "";
+      /**
+       * <pre>
+       * Captcha code to be used via reCAPTCHA.
+       * </pre>
+       *
+       * <code>string captcha = 4;</code>
+       */
+      public java.lang.String getCaptcha() {
+        java.lang.Object ref = captcha_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          captcha_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Captcha code to be used via reCAPTCHA.
+       * </pre>
+       *
+       * <code>string captcha = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCaptchaBytes() {
+        java.lang.Object ref = captcha_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          captcha_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Captcha code to be used via reCAPTCHA.
+       * </pre>
+       *
+       * <code>string captcha = 4;</code>
+       */
+      public Builder setCaptcha(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        captcha_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Captcha code to be used via reCAPTCHA.
+       * </pre>
+       *
+       * <code>string captcha = 4;</code>
+       */
+      public Builder clearCaptcha() {
+        
+        captcha_ = getDefaultInstance().getCaptcha();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Captcha code to be used via reCAPTCHA.
+       * </pre>
+       *
+       * <code>string captcha = 4;</code>
+       */
+      public Builder setCaptchaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        captcha_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object session_ = "";
+      /**
+       * <pre>
+       * Active session ID.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public java.lang.String getSession() {
+        java.lang.Object ref = session_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          session_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active session ID.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSessionBytes() {
+        java.lang.Object ref = session_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          session_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active session ID.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public Builder setSession(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        session_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active session ID.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public Builder clearSession() {
+        
+        session_ = getDefaultInstance().getSession();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active session ID.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public Builder setSessionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        session_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fingerprint_ = "";
+      /**
+       * <pre>
+       * Active device fingerprint.
+       * </pre>
+       *
+       * <code>string fingerprint = 6;</code>
+       */
+      public java.lang.String getFingerprint() {
+        java.lang.Object ref = fingerprint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fingerprint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active device fingerprint.
+       * </pre>
+       *
+       * <code>string fingerprint = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFingerprintBytes() {
+        java.lang.Object ref = fingerprint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fingerprint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active device fingerprint.
+       * </pre>
+       *
+       * <code>string fingerprint = 6;</code>
+       */
+      public Builder setFingerprint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active device fingerprint.
+       * </pre>
+       *
+       * <code>string fingerprint = 6;</code>
+       */
+      public Builder clearFingerprint() {
+        
+        fingerprint_ = getDefaultInstance().getFingerprint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active device fingerprint.
+       * </pre>
+       *
+       * <code>string fingerprint = 6;</code>
+       */
+      public Builder setFingerprintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+
       private io.bloombox.schema.security.AuthPayload auth_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.security.AuthPayload, io.bloombox.schema.security.AuthPayload.Builder, io.bloombox.schema.security.AuthPayloadOrBuilder> authBuilder_;
@@ -880,7 +1572,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       public boolean hasAuth() {
         return authBuilder_ != null || auth_ != null;
@@ -890,7 +1582,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       public io.bloombox.schema.security.AuthPayload getAuth() {
         if (authBuilder_ == null) {
@@ -904,7 +1596,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       public Builder setAuth(io.bloombox.schema.security.AuthPayload value) {
         if (authBuilder_ == null) {
@@ -924,7 +1616,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       public Builder setAuth(
           io.bloombox.schema.security.AuthPayload.Builder builderForValue) {
@@ -942,7 +1634,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       public Builder mergeAuth(io.bloombox.schema.security.AuthPayload value) {
         if (authBuilder_ == null) {
@@ -964,7 +1656,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       public Builder clearAuth() {
         if (authBuilder_ == null) {
@@ -982,7 +1674,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       public io.bloombox.schema.security.AuthPayload.Builder getAuthBuilder() {
         
@@ -994,7 +1686,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       public io.bloombox.schema.security.AuthPayloadOrBuilder getAuthOrBuilder() {
         if (authBuilder_ != null) {
@@ -1009,7 +1701,7 @@ private static final long serialVersionUID = 0L;
        * Combined authentication/authorization ticket.
        * </pre>
        *
-       * <code>.bloombox.schema.security.AuthPayload auth = 3;</code>
+       * <code>.bloombox.schema.security.AuthPayload auth = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.security.AuthPayload, io.bloombox.schema.security.AuthPayload.Builder, io.bloombox.schema.security.AuthPayloadOrBuilder> 
@@ -1079,10 +1771,27 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Authentiation status after this operation.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Authentiation status after this operation.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+     */
+    io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus();
+
+    /**
+     * <pre>
      * Resulting JSON web token.
      * </pre>
      *
-     * <code>string jwt = 1;</code>
+     * <code>string jwt = 2;</code>
      */
     java.lang.String getJwt();
     /**
@@ -1090,7 +1799,7 @@ private static final long serialVersionUID = 0L;
      * Resulting JSON web token.
      * </pre>
      *
-     * <code>string jwt = 1;</code>
+     * <code>string jwt = 2;</code>
      */
     com.google.protobuf.ByteString
         getJwtBytes();
@@ -1112,6 +1821,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
+      status_ = 0;
       jwt_ = "";
     }
 
@@ -1146,7 +1856,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             }
-            case 10: {
+            case 8: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
               jwt_ = s;
@@ -1176,14 +1892,38 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.class, io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.Builder.class);
     }
 
-    public static final int JWT_FIELD_NUMBER = 1;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_;
+    /**
+     * <pre>
+     * Authentiation status after this operation.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+     */
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Authentiation status after this operation.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+     */
+    public io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus() {
+      io.bloombox.schema.services.auth.v1beta1.AuthStatus result = io.bloombox.schema.services.auth.v1beta1.AuthStatus.valueOf(status_);
+      return result == null ? io.bloombox.schema.services.auth.v1beta1.AuthStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int JWT_FIELD_NUMBER = 2;
     private volatile java.lang.Object jwt_;
     /**
      * <pre>
      * Resulting JSON web token.
      * </pre>
      *
-     * <code>string jwt = 1;</code>
+     * <code>string jwt = 2;</code>
      */
     public java.lang.String getJwt() {
       java.lang.Object ref = jwt_;
@@ -1202,7 +1942,7 @@ private static final long serialVersionUID = 0L;
      * Resulting JSON web token.
      * </pre>
      *
-     * <code>string jwt = 1;</code>
+     * <code>string jwt = 2;</code>
      */
     public com.google.protobuf.ByteString
         getJwtBytes() {
@@ -1230,8 +1970,11 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (status_ != io.bloombox.schema.services.auth.v1beta1.AuthStatus.STATUS_UNKNOWN.getNumber()) {
+        output.writeEnum(1, status_);
+      }
       if (!getJwtBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jwt_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jwt_);
       }
       unknownFields.writeTo(output);
     }
@@ -1241,8 +1984,12 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
+      if (status_ != io.bloombox.schema.services.auth.v1beta1.AuthStatus.STATUS_UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_);
+      }
       if (!getJwtBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, jwt_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jwt_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1260,6 +2007,7 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response other = (io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response) obj;
 
       boolean result = true;
+      result = result && status_ == other.status_;
       result = result && getJwt()
           .equals(other.getJwt());
       result = result && unknownFields.equals(other.unknownFields);
@@ -1273,6 +2021,8 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
       hash = (37 * hash) + JWT_FIELD_NUMBER;
       hash = (53 * hash) + getJwt().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -1408,6 +2158,8 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
+        status_ = 0;
+
         jwt_ = "";
 
         return this;
@@ -1432,6 +2184,7 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response result = new io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response(this);
+        result.status_ = status_;
         result.jwt_ = jwt_;
         onBuilt();
         return result;
@@ -1474,6 +2227,9 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response other) {
         if (other == io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.getDefaultInstance()) return this;
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
         if (!other.getJwt().isEmpty()) {
           jwt_ = other.jwt_;
           onChanged();
@@ -1505,13 +2261,77 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Authentiation status after this operation.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       */
+      public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Authentiation status after this operation.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authentiation status after this operation.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       */
+      public io.bloombox.schema.services.auth.v1beta1.AuthStatus getStatus() {
+        io.bloombox.schema.services.auth.v1beta1.AuthStatus result = io.bloombox.schema.services.auth.v1beta1.AuthStatus.valueOf(status_);
+        return result == null ? io.bloombox.schema.services.auth.v1beta1.AuthStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Authentiation status after this operation.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       */
+      public Builder setStatus(io.bloombox.schema.services.auth.v1beta1.AuthStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authentiation status after this operation.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.auth.v1beta1.AuthStatus status = 1;</code>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object jwt_ = "";
       /**
        * <pre>
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string jwt = 2;</code>
        */
       public java.lang.String getJwt() {
         java.lang.Object ref = jwt_;
@@ -1530,7 +2350,7 @@ private static final long serialVersionUID = 0L;
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string jwt = 2;</code>
        */
       public com.google.protobuf.ByteString
           getJwtBytes() {
@@ -1550,7 +2370,7 @@ private static final long serialVersionUID = 0L;
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string jwt = 2;</code>
        */
       public Builder setJwt(
           java.lang.String value) {
@@ -1567,7 +2387,7 @@ private static final long serialVersionUID = 0L;
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string jwt = 2;</code>
        */
       public Builder clearJwt() {
         
@@ -1580,7 +2400,7 @@ private static final long serialVersionUID = 0L;
        * Resulting JSON web token.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string jwt = 2;</code>
        */
       public Builder setJwtBytes(
           com.google.protobuf.ByteString value) {

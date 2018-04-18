@@ -124,6 +124,30 @@ public enum AuthError
    * <code>EXPIRED_ACCESS_TOKEN = 13;</code>
    */
   EXPIRED_ACCESS_TOKEN(13),
+  /**
+   * <pre>
+   * The specified client was invalid.
+   * </pre>
+   *
+   * <code>INVALID_CLIENT = 14;</code>
+   */
+  INVALID_CLIENT(14),
+  /**
+   * <pre>
+   * The specified origin was invalid.
+   * </pre>
+   *
+   * <code>INVALID_ORIGIN = 15;</code>
+   */
+  INVALID_ORIGIN(15),
+  /**
+   * <pre>
+   * An internal error was encountered.
+   * </pre>
+   *
+   * <code>INTERNAL_ERROR = 16;</code>
+   */
+  INTERNAL_ERROR(16),
   UNRECOGNIZED(-1),
   ;
 
@@ -239,6 +263,30 @@ public enum AuthError
    * <code>EXPIRED_ACCESS_TOKEN = 13;</code>
    */
   public static final int EXPIRED_ACCESS_TOKEN_VALUE = 13;
+  /**
+   * <pre>
+   * The specified client was invalid.
+   * </pre>
+   *
+   * <code>INVALID_CLIENT = 14;</code>
+   */
+  public static final int INVALID_CLIENT_VALUE = 14;
+  /**
+   * <pre>
+   * The specified origin was invalid.
+   * </pre>
+   *
+   * <code>INVALID_ORIGIN = 15;</code>
+   */
+  public static final int INVALID_ORIGIN_VALUE = 15;
+  /**
+   * <pre>
+   * An internal error was encountered.
+   * </pre>
+   *
+   * <code>INTERNAL_ERROR = 16;</code>
+   */
+  public static final int INTERNAL_ERROR_VALUE = 16;
 
 
   public final int getNumber() {
@@ -273,6 +321,9 @@ public enum AuthError
       case 11: return INVALID_ACCESS_TOKEN;
       case 12: return EXPIRED_ID_TOKEN;
       case 13: return EXPIRED_ACCESS_TOKEN;
+      case 14: return INVALID_CLIENT;
+      case 15: return INVALID_ORIGIN;
+      case 16: return INTERNAL_ERROR;
       default: return null;
     }
   }
