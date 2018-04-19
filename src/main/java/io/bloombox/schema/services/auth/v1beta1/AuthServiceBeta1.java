@@ -60,6 +60,26 @@ public final class AuthServiceBeta1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_auth_v1beta1_ResolveToken_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_auth_v1beta1_UserContext_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -116,124 +136,143 @@ public final class AuthServiceBeta1 {
       "\n$auth/v1beta1/AuthService_Beta1.proto\022%" +
       "bloombox.schema.services.auth.v1beta1\032\022o" +
       "auth/Client.proto\032\023identity/User.proto\032\024" +
-      "security/Token.proto\032\034google/api/annotat" +
-      "ions.proto\032(protoc-gen-swagger/options/s" +
-      "wagger.proto\"9\n\026EmailPasswordAssertion\022\r" +
-      "\n\005email\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"4\n\026Fireb" +
-      "aseTokenAssertion\022\r\n\005token\030\001 \001(\t\022\013\n\003uid\030" +
-      "\002 \001(\t\"\313\001\n\020AccountAssertion\022W\n\016email_pass" +
-      "word\030\001 \001(\0132=.bloombox.schema.services.au" +
-      "th.v1beta1.EmailPasswordAssertionH\000\022Q\n\010f" +
-      "irebase\030\002 \001(\0132=.bloombox.schema.services" +
-      ".auth.v1beta1.FirebaseTokenAssertionH\000B\013" +
-      "\n\tassertion\"\335\001\n\020AuthenticateUser\032\223\001\n\007Req" +
-      "uest\022<\n\010provider\030\001 \001(\0162*.bloombox.schema" +
-      ".identity.IdentityProvider\022J\n\tassertion\030" +
-      "\002 \001(\01327.bloombox.schema.services.auth.v1" +
-      "beta1.AccountAssertion\0323\n\010Response\022\013\n\003ui" +
-      "d\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\022\r\n\005token\030\003 \001(\t\"\321\001\n\014" +
-      "ResolveToken\032\247\001\n\007Request\022\021\n\tclient_id\030\001 " +
-      "\001(\t\022\016\n\006origin\030\002 \001(\t\022\r\n\005state\030\003 \001(\t\022\017\n\007ca" +
-      "ptcha\030\004 \001(\t\022\017\n\007session\030\005 \001(\t\022\023\n\013fingerpr" +
-      "int\030\006 \001(\t\0223\n\004auth\030\007 \001(\0132%.bloombox.schem" +
-      "a.security.AuthPayload\032\027\n\010Response\022\013\n\003jw" +
-      "t\030\001 \001(\t\"\215\001\n\013UserContext\032\'\n\007Request\022\013\n\003ui" +
-      "d\030\001 \001(\t\022\017\n\007session\030\002 \001(\t\032U\n\010Response\022\013\n\003" +
-      "jwt\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\022/\n\007profile\030\003 \001(\0132" +
-      "\036.bloombox.schema.identity.User\"b\n\nGetPr" +
-      "ofile\032\027\n\007Request\022\014\n\004user\030\001 \001(\t\032;\n\010Respon" +
-      "se\022/\n\007profile\030\001 \001(\0132\036.bloombox.schema.id" +
-      "entity.User\"h\n\013ConsentFlow\032\032\n\007Request\022\017\n" +
-      "\007consent\030\001 \001(\t\032=\n\010Response\0221\n\006ticket\030\001 \001" +
-      "(\0132!.opencannabis.oauth.ConsentTicket*\207\004" +
-      "\n\tAuthError\022\014\n\010NO_ERROR\020\000\022\025\n\021ACCOUNT_SUS" +
-      "PENDED\020\001\022\025\n\021PROFILE_NOT_FOUND\020\002\022\024\n\020INVAL" +
-      "ID_USER_KEY\020\003\022\025\n\021INVALID_ASSERTION\020\004\022\032\n\026" +
-      "UNSUPPORTED_LOGIN_TYPE\020\005\022\026\n\022INVALID_AUTH" +
-      "_TOKEN\020\006\022\022\n\016INVALID_TICKET\020\007\022\024\n\020CLIENT_N" +
-      "OT_FOUND\020\010\022\026\n\022INVALID_CONSENT_ID\020\t\022\024\n\020IN" +
-      "VALID_ID_TOKEN\020\n\022\030\n\024INVALID_ACCESS_TOKEN" +
-      "\020\013\022\024\n\020EXPIRED_ID_TOKEN\020\014\022\030\n\024EXPIRED_ACCE" +
-      "SS_TOKEN\020\r\022\022\n\016INVALID_CLIENT\020\016\022\022\n\016INVALI" +
-      "D_ORIGIN\020\017\022\021\n\rACCESS_DENIED\020\020\022\023\n\017INVALID" +
-      "_SESSION\020\021\022\023\n\017EXPIRED_SESSION\020\022\022\027\n\023INVAL" +
-      "ID_FINGERPRINT\020\023\022\023\n\017INVALID_CAPTCHA\020\024\022\024\n" +
-      "\020CAPTCHA_REJECTED\020\025\022\022\n\016INTERNAL_ERROR\020c2" +
-      "\304\016\n\004Auth\022\242\002\n\014Authenticate\022?.bloombox.sch" +
-      "ema.services.auth.v1beta1.AuthenticateUs" +
-      "er.Request\032@.bloombox.schema.services.au" +
-      "th.v1beta1.AuthenticateUser.Response\"\216\001\202" +
-      "\323\344\223\002+\"\036/auth/v1beta1/login/{provider}:\ta" +
-      "ssertion\222AZ\022\014Authenticate\032<Authenticate " +
-      "a user to their digital identity with Bl" +
-      "oombox.*\014Authenticate\022\207\002\n\007Consent\022:.bloo" +
-      "mbox.schema.services.auth.v1beta1.Consen" +
-      "tFlow.Request\032;.bloombox.schema.services" +
-      ".auth.v1beta1.ConsentFlow.Response\"\202\001\202\323\344" +
-      "\223\002\031\022\027/auth/v1beta1/{consent}\222A`\022\007Consent" +
-      "\032LRetrieve information about a specific " +
-      "consent operation, by consent flow ID.*\007" +
-      "Consent\022\257\002\n\005Token\022;.bloombox.schema.serv" +
-      "ices.auth.v1beta1.ResolveToken.Request\032<" +
-      ".bloombox.schema.services.auth.v1beta1.R" +
-      "esolveToken.Response\"\252\001\202\323\344\223\0027\"2/auth/v1b" +
-      "eta1/{origin}/{client_id}/{session}/toke" +
-      "n:\001*\222Aj\022\005Token\032ZMint a data access token" +
-      ", given a completed authentication and a" +
-      "uthorization/consent flow.*\005Token\022\321\003\n\007Co" +
-      "ntext\022:.bloombox.schema.services.auth.v1" +
-      "beta1.UserContext.Request\032;.bloombox.sch" +
-      "ema.services.auth.v1beta1.UserContext.Re" +
-      "sponse\"\314\002\202\323\344\223\002!\022\037/auth/v1beta1/{session}" +
-      "/context\222A\241\002\022\007Context\032\217\001Retrieve full se" +
-      "curity context (including access rights," +
-      " a full user profile, and so on) for a g" +
-      "iven authorized and authenticated user s" +
-      "ession.*\007Contextb<\n\017\n\013ApiKeyParam\022\000\n)\n\006O" +
-      "Auth2\022\037\n\007offline\n\006openid\n\014profile:readb=" +
-      "\n\020\n\014ApiKeyHeader\022\000\n)\n\006OAuth2\022\037\n\007offline\n" +
-      "\006openid\n\014profile:read\022\206\004\n\007Profile\0229.bloo" +
-      "mbox.schema.services.auth.v1beta1.GetPro" +
-      "file.Request\032:.bloombox.schema.services." +
-      "auth.v1beta1.GetProfile.Response\"\203\003\202\323\344\223\002" +
-      "\036\022\034/auth/v1beta1/profile/{user}\222A\333\002\022\007Pro" +
-      "file\032\311\001Retrieve profile data about a use" +
-      "r by their user key, which is resolved u" +
-      "pon finishing an authentication and auth" +
-      "orization/consent flow.\nData offered in " +
-      "return depends on granted OAuth2 profile" +
-      " scopes.*\007Profileb<\n\017\n\013ApiKeyParam\022\000\n)\n\006" +
-      "OAuth2\022\037\n\007offline\n\006openid\n\014profile:readb" +
-      "=\n\020\n\014ApiKeyHeader\022\000\n)\n\006OAuth2\022\037\n\007offline" +
-      "\n\006openid\n\014profile:readB\327\010\n(io.bloombox.s" +
-      "chema.services.auth.v1beta1H\001P\001\242\002\003BBS\222A\237" +
-      "\010\022g\n\010Auth API\032\031https://bloombox.io/terms" +
-      "\"7\n\010Bloombox\022\023https://bloombox.io\032\026devel" +
-      "opers@bloombox.io2\007v1beta1\032\022api.bloombox" +
-      ".cloud*\001\0022\020application/json:\020application" +
-      "/jsonZ\240\006\nd\n\013ApiKeyParam\022U\010\002\022JParameter f" +
-      "or identifying API key owned by the invo" +
-      "king project or system.\032\003key \001\nh\n\014ApiKey" +
-      "Header\022X\010\002\022GHeader for identifying API k" +
-      "ey owned by the invoking project or syst" +
-      "em.\032\tX-API-Key \001\n\315\004\n\006OAuth2\022\302\004\010\003\022]Bloomb" +
-      "ox Identity-powered OAuth2 access, autho" +
-      "rized on behalf of an end-user or organi" +
-      "zation.(\0042,https://authorize.bloombox.cl" +
-      "oud/oauth2/auth:-https://authorize.bloom" +
-      "box.cloud/oauth2/tokenB\377\002\n1\n\007offline\022&Of" +
-      "fline access to authorized user data\n9\n\006" +
-      "openid\022/OIDC (OpenID Connect) access for" +
-      " seamless logon\n0\n\005email\022\'Read access to" +
-      " the user\'s email address\n/\n\005phone\022&Read" +
-      " access to the user\'s phone number\n9\n\006no" +
-      "tify\022/Ability to notify the user for imp" +
-      "ortant events\n1\n\014profile:read\022!Read acce" +
-      "ss to the user\'s profile\n>\n\022profile.basi" +
-      "c:read\022(Read access to the user\'s public" +
-      " profileb\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyH" +
-      "eader\022\000r/\n\rBloombox APIs\022\036https://apidoc" +
-      "s.bloombox.cloudb\006proto3"
+      "security/Token.proto\032\033google/protobuf/em" +
+      "pty.proto\032\034google/api/annotations.proto\032" +
+      "(protoc-gen-swagger/options/swagger.prot" +
+      "o\"9\n\026EmailPasswordAssertion\022\r\n\005email\030\001 \001" +
+      "(\t\022\020\n\010password\030\002 \001(\t\"4\n\026FirebaseTokenAss" +
+      "ertion\022\r\n\005token\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\"\313\001\n\020A" +
+      "ccountAssertion\022W\n\016email_password\030\001 \001(\0132" +
+      "=.bloombox.schema.services.auth.v1beta1." +
+      "EmailPasswordAssertionH\000\022Q\n\010firebase\030\002 \001" +
+      "(\0132=.bloombox.schema.services.auth.v1bet" +
+      "a1.FirebaseTokenAssertionH\000B\013\n\tassertion" +
+      "\"\335\001\n\020AuthenticateUser\032\223\001\n\007Request\022<\n\010pro" +
+      "vider\030\001 \001(\0162*.bloombox.schema.identity.I" +
+      "dentityProvider\022J\n\tassertion\030\002 \001(\01327.blo" +
+      "ombox.schema.services.auth.v1beta1.Accou" +
+      "ntAssertion\0323\n\010Response\022\013\n\003uid\030\001 \001(\t\022\013\n\003" +
+      "key\030\002 \001(\t\022\r\n\005token\030\003 \001(\t\"\321\001\n\014ResolveToke" +
+      "n\032\247\001\n\007Request\022\021\n\tclient_id\030\001 \001(\t\022\016\n\006orig" +
+      "in\030\002 \001(\t\022\r\n\005state\030\003 \001(\t\022\017\n\007captcha\030\004 \001(\t" +
+      "\022\017\n\007session\030\005 \001(\t\022\023\n\013fingerprint\030\006 \001(\t\0223" +
+      "\n\004auth\030\007 \001(\0132%.bloombox.schema.security." +
+      "AuthPayload\032\027\n\010Response\022\013\n\003jwt\030\001 \001(\t\"|\n\017" +
+      "ConsentDecision\0325\n\006Accept\022\013\n\003uid\030\001 \001(\t\022\017" +
+      "\n\007consent\030\002 \001(\t\022\r\n\005scope\030\003 \003(\t\032&\n\006Reject" +
+      "\022\013\n\003uid\030\001 \001(\t\022\017\n\007consent\030\002 \001(\t\032\n\n\010Respon" +
+      "se\"\215\001\n\013UserContext\032\'\n\007Request\022\013\n\003uid\030\001 \001" +
+      "(\t\022\017\n\007session\030\002 \001(\t\032U\n\010Response\022\013\n\003jwt\030\001" +
+      " \001(\t\022\013\n\003key\030\002 \001(\t\022/\n\007profile\030\003 \001(\0132\036.blo" +
+      "ombox.schema.identity.User\"b\n\nGetProfile" +
+      "\032\027\n\007Request\022\014\n\004user\030\001 \001(\t\032;\n\010Response\022/\n" +
+      "\007profile\030\001 \001(\0132\036.bloombox.schema.identit" +
+      "y.User\"h\n\013ConsentFlow\032\032\n\007Request\022\017\n\007cons" +
+      "ent\030\001 \001(\t\032=\n\010Response\0221\n\006ticket\030\001 \001(\0132!." +
+      "opencannabis.oauth.ConsentTicket*\263\004\n\tAut" +
+      "hError\022\014\n\010NO_ERROR\020\000\022\025\n\021ACCOUNT_SUSPENDE" +
+      "D\020\001\022\025\n\021PROFILE_NOT_FOUND\020\002\022\024\n\020INVALID_US" +
+      "ER_KEY\020\003\022\025\n\021INVALID_ASSERTION\020\004\022\032\n\026UNSUP" +
+      "PORTED_LOGIN_TYPE\020\005\022\026\n\022INVALID_AUTH_TOKE" +
+      "N\020\006\022\022\n\016INVALID_TICKET\020\007\022\024\n\020CLIENT_NOT_FO" +
+      "UND\020\010\022\026\n\022INVALID_CONSENT_ID\020\t\022\024\n\020INVALID" +
+      "_ID_TOKEN\020\n\022\030\n\024INVALID_ACCESS_TOKEN\020\013\022\024\n" +
+      "\020EXPIRED_ID_TOKEN\020\014\022\030\n\024EXPIRED_ACCESS_TO" +
+      "KEN\020\r\022\022\n\016INVALID_CLIENT\020\016\022\022\n\016INVALID_ORI" +
+      "GIN\020\017\022\021\n\rACCESS_DENIED\020\020\022\023\n\017INVALID_SESS" +
+      "ION\020\021\022\023\n\017EXPIRED_SESSION\020\022\022\027\n\023INVALID_FI" +
+      "NGERPRINT\020\023\022\023\n\017INVALID_CAPTCHA\020\024\022\024\n\020CAPT" +
+      "CHA_REJECTED\020\025\022\025\n\021CONSENT_NOT_FOUND\020\026\022\023\n" +
+      "\017EXPIRED_CONSENT\020\027\022\022\n\016INTERNAL_ERROR\020c2\202" +
+      "\023\n\004Auth\022\247\002\n\014Authenticate\022?.bloombox.sche" +
+      "ma.services.auth.v1beta1.AuthenticateUse" +
+      "r.Request\032@.bloombox.schema.services.aut" +
+      "h.v1beta1.AuthenticateUser.Response\"\223\001\202\323" +
+      "\344\223\002+\"\036/auth/v1beta1/login/{provider}:\tas" +
+      "sertion\222A_\022\021Authenticate User\032<Authentic" +
+      "ate a user to their digital identity wit" +
+      "h Bloombox.*\014Authenticate\022\220\002\n\007Consent\022:." +
+      "bloombox.schema.services.auth.v1beta1.Co" +
+      "nsentFlow.Request\032;.bloombox.schema.serv" +
+      "ices.auth.v1beta1.ConsentFlow.Response\"\213" +
+      "\001\202\323\344\223\002\031\022\027/auth/v1beta1/{consent}\222Ai\022\020Ret" +
+      "rieve Consent\032LRetrieve information abou" +
+      "t a specific consent operation, by conse" +
+      "nt flow ID.*\007Consent\022\271\002\n\005Token\022;.bloombo" +
+      "x.schema.services.auth.v1beta1.ResolveTo" +
+      "ken.Request\032<.bloombox.schema.services.a" +
+      "uth.v1beta1.ResolveToken.Response\"\264\001\202\323\344\223" +
+      "\0027\"2/auth/v1beta1/{origin}/{client_id}/{" +
+      "session}/token:\001*\222At\022\017Provision Token\032ZM" +
+      "int a data access token, given a complet" +
+      "ed authentication and authorization/cons" +
+      "ent flow.*\005Token\022\207\002\n\006Accept\022=.bloombox.s" +
+      "chema.services.auth.v1beta1.ConsentDecis" +
+      "ion.Accept\032\026.google.protobuf.Empty\"\245\001\202\323\344" +
+      "\223\002#\"\036/auth/v1beta1/{consent}/accept:\001*\222A" +
+      "y\022\016Accept Consent\032_Indicate that a subje" +
+      "ct entity approves or accepts the consen" +
+      "t challenge during a consent flow.*\006Acce" +
+      "pt\022\207\002\n\006Reject\022=.bloombox.schema.services" +
+      ".auth.v1beta1.ConsentDecision.Reject\032\026.g" +
+      "oogle.protobuf.Empty\"\245\001\202\323\344\223\002#\"\036/auth/v1b" +
+      "eta1/{consent}/reject:\001*\222Ay\022\016Reject Cons" +
+      "ent\032_Indicate that a subject entity appr" +
+      "oves or accepts the consent challenge du" +
+      "ring a consent flow.*\006Reject\022\332\003\n\007Context" +
+      "\022:.bloombox.schema.services.auth.v1beta1" +
+      ".UserContext.Request\032;.bloombox.schema.s" +
+      "ervices.auth.v1beta1.UserContext.Respons" +
+      "e\"\325\002\202\323\344\223\002!\022\037/auth/v1beta1/{session}/cont" +
+      "ext\222A\252\002\022\020Security Context\032\217\001Retrieve ful" +
+      "l security context (including access rig" +
+      "hts, a full user profile, and so on) for" +
+      " a given authorized and authenticated us" +
+      "er session.*\007Contextb<\n\017\n\013ApiKeyParam\022\000\n" +
+      ")\n\006OAuth2\022\037\n\007offline\n\006openid\n\014profile:re" +
+      "adb=\n\020\n\014ApiKeyHeader\022\000\n)\n\006OAuth2\022\037\n\007offl" +
+      "ine\n\006openid\n\014profile:read\022\217\004\n\007Profile\0229." +
+      "bloombox.schema.services.auth.v1beta1.Ge" +
+      "tProfile.Request\032:.bloombox.schema.servi" +
+      "ces.auth.v1beta1.GetProfile.Response\"\214\003\202" +
+      "\323\344\223\002\036\022\034/auth/v1beta1/profile/{user}\222A\344\002\022" +
+      "\020Retrieve Profile\032\311\001Retrieve profile dat" +
+      "a about a user by their user key, which " +
+      "is resolved upon finishing an authentica" +
+      "tion and authorization/consent flow.\nDat" +
+      "a offered in return depends on granted O" +
+      "Auth2 profile scopes.*\007Profileb<\n\017\n\013ApiK" +
+      "eyParam\022\000\n)\n\006OAuth2\022\037\n\007offline\n\006openid\n\014" +
+      "profile:readb=\n\020\n\014ApiKeyHeader\022\000\n)\n\006OAut" +
+      "h2\022\037\n\007offline\n\006openid\n\014profile:readB\327\010\n(" +
+      "io.bloombox.schema.services.auth.v1beta1" +
+      "H\001P\001\242\002\003BBS\222A\237\010\022g\n\010Auth API\032\031https://bloo" +
+      "mbox.io/terms\"7\n\010Bloombox\022\023https://bloom" +
+      "box.io\032\026developers@bloombox.io2\007v1beta1\032" +
+      "\022api.bloombox.cloud*\001\0022\020application/json" +
+      ":\020application/jsonZ\240\006\nd\n\013ApiKeyParam\022U\010\002" +
+      "\022JParameter for identifying API key owne" +
+      "d by the invoking project or system.\032\003ke" +
+      "y \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for iden" +
+      "tifying API key owned by the invoking pr" +
+      "oject or system.\032\tX-API-Key \001\n\315\004\n\006OAuth2" +
+      "\022\302\004\010\003\022]Bloombox Identity-powered OAuth2 " +
+      "access, authorized on behalf of an end-u" +
+      "ser or organization.(\0042,https://authoriz" +
+      "e.bloombox.cloud/oauth2/auth:-https://au" +
+      "thorize.bloombox.cloud/oauth2/tokenB\377\002\n1" +
+      "\n\007offline\022&Offline access to authorized " +
+      "user data\n9\n\006openid\022/OIDC (OpenID Connec" +
+      "t) access for seamless logon\n0\n\005email\022\'R" +
+      "ead access to the user\'s email address\n/" +
+      "\n\005phone\022&Read access to the user\'s phone" +
+      " number\n9\n\006notify\022/Ability to notify the" +
+      " user for important events\n1\n\014profile:re" +
+      "ad\022!Read access to the user\'s profile\n>\n" +
+      "\022profile.basic:read\022(Read access to the " +
+      "user\'s public profileb\021\n\017\n\013ApiKeyParam\022\000" +
+      "b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022\036h" +
+      "ttps://apidocs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -249,6 +288,7 @@ public final class AuthServiceBeta1 {
           io.opencannabis.schema.oauth.OAuthClient.getDescriptor(),
           io.bloombox.schema.identity.UserOuterClass.getDescriptor(),
           io.bloombox.schema.security.Token.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
         }, assigner);
@@ -306,8 +346,32 @@ public final class AuthServiceBeta1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_auth_v1beta1_ResolveToken_Response_descriptor,
         new java.lang.String[] { "Jwt", });
-    internal_static_bloombox_schema_services_auth_v1beta1_UserContext_descriptor =
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_descriptor =
+      internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Accept_descriptor,
+        new java.lang.String[] { "Uid", "Consent", "Scope", });
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_descriptor =
+      internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Reject_descriptor,
+        new java.lang.String[] { "Uid", "Consent", });
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_descriptor =
+      internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_descriptor.getNestedTypes().get(2);
+    internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_auth_v1beta1_ConsentDecision_Response_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_auth_v1beta1_UserContext_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_bloombox_schema_services_auth_v1beta1_UserContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_auth_v1beta1_UserContext_descriptor,
@@ -325,7 +389,7 @@ public final class AuthServiceBeta1 {
         internal_static_bloombox_schema_services_auth_v1beta1_UserContext_Response_descriptor,
         new java.lang.String[] { "Jwt", "Key", "Profile", });
     internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_descriptor,
@@ -343,7 +407,7 @@ public final class AuthServiceBeta1 {
         internal_static_bloombox_schema_services_auth_v1beta1_GetProfile_Response_descriptor,
         new java.lang.String[] { "Profile", });
     internal_static_bloombox_schema_services_auth_v1beta1_ConsentFlow_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_bloombox_schema_services_auth_v1beta1_ConsentFlow_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_auth_v1beta1_ConsentFlow_descriptor,
@@ -370,6 +434,7 @@ public final class AuthServiceBeta1 {
     io.opencannabis.schema.oauth.OAuthClient.getDescriptor();
     io.bloombox.schema.identity.UserOuterClass.getDescriptor();
     io.bloombox.schema.security.Token.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor();
   }

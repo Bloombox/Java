@@ -190,6 +190,22 @@ public enum AuthError
   CAPTCHA_REJECTED(21),
   /**
    * <pre>
+   * The specified consent ID could not be resolved.
+   * </pre>
+   *
+   * <code>CONSENT_NOT_FOUND = 22;</code>
+   */
+  CONSENT_NOT_FOUND(22),
+  /**
+   * <pre>
+   * Consent operation or consent record has expired.
+   * </pre>
+   *
+   * <code>EXPIRED_CONSENT = 23;</code>
+   */
+  EXPIRED_CONSENT(23),
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
@@ -377,6 +393,22 @@ public enum AuthError
   public static final int CAPTCHA_REJECTED_VALUE = 21;
   /**
    * <pre>
+   * The specified consent ID could not be resolved.
+   * </pre>
+   *
+   * <code>CONSENT_NOT_FOUND = 22;</code>
+   */
+  public static final int CONSENT_NOT_FOUND_VALUE = 22;
+  /**
+   * <pre>
+   * Consent operation or consent record has expired.
+   * </pre>
+   *
+   * <code>EXPIRED_CONSENT = 23;</code>
+   */
+  public static final int EXPIRED_CONSENT_VALUE = 23;
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
@@ -425,6 +457,8 @@ public enum AuthError
       case 19: return INVALID_FINGERPRINT;
       case 20: return INVALID_CAPTCHA;
       case 21: return CAPTCHA_REJECTED;
+      case 22: return CONSENT_NOT_FOUND;
+      case 23: return EXPIRED_CONSENT;
       case 99: return INTERNAL_ERROR;
       default: return null;
     }
