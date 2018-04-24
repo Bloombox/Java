@@ -38,7 +38,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: io.bloombox.labs.platform:schema:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="schema" />
+    <orderEntry type="library" name="Maven: com.google.api.grpc:proto-google-common-protos:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:24.1-jre" level="project" />
     <orderEntry type="library" name="Maven: org.checkerframework:checker-compat-qual:2.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:1.1" level="project" />
@@ -57,7 +58,6 @@
     <orderEntry type="library" name="Maven: io.netty:netty-codec-socks:4.1.22.Final" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-protobuf:1.11.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java-util:3.5.1" level="project" />
-    <orderEntry type="library" name="Maven: com.google.api.grpc:proto-google-common-protos:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-protobuf-lite:1.11.0" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-stub:1.11.0" level="project" />
     <orderEntry type="library" name="Maven: io.grpc:grpc-core:1.11.0" level="project" />
