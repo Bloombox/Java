@@ -151,7 +151,7 @@
     <dependencies>
         <!-- Schema -->
         <dependency>
-            <groupId>io.bloombox.labs.platform</groupId>
+            <groupId>io.bloombox.v2.base</groupId>
             <artifactId>schema</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
