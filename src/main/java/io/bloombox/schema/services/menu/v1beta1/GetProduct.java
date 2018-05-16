@@ -128,9 +128,9 @@ private static final long serialVersionUID = 0L;
      * Request a potentially-cached or forced-uncached copy of the specified product data.
      * </pre>
      *
-     * <code>bool cached = 3;</code>
+     * <code>bool fresh = 3;</code>
      */
-    boolean getCached();
+    boolean getFresh();
   }
   /**
    * <pre>
@@ -150,7 +150,7 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       scope_ = "";
-      cached_ = false;
+      fresh_ = false;
     }
 
     @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
             }
             case 24: {
 
-              cached_ = input.readBool();
+              fresh_ = input.readBool();
               break;
             }
           }
@@ -307,17 +307,17 @@ private static final long serialVersionUID = 0L;
       return getKey();
     }
 
-    public static final int CACHED_FIELD_NUMBER = 3;
-    private boolean cached_;
+    public static final int FRESH_FIELD_NUMBER = 3;
+    private boolean fresh_;
     /**
      * <pre>
      * Request a potentially-cached or forced-uncached copy of the specified product data.
      * </pre>
      *
-     * <code>bool cached = 3;</code>
+     * <code>bool fresh = 3;</code>
      */
-    public boolean getCached() {
-      return cached_;
+    public boolean getFresh() {
+      return fresh_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -338,8 +338,8 @@ private static final long serialVersionUID = 0L;
       if (key_ != null) {
         output.writeMessage(2, getKey());
       }
-      if (cached_ != false) {
-        output.writeBool(3, cached_);
+      if (fresh_ != false) {
+        output.writeBool(3, fresh_);
       }
       unknownFields.writeTo(output);
     }
@@ -356,9 +356,9 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getKey());
       }
-      if (cached_ != false) {
+      if (fresh_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, cached_);
+          .computeBoolSize(3, fresh_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -383,8 +383,8 @@ private static final long serialVersionUID = 0L;
         result = result && getKey()
             .equals(other.getKey());
       }
-      result = result && (getCached()
-          == other.getCached());
+      result = result && (getFresh()
+          == other.getFresh());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -402,9 +402,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + KEY_FIELD_NUMBER;
         hash = (53 * hash) + getKey().hashCode();
       }
-      hash = (37 * hash) + CACHED_FIELD_NUMBER;
+      hash = (37 * hash) + FRESH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getCached());
+          getFresh());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -546,7 +546,7 @@ private static final long serialVersionUID = 0L;
           key_ = null;
           keyBuilder_ = null;
         }
-        cached_ = false;
+        fresh_ = false;
 
         return this;
       }
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.key_ = keyBuilder_.build();
         }
-        result.cached_ = cached_;
+        result.fresh_ = fresh_;
         onBuilt();
         return result;
       }
@@ -625,8 +625,8 @@ private static final long serialVersionUID = 0L;
         if (other.hasKey()) {
           mergeKey(other.getKey());
         }
-        if (other.getCached() != false) {
-          setCached(other.getCached());
+        if (other.getFresh() != false) {
+          setFresh(other.getFresh());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -897,27 +897,27 @@ private static final long serialVersionUID = 0L;
         return keyBuilder_;
       }
 
-      private boolean cached_ ;
+      private boolean fresh_ ;
       /**
        * <pre>
        * Request a potentially-cached or forced-uncached copy of the specified product data.
        * </pre>
        *
-       * <code>bool cached = 3;</code>
+       * <code>bool fresh = 3;</code>
        */
-      public boolean getCached() {
-        return cached_;
+      public boolean getFresh() {
+        return fresh_;
       }
       /**
        * <pre>
        * Request a potentially-cached or forced-uncached copy of the specified product data.
        * </pre>
        *
-       * <code>bool cached = 3;</code>
+       * <code>bool fresh = 3;</code>
        */
-      public Builder setCached(boolean value) {
+      public Builder setFresh(boolean value) {
         
-        cached_ = value;
+        fresh_ = value;
         onChanged();
         return this;
       }
@@ -926,11 +926,11 @@ private static final long serialVersionUID = 0L;
        * Request a potentially-cached or forced-uncached copy of the specified product data.
        * </pre>
        *
-       * <code>bool cached = 3;</code>
+       * <code>bool fresh = 3;</code>
        */
-      public Builder clearCached() {
+      public Builder clearFresh() {
         
-        cached_ = false;
+        fresh_ = false;
         onChanged();
         return this;
       }
