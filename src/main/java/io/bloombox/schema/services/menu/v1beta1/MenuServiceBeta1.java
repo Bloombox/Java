@@ -197,7 +197,7 @@ public final class MenuServiceBeta1 {
       "LABLE\020\006\022\025\n\021PRODUCT_NOT_FOUND\020\007\022\021\n\rACCESS" +
       "_DENIED\020\010\022\017\n\013KEY_INVALID\020\t\022\022\n\016UPDATE_INV" +
       "ALID\020\n\022\014\n\010CONFLICT\020\013\022\022\n\016INTERNAL_ERROR\020c" +
-      "2\245\030\n\004Menu\022\304\002\n\010Retrieve\0226.bloombox.schema" +
+      "2\224\030\n\004Menu\022\304\002\n\010Retrieve\0226.bloombox.schema" +
       ".services.menu.v1beta1.GetMenu.Request\0327" +
       ".bloombox.schema.services.menu.v1beta1.G" +
       "etMenu.Response\"\306\001\202\323\344\223\002\201\001\022</menu/v1beta1" +
@@ -232,63 +232,62 @@ public final class MenuServiceBeta1 {
       "a1/{search.options.scope=partners/*/loca" +
       "tions/*}/search:\001*\222AO\022\017Search Products\0324" +
       "Perform a fulltext search over product c" +
-      "atalog data.*\006Search\022\257\002\n\006Create\022<.bloomb" +
+      "atalog data.*\006Search\022\236\002\n\006Create\022<.bloomb" +
       "ox.schema.services.menu.v1beta1.CreatePr" +
       "oduct.Request\032=.bloombox.schema.services" +
-      ".menu.v1beta1.CreateProduct.Response\"\247\001\202" +
-      "\323\344\223\002[\"P/menu/v1beta1/{scope=partners/*/l" +
-      "ocations/*}/{product.key.type}/{product." +
-      "key.id}:\007product\222AC\022\016Create Product\032)Cre" +
-      "ate a new product record from scratch.*\006" +
-      "Create\022\217\002\n\006Update\022<.bloombox.schema.serv" +
-      "ices.menu.v1beta1.UpdateProduct.Request\032" +
-      "\026.google.protobuf.Empty\"\256\001\202\323\344\223\002[\032P/menu/" +
-      "v1beta1/{scope=partners/*/locations/*}/{" +
-      "product.key.type}/{product.key.id}:\007prod" +
-      "uct\222AJ\022\016Update Product\0320Update an existi" +
-      "ng product record with new data.*\006Update" +
-      "\022\200\002\n\006Delete\022<.bloombox.schema.services.m" +
-      "enu.v1beta1.DeleteProduct.Request\032\026.goog" +
-      "le.protobuf.Empty\"\237\001\202\323\344\223\002B*@/menu/v1beta" +
-      "1/{scope=partners/*/locations/*}/{key.ty" +
-      "pe}/{key.id}\222AT\022\016Delete Product\032:Mark a " +
-      "product as deleted. This is a recoverabl" +
-      "e deletion.*\006Delete\022\201\002\n\rProductStatus\022;." +
-      "bloombox.schema.services.menu.v1beta1.Pr" +
-      "oductStock.Request\032\026.google.protobuf.Emp" +
-      "ty\"\232\001\202\323\344\223\002I\022G/menu/v1beta1/{scope=partne" +
-      "rs/*/locations/*}/{key.type}/{key.id}/st" +
-      "atus\222AH\022\016Product Status\032.Retrieve stock " +
-      "status for a given product key.*\006Status\022" +
-      "\235\002\n\007InStock\022;.bloombox.schema.services.m" +
-      "enu.v1beta1.ProductStock.Request\032\026.googl" +
-      "e.protobuf.Empty\"\274\001\202\323\344\223\002R\"P/menu/v1beta1" +
-      "/{scope=partners/*/locations/*}/{key.typ" +
-      "e}/{key.id}/status/in-stock\222Aa\022\025Mark Pro" +
-      "duct In-Stock\032?Mark a product as in-stoc" +
-      "k, or, currently offered for purchase.*\007" +
-      "InStock\022\256\002\n\nOutOfStock\022;.bloombox.schema" +
-      ".services.menu.v1beta1.ProductStock.Requ" +
-      "est\032\026.google.protobuf.Empty\"\312\001\202\323\344\223\002V\"T/m" +
-      "enu/v1beta1/{scope=partners/*/locations/" +
-      "*}/{key.type}/{key.id}/status/out-of-sto" +
-      "ck\222Ak\022\031Mark Product Out-of-Stock\032BMark a" +
-      " product as out-of-stock, or no longer o" +
-      "ffered for purchase.*\nOutOfStockB\207\004\n(io." +
-      "bloombox.schema.services.menu.v1beta1H\001P" +
-      "\001\242\002\003BBS\222A\317\003\022g\n\010Menu API\032\031https://bloombo" +
-      "x.io/terms\"7\n\010Bloombox\022\023https://bloombox" +
-      ".io\032\026developers@bloombox.io2\007v1beta1\032\022ap" +
-      "i.bloombox.cloud*\001\0022\020application/json:\020a" +
-      "pplication/jsonZ\320\001\nd\n\013ApiKeyParam\022U\010\002\022JP" +
-      "arameter for identifying API key owned b" +
-      "y the invoking project or system.\032\003key \001" +
-      "\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for identif" +
-      "ying API key owned by the invoking proje" +
-      "ct or system.\032\tX-API-Key \001b\021\n\017\n\013ApiKeyPa" +
-      "ram\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox AP" +
-      "Is\022\036https://apidocs.bloombox.cloudb\006prot" +
-      "o3"
+      ".menu.v1beta1.CreateProduct.Response\"\226\001\202" +
+      "\323\344\223\002J\"?/menu/v1beta1/{scope=partners/*/l" +
+      "ocations/*}/{product.key.type}:\007product\222" +
+      "AC\022\016Create Product\032)Create a new product" +
+      " record from scratch.*\006Create\022\217\002\n\006Update" +
+      "\022<.bloombox.schema.services.menu.v1beta1" +
+      ".UpdateProduct.Request\032\026.google.protobuf" +
+      ".Empty\"\256\001\202\323\344\223\002[\032P/menu/v1beta1/{scope=pa" +
+      "rtners/*/locations/*}/{product.key.type}" +
+      "/{product.key.id}:\007product\222AJ\022\016Update Pr" +
+      "oduct\0320Update an existing product record" +
+      " with new data.*\006Update\022\200\002\n\006Delete\022<.blo" +
+      "ombox.schema.services.menu.v1beta1.Delet" +
+      "eProduct.Request\032\026.google.protobuf.Empty" +
+      "\"\237\001\202\323\344\223\002B*@/menu/v1beta1/{scope=partners" +
+      "/*/locations/*}/{key.type}/{key.id}\222AT\022\016" +
+      "Delete Product\032:Mark a product as delete" +
+      "d. This is a recoverable deletion.*\006Dele" +
+      "te\022\201\002\n\rProductStatus\022;.bloombox.schema.s" +
+      "ervices.menu.v1beta1.ProductStock.Reques" +
+      "t\032\026.google.protobuf.Empty\"\232\001\202\323\344\223\002I\022G/men" +
+      "u/v1beta1/{scope=partners/*/locations/*}" +
+      "/{key.type}/{key.id}/status\222AH\022\016Product " +
+      "Status\032.Retrieve stock status for a give" +
+      "n product key.*\006Status\022\235\002\n\007InStock\022;.blo" +
+      "ombox.schema.services.menu.v1beta1.Produ" +
+      "ctStock.Request\032\026.google.protobuf.Empty\"" +
+      "\274\001\202\323\344\223\002R\"P/menu/v1beta1/{scope=partners/" +
+      "*/locations/*}/{key.type}/{key.id}/statu" +
+      "s/in-stock\222Aa\022\025Mark Product In-Stock\032?Ma" +
+      "rk a product as in-stock, or, currently " +
+      "offered for purchase.*\007InStock\022\256\002\n\nOutOf" +
+      "Stock\022;.bloombox.schema.services.menu.v1" +
+      "beta1.ProductStock.Request\032\026.google.prot" +
+      "obuf.Empty\"\312\001\202\323\344\223\002V\"T/menu/v1beta1/{scop" +
+      "e=partners/*/locations/*}/{key.type}/{ke" +
+      "y.id}/status/out-of-stock\222Ak\022\031Mark Produ" +
+      "ct Out-of-Stock\032BMark a product as out-o" +
+      "f-stock, or no longer offered for purcha" +
+      "se.*\nOutOfStockB\207\004\n(io.bloombox.schema.s" +
+      "ervices.menu.v1beta1H\001P\001\242\002\003BBS\222A\317\003\022g\n\010Me" +
+      "nu API\032\031https://bloombox.io/terms\"7\n\010Blo" +
+      "ombox\022\023https://bloombox.io\032\026developers@b" +
+      "loombox.io2\007v1beta1\032\022api.bloombox.cloud*" +
+      "\001\0022\020application/json:\020application/jsonZ\320" +
+      "\001\nd\n\013ApiKeyParam\022U\010\002\022JParameter for iden" +
+      "tifying API key owned by the invoking pr" +
+      "oject or system.\032\003key \001\nh\n\014ApiKeyHeader\022" +
+      "X\010\002\022GHeader for identifying API key owne" +
+      "d by the invoking project or system.\032\tX-" +
+      "API-Key \001b\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKey" +
+      "Header\022\000r/\n\rBloombox APIs\022\036https://apido" +
+      "cs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
