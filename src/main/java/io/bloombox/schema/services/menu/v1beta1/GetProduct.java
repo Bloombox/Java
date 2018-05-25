@@ -131,6 +131,26 @@ private static final long serialVersionUID = 0L;
      * <code>bool fresh = 3;</code>
      */
     boolean getFresh();
+
+    /**
+     * <pre>
+     * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+     * server may indicate so.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    java.lang.String getFingerprint();
+    /**
+     * <pre>
+     * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+     * server may indicate so.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getFingerprintBytes();
   }
   /**
    * <pre>
@@ -151,6 +171,7 @@ private static final long serialVersionUID = 0L;
     private Request() {
       scope_ = "";
       fresh_ = false;
+      fingerprint_ = "";
     }
 
     @java.lang.Override
@@ -206,6 +227,12 @@ private static final long serialVersionUID = 0L;
             case 24: {
 
               fresh_ = input.readBool();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fingerprint_ = s;
               break;
             }
           }
@@ -320,6 +347,50 @@ private static final long serialVersionUID = 0L;
       return fresh_;
     }
 
+    public static final int FINGERPRINT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object fingerprint_;
+    /**
+     * <pre>
+     * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+     * server may indicate so.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    public java.lang.String getFingerprint() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fingerprint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+     * server may indicate so.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFingerprintBytes() {
+      java.lang.Object ref = fingerprint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fingerprint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -341,6 +412,9 @@ private static final long serialVersionUID = 0L;
       if (fresh_ != false) {
         output.writeBool(3, fresh_);
       }
+      if (!getFingerprintBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fingerprint_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -359,6 +433,9 @@ private static final long serialVersionUID = 0L;
       if (fresh_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, fresh_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -385,6 +462,8 @@ private static final long serialVersionUID = 0L;
       }
       result = result && (getFresh()
           == other.getFresh());
+      result = result && getFingerprint()
+          .equals(other.getFingerprint());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -405,6 +484,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FRESH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getFresh());
+      hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
+      hash = (53 * hash) + getFingerprint().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -548,6 +629,8 @@ private static final long serialVersionUID = 0L;
         }
         fresh_ = false;
 
+        fingerprint_ = "";
+
         return this;
       }
 
@@ -577,6 +660,7 @@ private static final long serialVersionUID = 0L;
           result.key_ = keyBuilder_.build();
         }
         result.fresh_ = fresh_;
+        result.fingerprint_ = fingerprint_;
         onBuilt();
         return result;
       }
@@ -627,6 +711,10 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getFresh() != false) {
           setFresh(other.getFresh());
+        }
+        if (!other.getFingerprint().isEmpty()) {
+          fingerprint_ = other.fingerprint_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -934,6 +1022,100 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private java.lang.Object fingerprint_ = "";
+      /**
+       * <pre>
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public java.lang.String getFingerprint() {
+        java.lang.Object ref = fingerprint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fingerprint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFingerprintBytes() {
+        java.lang.Object ref = fingerprint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fingerprint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public Builder setFingerprint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public Builder clearFingerprint() {
+        
+        fingerprint_ = getDefaultInstance().getFingerprint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public Builder setFingerprintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fingerprint_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -1039,6 +1221,16 @@ private static final long serialVersionUID = 0L;
      * <code>bool cached = 2;</code>
      */
     boolean getCached();
+
+    /**
+     * <pre>
+     * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+     * server to respond with a 304 Not Modified-style answer.
+     * </pre>
+     *
+     * <code>bool unchanged = 3;</code>
+     */
+    boolean getUnchanged();
   }
   /**
    * <pre>
@@ -1059,6 +1251,7 @@ private static final long serialVersionUID = 0L;
     private Response() {
       product_ = java.util.Collections.emptyList();
       cached_ = false;
+      unchanged_ = false;
     }
 
     @java.lang.Override
@@ -1104,6 +1297,11 @@ private static final long serialVersionUID = 0L;
             case 16: {
 
               cached_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              unchanged_ = input.readBool();
               break;
             }
           }
@@ -1202,6 +1400,20 @@ private static final long serialVersionUID = 0L;
       return cached_;
     }
 
+    public static final int UNCHANGED_FIELD_NUMBER = 3;
+    private boolean unchanged_;
+    /**
+     * <pre>
+     * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+     * server to respond with a 304 Not Modified-style answer.
+     * </pre>
+     *
+     * <code>bool unchanged = 3;</code>
+     */
+    public boolean getUnchanged() {
+      return unchanged_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1220,6 +1432,9 @@ private static final long serialVersionUID = 0L;
       if (cached_ != false) {
         output.writeBool(2, cached_);
       }
+      if (unchanged_ != false) {
+        output.writeBool(3, unchanged_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1235,6 +1450,10 @@ private static final long serialVersionUID = 0L;
       if (cached_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, cached_);
+      }
+      if (unchanged_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, unchanged_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1256,6 +1475,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getProductList());
       result = result && (getCached()
           == other.getCached());
+      result = result && (getUnchanged()
+          == other.getUnchanged());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1274,6 +1495,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CACHED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCached());
+      hash = (37 * hash) + UNCHANGED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnchanged());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1416,6 +1640,8 @@ private static final long serialVersionUID = 0L;
         }
         cached_ = false;
 
+        unchanged_ = false;
+
         return this;
       }
 
@@ -1450,6 +1676,7 @@ private static final long serialVersionUID = 0L;
           result.product_ = productBuilder_.build();
         }
         result.cached_ = cached_;
+        result.unchanged_ = unchanged_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1520,6 +1747,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getCached() != false) {
           setCached(other.getCached());
+        }
+        if (other.getUnchanged() != false) {
+          setUnchanged(other.getUnchanged());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1895,6 +2125,47 @@ private static final long serialVersionUID = 0L;
       public Builder clearCached() {
         
         cached_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean unchanged_ ;
+      /**
+       * <pre>
+       * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+       * server to respond with a 304 Not Modified-style answer.
+       * </pre>
+       *
+       * <code>bool unchanged = 3;</code>
+       */
+      public boolean getUnchanged() {
+        return unchanged_;
+      }
+      /**
+       * <pre>
+       * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+       * server to respond with a 304 Not Modified-style answer.
+       * </pre>
+       *
+       * <code>bool unchanged = 3;</code>
+       */
+      public Builder setUnchanged(boolean value) {
+        
+        unchanged_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+       * server to respond with a 304 Not Modified-style answer.
+       * </pre>
+       *
+       * <code>bool unchanged = 3;</code>
+       */
+      public Builder clearUnchanged() {
+        
+        unchanged_ = false;
         onChanged();
         return this;
       }

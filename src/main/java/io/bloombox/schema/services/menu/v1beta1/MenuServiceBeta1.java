@@ -171,11 +171,12 @@ public final class MenuServiceBeta1 {
       "e\0229\n\010featured\030\001 \003(\0132\'.opencannabis.produ" +
       "cts.menu.MenuProduct\";\n\rProductKeyset\022*\n" +
       "\003key\030\001 \003(\0132\035.opencannabis.base.ProductKe" +
-      "y\"\267\001\n\nGetProduct\032S\n\007Request\022\r\n\005scope\030\001 \001" +
+      "y\"\337\001\n\nGetProduct\032h\n\007Request\022\r\n\005scope\030\001 \001" +
       "(\t\022*\n\003key\030\002 \001(\0132\035.opencannabis.base.Prod" +
-      "uctKey\022\r\n\005fresh\030\003 \001(\010\032T\n\010Response\0228\n\007pro" +
-      "duct\030\001 \003(\0132\'.opencannabis.products.menu." +
-      "MenuProduct\022\016\n\006cached\030\002 \001(\010\"\233\001\n\rCreatePr" +
+      "uctKey\022\r\n\005fresh\030\003 \001(\010\022\023\n\013fingerprint\030\004 \001" +
+      "(\t\032g\n\010Response\0228\n\007product\030\001 \003(\0132\'.openca" +
+      "nnabis.products.menu.MenuProduct\022\016\n\006cach" +
+      "ed\030\002 \001(\010\022\021\n\tunchanged\030\003 \001(\010\"\233\001\n\rCreatePr" +
       "oduct\032R\n\007Request\022\r\n\005scope\030\001 \001(\t\0228\n\007produ" +
       "ct\030\002 \001(\0132\'.opencannabis.products.menu.Me" +
       "nuProduct\0326\n\010Response\022*\n\003key\030\001 \001(\0132\035.ope" +
@@ -197,97 +198,102 @@ public final class MenuServiceBeta1 {
       "LABLE\020\006\022\025\n\021PRODUCT_NOT_FOUND\020\007\022\021\n\rACCESS" +
       "_DENIED\020\010\022\017\n\013KEY_INVALID\020\t\022\022\n\016UPDATE_INV" +
       "ALID\020\n\022\014\n\010CONFLICT\020\013\022\022\n\016INTERNAL_ERROR\020c" +
-      "2\224\030\n\004Menu\022\304\002\n\010Retrieve\0226.bloombox.schema" +
+      "2\320\031\n\004Menu\022\200\002\n\010Retrieve\0226.bloombox.schema" +
       ".services.menu.v1beta1.GetMenu.Request\0327" +
       ".bloombox.schema.services.menu.v1beta1.G" +
-      "etMenu.Response\"\306\001\202\323\344\223\002\201\001\022</menu/v1beta1" +
-      "/{scope=partners/*/locations/*}/global:r" +
-      "etrieveZA\022?/menu/v1beta1/{scope=partners" +
-      "/*/locations/*}/{section}:retrieve\222A;\022\rR" +
-      "etrieve Menu\032 Fetch product catalog/menu" +
-      " data.*\010Retrieve\022\205\003\n\010Featured\022:.bloombox" +
-      ".schema.services.menu.v1beta1.GetFeature" +
-      "d.Request\032;.bloombox.schema.services.men" +
-      "u.v1beta1.GetFeatured.Response\"\377\001\202\323\344\223\002\223\001" +
-      "\022E/menu/v1beta1/{scope=partners/*/locati" +
-      "ons/*}/global/featured:retrieveZJ\022H/menu" +
+      "etMenu.Response\"\202\001\202\323\344\223\002>\022</menu/v1beta1/" +
+      "{scope=partners/*/locations/*}/global:re" +
+      "trieve\222A;\022\rRetrieve Menu\032 Fetch product " +
+      "catalog/menu data.*\010Retrieve\022\375\001\n\007Section" +
+      "\0226.bloombox.schema.services.menu.v1beta1" +
+      ".GetMenu.Request\0327.bloombox.schema.servi" +
+      "ces.menu.v1beta1.GetMenu.Response\"\200\001\202\323\344\223" +
+      "\002A\022?/menu/v1beta1/{scope=partners/*/loca" +
+      "tions/*}/{section}/retrieve\222A6\022\016Sectione" +
+      "d Menu\032\033Fetch menu data by section.*\007Sec" +
+      "tion\022\205\003\n\010Featured\022:.bloombox.schema.serv" +
+      "ices.menu.v1beta1.GetFeatured.Request\032;." +
+      "bloombox.schema.services.menu.v1beta1.Ge" +
+      "tFeatured.Response\"\377\001\202\323\344\223\002\223\001\022E/menu/v1be" +
+      "ta1/{scope=partners/*/locations/*}/globa" +
+      "l/featured:retrieveZJ\022H/menu/v1beta1/{sc" +
+      "ope=partners/*/locations/*}/{section}/fe" +
+      "atured:retrieve\222Ab\022\021Featured Products\032CR" +
+      "etrieve products marked for extra attent" +
+      "ion (\'featured\' products).*\010Featured\022\270\002\n" +
+      "\010Products\0229.bloombox.schema.services.men" +
+      "u.v1beta1.GetProduct.Request\032:.bloombox." +
+      "schema.services.menu.v1beta1.GetProduct." +
+      "Response\"\264\001\202\323\344\223\002R\022P/menu/v1beta1/{scope=" +
+      "partners/*/locations/*}/products/{key.ty" +
+      "pe}/{key.id}/detail\222AY\022\014Product Data\032?Re" +
+      "trieve payload data for one or more prod" +
+      "ucts, by product key.*\010Products\022\366\002\n\006Sear" +
+      "ch\0229.bloombox.schema.services.menu.v1bet" +
+      "a1.SearchMenu.Request\032:.bloombox.schema." +
+      "services.menu.v1beta1.SearchMenu.Respons" +
+      "e\"\364\001\202\323\344\223\002\233\001\022P/menu/v1beta1/{search.optio" +
+      "ns.scope=partners/*/locations/*}/search/" +
+      "{search.term}ZG\"B/menu/v1beta1/{search.o" +
+      "ptions.scope=partners/*/locations/*}/sea" +
+      "rch:\001*\222AO\022\017Search Products\0324Perform a fu" +
+      "lltext search over product catalog data." +
+      "*\006Search\022\236\002\n\006Create\022<.bloombox.schema.se" +
+      "rvices.menu.v1beta1.CreateProduct.Reques" +
+      "t\032=.bloombox.schema.services.menu.v1beta" +
+      "1.CreateProduct.Response\"\226\001\202\323\344\223\002J\"?/menu" +
       "/v1beta1/{scope=partners/*/locations/*}/" +
-      "{section}/featured:retrieve\222Ab\022\021Featured" +
-      " Products\032CRetrieve products marked for " +
-      "extra attention (\'featured\' products).*\010" +
-      "Featured\022\270\002\n\010Products\0229.bloombox.schema." +
-      "services.menu.v1beta1.GetProduct.Request" +
-      "\032:.bloombox.schema.services.menu.v1beta1" +
-      ".GetProduct.Response\"\264\001\202\323\344\223\002R\022P/menu/v1b" +
-      "eta1/{scope=partners/*/locations/*}/prod" +
-      "ucts/{key.type}/{key.id}/detail\222AY\022\014Prod" +
-      "uct Data\032?Retrieve payload data for one " +
-      "or more products, by product key.*\010Produ" +
-      "cts\022\366\002\n\006Search\0229.bloombox.schema.service" +
-      "s.menu.v1beta1.SearchMenu.Request\032:.bloo" +
-      "mbox.schema.services.menu.v1beta1.Search" +
-      "Menu.Response\"\364\001\202\323\344\223\002\233\001\022P/menu/v1beta1/{" +
-      "search.options.scope=partners/*/location" +
-      "s/*}/search/{search.term}ZG\"B/menu/v1bet" +
-      "a1/{search.options.scope=partners/*/loca" +
-      "tions/*}/search:\001*\222AO\022\017Search Products\0324" +
-      "Perform a fulltext search over product c" +
-      "atalog data.*\006Search\022\236\002\n\006Create\022<.bloomb" +
-      "ox.schema.services.menu.v1beta1.CreatePr" +
-      "oduct.Request\032=.bloombox.schema.services" +
-      ".menu.v1beta1.CreateProduct.Response\"\226\001\202" +
-      "\323\344\223\002J\"?/menu/v1beta1/{scope=partners/*/l" +
-      "ocations/*}/{product.key.type}:\007product\222" +
-      "AC\022\016Create Product\032)Create a new product" +
-      " record from scratch.*\006Create\022\217\002\n\006Update" +
-      "\022<.bloombox.schema.services.menu.v1beta1" +
-      ".UpdateProduct.Request\032\026.google.protobuf" +
-      ".Empty\"\256\001\202\323\344\223\002[\032P/menu/v1beta1/{scope=pa" +
-      "rtners/*/locations/*}/{product.key.type}" +
-      "/{product.key.id}:\007product\222AJ\022\016Update Pr" +
-      "oduct\0320Update an existing product record" +
-      " with new data.*\006Update\022\200\002\n\006Delete\022<.blo" +
-      "ombox.schema.services.menu.v1beta1.Delet" +
-      "eProduct.Request\032\026.google.protobuf.Empty" +
-      "\"\237\001\202\323\344\223\002B*@/menu/v1beta1/{scope=partners" +
-      "/*/locations/*}/{key.type}/{key.id}\222AT\022\016" +
-      "Delete Product\032:Mark a product as delete" +
-      "d. This is a recoverable deletion.*\006Dele" +
-      "te\022\201\002\n\rProductStatus\022;.bloombox.schema.s" +
-      "ervices.menu.v1beta1.ProductStock.Reques" +
-      "t\032\026.google.protobuf.Empty\"\232\001\202\323\344\223\002I\022G/men" +
-      "u/v1beta1/{scope=partners/*/locations/*}" +
-      "/{key.type}/{key.id}/status\222AH\022\016Product " +
-      "Status\032.Retrieve stock status for a give" +
-      "n product key.*\006Status\022\235\002\n\007InStock\022;.blo" +
-      "ombox.schema.services.menu.v1beta1.Produ" +
-      "ctStock.Request\032\026.google.protobuf.Empty\"" +
-      "\274\001\202\323\344\223\002R\"P/menu/v1beta1/{scope=partners/" +
-      "*/locations/*}/{key.type}/{key.id}/statu" +
-      "s/in-stock\222Aa\022\025Mark Product In-Stock\032?Ma" +
-      "rk a product as in-stock, or, currently " +
-      "offered for purchase.*\007InStock\022\256\002\n\nOutOf" +
-      "Stock\022;.bloombox.schema.services.menu.v1" +
-      "beta1.ProductStock.Request\032\026.google.prot" +
-      "obuf.Empty\"\312\001\202\323\344\223\002V\"T/menu/v1beta1/{scop" +
-      "e=partners/*/locations/*}/{key.type}/{ke" +
-      "y.id}/status/out-of-stock\222Ak\022\031Mark Produ" +
-      "ct Out-of-Stock\032BMark a product as out-o" +
-      "f-stock, or no longer offered for purcha" +
-      "se.*\nOutOfStockB\207\004\n(io.bloombox.schema.s" +
-      "ervices.menu.v1beta1H\001P\001\242\002\003BBS\222A\317\003\022g\n\010Me" +
-      "nu API\032\031https://bloombox.io/terms\"7\n\010Blo" +
-      "ombox\022\023https://bloombox.io\032\026developers@b" +
-      "loombox.io2\007v1beta1\032\022api.bloombox.cloud*" +
-      "\001\0022\020application/json:\020application/jsonZ\320" +
-      "\001\nd\n\013ApiKeyParam\022U\010\002\022JParameter for iden" +
-      "tifying API key owned by the invoking pr" +
-      "oject or system.\032\003key \001\nh\n\014ApiKeyHeader\022" +
-      "X\010\002\022GHeader for identifying API key owne" +
-      "d by the invoking project or system.\032\tX-" +
-      "API-Key \001b\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKey" +
-      "Header\022\000r/\n\rBloombox APIs\022\036https://apido" +
-      "cs.bloombox.cloudb\006proto3"
+      "{product.key.type}:\007product\222AC\022\016Create P" +
+      "roduct\032)Create a new product record from" +
+      " scratch.*\006Create\022\217\002\n\006Update\022<.bloombox." +
+      "schema.services.menu.v1beta1.UpdateProdu" +
+      "ct.Request\032\026.google.protobuf.Empty\"\256\001\202\323\344" +
+      "\223\002[\032P/menu/v1beta1/{scope=partners/*/loc" +
+      "ations/*}/{product.key.type}/{product.ke" +
+      "y.id}:\007product\222AJ\022\016Update Product\0320Updat" +
+      "e an existing product record with new da" +
+      "ta.*\006Update\022\200\002\n\006Remove\022<.bloombox.schema" +
+      ".services.menu.v1beta1.DeleteProduct.Req" +
+      "uest\032\026.google.protobuf.Empty\"\237\001\202\323\344\223\002B*@/" +
+      "menu/v1beta1/{scope=partners/*/locations" +
+      "/*}/{key.type}/{key.id}\222AT\022\016Delete Produ" +
+      "ct\032:Mark a product as deleted. This is a" +
+      " recoverable deletion.*\006Delete\022\201\002\n\rProdu" +
+      "ctStatus\022;.bloombox.schema.services.menu" +
+      ".v1beta1.ProductStock.Request\032\026.google.p" +
+      "rotobuf.Empty\"\232\001\202\323\344\223\002I\022G/menu/v1beta1/{s" +
+      "cope=partners/*/locations/*}/{key.type}/" +
+      "{key.id}/status\222AH\022\016Product Status\032.Retr" +
+      "ieve stock status for a given product ke" +
+      "y.*\006Status\022\235\002\n\007InStock\022;.bloombox.schema" +
+      ".services.menu.v1beta1.ProductStock.Requ" +
+      "est\032\026.google.protobuf.Empty\"\274\001\202\323\344\223\002R\"P/m" +
+      "enu/v1beta1/{scope=partners/*/locations/" +
+      "*}/{key.type}/{key.id}/status/in-stock\222A" +
+      "a\022\025Mark Product In-Stock\032?Mark a product" +
+      " as in-stock, or, currently offered for " +
+      "purchase.*\007InStock\022\256\002\n\nOutOfStock\022;.bloo" +
+      "mbox.schema.services.menu.v1beta1.Produc" +
+      "tStock.Request\032\026.google.protobuf.Empty\"\312" +
+      "\001\202\323\344\223\002V\"T/menu/v1beta1/{scope=partners/*" +
+      "/locations/*}/{key.type}/{key.id}/status" +
+      "/out-of-stock\222Ak\022\031Mark Product Out-of-St" +
+      "ock\032BMark a product as out-of-stock, or " +
+      "no longer offered for purchase.*\nOutOfSt" +
+      "ockB\207\004\n(io.bloombox.schema.services.menu" +
+      ".v1beta1H\001P\001\242\002\003BBS\222A\317\003\022g\n\010Menu API\032\031http" +
+      "s://bloombox.io/terms\"7\n\010Bloombox\022\023https" +
+      "://bloombox.io\032\026developers@bloombox.io2\007" +
+      "v1beta1\032\022api.bloombox.cloud*\001\0022\020applicat" +
+      "ion/json:\020application/jsonZ\320\001\nd\n\013ApiKeyP" +
+      "aram\022U\010\002\022JParameter for identifying API " +
+      "key owned by the invoking project or sys" +
+      "tem.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader " +
+      "for identifying API key owned by the inv" +
+      "oking project or system.\032\tX-API-Key \001b\021\n" +
+      "\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\r" +
+      "Bloombox APIs\022\036https://apidocs.bloombox." +
+      "cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -380,13 +386,13 @@ public final class MenuServiceBeta1 {
     internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Request_descriptor,
-        new java.lang.String[] { "Scope", "Key", "Fresh", });
+        new java.lang.String[] { "Scope", "Key", "Fresh", "Fingerprint", });
     internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_descriptor =
       internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_descriptor,
-        new java.lang.String[] { "Product", "Cached", });
+        new java.lang.String[] { "Product", "Cached", "Unchanged", });
     internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_fieldAccessorTable = new

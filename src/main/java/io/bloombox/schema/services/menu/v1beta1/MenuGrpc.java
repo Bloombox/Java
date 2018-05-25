@@ -43,6 +43,18 @@ public final class MenuGrpc {
               io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+      io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> METHOD_SECTION =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetMenu.Request, io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.menu.v1beta1.Menu", "Section"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.menu.v1beta1.GetMenu.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.menu.v1beta1.GetMenu.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request,
       io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response> METHOD_FEATURED =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request, io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response>newBuilder()
@@ -104,11 +116,11 @@ public final class MenuGrpc {
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request,
-      com.google.protobuf.Empty> METHOD_DELETE =
+      com.google.protobuf.Empty> METHOD_REMOVE =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request, com.google.protobuf.Empty>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
-              "bloombox.schema.services.menu.v1beta1.Menu", "Delete"))
+              "bloombox.schema.services.menu.v1beta1.Menu", "Remove"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -183,12 +195,22 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to read a full or sectioned menu.
+     * Specifies an operation to read a full menu.
      * </pre>
      */
     public void retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_RETRIEVE, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Specifies an operation to read a sectioned menu.
+     * </pre>
+     */
+    public void section(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SECTION, responseObserver);
     }
 
     /**
@@ -246,9 +268,9 @@ public final class MenuGrpc {
      * Mark a product as deleted.
      * </pre>
      */
-    public void delete(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request,
+    public void remove(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_DELETE, responseObserver);
+      asyncUnimplementedUnaryCall(METHOD_REMOVE, responseObserver);
     }
 
     /**
@@ -291,6 +313,13 @@ public final class MenuGrpc {
                 io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>(
                   this, METHODID_RETRIEVE)))
           .addMethod(
+            METHOD_SECTION,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.Request,
+                io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>(
+                  this, METHODID_SECTION)))
+          .addMethod(
             METHOD_FEATURED,
             asyncUnaryCall(
               new MethodHandlers<
@@ -326,12 +355,12 @@ public final class MenuGrpc {
                 com.google.protobuf.Empty>(
                   this, METHODID_UPDATE)))
           .addMethod(
-            METHOD_DELETE,
+            METHOD_REMOVE,
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request,
                 com.google.protobuf.Empty>(
-                  this, METHODID_DELETE)))
+                  this, METHODID_REMOVE)))
           .addMethod(
             METHOD_PRODUCT_STATUS,
             asyncUnaryCall(
@@ -380,13 +409,24 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to read a full or sectioned menu.
+     * Specifies an operation to read a full menu.
      * </pre>
      */
     public void retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Specifies an operation to read a sectioned menu.
+     * </pre>
+     */
+    public void section(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SECTION, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -449,10 +489,10 @@ public final class MenuGrpc {
      * Mark a product as deleted.
      * </pre>
      */
-    public void delete(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request,
+    public void remove(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(METHOD_DELETE, getCallOptions()), request, responseObserver);
+          getChannel().newCall(METHOD_REMOVE, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -512,12 +552,22 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to read a full or sectioned menu.
+     * Specifies an operation to read a full menu.
      * </pre>
      */
     public io.bloombox.schema.services.menu.v1beta1.GetMenu.Response retrieve(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_RETRIEVE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Specifies an operation to read a sectioned menu.
+     * </pre>
+     */
+    public io.bloombox.schema.services.menu.v1beta1.GetMenu.Response section(io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SECTION, getCallOptions(), request);
     }
 
     /**
@@ -575,9 +625,9 @@ public final class MenuGrpc {
      * Mark a product as deleted.
      * </pre>
      */
-    public com.google.protobuf.Empty delete(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request) {
+    public com.google.protobuf.Empty remove(io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request) {
       return blockingUnaryCall(
-          getChannel(), METHOD_DELETE, getCallOptions(), request);
+          getChannel(), METHOD_REMOVE, getCallOptions(), request);
     }
 
     /**
@@ -634,13 +684,24 @@ public final class MenuGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to read a full or sectioned menu.
+     * Specifies an operation to read a full menu.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> retrieve(
         io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Specifies an operation to read a sectioned menu.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response> section(
+        io.bloombox.schema.services.menu.v1beta1.GetMenu.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SECTION, getCallOptions()), request);
     }
 
     /**
@@ -703,10 +764,10 @@ public final class MenuGrpc {
      * Mark a product as deleted.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> delete(
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> remove(
         io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request request) {
       return futureUnaryCall(
-          getChannel().newCall(METHOD_DELETE, getCallOptions()), request);
+          getChannel().newCall(METHOD_REMOVE, getCallOptions()), request);
     }
 
     /**
@@ -744,15 +805,16 @@ public final class MenuGrpc {
   }
 
   private static final int METHODID_RETRIEVE = 0;
-  private static final int METHODID_FEATURED = 1;
-  private static final int METHODID_PRODUCTS = 2;
-  private static final int METHODID_SEARCH = 3;
-  private static final int METHODID_CREATE = 4;
-  private static final int METHODID_UPDATE = 5;
-  private static final int METHODID_DELETE = 6;
-  private static final int METHODID_PRODUCT_STATUS = 7;
-  private static final int METHODID_IN_STOCK = 8;
-  private static final int METHODID_OUT_OF_STOCK = 9;
+  private static final int METHODID_SECTION = 1;
+  private static final int METHODID_FEATURED = 2;
+  private static final int METHODID_PRODUCTS = 3;
+  private static final int METHODID_SEARCH = 4;
+  private static final int METHODID_CREATE = 5;
+  private static final int METHODID_UPDATE = 6;
+  private static final int METHODID_REMOVE = 7;
+  private static final int METHODID_PRODUCT_STATUS = 8;
+  private static final int METHODID_IN_STOCK = 9;
+  private static final int METHODID_OUT_OF_STOCK = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -775,6 +837,10 @@ public final class MenuGrpc {
           serviceImpl.retrieve((io.bloombox.schema.services.menu.v1beta1.GetMenu.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>) responseObserver);
           break;
+        case METHODID_SECTION:
+          serviceImpl.section((io.bloombox.schema.services.menu.v1beta1.GetMenu.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetMenu.Response>) responseObserver);
+          break;
         case METHODID_FEATURED:
           serviceImpl.featured((io.bloombox.schema.services.menu.v1beta1.GetFeatured.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.menu.v1beta1.GetFeatured.Response>) responseObserver);
@@ -795,8 +861,8 @@ public final class MenuGrpc {
           serviceImpl.update((io.bloombox.schema.services.menu.v1beta1.UpdateProduct.Request) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
-        case METHODID_DELETE:
-          serviceImpl.delete((io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request) request,
+        case METHODID_REMOVE:
+          serviceImpl.remove((io.bloombox.schema.services.menu.v1beta1.DeleteProduct.Request) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_PRODUCT_STATUS:
@@ -845,12 +911,13 @@ public final class MenuGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MenuDescriptorSupplier())
               .addMethod(METHOD_RETRIEVE)
+              .addMethod(METHOD_SECTION)
               .addMethod(METHOD_FEATURED)
               .addMethod(METHOD_PRODUCTS)
               .addMethod(METHOD_SEARCH)
               .addMethod(METHOD_CREATE)
               .addMethod(METHOD_UPDATE)
-              .addMethod(METHOD_DELETE)
+              .addMethod(METHOD_REMOVE)
               .addMethod(METHOD_PRODUCT_STATUS)
               .addMethod(METHOD_IN_STOCK)
               .addMethod(METHOD_OUT_OF_STOCK)
