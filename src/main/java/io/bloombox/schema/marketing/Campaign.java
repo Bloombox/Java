@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     id_ = "";
     name_ = "";
     status_ = 0;
+    channel_ = java.util.Collections.emptyList();
     tag_ = java.util.Collections.emptyList();
     group_ = java.util.Collections.emptyList();
     created_ = 0L;
@@ -80,37 +81,6 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            io.bloombox.schema.marketing.ChannelSettings.Builder subBuilder = null;
-            if (channels_ != null) {
-              subBuilder = channels_.toBuilder();
-            }
-            channels_ = input.readMessage(io.bloombox.schema.marketing.ChannelSettings.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(channels_);
-              channels_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-              tag_ = new java.util.ArrayList<io.bloombox.schema.marketing.CampaignTag>();
-              mutable_bitField0_ |= 0x00000010;
-            }
-            tag_.add(
-                input.readMessage(io.bloombox.schema.marketing.CampaignTag.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-              group_ = new java.util.ArrayList<io.bloombox.schema.marketing.AdGroup>();
-              mutable_bitField0_ |= 0x00000020;
-            }
-            group_.add(
-                input.readMessage(io.bloombox.schema.marketing.AdGroup.parser(), extensionRegistry));
-            break;
-          }
-          case 58: {
             io.bloombox.schema.marketing.CampaignTargeting.Builder subBuilder = null;
             if (targeting_ != null) {
               subBuilder = targeting_.toBuilder();
@@ -121,6 +91,33 @@ private static final long serialVersionUID = 0L;
               targeting_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 42: {
+            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              channel_ = new java.util.ArrayList<io.bloombox.schema.marketing.ChannelSettings>();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            channel_.add(
+                input.readMessage(io.bloombox.schema.marketing.ChannelSettings.parser(), extensionRegistry));
+            break;
+          }
+          case 50: {
+            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              tag_ = new java.util.ArrayList<io.bloombox.schema.marketing.CampaignTag>();
+              mutable_bitField0_ |= 0x00000020;
+            }
+            tag_.add(
+                input.readMessage(io.bloombox.schema.marketing.CampaignTag.parser(), extensionRegistry));
+            break;
+          }
+          case 58: {
+            if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              group_ = new java.util.ArrayList<io.bloombox.schema.marketing.AdGroup>();
+              mutable_bitField0_ |= 0x00000040;
+            }
+            group_.add(
+                input.readMessage(io.bloombox.schema.marketing.AdGroup.parser(), extensionRegistry));
             break;
           }
           case 64: {
@@ -142,9 +139,12 @@ private static final long serialVersionUID = 0L;
           e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-        tag_ = java.util.Collections.unmodifiableList(tag_);
+        channel_ = java.util.Collections.unmodifiableList(channel_);
       }
       if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        tag_ = java.util.Collections.unmodifiableList(tag_);
+      }
+      if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
         group_ = java.util.Collections.unmodifiableList(group_);
       }
       this.unknownFields = unknownFields.build();
@@ -272,47 +272,102 @@ private static final long serialVersionUID = 0L;
     return result == null ? io.bloombox.schema.marketing.CampaignStatus.UNRECOGNIZED : result;
   }
 
-  public static final int CHANNELS_FIELD_NUMBER = 4;
-  private io.bloombox.schema.marketing.ChannelSettings channels_;
+  public static final int TARGETING_FIELD_NUMBER = 4;
+  private io.bloombox.schema.marketing.CampaignTargeting targeting_;
   /**
    * <pre>
-   * Distribution/channel settings for this campaign.
+   * Campaign audience targeting settings.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
+   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
    */
-  public boolean hasChannels() {
-    return channels_ != null;
+  public boolean hasTargeting() {
+    return targeting_ != null;
   }
   /**
    * <pre>
-   * Distribution/channel settings for this campaign.
+   * Campaign audience targeting settings.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
+   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
    */
-  public io.bloombox.schema.marketing.ChannelSettings getChannels() {
-    return channels_ == null ? io.bloombox.schema.marketing.ChannelSettings.getDefaultInstance() : channels_;
+  public io.bloombox.schema.marketing.CampaignTargeting getTargeting() {
+    return targeting_ == null ? io.bloombox.schema.marketing.CampaignTargeting.getDefaultInstance() : targeting_;
   }
   /**
    * <pre>
-   * Distribution/channel settings for this campaign.
+   * Campaign audience targeting settings.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
+   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
    */
-  public io.bloombox.schema.marketing.ChannelSettingsOrBuilder getChannelsOrBuilder() {
-    return getChannels();
+  public io.bloombox.schema.marketing.CampaignTargetingOrBuilder getTargetingOrBuilder() {
+    return getTargeting();
   }
 
-  public static final int TAG_FIELD_NUMBER = 5;
+  public static final int CHANNEL_FIELD_NUMBER = 5;
+  private java.util.List<io.bloombox.schema.marketing.ChannelSettings> channel_;
+  /**
+   * <pre>
+   * Distribution/channel settings for this campaign.
+   * </pre>
+   *
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+   */
+  public java.util.List<io.bloombox.schema.marketing.ChannelSettings> getChannelList() {
+    return channel_;
+  }
+  /**
+   * <pre>
+   * Distribution/channel settings for this campaign.
+   * </pre>
+   *
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+   */
+  public java.util.List<? extends io.bloombox.schema.marketing.ChannelSettingsOrBuilder> 
+      getChannelOrBuilderList() {
+    return channel_;
+  }
+  /**
+   * <pre>
+   * Distribution/channel settings for this campaign.
+   * </pre>
+   *
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+   */
+  public int getChannelCount() {
+    return channel_.size();
+  }
+  /**
+   * <pre>
+   * Distribution/channel settings for this campaign.
+   * </pre>
+   *
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+   */
+  public io.bloombox.schema.marketing.ChannelSettings getChannel(int index) {
+    return channel_.get(index);
+  }
+  /**
+   * <pre>
+   * Distribution/channel settings for this campaign.
+   * </pre>
+   *
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+   */
+  public io.bloombox.schema.marketing.ChannelSettingsOrBuilder getChannelOrBuilder(
+      int index) {
+    return channel_.get(index);
+  }
+
+  public static final int TAG_FIELD_NUMBER = 6;
   private java.util.List<io.bloombox.schema.marketing.CampaignTag> tag_;
   /**
    * <pre>
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   public java.util.List<io.bloombox.schema.marketing.CampaignTag> getTagList() {
     return tag_;
@@ -322,7 +377,7 @@ private static final long serialVersionUID = 0L;
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   public java.util.List<? extends io.bloombox.schema.marketing.CampaignTagOrBuilder> 
       getTagOrBuilderList() {
@@ -333,7 +388,7 @@ private static final long serialVersionUID = 0L;
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   public int getTagCount() {
     return tag_.size();
@@ -343,7 +398,7 @@ private static final long serialVersionUID = 0L;
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   public io.bloombox.schema.marketing.CampaignTag getTag(int index) {
     return tag_.get(index);
@@ -353,21 +408,21 @@ private static final long serialVersionUID = 0L;
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   public io.bloombox.schema.marketing.CampaignTagOrBuilder getTagOrBuilder(
       int index) {
     return tag_.get(index);
   }
 
-  public static final int GROUP_FIELD_NUMBER = 6;
+  public static final int GROUP_FIELD_NUMBER = 7;
   private java.util.List<io.bloombox.schema.marketing.AdGroup> group_;
   /**
    * <pre>
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   public java.util.List<io.bloombox.schema.marketing.AdGroup> getGroupList() {
     return group_;
@@ -377,7 +432,7 @@ private static final long serialVersionUID = 0L;
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   public java.util.List<? extends io.bloombox.schema.marketing.AdGroupOrBuilder> 
       getGroupOrBuilderList() {
@@ -388,7 +443,7 @@ private static final long serialVersionUID = 0L;
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   public int getGroupCount() {
     return group_.size();
@@ -398,7 +453,7 @@ private static final long serialVersionUID = 0L;
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   public io.bloombox.schema.marketing.AdGroup getGroup(int index) {
     return group_.get(index);
@@ -408,44 +463,11 @@ private static final long serialVersionUID = 0L;
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   public io.bloombox.schema.marketing.AdGroupOrBuilder getGroupOrBuilder(
       int index) {
     return group_.get(index);
-  }
-
-  public static final int TARGETING_FIELD_NUMBER = 7;
-  private io.bloombox.schema.marketing.CampaignTargeting targeting_;
-  /**
-   * <pre>
-   * Campaign audience targeting settings.
-   * </pre>
-   *
-   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
-   */
-  public boolean hasTargeting() {
-    return targeting_ != null;
-  }
-  /**
-   * <pre>
-   * Campaign audience targeting settings.
-   * </pre>
-   *
-   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
-   */
-  public io.bloombox.schema.marketing.CampaignTargeting getTargeting() {
-    return targeting_ == null ? io.bloombox.schema.marketing.CampaignTargeting.getDefaultInstance() : targeting_;
-  }
-  /**
-   * <pre>
-   * Campaign audience targeting settings.
-   * </pre>
-   *
-   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
-   */
-  public io.bloombox.schema.marketing.CampaignTargetingOrBuilder getTargetingOrBuilder() {
-    return getTargeting();
   }
 
   public static final int CREATED_FIELD_NUMBER = 8;
@@ -495,17 +517,17 @@ private static final long serialVersionUID = 0L;
     if (status_ != io.bloombox.schema.marketing.CampaignStatus.DRAFT.getNumber()) {
       output.writeEnum(3, status_);
     }
-    if (channels_ != null) {
-      output.writeMessage(4, getChannels());
+    if (targeting_ != null) {
+      output.writeMessage(4, getTargeting());
+    }
+    for (int i = 0; i < channel_.size(); i++) {
+      output.writeMessage(5, channel_.get(i));
     }
     for (int i = 0; i < tag_.size(); i++) {
-      output.writeMessage(5, tag_.get(i));
+      output.writeMessage(6, tag_.get(i));
     }
     for (int i = 0; i < group_.size(); i++) {
-      output.writeMessage(6, group_.get(i));
-    }
-    if (targeting_ != null) {
-      output.writeMessage(7, getTargeting());
+      output.writeMessage(7, group_.get(i));
     }
     if (created_ != 0L) {
       output.writeUInt64(8, created_);
@@ -531,21 +553,21 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, status_);
     }
-    if (channels_ != null) {
+    if (targeting_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, getChannels());
+        .computeMessageSize(4, getTargeting());
+    }
+    for (int i = 0; i < channel_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, channel_.get(i));
     }
     for (int i = 0; i < tag_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, tag_.get(i));
+        .computeMessageSize(6, tag_.get(i));
     }
     for (int i = 0; i < group_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, group_.get(i));
-    }
-    if (targeting_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getTargeting());
+        .computeMessageSize(7, group_.get(i));
     }
     if (created_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
@@ -576,20 +598,17 @@ private static final long serialVersionUID = 0L;
     result = result && getName()
         .equals(other.getName());
     result = result && status_ == other.status_;
-    result = result && (hasChannels() == other.hasChannels());
-    if (hasChannels()) {
-      result = result && getChannels()
-          .equals(other.getChannels());
-    }
-    result = result && getTagList()
-        .equals(other.getTagList());
-    result = result && getGroupList()
-        .equals(other.getGroupList());
     result = result && (hasTargeting() == other.hasTargeting());
     if (hasTargeting()) {
       result = result && getTargeting()
           .equals(other.getTargeting());
     }
+    result = result && getChannelList()
+        .equals(other.getChannelList());
+    result = result && getTagList()
+        .equals(other.getTagList());
+    result = result && getGroupList()
+        .equals(other.getGroupList());
     result = result && (getCreated()
         == other.getCreated());
     result = result && (getModified()
@@ -611,9 +630,13 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
-    if (hasChannels()) {
-      hash = (37 * hash) + CHANNELS_FIELD_NUMBER;
-      hash = (53 * hash) + getChannels().hashCode();
+    if (hasTargeting()) {
+      hash = (37 * hash) + TARGETING_FIELD_NUMBER;
+      hash = (53 * hash) + getTargeting().hashCode();
+    }
+    if (getChannelCount() > 0) {
+      hash = (37 * hash) + CHANNEL_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelList().hashCode();
     }
     if (getTagCount() > 0) {
       hash = (37 * hash) + TAG_FIELD_NUMBER;
@@ -622,10 +645,6 @@ private static final long serialVersionUID = 0L;
     if (getGroupCount() > 0) {
       hash = (37 * hash) + GROUP_FIELD_NUMBER;
       hash = (53 * hash) + getGroupList().hashCode();
-    }
-    if (hasTargeting()) {
-      hash = (37 * hash) + TARGETING_FIELD_NUMBER;
-      hash = (53 * hash) + getTargeting().hashCode();
     }
     hash = (37 * hash) + CREATED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -763,6 +782,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getChannelFieldBuilder();
         getTagFieldBuilder();
         getGroupFieldBuilder();
       }
@@ -775,29 +795,29 @@ private static final long serialVersionUID = 0L;
 
       status_ = 0;
 
-      if (channelsBuilder_ == null) {
-        channels_ = null;
-      } else {
-        channels_ = null;
-        channelsBuilder_ = null;
-      }
-      if (tagBuilder_ == null) {
-        tag_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
-      } else {
-        tagBuilder_.clear();
-      }
-      if (groupBuilder_ == null) {
-        group_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
-      } else {
-        groupBuilder_.clear();
-      }
       if (targetingBuilder_ == null) {
         targeting_ = null;
       } else {
         targeting_ = null;
         targetingBuilder_ = null;
+      }
+      if (channelBuilder_ == null) {
+        channel_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      } else {
+        channelBuilder_.clear();
+      }
+      if (tagBuilder_ == null) {
+        tag_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+      } else {
+        tagBuilder_.clear();
+      }
+      if (groupBuilder_ == null) {
+        group_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+      } else {
+        groupBuilder_.clear();
       }
       created_ = 0L;
 
@@ -830,33 +850,37 @@ private static final long serialVersionUID = 0L;
       result.id_ = id_;
       result.name_ = name_;
       result.status_ = status_;
-      if (channelsBuilder_ == null) {
-        result.channels_ = channels_;
+      if (targetingBuilder_ == null) {
+        result.targeting_ = targeting_;
       } else {
-        result.channels_ = channelsBuilder_.build();
+        result.targeting_ = targetingBuilder_.build();
+      }
+      if (channelBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          channel_ = java.util.Collections.unmodifiableList(channel_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.channel_ = channel_;
+      } else {
+        result.channel_ = channelBuilder_.build();
       }
       if (tagBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
           tag_ = java.util.Collections.unmodifiableList(tag_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.tag_ = tag_;
       } else {
         result.tag_ = tagBuilder_.build();
       }
       if (groupBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
           group_ = java.util.Collections.unmodifiableList(group_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.group_ = group_;
       } else {
         result.group_ = groupBuilder_.build();
-      }
-      if (targetingBuilder_ == null) {
-        result.targeting_ = targeting_;
-      } else {
-        result.targeting_ = targetingBuilder_.build();
       }
       result.created_ = created_;
       result.modified_ = modified_;
@@ -913,14 +937,40 @@ private static final long serialVersionUID = 0L;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
-      if (other.hasChannels()) {
-        mergeChannels(other.getChannels());
+      if (other.hasTargeting()) {
+        mergeTargeting(other.getTargeting());
+      }
+      if (channelBuilder_ == null) {
+        if (!other.channel_.isEmpty()) {
+          if (channel_.isEmpty()) {
+            channel_ = other.channel_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureChannelIsMutable();
+            channel_.addAll(other.channel_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.channel_.isEmpty()) {
+          if (channelBuilder_.isEmpty()) {
+            channelBuilder_.dispose();
+            channelBuilder_ = null;
+            channel_ = other.channel_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            channelBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getChannelFieldBuilder() : null;
+          } else {
+            channelBuilder_.addAllMessages(other.channel_);
+          }
+        }
       }
       if (tagBuilder_ == null) {
         if (!other.tag_.isEmpty()) {
           if (tag_.isEmpty()) {
             tag_ = other.tag_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureTagIsMutable();
             tag_.addAll(other.tag_);
@@ -933,7 +983,7 @@ private static final long serialVersionUID = 0L;
             tagBuilder_.dispose();
             tagBuilder_ = null;
             tag_ = other.tag_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             tagBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTagFieldBuilder() : null;
@@ -946,7 +996,7 @@ private static final long serialVersionUID = 0L;
         if (!other.group_.isEmpty()) {
           if (group_.isEmpty()) {
             group_ = other.group_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureGroupIsMutable();
             group_.addAll(other.group_);
@@ -959,7 +1009,7 @@ private static final long serialVersionUID = 0L;
             groupBuilder_.dispose();
             groupBuilder_ = null;
             group_ = other.group_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
             groupBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getGroupFieldBuilder() : null;
@@ -967,9 +1017,6 @@ private static final long serialVersionUID = 0L;
             groupBuilder_.addAllMessages(other.group_);
           }
         }
-      }
-      if (other.hasTargeting()) {
-        mergeTargeting(other.getTargeting());
       }
       if (other.getCreated() != 0L) {
         setCreated(other.getCreated());
@@ -1247,783 +1294,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.marketing.ChannelSettings channels_ = null;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.marketing.ChannelSettings, io.bloombox.schema.marketing.ChannelSettings.Builder, io.bloombox.schema.marketing.ChannelSettingsOrBuilder> channelsBuilder_;
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    public boolean hasChannels() {
-      return channelsBuilder_ != null || channels_ != null;
-    }
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    public io.bloombox.schema.marketing.ChannelSettings getChannels() {
-      if (channelsBuilder_ == null) {
-        return channels_ == null ? io.bloombox.schema.marketing.ChannelSettings.getDefaultInstance() : channels_;
-      } else {
-        return channelsBuilder_.getMessage();
-      }
-    }
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    public Builder setChannels(io.bloombox.schema.marketing.ChannelSettings value) {
-      if (channelsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        channels_ = value;
-        onChanged();
-      } else {
-        channelsBuilder_.setMessage(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    public Builder setChannels(
-        io.bloombox.schema.marketing.ChannelSettings.Builder builderForValue) {
-      if (channelsBuilder_ == null) {
-        channels_ = builderForValue.build();
-        onChanged();
-      } else {
-        channelsBuilder_.setMessage(builderForValue.build());
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    public Builder mergeChannels(io.bloombox.schema.marketing.ChannelSettings value) {
-      if (channelsBuilder_ == null) {
-        if (channels_ != null) {
-          channels_ =
-            io.bloombox.schema.marketing.ChannelSettings.newBuilder(channels_).mergeFrom(value).buildPartial();
-        } else {
-          channels_ = value;
-        }
-        onChanged();
-      } else {
-        channelsBuilder_.mergeFrom(value);
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    public Builder clearChannels() {
-      if (channelsBuilder_ == null) {
-        channels_ = null;
-        onChanged();
-      } else {
-        channels_ = null;
-        channelsBuilder_ = null;
-      }
-
-      return this;
-    }
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    public io.bloombox.schema.marketing.ChannelSettings.Builder getChannelsBuilder() {
-      
-      onChanged();
-      return getChannelsFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    public io.bloombox.schema.marketing.ChannelSettingsOrBuilder getChannelsOrBuilder() {
-      if (channelsBuilder_ != null) {
-        return channelsBuilder_.getMessageOrBuilder();
-      } else {
-        return channels_ == null ?
-            io.bloombox.schema.marketing.ChannelSettings.getDefaultInstance() : channels_;
-      }
-    }
-    /**
-     * <pre>
-     * Distribution/channel settings for this campaign.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.marketing.ChannelSettings, io.bloombox.schema.marketing.ChannelSettings.Builder, io.bloombox.schema.marketing.ChannelSettingsOrBuilder> 
-        getChannelsFieldBuilder() {
-      if (channelsBuilder_ == null) {
-        channelsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.marketing.ChannelSettings, io.bloombox.schema.marketing.ChannelSettings.Builder, io.bloombox.schema.marketing.ChannelSettingsOrBuilder>(
-                getChannels(),
-                getParentForChildren(),
-                isClean());
-        channels_ = null;
-      }
-      return channelsBuilder_;
-    }
-
-    private java.util.List<io.bloombox.schema.marketing.CampaignTag> tag_ =
-      java.util.Collections.emptyList();
-    private void ensureTagIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-        tag_ = new java.util.ArrayList<io.bloombox.schema.marketing.CampaignTag>(tag_);
-        bitField0_ |= 0x00000010;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.bloombox.schema.marketing.CampaignTag, io.bloombox.schema.marketing.CampaignTag.Builder, io.bloombox.schema.marketing.CampaignTagOrBuilder> tagBuilder_;
-
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public java.util.List<io.bloombox.schema.marketing.CampaignTag> getTagList() {
-      if (tagBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(tag_);
-      } else {
-        return tagBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public int getTagCount() {
-      if (tagBuilder_ == null) {
-        return tag_.size();
-      } else {
-        return tagBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public io.bloombox.schema.marketing.CampaignTag getTag(int index) {
-      if (tagBuilder_ == null) {
-        return tag_.get(index);
-      } else {
-        return tagBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder setTag(
-        int index, io.bloombox.schema.marketing.CampaignTag value) {
-      if (tagBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTagIsMutable();
-        tag_.set(index, value);
-        onChanged();
-      } else {
-        tagBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder setTag(
-        int index, io.bloombox.schema.marketing.CampaignTag.Builder builderForValue) {
-      if (tagBuilder_ == null) {
-        ensureTagIsMutable();
-        tag_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        tagBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder addTag(io.bloombox.schema.marketing.CampaignTag value) {
-      if (tagBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTagIsMutable();
-        tag_.add(value);
-        onChanged();
-      } else {
-        tagBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder addTag(
-        int index, io.bloombox.schema.marketing.CampaignTag value) {
-      if (tagBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureTagIsMutable();
-        tag_.add(index, value);
-        onChanged();
-      } else {
-        tagBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder addTag(
-        io.bloombox.schema.marketing.CampaignTag.Builder builderForValue) {
-      if (tagBuilder_ == null) {
-        ensureTagIsMutable();
-        tag_.add(builderForValue.build());
-        onChanged();
-      } else {
-        tagBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder addTag(
-        int index, io.bloombox.schema.marketing.CampaignTag.Builder builderForValue) {
-      if (tagBuilder_ == null) {
-        ensureTagIsMutable();
-        tag_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        tagBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder addAllTag(
-        java.lang.Iterable<? extends io.bloombox.schema.marketing.CampaignTag> values) {
-      if (tagBuilder_ == null) {
-        ensureTagIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tag_);
-        onChanged();
-      } else {
-        tagBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder clearTag() {
-      if (tagBuilder_ == null) {
-        tag_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
-      } else {
-        tagBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public Builder removeTag(int index) {
-      if (tagBuilder_ == null) {
-        ensureTagIsMutable();
-        tag_.remove(index);
-        onChanged();
-      } else {
-        tagBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public io.bloombox.schema.marketing.CampaignTag.Builder getTagBuilder(
-        int index) {
-      return getTagFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public io.bloombox.schema.marketing.CampaignTagOrBuilder getTagOrBuilder(
-        int index) {
-      if (tagBuilder_ == null) {
-        return tag_.get(index);  } else {
-        return tagBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public java.util.List<? extends io.bloombox.schema.marketing.CampaignTagOrBuilder> 
-         getTagOrBuilderList() {
-      if (tagBuilder_ != null) {
-        return tagBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(tag_);
-      }
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public io.bloombox.schema.marketing.CampaignTag.Builder addTagBuilder() {
-      return getTagFieldBuilder().addBuilder(
-          io.bloombox.schema.marketing.CampaignTag.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public io.bloombox.schema.marketing.CampaignTag.Builder addTagBuilder(
-        int index) {
-      return getTagFieldBuilder().addBuilder(
-          index, io.bloombox.schema.marketing.CampaignTag.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Tags for this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
-     */
-    public java.util.List<io.bloombox.schema.marketing.CampaignTag.Builder> 
-         getTagBuilderList() {
-      return getTagFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.bloombox.schema.marketing.CampaignTag, io.bloombox.schema.marketing.CampaignTag.Builder, io.bloombox.schema.marketing.CampaignTagOrBuilder> 
-        getTagFieldBuilder() {
-      if (tagBuilder_ == null) {
-        tagBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            io.bloombox.schema.marketing.CampaignTag, io.bloombox.schema.marketing.CampaignTag.Builder, io.bloombox.schema.marketing.CampaignTagOrBuilder>(
-                tag_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
-                getParentForChildren(),
-                isClean());
-        tag_ = null;
-      }
-      return tagBuilder_;
-    }
-
-    private java.util.List<io.bloombox.schema.marketing.AdGroup> group_ =
-      java.util.Collections.emptyList();
-    private void ensureGroupIsMutable() {
-      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-        group_ = new java.util.ArrayList<io.bloombox.schema.marketing.AdGroup>(group_);
-        bitField0_ |= 0x00000020;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.bloombox.schema.marketing.AdGroup, io.bloombox.schema.marketing.AdGroup.Builder, io.bloombox.schema.marketing.AdGroupOrBuilder> groupBuilder_;
-
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public java.util.List<io.bloombox.schema.marketing.AdGroup> getGroupList() {
-      if (groupBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(group_);
-      } else {
-        return groupBuilder_.getMessageList();
-      }
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public int getGroupCount() {
-      if (groupBuilder_ == null) {
-        return group_.size();
-      } else {
-        return groupBuilder_.getCount();
-      }
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public io.bloombox.schema.marketing.AdGroup getGroup(int index) {
-      if (groupBuilder_ == null) {
-        return group_.get(index);
-      } else {
-        return groupBuilder_.getMessage(index);
-      }
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder setGroup(
-        int index, io.bloombox.schema.marketing.AdGroup value) {
-      if (groupBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureGroupIsMutable();
-        group_.set(index, value);
-        onChanged();
-      } else {
-        groupBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder setGroup(
-        int index, io.bloombox.schema.marketing.AdGroup.Builder builderForValue) {
-      if (groupBuilder_ == null) {
-        ensureGroupIsMutable();
-        group_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        groupBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder addGroup(io.bloombox.schema.marketing.AdGroup value) {
-      if (groupBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureGroupIsMutable();
-        group_.add(value);
-        onChanged();
-      } else {
-        groupBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder addGroup(
-        int index, io.bloombox.schema.marketing.AdGroup value) {
-      if (groupBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureGroupIsMutable();
-        group_.add(index, value);
-        onChanged();
-      } else {
-        groupBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder addGroup(
-        io.bloombox.schema.marketing.AdGroup.Builder builderForValue) {
-      if (groupBuilder_ == null) {
-        ensureGroupIsMutable();
-        group_.add(builderForValue.build());
-        onChanged();
-      } else {
-        groupBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder addGroup(
-        int index, io.bloombox.schema.marketing.AdGroup.Builder builderForValue) {
-      if (groupBuilder_ == null) {
-        ensureGroupIsMutable();
-        group_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        groupBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder addAllGroup(
-        java.lang.Iterable<? extends io.bloombox.schema.marketing.AdGroup> values) {
-      if (groupBuilder_ == null) {
-        ensureGroupIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, group_);
-        onChanged();
-      } else {
-        groupBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder clearGroup() {
-      if (groupBuilder_ == null) {
-        group_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
-      } else {
-        groupBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public Builder removeGroup(int index) {
-      if (groupBuilder_ == null) {
-        ensureGroupIsMutable();
-        group_.remove(index);
-        onChanged();
-      } else {
-        groupBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public io.bloombox.schema.marketing.AdGroup.Builder getGroupBuilder(
-        int index) {
-      return getGroupFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public io.bloombox.schema.marketing.AdGroupOrBuilder getGroupOrBuilder(
-        int index) {
-      if (groupBuilder_ == null) {
-        return group_.get(index);  } else {
-        return groupBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public java.util.List<? extends io.bloombox.schema.marketing.AdGroupOrBuilder> 
-         getGroupOrBuilderList() {
-      if (groupBuilder_ != null) {
-        return groupBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(group_);
-      }
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public io.bloombox.schema.marketing.AdGroup.Builder addGroupBuilder() {
-      return getGroupFieldBuilder().addBuilder(
-          io.bloombox.schema.marketing.AdGroup.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public io.bloombox.schema.marketing.AdGroup.Builder addGroupBuilder(
-        int index) {
-      return getGroupFieldBuilder().addBuilder(
-          index, io.bloombox.schema.marketing.AdGroup.getDefaultInstance());
-    }
-    /**
-     * <pre>
-     * Ad groups attached to this campaign.
-     * </pre>
-     *
-     * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
-     */
-    public java.util.List<io.bloombox.schema.marketing.AdGroup.Builder> 
-         getGroupBuilderList() {
-      return getGroupFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.bloombox.schema.marketing.AdGroup, io.bloombox.schema.marketing.AdGroup.Builder, io.bloombox.schema.marketing.AdGroupOrBuilder> 
-        getGroupFieldBuilder() {
-      if (groupBuilder_ == null) {
-        groupBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            io.bloombox.schema.marketing.AdGroup, io.bloombox.schema.marketing.AdGroup.Builder, io.bloombox.schema.marketing.AdGroupOrBuilder>(
-                group_,
-                ((bitField0_ & 0x00000020) == 0x00000020),
-                getParentForChildren(),
-                isClean());
-        group_ = null;
-      }
-      return groupBuilder_;
-    }
-
     private io.bloombox.schema.marketing.CampaignTargeting targeting_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.marketing.CampaignTargeting, io.bloombox.schema.marketing.CampaignTargeting.Builder, io.bloombox.schema.marketing.CampaignTargetingOrBuilder> targetingBuilder_;
@@ -2032,7 +1302,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     public boolean hasTargeting() {
       return targetingBuilder_ != null || targeting_ != null;
@@ -2042,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting getTargeting() {
       if (targetingBuilder_ == null) {
@@ -2056,7 +1326,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     public Builder setTargeting(io.bloombox.schema.marketing.CampaignTargeting value) {
       if (targetingBuilder_ == null) {
@@ -2076,7 +1346,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     public Builder setTargeting(
         io.bloombox.schema.marketing.CampaignTargeting.Builder builderForValue) {
@@ -2094,7 +1364,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     public Builder mergeTargeting(io.bloombox.schema.marketing.CampaignTargeting value) {
       if (targetingBuilder_ == null) {
@@ -2116,7 +1386,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     public Builder clearTargeting() {
       if (targetingBuilder_ == null) {
@@ -2134,7 +1404,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargeting.Builder getTargetingBuilder() {
       
@@ -2146,7 +1416,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     public io.bloombox.schema.marketing.CampaignTargetingOrBuilder getTargetingOrBuilder() {
       if (targetingBuilder_ != null) {
@@ -2161,7 +1431,7 @@ private static final long serialVersionUID = 0L;
      * Campaign audience targeting settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
+     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.marketing.CampaignTargeting, io.bloombox.schema.marketing.CampaignTargeting.Builder, io.bloombox.schema.marketing.CampaignTargetingOrBuilder> 
@@ -2175,6 +1445,942 @@ private static final long serialVersionUID = 0L;
         targeting_ = null;
       }
       return targetingBuilder_;
+    }
+
+    private java.util.List<io.bloombox.schema.marketing.ChannelSettings> channel_ =
+      java.util.Collections.emptyList();
+    private void ensureChannelIsMutable() {
+      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        channel_ = new java.util.ArrayList<io.bloombox.schema.marketing.ChannelSettings>(channel_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.bloombox.schema.marketing.ChannelSettings, io.bloombox.schema.marketing.ChannelSettings.Builder, io.bloombox.schema.marketing.ChannelSettingsOrBuilder> channelBuilder_;
+
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public java.util.List<io.bloombox.schema.marketing.ChannelSettings> getChannelList() {
+      if (channelBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(channel_);
+      } else {
+        return channelBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public int getChannelCount() {
+      if (channelBuilder_ == null) {
+        return channel_.size();
+      } else {
+        return channelBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public io.bloombox.schema.marketing.ChannelSettings getChannel(int index) {
+      if (channelBuilder_ == null) {
+        return channel_.get(index);
+      } else {
+        return channelBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder setChannel(
+        int index, io.bloombox.schema.marketing.ChannelSettings value) {
+      if (channelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureChannelIsMutable();
+        channel_.set(index, value);
+        onChanged();
+      } else {
+        channelBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder setChannel(
+        int index, io.bloombox.schema.marketing.ChannelSettings.Builder builderForValue) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        channel_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        channelBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder addChannel(io.bloombox.schema.marketing.ChannelSettings value) {
+      if (channelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureChannelIsMutable();
+        channel_.add(value);
+        onChanged();
+      } else {
+        channelBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder addChannel(
+        int index, io.bloombox.schema.marketing.ChannelSettings value) {
+      if (channelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureChannelIsMutable();
+        channel_.add(index, value);
+        onChanged();
+      } else {
+        channelBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder addChannel(
+        io.bloombox.schema.marketing.ChannelSettings.Builder builderForValue) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        channel_.add(builderForValue.build());
+        onChanged();
+      } else {
+        channelBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder addChannel(
+        int index, io.bloombox.schema.marketing.ChannelSettings.Builder builderForValue) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        channel_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        channelBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder addAllChannel(
+        java.lang.Iterable<? extends io.bloombox.schema.marketing.ChannelSettings> values) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, channel_);
+        onChanged();
+      } else {
+        channelBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder clearChannel() {
+      if (channelBuilder_ == null) {
+        channel_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        channelBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public Builder removeChannel(int index) {
+      if (channelBuilder_ == null) {
+        ensureChannelIsMutable();
+        channel_.remove(index);
+        onChanged();
+      } else {
+        channelBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public io.bloombox.schema.marketing.ChannelSettings.Builder getChannelBuilder(
+        int index) {
+      return getChannelFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public io.bloombox.schema.marketing.ChannelSettingsOrBuilder getChannelOrBuilder(
+        int index) {
+      if (channelBuilder_ == null) {
+        return channel_.get(index);  } else {
+        return channelBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public java.util.List<? extends io.bloombox.schema.marketing.ChannelSettingsOrBuilder> 
+         getChannelOrBuilderList() {
+      if (channelBuilder_ != null) {
+        return channelBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(channel_);
+      }
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public io.bloombox.schema.marketing.ChannelSettings.Builder addChannelBuilder() {
+      return getChannelFieldBuilder().addBuilder(
+          io.bloombox.schema.marketing.ChannelSettings.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public io.bloombox.schema.marketing.ChannelSettings.Builder addChannelBuilder(
+        int index) {
+      return getChannelFieldBuilder().addBuilder(
+          index, io.bloombox.schema.marketing.ChannelSettings.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Distribution/channel settings for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+     */
+    public java.util.List<io.bloombox.schema.marketing.ChannelSettings.Builder> 
+         getChannelBuilderList() {
+      return getChannelFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.bloombox.schema.marketing.ChannelSettings, io.bloombox.schema.marketing.ChannelSettings.Builder, io.bloombox.schema.marketing.ChannelSettingsOrBuilder> 
+        getChannelFieldBuilder() {
+      if (channelBuilder_ == null) {
+        channelBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            io.bloombox.schema.marketing.ChannelSettings, io.bloombox.schema.marketing.ChannelSettings.Builder, io.bloombox.schema.marketing.ChannelSettingsOrBuilder>(
+                channel_,
+                ((bitField0_ & 0x00000010) == 0x00000010),
+                getParentForChildren(),
+                isClean());
+        channel_ = null;
+      }
+      return channelBuilder_;
+    }
+
+    private java.util.List<io.bloombox.schema.marketing.CampaignTag> tag_ =
+      java.util.Collections.emptyList();
+    private void ensureTagIsMutable() {
+      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        tag_ = new java.util.ArrayList<io.bloombox.schema.marketing.CampaignTag>(tag_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.bloombox.schema.marketing.CampaignTag, io.bloombox.schema.marketing.CampaignTag.Builder, io.bloombox.schema.marketing.CampaignTagOrBuilder> tagBuilder_;
+
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public java.util.List<io.bloombox.schema.marketing.CampaignTag> getTagList() {
+      if (tagBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(tag_);
+      } else {
+        return tagBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public int getTagCount() {
+      if (tagBuilder_ == null) {
+        return tag_.size();
+      } else {
+        return tagBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public io.bloombox.schema.marketing.CampaignTag getTag(int index) {
+      if (tagBuilder_ == null) {
+        return tag_.get(index);
+      } else {
+        return tagBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder setTag(
+        int index, io.bloombox.schema.marketing.CampaignTag value) {
+      if (tagBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTagIsMutable();
+        tag_.set(index, value);
+        onChanged();
+      } else {
+        tagBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder setTag(
+        int index, io.bloombox.schema.marketing.CampaignTag.Builder builderForValue) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        tag_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        tagBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder addTag(io.bloombox.schema.marketing.CampaignTag value) {
+      if (tagBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTagIsMutable();
+        tag_.add(value);
+        onChanged();
+      } else {
+        tagBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder addTag(
+        int index, io.bloombox.schema.marketing.CampaignTag value) {
+      if (tagBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTagIsMutable();
+        tag_.add(index, value);
+        onChanged();
+      } else {
+        tagBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder addTag(
+        io.bloombox.schema.marketing.CampaignTag.Builder builderForValue) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        tag_.add(builderForValue.build());
+        onChanged();
+      } else {
+        tagBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder addTag(
+        int index, io.bloombox.schema.marketing.CampaignTag.Builder builderForValue) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        tag_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        tagBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder addAllTag(
+        java.lang.Iterable<? extends io.bloombox.schema.marketing.CampaignTag> values) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tag_);
+        onChanged();
+      } else {
+        tagBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder clearTag() {
+      if (tagBuilder_ == null) {
+        tag_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        tagBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public Builder removeTag(int index) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        tag_.remove(index);
+        onChanged();
+      } else {
+        tagBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public io.bloombox.schema.marketing.CampaignTag.Builder getTagBuilder(
+        int index) {
+      return getTagFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public io.bloombox.schema.marketing.CampaignTagOrBuilder getTagOrBuilder(
+        int index) {
+      if (tagBuilder_ == null) {
+        return tag_.get(index);  } else {
+        return tagBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public java.util.List<? extends io.bloombox.schema.marketing.CampaignTagOrBuilder> 
+         getTagOrBuilderList() {
+      if (tagBuilder_ != null) {
+        return tagBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(tag_);
+      }
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public io.bloombox.schema.marketing.CampaignTag.Builder addTagBuilder() {
+      return getTagFieldBuilder().addBuilder(
+          io.bloombox.schema.marketing.CampaignTag.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public io.bloombox.schema.marketing.CampaignTag.Builder addTagBuilder(
+        int index) {
+      return getTagFieldBuilder().addBuilder(
+          index, io.bloombox.schema.marketing.CampaignTag.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Tags for this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
+     */
+    public java.util.List<io.bloombox.schema.marketing.CampaignTag.Builder> 
+         getTagBuilderList() {
+      return getTagFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.bloombox.schema.marketing.CampaignTag, io.bloombox.schema.marketing.CampaignTag.Builder, io.bloombox.schema.marketing.CampaignTagOrBuilder> 
+        getTagFieldBuilder() {
+      if (tagBuilder_ == null) {
+        tagBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            io.bloombox.schema.marketing.CampaignTag, io.bloombox.schema.marketing.CampaignTag.Builder, io.bloombox.schema.marketing.CampaignTagOrBuilder>(
+                tag_,
+                ((bitField0_ & 0x00000020) == 0x00000020),
+                getParentForChildren(),
+                isClean());
+        tag_ = null;
+      }
+      return tagBuilder_;
+    }
+
+    private java.util.List<io.bloombox.schema.marketing.AdGroup> group_ =
+      java.util.Collections.emptyList();
+    private void ensureGroupIsMutable() {
+      if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        group_ = new java.util.ArrayList<io.bloombox.schema.marketing.AdGroup>(group_);
+        bitField0_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.bloombox.schema.marketing.AdGroup, io.bloombox.schema.marketing.AdGroup.Builder, io.bloombox.schema.marketing.AdGroupOrBuilder> groupBuilder_;
+
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public java.util.List<io.bloombox.schema.marketing.AdGroup> getGroupList() {
+      if (groupBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(group_);
+      } else {
+        return groupBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public int getGroupCount() {
+      if (groupBuilder_ == null) {
+        return group_.size();
+      } else {
+        return groupBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public io.bloombox.schema.marketing.AdGroup getGroup(int index) {
+      if (groupBuilder_ == null) {
+        return group_.get(index);
+      } else {
+        return groupBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder setGroup(
+        int index, io.bloombox.schema.marketing.AdGroup value) {
+      if (groupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGroupIsMutable();
+        group_.set(index, value);
+        onChanged();
+      } else {
+        groupBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder setGroup(
+        int index, io.bloombox.schema.marketing.AdGroup.Builder builderForValue) {
+      if (groupBuilder_ == null) {
+        ensureGroupIsMutable();
+        group_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        groupBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder addGroup(io.bloombox.schema.marketing.AdGroup value) {
+      if (groupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGroupIsMutable();
+        group_.add(value);
+        onChanged();
+      } else {
+        groupBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder addGroup(
+        int index, io.bloombox.schema.marketing.AdGroup value) {
+      if (groupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureGroupIsMutable();
+        group_.add(index, value);
+        onChanged();
+      } else {
+        groupBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder addGroup(
+        io.bloombox.schema.marketing.AdGroup.Builder builderForValue) {
+      if (groupBuilder_ == null) {
+        ensureGroupIsMutable();
+        group_.add(builderForValue.build());
+        onChanged();
+      } else {
+        groupBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder addGroup(
+        int index, io.bloombox.schema.marketing.AdGroup.Builder builderForValue) {
+      if (groupBuilder_ == null) {
+        ensureGroupIsMutable();
+        group_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        groupBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder addAllGroup(
+        java.lang.Iterable<? extends io.bloombox.schema.marketing.AdGroup> values) {
+      if (groupBuilder_ == null) {
+        ensureGroupIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, group_);
+        onChanged();
+      } else {
+        groupBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder clearGroup() {
+      if (groupBuilder_ == null) {
+        group_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+      } else {
+        groupBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public Builder removeGroup(int index) {
+      if (groupBuilder_ == null) {
+        ensureGroupIsMutable();
+        group_.remove(index);
+        onChanged();
+      } else {
+        groupBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public io.bloombox.schema.marketing.AdGroup.Builder getGroupBuilder(
+        int index) {
+      return getGroupFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public io.bloombox.schema.marketing.AdGroupOrBuilder getGroupOrBuilder(
+        int index) {
+      if (groupBuilder_ == null) {
+        return group_.get(index);  } else {
+        return groupBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public java.util.List<? extends io.bloombox.schema.marketing.AdGroupOrBuilder> 
+         getGroupOrBuilderList() {
+      if (groupBuilder_ != null) {
+        return groupBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(group_);
+      }
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public io.bloombox.schema.marketing.AdGroup.Builder addGroupBuilder() {
+      return getGroupFieldBuilder().addBuilder(
+          io.bloombox.schema.marketing.AdGroup.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public io.bloombox.schema.marketing.AdGroup.Builder addGroupBuilder(
+        int index) {
+      return getGroupFieldBuilder().addBuilder(
+          index, io.bloombox.schema.marketing.AdGroup.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Ad groups attached to this campaign.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
+     */
+    public java.util.List<io.bloombox.schema.marketing.AdGroup.Builder> 
+         getGroupBuilderList() {
+      return getGroupFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.bloombox.schema.marketing.AdGroup, io.bloombox.schema.marketing.AdGroup.Builder, io.bloombox.schema.marketing.AdGroupOrBuilder> 
+        getGroupFieldBuilder() {
+      if (groupBuilder_ == null) {
+        groupBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            io.bloombox.schema.marketing.AdGroup, io.bloombox.schema.marketing.AdGroup.Builder, io.bloombox.schema.marketing.AdGroupOrBuilder>(
+                group_,
+                ((bitField0_ & 0x00000040) == 0x00000040),
+                getParentForChildren(),
+                isClean());
+        group_ = null;
+      }
+      return groupBuilder_;
     }
 
     private long created_ ;

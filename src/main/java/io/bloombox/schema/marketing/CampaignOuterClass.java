@@ -99,20 +99,20 @@ public final class CampaignOuterClass {
       "\003(\0132#.bloombox.schema.marketing.Creative" +
       "\"^\n\021CampaignTargeting\022\016\n\006strict\030\001 \001(\010\0229\n" +
       "\005block\030\002 \003(\0132*.bloombox.schema.marketing" +
-      ".TargetingPolicy\"\351\002\n\010Campaign\022\n\n\002id\030\001 \001(" +
+      ".TargetingPolicy\"\350\002\n\010Campaign\022\n\n\002id\030\001 \001(" +
       "\t\022\014\n\004name\030\002 \001(\t\0229\n\006status\030\003 \001(\0162).bloomb" +
-      "ox.schema.marketing.CampaignStatus\022<\n\010ch" +
-      "annels\030\004 \001(\0132*.bloombox.schema.marketing" +
-      ".ChannelSettings\0223\n\003tag\030\005 \003(\0132&.bloombox" +
-      ".schema.marketing.CampaignTag\0221\n\005group\030\006" +
-      " \003(\0132\".bloombox.schema.marketing.AdGroup" +
-      "\022?\n\ttargeting\030\007 \001(\0132,.bloombox.schema.ma" +
-      "rketing.CampaignTargeting\022\017\n\007created\030\010 \001" +
-      "(\004\022\020\n\010modified\030\t \001(\004*.\n\007Channel\022\017\n\013UNSPE" +
-      "CIFIED\020\000\022\t\n\005EMAIL\020\001\022\007\n\003SMS\020\002*>\n\016Campaign" +
-      "Status\022\t\n\005DRAFT\020\000\022\n\n\006QUEUED\020\001\022\013\n\007SENDING" +
-      "\020\002\022\010\n\004DONE\020\003B(\n\034io.bloombox.schema.marke" +
-      "tingH\001P\001\242\002\003OCSb\006proto3"
+      "ox.schema.marketing.CampaignStatus\022?\n\tta" +
+      "rgeting\030\004 \001(\0132,.bloombox.schema.marketin" +
+      "g.CampaignTargeting\022;\n\007channel\030\005 \003(\0132*.b" +
+      "loombox.schema.marketing.ChannelSettings" +
+      "\0223\n\003tag\030\006 \003(\0132&.bloombox.schema.marketin" +
+      "g.CampaignTag\0221\n\005group\030\007 \003(\0132\".bloombox." +
+      "schema.marketing.AdGroup\022\017\n\007created\030\010 \001(" +
+      "\004\022\020\n\010modified\030\t \001(\004*.\n\007Channel\022\017\n\013UNSPEC" +
+      "IFIED\020\000\022\t\n\005EMAIL\020\001\022\007\n\003SMS\020\002*>\n\016CampaignS" +
+      "tatus\022\t\n\005DRAFT\020\000\022\n\n\006QUEUED\020\001\022\013\n\007SENDING\020" +
+      "\002\022\010\n\004DONE\020\003B(\n\034io.bloombox.schema.market" +
+      "ingH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -188,7 +188,7 @@ public final class CampaignOuterClass {
     internal_static_bloombox_schema_marketing_Campaign_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_marketing_Campaign_descriptor,
-        new java.lang.String[] { "Id", "Name", "Status", "Channels", "Tag", "Group", "Targeting", "Created", "Modified", });
+        new java.lang.String[] { "Id", "Name", "Status", "Targeting", "Channel", "Tag", "Group", "Created", "Modified", });
     io.opencannabis.schema.media.AttachedMedia.getDescriptor();
     io.opencannabis.schema.content.GenericContent.getDescriptor();
     io.bloombox.schema.marketing.Targeting.getDescriptor();

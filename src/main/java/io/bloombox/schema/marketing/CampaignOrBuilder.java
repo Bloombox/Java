@@ -62,35 +62,79 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * Distribution/channel settings for this campaign.
+   * Campaign audience targeting settings.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
+   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
    */
-  boolean hasChannels();
+  boolean hasTargeting();
+  /**
+   * <pre>
+   * Campaign audience targeting settings.
+   * </pre>
+   *
+   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
+   */
+  io.bloombox.schema.marketing.CampaignTargeting getTargeting();
+  /**
+   * <pre>
+   * Campaign audience targeting settings.
+   * </pre>
+   *
+   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 4;</code>
+   */
+  io.bloombox.schema.marketing.CampaignTargetingOrBuilder getTargetingOrBuilder();
+
   /**
    * <pre>
    * Distribution/channel settings for this campaign.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
    */
-  io.bloombox.schema.marketing.ChannelSettings getChannels();
+  java.util.List<io.bloombox.schema.marketing.ChannelSettings> 
+      getChannelList();
   /**
    * <pre>
    * Distribution/channel settings for this campaign.
    * </pre>
    *
-   * <code>.bloombox.schema.marketing.ChannelSettings channels = 4;</code>
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
    */
-  io.bloombox.schema.marketing.ChannelSettingsOrBuilder getChannelsOrBuilder();
+  io.bloombox.schema.marketing.ChannelSettings getChannel(int index);
+  /**
+   * <pre>
+   * Distribution/channel settings for this campaign.
+   * </pre>
+   *
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+   */
+  int getChannelCount();
+  /**
+   * <pre>
+   * Distribution/channel settings for this campaign.
+   * </pre>
+   *
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+   */
+  java.util.List<? extends io.bloombox.schema.marketing.ChannelSettingsOrBuilder> 
+      getChannelOrBuilderList();
+  /**
+   * <pre>
+   * Distribution/channel settings for this campaign.
+   * </pre>
+   *
+   * <code>repeated .bloombox.schema.marketing.ChannelSettings channel = 5;</code>
+   */
+  io.bloombox.schema.marketing.ChannelSettingsOrBuilder getChannelOrBuilder(
+      int index);
 
   /**
    * <pre>
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   java.util.List<io.bloombox.schema.marketing.CampaignTag> 
       getTagList();
@@ -99,7 +143,7 @@ public interface CampaignOrBuilder extends
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   io.bloombox.schema.marketing.CampaignTag getTag(int index);
   /**
@@ -107,7 +151,7 @@ public interface CampaignOrBuilder extends
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   int getTagCount();
   /**
@@ -115,7 +159,7 @@ public interface CampaignOrBuilder extends
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   java.util.List<? extends io.bloombox.schema.marketing.CampaignTagOrBuilder> 
       getTagOrBuilderList();
@@ -124,7 +168,7 @@ public interface CampaignOrBuilder extends
    * Tags for this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 5;</code>
+   * <code>repeated .bloombox.schema.marketing.CampaignTag tag = 6;</code>
    */
   io.bloombox.schema.marketing.CampaignTagOrBuilder getTagOrBuilder(
       int index);
@@ -134,7 +178,7 @@ public interface CampaignOrBuilder extends
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   java.util.List<io.bloombox.schema.marketing.AdGroup> 
       getGroupList();
@@ -143,7 +187,7 @@ public interface CampaignOrBuilder extends
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   io.bloombox.schema.marketing.AdGroup getGroup(int index);
   /**
@@ -151,7 +195,7 @@ public interface CampaignOrBuilder extends
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   int getGroupCount();
   /**
@@ -159,7 +203,7 @@ public interface CampaignOrBuilder extends
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   java.util.List<? extends io.bloombox.schema.marketing.AdGroupOrBuilder> 
       getGroupOrBuilderList();
@@ -168,35 +212,10 @@ public interface CampaignOrBuilder extends
    * Ad groups attached to this campaign.
    * </pre>
    *
-   * <code>repeated .bloombox.schema.marketing.AdGroup group = 6;</code>
+   * <code>repeated .bloombox.schema.marketing.AdGroup group = 7;</code>
    */
   io.bloombox.schema.marketing.AdGroupOrBuilder getGroupOrBuilder(
       int index);
-
-  /**
-   * <pre>
-   * Campaign audience targeting settings.
-   * </pre>
-   *
-   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
-   */
-  boolean hasTargeting();
-  /**
-   * <pre>
-   * Campaign audience targeting settings.
-   * </pre>
-   *
-   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
-   */
-  io.bloombox.schema.marketing.CampaignTargeting getTargeting();
-  /**
-   * <pre>
-   * Campaign audience targeting settings.
-   * </pre>
-   *
-   * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 7;</code>
-   */
-  io.bloombox.schema.marketing.CampaignTargetingOrBuilder getTargetingOrBuilder();
 
   /**
    * <pre>
