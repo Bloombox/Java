@@ -28,7 +28,7 @@ public interface MediaKeyOrBuilder extends
    * Unique ID for this media item.
    * </pre>
    *
-   * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+   * <code>string id = 1 [(.core.field) = { ... }</code>
    */
   java.lang.String getId();
   /**
@@ -36,7 +36,7 @@ public interface MediaKeyOrBuilder extends
    * Unique ID for this media item.
    * </pre>
    *
-   * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+   * <code>string id = 1 [(.core.field) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getIdBytes();

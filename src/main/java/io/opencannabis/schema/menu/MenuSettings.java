@@ -39,6 +39,7 @@ private static final long serialVersionUID = 0L;
     full_ = false;
     keysOnly_ = false;
     section_ = java.util.Collections.emptyList();
+    availableSection_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -131,6 +132,29 @@ private static final long serialVersionUID = 0L;
             input.popLimit(oldLimit);
             break;
           }
+          case 48: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              availableSection_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000020;
+            }
+            availableSection_.add(rawValue);
+            break;
+          }
+          case 50: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                availableSection_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              availableSection_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -141,6 +165,9 @@ private static final long serialVersionUID = 0L;
     } finally {
       if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
         section_ = java.util.Collections.unmodifiableList(section_);
+      }
+      if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        availableSection_ = java.util.Collections.unmodifiableList(availableSection_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -316,6 +343,71 @@ private static final long serialVersionUID = 0L;
   }
   private int sectionMemoizedSerializedSize;
 
+  public static final int AVAILABLE_SECTION_FIELD_NUMBER = 6;
+  private java.util.List<java.lang.Integer> availableSection_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, io.opencannabis.schema.menu.section.Section> availableSection_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, io.opencannabis.schema.menu.section.Section>() {
+            public io.opencannabis.schema.menu.section.Section convert(java.lang.Integer from) {
+              io.opencannabis.schema.menu.section.Section result = io.opencannabis.schema.menu.section.Section.valueOf(from);
+              return result == null ? io.opencannabis.schema.menu.section.Section.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  public java.util.List<io.opencannabis.schema.menu.section.Section> getAvailableSectionList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, io.opencannabis.schema.menu.section.Section>(availableSection_, availableSection_converter_);
+  }
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  public int getAvailableSectionCount() {
+    return availableSection_.size();
+  }
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  public io.opencannabis.schema.menu.section.Section getAvailableSection(int index) {
+    return availableSection_converter_.convert(availableSection_.get(index));
+  }
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  public java.util.List<java.lang.Integer>
+  getAvailableSectionValueList() {
+    return availableSection_;
+  }
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  public int getAvailableSectionValue(int index) {
+    return availableSection_.get(index);
+  }
+  private int availableSectionMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -347,6 +439,13 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < section_.size(); i++) {
       output.writeEnumNoTag(section_.get(i));
+    }
+    if (getAvailableSectionList().size() > 0) {
+      output.writeUInt32NoTag(50);
+      output.writeUInt32NoTag(availableSectionMemoizedSerializedSize);
+    }
+    for (int i = 0; i < availableSection_.size(); i++) {
+      output.writeEnumNoTag(availableSection_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -384,6 +483,18 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }sectionMemoizedSerializedSize = dataSize;
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < availableSection_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(availableSection_.get(i));
+      }
+      size += dataSize;
+      if (!getAvailableSectionList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }availableSectionMemoizedSerializedSize = dataSize;
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -415,6 +526,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getFingerprint());
     }
     result = result && section_.equals(other.section_);
+    result = result && availableSection_.equals(other.availableSection_);
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -443,6 +555,10 @@ private static final long serialVersionUID = 0L;
     if (getSectionCount() > 0) {
       hash = (37 * hash) + SECTION_FIELD_NUMBER;
       hash = (53 * hash) + section_.hashCode();
+    }
+    if (getAvailableSectionCount() > 0) {
+      hash = (37 * hash) + AVAILABLE_SECTION_FIELD_NUMBER;
+      hash = (53 * hash) + availableSection_.hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -595,6 +711,8 @@ private static final long serialVersionUID = 0L;
       }
       section_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000010);
+      availableSection_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -636,6 +754,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.section_ = section_;
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        availableSection_ = java.util.Collections.unmodifiableList(availableSection_);
+        bitField0_ = (bitField0_ & ~0x00000020);
+      }
+      result.availableSection_ = availableSection_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -697,6 +820,16 @@ private static final long serialVersionUID = 0L;
         } else {
           ensureSectionIsMutable();
           section_.addAll(other.section_);
+        }
+        onChanged();
+      }
+      if (!other.availableSection_.isEmpty()) {
+        if (availableSection_.isEmpty()) {
+          availableSection_ = other.availableSection_;
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          ensureAvailableSectionIsMutable();
+          availableSection_.addAll(other.availableSection_);
         }
         onChanged();
       }
@@ -1271,6 +1404,172 @@ private static final long serialVersionUID = 0L;
       ensureSectionIsMutable();
       for (int value : values) {
         section_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> availableSection_ =
+      java.util.Collections.emptyList();
+    private void ensureAvailableSectionIsMutable() {
+      if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        availableSection_ = new java.util.ArrayList<java.lang.Integer>(availableSection_);
+        bitField0_ |= 0x00000020;
+      }
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public java.util.List<io.opencannabis.schema.menu.section.Section> getAvailableSectionList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.menu.section.Section>(availableSection_, availableSection_converter_);
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public int getAvailableSectionCount() {
+      return availableSection_.size();
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public io.opencannabis.schema.menu.section.Section getAvailableSection(int index) {
+      return availableSection_converter_.convert(availableSection_.get(index));
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public Builder setAvailableSection(
+        int index, io.opencannabis.schema.menu.section.Section value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureAvailableSectionIsMutable();
+      availableSection_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public Builder addAvailableSection(io.opencannabis.schema.menu.section.Section value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureAvailableSectionIsMutable();
+      availableSection_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public Builder addAllAvailableSection(
+        java.lang.Iterable<? extends io.opencannabis.schema.menu.section.Section> values) {
+      ensureAvailableSectionIsMutable();
+      for (io.opencannabis.schema.menu.section.Section value : values) {
+        availableSection_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public Builder clearAvailableSection() {
+      availableSection_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getAvailableSectionValueList() {
+      return java.util.Collections.unmodifiableList(availableSection_);
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public int getAvailableSectionValue(int index) {
+      return availableSection_.get(index);
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public Builder setAvailableSectionValue(
+        int index, int value) {
+      ensureAvailableSectionIsMutable();
+      availableSection_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public Builder addAvailableSectionValue(int value) {
+      ensureAvailableSectionIsMutable();
+      availableSection_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Hint for other available sections. Included on a sectioned menu payload with only one section.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+     */
+    public Builder addAllAvailableSectionValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureAvailableSectionIsMutable();
+      for (int value : values) {
+        availableSection_.add(value);
       }
       onChanged();
       return this;

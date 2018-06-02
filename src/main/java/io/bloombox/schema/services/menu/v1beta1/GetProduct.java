@@ -117,21 +117,57 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Single-key to fetch.
+     * Product key to fetch.
      * </pre>
      *
-     * <code>string key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2;</code>
      */
-    java.lang.String getKey();
+    boolean hasKey();
     /**
      * <pre>
-     * Single-key to fetch.
+     * Product key to fetch.
      * </pre>
      *
-     * <code>string key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     */
+    io.opencannabis.schema.base.ProductKey getKey();
+    /**
+     * <pre>
+     * Product key to fetch.
+     * </pre>
+     *
+     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     */
+    io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+
+    /**
+     * <pre>
+     * Request a potentially-cached or forced-uncached copy of the specified product data.
+     * </pre>
+     *
+     * <code>bool fresh = 3;</code>
+     */
+    boolean getFresh();
+
+    /**
+     * <pre>
+     * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+     * server may indicate so.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    java.lang.String getFingerprint();
+    /**
+     * <pre>
+     * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+     * server may indicate so.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
      */
     com.google.protobuf.ByteString
-        getKeyBytes();
+        getFingerprintBytes();
   }
   /**
    * <pre>
@@ -151,7 +187,8 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       scope_ = "";
-      key_ = "";
+      fresh_ = false;
+      fingerprint_ = "";
     }
 
     @java.lang.Override
@@ -192,9 +229,27 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
+              io.opencannabis.schema.base.ProductKey.Builder subBuilder = null;
+              if (key_ != null) {
+                subBuilder = key_.toBuilder();
+              }
+              key_ = input.readMessage(io.opencannabis.schema.base.ProductKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(key_);
+                key_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+
+              fresh_ = input.readBool();
+              break;
+            }
+            case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              key_ = s;
+              fingerprint_ = s;
               break;
             }
           }
@@ -264,41 +319,89 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int KEY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object key_;
+    private io.opencannabis.schema.base.ProductKey key_;
     /**
      * <pre>
-     * Single-key to fetch.
+     * Product key to fetch.
      * </pre>
      *
-     * <code>string key = 2;</code>
+     * <code>.opencannabis.base.ProductKey key = 2;</code>
      */
-    public java.lang.String getKey() {
-      java.lang.Object ref = key_;
+    public boolean hasKey() {
+      return key_ != null;
+    }
+    /**
+     * <pre>
+     * Product key to fetch.
+     * </pre>
+     *
+     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     */
+    public io.opencannabis.schema.base.ProductKey getKey() {
+      return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+    }
+    /**
+     * <pre>
+     * Product key to fetch.
+     * </pre>
+     *
+     * <code>.opencannabis.base.ProductKey key = 2;</code>
+     */
+    public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+      return getKey();
+    }
+
+    public static final int FRESH_FIELD_NUMBER = 3;
+    private boolean fresh_;
+    /**
+     * <pre>
+     * Request a potentially-cached or forced-uncached copy of the specified product data.
+     * </pre>
+     *
+     * <code>bool fresh = 3;</code>
+     */
+    public boolean getFresh() {
+      return fresh_;
+    }
+
+    public static final int FINGERPRINT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object fingerprint_;
+    /**
+     * <pre>
+     * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+     * server may indicate so.
+     * </pre>
+     *
+     * <code>string fingerprint = 4;</code>
+     */
+    public java.lang.String getFingerprint() {
+      java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        key_ = s;
+        fingerprint_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * Single-key to fetch.
+     * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+     * server may indicate so.
      * </pre>
      *
-     * <code>string key = 2;</code>
+     * <code>string fingerprint = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getKeyBytes() {
-      java.lang.Object ref = key_;
+        getFingerprintBytes() {
+      java.lang.Object ref = fingerprint_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        key_ = b;
+        fingerprint_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -320,8 +423,14 @@ private static final long serialVersionUID = 0L;
       if (!getScopeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
       }
-      if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+      if (key_ != null) {
+        output.writeMessage(2, getKey());
+      }
+      if (fresh_ != false) {
+        output.writeBool(3, fresh_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fingerprint_);
       }
       unknownFields.writeTo(output);
     }
@@ -334,8 +443,16 @@ private static final long serialVersionUID = 0L;
       if (!getScopeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
       }
-      if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+      if (key_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getKey());
+      }
+      if (fresh_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, fresh_);
+      }
+      if (!getFingerprintBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fingerprint_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -355,8 +472,15 @@ private static final long serialVersionUID = 0L;
       boolean result = true;
       result = result && getScope()
           .equals(other.getScope());
-      result = result && getKey()
-          .equals(other.getKey());
+      result = result && (hasKey() == other.hasKey());
+      if (hasKey()) {
+        result = result && getKey()
+            .equals(other.getKey());
+      }
+      result = result && (getFresh()
+          == other.getFresh());
+      result = result && getFingerprint()
+          .equals(other.getFingerprint());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -370,8 +494,15 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SCOPE_FIELD_NUMBER;
       hash = (53 * hash) + getScope().hashCode();
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
+      if (hasKey()) {
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+      }
+      hash = (37 * hash) + FRESH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFresh());
+      hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
+      hash = (53 * hash) + getFingerprint().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -507,7 +638,15 @@ private static final long serialVersionUID = 0L;
         super.clear();
         scope_ = "";
 
-        key_ = "";
+        if (keyBuilder_ == null) {
+          key_ = null;
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
+        fresh_ = false;
+
+        fingerprint_ = "";
 
         return this;
       }
@@ -532,7 +671,13 @@ private static final long serialVersionUID = 0L;
       public io.bloombox.schema.services.menu.v1beta1.GetProduct.Request buildPartial() {
         io.bloombox.schema.services.menu.v1beta1.GetProduct.Request result = new io.bloombox.schema.services.menu.v1beta1.GetProduct.Request(this);
         result.scope_ = scope_;
-        result.key_ = key_;
+        if (keyBuilder_ == null) {
+          result.key_ = key_;
+        } else {
+          result.key_ = keyBuilder_.build();
+        }
+        result.fresh_ = fresh_;
+        result.fingerprint_ = fingerprint_;
         onBuilt();
         return result;
       }
@@ -578,8 +723,14 @@ private static final long serialVersionUID = 0L;
           scope_ = other.scope_;
           onChanged();
         }
-        if (!other.getKey().isEmpty()) {
-          key_ = other.key_;
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
+        }
+        if (other.getFresh() != false) {
+          setFresh(other.getFresh());
+        }
+        if (!other.getFingerprint().isEmpty()) {
+          fingerprint_ = other.fingerprint_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -698,21 +849,213 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object key_ = "";
+      private io.opencannabis.schema.base.ProductKey key_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
-       * Single-key to fetch.
+       * Product key to fetch.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
        */
-      public java.lang.String getKey() {
-        java.lang.Object ref = key_;
+      public boolean hasKey() {
+        return keyBuilder_ != null || key_ != null;
+      }
+      /**
+       * <pre>
+       * Product key to fetch.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       */
+      public io.opencannabis.schema.base.ProductKey getKey() {
+        if (keyBuilder_ == null) {
+          return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+        } else {
+          return keyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Product key to fetch.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       */
+      public Builder setKey(io.opencannabis.schema.base.ProductKey value) {
+        if (keyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          key_ = value;
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Product key to fetch.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       */
+      public Builder setKey(
+          io.opencannabis.schema.base.ProductKey.Builder builderForValue) {
+        if (keyBuilder_ == null) {
+          key_ = builderForValue.build();
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Product key to fetch.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       */
+      public Builder mergeKey(io.opencannabis.schema.base.ProductKey value) {
+        if (keyBuilder_ == null) {
+          if (key_ != null) {
+            key_ =
+              io.opencannabis.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
+          } else {
+            key_ = value;
+          }
+          onChanged();
+        } else {
+          keyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Product key to fetch.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       */
+      public Builder clearKey() {
+        if (keyBuilder_ == null) {
+          key_ = null;
+          onChanged();
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Product key to fetch.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       */
+      public io.opencannabis.schema.base.ProductKey.Builder getKeyBuilder() {
+        
+        onChanged();
+        return getKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Product key to fetch.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       */
+      public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+        if (keyBuilder_ != null) {
+          return keyBuilder_.getMessageOrBuilder();
+        } else {
+          return key_ == null ?
+              io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+        }
+      }
+      /**
+       * <pre>
+       * Product key to fetch.
+       * </pre>
+       *
+       * <code>.opencannabis.base.ProductKey key = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> 
+          getKeyFieldBuilder() {
+        if (keyBuilder_ == null) {
+          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder>(
+                  getKey(),
+                  getParentForChildren(),
+                  isClean());
+          key_ = null;
+        }
+        return keyBuilder_;
+      }
+
+      private boolean fresh_ ;
+      /**
+       * <pre>
+       * Request a potentially-cached or forced-uncached copy of the specified product data.
+       * </pre>
+       *
+       * <code>bool fresh = 3;</code>
+       */
+      public boolean getFresh() {
+        return fresh_;
+      }
+      /**
+       * <pre>
+       * Request a potentially-cached or forced-uncached copy of the specified product data.
+       * </pre>
+       *
+       * <code>bool fresh = 3;</code>
+       */
+      public Builder setFresh(boolean value) {
+        
+        fresh_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Request a potentially-cached or forced-uncached copy of the specified product data.
+       * </pre>
+       *
+       * <code>bool fresh = 3;</code>
+       */
+      public Builder clearFresh() {
+        
+        fresh_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fingerprint_ = "";
+      /**
+       * <pre>
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
+       * </pre>
+       *
+       * <code>string fingerprint = 4;</code>
+       */
+      public java.lang.String getFingerprint() {
+        java.lang.Object ref = fingerprint_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          key_ = s;
+          fingerprint_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -720,19 +1063,20 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Single-key to fetch.
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string fingerprint = 4;</code>
        */
       public com.google.protobuf.ByteString
-          getKeyBytes() {
-        java.lang.Object ref = key_;
+          getFingerprintBytes() {
+        java.lang.Object ref = fingerprint_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          key_ = b;
+          fingerprint_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -740,49 +1084,52 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Single-key to fetch.
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string fingerprint = 4;</code>
        */
-      public Builder setKey(
+      public Builder setFingerprint(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        key_ = value;
+        fingerprint_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Single-key to fetch.
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string fingerprint = 4;</code>
        */
-      public Builder clearKey() {
+      public Builder clearFingerprint() {
         
-        key_ = getDefaultInstance().getKey();
+        fingerprint_ = getDefaultInstance().getFingerprint();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Single-key to fetch.
+       * Fingerprint for an existing revision the client has on-hand. If no change has occurred since that revision, the
+       * server may indicate so.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string fingerprint = 4;</code>
        */
-      public Builder setKeyBytes(
+      public Builder setFingerprintBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        key_ = value;
+        fingerprint_ = value;
         onChanged();
         return this;
       }
@@ -844,7 +1191,7 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     java.util.List<io.opencannabis.schema.menu.MenuProduct> 
         getProductList();
@@ -853,7 +1200,7 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     io.opencannabis.schema.menu.MenuProduct getProduct(int index);
     /**
@@ -861,7 +1208,7 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     int getProductCount();
     /**
@@ -869,7 +1216,7 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     java.util.List<? extends io.opencannabis.schema.menu.MenuProductOrBuilder> 
         getProductOrBuilderList();
@@ -878,10 +1225,29 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     io.opencannabis.schema.menu.MenuProductOrBuilder getProductOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Specify whether items in the response, or the whole response, was cached.
+     * </pre>
+     *
+     * <code>bool cached = 2;</code>
+     */
+    boolean getCached();
+
+    /**
+     * <pre>
+     * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+     * server to respond with a 304 Not Modified-style answer.
+     * </pre>
+     *
+     * <code>bool unchanged = 3;</code>
+     */
+    boolean getUnchanged();
   }
   /**
    * <pre>
@@ -901,6 +1267,8 @@ private static final long serialVersionUID = 0L;
     }
     private Response() {
       product_ = java.util.Collections.emptyList();
+      cached_ = false;
+      unchanged_ = false;
     }
 
     @java.lang.Override
@@ -934,13 +1302,23 @@ private static final long serialVersionUID = 0L;
               }
               break;
             }
-            case 18: {
+            case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 product_ = new java.util.ArrayList<io.opencannabis.schema.menu.MenuProduct>();
                 mutable_bitField0_ |= 0x00000001;
               }
               product_.add(
                   input.readMessage(io.opencannabis.schema.menu.MenuProduct.parser(), extensionRegistry));
+              break;
+            }
+            case 16: {
+
+              cached_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              unchanged_ = input.readBool();
               break;
             }
           }
@@ -970,14 +1348,15 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.menu.v1beta1.GetProduct.Response.class, io.bloombox.schema.services.menu.v1beta1.GetProduct.Response.Builder.class);
     }
 
-    public static final int PRODUCT_FIELD_NUMBER = 2;
+    private int bitField0_;
+    public static final int PRODUCT_FIELD_NUMBER = 1;
     private java.util.List<io.opencannabis.schema.menu.MenuProduct> product_;
     /**
      * <pre>
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     public java.util.List<io.opencannabis.schema.menu.MenuProduct> getProductList() {
       return product_;
@@ -987,7 +1366,7 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.menu.MenuProductOrBuilder> 
         getProductOrBuilderList() {
@@ -998,7 +1377,7 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     public int getProductCount() {
       return product_.size();
@@ -1008,7 +1387,7 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     public io.opencannabis.schema.menu.MenuProduct getProduct(int index) {
       return product_.get(index);
@@ -1018,11 +1397,38 @@ private static final long serialVersionUID = 0L;
      * Corresponding item for the keys that was requested, if found.
      * </pre>
      *
-     * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+     * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
      */
     public io.opencannabis.schema.menu.MenuProductOrBuilder getProductOrBuilder(
         int index) {
       return product_.get(index);
+    }
+
+    public static final int CACHED_FIELD_NUMBER = 2;
+    private boolean cached_;
+    /**
+     * <pre>
+     * Specify whether items in the response, or the whole response, was cached.
+     * </pre>
+     *
+     * <code>bool cached = 2;</code>
+     */
+    public boolean getCached() {
+      return cached_;
+    }
+
+    public static final int UNCHANGED_FIELD_NUMBER = 3;
+    private boolean unchanged_;
+    /**
+     * <pre>
+     * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+     * server to respond with a 304 Not Modified-style answer.
+     * </pre>
+     *
+     * <code>bool unchanged = 3;</code>
+     */
+    public boolean getUnchanged() {
+      return unchanged_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1038,7 +1444,13 @@ private static final long serialVersionUID = 0L;
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < product_.size(); i++) {
-        output.writeMessage(2, product_.get(i));
+        output.writeMessage(1, product_.get(i));
+      }
+      if (cached_ != false) {
+        output.writeBool(2, cached_);
+      }
+      if (unchanged_ != false) {
+        output.writeBool(3, unchanged_);
       }
       unknownFields.writeTo(output);
     }
@@ -1050,7 +1462,15 @@ private static final long serialVersionUID = 0L;
       size = 0;
       for (int i = 0; i < product_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, product_.get(i));
+          .computeMessageSize(1, product_.get(i));
+      }
+      if (cached_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, cached_);
+      }
+      if (unchanged_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, unchanged_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1070,6 +1490,10 @@ private static final long serialVersionUID = 0L;
       boolean result = true;
       result = result && getProductList()
           .equals(other.getProductList());
+      result = result && (getCached()
+          == other.getCached());
+      result = result && (getUnchanged()
+          == other.getUnchanged());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1085,6 +1509,12 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
         hash = (53 * hash) + getProductList().hashCode();
       }
+      hash = (37 * hash) + CACHED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCached());
+      hash = (37 * hash) + UNCHANGED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnchanged());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1225,6 +1655,10 @@ private static final long serialVersionUID = 0L;
         } else {
           productBuilder_.clear();
         }
+        cached_ = false;
+
+        unchanged_ = false;
+
         return this;
       }
 
@@ -1248,6 +1682,7 @@ private static final long serialVersionUID = 0L;
       public io.bloombox.schema.services.menu.v1beta1.GetProduct.Response buildPartial() {
         io.bloombox.schema.services.menu.v1beta1.GetProduct.Response result = new io.bloombox.schema.services.menu.v1beta1.GetProduct.Response(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (productBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             product_ = java.util.Collections.unmodifiableList(product_);
@@ -1257,6 +1692,9 @@ private static final long serialVersionUID = 0L;
         } else {
           result.product_ = productBuilder_.build();
         }
+        result.cached_ = cached_;
+        result.unchanged_ = unchanged_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1324,6 +1762,12 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
+        if (other.getCached() != false) {
+          setCached(other.getCached());
+        }
+        if (other.getUnchanged() != false) {
+          setUnchanged(other.getUnchanged());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1369,7 +1813,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public java.util.List<io.opencannabis.schema.menu.MenuProduct> getProductList() {
         if (productBuilder_ == null) {
@@ -1383,7 +1827,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public int getProductCount() {
         if (productBuilder_ == null) {
@@ -1397,7 +1841,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public io.opencannabis.schema.menu.MenuProduct getProduct(int index) {
         if (productBuilder_ == null) {
@@ -1411,7 +1855,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder setProduct(
           int index, io.opencannabis.schema.menu.MenuProduct value) {
@@ -1432,7 +1876,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder setProduct(
           int index, io.opencannabis.schema.menu.MenuProduct.Builder builderForValue) {
@@ -1450,7 +1894,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder addProduct(io.opencannabis.schema.menu.MenuProduct value) {
         if (productBuilder_ == null) {
@@ -1470,7 +1914,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder addProduct(
           int index, io.opencannabis.schema.menu.MenuProduct value) {
@@ -1491,7 +1935,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder addProduct(
           io.opencannabis.schema.menu.MenuProduct.Builder builderForValue) {
@@ -1509,7 +1953,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder addProduct(
           int index, io.opencannabis.schema.menu.MenuProduct.Builder builderForValue) {
@@ -1527,7 +1971,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder addAllProduct(
           java.lang.Iterable<? extends io.opencannabis.schema.menu.MenuProduct> values) {
@@ -1546,7 +1990,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder clearProduct() {
         if (productBuilder_ == null) {
@@ -1563,7 +2007,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public Builder removeProduct(int index) {
         if (productBuilder_ == null) {
@@ -1580,7 +2024,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public io.opencannabis.schema.menu.MenuProduct.Builder getProductBuilder(
           int index) {
@@ -1591,7 +2035,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public io.opencannabis.schema.menu.MenuProductOrBuilder getProductOrBuilder(
           int index) {
@@ -1605,7 +2049,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public java.util.List<? extends io.opencannabis.schema.menu.MenuProductOrBuilder> 
            getProductOrBuilderList() {
@@ -1620,7 +2064,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public io.opencannabis.schema.menu.MenuProduct.Builder addProductBuilder() {
         return getProductFieldBuilder().addBuilder(
@@ -1631,7 +2075,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public io.opencannabis.schema.menu.MenuProduct.Builder addProductBuilder(
           int index) {
@@ -1643,7 +2087,7 @@ private static final long serialVersionUID = 0L;
        * Corresponding item for the keys that was requested, if found.
        * </pre>
        *
-       * <code>repeated .opencannabis.products.menu.MenuProduct product = 2;</code>
+       * <code>repeated .opencannabis.products.menu.MenuProduct product = 1;</code>
        */
       public java.util.List<io.opencannabis.schema.menu.MenuProduct.Builder> 
            getProductBuilderList() {
@@ -1662,6 +2106,85 @@ private static final long serialVersionUID = 0L;
           product_ = null;
         }
         return productBuilder_;
+      }
+
+      private boolean cached_ ;
+      /**
+       * <pre>
+       * Specify whether items in the response, or the whole response, was cached.
+       * </pre>
+       *
+       * <code>bool cached = 2;</code>
+       */
+      public boolean getCached() {
+        return cached_;
+      }
+      /**
+       * <pre>
+       * Specify whether items in the response, or the whole response, was cached.
+       * </pre>
+       *
+       * <code>bool cached = 2;</code>
+       */
+      public Builder setCached(boolean value) {
+        
+        cached_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify whether items in the response, or the whole response, was cached.
+       * </pre>
+       *
+       * <code>bool cached = 2;</code>
+       */
+      public Builder clearCached() {
+        
+        cached_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean unchanged_ ;
+      /**
+       * <pre>
+       * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+       * server to respond with a 304 Not Modified-style answer.
+       * </pre>
+       *
+       * <code>bool unchanged = 3;</code>
+       */
+      public boolean getUnchanged() {
+        return unchanged_;
+      }
+      /**
+       * <pre>
+       * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+       * server to respond with a 304 Not Modified-style answer.
+       * </pre>
+       *
+       * <code>bool unchanged = 3;</code>
+       */
+      public Builder setUnchanged(boolean value) {
+        
+        unchanged_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag set when a request-given fingerprint still matches the underlying object data being requested, enabling the
+       * server to respond with a 304 Not Modified-style answer.
+       * </pre>
+       *
+       * <code>bool unchanged = 3;</code>
+       */
+      public Builder clearUnchanged() {
+        
+        unchanged_ = false;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

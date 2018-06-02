@@ -148,14 +148,27 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder subBuilder = null;
-            if (partners_ != null) {
-              subBuilder = partners_.toBuilder();
+            io.bloombox.schema.partner.settings.TabletSettings.Builder subBuilder = null;
+            if (tablet_ != null) {
+              subBuilder = tablet_.toBuilder();
             }
-            partners_ = input.readMessage(io.bloombox.schema.partner.integrations.LocationIntegrationSettings.parser(), extensionRegistry);
+            tablet_ = input.readMessage(io.bloombox.schema.partner.settings.TabletSettings.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(partners_);
-              partners_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(tablet_);
+              tablet_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 162: {
+            io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder subBuilder = null;
+            if (integration_ != null) {
+              subBuilder = integration_.toBuilder();
+            }
+            integration_ = input.readMessage(io.bloombox.schema.partner.integrations.LocationIntegrationSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(integration_);
+              integration_ = subBuilder.buildPartial();
             }
 
             break;
@@ -382,37 +395,70 @@ private static final long serialVersionUID = 0L;
     return getTv();
   }
 
-  public static final int PARTNERS_FIELD_NUMBER = 7;
-  private io.bloombox.schema.partner.integrations.LocationIntegrationSettings partners_;
+  public static final int TABLET_FIELD_NUMBER = 7;
+  private io.bloombox.schema.partner.settings.TabletSettings tablet_;
+  /**
+   * <pre>
+   * Tablet-related settings.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+   */
+  public boolean hasTablet() {
+    return tablet_ != null;
+  }
+  /**
+   * <pre>
+   * Tablet-related settings.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+   */
+  public io.bloombox.schema.partner.settings.TabletSettings getTablet() {
+    return tablet_ == null ? io.bloombox.schema.partner.settings.TabletSettings.getDefaultInstance() : tablet_;
+  }
+  /**
+   * <pre>
+   * Tablet-related settings.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+   */
+  public io.bloombox.schema.partner.settings.TabletSettingsOrBuilder getTabletOrBuilder() {
+    return getTablet();
+  }
+
+  public static final int INTEGRATION_FIELD_NUMBER = 20;
+  private io.bloombox.schema.partner.integrations.LocationIntegrationSettings integration_;
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
    */
-  public boolean hasPartners() {
-    return partners_ != null;
+  public boolean hasIntegration() {
+    return integration_ != null;
   }
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
    */
-  public io.bloombox.schema.partner.integrations.LocationIntegrationSettings getPartners() {
-    return partners_ == null ? io.bloombox.schema.partner.integrations.LocationIntegrationSettings.getDefaultInstance() : partners_;
+  public io.bloombox.schema.partner.integrations.LocationIntegrationSettings getIntegration() {
+    return integration_ == null ? io.bloombox.schema.partner.integrations.LocationIntegrationSettings.getDefaultInstance() : integration_;
   }
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
    */
-  public io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder getPartnersOrBuilder() {
-    return getPartners();
+  public io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
+    return getIntegration();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -445,8 +491,11 @@ private static final long serialVersionUID = 0L;
     if (tv_ != null) {
       output.writeMessage(6, getTv());
     }
-    if (partners_ != null) {
-      output.writeMessage(7, getPartners());
+    if (tablet_ != null) {
+      output.writeMessage(7, getTablet());
+    }
+    if (integration_ != null) {
+      output.writeMessage(20, getIntegration());
     }
     unknownFields.writeTo(output);
   }
@@ -480,9 +529,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getTv());
     }
-    if (partners_ != null) {
+    if (tablet_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getPartners());
+        .computeMessageSize(7, getTablet());
+    }
+    if (integration_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, getIntegration());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -530,10 +583,15 @@ private static final long serialVersionUID = 0L;
       result = result && getTv()
           .equals(other.getTv());
     }
-    result = result && (hasPartners() == other.hasPartners());
-    if (hasPartners()) {
-      result = result && getPartners()
-          .equals(other.getPartners());
+    result = result && (hasTablet() == other.hasTablet());
+    if (hasTablet()) {
+      result = result && getTablet()
+          .equals(other.getTablet());
+    }
+    result = result && (hasIntegration() == other.hasIntegration());
+    if (hasIntegration()) {
+      result = result && getIntegration()
+          .equals(other.getIntegration());
     }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
@@ -570,9 +628,13 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TV_FIELD_NUMBER;
       hash = (53 * hash) + getTv().hashCode();
     }
-    if (hasPartners()) {
-      hash = (37 * hash) + PARTNERS_FIELD_NUMBER;
-      hash = (53 * hash) + getPartners().hashCode();
+    if (hasTablet()) {
+      hash = (37 * hash) + TABLET_FIELD_NUMBER;
+      hash = (53 * hash) + getTablet().hashCode();
+    }
+    if (hasIntegration()) {
+      hash = (37 * hash) + INTEGRATION_FIELD_NUMBER;
+      hash = (53 * hash) + getIntegration().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -743,11 +805,17 @@ private static final long serialVersionUID = 0L;
         tv_ = null;
         tvBuilder_ = null;
       }
-      if (partnersBuilder_ == null) {
-        partners_ = null;
+      if (tabletBuilder_ == null) {
+        tablet_ = null;
       } else {
-        partners_ = null;
-        partnersBuilder_ = null;
+        tablet_ = null;
+        tabletBuilder_ = null;
+      }
+      if (integrationBuilder_ == null) {
+        integration_ = null;
+      } else {
+        integration_ = null;
+        integrationBuilder_ = null;
       }
       return this;
     }
@@ -801,10 +869,15 @@ private static final long serialVersionUID = 0L;
       } else {
         result.tv_ = tvBuilder_.build();
       }
-      if (partnersBuilder_ == null) {
-        result.partners_ = partners_;
+      if (tabletBuilder_ == null) {
+        result.tablet_ = tablet_;
       } else {
-        result.partners_ = partnersBuilder_.build();
+        result.tablet_ = tabletBuilder_.build();
+      }
+      if (integrationBuilder_ == null) {
+        result.integration_ = integration_;
+      } else {
+        result.integration_ = integrationBuilder_.build();
       }
       onBuilt();
       return result;
@@ -865,8 +938,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasTv()) {
         mergeTv(other.getTv());
       }
-      if (other.hasPartners()) {
-        mergePartners(other.getPartners());
+      if (other.hasTablet()) {
+        mergeTablet(other.getTablet());
+      }
+      if (other.hasIntegration()) {
+        mergeIntegration(other.getIntegration());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1813,107 +1889,202 @@ private static final long serialVersionUID = 0L;
       return tvBuilder_;
     }
 
-    private io.bloombox.schema.partner.integrations.LocationIntegrationSettings partners_ = null;
+    private io.bloombox.schema.partner.settings.TabletSettings tablet_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.integrations.LocationIntegrationSettings, io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder> partnersBuilder_;
+        io.bloombox.schema.partner.settings.TabletSettings, io.bloombox.schema.partner.settings.TabletSettings.Builder, io.bloombox.schema.partner.settings.TabletSettingsOrBuilder> tabletBuilder_;
     /**
      * <pre>
-     * Integration settings for this location.
+     * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
      */
-    public boolean hasPartners() {
-      return partnersBuilder_ != null || partners_ != null;
+    public boolean hasTablet() {
+      return tabletBuilder_ != null || tablet_ != null;
     }
     /**
      * <pre>
-     * Integration settings for this location.
+     * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
      */
-    public io.bloombox.schema.partner.integrations.LocationIntegrationSettings getPartners() {
-      if (partnersBuilder_ == null) {
-        return partners_ == null ? io.bloombox.schema.partner.integrations.LocationIntegrationSettings.getDefaultInstance() : partners_;
+    public io.bloombox.schema.partner.settings.TabletSettings getTablet() {
+      if (tabletBuilder_ == null) {
+        return tablet_ == null ? io.bloombox.schema.partner.settings.TabletSettings.getDefaultInstance() : tablet_;
       } else {
-        return partnersBuilder_.getMessage();
+        return tabletBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Integration settings for this location.
+     * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
      */
-    public Builder setPartners(io.bloombox.schema.partner.integrations.LocationIntegrationSettings value) {
-      if (partnersBuilder_ == null) {
+    public Builder setTablet(io.bloombox.schema.partner.settings.TabletSettings value) {
+      if (tabletBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        partners_ = value;
+        tablet_ = value;
         onChanged();
       } else {
-        partnersBuilder_.setMessage(value);
+        tabletBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Integration settings for this location.
+     * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
      */
-    public Builder setPartners(
-        io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder builderForValue) {
-      if (partnersBuilder_ == null) {
-        partners_ = builderForValue.build();
+    public Builder setTablet(
+        io.bloombox.schema.partner.settings.TabletSettings.Builder builderForValue) {
+      if (tabletBuilder_ == null) {
+        tablet_ = builderForValue.build();
         onChanged();
       } else {
-        partnersBuilder_.setMessage(builderForValue.build());
+        tabletBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * Integration settings for this location.
+     * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
      */
-    public Builder mergePartners(io.bloombox.schema.partner.integrations.LocationIntegrationSettings value) {
-      if (partnersBuilder_ == null) {
-        if (partners_ != null) {
-          partners_ =
-            io.bloombox.schema.partner.integrations.LocationIntegrationSettings.newBuilder(partners_).mergeFrom(value).buildPartial();
+    public Builder mergeTablet(io.bloombox.schema.partner.settings.TabletSettings value) {
+      if (tabletBuilder_ == null) {
+        if (tablet_ != null) {
+          tablet_ =
+            io.bloombox.schema.partner.settings.TabletSettings.newBuilder(tablet_).mergeFrom(value).buildPartial();
         } else {
-          partners_ = value;
+          tablet_ = value;
         }
         onChanged();
       } else {
-        partnersBuilder_.mergeFrom(value);
+        tabletBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Integration settings for this location.
+     * Tablet-related settings.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
      */
-    public Builder clearPartners() {
-      if (partnersBuilder_ == null) {
-        partners_ = null;
+    public Builder clearTablet() {
+      if (tabletBuilder_ == null) {
+        tablet_ = null;
         onChanged();
       } else {
-        partners_ = null;
-        partnersBuilder_ = null;
+        tablet_ = null;
+        tabletBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Tablet-related settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     */
+    public io.bloombox.schema.partner.settings.TabletSettings.Builder getTabletBuilder() {
+      
+      onChanged();
+      return getTabletFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Tablet-related settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     */
+    public io.bloombox.schema.partner.settings.TabletSettingsOrBuilder getTabletOrBuilder() {
+      if (tabletBuilder_ != null) {
+        return tabletBuilder_.getMessageOrBuilder();
+      } else {
+        return tablet_ == null ?
+            io.bloombox.schema.partner.settings.TabletSettings.getDefaultInstance() : tablet_;
+      }
+    }
+    /**
+     * <pre>
+     * Tablet-related settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.partner.settings.TabletSettings, io.bloombox.schema.partner.settings.TabletSettings.Builder, io.bloombox.schema.partner.settings.TabletSettingsOrBuilder> 
+        getTabletFieldBuilder() {
+      if (tabletBuilder_ == null) {
+        tabletBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.bloombox.schema.partner.settings.TabletSettings, io.bloombox.schema.partner.settings.TabletSettings.Builder, io.bloombox.schema.partner.settings.TabletSettingsOrBuilder>(
+                getTablet(),
+                getParentForChildren(),
+                isClean());
+        tablet_ = null;
+      }
+      return tabletBuilder_;
+    }
+
+    private io.bloombox.schema.partner.integrations.LocationIntegrationSettings integration_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.partner.integrations.LocationIntegrationSettings, io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder> integrationBuilder_;
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     */
+    public boolean hasIntegration() {
+      return integrationBuilder_ != null || integration_ != null;
+    }
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     */
+    public io.bloombox.schema.partner.integrations.LocationIntegrationSettings getIntegration() {
+      if (integrationBuilder_ == null) {
+        return integration_ == null ? io.bloombox.schema.partner.integrations.LocationIntegrationSettings.getDefaultInstance() : integration_;
+      } else {
+        return integrationBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     */
+    public Builder setIntegration(io.bloombox.schema.partner.integrations.LocationIntegrationSettings value) {
+      if (integrationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        integration_ = value;
+        onChanged();
+      } else {
+        integrationBuilder_.setMessage(value);
       }
 
       return this;
@@ -1923,26 +2094,84 @@ private static final long serialVersionUID = 0L;
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
-    public io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder getPartnersBuilder() {
-      
-      onChanged();
-      return getPartnersFieldBuilder().getBuilder();
+    public Builder setIntegration(
+        io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder builderForValue) {
+      if (integrationBuilder_ == null) {
+        integration_ = builderForValue.build();
+        onChanged();
+      } else {
+        integrationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
     }
     /**
      * <pre>
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
-    public io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder getPartnersOrBuilder() {
-      if (partnersBuilder_ != null) {
-        return partnersBuilder_.getMessageOrBuilder();
+    public Builder mergeIntegration(io.bloombox.schema.partner.integrations.LocationIntegrationSettings value) {
+      if (integrationBuilder_ == null) {
+        if (integration_ != null) {
+          integration_ =
+            io.bloombox.schema.partner.integrations.LocationIntegrationSettings.newBuilder(integration_).mergeFrom(value).buildPartial();
+        } else {
+          integration_ = value;
+        }
+        onChanged();
       } else {
-        return partners_ == null ?
-            io.bloombox.schema.partner.integrations.LocationIntegrationSettings.getDefaultInstance() : partners_;
+        integrationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     */
+    public Builder clearIntegration() {
+      if (integrationBuilder_ == null) {
+        integration_ = null;
+        onChanged();
+      } else {
+        integration_ = null;
+        integrationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     */
+    public io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder getIntegrationBuilder() {
+      
+      onChanged();
+      return getIntegrationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+     */
+    public io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
+      if (integrationBuilder_ != null) {
+        return integrationBuilder_.getMessageOrBuilder();
+      } else {
+        return integration_ == null ?
+            io.bloombox.schema.partner.integrations.LocationIntegrationSettings.getDefaultInstance() : integration_;
       }
     }
     /**
@@ -1950,20 +2179,20 @@ private static final long serialVersionUID = 0L;
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.integrations.LocationIntegrationSettings, io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder> 
-        getPartnersFieldBuilder() {
-      if (partnersBuilder_ == null) {
-        partnersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getIntegrationFieldBuilder() {
+      if (integrationBuilder_ == null) {
+        integrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.partner.integrations.LocationIntegrationSettings, io.bloombox.schema.partner.integrations.LocationIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder>(
-                getPartners(),
+                getIntegration(),
                 getParentForChildren(),
                 isClean());
-        partners_ = null;
+        integration_ = null;
       }
-      return partnersBuilder_;
+      return integrationBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

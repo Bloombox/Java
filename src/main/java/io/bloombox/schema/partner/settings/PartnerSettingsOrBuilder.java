@@ -128,23 +128,23 @@ public interface PartnerSettingsOrBuilder extends
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
    */
-  boolean hasPartners();
+  boolean hasIntegration();
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
    */
-  io.bloombox.schema.partner.integrations.PartnerIntegrationSettings getPartners();
+  io.bloombox.schema.partner.integrations.PartnerIntegrationSettings getIntegration();
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
    */
-  io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder getPartnersOrBuilder();
+  io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder();
 }

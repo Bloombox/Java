@@ -45,10 +45,10 @@ public final class MediaItemKey {
   static {
     java.lang.String[] descriptorData = {
       "\n\024media/MediaKey.proto\022\022opencannabis.med" +
-      "ia\032\016bq_field.proto\"9\n\010MediaKey\022-\n\002id\030\001 \001" +
-      "(\tB!\212@\036Unique ID for this media item.B6\n" +
-      "\034io.opencannabis.schema.mediaB\014MediaItem" +
-      "KeyH\001P\001\242\002\003OCSb\006proto3"
+      "ia\032\024core/Datamodel.proto\"<\n\010MediaKey\0220\n\002" +
+      "id\030\001 \001(\tB$\302\265\003 \022\036Unique ID for this media" +
+      " item.B6\n\034io.opencannabis.schema.mediaB\014" +
+      "MediaItemKeyH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,7 +61,7 @@ public final class MediaItemKey {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          gen_bq_schema.BqField.getDescriptor(),
+          core.Datamodel.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_media_MediaKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -71,10 +71,10 @@ public final class MediaItemKey {
         new java.lang.String[] { "Id", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(gen_bq_schema.BqField.description);
+    registry.add(core.Datamodel.field);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    gen_bq_schema.BqField.getDescriptor();
+    core.Datamodel.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
