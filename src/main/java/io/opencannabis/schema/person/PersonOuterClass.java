@@ -47,7 +47,7 @@ public final class PersonOuterClass {
       "\n\023person/Person.proto\022\023opencannabis.pers" +
       "on\032\016bq_field.proto\032\023temporal/Date.proto\032" +
       "\031contact/ContactInfo.proto\032\027person/Perso" +
-      "nName.proto\"\275\003\n\006Person\022N\n\004name\030\001 \001(\0132\031.o" +
+      "nName.proto\"\366\003\n\006Person\022N\n\004name\030\001 \001(\0132\031.o" +
       "pencannabis.person.NameB%\212@\"Person\'s pri" +
       "mary name information.\022m\n\nlegal_name\030\002 \001" +
       "(\0132\031.opencannabis.person.NameB>\212@;Person" +
@@ -58,8 +58,11 @@ public final class PersonOuterClass {
       "!.opencannabis.contact.ContactInfoB \212@\035P" +
       "erson\'s contact information.\022E\n\rdate_of_" +
       "birth\030\005 \001(\0132\033.opencannabis.temporal.Date" +
-      "B\021\212@\016Date of birth.B)\n\035io.opencannabis.s" +
-      "chema.personH\001P\001\242\002\003OCSb\006proto3"
+      "B\021\212@\016Date of birth.\0227\n\006gender\030\006 \001(\0162\033.op" +
+      "encannabis.person.GenderB\n\212@\007Gender.*:\n\006" +
+      "Gender\022\017\n\013UNSPECIFIED\020\000\022\010\n\004MALE\020\001\022\n\n\006FEM" +
+      "ALE\020\002\022\t\n\005OTHER\020\003B)\n\035io.opencannabis.sche" +
+      "ma.personH\001P\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -82,7 +85,7 @@ public final class PersonOuterClass {
     internal_static_opencannabis_person_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_person_Person_descriptor,
-        new java.lang.String[] { "Name", "LegalName", "AlternateName", "Contact", "DateOfBirth", });
+        new java.lang.String[] { "Name", "LegalName", "AlternateName", "Contact", "DateOfBirth", "Gender", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);

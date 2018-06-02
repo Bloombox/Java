@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Person() {
+    gender_ = 0;
   }
 
   @java.lang.Override
@@ -132,6 +133,12 @@ private static final long serialVersionUID = 0L;
               dateOfBirth_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 48: {
+            int rawValue = input.readEnum();
+
+            gender_ = rawValue;
             break;
           }
         }
@@ -323,6 +330,22 @@ private static final long serialVersionUID = 0L;
     return getDateOfBirth();
   }
 
+  public static final int GENDER_FIELD_NUMBER = 6;
+  private int gender_;
+  /**
+   * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+   */
+  public int getGenderValue() {
+    return gender_;
+  }
+  /**
+   * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+   */
+  public io.opencannabis.schema.person.Gender getGender() {
+    io.opencannabis.schema.person.Gender result = io.opencannabis.schema.person.Gender.valueOf(gender_);
+    return result == null ? io.opencannabis.schema.person.Gender.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -349,6 +372,9 @@ private static final long serialVersionUID = 0L;
     }
     if (dateOfBirth_ != null) {
       output.writeMessage(5, getDateOfBirth());
+    }
+    if (gender_ != io.opencannabis.schema.person.Gender.UNSPECIFIED.getNumber()) {
+      output.writeEnum(6, gender_);
     }
     unknownFields.writeTo(output);
   }
@@ -377,6 +403,10 @@ private static final long serialVersionUID = 0L;
     if (dateOfBirth_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDateOfBirth());
+    }
+    if (gender_ != io.opencannabis.schema.person.Gender.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(6, gender_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -419,6 +449,7 @@ private static final long serialVersionUID = 0L;
       result = result && getDateOfBirth()
           .equals(other.getDateOfBirth());
     }
+    result = result && gender_ == other.gender_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -450,6 +481,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATE_OF_BIRTH_FIELD_NUMBER;
       hash = (53 * hash) + getDateOfBirth().hashCode();
     }
+    hash = (37 * hash) + GENDER_FIELD_NUMBER;
+    hash = (53 * hash) + gender_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -613,6 +646,8 @@ private static final long serialVersionUID = 0L;
         dateOfBirth_ = null;
         dateOfBirthBuilder_ = null;
       }
+      gender_ = 0;
+
       return this;
     }
 
@@ -660,6 +695,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.dateOfBirth_ = dateOfBirthBuilder_.build();
       }
+      result.gender_ = gender_;
       onBuilt();
       return result;
     }
@@ -715,6 +751,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDateOfBirth()) {
         mergeDateOfBirth(other.getDateOfBirth());
+      }
+      if (other.gender_ != 0) {
+        setGenderValue(other.getGenderValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1506,6 +1545,50 @@ private static final long serialVersionUID = 0L;
         dateOfBirth_ = null;
       }
       return dateOfBirthBuilder_;
+    }
+
+    private int gender_ = 0;
+    /**
+     * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+     */
+    public int getGenderValue() {
+      return gender_;
+    }
+    /**
+     * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+     */
+    public Builder setGenderValue(int value) {
+      gender_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+     */
+    public io.opencannabis.schema.person.Gender getGender() {
+      io.opencannabis.schema.person.Gender result = io.opencannabis.schema.person.Gender.valueOf(gender_);
+      return result == null ? io.opencannabis.schema.person.Gender.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+     */
+    public Builder setGender(io.opencannabis.schema.person.Gender value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      gender_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+     */
+    public Builder clearGender() {
+      
+      gender_ = 0;
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

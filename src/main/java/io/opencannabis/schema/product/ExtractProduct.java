@@ -103,6 +103,30 @@ public final class ExtractProduct {
      * <code>ROSIN = 7;</code>
      */
     ROSIN(7),
+    /**
+     * <pre>
+     * Similar process to shatter, but with higher-terpene output and a softer, cheese-like consistency.
+     * </pre>
+     *
+     * <code>CRUMBLE = 8;</code>
+     */
+    CRUMBLE(8),
+    /**
+     * <pre>
+     * THC distillate, often with extracted terpene content added.
+     * </pre>
+     *
+     * <code>SAUCE = 9;</code>
+     */
+    SAUCE(9),
+    /**
+     * <pre>
+     * Raw THC or terpene distillate, in dust or powder form.
+     * </pre>
+     *
+     * <code>SUGAR = 10;</code>
+     */
+    SUGAR(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -170,6 +194,30 @@ public final class ExtractProduct {
      * <code>ROSIN = 7;</code>
      */
     public static final int ROSIN_VALUE = 7;
+    /**
+     * <pre>
+     * Similar process to shatter, but with higher-terpene output and a softer, cheese-like consistency.
+     * </pre>
+     *
+     * <code>CRUMBLE = 8;</code>
+     */
+    public static final int CRUMBLE_VALUE = 8;
+    /**
+     * <pre>
+     * THC distillate, often with extracted terpene content added.
+     * </pre>
+     *
+     * <code>SAUCE = 9;</code>
+     */
+    public static final int SAUCE_VALUE = 9;
+    /**
+     * <pre>
+     * Raw THC or terpene distillate, in dust or powder form.
+     * </pre>
+     *
+     * <code>SUGAR = 10;</code>
+     */
+    public static final int SUGAR_VALUE = 10;
 
 
     public final int getNumber() {
@@ -198,6 +246,9 @@ public final class ExtractProduct {
         case 5: return HASH;
         case 6: return LIVE_RESIN;
         case 7: return ROSIN;
+        case 8: return CRUMBLE;
+        case 9: return SAUCE;
+        case 10: return SUGAR;
         default: return null;
       }
     }
@@ -2282,13 +2333,14 @@ public final class ExtractProduct {
       "e.ProductReference\0225\n\007product\030\005 \001(\0132$.op" +
       "encannabis.content.ProductContent\0225\n\010mat" +
       "erial\030\006 \001(\0132#.opencannabis.content.Mater" +
-      "ialsData*t\n\013ExtractType\022\027\n\023UNSPECIFIED_E" +
-      "XTRACT\020\000\022\007\n\003OIL\020\001\022\007\n\003WAX\020\002\022\013\n\007SHATTER\020\003\022" +
-      "\010\n\004KIEF\020\004\022\010\n\004HASH\020\005\022\016\n\nLIVE_RESIN\020\006\022\t\n\005R" +
-      "OSIN\020\007*4\n\013ExtractFlag\022\024\n\020NO_EXTRACT_FLAG" +
-      "S\020\000\022\017\n\013SOLVENTLESS\020\001B:\n\036io.opencannabis." +
-      "schema.productB\016ExtractProductH\001P\000\242\002\003OCS" +
-      "b\006proto3"
+      "ialsData*\227\001\n\013ExtractType\022\027\n\023UNSPECIFIED_" +
+      "EXTRACT\020\000\022\007\n\003OIL\020\001\022\007\n\003WAX\020\002\022\013\n\007SHATTER\020\003" +
+      "\022\010\n\004KIEF\020\004\022\010\n\004HASH\020\005\022\016\n\nLIVE_RESIN\020\006\022\t\n\005" +
+      "ROSIN\020\007\022\013\n\007CRUMBLE\020\010\022\t\n\005SAUCE\020\t\022\t\n\005SUGAR" +
+      "\020\n*4\n\013ExtractFlag\022\024\n\020NO_EXTRACT_FLAGS\020\000\022" +
+      "\017\n\013SOLVENTLESS\020\001B:\n\036io.opencannabis.sche" +
+      "ma.productB\016ExtractProductH\001P\000\242\002\003OCSb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
