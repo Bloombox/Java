@@ -186,6 +186,16 @@ public final class PartnerLocationSettingsOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_settings_ShopSettings_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_partner_settings_CartSettings_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_partner_settings_CartSettings_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_partner_settings_TabletSettings_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -202,167 +212,175 @@ public final class PartnerLocationSettingsOuterClass {
       "\n.partner/settings/PartnerLocationSettin" +
       "gs.proto\022 bloombox.schema.partner.settin" +
       "gs\032\022geo/Location.proto\032\023temporal/Date.pr" +
-      "oto\032\031contact/PhoneNumber.proto\032\032contact/" +
-      "EmailAddress.proto\032.partner/integrations" +
-      "/IntegrationSettings.proto\"\034\n\013APISetting" +
-      "s\022\r\n\005embed\030\001 \001(\t\",\n\014InHouseBrand\022\r\n\005labe" +
-      "l\030\001 \001(\t\022\r\n\005brand\030\002 \003(\t\"W\n\024ProductBrandSe" +
-      "ttings\022?\n\007inhouse\030\001 \003(\0132..bloombox.schem" +
-      "a.partner.settings.InHouseBrand\"0\n\017Publi" +
-      "shSettings\022\014\n\004menu\030\001 \001(\010\022\017\n\007profile\030\002 \001(" +
-      "\010\"z\n\025CustomSectionSettings\022\014\n\004spec\030\001 \001(\t" +
-      "\022G\n\006filter\030\002 \001(\01625.bloombox.schema.partn" +
-      "er.settings.FilteredSectionTypeH\000B\n\n\010set" +
-      "tings\"\354\001\n\026SectionSettingsPayload\022\014\n\004hide" +
-      "\030\001 \001(\010\022\r\n\005label\030\002 \001(\010\022\r\n\005media\030\003 \001(\t\022\014\n\004" +
-      "text\030\004 \001(\t\022E\n\004type\030\005 \001(\01625.bloombox.sche" +
-      "ma.partner.settings.SectionSettingsTypeH" +
-      "\000\022I\n\006custom\030\006 \001(\01327.bloombox.schema.part" +
-      "ner.settings.CustomSectionSettingsH\000B\006\n\004" +
-      "kind\"\322\006\n\017SectionSettings\022L\n\napothecary\030\001" +
-      " \001(\01328.bloombox.schema.partner.settings." +
-      "SectionSettingsPayload\022L\n\ncartridges\030\002 \001" +
-      "(\01328.bloombox.schema.partner.settings.Se" +
-      "ctionSettingsPayload\022N\n\014concentrates\030\003 \001" +
-      "(\01328.bloombox.schema.partner.settings.Se" +
-      "ctionSettingsPayload\022I\n\007edibles\030\004 \001(\01328." +
-      "bloombox.schema.partner.settings.Section" +
-      "SettingsPayload\022I\n\007flowers\030\005 \001(\01328.bloom" +
-      "box.schema.partner.settings.SectionSetti" +
-      "ngsPayload\022J\n\010prerolls\030\006 \001(\01328.bloombox." +
-      "schema.partner.settings.SectionSettingsP" +
-      "ayload\022M\n\013merchandise\030\007 \001(\01328.bloombox.s" +
+      "oto\032\024commerce/Order.proto\032\031contact/Phone" +
+      "Number.proto\032\032contact/EmailAddress.proto" +
+      "\032.partner/integrations/IntegrationSettin" +
+      "gs.proto\"\034\n\013APISettings\022\r\n\005embed\030\001 \001(\t\"," +
+      "\n\014InHouseBrand\022\r\n\005label\030\001 \001(\t\022\r\n\005brand\030\002" +
+      " \003(\t\"W\n\024ProductBrandSettings\022?\n\007inhouse\030" +
+      "\001 \003(\0132..bloombox.schema.partner.settings" +
+      ".InHouseBrand\"0\n\017PublishSettings\022\014\n\004menu" +
+      "\030\001 \001(\010\022\017\n\007profile\030\002 \001(\010\"z\n\025CustomSection" +
+      "Settings\022\014\n\004spec\030\001 \001(\t\022G\n\006filter\030\002 \001(\01625" +
+      ".bloombox.schema.partner.settings.Filter" +
+      "edSectionTypeH\000B\n\n\010settings\"\354\001\n\026SectionS" +
+      "ettingsPayload\022\014\n\004hide\030\001 \001(\010\022\r\n\005label\030\002 " +
+      "\001(\010\022\r\n\005media\030\003 \001(\t\022\014\n\004text\030\004 \001(\t\022E\n\004type" +
+      "\030\005 \001(\01625.bloombox.schema.partner.setting" +
+      "s.SectionSettingsTypeH\000\022I\n\006custom\030\006 \001(\0132" +
+      "7.bloombox.schema.partner.settings.Custo" +
+      "mSectionSettingsH\000B\006\n\004kind\"\322\006\n\017SectionSe" +
+      "ttings\022L\n\napothecary\030\001 \001(\01328.bloombox.sc" +
+      "hema.partner.settings.SectionSettingsPay" +
+      "load\022L\n\ncartridges\030\002 \001(\01328.bloombox.sche" +
+      "ma.partner.settings.SectionSettingsPaylo" +
+      "ad\022N\n\014concentrates\030\003 \001(\01328.bloombox.sche" +
+      "ma.partner.settings.SectionSettingsPaylo" +
+      "ad\022I\n\007edibles\030\004 \001(\01328.bloombox.schema.pa" +
+      "rtner.settings.SectionSettingsPayload\022I\n" +
+      "\007flowers\030\005 \001(\01328.bloombox.schema.partner" +
+      ".settings.SectionSettingsPayload\022J\n\010prer" +
+      "olls\030\006 \001(\01328.bloombox.schema.partner.set" +
+      "tings.SectionSettingsPayload\022M\n\013merchand" +
+      "ise\030\007 \001(\01328.bloombox.schema.partner.sett" +
+      "ings.SectionSettingsPayload\022H\n\006plants\030\010 " +
+      "\001(\01328.bloombox.schema.partner.settings.S" +
+      "ectionSettingsPayload\022E\n\003cbd\030\024 \001(\01328.blo" +
+      "ombox.schema.partner.settings.SectionSet" +
+      "tingsPayload\022G\n\005house\030\025 \001(\01328.bloombox.s" +
       "chema.partner.settings.SectionSettingsPa" +
-      "yload\022H\n\006plants\030\010 \001(\01328.bloombox.schema." +
-      "partner.settings.SectionSettingsPayload\022" +
-      "E\n\003cbd\030\024 \001(\01328.bloombox.schema.partner.s" +
-      "ettings.SectionSettingsPayload\022G\n\005house\030" +
-      "\025 \001(\01328.bloombox.schema.partner.settings" +
-      ".SectionSettingsPayload\022H\n\006onsale\030\026 \001(\0132" +
-      "8.bloombox.schema.partner.settings.Secti" +
-      "onSettingsPayload\"6\n\020TVBannerSettings\022\023\n" +
-      "\013banner_text\030\001 \001(\t\022\r\n\005image\030\002 \001(\t\"F\n\030TVS" +
-      "ectionSettingsPayload\022\014\n\004sort\030\001 \001(\r\022\r\n\005t" +
-      "itle\030\002 \001(\t\022\r\n\005image\030\003 \001(\t\"\207\005\n\016TVMenuSett" +
-      "ings\022N\n\napothecary\030\001 \001(\0132:.bloombox.sche" +
-      "ma.partner.settings.TVSectionSettingsPay" +
-      "load\022N\n\ncartridges\030\002 \001(\0132:.bloombox.sche" +
-      "ma.partner.settings.TVSectionSettingsPay" +
-      "load\022P\n\014concentrates\030\003 \001(\0132:.bloombox.sc" +
-      "hema.partner.settings.TVSectionSettingsP" +
-      "ayload\022K\n\007edibles\030\004 \001(\0132:.bloombox.schem" +
-      "a.partner.settings.TVSectionSettingsPayl" +
-      "oad\022K\n\007flowers\030\005 \001(\0132:.bloombox.schema.p" +
-      "artner.settings.TVSectionSettingsPayload" +
-      "\022L\n\010prerolls\030\006 \001(\0132:.bloombox.schema.par" +
-      "tner.settings.TVSectionSettingsPayload\022O" +
-      "\n\013merchandise\030\007 \001(\0132:.bloombox.schema.pa" +
-      "rtner.settings.TVSectionSettingsPayload\022" +
-      "J\n\006plants\030\010 \001(\0132:.bloombox.schema.partne" +
-      "r.settings.TVSectionSettingsPayload\"\224\001\n\n" +
-      "TVSettings\022B\n\006banner\030\001 \001(\01322.bloombox.sc" +
-      "hema.partner.settings.TVBannerSettings\022B" +
-      "\n\010settings\030\002 \001(\01320.bloombox.schema.partn" +
-      "er.settings.TVMenuSettings\")\n\tHoursSpec\022" +
-      "\014\n\004hour\030\001 \001(\r\022\016\n\006minute\030\002 \001(\r\"\300\001\n\rHoursB" +
-      "oundary\022:\n\005begin\030\001 \001(\0132+.bloombox.schema" +
-      ".partner.settings.HoursSpec\0228\n\003end\030\002 \001(\013" +
-      "2+.bloombox.schema.partner.settings.Hour" +
-      "sSpec\0229\n\004span\030\003 \001(\0162+.bloombox.schema.pa" +
-      "rtner.settings.HoursSpan\"\223\001\n\024RegularHour" +
-      "sSettings\022?\n\006bounds\030\001 \001(\0132/.bloombox.sch" +
-      "ema.partner.settings.HoursBoundary\022:\n\004mo" +
-      "de\030\002 \001(\0162,.bloombox.schema.partner.setti" +
-      "ngs.ShopStatus\"\276\001\n\024SpecialHoursSettings\022" +
-      "?\n\006bounds\030\001 \001(\0132/.bloombox.schema.partne" +
-      "r.settings.HoursBoundary\022:\n\004mode\030\002 \001(\0162," +
-      ".bloombox.schema.partner.settings.ShopSt" +
-      "atus\022)\n\004date\030\003 \001(\0132\033.opencannabis.tempor" +
-      "al.Date\"\227\002\n\021ShopHoursSettings\022G\n\007regular" +
-      "\030\001 \003(\01326.bloombox.schema.partner.setting" +
-      "s.RegularHoursSettings\022Q\n\007special\030\002 \003(\0132" +
-      "@.bloombox.schema.partner.settings.ShopH" +
-      "oursSettings.SpecialEntry\032f\n\014SpecialEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022E\n\005value\030\002 \001(\01326.bloombox" +
-      ".schema.partner.settings.SpecialHoursSet" +
-      "tings:\0028\001\"\\\n\023ShopServiceSettings\022\020\n\010deli" +
-      "very\030\001 \001(\010\022\017\n\007express\030\002 \001(\010\022\016\n\006pickup\030\003 " +
-      "\001(\010\022\022\n\nstorefront\030\004 \001(\010\"U\n\027DeliveryZipco" +
-      "deSettings\022\017\n\007zipcode\030\001 \001(\t\022\017\n\007enabled\030\002" +
-      " \001(\010\022\030\n\020delivery_minimum\030\003 \001(\r\"\352\001\n\020Deliv" +
-      "erySettings\022\026\n\016global_minimum\030\001 \001(\r\022R\n\010z" +
-      "ipcodes\030\002 \003(\0132@.bloombox.schema.partner." +
-      "settings.DeliverySettings.ZipcodesEntry\032" +
-      "j\n\rZipcodesEntry\022\013\n\003key\030\001 \001(\t\022H\n\005value\030\002" +
-      " \001(\01329.bloombox.schema.partner.settings." +
-      "DeliveryZipcodeSettings:\0028\001\"8\n\032ShopConta" +
-      "ctChannelSettings\022\r\n\005email\030\001 \001(\010\022\013\n\003sms\030" +
-      "\002 \001(\010\"\265\001\n\023ShopChannelSettings\022L\n\006orders\030" +
-      "\001 \001(\0132<.bloombox.schema.partner.settings" +
-      ".ShopContactChannelSettings\022P\n\nenrollmen" +
-      "t\030\002 \001(\0132<.bloombox.schema.partner.settin" +
-      "gs.ShopContactChannelSettings\"\337\001\n\021ShopCo" +
-      "ntactTarget\022\r\n\005label\030\001 \001(\t\022\r\n\005debug\030\002 \001(" +
-      "\010\0221\n\005email\030\003 \001(\0132\".opencannabis.contact." +
-      "EmailAddress\0220\n\005phone\030\004 \001(\0132!.opencannab" +
-      "is.contact.PhoneNumber\022G\n\010channels\030\005 \001(\013" +
-      "25.bloombox.schema.partner.settings.Shop" +
-      "ChannelSettings\"z\n\023CommsSenderSettings\0221" +
-      "\n\005email\030\001 \001(\0132\".opencannabis.contact.Ema" +
-      "ilAddress\0220\n\005phone\030\002 \001(\0132!.opencannabis." +
-      "contact.PhoneNumber\"\343\001\n\024CommsSettingsPay" +
-      "load\022=\n\004type\030\001 \001(\0162/.bloombox.schema.par" +
-      "tner.settings.ShopCommsType\022E\n\010contacts\030" +
-      "\002 \003(\01323.bloombox.schema.partner.settings" +
-      ".ShopContactTarget\022E\n\006sender\030\003 \001(\01325.blo" +
-      "ombox.schema.partner.settings.CommsSende" +
-      "rSettings\"\247\001\n\021ShopCommsSettings\022H\n\010inter" +
-      "nal\030\001 \001(\01326.bloombox.schema.partner.sett" +
-      "ings.CommsSettingsPayload\022H\n\010external\030\002 " +
-      "\001(\01326.bloombox.schema.partner.settings.C" +
-      "ommsSettingsPayload\"h\n\022OnlineShopSetting" +
-      "s\022\016\n\006origin\030\001 \001(\t\022B\n\005comms\030\002 \001(\01323.bloom" +
-      "box.schema.partner.settings.ShopCommsSet" +
-      "tings\"J\n\032PhysicalStorefrontSettings\022,\n\010l" +
-      "ocation\030\001 \001(\0132\032.opencannabis.geo.Locatio" +
-      "n\"\360\001\n\022StorefrontSettings\022D\n\010delivery\030\001 \001" +
-      "(\01322.bloombox.schema.partner.settings.De" +
-      "liverySettings\022D\n\006online\030\002 \001(\01324.bloombo" +
-      "x.schema.partner.settings.OnlineShopSett" +
-      "ings\022N\n\010physical\030\003 \001(\0132<.bloombox.schema" +
-      ".partner.settings.PhysicalStorefrontSett" +
-      "ings\"\345\001\n\014ShopSettings\022B\n\005hours\030\001 \001(\01323.b" +
-      "loombox.schema.partner.settings.ShopHour" +
-      "sSettings\022G\n\010services\030\002 \001(\01325.bloombox.s" +
-      "chema.partner.settings.ShopServiceSettin" +
-      "gs\022H\n\nstorefront\030\003 \001(\01324.bloombox.schema" +
-      ".partner.settings.StorefrontSettings\"\363\003\n" +
-      "\027PartnerLocationSettings\022:\n\003api\030\001 \001(\0132-." +
-      "bloombox.schema.partner.settings.APISett" +
-      "ings\022F\n\006brands\030\002 \001(\01326.bloombox.schema.p" +
-      "artner.settings.ProductBrandSettings\022B\n\007" +
-      "publish\030\003 \001(\01321.bloombox.schema.partner." +
-      "settings.PublishSettings\022C\n\010sections\030\004 \001" +
-      "(\01321.bloombox.schema.partner.settings.Se" +
-      "ctionSettings\022<\n\004shop\030\005 \001(\0132..bloombox.s" +
-      "chema.partner.settings.ShopSettings\0228\n\002t" +
-      "v\030\006 \001(\0132,.bloombox.schema.partner.settin" +
-      "gs.TVSettings\022S\n\010partners\030\007 \001(\0132A.bloomb" +
-      "ox.schema.partner.integrations.LocationI" +
-      "ntegrationSettings*1\n\023SectionSettingsTyp" +
-      "e\022\014\n\010STANDARD\020\000\022\014\n\010FILTERED\020\001*5\n\023Filtere" +
-      "dSectionType\022\007\n\003CBD\020\000\022\t\n\005HOUSE\020\001\022\n\n\006ONSA" +
-      "LE\020\002* \n\022CustomSettingsType\022\n\n\006FILTER\020\000*\221" +
-      "\001\n\tHoursSpan\022\014\n\010EVERYDAY\020\000\022\014\n\010WEEKDAYS\020\001" +
-      "\022\014\n\010WEEKENDS\020\002\022\n\n\006MONDAY\020\003\022\013\n\007TUESDAY\020\004\022" +
-      "\r\n\tWEDNESDAY\020\005\022\014\n\010THURSDAY\020\006\022\n\n\006FRIDAY\020\007" +
-      "\022\014\n\010SATURDAY\020\010\022\n\n\006SUNDAY\020\t*F\n\nShopStatus" +
-      "\022\010\n\004OPEN\020\000\022\n\n\006CLOSED\020\001\022\021\n\rDELIVERY_ONLY\020" +
-      "\002\022\017\n\013PICKUP_ONLY\020\003*+\n\rShopCommsType\022\014\n\010I" +
-      "NTERNAL\020\000\022\014\n\010EXTERNAL\020\001*2\n\022ShopContactCh" +
-      "annel\022\014\n\010ORDERING\020\000\022\016\n\nENROLLMENT\020\001B/\n#i" +
-      "o.bloombox.schema.partner.settingsH\001P\001\242\002" +
-      "\003BBSb\006proto3"
+      "yload\022H\n\006onsale\030\026 \001(\01328.bloombox.schema." +
+      "partner.settings.SectionSettingsPayload\"" +
+      "6\n\020TVBannerSettings\022\023\n\013banner_text\030\001 \001(\t" +
+      "\022\r\n\005image\030\002 \001(\t\"F\n\030TVSectionSettingsPayl" +
+      "oad\022\014\n\004sort\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\022\r\n\005imag" +
+      "e\030\003 \001(\t\"\207\005\n\016TVMenuSettings\022N\n\napothecary" +
+      "\030\001 \001(\0132:.bloombox.schema.partner.setting" +
+      "s.TVSectionSettingsPayload\022N\n\ncartridges" +
+      "\030\002 \001(\0132:.bloombox.schema.partner.setting" +
+      "s.TVSectionSettingsPayload\022P\n\014concentrat" +
+      "es\030\003 \001(\0132:.bloombox.schema.partner.setti" +
+      "ngs.TVSectionSettingsPayload\022K\n\007edibles\030" +
+      "\004 \001(\0132:.bloombox.schema.partner.settings" +
+      ".TVSectionSettingsPayload\022K\n\007flowers\030\005 \001" +
+      "(\0132:.bloombox.schema.partner.settings.TV" +
+      "SectionSettingsPayload\022L\n\010prerolls\030\006 \001(\013" +
+      "2:.bloombox.schema.partner.settings.TVSe" +
+      "ctionSettingsPayload\022O\n\013merchandise\030\007 \001(" +
+      "\0132:.bloombox.schema.partner.settings.TVS" +
+      "ectionSettingsPayload\022J\n\006plants\030\010 \001(\0132:." +
+      "bloombox.schema.partner.settings.TVSecti" +
+      "onSettingsPayload\"\224\001\n\nTVSettings\022B\n\006bann" +
+      "er\030\001 \001(\01322.bloombox.schema.partner.setti" +
+      "ngs.TVBannerSettings\022B\n\010settings\030\002 \001(\01320" +
+      ".bloombox.schema.partner.settings.TVMenu" +
+      "Settings\")\n\tHoursSpec\022\014\n\004hour\030\001 \001(\r\022\016\n\006m" +
+      "inute\030\002 \001(\r\"\300\001\n\rHoursBoundary\022:\n\005begin\030\001" +
+      " \001(\0132+.bloombox.schema.partner.settings." +
+      "HoursSpec\0228\n\003end\030\002 \001(\0132+.bloombox.schema" +
+      ".partner.settings.HoursSpec\0229\n\004span\030\003 \001(" +
+      "\0162+.bloombox.schema.partner.settings.Hou" +
+      "rsSpan\"\223\001\n\024RegularHoursSettings\022?\n\006bound" +
+      "s\030\001 \001(\0132/.bloombox.schema.partner.settin" +
+      "gs.HoursBoundary\022:\n\004mode\030\002 \001(\0162,.bloombo" +
+      "x.schema.partner.settings.ShopStatus\"\276\001\n" +
+      "\024SpecialHoursSettings\022?\n\006bounds\030\001 \001(\0132/." +
+      "bloombox.schema.partner.settings.HoursBo" +
+      "undary\022:\n\004mode\030\002 \001(\0162,.bloombox.schema.p" +
+      "artner.settings.ShopStatus\022)\n\004date\030\003 \001(\013" +
+      "2\033.opencannabis.temporal.Date\"\227\002\n\021ShopHo" +
+      "ursSettings\022G\n\007regular\030\001 \003(\01326.bloombox." +
+      "schema.partner.settings.RegularHoursSett" +
+      "ings\022Q\n\007special\030\002 \003(\0132@.bloombox.schema." +
+      "partner.settings.ShopHoursSettings.Speci" +
+      "alEntry\032f\n\014SpecialEntry\022\013\n\003key\030\001 \001(\t\022E\n\005" +
+      "value\030\002 \001(\01326.bloombox.schema.partner.se" +
+      "ttings.SpecialHoursSettings:\0028\001\"\\\n\023ShopS" +
+      "erviceSettings\022\020\n\010delivery\030\001 \001(\010\022\017\n\007expr" +
+      "ess\030\002 \001(\010\022\016\n\006pickup\030\003 \001(\010\022\022\n\nstorefront\030" +
+      "\004 \001(\010\"U\n\027DeliveryZipcodeSettings\022\017\n\007zipc" +
+      "ode\030\001 \001(\t\022\017\n\007enabled\030\002 \001(\010\022\030\n\020delivery_m" +
+      "inimum\030\003 \001(\r\"\352\001\n\020DeliverySettings\022\026\n\016glo" +
+      "bal_minimum\030\001 \001(\r\022R\n\010zipcodes\030\002 \003(\0132@.bl" +
+      "oombox.schema.partner.settings.DeliveryS" +
+      "ettings.ZipcodesEntry\032j\n\rZipcodesEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022H\n\005value\030\002 \001(\01329.bloombox.sc" +
+      "hema.partner.settings.DeliveryZipcodeSet" +
+      "tings:\0028\001\"8\n\032ShopContactChannelSettings\022" +
+      "\r\n\005email\030\001 \001(\010\022\013\n\003sms\030\002 \001(\010\"\265\001\n\023ShopChan" +
+      "nelSettings\022L\n\006orders\030\001 \001(\0132<.bloombox.s" +
+      "chema.partner.settings.ShopContactChanne" +
+      "lSettings\022P\n\nenrollment\030\002 \001(\0132<.bloombox" +
+      ".schema.partner.settings.ShopContactChan" +
+      "nelSettings\"\337\001\n\021ShopContactTarget\022\r\n\005lab" +
+      "el\030\001 \001(\t\022\r\n\005debug\030\002 \001(\010\0221\n\005email\030\003 \001(\0132\"" +
+      ".opencannabis.contact.EmailAddress\0220\n\005ph" +
+      "one\030\004 \001(\0132!.opencannabis.contact.PhoneNu" +
+      "mber\022G\n\010channels\030\005 \001(\01325.bloombox.schema" +
+      ".partner.settings.ShopChannelSettings\"z\n" +
+      "\023CommsSenderSettings\0221\n\005email\030\001 \001(\0132\".op" +
+      "encannabis.contact.EmailAddress\0220\n\005phone" +
+      "\030\002 \001(\0132!.opencannabis.contact.PhoneNumbe" +
+      "r\"\343\001\n\024CommsSettingsPayload\022=\n\004type\030\001 \001(\016" +
+      "2/.bloombox.schema.partner.settings.Shop" +
+      "CommsType\022E\n\010contacts\030\002 \003(\01323.bloombox.s" +
+      "chema.partner.settings.ShopContactTarget" +
+      "\022E\n\006sender\030\003 \001(\01325.bloombox.schema.partn" +
+      "er.settings.CommsSenderSettings\"\247\001\n\021Shop" +
+      "CommsSettings\022H\n\010internal\030\001 \001(\01326.bloomb" +
+      "ox.schema.partner.settings.CommsSettings" +
+      "Payload\022H\n\010external\030\002 \001(\01326.bloombox.sch" +
+      "ema.partner.settings.CommsSettingsPayloa" +
+      "d\"h\n\022OnlineShopSettings\022\016\n\006origin\030\001 \001(\t\022" +
+      "B\n\005comms\030\002 \001(\01323.bloombox.schema.partner" +
+      ".settings.ShopCommsSettings\"J\n\032PhysicalS" +
+      "torefrontSettings\022,\n\010location\030\001 \001(\0132\032.op" +
+      "encannabis.geo.Location\"\360\001\n\022StorefrontSe" +
+      "ttings\022D\n\010delivery\030\001 \001(\01322.bloombox.sche" +
+      "ma.partner.settings.DeliverySettings\022D\n\006" +
+      "online\030\002 \001(\01324.bloombox.schema.partner.s" +
+      "ettings.OnlineShopSettings\022N\n\010physical\030\003" +
+      " \001(\0132<.bloombox.schema.partner.settings." +
+      "PhysicalStorefrontSettings\"\345\001\n\014ShopSetti" +
+      "ngs\022B\n\005hours\030\001 \001(\01323.bloombox.schema.par" +
+      "tner.settings.ShopHoursSettings\022G\n\010servi" +
+      "ces\030\002 \001(\01325.bloombox.schema.partner.sett" +
+      "ings.ShopServiceSettings\022H\n\nstorefront\030\003" +
+      " \001(\01324.bloombox.schema.partner.settings." +
+      "StorefrontSettings\"~\n\014CartSettings\0228\n\004mo" +
+      "de\030\001 \001(\0162*.bloombox.schema.partner.setti" +
+      "ngs.CartMode\0224\n\norder_type\030\002 \001(\0162 .openc" +
+      "annabis.commerce.OrderType\"N\n\016TabletSett" +
+      "ings\022<\n\004cart\030\001 \001(\0132..bloombox.schema.par" +
+      "tner.settings.CartSettings\"\270\004\n\027PartnerLo" +
+      "cationSettings\022:\n\003api\030\001 \001(\0132-.bloombox.s" +
+      "chema.partner.settings.APISettings\022F\n\006br" +
+      "ands\030\002 \001(\01326.bloombox.schema.partner.set" +
+      "tings.ProductBrandSettings\022B\n\007publish\030\003 " +
+      "\001(\01321.bloombox.schema.partner.settings.P" +
+      "ublishSettings\022C\n\010sections\030\004 \001(\01321.bloom" +
+      "box.schema.partner.settings.SectionSetti" +
+      "ngs\022<\n\004shop\030\005 \001(\0132..bloombox.schema.part" +
+      "ner.settings.ShopSettings\0228\n\002tv\030\006 \001(\0132,." +
+      "bloombox.schema.partner.settings.TVSetti" +
+      "ngs\022@\n\006tablet\030\007 \001(\01320.bloombox.schema.pa" +
+      "rtner.settings.TabletSettings\022V\n\013integra" +
+      "tion\030\024 \001(\0132A.bloombox.schema.partner.int" +
+      "egrations.LocationIntegrationSettings*1\n" +
+      "\023SectionSettingsType\022\014\n\010STANDARD\020\000\022\014\n\010FI" +
+      "LTERED\020\001*5\n\023FilteredSectionType\022\007\n\003CBD\020\000" +
+      "\022\t\n\005HOUSE\020\001\022\n\n\006ONSALE\020\002* \n\022CustomSetting" +
+      "sType\022\n\n\006FILTER\020\000*\221\001\n\tHoursSpan\022\014\n\010EVERY" +
+      "DAY\020\000\022\014\n\010WEEKDAYS\020\001\022\014\n\010WEEKENDS\020\002\022\n\n\006MON" +
+      "DAY\020\003\022\013\n\007TUESDAY\020\004\022\r\n\tWEDNESDAY\020\005\022\014\n\010THU" +
+      "RSDAY\020\006\022\n\n\006FRIDAY\020\007\022\014\n\010SATURDAY\020\010\022\n\n\006SUN" +
+      "DAY\020\t*F\n\nShopStatus\022\010\n\004OPEN\020\000\022\n\n\006CLOSED\020" +
+      "\001\022\021\n\rDELIVERY_ONLY\020\002\022\017\n\013PICKUP_ONLY\020\003*+\n" +
+      "\rShopCommsType\022\014\n\010INTERNAL\020\000\022\014\n\010EXTERNAL" +
+      "\020\001*2\n\022ShopContactChannel\022\014\n\010ORDERING\020\000\022\016" +
+      "\n\nENROLLMENT\020\001*&\n\010CartMode\022\007\n\003OFF\020\000\022\007\n\003B" +
+      "AG\020\001\022\010\n\004CART\020\002B/\n#io.bloombox.schema.par" +
+      "tner.settingsH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -377,6 +395,7 @@ public final class PartnerLocationSettingsOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.geo.LocationOuterClass.getDescriptor(),
           io.opencannabis.schema.temporal.DateOuterClass.getDescriptor(),
+          io.opencannabis.schema.commerce.CommercialOrder.getDescriptor(),
           io.opencannabis.schema.contact.PhoneNumberOuterClass.getDescriptor(),
           io.opencannabis.schema.contact.EmailAddressOuterClass.getDescriptor(),
           io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor(),
@@ -567,14 +586,27 @@ public final class PartnerLocationSettingsOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_ShopSettings_descriptor,
         new java.lang.String[] { "Hours", "Services", "Storefront", });
-    internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor =
+    internal_static_bloombox_schema_partner_settings_CartSettings_descriptor =
       getDescriptor().getMessageTypes().get(29);
+    internal_static_bloombox_schema_partner_settings_CartSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_partner_settings_CartSettings_descriptor,
+        new java.lang.String[] { "Mode", "OrderType", });
+    internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_bloombox_schema_partner_settings_TabletSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_partner_settings_TabletSettings_descriptor,
+        new java.lang.String[] { "Cart", });
+    internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor =
+      getDescriptor().getMessageTypes().get(31);
     internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor,
-        new java.lang.String[] { "Api", "Brands", "Publish", "Sections", "Shop", "Tv", "Partners", });
+        new java.lang.String[] { "Api", "Brands", "Publish", "Sections", "Shop", "Tv", "Tablet", "Integration", });
     io.opencannabis.schema.geo.LocationOuterClass.getDescriptor();
     io.opencannabis.schema.temporal.DateOuterClass.getDescriptor();
+    io.opencannabis.schema.commerce.CommercialOrder.getDescriptor();
     io.opencannabis.schema.contact.PhoneNumberOuterClass.getDescriptor();
     io.opencannabis.schema.contact.EmailAddressOuterClass.getDescriptor();
     io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor();
