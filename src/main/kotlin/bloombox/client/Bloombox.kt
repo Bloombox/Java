@@ -57,7 +57,7 @@ class Bloombox constructor (
      * Version for the library. This is sent with telemetry information and kept around so the user has a way to access
      * and know the active library version at runtime.
      */
-    internal const val VERSION = "1.1"
+    internal const val VERSION = "1.2"
 
     /**
      * API client variant name. In all cases, for now, this is "full," indicating a full client library. If other,

@@ -95,7 +95,7 @@ public enum TelemetryError
   PARTNER_NOT_FOUND(7),
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The specified location could not be found.
    * </pre>
    *
    * <code>LOCATION_NOT_FOUND = 8;</code>
@@ -178,7 +178,7 @@ public enum TelemetryError
   public static final int PARTNER_NOT_FOUND_VALUE = 7;
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The specified location could not be found.
    * </pre>
    *
    * <code>LOCATION_NOT_FOUND = 8;</code>

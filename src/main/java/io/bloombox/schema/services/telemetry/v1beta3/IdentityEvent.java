@@ -99,10 +99,18 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the action we are reporting.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the action we are reporting.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -307,6 +315,10 @@ private static final long serialVersionUID = 0L;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the action we are reporting.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public java.lang.String getName() {
@@ -322,6 +334,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Name of the action we are reporting.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -788,6 +804,10 @@ private static final long serialVersionUID = 0L;
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the action we are reporting.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public java.lang.String getName() {
@@ -803,6 +823,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Name of the action we are reporting.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -819,6 +843,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Name of the action we are reporting.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public Builder setName(
@@ -832,6 +860,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Name of the action we are reporting.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public Builder clearName() {
@@ -841,6 +873,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Name of the action we are reporting.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        */
       public Builder setNameBytes(

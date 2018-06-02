@@ -52,6 +52,14 @@ public enum FilteredSection
    * <code>CBD = 2;</code>
    */
   CBD(2),
+  /**
+   * <pre>
+   * Special section for product search.
+   * </pre>
+   *
+   * <code>SEARCH = 3;</code>
+   */
+  SEARCH(3),
   UNRECOGNIZED(-1),
   ;
 
@@ -79,6 +87,14 @@ public enum FilteredSection
    * <code>CBD = 2;</code>
    */
   public static final int CBD_VALUE = 2;
+  /**
+   * <pre>
+   * Special section for product search.
+   * </pre>
+   *
+   * <code>SEARCH = 3;</code>
+   */
+  public static final int SEARCH_VALUE = 3;
 
 
   public final int getNumber() {
@@ -102,6 +118,7 @@ public enum FilteredSection
       case 0: return ON_SALE;
       case 1: return HOUSE;
       case 2: return CBD;
+      case 3: return SEARCH;
       default: return null;
     }
   }

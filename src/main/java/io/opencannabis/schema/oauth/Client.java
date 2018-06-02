@@ -36,8 +36,16 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Client() {
-    clientId_ = "";
-    clientSecret_ = "";
+    id_ = "";
+    secret_ = "";
+    name_ = "";
+    contact_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    grantTypes_ = java.util.Collections.emptyList();
+    owner_ = "";
+    public_ = false;
+    redirectUri_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    responseType_ = java.util.Collections.emptyList();
+    scope_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -74,13 +82,142 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            clientId_ = s;
+            id_ = s;
             break;
           }
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            clientSecret_ = s;
+            secret_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              contact_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            contact_.add(s);
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              grantTypes_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            grantTypes_.add(rawValue);
+            break;
+          }
+          case 42: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                grantTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              grantTypes_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 50: {
+            io.opencannabis.schema.media.MediaItem.Builder subBuilder = null;
+            if (branding_ != null) {
+              subBuilder = branding_.toBuilder();
+            }
+            branding_ = input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(branding_);
+              branding_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            owner_ = s;
+            break;
+          }
+          case 66: {
+            io.opencannabis.schema.media.MediaItem.Builder subBuilder = null;
+            if (policy_ != null) {
+              subBuilder = policy_.toBuilder();
+            }
+            policy_ = input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(policy_);
+              policy_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 74: {
+            io.opencannabis.schema.media.MediaItem.Builder subBuilder = null;
+            if (terms_ != null) {
+              subBuilder = terms_.toBuilder();
+            }
+            terms_ = input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(terms_);
+              terms_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 80: {
+
+            public_ = input.readBool();
+            break;
+          }
+          case 90: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              redirectUri_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000400;
+            }
+            redirectUri_.add(s);
+            break;
+          }
+          case 96: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+              responseType_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000800;
+            }
+            responseType_.add(rawValue);
+            break;
+          }
+          case 98: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                responseType_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              responseType_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 106: {
+            if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+              scope_ = new java.util.ArrayList<io.opencannabis.schema.oauth.AuthorizationScope>();
+              mutable_bitField0_ |= 0x00001000;
+            }
+            scope_.add(
+                input.readMessage(io.opencannabis.schema.oauth.AuthorizationScope.parser(), extensionRegistry));
             break;
           }
         }
@@ -91,40 +228,56 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        contact_ = contact_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        grantTypes_ = java.util.Collections.unmodifiableList(grantTypes_);
+      }
+      if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        redirectUri_ = redirectUri_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+        responseType_ = java.util.Collections.unmodifiableList(responseType_);
+      }
+      if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+        scope_ = java.util.Collections.unmodifiableList(scope_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.opencannabis.schema.oauth.ClientOuterClass.internal_static_opencannabis_oauth_Client_descriptor;
+    return io.opencannabis.schema.oauth.OAuthClient.internal_static_opencannabis_oauth_Client_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.opencannabis.schema.oauth.ClientOuterClass.internal_static_opencannabis_oauth_Client_fieldAccessorTable
+    return io.opencannabis.schema.oauth.OAuthClient.internal_static_opencannabis_oauth_Client_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.opencannabis.schema.oauth.Client.class, io.opencannabis.schema.oauth.Client.Builder.class);
   }
 
-  public static final int CLIENT_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object clientId_;
+  private int bitField0_;
+  public static final int ID_FIELD_NUMBER = 1;
+  private volatile java.lang.Object id_;
   /**
    * <pre>
    * ID for this OAuth2 client.
    * </pre>
    *
-   * <code>string client_id = 1;</code>
+   * <code>string id = 1;</code>
    */
-  public java.lang.String getClientId() {
-    java.lang.Object ref = clientId_;
+  public java.lang.String getId() {
+    java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      clientId_ = s;
+      id_ = s;
       return s;
     }
   }
@@ -133,40 +286,40 @@ private static final long serialVersionUID = 0L;
    * ID for this OAuth2 client.
    * </pre>
    *
-   * <code>string client_id = 1;</code>
+   * <code>string id = 1;</code>
    */
   public com.google.protobuf.ByteString
-      getClientIdBytes() {
-    java.lang.Object ref = clientId_;
+      getIdBytes() {
+    java.lang.Object ref = id_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      clientId_ = b;
+      id_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int CLIENT_SECRET_FIELD_NUMBER = 2;
-  private volatile java.lang.Object clientSecret_;
+  public static final int SECRET_FIELD_NUMBER = 2;
+  private volatile java.lang.Object secret_;
   /**
    * <pre>
    * Secret (password) for this OAuth2 client.
    * </pre>
    *
-   * <code>string client_secret = 2;</code>
+   * <code>string secret = 2;</code>
    */
-  public java.lang.String getClientSecret() {
-    java.lang.Object ref = clientSecret_;
+  public java.lang.String getSecret() {
+    java.lang.Object ref = secret_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      clientSecret_ = s;
+      secret_ = s;
       return s;
     }
   }
@@ -175,20 +328,491 @@ private static final long serialVersionUID = 0L;
    * Secret (password) for this OAuth2 client.
    * </pre>
    *
-   * <code>string client_secret = 2;</code>
+   * <code>string secret = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getClientSecretBytes() {
-    java.lang.Object ref = clientSecret_;
+      getSecretBytes() {
+    java.lang.Object ref = secret_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      clientSecret_ = b;
+      secret_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int NAME_FIELD_NUMBER = 3;
+  private volatile java.lang.Object name_;
+  /**
+   * <pre>
+   * Name of the client.
+   * </pre>
+   *
+   * <code>string name = 3;</code>
+   */
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Name of the client.
+   * </pre>
+   *
+   * <code>string name = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getNameBytes() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CONTACT_FIELD_NUMBER = 4;
+  private com.google.protobuf.LazyStringList contact_;
+  /**
+   * <pre>
+   * Contact information for the client.
+   * </pre>
+   *
+   * <code>repeated string contact = 4;</code>
+   */
+  public com.google.protobuf.ProtocolStringList
+      getContactList() {
+    return contact_;
+  }
+  /**
+   * <pre>
+   * Contact information for the client.
+   * </pre>
+   *
+   * <code>repeated string contact = 4;</code>
+   */
+  public int getContactCount() {
+    return contact_.size();
+  }
+  /**
+   * <pre>
+   * Contact information for the client.
+   * </pre>
+   *
+   * <code>repeated string contact = 4;</code>
+   */
+  public java.lang.String getContact(int index) {
+    return contact_.get(index);
+  }
+  /**
+   * <pre>
+   * Contact information for the client.
+   * </pre>
+   *
+   * <code>repeated string contact = 4;</code>
+   */
+  public com.google.protobuf.ByteString
+      getContactBytes(int index) {
+    return contact_.getByteString(index);
+  }
+
+  public static final int GRANT_TYPES_FIELD_NUMBER = 5;
+  private java.util.List<java.lang.Integer> grantTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, io.opencannabis.schema.oauth.GrantType> grantTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, io.opencannabis.schema.oauth.GrantType>() {
+            public io.opencannabis.schema.oauth.GrantType convert(java.lang.Integer from) {
+              io.opencannabis.schema.oauth.GrantType result = io.opencannabis.schema.oauth.GrantType.valueOf(from);
+              return result == null ? io.opencannabis.schema.oauth.GrantType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Grant types supported by this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+   */
+  public java.util.List<io.opencannabis.schema.oauth.GrantType> getGrantTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, io.opencannabis.schema.oauth.GrantType>(grantTypes_, grantTypes_converter_);
+  }
+  /**
+   * <pre>
+   * Grant types supported by this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+   */
+  public int getGrantTypesCount() {
+    return grantTypes_.size();
+  }
+  /**
+   * <pre>
+   * Grant types supported by this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+   */
+  public io.opencannabis.schema.oauth.GrantType getGrantTypes(int index) {
+    return grantTypes_converter_.convert(grantTypes_.get(index));
+  }
+  /**
+   * <pre>
+   * Grant types supported by this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+   */
+  public java.util.List<java.lang.Integer>
+  getGrantTypesValueList() {
+    return grantTypes_;
+  }
+  /**
+   * <pre>
+   * Grant types supported by this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+   */
+  public int getGrantTypesValue(int index) {
+    return grantTypes_.get(index);
+  }
+  private int grantTypesMemoizedSerializedSize;
+
+  public static final int BRANDING_FIELD_NUMBER = 6;
+  private io.opencannabis.schema.media.MediaItem branding_;
+  /**
+   * <pre>
+   * Attached media item for branding.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem branding = 6;</code>
+   */
+  public boolean hasBranding() {
+    return branding_ != null;
+  }
+  /**
+   * <pre>
+   * Attached media item for branding.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem branding = 6;</code>
+   */
+  public io.opencannabis.schema.media.MediaItem getBranding() {
+    return branding_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
+  }
+  /**
+   * <pre>
+   * Attached media item for branding.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem branding = 6;</code>
+   */
+  public io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder() {
+    return getBranding();
+  }
+
+  public static final int OWNER_FIELD_NUMBER = 7;
+  private volatile java.lang.Object owner_;
+  /**
+   * <pre>
+   * Owner information for this client.
+   * </pre>
+   *
+   * <code>string owner = 7;</code>
+   */
+  public java.lang.String getOwner() {
+    java.lang.Object ref = owner_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      owner_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Owner information for this client.
+   * </pre>
+   *
+   * <code>string owner = 7;</code>
+   */
+  public com.google.protobuf.ByteString
+      getOwnerBytes() {
+    java.lang.Object ref = owner_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      owner_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int POLICY_FIELD_NUMBER = 8;
+  private io.opencannabis.schema.media.MediaItem policy_;
+  /**
+   * <pre>
+   * Privacy policy URI.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem policy = 8;</code>
+   */
+  public boolean hasPolicy() {
+    return policy_ != null;
+  }
+  /**
+   * <pre>
+   * Privacy policy URI.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem policy = 8;</code>
+   */
+  public io.opencannabis.schema.media.MediaItem getPolicy() {
+    return policy_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : policy_;
+  }
+  /**
+   * <pre>
+   * Privacy policy URI.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem policy = 8;</code>
+   */
+  public io.opencannabis.schema.media.MediaItemOrBuilder getPolicyOrBuilder() {
+    return getPolicy();
+  }
+
+  public static final int TERMS_FIELD_NUMBER = 9;
+  private io.opencannabis.schema.media.MediaItem terms_;
+  /**
+   * <pre>
+   * Terms of Service URI.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem terms = 9;</code>
+   */
+  public boolean hasTerms() {
+    return terms_ != null;
+  }
+  /**
+   * <pre>
+   * Terms of Service URI.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem terms = 9;</code>
+   */
+  public io.opencannabis.schema.media.MediaItem getTerms() {
+    return terms_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : terms_;
+  }
+  /**
+   * <pre>
+   * Terms of Service URI.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaItem terms = 9;</code>
+   */
+  public io.opencannabis.schema.media.MediaItemOrBuilder getTermsOrBuilder() {
+    return getTerms();
+  }
+
+  public static final int PUBLIC_FIELD_NUMBER = 10;
+  private boolean public_;
+  /**
+   * <pre>
+   * Whether this client is public or not.
+   * </pre>
+   *
+   * <code>bool public = 10;</code>
+   */
+  public boolean getPublic() {
+    return public_;
+  }
+
+  public static final int REDIRECT_URI_FIELD_NUMBER = 11;
+  private com.google.protobuf.LazyStringList redirectUri_;
+  /**
+   * <pre>
+   * Supported/allowed redirect URIs for this client.
+   * </pre>
+   *
+   * <code>repeated string redirect_uri = 11;</code>
+   */
+  public com.google.protobuf.ProtocolStringList
+      getRedirectUriList() {
+    return redirectUri_;
+  }
+  /**
+   * <pre>
+   * Supported/allowed redirect URIs for this client.
+   * </pre>
+   *
+   * <code>repeated string redirect_uri = 11;</code>
+   */
+  public int getRedirectUriCount() {
+    return redirectUri_.size();
+  }
+  /**
+   * <pre>
+   * Supported/allowed redirect URIs for this client.
+   * </pre>
+   *
+   * <code>repeated string redirect_uri = 11;</code>
+   */
+  public java.lang.String getRedirectUri(int index) {
+    return redirectUri_.get(index);
+  }
+  /**
+   * <pre>
+   * Supported/allowed redirect URIs for this client.
+   * </pre>
+   *
+   * <code>repeated string redirect_uri = 11;</code>
+   */
+  public com.google.protobuf.ByteString
+      getRedirectUriBytes(int index) {
+    return redirectUri_.getByteString(index);
+  }
+
+  public static final int RESPONSE_TYPE_FIELD_NUMBER = 12;
+  private java.util.List<java.lang.Integer> responseType_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, io.opencannabis.schema.oauth.ResponseType> responseType_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, io.opencannabis.schema.oauth.ResponseType>() {
+            public io.opencannabis.schema.oauth.ResponseType convert(java.lang.Integer from) {
+              io.opencannabis.schema.oauth.ResponseType result = io.opencannabis.schema.oauth.ResponseType.valueOf(from);
+              return result == null ? io.opencannabis.schema.oauth.ResponseType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Supported OAuth2 response types for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+   */
+  public java.util.List<io.opencannabis.schema.oauth.ResponseType> getResponseTypeList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, io.opencannabis.schema.oauth.ResponseType>(responseType_, responseType_converter_);
+  }
+  /**
+   * <pre>
+   * Supported OAuth2 response types for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+   */
+  public int getResponseTypeCount() {
+    return responseType_.size();
+  }
+  /**
+   * <pre>
+   * Supported OAuth2 response types for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+   */
+  public io.opencannabis.schema.oauth.ResponseType getResponseType(int index) {
+    return responseType_converter_.convert(responseType_.get(index));
+  }
+  /**
+   * <pre>
+   * Supported OAuth2 response types for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+   */
+  public java.util.List<java.lang.Integer>
+  getResponseTypeValueList() {
+    return responseType_;
+  }
+  /**
+   * <pre>
+   * Supported OAuth2 response types for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+   */
+  public int getResponseTypeValue(int index) {
+    return responseType_.get(index);
+  }
+  private int responseTypeMemoizedSerializedSize;
+
+  public static final int SCOPE_FIELD_NUMBER = 13;
+  private java.util.List<io.opencannabis.schema.oauth.AuthorizationScope> scope_;
+  /**
+   * <pre>
+   * Allowed authorization scopes for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+   */
+  public java.util.List<io.opencannabis.schema.oauth.AuthorizationScope> getScopeList() {
+    return scope_;
+  }
+  /**
+   * <pre>
+   * Allowed authorization scopes for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+   */
+  public java.util.List<? extends io.opencannabis.schema.oauth.AuthorizationScopeOrBuilder> 
+      getScopeOrBuilderList() {
+    return scope_;
+  }
+  /**
+   * <pre>
+   * Allowed authorization scopes for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+   */
+  public int getScopeCount() {
+    return scope_.size();
+  }
+  /**
+   * <pre>
+   * Allowed authorization scopes for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+   */
+  public io.opencannabis.schema.oauth.AuthorizationScope getScope(int index) {
+    return scope_.get(index);
+  }
+  /**
+   * <pre>
+   * Allowed authorization scopes for this client.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+   */
+  public io.opencannabis.schema.oauth.AuthorizationScopeOrBuilder getScopeOrBuilder(
+      int index) {
+    return scope_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -203,11 +827,53 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getClientIdBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clientId_);
+    getSerializedSize();
+    if (!getIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
-    if (!getClientSecretBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientSecret_);
+    if (!getSecretBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secret_);
+    }
+    if (!getNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+    }
+    for (int i = 0; i < contact_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, contact_.getRaw(i));
+    }
+    if (getGrantTypesList().size() > 0) {
+      output.writeUInt32NoTag(42);
+      output.writeUInt32NoTag(grantTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < grantTypes_.size(); i++) {
+      output.writeEnumNoTag(grantTypes_.get(i));
+    }
+    if (branding_ != null) {
+      output.writeMessage(6, getBranding());
+    }
+    if (!getOwnerBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, owner_);
+    }
+    if (policy_ != null) {
+      output.writeMessage(8, getPolicy());
+    }
+    if (terms_ != null) {
+      output.writeMessage(9, getTerms());
+    }
+    if (public_ != false) {
+      output.writeBool(10, public_);
+    }
+    for (int i = 0; i < redirectUri_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, redirectUri_.getRaw(i));
+    }
+    if (getResponseTypeList().size() > 0) {
+      output.writeUInt32NoTag(98);
+      output.writeUInt32NoTag(responseTypeMemoizedSerializedSize);
+    }
+    for (int i = 0; i < responseType_.size(); i++) {
+      output.writeEnumNoTag(responseType_.get(i));
+    }
+    for (int i = 0; i < scope_.size(); i++) {
+      output.writeMessage(13, scope_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -217,11 +883,77 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getClientIdBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clientId_);
+    if (!getIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
     }
-    if (!getClientSecretBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientSecret_);
+    if (!getSecretBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secret_);
+    }
+    if (!getNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < contact_.size(); i++) {
+        dataSize += computeStringSizeNoTag(contact_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getContactList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < grantTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(grantTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getGrantTypesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }grantTypesMemoizedSerializedSize = dataSize;
+    }
+    if (branding_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getBranding());
+    }
+    if (!getOwnerBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, owner_);
+    }
+    if (policy_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getPolicy());
+    }
+    if (terms_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, getTerms());
+    }
+    if (public_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(10, public_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < redirectUri_.size(); i++) {
+        dataSize += computeStringSizeNoTag(redirectUri_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getRedirectUriList().size();
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < responseType_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(responseType_.get(i));
+      }
+      size += dataSize;
+      if (!getResponseTypeList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }responseTypeMemoizedSerializedSize = dataSize;
+    }
+    for (int i = 0; i < scope_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(13, scope_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -239,10 +971,39 @@ private static final long serialVersionUID = 0L;
     io.opencannabis.schema.oauth.Client other = (io.opencannabis.schema.oauth.Client) obj;
 
     boolean result = true;
-    result = result && getClientId()
-        .equals(other.getClientId());
-    result = result && getClientSecret()
-        .equals(other.getClientSecret());
+    result = result && getId()
+        .equals(other.getId());
+    result = result && getSecret()
+        .equals(other.getSecret());
+    result = result && getName()
+        .equals(other.getName());
+    result = result && getContactList()
+        .equals(other.getContactList());
+    result = result && grantTypes_.equals(other.grantTypes_);
+    result = result && (hasBranding() == other.hasBranding());
+    if (hasBranding()) {
+      result = result && getBranding()
+          .equals(other.getBranding());
+    }
+    result = result && getOwner()
+        .equals(other.getOwner());
+    result = result && (hasPolicy() == other.hasPolicy());
+    if (hasPolicy()) {
+      result = result && getPolicy()
+          .equals(other.getPolicy());
+    }
+    result = result && (hasTerms() == other.hasTerms());
+    if (hasTerms()) {
+      result = result && getTerms()
+          .equals(other.getTerms());
+    }
+    result = result && (getPublic()
+        == other.getPublic());
+    result = result && getRedirectUriList()
+        .equals(other.getRedirectUriList());
+    result = result && responseType_.equals(other.responseType_);
+    result = result && getScopeList()
+        .equals(other.getScopeList());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -254,10 +1015,49 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getClientId().hashCode();
-    hash = (37 * hash) + CLIENT_SECRET_FIELD_NUMBER;
-    hash = (53 * hash) + getClientSecret().hashCode();
+    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (53 * hash) + getId().hashCode();
+    hash = (37 * hash) + SECRET_FIELD_NUMBER;
+    hash = (53 * hash) + getSecret().hashCode();
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
+    if (getContactCount() > 0) {
+      hash = (37 * hash) + CONTACT_FIELD_NUMBER;
+      hash = (53 * hash) + getContactList().hashCode();
+    }
+    if (getGrantTypesCount() > 0) {
+      hash = (37 * hash) + GRANT_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + grantTypes_.hashCode();
+    }
+    if (hasBranding()) {
+      hash = (37 * hash) + BRANDING_FIELD_NUMBER;
+      hash = (53 * hash) + getBranding().hashCode();
+    }
+    hash = (37 * hash) + OWNER_FIELD_NUMBER;
+    hash = (53 * hash) + getOwner().hashCode();
+    if (hasPolicy()) {
+      hash = (37 * hash) + POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + getPolicy().hashCode();
+    }
+    if (hasTerms()) {
+      hash = (37 * hash) + TERMS_FIELD_NUMBER;
+      hash = (53 * hash) + getTerms().hashCode();
+    }
+    hash = (37 * hash) + PUBLIC_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPublic());
+    if (getRedirectUriCount() > 0) {
+      hash = (37 * hash) + REDIRECT_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getRedirectUriList().hashCode();
+    }
+    if (getResponseTypeCount() > 0) {
+      hash = (37 * hash) + RESPONSE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + responseType_.hashCode();
+    }
+    if (getScopeCount() > 0) {
+      hash = (37 * hash) + SCOPE_FIELD_NUMBER;
+      hash = (53 * hash) + getScopeList().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -364,12 +1164,12 @@ private static final long serialVersionUID = 0L;
       io.opencannabis.schema.oauth.ClientOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.opencannabis.schema.oauth.ClientOuterClass.internal_static_opencannabis_oauth_Client_descriptor;
+      return io.opencannabis.schema.oauth.OAuthClient.internal_static_opencannabis_oauth_Client_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.opencannabis.schema.oauth.ClientOuterClass.internal_static_opencannabis_oauth_Client_fieldAccessorTable
+      return io.opencannabis.schema.oauth.OAuthClient.internal_static_opencannabis_oauth_Client_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.opencannabis.schema.oauth.Client.class, io.opencannabis.schema.oauth.Client.Builder.class);
     }
@@ -387,20 +1187,59 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getScopeFieldBuilder();
       }
     }
     public Builder clear() {
       super.clear();
-      clientId_ = "";
+      id_ = "";
 
-      clientSecret_ = "";
+      secret_ = "";
 
+      name_ = "";
+
+      contact_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      grantTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      if (brandingBuilder_ == null) {
+        branding_ = null;
+      } else {
+        branding_ = null;
+        brandingBuilder_ = null;
+      }
+      owner_ = "";
+
+      if (policyBuilder_ == null) {
+        policy_ = null;
+      } else {
+        policy_ = null;
+        policyBuilder_ = null;
+      }
+      if (termsBuilder_ == null) {
+        terms_ = null;
+      } else {
+        terms_ = null;
+        termsBuilder_ = null;
+      }
+      public_ = false;
+
+      redirectUri_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000400);
+      responseType_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      if (scopeBuilder_ == null) {
+        scope_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00001000);
+      } else {
+        scopeBuilder_.clear();
+      }
       return this;
     }
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.opencannabis.schema.oauth.ClientOuterClass.internal_static_opencannabis_oauth_Client_descriptor;
+      return io.opencannabis.schema.oauth.OAuthClient.internal_static_opencannabis_oauth_Client_descriptor;
     }
 
     public io.opencannabis.schema.oauth.Client getDefaultInstanceForType() {
@@ -417,8 +1256,58 @@ private static final long serialVersionUID = 0L;
 
     public io.opencannabis.schema.oauth.Client buildPartial() {
       io.opencannabis.schema.oauth.Client result = new io.opencannabis.schema.oauth.Client(this);
-      result.clientId_ = clientId_;
-      result.clientSecret_ = clientSecret_;
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      result.id_ = id_;
+      result.secret_ = secret_;
+      result.name_ = name_;
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        contact_ = contact_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.contact_ = contact_;
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        grantTypes_ = java.util.Collections.unmodifiableList(grantTypes_);
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.grantTypes_ = grantTypes_;
+      if (brandingBuilder_ == null) {
+        result.branding_ = branding_;
+      } else {
+        result.branding_ = brandingBuilder_.build();
+      }
+      result.owner_ = owner_;
+      if (policyBuilder_ == null) {
+        result.policy_ = policy_;
+      } else {
+        result.policy_ = policyBuilder_.build();
+      }
+      if (termsBuilder_ == null) {
+        result.terms_ = terms_;
+      } else {
+        result.terms_ = termsBuilder_.build();
+      }
+      result.public_ = public_;
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        redirectUri_ = redirectUri_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000400);
+      }
+      result.redirectUri_ = redirectUri_;
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        responseType_ = java.util.Collections.unmodifiableList(responseType_);
+        bitField0_ = (bitField0_ & ~0x00000800);
+      }
+      result.responseType_ = responseType_;
+      if (scopeBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          scope_ = java.util.Collections.unmodifiableList(scope_);
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.scope_ = scope_;
+      } else {
+        result.scope_ = scopeBuilder_.build();
+      }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -460,13 +1349,99 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(io.opencannabis.schema.oauth.Client other) {
       if (other == io.opencannabis.schema.oauth.Client.getDefaultInstance()) return this;
-      if (!other.getClientId().isEmpty()) {
-        clientId_ = other.clientId_;
+      if (!other.getId().isEmpty()) {
+        id_ = other.id_;
         onChanged();
       }
-      if (!other.getClientSecret().isEmpty()) {
-        clientSecret_ = other.clientSecret_;
+      if (!other.getSecret().isEmpty()) {
+        secret_ = other.secret_;
         onChanged();
+      }
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
+        onChanged();
+      }
+      if (!other.contact_.isEmpty()) {
+        if (contact_.isEmpty()) {
+          contact_ = other.contact_;
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ensureContactIsMutable();
+          contact_.addAll(other.contact_);
+        }
+        onChanged();
+      }
+      if (!other.grantTypes_.isEmpty()) {
+        if (grantTypes_.isEmpty()) {
+          grantTypes_ = other.grantTypes_;
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          ensureGrantTypesIsMutable();
+          grantTypes_.addAll(other.grantTypes_);
+        }
+        onChanged();
+      }
+      if (other.hasBranding()) {
+        mergeBranding(other.getBranding());
+      }
+      if (!other.getOwner().isEmpty()) {
+        owner_ = other.owner_;
+        onChanged();
+      }
+      if (other.hasPolicy()) {
+        mergePolicy(other.getPolicy());
+      }
+      if (other.hasTerms()) {
+        mergeTerms(other.getTerms());
+      }
+      if (other.getPublic() != false) {
+        setPublic(other.getPublic());
+      }
+      if (!other.redirectUri_.isEmpty()) {
+        if (redirectUri_.isEmpty()) {
+          redirectUri_ = other.redirectUri_;
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          ensureRedirectUriIsMutable();
+          redirectUri_.addAll(other.redirectUri_);
+        }
+        onChanged();
+      }
+      if (!other.responseType_.isEmpty()) {
+        if (responseType_.isEmpty()) {
+          responseType_ = other.responseType_;
+          bitField0_ = (bitField0_ & ~0x00000800);
+        } else {
+          ensureResponseTypeIsMutable();
+          responseType_.addAll(other.responseType_);
+        }
+        onChanged();
+      }
+      if (scopeBuilder_ == null) {
+        if (!other.scope_.isEmpty()) {
+          if (scope_.isEmpty()) {
+            scope_ = other.scope_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+          } else {
+            ensureScopeIsMutable();
+            scope_.addAll(other.scope_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.scope_.isEmpty()) {
+          if (scopeBuilder_.isEmpty()) {
+            scopeBuilder_.dispose();
+            scopeBuilder_ = null;
+            scope_ = other.scope_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+            scopeBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getScopeFieldBuilder() : null;
+          } else {
+            scopeBuilder_.addAllMessages(other.scope_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -494,22 +1469,23 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int bitField0_;
 
-    private java.lang.Object clientId_ = "";
+    private java.lang.Object id_ = "";
     /**
      * <pre>
      * ID for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_id = 1;</code>
+     * <code>string id = 1;</code>
      */
-    public java.lang.String getClientId() {
-      java.lang.Object ref = clientId_;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        clientId_ = s;
+        id_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -520,16 +1496,16 @@ private static final long serialVersionUID = 0L;
      * ID for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_id = 1;</code>
+     * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getClientIdBytes() {
-      java.lang.Object ref = clientId_;
+        getIdBytes() {
+      java.lang.Object ref = id_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        clientId_ = b;
+        id_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -540,15 +1516,15 @@ private static final long serialVersionUID = 0L;
      * ID for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_id = 1;</code>
+     * <code>string id = 1;</code>
      */
-    public Builder setClientId(
+    public Builder setId(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      clientId_ = value;
+      id_ = value;
       onChanged();
       return this;
     }
@@ -557,11 +1533,11 @@ private static final long serialVersionUID = 0L;
      * ID for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_id = 1;</code>
+     * <code>string id = 1;</code>
      */
-    public Builder clearClientId() {
+    public Builder clearId() {
       
-      clientId_ = getDefaultInstance().getClientId();
+      id_ = getDefaultInstance().getId();
       onChanged();
       return this;
     }
@@ -570,35 +1546,35 @@ private static final long serialVersionUID = 0L;
      * ID for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_id = 1;</code>
+     * <code>string id = 1;</code>
      */
-    public Builder setClientIdBytes(
+    public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      clientId_ = value;
+      id_ = value;
       onChanged();
       return this;
     }
 
-    private java.lang.Object clientSecret_ = "";
+    private java.lang.Object secret_ = "";
     /**
      * <pre>
      * Secret (password) for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_secret = 2;</code>
+     * <code>string secret = 2;</code>
      */
-    public java.lang.String getClientSecret() {
-      java.lang.Object ref = clientSecret_;
+    public java.lang.String getSecret() {
+      java.lang.Object ref = secret_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        clientSecret_ = s;
+        secret_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -609,16 +1585,16 @@ private static final long serialVersionUID = 0L;
      * Secret (password) for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_secret = 2;</code>
+     * <code>string secret = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getClientSecretBytes() {
-      java.lang.Object ref = clientSecret_;
+        getSecretBytes() {
+      java.lang.Object ref = secret_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        clientSecret_ = b;
+        secret_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -629,15 +1605,15 @@ private static final long serialVersionUID = 0L;
      * Secret (password) for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_secret = 2;</code>
+     * <code>string secret = 2;</code>
      */
-    public Builder setClientSecret(
+    public Builder setSecret(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      clientSecret_ = value;
+      secret_ = value;
       onChanged();
       return this;
     }
@@ -646,11 +1622,11 @@ private static final long serialVersionUID = 0L;
      * Secret (password) for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_secret = 2;</code>
+     * <code>string secret = 2;</code>
      */
-    public Builder clearClientSecret() {
+    public Builder clearSecret() {
       
-      clientSecret_ = getDefaultInstance().getClientSecret();
+      secret_ = getDefaultInstance().getSecret();
       onChanged();
       return this;
     }
@@ -659,18 +1635,1597 @@ private static final long serialVersionUID = 0L;
      * Secret (password) for this OAuth2 client.
      * </pre>
      *
-     * <code>string client_secret = 2;</code>
+     * <code>string secret = 2;</code>
      */
-    public Builder setClientSecretBytes(
+    public Builder setSecretBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      clientSecret_ = value;
+      secret_ = value;
       onChanged();
       return this;
+    }
+
+    private java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name of the client.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the client.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the client.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    public Builder setName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      name_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of the client.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    public Builder clearName() {
+      
+      name_ = getDefaultInstance().getName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Name of the client.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      name_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringList contact_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureContactIsMutable() {
+      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        contact_ = new com.google.protobuf.LazyStringArrayList(contact_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getContactList() {
+      return contact_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public int getContactCount() {
+      return contact_.size();
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public java.lang.String getContact(int index) {
+      return contact_.get(index);
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContactBytes(int index) {
+      return contact_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public Builder setContact(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureContactIsMutable();
+      contact_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public Builder addContact(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureContactIsMutable();
+      contact_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public Builder addAllContact(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureContactIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, contact_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public Builder clearContact() {
+      contact_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Contact information for the client.
+     * </pre>
+     *
+     * <code>repeated string contact = 4;</code>
+     */
+    public Builder addContactBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      ensureContactIsMutable();
+      contact_.add(value);
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> grantTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureGrantTypesIsMutable() {
+      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        grantTypes_ = new java.util.ArrayList<java.lang.Integer>(grantTypes_);
+        bitField0_ |= 0x00000010;
+      }
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public java.util.List<io.opencannabis.schema.oauth.GrantType> getGrantTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.oauth.GrantType>(grantTypes_, grantTypes_converter_);
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public int getGrantTypesCount() {
+      return grantTypes_.size();
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public io.opencannabis.schema.oauth.GrantType getGrantTypes(int index) {
+      return grantTypes_converter_.convert(grantTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public Builder setGrantTypes(
+        int index, io.opencannabis.schema.oauth.GrantType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureGrantTypesIsMutable();
+      grantTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public Builder addGrantTypes(io.opencannabis.schema.oauth.GrantType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureGrantTypesIsMutable();
+      grantTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public Builder addAllGrantTypes(
+        java.lang.Iterable<? extends io.opencannabis.schema.oauth.GrantType> values) {
+      ensureGrantTypesIsMutable();
+      for (io.opencannabis.schema.oauth.GrantType value : values) {
+        grantTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public Builder clearGrantTypes() {
+      grantTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getGrantTypesValueList() {
+      return java.util.Collections.unmodifiableList(grantTypes_);
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public int getGrantTypesValue(int index) {
+      return grantTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public Builder setGrantTypesValue(
+        int index, int value) {
+      ensureGrantTypesIsMutable();
+      grantTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public Builder addGrantTypesValue(int value) {
+      ensureGrantTypesIsMutable();
+      grantTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Grant types supported by this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.GrantType grant_types = 5;</code>
+     */
+    public Builder addAllGrantTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureGrantTypesIsMutable();
+      for (int value : values) {
+        grantTypes_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private io.opencannabis.schema.media.MediaItem branding_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> brandingBuilder_;
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    public boolean hasBranding() {
+      return brandingBuilder_ != null || branding_ != null;
+    }
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    public io.opencannabis.schema.media.MediaItem getBranding() {
+      if (brandingBuilder_ == null) {
+        return branding_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
+      } else {
+        return brandingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    public Builder setBranding(io.opencannabis.schema.media.MediaItem value) {
+      if (brandingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        branding_ = value;
+        onChanged();
+      } else {
+        brandingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    public Builder setBranding(
+        io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+      if (brandingBuilder_ == null) {
+        branding_ = builderForValue.build();
+        onChanged();
+      } else {
+        brandingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    public Builder mergeBranding(io.opencannabis.schema.media.MediaItem value) {
+      if (brandingBuilder_ == null) {
+        if (branding_ != null) {
+          branding_ =
+            io.opencannabis.schema.media.MediaItem.newBuilder(branding_).mergeFrom(value).buildPartial();
+        } else {
+          branding_ = value;
+        }
+        onChanged();
+      } else {
+        brandingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    public Builder clearBranding() {
+      if (brandingBuilder_ == null) {
+        branding_ = null;
+        onChanged();
+      } else {
+        branding_ = null;
+        brandingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    public io.opencannabis.schema.media.MediaItem.Builder getBrandingBuilder() {
+      
+      onChanged();
+      return getBrandingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    public io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder() {
+      if (brandingBuilder_ != null) {
+        return brandingBuilder_.getMessageOrBuilder();
+      } else {
+        return branding_ == null ?
+            io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
+      }
+    }
+    /**
+     * <pre>
+     * Attached media item for branding.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem branding = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
+        getBrandingFieldBuilder() {
+      if (brandingBuilder_ == null) {
+        brandingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
+                getBranding(),
+                getParentForChildren(),
+                isClean());
+        branding_ = null;
+      }
+      return brandingBuilder_;
+    }
+
+    private java.lang.Object owner_ = "";
+    /**
+     * <pre>
+     * Owner information for this client.
+     * </pre>
+     *
+     * <code>string owner = 7;</code>
+     */
+    public java.lang.String getOwner() {
+      java.lang.Object ref = owner_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        owner_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Owner information for this client.
+     * </pre>
+     *
+     * <code>string owner = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOwnerBytes() {
+      java.lang.Object ref = owner_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        owner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Owner information for this client.
+     * </pre>
+     *
+     * <code>string owner = 7;</code>
+     */
+    public Builder setOwner(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      owner_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Owner information for this client.
+     * </pre>
+     *
+     * <code>string owner = 7;</code>
+     */
+    public Builder clearOwner() {
+      
+      owner_ = getDefaultInstance().getOwner();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Owner information for this client.
+     * </pre>
+     *
+     * <code>string owner = 7;</code>
+     */
+    public Builder setOwnerBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      owner_ = value;
+      onChanged();
+      return this;
+    }
+
+    private io.opencannabis.schema.media.MediaItem policy_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> policyBuilder_;
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    public boolean hasPolicy() {
+      return policyBuilder_ != null || policy_ != null;
+    }
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    public io.opencannabis.schema.media.MediaItem getPolicy() {
+      if (policyBuilder_ == null) {
+        return policy_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : policy_;
+      } else {
+        return policyBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    public Builder setPolicy(io.opencannabis.schema.media.MediaItem value) {
+      if (policyBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        policy_ = value;
+        onChanged();
+      } else {
+        policyBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    public Builder setPolicy(
+        io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+      if (policyBuilder_ == null) {
+        policy_ = builderForValue.build();
+        onChanged();
+      } else {
+        policyBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    public Builder mergePolicy(io.opencannabis.schema.media.MediaItem value) {
+      if (policyBuilder_ == null) {
+        if (policy_ != null) {
+          policy_ =
+            io.opencannabis.schema.media.MediaItem.newBuilder(policy_).mergeFrom(value).buildPartial();
+        } else {
+          policy_ = value;
+        }
+        onChanged();
+      } else {
+        policyBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    public Builder clearPolicy() {
+      if (policyBuilder_ == null) {
+        policy_ = null;
+        onChanged();
+      } else {
+        policy_ = null;
+        policyBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    public io.opencannabis.schema.media.MediaItem.Builder getPolicyBuilder() {
+      
+      onChanged();
+      return getPolicyFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    public io.opencannabis.schema.media.MediaItemOrBuilder getPolicyOrBuilder() {
+      if (policyBuilder_ != null) {
+        return policyBuilder_.getMessageOrBuilder();
+      } else {
+        return policy_ == null ?
+            io.opencannabis.schema.media.MediaItem.getDefaultInstance() : policy_;
+      }
+    }
+    /**
+     * <pre>
+     * Privacy policy URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem policy = 8;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
+        getPolicyFieldBuilder() {
+      if (policyBuilder_ == null) {
+        policyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
+                getPolicy(),
+                getParentForChildren(),
+                isClean());
+        policy_ = null;
+      }
+      return policyBuilder_;
+    }
+
+    private io.opencannabis.schema.media.MediaItem terms_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> termsBuilder_;
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    public boolean hasTerms() {
+      return termsBuilder_ != null || terms_ != null;
+    }
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    public io.opencannabis.schema.media.MediaItem getTerms() {
+      if (termsBuilder_ == null) {
+        return terms_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : terms_;
+      } else {
+        return termsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    public Builder setTerms(io.opencannabis.schema.media.MediaItem value) {
+      if (termsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        terms_ = value;
+        onChanged();
+      } else {
+        termsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    public Builder setTerms(
+        io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+      if (termsBuilder_ == null) {
+        terms_ = builderForValue.build();
+        onChanged();
+      } else {
+        termsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    public Builder mergeTerms(io.opencannabis.schema.media.MediaItem value) {
+      if (termsBuilder_ == null) {
+        if (terms_ != null) {
+          terms_ =
+            io.opencannabis.schema.media.MediaItem.newBuilder(terms_).mergeFrom(value).buildPartial();
+        } else {
+          terms_ = value;
+        }
+        onChanged();
+      } else {
+        termsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    public Builder clearTerms() {
+      if (termsBuilder_ == null) {
+        terms_ = null;
+        onChanged();
+      } else {
+        terms_ = null;
+        termsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    public io.opencannabis.schema.media.MediaItem.Builder getTermsBuilder() {
+      
+      onChanged();
+      return getTermsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    public io.opencannabis.schema.media.MediaItemOrBuilder getTermsOrBuilder() {
+      if (termsBuilder_ != null) {
+        return termsBuilder_.getMessageOrBuilder();
+      } else {
+        return terms_ == null ?
+            io.opencannabis.schema.media.MediaItem.getDefaultInstance() : terms_;
+      }
+    }
+    /**
+     * <pre>
+     * Terms of Service URI.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaItem terms = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
+        getTermsFieldBuilder() {
+      if (termsBuilder_ == null) {
+        termsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
+                getTerms(),
+                getParentForChildren(),
+                isClean());
+        terms_ = null;
+      }
+      return termsBuilder_;
+    }
+
+    private boolean public_ ;
+    /**
+     * <pre>
+     * Whether this client is public or not.
+     * </pre>
+     *
+     * <code>bool public = 10;</code>
+     */
+    public boolean getPublic() {
+      return public_;
+    }
+    /**
+     * <pre>
+     * Whether this client is public or not.
+     * </pre>
+     *
+     * <code>bool public = 10;</code>
+     */
+    public Builder setPublic(boolean value) {
+      
+      public_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether this client is public or not.
+     * </pre>
+     *
+     * <code>bool public = 10;</code>
+     */
+    public Builder clearPublic() {
+      
+      public_ = false;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringList redirectUri_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureRedirectUriIsMutable() {
+      if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        redirectUri_ = new com.google.protobuf.LazyStringArrayList(redirectUri_);
+        bitField0_ |= 0x00000400;
+       }
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRedirectUriList() {
+      return redirectUri_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public int getRedirectUriCount() {
+      return redirectUri_.size();
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public java.lang.String getRedirectUri(int index) {
+      return redirectUri_.get(index);
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRedirectUriBytes(int index) {
+      return redirectUri_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public Builder setRedirectUri(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRedirectUriIsMutable();
+      redirectUri_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public Builder addRedirectUri(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRedirectUriIsMutable();
+      redirectUri_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public Builder addAllRedirectUri(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureRedirectUriIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, redirectUri_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public Builder clearRedirectUri() {
+      redirectUri_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000400);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported/allowed redirect URIs for this client.
+     * </pre>
+     *
+     * <code>repeated string redirect_uri = 11;</code>
+     */
+    public Builder addRedirectUriBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      ensureRedirectUriIsMutable();
+      redirectUri_.add(value);
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> responseType_ =
+      java.util.Collections.emptyList();
+    private void ensureResponseTypeIsMutable() {
+      if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+        responseType_ = new java.util.ArrayList<java.lang.Integer>(responseType_);
+        bitField0_ |= 0x00000800;
+      }
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public java.util.List<io.opencannabis.schema.oauth.ResponseType> getResponseTypeList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.oauth.ResponseType>(responseType_, responseType_converter_);
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public int getResponseTypeCount() {
+      return responseType_.size();
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public io.opencannabis.schema.oauth.ResponseType getResponseType(int index) {
+      return responseType_converter_.convert(responseType_.get(index));
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public Builder setResponseType(
+        int index, io.opencannabis.schema.oauth.ResponseType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureResponseTypeIsMutable();
+      responseType_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public Builder addResponseType(io.opencannabis.schema.oauth.ResponseType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureResponseTypeIsMutable();
+      responseType_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public Builder addAllResponseType(
+        java.lang.Iterable<? extends io.opencannabis.schema.oauth.ResponseType> values) {
+      ensureResponseTypeIsMutable();
+      for (io.opencannabis.schema.oauth.ResponseType value : values) {
+        responseType_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public Builder clearResponseType() {
+      responseType_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000800);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getResponseTypeValueList() {
+      return java.util.Collections.unmodifiableList(responseType_);
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public int getResponseTypeValue(int index) {
+      return responseType_.get(index);
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public Builder setResponseTypeValue(
+        int index, int value) {
+      ensureResponseTypeIsMutable();
+      responseType_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public Builder addResponseTypeValue(int value) {
+      ensureResponseTypeIsMutable();
+      responseType_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Supported OAuth2 response types for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.ResponseType response_type = 12;</code>
+     */
+    public Builder addAllResponseTypeValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureResponseTypeIsMutable();
+      for (int value : values) {
+        responseType_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<io.opencannabis.schema.oauth.AuthorizationScope> scope_ =
+      java.util.Collections.emptyList();
+    private void ensureScopeIsMutable() {
+      if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+        scope_ = new java.util.ArrayList<io.opencannabis.schema.oauth.AuthorizationScope>(scope_);
+        bitField0_ |= 0x00001000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.oauth.AuthorizationScope, io.opencannabis.schema.oauth.AuthorizationScope.Builder, io.opencannabis.schema.oauth.AuthorizationScopeOrBuilder> scopeBuilder_;
+
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public java.util.List<io.opencannabis.schema.oauth.AuthorizationScope> getScopeList() {
+      if (scopeBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(scope_);
+      } else {
+        return scopeBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public int getScopeCount() {
+      if (scopeBuilder_ == null) {
+        return scope_.size();
+      } else {
+        return scopeBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public io.opencannabis.schema.oauth.AuthorizationScope getScope(int index) {
+      if (scopeBuilder_ == null) {
+        return scope_.get(index);
+      } else {
+        return scopeBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder setScope(
+        int index, io.opencannabis.schema.oauth.AuthorizationScope value) {
+      if (scopeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureScopeIsMutable();
+        scope_.set(index, value);
+        onChanged();
+      } else {
+        scopeBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder setScope(
+        int index, io.opencannabis.schema.oauth.AuthorizationScope.Builder builderForValue) {
+      if (scopeBuilder_ == null) {
+        ensureScopeIsMutable();
+        scope_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        scopeBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder addScope(io.opencannabis.schema.oauth.AuthorizationScope value) {
+      if (scopeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureScopeIsMutable();
+        scope_.add(value);
+        onChanged();
+      } else {
+        scopeBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder addScope(
+        int index, io.opencannabis.schema.oauth.AuthorizationScope value) {
+      if (scopeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureScopeIsMutable();
+        scope_.add(index, value);
+        onChanged();
+      } else {
+        scopeBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder addScope(
+        io.opencannabis.schema.oauth.AuthorizationScope.Builder builderForValue) {
+      if (scopeBuilder_ == null) {
+        ensureScopeIsMutable();
+        scope_.add(builderForValue.build());
+        onChanged();
+      } else {
+        scopeBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder addScope(
+        int index, io.opencannabis.schema.oauth.AuthorizationScope.Builder builderForValue) {
+      if (scopeBuilder_ == null) {
+        ensureScopeIsMutable();
+        scope_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        scopeBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder addAllScope(
+        java.lang.Iterable<? extends io.opencannabis.schema.oauth.AuthorizationScope> values) {
+      if (scopeBuilder_ == null) {
+        ensureScopeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, scope_);
+        onChanged();
+      } else {
+        scopeBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder clearScope() {
+      if (scopeBuilder_ == null) {
+        scope_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+      } else {
+        scopeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public Builder removeScope(int index) {
+      if (scopeBuilder_ == null) {
+        ensureScopeIsMutable();
+        scope_.remove(index);
+        onChanged();
+      } else {
+        scopeBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public io.opencannabis.schema.oauth.AuthorizationScope.Builder getScopeBuilder(
+        int index) {
+      return getScopeFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public io.opencannabis.schema.oauth.AuthorizationScopeOrBuilder getScopeOrBuilder(
+        int index) {
+      if (scopeBuilder_ == null) {
+        return scope_.get(index);  } else {
+        return scopeBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public java.util.List<? extends io.opencannabis.schema.oauth.AuthorizationScopeOrBuilder> 
+         getScopeOrBuilderList() {
+      if (scopeBuilder_ != null) {
+        return scopeBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(scope_);
+      }
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public io.opencannabis.schema.oauth.AuthorizationScope.Builder addScopeBuilder() {
+      return getScopeFieldBuilder().addBuilder(
+          io.opencannabis.schema.oauth.AuthorizationScope.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public io.opencannabis.schema.oauth.AuthorizationScope.Builder addScopeBuilder(
+        int index) {
+      return getScopeFieldBuilder().addBuilder(
+          index, io.opencannabis.schema.oauth.AuthorizationScope.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Allowed authorization scopes for this client.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.oauth.AuthorizationScope scope = 13;</code>
+     */
+    public java.util.List<io.opencannabis.schema.oauth.AuthorizationScope.Builder> 
+         getScopeBuilderList() {
+      return getScopeFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.oauth.AuthorizationScope, io.opencannabis.schema.oauth.AuthorizationScope.Builder, io.opencannabis.schema.oauth.AuthorizationScopeOrBuilder> 
+        getScopeFieldBuilder() {
+      if (scopeBuilder_ == null) {
+        scopeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            io.opencannabis.schema.oauth.AuthorizationScope, io.opencannabis.schema.oauth.AuthorizationScope.Builder, io.opencannabis.schema.oauth.AuthorizationScopeOrBuilder>(
+                scope_,
+                ((bitField0_ & 0x00001000) == 0x00001000),
+                getParentForChildren(),
+                isClean());
+        scope_ = null;
+      }
+      return scopeBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

@@ -33,10 +33,10 @@ class TelemetryPingTest : ClientRPCTest() {
     client.ping()
   }
 
-  @test
-  fun testBasicPing() {
-    withClient({ client ->
-      testPing(client.platform.telemetry())
-    })
-  }
+//  @test
+//  fun testBasicPing() {
+//    withClient({ client ->
+//      testPing(client.platform.telemetry())
+//    })
+//  }
 }

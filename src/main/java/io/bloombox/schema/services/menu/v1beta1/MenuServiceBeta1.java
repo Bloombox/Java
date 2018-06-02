@@ -47,11 +47,6 @@ public final class MenuServiceBeta1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_menu_v1beta1_Ping_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_menu_v1beta1_Ping_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_menu_v1beta1_Ping_Operation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -67,11 +62,6 @@ public final class MenuServiceBeta1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Operation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -86,11 +76,6 @@ public final class MenuServiceBeta1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_Response_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_menu_v1beta1_ProductKeyset_descriptor;
   static final 
@@ -112,11 +97,6 @@ public final class MenuServiceBeta1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Operation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -131,11 +111,6 @@ public final class MenuServiceBeta1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Response_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Operation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -151,86 +126,82 @@ public final class MenuServiceBeta1 {
       "proto\032\030products/menu/Menu.proto\032\033product" +
       "s/menu/Section.proto\032\034services/ServiceSt" +
       "atus.proto\032\034google/api/annotations.proto" +
-      "\"\362\001\n\004Ping\032\t\n\007Request\032C\n\010Response\0227\n\006stat" +
-      "us\030\001 \001(\0162\'.bloombox.schema.services.Serv" +
-      "iceStatus\032\231\001\n\tOperation\022D\n\007request\030\001 \001(\013" +
-      "23.bloombox.schema.services.menu.v1beta1" +
-      ".Ping.Request\022F\n\010response\030\002 \001(\01324.bloomb" +
-      "ox.schema.services.menu.v1beta1.Ping.Res" +
-      "ponse\"\252\003\n\007GetMenu\032\255\001\n\007Request\022\r\n\005scope\030\001" +
-      " \001(\t\022\014\n\004full\030\002 \001(\010\022\021\n\tkeys_only\030\003 \001(\010\022\020\n" +
-      "\010snapshot\030\004 \001(\t\022\023\n\013fingerprint\030\005 \001(\t\022<\n\007" +
-      "section\030\006 \001(\0162+.opencannabis.products.me" +
-      "nu.section.Section\022\r\n\005fresh\030\007 \001(\010\032M\n\010Res" +
-      "ponse\0221\n\007catalog\030\001 \001(\0132 .opencannabis.pr" +
-      "oducts.menu.Menu\022\016\n\006cached\030\002 \001(\010\032\237\001\n\tOpe" +
-      "ration\022G\n\007request\030\001 \001(\01326.bloombox.schem" +
-      "a.services.menu.v1beta1.GetMenu.Request\022" +
-      "I\n\010response\030\002 \001(\01327.bloombox.schema.serv" +
-      "ices.menu.v1beta1.GetMenu.Response\"\351\002\n\013G" +
-      "etFeatured\032i\n\007Request\022\r\n\005scope\030\001 \001(\t\022\021\n\t" +
-      "keys_only\030\002 \001(\010\022<\n\007section\030\003 \001(\0162+.openc" +
-      "annabis.products.menu.section.Section\032E\n" +
-      "\010Response\0229\n\010featured\030\001 \003(\0132\'.opencannab" +
-      "is.products.menu.MenuProduct\032\247\001\n\tOperati" +
-      "on\022K\n\007request\030\001 \001(\0132:.bloombox.schema.se" +
-      "rvices.menu.v1beta1.GetFeatured.Request\022" +
-      "M\n\010response\030\002 \001(\0132;.bloombox.schema.serv" +
-      "ices.menu.v1beta1.GetFeatured.Response\";" +
-      "\n\rProductKeyset\022*\n\003key\030\001 \003(\0132\035.opencanna" +
-      "bis.base.ProductKey\"\241\002\n\nGetProduct\032%\n\007Re" +
-      "quest\022\r\n\005scope\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\032D\n\010Res" +
-      "ponse\0228\n\007product\030\002 \003(\0132\'.opencannabis.pr" +
-      "oducts.menu.MenuProduct\032\245\001\n\tOperation\022J\n" +
-      "\007request\030\001 \001(\01329.bloombox.schema.service" +
-      "s.menu.v1beta1.GetProduct.Request\022L\n\010res" +
-      "ponse\030\002 \001(\0132:.bloombox.schema.services.m" +
-      "enu.v1beta1.GetProduct.Response\"\272\002\n\nSear" +
-      "chMenu\032=\n\007Request\0222\n\006search\030\001 \001(\0132\".bloo" +
-      "mbox.schema.search.SearchSpec\032E\n\010Respons" +
-      "e\0229\n\010resulset\030\001 \001(\0132\'.bloombox.schema.se" +
-      "arch.SearchResultset\032\245\001\n\tOperation\022J\n\007re" +
-      "quest\030\001 \001(\01329.bloombox.schema.services.m" +
-      "enu.v1beta1.SearchMenu.Request\022L\n\010respon" +
-      "se\030\002 \001(\0132:.bloombox.schema.services.menu" +
-      ".v1beta1.SearchMenu.Response*\260\001\n\tMenuErr" +
-      "or\022\014\n\010NO_ERROR\020\000\022\023\n\017PARTNER_INVALID\020\001\022\024\n" +
-      "\020LOCATION_INVALID\020\002\022\023\n\017SECTION_INVALID\020\003" +
-      "\022\025\n\021SECTION_NOT_FOUND\020\004\022\022\n\016MENU_NOT_FOUN" +
-      "D\020\005\022\022\n\016INTERNAL_ERROR\020\006\022\026\n\022SEARCH_UNAVAI" +
-      "LABLE\020\0072\271\t\n\004Menu\022\215\001\n\004Ping\0223.bloombox.sch" +
-      "ema.services.menu.v1beta1.Ping.Request\0324" +
-      ".bloombox.schema.services.menu.v1beta1.P" +
-      "ing.Response\"\032\202\323\344\223\002\024\022\022/menu/v1beta1/ping" +
-      "\022\206\002\n\010Retrieve\0226.bloombox.schema.services" +
-      ".menu.v1beta1.GetMenu.Request\0327.bloombox" +
-      ".schema.services.menu.v1beta1.GetMenu.Re" +
-      "sponse\"\210\001\202\323\344\223\002\201\001\022</menu/v1beta1/{scope=p" +
-      "artners/*/locations/*}/global:retrieveZA" +
-      "\022?/menu/v1beta1/{scope=partners/*/locati" +
-      "ons/*}/{section}:retrieve\022\240\002\n\010Featured\022:" +
-      ".bloombox.schema.services.menu.v1beta1.G" +
-      "etFeatured.Request\032;.bloombox.schema.ser" +
-      "vices.menu.v1beta1.GetFeatured.Response\"" +
-      "\232\001\202\323\344\223\002\223\001\022E/menu/v1beta1/{scope=partners" +
-      "/*/locations/*}/global/featured:retrieve" +
-      "ZJ\022H/menu/v1beta1/{scope=partners/*/loca" +
-      "tions/*}/{section}/featured:retrieve\022\315\001\n" +
-      "\010Products\0229.bloombox.schema.services.men" +
-      "u.v1beta1.GetProduct.Request\032:.bloombox." +
-      "schema.services.menu.v1beta1.GetProduct." +
-      "Response\"J\202\323\344\223\002D\022B/menu/v1beta1/{scope=p" +
-      "artners/*/locations/*}/products/{key}/de" +
-      "tail\022\244\002\n\006Search\0229.bloombox.schema.servic" +
-      "es.menu.v1beta1.SearchMenu.Request\032:.blo" +
-      "ombox.schema.services.menu.v1beta1.Searc" +
-      "hMenu.Response\"\242\001\202\323\344\223\002\233\001\022P/menu/v1beta1/" +
-      "{search.options.scope=partners/*/locatio" +
-      "ns/*}/search/{search.term}ZG\"B/menu/v1be" +
-      "ta1/{search.options.scope=partners/*/loc" +
-      "ations/*}/search:\001*B4\n(io.bloombox.schem" +
-      "a.services.menu.v1beta1H\001P\001\242\002\003BBSb\006proto" +
-      "3"
+      "\032(protoc-gen-swagger/options/swagger.pro" +
+      "to\"V\n\004Ping\032\t\n\007Request\032C\n\010Response\0227\n\006sta" +
+      "tus\030\001 \001(\0162\'.bloombox.schema.services.Ser" +
+      "viceStatus\"\210\002\n\007GetMenu\032\255\001\n\007Request\022\r\n\005sc" +
+      "ope\030\001 \001(\t\022\014\n\004full\030\002 \001(\010\022\021\n\tkeys_only\030\003 \001" +
+      "(\010\022\020\n\010snapshot\030\004 \001(\t\022\023\n\013fingerprint\030\005 \001(" +
+      "\t\022<\n\007section\030\006 \001(\0162+.opencannabis.produc" +
+      "ts.menu.section.Section\022\r\n\005fresh\030\007 \001(\010\032M" +
+      "\n\010Response\0221\n\007catalog\030\001 \001(\0132 .opencannab" +
+      "is.products.menu.Menu\022\016\n\006cached\030\002 \001(\010\"\277\001" +
+      "\n\013GetFeatured\032i\n\007Request\022\r\n\005scope\030\001 \001(\t\022" +
+      "\021\n\tkeys_only\030\002 \001(\010\022<\n\007section\030\003 \001(\0162+.op" +
+      "encannabis.products.menu.section.Section" +
+      "\032E\n\010Response\0229\n\010featured\030\001 \003(\0132\'.opencan" +
+      "nabis.products.menu.MenuProduct\";\n\rProdu" +
+      "ctKeyset\022*\n\003key\030\001 \003(\0132\035.opencannabis.bas" +
+      "e.ProductKey\"y\n\nGetProduct\032%\n\007Request\022\r\n" +
+      "\005scope\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\032D\n\010Response\0228\n" +
+      "\007product\030\002 \003(\0132\'.opencannabis.products.m" +
+      "enu.MenuProduct\"\222\001\n\nSearchMenu\032=\n\007Reques" +
+      "t\0222\n\006search\030\001 \001(\0132\".bloombox.schema.sear" +
+      "ch.SearchSpec\032E\n\010Response\0229\n\010resulset\030\001 " +
+      "\001(\0132\'.bloombox.schema.search.SearchResul" +
+      "tset*\260\001\n\tMenuError\022\014\n\010NO_ERROR\020\000\022\023\n\017PART" +
+      "NER_INVALID\020\001\022\024\n\020LOCATION_INVALID\020\002\022\023\n\017S" +
+      "ECTION_INVALID\020\003\022\025\n\021SECTION_NOT_FOUND\020\004\022" +
+      "\022\n\016MENU_NOT_FOUND\020\005\022\022\n\016INTERNAL_ERROR\020\006\022" +
+      "\026\n\022SEARCH_UNAVAILABLE\020\0072\373\n\n\004Menu\022\304\002\n\010Ret" +
+      "rieve\0226.bloombox.schema.services.menu.v1" +
+      "beta1.GetMenu.Request\0327.bloombox.schema." +
+      "services.menu.v1beta1.GetMenu.Response\"\306" +
+      "\001\202\323\344\223\002\201\001\022</menu/v1beta1/{scope=partners/" +
+      "*/locations/*}/global:retrieveZA\022?/menu/" +
+      "v1beta1/{scope=partners/*/locations/*}/{" +
+      "section}:retrieve\222A;\022\rRetrieve Menu\032 Fet" +
+      "ch product catalog/menu data.*\010Retrieve\022" +
+      "\205\003\n\010Featured\022:.bloombox.schema.services." +
+      "menu.v1beta1.GetFeatured.Request\032;.bloom" +
+      "box.schema.services.menu.v1beta1.GetFeat" +
+      "ured.Response\"\377\001\202\323\344\223\002\223\001\022E/menu/v1beta1/{" +
+      "scope=partners/*/locations/*}/global/fea" +
+      "tured:retrieveZJ\022H/menu/v1beta1/{scope=p" +
+      "artners/*/locations/*}/{section}/feature" +
+      "d:retrieve\222Ab\022\021Featured Products\032CRetrie" +
+      "ve products marked for extra attention (" +
+      "\'featured\' products).*\010Featured\022\252\002\n\010Prod" +
+      "ucts\0229.bloombox.schema.services.menu.v1b" +
+      "eta1.GetProduct.Request\032:.bloombox.schem" +
+      "a.services.menu.v1beta1.GetProduct.Respo" +
+      "nse\"\246\001\202\323\344\223\002D\022B/menu/v1beta1/{scope=partn" +
+      "ers/*/locations/*}/products/{key}/detail" +
+      "\222AY\022\014Product Data\032?Retrieve payload data" +
+      " for one or more products, by product ke" +
+      "y.*\010Products\022\366\002\n\006Search\0229.bloombox.schem" +
+      "a.services.menu.v1beta1.SearchMenu.Reque" +
+      "st\032:.bloombox.schema.services.menu.v1bet" +
+      "a1.SearchMenu.Response\"\364\001\202\323\344\223\002\233\001\022P/menu/" +
+      "v1beta1/{search.options.scope=partners/*" +
+      "/locations/*}/search/{search.term}ZG\"B/m" +
+      "enu/v1beta1/{search.options.scope=partne" +
+      "rs/*/locations/*}/search:\001*\222AO\022\017Search P" +
+      "roducts\0324Perform a fulltext search over " +
+      "product catalog data.*\006SearchB\207\004\n(io.blo" +
+      "ombox.schema.services.menu.v1beta1H\001P\001\242\002" +
+      "\003BBS\222A\317\003\022g\n\010Menu API\032\031https://bloombox.i" +
+      "o/terms\"7\n\010Bloombox\022\023https://bloombox.io" +
+      "\032\026developers@bloombox.io2\007v1beta1\032\022api.b" +
+      "loombox.cloud*\001\0022\020application/json:\020appl" +
+      "ication/jsonZ\320\001\nd\n\013ApiKeyParam\022U\010\002\022JPara" +
+      "meter for identifying API key owned by t" +
+      "he invoking project or system.\032\003key \001\nh\n" +
+      "\014ApiKeyHeader\022X\010\002\022GHeader for identifyin" +
+      "g API key owned by the invoking project " +
+      "or system.\032\tX-API-Key \001b\021\n\017\n\013ApiKeyParam" +
+      "\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022" +
+      "\036https://apidocs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -249,6 +220,7 @@ public final class MenuServiceBeta1 {
           io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_services_menu_v1beta1_Ping_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -268,12 +240,6 @@ public final class MenuServiceBeta1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_Ping_Response_descriptor,
         new java.lang.String[] { "Status", });
-    internal_static_bloombox_schema_services_menu_v1beta1_Ping_Operation_descriptor =
-      internal_static_bloombox_schema_services_menu_v1beta1_Ping_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_menu_v1beta1_Ping_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_menu_v1beta1_Ping_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
     internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_fieldAccessorTable = new
@@ -292,12 +258,6 @@ public final class MenuServiceBeta1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Response_descriptor,
         new java.lang.String[] { "Catalog", "Cached", });
-    internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Operation_descriptor =
-      internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_menu_v1beta1_GetMenu_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
     internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_fieldAccessorTable = new
@@ -316,12 +276,6 @@ public final class MenuServiceBeta1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_Response_descriptor,
         new java.lang.String[] { "Featured", });
-    internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_Operation_descriptor =
-      internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_menu_v1beta1_GetFeatured_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
     internal_static_bloombox_schema_services_menu_v1beta1_ProductKeyset_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_bloombox_schema_services_menu_v1beta1_ProductKeyset_fieldAccessorTable = new
@@ -346,12 +300,6 @@ public final class MenuServiceBeta1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_descriptor,
         new java.lang.String[] { "Product", });
-    internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Operation_descriptor =
-      internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
     internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_fieldAccessorTable = new
@@ -370,15 +318,11 @@ public final class MenuServiceBeta1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Response_descriptor,
         new java.lang.String[] { "Resulset", });
-    internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Operation_descriptor =
-      internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(grpc.gateway.protoc_gen_swagger.options.Swagger.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_swagger.options.Swagger.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
@@ -387,6 +331,7 @@ public final class MenuServiceBeta1 {
     io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();
     io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

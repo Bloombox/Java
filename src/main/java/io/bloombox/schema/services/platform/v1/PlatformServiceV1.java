@@ -47,11 +47,6 @@ public final class PlatformServiceV1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_platform_v1_Ping_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_Ping_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_Ping_Operation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_platform_v1_Healthcheck_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -61,16 +56,6 @@ public final class PlatformServiceV1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_platform_v1_Healthcheck_Request_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_Healthcheck_Response_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_Healthcheck_Response_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_Healthcheck_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_Healthcheck_Operation_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_platform_v1_DomainResolve_descriptor;
   static final 
@@ -86,51 +71,6 @@ public final class PlatformServiceV1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_platform_v1_DomainResolve_Response_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_DomainResolve_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_DomainResolve_Operation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_SearchReindex_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Request_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_SearchReindex_Request_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Response_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_SearchReindex_Response_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_SearchReindex_Operation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_PlatformStats_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Request_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_PlatformStats_Request_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Response_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_PlatformStats_Response_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Operation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_platform_v1_PlatformStats_Operation_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -141,71 +81,68 @@ public final class PlatformServiceV1 {
   static {
     java.lang.String[] descriptorData = {
       "\n$platform/v1/PlatformService_v1.proto\022$" +
-      "bloombox.schema.services.platform.v1\032\034se" +
-      "rvices/ServiceStatus.proto\032\034platform/Pla" +
-      "tformStats.proto\032\034google/api/annotations" +
-      ".proto\032\033google/protobuf/empty.proto\"\360\001\n\004" +
-      "Ping\032\t\n\007Request\032C\n\010Response\0227\n\006status\030\001 " +
-      "\001(\0162\'.bloombox.schema.services.ServiceSt" +
-      "atus\032\227\001\n\tOperation\022C\n\007request\030\001 \001(\01322.bl" +
-      "oombox.schema.services.platform.v1.Ping." +
-      "Request\022E\n\010response\030\002 \001(\01323.bloombox.sch" +
-      "ema.services.platform.v1.Ping.Response\"\224" +
-      "\002\n\013Healthcheck\032\030\n\007Request\022\r\n\005probe\030\001 \001(\t" +
-      "\032C\n\010Response\0227\n\006status\030\001 \001(\0162\'.bloombox." +
-      "schema.services.ServiceStatus\032\245\001\n\tOperat" +
-      "ion\022J\n\007request\030\001 \001(\01329.bloombox.schema.s" +
-      "ervices.platform.v1.Healthcheck.Request\022" +
-      "L\n\010response\030\002 \001(\0132:.bloombox.schema.serv" +
-      "ices.platform.v1.Healthcheck.Response\"\225\002" +
-      "\n\rDomainResolve\032\031\n\007Request\022\016\n\006origin\030\001 \001" +
-      "(\t\032=\n\010Response\022\017\n\007partner\030\001 \001(\t\022\020\n\010locat" +
-      "ion\030\002 \001(\t\022\016\n\006apikey\030\003 \001(\t\032\251\001\n\tOperation\022" +
-      "L\n\007request\030\001 \001(\0132;.bloombox.schema.servi" +
-      "ces.platform.v1.DomainResolve.Request\022N\n" +
-      "\010response\030\002 \001(\0132<.bloombox.schema.servic" +
-      "es.platform.v1.DomainResolve.Response\"\317\002" +
-      "\n\rSearchReindex\032b\n\007Request\022\r\n\005scope\030\001 \001(" +
-      "\t\022H\n\005index\030\002 \001(\01629.bloombox.schema.servi" +
-      "ces.platform.v1.SearchReindex.Index\032\n\n\010R" +
-      "esponse\032\251\001\n\tOperation\022L\n\007request\030\001 \001(\0132;" +
-      ".bloombox.schema.services.platform.v1.Se" +
-      "archReindex.Request\022N\n\010response\030\002 \001(\0132<." +
-      "bloombox.schema.services.platform.v1.Sea" +
-      "rchReindex.Response\"\"\n\005Index\022\013\n\007CATALOG\020" +
-      "\000\022\014\n\010ACCOUNTS\020\001\"\276\002\n\rPlatformStats\032\t\n\007Req" +
-      "uest\032v\n\010Response\0223\n\005cache\030\001 \001(\0132$.bloomb" +
-      "ox.schema.platform.CacheStats\0225\n\006search\030" +
-      "\002 \001(\0132%.bloombox.schema.platform.SearchS" +
-      "tats\032\251\001\n\tOperation\022L\n\007request\030\001 \001(\0132;.bl" +
-      "oombox.schema.services.platform.v1.Platf" +
-      "ormStats.Request\022N\n\010response\030\002 \001(\0132<.blo" +
-      "ombox.schema.services.platform.v1.Platfo" +
-      "rmStats.Response*a\n\rPlatformError\022\014\n\010NO_" +
-      "ERROR\020\000\022\030\n\024SEARCH_NOT_AVAILABLE\020\001\022\022\n\016ORI" +
-      "GIN_INVALID\020\002\022\024\n\020ORIGIN_NOT_FOUND\020\0032\242\006\n\010" +
-      "Platform\022\212\001\n\004Ping\0222.bloombox.schema.serv" +
-      "ices.platform.v1.Ping.Request\0323.bloombox" +
-      ".schema.services.platform.v1.Ping.Respon" +
-      "se\"\031\202\323\344\223\002\023\022\021/platform/v1/ping\022U\n\006Health\022" +
-      "\026.google.protobuf.Empty\032\026.google.protobu" +
-      "f.Empty\"\033\202\323\344\223\002\025\022\023/platform/v1/health\022\252\001\n" +
-      "\007Resolve\022;.bloombox.schema.services.plat" +
-      "form.v1.DomainResolve.Request\032<.bloombox" +
-      ".schema.services.platform.v1.DomainResol" +
-      "ve.Response\"$\202\323\344\223\002\036\022\034/platform/v1/domain" +
-      "/{origin}\022\236\001\n\005Stats\022;.bloombox.schema.se" +
-      "rvices.platform.v1.PlatformStats.Request" +
-      "\032<.bloombox.schema.services.platform.v1." +
-      "PlatformStats.Response\"\032\202\323\344\223\002\024\022\022/platfor" +
-      "m/v1/stats\022\343\001\n\007Reindex\022;.bloombox.schema" +
-      ".services.platform.v1.SearchReindex.Requ" +
-      "est\032<.bloombox.schema.services.platform." +
-      "v1.SearchReindex.Response\"]\202\323\344\223\002W\022%/plat" +
-      "form/v1/reindex/{scope=*}/globalZ.\022,/pla" +
-      "tform/v1/reindex/{scope=*}/index/{index}" +
-      "B3\n\'io.bloombox.schema.services.platform" +
-      ".v1H\001P\001\242\002\003BBSb\006proto3"
+      "bloombox.schema.services.platform.v1\032\033go" +
+      "ogle/protobuf/empty.proto\032\034google/api/an" +
+      "notations.proto\032(protoc-gen-swagger/opti" +
+      "ons/swagger.proto\"j\n\004Ping\032\t\n\007Request\032W\n\010" +
+      "Response\022K\n\006status\030\001 \001(\0162;.bloombox.sche" +
+      "ma.services.platform.v1.PlatformServiceS" +
+      "tatus\"\'\n\013Healthcheck\032\030\n\007Request\022\r\n\005probe" +
+      "\030\001 \001(\t\"|\n\rDomainResolve\032\031\n\007Request\022\016\n\006or" +
+      "igin\030\001 \001(\t\032P\n\010Response\022\017\n\007partner\030\001 \001(\t\022" +
+      "\020\n\010location\030\002 \001(\t\022\016\n\006apikey\030\003 \001(\t\022\021\n\tcli" +
+      "ent_id\030\004 \001(\t*a\n\rPlatformError\022\014\n\010NO_ERRO" +
+      "R\020\000\022\030\n\024SEARCH_NOT_AVAILABLE\020\001\022\022\n\016ORIGIN_" +
+      "INVALID\020\002\022\024\n\020ORIGIN_NOT_FOUND\020\003*G\n\025Platf" +
+      "ormServiceStatus\022\013\n\007UNKNOWN\020\000\022\006\n\002UP\020\001\022\010\n" +
+      "\004DOWN\020\002\022\017\n\013MAINTENANCE\020\0032\330\005\n\010Platform\022\317\001" +
+      "\n\004Ping\0222.bloombox.schema.services.platfo" +
+      "rm.v1.Ping.Request\0323.bloombox.schema.ser" +
+      "vices.platform.v1.Ping.Response\"^\202\323\344\223\002\023\022" +
+      "\021/platform/v1/ping\222AB\022\014Service Ping\032,Que" +
+      "ry for service uptime/maintenance status" +
+      ".*\004Ping\022\313\001\n\006Health\022\026.google.protobuf.Emp" +
+      "ty\032\026.google.protobuf.Empty\"\220\001\202\323\344\223\002\025\022\023/pl" +
+      "atform/v1/health\222Ar\022\023Service Healthcheck" +
+      "\032NIf the service is running correctly, a" +
+      "lways responds with an empty HTTP200/OK." +
+      "*\013Healthcheck\022\253\002\n\007Resolve\022;.bloombox.sch" +
+      "ema.services.platform.v1.DomainResolve.R" +
+      "equest\032<.bloombox.schema.services.platfo" +
+      "rm.v1.DomainResolve.Response\"\244\001\202\323\344\223\002\036\022\034/" +
+      "platform/v1/domain/{origin}\222A}\022\016Resolve " +
+      "Domain\032bFor custom-hosting endpoints, gi" +
+      "ven a web origin, resolve the owning par" +
+      "tner and location account.*\007ResolveB\353\010\n\'" +
+      "io.bloombox.schema.services.platform.v1H" +
+      "\001P\001\242\002\003BBS\222A\264\010\022f\n\014Platform API\032\031https://b" +
+      "loombox.io/terms\"7\n\010Bloombox\022\023https://bl" +
+      "oombox.io\032\026developers@bloombox.io2\002v1\032\022a" +
+      "pi.bloombox.cloud*\001\0022\020application/json:\020" +
+      "application/jsonZ\270\006\nd\n\013ApiKeyParam\022U\010\002\022J" +
+      "Parameter for identifying API key owned " +
+      "by the invoking project or system.\032\003key " +
+      "\001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for identi" +
+      "fying API key owned by the invoking proj" +
+      "ect or system.\032\tX-API-Key \001\n\345\004\n\006OAuth2\022\332" +
+      "\004\010\003\022]Bloombox Identity-powered OAuth2 ac" +
+      "cess, authorized on behalf of an end-use" +
+      "r or organization.(\0042,https://authorize." +
+      "bloombox.cloud/oauth2/auth:-https://auth" +
+      "orize.bloombox.cloud/oauth2/tokenB\227\003\n1\n\007" +
+      "offline\022&Offline access to authorized us" +
+      "er data\n9\n\006openid\022/OIDC (OpenID Connect)" +
+      " access for seamless logon\nE\n\014partner:re" +
+      "ad\0225Read access to a partner\'s profile a" +
+      "nd basic settings\nG\n\rpartner:write\0226Writ" +
+      "e access to a partner\'s profile and basi" +
+      "c settings\nV\n\rpartner:admin\022EFull admini" +
+      "strative access rights to a partner\'s pr" +
+      "ofile and settings\n?\n\016platform:admin\022-Pl" +
+      "atform-level internal administrative acc" +
+      "essb#\n\017\n\013ApiKeyParam\022\000\n\020\n\014ApiKeyHeader\022\000" +
+      "r/\n\rBloombox APIs\022\036https://apidocs.bloom" +
+      "box.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -218,10 +155,9 @@ public final class PlatformServiceV1 {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
-          io.bloombox.schema.platform.PlatformStats.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
+          grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_services_platform_v1_Ping_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -241,12 +177,6 @@ public final class PlatformServiceV1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_platform_v1_Ping_Response_descriptor,
         new java.lang.String[] { "Status", });
-    internal_static_bloombox_schema_services_platform_v1_Ping_Operation_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_Ping_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_platform_v1_Ping_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_Ping_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
     internal_static_bloombox_schema_services_platform_v1_Healthcheck_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bloombox_schema_services_platform_v1_Healthcheck_fieldAccessorTable = new
@@ -259,18 +189,6 @@ public final class PlatformServiceV1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_platform_v1_Healthcheck_Request_descriptor,
         new java.lang.String[] { "Probe", });
-    internal_static_bloombox_schema_services_platform_v1_Healthcheck_Response_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_Healthcheck_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_platform_v1_Healthcheck_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_Healthcheck_Response_descriptor,
-        new java.lang.String[] { "Status", });
-    internal_static_bloombox_schema_services_platform_v1_Healthcheck_Operation_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_Healthcheck_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_platform_v1_Healthcheck_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_Healthcheck_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
     internal_static_bloombox_schema_services_platform_v1_DomainResolve_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bloombox_schema_services_platform_v1_DomainResolve_fieldAccessorTable = new
@@ -288,70 +206,17 @@ public final class PlatformServiceV1 {
     internal_static_bloombox_schema_services_platform_v1_DomainResolve_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_platform_v1_DomainResolve_Response_descriptor,
-        new java.lang.String[] { "Partner", "Location", "Apikey", });
-    internal_static_bloombox_schema_services_platform_v1_DomainResolve_Operation_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_DomainResolve_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_platform_v1_DomainResolve_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_DomainResolve_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_SearchReindex_descriptor,
-        new java.lang.String[] { });
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Request_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_SearchReindex_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_SearchReindex_Request_descriptor,
-        new java.lang.String[] { "Scope", "Index", });
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Response_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_SearchReindex_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_SearchReindex_Response_descriptor,
-        new java.lang.String[] { });
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Operation_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_SearchReindex_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_platform_v1_SearchReindex_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_SearchReindex_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_PlatformStats_descriptor,
-        new java.lang.String[] { });
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Request_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_PlatformStats_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_PlatformStats_Request_descriptor,
-        new java.lang.String[] { });
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Response_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_PlatformStats_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_PlatformStats_Response_descriptor,
-        new java.lang.String[] { "Cache", "Search", });
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Operation_descriptor =
-      internal_static_bloombox_schema_services_platform_v1_PlatformStats_descriptor.getNestedTypes().get(2);
-    internal_static_bloombox_schema_services_platform_v1_PlatformStats_Operation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_platform_v1_PlatformStats_Operation_descriptor,
-        new java.lang.String[] { "Request", "Response", });
+        new java.lang.String[] { "Partner", "Location", "Apikey", "ClientId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(grpc.gateway.protoc_gen_swagger.options.Swagger.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_swagger.options.Swagger.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();
-    io.bloombox.schema.platform.PlatformStats.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
+    grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

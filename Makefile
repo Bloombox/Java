@@ -19,8 +19,8 @@
 
 BUILDMODE ?= maven
 TESTS ?= yes
-RELEASE_VERSION ?= 1.1
-CLIENT_VERSION ?= 1.1-SNAPSHOT
+RELEASE_VERSION ?= 1.2
+CLIENT_VERSION ?= 1.2-SNAPSHOT
 SERVICE_ARGS ?= -Dbloombox.shop.version=$(SHOP_VERSION) -Dbloombox.telemetry.version=$(TELEMETRY_VERSION)
 SCHEMA ?= schema/
 RELEASE_ARGS ?= -DperformRelease=true
@@ -128,6 +128,8 @@ embedded:
 	@echo "Building embedded library..."
 	@mv pom.xml pom-standard.xml
 	@mv pom-embedded.xml pom.xml
+	@mv build.gradle build-standard.gradle
+	@mv build-embedded.gradle build.gradle
 	@mvn clean package && echo "Cutting new branch..." && git branch -D embedded && git checkout -b embedded && echo "Removing schema..." && rm -fr src/main/java/* && echo "Schema is not included with embedded library." > src/main/README.md && git add . && git commit -m "Embedded: $(CLIENT_VERSION)" && git push origin embedded --force && git checkout $(CURRENT_BRANCH)
 
 ifeq ($(BUILDMODE),maven)

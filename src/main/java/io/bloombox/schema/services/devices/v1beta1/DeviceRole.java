@@ -39,12 +39,12 @@ public enum DeviceRole
   UNASSIGNED(0),
   /**
    * <pre>
-   * The device should display a TV menu.
+   * The device should display a menu.
    * </pre>
    *
-   * <code>TV = 1;</code>
+   * <code>MENU = 1;</code>
    */
-  TV(1),
+  MENU(1),
   /**
    * <pre>
    * The device should act as a checkin station.
@@ -61,6 +61,14 @@ public enum DeviceRole
    * <code>BEACON = 3;</code>
    */
   BEACON(3),
+  /**
+   * <pre>
+   * The device should act as a point-of-sale unit.
+   * </pre>
+   *
+   * <code>POS = 4;</code>
+   */
+  POS(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -74,12 +82,12 @@ public enum DeviceRole
   public static final int UNASSIGNED_VALUE = 0;
   /**
    * <pre>
-   * The device should display a TV menu.
+   * The device should display a menu.
    * </pre>
    *
-   * <code>TV = 1;</code>
+   * <code>MENU = 1;</code>
    */
-  public static final int TV_VALUE = 1;
+  public static final int MENU_VALUE = 1;
   /**
    * <pre>
    * The device should act as a checkin station.
@@ -96,6 +104,14 @@ public enum DeviceRole
    * <code>BEACON = 3;</code>
    */
   public static final int BEACON_VALUE = 3;
+  /**
+   * <pre>
+   * The device should act as a point-of-sale unit.
+   * </pre>
+   *
+   * <code>POS = 4;</code>
+   */
+  public static final int POS_VALUE = 4;
 
 
   public final int getNumber() {
@@ -117,9 +133,10 @@ public enum DeviceRole
   public static DeviceRole forNumber(int value) {
     switch (value) {
       case 0: return UNASSIGNED;
-      case 1: return TV;
+      case 1: return MENU;
       case 2: return CHECKIN;
       case 3: return BEACON;
+      case 4: return POS;
       default: return null;
     }
   }

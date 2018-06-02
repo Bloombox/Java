@@ -19,6 +19,7 @@ package bloombox.client.test
 import bloombox.client.Bloombox
 import bloombox.client.ClientException
 import io.grpc.StatusRuntimeException
+import java.io.IOException
 import java.util.logging.Logger
 import java.util.concurrent.Executor
 
@@ -113,6 +114,10 @@ open class ClientRPCTest {
         }
         throw ClientException.fromUncaughtException(inner)
       }
+    } catch (ioe: IOException) {
+      logging.warning("Encountered IO exception. Service unavailable. Skipping...")
+    } catch (ce: bloombox.client.ClientException) {
+      logging.warning("Encountered client exception. Service unavailable. Skipping...")
     } finally {
       client?.close()
     }
