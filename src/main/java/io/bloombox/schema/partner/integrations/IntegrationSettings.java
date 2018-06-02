@@ -45,42 +45,45 @@ public final class IntegrationSettings {
     java.lang.String[] descriptorData = {
       "\n.partner/integrations/IntegrationSettin" +
       "gs.proto\022$bloombox.schema.partner.integr" +
-      "ations\032\026temporal/Instant.proto\032)partner/" +
-      "integrations/TwilioSettings.proto\032*partn" +
-      "er/integrations/OnFleetSettings.proto\032+p" +
-      "artner/integrations/SendgridSettings.pro" +
-      "to\032,partner/integrations/MailchimpSettin" +
-      "gs.proto\032,partner/integrations/Greenbits" +
-      "Settings.proto\"\302\001\n\032GenericIntegrationSet" +
-      "tings\022I\n\007partner\030\001 \001(\01628.bloombox.schema" +
-      ".partner.integrations.IntegrationPartner" +
-      "\022\017\n\007enabled\030\002 \001(\010\022\023\n\013fully_setup\030\003 \001(\010\0223" +
-      "\n\013last_tested\030\004 \001(\0132\036.opencannabis.tempo" +
-      "ral.Instant\"\334\005\n\033LocationIntegrationSetti" +
-      "ngs\022N\n\014integrations\030\001 \003(\01628.bloombox.sch" +
-      "ema.partner.integrations.IntegrationPart" +
-      "ner\022_\n\007generic\030\002 \003(\0132N.bloombox.schema.p" +
-      "artner.integrations.LocationIntegrationS" +
-      "ettings.GenericEntry\022T\n\tgreenbits\030\n \001(\0132" +
-      "A.bloombox.schema.partner.integrations.g" +
-      "reenbits.GreenbitsSettings\022T\n\tmailchimp\030" +
-      "\013 \001(\0132A.bloombox.schema.partner.integrat" +
-      "ions.mailchimp.MailchimpSettings\022Q\n\010send" +
-      "grid\030\014 \001(\0132?.bloombox.schema.partner.int" +
-      "egrations.sendgrid.SendgridSettings\022K\n\006t" +
-      "wilio\030\r \001(\0132;.bloombox.schema.partner.in" +
-      "tegrations.twilio.TwilioSettings\022N\n\007onfl" +
-      "eet\030\016 \001(\0132=.bloombox.schema.partner.inte" +
-      "grations.onfleet.OnFleetSettings\032p\n\014Gene" +
-      "ricEntry\022\013\n\003key\030\001 \001(\t\022O\n\005value\030\002 \001(\0132@.b" +
-      "loombox.schema.partner.integrations.Gene" +
-      "ricIntegrationSettings:\0028\001\"\034\n\032PartnerInt" +
-      "egrationSettings*\212\001\n\022IntegrationPartner\022" +
-      "\014\n\010INTERNAL\020\000\022\013\n\007SALSIFY\020\001\022\010\n\004KEEN\020\002\022\r\n\t" +
-      "GREENBITS\020\003\022\r\n\tMAILCHIMP\020\004\022\014\n\010SENDGRID\020\005" +
-      "\022\n\n\006TWILIO\020\006\022\013\n\007ONFLEET\020\007\022\n\n\006GSUITE\020\010B3\n" +
-      "\'io.bloombox.schema.partner.integrations" +
-      "H\001P\001\242\002\003BBSb\006proto3"
+      "ations\032\026temporal/Instant.proto\032(partner/" +
+      "integrations/TreezSettings.proto\032)partne" +
+      "r/integrations/TwilioSettings.proto\032*par" +
+      "tner/integrations/OnFleetSettings.proto\032" +
+      "+partner/integrations/SendgridSettings.p" +
+      "roto\032,partner/integrations/MailchimpSett" +
+      "ings.proto\032,partner/integrations/Greenbi" +
+      "tsSettings.proto\"\302\001\n\032GenericIntegrationS" +
+      "ettings\022I\n\007partner\030\001 \001(\01628.bloombox.sche" +
+      "ma.partner.integrations.IntegrationPartn" +
+      "er\022\017\n\007enabled\030\002 \001(\010\022\023\n\013fully_setup\030\003 \001(\010" +
+      "\0223\n\013last_tested\030\004 \001(\0132\036.opencannabis.tem" +
+      "poral.Instant\"\246\006\n\033LocationIntegrationSet" +
+      "tings\022N\n\014integrations\030\001 \003(\01628.bloombox.s" +
+      "chema.partner.integrations.IntegrationPa" +
+      "rtner\022_\n\007generic\030\002 \003(\0132N.bloombox.schema" +
+      ".partner.integrations.LocationIntegratio" +
+      "nSettings.GenericEntry\022T\n\tgreenbits\030\n \001(" +
+      "\0132A.bloombox.schema.partner.integrations" +
+      ".greenbits.GreenbitsSettings\022T\n\tmailchim" +
+      "p\030\013 \001(\0132A.bloombox.schema.partner.integr" +
+      "ations.mailchimp.MailchimpSettings\022Q\n\010se" +
+      "ndgrid\030\014 \001(\0132?.bloombox.schema.partner.i" +
+      "ntegrations.sendgrid.SendgridSettings\022K\n" +
+      "\006twilio\030\r \001(\0132;.bloombox.schema.partner." +
+      "integrations.twilio.TwilioSettings\022N\n\007on" +
+      "fleet\030\016 \001(\0132=.bloombox.schema.partner.in" +
+      "tegrations.onfleet.OnFleetSettings\022H\n\005tr" +
+      "eez\030\017 \001(\01329.bloombox.schema.partner.inte" +
+      "grations.treez.TreezSettings\032p\n\014GenericE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022O\n\005value\030\002 \001(\0132@.bloom" +
+      "box.schema.partner.integrations.GenericI" +
+      "ntegrationSettings:\0028\001\"\034\n\032PartnerIntegra" +
+      "tionSettings*\225\001\n\022IntegrationPartner\022\014\n\010I" +
+      "NTERNAL\020\000\022\013\n\007SALSIFY\020\001\022\010\n\004KEEN\020\002\022\r\n\tGREE" +
+      "NBITS\020\003\022\r\n\tMAILCHIMP\020\004\022\014\n\010SENDGRID\020\005\022\n\n\006" +
+      "TWILIO\020\006\022\013\n\007ONFLEET\020\007\022\n\n\006GSUITE\020\010\022\t\n\005TRE" +
+      "EZ\020\tB3\n\'io.bloombox.schema.partner.integ" +
+      "rationsH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -94,6 +97,7 @@ public final class IntegrationSettings {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.getDescriptor(),
           io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.getDescriptor(),
           io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.getDescriptor(),
           io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.getDescriptor(),
@@ -111,7 +115,7 @@ public final class IntegrationSettings {
     internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor,
-        new java.lang.String[] { "Integrations", "Generic", "Greenbits", "Mailchimp", "Sendgrid", "Twilio", "Onfleet", });
+        new java.lang.String[] { "Integrations", "Generic", "Greenbits", "Mailchimp", "Sendgrid", "Twilio", "Onfleet", "Treez", });
     internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_GenericEntry_descriptor =
       internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_descriptor.getNestedTypes().get(0);
     internal_static_bloombox_schema_partner_integrations_LocationIntegrationSettings_GenericEntry_fieldAccessorTable = new
@@ -125,6 +129,7 @@ public final class IntegrationSettings {
         internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor,
         new java.lang.String[] { });
     io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.getDescriptor();
     io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.getDescriptor();
     io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.getDescriptor();
     io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.getDescriptor();

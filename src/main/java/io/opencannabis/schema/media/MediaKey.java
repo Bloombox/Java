@@ -92,7 +92,7 @@ private static final long serialVersionUID = 0L;
    * Unique ID for this media item.
    * </pre>
    *
-   * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+   * <code>string id = 1 [(.core.field) = { ... }</code>
    */
   public java.lang.String getId() {
     java.lang.Object ref = id_;
@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
    * Unique ID for this media item.
    * </pre>
    *
-   * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+   * <code>string id = 1 [(.core.field) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getIdBytes() {
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID for this media item.
      * </pre>
      *
-     * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+     * <code>string id = 1 [(.core.field) = { ... }</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -440,7 +440,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID for this media item.
      * </pre>
      *
-     * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+     * <code>string id = 1 [(.core.field) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -460,7 +460,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID for this media item.
      * </pre>
      *
-     * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+     * <code>string id = 1 [(.core.field) = { ... }</code>
      */
     public Builder setId(
         java.lang.String value) {
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID for this media item.
      * </pre>
      *
-     * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+     * <code>string id = 1 [(.core.field) = { ... }</code>
      */
     public Builder clearId() {
       
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID for this media item.
      * </pre>
      *
-     * <code>string id = 1 [(.gen_bq_schema.description) = "Unique ID for this media item."];</code>
+     * <code>string id = 1 [(.core.field) = { ... }</code>
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {

@@ -82,39 +82,21 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Partnership scope for the request.
+     * ID of the campaign to send.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string campaign_id = 1;</code>
      */
-    java.lang.String getScope();
-    /**
-     * <pre>
-     * Partnership scope for the request.
-     * </pre>
-     *
-     * <code>string scope = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getScopeBytes();
-
+    java.lang.String getCampaignId();
     /**
      * <pre>
      * ID of the campaign to send.
      * </pre>
      *
-     * <code>string id = 2;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <pre>
-     * ID of the campaign to send.
-     * </pre>
-     *
-     * <code>string id = 2;</code>
+     * <code>string campaign_id = 1;</code>
      */
     com.google.protobuf.ByteString
-        getIdBytes();
+        getCampaignIdBytes();
   }
   /**
    * <pre>
@@ -133,8 +115,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
-      scope_ = "";
-      id_ = "";
+      campaignId_ = "";
     }
 
     @java.lang.Override
@@ -171,13 +152,7 @@ private static final long serialVersionUID = 0L;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              scope_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
+              campaignId_ = s;
               break;
             }
           }
@@ -204,66 +179,24 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request.class, io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request.Builder.class);
     }
 
-    public static final int SCOPE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object scope_;
-    /**
-     * <pre>
-     * Partnership scope for the request.
-     * </pre>
-     *
-     * <code>string scope = 1;</code>
-     */
-    public java.lang.String getScope() {
-      java.lang.Object ref = scope_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        scope_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Partnership scope for the request.
-     * </pre>
-     *
-     * <code>string scope = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getScopeBytes() {
-      java.lang.Object ref = scope_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        scope_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object id_;
+    public static final int CAMPAIGN_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object campaignId_;
     /**
      * <pre>
      * ID of the campaign to send.
      * </pre>
      *
-     * <code>string id = 2;</code>
+     * <code>string campaign_id = 1;</code>
      */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
+    public java.lang.String getCampaignId() {
+      java.lang.Object ref = campaignId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        id_ = s;
+        campaignId_ = s;
         return s;
       }
     }
@@ -272,16 +205,16 @@ private static final long serialVersionUID = 0L;
      * ID of the campaign to send.
      * </pre>
      *
-     * <code>string id = 2;</code>
+     * <code>string campaign_id = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
+        getCampaignIdBytes() {
+      java.lang.Object ref = campaignId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        id_ = b;
+        campaignId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -300,11 +233,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getScopeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
-      }
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      if (!getCampaignIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, campaignId_);
       }
       unknownFields.writeTo(output);
     }
@@ -314,11 +244,8 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getScopeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
-      }
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      if (!getCampaignIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, campaignId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -336,10 +263,8 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request other = (io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request) obj;
 
       boolean result = true;
-      result = result && getScope()
-          .equals(other.getScope());
-      result = result && getId()
-          .equals(other.getId());
+      result = result && getCampaignId()
+          .equals(other.getCampaignId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -351,10 +276,8 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SCOPE_FIELD_NUMBER;
-      hash = (53 * hash) + getScope().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + CAMPAIGN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -488,9 +411,7 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        scope_ = "";
-
-        id_ = "";
+        campaignId_ = "";
 
         return this;
       }
@@ -514,8 +435,7 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request buildPartial() {
         io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request result = new io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request(this);
-        result.scope_ = scope_;
-        result.id_ = id_;
+        result.campaignId_ = campaignId_;
         onBuilt();
         return result;
       }
@@ -557,12 +477,8 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request other) {
         if (other == io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request.getDefaultInstance()) return this;
-        if (!other.getScope().isEmpty()) {
-          scope_ = other.scope_;
-          onChanged();
-        }
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
+        if (!other.getCampaignId().isEmpty()) {
+          campaignId_ = other.campaignId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -592,110 +508,21 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object scope_ = "";
-      /**
-       * <pre>
-       * Partnership scope for the request.
-       * </pre>
-       *
-       * <code>string scope = 1;</code>
-       */
-      public java.lang.String getScope() {
-        java.lang.Object ref = scope_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          scope_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Partnership scope for the request.
-       * </pre>
-       *
-       * <code>string scope = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getScopeBytes() {
-        java.lang.Object ref = scope_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          scope_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Partnership scope for the request.
-       * </pre>
-       *
-       * <code>string scope = 1;</code>
-       */
-      public Builder setScope(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        scope_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Partnership scope for the request.
-       * </pre>
-       *
-       * <code>string scope = 1;</code>
-       */
-      public Builder clearScope() {
-        
-        scope_ = getDefaultInstance().getScope();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Partnership scope for the request.
-       * </pre>
-       *
-       * <code>string scope = 1;</code>
-       */
-      public Builder setScopeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        scope_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
+      private java.lang.Object campaignId_ = "";
       /**
        * <pre>
        * ID of the campaign to send.
        * </pre>
        *
-       * <code>string id = 2;</code>
+       * <code>string campaign_id = 1;</code>
        */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
+      public java.lang.String getCampaignId() {
+        java.lang.Object ref = campaignId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          id_ = s;
+          campaignId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -706,16 +533,16 @@ private static final long serialVersionUID = 0L;
        * ID of the campaign to send.
        * </pre>
        *
-       * <code>string id = 2;</code>
+       * <code>string campaign_id = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
+          getCampaignIdBytes() {
+        java.lang.Object ref = campaignId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          id_ = b;
+          campaignId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -726,15 +553,15 @@ private static final long serialVersionUID = 0L;
        * ID of the campaign to send.
        * </pre>
        *
-       * <code>string id = 2;</code>
+       * <code>string campaign_id = 1;</code>
        */
-      public Builder setId(
+      public Builder setCampaignId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        id_ = value;
+        campaignId_ = value;
         onChanged();
         return this;
       }
@@ -743,11 +570,11 @@ private static final long serialVersionUID = 0L;
        * ID of the campaign to send.
        * </pre>
        *
-       * <code>string id = 2;</code>
+       * <code>string campaign_id = 1;</code>
        */
-      public Builder clearId() {
+      public Builder clearCampaignId() {
         
-        id_ = getDefaultInstance().getId();
+        campaignId_ = getDefaultInstance().getCampaignId();
         onChanged();
         return this;
       }
@@ -756,16 +583,16 @@ private static final long serialVersionUID = 0L;
        * ID of the campaign to send.
        * </pre>
        *
-       * <code>string id = 2;</code>
+       * <code>string campaign_id = 1;</code>
        */
-      public Builder setIdBytes(
+      public Builder setCampaignIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        id_ = value;
+        campaignId_ = value;
         onChanged();
         return this;
       }

@@ -155,6 +155,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 122: {
+            io.bloombox.schema.partner.integrations.treez.TreezSettings.Builder subBuilder = null;
+            if (treez_ != null) {
+              subBuilder = treez_.toBuilder();
+            }
+            treez_ = input.readMessage(io.bloombox.schema.partner.integrations.treez.TreezSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(treez_);
+              treez_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -516,6 +529,39 @@ private static final long serialVersionUID = 0L;
     return getOnfleet();
   }
 
+  public static final int TREEZ_FIELD_NUMBER = 15;
+  private io.bloombox.schema.partner.integrations.treez.TreezSettings treez_;
+  /**
+   * <pre>
+   * Specifies location-specific integration settings with Treez.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+   */
+  public boolean hasTreez() {
+    return treez_ != null;
+  }
+  /**
+   * <pre>
+   * Specifies location-specific integration settings with Treez.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+   */
+  public io.bloombox.schema.partner.integrations.treez.TreezSettings getTreez() {
+    return treez_ == null ? io.bloombox.schema.partner.integrations.treez.TreezSettings.getDefaultInstance() : treez_;
+  }
+  /**
+   * <pre>
+   * Specifies location-specific integration settings with Treez.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+   */
+  public io.bloombox.schema.partner.integrations.treez.TreezSettingsOrBuilder getTreezOrBuilder() {
+    return getTreez();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -556,6 +602,9 @@ private static final long serialVersionUID = 0L;
     }
     if (onfleet_ != null) {
       output.writeMessage(14, getOnfleet());
+    }
+    if (treez_ != null) {
+      output.writeMessage(15, getTreez());
     }
     unknownFields.writeTo(output);
   }
@@ -607,6 +656,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getOnfleet());
     }
+    if (treez_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getTreez());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -651,6 +704,11 @@ private static final long serialVersionUID = 0L;
       result = result && getOnfleet()
           .equals(other.getOnfleet());
     }
+    result = result && (hasTreez() == other.hasTreez());
+    if (hasTreez()) {
+      result = result && getTreez()
+          .equals(other.getTreez());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -689,6 +747,10 @@ private static final long serialVersionUID = 0L;
     if (hasOnfleet()) {
       hash = (37 * hash) + ONFLEET_FIELD_NUMBER;
       hash = (53 * hash) + getOnfleet().hashCode();
+    }
+    if (hasTreez()) {
+      hash = (37 * hash) + TREEZ_FIELD_NUMBER;
+      hash = (53 * hash) + getTreez().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -878,6 +940,12 @@ private static final long serialVersionUID = 0L;
         onfleet_ = null;
         onfleetBuilder_ = null;
       }
+      if (treezBuilder_ == null) {
+        treez_ = null;
+      } else {
+        treez_ = null;
+        treezBuilder_ = null;
+      }
       return this;
     }
 
@@ -933,6 +1001,11 @@ private static final long serialVersionUID = 0L;
         result.onfleet_ = onfleet_;
       } else {
         result.onfleet_ = onfleetBuilder_.build();
+      }
+      if (treezBuilder_ == null) {
+        result.treez_ = treez_;
+      } else {
+        result.treez_ = treezBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -1002,6 +1075,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasOnfleet()) {
         mergeOnfleet(other.getOnfleet());
+      }
+      if (other.hasTreez()) {
+        mergeTreez(other.getTreez());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2111,6 +2187,159 @@ private static final long serialVersionUID = 0L;
         onfleet_ = null;
       }
       return onfleetBuilder_;
+    }
+
+    private io.bloombox.schema.partner.integrations.treez.TreezSettings treez_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.partner.integrations.treez.TreezSettings, io.bloombox.schema.partner.integrations.treez.TreezSettings.Builder, io.bloombox.schema.partner.integrations.treez.TreezSettingsOrBuilder> treezBuilder_;
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    public boolean hasTreez() {
+      return treezBuilder_ != null || treez_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    public io.bloombox.schema.partner.integrations.treez.TreezSettings getTreez() {
+      if (treezBuilder_ == null) {
+        return treez_ == null ? io.bloombox.schema.partner.integrations.treez.TreezSettings.getDefaultInstance() : treez_;
+      } else {
+        return treezBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    public Builder setTreez(io.bloombox.schema.partner.integrations.treez.TreezSettings value) {
+      if (treezBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        treez_ = value;
+        onChanged();
+      } else {
+        treezBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    public Builder setTreez(
+        io.bloombox.schema.partner.integrations.treez.TreezSettings.Builder builderForValue) {
+      if (treezBuilder_ == null) {
+        treez_ = builderForValue.build();
+        onChanged();
+      } else {
+        treezBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    public Builder mergeTreez(io.bloombox.schema.partner.integrations.treez.TreezSettings value) {
+      if (treezBuilder_ == null) {
+        if (treez_ != null) {
+          treez_ =
+            io.bloombox.schema.partner.integrations.treez.TreezSettings.newBuilder(treez_).mergeFrom(value).buildPartial();
+        } else {
+          treez_ = value;
+        }
+        onChanged();
+      } else {
+        treezBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    public Builder clearTreez() {
+      if (treezBuilder_ == null) {
+        treez_ = null;
+        onChanged();
+      } else {
+        treez_ = null;
+        treezBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    public io.bloombox.schema.partner.integrations.treez.TreezSettings.Builder getTreezBuilder() {
+      
+      onChanged();
+      return getTreezFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    public io.bloombox.schema.partner.integrations.treez.TreezSettingsOrBuilder getTreezOrBuilder() {
+      if (treezBuilder_ != null) {
+        return treezBuilder_.getMessageOrBuilder();
+      } else {
+        return treez_ == null ?
+            io.bloombox.schema.partner.integrations.treez.TreezSettings.getDefaultInstance() : treez_;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with Treez.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.partner.integrations.treez.TreezSettings, io.bloombox.schema.partner.integrations.treez.TreezSettings.Builder, io.bloombox.schema.partner.integrations.treez.TreezSettingsOrBuilder> 
+        getTreezFieldBuilder() {
+      if (treezBuilder_ == null) {
+        treezBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.bloombox.schema.partner.integrations.treez.TreezSettings, io.bloombox.schema.partner.integrations.treez.TreezSettings.Builder, io.bloombox.schema.partner.integrations.treez.TreezSettingsOrBuilder>(
+                getTreez(),
+                getParentForChildren(),
+                isClean());
+        treez_ = null;
+      }
+      return treezBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

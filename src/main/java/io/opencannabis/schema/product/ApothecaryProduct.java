@@ -63,14 +63,6 @@ public final class ApothecaryProduct {
      * <code>INJECTOR = 4;</code>
      */
     INJECTOR(4),
-    /**
-     * <pre>
-     * Specifies a sublingual-applied product, i.e., under-the-tongue.
-     * </pre>
-     *
-     * <code>SUBLINGUAL = 5;</code>
-     */
-    SUBLINGUAL(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -114,14 +106,6 @@ public final class ApothecaryProduct {
      * <code>INJECTOR = 4;</code>
      */
     public static final int INJECTOR_VALUE = 4;
-    /**
-     * <pre>
-     * Specifies a sublingual-applied product, i.e., under-the-tongue.
-     * </pre>
-     *
-     * <code>SUBLINGUAL = 5;</code>
-     */
-    public static final int SUBLINGUAL_VALUE = 5;
 
 
     public final int getNumber() {
@@ -147,7 +131,6 @@ public final class ApothecaryProduct {
         case 2: return TINCTURE;
         case 3: return CAPSULE;
         case 4: return INJECTOR;
-        case 5: return SUBLINGUAL;
         default: return null;
       }
     }
@@ -1510,12 +1493,12 @@ public final class ApothecaryProduct {
       "\002 \001(\0162%.opencannabis.products.Apothecary" +
       "Type\0225\n\007product\030\003 \001(\0132$.opencannabis.con" +
       "tent.ProductContent\0225\n\010material\030\004 \001(\0132#." +
-      "opencannabis.content.MaterialsData*r\n\016Ap" +
+      "opencannabis.content.MaterialsData*b\n\016Ap" +
       "othecaryType\022\032\n\026UNSPECIFIED_APOTHECARY\020\000" +
       "\022\013\n\007TOPICAL\020\001\022\014\n\010TINCTURE\020\002\022\013\n\007CAPSULE\020\003" +
-      "\022\014\n\010INJECTOR\020\004\022\016\n\nSUBLINGUAL\020\005B=\n\036io.ope" +
-      "ncannabis.schema.productB\021ApothecaryProd" +
-      "uctH\001P\000\242\002\003OCSb\006proto3"
+      "\022\014\n\010INJECTOR\020\004B=\n\036io.opencannabis.schema" +
+      ".productB\021ApothecaryProductH\001P\000\242\002\003OCSb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

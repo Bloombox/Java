@@ -49,7 +49,7 @@ public final class EdibleProduct {
     BAKED_GOOD(2),
     /**
      * <pre>
-     * Specifies candy items like lollipops, lozenges, gummies, etc.
+     * Specifies generic candy items not otherwise specified.
      * </pre>
      *
      * <code>CANDY = 3;</code>
@@ -57,12 +57,60 @@ public final class EdibleProduct {
     CANDY(3),
     /**
      * <pre>
-     * Specifies beverage products.
+     * Beverage/drink products.
      * </pre>
      *
-     * <code>DRINK = 4;</code>
+     * <code>BEVERAGE = 4;</code>
      */
-    DRINK(4),
+    BEVERAGE(4),
+    /**
+     * <pre>
+     * Lozenge (hardened candy) products.
+     * </pre>
+     *
+     * <code>LOZENGE = 5;</code>
+     */
+    LOZENGE(5),
+    /**
+     * <pre>
+     * Sub-lingual, i.e. under-the-tongue, products.
+     * </pre>
+     *
+     * <code>SUBLINGUAL = 6;</code>
+     */
+    SUBLINGUAL(6),
+    /**
+     * <pre>
+     * Soft candies made of congealed sugar product.
+     * </pre>
+     *
+     * <code>GUMMY = 7;</code>
+     */
+    GUMMY(7),
+    /**
+     * <pre>
+     * Medicated butter pdocuts.
+     * </pre>
+     *
+     * <code>BUTTER = 8;</code>
+     */
+    BUTTER(8),
+    /**
+     * <pre>
+     * Cooking oil and other edible oils.
+     * </pre>
+     *
+     * <code>OILS = 9;</code>
+     */
+    OILS(9),
+    /**
+     * <pre>
+     * Cereals and related breakfast products.
+     * </pre>
+     *
+     * <code>CEREAL = 10;</code>
+     */
+    CEREAL(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -92,7 +140,7 @@ public final class EdibleProduct {
     public static final int BAKED_GOOD_VALUE = 2;
     /**
      * <pre>
-     * Specifies candy items like lollipops, lozenges, gummies, etc.
+     * Specifies generic candy items not otherwise specified.
      * </pre>
      *
      * <code>CANDY = 3;</code>
@@ -100,12 +148,60 @@ public final class EdibleProduct {
     public static final int CANDY_VALUE = 3;
     /**
      * <pre>
-     * Specifies beverage products.
+     * Beverage/drink products.
      * </pre>
      *
-     * <code>DRINK = 4;</code>
+     * <code>BEVERAGE = 4;</code>
      */
-    public static final int DRINK_VALUE = 4;
+    public static final int BEVERAGE_VALUE = 4;
+    /**
+     * <pre>
+     * Lozenge (hardened candy) products.
+     * </pre>
+     *
+     * <code>LOZENGE = 5;</code>
+     */
+    public static final int LOZENGE_VALUE = 5;
+    /**
+     * <pre>
+     * Sub-lingual, i.e. under-the-tongue, products.
+     * </pre>
+     *
+     * <code>SUBLINGUAL = 6;</code>
+     */
+    public static final int SUBLINGUAL_VALUE = 6;
+    /**
+     * <pre>
+     * Soft candies made of congealed sugar product.
+     * </pre>
+     *
+     * <code>GUMMY = 7;</code>
+     */
+    public static final int GUMMY_VALUE = 7;
+    /**
+     * <pre>
+     * Medicated butter pdocuts.
+     * </pre>
+     *
+     * <code>BUTTER = 8;</code>
+     */
+    public static final int BUTTER_VALUE = 8;
+    /**
+     * <pre>
+     * Cooking oil and other edible oils.
+     * </pre>
+     *
+     * <code>OILS = 9;</code>
+     */
+    public static final int OILS_VALUE = 9;
+    /**
+     * <pre>
+     * Cereals and related breakfast products.
+     * </pre>
+     *
+     * <code>CEREAL = 10;</code>
+     */
+    public static final int CEREAL_VALUE = 10;
 
 
     public final int getNumber() {
@@ -130,7 +226,13 @@ public final class EdibleProduct {
         case 1: return CHOCOLATE;
         case 2: return BAKED_GOOD;
         case 3: return CANDY;
-        case 4: return DRINK;
+        case 4: return BEVERAGE;
+        case 5: return LOZENGE;
+        case 6: return SUBLINGUAL;
+        case 7: return GUMMY;
+        case 8: return BUTTER;
+        case 9: return OILS;
+        case 10: return CEREAL;
         default: return null;
       }
     }
@@ -3273,14 +3375,16 @@ public final class EdibleProduct {
       "nabis.content.ProductContent\0225\n\010material" +
       "\030\005 \001(\0132#.opencannabis.content.MaterialsD" +
       "ata\022<\n\013ingredients\030\006 \003(\0132\'.opencannabis." +
-      "products.EdibleIngredient*Y\n\nEdibleType\022" +
-      "\026\n\022UNSPECIFIED_EDIBLE\020\000\022\r\n\tCHOCOLATE\020\001\022\016" +
-      "\n\nBAKED_GOOD\020\002\022\t\n\005CANDY\020\003\022\t\n\005DRINK\020\004*t\n\n" +
-      "EdibleFlag\022\022\n\016NO_EDIBLE_FLAG\020\000\022\t\n\005VEGAN\020" +
-      "\001\022\017\n\013GLUTEN_FREE\020\002\022\016\n\nSUGAR_FREE\020\003\022\016\n\nFA" +
-      "IR_TRADE\020\004\022\013\n\007ORGANIC\020\005\022\t\n\005LOCAL\020\006B9\n\036io" +
-      ".opencannabis.schema.productB\rEdibleProd" +
-      "uctH\001P\000\242\002\003OCSb\006proto3"
+      "products.EdibleIngredient*\246\001\n\nEdibleType" +
+      "\022\026\n\022UNSPECIFIED_EDIBLE\020\000\022\r\n\tCHOCOLATE\020\001\022" +
+      "\016\n\nBAKED_GOOD\020\002\022\t\n\005CANDY\020\003\022\014\n\010BEVERAGE\020\004" +
+      "\022\013\n\007LOZENGE\020\005\022\016\n\nSUBLINGUAL\020\006\022\t\n\005GUMMY\020\007" +
+      "\022\n\n\006BUTTER\020\010\022\010\n\004OILS\020\t\022\n\n\006CEREAL\020\n*t\n\nEd" +
+      "ibleFlag\022\022\n\016NO_EDIBLE_FLAG\020\000\022\t\n\005VEGAN\020\001\022" +
+      "\017\n\013GLUTEN_FREE\020\002\022\016\n\nSUGAR_FREE\020\003\022\016\n\nFAIR" +
+      "_TRADE\020\004\022\013\n\007ORGANIC\020\005\022\t\n\005LOCAL\020\006B9\n\036io.o" +
+      "pencannabis.schema.productB\rEdibleProduc" +
+      "tH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

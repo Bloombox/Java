@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   private MediaItem() {
     name_ = "";
     uri_ = "";
+    servingUri_ = "";
   }
 
   @java.lang.Override
@@ -93,6 +94,12 @@ private static final long serialVersionUID = 0L;
             uri_ = s;
             break;
           }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            servingUri_ = s;
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -124,7 +131,7 @@ private static final long serialVersionUID = 0L;
    * Key uniquely identifying this media item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+   * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
    */
   public boolean hasKey() {
     return key_ != null;
@@ -134,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * Key uniquely identifying this media item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+   * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
    */
   public io.opencannabis.schema.media.MediaKey getKey() {
     return key_ == null ? io.opencannabis.schema.media.MediaKey.getDefaultInstance() : key_;
@@ -144,7 +151,7 @@ private static final long serialVersionUID = 0L;
    * Key uniquely identifying this media item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+   * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
    */
   public io.opencannabis.schema.media.MediaKeyOrBuilder getKeyOrBuilder() {
     return getKey();
@@ -157,7 +164,7 @@ private static final long serialVersionUID = 0L;
    * Type of media this is describing.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+   * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
    */
   public boolean hasType() {
     return type_ != null;
@@ -167,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * Type of media this is describing.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+   * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
    */
   public io.opencannabis.schema.media.MediaType getType() {
     return type_ == null ? io.opencannabis.schema.media.MediaType.getDefaultInstance() : type_;
@@ -177,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * Type of media this is describing.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+   * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
    */
   public io.opencannabis.schema.media.MediaTypeOrBuilder getTypeOrBuilder() {
     return getType();
@@ -190,7 +197,7 @@ private static final long serialVersionUID = 0L;
    * Friendly name for this media.
    * </pre>
    *
-   * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+   * <code>string name = 3 [(.core.field) = { ... }</code>
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -209,7 +216,7 @@ private static final long serialVersionUID = 0L;
    * Friendly name for this media.
    * </pre>
    *
-   * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+   * <code>string name = 3 [(.core.field) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -229,10 +236,10 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object uri_;
   /**
    * <pre>
-   * Absolute URI to this media.
+   * Origin URI to this media.
    * </pre>
    *
-   * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+   * <code>string uri = 4 [(.core.field) = { ... }</code>
    */
   public java.lang.String getUri() {
     java.lang.Object ref = uri_;
@@ -248,10 +255,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Absolute URI to this media.
+   * Origin URI to this media.
    * </pre>
    *
-   * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+   * <code>string uri = 4 [(.core.field) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getUriBytes() {
@@ -261,6 +268,48 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       uri_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SERVING_URI_FIELD_NUMBER = 5;
+  private volatile java.lang.Object servingUri_;
+  /**
+   * <pre>
+   * Serving URI for this media, if it differs from the origin URI.
+   * </pre>
+   *
+   * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+   */
+  public java.lang.String getServingUri() {
+    java.lang.Object ref = servingUri_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      servingUri_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Serving URI for this media, if it differs from the origin URI.
+   * </pre>
+   *
+   * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+   */
+  public com.google.protobuf.ByteString
+      getServingUriBytes() {
+    java.lang.Object ref = servingUri_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      servingUri_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -291,6 +340,9 @@ private static final long serialVersionUID = 0L;
     if (!getUriBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uri_);
     }
+    if (!getServingUriBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, servingUri_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -312,6 +364,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!getUriBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uri_);
+    }
+    if (!getServingUriBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, servingUri_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -343,6 +398,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName());
     result = result && getUri()
         .equals(other.getUri());
+    result = result && getServingUri()
+        .equals(other.getServingUri());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -366,6 +423,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + URI_FIELD_NUMBER;
     hash = (53 * hash) + getUri().hashCode();
+    hash = (37 * hash) + SERVING_URI_FIELD_NUMBER;
+    hash = (53 * hash) + getServingUri().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -515,6 +574,8 @@ private static final long serialVersionUID = 0L;
 
       uri_ = "";
 
+      servingUri_ = "";
+
       return this;
     }
 
@@ -549,6 +610,7 @@ private static final long serialVersionUID = 0L;
       }
       result.name_ = name_;
       result.uri_ = uri_;
+      result.servingUri_ = servingUri_;
       onBuilt();
       return result;
     }
@@ -604,6 +666,10 @@ private static final long serialVersionUID = 0L;
         uri_ = other.uri_;
         onChanged();
       }
+      if (!other.getServingUri().isEmpty()) {
+        servingUri_ = other.servingUri_;
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -639,7 +705,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     public boolean hasKey() {
       return keyBuilder_ != null || key_ != null;
@@ -649,7 +715,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.media.MediaKey getKey() {
       if (keyBuilder_ == null) {
@@ -663,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     public Builder setKey(io.opencannabis.schema.media.MediaKey value) {
       if (keyBuilder_ == null) {
@@ -683,7 +749,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     public Builder setKey(
         io.opencannabis.schema.media.MediaKey.Builder builderForValue) {
@@ -701,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     public Builder mergeKey(io.opencannabis.schema.media.MediaKey value) {
       if (keyBuilder_ == null) {
@@ -723,7 +789,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     public Builder clearKey() {
       if (keyBuilder_ == null) {
@@ -741,7 +807,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.media.MediaKey.Builder getKeyBuilder() {
       
@@ -753,7 +819,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.media.MediaKeyOrBuilder getKeyOrBuilder() {
       if (keyBuilder_ != null) {
@@ -768,7 +834,7 @@ private static final long serialVersionUID = 0L;
      * Key uniquely identifying this media item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+     * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.MediaKey, io.opencannabis.schema.media.MediaKey.Builder, io.opencannabis.schema.media.MediaKeyOrBuilder> 
@@ -792,7 +858,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     public boolean hasType() {
       return typeBuilder_ != null || type_ != null;
@@ -802,7 +868,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.media.MediaType getType() {
       if (typeBuilder_ == null) {
@@ -816,7 +882,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     public Builder setType(io.opencannabis.schema.media.MediaType value) {
       if (typeBuilder_ == null) {
@@ -836,7 +902,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     public Builder setType(
         io.opencannabis.schema.media.MediaType.Builder builderForValue) {
@@ -854,7 +920,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     public Builder mergeType(io.opencannabis.schema.media.MediaType value) {
       if (typeBuilder_ == null) {
@@ -876,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     public Builder clearType() {
       if (typeBuilder_ == null) {
@@ -894,7 +960,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.media.MediaType.Builder getTypeBuilder() {
       
@@ -906,7 +972,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.media.MediaTypeOrBuilder getTypeOrBuilder() {
       if (typeBuilder_ != null) {
@@ -921,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * Type of media this is describing.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+     * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.MediaType, io.opencannabis.schema.media.MediaType.Builder, io.opencannabis.schema.media.MediaTypeOrBuilder> 
@@ -943,7 +1009,7 @@ private static final long serialVersionUID = 0L;
      * Friendly name for this media.
      * </pre>
      *
-     * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+     * <code>string name = 3 [(.core.field) = { ... }</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -962,7 +1028,7 @@ private static final long serialVersionUID = 0L;
      * Friendly name for this media.
      * </pre>
      *
-     * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+     * <code>string name = 3 [(.core.field) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -982,7 +1048,7 @@ private static final long serialVersionUID = 0L;
      * Friendly name for this media.
      * </pre>
      *
-     * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+     * <code>string name = 3 [(.core.field) = { ... }</code>
      */
     public Builder setName(
         java.lang.String value) {
@@ -999,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * Friendly name for this media.
      * </pre>
      *
-     * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+     * <code>string name = 3 [(.core.field) = { ... }</code>
      */
     public Builder clearName() {
       
@@ -1012,7 +1078,7 @@ private static final long serialVersionUID = 0L;
      * Friendly name for this media.
      * </pre>
      *
-     * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+     * <code>string name = 3 [(.core.field) = { ... }</code>
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1029,10 +1095,10 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object uri_ = "";
     /**
      * <pre>
-     * Absolute URI to this media.
+     * Origin URI to this media.
      * </pre>
      *
-     * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+     * <code>string uri = 4 [(.core.field) = { ... }</code>
      */
     public java.lang.String getUri() {
       java.lang.Object ref = uri_;
@@ -1048,10 +1114,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Absolute URI to this media.
+     * Origin URI to this media.
      * </pre>
      *
-     * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+     * <code>string uri = 4 [(.core.field) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getUriBytes() {
@@ -1068,10 +1134,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Absolute URI to this media.
+     * Origin URI to this media.
      * </pre>
      *
-     * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+     * <code>string uri = 4 [(.core.field) = { ... }</code>
      */
     public Builder setUri(
         java.lang.String value) {
@@ -1085,10 +1151,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Absolute URI to this media.
+     * Origin URI to this media.
      * </pre>
      *
-     * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+     * <code>string uri = 4 [(.core.field) = { ... }</code>
      */
     public Builder clearUri() {
       
@@ -1098,10 +1164,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Absolute URI to this media.
+     * Origin URI to this media.
      * </pre>
      *
-     * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+     * <code>string uri = 4 [(.core.field) = { ... }</code>
      */
     public Builder setUriBytes(
         com.google.protobuf.ByteString value) {
@@ -1111,6 +1177,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       uri_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object servingUri_ = "";
+    /**
+     * <pre>
+     * Serving URI for this media, if it differs from the origin URI.
+     * </pre>
+     *
+     * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+     */
+    public java.lang.String getServingUri() {
+      java.lang.Object ref = servingUri_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        servingUri_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Serving URI for this media, if it differs from the origin URI.
+     * </pre>
+     *
+     * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+     */
+    public com.google.protobuf.ByteString
+        getServingUriBytes() {
+      java.lang.Object ref = servingUri_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        servingUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Serving URI for this media, if it differs from the origin URI.
+     * </pre>
+     *
+     * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+     */
+    public Builder setServingUri(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      servingUri_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Serving URI for this media, if it differs from the origin URI.
+     * </pre>
+     *
+     * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+     */
+    public Builder clearServingUri() {
+      
+      servingUri_ = getDefaultInstance().getServingUri();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Serving URI for this media, if it differs from the origin URI.
+     * </pre>
+     *
+     * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+     */
+    public Builder setServingUriBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      servingUri_ = value;
       onChanged();
       return this;
     }

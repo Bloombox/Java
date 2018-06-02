@@ -84,6 +84,14 @@ public enum IntegrationPartner
    * <code>GSUITE = 8;</code>
    */
   GSUITE(8),
+  /**
+   * <pre>
+   * Treez IO - https://www.treez.io
+   * </pre>
+   *
+   * <code>TREEZ = 9;</code>
+   */
+  TREEZ(9),
   UNRECOGNIZED(-1),
   ;
 
@@ -159,6 +167,14 @@ public enum IntegrationPartner
    * <code>GSUITE = 8;</code>
    */
   public static final int GSUITE_VALUE = 8;
+  /**
+   * <pre>
+   * Treez IO - https://www.treez.io
+   * </pre>
+   *
+   * <code>TREEZ = 9;</code>
+   */
+  public static final int TREEZ_VALUE = 9;
 
 
   public final int getNumber() {
@@ -188,6 +204,7 @@ public enum IntegrationPartner
       case 6: return TWILIO;
       case 7: return ONFLEET;
       case 8: return GSUITE;
+      case 9: return TREEZ;
       default: return null;
     }
   }

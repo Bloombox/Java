@@ -15,20 +15,10 @@ public final class MarketingServiceBeta1 {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_descriptor;
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSummary_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_fieldAccessorTable;
+      internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSummary_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_descriptor;
   static final 
@@ -85,6 +75,21 @@ public final class MarketingServiceBeta1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_marketing_v1beta1_CampaignUpdate_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSend_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -94,6 +99,61 @@ public final class MarketingServiceBeta1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSend_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_Request_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -105,87 +165,146 @@ public final class MarketingServiceBeta1 {
     java.lang.String[] descriptorData = {
       "\n.marketing/v1beta1/MarketingService_Bet" +
       "a1.proto\022*bloombox.schema.services.marke" +
-      "ting.v1beta1\032\030marketing/Campaign.proto\032\033" +
-      "google/protobuf/empty.proto\032\034google/api/" +
-      "annotations.proto\032(protoc-gen-swagger/op" +
-      "tions/swagger.proto\"\220\001\n\020EstimateAudience" +
-      "\032Y\n\007Request\022\r\n\005scope\030\001 \001(\t\022?\n\ttargeting\030" +
-      "\002 \001(\0132,.bloombox.schema.marketing.Campai" +
-      "gnTargeting\032!\n\010Response\022\025\n\raudience_size" +
-      "\030\001 \001(\r\"l\n\014CampaignList\032\030\n\007Request\022\r\n\005sco" +
-      "pe\030\001 \001(\t\032B\n\010Response\0226\n\tcampaigns\030\001 \003(\0132" +
-      "#.bloombox.schema.marketing.Campaign\"v\n\013" +
-      "CampaignGet\032$\n\007Request\022\r\n\005scope\030\001 \001(\t\022\n\n" +
-      "\002id\030\002 \001(\t\032A\n\010Response\0225\n\010campaign\030\001 \001(\0132" +
-      "#.bloombox.schema.marketing.Campaign\"y\n\016" +
-      "CampaignCreate\032O\n\007Request\022\r\n\005scope\030\001 \001(\t" +
-      "\0225\n\010campaign\030\002 \001(\0132#.bloombox.schema.mar" +
-      "keting.Campaign\032\026\n\010Response\022\n\n\002id\030\002 \001(\t\"" +
-      "m\n\016CampaignUpdate\032[\n\007Request\022\r\n\005scope\030\001 " +
-      "\001(\t\022\n\n\002id\030\002 \001(\t\0225\n\010campaign\030\003 \001(\0132#.bloo" +
-      "mbox.schema.marketing.Campaign\"4\n\014Campai" +
-      "gnSend\032$\n\007Request\022\r\n\005scope\030\001 \001(\t\022\n\n\002id\030\002" +
-      " \001(\t*p\n\016MarketingError\022\014\n\010NO_ERROR\020\000\022\023\n\017" +
-      "PARTNER_INVALID\020\001\022\024\n\020LOCATION_INVALID\020\002\022" +
-      "\021\n\rACCESS_DENIED\020\003\022\022\n\016INTERNAL_ERROR\020c2\346" +
-      "\r\n\tMarketing\022\326\002\n\tTargeting\022D.bloombox.sc" +
-      "hema.services.marketing.v1beta1.Estimate" +
-      "Audience.Request\032E.bloombox.schema.servi" +
-      "ces.marketing.v1beta1.EstimateAudience.R" +
-      "esponse\"\273\001\202\323\344\223\002I\"D/marketing/v1beta1/{sc" +
-      "ope=partners/*/locations/*}/targeting/es" +
-      "timate:\001*\222Ai\022\026Audience size estimate\032<Gi" +
-      "ven a set of targeting parameters, estim" +
-      "ate audience size.*\021TargetingEstimate\022\242\002" +
-      "\n\rListCampaigns\022@.bloombox.schema.servic" +
-      "es.marketing.v1beta1.CampaignList.Reques" +
-      "t\032A.bloombox.schema.services.marketing.v" +
-      "1beta1.CampaignList.Response\"\213\001\202\323\344\223\002=\022;/" +
-      "marketing/v1beta1/{scope=partners/*/loca" +
-      "tions/*}/campaigns\222AE\022\016List campaigns\032$F" +
-      "etch a list of marketing campaigns.*\rLis" +
-      "tCampaigns\022\235\002\n\013GetCampaign\022?.bloombox.sc" +
-      "hema.services.marketing.v1beta1.Campaign" +
-      "Get.Request\032@.bloombox.schema.services.m" +
-      "arketing.v1beta1.CampaignGet.Response\"\212\001" +
-      "\202\323\344\223\002B\022@/marketing/v1beta1/{scope=partne" +
-      "rs/*/locations/*}/campaigns/{id}\222A?\022\023Ret" +
-      "rieve a campaign\032\033Fetch a campaign by it" +
-      "s ID.*\013GetCampaign\022\200\002\n\016CreateCampaign\022B." +
+      "ting.v1beta1\032\026temporal/Instant.proto\032\030ma" +
+      "rketing/Campaign.proto\032\033google/protobuf/" +
+      "empty.proto\032\034google/api/annotations.prot" +
+      "o\032(protoc-gen-swagger/options/swagger.pr" +
+      "oto\"\265\002\n\017CampaignSummary\0223\n\003key\030\001 \001(\0132&.b" +
+      "loombox.schema.marketing.CampaignKey\022\014\n\004" +
+      "name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\014\n\004live\030" +
+      "\004 \001(\010\0229\n\006status\030\005 \001(\0162).bloombox.schema." +
+      "marketing.CampaignStatus\022\013\n\003sms\030\006 \001(\010\022\r\n" +
+      "\005email\030\007 \001(\010\0223\n\003tag\030\010 \003(\0132&.bloombox.sch" +
+      "ema.marketing.CampaignTag\0220\n\010modified\030\t " +
+      "\001(\0132\036.opencannabis.temporal.Instant\"\227\001\n\014" +
+      "CampaignList\032,\n\007Request\022\017\n\007partner\030\001 \001(\t" +
+      "\022\020\n\010location\030\002 \001(\t\032Y\n\010Response\022M\n\010campai" +
+      "gn\030\001 \003(\0132;.bloombox.schema.services.mark" +
+      "eting.v1beta1.CampaignSummary\"p\n\013Campaig" +
+      "nGet\032\036\n\007Request\022\023\n\013campaign_id\030\001 \001(\t\032A\n\010" +
+      "Response\0225\n\010campaign\030\001 \001(\0132#.bloombox.sc" +
+      "hema.marketing.Campaign\"\267\001\n\016CampaignCrea" +
+      "te\032\214\001\n\007Request\022\017\n\007partner\030\001 \001(\t\022\020\n\010locat" +
+      "ion\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004" +
+      " \001(\t\022;\n\007channel\030\005 \003(\0132*.bloombox.schema." +
+      "marketing.ChannelSettings\032\026\n\010Response\022\n\n" +
+      "\002id\030\001 \001(\t\"\314\001\n\016CampaignUpdate\032\271\001\n\007Request" +
+      "\022\023\n\013campaign_id\030\001 \001(\t\022\014\n\004name\030\003 \001(\t\022\023\n\013d" +
+      "escription\030\004 \001(\t\0229\n\006status\030\005 \001(\0162).bloom" +
+      "box.schema.marketing.CampaignStatus\022;\n\007c" +
+      "hannel\030\006 \003(\0132*.bloombox.schema.marketing" +
+      ".ChannelSettings\"\207\001\n\020CampaignValidate\032\036\n" +
+      "\007Request\022\023\n\013campaign_id\030\001 \001(\t\032S\n\010Respons" +
+      "e\022G\n\003err\030\001 \001(\0162:.bloombox.schema.service" +
+      "s.marketing.v1beta1.MarketingError\".\n\014Ca" +
+      "mpaignSend\032\036\n\007Request\022\023\n\013campaign_id\030\001 \001" +
+      "(\t\"n\n\013AdGroupList\032\036\n\007Request\022\023\n\013campaign" +
+      "_id\030\001 \001(\t\032?\n\010Response\0223\n\007adgroup\030\001 \003(\0132\"" +
+      ".bloombox.schema.marketing.AdGroup\"\274\001\n\rA" +
+      "dGroupCreate\032\212\001\n\007Request\022\023\n\013campaign_id\030" +
+      "\001 \001(\t\0223\n\007channel\030\002 \001(\0162\".bloombox.schema" +
+      ".marketing.Channel\0225\n\010creative\030\003 \001(\0132#.b" +
+      "loombox.schema.marketing.Creative\032\036\n\010Res" +
+      "ponse\022\022\n\nadgroup_id\030\001 \001(\t\"\201\001\n\nAdGroupGet" +
+      "\0322\n\007Request\022\023\n\013campaign_id\030\001 \001(\t\022\022\n\nadgr" +
+      "oup_id\030\002 \001(\t\032?\n\010Response\0223\n\007adgroup\030\001 \001(" +
+      "\0132\".bloombox.schema.marketing.AdGroup\"z\n" +
+      "\rAdGroupUpdate\032i\n\007Request\022\023\n\013campaign_id" +
+      "\030\001 \001(\t\022\022\n\nadgroup_id\030\002 \001(\t\0225\n\010creative\030\003" +
+      " \003(\0132#.bloombox.schema.marketing.Creativ" +
+      "e*\341\002\n\016MarketingError\022\014\n\010NO_ERROR\020\000\022\023\n\017PA" +
+      "RTNER_INVALID\020\001\022\024\n\020LOCATION_INVALID\020\002\022\016\n" +
+      "\nID_INVALID\020\003\022\020\n\014NAME_INVALID\020\004\022\026\n\022CAMPA" +
+      "IGN_NOT_FOUND\020\005\022\021\n\rACCESS_DENIED\020\006\022\024\n\020SE" +
+      "TTINGS_INVALID\020\007\022\023\n\017CHANNEL_INVALID\020\010\022\023\n" +
+      "\017ADGROUP_INVALID\020\t\022\025\n\021SETTINGS_MISMATCH\020" +
+      "\n\022\024\n\020CREATIVE_INVALID\020\013\022\030\n\024SMS_CREATIVE_" +
+      "INVALID\020\014\022\032\n\026EMAIL_CREATIVE_INVALID\020\r\022\022\n" +
+      "\016UPDATE_INVALID\020\016\022\022\n\016INTERNAL_ERROR\020c2\342\025" +
+      "\n\tMarketing\022\215\002\n\016CreateCampaign\022B.bloombo" +
+      "x.schema.services.marketing.v1beta1.Camp" +
+      "aignCreate.Request\032C.bloombox.schema.ser" +
+      "vices.marketing.v1beta1.CampaignCreate.R" +
+      "esponse\"r\202\323\344\223\002!\"\034/marketing/v1beta1/camp" +
+      "aigns:\001*\222AH\022\021Create a campaign\032#Provisio" +
+      "n a new marketing campaign.*\016CreateCampa" +
+      "ign\022\206\002\n\013GetCampaign\022?.bloombox.schema.se" +
+      "rvices.marketing.v1beta1.CampaignGet.Req" +
+      "uest\032@.bloombox.schema.services.marketin" +
+      "g.v1beta1.CampaignGet.Response\"t\202\323\344\223\002,\022*" +
+      "/marketing/v1beta1/campaigns/{campaign_i" +
+      "d}\222A?\022\023Retrieve a campaign\032\033Fetch a camp" +
+      "aign by its ID.*\013GetCampaign\022\202\002\n\rListCam" +
+      "paigns\022@.bloombox.schema.services.market" +
+      "ing.v1beta1.CampaignList.Request\032A.bloom" +
+      "box.schema.services.marketing.v1beta1.Ca" +
+      "mpaignList.Response\"l\202\323\344\223\002\036\022\034/marketing/" +
+      "v1beta1/campaigns\222AE\022\016List campaigns\032$Fe" +
+      "tch a list of marketing campaigns.*\rList" +
+      "Campaigns\022\205\002\n\016UpdateCampaign\022B.bloombox." +
+      "schema.services.marketing.v1beta1.Campai" +
+      "gnUpdate.Request\032\026.google.protobuf.Empty" +
+      "\"\226\001\202\323\344\223\002/\032*/marketing/v1beta1/campaigns/" +
+      "{campaign_id}:\001*\222A^\022\021Update a campaign\0329" +
+      "Publish new content or settings for an e" +
+      "xisting campaign.*\016UpdateCampaign\022\233\002\n\020Va" +
+      "lidateCampaign\022D.bloombox.schema.service" +
+      "s.marketing.v1beta1.CampaignValidate.Req" +
+      "uest\032\026.google.protobuf.Empty\"\250\001\202\323\344\223\0028\"3/" +
+      "marketing/v1beta1/campaigns/{campaign_id" +
+      "}/validate:\001*\222Ag\022\023Validate a campaign\032>P" +
+      "erform checks on a campaign to make sure" +
+      " it is ready to send.*\020ValidateCampaign\022" +
+      "\203\002\n\014SendCampaign\022@.bloombox.schema.servi" +
+      "ces.marketing.v1beta1.CampaignSend.Reque" +
+      "st\032\026.google.protobuf.Empty\"\230\001\202\323\344\223\0024\"//ma" +
+      "rketing/v1beta1/campaigns/{campaign_id}/" +
+      "send:\001*\222A[\022\017Send a campaign\032:Trigger a c" +
+      "ampaign to be sent now or at a later dat" +
+      "e/time.*\014SendCampaign\022\240\002\n\010Adgroups\022?.blo" +
+      "ombox.schema.services.marketing.v1beta1." +
+      "AdGroupList.Request\032@.bloombox.schema.se" +
+      "rvices.marketing.v1beta1.AdGroupList.Res" +
+      "ponse\"\220\001\202\323\344\223\0025\0223/marketing/v1beta1/campa" +
+      "igns/{campaign_id}/adgroups\222AR\022\016List ad " +
+      "groups\0322List groups of ad parameters for" +
+      " a given campaign.*\014AdGroupsList\022\246\002\n\rCre" +
+      "ateAdgroup\022A.bloombox.schema.services.ma" +
+      "rketing.v1beta1.AdGroupCreate.Request\032B." +
       "bloombox.schema.services.marketing.v1bet" +
-      "a1.CampaignCreate.Request\032\026.google.proto" +
-      "buf.Empty\"\221\001\202\323\344\223\002@\";/marketing/v1beta1/{" +
-      "scope=partners/*/locations/*}/campaigns:" +
-      "\001*\222AH\022\021Create a campaign\032#Provision a ne" +
-      "w marketing campaign.*\016CreateCampaign\022\233\002" +
-      "\n\016UpdateCampaign\022B.bloombox.schema.servi" +
-      "ces.marketing.v1beta1.CampaignUpdate.Req" +
-      "uest\032\026.google.protobuf.Empty\"\254\001\202\323\344\223\002E\032@/" +
-      "marketing/v1beta1/{scope=partners/*/loca" +
-      "tions/*}/campaigns/{id}:\001*\222A^\022\021Update a " +
-      "campaign\0329Publish new content or setting" +
-      "s for an existing campaign.*\016UpdateCampa" +
-      "ign\022\231\002\n\014SendCampaign\022@.bloombox.schema.s" +
-      "ervices.marketing.v1beta1.CampaignSend.R" +
-      "equest\032\026.google.protobuf.Empty\"\256\001\202\323\344\223\002J\"" +
-      "E/marketing/v1beta1/{scope=partners/*/lo" +
-      "cations/*}/campaigns/{id}/send:\001*\222A[\022\017Se" +
-      "nd a campaign\032:Trigger a campaign to be " +
-      "sent now or at a later date/time.*\014SendC" +
-      "ampaignB\221\004\n-io.bloombox.schema.services." +
-      "marketing.v1beta1H\001P\001\242\002\003BBS\222A\324\003\022l\n\rMarke" +
-      "ting API\032\031https://bloombox.io/terms\"7\n\010B" +
-      "loombox\022\023https://bloombox.io\032\026developers" +
-      "@bloombox.io2\007v1beta1\032\022api.bloombox.clou" +
-      "d*\001\0022\020application/json:\020application/json" +
-      "Z\320\001\nd\n\013ApiKeyParam\022U\010\002\022JParameter for id" +
-      "entifying API key owned by the invoking " +
-      "project or system.\032\003key \001\nh\n\014ApiKeyHeade" +
-      "r\022X\010\002\022GHeader for identifying API key ow" +
-      "ned by the invoking project or system.\032\t" +
-      "X-API-Key \001b\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiK" +
-      "eyHeader\022\000r/\n\rBloombox APIs\022\036https://api" +
-      "docs.bloombox.cloudb\006proto3"
+      "a1.AdGroupCreate.Response\"\215\001\202\323\344\223\0028\"3/mar" +
+      "keting/v1beta1/campaigns/{campaign_id}/a" +
+      "dgroups:\001*\222AL\022\022Create an ad group\032\'Provi" +
+      "sion a new group of ad parameters.*\rAdGr" +
+      "oupCreate\022\247\002\n\007Adgroup\022>.bloombox.schema." +
+      "services.marketing.v1beta1.AdGroupGet.Re" +
+      "quest\032?.bloombox.schema.services.marketi" +
+      "ng.v1beta1.AdGroupGet.Response\"\232\001\202\323\344\223\002E\"" +
+      "@/marketing/v1beta1/campaigns/{campaign_" +
+      "id}/adgroups/{adgroup_id}:\001*\222AL\022\022Create " +
+      "an ad group\032\'Provision a new group of ad" +
+      " parameters.*\rAdGroupCreate\022\224\002\n\rUpdateAd" +
+      "group\022A.bloombox.schema.services.marketi" +
+      "ng.v1beta1.AdGroupUpdate.Request\032\026.googl" +
+      "e.protobuf.Empty\"\247\001\202\323\344\223\002E\032@/marketing/v1" +
+      "beta1/campaigns/{campaign_id}/adgroups/{" +
+      "adgroup_id}:\001*\222AY\022\022Update an ad group\0324U" +
+      "pdate data for a particular group of ad " +
+      "parameters.*\rAdGroupUpdateB\221\004\n-io.bloomb" +
+      "ox.schema.services.marketing.v1beta1H\001P\001" +
+      "\242\002\003BBS\222A\324\003\022l\n\rMarketing API\032\031https://blo" +
+      "ombox.io/terms\"7\n\010Bloombox\022\023https://bloo" +
+      "mbox.io\032\026developers@bloombox.io2\007v1beta1" +
+      "\032\022api.bloombox.cloud*\001\0022\020application/jso" +
+      "n:\020application/jsonZ\320\001\nd\n\013ApiKeyParam\022U\010" +
+      "\002\022JParameter for identifying API key own" +
+      "ed by the invoking project or system.\032\003k" +
+      "ey \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for ide" +
+      "ntifying API key owned by the invoking p" +
+      "roject or system.\032\tX-API-Key \001b\021\n\017\n\013ApiK" +
+      "eyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombo" +
+      "x APIs\022\036https://apidocs.bloombox.cloudb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -198,29 +317,18 @@ public final class MarketingServiceBeta1 {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.bloombox.schema.marketing.CampaignOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.bloombox.schema.marketing.MarketingCampaign.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_descriptor =
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSummary_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_fieldAccessorTable = new
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSummary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_descriptor,
-        new java.lang.String[] { });
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_descriptor =
-      internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_descriptor,
-        new java.lang.String[] { "Scope", "Targeting", });
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_descriptor =
-      internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_descriptor,
-        new java.lang.String[] { "AudienceSize", });
+        internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSummary_descriptor,
+        new java.lang.String[] { "Key", "Name", "Description", "Live", "Status", "Sms", "Email", "Tag", "Modified", });
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_fieldAccessorTable = new
@@ -232,13 +340,13 @@ public final class MarketingServiceBeta1 {
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_Request_descriptor,
-        new java.lang.String[] { "Scope", });
+        new java.lang.String[] { "Partner", "Location", });
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_Response_descriptor =
       internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_marketing_v1beta1_CampaignList_Response_descriptor,
-        new java.lang.String[] { "Campaigns", });
+        new java.lang.String[] { "Campaign", });
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignGet_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignGet_fieldAccessorTable = new
@@ -250,7 +358,7 @@ public final class MarketingServiceBeta1 {
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignGet_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_marketing_v1beta1_CampaignGet_Request_descriptor,
-        new java.lang.String[] { "Scope", "Id", });
+        new java.lang.String[] { "CampaignId", });
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignGet_Response_descriptor =
       internal_static_bloombox_schema_services_marketing_v1beta1_CampaignGet_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignGet_Response_fieldAccessorTable = new
@@ -268,7 +376,7 @@ public final class MarketingServiceBeta1 {
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignCreate_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_marketing_v1beta1_CampaignCreate_Request_descriptor,
-        new java.lang.String[] { "Scope", "Campaign", });
+        new java.lang.String[] { "Partner", "Location", "Name", "Description", "Channel", });
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignCreate_Response_descriptor =
       internal_static_bloombox_schema_services_marketing_v1beta1_CampaignCreate_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignCreate_Response_fieldAccessorTable = new
@@ -286,9 +394,27 @@ public final class MarketingServiceBeta1 {
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignUpdate_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_marketing_v1beta1_CampaignUpdate_Request_descriptor,
-        new java.lang.String[] { "Scope", "Id", "Campaign", });
-    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSend_descriptor =
+        new java.lang.String[] { "CampaignId", "Name", "Description", "Status", "Channel", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Request_descriptor,
+        new java.lang.String[] { "CampaignId", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_CampaignValidate_Response_descriptor,
+        new java.lang.String[] { "Err", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSend_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSend_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSend_descriptor,
@@ -298,7 +424,73 @@ public final class MarketingServiceBeta1 {
     internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSend_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_marketing_v1beta1_CampaignSend_Request_descriptor,
-        new java.lang.String[] { "Scope", "Id", });
+        new java.lang.String[] { "CampaignId", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Request_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Request_descriptor,
+        new java.lang.String[] { "CampaignId", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Response_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupList_Response_descriptor,
+        new java.lang.String[] { "Adgroup", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Request_descriptor,
+        new java.lang.String[] { "CampaignId", "Channel", "Creative", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupCreate_Response_descriptor,
+        new java.lang.String[] { "AdgroupId", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_descriptor,
+        new java.lang.String[] { "CampaignId", "AdgroupId", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_descriptor,
+        new java.lang.String[] { "Adgroup", });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_Request_descriptor =
+      internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupUpdate_Request_descriptor,
+        new java.lang.String[] { "CampaignId", "AdgroupId", "Creative", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -306,7 +498,8 @@ public final class MarketingServiceBeta1 {
     registry.add(grpc.gateway.protoc_gen_swagger.options.Swagger.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    io.bloombox.schema.marketing.CampaignOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.bloombox.schema.marketing.MarketingCampaign.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor();

@@ -159,26 +159,51 @@ public interface PartnerLocationSettingsOrBuilder extends
 
   /**
    * <pre>
-   * Integration settings for this location.
+   * Tablet-related settings.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
    */
-  boolean hasPartners();
+  boolean hasTablet();
+  /**
+   * <pre>
+   * Tablet-related settings.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+   */
+  io.bloombox.schema.partner.settings.TabletSettings getTablet();
+  /**
+   * <pre>
+   * Tablet-related settings.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.settings.TabletSettings tablet = 7;</code>
+   */
+  io.bloombox.schema.partner.settings.TabletSettingsOrBuilder getTabletOrBuilder();
+
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
    */
-  io.bloombox.schema.partner.integrations.LocationIntegrationSettings getPartners();
+  boolean hasIntegration();
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
    */
-  io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder getPartnersOrBuilder();
+  io.bloombox.schema.partner.integrations.LocationIntegrationSettings getIntegration();
+  /**
+   * <pre>
+   * Integration settings for this location.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.integrations.LocationIntegrationSettings integration = 20;</code>
+   */
+  io.bloombox.schema.partner.integrations.LocationIntegrationSettingsOrBuilder getIntegrationOrBuilder();
 }

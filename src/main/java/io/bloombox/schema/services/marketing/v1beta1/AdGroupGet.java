@@ -5,22 +5,22 @@ package io.bloombox.schema.services.marketing.v1beta1;
 
 /**
  * <pre>
- * Represents an RPC operation wherein an authorized partner end-user requests, and receives, an estimate of the size of
- * a resulting audience for a given set of targeting parameters.
+ * Represents an RPC operation to retrieve an individual adgroup, addressed by its ID, under a specific marketing
+ * campaign, also addressed by its ID.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.EstimateAudience}
+ * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupGet}
  */
-public  final class EstimateAudience extends
+public  final class AdGroupGet extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.EstimateAudience)
-    EstimateAudienceOrBuilder {
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.AdGroupGet)
+    AdGroupGetOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use EstimateAudience.newBuilder() to construct.
-  private EstimateAudience(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use AdGroupGet.newBuilder() to construct.
+  private AdGroupGet(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private EstimateAudience() {
+  private AdGroupGet() {
   }
 
   @java.lang.Override
@@ -28,7 +28,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private EstimateAudience(
+  private AdGroupGet(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -67,73 +67,66 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_descriptor;
+    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_fieldAccessorTable
+    return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.class, io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Builder.class);
+            io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Partnership scope for the request.
+     * ID for the campaign.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string campaign_id = 1;</code>
      */
-    java.lang.String getScope();
+    java.lang.String getCampaignId();
     /**
      * <pre>
-     * Partnership scope for the request.
+     * ID for the campaign.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string campaign_id = 1;</code>
      */
     com.google.protobuf.ByteString
-        getScopeBytes();
+        getCampaignIdBytes();
 
     /**
      * <pre>
-     * Targeting parameters to estimate.
+     * Adgroup ID to fetch.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
+     * <code>string adgroup_id = 2;</code>
      */
-    boolean hasTargeting();
+    java.lang.String getAdgroupId();
     /**
      * <pre>
-     * Targeting parameters to estimate.
+     * Adgroup ID to fetch.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
+     * <code>string adgroup_id = 2;</code>
      */
-    io.bloombox.schema.marketing.CampaignTargeting getTargeting();
-    /**
-     * <pre>
-     * Targeting parameters to estimate.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
-     */
-    io.bloombox.schema.marketing.CampaignTargetingOrBuilder getTargetingOrBuilder();
+    com.google.protobuf.ByteString
+        getAdgroupIdBytes();
   }
   /**
    * <pre>
-   * Request for an audience estimate.
+   * Request to retrieve a particular adgroup's data.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request}
+   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -141,7 +134,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
-      scope_ = "";
+      campaignId_ = "";
+      adgroupId_ = "";
     }
 
     @java.lang.Override
@@ -178,20 +172,13 @@ private static final long serialVersionUID = 0L;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              scope_ = s;
+              campaignId_ = s;
               break;
             }
             case 18: {
-              io.bloombox.schema.marketing.CampaignTargeting.Builder subBuilder = null;
-              if (targeting_ != null) {
-                subBuilder = targeting_.toBuilder();
-              }
-              targeting_ = input.readMessage(io.bloombox.schema.marketing.CampaignTargeting.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(targeting_);
-                targeting_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              adgroupId_ = s;
               break;
             }
           }
@@ -208,89 +195,98 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request.class, io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request.Builder.class);
+              io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.Builder.class);
     }
 
-    public static final int SCOPE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object scope_;
+    public static final int CAMPAIGN_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object campaignId_;
     /**
      * <pre>
-     * Partnership scope for the request.
+     * ID for the campaign.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string campaign_id = 1;</code>
      */
-    public java.lang.String getScope() {
-      java.lang.Object ref = scope_;
+    public java.lang.String getCampaignId() {
+      java.lang.Object ref = campaignId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        scope_ = s;
+        campaignId_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * Partnership scope for the request.
+     * ID for the campaign.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string campaign_id = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getScopeBytes() {
-      java.lang.Object ref = scope_;
+        getCampaignIdBytes() {
+      java.lang.Object ref = campaignId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        scope_ = b;
+        campaignId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int TARGETING_FIELD_NUMBER = 2;
-    private io.bloombox.schema.marketing.CampaignTargeting targeting_;
+    public static final int ADGROUP_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object adgroupId_;
     /**
      * <pre>
-     * Targeting parameters to estimate.
+     * Adgroup ID to fetch.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
+     * <code>string adgroup_id = 2;</code>
      */
-    public boolean hasTargeting() {
-      return targeting_ != null;
+    public java.lang.String getAdgroupId() {
+      java.lang.Object ref = adgroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        adgroupId_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * Targeting parameters to estimate.
+     * Adgroup ID to fetch.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
+     * <code>string adgroup_id = 2;</code>
      */
-    public io.bloombox.schema.marketing.CampaignTargeting getTargeting() {
-      return targeting_ == null ? io.bloombox.schema.marketing.CampaignTargeting.getDefaultInstance() : targeting_;
-    }
-    /**
-     * <pre>
-     * Targeting parameters to estimate.
-     * </pre>
-     *
-     * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
-     */
-    public io.bloombox.schema.marketing.CampaignTargetingOrBuilder getTargetingOrBuilder() {
-      return getTargeting();
+    public com.google.protobuf.ByteString
+        getAdgroupIdBytes() {
+      java.lang.Object ref = adgroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        adgroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -305,11 +301,11 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getScopeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
+      if (!getCampaignIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, campaignId_);
       }
-      if (targeting_ != null) {
-        output.writeMessage(2, getTargeting());
+      if (!getAdgroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, adgroupId_);
       }
       unknownFields.writeTo(output);
     }
@@ -319,12 +315,11 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getScopeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
+      if (!getCampaignIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, campaignId_);
       }
-      if (targeting_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getTargeting());
+      if (!getAdgroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, adgroupId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -336,19 +331,16 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request)) {
+      if (!(obj instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request)) {
         return super.equals(obj);
       }
-      io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request other = (io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request) obj;
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request other = (io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request) obj;
 
       boolean result = true;
-      result = result && getScope()
-          .equals(other.getScope());
-      result = result && (hasTargeting() == other.hasTargeting());
-      if (hasTargeting()) {
-        result = result && getTargeting()
-            .equals(other.getTargeting());
-      }
+      result = result && getCampaignId()
+          .equals(other.getCampaignId());
+      result = result && getAdgroupId()
+          .equals(other.getAdgroupId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -360,80 +352,78 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SCOPE_FIELD_NUMBER;
-      hash = (53 * hash) + getScope().hashCode();
-      if (hasTargeting()) {
-        hash = (37 * hash) + TARGETING_FIELD_NUMBER;
-        hash = (53 * hash) + getTargeting().hashCode();
-      }
+      hash = (37 * hash) + CAMPAIGN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignId().hashCode();
+      hash = (37 * hash) + ADGROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAdgroupId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(byte[] data)
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseDelimitedFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseDelimitedFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -445,7 +435,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request prototype) {
+    public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -461,28 +451,28 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Request for an audience estimate.
+     * Request to retrieve a particular adgroup's data.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request}
+     * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request)
-        io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.RequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request)
+        io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_fieldAccessorTable
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request.class, io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request.Builder.class);
+                io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.Builder.class);
       }
 
-      // Construct using io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request.newBuilder()
+      // Construct using io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -499,42 +489,34 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        scope_ = "";
+        campaignId_ = "";
 
-        if (targetingBuilder_ == null) {
-          targeting_ = null;
-        } else {
-          targeting_ = null;
-          targetingBuilder_ = null;
-        }
+        adgroupId_ = "";
+
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Request_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Request_descriptor;
       }
 
-      public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request getDefaultInstanceForType() {
-        return io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request.getDefaultInstance();
+      public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request getDefaultInstanceForType() {
+        return io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.getDefaultInstance();
       }
 
-      public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request build() {
-        io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request result = buildPartial();
+      public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request build() {
+        io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request buildPartial() {
-        io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request result = new io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request(this);
-        result.scope_ = scope_;
-        if (targetingBuilder_ == null) {
-          result.targeting_ = targeting_;
-        } else {
-          result.targeting_ = targetingBuilder_.build();
-        }
+      public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request buildPartial() {
+        io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request result = new io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request(this);
+        result.campaignId_ = campaignId_;
+        result.adgroupId_ = adgroupId_;
         onBuilt();
         return result;
       }
@@ -566,22 +548,23 @@ private static final long serialVersionUID = 0L;
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request) {
-          return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request)other);
+        if (other instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request) {
+          return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request other) {
-        if (other == io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request.getDefaultInstance()) return this;
-        if (!other.getScope().isEmpty()) {
-          scope_ = other.scope_;
+      public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request other) {
+        if (other == io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request.getDefaultInstance()) return this;
+        if (!other.getCampaignId().isEmpty()) {
+          campaignId_ = other.campaignId_;
           onChanged();
         }
-        if (other.hasTargeting()) {
-          mergeTargeting(other.getTargeting());
+        if (!other.getAdgroupId().isEmpty()) {
+          adgroupId_ = other.adgroupId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -596,11 +579,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request parsedMessage = null;
+        io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request) e.getUnfinishedMessage();
+          parsedMessage = (io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -610,21 +593,21 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object scope_ = "";
+      private java.lang.Object campaignId_ = "";
       /**
        * <pre>
-       * Partnership scope for the request.
+       * ID for the campaign.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string campaign_id = 1;</code>
        */
-      public java.lang.String getScope() {
-        java.lang.Object ref = scope_;
+      public java.lang.String getCampaignId() {
+        java.lang.Object ref = campaignId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          scope_ = s;
+          campaignId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -632,19 +615,19 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Partnership scope for the request.
+       * ID for the campaign.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string campaign_id = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getScopeBytes() {
-        java.lang.Object ref = scope_;
+          getCampaignIdBytes() {
+        java.lang.Object ref = campaignId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          scope_ = b;
+          campaignId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -652,204 +635,140 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Partnership scope for the request.
+       * ID for the campaign.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string campaign_id = 1;</code>
        */
-      public Builder setScope(
+      public Builder setCampaignId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        scope_ = value;
+        campaignId_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Partnership scope for the request.
+       * ID for the campaign.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string campaign_id = 1;</code>
        */
-      public Builder clearScope() {
+      public Builder clearCampaignId() {
         
-        scope_ = getDefaultInstance().getScope();
+        campaignId_ = getDefaultInstance().getCampaignId();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Partnership scope for the request.
+       * ID for the campaign.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string campaign_id = 1;</code>
        */
-      public Builder setScopeBytes(
+      public Builder setCampaignIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        scope_ = value;
+        campaignId_ = value;
         onChanged();
         return this;
       }
 
-      private io.bloombox.schema.marketing.CampaignTargeting targeting_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.CampaignTargeting, io.bloombox.schema.marketing.CampaignTargeting.Builder, io.bloombox.schema.marketing.CampaignTargetingOrBuilder> targetingBuilder_;
+      private java.lang.Object adgroupId_ = "";
       /**
        * <pre>
-       * Targeting parameters to estimate.
+       * Adgroup ID to fetch.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
+       * <code>string adgroup_id = 2;</code>
        */
-      public boolean hasTargeting() {
-        return targetingBuilder_ != null || targeting_ != null;
-      }
-      /**
-       * <pre>
-       * Targeting parameters to estimate.
-       * </pre>
-       *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
-       */
-      public io.bloombox.schema.marketing.CampaignTargeting getTargeting() {
-        if (targetingBuilder_ == null) {
-          return targeting_ == null ? io.bloombox.schema.marketing.CampaignTargeting.getDefaultInstance() : targeting_;
+      public java.lang.String getAdgroupId() {
+        java.lang.Object ref = adgroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          adgroupId_ = s;
+          return s;
         } else {
-          return targetingBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
        * <pre>
-       * Targeting parameters to estimate.
+       * Adgroup ID to fetch.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
+       * <code>string adgroup_id = 2;</code>
        */
-      public Builder setTargeting(io.bloombox.schema.marketing.CampaignTargeting value) {
-        if (targetingBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          targeting_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getAdgroupIdBytes() {
+        java.lang.Object ref = adgroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          adgroupId_ = b;
+          return b;
         } else {
-          targetingBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
+      }
+      /**
+       * <pre>
+       * Adgroup ID to fetch.
+       * </pre>
+       *
+       * <code>string adgroup_id = 2;</code>
+       */
+      public Builder setAdgroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        adgroupId_ = value;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Targeting parameters to estimate.
+       * Adgroup ID to fetch.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
+       * <code>string adgroup_id = 2;</code>
        */
-      public Builder setTargeting(
-          io.bloombox.schema.marketing.CampaignTargeting.Builder builderForValue) {
-        if (targetingBuilder_ == null) {
-          targeting_ = builderForValue.build();
-          onChanged();
-        } else {
-          targetingBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Targeting parameters to estimate.
-       * </pre>
-       *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
-       */
-      public Builder mergeTargeting(io.bloombox.schema.marketing.CampaignTargeting value) {
-        if (targetingBuilder_ == null) {
-          if (targeting_ != null) {
-            targeting_ =
-              io.bloombox.schema.marketing.CampaignTargeting.newBuilder(targeting_).mergeFrom(value).buildPartial();
-          } else {
-            targeting_ = value;
-          }
-          onChanged();
-        } else {
-          targetingBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Targeting parameters to estimate.
-       * </pre>
-       *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
-       */
-      public Builder clearTargeting() {
-        if (targetingBuilder_ == null) {
-          targeting_ = null;
-          onChanged();
-        } else {
-          targeting_ = null;
-          targetingBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Targeting parameters to estimate.
-       * </pre>
-       *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
-       */
-      public io.bloombox.schema.marketing.CampaignTargeting.Builder getTargetingBuilder() {
+      public Builder clearAdgroupId() {
         
+        adgroupId_ = getDefaultInstance().getAdgroupId();
         onChanged();
-        return getTargetingFieldBuilder().getBuilder();
+        return this;
       }
       /**
        * <pre>
-       * Targeting parameters to estimate.
+       * Adgroup ID to fetch.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
+       * <code>string adgroup_id = 2;</code>
        */
-      public io.bloombox.schema.marketing.CampaignTargetingOrBuilder getTargetingOrBuilder() {
-        if (targetingBuilder_ != null) {
-          return targetingBuilder_.getMessageOrBuilder();
-        } else {
-          return targeting_ == null ?
-              io.bloombox.schema.marketing.CampaignTargeting.getDefaultInstance() : targeting_;
-        }
-      }
-      /**
-       * <pre>
-       * Targeting parameters to estimate.
-       * </pre>
-       *
-       * <code>.bloombox.schema.marketing.CampaignTargeting targeting = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.CampaignTargeting, io.bloombox.schema.marketing.CampaignTargeting.Builder, io.bloombox.schema.marketing.CampaignTargetingOrBuilder> 
-          getTargetingFieldBuilder() {
-        if (targetingBuilder_ == null) {
-          targetingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.marketing.CampaignTargeting, io.bloombox.schema.marketing.CampaignTargeting.Builder, io.bloombox.schema.marketing.CampaignTargetingOrBuilder>(
-                  getTargeting(),
-                  getParentForChildren(),
-                  isClean());
-          targeting_ = null;
-        }
-        return targetingBuilder_;
+      public Builder setAdgroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        adgroupId_ = value;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -862,16 +781,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request)
-    private static final io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request)
+    private static final io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request();
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request();
     }
 
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request getDefaultInstance() {
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -894,35 +813,51 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
-    public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Request getDefaultInstanceForType() {
+    public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Estimated audience size.
+     * Resulting adgroup, if it could be located.
      * </pre>
      *
-     * <code>uint32 audience_size = 1;</code>
+     * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
      */
-    int getAudienceSize();
+    boolean hasAdgroup();
+    /**
+     * <pre>
+     * Resulting adgroup, if it could be located.
+     * </pre>
+     *
+     * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+     */
+    io.bloombox.schema.marketing.MarketingCampaign.AdGroup getAdgroup();
+    /**
+     * <pre>
+     * Resulting adgroup, if it could be located.
+     * </pre>
+     *
+     * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+     */
+    io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder getAdgroupOrBuilder();
   }
   /**
    * <pre>
-   * Response to a request for an audience estimate.
+   * Response to a request to retrieve a particular adgroup's data.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response}
+   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -930,7 +865,6 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      audienceSize_ = 0;
     }
 
     @java.lang.Override
@@ -964,9 +898,17 @@ private static final long serialVersionUID = 0L;
               }
               break;
             }
-            case 8: {
+            case 10: {
+              io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder subBuilder = null;
+              if (adgroup_ != null) {
+                subBuilder = adgroup_.toBuilder();
+              }
+              adgroup_ = input.readMessage(io.bloombox.schema.marketing.MarketingCampaign.AdGroup.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(adgroup_);
+                adgroup_ = subBuilder.buildPartial();
+              }
 
-              audienceSize_ = input.readUInt32();
               break;
             }
           }
@@ -983,27 +925,47 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response.class, io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response.Builder.class);
+              io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.Builder.class);
     }
 
-    public static final int AUDIENCE_SIZE_FIELD_NUMBER = 1;
-    private int audienceSize_;
+    public static final int ADGROUP_FIELD_NUMBER = 1;
+    private io.bloombox.schema.marketing.MarketingCampaign.AdGroup adgroup_;
     /**
      * <pre>
-     * Estimated audience size.
+     * Resulting adgroup, if it could be located.
      * </pre>
      *
-     * <code>uint32 audience_size = 1;</code>
+     * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
      */
-    public int getAudienceSize() {
-      return audienceSize_;
+    public boolean hasAdgroup() {
+      return adgroup_ != null;
+    }
+    /**
+     * <pre>
+     * Resulting adgroup, if it could be located.
+     * </pre>
+     *
+     * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+     */
+    public io.bloombox.schema.marketing.MarketingCampaign.AdGroup getAdgroup() {
+      return adgroup_ == null ? io.bloombox.schema.marketing.MarketingCampaign.AdGroup.getDefaultInstance() : adgroup_;
+    }
+    /**
+     * <pre>
+     * Resulting adgroup, if it could be located.
+     * </pre>
+     *
+     * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+     */
+    public io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder getAdgroupOrBuilder() {
+      return getAdgroup();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1018,8 +980,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (audienceSize_ != 0) {
-        output.writeUInt32(1, audienceSize_);
+      if (adgroup_ != null) {
+        output.writeMessage(1, getAdgroup());
       }
       unknownFields.writeTo(output);
     }
@@ -1029,9 +991,9 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (audienceSize_ != 0) {
+      if (adgroup_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, audienceSize_);
+          .computeMessageSize(1, getAdgroup());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1043,14 +1005,17 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response)) {
+      if (!(obj instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response)) {
         return super.equals(obj);
       }
-      io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response other = (io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response) obj;
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response other = (io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response) obj;
 
       boolean result = true;
-      result = result && (getAudienceSize()
-          == other.getAudienceSize());
+      result = result && (hasAdgroup() == other.hasAdgroup());
+      if (hasAdgroup()) {
+        result = result && getAdgroup()
+            .equals(other.getAdgroup());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1062,76 +1027,78 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AUDIENCE_SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + getAudienceSize();
+      if (hasAdgroup()) {
+        hash = (37 * hash) + ADGROUP_FIELD_NUMBER;
+        hash = (53 * hash) + getAdgroup().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(byte[] data)
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseDelimitedFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseDelimitedFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parseFrom(
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1143,7 +1110,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response prototype) {
+    public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1159,28 +1126,28 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Response to a request for an audience estimate.
+     * Response to a request to retrieve a particular adgroup's data.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response}
+     * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response)
-        io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.ResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response)
+        io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_fieldAccessorTable
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response.class, io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response.Builder.class);
+                io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.Builder.class);
       }
 
-      // Construct using io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response.newBuilder()
+      // Construct using io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1197,31 +1164,39 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        audienceSize_ = 0;
-
+        if (adgroupBuilder_ == null) {
+          adgroup_ = null;
+        } else {
+          adgroup_ = null;
+          adgroupBuilder_ = null;
+        }
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_Response_descriptor;
+        return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_Response_descriptor;
       }
 
-      public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response getDefaultInstanceForType() {
-        return io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response.getDefaultInstance();
+      public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response getDefaultInstanceForType() {
+        return io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.getDefaultInstance();
       }
 
-      public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response build() {
-        io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response result = buildPartial();
+      public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response build() {
+        io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response buildPartial() {
-        io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response result = new io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response(this);
-        result.audienceSize_ = audienceSize_;
+      public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response buildPartial() {
+        io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response result = new io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response(this);
+        if (adgroupBuilder_ == null) {
+          result.adgroup_ = adgroup_;
+        } else {
+          result.adgroup_ = adgroupBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1253,18 +1228,18 @@ private static final long serialVersionUID = 0L;
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response) {
-          return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response)other);
+        if (other instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response) {
+          return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response other) {
-        if (other == io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response.getDefaultInstance()) return this;
-        if (other.getAudienceSize() != 0) {
-          setAudienceSize(other.getAudienceSize());
+      public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response other) {
+        if (other == io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response.getDefaultInstance()) return this;
+        if (other.hasAdgroup()) {
+          mergeAdgroup(other.getAdgroup());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1279,11 +1254,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response parsedMessage = null;
+        io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response) e.getUnfinishedMessage();
+          parsedMessage = (io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1293,42 +1268,157 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private int audienceSize_ ;
+      private io.bloombox.schema.marketing.MarketingCampaign.AdGroup adgroup_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.marketing.MarketingCampaign.AdGroup, io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder, io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder> adgroupBuilder_;
       /**
        * <pre>
-       * Estimated audience size.
+       * Resulting adgroup, if it could be located.
        * </pre>
        *
-       * <code>uint32 audience_size = 1;</code>
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
        */
-      public int getAudienceSize() {
-        return audienceSize_;
+      public boolean hasAdgroup() {
+        return adgroupBuilder_ != null || adgroup_ != null;
       }
       /**
        * <pre>
-       * Estimated audience size.
+       * Resulting adgroup, if it could be located.
        * </pre>
        *
-       * <code>uint32 audience_size = 1;</code>
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
        */
-      public Builder setAudienceSize(int value) {
-        
-        audienceSize_ = value;
-        onChanged();
+      public io.bloombox.schema.marketing.MarketingCampaign.AdGroup getAdgroup() {
+        if (adgroupBuilder_ == null) {
+          return adgroup_ == null ? io.bloombox.schema.marketing.MarketingCampaign.AdGroup.getDefaultInstance() : adgroup_;
+        } else {
+          return adgroupBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Resulting adgroup, if it could be located.
+       * </pre>
+       *
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+       */
+      public Builder setAdgroup(io.bloombox.schema.marketing.MarketingCampaign.AdGroup value) {
+        if (adgroupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          adgroup_ = value;
+          onChanged();
+        } else {
+          adgroupBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
        * <pre>
-       * Estimated audience size.
+       * Resulting adgroup, if it could be located.
        * </pre>
        *
-       * <code>uint32 audience_size = 1;</code>
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
        */
-      public Builder clearAudienceSize() {
-        
-        audienceSize_ = 0;
-        onChanged();
+      public Builder setAdgroup(
+          io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder builderForValue) {
+        if (adgroupBuilder_ == null) {
+          adgroup_ = builderForValue.build();
+          onChanged();
+        } else {
+          adgroupBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
+      }
+      /**
+       * <pre>
+       * Resulting adgroup, if it could be located.
+       * </pre>
+       *
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+       */
+      public Builder mergeAdgroup(io.bloombox.schema.marketing.MarketingCampaign.AdGroup value) {
+        if (adgroupBuilder_ == null) {
+          if (adgroup_ != null) {
+            adgroup_ =
+              io.bloombox.schema.marketing.MarketingCampaign.AdGroup.newBuilder(adgroup_).mergeFrom(value).buildPartial();
+          } else {
+            adgroup_ = value;
+          }
+          onChanged();
+        } else {
+          adgroupBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resulting adgroup, if it could be located.
+       * </pre>
+       *
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+       */
+      public Builder clearAdgroup() {
+        if (adgroupBuilder_ == null) {
+          adgroup_ = null;
+          onChanged();
+        } else {
+          adgroup_ = null;
+          adgroupBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resulting adgroup, if it could be located.
+       * </pre>
+       *
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+       */
+      public io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder getAdgroupBuilder() {
+        
+        onChanged();
+        return getAdgroupFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Resulting adgroup, if it could be located.
+       * </pre>
+       *
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+       */
+      public io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder getAdgroupOrBuilder() {
+        if (adgroupBuilder_ != null) {
+          return adgroupBuilder_.getMessageOrBuilder();
+        } else {
+          return adgroup_ == null ?
+              io.bloombox.schema.marketing.MarketingCampaign.AdGroup.getDefaultInstance() : adgroup_;
+        }
+      }
+      /**
+       * <pre>
+       * Resulting adgroup, if it could be located.
+       * </pre>
+       *
+       * <code>.bloombox.schema.marketing.AdGroup adgroup = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.marketing.MarketingCampaign.AdGroup, io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder, io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder> 
+          getAdgroupFieldBuilder() {
+        if (adgroupBuilder_ == null) {
+          adgroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.marketing.MarketingCampaign.AdGroup, io.bloombox.schema.marketing.MarketingCampaign.AdGroup.Builder, io.bloombox.schema.marketing.MarketingCampaign.AdGroupOrBuilder>(
+                  getAdgroup(),
+                  getParentForChildren(),
+                  isClean());
+          adgroup_ = null;
+        }
+        return adgroupBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1341,16 +1431,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response)
-    private static final io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response)
+    private static final io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response();
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response();
     }
 
-    public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response getDefaultInstance() {
+    public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1373,7 +1463,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
-    public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Response getDefaultInstanceForType() {
+    public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1409,10 +1499,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof io.bloombox.schema.services.marketing.v1beta1.EstimateAudience)) {
+    if (!(obj instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupGet)) {
       return super.equals(obj);
     }
-    io.bloombox.schema.services.marketing.v1beta1.EstimateAudience other = (io.bloombox.schema.services.marketing.v1beta1.EstimateAudience) obj;
+    io.bloombox.schema.services.marketing.v1beta1.AdGroupGet other = (io.bloombox.schema.services.marketing.v1beta1.AdGroupGet) obj;
 
     boolean result = true;
     result = result && unknownFields.equals(other.unknownFields);
@@ -1431,69 +1521,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(byte[] data)
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(java.io.InputStream input)
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseDelimitedFrom(java.io.InputStream input)
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseDelimitedFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parseFrom(
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -1505,7 +1595,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.EstimateAudience prototype) {
+  public static Builder newBuilder(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -1521,29 +1611,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents an RPC operation wherein an authorized partner end-user requests, and receives, an estimate of the size of
-   * a resulting audience for a given set of targeting parameters.
+   * Represents an RPC operation to retrieve an individual adgroup, addressed by its ID, under a specific marketing
+   * campaign, also addressed by its ID.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.EstimateAudience}
+   * Protobuf type {@code bloombox.schema.services.marketing.v1beta1.AdGroupGet}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.EstimateAudience)
-      io.bloombox.schema.services.marketing.v1beta1.EstimateAudienceOrBuilder {
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.marketing.v1beta1.AdGroupGet)
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupGetOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_fieldAccessorTable
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.class, io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.Builder.class);
+              io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.class, io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.Builder.class);
     }
 
-    // Construct using io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.newBuilder()
+    // Construct using io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -1565,23 +1655,23 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_EstimateAudience_descriptor;
+      return io.bloombox.schema.services.marketing.v1beta1.MarketingServiceBeta1.internal_static_bloombox_schema_services_marketing_v1beta1_AdGroupGet_descriptor;
     }
 
-    public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience getDefaultInstanceForType() {
-      return io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.getDefaultInstance();
+    public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet getDefaultInstanceForType() {
+      return io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.getDefaultInstance();
     }
 
-    public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience build() {
-      io.bloombox.schema.services.marketing.v1beta1.EstimateAudience result = buildPartial();
+    public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet build() {
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupGet result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience buildPartial() {
-      io.bloombox.schema.services.marketing.v1beta1.EstimateAudience result = new io.bloombox.schema.services.marketing.v1beta1.EstimateAudience(this);
+    public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet buildPartial() {
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupGet result = new io.bloombox.schema.services.marketing.v1beta1.AdGroupGet(this);
       onBuilt();
       return result;
     }
@@ -1613,16 +1703,16 @@ private static final long serialVersionUID = 0L;
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof io.bloombox.schema.services.marketing.v1beta1.EstimateAudience) {
-        return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.EstimateAudience)other);
+      if (other instanceof io.bloombox.schema.services.marketing.v1beta1.AdGroupGet) {
+        return mergeFrom((io.bloombox.schema.services.marketing.v1beta1.AdGroupGet)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.EstimateAudience other) {
-      if (other == io.bloombox.schema.services.marketing.v1beta1.EstimateAudience.getDefaultInstance()) return this;
+    public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.AdGroupGet other) {
+      if (other == io.bloombox.schema.services.marketing.v1beta1.AdGroupGet.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -1636,11 +1726,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      io.bloombox.schema.services.marketing.v1beta1.EstimateAudience parsedMessage = null;
+      io.bloombox.schema.services.marketing.v1beta1.AdGroupGet parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (io.bloombox.schema.services.marketing.v1beta1.EstimateAudience) e.getUnfinishedMessage();
+        parsedMessage = (io.bloombox.schema.services.marketing.v1beta1.AdGroupGet) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -1660,39 +1750,39 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.EstimateAudience)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.marketing.v1beta1.AdGroupGet)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.EstimateAudience)
-  private static final io.bloombox.schema.services.marketing.v1beta1.EstimateAudience DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.marketing.v1beta1.AdGroupGet)
+  private static final io.bloombox.schema.services.marketing.v1beta1.AdGroupGet DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.EstimateAudience();
+    DEFAULT_INSTANCE = new io.bloombox.schema.services.marketing.v1beta1.AdGroupGet();
   }
 
-  public static io.bloombox.schema.services.marketing.v1beta1.EstimateAudience getDefaultInstance() {
+  public static io.bloombox.schema.services.marketing.v1beta1.AdGroupGet getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<EstimateAudience>
-      PARSER = new com.google.protobuf.AbstractParser<EstimateAudience>() {
-    public EstimateAudience parsePartialFrom(
+  private static final com.google.protobuf.Parser<AdGroupGet>
+      PARSER = new com.google.protobuf.AbstractParser<AdGroupGet>() {
+    public AdGroupGet parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new EstimateAudience(input, extensionRegistry);
+      return new AdGroupGet(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<EstimateAudience> parser() {
+  public static com.google.protobuf.Parser<AdGroupGet> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<EstimateAudience> getParserForType() {
+  public com.google.protobuf.Parser<AdGroupGet> getParserForType() {
     return PARSER;
   }
 
-  public io.bloombox.schema.services.marketing.v1beta1.EstimateAudience getDefaultInstanceForType() {
+  public io.bloombox.schema.services.marketing.v1beta1.AdGroupGet getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

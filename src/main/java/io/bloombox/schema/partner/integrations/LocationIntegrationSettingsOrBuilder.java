@@ -227,4 +227,29 @@ public interface LocationIntegrationSettingsOrBuilder extends
    * <code>.bloombox.schema.partner.integrations.onfleet.OnFleetSettings onfleet = 14;</code>
    */
   io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOrBuilder getOnfleetOrBuilder();
+
+  /**
+   * <pre>
+   * Specifies location-specific integration settings with Treez.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+   */
+  boolean hasTreez();
+  /**
+   * <pre>
+   * Specifies location-specific integration settings with Treez.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+   */
+  io.bloombox.schema.partner.integrations.treez.TreezSettings getTreez();
+  /**
+   * <pre>
+   * Specifies location-specific integration settings with Treez.
+   * </pre>
+   *
+   * <code>.bloombox.schema.partner.integrations.treez.TreezSettings treez = 15;</code>
+   */
+  io.bloombox.schema.partner.integrations.treez.TreezSettingsOrBuilder getTreezOrBuilder();
 }

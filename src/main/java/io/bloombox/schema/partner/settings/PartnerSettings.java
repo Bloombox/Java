@@ -107,13 +107,13 @@ private static final long serialVersionUID = 0L;
           }
           case 58: {
             io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.Builder subBuilder = null;
-            if (partners_ != null) {
-              subBuilder = partners_.toBuilder();
+            if (integration_ != null) {
+              subBuilder = integration_.toBuilder();
             }
-            partners_ = input.readMessage(io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.parser(), extensionRegistry);
+            integration_ = input.readMessage(io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(partners_);
-              partners_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(integration_);
+              integration_ = subBuilder.buildPartial();
             }
 
             break;
@@ -274,37 +274,37 @@ private static final long serialVersionUID = 0L;
     return getSearch();
   }
 
-  public static final int PARTNERS_FIELD_NUMBER = 7;
-  private io.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners_;
+  public static final int INTEGRATION_FIELD_NUMBER = 7;
+  private io.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration_;
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
    */
-  public boolean hasPartners() {
-    return partners_ != null;
+  public boolean hasIntegration() {
+    return integration_ != null;
   }
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
    */
-  public io.bloombox.schema.partner.integrations.PartnerIntegrationSettings getPartners() {
-    return partners_ == null ? io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.getDefaultInstance() : partners_;
+  public io.bloombox.schema.partner.integrations.PartnerIntegrationSettings getIntegration() {
+    return integration_ == null ? io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.getDefaultInstance() : integration_;
   }
   /**
    * <pre>
    * Integration settings for this location.
    * </pre>
    *
-   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+   * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
    */
-  public io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder getPartnersOrBuilder() {
-    return getPartners();
+  public io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
+    return getIntegration();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -331,8 +331,8 @@ private static final long serialVersionUID = 0L;
     if (search_ != null) {
       output.writeMessage(4, getSearch());
     }
-    if (partners_ != null) {
-      output.writeMessage(7, getPartners());
+    if (integration_ != null) {
+      output.writeMessage(7, getIntegration());
     }
     unknownFields.writeTo(output);
   }
@@ -358,9 +358,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getSearch());
     }
-    if (partners_ != null) {
+    if (integration_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(7, getPartners());
+        .computeMessageSize(7, getIntegration());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -398,10 +398,10 @@ private static final long serialVersionUID = 0L;
       result = result && getSearch()
           .equals(other.getSearch());
     }
-    result = result && (hasPartners() == other.hasPartners());
-    if (hasPartners()) {
-      result = result && getPartners()
-          .equals(other.getPartners());
+    result = result && (hasIntegration() == other.hasIntegration());
+    if (hasIntegration()) {
+      result = result && getIntegration()
+          .equals(other.getIntegration());
     }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
@@ -430,9 +430,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SEARCH_FIELD_NUMBER;
       hash = (53 * hash) + getSearch().hashCode();
     }
-    if (hasPartners()) {
-      hash = (37 * hash) + PARTNERS_FIELD_NUMBER;
-      hash = (53 * hash) + getPartners().hashCode();
+    if (hasIntegration()) {
+      hash = (37 * hash) + INTEGRATION_FIELD_NUMBER;
+      hash = (53 * hash) + getIntegration().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -591,11 +591,11 @@ private static final long serialVersionUID = 0L;
         search_ = null;
         searchBuilder_ = null;
       }
-      if (partnersBuilder_ == null) {
-        partners_ = null;
+      if (integrationBuilder_ == null) {
+        integration_ = null;
       } else {
-        partners_ = null;
-        partnersBuilder_ = null;
+        integration_ = null;
+        integrationBuilder_ = null;
       }
       return this;
     }
@@ -639,10 +639,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.search_ = searchBuilder_.build();
       }
-      if (partnersBuilder_ == null) {
-        result.partners_ = partners_;
+      if (integrationBuilder_ == null) {
+        result.integration_ = integration_;
       } else {
-        result.partners_ = partnersBuilder_.build();
+        result.integration_ = integrationBuilder_.build();
       }
       onBuilt();
       return result;
@@ -697,8 +697,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasSearch()) {
         mergeSearch(other.getSearch());
       }
-      if (other.hasPartners()) {
-        mergePartners(other.getPartners());
+      if (other.hasIntegration()) {
+        mergeIntegration(other.getIntegration());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1339,31 +1339,31 @@ private static final long serialVersionUID = 0L;
       return searchBuilder_;
     }
 
-    private io.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners_ = null;
+    private io.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.integrations.PartnerIntegrationSettings, io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder> partnersBuilder_;
+        io.bloombox.schema.partner.integrations.PartnerIntegrationSettings, io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder> integrationBuilder_;
     /**
      * <pre>
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
-    public boolean hasPartners() {
-      return partnersBuilder_ != null || partners_ != null;
+    public boolean hasIntegration() {
+      return integrationBuilder_ != null || integration_ != null;
     }
     /**
      * <pre>
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
-    public io.bloombox.schema.partner.integrations.PartnerIntegrationSettings getPartners() {
-      if (partnersBuilder_ == null) {
-        return partners_ == null ? io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.getDefaultInstance() : partners_;
+    public io.bloombox.schema.partner.integrations.PartnerIntegrationSettings getIntegration() {
+      if (integrationBuilder_ == null) {
+        return integration_ == null ? io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.getDefaultInstance() : integration_;
       } else {
-        return partnersBuilder_.getMessage();
+        return integrationBuilder_.getMessage();
       }
     }
     /**
@@ -1371,17 +1371,17 @@ private static final long serialVersionUID = 0L;
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
-    public Builder setPartners(io.bloombox.schema.partner.integrations.PartnerIntegrationSettings value) {
-      if (partnersBuilder_ == null) {
+    public Builder setIntegration(io.bloombox.schema.partner.integrations.PartnerIntegrationSettings value) {
+      if (integrationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        partners_ = value;
+        integration_ = value;
         onChanged();
       } else {
-        partnersBuilder_.setMessage(value);
+        integrationBuilder_.setMessage(value);
       }
 
       return this;
@@ -1391,15 +1391,15 @@ private static final long serialVersionUID = 0L;
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
-    public Builder setPartners(
+    public Builder setIntegration(
         io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.Builder builderForValue) {
-      if (partnersBuilder_ == null) {
-        partners_ = builderForValue.build();
+      if (integrationBuilder_ == null) {
+        integration_ = builderForValue.build();
         onChanged();
       } else {
-        partnersBuilder_.setMessage(builderForValue.build());
+        integrationBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
@@ -1409,19 +1409,19 @@ private static final long serialVersionUID = 0L;
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
-    public Builder mergePartners(io.bloombox.schema.partner.integrations.PartnerIntegrationSettings value) {
-      if (partnersBuilder_ == null) {
-        if (partners_ != null) {
-          partners_ =
-            io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.newBuilder(partners_).mergeFrom(value).buildPartial();
+    public Builder mergeIntegration(io.bloombox.schema.partner.integrations.PartnerIntegrationSettings value) {
+      if (integrationBuilder_ == null) {
+        if (integration_ != null) {
+          integration_ =
+            io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.newBuilder(integration_).mergeFrom(value).buildPartial();
         } else {
-          partners_ = value;
+          integration_ = value;
         }
         onChanged();
       } else {
-        partnersBuilder_.mergeFrom(value);
+        integrationBuilder_.mergeFrom(value);
       }
 
       return this;
@@ -1431,15 +1431,15 @@ private static final long serialVersionUID = 0L;
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
-    public Builder clearPartners() {
-      if (partnersBuilder_ == null) {
-        partners_ = null;
+    public Builder clearIntegration() {
+      if (integrationBuilder_ == null) {
+        integration_ = null;
         onChanged();
       } else {
-        partners_ = null;
-        partnersBuilder_ = null;
+        integration_ = null;
+        integrationBuilder_ = null;
       }
 
       return this;
@@ -1449,26 +1449,26 @@ private static final long serialVersionUID = 0L;
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
-    public io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.Builder getPartnersBuilder() {
+    public io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.Builder getIntegrationBuilder() {
       
       onChanged();
-      return getPartnersFieldBuilder().getBuilder();
+      return getIntegrationFieldBuilder().getBuilder();
     }
     /**
      * <pre>
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
-    public io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder getPartnersOrBuilder() {
-      if (partnersBuilder_ != null) {
-        return partnersBuilder_.getMessageOrBuilder();
+    public io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
+      if (integrationBuilder_ != null) {
+        return integrationBuilder_.getMessageOrBuilder();
       } else {
-        return partners_ == null ?
-            io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.getDefaultInstance() : partners_;
+        return integration_ == null ?
+            io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.getDefaultInstance() : integration_;
       }
     }
     /**
@@ -1476,20 +1476,20 @@ private static final long serialVersionUID = 0L;
      * Integration settings for this location.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings partners = 7;</code>
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.partner.integrations.PartnerIntegrationSettings, io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder> 
-        getPartnersFieldBuilder() {
-      if (partnersBuilder_ == null) {
-        partnersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getIntegrationFieldBuilder() {
+      if (integrationBuilder_ == null) {
+        integrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             io.bloombox.schema.partner.integrations.PartnerIntegrationSettings, io.bloombox.schema.partner.integrations.PartnerIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.PartnerIntegrationSettingsOrBuilder>(
-                getPartners(),
+                getIntegration(),
                 getParentForChildren(),
                 isClean());
-        partners_ = null;
+        integration_ = null;
       }
-      return partnersBuilder_;
+      return integrationBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

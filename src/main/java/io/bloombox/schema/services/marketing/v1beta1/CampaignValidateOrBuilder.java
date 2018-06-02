@@ -3,7 +3,7 @@
 
 package io.bloombox.schema.services.marketing.v1beta1;
 
-public interface EstimateAudienceOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.EstimateAudience)
+public interface CampaignValidateOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.marketing.v1beta1.CampaignValidate)
     com.google.protobuf.MessageOrBuilder {
 }

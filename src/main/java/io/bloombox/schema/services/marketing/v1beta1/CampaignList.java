@@ -85,18 +85,36 @@ private static final long serialVersionUID = 0L;
      * Partnership scope for the request.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string partner = 1;</code>
      */
-    java.lang.String getScope();
+    java.lang.String getPartner();
     /**
      * <pre>
      * Partnership scope for the request.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string partner = 1;</code>
      */
     com.google.protobuf.ByteString
-        getScopeBytes();
+        getPartnerBytes();
+
+    /**
+     * <pre>
+     * Location scope for the request.
+     * </pre>
+     *
+     * <code>string location = 2;</code>
+     */
+    java.lang.String getLocation();
+    /**
+     * <pre>
+     * Location scope for the request.
+     * </pre>
+     *
+     * <code>string location = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getLocationBytes();
   }
   /**
    * <pre>
@@ -115,7 +133,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
-      scope_ = "";
+      partner_ = "";
+      location_ = "";
     }
 
     @java.lang.Override
@@ -152,7 +171,13 @@ private static final long serialVersionUID = 0L;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              scope_ = s;
+              partner_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              location_ = s;
               break;
             }
           }
@@ -179,24 +204,24 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request.class, io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request.Builder.class);
     }
 
-    public static final int SCOPE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object scope_;
+    public static final int PARTNER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object partner_;
     /**
      * <pre>
      * Partnership scope for the request.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string partner = 1;</code>
      */
-    public java.lang.String getScope() {
-      java.lang.Object ref = scope_;
+    public java.lang.String getPartner() {
+      java.lang.Object ref = partner_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        scope_ = s;
+        partner_ = s;
         return s;
       }
     }
@@ -205,16 +230,58 @@ private static final long serialVersionUID = 0L;
      * Partnership scope for the request.
      * </pre>
      *
-     * <code>string scope = 1;</code>
+     * <code>string partner = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getScopeBytes() {
-      java.lang.Object ref = scope_;
+        getPartnerBytes() {
+      java.lang.Object ref = partner_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        scope_ = b;
+        partner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object location_;
+    /**
+     * <pre>
+     * Location scope for the request.
+     * </pre>
+     *
+     * <code>string location = 2;</code>
+     */
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Location scope for the request.
+     * </pre>
+     *
+     * <code>string location = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        location_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -233,8 +300,11 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getScopeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
+      if (!getPartnerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, partner_);
+      }
+      if (!getLocationBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, location_);
       }
       unknownFields.writeTo(output);
     }
@@ -244,8 +314,11 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getScopeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
+      if (!getPartnerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, partner_);
+      }
+      if (!getLocationBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, location_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -263,8 +336,10 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request other = (io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request) obj;
 
       boolean result = true;
-      result = result && getScope()
-          .equals(other.getScope());
+      result = result && getPartner()
+          .equals(other.getPartner());
+      result = result && getLocation()
+          .equals(other.getLocation());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -276,8 +351,10 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SCOPE_FIELD_NUMBER;
-      hash = (53 * hash) + getScope().hashCode();
+      hash = (37 * hash) + PARTNER_FIELD_NUMBER;
+      hash = (53 * hash) + getPartner().hashCode();
+      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLocation().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -411,7 +488,9 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        scope_ = "";
+        partner_ = "";
+
+        location_ = "";
 
         return this;
       }
@@ -435,7 +514,8 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request buildPartial() {
         io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request result = new io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request(this);
-        result.scope_ = scope_;
+        result.partner_ = partner_;
+        result.location_ = location_;
         onBuilt();
         return result;
       }
@@ -477,8 +557,12 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request other) {
         if (other == io.bloombox.schema.services.marketing.v1beta1.CampaignList.Request.getDefaultInstance()) return this;
-        if (!other.getScope().isEmpty()) {
-          scope_ = other.scope_;
+        if (!other.getPartner().isEmpty()) {
+          partner_ = other.partner_;
+          onChanged();
+        }
+        if (!other.getLocation().isEmpty()) {
+          location_ = other.location_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -508,21 +592,21 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object scope_ = "";
+      private java.lang.Object partner_ = "";
       /**
        * <pre>
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string partner = 1;</code>
        */
-      public java.lang.String getScope() {
-        java.lang.Object ref = scope_;
+      public java.lang.String getPartner() {
+        java.lang.Object ref = partner_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          scope_ = s;
+          partner_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -533,16 +617,16 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string partner = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getScopeBytes() {
-        java.lang.Object ref = scope_;
+          getPartnerBytes() {
+        java.lang.Object ref = partner_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          scope_ = b;
+          partner_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -553,15 +637,15 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string partner = 1;</code>
        */
-      public Builder setScope(
+      public Builder setPartner(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        scope_ = value;
+        partner_ = value;
         onChanged();
         return this;
       }
@@ -570,11 +654,11 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string partner = 1;</code>
        */
-      public Builder clearScope() {
+      public Builder clearPartner() {
         
-        scope_ = getDefaultInstance().getScope();
+        partner_ = getDefaultInstance().getPartner();
         onChanged();
         return this;
       }
@@ -583,16 +667,105 @@ private static final long serialVersionUID = 0L;
        * Partnership scope for the request.
        * </pre>
        *
-       * <code>string scope = 1;</code>
+       * <code>string partner = 1;</code>
        */
-      public Builder setScopeBytes(
+      public Builder setPartnerBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        scope_ = value;
+        partner_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object location_ = "";
+      /**
+       * <pre>
+       * Location scope for the request.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public java.lang.String getLocation() {
+        java.lang.Object ref = location_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          location_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location scope for the request.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLocationBytes() {
+        java.lang.Object ref = location_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          location_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location scope for the request.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public Builder setLocation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        location_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location scope for the request.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public Builder clearLocation() {
+        
+        location_ = getDefaultInstance().getLocation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location scope for the request.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public Builder setLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        location_ = value;
         onChanged();
         return this;
       }
@@ -654,43 +827,43 @@ private static final long serialVersionUID = 0L;
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    java.util.List<io.bloombox.schema.marketing.Campaign> 
-        getCampaignsList();
+    java.util.List<io.bloombox.schema.services.marketing.v1beta1.CampaignSummary> 
+        getCampaignList();
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    io.bloombox.schema.marketing.Campaign getCampaigns(int index);
+    io.bloombox.schema.services.marketing.v1beta1.CampaignSummary getCampaign(int index);
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    int getCampaignsCount();
+    int getCampaignCount();
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    java.util.List<? extends io.bloombox.schema.marketing.CampaignOrBuilder> 
-        getCampaignsOrBuilderList();
+    java.util.List<? extends io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder> 
+        getCampaignOrBuilderList();
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    io.bloombox.schema.marketing.CampaignOrBuilder getCampaignsOrBuilder(
+    io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder getCampaignOrBuilder(
         int index);
   }
   /**
@@ -710,7 +883,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      campaigns_ = java.util.Collections.emptyList();
+      campaign_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -746,11 +919,11 @@ private static final long serialVersionUID = 0L;
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                campaigns_ = new java.util.ArrayList<io.bloombox.schema.marketing.Campaign>();
+                campaign_ = new java.util.ArrayList<io.bloombox.schema.services.marketing.v1beta1.CampaignSummary>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              campaigns_.add(
-                  input.readMessage(io.bloombox.schema.marketing.Campaign.parser(), extensionRegistry));
+              campaign_.add(
+                  input.readMessage(io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.parser(), extensionRegistry));
               break;
             }
           }
@@ -762,7 +935,7 @@ private static final long serialVersionUID = 0L;
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          campaigns_ = java.util.Collections.unmodifiableList(campaigns_);
+          campaign_ = java.util.Collections.unmodifiableList(campaign_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -780,59 +953,59 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response.class, io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response.Builder.class);
     }
 
-    public static final int CAMPAIGNS_FIELD_NUMBER = 1;
-    private java.util.List<io.bloombox.schema.marketing.Campaign> campaigns_;
+    public static final int CAMPAIGN_FIELD_NUMBER = 1;
+    private java.util.List<io.bloombox.schema.services.marketing.v1beta1.CampaignSummary> campaign_;
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    public java.util.List<io.bloombox.schema.marketing.Campaign> getCampaignsList() {
-      return campaigns_;
+    public java.util.List<io.bloombox.schema.services.marketing.v1beta1.CampaignSummary> getCampaignList() {
+      return campaign_;
     }
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    public java.util.List<? extends io.bloombox.schema.marketing.CampaignOrBuilder> 
-        getCampaignsOrBuilderList() {
-      return campaigns_;
+    public java.util.List<? extends io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder> 
+        getCampaignOrBuilderList() {
+      return campaign_;
     }
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    public int getCampaignsCount() {
-      return campaigns_.size();
+    public int getCampaignCount() {
+      return campaign_.size();
     }
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    public io.bloombox.schema.marketing.Campaign getCampaigns(int index) {
-      return campaigns_.get(index);
+    public io.bloombox.schema.services.marketing.v1beta1.CampaignSummary getCampaign(int index) {
+      return campaign_.get(index);
     }
     /**
      * <pre>
      * Campaigns for a given partner/location pair.
      * </pre>
      *
-     * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+     * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
      */
-    public io.bloombox.schema.marketing.CampaignOrBuilder getCampaignsOrBuilder(
+    public io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder getCampaignOrBuilder(
         int index) {
-      return campaigns_.get(index);
+      return campaign_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -847,8 +1020,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < campaigns_.size(); i++) {
-        output.writeMessage(1, campaigns_.get(i));
+      for (int i = 0; i < campaign_.size(); i++) {
+        output.writeMessage(1, campaign_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -858,9 +1031,9 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < campaigns_.size(); i++) {
+      for (int i = 0; i < campaign_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, campaigns_.get(i));
+          .computeMessageSize(1, campaign_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -878,8 +1051,8 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response other = (io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response) obj;
 
       boolean result = true;
-      result = result && getCampaignsList()
-          .equals(other.getCampaignsList());
+      result = result && getCampaignList()
+          .equals(other.getCampaignList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -891,9 +1064,9 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getCampaignsCount() > 0) {
-        hash = (37 * hash) + CAMPAIGNS_FIELD_NUMBER;
-        hash = (53 * hash) + getCampaignsList().hashCode();
+      if (getCampaignCount() > 0) {
+        hash = (37 * hash) + CAMPAIGN_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1024,16 +1197,16 @@ private static final long serialVersionUID = 0L;
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getCampaignsFieldBuilder();
+          getCampaignFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
-        if (campaignsBuilder_ == null) {
-          campaigns_ = java.util.Collections.emptyList();
+        if (campaignBuilder_ == null) {
+          campaign_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          campaignsBuilder_.clear();
+          campaignBuilder_.clear();
         }
         return this;
       }
@@ -1058,14 +1231,14 @@ private static final long serialVersionUID = 0L;
       public io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response buildPartial() {
         io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response result = new io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response(this);
         int from_bitField0_ = bitField0_;
-        if (campaignsBuilder_ == null) {
+        if (campaignBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            campaigns_ = java.util.Collections.unmodifiableList(campaigns_);
+            campaign_ = java.util.Collections.unmodifiableList(campaign_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.campaigns_ = campaigns_;
+          result.campaign_ = campaign_;
         } else {
-          result.campaigns_ = campaignsBuilder_.build();
+          result.campaign_ = campaignBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1108,29 +1281,29 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response other) {
         if (other == io.bloombox.schema.services.marketing.v1beta1.CampaignList.Response.getDefaultInstance()) return this;
-        if (campaignsBuilder_ == null) {
-          if (!other.campaigns_.isEmpty()) {
-            if (campaigns_.isEmpty()) {
-              campaigns_ = other.campaigns_;
+        if (campaignBuilder_ == null) {
+          if (!other.campaign_.isEmpty()) {
+            if (campaign_.isEmpty()) {
+              campaign_ = other.campaign_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureCampaignsIsMutable();
-              campaigns_.addAll(other.campaigns_);
+              ensureCampaignIsMutable();
+              campaign_.addAll(other.campaign_);
             }
             onChanged();
           }
         } else {
-          if (!other.campaigns_.isEmpty()) {
-            if (campaignsBuilder_.isEmpty()) {
-              campaignsBuilder_.dispose();
-              campaignsBuilder_ = null;
-              campaigns_ = other.campaigns_;
+          if (!other.campaign_.isEmpty()) {
+            if (campaignBuilder_.isEmpty()) {
+              campaignBuilder_.dispose();
+              campaignBuilder_ = null;
+              campaign_ = other.campaign_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              campaignsBuilder_ = 
+              campaignBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getCampaignsFieldBuilder() : null;
+                   getCampaignFieldBuilder() : null;
             } else {
-              campaignsBuilder_.addAllMessages(other.campaigns_);
+              campaignBuilder_.addAllMessages(other.campaign_);
             }
           }
         }
@@ -1162,30 +1335,30 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private java.util.List<io.bloombox.schema.marketing.Campaign> campaigns_ =
+      private java.util.List<io.bloombox.schema.services.marketing.v1beta1.CampaignSummary> campaign_ =
         java.util.Collections.emptyList();
-      private void ensureCampaignsIsMutable() {
+      private void ensureCampaignIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          campaigns_ = new java.util.ArrayList<io.bloombox.schema.marketing.Campaign>(campaigns_);
+          campaign_ = new java.util.ArrayList<io.bloombox.schema.services.marketing.v1beta1.CampaignSummary>(campaign_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.marketing.Campaign, io.bloombox.schema.marketing.Campaign.Builder, io.bloombox.schema.marketing.CampaignOrBuilder> campaignsBuilder_;
+          io.bloombox.schema.services.marketing.v1beta1.CampaignSummary, io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder, io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder> campaignBuilder_;
 
       /**
        * <pre>
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public java.util.List<io.bloombox.schema.marketing.Campaign> getCampaignsList() {
-        if (campaignsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(campaigns_);
+      public java.util.List<io.bloombox.schema.services.marketing.v1beta1.CampaignSummary> getCampaignList() {
+        if (campaignBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(campaign_);
         } else {
-          return campaignsBuilder_.getMessageList();
+          return campaignBuilder_.getMessageList();
         }
       }
       /**
@@ -1193,13 +1366,13 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public int getCampaignsCount() {
-        if (campaignsBuilder_ == null) {
-          return campaigns_.size();
+      public int getCampaignCount() {
+        if (campaignBuilder_ == null) {
+          return campaign_.size();
         } else {
-          return campaignsBuilder_.getCount();
+          return campaignBuilder_.getCount();
         }
       }
       /**
@@ -1207,13 +1380,13 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public io.bloombox.schema.marketing.Campaign getCampaigns(int index) {
-        if (campaignsBuilder_ == null) {
-          return campaigns_.get(index);
+      public io.bloombox.schema.services.marketing.v1beta1.CampaignSummary getCampaign(int index) {
+        if (campaignBuilder_ == null) {
+          return campaign_.get(index);
         } else {
-          return campaignsBuilder_.getMessage(index);
+          return campaignBuilder_.getMessage(index);
         }
       }
       /**
@@ -1221,19 +1394,19 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder setCampaigns(
-          int index, io.bloombox.schema.marketing.Campaign value) {
-        if (campaignsBuilder_ == null) {
+      public Builder setCampaign(
+          int index, io.bloombox.schema.services.marketing.v1beta1.CampaignSummary value) {
+        if (campaignBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureCampaignsIsMutable();
-          campaigns_.set(index, value);
+          ensureCampaignIsMutable();
+          campaign_.set(index, value);
           onChanged();
         } else {
-          campaignsBuilder_.setMessage(index, value);
+          campaignBuilder_.setMessage(index, value);
         }
         return this;
       }
@@ -1242,16 +1415,16 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder setCampaigns(
-          int index, io.bloombox.schema.marketing.Campaign.Builder builderForValue) {
-        if (campaignsBuilder_ == null) {
-          ensureCampaignsIsMutable();
-          campaigns_.set(index, builderForValue.build());
+      public Builder setCampaign(
+          int index, io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder builderForValue) {
+        if (campaignBuilder_ == null) {
+          ensureCampaignIsMutable();
+          campaign_.set(index, builderForValue.build());
           onChanged();
         } else {
-          campaignsBuilder_.setMessage(index, builderForValue.build());
+          campaignBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
@@ -1260,18 +1433,18 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder addCampaigns(io.bloombox.schema.marketing.Campaign value) {
-        if (campaignsBuilder_ == null) {
+      public Builder addCampaign(io.bloombox.schema.services.marketing.v1beta1.CampaignSummary value) {
+        if (campaignBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureCampaignsIsMutable();
-          campaigns_.add(value);
+          ensureCampaignIsMutable();
+          campaign_.add(value);
           onChanged();
         } else {
-          campaignsBuilder_.addMessage(value);
+          campaignBuilder_.addMessage(value);
         }
         return this;
       }
@@ -1280,19 +1453,19 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder addCampaigns(
-          int index, io.bloombox.schema.marketing.Campaign value) {
-        if (campaignsBuilder_ == null) {
+      public Builder addCampaign(
+          int index, io.bloombox.schema.services.marketing.v1beta1.CampaignSummary value) {
+        if (campaignBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureCampaignsIsMutable();
-          campaigns_.add(index, value);
+          ensureCampaignIsMutable();
+          campaign_.add(index, value);
           onChanged();
         } else {
-          campaignsBuilder_.addMessage(index, value);
+          campaignBuilder_.addMessage(index, value);
         }
         return this;
       }
@@ -1301,16 +1474,16 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder addCampaigns(
-          io.bloombox.schema.marketing.Campaign.Builder builderForValue) {
-        if (campaignsBuilder_ == null) {
-          ensureCampaignsIsMutable();
-          campaigns_.add(builderForValue.build());
+      public Builder addCampaign(
+          io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder builderForValue) {
+        if (campaignBuilder_ == null) {
+          ensureCampaignIsMutable();
+          campaign_.add(builderForValue.build());
           onChanged();
         } else {
-          campaignsBuilder_.addMessage(builderForValue.build());
+          campaignBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
@@ -1319,16 +1492,16 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder addCampaigns(
-          int index, io.bloombox.schema.marketing.Campaign.Builder builderForValue) {
-        if (campaignsBuilder_ == null) {
-          ensureCampaignsIsMutable();
-          campaigns_.add(index, builderForValue.build());
+      public Builder addCampaign(
+          int index, io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder builderForValue) {
+        if (campaignBuilder_ == null) {
+          ensureCampaignIsMutable();
+          campaign_.add(index, builderForValue.build());
           onChanged();
         } else {
-          campaignsBuilder_.addMessage(index, builderForValue.build());
+          campaignBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
@@ -1337,17 +1510,17 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder addAllCampaigns(
-          java.lang.Iterable<? extends io.bloombox.schema.marketing.Campaign> values) {
-        if (campaignsBuilder_ == null) {
-          ensureCampaignsIsMutable();
+      public Builder addAllCampaign(
+          java.lang.Iterable<? extends io.bloombox.schema.services.marketing.v1beta1.CampaignSummary> values) {
+        if (campaignBuilder_ == null) {
+          ensureCampaignIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, campaigns_);
+              values, campaign_);
           onChanged();
         } else {
-          campaignsBuilder_.addAllMessages(values);
+          campaignBuilder_.addAllMessages(values);
         }
         return this;
       }
@@ -1356,15 +1529,15 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder clearCampaigns() {
-        if (campaignsBuilder_ == null) {
-          campaigns_ = java.util.Collections.emptyList();
+      public Builder clearCampaign() {
+        if (campaignBuilder_ == null) {
+          campaign_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          campaignsBuilder_.clear();
+          campaignBuilder_.clear();
         }
         return this;
       }
@@ -1373,15 +1546,15 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public Builder removeCampaigns(int index) {
-        if (campaignsBuilder_ == null) {
-          ensureCampaignsIsMutable();
-          campaigns_.remove(index);
+      public Builder removeCampaign(int index) {
+        if (campaignBuilder_ == null) {
+          ensureCampaignIsMutable();
+          campaign_.remove(index);
           onChanged();
         } else {
-          campaignsBuilder_.remove(index);
+          campaignBuilder_.remove(index);
         }
         return this;
       }
@@ -1390,24 +1563,24 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public io.bloombox.schema.marketing.Campaign.Builder getCampaignsBuilder(
+      public io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder getCampaignBuilder(
           int index) {
-        return getCampaignsFieldBuilder().getBuilder(index);
+        return getCampaignFieldBuilder().getBuilder(index);
       }
       /**
        * <pre>
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public io.bloombox.schema.marketing.CampaignOrBuilder getCampaignsOrBuilder(
+      public io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder getCampaignOrBuilder(
           int index) {
-        if (campaignsBuilder_ == null) {
-          return campaigns_.get(index);  } else {
-          return campaignsBuilder_.getMessageOrBuilder(index);
+        if (campaignBuilder_ == null) {
+          return campaign_.get(index);  } else {
+          return campaignBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
@@ -1415,14 +1588,14 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public java.util.List<? extends io.bloombox.schema.marketing.CampaignOrBuilder> 
-           getCampaignsOrBuilderList() {
-        if (campaignsBuilder_ != null) {
-          return campaignsBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder> 
+           getCampaignOrBuilderList() {
+        if (campaignBuilder_ != null) {
+          return campaignBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(campaigns_);
+          return java.util.Collections.unmodifiableList(campaign_);
         }
       }
       /**
@@ -1430,48 +1603,48 @@ private static final long serialVersionUID = 0L;
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public io.bloombox.schema.marketing.Campaign.Builder addCampaignsBuilder() {
-        return getCampaignsFieldBuilder().addBuilder(
-            io.bloombox.schema.marketing.Campaign.getDefaultInstance());
+      public io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder addCampaignBuilder() {
+        return getCampaignFieldBuilder().addBuilder(
+            io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.getDefaultInstance());
       }
       /**
        * <pre>
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public io.bloombox.schema.marketing.Campaign.Builder addCampaignsBuilder(
+      public io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder addCampaignBuilder(
           int index) {
-        return getCampaignsFieldBuilder().addBuilder(
-            index, io.bloombox.schema.marketing.Campaign.getDefaultInstance());
+        return getCampaignFieldBuilder().addBuilder(
+            index, io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.getDefaultInstance());
       }
       /**
        * <pre>
        * Campaigns for a given partner/location pair.
        * </pre>
        *
-       * <code>repeated .bloombox.schema.marketing.Campaign campaigns = 1;</code>
+       * <code>repeated .bloombox.schema.services.marketing.v1beta1.CampaignSummary campaign = 1;</code>
        */
-      public java.util.List<io.bloombox.schema.marketing.Campaign.Builder> 
-           getCampaignsBuilderList() {
-        return getCampaignsFieldBuilder().getBuilderList();
+      public java.util.List<io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder> 
+           getCampaignBuilderList() {
+        return getCampaignFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.marketing.Campaign, io.bloombox.schema.marketing.Campaign.Builder, io.bloombox.schema.marketing.CampaignOrBuilder> 
-          getCampaignsFieldBuilder() {
-        if (campaignsBuilder_ == null) {
-          campaignsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.bloombox.schema.marketing.Campaign, io.bloombox.schema.marketing.Campaign.Builder, io.bloombox.schema.marketing.CampaignOrBuilder>(
-                  campaigns_,
+          io.bloombox.schema.services.marketing.v1beta1.CampaignSummary, io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder, io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder> 
+          getCampaignFieldBuilder() {
+        if (campaignBuilder_ == null) {
+          campaignBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.bloombox.schema.services.marketing.v1beta1.CampaignSummary, io.bloombox.schema.services.marketing.v1beta1.CampaignSummary.Builder, io.bloombox.schema.services.marketing.v1beta1.CampaignSummaryOrBuilder>(
+                  campaign_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
-          campaigns_ = null;
+          campaign_ = null;
         }
-        return campaignsBuilder_;
+        return campaignBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

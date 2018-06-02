@@ -38,12 +38,100 @@ public enum MarketingError
   LOCATION_INVALID(2),
   /**
    * <pre>
+   * The specified campaign ID was found to be invalid.
+   * </pre>
+   *
+   * <code>ID_INVALID = 3;</code>
+   */
+  ID_INVALID(3),
+  /**
+   * <pre>
+   * The specified campaign name was found to be invalid.
+   * </pre>
+   *
+   * <code>NAME_INVALID = 4;</code>
+   */
+  NAME_INVALID(4),
+  /**
+   * <pre>
+   * The specified campaign could not be located.
+   * </pre>
+   *
+   * <code>CAMPAIGN_NOT_FOUND = 5;</code>
+   */
+  CAMPAIGN_NOT_FOUND(5),
+  /**
+   * <pre>
    * The configured access permissions do not allow the requested operation.
    * </pre>
    *
-   * <code>ACCESS_DENIED = 3;</code>
+   * <code>ACCESS_DENIED = 6;</code>
    */
-  ACCESS_DENIED(3),
+  ACCESS_DENIED(6),
+  /**
+   * <pre>
+   * The specified campaign settings were invalid.
+   * </pre>
+   *
+   * <code>SETTINGS_INVALID = 7;</code>
+   */
+  SETTINGS_INVALID(7),
+  /**
+   * <pre>
+   * The specified channel was invalid.
+   * </pre>
+   *
+   * <code>CHANNEL_INVALID = 8;</code>
+   */
+  CHANNEL_INVALID(8),
+  /**
+   * <pre>
+   * The specified adgroup payload was found to be invalid.
+   * </pre>
+   *
+   * <code>ADGROUP_INVALID = 9;</code>
+   */
+  ADGROUP_INVALID(9),
+  /**
+   * <pre>
+   * Must provide settings payload to match the channel type specified.
+   * </pre>
+   *
+   * <code>SETTINGS_MISMATCH = 10;</code>
+   */
+  SETTINGS_MISMATCH(10),
+  /**
+   * <pre>
+   * The specified adgroup creative was invalid for some reason.
+   * </pre>
+   *
+   * <code>CREATIVE_INVALID = 11;</code>
+   */
+  CREATIVE_INVALID(11),
+  /**
+   * <pre>
+   * The specified adgroup SMS creative was invalid for some reason.
+   * </pre>
+   *
+   * <code>SMS_CREATIVE_INVALID = 12;</code>
+   */
+  SMS_CREATIVE_INVALID(12),
+  /**
+   * <pre>
+   * The specified adgroup email creative was invalid for some reason.
+   * </pre>
+   *
+   * <code>EMAIL_CREATIVE_INVALID = 13;</code>
+   */
+  EMAIL_CREATIVE_INVALID(13),
+  /**
+   * <pre>
+   * The specified update was invalid.
+   * </pre>
+   *
+   * <code>UPDATE_INVALID = 14;</code>
+   */
+  UPDATE_INVALID(14),
   /**
    * <pre>
    * The server encountered some internal error.
@@ -81,12 +169,100 @@ public enum MarketingError
   public static final int LOCATION_INVALID_VALUE = 2;
   /**
    * <pre>
+   * The specified campaign ID was found to be invalid.
+   * </pre>
+   *
+   * <code>ID_INVALID = 3;</code>
+   */
+  public static final int ID_INVALID_VALUE = 3;
+  /**
+   * <pre>
+   * The specified campaign name was found to be invalid.
+   * </pre>
+   *
+   * <code>NAME_INVALID = 4;</code>
+   */
+  public static final int NAME_INVALID_VALUE = 4;
+  /**
+   * <pre>
+   * The specified campaign could not be located.
+   * </pre>
+   *
+   * <code>CAMPAIGN_NOT_FOUND = 5;</code>
+   */
+  public static final int CAMPAIGN_NOT_FOUND_VALUE = 5;
+  /**
+   * <pre>
    * The configured access permissions do not allow the requested operation.
    * </pre>
    *
-   * <code>ACCESS_DENIED = 3;</code>
+   * <code>ACCESS_DENIED = 6;</code>
    */
-  public static final int ACCESS_DENIED_VALUE = 3;
+  public static final int ACCESS_DENIED_VALUE = 6;
+  /**
+   * <pre>
+   * The specified campaign settings were invalid.
+   * </pre>
+   *
+   * <code>SETTINGS_INVALID = 7;</code>
+   */
+  public static final int SETTINGS_INVALID_VALUE = 7;
+  /**
+   * <pre>
+   * The specified channel was invalid.
+   * </pre>
+   *
+   * <code>CHANNEL_INVALID = 8;</code>
+   */
+  public static final int CHANNEL_INVALID_VALUE = 8;
+  /**
+   * <pre>
+   * The specified adgroup payload was found to be invalid.
+   * </pre>
+   *
+   * <code>ADGROUP_INVALID = 9;</code>
+   */
+  public static final int ADGROUP_INVALID_VALUE = 9;
+  /**
+   * <pre>
+   * Must provide settings payload to match the channel type specified.
+   * </pre>
+   *
+   * <code>SETTINGS_MISMATCH = 10;</code>
+   */
+  public static final int SETTINGS_MISMATCH_VALUE = 10;
+  /**
+   * <pre>
+   * The specified adgroup creative was invalid for some reason.
+   * </pre>
+   *
+   * <code>CREATIVE_INVALID = 11;</code>
+   */
+  public static final int CREATIVE_INVALID_VALUE = 11;
+  /**
+   * <pre>
+   * The specified adgroup SMS creative was invalid for some reason.
+   * </pre>
+   *
+   * <code>SMS_CREATIVE_INVALID = 12;</code>
+   */
+  public static final int SMS_CREATIVE_INVALID_VALUE = 12;
+  /**
+   * <pre>
+   * The specified adgroup email creative was invalid for some reason.
+   * </pre>
+   *
+   * <code>EMAIL_CREATIVE_INVALID = 13;</code>
+   */
+  public static final int EMAIL_CREATIVE_INVALID_VALUE = 13;
+  /**
+   * <pre>
+   * The specified update was invalid.
+   * </pre>
+   *
+   * <code>UPDATE_INVALID = 14;</code>
+   */
+  public static final int UPDATE_INVALID_VALUE = 14;
   /**
    * <pre>
    * The server encountered some internal error.
@@ -118,7 +294,18 @@ public enum MarketingError
       case 0: return NO_ERROR;
       case 1: return PARTNER_INVALID;
       case 2: return LOCATION_INVALID;
-      case 3: return ACCESS_DENIED;
+      case 3: return ID_INVALID;
+      case 4: return NAME_INVALID;
+      case 5: return CAMPAIGN_NOT_FOUND;
+      case 6: return ACCESS_DENIED;
+      case 7: return SETTINGS_INVALID;
+      case 8: return CHANNEL_INVALID;
+      case 9: return ADGROUP_INVALID;
+      case 10: return SETTINGS_MISMATCH;
+      case 11: return CREATIVE_INVALID;
+      case 12: return SMS_CREATIVE_INVALID;
+      case 13: return EMAIL_CREATIVE_INVALID;
+      case 14: return UPDATE_INVALID;
       case 99: return INTERNAL_ERROR;
       default: return null;
     }

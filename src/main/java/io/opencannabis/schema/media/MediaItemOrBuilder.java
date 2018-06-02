@@ -12,7 +12,7 @@ public interface MediaItemOrBuilder extends
    * Key uniquely identifying this media item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+   * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
    */
   boolean hasKey();
   /**
@@ -20,7 +20,7 @@ public interface MediaItemOrBuilder extends
    * Key uniquely identifying this media item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+   * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
    */
   io.opencannabis.schema.media.MediaKey getKey();
   /**
@@ -28,7 +28,7 @@ public interface MediaItemOrBuilder extends
    * Key uniquely identifying this media item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1 [(.gen_bq_schema.description) = "Key uniquely identifying this media item."];</code>
+   * <code>.opencannabis.media.MediaKey key = 1 [(.core.field) = { ... }</code>
    */
   io.opencannabis.schema.media.MediaKeyOrBuilder getKeyOrBuilder();
 
@@ -37,7 +37,7 @@ public interface MediaItemOrBuilder extends
    * Type of media this is describing.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+   * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
    */
   boolean hasType();
   /**
@@ -45,7 +45,7 @@ public interface MediaItemOrBuilder extends
    * Type of media this is describing.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+   * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
    */
   io.opencannabis.schema.media.MediaType getType();
   /**
@@ -53,7 +53,7 @@ public interface MediaItemOrBuilder extends
    * Type of media this is describing.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2 [(.gen_bq_schema.description) = "Type of media this is describing."];</code>
+   * <code>.opencannabis.media.MediaType type = 2 [(.core.field) = { ... }</code>
    */
   io.opencannabis.schema.media.MediaTypeOrBuilder getTypeOrBuilder();
 
@@ -62,7 +62,7 @@ public interface MediaItemOrBuilder extends
    * Friendly name for this media.
    * </pre>
    *
-   * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+   * <code>string name = 3 [(.core.field) = { ... }</code>
    */
   java.lang.String getName();
   /**
@@ -70,26 +70,44 @@ public interface MediaItemOrBuilder extends
    * Friendly name for this media.
    * </pre>
    *
-   * <code>string name = 3 [(.gen_bq_schema.description) = "Friendly name for this media."];</code>
+   * <code>string name = 3 [(.core.field) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
    * <pre>
-   * Absolute URI to this media.
+   * Origin URI to this media.
    * </pre>
    *
-   * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+   * <code>string uri = 4 [(.core.field) = { ... }</code>
    */
   java.lang.String getUri();
   /**
    * <pre>
-   * Absolute URI to this media.
+   * Origin URI to this media.
    * </pre>
    *
-   * <code>string uri = 4 [(.gen_bq_schema.description) = "Absolute URI to this media."];</code>
+   * <code>string uri = 4 [(.core.field) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getUriBytes();
+
+  /**
+   * <pre>
+   * Serving URI for this media, if it differs from the origin URI.
+   * </pre>
+   *
+   * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+   */
+  java.lang.String getServingUri();
+  /**
+   * <pre>
+   * Serving URI for this media, if it differs from the origin URI.
+   * </pre>
+   *
+   * <code>string serving_uri = 5 [(.core.field) = { ... }</code>
+   */
+  com.google.protobuf.ByteString
+      getServingUriBytes();
 }

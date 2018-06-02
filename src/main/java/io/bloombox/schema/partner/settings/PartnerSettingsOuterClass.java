@@ -78,17 +78,17 @@ public final class PartnerSettingsOuterClass {
       "alytics\030\001 \001(\010\022\014\n\004beta\030\002 \001(\010\022\017\n\007offline\030\003" +
       " \001(\010\022\014\n\004shop\030\004 \001(\010\022\017\n\007checkin\030\005 \001(\010\"0\n\016S" +
       "earchSettings\022\017\n\007enabled\030\001 \001(\010\022\r\n\005media\030" +
-      "\002 \001(\010\"\360\002\n\017PartnerSettings\022F\n\006alerts\030\001 \001(" +
+      "\002 \001(\010\"\363\002\n\017PartnerSettings\022F\n\006alerts\030\001 \001(" +
       "\01326.bloombox.schema.partner.settings.Par" +
       "tnerAlertSettings\022<\n\004beta\030\002 \001(\0132..bloomb" +
       "ox.schema.partner.settings.BetaSettings\022" +
       "A\n\010features\030\003 \001(\0132/.bloombox.schema.part" +
       "ner.settings.FeatureStatus\022@\n\006search\030\004 \001" +
       "(\01320.bloombox.schema.partner.settings.Se" +
-      "archSettings\022R\n\010partners\030\007 \001(\0132@.bloombo" +
-      "x.schema.partner.integrations.PartnerInt" +
-      "egrationSettingsB/\n#io.bloombox.schema.p" +
-      "artner.settingsH\001P\001\242\002\003BBSb\006proto3"
+      "archSettings\022U\n\013integration\030\007 \001(\0132@.bloo" +
+      "mbox.schema.partner.integrations.Partner" +
+      "IntegrationSettingsB/\n#io.bloombox.schem" +
+      "a.partner.settingsH\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -146,7 +146,7 @@ public final class PartnerSettingsOuterClass {
     internal_static_bloombox_schema_partner_settings_PartnerSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor,
-        new java.lang.String[] { "Alerts", "Beta", "Features", "Search", "Partners", });
+        new java.lang.String[] { "Alerts", "Beta", "Features", "Search", "Integration", });
     io.opencannabis.schema.contact.PhoneNumberOuterClass.getDescriptor();
     io.opencannabis.schema.contact.EmailAddressOuterClass.getDescriptor();
     io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor();
