@@ -132,4 +132,46 @@ public interface MenuSettingsOrBuilder extends
    * <code>repeated .opencannabis.products.menu.section.Section section = 5;</code>
    */
   int getSectionValue(int index);
+
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  java.util.List<io.opencannabis.schema.menu.section.Section> getAvailableSectionList();
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  int getAvailableSectionCount();
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  io.opencannabis.schema.menu.section.Section getAvailableSection(int index);
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  java.util.List<java.lang.Integer>
+  getAvailableSectionValueList();
+  /**
+   * <pre>
+   * Hint for other available sections. Included on a sectioned menu payload with only one section.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.section.Section available_section = 6;</code>
+   */
+  int getAvailableSectionValue(int index);
 }

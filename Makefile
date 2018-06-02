@@ -19,8 +19,8 @@
 
 BUILDMODE ?= maven
 TESTS ?= yes
-RELEASE_VERSION ?= 1.2
-CLIENT_VERSION ?= 1.2-SNAPSHOT
+RELEASE_VERSION ?= 1.3
+CLIENT_VERSION ?= 1.3-SNAPSHOT
 SERVICE_ARGS ?= -Dbloombox.shop.version=$(SHOP_VERSION) -Dbloombox.telemetry.version=$(TELEMETRY_VERSION)
 SCHEMA ?= schema/
 RELEASE_ARGS ?= -DperformRelease=true

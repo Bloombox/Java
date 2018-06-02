@@ -147,4 +147,13 @@ public interface PersonOrBuilder extends
    * <code>.opencannabis.temporal.Date date_of_birth = 5 [(.gen_bq_schema.description) = "Date of birth."];</code>
    */
   io.opencannabis.schema.temporal.DateOrBuilder getDateOfBirthOrBuilder();
+
+  /**
+   * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+   */
+  int getGenderValue();
+  /**
+   * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>
+   */
+  io.opencannabis.schema.person.Gender getGender();
 }

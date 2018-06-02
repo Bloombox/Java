@@ -97,6 +97,31 @@ public final class MenuServiceBeta1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -111,6 +136,26 @@ public final class MenuServiceBeta1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_Request_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -125,83 +170,147 @@ public final class MenuServiceBeta1 {
       "ase/ProductKey.proto\032\027search/SearchSpec." +
       "proto\032\030products/menu/Menu.proto\032\033product" +
       "s/menu/Section.proto\032\034services/ServiceSt" +
-      "atus.proto\032\034google/api/annotations.proto" +
-      "\032(protoc-gen-swagger/options/swagger.pro" +
-      "to\"V\n\004Ping\032\t\n\007Request\032C\n\010Response\0227\n\006sta" +
-      "tus\030\001 \001(\0162\'.bloombox.schema.services.Ser" +
-      "viceStatus\"\210\002\n\007GetMenu\032\255\001\n\007Request\022\r\n\005sc" +
-      "ope\030\001 \001(\t\022\014\n\004full\030\002 \001(\010\022\021\n\tkeys_only\030\003 \001" +
-      "(\010\022\020\n\010snapshot\030\004 \001(\t\022\023\n\013fingerprint\030\005 \001(" +
-      "\t\022<\n\007section\030\006 \001(\0162+.opencannabis.produc" +
-      "ts.menu.section.Section\022\r\n\005fresh\030\007 \001(\010\032M" +
-      "\n\010Response\0221\n\007catalog\030\001 \001(\0132 .opencannab" +
-      "is.products.menu.Menu\022\016\n\006cached\030\002 \001(\010\"\277\001" +
-      "\n\013GetFeatured\032i\n\007Request\022\r\n\005scope\030\001 \001(\t\022" +
-      "\021\n\tkeys_only\030\002 \001(\010\022<\n\007section\030\003 \001(\0162+.op" +
-      "encannabis.products.menu.section.Section" +
-      "\032E\n\010Response\0229\n\010featured\030\001 \003(\0132\'.opencan" +
-      "nabis.products.menu.MenuProduct\";\n\rProdu" +
-      "ctKeyset\022*\n\003key\030\001 \003(\0132\035.opencannabis.bas" +
-      "e.ProductKey\"y\n\nGetProduct\032%\n\007Request\022\r\n" +
-      "\005scope\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\032D\n\010Response\0228\n" +
-      "\007product\030\002 \003(\0132\'.opencannabis.products.m" +
-      "enu.MenuProduct\"\222\001\n\nSearchMenu\032=\n\007Reques" +
-      "t\0222\n\006search\030\001 \001(\0132\".bloombox.schema.sear" +
-      "ch.SearchSpec\032E\n\010Response\0229\n\010resulset\030\001 " +
-      "\001(\0132\'.bloombox.schema.search.SearchResul" +
-      "tset*\260\001\n\tMenuError\022\014\n\010NO_ERROR\020\000\022\023\n\017PART" +
-      "NER_INVALID\020\001\022\024\n\020LOCATION_INVALID\020\002\022\023\n\017S" +
-      "ECTION_INVALID\020\003\022\025\n\021SECTION_NOT_FOUND\020\004\022" +
-      "\022\n\016MENU_NOT_FOUND\020\005\022\022\n\016INTERNAL_ERROR\020\006\022" +
-      "\026\n\022SEARCH_UNAVAILABLE\020\0072\373\n\n\004Menu\022\304\002\n\010Ret" +
-      "rieve\0226.bloombox.schema.services.menu.v1" +
-      "beta1.GetMenu.Request\0327.bloombox.schema." +
-      "services.menu.v1beta1.GetMenu.Response\"\306" +
-      "\001\202\323\344\223\002\201\001\022</menu/v1beta1/{scope=partners/" +
-      "*/locations/*}/global:retrieveZA\022?/menu/" +
-      "v1beta1/{scope=partners/*/locations/*}/{" +
-      "section}:retrieve\222A;\022\rRetrieve Menu\032 Fet" +
-      "ch product catalog/menu data.*\010Retrieve\022" +
-      "\205\003\n\010Featured\022:.bloombox.schema.services." +
-      "menu.v1beta1.GetFeatured.Request\032;.bloom" +
-      "box.schema.services.menu.v1beta1.GetFeat" +
-      "ured.Response\"\377\001\202\323\344\223\002\223\001\022E/menu/v1beta1/{" +
-      "scope=partners/*/locations/*}/global/fea" +
-      "tured:retrieveZJ\022H/menu/v1beta1/{scope=p" +
-      "artners/*/locations/*}/{section}/feature" +
-      "d:retrieve\222Ab\022\021Featured Products\032CRetrie" +
-      "ve products marked for extra attention (" +
-      "\'featured\' products).*\010Featured\022\252\002\n\010Prod" +
-      "ucts\0229.bloombox.schema.services.menu.v1b" +
-      "eta1.GetProduct.Request\032:.bloombox.schem" +
-      "a.services.menu.v1beta1.GetProduct.Respo" +
-      "nse\"\246\001\202\323\344\223\002D\022B/menu/v1beta1/{scope=partn" +
-      "ers/*/locations/*}/products/{key}/detail" +
-      "\222AY\022\014Product Data\032?Retrieve payload data" +
-      " for one or more products, by product ke" +
-      "y.*\010Products\022\366\002\n\006Search\0229.bloombox.schem" +
-      "a.services.menu.v1beta1.SearchMenu.Reque" +
-      "st\032:.bloombox.schema.services.menu.v1bet" +
-      "a1.SearchMenu.Response\"\364\001\202\323\344\223\002\233\001\022P/menu/" +
-      "v1beta1/{search.options.scope=partners/*" +
-      "/locations/*}/search/{search.term}ZG\"B/m" +
-      "enu/v1beta1/{search.options.scope=partne" +
-      "rs/*/locations/*}/search:\001*\222AO\022\017Search P" +
-      "roducts\0324Perform a fulltext search over " +
-      "product catalog data.*\006SearchB\207\004\n(io.blo" +
-      "ombox.schema.services.menu.v1beta1H\001P\001\242\002" +
-      "\003BBS\222A\317\003\022g\n\010Menu API\032\031https://bloombox.i" +
-      "o/terms\"7\n\010Bloombox\022\023https://bloombox.io" +
-      "\032\026developers@bloombox.io2\007v1beta1\032\022api.b" +
-      "loombox.cloud*\001\0022\020application/json:\020appl" +
-      "ication/jsonZ\320\001\nd\n\013ApiKeyParam\022U\010\002\022JPara" +
-      "meter for identifying API key owned by t" +
-      "he invoking project or system.\032\003key \001\nh\n" +
-      "\014ApiKeyHeader\022X\010\002\022GHeader for identifyin" +
-      "g API key owned by the invoking project " +
-      "or system.\032\tX-API-Key \001b\021\n\017\n\013ApiKeyParam" +
-      "\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022" +
-      "\036https://apidocs.bloombox.cloudb\006proto3"
+      "atus.proto\032\033google/protobuf/empty.proto\032" +
+      "\034google/api/annotations.proto\032(protoc-ge" +
+      "n-swagger/options/swagger.proto\"V\n\004Ping\032" +
+      "\t\n\007Request\032C\n\010Response\0227\n\006status\030\001 \001(\0162\'" +
+      ".bloombox.schema.services.ServiceStatus\"" +
+      "\210\002\n\007GetMenu\032\255\001\n\007Request\022\r\n\005scope\030\001 \001(\t\022\014" +
+      "\n\004full\030\002 \001(\010\022\021\n\tkeys_only\030\003 \001(\010\022\020\n\010snaps" +
+      "hot\030\004 \001(\t\022\023\n\013fingerprint\030\005 \001(\t\022<\n\007sectio" +
+      "n\030\006 \001(\0162+.opencannabis.products.menu.sec" +
+      "tion.Section\022\r\n\005fresh\030\007 \001(\010\032M\n\010Response\022" +
+      "1\n\007catalog\030\001 \001(\0132 .opencannabis.products" +
+      ".menu.Menu\022\016\n\006cached\030\002 \001(\010\"\277\001\n\013GetFeatur" +
+      "ed\032i\n\007Request\022\r\n\005scope\030\001 \001(\t\022\021\n\tkeys_onl" +
+      "y\030\002 \001(\010\022<\n\007section\030\003 \001(\0162+.opencannabis." +
+      "products.menu.section.Section\032E\n\010Respons" +
+      "e\0229\n\010featured\030\001 \003(\0132\'.opencannabis.produ" +
+      "cts.menu.MenuProduct\";\n\rProductKeyset\022*\n" +
+      "\003key\030\001 \003(\0132\035.opencannabis.base.ProductKe" +
+      "y\"\337\001\n\nGetProduct\032h\n\007Request\022\r\n\005scope\030\001 \001" +
+      "(\t\022*\n\003key\030\002 \001(\0132\035.opencannabis.base.Prod" +
+      "uctKey\022\r\n\005fresh\030\003 \001(\010\022\023\n\013fingerprint\030\004 \001" +
+      "(\t\032g\n\010Response\0228\n\007product\030\001 \003(\0132\'.openca" +
+      "nnabis.products.menu.MenuProduct\022\016\n\006cach" +
+      "ed\030\002 \001(\010\022\021\n\tunchanged\030\003 \001(\010\"\233\001\n\rCreatePr" +
+      "oduct\032R\n\007Request\022\r\n\005scope\030\001 \001(\t\0228\n\007produ" +
+      "ct\030\002 \001(\0132\'.opencannabis.products.menu.Me" +
+      "nuProduct\0326\n\010Response\022*\n\003key\030\001 \001(\0132\035.ope" +
+      "ncannabis.base.ProductKey\"c\n\rUpdateProdu" +
+      "ct\032R\n\007Request\022\r\n\005scope\030\001 \001(\t\0228\n\007product\030" +
+      "\002 \001(\0132\'.opencannabis.products.menu.MenuP" +
+      "roduct\"\222\001\n\nSearchMenu\032=\n\007Request\0222\n\006sear" +
+      "ch\030\001 \001(\0132\".bloombox.schema.search.Search" +
+      "Spec\032E\n\010Response\0229\n\010resulset\030\001 \001(\0132\'.blo" +
+      "ombox.schema.search.SearchResultset\"T\n\014P" +
+      "roductStock\032D\n\007Request\022\r\n\005scope\030\001 \001(\t\022*\n" +
+      "\003key\030\002 \001(\0132\035.opencannabis.base.ProductKe" +
+      "y\"U\n\rDeleteProduct\032D\n\007Request\022\r\n\005scope\030\001" +
+      " \001(\t\022*\n\003key\030\002 \001(\0132\035.opencannabis.base.Pr" +
+      "oductKey*\215\002\n\tMenuError\022\014\n\010NO_ERROR\020\000\022\023\n\017" +
+      "PARTNER_INVALID\020\001\022\024\n\020LOCATION_INVALID\020\002\022" +
+      "\023\n\017SECTION_INVALID\020\003\022\025\n\021SECTION_NOT_FOUN" +
+      "D\020\004\022\022\n\016MENU_NOT_FOUND\020\005\022\026\n\022SEARCH_UNAVAI" +
+      "LABLE\020\006\022\025\n\021PRODUCT_NOT_FOUND\020\007\022\021\n\rACCESS" +
+      "_DENIED\020\010\022\017\n\013KEY_INVALID\020\t\022\022\n\016UPDATE_INV" +
+      "ALID\020\n\022\014\n\010CONFLICT\020\013\022\022\n\016INTERNAL_ERROR\020c" +
+      "2\320\031\n\004Menu\022\200\002\n\010Retrieve\0226.bloombox.schema" +
+      ".services.menu.v1beta1.GetMenu.Request\0327" +
+      ".bloombox.schema.services.menu.v1beta1.G" +
+      "etMenu.Response\"\202\001\202\323\344\223\002>\022</menu/v1beta1/" +
+      "{scope=partners/*/locations/*}/global:re" +
+      "trieve\222A;\022\rRetrieve Menu\032 Fetch product " +
+      "catalog/menu data.*\010Retrieve\022\375\001\n\007Section" +
+      "\0226.bloombox.schema.services.menu.v1beta1" +
+      ".GetMenu.Request\0327.bloombox.schema.servi" +
+      "ces.menu.v1beta1.GetMenu.Response\"\200\001\202\323\344\223" +
+      "\002A\022?/menu/v1beta1/{scope=partners/*/loca" +
+      "tions/*}/{section}/retrieve\222A6\022\016Sectione" +
+      "d Menu\032\033Fetch menu data by section.*\007Sec" +
+      "tion\022\205\003\n\010Featured\022:.bloombox.schema.serv" +
+      "ices.menu.v1beta1.GetFeatured.Request\032;." +
+      "bloombox.schema.services.menu.v1beta1.Ge" +
+      "tFeatured.Response\"\377\001\202\323\344\223\002\223\001\022E/menu/v1be" +
+      "ta1/{scope=partners/*/locations/*}/globa" +
+      "l/featured:retrieveZJ\022H/menu/v1beta1/{sc" +
+      "ope=partners/*/locations/*}/{section}/fe" +
+      "atured:retrieve\222Ab\022\021Featured Products\032CR" +
+      "etrieve products marked for extra attent" +
+      "ion (\'featured\' products).*\010Featured\022\270\002\n" +
+      "\010Products\0229.bloombox.schema.services.men" +
+      "u.v1beta1.GetProduct.Request\032:.bloombox." +
+      "schema.services.menu.v1beta1.GetProduct." +
+      "Response\"\264\001\202\323\344\223\002R\022P/menu/v1beta1/{scope=" +
+      "partners/*/locations/*}/products/{key.ty" +
+      "pe}/{key.id}/detail\222AY\022\014Product Data\032?Re" +
+      "trieve payload data for one or more prod" +
+      "ucts, by product key.*\010Products\022\366\002\n\006Sear" +
+      "ch\0229.bloombox.schema.services.menu.v1bet" +
+      "a1.SearchMenu.Request\032:.bloombox.schema." +
+      "services.menu.v1beta1.SearchMenu.Respons" +
+      "e\"\364\001\202\323\344\223\002\233\001\022P/menu/v1beta1/{search.optio" +
+      "ns.scope=partners/*/locations/*}/search/" +
+      "{search.term}ZG\"B/menu/v1beta1/{search.o" +
+      "ptions.scope=partners/*/locations/*}/sea" +
+      "rch:\001*\222AO\022\017Search Products\0324Perform a fu" +
+      "lltext search over product catalog data." +
+      "*\006Search\022\236\002\n\006Create\022<.bloombox.schema.se" +
+      "rvices.menu.v1beta1.CreateProduct.Reques" +
+      "t\032=.bloombox.schema.services.menu.v1beta" +
+      "1.CreateProduct.Response\"\226\001\202\323\344\223\002J\"?/menu" +
+      "/v1beta1/{scope=partners/*/locations/*}/" +
+      "{product.key.type}:\007product\222AC\022\016Create P" +
+      "roduct\032)Create a new product record from" +
+      " scratch.*\006Create\022\217\002\n\006Update\022<.bloombox." +
+      "schema.services.menu.v1beta1.UpdateProdu" +
+      "ct.Request\032\026.google.protobuf.Empty\"\256\001\202\323\344" +
+      "\223\002[\032P/menu/v1beta1/{scope=partners/*/loc" +
+      "ations/*}/{product.key.type}/{product.ke" +
+      "y.id}:\007product\222AJ\022\016Update Product\0320Updat" +
+      "e an existing product record with new da" +
+      "ta.*\006Update\022\200\002\n\006Remove\022<.bloombox.schema" +
+      ".services.menu.v1beta1.DeleteProduct.Req" +
+      "uest\032\026.google.protobuf.Empty\"\237\001\202\323\344\223\002B*@/" +
+      "menu/v1beta1/{scope=partners/*/locations" +
+      "/*}/{key.type}/{key.id}\222AT\022\016Delete Produ" +
+      "ct\032:Mark a product as deleted. This is a" +
+      " recoverable deletion.*\006Delete\022\201\002\n\rProdu" +
+      "ctStatus\022;.bloombox.schema.services.menu" +
+      ".v1beta1.ProductStock.Request\032\026.google.p" +
+      "rotobuf.Empty\"\232\001\202\323\344\223\002I\022G/menu/v1beta1/{s" +
+      "cope=partners/*/locations/*}/{key.type}/" +
+      "{key.id}/status\222AH\022\016Product Status\032.Retr" +
+      "ieve stock status for a given product ke" +
+      "y.*\006Status\022\235\002\n\007InStock\022;.bloombox.schema" +
+      ".services.menu.v1beta1.ProductStock.Requ" +
+      "est\032\026.google.protobuf.Empty\"\274\001\202\323\344\223\002R\"P/m" +
+      "enu/v1beta1/{scope=partners/*/locations/" +
+      "*}/{key.type}/{key.id}/status/in-stock\222A" +
+      "a\022\025Mark Product In-Stock\032?Mark a product" +
+      " as in-stock, or, currently offered for " +
+      "purchase.*\007InStock\022\256\002\n\nOutOfStock\022;.bloo" +
+      "mbox.schema.services.menu.v1beta1.Produc" +
+      "tStock.Request\032\026.google.protobuf.Empty\"\312" +
+      "\001\202\323\344\223\002V\"T/menu/v1beta1/{scope=partners/*" +
+      "/locations/*}/{key.type}/{key.id}/status" +
+      "/out-of-stock\222Ak\022\031Mark Product Out-of-St" +
+      "ock\032BMark a product as out-of-stock, or " +
+      "no longer offered for purchase.*\nOutOfSt" +
+      "ockB\207\004\n(io.bloombox.schema.services.menu" +
+      ".v1beta1H\001P\001\242\002\003BBS\222A\317\003\022g\n\010Menu API\032\031http" +
+      "s://bloombox.io/terms\"7\n\010Bloombox\022\023https" +
+      "://bloombox.io\032\026developers@bloombox.io2\007" +
+      "v1beta1\032\022api.bloombox.cloud*\001\0022\020applicat" +
+      "ion/json:\020application/jsonZ\320\001\nd\n\013ApiKeyP" +
+      "aram\022U\010\002\022JParameter for identifying API " +
+      "key owned by the invoking project or sys" +
+      "tem.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader " +
+      "for identifying API key owned by the inv" +
+      "oking project or system.\032\tX-API-Key \001b\021\n" +
+      "\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\r" +
+      "Bloombox APIs\022\036https://apidocs.bloombox." +
+      "cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -219,6 +328,7 @@ public final class MenuServiceBeta1 {
           io.opencannabis.schema.menu.MenuOuterClass.getDescriptor(),
           io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
         }, assigner);
@@ -293,15 +403,45 @@ public final class MenuServiceBeta1 {
     internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Request_descriptor,
-        new java.lang.String[] { "Scope", "Key", });
+        new java.lang.String[] { "Scope", "Key", "Fresh", "Fingerprint", });
     internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_descriptor =
       internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_GetProduct_Response_descriptor,
-        new java.lang.String[] { "Product", });
-    internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_descriptor =
+        new java.lang.String[] { "Product", "Cached", "Unchanged", });
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Request_descriptor =
+      internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Request_descriptor,
+        new java.lang.String[] { "Scope", "Product", });
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Response_descriptor =
+      internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_CreateProduct_Response_descriptor,
+        new java.lang.String[] { "Key", });
+    internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_Request_descriptor =
+      internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_UpdateProduct_Request_descriptor,
+        new java.lang.String[] { "Scope", "Product", });
+    internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_descriptor,
@@ -318,6 +458,30 @@ public final class MenuServiceBeta1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_menu_v1beta1_SearchMenu_Response_descriptor,
         new java.lang.String[] { "Resulset", });
+    internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_Request_descriptor =
+      internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_ProductStock_Request_descriptor,
+        new java.lang.String[] { "Scope", "Key", });
+    internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_Request_descriptor =
+      internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_menu_v1beta1_DeleteProduct_Request_descriptor,
+        new java.lang.String[] { "Scope", "Key", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -330,6 +494,7 @@ public final class MenuServiceBeta1 {
     io.opencannabis.schema.menu.MenuOuterClass.getDescriptor();
     io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();
     io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor();
   }
