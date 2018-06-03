@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.User profile = 1;</code>
      */
-    io.bloombox.schema.identity.User getProfile();
+    io.bloombox.schema.identity.UserOuterClass.User getProfile();
     /**
      * <pre>
      * User's profile object.
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.User profile = 1;</code>
      */
-    io.bloombox.schema.identity.UserOrBuilder getProfileOrBuilder();
+    io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getProfileOrBuilder();
   }
   /**
    * <pre>
@@ -742,11 +742,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.bloombox.schema.identity.User.Builder subBuilder = null;
+              io.bloombox.schema.identity.UserOuterClass.User.Builder subBuilder = null;
               if (profile_ != null) {
                 subBuilder = profile_.toBuilder();
               }
-              profile_ = input.readMessage(io.bloombox.schema.identity.User.parser(), extensionRegistry);
+              profile_ = input.readMessage(io.bloombox.schema.identity.UserOuterClass.User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(profile_);
                 profile_ = subBuilder.buildPartial();
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PROFILE_FIELD_NUMBER = 1;
-    private io.bloombox.schema.identity.User profile_;
+    private io.bloombox.schema.identity.UserOuterClass.User profile_;
     /**
      * <pre>
      * User's profile object.
@@ -797,8 +797,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.User profile = 1;</code>
      */
-    public io.bloombox.schema.identity.User getProfile() {
-      return profile_ == null ? io.bloombox.schema.identity.User.getDefaultInstance() : profile_;
+    public io.bloombox.schema.identity.UserOuterClass.User getProfile() {
+      return profile_ == null ? io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : profile_;
     }
     /**
      * <pre>
@@ -807,7 +807,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.User profile = 1;</code>
      */
-    public io.bloombox.schema.identity.UserOrBuilder getProfileOrBuilder() {
+    public io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getProfileOrBuilder() {
       return getProfile();
     }
 
@@ -1111,9 +1111,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.identity.User profile_ = null;
+      private io.bloombox.schema.identity.UserOuterClass.User profile_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.User, io.bloombox.schema.identity.User.Builder, io.bloombox.schema.identity.UserOrBuilder> profileBuilder_;
+          io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder> profileBuilder_;
       /**
        * <pre>
        * User's profile object.
@@ -1131,9 +1131,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.User profile = 1;</code>
        */
-      public io.bloombox.schema.identity.User getProfile() {
+      public io.bloombox.schema.identity.UserOuterClass.User getProfile() {
         if (profileBuilder_ == null) {
-          return profile_ == null ? io.bloombox.schema.identity.User.getDefaultInstance() : profile_;
+          return profile_ == null ? io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : profile_;
         } else {
           return profileBuilder_.getMessage();
         }
@@ -1145,7 +1145,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.User profile = 1;</code>
        */
-      public Builder setProfile(io.bloombox.schema.identity.User value) {
+      public Builder setProfile(io.bloombox.schema.identity.UserOuterClass.User value) {
         if (profileBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1166,7 +1166,7 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.identity.User profile = 1;</code>
        */
       public Builder setProfile(
-          io.bloombox.schema.identity.User.Builder builderForValue) {
+          io.bloombox.schema.identity.UserOuterClass.User.Builder builderForValue) {
         if (profileBuilder_ == null) {
           profile_ = builderForValue.build();
           onChanged();
@@ -1183,11 +1183,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.User profile = 1;</code>
        */
-      public Builder mergeProfile(io.bloombox.schema.identity.User value) {
+      public Builder mergeProfile(io.bloombox.schema.identity.UserOuterClass.User value) {
         if (profileBuilder_ == null) {
           if (profile_ != null) {
             profile_ =
-              io.bloombox.schema.identity.User.newBuilder(profile_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.UserOuterClass.User.newBuilder(profile_).mergeFrom(value).buildPartial();
           } else {
             profile_ = value;
           }
@@ -1223,7 +1223,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.User profile = 1;</code>
        */
-      public io.bloombox.schema.identity.User.Builder getProfileBuilder() {
+      public io.bloombox.schema.identity.UserOuterClass.User.Builder getProfileBuilder() {
         
         onChanged();
         return getProfileFieldBuilder().getBuilder();
@@ -1235,12 +1235,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.User profile = 1;</code>
        */
-      public io.bloombox.schema.identity.UserOrBuilder getProfileOrBuilder() {
+      public io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getProfileOrBuilder() {
         if (profileBuilder_ != null) {
           return profileBuilder_.getMessageOrBuilder();
         } else {
           return profile_ == null ?
-              io.bloombox.schema.identity.User.getDefaultInstance() : profile_;
+              io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : profile_;
         }
       }
       /**
@@ -1251,11 +1251,11 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.identity.User profile = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.User, io.bloombox.schema.identity.User.Builder, io.bloombox.schema.identity.UserOrBuilder> 
+          io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder> 
           getProfileFieldBuilder() {
         if (profileBuilder_ == null) {
           profileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.User, io.bloombox.schema.identity.User.Builder, io.bloombox.schema.identity.UserOrBuilder>(
+              io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder>(
                   getProfile(),
                   getParentForChildren(),
                   isClean());

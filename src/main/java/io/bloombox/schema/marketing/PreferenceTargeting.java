@@ -70,11 +70,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 10: {
-            io.bloombox.schema.identity.MenuPreferences.Builder subBuilder = null;
+            io.bloombox.schema.identity.UserOuterClass.MenuPreferences.Builder subBuilder = null;
             if (menu_ != null) {
               subBuilder = menu_.toBuilder();
             }
-            menu_ = input.readMessage(io.bloombox.schema.identity.MenuPreferences.parser(), extensionRegistry);
+            menu_ = input.readMessage(io.bloombox.schema.identity.UserOuterClass.MenuPreferences.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(menu_);
               menu_ = subBuilder.buildPartial();
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MENU_FIELD_NUMBER = 1;
-  private io.bloombox.schema.identity.MenuPreferences menu_;
+  private io.bloombox.schema.identity.UserOuterClass.MenuPreferences menu_;
   /**
    * <pre>
    * Menu preferences, stated by a user, to target by a given campaign.
@@ -125,8 +125,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
    */
-  public io.bloombox.schema.identity.MenuPreferences getMenu() {
-    return menu_ == null ? io.bloombox.schema.identity.MenuPreferences.getDefaultInstance() : menu_;
+  public io.bloombox.schema.identity.UserOuterClass.MenuPreferences getMenu() {
+    return menu_ == null ? io.bloombox.schema.identity.UserOuterClass.MenuPreferences.getDefaultInstance() : menu_;
   }
   /**
    * <pre>
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
    */
-  public io.bloombox.schema.identity.MenuPreferencesOrBuilder getMenuOrBuilder() {
+  public io.bloombox.schema.identity.UserOuterClass.MenuPreferencesOrBuilder getMenuOrBuilder() {
     return getMenu();
   }
 
@@ -439,9 +439,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.identity.MenuPreferences menu_ = null;
+    private io.bloombox.schema.identity.UserOuterClass.MenuPreferences menu_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.identity.MenuPreferences, io.bloombox.schema.identity.MenuPreferences.Builder, io.bloombox.schema.identity.MenuPreferencesOrBuilder> menuBuilder_;
+        io.bloombox.schema.identity.UserOuterClass.MenuPreferences, io.bloombox.schema.identity.UserOuterClass.MenuPreferences.Builder, io.bloombox.schema.identity.UserOuterClass.MenuPreferencesOrBuilder> menuBuilder_;
     /**
      * <pre>
      * Menu preferences, stated by a user, to target by a given campaign.
@@ -459,9 +459,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
      */
-    public io.bloombox.schema.identity.MenuPreferences getMenu() {
+    public io.bloombox.schema.identity.UserOuterClass.MenuPreferences getMenu() {
       if (menuBuilder_ == null) {
-        return menu_ == null ? io.bloombox.schema.identity.MenuPreferences.getDefaultInstance() : menu_;
+        return menu_ == null ? io.bloombox.schema.identity.UserOuterClass.MenuPreferences.getDefaultInstance() : menu_;
       } else {
         return menuBuilder_.getMessage();
       }
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
      */
-    public Builder setMenu(io.bloombox.schema.identity.MenuPreferences value) {
+    public Builder setMenu(io.bloombox.schema.identity.UserOuterClass.MenuPreferences value) {
       if (menuBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -494,7 +494,7 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
      */
     public Builder setMenu(
-        io.bloombox.schema.identity.MenuPreferences.Builder builderForValue) {
+        io.bloombox.schema.identity.UserOuterClass.MenuPreferences.Builder builderForValue) {
       if (menuBuilder_ == null) {
         menu_ = builderForValue.build();
         onChanged();
@@ -511,11 +511,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
      */
-    public Builder mergeMenu(io.bloombox.schema.identity.MenuPreferences value) {
+    public Builder mergeMenu(io.bloombox.schema.identity.UserOuterClass.MenuPreferences value) {
       if (menuBuilder_ == null) {
         if (menu_ != null) {
           menu_ =
-            io.bloombox.schema.identity.MenuPreferences.newBuilder(menu_).mergeFrom(value).buildPartial();
+            io.bloombox.schema.identity.UserOuterClass.MenuPreferences.newBuilder(menu_).mergeFrom(value).buildPartial();
         } else {
           menu_ = value;
         }
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
      */
-    public io.bloombox.schema.identity.MenuPreferences.Builder getMenuBuilder() {
+    public io.bloombox.schema.identity.UserOuterClass.MenuPreferences.Builder getMenuBuilder() {
       
       onChanged();
       return getMenuFieldBuilder().getBuilder();
@@ -563,12 +563,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
      */
-    public io.bloombox.schema.identity.MenuPreferencesOrBuilder getMenuOrBuilder() {
+    public io.bloombox.schema.identity.UserOuterClass.MenuPreferencesOrBuilder getMenuOrBuilder() {
       if (menuBuilder_ != null) {
         return menuBuilder_.getMessageOrBuilder();
       } else {
         return menu_ == null ?
-            io.bloombox.schema.identity.MenuPreferences.getDefaultInstance() : menu_;
+            io.bloombox.schema.identity.UserOuterClass.MenuPreferences.getDefaultInstance() : menu_;
       }
     }
     /**
@@ -579,11 +579,11 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.identity.MenuPreferences, io.bloombox.schema.identity.MenuPreferences.Builder, io.bloombox.schema.identity.MenuPreferencesOrBuilder> 
+        io.bloombox.schema.identity.UserOuterClass.MenuPreferences, io.bloombox.schema.identity.UserOuterClass.MenuPreferences.Builder, io.bloombox.schema.identity.UserOuterClass.MenuPreferencesOrBuilder> 
         getMenuFieldBuilder() {
       if (menuBuilder_ == null) {
         menuBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.identity.MenuPreferences, io.bloombox.schema.identity.MenuPreferences.Builder, io.bloombox.schema.identity.MenuPreferencesOrBuilder>(
+            io.bloombox.schema.identity.UserOuterClass.MenuPreferences, io.bloombox.schema.identity.UserOuterClass.MenuPreferences.Builder, io.bloombox.schema.identity.UserOuterClass.MenuPreferencesOrBuilder>(
                 getMenu(),
                 getParentForChildren(),
                 isClean());
