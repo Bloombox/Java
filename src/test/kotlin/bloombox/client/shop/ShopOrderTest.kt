@@ -17,28 +17,23 @@
 
 package bloombox.client.shop
 
-import bloombox.client.ClientException
 import bloombox.client.services.shop.ShopClient
 import bloombox.client.test.ClientRPCTest
-import io.opencannabis.schema.base.ProductKey
-import io.opencannabis.schema.base.ProductKind
+import io.opencannabis.schema.base.BaseProductKey.ProductKey
+import io.opencannabis.schema.base.BaseProductKind.ProductKind
 import io.opencannabis.schema.commerce.CommercialOrder
 import io.opencannabis.schema.commerce.OrderCustomer
 import io.opencannabis.schema.commerce.OrderDelivery
 import io.opencannabis.schema.commerce.OrderItem
-import io.opencannabis.schema.contact.ContactInfo
-import io.opencannabis.schema.contact.EmailAddress
-import io.opencannabis.schema.contact.PhoneNumber
+import io.opencannabis.schema.contact.GenericContact.ContactInfo
+import io.opencannabis.schema.contact.ContactEmail.EmailAddress
+import io.opencannabis.schema.contact.ContactPhone.PhoneNumber
 import io.opencannabis.schema.geo.Address
 import io.opencannabis.schema.person.Name
 import io.opencannabis.schema.person.Person
-import io.opencannabis.schema.temporal.Instant
+import io.opencannabis.schema.temporal.TemporalInstant.Instant
 import io.bloombox.schema.services.shop.v1.SubmitOrder
 import io.opencannabis.schema.product.struct.PricingWeightTier
-import java.util.concurrent.TimeUnit
-import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
-import kotlin.test.assertTrue
 import org.junit.Test as test
 
 

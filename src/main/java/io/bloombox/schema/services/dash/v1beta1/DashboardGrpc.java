@@ -1,20 +1,3 @@
-/*
- * Copyright 2018, Bloombox, LLC. All rights reserved.
- *
- * Source and object computer code contained herein is the private intellectual
- * property of Bloombox, a California Limited Liability Corporation. Use of this
- * code in source form requires permission in writing before use or the
- * assembly, distribution, or publishing of derivative works, for commercial
- * purposes or any other purpose, from a duly authorized officer of Momentum
- * Ideas Co.
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package io.bloombox.schema.services.dash.v1beta1;
 
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
@@ -48,6 +31,42 @@ public final class DashboardGrpc {
   public static final String SERVICE_NAME = "bloombox.schema.services.dash.v1beta1.Dashboard";
 
   // Static method descriptors that strictly reflect the proto.
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.dash.v1beta1.GetPartner.Request,
+      io.bloombox.schema.services.dash.v1beta1.GetPartner.Response> METHOD_PARTNER =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.dash.v1beta1.GetPartner.Request, io.bloombox.schema.services.dash.v1beta1.GetPartner.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.dash.v1beta1.Dashboard", "Partner"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.GetPartner.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.GetPartner.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.dash.v1beta1.ListLocations.Request,
+      io.bloombox.schema.services.dash.v1beta1.ListLocations.Response> METHOD_LOCATIONS =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.dash.v1beta1.ListLocations.Request, io.bloombox.schema.services.dash.v1beta1.ListLocations.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.dash.v1beta1.Dashboard", "Locations"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.ListLocations.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.ListLocations.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.dash.v1beta1.GetLocation.Request,
+      io.bloombox.schema.services.dash.v1beta1.GetLocation.Response> METHOD_LOCATION =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.dash.v1beta1.GetLocation.Request, io.bloombox.schema.services.dash.v1beta1.GetLocation.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.dash.v1beta1.Dashboard", "Location"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.GetLocation.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.GetLocation.Response.getDefaultInstance()))
+          .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request,
       io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response> METHOD_PARTNER_SETTINGS =
@@ -166,6 +185,36 @@ public final class DashboardGrpc {
 
     /**
      * <pre>
+     * Retrieve an individual partner record.
+     * </pre>
+     */
+    public void partner(io.bloombox.schema.services.dash.v1beta1.GetPartner.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.GetPartner.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_PARTNER, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve a list of location records for a given partner record.
+     * </pre>
+     */
+    public void locations(io.bloombox.schema.services.dash.v1beta1.ListLocations.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.ListLocations.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_LOCATIONS, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual partner location record.
+     * </pre>
+     */
+    public void location(io.bloombox.schema.services.dash.v1beta1.GetLocation.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.GetLocation.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_LOCATION, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Retrieve partner-level settings from the Dashboard.
      * </pre>
      */
@@ -236,6 +285,27 @@ public final class DashboardGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            METHOD_PARTNER,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.dash.v1beta1.GetPartner.Request,
+                io.bloombox.schema.services.dash.v1beta1.GetPartner.Response>(
+                  this, METHODID_PARTNER)))
+          .addMethod(
+            METHOD_LOCATIONS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.dash.v1beta1.ListLocations.Request,
+                io.bloombox.schema.services.dash.v1beta1.ListLocations.Response>(
+                  this, METHODID_LOCATIONS)))
+          .addMethod(
+            METHOD_LOCATION,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.dash.v1beta1.GetLocation.Request,
+                io.bloombox.schema.services.dash.v1beta1.GetLocation.Response>(
+                  this, METHODID_LOCATION)))
           .addMethod(
             METHOD_PARTNER_SETTINGS,
             asyncUnaryCall(
@@ -309,6 +379,39 @@ public final class DashboardGrpc {
     protected DashboardStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new DashboardStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual partner record.
+     * </pre>
+     */
+    public void partner(io.bloombox.schema.services.dash.v1beta1.GetPartner.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.GetPartner.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_PARTNER, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve a list of location records for a given partner record.
+     * </pre>
+     */
+    public void locations(io.bloombox.schema.services.dash.v1beta1.ListLocations.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.ListLocations.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_LOCATIONS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual partner location record.
+     * </pre>
+     */
+    public void location(io.bloombox.schema.services.dash.v1beta1.GetLocation.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.GetLocation.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_LOCATION, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -413,6 +516,36 @@ public final class DashboardGrpc {
 
     /**
      * <pre>
+     * Retrieve an individual partner record.
+     * </pre>
+     */
+    public io.bloombox.schema.services.dash.v1beta1.GetPartner.Response partner(io.bloombox.schema.services.dash.v1beta1.GetPartner.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_PARTNER, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve a list of location records for a given partner record.
+     * </pre>
+     */
+    public io.bloombox.schema.services.dash.v1beta1.ListLocations.Response locations(io.bloombox.schema.services.dash.v1beta1.ListLocations.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_LOCATIONS, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual partner location record.
+     * </pre>
+     */
+    public io.bloombox.schema.services.dash.v1beta1.GetLocation.Response location(io.bloombox.schema.services.dash.v1beta1.GetLocation.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_LOCATION, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Retrieve partner-level settings from the Dashboard.
      * </pre>
      */
@@ -506,6 +639,39 @@ public final class DashboardGrpc {
 
     /**
      * <pre>
+     * Retrieve an individual partner record.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.dash.v1beta1.GetPartner.Response> partner(
+        io.bloombox.schema.services.dash.v1beta1.GetPartner.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_PARTNER, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve a list of location records for a given partner record.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.dash.v1beta1.ListLocations.Response> locations(
+        io.bloombox.schema.services.dash.v1beta1.ListLocations.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_LOCATIONS, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual partner location record.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.dash.v1beta1.GetLocation.Response> location(
+        io.bloombox.schema.services.dash.v1beta1.GetLocation.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_LOCATION, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Retrieve partner-level settings from the Dashboard.
      * </pre>
      */
@@ -582,13 +748,16 @@ public final class DashboardGrpc {
     }
   }
 
-  private static final int METHODID_PARTNER_SETTINGS = 0;
-  private static final int METHODID_PARTNER_SETTINGS_UPDATE = 1;
-  private static final int METHODID_LOCATION_SETTINGS = 2;
-  private static final int METHODID_LOCATION_SETTINGS_UPDATE = 3;
-  private static final int METHODID_INTEGRATION_VALIDATE = 4;
-  private static final int METHODID_INTEGRATION_TEST = 5;
-  private static final int METHODID_INTEGRATION_TRIGGER = 6;
+  private static final int METHODID_PARTNER = 0;
+  private static final int METHODID_LOCATIONS = 1;
+  private static final int METHODID_LOCATION = 2;
+  private static final int METHODID_PARTNER_SETTINGS = 3;
+  private static final int METHODID_PARTNER_SETTINGS_UPDATE = 4;
+  private static final int METHODID_LOCATION_SETTINGS = 5;
+  private static final int METHODID_LOCATION_SETTINGS_UPDATE = 6;
+  private static final int METHODID_INTEGRATION_VALIDATE = 7;
+  private static final int METHODID_INTEGRATION_TEST = 8;
+  private static final int METHODID_INTEGRATION_TRIGGER = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -607,6 +776,18 @@ public final class DashboardGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_PARTNER:
+          serviceImpl.partner((io.bloombox.schema.services.dash.v1beta1.GetPartner.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.GetPartner.Response>) responseObserver);
+          break;
+        case METHODID_LOCATIONS:
+          serviceImpl.locations((io.bloombox.schema.services.dash.v1beta1.ListLocations.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.ListLocations.Response>) responseObserver);
+          break;
+        case METHODID_LOCATION:
+          serviceImpl.location((io.bloombox.schema.services.dash.v1beta1.GetLocation.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.GetLocation.Response>) responseObserver);
+          break;
         case METHODID_PARTNER_SETTINGS:
           serviceImpl.partnerSettings((io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response>) responseObserver);
@@ -668,6 +849,9 @@ public final class DashboardGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DashboardDescriptorSupplier())
+              .addMethod(METHOD_PARTNER)
+              .addMethod(METHOD_LOCATIONS)
+              .addMethod(METHOD_LOCATION)
               .addMethod(METHOD_PARTNER_SETTINGS)
               .addMethod(METHOD_PARTNER_SETTINGS_UPDATE)
               .addMethod(METHOD_LOCATION_SETTINGS)
