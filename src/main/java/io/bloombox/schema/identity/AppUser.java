@@ -1818,7 +1818,7 @@ public final class AppUser {
      * Use {@link #getMediaMap()} instead.
      */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem>
+    java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>
     getMedia();
     /**
      * <pre>
@@ -1827,7 +1827,7 @@ public final class AppUser {
      *
      * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
-    java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem>
+    java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>
     getMediaMap();
     /**
      * <pre>
@@ -1837,9 +1837,9 @@ public final class AppUser {
      * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
-    io.opencannabis.schema.media.MediaItem getMediaOrDefault(
+    io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaOrDefault(
         java.lang.String key,
-        io.opencannabis.schema.media.MediaItem defaultValue);
+        io.opencannabis.schema.media.AttachedMedia.MediaItem defaultValue);
     /**
      * <pre>
      * Media associated with this user.
@@ -1848,7 +1848,7 @@ public final class AppUser {
      * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
-    io.opencannabis.schema.media.MediaItem getMediaOrThrow(
+    io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaOrThrow(
         java.lang.String key);
 
     /**
@@ -2049,7 +2049,7 @@ public final class AppUser {
                     MediaDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000100;
               }
-              com.google.protobuf.MapEntry<java.lang.String, io.opencannabis.schema.media.MediaItem>
+              com.google.protobuf.MapEntry<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>
               media__ = input.readMessage(
                   MediaDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               media_.getMutableMap().put(
@@ -2505,18 +2505,18 @@ public final class AppUser {
     public static final int MEDIA_FIELD_NUMBER = 41;
     private static final class MediaDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
-          java.lang.String, io.opencannabis.schema.media.MediaItem> defaultEntry =
+          java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> defaultEntry =
               com.google.protobuf.MapEntry
-              .<java.lang.String, io.opencannabis.schema.media.MediaItem>newDefaultInstance(
+              .<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>newDefaultInstance(
                   io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_User_MediaEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  io.opencannabis.schema.media.MediaItem.getDefaultInstance());
+                  io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance());
     }
     private com.google.protobuf.MapField<
-        java.lang.String, io.opencannabis.schema.media.MediaItem> media_;
-    private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.MediaItem>
+        java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> media_;
+    private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>
     internalGetMedia() {
       if (media_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -2545,7 +2545,7 @@ public final class AppUser {
      * Use {@link #getMediaMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> getMedia() {
+    public java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> getMedia() {
       return getMediaMap();
     }
     /**
@@ -2556,7 +2556,7 @@ public final class AppUser {
      * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
-    public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> getMediaMap() {
+    public java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> getMediaMap() {
       return internalGetMedia().getMap();
     }
     /**
@@ -2567,11 +2567,11 @@ public final class AppUser {
      * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
-    public io.opencannabis.schema.media.MediaItem getMediaOrDefault(
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaOrDefault(
         java.lang.String key,
-        io.opencannabis.schema.media.MediaItem defaultValue) {
+        io.opencannabis.schema.media.AttachedMedia.MediaItem defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> map =
+      java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> map =
           internalGetMedia().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -2583,10 +2583,10 @@ public final class AppUser {
      * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
      */
 
-    public io.opencannabis.schema.media.MediaItem getMediaOrThrow(
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> map =
+      java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> map =
           internalGetMedia().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -2756,9 +2756,9 @@ public final class AppUser {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(40, identities__);
       }
-      for (java.util.Map.Entry<java.lang.String, io.opencannabis.schema.media.MediaItem> entry
+      for (java.util.Map.Entry<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> entry
            : internalGetMedia().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, io.opencannabis.schema.media.MediaItem>
+        com.google.protobuf.MapEntry<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>
         media__ = MediaDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
@@ -4798,8 +4798,8 @@ public final class AppUser {
       }
 
       private com.google.protobuf.MapField<
-          java.lang.String, io.opencannabis.schema.media.MediaItem> media_;
-      private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.MediaItem>
+          java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> media_;
+      private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>
       internalGetMedia() {
         if (media_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
@@ -4807,7 +4807,7 @@ public final class AppUser {
         }
         return media_;
       }
-      private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.MediaItem>
+      private com.google.protobuf.MapField<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>
       internalGetMutableMedia() {
         onChanged();;
         if (media_ == null) {
@@ -4840,7 +4840,7 @@ public final class AppUser {
        * Use {@link #getMediaMap()} instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> getMedia() {
+      public java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> getMedia() {
         return getMediaMap();
       }
       /**
@@ -4851,7 +4851,7 @@ public final class AppUser {
        * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
        */
 
-      public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> getMediaMap() {
+      public java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> getMediaMap() {
         return internalGetMedia().getMap();
       }
       /**
@@ -4862,11 +4862,11 @@ public final class AppUser {
        * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
        */
 
-      public io.opencannabis.schema.media.MediaItem getMediaOrDefault(
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaOrDefault(
           java.lang.String key,
-          io.opencannabis.schema.media.MediaItem defaultValue) {
+          io.opencannabis.schema.media.AttachedMedia.MediaItem defaultValue) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> map =
+        java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> map =
             internalGetMedia().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
@@ -4878,10 +4878,10 @@ public final class AppUser {
        * <code>map&lt;string, .opencannabis.media.MediaItem&gt; media = 41 [(.gen_bq_schema.ignore) = true, (.gen_bq_schema.description) = "Media associated with this user."];</code>
        */
 
-      public io.opencannabis.schema.media.MediaItem getMediaOrThrow(
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaOrThrow(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> map =
+        java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> map =
             internalGetMedia().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
@@ -4913,7 +4913,7 @@ public final class AppUser {
        * Use alternate mutation accessors instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem>
+      public java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem>
       getMutableMedia() {
         return internalGetMutableMedia().getMutableMap();
       }
@@ -4926,7 +4926,7 @@ public final class AppUser {
        */
       public Builder putMedia(
           java.lang.String key,
-          io.opencannabis.schema.media.MediaItem value) {
+          io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableMedia().getMutableMap()
@@ -4942,7 +4942,7 @@ public final class AppUser {
        */
 
       public Builder putAllMedia(
-          java.util.Map<java.lang.String, io.opencannabis.schema.media.MediaItem> values) {
+          java.util.Map<java.lang.String, io.opencannabis.schema.media.AttachedMedia.MediaItem> values) {
         internalGetMutableMedia().getMutableMap()
             .putAll(values);
         return this;

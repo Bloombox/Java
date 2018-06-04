@@ -31,7 +31,7 @@ public interface MediaContentOrBuilder extends
    *
    * <code>.opencannabis.media.MediaType type = 2;</code>
    */
-  io.opencannabis.schema.media.MediaType getType();
+  io.opencannabis.schema.media.MediaItemType.MediaType getType();
   /**
    * <pre>
    * Type specification for the media being uploaded.
@@ -39,7 +39,7 @@ public interface MediaContentOrBuilder extends
    *
    * <code>.opencannabis.media.MediaType type = 2;</code>
    */
-  io.opencannabis.schema.media.MediaTypeOrBuilder getTypeOrBuilder();
+  io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder getTypeOrBuilder();
 
   /**
    * <pre>

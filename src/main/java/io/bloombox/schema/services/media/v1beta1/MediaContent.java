@@ -60,11 +60,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.opencannabis.schema.media.MediaType.Builder subBuilder = null;
+            io.opencannabis.schema.media.MediaItemType.MediaType.Builder subBuilder = null;
             if (type_ != null) {
               subBuilder = type_.toBuilder();
             }
-            type_ = input.readMessage(io.opencannabis.schema.media.MediaType.parser(), extensionRegistry);
+            type_ = input.readMessage(io.opencannabis.schema.media.MediaItemType.MediaType.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(type_);
               type_ = subBuilder.buildPartial();
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 2;
-  private io.opencannabis.schema.media.MediaType type_;
+  private io.opencannabis.schema.media.MediaItemType.MediaType type_;
   /**
    * <pre>
    * Type specification for the media being uploaded.
@@ -185,8 +185,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.media.MediaType type = 2;</code>
    */
-  public io.opencannabis.schema.media.MediaType getType() {
-    return type_ == null ? io.opencannabis.schema.media.MediaType.getDefaultInstance() : type_;
+  public io.opencannabis.schema.media.MediaItemType.MediaType getType() {
+    return type_ == null ? io.opencannabis.schema.media.MediaItemType.MediaType.getDefaultInstance() : type_;
   }
   /**
    * <pre>
@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.media.MediaType type = 2;</code>
    */
-  public io.opencannabis.schema.media.MediaTypeOrBuilder getTypeOrBuilder() {
+  public io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder getTypeOrBuilder() {
     return getType();
   }
 
@@ -695,9 +695,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.media.MediaType type_ = null;
+    private io.opencannabis.schema.media.MediaItemType.MediaType type_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.media.MediaType, io.opencannabis.schema.media.MediaType.Builder, io.opencannabis.schema.media.MediaTypeOrBuilder> typeBuilder_;
+        io.opencannabis.schema.media.MediaItemType.MediaType, io.opencannabis.schema.media.MediaItemType.MediaType.Builder, io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder> typeBuilder_;
     /**
      * <pre>
      * Type specification for the media being uploaded.
@@ -715,9 +715,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaType type = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaType getType() {
+    public io.opencannabis.schema.media.MediaItemType.MediaType getType() {
       if (typeBuilder_ == null) {
-        return type_ == null ? io.opencannabis.schema.media.MediaType.getDefaultInstance() : type_;
+        return type_ == null ? io.opencannabis.schema.media.MediaItemType.MediaType.getDefaultInstance() : type_;
       } else {
         return typeBuilder_.getMessage();
       }
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaType type = 2;</code>
      */
-    public Builder setType(io.opencannabis.schema.media.MediaType value) {
+    public Builder setType(io.opencannabis.schema.media.MediaItemType.MediaType value) {
       if (typeBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -750,7 +750,7 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.media.MediaType type = 2;</code>
      */
     public Builder setType(
-        io.opencannabis.schema.media.MediaType.Builder builderForValue) {
+        io.opencannabis.schema.media.MediaItemType.MediaType.Builder builderForValue) {
       if (typeBuilder_ == null) {
         type_ = builderForValue.build();
         onChanged();
@@ -767,11 +767,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaType type = 2;</code>
      */
-    public Builder mergeType(io.opencannabis.schema.media.MediaType value) {
+    public Builder mergeType(io.opencannabis.schema.media.MediaItemType.MediaType value) {
       if (typeBuilder_ == null) {
         if (type_ != null) {
           type_ =
-            io.opencannabis.schema.media.MediaType.newBuilder(type_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.media.MediaItemType.MediaType.newBuilder(type_).mergeFrom(value).buildPartial();
         } else {
           type_ = value;
         }
@@ -807,7 +807,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaType type = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaType.Builder getTypeBuilder() {
+    public io.opencannabis.schema.media.MediaItemType.MediaType.Builder getTypeBuilder() {
       
       onChanged();
       return getTypeFieldBuilder().getBuilder();
@@ -819,12 +819,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaType type = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaTypeOrBuilder getTypeOrBuilder() {
+    public io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder getTypeOrBuilder() {
       if (typeBuilder_ != null) {
         return typeBuilder_.getMessageOrBuilder();
       } else {
         return type_ == null ?
-            io.opencannabis.schema.media.MediaType.getDefaultInstance() : type_;
+            io.opencannabis.schema.media.MediaItemType.MediaType.getDefaultInstance() : type_;
       }
     }
     /**
@@ -835,11 +835,11 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.media.MediaType type = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.media.MediaType, io.opencannabis.schema.media.MediaType.Builder, io.opencannabis.schema.media.MediaTypeOrBuilder> 
+        io.opencannabis.schema.media.MediaItemType.MediaType, io.opencannabis.schema.media.MediaItemType.MediaType.Builder, io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder> 
         getTypeFieldBuilder() {
       if (typeBuilder_ == null) {
         typeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.media.MediaType, io.opencannabis.schema.media.MediaType.Builder, io.opencannabis.schema.media.MediaTypeOrBuilder>(
+            io.opencannabis.schema.media.MediaItemType.MediaType, io.opencannabis.schema.media.MediaItemType.MediaType.Builder, io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder>(
                 getType(),
                 getParentForChildren(),
                 isClean());

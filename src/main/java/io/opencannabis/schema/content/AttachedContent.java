@@ -1310,7 +1310,7 @@ public final class AttachedContent {
      *
      * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
      */
-    java.util.List<io.opencannabis.schema.media.MediaItem> 
+    java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> 
         getMediaList();
     /**
      * <pre>
@@ -1319,7 +1319,7 @@ public final class AttachedContent {
      *
      * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
      */
-    io.opencannabis.schema.media.MediaItem getMedia(int index);
+    io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index);
     /**
      * <pre>
      * Product media, including images, videos, and so on.
@@ -1335,7 +1335,7 @@ public final class AttachedContent {
      *
      * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
      */
-    java.util.List<? extends io.opencannabis.schema.media.MediaItemOrBuilder> 
+    java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
         getMediaOrBuilderList();
     /**
      * <pre>
@@ -1344,7 +1344,7 @@ public final class AttachedContent {
      *
      * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
      */
-    io.opencannabis.schema.media.MediaItemOrBuilder getMediaOrBuilder(
+    io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
         int index);
 
     /**
@@ -1584,11 +1584,11 @@ public final class AttachedContent {
             }
             case 50: {
               if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                media_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItem>();
+                media_ = new java.util.ArrayList<io.opencannabis.schema.media.AttachedMedia.MediaItem>();
                 mutable_bitField0_ |= 0x00000020;
               }
               media_.add(
-                  input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry));
+                  input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaItem.parser(), extensionRegistry));
               break;
             }
             case 58: {
@@ -1850,7 +1850,7 @@ public final class AttachedContent {
     }
 
     public static final int MEDIA_FIELD_NUMBER = 6;
-    private java.util.List<io.opencannabis.schema.media.MediaItem> media_;
+    private java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> media_;
     /**
      * <pre>
      * Product media, including images, videos, and so on.
@@ -1858,7 +1858,7 @@ public final class AttachedContent {
      *
      * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
      */
-    public java.util.List<io.opencannabis.schema.media.MediaItem> getMediaList() {
+    public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> getMediaList() {
       return media_;
     }
     /**
@@ -1868,7 +1868,7 @@ public final class AttachedContent {
      *
      * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
      */
-    public java.util.List<? extends io.opencannabis.schema.media.MediaItemOrBuilder> 
+    public java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
         getMediaOrBuilderList() {
       return media_;
     }
@@ -1889,7 +1889,7 @@ public final class AttachedContent {
      *
      * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
      */
-    public io.opencannabis.schema.media.MediaItem getMedia(int index) {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index) {
       return media_.get(index);
     }
     /**
@@ -1899,7 +1899,7 @@ public final class AttachedContent {
      *
      * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
      */
-    public io.opencannabis.schema.media.MediaItemOrBuilder getMediaOrBuilder(
+    public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
         int index) {
       return media_.get(index);
     }
@@ -3445,17 +3445,17 @@ public final class AttachedContent {
         return dosageBuilder_;
       }
 
-      private java.util.List<io.opencannabis.schema.media.MediaItem> media_ =
+      private java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> media_ =
         java.util.Collections.emptyList();
       private void ensureMediaIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          media_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItem>(media_);
+          media_ = new java.util.ArrayList<io.opencannabis.schema.media.AttachedMedia.MediaItem>(media_);
           bitField0_ |= 0x00000020;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> mediaBuilder_;
+          io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> mediaBuilder_;
 
       /**
        * <pre>
@@ -3464,7 +3464,7 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public java.util.List<io.opencannabis.schema.media.MediaItem> getMediaList() {
+      public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> getMediaList() {
         if (mediaBuilder_ == null) {
           return java.util.Collections.unmodifiableList(media_);
         } else {
@@ -3492,7 +3492,7 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public io.opencannabis.schema.media.MediaItem getMedia(int index) {
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index) {
         if (mediaBuilder_ == null) {
           return media_.get(index);
         } else {
@@ -3507,7 +3507,7 @@ public final class AttachedContent {
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
       public Builder setMedia(
-          int index, io.opencannabis.schema.media.MediaItem value) {
+          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
         if (mediaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3528,7 +3528,7 @@ public final class AttachedContent {
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
       public Builder setMedia(
-          int index, io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
         if (mediaBuilder_ == null) {
           ensureMediaIsMutable();
           media_.set(index, builderForValue.build());
@@ -3545,7 +3545,7 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public Builder addMedia(io.opencannabis.schema.media.MediaItem value) {
+      public Builder addMedia(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
         if (mediaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3566,7 +3566,7 @@ public final class AttachedContent {
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
       public Builder addMedia(
-          int index, io.opencannabis.schema.media.MediaItem value) {
+          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
         if (mediaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3587,7 +3587,7 @@ public final class AttachedContent {
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
       public Builder addMedia(
-          io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+          io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
         if (mediaBuilder_ == null) {
           ensureMediaIsMutable();
           media_.add(builderForValue.build());
@@ -3605,7 +3605,7 @@ public final class AttachedContent {
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
       public Builder addMedia(
-          int index, io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
         if (mediaBuilder_ == null) {
           ensureMediaIsMutable();
           media_.add(index, builderForValue.build());
@@ -3623,7 +3623,7 @@ public final class AttachedContent {
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
       public Builder addAllMedia(
-          java.lang.Iterable<? extends io.opencannabis.schema.media.MediaItem> values) {
+          java.lang.Iterable<? extends io.opencannabis.schema.media.AttachedMedia.MediaItem> values) {
         if (mediaBuilder_ == null) {
           ensureMediaIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3675,7 +3675,7 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public io.opencannabis.schema.media.MediaItem.Builder getMediaBuilder(
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder getMediaBuilder(
           int index) {
         return getMediaFieldBuilder().getBuilder(index);
       }
@@ -3686,7 +3686,7 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public io.opencannabis.schema.media.MediaItemOrBuilder getMediaOrBuilder(
+      public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
           int index) {
         if (mediaBuilder_ == null) {
           return media_.get(index);  } else {
@@ -3700,7 +3700,7 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public java.util.List<? extends io.opencannabis.schema.media.MediaItemOrBuilder> 
+      public java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
            getMediaOrBuilderList() {
         if (mediaBuilder_ != null) {
           return mediaBuilder_.getMessageOrBuilderList();
@@ -3715,9 +3715,9 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public io.opencannabis.schema.media.MediaItem.Builder addMediaBuilder() {
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder addMediaBuilder() {
         return getMediaFieldBuilder().addBuilder(
-            io.opencannabis.schema.media.MediaItem.getDefaultInstance());
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance());
       }
       /**
        * <pre>
@@ -3726,10 +3726,10 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public io.opencannabis.schema.media.MediaItem.Builder addMediaBuilder(
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder addMediaBuilder(
           int index) {
         return getMediaFieldBuilder().addBuilder(
-            index, io.opencannabis.schema.media.MediaItem.getDefaultInstance());
+            index, io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance());
       }
       /**
        * <pre>
@@ -3738,16 +3738,16 @@ public final class AttachedContent {
        *
        * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
        */
-      public java.util.List<io.opencannabis.schema.media.MediaItem.Builder> 
+      public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder> 
            getMediaBuilderList() {
         return getMediaFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
+          io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
           getMediaFieldBuilder() {
         if (mediaBuilder_ == null) {
           mediaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
+              io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder>(
                   media_,
                   ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),

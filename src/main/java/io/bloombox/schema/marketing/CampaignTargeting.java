@@ -3259,7 +3259,7 @@ public final class CampaignTargeting {
       "(\0132..bloombox.schema.marketing.Preferenc" +
       "eTargetingH\000B\010\n\006policyB;\n\034io.bloombox.sc" +
       "hema.marketingB\021CampaignTargetingH\001P\000\242\002\003" +
-      "OCSb\006proto3"
+      "BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

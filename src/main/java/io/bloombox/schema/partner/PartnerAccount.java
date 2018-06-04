@@ -238,7 +238,7 @@ public final class PartnerAccount {
      *
      * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
      */
-    io.opencannabis.schema.media.MediaItem getBranding();
+    io.opencannabis.schema.media.AttachedMedia.MediaItem getBranding();
     /**
      * <pre>
      * Branding information for this organization.
@@ -246,7 +246,7 @@ public final class PartnerAccount {
      *
      * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
      */
-    io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder();
+    io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getBrandingOrBuilder();
 
     /**
      * <pre>
@@ -486,11 +486,11 @@ public final class PartnerAccount {
               break;
             }
             case 50: {
-              io.opencannabis.schema.media.MediaItem.Builder subBuilder = null;
+              io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder subBuilder = null;
               if (branding_ != null) {
                 subBuilder = branding_.toBuilder();
               }
-              branding_ = input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry);
+              branding_ = input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaItem.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(branding_);
                 branding_ = subBuilder.buildPartial();
@@ -773,7 +773,7 @@ public final class PartnerAccount {
     }
 
     public static final int BRANDING_FIELD_NUMBER = 6;
-    private io.opencannabis.schema.media.MediaItem branding_;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem branding_;
     /**
      * <pre>
      * Branding information for this organization.
@@ -791,8 +791,8 @@ public final class PartnerAccount {
      *
      * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
      */
-    public io.opencannabis.schema.media.MediaItem getBranding() {
-      return branding_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem getBranding() {
+      return branding_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : branding_;
     }
     /**
      * <pre>
@@ -801,7 +801,7 @@ public final class PartnerAccount {
      *
      * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
      */
-    public io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getBrandingOrBuilder() {
       return getBranding();
     }
 
@@ -2134,9 +2134,9 @@ public final class PartnerAccount {
         return contactBuilder_;
       }
 
-      private io.opencannabis.schema.media.MediaItem branding_ = null;
+      private io.opencannabis.schema.media.AttachedMedia.MediaItem branding_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> brandingBuilder_;
+          io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> brandingBuilder_;
       /**
        * <pre>
        * Branding information for this organization.
@@ -2154,9 +2154,9 @@ public final class PartnerAccount {
        *
        * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
        */
-      public io.opencannabis.schema.media.MediaItem getBranding() {
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem getBranding() {
         if (brandingBuilder_ == null) {
-          return branding_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
+          return branding_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : branding_;
         } else {
           return brandingBuilder_.getMessage();
         }
@@ -2168,7 +2168,7 @@ public final class PartnerAccount {
        *
        * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
        */
-      public Builder setBranding(io.opencannabis.schema.media.MediaItem value) {
+      public Builder setBranding(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
         if (brandingBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2189,7 +2189,7 @@ public final class PartnerAccount {
        * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
        */
       public Builder setBranding(
-          io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+          io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
         if (brandingBuilder_ == null) {
           branding_ = builderForValue.build();
           onChanged();
@@ -2206,11 +2206,11 @@ public final class PartnerAccount {
        *
        * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
        */
-      public Builder mergeBranding(io.opencannabis.schema.media.MediaItem value) {
+      public Builder mergeBranding(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
         if (brandingBuilder_ == null) {
           if (branding_ != null) {
             branding_ =
-              io.opencannabis.schema.media.MediaItem.newBuilder(branding_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.media.AttachedMedia.MediaItem.newBuilder(branding_).mergeFrom(value).buildPartial();
           } else {
             branding_ = value;
           }
@@ -2246,7 +2246,7 @@ public final class PartnerAccount {
        *
        * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
        */
-      public io.opencannabis.schema.media.MediaItem.Builder getBrandingBuilder() {
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder getBrandingBuilder() {
         
         onChanged();
         return getBrandingFieldBuilder().getBuilder();
@@ -2258,12 +2258,12 @@ public final class PartnerAccount {
        *
        * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
        */
-      public io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder() {
+      public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getBrandingOrBuilder() {
         if (brandingBuilder_ != null) {
           return brandingBuilder_.getMessageOrBuilder();
         } else {
           return branding_ == null ?
-              io.opencannabis.schema.media.MediaItem.getDefaultInstance() : branding_;
+              io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : branding_;
         }
       }
       /**
@@ -2274,11 +2274,11 @@ public final class PartnerAccount {
        * <code>.opencannabis.media.MediaItem branding = 6 [(.gen_bq_schema.description) = "Branding information for this organization."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
+          io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
           getBrandingFieldBuilder() {
         if (brandingBuilder_ == null) {
           brandingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
+              io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder>(
                   getBranding(),
                   getParentForChildren(),
                   isClean());

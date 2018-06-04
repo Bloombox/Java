@@ -153,7 +153,7 @@ public interface ClientOrBuilder extends
    *
    * <code>.opencannabis.media.MediaItem branding = 6;</code>
    */
-  io.opencannabis.schema.media.MediaItem getBranding();
+  io.opencannabis.schema.media.AttachedMedia.MediaItem getBranding();
   /**
    * <pre>
    * Attached media item for branding.
@@ -161,7 +161,7 @@ public interface ClientOrBuilder extends
    *
    * <code>.opencannabis.media.MediaItem branding = 6;</code>
    */
-  io.opencannabis.schema.media.MediaItemOrBuilder getBrandingOrBuilder();
+  io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getBrandingOrBuilder();
 
   /**
    * <pre>
@@ -196,7 +196,7 @@ public interface ClientOrBuilder extends
    *
    * <code>.opencannabis.media.MediaItem policy = 8;</code>
    */
-  io.opencannabis.schema.media.MediaItem getPolicy();
+  io.opencannabis.schema.media.AttachedMedia.MediaItem getPolicy();
   /**
    * <pre>
    * Privacy policy URI.
@@ -204,7 +204,7 @@ public interface ClientOrBuilder extends
    *
    * <code>.opencannabis.media.MediaItem policy = 8;</code>
    */
-  io.opencannabis.schema.media.MediaItemOrBuilder getPolicyOrBuilder();
+  io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getPolicyOrBuilder();
 
   /**
    * <pre>
@@ -221,7 +221,7 @@ public interface ClientOrBuilder extends
    *
    * <code>.opencannabis.media.MediaItem terms = 9;</code>
    */
-  io.opencannabis.schema.media.MediaItem getTerms();
+  io.opencannabis.schema.media.AttachedMedia.MediaItem getTerms();
   /**
    * <pre>
    * Terms of Service URI.
@@ -229,7 +229,7 @@ public interface ClientOrBuilder extends
    *
    * <code>.opencannabis.media.MediaItem terms = 9;</code>
    */
-  io.opencannabis.schema.media.MediaItemOrBuilder getTermsOrBuilder();
+  io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getTermsOrBuilder();
 
   /**
    * <pre>
