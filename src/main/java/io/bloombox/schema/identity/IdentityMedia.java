@@ -185,7 +185,7 @@ public final class IdentityMedia {
      *
      * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
      */
-    io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation getOrientation();
+    io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation getOrientation();
 
     /**
      * <pre>
@@ -363,9 +363,9 @@ public final class IdentityMedia {
      *
      * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation getOrientation() {
-      io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation result = io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation.valueOf(orientation_);
-      return result == null ? io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation.UNRECOGNIZED : result;
+    public io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation getOrientation() {
+      io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation result = io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.valueOf(orientation_);
+      return result == null ? io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.UNRECOGNIZED : result;
     }
 
     public static final int DATA_FIELD_NUMBER = 3;
@@ -422,7 +422,7 @@ public final class IdentityMedia {
       if (type_ != io.bloombox.schema.identity.IdentityMedia.IDMedia.DOCUMENT_FRONT.getNumber()) {
         output.writeEnum(1, type_);
       }
-      if (orientation_ != io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation.UP.getNumber()) {
+      if (orientation_ != io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.UP.getNumber()) {
         output.writeEnum(2, orientation_);
       }
       if (!data_.isEmpty()) {
@@ -446,7 +446,7 @@ public final class IdentityMedia {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (orientation_ != io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation.UP.getNumber()) {
+      if (orientation_ != io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.UP.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, orientation_);
       }
@@ -857,9 +857,9 @@ public final class IdentityMedia {
        *
        * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
        */
-      public io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation getOrientation() {
-        io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation result = io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation.valueOf(orientation_);
-        return result == null ? io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation.UNRECOGNIZED : result;
+      public io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation getOrientation() {
+        io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation result = io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.valueOf(orientation_);
+        return result == null ? io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -868,7 +868,7 @@ public final class IdentityMedia {
        *
        * <code>.opencannabis.media.MediaOrientation orientation = 2;</code>
        */
-      public Builder setOrientation(io.opencannabis.schema.media.MediaOrientationOuterClass.MediaOrientation value) {
+      public Builder setOrientation(io.opencannabis.schema.media.MediaItemOrientation.MediaOrientation value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1092,7 +1092,7 @@ public final class IdentityMedia {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.opencannabis.schema.media.MediaOrientationOuterClass.getDescriptor(),
+          io.opencannabis.schema.media.MediaItemOrientation.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1100,7 +1100,7 @@ public final class IdentityMedia {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_IDMediaAttachment_descriptor,
         new java.lang.String[] { "Type", "Orientation", "Data", "ImageType", "Quality", });
-    io.opencannabis.schema.media.MediaOrientationOuterClass.getDescriptor();
+    io.opencannabis.schema.media.MediaItemOrientation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
