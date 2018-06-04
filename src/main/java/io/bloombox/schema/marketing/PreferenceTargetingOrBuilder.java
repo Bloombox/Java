@@ -38,7 +38,7 @@ public interface PreferenceTargetingOrBuilder extends
    *
    * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
    */
-  io.bloombox.schema.identity.MenuPreferences getMenu();
+  io.bloombox.schema.identity.UserOuterClass.MenuPreferences getMenu();
   /**
    * <pre>
    * Menu preferences, stated by a user, to target by a given campaign.
@@ -46,5 +46,5 @@ public interface PreferenceTargetingOrBuilder extends
    *
    * <code>.bloombox.schema.identity.MenuPreferences menu = 1;</code>
    */
-  io.bloombox.schema.identity.MenuPreferencesOrBuilder getMenuOrBuilder();
+  io.bloombox.schema.identity.UserOuterClass.MenuPreferencesOrBuilder getMenuOrBuilder();
 }

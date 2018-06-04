@@ -39,7 +39,7 @@ public interface CheckinUserOrBuilder extends
    *
    * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
-  io.bloombox.schema.identity.UserKey getKey();
+  io.bloombox.schema.identity.UserOuterClass.UserKey getKey();
   /**
    * <pre>
    * Key and identity ID for the user who was checked in.
@@ -47,7 +47,7 @@ public interface CheckinUserOrBuilder extends
    *
    * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
-  io.bloombox.schema.identity.UserKeyOrBuilder getKeyOrBuilder();
+  io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder getKeyOrBuilder();
 
   /**
    * <pre>
@@ -64,7 +64,7 @@ public interface CheckinUserOrBuilder extends
    *
    * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
    */
-  io.bloombox.schema.identity.UserFlags getFlags();
+  io.bloombox.schema.identity.UserOuterClass.UserFlags getFlags();
   /**
    * <pre>
    * Active account flags.
@@ -72,7 +72,7 @@ public interface CheckinUserOrBuilder extends
    *
    * <code>.bloombox.schema.identity.UserFlags flags = 2;</code>
    */
-  io.bloombox.schema.identity.UserFlagsOrBuilder getFlagsOrBuilder();
+  io.bloombox.schema.identity.UserOuterClass.UserFlagsOrBuilder getFlagsOrBuilder();
 
   /**
    * <pre>
