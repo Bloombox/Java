@@ -93,7 +93,7 @@
         <junit.version>4.12</junit.version>
 
         <!-- Plugins -->
-        <maven.clean.version>3.0.0</maven.clean.version>
+        <maven.clean.version>3.1.0</maven.clean.version>
         <maven.compiler.version>3.7.0</maven.compiler.version>
         <maven.jar.version>3.1.0</maven.jar.version>
         <maven.javadoc.version>3.0.1</maven.javadoc.version>
