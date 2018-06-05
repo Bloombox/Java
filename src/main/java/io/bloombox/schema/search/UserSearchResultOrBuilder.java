@@ -38,7 +38,7 @@ public interface UserSearchResultOrBuilder extends
    *
    * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
-  io.bloombox.schema.identity.UserKey getKey();
+  io.bloombox.schema.identity.UserOuterClass.UserKey getKey();
   /**
    * <pre>
    * User profile key.
@@ -46,7 +46,7 @@ public interface UserSearchResultOrBuilder extends
    *
    * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
-  io.bloombox.schema.identity.UserKeyOrBuilder getKeyOrBuilder();
+  io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder getKeyOrBuilder();
 
   /**
    * <code>.bloombox.schema.identity.User user = 2;</code>
@@ -55,9 +55,9 @@ public interface UserSearchResultOrBuilder extends
   /**
    * <code>.bloombox.schema.identity.User user = 2;</code>
    */
-  io.bloombox.schema.identity.User getUser();
+  io.bloombox.schema.identity.UserOuterClass.User getUser();
   /**
    * <code>.bloombox.schema.identity.User user = 2;</code>
    */
-  io.bloombox.schema.identity.UserOrBuilder getUserOrBuilder();
+  io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getUserOrBuilder();
 }

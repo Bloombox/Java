@@ -82,7 +82,7 @@ public interface MediaSubjectOrBuilder extends
    *
    * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
    */
-  io.bloombox.schema.partner.PartnerKey getPartner();
+  io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey getPartner();
   /**
    * <pre>
    * Specify a partner as the subject parent of this media.
@@ -90,7 +90,7 @@ public interface MediaSubjectOrBuilder extends
    *
    * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
    */
-  io.bloombox.schema.partner.PartnerKeyOrBuilder getPartnerOrBuilder();
+  io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKeyOrBuilder getPartnerOrBuilder();
 
   /**
    * <pre>
@@ -107,7 +107,7 @@ public interface MediaSubjectOrBuilder extends
    *
    * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
    */
-  io.bloombox.schema.partner.PartnerLocationKey getLocation();
+  io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation();
   /**
    * <pre>
    * Specify a partner and location as the subject parent of this media.
@@ -115,7 +115,7 @@ public interface MediaSubjectOrBuilder extends
    *
    * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
    */
-  io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+  io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder();
 
   /**
    * <pre>

@@ -30,39 +30,6535 @@ public final class PartnerSettingsOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface PartnerNotificationTargetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerNotificationTarget)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Whether this notification target is currently disabled.
+     * </pre>
+     *
+     * <code>bool disabled = 1;</code>
+     */
+    boolean getDisabled();
+
+    /**
+     * <pre>
+     * Phone number contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+     */
+    boolean hasPhone();
+    /**
+     * <pre>
+     * Phone number contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+     */
+    io.opencannabis.schema.contact.PhoneNumber getPhone();
+    /**
+     * <pre>
+     * Phone number contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+     */
+    io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder();
+
+    /**
+     * <pre>
+     * Email address contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+     */
+    boolean hasEmail();
+    /**
+     * <pre>
+     * Email address contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+     */
+    io.opencannabis.schema.contact.EmailAddress getEmail();
+    /**
+     * <pre>
+     * Email address contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+     */
+    io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder();
+
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.ContactCase getContactCase();
+  }
+  /**
+   * <pre>
+   * Specifies an individual notification target for alerting.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.settings.PartnerNotificationTarget}
+   */
+  public  static final class PartnerNotificationTarget extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerNotificationTarget)
+      PartnerNotificationTargetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PartnerNotificationTarget.newBuilder() to construct.
+    private PartnerNotificationTarget(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PartnerNotificationTarget() {
+      disabled_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartnerNotificationTarget(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              disabled_ = input.readBool();
+              break;
+            }
+            case 82: {
+              io.opencannabis.schema.contact.PhoneNumber.Builder subBuilder = null;
+              if (contactCase_ == 10) {
+                subBuilder = ((io.opencannabis.schema.contact.PhoneNumber) contact_).toBuilder();
+              }
+              contact_ =
+                  input.readMessage(io.opencannabis.schema.contact.PhoneNumber.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.opencannabis.schema.contact.PhoneNumber) contact_);
+                contact_ = subBuilder.buildPartial();
+              }
+              contactCase_ = 10;
+              break;
+            }
+            case 90: {
+              io.opencannabis.schema.contact.EmailAddress.Builder subBuilder = null;
+              if (contactCase_ == 11) {
+                subBuilder = ((io.opencannabis.schema.contact.EmailAddress) contact_).toBuilder();
+              }
+              contact_ =
+                  input.readMessage(io.opencannabis.schema.contact.EmailAddress.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.opencannabis.schema.contact.EmailAddress) contact_);
+                contact_ = subBuilder.buildPartial();
+              }
+              contactCase_ = 11;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder.class);
+    }
+
+    private int contactCase_ = 0;
+    private java.lang.Object contact_;
+    public enum ContactCase
+        implements com.google.protobuf.Internal.EnumLite {
+      PHONE(10),
+      EMAIL(11),
+      CONTACT_NOT_SET(0);
+      private final int value;
+      private ContactCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ContactCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ContactCase forNumber(int value) {
+        switch (value) {
+          case 10: return PHONE;
+          case 11: return EMAIL;
+          case 0: return CONTACT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ContactCase
+    getContactCase() {
+      return ContactCase.forNumber(
+          contactCase_);
+    }
+
+    public static final int DISABLED_FIELD_NUMBER = 1;
+    private boolean disabled_;
+    /**
+     * <pre>
+     * Whether this notification target is currently disabled.
+     * </pre>
+     *
+     * <code>bool disabled = 1;</code>
+     */
+    public boolean getDisabled() {
+      return disabled_;
+    }
+
+    public static final int PHONE_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Phone number contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+     */
+    public boolean hasPhone() {
+      return contactCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Phone number contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+     */
+    public io.opencannabis.schema.contact.PhoneNumber getPhone() {
+      if (contactCase_ == 10) {
+         return (io.opencannabis.schema.contact.PhoneNumber) contact_;
+      }
+      return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Phone number contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+     */
+    public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder() {
+      if (contactCase_ == 10) {
+         return (io.opencannabis.schema.contact.PhoneNumber) contact_;
+      }
+      return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Email address contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+     */
+    public boolean hasEmail() {
+      return contactCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Email address contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+     */
+    public io.opencannabis.schema.contact.EmailAddress getEmail() {
+      if (contactCase_ == 11) {
+         return (io.opencannabis.schema.contact.EmailAddress) contact_;
+      }
+      return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Email address contact target.
+     * </pre>
+     *
+     * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+     */
+    public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder() {
+      if (contactCase_ == 11) {
+         return (io.opencannabis.schema.contact.EmailAddress) contact_;
+      }
+      return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (disabled_ != false) {
+        output.writeBool(1, disabled_);
+      }
+      if (contactCase_ == 10) {
+        output.writeMessage(10, (io.opencannabis.schema.contact.PhoneNumber) contact_);
+      }
+      if (contactCase_ == 11) {
+        output.writeMessage(11, (io.opencannabis.schema.contact.EmailAddress) contact_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (disabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, disabled_);
+      }
+      if (contactCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (io.opencannabis.schema.contact.PhoneNumber) contact_);
+      }
+      if (contactCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (io.opencannabis.schema.contact.EmailAddress) contact_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget other = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget) obj;
+
+      boolean result = true;
+      result = result && (getDisabled()
+          == other.getDisabled());
+      result = result && getContactCase().equals(
+          other.getContactCase());
+      if (!result) return false;
+      switch (contactCase_) {
+        case 10:
+          result = result && getPhone()
+              .equals(other.getPhone());
+          break;
+        case 11:
+          result = result && getEmail()
+              .equals(other.getEmail());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DISABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisabled());
+      switch (contactCase_) {
+        case 10:
+          hash = (37 * hash) + PHONE_FIELD_NUMBER;
+          hash = (53 * hash) + getPhone().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+          hash = (53 * hash) + getEmail().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies an individual notification target for alerting.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.settings.PartnerNotificationTarget}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerNotificationTarget)
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        disabled_ = false;
+
+        contactCase_ = 0;
+        contact_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget build() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget buildPartial() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget(this);
+        result.disabled_ = disabled_;
+        if (contactCase_ == 10) {
+          if (phoneBuilder_ == null) {
+            result.contact_ = contact_;
+          } else {
+            result.contact_ = phoneBuilder_.build();
+          }
+        }
+        if (contactCase_ == 11) {
+          if (emailBuilder_ == null) {
+            result.contact_ = contact_;
+          } else {
+            result.contact_ = emailBuilder_.build();
+          }
+        }
+        result.contactCase_ = contactCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget) {
+          return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget other) {
+        if (other == io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.getDefaultInstance()) return this;
+        if (other.getDisabled() != false) {
+          setDisabled(other.getDisabled());
+        }
+        switch (other.getContactCase()) {
+          case PHONE: {
+            mergePhone(other.getPhone());
+            break;
+          }
+          case EMAIL: {
+            mergeEmail(other.getEmail());
+            break;
+          }
+          case CONTACT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int contactCase_ = 0;
+      private java.lang.Object contact_;
+      public ContactCase
+          getContactCase() {
+        return ContactCase.forNumber(
+            contactCase_);
+      }
+
+      public Builder clearContact() {
+        contactCase_ = 0;
+        contact_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private boolean disabled_ ;
+      /**
+       * <pre>
+       * Whether this notification target is currently disabled.
+       * </pre>
+       *
+       * <code>bool disabled = 1;</code>
+       */
+      public boolean getDisabled() {
+        return disabled_;
+      }
+      /**
+       * <pre>
+       * Whether this notification target is currently disabled.
+       * </pre>
+       *
+       * <code>bool disabled = 1;</code>
+       */
+      public Builder setDisabled(boolean value) {
+        
+        disabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this notification target is currently disabled.
+       * </pre>
+       *
+       * <code>bool disabled = 1;</code>
+       */
+      public Builder clearDisabled() {
+        
+        disabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> phoneBuilder_;
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      public boolean hasPhone() {
+        return contactCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      public io.opencannabis.schema.contact.PhoneNumber getPhone() {
+        if (phoneBuilder_ == null) {
+          if (contactCase_ == 10) {
+            return (io.opencannabis.schema.contact.PhoneNumber) contact_;
+          }
+          return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+        } else {
+          if (contactCase_ == 10) {
+            return phoneBuilder_.getMessage();
+          }
+          return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      public Builder setPhone(io.opencannabis.schema.contact.PhoneNumber value) {
+        if (phoneBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contact_ = value;
+          onChanged();
+        } else {
+          phoneBuilder_.setMessage(value);
+        }
+        contactCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      public Builder setPhone(
+          io.opencannabis.schema.contact.PhoneNumber.Builder builderForValue) {
+        if (phoneBuilder_ == null) {
+          contact_ = builderForValue.build();
+          onChanged();
+        } else {
+          phoneBuilder_.setMessage(builderForValue.build());
+        }
+        contactCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      public Builder mergePhone(io.opencannabis.schema.contact.PhoneNumber value) {
+        if (phoneBuilder_ == null) {
+          if (contactCase_ == 10 &&
+              contact_ != io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance()) {
+            contact_ = io.opencannabis.schema.contact.PhoneNumber.newBuilder((io.opencannabis.schema.contact.PhoneNumber) contact_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            contact_ = value;
+          }
+          onChanged();
+        } else {
+          if (contactCase_ == 10) {
+            phoneBuilder_.mergeFrom(value);
+          }
+          phoneBuilder_.setMessage(value);
+        }
+        contactCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      public Builder clearPhone() {
+        if (phoneBuilder_ == null) {
+          if (contactCase_ == 10) {
+            contactCase_ = 0;
+            contact_ = null;
+            onChanged();
+          }
+        } else {
+          if (contactCase_ == 10) {
+            contactCase_ = 0;
+            contact_ = null;
+          }
+          phoneBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      public io.opencannabis.schema.contact.PhoneNumber.Builder getPhoneBuilder() {
+        return getPhoneFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder() {
+        if ((contactCase_ == 10) && (phoneBuilder_ != null)) {
+          return phoneBuilder_.getMessageOrBuilder();
+        } else {
+          if (contactCase_ == 10) {
+            return (io.opencannabis.schema.contact.PhoneNumber) contact_;
+          }
+          return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Phone number contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> 
+          getPhoneFieldBuilder() {
+        if (phoneBuilder_ == null) {
+          if (!(contactCase_ == 10)) {
+            contact_ = io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+          }
+          phoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder>(
+                  (io.opencannabis.schema.contact.PhoneNumber) contact_,
+                  getParentForChildren(),
+                  isClean());
+          contact_ = null;
+        }
+        contactCase_ = 10;
+        onChanged();;
+        return phoneBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> emailBuilder_;
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      public boolean hasEmail() {
+        return contactCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      public io.opencannabis.schema.contact.EmailAddress getEmail() {
+        if (emailBuilder_ == null) {
+          if (contactCase_ == 11) {
+            return (io.opencannabis.schema.contact.EmailAddress) contact_;
+          }
+          return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+        } else {
+          if (contactCase_ == 11) {
+            return emailBuilder_.getMessage();
+          }
+          return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      public Builder setEmail(io.opencannabis.schema.contact.EmailAddress value) {
+        if (emailBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contact_ = value;
+          onChanged();
+        } else {
+          emailBuilder_.setMessage(value);
+        }
+        contactCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      public Builder setEmail(
+          io.opencannabis.schema.contact.EmailAddress.Builder builderForValue) {
+        if (emailBuilder_ == null) {
+          contact_ = builderForValue.build();
+          onChanged();
+        } else {
+          emailBuilder_.setMessage(builderForValue.build());
+        }
+        contactCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      public Builder mergeEmail(io.opencannabis.schema.contact.EmailAddress value) {
+        if (emailBuilder_ == null) {
+          if (contactCase_ == 11 &&
+              contact_ != io.opencannabis.schema.contact.EmailAddress.getDefaultInstance()) {
+            contact_ = io.opencannabis.schema.contact.EmailAddress.newBuilder((io.opencannabis.schema.contact.EmailAddress) contact_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            contact_ = value;
+          }
+          onChanged();
+        } else {
+          if (contactCase_ == 11) {
+            emailBuilder_.mergeFrom(value);
+          }
+          emailBuilder_.setMessage(value);
+        }
+        contactCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      public Builder clearEmail() {
+        if (emailBuilder_ == null) {
+          if (contactCase_ == 11) {
+            contactCase_ = 0;
+            contact_ = null;
+            onChanged();
+          }
+        } else {
+          if (contactCase_ == 11) {
+            contactCase_ = 0;
+            contact_ = null;
+          }
+          emailBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      public io.opencannabis.schema.contact.EmailAddress.Builder getEmailBuilder() {
+        return getEmailFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder() {
+        if ((contactCase_ == 11) && (emailBuilder_ != null)) {
+          return emailBuilder_.getMessageOrBuilder();
+        } else {
+          if (contactCase_ == 11) {
+            return (io.opencannabis.schema.contact.EmailAddress) contact_;
+          }
+          return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Email address contact target.
+       * </pre>
+       *
+       * <code>.opencannabis.contact.EmailAddress email = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> 
+          getEmailFieldBuilder() {
+        if (emailBuilder_ == null) {
+          if (!(contactCase_ == 11)) {
+            contact_ = io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+          }
+          emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder>(
+                  (io.opencannabis.schema.contact.EmailAddress) contact_,
+                  getParentForChildren(),
+                  isClean());
+          contact_ = null;
+        }
+        contactCase_ = 11;
+        onChanged();;
+        return emailBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerNotificationTarget)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerNotificationTarget)
+    private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget();
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartnerNotificationTarget>
+        PARSER = new com.google.protobuf.AbstractParser<PartnerNotificationTarget>() {
+      public PartnerNotificationTarget parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartnerNotificationTarget(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartnerNotificationTarget> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartnerNotificationTarget> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PartnerEventAlertingSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specifies 'promo' notifications.
+     * </pre>
+     *
+     * <code>bool promo = 1;</code>
+     */
+    boolean getPromo();
+
+    /**
+     * <pre>
+     * Specifies 'security' notifications.
+     * </pre>
+     *
+     * <code>bool security = 2;</code>
+     */
+    boolean getSecurity();
+
+    /**
+     * <pre>
+     * Specifies 'volume' notifications.
+     * </pre>
+     *
+     * <code>bool volume = 3;</code>
+     */
+    boolean getVolume();
+  }
+  /**
+   * <pre>
+   * Specifies event-level alerting settings.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.settings.PartnerEventAlertingSettings}
+   */
+  public  static final class PartnerEventAlertingSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+      PartnerEventAlertingSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PartnerEventAlertingSettings.newBuilder() to construct.
+    private PartnerEventAlertingSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PartnerEventAlertingSettings() {
+      promo_ = false;
+      security_ = false;
+      volume_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartnerEventAlertingSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              promo_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              security_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              volume_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder.class);
+    }
+
+    public static final int PROMO_FIELD_NUMBER = 1;
+    private boolean promo_;
+    /**
+     * <pre>
+     * Specifies 'promo' notifications.
+     * </pre>
+     *
+     * <code>bool promo = 1;</code>
+     */
+    public boolean getPromo() {
+      return promo_;
+    }
+
+    public static final int SECURITY_FIELD_NUMBER = 2;
+    private boolean security_;
+    /**
+     * <pre>
+     * Specifies 'security' notifications.
+     * </pre>
+     *
+     * <code>bool security = 2;</code>
+     */
+    public boolean getSecurity() {
+      return security_;
+    }
+
+    public static final int VOLUME_FIELD_NUMBER = 3;
+    private boolean volume_;
+    /**
+     * <pre>
+     * Specifies 'volume' notifications.
+     * </pre>
+     *
+     * <code>bool volume = 3;</code>
+     */
+    public boolean getVolume() {
+      return volume_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (promo_ != false) {
+        output.writeBool(1, promo_);
+      }
+      if (security_ != false) {
+        output.writeBool(2, security_);
+      }
+      if (volume_ != false) {
+        output.writeBool(3, volume_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (promo_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, promo_);
+      }
+      if (security_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, security_);
+      }
+      if (volume_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, volume_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings other = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings) obj;
+
+      boolean result = true;
+      result = result && (getPromo()
+          == other.getPromo());
+      result = result && (getSecurity()
+          == other.getSecurity());
+      result = result && (getVolume()
+          == other.getVolume());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROMO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPromo());
+      hash = (37 * hash) + SECURITY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSecurity());
+      hash = (37 * hash) + VOLUME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getVolume());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies event-level alerting settings.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.settings.PartnerEventAlertingSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        promo_ = false;
+
+        security_ = false;
+
+        volume_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings build() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings buildPartial() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings(this);
+        result.promo_ = promo_;
+        result.security_ = security_;
+        result.volume_ = volume_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings) {
+          return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings other) {
+        if (other == io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.getDefaultInstance()) return this;
+        if (other.getPromo() != false) {
+          setPromo(other.getPromo());
+        }
+        if (other.getSecurity() != false) {
+          setSecurity(other.getSecurity());
+        }
+        if (other.getVolume() != false) {
+          setVolume(other.getVolume());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean promo_ ;
+      /**
+       * <pre>
+       * Specifies 'promo' notifications.
+       * </pre>
+       *
+       * <code>bool promo = 1;</code>
+       */
+      public boolean getPromo() {
+        return promo_;
+      }
+      /**
+       * <pre>
+       * Specifies 'promo' notifications.
+       * </pre>
+       *
+       * <code>bool promo = 1;</code>
+       */
+      public Builder setPromo(boolean value) {
+        
+        promo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies 'promo' notifications.
+       * </pre>
+       *
+       * <code>bool promo = 1;</code>
+       */
+      public Builder clearPromo() {
+        
+        promo_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean security_ ;
+      /**
+       * <pre>
+       * Specifies 'security' notifications.
+       * </pre>
+       *
+       * <code>bool security = 2;</code>
+       */
+      public boolean getSecurity() {
+        return security_;
+      }
+      /**
+       * <pre>
+       * Specifies 'security' notifications.
+       * </pre>
+       *
+       * <code>bool security = 2;</code>
+       */
+      public Builder setSecurity(boolean value) {
+        
+        security_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies 'security' notifications.
+       * </pre>
+       *
+       * <code>bool security = 2;</code>
+       */
+      public Builder clearSecurity() {
+        
+        security_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean volume_ ;
+      /**
+       * <pre>
+       * Specifies 'volume' notifications.
+       * </pre>
+       *
+       * <code>bool volume = 3;</code>
+       */
+      public boolean getVolume() {
+        return volume_;
+      }
+      /**
+       * <pre>
+       * Specifies 'volume' notifications.
+       * </pre>
+       *
+       * <code>bool volume = 3;</code>
+       */
+      public Builder setVolume(boolean value) {
+        
+        volume_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies 'volume' notifications.
+       * </pre>
+       *
+       * <code>bool volume = 3;</code>
+       */
+      public Builder clearVolume() {
+        
+        volume_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerEventAlertingSettings)
+    private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings();
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartnerEventAlertingSettings>
+        PARSER = new com.google.protobuf.AbstractParser<PartnerEventAlertingSettings>() {
+      public PartnerEventAlertingSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartnerEventAlertingSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartnerEventAlertingSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartnerEventAlertingSettings> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PartnerAlertSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerAlertSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specify event-level alerting settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     */
+    boolean hasEvents();
+    /**
+     * <pre>
+     * Specify event-level alerting settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getEvents();
+    /**
+     * <pre>
+     * Specify event-level alerting settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder getEventsOrBuilder();
+
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> 
+        getRecipientsList();
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getRecipients(int index);
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    int getRecipientsCount();
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    java.util.List<? extends io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder> 
+        getRecipientsOrBuilderList();
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder getRecipientsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Alerting and notification settings.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.settings.PartnerAlertSettings}
+   */
+  public  static final class PartnerAlertSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerAlertSettings)
+      PartnerAlertSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PartnerAlertSettings.newBuilder() to construct.
+    private PartnerAlertSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PartnerAlertSettings() {
+      recipients_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartnerAlertSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder subBuilder = null;
+              if (events_ != null) {
+                subBuilder = events_.toBuilder();
+              }
+              events_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(events_);
+                events_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                recipients_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              recipients_.add(
+                  input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          recipients_ = java.util.Collections.unmodifiableList(recipients_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EVENTS_FIELD_NUMBER = 1;
+    private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings events_;
+    /**
+     * <pre>
+     * Specify event-level alerting settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     */
+    public boolean hasEvents() {
+      return events_ != null;
+    }
+    /**
+     * <pre>
+     * Specify event-level alerting settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getEvents() {
+      return events_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.getDefaultInstance() : events_;
+    }
+    /**
+     * <pre>
+     * Specify event-level alerting settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder getEventsOrBuilder() {
+      return getEvents();
+    }
+
+    public static final int RECIPIENTS_FIELD_NUMBER = 2;
+    private java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> recipients_;
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    public java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> getRecipientsList() {
+      return recipients_;
+    }
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder> 
+        getRecipientsOrBuilderList() {
+      return recipients_;
+    }
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    public int getRecipientsCount() {
+      return recipients_.size();
+    }
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getRecipients(int index) {
+      return recipients_.get(index);
+    }
+    /**
+     * <pre>
+     * Notification targets/recipients.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder getRecipientsOrBuilder(
+        int index) {
+      return recipients_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (events_ != null) {
+        output.writeMessage(1, getEvents());
+      }
+      for (int i = 0; i < recipients_.size(); i++) {
+        output.writeMessage(2, recipients_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (events_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEvents());
+      }
+      for (int i = 0; i < recipients_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, recipients_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings other = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings) obj;
+
+      boolean result = true;
+      result = result && (hasEvents() == other.hasEvents());
+      if (hasEvents()) {
+        result = result && getEvents()
+            .equals(other.getEvents());
+      }
+      result = result && getRecipientsList()
+          .equals(other.getRecipientsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEvents()) {
+        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getEvents().hashCode();
+      }
+      if (getRecipientsCount() > 0) {
+        hash = (37 * hash) + RECIPIENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getRecipientsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Alerting and notification settings.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.settings.PartnerAlertSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerAlertSettings)
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRecipientsFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (eventsBuilder_ == null) {
+          events_ = null;
+        } else {
+          events_ = null;
+          eventsBuilder_ = null;
+        }
+        if (recipientsBuilder_ == null) {
+          recipients_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          recipientsBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings build() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings buildPartial() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (eventsBuilder_ == null) {
+          result.events_ = events_;
+        } else {
+          result.events_ = eventsBuilder_.build();
+        }
+        if (recipientsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            recipients_ = java.util.Collections.unmodifiableList(recipients_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.recipients_ = recipients_;
+        } else {
+          result.recipients_ = recipientsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings) {
+          return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings other) {
+        if (other == io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.getDefaultInstance()) return this;
+        if (other.hasEvents()) {
+          mergeEvents(other.getEvents());
+        }
+        if (recipientsBuilder_ == null) {
+          if (!other.recipients_.isEmpty()) {
+            if (recipients_.isEmpty()) {
+              recipients_ = other.recipients_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureRecipientsIsMutable();
+              recipients_.addAll(other.recipients_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.recipients_.isEmpty()) {
+            if (recipientsBuilder_.isEmpty()) {
+              recipientsBuilder_.dispose();
+              recipientsBuilder_ = null;
+              recipients_ = other.recipients_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              recipientsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRecipientsFieldBuilder() : null;
+            } else {
+              recipientsBuilder_.addAllMessages(other.recipients_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings events_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder> eventsBuilder_;
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      public boolean hasEvents() {
+        return eventsBuilder_ != null || events_ != null;
+      }
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings getEvents() {
+        if (eventsBuilder_ == null) {
+          return events_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.getDefaultInstance() : events_;
+        } else {
+          return eventsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      public Builder setEvents(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings value) {
+        if (eventsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          events_ = value;
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      public Builder setEvents(
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder builderForValue) {
+        if (eventsBuilder_ == null) {
+          events_ = builderForValue.build();
+          onChanged();
+        } else {
+          eventsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      public Builder mergeEvents(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings value) {
+        if (eventsBuilder_ == null) {
+          if (events_ != null) {
+            events_ =
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.newBuilder(events_).mergeFrom(value).buildPartial();
+          } else {
+            events_ = value;
+          }
+          onChanged();
+        } else {
+          eventsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      public Builder clearEvents() {
+        if (eventsBuilder_ == null) {
+          events_ = null;
+          onChanged();
+        } else {
+          events_ = null;
+          eventsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder getEventsBuilder() {
+        
+        onChanged();
+        return getEventsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder getEventsOrBuilder() {
+        if (eventsBuilder_ != null) {
+          return eventsBuilder_.getMessageOrBuilder();
+        } else {
+          return events_ == null ?
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.getDefaultInstance() : events_;
+        }
+      }
+      /**
+       * <pre>
+       * Specify event-level alerting settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerEventAlertingSettings events = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder> 
+          getEventsFieldBuilder() {
+        if (eventsBuilder_ == null) {
+          eventsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerEventAlertingSettingsOrBuilder>(
+                  getEvents(),
+                  getParentForChildren(),
+                  isClean());
+          events_ = null;
+        }
+        return eventsBuilder_;
+      }
+
+      private java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> recipients_ =
+        java.util.Collections.emptyList();
+      private void ensureRecipientsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          recipients_ = new java.util.ArrayList<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget>(recipients_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder> recipientsBuilder_;
+
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> getRecipientsList() {
+        if (recipientsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(recipients_);
+        } else {
+          return recipientsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public int getRecipientsCount() {
+        if (recipientsBuilder_ == null) {
+          return recipients_.size();
+        } else {
+          return recipientsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget getRecipients(int index) {
+        if (recipientsBuilder_ == null) {
+          return recipients_.get(index);
+        } else {
+          return recipientsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder setRecipients(
+          int index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget value) {
+        if (recipientsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecipientsIsMutable();
+          recipients_.set(index, value);
+          onChanged();
+        } else {
+          recipientsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder setRecipients(
+          int index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder builderForValue) {
+        if (recipientsBuilder_ == null) {
+          ensureRecipientsIsMutable();
+          recipients_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          recipientsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder addRecipients(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget value) {
+        if (recipientsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecipientsIsMutable();
+          recipients_.add(value);
+          onChanged();
+        } else {
+          recipientsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder addRecipients(
+          int index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget value) {
+        if (recipientsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRecipientsIsMutable();
+          recipients_.add(index, value);
+          onChanged();
+        } else {
+          recipientsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder addRecipients(
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder builderForValue) {
+        if (recipientsBuilder_ == null) {
+          ensureRecipientsIsMutable();
+          recipients_.add(builderForValue.build());
+          onChanged();
+        } else {
+          recipientsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder addRecipients(
+          int index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder builderForValue) {
+        if (recipientsBuilder_ == null) {
+          ensureRecipientsIsMutable();
+          recipients_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          recipientsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder addAllRecipients(
+          java.lang.Iterable<? extends io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget> values) {
+        if (recipientsBuilder_ == null) {
+          ensureRecipientsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, recipients_);
+          onChanged();
+        } else {
+          recipientsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder clearRecipients() {
+        if (recipientsBuilder_ == null) {
+          recipients_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          recipientsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public Builder removeRecipients(int index) {
+        if (recipientsBuilder_ == null) {
+          ensureRecipientsIsMutable();
+          recipients_.remove(index);
+          onChanged();
+        } else {
+          recipientsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder getRecipientsBuilder(
+          int index) {
+        return getRecipientsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder getRecipientsOrBuilder(
+          int index) {
+        if (recipientsBuilder_ == null) {
+          return recipients_.get(index);  } else {
+          return recipientsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public java.util.List<? extends io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder> 
+           getRecipientsOrBuilderList() {
+        if (recipientsBuilder_ != null) {
+          return recipientsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(recipients_);
+        }
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder addRecipientsBuilder() {
+        return getRecipientsFieldBuilder().addBuilder(
+            io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder addRecipientsBuilder(
+          int index) {
+        return getRecipientsFieldBuilder().addBuilder(
+            index, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Notification targets/recipients.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.settings.PartnerNotificationTarget recipients = 2;</code>
+       */
+      public java.util.List<io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder> 
+           getRecipientsBuilderList() {
+        return getRecipientsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder> 
+          getRecipientsFieldBuilder() {
+        if (recipientsBuilder_ == null) {
+          recipientsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTargetOrBuilder>(
+                  recipients_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          recipients_ = null;
+        }
+        return recipientsBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerAlertSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerAlertSettings)
+    private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings();
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartnerAlertSettings>
+        PARSER = new com.google.protobuf.AbstractParser<PartnerAlertSettings>() {
+      public PartnerAlertSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartnerAlertSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartnerAlertSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartnerAlertSettings> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BetaSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.BetaSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enable access to beta systems for this partner.
+     * </pre>
+     *
+     * <code>bool enable = 1;</code>
+     */
+    boolean getEnable();
+
+    /**
+     * <pre>
+     * Enable access to sandbox resources and systems for this partner.
+     * </pre>
+     *
+     * <code>bool sandbox = 2;</code>
+     */
+    boolean getSandbox();
+  }
+  /**
+   * <pre>
+   * Beta and sandbox settings.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.settings.BetaSettings}
+   */
+  public  static final class BetaSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.BetaSettings)
+      BetaSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BetaSettings.newBuilder() to construct.
+    private BetaSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BetaSettings() {
+      enable_ = false;
+      sandbox_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BetaSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              enable_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              sandbox_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder.class);
+    }
+
+    public static final int ENABLE_FIELD_NUMBER = 1;
+    private boolean enable_;
+    /**
+     * <pre>
+     * Enable access to beta systems for this partner.
+     * </pre>
+     *
+     * <code>bool enable = 1;</code>
+     */
+    public boolean getEnable() {
+      return enable_;
+    }
+
+    public static final int SANDBOX_FIELD_NUMBER = 2;
+    private boolean sandbox_;
+    /**
+     * <pre>
+     * Enable access to sandbox resources and systems for this partner.
+     * </pre>
+     *
+     * <code>bool sandbox = 2;</code>
+     */
+    public boolean getSandbox() {
+      return sandbox_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enable_ != false) {
+        output.writeBool(1, enable_);
+      }
+      if (sandbox_ != false) {
+        output.writeBool(2, sandbox_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enable_);
+      }
+      if (sandbox_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, sandbox_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings other = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings) obj;
+
+      boolean result = true;
+      result = result && (getEnable()
+          == other.getEnable());
+      result = result && (getSandbox()
+          == other.getSandbox());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnable());
+      hash = (37 * hash) + SANDBOX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSandbox());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Beta and sandbox settings.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.settings.BetaSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.BetaSettings)
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        enable_ = false;
+
+        sandbox_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings build() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings buildPartial() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings(this);
+        result.enable_ = enable_;
+        result.sandbox_ = sandbox_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings) {
+          return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings other) {
+        if (other == io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.getDefaultInstance()) return this;
+        if (other.getEnable() != false) {
+          setEnable(other.getEnable());
+        }
+        if (other.getSandbox() != false) {
+          setSandbox(other.getSandbox());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enable_ ;
+      /**
+       * <pre>
+       * Enable access to beta systems for this partner.
+       * </pre>
+       *
+       * <code>bool enable = 1;</code>
+       */
+      public boolean getEnable() {
+        return enable_;
+      }
+      /**
+       * <pre>
+       * Enable access to beta systems for this partner.
+       * </pre>
+       *
+       * <code>bool enable = 1;</code>
+       */
+      public Builder setEnable(boolean value) {
+        
+        enable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable access to beta systems for this partner.
+       * </pre>
+       *
+       * <code>bool enable = 1;</code>
+       */
+      public Builder clearEnable() {
+        
+        enable_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean sandbox_ ;
+      /**
+       * <pre>
+       * Enable access to sandbox resources and systems for this partner.
+       * </pre>
+       *
+       * <code>bool sandbox = 2;</code>
+       */
+      public boolean getSandbox() {
+        return sandbox_;
+      }
+      /**
+       * <pre>
+       * Enable access to sandbox resources and systems for this partner.
+       * </pre>
+       *
+       * <code>bool sandbox = 2;</code>
+       */
+      public Builder setSandbox(boolean value) {
+        
+        sandbox_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable access to sandbox resources and systems for this partner.
+       * </pre>
+       *
+       * <code>bool sandbox = 2;</code>
+       */
+      public Builder clearSandbox() {
+        
+        sandbox_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.BetaSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.BetaSettings)
+    private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings();
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BetaSettings>
+        PARSER = new com.google.protobuf.AbstractParser<BetaSettings>() {
+      public BetaSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BetaSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BetaSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BetaSettings> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeatureStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.FeatureStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Whether this partner has access to analytics.
+     * </pre>
+     *
+     * <code>bool analytics = 1;</code>
+     */
+    boolean getAnalytics();
+
+    /**
+     * <pre>
+     * Whether this partner has access to beta features.
+     * </pre>
+     *
+     * <code>bool beta = 2;</code>
+     */
+    boolean getBeta();
+
+    /**
+     * <pre>
+     * Whether this partner has offline features.
+     * </pre>
+     *
+     * <code>bool offline = 3;</code>
+     */
+    boolean getOffline();
+
+    /**
+     * <pre>
+     * Whether this partner has access to shop features.
+     * </pre>
+     *
+     * <code>bool shop = 4;</code>
+     */
+    boolean getShop();
+
+    /**
+     * <pre>
+     * Whether this partner has access to checkin features.
+     * </pre>
+     *
+     * <code>bool checkin = 5;</code>
+     */
+    boolean getCheckin();
+  }
+  /**
+   * <pre>
+   * Feature activation flags.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.settings.FeatureStatus}
+   */
+  public  static final class FeatureStatus extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.FeatureStatus)
+      FeatureStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeatureStatus.newBuilder() to construct.
+    private FeatureStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeatureStatus() {
+      analytics_ = false;
+      beta_ = false;
+      offline_ = false;
+      shop_ = false;
+      checkin_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeatureStatus(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              analytics_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              beta_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              offline_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              shop_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              checkin_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder.class);
+    }
+
+    public static final int ANALYTICS_FIELD_NUMBER = 1;
+    private boolean analytics_;
+    /**
+     * <pre>
+     * Whether this partner has access to analytics.
+     * </pre>
+     *
+     * <code>bool analytics = 1;</code>
+     */
+    public boolean getAnalytics() {
+      return analytics_;
+    }
+
+    public static final int BETA_FIELD_NUMBER = 2;
+    private boolean beta_;
+    /**
+     * <pre>
+     * Whether this partner has access to beta features.
+     * </pre>
+     *
+     * <code>bool beta = 2;</code>
+     */
+    public boolean getBeta() {
+      return beta_;
+    }
+
+    public static final int OFFLINE_FIELD_NUMBER = 3;
+    private boolean offline_;
+    /**
+     * <pre>
+     * Whether this partner has offline features.
+     * </pre>
+     *
+     * <code>bool offline = 3;</code>
+     */
+    public boolean getOffline() {
+      return offline_;
+    }
+
+    public static final int SHOP_FIELD_NUMBER = 4;
+    private boolean shop_;
+    /**
+     * <pre>
+     * Whether this partner has access to shop features.
+     * </pre>
+     *
+     * <code>bool shop = 4;</code>
+     */
+    public boolean getShop() {
+      return shop_;
+    }
+
+    public static final int CHECKIN_FIELD_NUMBER = 5;
+    private boolean checkin_;
+    /**
+     * <pre>
+     * Whether this partner has access to checkin features.
+     * </pre>
+     *
+     * <code>bool checkin = 5;</code>
+     */
+    public boolean getCheckin() {
+      return checkin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (analytics_ != false) {
+        output.writeBool(1, analytics_);
+      }
+      if (beta_ != false) {
+        output.writeBool(2, beta_);
+      }
+      if (offline_ != false) {
+        output.writeBool(3, offline_);
+      }
+      if (shop_ != false) {
+        output.writeBool(4, shop_);
+      }
+      if (checkin_ != false) {
+        output.writeBool(5, checkin_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (analytics_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, analytics_);
+      }
+      if (beta_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, beta_);
+      }
+      if (offline_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, offline_);
+      }
+      if (shop_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, shop_);
+      }
+      if (checkin_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, checkin_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus other = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus) obj;
+
+      boolean result = true;
+      result = result && (getAnalytics()
+          == other.getAnalytics());
+      result = result && (getBeta()
+          == other.getBeta());
+      result = result && (getOffline()
+          == other.getOffline());
+      result = result && (getShop()
+          == other.getShop());
+      result = result && (getCheckin()
+          == other.getCheckin());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ANALYTICS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAnalytics());
+      hash = (37 * hash) + BETA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getBeta());
+      hash = (37 * hash) + OFFLINE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getOffline());
+      hash = (37 * hash) + SHOP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getShop());
+      hash = (37 * hash) + CHECKIN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getCheckin());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Feature activation flags.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.settings.FeatureStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.FeatureStatus)
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        analytics_ = false;
+
+        beta_ = false;
+
+        offline_ = false;
+
+        shop_ = false;
+
+        checkin_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus build() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus buildPartial() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus(this);
+        result.analytics_ = analytics_;
+        result.beta_ = beta_;
+        result.offline_ = offline_;
+        result.shop_ = shop_;
+        result.checkin_ = checkin_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus) {
+          return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus other) {
+        if (other == io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.getDefaultInstance()) return this;
+        if (other.getAnalytics() != false) {
+          setAnalytics(other.getAnalytics());
+        }
+        if (other.getBeta() != false) {
+          setBeta(other.getBeta());
+        }
+        if (other.getOffline() != false) {
+          setOffline(other.getOffline());
+        }
+        if (other.getShop() != false) {
+          setShop(other.getShop());
+        }
+        if (other.getCheckin() != false) {
+          setCheckin(other.getCheckin());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean analytics_ ;
+      /**
+       * <pre>
+       * Whether this partner has access to analytics.
+       * </pre>
+       *
+       * <code>bool analytics = 1;</code>
+       */
+      public boolean getAnalytics() {
+        return analytics_;
+      }
+      /**
+       * <pre>
+       * Whether this partner has access to analytics.
+       * </pre>
+       *
+       * <code>bool analytics = 1;</code>
+       */
+      public Builder setAnalytics(boolean value) {
+        
+        analytics_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this partner has access to analytics.
+       * </pre>
+       *
+       * <code>bool analytics = 1;</code>
+       */
+      public Builder clearAnalytics() {
+        
+        analytics_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean beta_ ;
+      /**
+       * <pre>
+       * Whether this partner has access to beta features.
+       * </pre>
+       *
+       * <code>bool beta = 2;</code>
+       */
+      public boolean getBeta() {
+        return beta_;
+      }
+      /**
+       * <pre>
+       * Whether this partner has access to beta features.
+       * </pre>
+       *
+       * <code>bool beta = 2;</code>
+       */
+      public Builder setBeta(boolean value) {
+        
+        beta_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this partner has access to beta features.
+       * </pre>
+       *
+       * <code>bool beta = 2;</code>
+       */
+      public Builder clearBeta() {
+        
+        beta_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean offline_ ;
+      /**
+       * <pre>
+       * Whether this partner has offline features.
+       * </pre>
+       *
+       * <code>bool offline = 3;</code>
+       */
+      public boolean getOffline() {
+        return offline_;
+      }
+      /**
+       * <pre>
+       * Whether this partner has offline features.
+       * </pre>
+       *
+       * <code>bool offline = 3;</code>
+       */
+      public Builder setOffline(boolean value) {
+        
+        offline_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this partner has offline features.
+       * </pre>
+       *
+       * <code>bool offline = 3;</code>
+       */
+      public Builder clearOffline() {
+        
+        offline_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean shop_ ;
+      /**
+       * <pre>
+       * Whether this partner has access to shop features.
+       * </pre>
+       *
+       * <code>bool shop = 4;</code>
+       */
+      public boolean getShop() {
+        return shop_;
+      }
+      /**
+       * <pre>
+       * Whether this partner has access to shop features.
+       * </pre>
+       *
+       * <code>bool shop = 4;</code>
+       */
+      public Builder setShop(boolean value) {
+        
+        shop_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this partner has access to shop features.
+       * </pre>
+       *
+       * <code>bool shop = 4;</code>
+       */
+      public Builder clearShop() {
+        
+        shop_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean checkin_ ;
+      /**
+       * <pre>
+       * Whether this partner has access to checkin features.
+       * </pre>
+       *
+       * <code>bool checkin = 5;</code>
+       */
+      public boolean getCheckin() {
+        return checkin_;
+      }
+      /**
+       * <pre>
+       * Whether this partner has access to checkin features.
+       * </pre>
+       *
+       * <code>bool checkin = 5;</code>
+       */
+      public Builder setCheckin(boolean value) {
+        
+        checkin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this partner has access to checkin features.
+       * </pre>
+       *
+       * <code>bool checkin = 5;</code>
+       */
+      public Builder clearCheckin() {
+        
+        checkin_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.FeatureStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.FeatureStatus)
+    private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus();
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeatureStatus>
+        PARSER = new com.google.protobuf.AbstractParser<FeatureStatus>() {
+      public FeatureStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FeatureStatus(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeatureStatus> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeatureStatus> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SearchSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.SearchSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Whether to enable search for this partner or not.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * Make media uploaded by this partner searchable.
+     * </pre>
+     *
+     * <code>bool media = 2;</code>
+     */
+    boolean getMedia();
+  }
+  /**
+   * <pre>
+   * Settings related to search functionality.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.settings.SearchSettings}
+   */
+  public  static final class SearchSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.SearchSettings)
+      SearchSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SearchSettings.newBuilder() to construct.
+    private SearchSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SearchSettings() {
+      enabled_ = false;
+      media_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SearchSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              media_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Whether to enable search for this partner or not.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     */
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int MEDIA_FIELD_NUMBER = 2;
+    private boolean media_;
+    /**
+     * <pre>
+     * Make media uploaded by this partner searchable.
+     * </pre>
+     *
+     * <code>bool media = 2;</code>
+     */
+    public boolean getMedia() {
+      return media_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      if (media_ != false) {
+        output.writeBool(2, media_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      if (media_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, media_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings other = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings) obj;
+
+      boolean result = true;
+      result = result && (getEnabled()
+          == other.getEnabled());
+      result = result && (getMedia()
+          == other.getMedia());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (37 * hash) + MEDIA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMedia());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Settings related to search functionality.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.settings.SearchSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.SearchSettings)
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        media_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings build() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings buildPartial() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings(this);
+        result.enabled_ = enabled_;
+        result.media_ = media_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings) {
+          return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings other) {
+        if (other == io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (other.getMedia() != false) {
+          setMedia(other.getMedia());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Whether to enable search for this partner or not.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Whether to enable search for this partner or not.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether to enable search for this partner or not.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean media_ ;
+      /**
+       * <pre>
+       * Make media uploaded by this partner searchable.
+       * </pre>
+       *
+       * <code>bool media = 2;</code>
+       */
+      public boolean getMedia() {
+        return media_;
+      }
+      /**
+       * <pre>
+       * Make media uploaded by this partner searchable.
+       * </pre>
+       *
+       * <code>bool media = 2;</code>
+       */
+      public Builder setMedia(boolean value) {
+        
+        media_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Make media uploaded by this partner searchable.
+       * </pre>
+       *
+       * <code>bool media = 2;</code>
+       */
+      public Builder clearMedia() {
+        
+        media_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.SearchSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.SearchSettings)
+    private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings();
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SearchSettings>
+        PARSER = new com.google.protobuf.AbstractParser<SearchSettings>() {
+      public SearchSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SearchSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SearchSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchSettings> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PartnerSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.settings.PartnerSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Alerting and notification settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     */
+    boolean hasAlerts();
+    /**
+     * <pre>
+     * Alerting and notification settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getAlerts();
+    /**
+     * <pre>
+     * Alerting and notification settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder getAlertsOrBuilder();
+
+    /**
+     * <pre>
+     * Beta and sandbox settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     */
+    boolean hasBeta();
+    /**
+     * <pre>
+     * Beta and sandbox settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getBeta();
+    /**
+     * <pre>
+     * Beta and sandbox settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder getBetaOrBuilder();
+
+    /**
+     * <pre>
+     * Feature activation flags.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     */
+    boolean hasFeatures();
+    /**
+     * <pre>
+     * Feature activation flags.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getFeatures();
+    /**
+     * <pre>
+     * Feature activation flags.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder getFeaturesOrBuilder();
+
+    /**
+     * <pre>
+     * Search settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     */
+    boolean hasSearch();
+    /**
+     * <pre>
+     * Search settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getSearch();
+    /**
+     * <pre>
+     * Search settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder getSearchOrBuilder();
+
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     */
+    boolean hasIntegration();
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     */
+    io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings getIntegration();
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     */
+    io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder();
+  }
+  /**
+   * <pre>
+   * Partner-level account settings.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.settings.PartnerSettings}
+   */
+  public  static final class PartnerSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.settings.PartnerSettings)
+      PartnerSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PartnerSettings.newBuilder() to construct.
+    private PartnerSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PartnerSettings() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartnerSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder subBuilder = null;
+              if (alerts_ != null) {
+                subBuilder = alerts_.toBuilder();
+              }
+              alerts_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(alerts_);
+                alerts_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder subBuilder = null;
+              if (beta_ != null) {
+                subBuilder = beta_.toBuilder();
+              }
+              beta_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(beta_);
+                beta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder subBuilder = null;
+              if (features_ != null) {
+                subBuilder = features_.toBuilder();
+              }
+              features_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(features_);
+                features_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder subBuilder = null;
+              if (search_ != null) {
+                subBuilder = search_.toBuilder();
+              }
+              search_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(search_);
+                search_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder subBuilder = null;
+              if (integration_ != null) {
+                subBuilder = integration_.toBuilder();
+              }
+              integration_ = input.readMessage(io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(integration_);
+                integration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder.class);
+    }
+
+    public static final int ALERTS_FIELD_NUMBER = 1;
+    private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings alerts_;
+    /**
+     * <pre>
+     * Alerting and notification settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     */
+    public boolean hasAlerts() {
+      return alerts_ != null;
+    }
+    /**
+     * <pre>
+     * Alerting and notification settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getAlerts() {
+      return alerts_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.getDefaultInstance() : alerts_;
+    }
+    /**
+     * <pre>
+     * Alerting and notification settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder getAlertsOrBuilder() {
+      return getAlerts();
+    }
+
+    public static final int BETA_FIELD_NUMBER = 2;
+    private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings beta_;
+    /**
+     * <pre>
+     * Beta and sandbox settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     */
+    public boolean hasBeta() {
+      return beta_ != null;
+    }
+    /**
+     * <pre>
+     * Beta and sandbox settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getBeta() {
+      return beta_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.getDefaultInstance() : beta_;
+    }
+    /**
+     * <pre>
+     * Beta and sandbox settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder getBetaOrBuilder() {
+      return getBeta();
+    }
+
+    public static final int FEATURES_FIELD_NUMBER = 3;
+    private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus features_;
+    /**
+     * <pre>
+     * Feature activation flags.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     */
+    public boolean hasFeatures() {
+      return features_ != null;
+    }
+    /**
+     * <pre>
+     * Feature activation flags.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getFeatures() {
+      return features_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.getDefaultInstance() : features_;
+    }
+    /**
+     * <pre>
+     * Feature activation flags.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder getFeaturesOrBuilder() {
+      return getFeatures();
+    }
+
+    public static final int SEARCH_FIELD_NUMBER = 4;
+    private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings search_;
+    /**
+     * <pre>
+     * Search settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     */
+    public boolean hasSearch() {
+      return search_ != null;
+    }
+    /**
+     * <pre>
+     * Search settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getSearch() {
+      return search_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.getDefaultInstance() : search_;
+    }
+    /**
+     * <pre>
+     * Search settings.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder getSearchOrBuilder() {
+      return getSearch();
+    }
+
+    public static final int INTEGRATION_FIELD_NUMBER = 7;
+    private io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings integration_;
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     */
+    public boolean hasIntegration() {
+      return integration_ != null;
+    }
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     */
+    public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings getIntegration() {
+      return integration_ == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.getDefaultInstance() : integration_;
+    }
+    /**
+     * <pre>
+     * Integration settings for this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+     */
+    public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
+      return getIntegration();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (alerts_ != null) {
+        output.writeMessage(1, getAlerts());
+      }
+      if (beta_ != null) {
+        output.writeMessage(2, getBeta());
+      }
+      if (features_ != null) {
+        output.writeMessage(3, getFeatures());
+      }
+      if (search_ != null) {
+        output.writeMessage(4, getSearch());
+      }
+      if (integration_ != null) {
+        output.writeMessage(7, getIntegration());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (alerts_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAlerts());
+      }
+      if (beta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getBeta());
+      }
+      if (features_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getFeatures());
+      }
+      if (search_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSearch());
+      }
+      if (integration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getIntegration());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings other = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings) obj;
+
+      boolean result = true;
+      result = result && (hasAlerts() == other.hasAlerts());
+      if (hasAlerts()) {
+        result = result && getAlerts()
+            .equals(other.getAlerts());
+      }
+      result = result && (hasBeta() == other.hasBeta());
+      if (hasBeta()) {
+        result = result && getBeta()
+            .equals(other.getBeta());
+      }
+      result = result && (hasFeatures() == other.hasFeatures());
+      if (hasFeatures()) {
+        result = result && getFeatures()
+            .equals(other.getFeatures());
+      }
+      result = result && (hasSearch() == other.hasSearch());
+      if (hasSearch()) {
+        result = result && getSearch()
+            .equals(other.getSearch());
+      }
+      result = result && (hasIntegration() == other.hasIntegration());
+      if (hasIntegration()) {
+        result = result && getIntegration()
+            .equals(other.getIntegration());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAlerts()) {
+        hash = (37 * hash) + ALERTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAlerts().hashCode();
+      }
+      if (hasBeta()) {
+        hash = (37 * hash) + BETA_FIELD_NUMBER;
+        hash = (53 * hash) + getBeta().hashCode();
+      }
+      if (hasFeatures()) {
+        hash = (37 * hash) + FEATURES_FIELD_NUMBER;
+        hash = (53 * hash) + getFeatures().hashCode();
+      }
+      if (hasSearch()) {
+        hash = (37 * hash) + SEARCH_FIELD_NUMBER;
+        hash = (53 * hash) + getSearch().hashCode();
+      }
+      if (hasIntegration()) {
+        hash = (37 * hash) + INTEGRATION_FIELD_NUMBER;
+        hash = (53 * hash) + getIntegration().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Partner-level account settings.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.settings.PartnerSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.settings.PartnerSettings)
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.class, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (alertsBuilder_ == null) {
+          alerts_ = null;
+        } else {
+          alerts_ = null;
+          alertsBuilder_ = null;
+        }
+        if (betaBuilder_ == null) {
+          beta_ = null;
+        } else {
+          beta_ = null;
+          betaBuilder_ = null;
+        }
+        if (featuresBuilder_ == null) {
+          features_ = null;
+        } else {
+          features_ = null;
+          featuresBuilder_ = null;
+        }
+        if (searchBuilder_ == null) {
+          search_ = null;
+        } else {
+          search_ = null;
+          searchBuilder_ = null;
+        }
+        if (integrationBuilder_ == null) {
+          integration_ = null;
+        } else {
+          integration_ = null;
+          integrationBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings build() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings buildPartial() {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings result = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings(this);
+        if (alertsBuilder_ == null) {
+          result.alerts_ = alerts_;
+        } else {
+          result.alerts_ = alertsBuilder_.build();
+        }
+        if (betaBuilder_ == null) {
+          result.beta_ = beta_;
+        } else {
+          result.beta_ = betaBuilder_.build();
+        }
+        if (featuresBuilder_ == null) {
+          result.features_ = features_;
+        } else {
+          result.features_ = featuresBuilder_.build();
+        }
+        if (searchBuilder_ == null) {
+          result.search_ = search_;
+        } else {
+          result.search_ = searchBuilder_.build();
+        }
+        if (integrationBuilder_ == null) {
+          result.integration_ = integration_;
+        } else {
+          result.integration_ = integrationBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings) {
+          return mergeFrom((io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings other) {
+        if (other == io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance()) return this;
+        if (other.hasAlerts()) {
+          mergeAlerts(other.getAlerts());
+        }
+        if (other.hasBeta()) {
+          mergeBeta(other.getBeta());
+        }
+        if (other.hasFeatures()) {
+          mergeFeatures(other.getFeatures());
+        }
+        if (other.hasSearch()) {
+          mergeSearch(other.getSearch());
+        }
+        if (other.hasIntegration()) {
+          mergeIntegration(other.getIntegration());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings alerts_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder> alertsBuilder_;
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      public boolean hasAlerts() {
+        return alertsBuilder_ != null || alerts_ != null;
+      }
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings getAlerts() {
+        if (alertsBuilder_ == null) {
+          return alerts_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.getDefaultInstance() : alerts_;
+        } else {
+          return alertsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      public Builder setAlerts(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings value) {
+        if (alertsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          alerts_ = value;
+          onChanged();
+        } else {
+          alertsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      public Builder setAlerts(
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder builderForValue) {
+        if (alertsBuilder_ == null) {
+          alerts_ = builderForValue.build();
+          onChanged();
+        } else {
+          alertsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      public Builder mergeAlerts(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings value) {
+        if (alertsBuilder_ == null) {
+          if (alerts_ != null) {
+            alerts_ =
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.newBuilder(alerts_).mergeFrom(value).buildPartial();
+          } else {
+            alerts_ = value;
+          }
+          onChanged();
+        } else {
+          alertsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      public Builder clearAlerts() {
+        if (alertsBuilder_ == null) {
+          alerts_ = null;
+          onChanged();
+        } else {
+          alerts_ = null;
+          alertsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder getAlertsBuilder() {
+        
+        onChanged();
+        return getAlertsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder getAlertsOrBuilder() {
+        if (alertsBuilder_ != null) {
+          return alertsBuilder_.getMessageOrBuilder();
+        } else {
+          return alerts_ == null ?
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.getDefaultInstance() : alerts_;
+        }
+      }
+      /**
+       * <pre>
+       * Alerting and notification settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.PartnerAlertSettings alerts = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder> 
+          getAlertsFieldBuilder() {
+        if (alertsBuilder_ == null) {
+          alertsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerAlertSettingsOrBuilder>(
+                  getAlerts(),
+                  getParentForChildren(),
+                  isClean());
+          alerts_ = null;
+        }
+        return alertsBuilder_;
+      }
+
+      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings beta_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder> betaBuilder_;
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      public boolean hasBeta() {
+        return betaBuilder_ != null || beta_ != null;
+      }
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings getBeta() {
+        if (betaBuilder_ == null) {
+          return beta_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.getDefaultInstance() : beta_;
+        } else {
+          return betaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      public Builder setBeta(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings value) {
+        if (betaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          beta_ = value;
+          onChanged();
+        } else {
+          betaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      public Builder setBeta(
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder builderForValue) {
+        if (betaBuilder_ == null) {
+          beta_ = builderForValue.build();
+          onChanged();
+        } else {
+          betaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      public Builder mergeBeta(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings value) {
+        if (betaBuilder_ == null) {
+          if (beta_ != null) {
+            beta_ =
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.newBuilder(beta_).mergeFrom(value).buildPartial();
+          } else {
+            beta_ = value;
+          }
+          onChanged();
+        } else {
+          betaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      public Builder clearBeta() {
+        if (betaBuilder_ == null) {
+          beta_ = null;
+          onChanged();
+        } else {
+          beta_ = null;
+          betaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder getBetaBuilder() {
+        
+        onChanged();
+        return getBetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder getBetaOrBuilder() {
+        if (betaBuilder_ != null) {
+          return betaBuilder_.getMessageOrBuilder();
+        } else {
+          return beta_ == null ?
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.getDefaultInstance() : beta_;
+        }
+      }
+      /**
+       * <pre>
+       * Beta and sandbox settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.BetaSettings beta = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder> 
+          getBetaFieldBuilder() {
+        if (betaBuilder_ == null) {
+          betaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.BetaSettingsOrBuilder>(
+                  getBeta(),
+                  getParentForChildren(),
+                  isClean());
+          beta_ = null;
+        }
+        return betaBuilder_;
+      }
+
+      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus features_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder> featuresBuilder_;
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      public boolean hasFeatures() {
+        return featuresBuilder_ != null || features_ != null;
+      }
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus getFeatures() {
+        if (featuresBuilder_ == null) {
+          return features_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.getDefaultInstance() : features_;
+        } else {
+          return featuresBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      public Builder setFeatures(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus value) {
+        if (featuresBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          features_ = value;
+          onChanged();
+        } else {
+          featuresBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      public Builder setFeatures(
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder builderForValue) {
+        if (featuresBuilder_ == null) {
+          features_ = builderForValue.build();
+          onChanged();
+        } else {
+          featuresBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      public Builder mergeFeatures(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus value) {
+        if (featuresBuilder_ == null) {
+          if (features_ != null) {
+            features_ =
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.newBuilder(features_).mergeFrom(value).buildPartial();
+          } else {
+            features_ = value;
+          }
+          onChanged();
+        } else {
+          featuresBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      public Builder clearFeatures() {
+        if (featuresBuilder_ == null) {
+          features_ = null;
+          onChanged();
+        } else {
+          features_ = null;
+          featuresBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder getFeaturesBuilder() {
+        
+        onChanged();
+        return getFeaturesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder getFeaturesOrBuilder() {
+        if (featuresBuilder_ != null) {
+          return featuresBuilder_.getMessageOrBuilder();
+        } else {
+          return features_ == null ?
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.getDefaultInstance() : features_;
+        }
+      }
+      /**
+       * <pre>
+       * Feature activation flags.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.FeatureStatus features = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder> 
+          getFeaturesFieldBuilder() {
+        if (featuresBuilder_ == null) {
+          featuresBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatus.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.FeatureStatusOrBuilder>(
+                  getFeatures(),
+                  getParentForChildren(),
+                  isClean());
+          features_ = null;
+        }
+        return featuresBuilder_;
+      }
+
+      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings search_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder> searchBuilder_;
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      public boolean hasSearch() {
+        return searchBuilder_ != null || search_ != null;
+      }
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings getSearch() {
+        if (searchBuilder_ == null) {
+          return search_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.getDefaultInstance() : search_;
+        } else {
+          return searchBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      public Builder setSearch(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings value) {
+        if (searchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          search_ = value;
+          onChanged();
+        } else {
+          searchBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      public Builder setSearch(
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder builderForValue) {
+        if (searchBuilder_ == null) {
+          search_ = builderForValue.build();
+          onChanged();
+        } else {
+          searchBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      public Builder mergeSearch(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings value) {
+        if (searchBuilder_ == null) {
+          if (search_ != null) {
+            search_ =
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.newBuilder(search_).mergeFrom(value).buildPartial();
+          } else {
+            search_ = value;
+          }
+          onChanged();
+        } else {
+          searchBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      public Builder clearSearch() {
+        if (searchBuilder_ == null) {
+          search_ = null;
+          onChanged();
+        } else {
+          search_ = null;
+          searchBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder getSearchBuilder() {
+        
+        onChanged();
+        return getSearchFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder getSearchOrBuilder() {
+        if (searchBuilder_ != null) {
+          return searchBuilder_.getMessageOrBuilder();
+        } else {
+          return search_ == null ?
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.getDefaultInstance() : search_;
+        }
+      }
+      /**
+       * <pre>
+       * Search settings.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.SearchSettings search = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder> 
+          getSearchFieldBuilder() {
+        if (searchBuilder_ == null) {
+          searchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.SearchSettingsOrBuilder>(
+                  getSearch(),
+                  getParentForChildren(),
+                  isClean());
+          search_ = null;
+        }
+        return searchBuilder_;
+      }
+
+      private io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings integration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder> integrationBuilder_;
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      public boolean hasIntegration() {
+        return integrationBuilder_ != null || integration_ != null;
+      }
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings getIntegration() {
+        if (integrationBuilder_ == null) {
+          return integration_ == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.getDefaultInstance() : integration_;
+        } else {
+          return integrationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      public Builder setIntegration(io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings value) {
+        if (integrationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          integration_ = value;
+          onChanged();
+        } else {
+          integrationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      public Builder setIntegration(
+          io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder builderForValue) {
+        if (integrationBuilder_ == null) {
+          integration_ = builderForValue.build();
+          onChanged();
+        } else {
+          integrationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      public Builder mergeIntegration(io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings value) {
+        if (integrationBuilder_ == null) {
+          if (integration_ != null) {
+            integration_ =
+              io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.newBuilder(integration_).mergeFrom(value).buildPartial();
+          } else {
+            integration_ = value;
+          }
+          onChanged();
+        } else {
+          integrationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      public Builder clearIntegration() {
+        if (integrationBuilder_ == null) {
+          integration_ = null;
+          onChanged();
+        } else {
+          integration_ = null;
+          integrationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder getIntegrationBuilder() {
+        
+        onChanged();
+        return getIntegrationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder getIntegrationOrBuilder() {
+        if (integrationBuilder_ != null) {
+          return integrationBuilder_.getMessageOrBuilder();
+        } else {
+          return integration_ == null ?
+              io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.getDefaultInstance() : integration_;
+        }
+      }
+      /**
+       * <pre>
+       * Integration settings for this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.PartnerIntegrationSettings integration = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder> 
+          getIntegrationFieldBuilder() {
+        if (integrationBuilder_ == null) {
+          integrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettingsOrBuilder>(
+                  getIntegration(),
+                  getParentForChildren(),
+                  isClean());
+          integration_ = null;
+        }
+        return integrationBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.settings.PartnerSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.settings.PartnerSettings)
+    private static final io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings();
+    }
+
+    public static io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartnerSettings>
+        PARSER = new com.google.protobuf.AbstractParser<PartnerSettings>() {
+      public PartnerSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartnerSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartnerSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartnerSettings> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_settings_PartnerEventAlertingSettings_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_settings_PartnerAlertSettings_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_settings_BetaSettings_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_settings_BetaSettings_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_settings_FeatureStatus_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_settings_FeatureStatus_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_settings_SearchSettings_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_settings_SearchSettings_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_settings_PartnerSettings_fieldAccessorTable;
 
@@ -104,7 +6600,7 @@ public final class PartnerSettingsOuterClass {
       "archSettings\022U\n\013integration\030\007 \001(\0132@.bloo" +
       "mbox.schema.partner.integrations.Partner" +
       "IntegrationSettingsB/\n#io.bloombox.schem" +
-      "a.partner.settingsH\001P\001\242\002\003BBSb\006proto3"
+      "a.partner.settingsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
