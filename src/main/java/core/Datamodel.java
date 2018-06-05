@@ -196,6 +196,14 @@ public final class Datamodel {
      * <code>TAGS = 3;</code>
      */
     TAGS(3),
+    /**
+     * <pre>
+     * Store this object as a special flags-style mapping.
+     * </pre>
+     *
+     * <code>FLAGS = 4;</code>
+     */
+    FLAGS(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -231,6 +239,14 @@ public final class Datamodel {
      * <code>TAGS = 3;</code>
      */
     public static final int TAGS_VALUE = 3;
+    /**
+     * <pre>
+     * Store this object as a special flags-style mapping.
+     * </pre>
+     *
+     * <code>FLAGS = 4;</code>
+     */
+    public static final int FLAGS_VALUE = 4;
 
 
     public final int getNumber() {
@@ -255,6 +271,7 @@ public final class Datamodel {
         case 1: return KEY;
         case 2: return ID;
         case 3: return TAGS;
+        case 4: return FLAGS;
         default: return null;
       }
     }
@@ -4003,18 +4020,18 @@ public final class Datamodel {
       "scription\030\002 \001(\t\"D\n\021TableFieldOptions\022\017\n\007" +
       "require\030\001 \001(\010\022\016\n\006ignore\030\002 \001(\010\022\016\n\006bqtype\030" +
       "\003 \001(\t*7\n\016CollectionMode\022\n\n\006NESTED\020\000\022\016\n\nC" +
-      "OLLECTION\020\001\022\t\n\005GROUP\020\002*4\n\tFieldType\022\014\n\010S" +
-      "TANDARD\020\000\022\007\n\003KEY\020\001\022\006\n\002ID\020\002\022\010\n\004TAGS\020\003:F\n\002" +
-      "db\022\037.google.protobuf.MessageOptions\030\360. \001" +
-      "(\0132\030.core.PersistenceOptions:C\n\005table\022\037." +
-      "google.protobuf.MessageOptions\030\361. \001(\0132\022." +
-      "core.TableOptions:L\n\005field\022\035.google.prot" +
-      "obuf.FieldOptions\030\3306 \001(\0132\035.core.FieldPer" +
-      "sistenceOptions:G\n\006column\022\035.google.proto" +
-      "buf.FieldOptions\030\3316 \001(\0132\027.core.TableFiel" +
-      "dOptions:K\n\ncollection\022\035.google.protobuf" +
-      ".FieldOptions\030\3326 \001(\0132\027.core.SubmessageOp" +
-      "tionsb\006proto3"
+      "OLLECTION\020\001\022\t\n\005GROUP\020\002*?\n\tFieldType\022\014\n\010S" +
+      "TANDARD\020\000\022\007\n\003KEY\020\001\022\006\n\002ID\020\002\022\010\n\004TAGS\020\003\022\t\n\005" +
+      "FLAGS\020\004:F\n\002db\022\037.google.protobuf.MessageO" +
+      "ptions\030\360. \001(\0132\030.core.PersistenceOptions:" +
+      "C\n\005table\022\037.google.protobuf.MessageOption" +
+      "s\030\361. \001(\0132\022.core.TableOptions:L\n\005field\022\035." +
+      "google.protobuf.FieldOptions\030\3306 \001(\0132\035.co" +
+      "re.FieldPersistenceOptions:G\n\006column\022\035.g" +
+      "oogle.protobuf.FieldOptions\030\3316 \001(\0132\027.cor" +
+      "e.TableFieldOptions:K\n\ncollection\022\035.goog" +
+      "le.protobuf.FieldOptions\030\3326 \001(\0132\027.core.S" +
+      "ubmessageOptionsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -71,6 +71,46 @@ public enum DashError
   LOCATION_NOT_FOUND(4),
   /**
    * <pre>
+   * The specified integration is not ready.
+   * </pre>
+   *
+   * <code>INTEGRATION_NOT_READY = 5;</code>
+   */
+  INTEGRATION_NOT_READY(5),
+  /**
+   * <pre>
+   * The specified integration is not currently enabled.
+   * </pre>
+   *
+   * <code>INTEGRATION_DISABLED = 6;</code>
+   */
+  INTEGRATION_DISABLED(6),
+  /**
+   * <pre>
+   * The specified integration is not currently enabled.
+   * </pre>
+   *
+   * <code>INTEGRATION_AUTHFAIL = 7;</code>
+   */
+  INTEGRATION_AUTHFAIL(7),
+  /**
+   * <pre>
+   * The specified integration settings are not valid.
+   * </pre>
+   *
+   * <code>INTEGRATION_SETTINGS_INVALID = 9;</code>
+   */
+  INTEGRATION_SETTINGS_INVALID(9),
+  /**
+   * <pre>
+   * An error occurred with an integration.
+   * </pre>
+   *
+   * <code>INTEGRATION_ERROR = 10;</code>
+   */
+  INTEGRATION_ERROR(10),
+  /**
+   * <pre>
    * Permission was denied for the current security context.
    * </pre>
    *
@@ -138,6 +178,46 @@ public enum DashError
   public static final int LOCATION_NOT_FOUND_VALUE = 4;
   /**
    * <pre>
+   * The specified integration is not ready.
+   * </pre>
+   *
+   * <code>INTEGRATION_NOT_READY = 5;</code>
+   */
+  public static final int INTEGRATION_NOT_READY_VALUE = 5;
+  /**
+   * <pre>
+   * The specified integration is not currently enabled.
+   * </pre>
+   *
+   * <code>INTEGRATION_DISABLED = 6;</code>
+   */
+  public static final int INTEGRATION_DISABLED_VALUE = 6;
+  /**
+   * <pre>
+   * The specified integration is not currently enabled.
+   * </pre>
+   *
+   * <code>INTEGRATION_AUTHFAIL = 7;</code>
+   */
+  public static final int INTEGRATION_AUTHFAIL_VALUE = 7;
+  /**
+   * <pre>
+   * The specified integration settings are not valid.
+   * </pre>
+   *
+   * <code>INTEGRATION_SETTINGS_INVALID = 9;</code>
+   */
+  public static final int INTEGRATION_SETTINGS_INVALID_VALUE = 9;
+  /**
+   * <pre>
+   * An error occurred with an integration.
+   * </pre>
+   *
+   * <code>INTEGRATION_ERROR = 10;</code>
+   */
+  public static final int INTEGRATION_ERROR_VALUE = 10;
+  /**
+   * <pre>
    * Permission was denied for the current security context.
    * </pre>
    *
@@ -185,6 +265,11 @@ public enum DashError
       case 2: return PARTNER_NOT_FOUND;
       case 3: return LOCATION_INVALID;
       case 4: return LOCATION_NOT_FOUND;
+      case 5: return INTEGRATION_NOT_READY;
+      case 6: return INTEGRATION_DISABLED;
+      case 7: return INTEGRATION_AUTHFAIL;
+      case 9: return INTEGRATION_SETTINGS_INVALID;
+      case 10: return INTEGRATION_ERROR;
       case 90: return PERMISSION_DENIED;
       case 91: return NOT_IMPLEMENTED;
       case 99: return INTERNAL_ERROR;

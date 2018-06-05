@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
      */
-    io.bloombox.schema.partner.settings.PartnerSettings getSettings();
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings();
     /**
      * <pre>
      * Settings to apply for the partner.
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
      */
-    io.bloombox.schema.partner.settings.PartnerSettingsOrBuilder getSettingsOrBuilder();
+    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder();
   }
   /**
    * <pre>
@@ -198,11 +198,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              io.bloombox.schema.partner.settings.PartnerSettings.Builder subBuilder = null;
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder subBuilder = null;
               if (settings_ != null) {
                 subBuilder = settings_.toBuilder();
               }
-              settings_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerSettings.parser(), extensionRegistry);
+              settings_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(settings_);
                 settings_ = subBuilder.buildPartial();
@@ -277,7 +277,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SETTINGS_FIELD_NUMBER = 2;
-    private io.bloombox.schema.partner.settings.PartnerSettings settings_;
+    private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings settings_;
     /**
      * <pre>
      * Settings to apply for the partner.
@@ -295,8 +295,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
      */
-    public io.bloombox.schema.partner.settings.PartnerSettings getSettings() {
-      return settings_ == null ? io.bloombox.schema.partner.settings.PartnerSettings.getDefaultInstance() : settings_;
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings() {
+      return settings_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance() : settings_;
     }
     /**
      * <pre>
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
      */
-    public io.bloombox.schema.partner.settings.PartnerSettingsOrBuilder getSettingsOrBuilder() {
+    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder() {
       return getSettings();
     }
 
@@ -715,9 +715,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.partner.settings.PartnerSettings settings_ = null;
+      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings settings_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.settings.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOrBuilder> settingsBuilder_;
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder> settingsBuilder_;
       /**
        * <pre>
        * Settings to apply for the partner.
@@ -735,9 +735,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
        */
-      public io.bloombox.schema.partner.settings.PartnerSettings getSettings() {
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings() {
         if (settingsBuilder_ == null) {
-          return settings_ == null ? io.bloombox.schema.partner.settings.PartnerSettings.getDefaultInstance() : settings_;
+          return settings_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance() : settings_;
         } else {
           return settingsBuilder_.getMessage();
         }
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
        */
-      public Builder setSettings(io.bloombox.schema.partner.settings.PartnerSettings value) {
+      public Builder setSettings(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings value) {
         if (settingsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
        */
       public Builder setSettings(
-          io.bloombox.schema.partner.settings.PartnerSettings.Builder builderForValue) {
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder builderForValue) {
         if (settingsBuilder_ == null) {
           settings_ = builderForValue.build();
           onChanged();
@@ -787,11 +787,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
        */
-      public Builder mergeSettings(io.bloombox.schema.partner.settings.PartnerSettings value) {
+      public Builder mergeSettings(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings value) {
         if (settingsBuilder_ == null) {
           if (settings_ != null) {
             settings_ =
-              io.bloombox.schema.partner.settings.PartnerSettings.newBuilder(settings_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.newBuilder(settings_).mergeFrom(value).buildPartial();
           } else {
             settings_ = value;
           }
@@ -827,7 +827,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
        */
-      public io.bloombox.schema.partner.settings.PartnerSettings.Builder getSettingsBuilder() {
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder getSettingsBuilder() {
         
         onChanged();
         return getSettingsFieldBuilder().getBuilder();
@@ -839,12 +839,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
        */
-      public io.bloombox.schema.partner.settings.PartnerSettingsOrBuilder getSettingsOrBuilder() {
+      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder() {
         if (settingsBuilder_ != null) {
           return settingsBuilder_.getMessageOrBuilder();
         } else {
           return settings_ == null ?
-              io.bloombox.schema.partner.settings.PartnerSettings.getDefaultInstance() : settings_;
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance() : settings_;
         }
       }
       /**
@@ -855,11 +855,11 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.settings.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOrBuilder> 
+          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder> 
           getSettingsFieldBuilder() {
         if (settingsBuilder_ == null) {
           settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.settings.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOrBuilder>(
+              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder>(
                   getSettings(),
                   getParentForChildren(),
                   isClean());

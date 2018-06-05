@@ -22,8 +22,8 @@ import bloombox.client.internals.mtls.ClientCredentials
 import bloombox.client.internals.rpc.RPCClient
 import com.google.common.util.concurrent.ListenableFuture
 import io.opencannabis.schema.commerce.CommercialOrder
-import io.bloombox.schema.partner.PartnerKey
-import io.bloombox.schema.partner.PartnerLocationKey
+import io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey
+import io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey
 import io.bloombox.schema.services.shop.v1.*
 import io.grpc.*
 import io.netty.handler.ssl.ClientAuth

@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
      */
-    io.bloombox.schema.identity.IdentityProvider getProvider();
+    io.bloombox.schema.identity.UserOuterClass.IdentityProvider getProvider();
 
     /**
      * <pre>
@@ -252,9 +252,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
      */
-    public io.bloombox.schema.identity.IdentityProvider getProvider() {
-      io.bloombox.schema.identity.IdentityProvider result = io.bloombox.schema.identity.IdentityProvider.valueOf(provider_);
-      return result == null ? io.bloombox.schema.identity.IdentityProvider.UNRECOGNIZED : result;
+    public io.bloombox.schema.identity.UserOuterClass.IdentityProvider getProvider() {
+      io.bloombox.schema.identity.UserOuterClass.IdentityProvider result = io.bloombox.schema.identity.UserOuterClass.IdentityProvider.valueOf(provider_);
+      return result == null ? io.bloombox.schema.identity.UserOuterClass.IdentityProvider.UNRECOGNIZED : result;
     }
 
     public static final int ASSERTION_FIELD_NUMBER = 2;
@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (provider_ != io.bloombox.schema.identity.IdentityProvider.EMAIL.getNumber()) {
+      if (provider_ != io.bloombox.schema.identity.UserOuterClass.IdentityProvider.EMAIL.getNumber()) {
         output.writeEnum(1, provider_);
       }
       if (assertion_ != null) {
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (provider_ != io.bloombox.schema.identity.IdentityProvider.EMAIL.getNumber()) {
+      if (provider_ != io.bloombox.schema.identity.UserOuterClass.IdentityProvider.EMAIL.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, provider_);
       }
@@ -636,9 +636,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
        */
-      public io.bloombox.schema.identity.IdentityProvider getProvider() {
-        io.bloombox.schema.identity.IdentityProvider result = io.bloombox.schema.identity.IdentityProvider.valueOf(provider_);
-        return result == null ? io.bloombox.schema.identity.IdentityProvider.UNRECOGNIZED : result;
+      public io.bloombox.schema.identity.UserOuterClass.IdentityProvider getProvider() {
+        io.bloombox.schema.identity.UserOuterClass.IdentityProvider result = io.bloombox.schema.identity.UserOuterClass.IdentityProvider.valueOf(provider_);
+        return result == null ? io.bloombox.schema.identity.UserOuterClass.IdentityProvider.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -647,7 +647,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.IdentityProvider provider = 1;</code>
        */
-      public Builder setProvider(io.bloombox.schema.identity.IdentityProvider value) {
+      public Builder setProvider(io.bloombox.schema.identity.UserOuterClass.IdentityProvider value) {
         if (value == null) {
           throw new NullPointerException();
         }

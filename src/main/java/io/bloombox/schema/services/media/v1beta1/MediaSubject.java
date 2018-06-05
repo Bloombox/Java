@@ -93,28 +93,28 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.bloombox.schema.partner.PartnerKey.Builder subBuilder = null;
+            io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.Builder subBuilder = null;
             if (attachmentCase_ == 3) {
-              subBuilder = ((io.bloombox.schema.partner.PartnerKey) attachment_).toBuilder();
+              subBuilder = ((io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_).toBuilder();
             }
             attachment_ =
-                input.readMessage(io.bloombox.schema.partner.PartnerKey.parser(), extensionRegistry);
+                input.readMessage(io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom((io.bloombox.schema.partner.PartnerKey) attachment_);
+              subBuilder.mergeFrom((io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_);
               attachment_ = subBuilder.buildPartial();
             }
             attachmentCase_ = 3;
             break;
           }
           case 34: {
-            io.bloombox.schema.partner.PartnerLocationKey.Builder subBuilder = null;
+            io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder subBuilder = null;
             if (attachmentCase_ == 4) {
-              subBuilder = ((io.bloombox.schema.partner.PartnerLocationKey) attachment_).toBuilder();
+              subBuilder = ((io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_).toBuilder();
             }
             attachment_ =
-                input.readMessage(io.bloombox.schema.partner.PartnerLocationKey.parser(), extensionRegistry);
+                input.readMessage(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom((io.bloombox.schema.partner.PartnerLocationKey) attachment_);
+              subBuilder.mergeFrom((io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_);
               attachment_ = subBuilder.buildPartial();
             }
             attachmentCase_ = 4;
@@ -289,11 +289,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
    */
-  public io.bloombox.schema.partner.PartnerKey getPartner() {
+  public io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey getPartner() {
     if (attachmentCase_ == 3) {
-       return (io.bloombox.schema.partner.PartnerKey) attachment_;
+       return (io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_;
     }
-    return io.bloombox.schema.partner.PartnerKey.getDefaultInstance();
+    return io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.getDefaultInstance();
   }
   /**
    * <pre>
@@ -302,11 +302,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
    */
-  public io.bloombox.schema.partner.PartnerKeyOrBuilder getPartnerOrBuilder() {
+  public io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKeyOrBuilder getPartnerOrBuilder() {
     if (attachmentCase_ == 3) {
-       return (io.bloombox.schema.partner.PartnerKey) attachment_;
+       return (io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_;
     }
-    return io.bloombox.schema.partner.PartnerKey.getDefaultInstance();
+    return io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.getDefaultInstance();
   }
 
   public static final int LOCATION_FIELD_NUMBER = 4;
@@ -327,11 +327,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
    */
-  public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
+  public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
     if (attachmentCase_ == 4) {
-       return (io.bloombox.schema.partner.PartnerLocationKey) attachment_;
+       return (io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_;
     }
-    return io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance();
+    return io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance();
   }
   /**
    * <pre>
@@ -340,11 +340,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
    */
-  public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+  public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
     if (attachmentCase_ == 4) {
-       return (io.bloombox.schema.partner.PartnerLocationKey) attachment_;
+       return (io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_;
     }
-    return io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance();
+    return io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance();
   }
 
   public static final int GLOBAL_FIELD_NUMBER = 5;
@@ -381,10 +381,10 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(2, (io.opencannabis.schema.base.ProductKey) attachment_);
     }
     if (attachmentCase_ == 3) {
-      output.writeMessage(3, (io.bloombox.schema.partner.PartnerKey) attachment_);
+      output.writeMessage(3, (io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_);
     }
     if (attachmentCase_ == 4) {
-      output.writeMessage(4, (io.bloombox.schema.partner.PartnerLocationKey) attachment_);
+      output.writeMessage(4, (io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_);
     }
     if (attachmentCase_ == 5) {
       output.writeBool(
@@ -407,11 +407,11 @@ private static final long serialVersionUID = 0L;
     }
     if (attachmentCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, (io.bloombox.schema.partner.PartnerKey) attachment_);
+        .computeMessageSize(3, (io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_);
     }
     if (attachmentCase_ == 4) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(4, (io.bloombox.schema.partner.PartnerLocationKey) attachment_);
+        .computeMessageSize(4, (io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_);
     }
     if (attachmentCase_ == 5) {
       size += com.google.protobuf.CodedOutputStream
@@ -1049,7 +1049,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.PartnerKey, io.bloombox.schema.partner.PartnerKey.Builder, io.bloombox.schema.partner.PartnerKeyOrBuilder> partnerBuilder_;
+        io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey, io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.Builder, io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKeyOrBuilder> partnerBuilder_;
     /**
      * <pre>
      * Specify a partner as the subject parent of this media.
@@ -1067,17 +1067,17 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
      */
-    public io.bloombox.schema.partner.PartnerKey getPartner() {
+    public io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey getPartner() {
       if (partnerBuilder_ == null) {
         if (attachmentCase_ == 3) {
-          return (io.bloombox.schema.partner.PartnerKey) attachment_;
+          return (io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_;
         }
-        return io.bloombox.schema.partner.PartnerKey.getDefaultInstance();
+        return io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.getDefaultInstance();
       } else {
         if (attachmentCase_ == 3) {
           return partnerBuilder_.getMessage();
         }
-        return io.bloombox.schema.partner.PartnerKey.getDefaultInstance();
+        return io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.getDefaultInstance();
       }
     }
     /**
@@ -1087,7 +1087,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
      */
-    public Builder setPartner(io.bloombox.schema.partner.PartnerKey value) {
+    public Builder setPartner(io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey value) {
       if (partnerBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1108,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
      */
     public Builder setPartner(
-        io.bloombox.schema.partner.PartnerKey.Builder builderForValue) {
+        io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.Builder builderForValue) {
       if (partnerBuilder_ == null) {
         attachment_ = builderForValue.build();
         onChanged();
@@ -1125,11 +1125,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
      */
-    public Builder mergePartner(io.bloombox.schema.partner.PartnerKey value) {
+    public Builder mergePartner(io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey value) {
       if (partnerBuilder_ == null) {
         if (attachmentCase_ == 3 &&
-            attachment_ != io.bloombox.schema.partner.PartnerKey.getDefaultInstance()) {
-          attachment_ = io.bloombox.schema.partner.PartnerKey.newBuilder((io.bloombox.schema.partner.PartnerKey) attachment_)
+            attachment_ != io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.getDefaultInstance()) {
+          attachment_ = io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.newBuilder((io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_)
               .mergeFrom(value).buildPartial();
         } else {
           attachment_ = value;
@@ -1174,7 +1174,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
      */
-    public io.bloombox.schema.partner.PartnerKey.Builder getPartnerBuilder() {
+    public io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.Builder getPartnerBuilder() {
       return getPartnerFieldBuilder().getBuilder();
     }
     /**
@@ -1184,14 +1184,14 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
      */
-    public io.bloombox.schema.partner.PartnerKeyOrBuilder getPartnerOrBuilder() {
+    public io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKeyOrBuilder getPartnerOrBuilder() {
       if ((attachmentCase_ == 3) && (partnerBuilder_ != null)) {
         return partnerBuilder_.getMessageOrBuilder();
       } else {
         if (attachmentCase_ == 3) {
-          return (io.bloombox.schema.partner.PartnerKey) attachment_;
+          return (io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_;
         }
-        return io.bloombox.schema.partner.PartnerKey.getDefaultInstance();
+        return io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.getDefaultInstance();
       }
     }
     /**
@@ -1202,15 +1202,15 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.partner.PartnerKey partner = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.PartnerKey, io.bloombox.schema.partner.PartnerKey.Builder, io.bloombox.schema.partner.PartnerKeyOrBuilder> 
+        io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey, io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.Builder, io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKeyOrBuilder> 
         getPartnerFieldBuilder() {
       if (partnerBuilder_ == null) {
         if (!(attachmentCase_ == 3)) {
-          attachment_ = io.bloombox.schema.partner.PartnerKey.getDefaultInstance();
+          attachment_ = io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.getDefaultInstance();
         }
         partnerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.partner.PartnerKey, io.bloombox.schema.partner.PartnerKey.Builder, io.bloombox.schema.partner.PartnerKeyOrBuilder>(
-                (io.bloombox.schema.partner.PartnerKey) attachment_,
+            io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey, io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey.Builder, io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKeyOrBuilder>(
+                (io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey) attachment_,
                 getParentForChildren(),
                 isClean());
         attachment_ = null;
@@ -1221,7 +1221,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> locationBuilder_;
+        io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> locationBuilder_;
     /**
      * <pre>
      * Specify a partner and location as the subject parent of this media.
@@ -1239,17 +1239,17 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
       if (locationBuilder_ == null) {
         if (attachmentCase_ == 4) {
-          return (io.bloombox.schema.partner.PartnerLocationKey) attachment_;
+          return (io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_;
         }
-        return io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance();
+        return io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance();
       } else {
         if (attachmentCase_ == 4) {
           return locationBuilder_.getMessage();
         }
-        return io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance();
+        return io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance();
       }
     }
     /**
@@ -1259,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
      */
-    public Builder setLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
+    public Builder setLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
       if (locationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1280,7 +1280,7 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
      */
     public Builder setLocation(
-        io.bloombox.schema.partner.PartnerLocationKey.Builder builderForValue) {
+        io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder builderForValue) {
       if (locationBuilder_ == null) {
         attachment_ = builderForValue.build();
         onChanged();
@@ -1297,11 +1297,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
      */
-    public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
+    public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
       if (locationBuilder_ == null) {
         if (attachmentCase_ == 4 &&
-            attachment_ != io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance()) {
-          attachment_ = io.bloombox.schema.partner.PartnerLocationKey.newBuilder((io.bloombox.schema.partner.PartnerLocationKey) attachment_)
+            attachment_ != io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance()) {
+          attachment_ = io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.newBuilder((io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_)
               .mergeFrom(value).buildPartial();
         } else {
           attachment_ = value;
@@ -1346,7 +1346,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationKey.Builder getLocationBuilder() {
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder getLocationBuilder() {
       return getLocationFieldBuilder().getBuilder();
     }
     /**
@@ -1356,14 +1356,14 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
       if ((attachmentCase_ == 4) && (locationBuilder_ != null)) {
         return locationBuilder_.getMessageOrBuilder();
       } else {
         if (attachmentCase_ == 4) {
-          return (io.bloombox.schema.partner.PartnerLocationKey) attachment_;
+          return (io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_;
         }
-        return io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance();
+        return io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance();
       }
     }
     /**
@@ -1374,15 +1374,15 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> 
+        io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> 
         getLocationFieldBuilder() {
       if (locationBuilder_ == null) {
         if (!(attachmentCase_ == 4)) {
-          attachment_ = io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance();
+          attachment_ = io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance();
         }
         locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder>(
-                (io.bloombox.schema.partner.PartnerLocationKey) attachment_,
+            io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder>(
+                (io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey) attachment_,
                 getParentForChildren(),
                 isClean());
         attachment_ = null;

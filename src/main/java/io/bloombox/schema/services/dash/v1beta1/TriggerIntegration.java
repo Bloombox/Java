@@ -22,21 +22,21 @@ package io.bloombox.schema.services.dash.v1beta1;
 
 /**
  * <pre>
- * Specifies an RPC operation to retrieve partner-level settings.
+ * Manually trigger an integration to run.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.dash.v1beta1.GetPartnerSettings}
+ * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TriggerIntegration}
  */
-public  final class GetPartnerSettings extends
+public  final class TriggerIntegration extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.GetPartnerSettings)
-    GetPartnerSettingsOrBuilder {
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.TriggerIntegration)
+    TriggerIntegrationOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetPartnerSettings.newBuilder() to construct.
-  private GetPartnerSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use TriggerIntegration.newBuilder() to construct.
+  private TriggerIntegration(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetPartnerSettings() {
+  private TriggerIntegration() {
   }
 
   @java.lang.Override
@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private GetPartnerSettings(
+  private TriggerIntegration(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -83,23 +83,23 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_descriptor;
+    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_fieldAccessorTable
+    return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.class, io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Builder.class);
+            io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.class, io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Partner ID.
+     * Partner scope for the request. Required.
      * </pre>
      *
      * <code>string partner = 1;</code>
@@ -107,24 +107,59 @@ private static final long serialVersionUID = 0L;
     java.lang.String getPartner();
     /**
      * <pre>
-     * Partner ID.
+     * Partner scope for the request. Required.
      * </pre>
      *
      * <code>string partner = 1;</code>
      */
     com.google.protobuf.ByteString
         getPartnerBytes();
+
+    /**
+     * <pre>
+     * Location scope for the request, if applicable.
+     * </pre>
+     *
+     * <code>string location = 2;</code>
+     */
+    java.lang.String getLocation();
+    /**
+     * <pre>
+     * Location scope for the request, if applicable.
+     * </pre>
+     *
+     * <code>string location = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getLocationBytes();
+
+    /**
+     * <pre>
+     * Vendor for which we should trigger an integration.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+     */
+    int getVendorValue();
+    /**
+     * <pre>
+     * Vendor for which we should trigger an integration.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+     */
+    io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getVendor();
   }
   /**
    * <pre>
-   * Request for partner-level settings.
+   * Request to trigger an integration.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request}
+   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -133,6 +168,8 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       partner_ = "";
+      location_ = "";
+      vendor_ = 0;
     }
 
     @java.lang.Override
@@ -172,6 +209,18 @@ private static final long serialVersionUID = 0L;
               partner_ = s;
               break;
             }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              location_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              vendor_ = rawValue;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -186,21 +235,21 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_fieldAccessorTable
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request.class, io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request.Builder.class);
+              io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request.class, io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request.Builder.class);
     }
 
     public static final int PARTNER_FIELD_NUMBER = 1;
     private volatile java.lang.Object partner_;
     /**
      * <pre>
-     * Partner ID.
+     * Partner scope for the request. Required.
      * </pre>
      *
      * <code>string partner = 1;</code>
@@ -219,7 +268,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Partner ID.
+     * Partner scope for the request. Required.
      * </pre>
      *
      * <code>string partner = 1;</code>
@@ -238,6 +287,72 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int LOCATION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object location_;
+    /**
+     * <pre>
+     * Location scope for the request, if applicable.
+     * </pre>
+     *
+     * <code>string location = 2;</code>
+     */
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Location scope for the request, if applicable.
+     * </pre>
+     *
+     * <code>string location = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        location_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VENDOR_FIELD_NUMBER = 3;
+    private int vendor_;
+    /**
+     * <pre>
+     * Vendor for which we should trigger an integration.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+     */
+    public int getVendorValue() {
+      return vendor_;
+    }
+    /**
+     * <pre>
+     * Vendor for which we should trigger an integration.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+     */
+    public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getVendor() {
+      io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(vendor_);
+      return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -253,6 +368,12 @@ private static final long serialVersionUID = 0L;
       if (!getPartnerBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, partner_);
       }
+      if (!getLocationBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, location_);
+      }
+      if (vendor_ != io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.INTERNAL.getNumber()) {
+        output.writeEnum(3, vendor_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -264,6 +385,13 @@ private static final long serialVersionUID = 0L;
       if (!getPartnerBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, partner_);
       }
+      if (!getLocationBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, location_);
+      }
+      if (vendor_ != io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.INTERNAL.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, vendor_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -274,14 +402,17 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request)) {
+      if (!(obj instanceof io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request)) {
         return super.equals(obj);
       }
-      io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request other = (io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request) obj;
+      io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request other = (io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request) obj;
 
       boolean result = true;
       result = result && getPartner()
           .equals(other.getPartner());
+      result = result && getLocation()
+          .equals(other.getLocation());
+      result = result && vendor_ == other.vendor_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -295,74 +426,78 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PARTNER_FIELD_NUMBER;
       hash = (53 * hash) + getPartner().hashCode();
+      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLocation().hashCode();
+      hash = (37 * hash) + VENDOR_FIELD_NUMBER;
+      hash = (53 * hash) + vendor_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(byte[] data)
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseDelimitedFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseDelimitedFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -374,7 +509,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request prototype) {
+    public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -390,28 +525,28 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Request for partner-level settings.
+     * Request to trigger an integration.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request}
+     * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request)
-        io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.RequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request)
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_fieldAccessorTable
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request.class, io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request.Builder.class);
+                io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request.class, io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request.Builder.class);
       }
 
-      // Construct using io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request.newBuilder()
+      // Construct using io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -430,29 +565,35 @@ private static final long serialVersionUID = 0L;
         super.clear();
         partner_ = "";
 
+        location_ = "";
+
+        vendor_ = 0;
+
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Request_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Request_descriptor;
       }
 
-      public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request getDefaultInstanceForType() {
-        return io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request.getDefaultInstance();
+      public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request getDefaultInstanceForType() {
+        return io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request.getDefaultInstance();
       }
 
-      public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request build() {
-        io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request result = buildPartial();
+      public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request build() {
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request buildPartial() {
-        io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request result = new io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request(this);
+      public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request buildPartial() {
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request result = new io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request(this);
         result.partner_ = partner_;
+        result.location_ = location_;
+        result.vendor_ = vendor_;
         onBuilt();
         return result;
       }
@@ -484,19 +625,26 @@ private static final long serialVersionUID = 0L;
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request) {
-          return mergeFrom((io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request)other);
+        if (other instanceof io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request) {
+          return mergeFrom((io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request other) {
-        if (other == io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request.getDefaultInstance()) return this;
+      public Builder mergeFrom(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request other) {
+        if (other == io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request.getDefaultInstance()) return this;
         if (!other.getPartner().isEmpty()) {
           partner_ = other.partner_;
           onChanged();
+        }
+        if (!other.getLocation().isEmpty()) {
+          location_ = other.location_;
+          onChanged();
+        }
+        if (other.vendor_ != 0) {
+          setVendorValue(other.getVendorValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -511,11 +659,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request parsedMessage = null;
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request) e.getUnfinishedMessage();
+          parsedMessage = (io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -528,7 +676,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object partner_ = "";
       /**
        * <pre>
-       * Partner ID.
+       * Partner scope for the request. Required.
        * </pre>
        *
        * <code>string partner = 1;</code>
@@ -547,7 +695,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Partner ID.
+       * Partner scope for the request. Required.
        * </pre>
        *
        * <code>string partner = 1;</code>
@@ -567,7 +715,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Partner ID.
+       * Partner scope for the request. Required.
        * </pre>
        *
        * <code>string partner = 1;</code>
@@ -584,7 +732,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Partner ID.
+       * Partner scope for the request. Required.
        * </pre>
        *
        * <code>string partner = 1;</code>
@@ -597,7 +745,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Partner ID.
+       * Partner scope for the request. Required.
        * </pre>
        *
        * <code>string partner = 1;</code>
@@ -613,6 +761,159 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private java.lang.Object location_ = "";
+      /**
+       * <pre>
+       * Location scope for the request, if applicable.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public java.lang.String getLocation() {
+        java.lang.Object ref = location_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          location_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location scope for the request, if applicable.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLocationBytes() {
+        java.lang.Object ref = location_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          location_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location scope for the request, if applicable.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public Builder setLocation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        location_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location scope for the request, if applicable.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public Builder clearLocation() {
+        
+        location_ = getDefaultInstance().getLocation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location scope for the request, if applicable.
+       * </pre>
+       *
+       * <code>string location = 2;</code>
+       */
+      public Builder setLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        location_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int vendor_ = 0;
+      /**
+       * <pre>
+       * Vendor for which we should trigger an integration.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       */
+      public int getVendorValue() {
+        return vendor_;
+      }
+      /**
+       * <pre>
+       * Vendor for which we should trigger an integration.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       */
+      public Builder setVendorValue(int value) {
+        vendor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Vendor for which we should trigger an integration.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       */
+      public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getVendor() {
+        io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(vendor_);
+        return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Vendor for which we should trigger an integration.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       */
+      public Builder setVendor(io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        vendor_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Vendor for which we should trigger an integration.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.IntegrationPartner vendor = 3;</code>
+       */
+      public Builder clearVendor() {
+        
+        vendor_ = 0;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -624,16 +925,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request)
-    private static final io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request)
+    private static final io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request();
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request();
     }
 
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request getDefaultInstance() {
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -656,51 +957,26 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
-    public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Request getDefaultInstanceForType() {
+    public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Current partner-level settings.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-     */
-    boolean hasSettings();
-    /**
-     * <pre>
-     * Current partner-level settings.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-     */
-    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings();
-    /**
-     * <pre>
-     * Current partner-level settings.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-     */
-    io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder();
   }
   /**
    * <pre>
-   * Response to a request for partner-level settings.
+   * Response to a request to trigger an integration.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response}
+   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -723,7 +999,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -741,19 +1016,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             }
-            case 10: {
-              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder subBuilder = null;
-              if (settings_ != null) {
-                subBuilder = settings_.toBuilder();
-              }
-              settings_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(settings_);
-                settings_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -768,47 +1030,14 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_fieldAccessorTable
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response.class, io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response.Builder.class);
-    }
-
-    public static final int SETTINGS_FIELD_NUMBER = 1;
-    private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings settings_;
-    /**
-     * <pre>
-     * Current partner-level settings.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-     */
-    public boolean hasSettings() {
-      return settings_ != null;
-    }
-    /**
-     * <pre>
-     * Current partner-level settings.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-     */
-    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings() {
-      return settings_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance() : settings_;
-    }
-    /**
-     * <pre>
-     * Current partner-level settings.
-     * </pre>
-     *
-     * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-     */
-    public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder() {
-      return getSettings();
+              io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response.class, io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -823,9 +1052,6 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (settings_ != null) {
-        output.writeMessage(1, getSettings());
-      }
       unknownFields.writeTo(output);
     }
 
@@ -834,10 +1060,6 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (settings_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getSettings());
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -848,17 +1070,12 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response)) {
+      if (!(obj instanceof io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response)) {
         return super.equals(obj);
       }
-      io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response other = (io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response) obj;
+      io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response other = (io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response) obj;
 
       boolean result = true;
-      result = result && (hasSettings() == other.hasSettings());
-      if (hasSettings()) {
-        result = result && getSettings()
-            .equals(other.getSettings());
-      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -870,78 +1087,74 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasSettings()) {
-        hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
-        hash = (53 * hash) + getSettings().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(byte[] data)
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseDelimitedFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseDelimitedFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parseFrom(
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -953,7 +1166,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response prototype) {
+    public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -969,28 +1182,28 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Response to a request for partner-level settings.
+     * Response to a request to trigger an integration.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response}
+     * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response)
-        io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.ResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response)
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_fieldAccessorTable
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response.class, io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response.Builder.class);
+                io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response.class, io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response.Builder.class);
       }
 
-      // Construct using io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response.newBuilder()
+      // Construct using io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1007,39 +1220,28 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        if (settingsBuilder_ == null) {
-          settings_ = null;
-        } else {
-          settings_ = null;
-          settingsBuilder_ = null;
-        }
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_Response_descriptor;
+        return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_Response_descriptor;
       }
 
-      public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response getDefaultInstanceForType() {
-        return io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response.getDefaultInstance();
+      public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response getDefaultInstanceForType() {
+        return io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response.getDefaultInstance();
       }
 
-      public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response build() {
-        io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response result = buildPartial();
+      public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response build() {
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response buildPartial() {
-        io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response result = new io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response(this);
-        if (settingsBuilder_ == null) {
-          result.settings_ = settings_;
-        } else {
-          result.settings_ = settingsBuilder_.build();
-        }
+      public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response buildPartial() {
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response result = new io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response(this);
         onBuilt();
         return result;
       }
@@ -1071,19 +1273,16 @@ private static final long serialVersionUID = 0L;
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response) {
-          return mergeFrom((io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response)other);
+        if (other instanceof io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response) {
+          return mergeFrom((io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response other) {
-        if (other == io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response.getDefaultInstance()) return this;
-        if (other.hasSettings()) {
-          mergeSettings(other.getSettings());
-        }
+      public Builder mergeFrom(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response other) {
+        if (other == io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1097,11 +1296,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response parsedMessage = null;
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response) e.getUnfinishedMessage();
+          parsedMessage = (io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1109,159 +1308,6 @@ private static final long serialVersionUID = 0L;
           }
         }
         return this;
-      }
-
-      private io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings settings_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder> settingsBuilder_;
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      public boolean hasSettings() {
-        return settingsBuilder_ != null || settings_ != null;
-      }
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings getSettings() {
-        if (settingsBuilder_ == null) {
-          return settings_ == null ? io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance() : settings_;
-        } else {
-          return settingsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      public Builder setSettings(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings value) {
-        if (settingsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          settings_ = value;
-          onChanged();
-        } else {
-          settingsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      public Builder setSettings(
-          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder builderForValue) {
-        if (settingsBuilder_ == null) {
-          settings_ = builderForValue.build();
-          onChanged();
-        } else {
-          settingsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      public Builder mergeSettings(io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings value) {
-        if (settingsBuilder_ == null) {
-          if (settings_ != null) {
-            settings_ =
-              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.newBuilder(settings_).mergeFrom(value).buildPartial();
-          } else {
-            settings_ = value;
-          }
-          onChanged();
-        } else {
-          settingsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      public Builder clearSettings() {
-        if (settingsBuilder_ == null) {
-          settings_ = null;
-          onChanged();
-        } else {
-          settings_ = null;
-          settingsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder getSettingsBuilder() {
-        
-        onChanged();
-        return getSettingsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder getSettingsOrBuilder() {
-        if (settingsBuilder_ != null) {
-          return settingsBuilder_.getMessageOrBuilder();
-        } else {
-          return settings_ == null ?
-              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.getDefaultInstance() : settings_;
-        }
-      }
-      /**
-       * <pre>
-       * Current partner-level settings.
-       * </pre>
-       *
-       * <code>.bloombox.schema.partner.settings.PartnerSettings settings = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder> 
-          getSettingsFieldBuilder() {
-        if (settingsBuilder_ == null) {
-          settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettings.Builder, io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerSettingsOrBuilder>(
-                  getSettings(),
-                  getParentForChildren(),
-                  isClean());
-          settings_ = null;
-        }
-        return settingsBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1274,16 +1320,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response)
-    private static final io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response)
+    private static final io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response();
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response();
     }
 
-    public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response getDefaultInstance() {
+    public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1306,7 +1352,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
-    public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Response getDefaultInstanceForType() {
+    public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1342,10 +1388,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings)) {
+    if (!(obj instanceof io.bloombox.schema.services.dash.v1beta1.TriggerIntegration)) {
       return super.equals(obj);
     }
-    io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings other = (io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings) obj;
+    io.bloombox.schema.services.dash.v1beta1.TriggerIntegration other = (io.bloombox.schema.services.dash.v1beta1.TriggerIntegration) obj;
 
     boolean result = true;
     result = result && unknownFields.equals(other.unknownFields);
@@ -1364,69 +1410,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(byte[] data)
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(java.io.InputStream input)
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseDelimitedFrom(java.io.InputStream input)
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseDelimitedFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parseFrom(
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -1438,7 +1484,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings prototype) {
+  public static Builder newBuilder(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -1454,28 +1500,28 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies an RPC operation to retrieve partner-level settings.
+   * Manually trigger an integration to run.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.GetPartnerSettings}
+   * Protobuf type {@code bloombox.schema.services.dash.v1beta1.TriggerIntegration}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.GetPartnerSettings)
-      io.bloombox.schema.services.dash.v1beta1.GetPartnerSettingsOrBuilder {
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.dash.v1beta1.TriggerIntegration)
+      io.bloombox.schema.services.dash.v1beta1.TriggerIntegrationOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_fieldAccessorTable
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.class, io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.Builder.class);
+              io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.class, io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Builder.class);
     }
 
-    // Construct using io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.newBuilder()
+    // Construct using io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -1497,23 +1543,23 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_GetPartnerSettings_descriptor;
+      return io.bloombox.schema.services.dash.v1beta1.DashServiceBeta1.internal_static_bloombox_schema_services_dash_v1beta1_TriggerIntegration_descriptor;
     }
 
-    public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings getDefaultInstanceForType() {
-      return io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.getDefaultInstance();
+    public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration getDefaultInstanceForType() {
+      return io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.getDefaultInstance();
     }
 
-    public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings build() {
-      io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings result = buildPartial();
+    public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration build() {
+      io.bloombox.schema.services.dash.v1beta1.TriggerIntegration result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings buildPartial() {
-      io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings result = new io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings(this);
+    public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration buildPartial() {
+      io.bloombox.schema.services.dash.v1beta1.TriggerIntegration result = new io.bloombox.schema.services.dash.v1beta1.TriggerIntegration(this);
       onBuilt();
       return result;
     }
@@ -1545,16 +1591,16 @@ private static final long serialVersionUID = 0L;
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings) {
-        return mergeFrom((io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings)other);
+      if (other instanceof io.bloombox.schema.services.dash.v1beta1.TriggerIntegration) {
+        return mergeFrom((io.bloombox.schema.services.dash.v1beta1.TriggerIntegration)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings other) {
-      if (other == io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings.getDefaultInstance()) return this;
+    public Builder mergeFrom(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration other) {
+      if (other == io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -1568,11 +1614,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings parsedMessage = null;
+      io.bloombox.schema.services.dash.v1beta1.TriggerIntegration parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings) e.getUnfinishedMessage();
+        parsedMessage = (io.bloombox.schema.services.dash.v1beta1.TriggerIntegration) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -1592,39 +1638,39 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.GetPartnerSettings)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.dash.v1beta1.TriggerIntegration)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.GetPartnerSettings)
-  private static final io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.dash.v1beta1.TriggerIntegration)
+  private static final io.bloombox.schema.services.dash.v1beta1.TriggerIntegration DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings();
+    DEFAULT_INSTANCE = new io.bloombox.schema.services.dash.v1beta1.TriggerIntegration();
   }
 
-  public static io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings getDefaultInstance() {
+  public static io.bloombox.schema.services.dash.v1beta1.TriggerIntegration getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetPartnerSettings>
-      PARSER = new com.google.protobuf.AbstractParser<GetPartnerSettings>() {
-    public GetPartnerSettings parsePartialFrom(
+  private static final com.google.protobuf.Parser<TriggerIntegration>
+      PARSER = new com.google.protobuf.AbstractParser<TriggerIntegration>() {
+    public TriggerIntegration parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetPartnerSettings(input, extensionRegistry);
+      return new TriggerIntegration(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<GetPartnerSettings> parser() {
+  public static com.google.protobuf.Parser<TriggerIntegration> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetPartnerSettings> getParserForType() {
+  public com.google.protobuf.Parser<TriggerIntegration> getParserForType() {
     return PARSER;
   }
 
-  public io.bloombox.schema.services.dash.v1beta1.GetPartnerSettings getDefaultInstanceForType() {
+  public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

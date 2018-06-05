@@ -2779,7 +2779,7 @@ public final class CommercialPurchase {
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
-    io.bloombox.schema.partner.PartnerDeviceKey getRegister();
+    io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey getRegister();
     /**
      * <pre>
      * Point-of-Sale device that submitted this purchase.
@@ -2787,7 +2787,7 @@ public final class CommercialPurchase {
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
-    io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder getRegisterOrBuilder();
+    io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKeyOrBuilder getRegisterOrBuilder();
 
     /**
      * <pre>
@@ -3022,11 +3022,11 @@ public final class CommercialPurchase {
               break;
             }
             case 50: {
-              io.bloombox.schema.partner.PartnerDeviceKey.Builder subBuilder = null;
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.Builder subBuilder = null;
               if (register_ != null) {
                 subBuilder = register_.toBuilder();
               }
-              register_ = input.readMessage(io.bloombox.schema.partner.PartnerDeviceKey.parser(), extensionRegistry);
+              register_ = input.readMessage(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(register_);
                 register_ = subBuilder.buildPartial();
@@ -3293,7 +3293,7 @@ public final class CommercialPurchase {
     }
 
     public static final int REGISTER_FIELD_NUMBER = 6;
-    private io.bloombox.schema.partner.PartnerDeviceKey register_;
+    private io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey register_;
     /**
      * <pre>
      * Point-of-Sale device that submitted this purchase.
@@ -3311,8 +3311,8 @@ public final class CommercialPurchase {
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
-    public io.bloombox.schema.partner.PartnerDeviceKey getRegister() {
-      return register_ == null ? io.bloombox.schema.partner.PartnerDeviceKey.getDefaultInstance() : register_;
+    public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey getRegister() {
+      return register_ == null ? io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.getDefaultInstance() : register_;
     }
     /**
      * <pre>
@@ -3321,7 +3321,7 @@ public final class CommercialPurchase {
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
      */
-    public io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
+    public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
       return getRegister();
     }
 
@@ -4557,9 +4557,9 @@ public final class CommercialPurchase {
         return customerBuilder_;
       }
 
-      private io.bloombox.schema.partner.PartnerDeviceKey register_ = null;
+      private io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey register_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder> registerBuilder_;
+          io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKeyOrBuilder> registerBuilder_;
       /**
        * <pre>
        * Point-of-Sale device that submitted this purchase.
@@ -4577,9 +4577,9 @@ public final class CommercialPurchase {
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
-      public io.bloombox.schema.partner.PartnerDeviceKey getRegister() {
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey getRegister() {
         if (registerBuilder_ == null) {
-          return register_ == null ? io.bloombox.schema.partner.PartnerDeviceKey.getDefaultInstance() : register_;
+          return register_ == null ? io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.getDefaultInstance() : register_;
         } else {
           return registerBuilder_.getMessage();
         }
@@ -4591,7 +4591,7 @@ public final class CommercialPurchase {
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
-      public Builder setRegister(io.bloombox.schema.partner.PartnerDeviceKey value) {
+      public Builder setRegister(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey value) {
         if (registerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4612,7 +4612,7 @@ public final class CommercialPurchase {
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       public Builder setRegister(
-          io.bloombox.schema.partner.PartnerDeviceKey.Builder builderForValue) {
+          io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.Builder builderForValue) {
         if (registerBuilder_ == null) {
           register_ = builderForValue.build();
           onChanged();
@@ -4629,11 +4629,11 @@ public final class CommercialPurchase {
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
-      public Builder mergeRegister(io.bloombox.schema.partner.PartnerDeviceKey value) {
+      public Builder mergeRegister(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey value) {
         if (registerBuilder_ == null) {
           if (register_ != null) {
             register_ =
-              io.bloombox.schema.partner.PartnerDeviceKey.newBuilder(register_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.newBuilder(register_).mergeFrom(value).buildPartial();
           } else {
             register_ = value;
           }
@@ -4669,7 +4669,7 @@ public final class CommercialPurchase {
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
-      public io.bloombox.schema.partner.PartnerDeviceKey.Builder getRegisterBuilder() {
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.Builder getRegisterBuilder() {
         
         onChanged();
         return getRegisterFieldBuilder().getBuilder();
@@ -4681,12 +4681,12 @@ public final class CommercialPurchase {
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
-      public io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
         if (registerBuilder_ != null) {
           return registerBuilder_.getMessageOrBuilder();
         } else {
           return register_ == null ?
-              io.bloombox.schema.partner.PartnerDeviceKey.getDefaultInstance() : register_;
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.getDefaultInstance() : register_;
         }
       }
       /**
@@ -4697,11 +4697,11 @@ public final class CommercialPurchase {
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder> 
+          io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKeyOrBuilder> 
           getRegisterFieldBuilder() {
         if (registerBuilder_ == null) {
           registerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDeviceKeyOrBuilder>(
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKeyOrBuilder>(
                   getRegister(),
                   getParentForChildren(),
                   isClean());

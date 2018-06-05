@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
      */
-    io.bloombox.schema.identity.EnrollmentSource getSource();
+    io.bloombox.schema.identity.UserOuterClass.EnrollmentSource getSource();
 
     /**
      * <pre>
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
-    io.bloombox.schema.identity.ids.UserDoctorRec getDoctorRec();
+    io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec getDoctorRec();
     /**
      * <pre>
      * Holds information about the user's cannabis recommendation.
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
-    io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder getDoctorRecOrBuilder();
+    io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRecOrBuilder getDoctorRecOrBuilder();
 
     /**
      * <pre>
@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ID government_id = 5;</code>
      */
-    io.bloombox.schema.identity.ID getGovernmentId();
+    io.bloombox.schema.identity.IDOuterClass.ID getGovernmentId();
     /**
      * <pre>
      * Holds information about the user's driver's license.
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ID government_id = 5;</code>
      */
-    io.bloombox.schema.identity.IDOrBuilder getGovernmentIdOrBuilder();
+    io.bloombox.schema.identity.IDOuterClass.IDOrBuilder getGovernmentIdOrBuilder();
 
     /**
      * <pre>
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
      */
-    io.bloombox.schema.partner.PartnerLocationKey getLocation();
+    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation();
     /**
      * <pre>
      * Specifies the partner we are enrolling to.
@@ -230,7 +230,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
      */
-    io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder();
 
     /**
      * <pre>
@@ -277,7 +277,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
      */
-    io.bloombox.schema.identity.ConsumerProfile getConsumerProfile();
+    io.bloombox.schema.identity.UserOuterClass.ConsumerProfile getConsumerProfile();
     /**
      * <pre>
      * Specifies information related to a cannabis consumer's consumption preferences.
@@ -285,7 +285,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
      */
-    io.bloombox.schema.identity.ConsumerProfileOrBuilder getConsumerProfileOrBuilder();
+    io.bloombox.schema.identity.UserOuterClass.ConsumerProfileOrBuilder getConsumerProfileOrBuilder();
   }
   /**
    * Protobuf type {@code bloombox.schema.services.shop.v1.EnrollMember.Request}
@@ -363,11 +363,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 34: {
-              io.bloombox.schema.identity.ids.UserDoctorRec.Builder subBuilder = null;
+              io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.Builder subBuilder = null;
               if (doctorRec_ != null) {
                 subBuilder = doctorRec_.toBuilder();
               }
-              doctorRec_ = input.readMessage(io.bloombox.schema.identity.ids.UserDoctorRec.parser(), extensionRegistry);
+              doctorRec_ = input.readMessage(io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(doctorRec_);
                 doctorRec_ = subBuilder.buildPartial();
@@ -376,11 +376,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 42: {
-              io.bloombox.schema.identity.ID.Builder subBuilder = null;
+              io.bloombox.schema.identity.IDOuterClass.ID.Builder subBuilder = null;
               if (governmentId_ != null) {
                 subBuilder = governmentId_.toBuilder();
               }
-              governmentId_ = input.readMessage(io.bloombox.schema.identity.ID.parser(), extensionRegistry);
+              governmentId_ = input.readMessage(io.bloombox.schema.identity.IDOuterClass.ID.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(governmentId_);
                 governmentId_ = subBuilder.buildPartial();
@@ -389,11 +389,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 50: {
-              io.bloombox.schema.partner.PartnerLocationKey.Builder subBuilder = null;
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder subBuilder = null;
               if (location_ != null) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocationKey.parser(), extensionRegistry);
+              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -413,11 +413,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 74: {
-              io.bloombox.schema.identity.ConsumerProfile.Builder subBuilder = null;
+              io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.Builder subBuilder = null;
               if (consumerProfile_ != null) {
                 subBuilder = consumerProfile_.toBuilder();
               }
-              consumerProfile_ = input.readMessage(io.bloombox.schema.identity.ConsumerProfile.parser(), extensionRegistry);
+              consumerProfile_ = input.readMessage(io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(consumerProfile_);
                 consumerProfile_ = subBuilder.buildPartial();
@@ -501,9 +501,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
      */
-    public io.bloombox.schema.identity.EnrollmentSource getSource() {
-      io.bloombox.schema.identity.EnrollmentSource result = io.bloombox.schema.identity.EnrollmentSource.valueOf(source_);
-      return result == null ? io.bloombox.schema.identity.EnrollmentSource.UNRECOGNIZED : result;
+    public io.bloombox.schema.identity.UserOuterClass.EnrollmentSource getSource() {
+      io.bloombox.schema.identity.UserOuterClass.EnrollmentSource result = io.bloombox.schema.identity.UserOuterClass.EnrollmentSource.valueOf(source_);
+      return result == null ? io.bloombox.schema.identity.UserOuterClass.EnrollmentSource.UNRECOGNIZED : result;
     }
 
     public static final int CHANNEL_FIELD_NUMBER = 3;
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DOCTOR_REC_FIELD_NUMBER = 4;
-    private io.bloombox.schema.identity.ids.UserDoctorRec doctorRec_;
+    private io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec doctorRec_;
     /**
      * <pre>
      * Holds information about the user's cannabis recommendation.
@@ -567,8 +567,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
-    public io.bloombox.schema.identity.ids.UserDoctorRec getDoctorRec() {
-      return doctorRec_ == null ? io.bloombox.schema.identity.ids.UserDoctorRec.getDefaultInstance() : doctorRec_;
+    public io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec getDoctorRec() {
+      return doctorRec_ == null ? io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.getDefaultInstance() : doctorRec_;
     }
     /**
      * <pre>
@@ -577,12 +577,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
      */
-    public io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder getDoctorRecOrBuilder() {
+    public io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRecOrBuilder getDoctorRecOrBuilder() {
       return getDoctorRec();
     }
 
     public static final int GOVERNMENT_ID_FIELD_NUMBER = 5;
-    private io.bloombox.schema.identity.ID governmentId_;
+    private io.bloombox.schema.identity.IDOuterClass.ID governmentId_;
     /**
      * <pre>
      * Holds information about the user's driver's license.
@@ -600,8 +600,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ID government_id = 5;</code>
      */
-    public io.bloombox.schema.identity.ID getGovernmentId() {
-      return governmentId_ == null ? io.bloombox.schema.identity.ID.getDefaultInstance() : governmentId_;
+    public io.bloombox.schema.identity.IDOuterClass.ID getGovernmentId() {
+      return governmentId_ == null ? io.bloombox.schema.identity.IDOuterClass.ID.getDefaultInstance() : governmentId_;
     }
     /**
      * <pre>
@@ -610,12 +610,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ID government_id = 5;</code>
      */
-    public io.bloombox.schema.identity.IDOrBuilder getGovernmentIdOrBuilder() {
+    public io.bloombox.schema.identity.IDOuterClass.IDOrBuilder getGovernmentIdOrBuilder() {
       return getGovernmentId();
     }
 
     public static final int LOCATION_FIELD_NUMBER = 6;
-    private io.bloombox.schema.partner.PartnerLocationKey location_;
+    private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_;
     /**
      * <pre>
      * Specifies the partner we are enrolling to.
@@ -633,8 +633,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance() : location_;
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
     }
     /**
      * <pre>
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CONSUMER_PROFILE_FIELD_NUMBER = 9;
-    private io.bloombox.schema.identity.ConsumerProfile consumerProfile_;
+    private io.bloombox.schema.identity.UserOuterClass.ConsumerProfile consumerProfile_;
     /**
      * <pre>
      * Specifies information related to a cannabis consumer's consumption preferences.
@@ -724,8 +724,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
      */
-    public io.bloombox.schema.identity.ConsumerProfile getConsumerProfile() {
-      return consumerProfile_ == null ? io.bloombox.schema.identity.ConsumerProfile.getDefaultInstance() : consumerProfile_;
+    public io.bloombox.schema.identity.UserOuterClass.ConsumerProfile getConsumerProfile() {
+      return consumerProfile_ == null ? io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.getDefaultInstance() : consumerProfile_;
     }
     /**
      * <pre>
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
      */
-    public io.bloombox.schema.identity.ConsumerProfileOrBuilder getConsumerProfileOrBuilder() {
+    public io.bloombox.schema.identity.UserOuterClass.ConsumerProfileOrBuilder getConsumerProfileOrBuilder() {
       return getConsumerProfile();
     }
 
@@ -753,7 +753,7 @@ private static final long serialVersionUID = 0L;
       if (person_ != null) {
         output.writeMessage(1, getPerson());
       }
-      if (source_ != io.bloombox.schema.identity.EnrollmentSource.UNSPECIFIED.getNumber()) {
+      if (source_ != io.bloombox.schema.identity.UserOuterClass.EnrollmentSource.UNSPECIFIED.getNumber()) {
         output.writeEnum(2, source_);
       }
       if (!getChannelBytes().isEmpty()) {
@@ -789,7 +789,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPerson());
       }
-      if (source_ != io.bloombox.schema.identity.EnrollmentSource.UNSPECIFIED.getNumber()) {
+      if (source_ != io.bloombox.schema.identity.UserOuterClass.EnrollmentSource.UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, source_);
       }
@@ -1405,9 +1405,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
        */
-      public io.bloombox.schema.identity.EnrollmentSource getSource() {
-        io.bloombox.schema.identity.EnrollmentSource result = io.bloombox.schema.identity.EnrollmentSource.valueOf(source_);
-        return result == null ? io.bloombox.schema.identity.EnrollmentSource.UNRECOGNIZED : result;
+      public io.bloombox.schema.identity.UserOuterClass.EnrollmentSource getSource() {
+        io.bloombox.schema.identity.UserOuterClass.EnrollmentSource result = io.bloombox.schema.identity.UserOuterClass.EnrollmentSource.valueOf(source_);
+        return result == null ? io.bloombox.schema.identity.UserOuterClass.EnrollmentSource.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -1416,7 +1416,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.EnrollmentSource source = 2;</code>
        */
-      public Builder setSource(io.bloombox.schema.identity.EnrollmentSource value) {
+      public Builder setSource(io.bloombox.schema.identity.UserOuterClass.EnrollmentSource value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1528,9 +1528,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.identity.ids.UserDoctorRec doctorRec_ = null;
+      private io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec doctorRec_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.ids.UserDoctorRec, io.bloombox.schema.identity.ids.UserDoctorRec.Builder, io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder> doctorRecBuilder_;
+          io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec, io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.Builder, io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRecOrBuilder> doctorRecBuilder_;
       /**
        * <pre>
        * Holds information about the user's cannabis recommendation.
@@ -1548,9 +1548,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
-      public io.bloombox.schema.identity.ids.UserDoctorRec getDoctorRec() {
+      public io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec getDoctorRec() {
         if (doctorRecBuilder_ == null) {
-          return doctorRec_ == null ? io.bloombox.schema.identity.ids.UserDoctorRec.getDefaultInstance() : doctorRec_;
+          return doctorRec_ == null ? io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.getDefaultInstance() : doctorRec_;
         } else {
           return doctorRecBuilder_.getMessage();
         }
@@ -1562,7 +1562,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
-      public Builder setDoctorRec(io.bloombox.schema.identity.ids.UserDoctorRec value) {
+      public Builder setDoctorRec(io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec value) {
         if (doctorRecBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1583,7 +1583,7 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       public Builder setDoctorRec(
-          io.bloombox.schema.identity.ids.UserDoctorRec.Builder builderForValue) {
+          io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.Builder builderForValue) {
         if (doctorRecBuilder_ == null) {
           doctorRec_ = builderForValue.build();
           onChanged();
@@ -1600,11 +1600,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
-      public Builder mergeDoctorRec(io.bloombox.schema.identity.ids.UserDoctorRec value) {
+      public Builder mergeDoctorRec(io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec value) {
         if (doctorRecBuilder_ == null) {
           if (doctorRec_ != null) {
             doctorRec_ =
-              io.bloombox.schema.identity.ids.UserDoctorRec.newBuilder(doctorRec_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.newBuilder(doctorRec_).mergeFrom(value).buildPartial();
           } else {
             doctorRec_ = value;
           }
@@ -1640,7 +1640,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
-      public io.bloombox.schema.identity.ids.UserDoctorRec.Builder getDoctorRecBuilder() {
+      public io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.Builder getDoctorRecBuilder() {
         
         onChanged();
         return getDoctorRecFieldBuilder().getBuilder();
@@ -1652,12 +1652,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
-      public io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder getDoctorRecOrBuilder() {
+      public io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRecOrBuilder getDoctorRecOrBuilder() {
         if (doctorRecBuilder_ != null) {
           return doctorRecBuilder_.getMessageOrBuilder();
         } else {
           return doctorRec_ == null ?
-              io.bloombox.schema.identity.ids.UserDoctorRec.getDefaultInstance() : doctorRec_;
+              io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.getDefaultInstance() : doctorRec_;
         }
       }
       /**
@@ -1668,11 +1668,11 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.identity.ids.UserDoctorRec doctor_rec = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.ids.UserDoctorRec, io.bloombox.schema.identity.ids.UserDoctorRec.Builder, io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder> 
+          io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec, io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.Builder, io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRecOrBuilder> 
           getDoctorRecFieldBuilder() {
         if (doctorRecBuilder_ == null) {
           doctorRecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.ids.UserDoctorRec, io.bloombox.schema.identity.ids.UserDoctorRec.Builder, io.bloombox.schema.identity.ids.UserDoctorRecOrBuilder>(
+              io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec, io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRec.Builder, io.bloombox.schema.identity.ids.UserDoctorRecOuterClass.UserDoctorRecOrBuilder>(
                   getDoctorRec(),
                   getParentForChildren(),
                   isClean());
@@ -1681,9 +1681,9 @@ private static final long serialVersionUID = 0L;
         return doctorRecBuilder_;
       }
 
-      private io.bloombox.schema.identity.ID governmentId_ = null;
+      private io.bloombox.schema.identity.IDOuterClass.ID governmentId_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.ID, io.bloombox.schema.identity.ID.Builder, io.bloombox.schema.identity.IDOrBuilder> governmentIdBuilder_;
+          io.bloombox.schema.identity.IDOuterClass.ID, io.bloombox.schema.identity.IDOuterClass.ID.Builder, io.bloombox.schema.identity.IDOuterClass.IDOrBuilder> governmentIdBuilder_;
       /**
        * <pre>
        * Holds information about the user's driver's license.
@@ -1701,9 +1701,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ID government_id = 5;</code>
        */
-      public io.bloombox.schema.identity.ID getGovernmentId() {
+      public io.bloombox.schema.identity.IDOuterClass.ID getGovernmentId() {
         if (governmentIdBuilder_ == null) {
-          return governmentId_ == null ? io.bloombox.schema.identity.ID.getDefaultInstance() : governmentId_;
+          return governmentId_ == null ? io.bloombox.schema.identity.IDOuterClass.ID.getDefaultInstance() : governmentId_;
         } else {
           return governmentIdBuilder_.getMessage();
         }
@@ -1715,7 +1715,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ID government_id = 5;</code>
        */
-      public Builder setGovernmentId(io.bloombox.schema.identity.ID value) {
+      public Builder setGovernmentId(io.bloombox.schema.identity.IDOuterClass.ID value) {
         if (governmentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1736,7 +1736,7 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.identity.ID government_id = 5;</code>
        */
       public Builder setGovernmentId(
-          io.bloombox.schema.identity.ID.Builder builderForValue) {
+          io.bloombox.schema.identity.IDOuterClass.ID.Builder builderForValue) {
         if (governmentIdBuilder_ == null) {
           governmentId_ = builderForValue.build();
           onChanged();
@@ -1753,11 +1753,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ID government_id = 5;</code>
        */
-      public Builder mergeGovernmentId(io.bloombox.schema.identity.ID value) {
+      public Builder mergeGovernmentId(io.bloombox.schema.identity.IDOuterClass.ID value) {
         if (governmentIdBuilder_ == null) {
           if (governmentId_ != null) {
             governmentId_ =
-              io.bloombox.schema.identity.ID.newBuilder(governmentId_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.IDOuterClass.ID.newBuilder(governmentId_).mergeFrom(value).buildPartial();
           } else {
             governmentId_ = value;
           }
@@ -1793,7 +1793,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ID government_id = 5;</code>
        */
-      public io.bloombox.schema.identity.ID.Builder getGovernmentIdBuilder() {
+      public io.bloombox.schema.identity.IDOuterClass.ID.Builder getGovernmentIdBuilder() {
         
         onChanged();
         return getGovernmentIdFieldBuilder().getBuilder();
@@ -1805,12 +1805,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ID government_id = 5;</code>
        */
-      public io.bloombox.schema.identity.IDOrBuilder getGovernmentIdOrBuilder() {
+      public io.bloombox.schema.identity.IDOuterClass.IDOrBuilder getGovernmentIdOrBuilder() {
         if (governmentIdBuilder_ != null) {
           return governmentIdBuilder_.getMessageOrBuilder();
         } else {
           return governmentId_ == null ?
-              io.bloombox.schema.identity.ID.getDefaultInstance() : governmentId_;
+              io.bloombox.schema.identity.IDOuterClass.ID.getDefaultInstance() : governmentId_;
         }
       }
       /**
@@ -1821,11 +1821,11 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.identity.ID government_id = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.ID, io.bloombox.schema.identity.ID.Builder, io.bloombox.schema.identity.IDOrBuilder> 
+          io.bloombox.schema.identity.IDOuterClass.ID, io.bloombox.schema.identity.IDOuterClass.ID.Builder, io.bloombox.schema.identity.IDOuterClass.IDOrBuilder> 
           getGovernmentIdFieldBuilder() {
         if (governmentIdBuilder_ == null) {
           governmentIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.ID, io.bloombox.schema.identity.ID.Builder, io.bloombox.schema.identity.IDOrBuilder>(
+              io.bloombox.schema.identity.IDOuterClass.ID, io.bloombox.schema.identity.IDOuterClass.ID.Builder, io.bloombox.schema.identity.IDOuterClass.IDOrBuilder>(
                   getGovernmentId(),
                   getParentForChildren(),
                   isClean());
@@ -1834,9 +1834,9 @@ private static final long serialVersionUID = 0L;
         return governmentIdBuilder_;
       }
 
-      private io.bloombox.schema.partner.PartnerLocationKey location_ = null;
+      private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> locationBuilder_;
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Specifies the partner we are enrolling to.
@@ -1854,9 +1854,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationKey getLocation() {
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance() : location_;
+          return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
@@ -1868,7 +1868,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
+      public Builder setLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1889,7 +1889,7 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.PartnerLocationKey.Builder builderForValue) {
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -1906,11 +1906,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationKey value) {
+      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
         if (locationBuilder_ == null) {
           if (location_ != null) {
             location_ =
-              io.bloombox.schema.partner.PartnerLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -1946,7 +1946,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationKey.Builder getLocationBuilder() {
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder getLocationBuilder() {
         
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -1958,12 +1958,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              io.bloombox.schema.partner.PartnerLocationKey.getDefaultInstance() : location_;
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
         }
       }
       /**
@@ -1974,11 +1974,11 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.partner.PartnerLocationKey location = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder> 
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationKeyOrBuilder>(
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -2122,9 +2122,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.identity.ConsumerProfile consumerProfile_ = null;
+      private io.bloombox.schema.identity.UserOuterClass.ConsumerProfile consumerProfile_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.ConsumerProfile, io.bloombox.schema.identity.ConsumerProfile.Builder, io.bloombox.schema.identity.ConsumerProfileOrBuilder> consumerProfileBuilder_;
+          io.bloombox.schema.identity.UserOuterClass.ConsumerProfile, io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.Builder, io.bloombox.schema.identity.UserOuterClass.ConsumerProfileOrBuilder> consumerProfileBuilder_;
       /**
        * <pre>
        * Specifies information related to a cannabis consumer's consumption preferences.
@@ -2142,9 +2142,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
        */
-      public io.bloombox.schema.identity.ConsumerProfile getConsumerProfile() {
+      public io.bloombox.schema.identity.UserOuterClass.ConsumerProfile getConsumerProfile() {
         if (consumerProfileBuilder_ == null) {
-          return consumerProfile_ == null ? io.bloombox.schema.identity.ConsumerProfile.getDefaultInstance() : consumerProfile_;
+          return consumerProfile_ == null ? io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.getDefaultInstance() : consumerProfile_;
         } else {
           return consumerProfileBuilder_.getMessage();
         }
@@ -2156,7 +2156,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
        */
-      public Builder setConsumerProfile(io.bloombox.schema.identity.ConsumerProfile value) {
+      public Builder setConsumerProfile(io.bloombox.schema.identity.UserOuterClass.ConsumerProfile value) {
         if (consumerProfileBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2177,7 +2177,7 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       public Builder setConsumerProfile(
-          io.bloombox.schema.identity.ConsumerProfile.Builder builderForValue) {
+          io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.Builder builderForValue) {
         if (consumerProfileBuilder_ == null) {
           consumerProfile_ = builderForValue.build();
           onChanged();
@@ -2194,11 +2194,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
        */
-      public Builder mergeConsumerProfile(io.bloombox.schema.identity.ConsumerProfile value) {
+      public Builder mergeConsumerProfile(io.bloombox.schema.identity.UserOuterClass.ConsumerProfile value) {
         if (consumerProfileBuilder_ == null) {
           if (consumerProfile_ != null) {
             consumerProfile_ =
-              io.bloombox.schema.identity.ConsumerProfile.newBuilder(consumerProfile_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.newBuilder(consumerProfile_).mergeFrom(value).buildPartial();
           } else {
             consumerProfile_ = value;
           }
@@ -2234,7 +2234,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
        */
-      public io.bloombox.schema.identity.ConsumerProfile.Builder getConsumerProfileBuilder() {
+      public io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.Builder getConsumerProfileBuilder() {
         
         onChanged();
         return getConsumerProfileFieldBuilder().getBuilder();
@@ -2246,12 +2246,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
        */
-      public io.bloombox.schema.identity.ConsumerProfileOrBuilder getConsumerProfileOrBuilder() {
+      public io.bloombox.schema.identity.UserOuterClass.ConsumerProfileOrBuilder getConsumerProfileOrBuilder() {
         if (consumerProfileBuilder_ != null) {
           return consumerProfileBuilder_.getMessageOrBuilder();
         } else {
           return consumerProfile_ == null ?
-              io.bloombox.schema.identity.ConsumerProfile.getDefaultInstance() : consumerProfile_;
+              io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.getDefaultInstance() : consumerProfile_;
         }
       }
       /**
@@ -2262,11 +2262,11 @@ private static final long serialVersionUID = 0L;
        * <code>.bloombox.schema.identity.ConsumerProfile consumer_profile = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.ConsumerProfile, io.bloombox.schema.identity.ConsumerProfile.Builder, io.bloombox.schema.identity.ConsumerProfileOrBuilder> 
+          io.bloombox.schema.identity.UserOuterClass.ConsumerProfile, io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.Builder, io.bloombox.schema.identity.UserOuterClass.ConsumerProfileOrBuilder> 
           getConsumerProfileFieldBuilder() {
         if (consumerProfileBuilder_ == null) {
           consumerProfileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.ConsumerProfile, io.bloombox.schema.identity.ConsumerProfile.Builder, io.bloombox.schema.identity.ConsumerProfileOrBuilder>(
+              io.bloombox.schema.identity.UserOuterClass.ConsumerProfile, io.bloombox.schema.identity.UserOuterClass.ConsumerProfile.Builder, io.bloombox.schema.identity.UserOuterClass.ConsumerProfileOrBuilder>(
                   getConsumerProfile(),
                   getParentForChildren(),
                   isClean());

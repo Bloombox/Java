@@ -96,6 +96,42 @@ public final class DashboardGrpc {
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               com.google.protobuf.Empty.getDefaultInstance()))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request,
+      io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response> METHOD_INTEGRATION_VALIDATE =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request, io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.dash.v1beta1.Dashboard", "IntegrationValidate"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request,
+      io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response> METHOD_INTEGRATION_TEST =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request, io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.dash.v1beta1.Dashboard", "IntegrationTest"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request,
+      io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response> METHOD_INTEGRATION_TRIGGER =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request, io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.dash.v1beta1.Dashboard", "IntegrationTrigger"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response.getDefaultInstance()))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -168,6 +204,36 @@ public final class DashboardGrpc {
       asyncUnimplementedUnaryCall(METHOD_LOCATION_SETTINGS_UPDATE, responseObserver);
     }
 
+    /**
+     * <pre>
+     * Validate configuration for an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public void integrationValidate(io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_INTEGRATION_VALIDATE, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Test an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public void integrationTest(io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_INTEGRATION_TEST, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Manually trigger an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public void integrationTrigger(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_INTEGRATION_TRIGGER, responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -198,6 +264,27 @@ public final class DashboardGrpc {
                 io.bloombox.schema.services.dash.v1beta1.UpdateLocationSettings.Request,
                 com.google.protobuf.Empty>(
                   this, METHODID_LOCATION_SETTINGS_UPDATE)))
+          .addMethod(
+            METHOD_INTEGRATION_VALIDATE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request,
+                io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response>(
+                  this, METHODID_INTEGRATION_VALIDATE)))
+          .addMethod(
+            METHOD_INTEGRATION_TEST,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request,
+                io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response>(
+                  this, METHODID_INTEGRATION_TEST)))
+          .addMethod(
+            METHOD_INTEGRATION_TRIGGER,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request,
+                io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response>(
+                  this, METHODID_INTEGRATION_TRIGGER)))
           .build();
     }
   }
@@ -267,6 +354,39 @@ public final class DashboardGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_LOCATION_SETTINGS_UPDATE, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Validate configuration for an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public void integrationValidate(io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_INTEGRATION_VALIDATE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Test an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public void integrationTest(io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_INTEGRATION_TEST, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Manually trigger an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public void integrationTrigger(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_INTEGRATION_TRIGGER, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -329,6 +449,36 @@ public final class DashboardGrpc {
     public com.google.protobuf.Empty locationSettingsUpdate(io.bloombox.schema.services.dash.v1beta1.UpdateLocationSettings.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_LOCATION_SETTINGS_UPDATE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Validate configuration for an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response integrationValidate(io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_INTEGRATION_VALIDATE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Test an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response integrationTest(io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_INTEGRATION_TEST, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Manually trigger an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response integrationTrigger(io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_INTEGRATION_TRIGGER, getCallOptions(), request);
     }
   }
 
@@ -397,12 +547,48 @@ public final class DashboardGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_LOCATION_SETTINGS_UPDATE, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Validate configuration for an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response> integrationValidate(
+        io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_INTEGRATION_VALIDATE, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Test an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response> integrationTest(
+        io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_INTEGRATION_TEST, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Manually trigger an integrated piece of software against a Bloombox account.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response> integrationTrigger(
+        io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_INTEGRATION_TRIGGER, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PARTNER_SETTINGS = 0;
   private static final int METHODID_PARTNER_SETTINGS_UPDATE = 1;
   private static final int METHODID_LOCATION_SETTINGS = 2;
   private static final int METHODID_LOCATION_SETTINGS_UPDATE = 3;
+  private static final int METHODID_INTEGRATION_VALIDATE = 4;
+  private static final int METHODID_INTEGRATION_TEST = 5;
+  private static final int METHODID_INTEGRATION_TRIGGER = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -436,6 +622,18 @@ public final class DashboardGrpc {
         case METHODID_LOCATION_SETTINGS_UPDATE:
           serviceImpl.locationSettingsUpdate((io.bloombox.schema.services.dash.v1beta1.UpdateLocationSettings.Request) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_INTEGRATION_VALIDATE:
+          serviceImpl.integrationValidate((io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.ValidateIntegration.Response>) responseObserver);
+          break;
+        case METHODID_INTEGRATION_TEST:
+          serviceImpl.integrationTest((io.bloombox.schema.services.dash.v1beta1.TestIntegration.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.TestIntegration.Response>) responseObserver);
+          break;
+        case METHODID_INTEGRATION_TRIGGER:
+          serviceImpl.integrationTrigger((io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.dash.v1beta1.TriggerIntegration.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -474,6 +672,9 @@ public final class DashboardGrpc {
               .addMethod(METHOD_PARTNER_SETTINGS_UPDATE)
               .addMethod(METHOD_LOCATION_SETTINGS)
               .addMethod(METHOD_LOCATION_SETTINGS_UPDATE)
+              .addMethod(METHOD_INTEGRATION_VALIDATE)
+              .addMethod(METHOD_INTEGRATION_TEST)
+              .addMethod(METHOD_INTEGRATION_TRIGGER)
               .build();
         }
       }

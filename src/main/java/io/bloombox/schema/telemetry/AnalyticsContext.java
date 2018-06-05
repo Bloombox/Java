@@ -1122,7 +1122,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
-    io.bloombox.schema.identity.User getUser();
+    io.bloombox.schema.identity.UserOuterClass.User getUser();
     /**
      * <pre>
      * User account that was logged in when the event was submitted.
@@ -1130,7 +1130,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
-    io.bloombox.schema.identity.UserOrBuilder getUserOrBuilder();
+    io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getUserOrBuilder();
 
     /**
      * <pre>
@@ -1147,7 +1147,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
-    io.bloombox.schema.partner.Partner getPartner();
+    io.bloombox.schema.partner.PartnerOuterClass.Partner getPartner();
     /**
      * <pre>
      * Partner account under which the event was submitted.
@@ -1155,7 +1155,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
-    io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder();
+    io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder getPartnerOrBuilder();
 
     /**
      * <pre>
@@ -1172,7 +1172,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
-    io.bloombox.schema.partner.PartnerLocation getLocation();
+    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation getLocation();
     /**
      * <pre>
      * Location account under which this event was submitted.
@@ -1180,7 +1180,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
-    io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder();
+    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder getLocationOrBuilder();
   }
   /**
    * <pre>
@@ -1233,11 +1233,11 @@ public final class AnalyticsContext {
               break;
             }
             case 10: {
-              io.bloombox.schema.identity.User.Builder subBuilder = null;
+              io.bloombox.schema.identity.UserOuterClass.User.Builder subBuilder = null;
               if (user_ != null) {
                 subBuilder = user_.toBuilder();
               }
-              user_ = input.readMessage(io.bloombox.schema.identity.User.parser(), extensionRegistry);
+              user_ = input.readMessage(io.bloombox.schema.identity.UserOuterClass.User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(user_);
                 user_ = subBuilder.buildPartial();
@@ -1246,11 +1246,11 @@ public final class AnalyticsContext {
               break;
             }
             case 18: {
-              io.bloombox.schema.partner.Partner.Builder subBuilder = null;
+              io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder subBuilder = null;
               if (partner_ != null) {
                 subBuilder = partner_.toBuilder();
               }
-              partner_ = input.readMessage(io.bloombox.schema.partner.Partner.parser(), extensionRegistry);
+              partner_ = input.readMessage(io.bloombox.schema.partner.PartnerOuterClass.Partner.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(partner_);
                 partner_ = subBuilder.buildPartial();
@@ -1259,11 +1259,11 @@ public final class AnalyticsContext {
               break;
             }
             case 26: {
-              io.bloombox.schema.partner.PartnerLocation.Builder subBuilder = null;
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder subBuilder = null;
               if (location_ != null) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocation.parser(), extensionRegistry);
+              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -1296,7 +1296,7 @@ public final class AnalyticsContext {
     }
 
     public static final int USER_FIELD_NUMBER = 1;
-    private io.bloombox.schema.identity.User user_;
+    private io.bloombox.schema.identity.UserOuterClass.User user_;
     /**
      * <pre>
      * User account that was logged in when the event was submitted.
@@ -1314,8 +1314,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
-    public io.bloombox.schema.identity.User getUser() {
-      return user_ == null ? io.bloombox.schema.identity.User.getDefaultInstance() : user_;
+    public io.bloombox.schema.identity.UserOuterClass.User getUser() {
+      return user_ == null ? io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : user_;
     }
     /**
      * <pre>
@@ -1324,12 +1324,12 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
-    public io.bloombox.schema.identity.UserOrBuilder getUserOrBuilder() {
+    public io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getUserOrBuilder() {
       return getUser();
     }
 
     public static final int PARTNER_FIELD_NUMBER = 2;
-    private io.bloombox.schema.partner.Partner partner_;
+    private io.bloombox.schema.partner.PartnerOuterClass.Partner partner_;
     /**
      * <pre>
      * Partner account under which the event was submitted.
@@ -1347,8 +1347,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
-    public io.bloombox.schema.partner.Partner getPartner() {
-      return partner_ == null ? io.bloombox.schema.partner.Partner.getDefaultInstance() : partner_;
+    public io.bloombox.schema.partner.PartnerOuterClass.Partner getPartner() {
+      return partner_ == null ? io.bloombox.schema.partner.PartnerOuterClass.Partner.getDefaultInstance() : partner_;
     }
     /**
      * <pre>
@@ -1357,12 +1357,12 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
-    public io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder() {
+    public io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder getPartnerOrBuilder() {
       return getPartner();
     }
 
     public static final int LOCATION_FIELD_NUMBER = 3;
-    private io.bloombox.schema.partner.PartnerLocation location_;
+    private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation location_;
     /**
      * <pre>
      * Location account under which this event was submitted.
@@ -1380,8 +1380,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
-    public io.bloombox.schema.partner.PartnerLocation getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.PartnerLocation.getDefaultInstance() : location_;
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.getDefaultInstance() : location_;
     }
     /**
      * <pre>
@@ -1390,7 +1390,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
@@ -1754,9 +1754,9 @@ public final class AnalyticsContext {
         return this;
       }
 
-      private io.bloombox.schema.identity.User user_ = null;
+      private io.bloombox.schema.identity.UserOuterClass.User user_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.User, io.bloombox.schema.identity.User.Builder, io.bloombox.schema.identity.UserOrBuilder> userBuilder_;
+          io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder> userBuilder_;
       /**
        * <pre>
        * User account that was logged in when the event was submitted.
@@ -1774,9 +1774,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public io.bloombox.schema.identity.User getUser() {
+      public io.bloombox.schema.identity.UserOuterClass.User getUser() {
         if (userBuilder_ == null) {
-          return user_ == null ? io.bloombox.schema.identity.User.getDefaultInstance() : user_;
+          return user_ == null ? io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : user_;
         } else {
           return userBuilder_.getMessage();
         }
@@ -1788,7 +1788,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public Builder setUser(io.bloombox.schema.identity.User value) {
+      public Builder setUser(io.bloombox.schema.identity.UserOuterClass.User value) {
         if (userBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1809,7 +1809,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public Builder setUser(
-          io.bloombox.schema.identity.User.Builder builderForValue) {
+          io.bloombox.schema.identity.UserOuterClass.User.Builder builderForValue) {
         if (userBuilder_ == null) {
           user_ = builderForValue.build();
           onChanged();
@@ -1826,11 +1826,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public Builder mergeUser(io.bloombox.schema.identity.User value) {
+      public Builder mergeUser(io.bloombox.schema.identity.UserOuterClass.User value) {
         if (userBuilder_ == null) {
           if (user_ != null) {
             user_ =
-              io.bloombox.schema.identity.User.newBuilder(user_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.UserOuterClass.User.newBuilder(user_).mergeFrom(value).buildPartial();
           } else {
             user_ = value;
           }
@@ -1866,7 +1866,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public io.bloombox.schema.identity.User.Builder getUserBuilder() {
+      public io.bloombox.schema.identity.UserOuterClass.User.Builder getUserBuilder() {
         
         onChanged();
         return getUserFieldBuilder().getBuilder();
@@ -1878,12 +1878,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public io.bloombox.schema.identity.UserOrBuilder getUserOrBuilder() {
+      public io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
           return userBuilder_.getMessageOrBuilder();
         } else {
           return user_ == null ?
-              io.bloombox.schema.identity.User.getDefaultInstance() : user_;
+              io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : user_;
         }
       }
       /**
@@ -1894,11 +1894,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.User, io.bloombox.schema.identity.User.Builder, io.bloombox.schema.identity.UserOrBuilder> 
+          io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder> 
           getUserFieldBuilder() {
         if (userBuilder_ == null) {
           userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.User, io.bloombox.schema.identity.User.Builder, io.bloombox.schema.identity.UserOrBuilder>(
+              io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder>(
                   getUser(),
                   getParentForChildren(),
                   isClean());
@@ -1907,9 +1907,9 @@ public final class AnalyticsContext {
         return userBuilder_;
       }
 
-      private io.bloombox.schema.partner.Partner partner_ = null;
+      private io.bloombox.schema.partner.PartnerOuterClass.Partner partner_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.Partner, io.bloombox.schema.partner.Partner.Builder, io.bloombox.schema.partner.PartnerOrBuilder> partnerBuilder_;
+          io.bloombox.schema.partner.PartnerOuterClass.Partner, io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder, io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder> partnerBuilder_;
       /**
        * <pre>
        * Partner account under which the event was submitted.
@@ -1927,9 +1927,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.Partner getPartner() {
+      public io.bloombox.schema.partner.PartnerOuterClass.Partner getPartner() {
         if (partnerBuilder_ == null) {
-          return partner_ == null ? io.bloombox.schema.partner.Partner.getDefaultInstance() : partner_;
+          return partner_ == null ? io.bloombox.schema.partner.PartnerOuterClass.Partner.getDefaultInstance() : partner_;
         } else {
           return partnerBuilder_.getMessage();
         }
@@ -1941,7 +1941,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public Builder setPartner(io.bloombox.schema.partner.Partner value) {
+      public Builder setPartner(io.bloombox.schema.partner.PartnerOuterClass.Partner value) {
         if (partnerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1962,7 +1962,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public Builder setPartner(
-          io.bloombox.schema.partner.Partner.Builder builderForValue) {
+          io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder builderForValue) {
         if (partnerBuilder_ == null) {
           partner_ = builderForValue.build();
           onChanged();
@@ -1979,11 +1979,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public Builder mergePartner(io.bloombox.schema.partner.Partner value) {
+      public Builder mergePartner(io.bloombox.schema.partner.PartnerOuterClass.Partner value) {
         if (partnerBuilder_ == null) {
           if (partner_ != null) {
             partner_ =
-              io.bloombox.schema.partner.Partner.newBuilder(partner_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.PartnerOuterClass.Partner.newBuilder(partner_).mergeFrom(value).buildPartial();
           } else {
             partner_ = value;
           }
@@ -2019,7 +2019,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.Partner.Builder getPartnerBuilder() {
+      public io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder getPartnerBuilder() {
         
         onChanged();
         return getPartnerFieldBuilder().getBuilder();
@@ -2031,12 +2031,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerOrBuilder getPartnerOrBuilder() {
+      public io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder getPartnerOrBuilder() {
         if (partnerBuilder_ != null) {
           return partnerBuilder_.getMessageOrBuilder();
         } else {
           return partner_ == null ?
-              io.bloombox.schema.partner.Partner.getDefaultInstance() : partner_;
+              io.bloombox.schema.partner.PartnerOuterClass.Partner.getDefaultInstance() : partner_;
         }
       }
       /**
@@ -2047,11 +2047,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.Partner, io.bloombox.schema.partner.Partner.Builder, io.bloombox.schema.partner.PartnerOrBuilder> 
+          io.bloombox.schema.partner.PartnerOuterClass.Partner, io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder, io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder> 
           getPartnerFieldBuilder() {
         if (partnerBuilder_ == null) {
           partnerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.Partner, io.bloombox.schema.partner.Partner.Builder, io.bloombox.schema.partner.PartnerOrBuilder>(
+              io.bloombox.schema.partner.PartnerOuterClass.Partner, io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder, io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder>(
                   getPartner(),
                   getParentForChildren(),
                   isClean());
@@ -2060,9 +2060,9 @@ public final class AnalyticsContext {
         return partnerBuilder_;
       }
 
-      private io.bloombox.schema.partner.PartnerLocation location_ = null;
+      private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocation, io.bloombox.schema.partner.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOrBuilder> locationBuilder_;
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Location account under which this event was submitted.
@@ -2080,9 +2080,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerLocation getLocation() {
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.PartnerLocation.getDefaultInstance() : location_;
+          return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
@@ -2094,7 +2094,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.PartnerLocation value) {
+      public Builder setLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2115,7 +2115,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.PartnerLocation.Builder builderForValue) {
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -2132,11 +2132,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocation value) {
+      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation value) {
         if (locationBuilder_ == null) {
           if (location_ != null) {
             location_ =
-              io.bloombox.schema.partner.PartnerLocation.newBuilder(location_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -2172,7 +2172,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerLocation.Builder getLocationBuilder() {
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder getLocationBuilder() {
         
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -2184,12 +2184,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOrBuilder getLocationOrBuilder() {
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              io.bloombox.schema.partner.PartnerLocation.getDefaultInstance() : location_;
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.getDefaultInstance() : location_;
         }
       }
       /**
@@ -2200,11 +2200,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocation, io.bloombox.schema.partner.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOrBuilder> 
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerLocation, io.bloombox.schema.partner.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOrBuilder>(
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -2305,7 +2305,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    io.bloombox.schema.identity.UserKey getUserKey();
+    io.bloombox.schema.identity.UserOuterClass.UserKey getUserKey();
     /**
      * <pre>
      * Specifies the user associated with this event, if known.
@@ -2313,7 +2313,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    io.bloombox.schema.identity.UserKeyOrBuilder getUserKeyOrBuilder();
+    io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder getUserKeyOrBuilder();
 
     /**
      * <pre>
@@ -2610,11 +2610,11 @@ public final class AnalyticsContext {
               break;
             }
             case 18: {
-              io.bloombox.schema.identity.UserKey.Builder subBuilder = null;
+              io.bloombox.schema.identity.UserOuterClass.UserKey.Builder subBuilder = null;
               if (userKey_ != null) {
                 subBuilder = userKey_.toBuilder();
               }
-              userKey_ = input.readMessage(io.bloombox.schema.identity.UserKey.parser(), extensionRegistry);
+              userKey_ = input.readMessage(io.bloombox.schema.identity.UserOuterClass.UserKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userKey_);
                 userKey_ = subBuilder.buildPartial();
@@ -2782,7 +2782,7 @@ public final class AnalyticsContext {
     }
 
     public static final int USER_KEY_FIELD_NUMBER = 2;
-    private io.bloombox.schema.identity.UserKey userKey_;
+    private io.bloombox.schema.identity.UserOuterClass.UserKey userKey_;
     /**
      * <pre>
      * Specifies the user associated with this event, if known.
@@ -2800,8 +2800,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    public io.bloombox.schema.identity.UserKey getUserKey() {
-      return userKey_ == null ? io.bloombox.schema.identity.UserKey.getDefaultInstance() : userKey_;
+    public io.bloombox.schema.identity.UserOuterClass.UserKey getUserKey() {
+      return userKey_ == null ? io.bloombox.schema.identity.UserOuterClass.UserKey.getDefaultInstance() : userKey_;
     }
     /**
      * <pre>
@@ -2810,7 +2810,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    public io.bloombox.schema.identity.UserKeyOrBuilder getUserKeyOrBuilder() {
+    public io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder getUserKeyOrBuilder() {
       return getUserKey();
     }
 
@@ -3916,9 +3916,9 @@ public final class AnalyticsContext {
         return collectionBuilder_;
       }
 
-      private io.bloombox.schema.identity.UserKey userKey_ = null;
+      private io.bloombox.schema.identity.UserOuterClass.UserKey userKey_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.UserKey, io.bloombox.schema.identity.UserKey.Builder, io.bloombox.schema.identity.UserKeyOrBuilder> userKeyBuilder_;
+          io.bloombox.schema.identity.UserOuterClass.UserKey, io.bloombox.schema.identity.UserOuterClass.UserKey.Builder, io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder> userKeyBuilder_;
       /**
        * <pre>
        * Specifies the user associated with this event, if known.
@@ -3936,9 +3936,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.UserKey getUserKey() {
+      public io.bloombox.schema.identity.UserOuterClass.UserKey getUserKey() {
         if (userKeyBuilder_ == null) {
-          return userKey_ == null ? io.bloombox.schema.identity.UserKey.getDefaultInstance() : userKey_;
+          return userKey_ == null ? io.bloombox.schema.identity.UserOuterClass.UserKey.getDefaultInstance() : userKey_;
         } else {
           return userKeyBuilder_.getMessage();
         }
@@ -3950,7 +3950,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public Builder setUserKey(io.bloombox.schema.identity.UserKey value) {
+      public Builder setUserKey(io.bloombox.schema.identity.UserOuterClass.UserKey value) {
         if (userKeyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3971,7 +3971,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public Builder setUserKey(
-          io.bloombox.schema.identity.UserKey.Builder builderForValue) {
+          io.bloombox.schema.identity.UserOuterClass.UserKey.Builder builderForValue) {
         if (userKeyBuilder_ == null) {
           userKey_ = builderForValue.build();
           onChanged();
@@ -3988,11 +3988,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public Builder mergeUserKey(io.bloombox.schema.identity.UserKey value) {
+      public Builder mergeUserKey(io.bloombox.schema.identity.UserOuterClass.UserKey value) {
         if (userKeyBuilder_ == null) {
           if (userKey_ != null) {
             userKey_ =
-              io.bloombox.schema.identity.UserKey.newBuilder(userKey_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.UserOuterClass.UserKey.newBuilder(userKey_).mergeFrom(value).buildPartial();
           } else {
             userKey_ = value;
           }
@@ -4028,7 +4028,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.UserKey.Builder getUserKeyBuilder() {
+      public io.bloombox.schema.identity.UserOuterClass.UserKey.Builder getUserKeyBuilder() {
         
         onChanged();
         return getUserKeyFieldBuilder().getBuilder();
@@ -4040,12 +4040,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.UserKeyOrBuilder getUserKeyOrBuilder() {
+      public io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder getUserKeyOrBuilder() {
         if (userKeyBuilder_ != null) {
           return userKeyBuilder_.getMessageOrBuilder();
         } else {
           return userKey_ == null ?
-              io.bloombox.schema.identity.UserKey.getDefaultInstance() : userKey_;
+              io.bloombox.schema.identity.UserOuterClass.UserKey.getDefaultInstance() : userKey_;
         }
       }
       /**
@@ -4056,11 +4056,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.UserKey, io.bloombox.schema.identity.UserKey.Builder, io.bloombox.schema.identity.UserKeyOrBuilder> 
+          io.bloombox.schema.identity.UserOuterClass.UserKey, io.bloombox.schema.identity.UserOuterClass.UserKey.Builder, io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder> 
           getUserKeyFieldBuilder() {
         if (userKeyBuilder_ == null) {
           userKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.UserKey, io.bloombox.schema.identity.UserKey.Builder, io.bloombox.schema.identity.UserKeyOrBuilder>(
+              io.bloombox.schema.identity.UserOuterClass.UserKey, io.bloombox.schema.identity.UserOuterClass.UserKey.Builder, io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder>(
                   getUserKey(),
                   getParentForChildren(),
                   isClean());

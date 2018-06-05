@@ -30,19 +30,3744 @@ public final class PartnerDeviceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * Specifies types of partner co-located devices.
+   * </pre>
+   *
+   * Protobuf enum {@code bloombox.schema.partner.PartnerDeviceType}
+   */
+  public enum PartnerDeviceType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Unspecified, or unrecognized, device type.
+     * </pre>
+     *
+     * <code>UNSPECIFIED_DEVICE_TYPE = 0;</code>
+     */
+    UNSPECIFIED_DEVICE_TYPE(0),
+    /**
+     * <pre>
+     * Internal devices. Used for sandbox/development operations.
+     * </pre>
+     *
+     * <code>INTERNAL = 1;</code>
+     */
+    INTERNAL(1),
+    /**
+     * <pre>
+     * Menu tablet devices.
+     * </pre>
+     *
+     * <code>MENU_TABLET = 10;</code>
+     */
+    MENU_TABLET(10),
+    /**
+     * <pre>
+     * Menu TV (display) devices.
+     * </pre>
+     *
+     * <code>MENU_TV = 11;</code>
+     */
+    MENU_TV(11),
+    /**
+     * <pre>
+     * Checkin station units.
+     * </pre>
+     *
+     * <code>CHECKIN_STATION = 20;</code>
+     */
+    CHECKIN_STATION(20),
+    /**
+     * <pre>
+     * Checkin queue TV (display) devices.
+     * </pre>
+     *
+     * <code>CHECKIN_TV = 21;</code>
+     */
+    CHECKIN_TV(21),
+    /**
+     * <pre>
+     * Point-of-Sale/cash register devices.
+     * </pre>
+     *
+     * <code>POS_REGISTER = 30;</code>
+     */
+    POS_REGISTER(30),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Unspecified, or unrecognized, device type.
+     * </pre>
+     *
+     * <code>UNSPECIFIED_DEVICE_TYPE = 0;</code>
+     */
+    public static final int UNSPECIFIED_DEVICE_TYPE_VALUE = 0;
+    /**
+     * <pre>
+     * Internal devices. Used for sandbox/development operations.
+     * </pre>
+     *
+     * <code>INTERNAL = 1;</code>
+     */
+    public static final int INTERNAL_VALUE = 1;
+    /**
+     * <pre>
+     * Menu tablet devices.
+     * </pre>
+     *
+     * <code>MENU_TABLET = 10;</code>
+     */
+    public static final int MENU_TABLET_VALUE = 10;
+    /**
+     * <pre>
+     * Menu TV (display) devices.
+     * </pre>
+     *
+     * <code>MENU_TV = 11;</code>
+     */
+    public static final int MENU_TV_VALUE = 11;
+    /**
+     * <pre>
+     * Checkin station units.
+     * </pre>
+     *
+     * <code>CHECKIN_STATION = 20;</code>
+     */
+    public static final int CHECKIN_STATION_VALUE = 20;
+    /**
+     * <pre>
+     * Checkin queue TV (display) devices.
+     * </pre>
+     *
+     * <code>CHECKIN_TV = 21;</code>
+     */
+    public static final int CHECKIN_TV_VALUE = 21;
+    /**
+     * <pre>
+     * Point-of-Sale/cash register devices.
+     * </pre>
+     *
+     * <code>POS_REGISTER = 30;</code>
+     */
+    public static final int POS_REGISTER_VALUE = 30;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PartnerDeviceType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static PartnerDeviceType forNumber(int value) {
+      switch (value) {
+        case 0: return UNSPECIFIED_DEVICE_TYPE;
+        case 1: return INTERNAL;
+        case 10: return MENU_TABLET;
+        case 11: return MENU_TV;
+        case 20: return CHECKIN_STATION;
+        case 21: return CHECKIN_TV;
+        case 30: return POS_REGISTER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PartnerDeviceType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PartnerDeviceType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PartnerDeviceType>() {
+            public PartnerDeviceType findValueByNumber(int number) {
+              return PartnerDeviceType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PartnerDeviceType[] VALUES = values();
+
+    public static PartnerDeviceType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PartnerDeviceType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.partner.PartnerDeviceType)
+  }
+
+  public interface PartnerDeviceKeyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerDeviceKey)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Partner location that owns/co-locates this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     */
+    boolean hasLocation();
+    /**
+     * <pre>
+     * Partner location that owns/co-locates this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     */
+    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation();
+    /**
+     * <pre>
+     * Partner location that owns/co-locates this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     */
+    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+
+    /**
+     * <pre>
+     * UUID for this particular device.
+     * </pre>
+     *
+     * <code>string uuid = 2 [(.core.field) = { ... }</code>
+     */
+    java.lang.String getUuid();
+    /**
+     * <pre>
+     * UUID for this particular device.
+     * </pre>
+     *
+     * <code>string uuid = 2 [(.core.field) = { ... }</code>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+  }
+  /**
+   * <pre>
+   * Specifies the structure of a key for a given partner device.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.PartnerDeviceKey}
+   */
+  public  static final class PartnerDeviceKey extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerDeviceKey)
+      PartnerDeviceKeyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PartnerDeviceKey.newBuilder() to construct.
+    private PartnerDeviceKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PartnerDeviceKey() {
+      uuid_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartnerDeviceKey(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder subBuilder = null;
+              if (location_ != null) {
+                subBuilder = location_.toBuilder();
+              }
+              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(location_);
+                location_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.class, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.Builder.class);
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 1;
+    private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_;
+    /**
+     * <pre>
+     * Partner location that owns/co-locates this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     */
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <pre>
+     * Partner location that owns/co-locates this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     */
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+    }
+    /**
+     * <pre>
+     * Partner location that owns/co-locates this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     */
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+      return getLocation();
+    }
+
+    public static final int UUID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <pre>
+     * UUID for this particular device.
+     * </pre>
+     *
+     * <code>string uuid = 2 [(.core.field) = { ... }</code>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * UUID for this particular device.
+     * </pre>
+     *
+     * <code>string uuid = 2 [(.core.field) = { ... }</code>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (location_ != null) {
+        output.writeMessage(1, getLocation());
+      }
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uuid_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLocation());
+      }
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uuid_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey other = (io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey) obj;
+
+      boolean result = true;
+      result = result && (hasLocation() == other.hasLocation());
+      if (hasLocation()) {
+        result = result && getLocation()
+            .equals(other.getLocation());
+      }
+      result = result && getUuid()
+          .equals(other.getUuid());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (37 * hash) + UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getUuid().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies the structure of a key for a given partner device.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.PartnerDeviceKey}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerDeviceKey)
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKeyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.class, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (locationBuilder_ == null) {
+          location_ = null;
+        } else {
+          location_ = null;
+          locationBuilder_ = null;
+        }
+        uuid_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey build() {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey buildPartial() {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey result = new io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey(this);
+        if (locationBuilder_ == null) {
+          result.location_ = location_;
+        } else {
+          result.location_ = locationBuilder_.build();
+        }
+        result.uuid_ = uuid_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey) {
+          return mergeFrom((io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey other) {
+        if (other == io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey.getDefaultInstance()) return this;
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> locationBuilder_;
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      public boolean hasLocation() {
+        return locationBuilder_ != null || location_ != null;
+      }
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      public Builder setLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+          onChanged();
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      public Builder setLocation(
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+          onChanged();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
+        if (locationBuilder_ == null) {
+          if (location_ != null) {
+            location_ =
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+          } else {
+            location_ = value;
+          }
+          onChanged();
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      public Builder clearLocation() {
+        if (locationBuilder_ == null) {
+          location_ = null;
+          onChanged();
+        } else {
+          location_ = null;
+          locationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder getLocationBuilder() {
+        
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <pre>
+       * Partner location that owns/co-locates this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <pre>
+       * UUID for this particular device.
+       * </pre>
+       *
+       * <code>string uuid = 2 [(.core.field) = { ... }</code>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UUID for this particular device.
+       * </pre>
+       *
+       * <code>string uuid = 2 [(.core.field) = { ... }</code>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UUID for this particular device.
+       * </pre>
+       *
+       * <code>string uuid = 2 [(.core.field) = { ... }</code>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UUID for this particular device.
+       * </pre>
+       *
+       * <code>string uuid = 2 [(.core.field) = { ... }</code>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UUID for this particular device.
+       * </pre>
+       *
+       * <code>string uuid = 2 [(.core.field) = { ... }</code>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerDeviceKey)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerDeviceKey)
+    private static final io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey();
+    }
+
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartnerDeviceKey>
+        PARSER = new com.google.protobuf.AbstractParser<PartnerDeviceKey>() {
+      public PartnerDeviceKey parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartnerDeviceKey(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartnerDeviceKey> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartnerDeviceKey> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceKey getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PartnerDeviceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerDevice)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique ID for this partner device.
+     * </pre>
+     *
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
+     */
+    java.lang.String getUuid();
+    /**
+     * <pre>
+     * Unique ID for this partner device.
+     * </pre>
+     *
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <pre>
+     * Partner that owns this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     */
+    boolean hasLocation();
+    /**
+     * <pre>
+     * Partner that owns this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     */
+    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation();
+    /**
+     * <pre>
+     * Partner that owns this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     */
+    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+
+    /**
+     * <pre>
+     * Type of the device this record represents.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of the device this record represents.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+     */
+    io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType getType();
+
+    /**
+     * <pre>
+     * Flags for this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     */
+    boolean hasFlags();
+    /**
+     * <pre>
+     * Flags for this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     */
+    io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags getFlags();
+    /**
+     * <pre>
+     * Flags for this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     */
+    io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder();
+
+    /**
+     * <pre>
+     * Device-specific information.
+     * </pre>
+     *
+     * <code>.opencannabis.device.Device device = 5;</code>
+     */
+    boolean hasDevice();
+    /**
+     * <pre>
+     * Device-specific information.
+     * </pre>
+     *
+     * <code>.opencannabis.device.Device device = 5;</code>
+     */
+    io.opencannabis.schema.device.Device getDevice();
+    /**
+     * <pre>
+     * Device-specific information.
+     * </pre>
+     *
+     * <code>.opencannabis.device.Device device = 5;</code>
+     */
+    io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp for the last time this device was "seen" on the API.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
+     */
+    boolean hasSeen();
+    /**
+     * <pre>
+     * Timestamp for the last time this device was "seen" on the API.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
+     */
+    io.opencannabis.schema.temporal.Instant getSeen();
+    /**
+     * <pre>
+     * Timestamp for the last time this device was "seen" on the API.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
+     */
+    io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp for when this device originally registered.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant registered = 7;</code>
+     */
+    boolean hasRegistered();
+    /**
+     * <pre>
+     * Timestamp for when this device originally registered.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant registered = 7;</code>
+     */
+    io.opencannabis.schema.temporal.Instant getRegistered();
+    /**
+     * <pre>
+     * Timestamp for when this device originally registered.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant registered = 7;</code>
+     */
+    io.opencannabis.schema.temporal.InstantOrBuilder getRegisteredOrBuilder();
+  }
+  /**
+   * <pre>
+   * Specifies the structure of partner co-located device records.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.PartnerDevice}
+   */
+  public  static final class PartnerDevice extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerDevice)
+      PartnerDeviceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PartnerDevice.newBuilder() to construct.
+    private PartnerDevice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PartnerDevice() {
+      uuid_ = "";
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartnerDevice(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 18: {
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder subBuilder = null;
+              if (location_ != null) {
+                subBuilder = location_.toBuilder();
+              }
+              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(location_);
+                location_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 34: {
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.Builder subBuilder = null;
+              if (flags_ != null) {
+                subBuilder = flags_.toBuilder();
+              }
+              flags_ = input.readMessage(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(flags_);
+                flags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              io.opencannabis.schema.device.Device.Builder subBuilder = null;
+              if (device_ != null) {
+                subBuilder = device_.toBuilder();
+              }
+              device_ = input.readMessage(io.opencannabis.schema.device.Device.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(device_);
+                device_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              if (seen_ != null) {
+                subBuilder = seen_.toBuilder();
+              }
+              seen_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(seen_);
+                seen_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              if (registered_ != null) {
+                subBuilder = registered_.toBuilder();
+              }
+              registered_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(registered_);
+                registered_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice.class, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice.Builder.class);
+    }
+
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <pre>
+     * Unique ID for this partner device.
+     * </pre>
+     *
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique ID for this partner device.
+     * </pre>
+     *
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 2;
+    private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_;
+    /**
+     * <pre>
+     * Partner that owns this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     */
+    public boolean hasLocation() {
+      return location_ != null;
+    }
+    /**
+     * <pre>
+     * Partner that owns this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     */
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+    }
+    /**
+     * <pre>
+     * Partner that owns this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     */
+    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+      return getLocation();
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private int type_;
+    /**
+     * <pre>
+     * Type of the device this record represents.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of the device this record represents.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+     */
+    public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType getType() {
+      io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType result = io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType.valueOf(type_);
+      return result == null ? io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType.UNRECOGNIZED : result;
+    }
+
+    public static final int FLAGS_FIELD_NUMBER = 4;
+    private io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags flags_;
+    /**
+     * <pre>
+     * Flags for this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     */
+    public boolean hasFlags() {
+      return flags_ != null;
+    }
+    /**
+     * <pre>
+     * Flags for this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     */
+    public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags getFlags() {
+      return flags_ == null ? io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.getDefaultInstance() : flags_;
+    }
+    /**
+     * <pre>
+     * Flags for this device.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+     */
+    public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder() {
+      return getFlags();
+    }
+
+    public static final int DEVICE_FIELD_NUMBER = 5;
+    private io.opencannabis.schema.device.Device device_;
+    /**
+     * <pre>
+     * Device-specific information.
+     * </pre>
+     *
+     * <code>.opencannabis.device.Device device = 5;</code>
+     */
+    public boolean hasDevice() {
+      return device_ != null;
+    }
+    /**
+     * <pre>
+     * Device-specific information.
+     * </pre>
+     *
+     * <code>.opencannabis.device.Device device = 5;</code>
+     */
+    public io.opencannabis.schema.device.Device getDevice() {
+      return device_ == null ? io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
+    }
+    /**
+     * <pre>
+     * Device-specific information.
+     * </pre>
+     *
+     * <code>.opencannabis.device.Device device = 5;</code>
+     */
+    public io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
+      return getDevice();
+    }
+
+    public static final int SEEN_FIELD_NUMBER = 6;
+    private io.opencannabis.schema.temporal.Instant seen_;
+    /**
+     * <pre>
+     * Timestamp for the last time this device was "seen" on the API.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
+     */
+    public boolean hasSeen() {
+      return seen_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp for the last time this device was "seen" on the API.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
+     */
+    public io.opencannabis.schema.temporal.Instant getSeen() {
+      return seen_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
+    }
+    /**
+     * <pre>
+     * Timestamp for the last time this device was "seen" on the API.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
+     */
+    public io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
+      return getSeen();
+    }
+
+    public static final int REGISTERED_FIELD_NUMBER = 7;
+    private io.opencannabis.schema.temporal.Instant registered_;
+    /**
+     * <pre>
+     * Timestamp for when this device originally registered.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant registered = 7;</code>
+     */
+    public boolean hasRegistered() {
+      return registered_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp for when this device originally registered.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant registered = 7;</code>
+     */
+    public io.opencannabis.schema.temporal.Instant getRegistered() {
+      return registered_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : registered_;
+    }
+    /**
+     * <pre>
+     * Timestamp for when this device originally registered.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant registered = 7;</code>
+     */
+    public io.opencannabis.schema.temporal.InstantOrBuilder getRegisteredOrBuilder() {
+      return getRegistered();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
+      }
+      if (location_ != null) {
+        output.writeMessage(2, getLocation());
+      }
+      if (type_ != io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType.UNSPECIFIED_DEVICE_TYPE.getNumber()) {
+        output.writeEnum(3, type_);
+      }
+      if (flags_ != null) {
+        output.writeMessage(4, getFlags());
+      }
+      if (device_ != null) {
+        output.writeMessage(5, getDevice());
+      }
+      if (seen_ != null) {
+        output.writeMessage(6, getSeen());
+      }
+      if (registered_ != null) {
+        output.writeMessage(7, getRegistered());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
+      }
+      if (location_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLocation());
+      }
+      if (type_ != io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType.UNSPECIFIED_DEVICE_TYPE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, type_);
+      }
+      if (flags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getFlags());
+      }
+      if (device_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getDevice());
+      }
+      if (seen_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSeen());
+      }
+      if (registered_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getRegistered());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice other = (io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice) obj;
+
+      boolean result = true;
+      result = result && getUuid()
+          .equals(other.getUuid());
+      result = result && (hasLocation() == other.hasLocation());
+      if (hasLocation()) {
+        result = result && getLocation()
+            .equals(other.getLocation());
+      }
+      result = result && type_ == other.type_;
+      result = result && (hasFlags() == other.hasFlags());
+      if (hasFlags()) {
+        result = result && getFlags()
+            .equals(other.getFlags());
+      }
+      result = result && (hasDevice() == other.hasDevice());
+      if (hasDevice()) {
+        result = result && getDevice()
+            .equals(other.getDevice());
+      }
+      result = result && (hasSeen() == other.hasSeen());
+      if (hasSeen()) {
+        result = result && getSeen()
+            .equals(other.getSeen());
+      }
+      result = result && (hasRegistered() == other.hasRegistered());
+      if (hasRegistered()) {
+        result = result && getRegistered()
+            .equals(other.getRegistered());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getUuid().hashCode();
+      if (hasLocation()) {
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+      }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      if (hasFlags()) {
+        hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getFlags().hashCode();
+      }
+      if (hasDevice()) {
+        hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+        hash = (53 * hash) + getDevice().hashCode();
+      }
+      if (hasSeen()) {
+        hash = (37 * hash) + SEEN_FIELD_NUMBER;
+        hash = (53 * hash) + getSeen().hashCode();
+      }
+      if (hasRegistered()) {
+        hash = (37 * hash) + REGISTERED_FIELD_NUMBER;
+        hash = (53 * hash) + getRegistered().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies the structure of partner co-located device records.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.PartnerDevice}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerDevice)
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice.class, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uuid_ = "";
+
+        if (locationBuilder_ == null) {
+          location_ = null;
+        } else {
+          location_ = null;
+          locationBuilder_ = null;
+        }
+        type_ = 0;
+
+        if (flagsBuilder_ == null) {
+          flags_ = null;
+        } else {
+          flags_ = null;
+          flagsBuilder_ = null;
+        }
+        if (deviceBuilder_ == null) {
+          device_ = null;
+        } else {
+          device_ = null;
+          deviceBuilder_ = null;
+        }
+        if (seenBuilder_ == null) {
+          seen_ = null;
+        } else {
+          seen_ = null;
+          seenBuilder_ = null;
+        }
+        if (registeredBuilder_ == null) {
+          registered_ = null;
+        } else {
+          registered_ = null;
+          registeredBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice build() {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice buildPartial() {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice result = new io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice(this);
+        result.uuid_ = uuid_;
+        if (locationBuilder_ == null) {
+          result.location_ = location_;
+        } else {
+          result.location_ = locationBuilder_.build();
+        }
+        result.type_ = type_;
+        if (flagsBuilder_ == null) {
+          result.flags_ = flags_;
+        } else {
+          result.flags_ = flagsBuilder_.build();
+        }
+        if (deviceBuilder_ == null) {
+          result.device_ = device_;
+        } else {
+          result.device_ = deviceBuilder_.build();
+        }
+        if (seenBuilder_ == null) {
+          result.seen_ = seen_;
+        } else {
+          result.seen_ = seenBuilder_.build();
+        }
+        if (registeredBuilder_ == null) {
+          result.registered_ = registered_;
+        } else {
+          result.registered_ = registeredBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice) {
+          return mergeFrom((io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice other) {
+        if (other == io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice.getDefaultInstance()) return this;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (other.hasLocation()) {
+          mergeLocation(other.getLocation());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.hasFlags()) {
+          mergeFlags(other.getFlags());
+        }
+        if (other.hasDevice()) {
+          mergeDevice(other.getDevice());
+        }
+        if (other.hasSeen()) {
+          mergeSeen(other.getSeen());
+        }
+        if (other.hasRegistered()) {
+          mergeRegistered(other.getRegistered());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <pre>
+       * Unique ID for this partner device.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique ID for this partner device.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique ID for this partner device.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique ID for this partner device.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique ID for this partner device.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> locationBuilder_;
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      public boolean hasLocation() {
+        return locationBuilder_ != null || location_ != null;
+      }
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
+        if (locationBuilder_ == null) {
+          return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+        } else {
+          return locationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      public Builder setLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          location_ = value;
+          onChanged();
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      public Builder setLocation(
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          location_ = builderForValue.build();
+          onChanged();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
+        if (locationBuilder_ == null) {
+          if (location_ != null) {
+            location_ =
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+          } else {
+            location_ = value;
+          }
+          onChanged();
+        } else {
+          locationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      public Builder clearLocation() {
+        if (locationBuilder_ == null) {
+          location_ = null;
+          onChanged();
+        } else {
+          location_ = null;
+          locationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder getLocationBuilder() {
+        
+        onChanged();
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+        if (locationBuilder_ != null) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          return location_ == null ?
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+        }
+      }
+      /**
+       * <pre>
+       * Partner that owns this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder>(
+                  getLocation(),
+                  getParentForChildren(),
+                  isClean());
+          location_ = null;
+        }
+        return locationBuilder_;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of the device this record represents.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of the device this record represents.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the device this record represents.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       */
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType getType() {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType result = io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType.valueOf(type_);
+        return result == null ? io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of the device this record represents.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       */
+      public Builder setType(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the device this record represents.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceType type = 3;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags flags_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.Builder, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlagsOrBuilder> flagsBuilder_;
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      public boolean hasFlags() {
+        return flagsBuilder_ != null || flags_ != null;
+      }
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags getFlags() {
+        if (flagsBuilder_ == null) {
+          return flags_ == null ? io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.getDefaultInstance() : flags_;
+        } else {
+          return flagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      public Builder setFlags(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags value) {
+        if (flagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          flags_ = value;
+          onChanged();
+        } else {
+          flagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      public Builder setFlags(
+          io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.Builder builderForValue) {
+        if (flagsBuilder_ == null) {
+          flags_ = builderForValue.build();
+          onChanged();
+        } else {
+          flagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      public Builder mergeFlags(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags value) {
+        if (flagsBuilder_ == null) {
+          if (flags_ != null) {
+            flags_ =
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.newBuilder(flags_).mergeFrom(value).buildPartial();
+          } else {
+            flags_ = value;
+          }
+          onChanged();
+        } else {
+          flagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      public Builder clearFlags() {
+        if (flagsBuilder_ == null) {
+          flags_ = null;
+          onChanged();
+        } else {
+          flags_ = null;
+          flagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.Builder getFlagsBuilder() {
+        
+        onChanged();
+        return getFlagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlagsOrBuilder getFlagsOrBuilder() {
+        if (flagsBuilder_ != null) {
+          return flagsBuilder_.getMessageOrBuilder();
+        } else {
+          return flags_ == null ?
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.getDefaultInstance() : flags_;
+        }
+      }
+      /**
+       * <pre>
+       * Flags for this device.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceFlags flags = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.Builder, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlagsOrBuilder> 
+          getFlagsFieldBuilder() {
+        if (flagsBuilder_ == null) {
+          flagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.Builder, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlagsOrBuilder>(
+                  getFlags(),
+                  getParentForChildren(),
+                  isClean());
+          flags_ = null;
+        }
+        return flagsBuilder_;
+      }
+
+      private io.opencannabis.schema.device.Device device_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder> deviceBuilder_;
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      public boolean hasDevice() {
+        return deviceBuilder_ != null || device_ != null;
+      }
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      public io.opencannabis.schema.device.Device getDevice() {
+        if (deviceBuilder_ == null) {
+          return device_ == null ? io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
+        } else {
+          return deviceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      public Builder setDevice(io.opencannabis.schema.device.Device value) {
+        if (deviceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          device_ = value;
+          onChanged();
+        } else {
+          deviceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      public Builder setDevice(
+          io.opencannabis.schema.device.Device.Builder builderForValue) {
+        if (deviceBuilder_ == null) {
+          device_ = builderForValue.build();
+          onChanged();
+        } else {
+          deviceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      public Builder mergeDevice(io.opencannabis.schema.device.Device value) {
+        if (deviceBuilder_ == null) {
+          if (device_ != null) {
+            device_ =
+              io.opencannabis.schema.device.Device.newBuilder(device_).mergeFrom(value).buildPartial();
+          } else {
+            device_ = value;
+          }
+          onChanged();
+        } else {
+          deviceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      public Builder clearDevice() {
+        if (deviceBuilder_ == null) {
+          device_ = null;
+          onChanged();
+        } else {
+          device_ = null;
+          deviceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      public io.opencannabis.schema.device.Device.Builder getDeviceBuilder() {
+        
+        onChanged();
+        return getDeviceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      public io.opencannabis.schema.device.DeviceOrBuilder getDeviceOrBuilder() {
+        if (deviceBuilder_ != null) {
+          return deviceBuilder_.getMessageOrBuilder();
+        } else {
+          return device_ == null ?
+              io.opencannabis.schema.device.Device.getDefaultInstance() : device_;
+        }
+      }
+      /**
+       * <pre>
+       * Device-specific information.
+       * </pre>
+       *
+       * <code>.opencannabis.device.Device device = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder> 
+          getDeviceFieldBuilder() {
+        if (deviceBuilder_ == null) {
+          deviceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.device.Device, io.opencannabis.schema.device.Device.Builder, io.opencannabis.schema.device.DeviceOrBuilder>(
+                  getDevice(),
+                  getParentForChildren(),
+                  isClean());
+          device_ = null;
+        }
+        return deviceBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.Instant seen_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> seenBuilder_;
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      public boolean hasSeen() {
+        return seenBuilder_ != null || seen_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      public io.opencannabis.schema.temporal.Instant getSeen() {
+        if (seenBuilder_ == null) {
+          return seen_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
+        } else {
+          return seenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      public Builder setSeen(io.opencannabis.schema.temporal.Instant value) {
+        if (seenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          seen_ = value;
+          onChanged();
+        } else {
+          seenBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      public Builder setSeen(
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+        if (seenBuilder_ == null) {
+          seen_ = builderForValue.build();
+          onChanged();
+        } else {
+          seenBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      public Builder mergeSeen(io.opencannabis.schema.temporal.Instant value) {
+        if (seenBuilder_ == null) {
+          if (seen_ != null) {
+            seen_ =
+              io.opencannabis.schema.temporal.Instant.newBuilder(seen_).mergeFrom(value).buildPartial();
+          } else {
+            seen_ = value;
+          }
+          onChanged();
+        } else {
+          seenBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      public Builder clearSeen() {
+        if (seenBuilder_ == null) {
+          seen_ = null;
+          onChanged();
+        } else {
+          seen_ = null;
+          seenBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      public io.opencannabis.schema.temporal.Instant.Builder getSeenBuilder() {
+        
+        onChanged();
+        return getSeenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      public io.opencannabis.schema.temporal.InstantOrBuilder getSeenOrBuilder() {
+        if (seenBuilder_ != null) {
+          return seenBuilder_.getMessageOrBuilder();
+        } else {
+          return seen_ == null ?
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : seen_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp for the last time this device was "seen" on the API.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          getSeenFieldBuilder() {
+        if (seenBuilder_ == null) {
+          seenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+                  getSeen(),
+                  getParentForChildren(),
+                  isClean());
+          seen_ = null;
+        }
+        return seenBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.Instant registered_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> registeredBuilder_;
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      public boolean hasRegistered() {
+        return registeredBuilder_ != null || registered_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      public io.opencannabis.schema.temporal.Instant getRegistered() {
+        if (registeredBuilder_ == null) {
+          return registered_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : registered_;
+        } else {
+          return registeredBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      public Builder setRegistered(io.opencannabis.schema.temporal.Instant value) {
+        if (registeredBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          registered_ = value;
+          onChanged();
+        } else {
+          registeredBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      public Builder setRegistered(
+          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+        if (registeredBuilder_ == null) {
+          registered_ = builderForValue.build();
+          onChanged();
+        } else {
+          registeredBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      public Builder mergeRegistered(io.opencannabis.schema.temporal.Instant value) {
+        if (registeredBuilder_ == null) {
+          if (registered_ != null) {
+            registered_ =
+              io.opencannabis.schema.temporal.Instant.newBuilder(registered_).mergeFrom(value).buildPartial();
+          } else {
+            registered_ = value;
+          }
+          onChanged();
+        } else {
+          registeredBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      public Builder clearRegistered() {
+        if (registeredBuilder_ == null) {
+          registered_ = null;
+          onChanged();
+        } else {
+          registered_ = null;
+          registeredBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      public io.opencannabis.schema.temporal.Instant.Builder getRegisteredBuilder() {
+        
+        onChanged();
+        return getRegisteredFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      public io.opencannabis.schema.temporal.InstantOrBuilder getRegisteredOrBuilder() {
+        if (registeredBuilder_ != null) {
+          return registeredBuilder_.getMessageOrBuilder();
+        } else {
+          return registered_ == null ?
+              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : registered_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp for when this device originally registered.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant registered = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          getRegisteredFieldBuilder() {
+        if (registeredBuilder_ == null) {
+          registeredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+                  getRegistered(),
+                  getParentForChildren(),
+                  isClean());
+          registered_ = null;
+        }
+        return registeredBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerDevice)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerDevice)
+    private static final io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice();
+    }
+
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartnerDevice>
+        PARSER = new com.google.protobuf.AbstractParser<PartnerDevice>() {
+      public PartnerDevice parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartnerDevice(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartnerDevice> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartnerDevice> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDevice getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PartnerDeviceFlagsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.PartnerDeviceFlags)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Indicates this device is active, or inactive.
+     * </pre>
+     *
+     * <code>bool active = 1;</code>
+     */
+    boolean getActive();
+
+    /**
+     * <pre>
+     * Indicates this device is suspended.
+     * </pre>
+     *
+     * <code>bool suspended = 2;</code>
+     */
+    boolean getSuspended();
+
+    /**
+     * <pre>
+     * Indicates this device has beta access.
+     * </pre>
+     *
+     * <code>bool beta = 3;</code>
+     */
+    boolean getBeta();
+
+    /**
+     * <pre>
+     * Indicates this device has sandbox access.
+     * </pre>
+     *
+     * <code>bool sandbox = 4;</code>
+     */
+    boolean getSandbox();
+  }
+  /**
+   * <pre>
+   * Enumerates flags that may be applied to partner co-located devices.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.partner.PartnerDeviceFlags}
+   */
+  public  static final class PartnerDeviceFlags extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.partner.PartnerDeviceFlags)
+      PartnerDeviceFlagsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PartnerDeviceFlags.newBuilder() to construct.
+    private PartnerDeviceFlags(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PartnerDeviceFlags() {
+      active_ = false;
+      suspended_ = false;
+      beta_ = false;
+      sandbox_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PartnerDeviceFlags(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              active_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              suspended_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              beta_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              sandbox_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.class, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.Builder.class);
+    }
+
+    public static final int ACTIVE_FIELD_NUMBER = 1;
+    private boolean active_;
+    /**
+     * <pre>
+     * Indicates this device is active, or inactive.
+     * </pre>
+     *
+     * <code>bool active = 1;</code>
+     */
+    public boolean getActive() {
+      return active_;
+    }
+
+    public static final int SUSPENDED_FIELD_NUMBER = 2;
+    private boolean suspended_;
+    /**
+     * <pre>
+     * Indicates this device is suspended.
+     * </pre>
+     *
+     * <code>bool suspended = 2;</code>
+     */
+    public boolean getSuspended() {
+      return suspended_;
+    }
+
+    public static final int BETA_FIELD_NUMBER = 3;
+    private boolean beta_;
+    /**
+     * <pre>
+     * Indicates this device has beta access.
+     * </pre>
+     *
+     * <code>bool beta = 3;</code>
+     */
+    public boolean getBeta() {
+      return beta_;
+    }
+
+    public static final int SANDBOX_FIELD_NUMBER = 4;
+    private boolean sandbox_;
+    /**
+     * <pre>
+     * Indicates this device has sandbox access.
+     * </pre>
+     *
+     * <code>bool sandbox = 4;</code>
+     */
+    public boolean getSandbox() {
+      return sandbox_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (active_ != false) {
+        output.writeBool(1, active_);
+      }
+      if (suspended_ != false) {
+        output.writeBool(2, suspended_);
+      }
+      if (beta_ != false) {
+        output.writeBool(3, beta_);
+      }
+      if (sandbox_ != false) {
+        output.writeBool(4, sandbox_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (active_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, active_);
+      }
+      if (suspended_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, suspended_);
+      }
+      if (beta_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, beta_);
+      }
+      if (sandbox_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, sandbox_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags other = (io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags) obj;
+
+      boolean result = true;
+      result = result && (getActive()
+          == other.getActive());
+      result = result && (getSuspended()
+          == other.getSuspended());
+      result = result && (getBeta()
+          == other.getBeta());
+      result = result && (getSandbox()
+          == other.getSandbox());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getActive());
+      hash = (37 * hash) + SUSPENDED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuspended());
+      hash = (37 * hash) + BETA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getBeta());
+      hash = (37 * hash) + SANDBOX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSandbox());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Enumerates flags that may be applied to partner co-located devices.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.partner.PartnerDeviceFlags}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.partner.PartnerDeviceFlags)
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlagsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.class, io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        active_ = false;
+
+        suspended_ = false;
+
+        beta_ = false;
+
+        sandbox_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags getDefaultInstanceForType() {
+        return io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags build() {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags buildPartial() {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags result = new io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags(this);
+        result.active_ = active_;
+        result.suspended_ = suspended_;
+        result.beta_ = beta_;
+        result.sandbox_ = sandbox_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags) {
+          return mergeFrom((io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags other) {
+        if (other == io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags.getDefaultInstance()) return this;
+        if (other.getActive() != false) {
+          setActive(other.getActive());
+        }
+        if (other.getSuspended() != false) {
+          setSuspended(other.getSuspended());
+        }
+        if (other.getBeta() != false) {
+          setBeta(other.getBeta());
+        }
+        if (other.getSandbox() != false) {
+          setSandbox(other.getSandbox());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean active_ ;
+      /**
+       * <pre>
+       * Indicates this device is active, or inactive.
+       * </pre>
+       *
+       * <code>bool active = 1;</code>
+       */
+      public boolean getActive() {
+        return active_;
+      }
+      /**
+       * <pre>
+       * Indicates this device is active, or inactive.
+       * </pre>
+       *
+       * <code>bool active = 1;</code>
+       */
+      public Builder setActive(boolean value) {
+        
+        active_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates this device is active, or inactive.
+       * </pre>
+       *
+       * <code>bool active = 1;</code>
+       */
+      public Builder clearActive() {
+        
+        active_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean suspended_ ;
+      /**
+       * <pre>
+       * Indicates this device is suspended.
+       * </pre>
+       *
+       * <code>bool suspended = 2;</code>
+       */
+      public boolean getSuspended() {
+        return suspended_;
+      }
+      /**
+       * <pre>
+       * Indicates this device is suspended.
+       * </pre>
+       *
+       * <code>bool suspended = 2;</code>
+       */
+      public Builder setSuspended(boolean value) {
+        
+        suspended_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates this device is suspended.
+       * </pre>
+       *
+       * <code>bool suspended = 2;</code>
+       */
+      public Builder clearSuspended() {
+        
+        suspended_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean beta_ ;
+      /**
+       * <pre>
+       * Indicates this device has beta access.
+       * </pre>
+       *
+       * <code>bool beta = 3;</code>
+       */
+      public boolean getBeta() {
+        return beta_;
+      }
+      /**
+       * <pre>
+       * Indicates this device has beta access.
+       * </pre>
+       *
+       * <code>bool beta = 3;</code>
+       */
+      public Builder setBeta(boolean value) {
+        
+        beta_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates this device has beta access.
+       * </pre>
+       *
+       * <code>bool beta = 3;</code>
+       */
+      public Builder clearBeta() {
+        
+        beta_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean sandbox_ ;
+      /**
+       * <pre>
+       * Indicates this device has sandbox access.
+       * </pre>
+       *
+       * <code>bool sandbox = 4;</code>
+       */
+      public boolean getSandbox() {
+        return sandbox_;
+      }
+      /**
+       * <pre>
+       * Indicates this device has sandbox access.
+       * </pre>
+       *
+       * <code>bool sandbox = 4;</code>
+       */
+      public Builder setSandbox(boolean value) {
+        
+        sandbox_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates this device has sandbox access.
+       * </pre>
+       *
+       * <code>bool sandbox = 4;</code>
+       */
+      public Builder clearSandbox() {
+        
+        sandbox_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.partner.PartnerDeviceFlags)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.partner.PartnerDeviceFlags)
+    private static final io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags();
+    }
+
+    public static io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PartnerDeviceFlags>
+        PARSER = new com.google.protobuf.AbstractParser<PartnerDeviceFlags>() {
+      public PartnerDeviceFlags parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PartnerDeviceFlags(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PartnerDeviceFlags> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PartnerDeviceFlags> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.partner.PartnerDeviceOuterClass.PartnerDeviceFlags getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_PartnerDeviceKey_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_PartnerDevice_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable;
 
@@ -55,29 +3780,29 @@ public final class PartnerDeviceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\033partner/PartnerDevice.proto\022\027bloombox." +
-      "schema.partner\032\023device/Device.proto\032\025par" +
-      "tner/Partner.proto\032\035partner/PartnerLocat" +
-      "ion.proto\032\026temporal/Instant.proto\"_\n\020Par" +
-      "tnerDeviceKey\022=\n\010location\030\001 \001(\0132+.bloomb" +
-      "ox.schema.partner.PartnerLocationKey\022\014\n\004" +
-      "uuid\030\002 \001(\t\"\221\003\n\rPartnerDevice\022\014\n\004uuid\030\001 \001" +
-      "(\t\0221\n\007partner\030\002 \001(\0132 .bloombox.schema.pa" +
-      "rtner.Partner\022:\n\010location\030\003 \001(\0132(.bloomb" +
-      "ox.schema.partner.PartnerLocation\0228\n\004typ" +
-      "e\030\004 \001(\0162*.bloombox.schema.partner.Partne" +
-      "rDeviceType\022:\n\005flags\030\005 \001(\0132+.bloombox.sc" +
-      "hema.partner.PartnerDeviceFlags\022+\n\006devic" +
-      "e\030\006 \001(\0132\033.opencannabis.device.Device\022,\n\004" +
-      "seen\030\007 \001(\0132\036.opencannabis.temporal.Insta" +
-      "nt\0222\n\nregistered\030\010 \001(\0132\036.opencannabis.te" +
-      "mporal.Instant\"V\n\022PartnerDeviceFlags\022\016\n\006" +
-      "active\030\001 \001(\010\022\021\n\tsuspended\030\002 \001(\010\022\014\n\004beta\030" +
-      "\003 \001(\010\022\017\n\007sandbox\030\004 \001(\010*\223\001\n\021PartnerDevice" +
-      "Type\022\033\n\027UNSPECIFIED_DEVICE_TYPE\020\000\022\014\n\010INT" +
-      "ERNAL\020\001\022\017\n\013MENU_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n" +
-      "\017CHECKIN_STATION\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014PO" +
-      "S_REGISTER\020\036B&\n\032io.bloombox.schema.partn" +
-      "erH\001P\001\242\002\003BBSb\006proto3"
+      "schema.partner\032\024core/Datamodel.proto\032\026te" +
+      "mporal/Instant.proto\032\023device/Device.prot" +
+      "o\032\025partner/Partner.proto\032\035partner/Partne" +
+      "rLocation.proto\"g\n\020PartnerDeviceKey\022=\n\010l" +
+      "ocation\030\001 \001(\0132+.bloombox.schema.partner." +
+      "PartnerLocationKey\022\024\n\004uuid\030\002 \001(\tB\006\302\265\003\002\010\002" +
+      "\"\351\002\n\rPartnerDevice\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002" +
+      "\022=\n\010location\030\002 \001(\0132+.bloombox.schema.par" +
+      "tner.PartnerLocationKey\0228\n\004type\030\003 \001(\0162*." +
+      "bloombox.schema.partner.PartnerDeviceTyp" +
+      "e\022:\n\005flags\030\004 \001(\0132+.bloombox.schema.partn" +
+      "er.PartnerDeviceFlags\022+\n\006device\030\005 \001(\0132\033." +
+      "opencannabis.device.Device\022,\n\004seen\030\006 \001(\013" +
+      "2\036.opencannabis.temporal.Instant\0222\n\nregi" +
+      "stered\030\007 \001(\0132\036.opencannabis.temporal.Ins" +
+      "tant\"V\n\022PartnerDeviceFlags\022\016\n\006active\030\001 \001" +
+      "(\010\022\021\n\tsuspended\030\002 \001(\010\022\014\n\004beta\030\003 \001(\010\022\017\n\007s" +
+      "andbox\030\004 \001(\010*\223\001\n\021PartnerDeviceType\022\033\n\027UN" +
+      "SPECIFIED_DEVICE_TYPE\020\000\022\014\n\010INTERNAL\020\001\022\017\n" +
+      "\013MENU_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n\017CHECKIN_S" +
+      "TATION\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014POS_REGISTER" +
+      "\020\036B&\n\032io.bloombox.schema.partnerH\001P\000\242\002\003B" +
+      "BSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -90,10 +3815,11 @@ public final class PartnerDeviceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          core.Datamodel.getDescriptor(),
+          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
           io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
           io.bloombox.schema.partner.PartnerOuterClass.getDescriptor(),
           io.bloombox.schema.partner.PartnerLocationOuterClass.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -106,17 +3832,23 @@ public final class PartnerDeviceOuterClass {
     internal_static_bloombox_schema_partner_PartnerDevice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_PartnerDevice_descriptor,
-        new java.lang.String[] { "Uuid", "Partner", "Location", "Type", "Flags", "Device", "Seen", "Registered", });
+        new java.lang.String[] { "Uuid", "Location", "Type", "Flags", "Device", "Seen", "Registered", });
     internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bloombox_schema_partner_PartnerDeviceFlags_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_PartnerDeviceFlags_descriptor,
         new java.lang.String[] { "Active", "Suspended", "Beta", "Sandbox", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(core.Datamodel.field);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    core.Datamodel.getDescriptor();
+    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
     io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
     io.bloombox.schema.partner.PartnerOuterClass.getDescriptor();
     io.bloombox.schema.partner.PartnerLocationOuterClass.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
