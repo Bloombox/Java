@@ -934,6 +934,14 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>ENROLLMENT = 1;</code>
      */
     ENROLLMENT(1),
+    /**
+     * <pre>
+     * Specifies marketing/newsletter style communications.
+     * </pre>
+     *
+     * <code>MARKETING = 2;</code>
+     */
+    MARKETING(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -953,6 +961,14 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>ENROLLMENT = 1;</code>
      */
     public static final int ENROLLMENT_VALUE = 1;
+    /**
+     * <pre>
+     * Specifies marketing/newsletter style communications.
+     * </pre>
+     *
+     * <code>MARKETING = 2;</code>
+     */
+    public static final int MARKETING_VALUE = 2;
 
 
     public final int getNumber() {
@@ -975,6 +991,7 @@ public final class PartnerLocationSettingsOuterClass {
       switch (value) {
         case 0: return ORDERING;
         case 1: return ENROLLMENT;
+        case 2: return MARKETING;
         default: return null;
       }
     }
@@ -18992,6 +19009,24 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>bool storefront = 4;</code>
      */
     boolean getStorefront();
+
+    /**
+     * <pre>
+     * Specifies whether this operator supports medical sales.
+     * </pre>
+     *
+     * <code>bool medical = 5;</code>
+     */
+    boolean getMedical();
+
+    /**
+     * <pre>
+     * Specifies whether this operator supports adult-use, or recreational, sales.
+     * </pre>
+     *
+     * <code>bool adult_use = 6;</code>
+     */
+    boolean getAdultUse();
   }
   /**
    * <pre>
@@ -19014,6 +19049,8 @@ public final class PartnerLocationSettingsOuterClass {
       express_ = false;
       pickup_ = false;
       storefront_ = false;
+      medical_ = false;
+      adultUse_ = false;
     }
 
     @java.lang.Override
@@ -19065,6 +19102,16 @@ public final class PartnerLocationSettingsOuterClass {
             case 32: {
 
               storefront_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              medical_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              adultUse_ = input.readBool();
               break;
             }
           }
@@ -19143,6 +19190,32 @@ public final class PartnerLocationSettingsOuterClass {
       return storefront_;
     }
 
+    public static final int MEDICAL_FIELD_NUMBER = 5;
+    private boolean medical_;
+    /**
+     * <pre>
+     * Specifies whether this operator supports medical sales.
+     * </pre>
+     *
+     * <code>bool medical = 5;</code>
+     */
+    public boolean getMedical() {
+      return medical_;
+    }
+
+    public static final int ADULT_USE_FIELD_NUMBER = 6;
+    private boolean adultUse_;
+    /**
+     * <pre>
+     * Specifies whether this operator supports adult-use, or recreational, sales.
+     * </pre>
+     *
+     * <code>bool adult_use = 6;</code>
+     */
+    public boolean getAdultUse() {
+      return adultUse_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -19166,6 +19239,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       if (storefront_ != false) {
         output.writeBool(4, storefront_);
+      }
+      if (medical_ != false) {
+        output.writeBool(5, medical_);
+      }
+      if (adultUse_ != false) {
+        output.writeBool(6, adultUse_);
       }
       unknownFields.writeTo(output);
     }
@@ -19191,6 +19270,14 @@ public final class PartnerLocationSettingsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, storefront_);
       }
+      if (medical_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, medical_);
+      }
+      if (adultUse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, adultUse_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19215,6 +19302,10 @@ public final class PartnerLocationSettingsOuterClass {
           == other.getPickup());
       result = result && (getStorefront()
           == other.getStorefront());
+      result = result && (getMedical()
+          == other.getMedical());
+      result = result && (getAdultUse()
+          == other.getAdultUse());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -19238,6 +19329,12 @@ public final class PartnerLocationSettingsOuterClass {
       hash = (37 * hash) + STOREFRONT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getStorefront());
+      hash = (37 * hash) + MEDICAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMedical());
+      hash = (37 * hash) + ADULT_USE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAdultUse());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -19379,6 +19476,10 @@ public final class PartnerLocationSettingsOuterClass {
 
         storefront_ = false;
 
+        medical_ = false;
+
+        adultUse_ = false;
+
         return this;
       }
 
@@ -19405,6 +19506,8 @@ public final class PartnerLocationSettingsOuterClass {
         result.express_ = express_;
         result.pickup_ = pickup_;
         result.storefront_ = storefront_;
+        result.medical_ = medical_;
+        result.adultUse_ = adultUse_;
         onBuilt();
         return result;
       }
@@ -19457,6 +19560,12 @@ public final class PartnerLocationSettingsOuterClass {
         }
         if (other.getStorefront() != false) {
           setStorefront(other.getStorefront());
+        }
+        if (other.getMedical() != false) {
+          setMedical(other.getMedical());
+        }
+        if (other.getAdultUse() != false) {
+          setAdultUse(other.getAdultUse());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19633,6 +19742,82 @@ public final class PartnerLocationSettingsOuterClass {
       public Builder clearStorefront() {
         
         storefront_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean medical_ ;
+      /**
+       * <pre>
+       * Specifies whether this operator supports medical sales.
+       * </pre>
+       *
+       * <code>bool medical = 5;</code>
+       */
+      public boolean getMedical() {
+        return medical_;
+      }
+      /**
+       * <pre>
+       * Specifies whether this operator supports medical sales.
+       * </pre>
+       *
+       * <code>bool medical = 5;</code>
+       */
+      public Builder setMedical(boolean value) {
+        
+        medical_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether this operator supports medical sales.
+       * </pre>
+       *
+       * <code>bool medical = 5;</code>
+       */
+      public Builder clearMedical() {
+        
+        medical_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean adultUse_ ;
+      /**
+       * <pre>
+       * Specifies whether this operator supports adult-use, or recreational, sales.
+       * </pre>
+       *
+       * <code>bool adult_use = 6;</code>
+       */
+      public boolean getAdultUse() {
+        return adultUse_;
+      }
+      /**
+       * <pre>
+       * Specifies whether this operator supports adult-use, or recreational, sales.
+       * </pre>
+       *
+       * <code>bool adult_use = 6;</code>
+       */
+      public Builder setAdultUse(boolean value) {
+        
+        adultUse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether this operator supports adult-use, or recreational, sales.
+       * </pre>
+       *
+       * <code>bool adult_use = 6;</code>
+       */
+      public Builder clearAdultUse() {
+        
+        adultUse_ = false;
         onChanged();
         return this;
       }
@@ -21897,6 +22082,31 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getEnrollmentOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    boolean hasMarketing();
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing();
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder();
   }
   /**
    * <pre>
@@ -21970,6 +22180,19 @@ public final class PartnerLocationSettingsOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(enrollment_);
                 enrollment_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder subBuilder = null;
+              if (marketing_ != null) {
+                subBuilder = marketing_.toBuilder();
+              }
+              marketing_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(marketing_);
+                marketing_ = subBuilder.buildPartial();
               }
 
               break;
@@ -22064,6 +22287,39 @@ public final class PartnerLocationSettingsOuterClass {
       return getEnrollment();
     }
 
+    public static final int MARKETING_FIELD_NUMBER = 3;
+    private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings marketing_;
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    public boolean hasMarketing() {
+      return marketing_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing() {
+      return marketing_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : marketing_;
+    }
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder() {
+      return getMarketing();
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -22082,6 +22338,9 @@ public final class PartnerLocationSettingsOuterClass {
       if (enrollment_ != null) {
         output.writeMessage(2, getEnrollment());
       }
+      if (marketing_ != null) {
+        output.writeMessage(3, getMarketing());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -22097,6 +22356,10 @@ public final class PartnerLocationSettingsOuterClass {
       if (enrollment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEnrollment());
+      }
+      if (marketing_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMarketing());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22124,6 +22387,11 @@ public final class PartnerLocationSettingsOuterClass {
         result = result && getEnrollment()
             .equals(other.getEnrollment());
       }
+      result = result && (hasMarketing() == other.hasMarketing());
+      if (hasMarketing()) {
+        result = result && getMarketing()
+            .equals(other.getMarketing());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -22142,6 +22410,10 @@ public final class PartnerLocationSettingsOuterClass {
       if (hasEnrollment()) {
         hash = (37 * hash) + ENROLLMENT_FIELD_NUMBER;
         hash = (53 * hash) + getEnrollment().hashCode();
+      }
+      if (hasMarketing()) {
+        hash = (37 * hash) + MARKETING_FIELD_NUMBER;
+        hash = (53 * hash) + getMarketing().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -22288,6 +22560,12 @@ public final class PartnerLocationSettingsOuterClass {
           enrollment_ = null;
           enrollmentBuilder_ = null;
         }
+        if (marketingBuilder_ == null) {
+          marketing_ = null;
+        } else {
+          marketing_ = null;
+          marketingBuilder_ = null;
+        }
         return this;
       }
 
@@ -22319,6 +22597,11 @@ public final class PartnerLocationSettingsOuterClass {
           result.enrollment_ = enrollment_;
         } else {
           result.enrollment_ = enrollmentBuilder_.build();
+        }
+        if (marketingBuilder_ == null) {
+          result.marketing_ = marketing_;
+        } else {
+          result.marketing_ = marketingBuilder_.build();
         }
         onBuilt();
         return result;
@@ -22366,6 +22649,9 @@ public final class PartnerLocationSettingsOuterClass {
         }
         if (other.hasEnrollment()) {
           mergeEnrollment(other.getEnrollment());
+        }
+        if (other.hasMarketing()) {
+          mergeMarketing(other.getMarketing());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -22698,6 +22984,159 @@ public final class PartnerLocationSettingsOuterClass {
           enrollment_ = null;
         }
         return enrollmentBuilder_;
+      }
+
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings marketing_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> marketingBuilder_;
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public boolean hasMarketing() {
+        return marketingBuilder_ != null || marketing_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing() {
+        if (marketingBuilder_ == null) {
+          return marketing_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : marketing_;
+        } else {
+          return marketingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public Builder setMarketing(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
+        if (marketingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          marketing_ = value;
+          onChanged();
+        } else {
+          marketingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public Builder setMarketing(
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder builderForValue) {
+        if (marketingBuilder_ == null) {
+          marketing_ = builderForValue.build();
+          onChanged();
+        } else {
+          marketingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public Builder mergeMarketing(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
+        if (marketingBuilder_ == null) {
+          if (marketing_ != null) {
+            marketing_ =
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.newBuilder(marketing_).mergeFrom(value).buildPartial();
+          } else {
+            marketing_ = value;
+          }
+          onChanged();
+        } else {
+          marketingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public Builder clearMarketing() {
+        if (marketingBuilder_ == null) {
+          marketing_ = null;
+          onChanged();
+        } else {
+          marketing_ = null;
+          marketingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder getMarketingBuilder() {
+        
+        onChanged();
+        return getMarketingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder() {
+        if (marketingBuilder_ != null) {
+          return marketingBuilder_.getMessageOrBuilder();
+        } else {
+          return marketing_ == null ?
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : marketing_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> 
+          getMarketingFieldBuilder() {
+        if (marketingBuilder_ == null) {
+          marketingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder>(
+                  getMarketing(),
+                  getParentForChildren(),
+                  isClean());
+          marketing_ = null;
+        }
+        return marketingBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -35603,93 +36042,97 @@ public final class PartnerLocationSettingsOuterClass {
       "partner.settings.ShopHoursSettings.Speci" +
       "alEntry\032f\n\014SpecialEntry\022\013\n\003key\030\001 \001(\t\022E\n\005" +
       "value\030\002 \001(\01326.bloombox.schema.partner.se" +
-      "ttings.SpecialHoursSettings:\0028\001\"\\\n\023ShopS" +
-      "erviceSettings\022\020\n\010delivery\030\001 \001(\010\022\017\n\007expr" +
-      "ess\030\002 \001(\010\022\016\n\006pickup\030\003 \001(\010\022\022\n\nstorefront\030" +
-      "\004 \001(\010\"U\n\027DeliveryZipcodeSettings\022\017\n\007zipc" +
-      "ode\030\001 \001(\t\022\017\n\007enabled\030\002 \001(\010\022\030\n\020delivery_m" +
-      "inimum\030\003 \001(\r\"\352\001\n\020DeliverySettings\022\026\n\016glo" +
-      "bal_minimum\030\001 \001(\r\022R\n\010zipcodes\030\002 \003(\0132@.bl" +
-      "oombox.schema.partner.settings.DeliveryS" +
-      "ettings.ZipcodesEntry\032j\n\rZipcodesEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022H\n\005value\030\002 \001(\01329.bloombox.sc" +
-      "hema.partner.settings.DeliveryZipcodeSet" +
-      "tings:\0028\001\"8\n\032ShopContactChannelSettings\022" +
-      "\r\n\005email\030\001 \001(\010\022\013\n\003sms\030\002 \001(\010\"\265\001\n\023ShopChan" +
-      "nelSettings\022L\n\006orders\030\001 \001(\0132<.bloombox.s" +
-      "chema.partner.settings.ShopContactChanne" +
-      "lSettings\022P\n\nenrollment\030\002 \001(\0132<.bloombox" +
-      ".schema.partner.settings.ShopContactChan" +
-      "nelSettings\"\337\001\n\021ShopContactTarget\022\r\n\005lab" +
-      "el\030\001 \001(\t\022\r\n\005debug\030\002 \001(\010\0221\n\005email\030\003 \001(\0132\"" +
-      ".opencannabis.contact.EmailAddress\0220\n\005ph" +
-      "one\030\004 \001(\0132!.opencannabis.contact.PhoneNu" +
-      "mber\022G\n\010channels\030\005 \001(\01325.bloombox.schema" +
-      ".partner.settings.ShopChannelSettings\"z\n" +
-      "\023CommsSenderSettings\0221\n\005email\030\001 \001(\0132\".op" +
-      "encannabis.contact.EmailAddress\0220\n\005phone" +
-      "\030\002 \001(\0132!.opencannabis.contact.PhoneNumbe" +
-      "r\"\343\001\n\024CommsSettingsPayload\022=\n\004type\030\001 \001(\016" +
-      "2/.bloombox.schema.partner.settings.Shop" +
-      "CommsType\022E\n\010contacts\030\002 \003(\01323.bloombox.s" +
-      "chema.partner.settings.ShopContactTarget" +
-      "\022E\n\006sender\030\003 \001(\01325.bloombox.schema.partn" +
-      "er.settings.CommsSenderSettings\"\247\001\n\021Shop" +
-      "CommsSettings\022H\n\010internal\030\001 \001(\01326.bloomb" +
-      "ox.schema.partner.settings.CommsSettings" +
-      "Payload\022H\n\010external\030\002 \001(\01326.bloombox.sch" +
-      "ema.partner.settings.CommsSettingsPayloa" +
-      "d\"\227\001\n\022OnlineShopSettings\022\016\n\006origin\030\001 \001(\t" +
-      "\022B\n\005comms\030\002 \001(\01323.bloombox.schema.partne" +
-      "r.settings.ShopCommsSettings\022\016\n\006domain\030\003" +
-      " \001(\t\022\016\n\006signup\030\004 \001(\t\022\r\n\005login\030\005 \001(\t\"J\n\032P" +
-      "hysicalStorefrontSettings\022,\n\010location\030\001 " +
-      "\001(\0132\032.opencannabis.geo.Location\"\360\001\n\022Stor" +
-      "efrontSettings\022D\n\010delivery\030\001 \001(\01322.bloom" +
+      "ttings.SpecialHoursSettings:\0028\001\"\200\001\n\023Shop" +
+      "ServiceSettings\022\020\n\010delivery\030\001 \001(\010\022\017\n\007exp" +
+      "ress\030\002 \001(\010\022\016\n\006pickup\030\003 \001(\010\022\022\n\nstorefront" +
+      "\030\004 \001(\010\022\017\n\007medical\030\005 \001(\010\022\021\n\tadult_use\030\006 \001" +
+      "(\010\"U\n\027DeliveryZipcodeSettings\022\017\n\007zipcode" +
+      "\030\001 \001(\t\022\017\n\007enabled\030\002 \001(\010\022\030\n\020delivery_mini" +
+      "mum\030\003 \001(\r\"\352\001\n\020DeliverySettings\022\026\n\016global" +
+      "_minimum\030\001 \001(\r\022R\n\010zipcodes\030\002 \003(\0132@.bloom" +
       "box.schema.partner.settings.DeliverySett" +
-      "ings\022D\n\006online\030\002 \001(\01324.bloombox.schema.p" +
-      "artner.settings.OnlineShopSettings\022N\n\010ph" +
-      "ysical\030\003 \001(\0132<.bloombox.schema.partner.s" +
-      "ettings.PhysicalStorefrontSettings\"\345\001\n\014S" +
-      "hopSettings\022B\n\005hours\030\001 \001(\01323.bloombox.sc" +
-      "hema.partner.settings.ShopHoursSettings\022" +
-      "G\n\010services\030\002 \001(\01325.bloombox.schema.part" +
-      "ner.settings.ShopServiceSettings\022H\n\nstor" +
-      "efront\030\003 \001(\01324.bloombox.schema.partner.s" +
-      "ettings.StorefrontSettings\"~\n\014CartSettin" +
-      "gs\0228\n\004mode\030\001 \001(\0162*.bloombox.schema.partn" +
-      "er.settings.CartMode\0224\n\norder_type\030\002 \001(\016" +
-      "2 .opencannabis.commerce.OrderType\"N\n\016Ta" +
-      "bletSettings\022<\n\004cart\030\001 \001(\0132..bloombox.sc" +
-      "hema.partner.settings.CartSettings\"\270\004\n\027P" +
-      "artnerLocationSettings\022:\n\003api\030\001 \001(\0132-.bl" +
-      "oombox.schema.partner.settings.APISettin" +
-      "gs\022F\n\006brands\030\002 \001(\01326.bloombox.schema.par" +
-      "tner.settings.ProductBrandSettings\022B\n\007pu" +
-      "blish\030\003 \001(\01321.bloombox.schema.partner.se" +
-      "ttings.PublishSettings\022C\n\010sections\030\004 \001(\013" +
-      "21.bloombox.schema.partner.settings.Sect" +
-      "ionSettings\022<\n\004shop\030\005 \001(\0132..bloombox.sch" +
-      "ema.partner.settings.ShopSettings\0228\n\002tv\030" +
-      "\006 \001(\0132,.bloombox.schema.partner.settings" +
-      ".TVSettings\022@\n\006tablet\030\007 \001(\01320.bloombox.s" +
-      "chema.partner.settings.TabletSettings\022V\n" +
-      "\013integration\030\024 \001(\0132A.bloombox.schema.par" +
-      "tner.integrations.LocationIntegrationSet" +
-      "tings*1\n\023SectionSettingsType\022\014\n\010STANDARD" +
-      "\020\000\022\014\n\010FILTERED\020\001*5\n\023FilteredSectionType\022" +
-      "\007\n\003CBD\020\000\022\t\n\005HOUSE\020\001\022\n\n\006ONSALE\020\002* \n\022Custo" +
-      "mSettingsType\022\n\n\006FILTER\020\000*\221\001\n\tHoursSpan\022" +
-      "\014\n\010EVERYDAY\020\000\022\014\n\010WEEKDAYS\020\001\022\014\n\010WEEKENDS\020" +
-      "\002\022\n\n\006MONDAY\020\003\022\013\n\007TUESDAY\020\004\022\r\n\tWEDNESDAY\020" +
-      "\005\022\014\n\010THURSDAY\020\006\022\n\n\006FRIDAY\020\007\022\014\n\010SATURDAY\020" +
-      "\010\022\n\n\006SUNDAY\020\t*F\n\nShopStatus\022\010\n\004OPEN\020\000\022\n\n" +
-      "\006CLOSED\020\001\022\021\n\rDELIVERY_ONLY\020\002\022\017\n\013PICKUP_O" +
-      "NLY\020\003*+\n\rShopCommsType\022\014\n\010INTERNAL\020\000\022\014\n\010" +
-      "EXTERNAL\020\001*2\n\022ShopContactChannel\022\014\n\010ORDE" +
-      "RING\020\000\022\016\n\nENROLLMENT\020\001*&\n\010CartMode\022\007\n\003OF" +
-      "F\020\000\022\007\n\003BAG\020\001\022\010\n\004CART\020\002B/\n#io.bloombox.sc" +
-      "hema.partner.settingsH\001P\000\242\002\003BBSb\006proto3"
+      "ings.ZipcodesEntry\032j\n\rZipcodesEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022H\n\005value\030\002 \001(\01329.bloombox.schem" +
+      "a.partner.settings.DeliveryZipcodeSettin" +
+      "gs:\0028\001\"8\n\032ShopContactChannelSettings\022\r\n\005" +
+      "email\030\001 \001(\010\022\013\n\003sms\030\002 \001(\010\"\206\002\n\023ShopChannel" +
+      "Settings\022L\n\006orders\030\001 \001(\0132<.bloombox.sche" +
+      "ma.partner.settings.ShopContactChannelSe" +
+      "ttings\022P\n\nenrollment\030\002 \001(\0132<.bloombox.sc" +
+      "hema.partner.settings.ShopContactChannel" +
+      "Settings\022O\n\tmarketing\030\003 \001(\0132<.bloombox.s" +
+      "chema.partner.settings.ShopContactChanne" +
+      "lSettings\"\337\001\n\021ShopContactTarget\022\r\n\005label" +
+      "\030\001 \001(\t\022\r\n\005debug\030\002 \001(\010\0221\n\005email\030\003 \001(\0132\".o" +
+      "pencannabis.contact.EmailAddress\0220\n\005phon" +
+      "e\030\004 \001(\0132!.opencannabis.contact.PhoneNumb" +
+      "er\022G\n\010channels\030\005 \001(\01325.bloombox.schema.p" +
+      "artner.settings.ShopChannelSettings\"z\n\023C" +
+      "ommsSenderSettings\0221\n\005email\030\001 \001(\0132\".open" +
+      "cannabis.contact.EmailAddress\0220\n\005phone\030\002" +
+      " \001(\0132!.opencannabis.contact.PhoneNumber\"" +
+      "\343\001\n\024CommsSettingsPayload\022=\n\004type\030\001 \001(\0162/" +
+      ".bloombox.schema.partner.settings.ShopCo" +
+      "mmsType\022E\n\010contacts\030\002 \003(\01323.bloombox.sch" +
+      "ema.partner.settings.ShopContactTarget\022E" +
+      "\n\006sender\030\003 \001(\01325.bloombox.schema.partner" +
+      ".settings.CommsSenderSettings\"\247\001\n\021ShopCo" +
+      "mmsSettings\022H\n\010internal\030\001 \001(\01326.bloombox" +
+      ".schema.partner.settings.CommsSettingsPa" +
+      "yload\022H\n\010external\030\002 \001(\01326.bloombox.schem" +
+      "a.partner.settings.CommsSettingsPayload\"" +
+      "\227\001\n\022OnlineShopSettings\022\016\n\006origin\030\001 \001(\t\022B" +
+      "\n\005comms\030\002 \001(\01323.bloombox.schema.partner." +
+      "settings.ShopCommsSettings\022\016\n\006domain\030\003 \001" +
+      "(\t\022\016\n\006signup\030\004 \001(\t\022\r\n\005login\030\005 \001(\t\"J\n\032Phy" +
+      "sicalStorefrontSettings\022,\n\010location\030\001 \001(" +
+      "\0132\032.opencannabis.geo.Location\"\360\001\n\022Storef" +
+      "rontSettings\022D\n\010delivery\030\001 \001(\01322.bloombo" +
+      "x.schema.partner.settings.DeliverySettin" +
+      "gs\022D\n\006online\030\002 \001(\01324.bloombox.schema.par" +
+      "tner.settings.OnlineShopSettings\022N\n\010phys" +
+      "ical\030\003 \001(\0132<.bloombox.schema.partner.set" +
+      "tings.PhysicalStorefrontSettings\"\345\001\n\014Sho" +
+      "pSettings\022B\n\005hours\030\001 \001(\01323.bloombox.sche" +
+      "ma.partner.settings.ShopHoursSettings\022G\n" +
+      "\010services\030\002 \001(\01325.bloombox.schema.partne" +
+      "r.settings.ShopServiceSettings\022H\n\nstoref" +
+      "ront\030\003 \001(\01324.bloombox.schema.partner.set" +
+      "tings.StorefrontSettings\"~\n\014CartSettings" +
+      "\0228\n\004mode\030\001 \001(\0162*.bloombox.schema.partner" +
+      ".settings.CartMode\0224\n\norder_type\030\002 \001(\0162 " +
+      ".opencannabis.commerce.OrderType\"N\n\016Tabl" +
+      "etSettings\022<\n\004cart\030\001 \001(\0132..bloombox.sche" +
+      "ma.partner.settings.CartSettings\"\270\004\n\027Par" +
+      "tnerLocationSettings\022:\n\003api\030\001 \001(\0132-.bloo" +
+      "mbox.schema.partner.settings.APISettings" +
+      "\022F\n\006brands\030\002 \001(\01326.bloombox.schema.partn" +
+      "er.settings.ProductBrandSettings\022B\n\007publ" +
+      "ish\030\003 \001(\01321.bloombox.schema.partner.sett" +
+      "ings.PublishSettings\022C\n\010sections\030\004 \001(\01321" +
+      ".bloombox.schema.partner.settings.Sectio" +
+      "nSettings\022<\n\004shop\030\005 \001(\0132..bloombox.schem" +
+      "a.partner.settings.ShopSettings\0228\n\002tv\030\006 " +
+      "\001(\0132,.bloombox.schema.partner.settings.T" +
+      "VSettings\022@\n\006tablet\030\007 \001(\01320.bloombox.sch" +
+      "ema.partner.settings.TabletSettings\022V\n\013i" +
+      "ntegration\030\024 \001(\0132A.bloombox.schema.partn" +
+      "er.integrations.LocationIntegrationSetti" +
+      "ngs*1\n\023SectionSettingsType\022\014\n\010STANDARD\020\000" +
+      "\022\014\n\010FILTERED\020\001*5\n\023FilteredSectionType\022\007\n" +
+      "\003CBD\020\000\022\t\n\005HOUSE\020\001\022\n\n\006ONSALE\020\002* \n\022CustomS" +
+      "ettingsType\022\n\n\006FILTER\020\000*\221\001\n\tHoursSpan\022\014\n" +
+      "\010EVERYDAY\020\000\022\014\n\010WEEKDAYS\020\001\022\014\n\010WEEKENDS\020\002\022" +
+      "\n\n\006MONDAY\020\003\022\013\n\007TUESDAY\020\004\022\r\n\tWEDNESDAY\020\005\022" +
+      "\014\n\010THURSDAY\020\006\022\n\n\006FRIDAY\020\007\022\014\n\010SATURDAY\020\010\022" +
+      "\n\n\006SUNDAY\020\t*F\n\nShopStatus\022\010\n\004OPEN\020\000\022\n\n\006C" +
+      "LOSED\020\001\022\021\n\rDELIVERY_ONLY\020\002\022\017\n\013PICKUP_ONL" +
+      "Y\020\003*+\n\rShopCommsType\022\014\n\010INTERNAL\020\000\022\014\n\010EX" +
+      "TERNAL\020\001*A\n\022ShopContactChannel\022\014\n\010ORDERI" +
+      "NG\020\000\022\016\n\nENROLLMENT\020\001\022\r\n\tMARKETING\020\002*&\n\010C" +
+      "artMode\022\007\n\003OFF\020\000\022\007\n\003BAG\020\001\022\010\n\004CART\020\002B/\n#i" +
+      "o.bloombox.schema.partner.settingsH\001P\000\242\002" +
+      "\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35816,7 +36259,7 @@ public final class PartnerLocationSettingsOuterClass {
     internal_static_bloombox_schema_partner_settings_ShopServiceSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_ShopServiceSettings_descriptor,
-        new java.lang.String[] { "Delivery", "Express", "Pickup", "Storefront", });
+        new java.lang.String[] { "Delivery", "Express", "Pickup", "Storefront", "Medical", "AdultUse", });
     internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable = new
@@ -35846,7 +36289,7 @@ public final class PartnerLocationSettingsOuterClass {
     internal_static_bloombox_schema_partner_settings_ShopChannelSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_ShopChannelSettings_descriptor,
-        new java.lang.String[] { "Orders", "Enrollment", });
+        new java.lang.String[] { "Orders", "Enrollment", "Marketing", });
     internal_static_bloombox_schema_partner_settings_ShopContactTarget_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_bloombox_schema_partner_settings_ShopContactTarget_fieldAccessorTable = new

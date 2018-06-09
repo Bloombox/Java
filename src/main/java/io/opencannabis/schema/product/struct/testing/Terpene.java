@@ -40,12 +40,12 @@ public enum Terpene
   CAMPHENE(0),
   /**
    * <pre>
-   * Delta-3-carene.
+   * Carene.
    * </pre>
    *
-   * <code>DELTA_3_CARENE = 1;</code>
+   * <code>CARENE = 1;</code>
    */
-  DELTA_3_CARENE(1),
+  CARENE(1),
   /**
    * <pre>
    * Beta-caryophyllene.
@@ -358,6 +358,14 @@ public enum Terpene
    * <code>CITRONELLOL = 40;</code>
    */
   CITRONELLOL(40),
+  /**
+   * <pre>
+   * Delta-3-carene.
+   * </pre>
+   *
+   * <code>DELTA_3_CARENE = 41;</code>
+   */
+  DELTA_3_CARENE(41),
   UNRECOGNIZED(-1),
   ;
 
@@ -371,12 +379,12 @@ public enum Terpene
   public static final int CAMPHENE_VALUE = 0;
   /**
    * <pre>
-   * Delta-3-carene.
+   * Carene.
    * </pre>
    *
-   * <code>DELTA_3_CARENE = 1;</code>
+   * <code>CARENE = 1;</code>
    */
-  public static final int DELTA_3_CARENE_VALUE = 1;
+  public static final int CARENE_VALUE = 1;
   /**
    * <pre>
    * Beta-caryophyllene.
@@ -689,6 +697,14 @@ public enum Terpene
    * <code>CITRONELLOL = 40;</code>
    */
   public static final int CITRONELLOL_VALUE = 40;
+  /**
+   * <pre>
+   * Delta-3-carene.
+   * </pre>
+   *
+   * <code>DELTA_3_CARENE = 41;</code>
+   */
+  public static final int DELTA_3_CARENE_VALUE = 41;
 
 
   public final int getNumber() {
@@ -710,7 +726,7 @@ public enum Terpene
   public static Terpene forNumber(int value) {
     switch (value) {
       case 0: return CAMPHENE;
-      case 1: return DELTA_3_CARENE;
+      case 1: return CARENE;
       case 2: return BETA_CARYOPHYLLENE;
       case 3: return CARYOPHYLLENE_OXIDE;
       case 4: return EUCALYPTOL;
@@ -750,6 +766,7 @@ public enum Terpene
       case 38: return FENCHONE;
       case 39: return TERPINENE;
       case 40: return CITRONELLOL;
+      case 41: return DELTA_3_CARENE;
       default: return null;
     }
   }

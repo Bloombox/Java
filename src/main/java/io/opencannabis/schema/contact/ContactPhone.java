@@ -61,6 +61,24 @@ public final class ContactPhone {
      * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this phone number."];</code>
      */
     boolean getValidated();
+
+    /**
+     * <pre>
+     * Display text for this phone number, if applicable.
+     * </pre>
+     *
+     * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+     */
+    java.lang.String getDisplay();
+    /**
+     * <pre>
+     * Display text for this phone number, if applicable.
+     * </pre>
+     *
+     * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+     */
+    com.google.protobuf.ByteString
+        getDisplayBytes();
   }
   /**
    * <pre>
@@ -82,6 +100,7 @@ public final class ContactPhone {
     private PhoneNumber() {
       e164_ = "";
       validated_ = false;
+      display_ = "";
     }
 
     @java.lang.Override
@@ -124,6 +143,12 @@ public final class ContactPhone {
             case 16: {
 
               validated_ = input.readBool();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              display_ = s;
               break;
             }
           }
@@ -206,6 +231,48 @@ public final class ContactPhone {
       return validated_;
     }
 
+    public static final int DISPLAY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object display_;
+    /**
+     * <pre>
+     * Display text for this phone number, if applicable.
+     * </pre>
+     *
+     * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+     */
+    public java.lang.String getDisplay() {
+      java.lang.Object ref = display_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        display_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Display text for this phone number, if applicable.
+     * </pre>
+     *
+     * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDisplayBytes() {
+      java.lang.Object ref = display_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        display_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -224,6 +291,9 @@ public final class ContactPhone {
       if (validated_ != false) {
         output.writeBool(2, validated_);
       }
+      if (!getDisplayBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, display_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -238,6 +308,9 @@ public final class ContactPhone {
       if (validated_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, validated_);
+      }
+      if (!getDisplayBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, display_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -259,6 +332,8 @@ public final class ContactPhone {
           .equals(other.getE164());
       result = result && (getValidated()
           == other.getValidated());
+      result = result && getDisplay()
+          .equals(other.getDisplay());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -275,6 +350,8 @@ public final class ContactPhone {
       hash = (37 * hash) + VALIDATED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getValidated());
+      hash = (37 * hash) + DISPLAY_FIELD_NUMBER;
+      hash = (53 * hash) + getDisplay().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -413,6 +490,8 @@ public final class ContactPhone {
 
         validated_ = false;
 
+        display_ = "";
+
         return this;
       }
 
@@ -437,6 +516,7 @@ public final class ContactPhone {
         io.opencannabis.schema.contact.ContactPhone.PhoneNumber result = new io.opencannabis.schema.contact.ContactPhone.PhoneNumber(this);
         result.e164_ = e164_;
         result.validated_ = validated_;
+        result.display_ = display_;
         onBuilt();
         return result;
       }
@@ -484,6 +564,10 @@ public final class ContactPhone {
         }
         if (other.getValidated() != false) {
           setValidated(other.getValidated());
+        }
+        if (!other.getDisplay().isEmpty()) {
+          display_ = other.display_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -641,6 +725,95 @@ public final class ContactPhone {
         onChanged();
         return this;
       }
+
+      private java.lang.Object display_ = "";
+      /**
+       * <pre>
+       * Display text for this phone number, if applicable.
+       * </pre>
+       *
+       * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+       */
+      public java.lang.String getDisplay() {
+        java.lang.Object ref = display_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          display_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Display text for this phone number, if applicable.
+       * </pre>
+       *
+       * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDisplayBytes() {
+        java.lang.Object ref = display_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          display_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Display text for this phone number, if applicable.
+       * </pre>
+       *
+       * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+       */
+      public Builder setDisplay(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        display_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Display text for this phone number, if applicable.
+       * </pre>
+       *
+       * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+       */
+      public Builder clearDisplay() {
+        
+        display_ = getDefaultInstance().getDisplay();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Display text for this phone number, if applicable.
+       * </pre>
+       *
+       * <code>string display = 3 [(.gen_bq_schema.description) = "Display text for this phone number, if applicable."];</code>
+       */
+      public Builder setDisplayBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        display_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -705,12 +878,14 @@ public final class ContactPhone {
   static {
     java.lang.String[] descriptorData = {
       "\n\031contact/PhoneNumber.proto\022\024opencannabi" +
-      "s.contact\032\016bq_field.proto\"\200\001\n\013PhoneNumbe" +
+      "s.contact\032\016bq_field.proto\"\310\001\n\013PhoneNumbe" +
       "r\0221\n\004e164\030\001 \001(\tB#\212@ E164-formatted telep" +
       "hone number.\022>\n\tvalidated\030\002 \001(\010B+\212@(Vali" +
-      "dation status for this phone number.B8\n\036" +
-      "io.opencannabis.schema.contactB\014ContactP" +
-      "honeH\001P\000\242\002\003OCSb\006proto3"
+      "dation status for this phone number.\022F\n\007" +
+      "display\030\003 \001(\tB5\212@2Display text for this " +
+      "phone number, if applicable.B8\n\036io.openc" +
+      "annabis.schema.contactB\014ContactPhoneH\001P\000" +
+      "\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -730,7 +905,7 @@ public final class ContactPhone {
     internal_static_opencannabis_contact_PhoneNumber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_contact_PhoneNumber_descriptor,
-        new java.lang.String[] { "E164", "Validated", });
+        new java.lang.String[] { "E164", "Validated", "Display", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);

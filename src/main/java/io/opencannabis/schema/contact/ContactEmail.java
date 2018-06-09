@@ -61,6 +61,24 @@ public final class ContactEmail {
      * <code>bool validated = 2 [(.gen_bq_schema.description) = "Validation status for this email address."];</code>
      */
     boolean getValidated();
+
+    /**
+     * <pre>
+     * Display name for the email address, if known/specified.
+     * </pre>
+     *
+     * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Display name for the email address, if known/specified.
+     * </pre>
+     *
+     * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
   }
   /**
    * <pre>
@@ -81,6 +99,7 @@ public final class ContactEmail {
     private EmailAddress() {
       address_ = "";
       validated_ = false;
+      name_ = "";
     }
 
     @java.lang.Override
@@ -123,6 +142,12 @@ public final class ContactEmail {
             case 16: {
 
               validated_ = input.readBool();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
               break;
             }
           }
@@ -205,6 +230,48 @@ public final class ContactEmail {
       return validated_;
     }
 
+    public static final int NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Display name for the email address, if known/specified.
+     * </pre>
+     *
+     * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Display name for the email address, if known/specified.
+     * </pre>
+     *
+     * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -223,6 +290,9 @@ public final class ContactEmail {
       if (validated_ != false) {
         output.writeBool(2, validated_);
       }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -237,6 +307,9 @@ public final class ContactEmail {
       if (validated_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, validated_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -258,6 +331,8 @@ public final class ContactEmail {
           .equals(other.getAddress());
       result = result && (getValidated()
           == other.getValidated());
+      result = result && getName()
+          .equals(other.getName());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -274,6 +349,8 @@ public final class ContactEmail {
       hash = (37 * hash) + VALIDATED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getValidated());
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -411,6 +488,8 @@ public final class ContactEmail {
 
         validated_ = false;
 
+        name_ = "";
+
         return this;
       }
 
@@ -435,6 +514,7 @@ public final class ContactEmail {
         io.opencannabis.schema.contact.ContactEmail.EmailAddress result = new io.opencannabis.schema.contact.ContactEmail.EmailAddress(this);
         result.address_ = address_;
         result.validated_ = validated_;
+        result.name_ = name_;
         onBuilt();
         return result;
       }
@@ -482,6 +562,10 @@ public final class ContactEmail {
         }
         if (other.getValidated() != false) {
           setValidated(other.getValidated());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -639,6 +723,95 @@ public final class ContactEmail {
         onChanged();
         return this;
       }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Display name for the email address, if known/specified.
+       * </pre>
+       *
+       * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Display name for the email address, if known/specified.
+       * </pre>
+       *
+       * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Display name for the email address, if known/specified.
+       * </pre>
+       *
+       * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Display name for the email address, if known/specified.
+       * </pre>
+       *
+       * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Display name for the email address, if known/specified.
+       * </pre>
+       *
+       * <code>string name = 3 [(.gen_bq_schema.description) = "Display name for the email address, if known/specified."];</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -703,13 +876,15 @@ public final class ContactEmail {
   static {
     java.lang.String[] descriptorData = {
       "\n\032contact/EmailAddress.proto\022\024opencannab" +
-      "is.contact\032\016bq_field.proto\"\236\001\n\014EmailAddr" +
+      "is.contact\032\016bq_field.proto\"\350\001\n\014EmailAddr" +
       "ess\022M\n\007address\030\001 \001(\tB<\212@9Email address, " +
       "in standard format (\'example@sample.com\'" +
       ").\022?\n\tvalidated\030\002 \001(\010B,\212@)Validation sta" +
-      "tus for this email address.B8\n\036io.openca" +
-      "nnabis.schema.contactB\014ContactEmailH\001P\000\242" +
-      "\002\003OCSb\006proto3"
+      "tus for this email address.\022H\n\004name\030\003 \001(" +
+      "\tB:\212@7Display name for the email address" +
+      ", if known/specified.B8\n\036io.opencannabis" +
+      ".schema.contactB\014ContactEmailH\001P\000\242\002\003OCSb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -729,7 +904,7 @@ public final class ContactEmail {
     internal_static_opencannabis_contact_EmailAddress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_contact_EmailAddress_descriptor,
-        new java.lang.String[] { "Address", "Validated", });
+        new java.lang.String[] { "Address", "Validated", "Name", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.description);
