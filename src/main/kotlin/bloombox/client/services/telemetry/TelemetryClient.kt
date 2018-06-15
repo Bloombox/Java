@@ -22,7 +22,7 @@ import bloombox.client.internals.mtls.ClientCredentials
 import bloombox.client.internals.rpc.RPCClient
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
-import io.bloombox.schema.identity.AppUser.UserKey
+import io.bloombox.schema.identity.AppUserKey.UserKey
 import io.opencannabis.schema.base.BaseProductKey.ProductKey
 import io.opencannabis.schema.menu.section.Section
 import io.bloombox.schema.services.telemetry.v1beta3.*
