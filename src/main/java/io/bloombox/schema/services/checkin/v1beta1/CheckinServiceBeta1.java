@@ -90,65 +90,66 @@ public final class CheckinServiceBeta1 {
     java.lang.String[] descriptorData = {
       "\n*checkin/v1beta1/CheckinService_Beta1.p" +
       "roto\022(bloombox.schema.services.checkin.v" +
-      "1beta1\032\023identity/User.proto\032\034services/Se" +
-      "rviceStatus.proto\032\027person/PersonName.pro" +
-      "to\032\034google/api/annotations.proto\"\370\001\n\004Pin" +
-      "g\032\t\n\007Request\032C\n\010Response\0227\n\006status\030\001 \001(\016" +
-      "2\'.bloombox.schema.services.ServiceStatu" +
-      "s\032\237\001\n\tOperation\022G\n\007request\030\001 \001(\01326.bloom" +
-      "box.schema.services.checkin.v1beta1.Ping" +
-      ".Request\022I\n\010response\030\002 \001(\01327.bloombox.sc" +
-      "hema.services.checkin.v1beta1.Ping.Respo" +
-      "nse\"\232\001\n\013CheckinUser\022.\n\003key\030\001 \001(\0132!.bloom" +
-      "box.schema.identity.UserKey\0222\n\005flags\030\002 \001" +
-      "(\0132#.bloombox.schema.identity.UserFlags\022" +
-      "\'\n\004name\030\003 \001(\0132\031.opencannabis.person.Name" +
-      "\"!\n\021CheckinEnrollment\022\014\n\004code\030\001 \001(\t\"\224\002\n\017" +
-      "CheckinResponse\022\017\n\007success\030\001 \001(\010\022\023\n\013must" +
-      "_enroll\030\002 \001(\010\022E\n\005error\030\003 \001(\01626.bloombox." +
-      "schema.services.checkin.v1beta1.CheckinE" +
-      "rror\022C\n\004user\030\004 \001(\01325.bloombox.schema.ser" +
-      "vices.checkin.v1beta1.CheckinUser\022O\n\nenr" +
-      "ollment\030\005 \001(\0132;.bloombox.schema.services" +
-      ".checkin.v1beta1.CheckinEnrollment\"\207\002\n\tI" +
-      "DCheckin\032Q\n\007Request\022\013\n\003raw\030\001 \001(\t\022\r\n\005scop" +
-      "e\030\002 \001(\t\022\025\n\rserial_number\030\003 \001(\t\022\023\n\013finger" +
-      "print\030\004 \001(\t\032\246\001\n\tOperation\022L\n\007request\030\001 \001" +
-      "(\0132;.bloombox.schema.services.checkin.v1" +
-      "beta1.IDCheckin.Request\022K\n\010response\030\002 \001(" +
-      "\01329.bloombox.schema.services.checkin.v1b" +
-      "eta1.CheckinResponse\"\230\002\n\013CardCheckin\032^\n\007" +
-      "Request\022\021\n\tcard_type\030\001 \001(\t\022\017\n\007payload\030\002 " +
-      "\001(\t\022\021\n\tsignature\030\003 \001(\t\022\r\n\005agent\030\004 \001(\t\022\r\n" +
-      "\005scope\030\005 \001(\t\032\250\001\n\tOperation\022N\n\007request\030\001 " +
-      "\001(\0132=.bloombox.schema.services.checkin.v" +
-      "1beta1.CardCheckin.Request\022K\n\010response\030\002" +
-      " \001(\01329.bloombox.schema.services.checkin." +
-      "v1beta1.CheckinResponse*\305\002\n\014CheckinError" +
-      "\022\014\n\010NO_ERROR\020\000\022\020\n\014ID_NOT_FOUND\020\001\022\016\n\nID_E" +
-      "XPIRED\020\002\022\016\n\nID_INVALID\020\003\022\027\n\023ID_TYPE_UNSU" +
-      "PPORTED\020\004\022\025\n\021CARD_TYPE_INVALID\020\005\022\020\n\014CARD" +
-      "_EXPIRED\020\006\022\022\n\016CARD_SUSPENDED\020\007\022\022\n\016USER_S" +
-      "USPENDED\020\010\022\025\n\021PARTNER_SUSPENDED\020\t\022\023\n\017PAR" +
-      "TNER_INVALID\020\n\022\024\n\020LOCATION_INVALID\020\013\022\030\n\024" +
-      "JURISDICTION_INVALID\020\014\022\034\n\030JURISDICTION_U" +
-      "NSUPPORTED\020\r\022\021\n\rUSER_UNDERAGE\020\0162\300\004\n\007Chec" +
-      "kin\022\226\001\n\004Ping\0226.bloombox.schema.services." +
-      "checkin.v1beta1.Ping.Request\0327.bloombox." +
-      "schema.services.checkin.v1beta1.Ping.Res" +
-      "ponse\"\035\202\323\344\223\002\027\022\025/checkin/v1beta1/ping\022\357\001\n" +
-      "\016Identification\022;.bloombox.schema.servic" +
-      "es.checkin.v1beta1.IDCheckin.Request\0329.b" +
+      "1beta1\032\023identity/User.proto\032\026identity/Us" +
+      "erKey.proto\032\034services/ServiceStatus.prot" +
+      "o\032\027person/PersonName.proto\032\034google/api/a" +
+      "nnotations.proto\"\370\001\n\004Ping\032\t\n\007Request\032C\n\010" +
+      "Response\0227\n\006status\030\001 \001(\0162\'.bloombox.sche" +
+      "ma.services.ServiceStatus\032\237\001\n\tOperation\022" +
+      "G\n\007request\030\001 \001(\01326.bloombox.schema.servi" +
+      "ces.checkin.v1beta1.Ping.Request\022I\n\010resp" +
+      "onse\030\002 \001(\01327.bloombox.schema.services.ch" +
+      "eckin.v1beta1.Ping.Response\"\232\001\n\013CheckinU" +
+      "ser\022.\n\003key\030\001 \001(\0132!.bloombox.schema.ident" +
+      "ity.UserKey\0222\n\005flags\030\002 \001(\0132#.bloombox.sc" +
+      "hema.identity.UserFlags\022\'\n\004name\030\003 \001(\0132\031." +
+      "opencannabis.person.Name\"!\n\021CheckinEnrol" +
+      "lment\022\014\n\004code\030\001 \001(\t\"\224\002\n\017CheckinResponse\022" +
+      "\017\n\007success\030\001 \001(\010\022\023\n\013must_enroll\030\002 \001(\010\022E\n" +
+      "\005error\030\003 \001(\01626.bloombox.schema.services." +
+      "checkin.v1beta1.CheckinError\022C\n\004user\030\004 \001" +
+      "(\01325.bloombox.schema.services.checkin.v1" +
+      "beta1.CheckinUser\022O\n\nenrollment\030\005 \001(\0132;." +
+      "bloombox.schema.services.checkin.v1beta1" +
+      ".CheckinEnrollment\"\207\002\n\tIDCheckin\032Q\n\007Requ" +
+      "est\022\013\n\003raw\030\001 \001(\t\022\r\n\005scope\030\002 \001(\t\022\025\n\rseria" +
+      "l_number\030\003 \001(\t\022\023\n\013fingerprint\030\004 \001(\t\032\246\001\n\t" +
+      "Operation\022L\n\007request\030\001 \001(\0132;.bloombox.sc" +
+      "hema.services.checkin.v1beta1.IDCheckin." +
+      "Request\022K\n\010response\030\002 \001(\01329.bloombox.sch" +
+      "ema.services.checkin.v1beta1.CheckinResp" +
+      "onse\"\230\002\n\013CardCheckin\032^\n\007Request\022\021\n\tcard_" +
+      "type\030\001 \001(\t\022\017\n\007payload\030\002 \001(\t\022\021\n\tsignature" +
+      "\030\003 \001(\t\022\r\n\005agent\030\004 \001(\t\022\r\n\005scope\030\005 \001(\t\032\250\001\n" +
+      "\tOperation\022N\n\007request\030\001 \001(\0132=.bloombox.s" +
+      "chema.services.checkin.v1beta1.CardCheck" +
+      "in.Request\022K\n\010response\030\002 \001(\01329.bloombox." +
+      "schema.services.checkin.v1beta1.CheckinR" +
+      "esponse*\305\002\n\014CheckinError\022\014\n\010NO_ERROR\020\000\022\020" +
+      "\n\014ID_NOT_FOUND\020\001\022\016\n\nID_EXPIRED\020\002\022\016\n\nID_I" +
+      "NVALID\020\003\022\027\n\023ID_TYPE_UNSUPPORTED\020\004\022\025\n\021CAR" +
+      "D_TYPE_INVALID\020\005\022\020\n\014CARD_EXPIRED\020\006\022\022\n\016CA" +
+      "RD_SUSPENDED\020\007\022\022\n\016USER_SUSPENDED\020\010\022\025\n\021PA" +
+      "RTNER_SUSPENDED\020\t\022\023\n\017PARTNER_INVALID\020\n\022\024" +
+      "\n\020LOCATION_INVALID\020\013\022\030\n\024JURISDICTION_INV" +
+      "ALID\020\014\022\034\n\030JURISDICTION_UNSUPPORTED\020\r\022\021\n\r" +
+      "USER_UNDERAGE\020\0162\300\004\n\007Checkin\022\226\001\n\004Ping\0226.b" +
       "loombox.schema.services.checkin.v1beta1." +
-      "CheckinResponse\"e\202\323\344\223\002_\"9/checkin/v1beta" +
-      "1/{scope=partners/*/locations/*}/global:" +
-      "id:\001*Z\037\"\032/checkin/v1beta1/global:id:\001*\022\251" +
-      "\001\n\004Card\022=.bloombox.schema.services.check" +
-      "in.v1beta1.CardCheckin.Request\0329.bloombo" +
-      "x.schema.services.checkin.v1beta1.Checki" +
-      "nResponse\"\'\202\323\344\223\002!\"\034/checkin/v1beta1/glob" +
-      "al:card:\001*B7\n+io.bloombox.schema.service" +
-      "s.checkin.v1beta1H\001P\001\242\002\003BBSb\006proto3"
+      "Ping.Request\0327.bloombox.schema.services." +
+      "checkin.v1beta1.Ping.Response\"\035\202\323\344\223\002\027\022\025/" +
+      "checkin/v1beta1/ping\022\357\001\n\016Identification\022" +
+      ";.bloombox.schema.services.checkin.v1bet" +
+      "a1.IDCheckin.Request\0329.bloombox.schema.s" +
+      "ervices.checkin.v1beta1.CheckinResponse\"" +
+      "e\202\323\344\223\002_\"9/checkin/v1beta1/{scope=partner" +
+      "s/*/locations/*}/global:id:\001*Z\037\"\032/checki" +
+      "n/v1beta1/global:id:\001*\022\251\001\n\004Card\022=.bloomb" +
+      "ox.schema.services.checkin.v1beta1.CardC" +
+      "heckin.Request\0329.bloombox.schema.service" +
+      "s.checkin.v1beta1.CheckinResponse\"\'\202\323\344\223\002" +
+      "!\"\034/checkin/v1beta1/global:card:\001*B7\n+io" +
+      ".bloombox.schema.services.checkin.v1beta" +
+      "1H\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -162,6 +163,7 @@ public final class CheckinServiceBeta1 {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.bloombox.schema.identity.AppUser.getDescriptor(),
+          io.bloombox.schema.identity.AppUserKey.getDescriptor(),
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
           io.opencannabis.schema.person.PersonName.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -250,6 +252,7 @@ public final class CheckinServiceBeta1 {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     io.bloombox.schema.identity.AppUser.getDescriptor();
+    io.bloombox.schema.identity.AppUserKey.getDescriptor();
     io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();
     io.opencannabis.schema.person.PersonName.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

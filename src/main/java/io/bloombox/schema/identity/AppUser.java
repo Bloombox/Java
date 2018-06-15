@@ -791,748 +791,6 @@ public final class AppUser {
     // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.ConsumerType)
   }
 
-  public interface UserKeyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.UserKey)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Unique ID for the user.
-     * </pre>
-     *
-     * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-     */
-    java.lang.String getUid();
-    /**
-     * <pre>
-     * Unique ID for the user.
-     * </pre>
-     *
-     * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-     */
-    com.google.protobuf.ByteString
-        getUidBytes();
-
-    /**
-     * <pre>
-     * Specific user identity in use.
-     * </pre>
-     *
-     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-     */
-    java.lang.String getIdentity();
-    /**
-     * <pre>
-     * Specific user identity in use.
-     * </pre>
-     *
-     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-     */
-    com.google.protobuf.ByteString
-        getIdentityBytes();
-  }
-  /**
-   * <pre>
-   * Represents a key that refers to a user account.
-   * </pre>
-   *
-   * Protobuf type {@code bloombox.schema.identity.UserKey}
-   */
-  public  static final class UserKey extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.UserKey)
-      UserKeyOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UserKey.newBuilder() to construct.
-    private UserKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private UserKey() {
-      uid_ = "";
-      identity_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private UserKey(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uid_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              identity_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserKey_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.identity.AppUser.UserKey.class, io.bloombox.schema.identity.AppUser.UserKey.Builder.class);
-    }
-
-    public static final int UID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uid_;
-    /**
-     * <pre>
-     * Unique ID for the user.
-     * </pre>
-     *
-     * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-     */
-    public java.lang.String getUid() {
-      java.lang.Object ref = uid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Unique ID for the user.
-     * </pre>
-     *
-     * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-     */
-    public com.google.protobuf.ByteString
-        getUidBytes() {
-      java.lang.Object ref = uid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int IDENTITY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object identity_;
-    /**
-     * <pre>
-     * Specific user identity in use.
-     * </pre>
-     *
-     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-     */
-    public java.lang.String getIdentity() {
-      java.lang.Object ref = identity_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        identity_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Specific user identity in use.
-     * </pre>
-     *
-     * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdentityBytes() {
-      java.lang.Object ref = identity_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        identity_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getUidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
-      }
-      if (!getIdentityBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, identity_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getUidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
-      }
-      if (!getIdentityBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, identity_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof io.bloombox.schema.identity.AppUser.UserKey)) {
-        return super.equals(obj);
-      }
-      io.bloombox.schema.identity.AppUser.UserKey other = (io.bloombox.schema.identity.AppUser.UserKey) obj;
-
-      boolean result = true;
-      result = result && getUid()
-          .equals(other.getUid());
-      result = result && getIdentity()
-          .equals(other.getIdentity());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UID_FIELD_NUMBER;
-      hash = (53 * hash) + getUid().hashCode();
-      hash = (37 * hash) + IDENTITY_FIELD_NUMBER;
-      hash = (53 * hash) + getIdentity().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.identity.AppUser.UserKey parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(io.bloombox.schema.identity.AppUser.UserKey prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Represents a key that refers to a user account.
-     * </pre>
-     *
-     * Protobuf type {@code bloombox.schema.identity.UserKey}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.UserKey)
-        io.bloombox.schema.identity.AppUser.UserKeyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserKey_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.identity.AppUser.UserKey.class, io.bloombox.schema.identity.AppUser.UserKey.Builder.class);
-      }
-
-      // Construct using io.bloombox.schema.identity.AppUser.UserKey.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        uid_ = "";
-
-        identity_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_UserKey_descriptor;
-      }
-
-      public io.bloombox.schema.identity.AppUser.UserKey getDefaultInstanceForType() {
-        return io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance();
-      }
-
-      public io.bloombox.schema.identity.AppUser.UserKey build() {
-        io.bloombox.schema.identity.AppUser.UserKey result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public io.bloombox.schema.identity.AppUser.UserKey buildPartial() {
-        io.bloombox.schema.identity.AppUser.UserKey result = new io.bloombox.schema.identity.AppUser.UserKey(this);
-        result.uid_ = uid_;
-        result.identity_ = identity_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.identity.AppUser.UserKey) {
-          return mergeFrom((io.bloombox.schema.identity.AppUser.UserKey)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(io.bloombox.schema.identity.AppUser.UserKey other) {
-        if (other == io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance()) return this;
-        if (!other.getUid().isEmpty()) {
-          uid_ = other.uid_;
-          onChanged();
-        }
-        if (!other.getIdentity().isEmpty()) {
-          identity_ = other.identity_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        io.bloombox.schema.identity.AppUser.UserKey parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.identity.AppUser.UserKey) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object uid_ = "";
-      /**
-       * <pre>
-       * Unique ID for the user.
-       * </pre>
-       *
-       * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-       */
-      public java.lang.String getUid() {
-        java.lang.Object ref = uid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique ID for the user.
-       * </pre>
-       *
-       * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-       */
-      public com.google.protobuf.ByteString
-          getUidBytes() {
-        java.lang.Object ref = uid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique ID for the user.
-       * </pre>
-       *
-       * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-       */
-      public Builder setUid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        uid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique ID for the user.
-       * </pre>
-       *
-       * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-       */
-      public Builder clearUid() {
-        
-        uid_ = getDefaultInstance().getUid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique ID for the user.
-       * </pre>
-       *
-       * <code>string uid = 1 [(.gen_bq_schema.description) = "Unique ID for the user."];</code>
-       */
-      public Builder setUidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        uid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object identity_ = "";
-      /**
-       * <pre>
-       * Specific user identity in use.
-       * </pre>
-       *
-       * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-       */
-      public java.lang.String getIdentity() {
-        java.lang.Object ref = identity_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          identity_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Specific user identity in use.
-       * </pre>
-       *
-       * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdentityBytes() {
-        java.lang.Object ref = identity_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          identity_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Specific user identity in use.
-       * </pre>
-       *
-       * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-       */
-      public Builder setIdentity(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        identity_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Specific user identity in use.
-       * </pre>
-       *
-       * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-       */
-      public Builder clearIdentity() {
-        
-        identity_ = getDefaultInstance().getIdentity();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Specific user identity in use.
-       * </pre>
-       *
-       * <code>string identity = 2 [(.gen_bq_schema.description) = "Specific user identity in use."];</code>
-       */
-      public Builder setIdentityBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        identity_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.UserKey)
-    }
-
-    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.UserKey)
-    private static final io.bloombox.schema.identity.AppUser.UserKey DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppUser.UserKey();
-    }
-
-    public static io.bloombox.schema.identity.AppUser.UserKey getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<UserKey>
-        PARSER = new com.google.protobuf.AbstractParser<UserKey>() {
-      public UserKey parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UserKey(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<UserKey> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UserKey> getParserForType() {
-      return PARSER;
-    }
-
-    public io.bloombox.schema.identity.AppUser.UserKey getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface UserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.User)
       com.google.protobuf.MessageOrBuilder {
@@ -13204,7 +12462,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
     int getPartnersCount();
     /**
@@ -13212,7 +12470,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
     boolean containsPartners(
         java.lang.String key);
@@ -13220,37 +12478,37 @@ public final class AppUser {
      * Use {@link #getPartnersMap()} instead.
      */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>
+    java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
     getPartners();
     /**
      * <pre>
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
-    java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>
+    java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
     getPartnersMap();
     /**
      * <pre>
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
-    io.bloombox.schema.security.access.PartnerAccess getPartnersOrDefault(
+    io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
         java.lang.String key,
-        io.bloombox.schema.security.access.PartnerAccess defaultValue);
+        io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy defaultValue);
     /**
      * <pre>
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
-    io.bloombox.schema.security.access.PartnerAccess getPartnersOrThrow(
+    io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
         java.lang.String key);
   }
   /**
@@ -13315,7 +12573,7 @@ public final class AppUser {
                     PartnersDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000002;
               }
-              com.google.protobuf.MapEntry<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>
+              com.google.protobuf.MapEntry<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
               partners__ = input.readMessage(
                   PartnersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               partners_.getMutableMap().put(
@@ -13374,18 +12632,18 @@ public final class AppUser {
     public static final int PARTNERS_FIELD_NUMBER = 2;
     private static final class PartnersDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
-          java.lang.String, io.bloombox.schema.security.access.PartnerAccess> defaultEntry =
+          java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> defaultEntry =
               com.google.protobuf.MapEntry
-              .<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>newDefaultInstance(
+              .<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>newDefaultInstance(
                   io.bloombox.schema.identity.AppUser.internal_static_bloombox_schema_identity_IndustryProfile_PartnersEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  io.bloombox.schema.security.access.PartnerAccess.getDefaultInstance());
+                  io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.getDefaultInstance());
     }
     private com.google.protobuf.MapField<
-        java.lang.String, io.bloombox.schema.security.access.PartnerAccess> partners_;
-    private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>
+        java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> partners_;
+    private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
     internalGetPartners() {
       if (partners_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -13402,7 +12660,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
     public boolean containsPartners(
@@ -13414,7 +12672,7 @@ public final class AppUser {
      * Use {@link #getPartnersMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> getPartners() {
+    public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPartners() {
       return getPartnersMap();
     }
     /**
@@ -13422,10 +12680,10 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
-    public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> getPartnersMap() {
+    public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPartnersMap() {
       return internalGetPartners().getMap();
     }
     /**
@@ -13433,14 +12691,14 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
-    public io.bloombox.schema.security.access.PartnerAccess getPartnersOrDefault(
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
         java.lang.String key,
-        io.bloombox.schema.security.access.PartnerAccess defaultValue) {
+        io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> map =
+      java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> map =
           internalGetPartners().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
@@ -13449,13 +12707,13 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
      */
 
-    public io.bloombox.schema.security.access.PartnerAccess getPartnersOrThrow(
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> map =
+      java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> map =
           internalGetPartners().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -13496,9 +12754,9 @@ public final class AppUser {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, active_);
       }
-      for (java.util.Map.Entry<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> entry
+      for (java.util.Map.Entry<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> entry
            : internalGetPartners().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>
+        com.google.protobuf.MapEntry<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
         partners__ = PartnersDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
@@ -13843,8 +13101,8 @@ public final class AppUser {
       }
 
       private com.google.protobuf.MapField<
-          java.lang.String, io.bloombox.schema.security.access.PartnerAccess> partners_;
-      private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>
+          java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> partners_;
+      private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
       internalGetPartners() {
         if (partners_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
@@ -13852,7 +13110,7 @@ public final class AppUser {
         }
         return partners_;
       }
-      private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>
+      private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
       internalGetMutablePartners() {
         onChanged();;
         if (partners_ == null) {
@@ -13873,7 +13131,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
        */
 
       public boolean containsPartners(
@@ -13885,7 +13143,7 @@ public final class AppUser {
        * Use {@link #getPartnersMap()} instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> getPartners() {
+      public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPartners() {
         return getPartnersMap();
       }
       /**
@@ -13893,10 +13151,10 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
        */
 
-      public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> getPartnersMap() {
+      public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPartnersMap() {
         return internalGetPartners().getMap();
       }
       /**
@@ -13904,14 +13162,14 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
        */
 
-      public io.bloombox.schema.security.access.PartnerAccess getPartnersOrDefault(
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
           java.lang.String key,
-          io.bloombox.schema.security.access.PartnerAccess defaultValue) {
+          io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy defaultValue) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> map =
+        java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> map =
             internalGetPartners().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
@@ -13920,13 +13178,13 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
        */
 
-      public io.bloombox.schema.security.access.PartnerAccess getPartnersOrThrow(
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> map =
+        java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> map =
             internalGetPartners().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
@@ -13944,7 +13202,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
        */
 
       public Builder removePartners(
@@ -13958,7 +13216,7 @@ public final class AppUser {
        * Use alternate mutation accessors instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess>
+      public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
       getMutablePartners() {
         return internalGetMutablePartners().getMutableMap();
       }
@@ -13967,11 +13225,11 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
        */
       public Builder putPartners(
           java.lang.String key,
-          io.bloombox.schema.security.access.PartnerAccess value) {
+          io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy value) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutablePartners().getMutableMap()
@@ -13983,11 +13241,11 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.PartnerAccess&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
        */
 
       public Builder putAllPartners(
-          java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerAccess> values) {
+          java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> values) {
         internalGetMutablePartners().getMutableMap()
             .putAll(values);
         return this;
@@ -14041,11 +13299,6 @@ public final class AppUser {
 
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_identity_UserKey_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_identity_User_descriptor;
   private static final 
@@ -14118,133 +13371,131 @@ public final class AppUser {
       ".proto\032\033products/menu/Section.proto\032\022str" +
       "ucts/Grow.proto\032\025structs/Species.proto\032$" +
       "structs/labtesting/TestResults.proto\032(se" +
-      "curity/access/PartnerPermissions.proto\"g" +
-      "\n\007UserKey\022\'\n\003uid\030\001 \001(\tB\032\212@\027Unique ID for" +
-      " the user.\0223\n\010identity\030\002 \001(\tB!\212@\036Specifi" +
-      "c user identity in use.\"\223\n\n\004User\022-\n\003uid\030" +
-      "\001 \001(\tB \302\265\003\002\010\002\212@\027Unique ID for the user.\022" +
-      "Y\n\005flags\030\002 \001(\0132#.bloombox.schema.identit" +
-      "y.UserFlagsB%\302\265\003\002\010\004\212@\034Boolean flags for " +
-      "this user.\022Z\n\006person\030\003 \001(\0132\033.opencannabi" +
-      "s.person.PersonB-\212@*Person\'s information" +
-      " that backs this user.\022z\n\016identification" +
-      "\030\024 \003(\0132\034.bloombox.schema.identity.IDBD\200@" +
-      "\001\212@(Government ID associated with this u" +
-      "ser.\322\265\003\022\010\001\032\016identification\022\217\001\n\ndoctor_re" +
-      "c\030\025 \003(\0132+.bloombox.schema.identity.ids.U" +
-      "serDoctorRecBN\200@\001\212@3Doctor\'s recommendat" +
-      "ions associated with this user.\322\265\003\021\010\001\032\rp" +
-      "rescriptions\022m\n\004seen\030\036 \001(\0132\036.opencannabi" +
-      "s.temporal.InstantB?\212@<Last time this us" +
-      "er was seen, via auth/login/enrollment e" +
-      "tc.\022\\\n\006signup\030\037 \001(\0132\036.opencannabis.tempo" +
-      "ral.InstantB,\212@)Timestamp for when this " +
-      "user was created.\022o\n\nidentities\030( \003(\0132.." +
-      "bloombox.schema.identity.User.Identities" +
-      "EntryB+\200@\001\212@%Identities associated with " +
-      "this user.\022`\n\005media\030) \003(\0132).bloombox.sch" +
-      "ema.identity.User.MediaEntryB&\200@\001\212@ Medi" +
-      "a associated with this user.\022_\n\010consumer" +
-      "\030d \001(\0132).bloombox.schema.identity.Consum" +
-      "erProfileB\"\212@\037Consumer profile for this " +
-      "user.\022_\n\010industry\030e \001(\0132).bloombox.schem" +
-      "a.identity.IndustryProfileB\"\212@\037Industry " +
-      "profile for this user.\032Y\n\017IdentitiesEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\0225\n\005value\030\002 \001(\0132&.bloombox" +
-      ".schema.identity.UserIdentity:\0028\001\032K\n\nMed" +
-      "iaEntry\022\013\n\003key\030\001 \001(\t\022,\n\005value\030\002 \001(\0132\035.op" +
-      "encannabis.media.MediaItem:\0028\001:\r\202\367\002\t\010\002\022\005" +
-      "users\"\367\002\n\tUserFlags\022D\n\tvalidated\030\001 \001(\010B1" +
-      "\212@.Indicates that the account has been v" +
-      "alidated.\022H\n\tsuspended\030\002 \001(\010B5\212@2Indicat" +
-      "es that the account is currently suspend" +
-      "ed.\022B\n\005admin\030\003 \001(\010B3\212@0Indicates that th" +
-      "e account has admin privileges.\022G\n\004beta\030" +
-      "\004 \001(\010B9\212@6Indicates that the account has" +
-      " access to beta systems.\022M\n\007sandbox\030\005 \001(" +
-      "\010B<\212@9Indicates that the account has acc" +
-      "ess to sandbox systems.\"\345\002\n\014UserIdentity" +
-      "\022l\n\010provider\030\001 \001(\0162*.bloombox.schema.ide" +
-      "ntity.IdentityProviderB.\212@+Provider for " +
-      "this external/foreign account.\022L\n\002id\030\002 \001" +
-      "(\tB@\302\265\003\002\010\002\212@7Unique ID for this account " +
-      "with the specified provider.\022\204\001\n\004seen\030\003 " +
-      "\001(\0132\036.opencannabis.temporal.InstantBV\212@S" +
-      "Timestamp for when this identity was las" +
-      "t user to authenticate the underlying us" +
-      "er.:\022\202\367\002\016\010\002\022\nidentities\"\220\006\n\017ConsumerProf" +
-      "ile\0220\n\006active\030\001 \001(\010B \212@\035Profile active/i" +
-      "nactive flag.\022N\n\025favorite_dispensaries\030\002" +
-      " \003(\tB/\212@,Enumerates favorite dispensarie" +
-      "s for a user.\022~\n\021enrollment_source\030\003 \001(\016" +
-      "2*.bloombox.schema.identity.EnrollmentSo" +
-      "urceB7\212@4Specifies enrollment source att" +
-      "ribution information.\022a\n\022enrollment_chan" +
-      "nel\030\004 \001(\tBE\212@BArbitrary string for the c" +
-      "hannel through which this user enrolled." +
-      "\022r\n\013preferences\030\005 \001(\0132-.bloombox.schema." +
-      "identity.ConsumerPreferencesB.\212@+Prefere" +
-      "nces attached to a consumer account.\022n\n\004" +
-      "type\030\006 \001(\0162&.bloombox.schema.identity.Co" +
-      "nsumerTypeB8\212@5Specifies the primary con" +
-      "sumer type for this account.\022x\n\017referral" +
-      "_source\030\007 \001(\0162(.bloombox.schema.identity" +
-      ".ReferralSourceB5\212@2Specifies referral s" +
-      "ource attribution information.\022:\n\017referr" +
-      "al_detail\030\010 \001(\tB!\212@\036Specifies the referr" +
-      "er\'s name.\"\250\005\n\017MenuPreferences\022j\n\007sectio" +
-      "n\030\001 \003(\0162+.opencannabis.products.menu.sec" +
-      "tion.SectionB,\212@)Preferred menu sections" +
-      " or product types.\022h\n\007feeling\030\002 \003(\0162(.op" +
-      "encannabis.structs.labtesting.FeelingB-\212" +
-      "@*Preferred feelings or experiential sta" +
-      "tes.\022[\n\ntaste_note\030\003 \003(\0162*.opencannabis." +
-      "structs.labtesting.TasteNoteB\033\212@\030Preferr" +
-      "ed tasting notes.\022d\n\017desired_potency\030\004 \001" +
-      "(\01620.opencannabis.structs.labtesting.Pot" +
-      "encyEstimateB\031\212@\026Desired potency level.\022" +
-      "k\n\021cannabinoid_ratio\030\005 \001(\01621.opencannabi" +
-      "s.structs.labtesting.CannabinoidRatioB\035\212" +
-      "@\032Desired cannabinoid ratio.\022K\n\007species\030" +
-      "\006 \003(\0162\035.opencannabis.structs.SpeciesB\033\212@" +
-      "\030Preferred species types.\022B\n\004grow\030\007 \003(\0162" +
-      "\032.opencannabis.structs.GrowB\030\212@\025Preferre" +
-      "d grow types.\"\204\001\n\023ConsumerPreferences\022m\n" +
-      "\004menu\030\n \001(\0132).bloombox.schema.identity.M" +
-      "enuPreferencesB4\212@1Preferred menu sectio" +
-      "ns/product types, and so on.\"\213\004\n\022Consume" +
-      "rMembership\022l\n\017referral_source\030\001 \001(\0162*.b" +
-      "loombox.schema.identity.EnrollmentSource" +
-      "B\'\212@$Referral source for this enrollment" +
-      ".\022^\n\020referral_channel\030\002 \001(\tBD\212@AReferral" +
-      " channel token - an artbirary, end-syste" +
-      "m provided value.\022b\n\014signed_up_at\030\003 \001(\0132" +
-      "\036.opencannabis.temporal.InstantB,\212@)Time" +
-      "stamp for when this profile enrolled.\022_\n" +
-      "\004seen\030\004 \001(\0132\036.opencannabis.temporal.Inst" +
-      "antB1\212@.Timestamp for when this profile " +
-      "was last seen.\022b\n\nforeign_id\030\005 \001(\tBN\212@KF" +
-      "oreign ID for this membership, in the pa" +
-      "rtner-colocated membership system.\"\246\002\n\017I" +
-      "ndustryProfile\0222\n\006active\030\001 \001(\010B\"\212@\037Profi" +
-      "le inactive/active status.\022~\n\010partners\030\002" +
-      " \003(\01327.bloombox.schema.identity.Industry" +
-      "Profile.PartnersEntryB3\212@0Map of partner" +
-      " accesses levels to partner codes.\032_\n\rPa" +
-      "rtnersEntry\022\013\n\003key\030\001 \001(\t\022=\n\005value\030\002 \001(\0132" +
-      "..bloombox.schema.security.access.Partne" +
-      "rAccess:\0028\001*A\n\rUserMediaType\022\013\n\007PICTURE\020" +
-      "\000\022\023\n\017DRIVERS_LICENSE\020\001\022\016\n\nDOCTOR_REC\020\002*D" +
-      "\n\020IdentityProvider\022\t\n\005EMAIL\020\000\022\n\n\006GOOGLE\020" +
-      "\001\022\014\n\010FACEBOOK\020\002\022\013\n\007TWITTER\020\003*l\n\020Enrollme" +
-      "ntSource\022\017\n\013UNSPECIFIED\020\000\022\n\n\006ONLINE\020\001\022\020\n" +
-      "\014INTERNAL_APP\020\002\022\017\n\013PARTNER_APP\020\003\022\014\n\010IN_S" +
-      "TORE\020\004\022\n\n\006IMPORT\020\005*U\n\016ReferralSource\022\013\n\007" +
-      "UNKNOWN\020\000\022\013\n\007OUTDOOR\020\001\022\013\n\007DIGITAL\020\002\022\020\n\014S" +
-      "OCIAL_MEDIA\020\003\022\n\n\006FRIEND\020\004*>\n\014ConsumerTyp" +
-      "e\022\017\n\013UNVALIDATED\020\000\022\020\n\014RECREATIONAL\020\001\022\013\n\007" +
-      "MEDICAL\020\002B0\n\033io.bloombox.schema.identity" +
-      "B\007AppUserH\001P\000\242\002\003BBSb\006proto3"
+      "curity/access/PartnerPermissions.proto\"\223" +
+      "\n\n\004User\022-\n\003uid\030\001 \001(\tB \302\265\003\002\010\002\212@\027Unique ID" +
+      " for the user.\022Y\n\005flags\030\002 \001(\0132#.bloombox" +
+      ".schema.identity.UserFlagsB%\302\265\003\002\010\004\212@\034Boo" +
+      "lean flags for this user.\022Z\n\006person\030\003 \001(" +
+      "\0132\033.opencannabis.person.PersonB-\212@*Perso" +
+      "n\'s information that backs this user.\022z\n" +
+      "\016identification\030\024 \003(\0132\034.bloombox.schema." +
+      "identity.IDBD\200@\001\212@(Government ID associa" +
+      "ted with this user.\322\265\003\022\010\001\032\016identificatio" +
+      "n\022\217\001\n\ndoctor_rec\030\025 \003(\0132+.bloombox.schema" +
+      ".identity.ids.UserDoctorRecBN\200@\001\212@3Docto" +
+      "r\'s recommendations associated with this" +
+      " user.\322\265\003\021\010\001\032\rprescriptions\022m\n\004seen\030\036 \001(" +
+      "\0132\036.opencannabis.temporal.InstantB?\212@<La" +
+      "st time this user was seen, via auth/log" +
+      "in/enrollment etc.\022\\\n\006signup\030\037 \001(\0132\036.ope" +
+      "ncannabis.temporal.InstantB,\212@)Timestamp" +
+      " for when this user was created.\022o\n\niden" +
+      "tities\030( \003(\0132..bloombox.schema.identity." +
+      "User.IdentitiesEntryB+\200@\001\212@%Identities a" +
+      "ssociated with this user.\022`\n\005media\030) \003(\013" +
+      "2).bloombox.schema.identity.User.MediaEn" +
+      "tryB&\200@\001\212@ Media associated with this us" +
+      "er.\022_\n\010consumer\030d \001(\0132).bloombox.schema." +
+      "identity.ConsumerProfileB\"\212@\037Consumer pr" +
+      "ofile for this user.\022_\n\010industry\030e \001(\0132)" +
+      ".bloombox.schema.identity.IndustryProfil" +
+      "eB\"\212@\037Industry profile for this user.\032Y\n" +
+      "\017IdentitiesEntry\022\013\n\003key\030\001 \001(\t\0225\n\005value\030\002" +
+      " \001(\0132&.bloombox.schema.identity.UserIden" +
+      "tity:\0028\001\032K\n\nMediaEntry\022\013\n\003key\030\001 \001(\t\022,\n\005v" +
+      "alue\030\002 \001(\0132\035.opencannabis.media.MediaIte" +
+      "m:\0028\001:\r\202\367\002\t\010\002\022\005users\"\367\002\n\tUserFlags\022D\n\tva" +
+      "lidated\030\001 \001(\010B1\212@.Indicates that the acc" +
+      "ount has been validated.\022H\n\tsuspended\030\002 " +
+      "\001(\010B5\212@2Indicates that the account is cu" +
+      "rrently suspended.\022B\n\005admin\030\003 \001(\010B3\212@0In" +
+      "dicates that the account has admin privi" +
+      "leges.\022G\n\004beta\030\004 \001(\010B9\212@6Indicates that " +
+      "the account has access to beta systems.\022" +
+      "M\n\007sandbox\030\005 \001(\010B<\212@9Indicates that the " +
+      "account has access to sandbox systems.\"\345" +
+      "\002\n\014UserIdentity\022l\n\010provider\030\001 \001(\0162*.bloo" +
+      "mbox.schema.identity.IdentityProviderB.\212" +
+      "@+Provider for this external/foreign acc" +
+      "ount.\022L\n\002id\030\002 \001(\tB@\302\265\003\002\010\002\212@7Unique ID fo" +
+      "r this account with the specified provid" +
+      "er.\022\204\001\n\004seen\030\003 \001(\0132\036.opencannabis.tempor" +
+      "al.InstantBV\212@STimestamp for when this i" +
+      "dentity was last user to authenticate th" +
+      "e underlying user.:\022\202\367\002\016\010\002\022\nidentities\"\220" +
+      "\006\n\017ConsumerProfile\0220\n\006active\030\001 \001(\010B \212@\035P" +
+      "rofile active/inactive flag.\022N\n\025favorite" +
+      "_dispensaries\030\002 \003(\tB/\212@,Enumerates favor" +
+      "ite dispensaries for a user.\022~\n\021enrollme" +
+      "nt_source\030\003 \001(\0162*.bloombox.schema.identi" +
+      "ty.EnrollmentSourceB7\212@4Specifies enroll" +
+      "ment source attribution information.\022a\n\022" +
+      "enrollment_channel\030\004 \001(\tBE\212@BArbitrary s" +
+      "tring for the channel through which this" +
+      " user enrolled.\022r\n\013preferences\030\005 \001(\0132-.b" +
+      "loombox.schema.identity.ConsumerPreferen" +
+      "cesB.\212@+Preferences attached to a consum" +
+      "er account.\022n\n\004type\030\006 \001(\0162&.bloombox.sch" +
+      "ema.identity.ConsumerTypeB8\212@5Specifies " +
+      "the primary consumer type for this accou" +
+      "nt.\022x\n\017referral_source\030\007 \001(\0162(.bloombox." +
+      "schema.identity.ReferralSourceB5\212@2Speci" +
+      "fies referral source attribution informa" +
+      "tion.\022:\n\017referral_detail\030\010 \001(\tB!\212@\036Speci" +
+      "fies the referrer\'s name.\"\250\005\n\017MenuPrefer" +
+      "ences\022j\n\007section\030\001 \003(\0162+.opencannabis.pr" +
+      "oducts.menu.section.SectionB,\212@)Preferre" +
+      "d menu sections or product types.\022h\n\007fee" +
+      "ling\030\002 \003(\0162(.opencannabis.structs.labtes" +
+      "ting.FeelingB-\212@*Preferred feelings or e" +
+      "xperiential states.\022[\n\ntaste_note\030\003 \003(\0162" +
+      "*.opencannabis.structs.labtesting.TasteN" +
+      "oteB\033\212@\030Preferred tasting notes.\022d\n\017desi" +
+      "red_potency\030\004 \001(\01620.opencannabis.structs" +
+      ".labtesting.PotencyEstimateB\031\212@\026Desired " +
+      "potency level.\022k\n\021cannabinoid_ratio\030\005 \001(" +
+      "\01621.opencannabis.structs.labtesting.Cann" +
+      "abinoidRatioB\035\212@\032Desired cannabinoid rat" +
+      "io.\022K\n\007species\030\006 \003(\0162\035.opencannabis.stru" +
+      "cts.SpeciesB\033\212@\030Preferred species types." +
+      "\022B\n\004grow\030\007 \003(\0162\032.opencannabis.structs.Gr" +
+      "owB\030\212@\025Preferred grow types.\"\204\001\n\023Consume" +
+      "rPreferences\022m\n\004menu\030\n \001(\0132).bloombox.sc" +
+      "hema.identity.MenuPreferencesB4\212@1Prefer" +
+      "red menu sections/product types, and so " +
+      "on.\"\213\004\n\022ConsumerMembership\022l\n\017referral_s" +
+      "ource\030\001 \001(\0162*.bloombox.schema.identity.E" +
+      "nrollmentSourceB\'\212@$Referral source for " +
+      "this enrollment.\022^\n\020referral_channel\030\002 \001" +
+      "(\tBD\212@AReferral channel token - an artbi" +
+      "rary, end-system provided value.\022b\n\014sign" +
+      "ed_up_at\030\003 \001(\0132\036.opencannabis.temporal.I" +
+      "nstantB,\212@)Timestamp for when this profi" +
+      "le enrolled.\022_\n\004seen\030\004 \001(\0132\036.opencannabi" +
+      "s.temporal.InstantB1\212@.Timestamp for whe" +
+      "n this profile was last seen.\022b\n\nforeign" +
+      "_id\030\005 \001(\tBN\212@KForeign ID for this member" +
+      "ship, in the partner-colocated membershi" +
+      "p system.\"\245\002\n\017IndustryProfile\0222\n\006active\030" +
+      "\001 \001(\010B\"\212@\037Profile inactive/active status" +
+      ".\022~\n\010partners\030\002 \003(\01327.bloombox.schema.id" +
+      "entity.IndustryProfile.PartnersEntryB3\212@" +
+      "0Map of partner accesses levels to partn" +
+      "er codes.\032^\n\rPartnersEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "<\n\005value\030\002 \001(\0132-.bloombox.schema.securit" +
+      "y.access.AccessPolicy:\0028\001*A\n\rUserMediaTy" +
+      "pe\022\013\n\007PICTURE\020\000\022\023\n\017DRIVERS_LICENSE\020\001\022\016\n\n" +
+      "DOCTOR_REC\020\002*D\n\020IdentityProvider\022\t\n\005EMAI" +
+      "L\020\000\022\n\n\006GOOGLE\020\001\022\014\n\010FACEBOOK\020\002\022\013\n\007TWITTER" +
+      "\020\003*l\n\020EnrollmentSource\022\017\n\013UNSPECIFIED\020\000\022" +
+      "\n\n\006ONLINE\020\001\022\020\n\014INTERNAL_APP\020\002\022\017\n\013PARTNER" +
+      "_APP\020\003\022\014\n\010IN_STORE\020\004\022\n\n\006IMPORT\020\005*U\n\016Refe" +
+      "rralSource\022\013\n\007UNKNOWN\020\000\022\013\n\007OUTDOOR\020\001\022\013\n\007" +
+      "DIGITAL\020\002\022\020\n\014SOCIAL_MEDIA\020\003\022\n\n\006FRIEND\020\004*" +
+      ">\n\014ConsumerType\022\017\n\013UNVALIDATED\020\000\022\020\n\014RECR" +
+      "EATIONAL\020\001\022\013\n\007MEDICAL\020\002B0\n\033io.bloombox.s" +
+      "chema.identityB\007AppUserH\001P\000\242\002\003BBSb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14270,14 +13521,8 @@ public final class AppUser {
           io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor(),
           io.bloombox.schema.security.access.PartnerPermissions.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_UserKey_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_identity_UserKey_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_identity_UserKey_descriptor,
-        new java.lang.String[] { "Uid", "Identity", });
     internal_static_bloombox_schema_identity_User_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_bloombox_schema_identity_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_User_descriptor,
@@ -14295,43 +13540,43 @@ public final class AppUser {
         internal_static_bloombox_schema_identity_User_MediaEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_bloombox_schema_identity_UserFlags_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_bloombox_schema_identity_UserFlags_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_UserFlags_descriptor,
         new java.lang.String[] { "Validated", "Suspended", "Admin", "Beta", "Sandbox", });
     internal_static_bloombox_schema_identity_UserIdentity_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_bloombox_schema_identity_UserIdentity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_UserIdentity_descriptor,
         new java.lang.String[] { "Provider", "Id", "Seen", });
     internal_static_bloombox_schema_identity_ConsumerProfile_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_bloombox_schema_identity_ConsumerProfile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_ConsumerProfile_descriptor,
         new java.lang.String[] { "Active", "FavoriteDispensaries", "EnrollmentSource", "EnrollmentChannel", "Preferences", "Type", "ReferralSource", "ReferralDetail", });
     internal_static_bloombox_schema_identity_MenuPreferences_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_bloombox_schema_identity_MenuPreferences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_MenuPreferences_descriptor,
         new java.lang.String[] { "Section", "Feeling", "TasteNote", "DesiredPotency", "CannabinoidRatio", "Species", "Grow", });
     internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_bloombox_schema_identity_ConsumerPreferences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_ConsumerPreferences_descriptor,
         new java.lang.String[] { "Menu", });
     internal_static_bloombox_schema_identity_ConsumerMembership_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_bloombox_schema_identity_ConsumerMembership_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_ConsumerMembership_descriptor,
         new java.lang.String[] { "ReferralSource", "ReferralChannel", "SignedUpAt", "Seen", "ForeignId", });
     internal_static_bloombox_schema_identity_IndustryProfile_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_bloombox_schema_identity_IndustryProfile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_IndustryProfile_descriptor,

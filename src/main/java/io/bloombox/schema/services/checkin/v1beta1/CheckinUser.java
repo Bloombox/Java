@@ -55,11 +55,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 10: {
-            io.bloombox.schema.identity.AppUser.UserKey.Builder subBuilder = null;
+            io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
             if (key_ != null) {
               subBuilder = key_.toBuilder();
             }
-            key_ = input.readMessage(io.bloombox.schema.identity.AppUser.UserKey.parser(), extensionRegistry);
+            key_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(key_);
               key_ = subBuilder.buildPartial();
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEY_FIELD_NUMBER = 1;
-  private io.bloombox.schema.identity.AppUser.UserKey key_;
+  private io.bloombox.schema.identity.AppUserKey.UserKey key_;
   /**
    * <pre>
    * Key and identity ID for the user who was checked in.
@@ -136,8 +136,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
-  public io.bloombox.schema.identity.AppUser.UserKey getKey() {
-    return key_ == null ? io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : key_;
+  public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
+    return key_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
   }
   /**
    * <pre>
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
-  public io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getKeyOrBuilder() {
+  public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
     return getKey();
   }
 
@@ -577,9 +577,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.identity.AppUser.UserKey key_ = null;
+    private io.bloombox.schema.identity.AppUserKey.UserKey key_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder> keyBuilder_;
+        io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> keyBuilder_;
     /**
      * <pre>
      * Key and identity ID for the user who was checked in.
@@ -597,9 +597,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKey getKey() {
+    public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
       if (keyBuilder_ == null) {
-        return key_ == null ? io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : key_;
+        return key_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
       } else {
         return keyBuilder_.getMessage();
       }
@@ -611,7 +611,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    public Builder setKey(io.bloombox.schema.identity.AppUser.UserKey value) {
+    public Builder setKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
       if (keyBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -632,7 +632,7 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     public Builder setKey(
-        io.bloombox.schema.identity.AppUser.UserKey.Builder builderForValue) {
+        io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
       if (keyBuilder_ == null) {
         key_ = builderForValue.build();
         onChanged();
@@ -649,11 +649,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    public Builder mergeKey(io.bloombox.schema.identity.AppUser.UserKey value) {
+    public Builder mergeKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
       if (keyBuilder_ == null) {
         if (key_ != null) {
           key_ =
-            io.bloombox.schema.identity.AppUser.UserKey.newBuilder(key_).mergeFrom(value).buildPartial();
+            io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(key_).mergeFrom(value).buildPartial();
         } else {
           key_ = value;
         }
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKey.Builder getKeyBuilder() {
+    public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getKeyBuilder() {
       
       onChanged();
       return getKeyFieldBuilder().getBuilder();
@@ -701,12 +701,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getKeyOrBuilder() {
+    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
       if (keyBuilder_ != null) {
         return keyBuilder_.getMessageOrBuilder();
       } else {
         return key_ == null ?
-            io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : key_;
+            io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
       }
     }
     /**
@@ -717,11 +717,11 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder> 
+        io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
         getKeyFieldBuilder() {
       if (keyBuilder_ == null) {
         keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder>(
+            io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
                 getKey(),
                 getParentForChildren(),
                 isClean());

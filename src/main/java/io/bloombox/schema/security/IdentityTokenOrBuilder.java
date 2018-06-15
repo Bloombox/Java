@@ -8,30 +8,54 @@ public interface IdentityTokenOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * ID for the subject user.
+   * </pre>
+   *
    * <code>string uid = 1;</code>
    */
   java.lang.String getUid();
   /**
+   * <pre>
+   * ID for the subject user.
+   * </pre>
+   *
    * <code>string uid = 1;</code>
    */
   com.google.protobuf.ByteString
       getUidBytes();
 
   /**
+   * <pre>
+   * Encoded JWT identity token.
+   * </pre>
+   *
    * <code>string encoded = 2;</code>
    */
   java.lang.String getEncoded();
   /**
+   * <pre>
+   * Encoded JWT identity token.
+   * </pre>
+   *
    * <code>string encoded = 2;</code>
    */
   com.google.protobuf.ByteString
       getEncodedBytes();
 
   /**
+   * <pre>
+   * Token issuer, or authorizing IdP (Identity Provider).
+   * </pre>
+   *
    * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
    */
   int getIssuerValue();
   /**
+   * <pre>
+   * Token issuer, or authorizing IdP (Identity Provider).
+   * </pre>
+   *
    * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
    */
   io.bloombox.schema.security.IdentityTokenIssuer getIssuer();

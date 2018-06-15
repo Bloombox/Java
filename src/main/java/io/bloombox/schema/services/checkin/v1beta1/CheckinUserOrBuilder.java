@@ -22,7 +22,7 @@ public interface CheckinUserOrBuilder extends
    *
    * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
-  io.bloombox.schema.identity.AppUser.UserKey getKey();
+  io.bloombox.schema.identity.AppUserKey.UserKey getKey();
   /**
    * <pre>
    * Key and identity ID for the user who was checked in.
@@ -30,7 +30,7 @@ public interface CheckinUserOrBuilder extends
    *
    * <code>.bloombox.schema.identity.UserKey key = 1;</code>
    */
-  io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getKeyOrBuilder();
+  io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder();
 
   /**
    * <pre>

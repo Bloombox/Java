@@ -4334,7 +4334,7 @@ public final class CommsTask {
      *
      * <code>.bloombox.schema.identity.UserKey user = 9;</code>
      */
-    io.bloombox.schema.identity.AppUser.UserKey getUser();
+    io.bloombox.schema.identity.AppUserKey.UserKey getUser();
     /**
      * <pre>
      * Key for the user's account.
@@ -4342,7 +4342,7 @@ public final class CommsTask {
      *
      * <code>.bloombox.schema.identity.UserKey user = 9;</code>
      */
-    io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getUserOrBuilder();
+    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder();
 
     /**
      * <pre>
@@ -4488,11 +4488,11 @@ public final class CommsTask {
               break;
             }
             case 74: {
-              io.bloombox.schema.identity.AppUser.UserKey.Builder subBuilder = null;
+              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
               if (user_ != null) {
                 subBuilder = user_.toBuilder();
               }
-              user_ = input.readMessage(io.bloombox.schema.identity.AppUser.UserKey.parser(), extensionRegistry);
+              user_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(user_);
                 user_ = subBuilder.buildPartial();
@@ -4720,7 +4720,7 @@ public final class CommsTask {
     }
 
     public static final int USER_FIELD_NUMBER = 9;
-    private io.bloombox.schema.identity.AppUser.UserKey user_;
+    private io.bloombox.schema.identity.AppUserKey.UserKey user_;
     /**
      * <pre>
      * Key for the user's account.
@@ -4738,8 +4738,8 @@ public final class CommsTask {
      *
      * <code>.bloombox.schema.identity.UserKey user = 9;</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKey getUser() {
-      return user_ == null ? io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : user_;
+    public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
+      return user_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
     }
     /**
      * <pre>
@@ -4748,7 +4748,7 @@ public final class CommsTask {
      *
      * <code>.bloombox.schema.identity.UserKey user = 9;</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getUserOrBuilder() {
+    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
       return getUser();
     }
 
@@ -5831,9 +5831,9 @@ public final class CommsTask {
         return membershipBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUser.UserKey user_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey user_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder> userBuilder_;
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userBuilder_;
       /**
        * <pre>
        * Key for the user's account.
@@ -5851,9 +5851,9 @@ public final class CommsTask {
        *
        * <code>.bloombox.schema.identity.UserKey user = 9;</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKey getUser() {
+      public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
         if (userBuilder_ == null) {
-          return user_ == null ? io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : user_;
+          return user_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
         } else {
           return userBuilder_.getMessage();
         }
@@ -5865,7 +5865,7 @@ public final class CommsTask {
        *
        * <code>.bloombox.schema.identity.UserKey user = 9;</code>
        */
-      public Builder setUser(io.bloombox.schema.identity.AppUser.UserKey value) {
+      public Builder setUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5886,7 +5886,7 @@ public final class CommsTask {
        * <code>.bloombox.schema.identity.UserKey user = 9;</code>
        */
       public Builder setUser(
-          io.bloombox.schema.identity.AppUser.UserKey.Builder builderForValue) {
+          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
         if (userBuilder_ == null) {
           user_ = builderForValue.build();
           onChanged();
@@ -5903,11 +5903,11 @@ public final class CommsTask {
        *
        * <code>.bloombox.schema.identity.UserKey user = 9;</code>
        */
-      public Builder mergeUser(io.bloombox.schema.identity.AppUser.UserKey value) {
+      public Builder mergeUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userBuilder_ == null) {
           if (user_ != null) {
             user_ =
-              io.bloombox.schema.identity.AppUser.UserKey.newBuilder(user_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(user_).mergeFrom(value).buildPartial();
           } else {
             user_ = value;
           }
@@ -5943,7 +5943,7 @@ public final class CommsTask {
        *
        * <code>.bloombox.schema.identity.UserKey user = 9;</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKey.Builder getUserBuilder() {
+      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserBuilder() {
         
         onChanged();
         return getUserFieldBuilder().getBuilder();
@@ -5955,12 +5955,12 @@ public final class CommsTask {
        *
        * <code>.bloombox.schema.identity.UserKey user = 9;</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getUserOrBuilder() {
+      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
           return userBuilder_.getMessageOrBuilder();
         } else {
           return user_ == null ?
-              io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : user_;
+              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
         }
       }
       /**
@@ -5971,11 +5971,11 @@ public final class CommsTask {
        * <code>.bloombox.schema.identity.UserKey user = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder> 
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
           getUserFieldBuilder() {
         if (userBuilder_ == null) {
           userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder>(
+              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
                   getUser(),
                   getParentForChildren(),
                   isClean());
@@ -6250,35 +6250,36 @@ public final class CommsTask {
       "\n\025comms/CommsTask.proto\022\025bloombox.schema" +
       ".comms\032\024core/Datamodel.proto\032\017comms/SMS." +
       "proto\032\021comms/Email.proto\032\021comms/Comms.pr" +
-      "oto\032\023identity/User.proto\032\030marketing/Camp" +
-      "aign.proto\032\026temporal/Instant.proto\"\345\002\n\rS" +
-      "endOperation\022\014\n\004uuid\030\001 \001(\t\022/\n\007channel\030\002 " +
-      "\001(\0162\036.bloombox.schema.comms.Channel\022;\n\006s" +
-      "tatus\030\003 \001(\0162+.bloombox.schema.comms.Send" +
-      "Operation.Status\022\017\n\007dry_run\030\004 \001(\010\0225\n\003sms" +
-      "\030\n \001(\0132&.bloombox.schema.comms.SMSTransm" +
-      "issionH\000\0229\n\005email\030\013 \001(\0132(.bloombox.schem" +
-      "a.comms.EmailTransmissionH\000\"7\n\006Status\022\013\n" +
-      "\007PENDING\020\000\022\013\n\007SENDING\020\001\022\t\n\005ERROR\020\002\022\010\n\004DO" +
-      "NE\020\003:\017\202\367\002\013\010\001\022\007batchesB\013\n\toperation\"\314\002\n\020T" +
-      "riggerOperation\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\017\n" +
-      "\007partner\030\002 \001(\t\022\020\n\010location\030\003 \001(\t\022\020\n\010camp" +
-      "aign\030\004 \001(\t\0221\n\tsubmitted\030\005 \001(\0132\036.opencann" +
-      "abis.temporal.Instant\0222\n\nnot_before\030\006 \001(" +
-      "\0132\036.opencannabis.temporal.Instant\022/\n\007cha" +
-      "nnel\030\007 \003(\0162\036.bloombox.schema.comms.Chann" +
-      "el\0220\n\002op\030\010 \003(\0132$.bloombox.schema.comms.S" +
-      "endOperation\022\017\n\007dry_run\030\t \001(\010:\022\202\367\002\016\010\001\022\ne" +
-      "xecutions\"\306\002\n\021AdEngineOperation\022\021\n\texecu" +
-      "tion\030\001 \001(\t\0225\n\010campaign\030\002 \001(\0132#.bloombox." +
-      "schema.marketing.Campaign\022/\n\007channel\030\007 \003" +
-      "(\0162\036.bloombox.schema.comms.Channel\022@\n\nme" +
-      "mbership\030\010 \001(\0132,.bloombox.schema.identit" +
-      "y.ConsumerMembership\022/\n\004user\030\t \001(\0132!.blo" +
-      "ombox.schema.identity.UserKey\0222\n\nnot_bef" +
-      "ore\030\n \001(\0132\036.opencannabis.temporal.Instan" +
-      "t\022\017\n\007dry_run\030\013 \001(\010B/\n\030io.bloombox.schema" +
-      ".commsB\tCommsTaskH\001P\000\242\002\003BBSb\006proto3"
+      "oto\032\023identity/User.proto\032\026identity/UserK" +
+      "ey.proto\032\030marketing/Campaign.proto\032\026temp" +
+      "oral/Instant.proto\"\345\002\n\rSendOperation\022\014\n\004" +
+      "uuid\030\001 \001(\t\022/\n\007channel\030\002 \001(\0162\036.bloombox.s" +
+      "chema.comms.Channel\022;\n\006status\030\003 \001(\0162+.bl" +
+      "oombox.schema.comms.SendOperation.Status" +
+      "\022\017\n\007dry_run\030\004 \001(\010\0225\n\003sms\030\n \001(\0132&.bloombo" +
+      "x.schema.comms.SMSTransmissionH\000\0229\n\005emai" +
+      "l\030\013 \001(\0132(.bloombox.schema.comms.EmailTra" +
+      "nsmissionH\000\"7\n\006Status\022\013\n\007PENDING\020\000\022\013\n\007SE" +
+      "NDING\020\001\022\t\n\005ERROR\020\002\022\010\n\004DONE\020\003:\017\202\367\002\013\010\001\022\007ba" +
+      "tchesB\013\n\toperation\"\314\002\n\020TriggerOperation\022" +
+      "\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\017\n\007partner\030\002 \001(\t\022\020" +
+      "\n\010location\030\003 \001(\t\022\020\n\010campaign\030\004 \001(\t\0221\n\tsu" +
+      "bmitted\030\005 \001(\0132\036.opencannabis.temporal.In" +
+      "stant\0222\n\nnot_before\030\006 \001(\0132\036.opencannabis" +
+      ".temporal.Instant\022/\n\007channel\030\007 \003(\0162\036.blo" +
+      "ombox.schema.comms.Channel\0220\n\002op\030\010 \003(\0132$" +
+      ".bloombox.schema.comms.SendOperation\022\017\n\007" +
+      "dry_run\030\t \001(\010:\022\202\367\002\016\010\001\022\nexecutions\"\306\002\n\021Ad" +
+      "EngineOperation\022\021\n\texecution\030\001 \001(\t\0225\n\010ca" +
+      "mpaign\030\002 \001(\0132#.bloombox.schema.marketing" +
+      ".Campaign\022/\n\007channel\030\007 \003(\0162\036.bloombox.sc" +
+      "hema.comms.Channel\022@\n\nmembership\030\010 \001(\0132," +
+      ".bloombox.schema.identity.ConsumerMember" +
+      "ship\022/\n\004user\030\t \001(\0132!.bloombox.schema.ide" +
+      "ntity.UserKey\0222\n\nnot_before\030\n \001(\0132\036.open" +
+      "cannabis.temporal.Instant\022\017\n\007dry_run\030\013 \001" +
+      "(\010B/\n\030io.bloombox.schema.commsB\tCommsTas" +
+      "kH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6296,6 +6297,7 @@ public final class CommsTask {
           io.bloombox.schema.comms.EmailComms.getDescriptor(),
           io.bloombox.schema.comms.GenericComms.getDescriptor(),
           io.bloombox.schema.identity.AppUser.getDescriptor(),
+          io.bloombox.schema.identity.AppUserKey.getDescriptor(),
           io.bloombox.schema.marketing.MarketingCampaign.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
@@ -6328,6 +6330,7 @@ public final class CommsTask {
     io.bloombox.schema.comms.EmailComms.getDescriptor();
     io.bloombox.schema.comms.GenericComms.getDescriptor();
     io.bloombox.schema.identity.AppUser.getDescriptor();
+    io.bloombox.schema.identity.AppUserKey.getDescriptor();
     io.bloombox.schema.marketing.MarketingCampaign.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }

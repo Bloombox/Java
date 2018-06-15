@@ -226,7 +226,7 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
      */
     boolean hasLocation();
     /**
@@ -234,17 +234,17 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
      */
-    io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
      * <pre>
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
      */
-    io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
     /**
      * <pre>
@@ -316,11 +316,11 @@ public final class PartnerDevices {
               break;
             }
             case 10: {
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder subBuilder = null;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
               if (location_ != null) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.parser(), extensionRegistry);
+              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -359,13 +359,13 @@ public final class PartnerDevices {
     }
 
     public static final int LOCATION_FIELD_NUMBER = 1;
-    private io.bloombox.schema.partner.LocationAccount.PartnerLocationKey location_;
+    private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
     /**
      * <pre>
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -375,19 +375,19 @@ public final class PartnerDevices {
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
      */
-    public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance() : location_;
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
     }
     /**
      * <pre>
      * Partner location that owns/co-locates this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
      */
-    public io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
@@ -750,15 +750,15 @@ public final class PartnerDevices {
         return this;
       }
 
-      private io.bloombox.schema.partner.LocationAccount.PartnerLocationKey location_ = null;
+      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder> locationBuilder_;
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -768,11 +768,11 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance() : location_;
+          return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
@@ -782,9 +782,9 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey value) {
+      public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -802,10 +802,10 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder builderForValue) {
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -820,13 +820,13 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey value) {
+      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (location_ != null) {
             location_ =
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -842,7 +842,7 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -860,9 +860,9 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder getLocationBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -872,14 +872,14 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance() : location_;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
         }
       }
       /**
@@ -887,14 +887,14 @@ public final class PartnerDevices {
        * Partner location that owns/co-locates this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 1;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder> 
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder>(
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -1067,7 +1067,7 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
     boolean hasLocation();
     /**
@@ -1075,17 +1075,17 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
-    io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
      * <pre>
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
-    io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
     /**
      * <pre>
@@ -1263,11 +1263,11 @@ public final class PartnerDevices {
               break;
             }
             case 18: {
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder subBuilder = null;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
               if (location_ != null) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.parser(), extensionRegistry);
+              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -1400,13 +1400,13 @@ public final class PartnerDevices {
     }
 
     public static final int LOCATION_FIELD_NUMBER = 2;
-    private io.bloombox.schema.partner.LocationAccount.PartnerLocationKey location_;
+    private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
     /**
      * <pre>
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -1416,19 +1416,19 @@ public final class PartnerDevices {
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
-    public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance() : location_;
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
     }
     /**
      * <pre>
      * Partner that owns this device.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
-    public io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
@@ -2130,15 +2130,15 @@ public final class PartnerDevices {
         return this;
       }
 
-      private io.bloombox.schema.partner.LocationAccount.PartnerLocationKey location_ = null;
+      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder> locationBuilder_;
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -2148,11 +2148,11 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance() : location_;
+          return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
@@ -2162,9 +2162,9 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey value) {
+      public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2182,10 +2182,10 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder builderForValue) {
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -2200,13 +2200,13 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey value) {
+      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (location_ != null) {
             location_ =
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -2222,7 +2222,7 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -2240,9 +2240,9 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder getLocationBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -2252,14 +2252,14 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance() : location_;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
         }
       }
       /**
@@ -2267,14 +2267,14 @@ public final class PartnerDevices {
        * Partner that owns this device.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder> 
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder>(
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -3766,27 +3766,27 @@ public final class PartnerDevices {
       "\n\033partner/PartnerDevice.proto\022\027bloombox." +
       "schema.partner\032\024core/Datamodel.proto\032\026te" +
       "mporal/Instant.proto\032\023device/Device.prot" +
-      "o\032\025partner/Partner.proto\032\035partner/Partne" +
-      "rLocation.proto\"g\n\020PartnerDeviceKey\022=\n\010l" +
-      "ocation\030\001 \001(\0132+.bloombox.schema.partner." +
-      "PartnerLocationKey\022\024\n\004uuid\030\002 \001(\tB\006\302\265\003\002\010\002" +
-      "\"\351\002\n\rPartnerDevice\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002" +
-      "\022=\n\010location\030\002 \001(\0132+.bloombox.schema.par" +
-      "tner.PartnerLocationKey\0228\n\004type\030\003 \001(\0162*." +
-      "bloombox.schema.partner.PartnerDeviceTyp" +
-      "e\022:\n\005flags\030\004 \001(\0132+.bloombox.schema.partn" +
-      "er.PartnerDeviceFlags\022+\n\006device\030\005 \001(\0132\033." +
-      "opencannabis.device.Device\022,\n\004seen\030\006 \001(\013" +
-      "2\036.opencannabis.temporal.Instant\0222\n\nregi" +
-      "stered\030\007 \001(\0132\036.opencannabis.temporal.Ins" +
-      "tant\"V\n\022PartnerDeviceFlags\022\016\n\006active\030\001 \001" +
-      "(\010\022\021\n\tsuspended\030\002 \001(\010\022\014\n\004beta\030\003 \001(\010\022\017\n\007s" +
-      "andbox\030\004 \001(\010*\223\001\n\021PartnerDeviceType\022\033\n\027UN" +
-      "SPECIFIED_DEVICE_TYPE\020\000\022\014\n\010INTERNAL\020\001\022\017\n" +
-      "\013MENU_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n\017CHECKIN_S" +
-      "TATION\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014POS_REGISTER" +
-      "\020\036B6\n\032io.bloombox.schema.partnerB\016Partne" +
-      "rDevicesH\001P\000\242\002\003BBSb\006proto3"
+      "o\032\030partner/PartnerKey.proto\032\031partner/Loc" +
+      "ationKey.proto\"`\n\020PartnerDeviceKey\0226\n\010lo" +
+      "cation\030\001 \001(\0132$.bloombox.schema.partner.L" +
+      "ocationKey\022\024\n\004uuid\030\002 \001(\tB\006\302\265\003\002\010\002\"\342\002\n\rPar" +
+      "tnerDevice\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\0226\n\010loca" +
+      "tion\030\002 \001(\0132$.bloombox.schema.partner.Loc" +
+      "ationKey\0228\n\004type\030\003 \001(\0162*.bloombox.schema" +
+      ".partner.PartnerDeviceType\022:\n\005flags\030\004 \001(" +
+      "\0132+.bloombox.schema.partner.PartnerDevic" +
+      "eFlags\022+\n\006device\030\005 \001(\0132\033.opencannabis.de" +
+      "vice.Device\022,\n\004seen\030\006 \001(\0132\036.opencannabis" +
+      ".temporal.Instant\0222\n\nregistered\030\007 \001(\0132\036." +
+      "opencannabis.temporal.Instant\"V\n\022Partner" +
+      "DeviceFlags\022\016\n\006active\030\001 \001(\010\022\021\n\tsuspended" +
+      "\030\002 \001(\010\022\014\n\004beta\030\003 \001(\010\022\017\n\007sandbox\030\004 \001(\010*\223\001" +
+      "\n\021PartnerDeviceType\022\033\n\027UNSPECIFIED_DEVIC" +
+      "E_TYPE\020\000\022\014\n\010INTERNAL\020\001\022\017\n\013MENU_TABLET\020\n\022" +
+      "\013\n\007MENU_TV\020\013\022\023\n\017CHECKIN_STATION\020\024\022\016\n\nCHE" +
+      "CKIN_TV\020\025\022\020\n\014POS_REGISTER\020\036B6\n\032io.bloomb" +
+      "ox.schema.partnerB\016PartnerDevicesH\001P\000\242\002\003" +
+      "BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3802,8 +3802,8 @@ public final class PartnerDevices {
           core.Datamodel.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
-          io.bloombox.schema.partner.PartnerAccount.getDescriptor(),
-          io.bloombox.schema.partner.LocationAccount.getDescriptor(),
+          io.bloombox.schema.partner.PartnerMeta.getDescriptor(),
+          io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3831,8 +3831,8 @@ public final class PartnerDevices {
     core.Datamodel.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
-    io.bloombox.schema.partner.PartnerAccount.getDescriptor();
-    io.bloombox.schema.partner.LocationAccount.getDescriptor();
+    io.bloombox.schema.partner.PartnerMeta.getDescriptor();
+    io.bloombox.schema.partner.LocationAccountKey.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

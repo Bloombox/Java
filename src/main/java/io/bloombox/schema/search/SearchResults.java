@@ -683,7 +683,7 @@ public final class SearchResults {
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    io.bloombox.schema.identity.AppUser.UserKey getKey();
+    io.bloombox.schema.identity.AppUserKey.UserKey getKey();
     /**
      * <pre>
      * User profile key.
@@ -691,17 +691,29 @@ public final class SearchResults {
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getKeyOrBuilder();
+    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder();
 
     /**
+     * <pre>
+     * User profile record.
+     * </pre>
+     *
      * <code>.bloombox.schema.identity.User user = 2;</code>
      */
     boolean hasUser();
     /**
+     * <pre>
+     * User profile record.
+     * </pre>
+     *
      * <code>.bloombox.schema.identity.User user = 2;</code>
      */
     io.bloombox.schema.identity.AppUser.User getUser();
     /**
+     * <pre>
+     * User profile record.
+     * </pre>
+     *
      * <code>.bloombox.schema.identity.User user = 2;</code>
      */
     io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder();
@@ -757,11 +769,11 @@ public final class SearchResults {
               break;
             }
             case 10: {
-              io.bloombox.schema.identity.AppUser.UserKey.Builder subBuilder = null;
+              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
               if (key_ != null) {
                 subBuilder = key_.toBuilder();
               }
-              key_ = input.readMessage(io.bloombox.schema.identity.AppUser.UserKey.parser(), extensionRegistry);
+              key_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(key_);
                 key_ = subBuilder.buildPartial();
@@ -807,7 +819,7 @@ public final class SearchResults {
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private io.bloombox.schema.identity.AppUser.UserKey key_;
+    private io.bloombox.schema.identity.AppUserKey.UserKey key_;
     /**
      * <pre>
      * User profile key.
@@ -825,8 +837,8 @@ public final class SearchResults {
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKey getKey() {
-      return key_ == null ? io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : key_;
+    public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
+      return key_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
@@ -835,25 +847,37 @@ public final class SearchResults {
      *
      * <code>.bloombox.schema.identity.UserKey key = 1;</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getKeyOrBuilder() {
+    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
     public static final int USER_FIELD_NUMBER = 2;
     private io.bloombox.schema.identity.AppUser.User user_;
     /**
+     * <pre>
+     * User profile record.
+     * </pre>
+     *
      * <code>.bloombox.schema.identity.User user = 2;</code>
      */
     public boolean hasUser() {
       return user_ != null;
     }
     /**
+     * <pre>
+     * User profile record.
+     * </pre>
+     *
      * <code>.bloombox.schema.identity.User user = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.User getUser() {
       return user_ == null ? io.bloombox.schema.identity.AppUser.User.getDefaultInstance() : user_;
     }
     /**
+     * <pre>
+     * User profile record.
+     * </pre>
+     *
      * <code>.bloombox.schema.identity.User user = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder() {
@@ -1190,9 +1214,9 @@ public final class SearchResults {
         return this;
       }
 
-      private io.bloombox.schema.identity.AppUser.UserKey key_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey key_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder> keyBuilder_;
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
        * User profile key.
@@ -1210,9 +1234,9 @@ public final class SearchResults {
        *
        * <code>.bloombox.schema.identity.UserKey key = 1;</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKey getKey() {
+      public io.bloombox.schema.identity.AppUserKey.UserKey getKey() {
         if (keyBuilder_ == null) {
-          return key_ == null ? io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : key_;
+          return key_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
         } else {
           return keyBuilder_.getMessage();
         }
@@ -1224,7 +1248,7 @@ public final class SearchResults {
        *
        * <code>.bloombox.schema.identity.UserKey key = 1;</code>
        */
-      public Builder setKey(io.bloombox.schema.identity.AppUser.UserKey value) {
+      public Builder setKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (keyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1245,7 +1269,7 @@ public final class SearchResults {
        * <code>.bloombox.schema.identity.UserKey key = 1;</code>
        */
       public Builder setKey(
-          io.bloombox.schema.identity.AppUser.UserKey.Builder builderForValue) {
+          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
           key_ = builderForValue.build();
           onChanged();
@@ -1262,11 +1286,11 @@ public final class SearchResults {
        *
        * <code>.bloombox.schema.identity.UserKey key = 1;</code>
        */
-      public Builder mergeKey(io.bloombox.schema.identity.AppUser.UserKey value) {
+      public Builder mergeKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (keyBuilder_ == null) {
           if (key_ != null) {
             key_ =
-              io.bloombox.schema.identity.AppUser.UserKey.newBuilder(key_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(key_).mergeFrom(value).buildPartial();
           } else {
             key_ = value;
           }
@@ -1302,7 +1326,7 @@ public final class SearchResults {
        *
        * <code>.bloombox.schema.identity.UserKey key = 1;</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKey.Builder getKeyBuilder() {
+      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getKeyBuilder() {
         
         onChanged();
         return getKeyFieldBuilder().getBuilder();
@@ -1314,12 +1338,12 @@ public final class SearchResults {
        *
        * <code>.bloombox.schema.identity.UserKey key = 1;</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getKeyOrBuilder() {
+      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
           return keyBuilder_.getMessageOrBuilder();
         } else {
           return key_ == null ?
-              io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : key_;
+              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : key_;
         }
       }
       /**
@@ -1330,11 +1354,11 @@ public final class SearchResults {
        * <code>.bloombox.schema.identity.UserKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder> 
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
           keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder>(
+              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
                   getKey(),
                   getParentForChildren(),
                   isClean());
@@ -1347,12 +1371,20 @@ public final class SearchResults {
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder> userBuilder_;
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       public boolean hasUser() {
         return userBuilder_ != null || user_ != null;
       }
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.User getUser() {
@@ -1363,6 +1395,10 @@ public final class SearchResults {
         }
       }
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       public Builder setUser(io.bloombox.schema.identity.AppUser.User value) {
@@ -1379,6 +1415,10 @@ public final class SearchResults {
         return this;
       }
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       public Builder setUser(
@@ -1393,6 +1433,10 @@ public final class SearchResults {
         return this;
       }
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       public Builder mergeUser(io.bloombox.schema.identity.AppUser.User value) {
@@ -1411,6 +1455,10 @@ public final class SearchResults {
         return this;
       }
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       public Builder clearUser() {
@@ -1425,6 +1473,10 @@ public final class SearchResults {
         return this;
       }
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.User.Builder getUserBuilder() {
@@ -1433,6 +1485,10 @@ public final class SearchResults {
         return getUserFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder() {
@@ -1444,6 +1500,10 @@ public final class SearchResults {
         }
       }
       /**
+       * <pre>
+       * User profile record.
+       * </pre>
+       *
        * <code>.bloombox.schema.identity.User user = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3836,24 +3896,25 @@ public final class SearchResults {
   static {
     java.lang.String[] descriptorData = {
       "\n\031search/SearchResult.proto\022\026bloombox.sc" +
-      "hema.search\032\023identity/User.proto\032\025base/P" +
-      "roductKey.proto\032\030products/menu/Menu.prot" +
-      "o\032 google/protobuf/field_mask.proto\"L\n\023P" +
-      "roductSearchResult\0225\n\004item\030\001 \001(\0132\'.openc" +
-      "annabis.products.menu.MenuProduct\"p\n\020Use" +
-      "rSearchResult\022.\n\003key\030\001 \001(\0132!.bloombox.sc" +
-      "hema.identity.UserKey\022,\n\004user\030\002 \001(\0132\036.bl" +
-      "oombox.schema.identity.User\"$\n\023PartnerSe" +
-      "archResult\022\r\n\005scope\030\001 \001(\t\"\242\002\n\014SearchResu" +
-      "lt\022\014\n\004rank\030\001 \001(\r\022\021\n\trelevance\030\002 \001(\001\022*\n\006f" +
-      "ields\030\003 \001(\0132\032.google.protobuf.FieldMask\022" +
-      ">\n\007product\030\n \001(\0132+.bloombox.schema.searc" +
-      "h.ProductSearchResultH\000\022;\n\007profile\030\013 \001(\013" +
-      "2(.bloombox.schema.search.UserSearchResu" +
-      "ltH\000\022>\n\007partner\030\014 \001(\0132+.bloombox.schema." +
-      "search.PartnerSearchResultH\000B\010\n\006resultB4" +
-      "\n\031io.bloombox.schema.searchB\rSearchResul" +
-      "tsH\001P\000\242\002\003BBSb\006proto3"
+      "hema.search\032\023identity/User.proto\032\026identi" +
+      "ty/UserKey.proto\032\025base/ProductKey.proto\032" +
+      "\030products/menu/Menu.proto\032 google/protob" +
+      "uf/field_mask.proto\"L\n\023ProductSearchResu" +
+      "lt\0225\n\004item\030\001 \001(\0132\'.opencannabis.products" +
+      ".menu.MenuProduct\"p\n\020UserSearchResult\022.\n" +
+      "\003key\030\001 \001(\0132!.bloombox.schema.identity.Us" +
+      "erKey\022,\n\004user\030\002 \001(\0132\036.bloombox.schema.id" +
+      "entity.User\"$\n\023PartnerSearchResult\022\r\n\005sc" +
+      "ope\030\001 \001(\t\"\242\002\n\014SearchResult\022\014\n\004rank\030\001 \001(\r" +
+      "\022\021\n\trelevance\030\002 \001(\001\022*\n\006fields\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMask\022>\n\007product\030\n \001(\013" +
+      "2+.bloombox.schema.search.ProductSearchR" +
+      "esultH\000\022;\n\007profile\030\013 \001(\0132(.bloombox.sche" +
+      "ma.search.UserSearchResultH\000\022>\n\007partner\030" +
+      "\014 \001(\0132+.bloombox.schema.search.PartnerSe" +
+      "archResultH\000B\010\n\006resultB4\n\031io.bloombox.sc" +
+      "hema.searchB\rSearchResultsH\001P\000\242\002\003BBSb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3867,6 +3928,7 @@ public final class SearchResults {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.bloombox.schema.identity.AppUser.getDescriptor(),
+          io.bloombox.schema.identity.AppUserKey.getDescriptor(),
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
           io.opencannabis.schema.menu.MenuOuterClass.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
@@ -3896,6 +3958,7 @@ public final class SearchResults {
         internal_static_bloombox_schema_search_SearchResult_descriptor,
         new java.lang.String[] { "Rank", "Relevance", "Fields", "Product", "Profile", "Partner", "Result", });
     io.bloombox.schema.identity.AppUser.getDescriptor();
+    io.bloombox.schema.identity.AppUserKey.getDescriptor();
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
     io.opencannabis.schema.menu.MenuOuterClass.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

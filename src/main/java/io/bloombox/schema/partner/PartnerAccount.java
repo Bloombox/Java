@@ -336,6 +336,50 @@ public final class PartnerAccount {
 
     /**
      * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> 
+        getPolicyList();
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPolicy(int index);
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    int getPolicyCount();
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    java.util.List<? extends io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder> 
+        getPolicyOrBuilderList();
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder getPolicyOrBuilder(
+        int index);
+
+    /**
+     * <pre>
      * Timestamp for when this record was created.
      * </pre>
      *
@@ -408,6 +452,7 @@ public final class PartnerAccount {
       legalName_ = "";
       channel_ = 0;
       location_ = java.util.Collections.emptyList();
+      policy_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -526,6 +571,15 @@ public final class PartnerAccount {
                   input.readMessage(io.bloombox.schema.partner.LocationAccount.PartnerLocation.parser(), extensionRegistry));
               break;
             }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                policy_ = new java.util.ArrayList<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              policy_.add(
+                  input.readMessage(io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.parser(), extensionRegistry));
+              break;
+            }
             case 802: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (created_ != null) {
@@ -562,6 +616,9 @@ public final class PartnerAccount {
       } finally {
         if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
           location_ = java.util.Collections.unmodifiableList(location_);
+        }
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+          policy_ = java.util.Collections.unmodifiableList(policy_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -917,6 +974,61 @@ public final class PartnerAccount {
       return location_.get(index);
     }
 
+    public static final int POLICY_FIELD_NUMBER = 10;
+    private java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> policy_;
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPolicyList() {
+      return policy_;
+    }
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    public java.util.List<? extends io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder> 
+        getPolicyOrBuilderList() {
+      return policy_;
+    }
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    public int getPolicyCount() {
+      return policy_.size();
+    }
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPolicy(int index) {
+      return policy_.get(index);
+    }
+    /**
+     * <pre>
+     * Access policy records attached to this partner.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+     */
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder getPolicyOrBuilder(
+        int index) {
+      return policy_.get(index);
+    }
+
     public static final int CREATED_FIELD_NUMBER = 100;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
     /**
@@ -1022,6 +1134,9 @@ public final class PartnerAccount {
       for (int i = 0; i < location_.size(); i++) {
         output.writeMessage(9, location_.get(i));
       }
+      for (int i = 0; i < policy_.size(); i++) {
+        output.writeMessage(10, policy_.get(i));
+      }
       if (created_ != null) {
         output.writeMessage(100, getCreated());
       }
@@ -1068,6 +1183,10 @@ public final class PartnerAccount {
       for (int i = 0; i < location_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, location_.get(i));
+      }
+      for (int i = 0; i < policy_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, policy_.get(i));
       }
       if (created_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1122,6 +1241,8 @@ public final class PartnerAccount {
       }
       result = result && getLocationList()
           .equals(other.getLocationList());
+      result = result && getPolicyList()
+          .equals(other.getPolicyList());
       result = result && (hasCreated() == other.hasCreated());
       if (hasCreated()) {
         result = result && getCreated()
@@ -1170,6 +1291,10 @@ public final class PartnerAccount {
       if (getLocationCount() > 0) {
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
         hash = (53 * hash) + getLocationList().hashCode();
+      }
+      if (getPolicyCount() > 0) {
+        hash = (37 * hash) + POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getPolicyList().hashCode();
       }
       if (hasCreated()) {
         hash = (37 * hash) + CREATED_FIELD_NUMBER;
@@ -1311,6 +1436,7 @@ public final class PartnerAccount {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getLocationFieldBuilder();
+          getPolicyFieldBuilder();
         }
       }
       public Builder clear() {
@@ -1352,6 +1478,12 @@ public final class PartnerAccount {
           bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           locationBuilder_.clear();
+        }
+        if (policyBuilder_ == null) {
+          policy_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        } else {
+          policyBuilder_.clear();
         }
         if (createdBuilder_ == null) {
           created_ = null;
@@ -1421,6 +1553,15 @@ public final class PartnerAccount {
           result.location_ = location_;
         } else {
           result.location_ = locationBuilder_.build();
+        }
+        if (policyBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+            policy_ = java.util.Collections.unmodifiableList(policy_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.policy_ = policy_;
+        } else {
+          result.policy_ = policyBuilder_.build();
         }
         if (createdBuilder_ == null) {
           result.created_ = created_;
@@ -1524,6 +1665,32 @@ public final class PartnerAccount {
                    getLocationFieldBuilder() : null;
             } else {
               locationBuilder_.addAllMessages(other.location_);
+            }
+          }
+        }
+        if (policyBuilder_ == null) {
+          if (!other.policy_.isEmpty()) {
+            if (policy_.isEmpty()) {
+              policy_ = other.policy_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensurePolicyIsMutable();
+              policy_.addAll(other.policy_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.policy_.isEmpty()) {
+            if (policyBuilder_.isEmpty()) {
+              policyBuilder_.dispose();
+              policyBuilder_ = null;
+              policy_ = other.policy_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              policyBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPolicyFieldBuilder() : null;
+            } else {
+              policyBuilder_.addAllMessages(other.policy_);
             }
           }
         }
@@ -2816,6 +2983,318 @@ public final class PartnerAccount {
         return locationBuilder_;
       }
 
+      private java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> policy_ =
+        java.util.Collections.emptyList();
+      private void ensurePolicyIsMutable() {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+          policy_ = new java.util.ArrayList<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>(policy_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder> policyBuilder_;
+
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPolicyList() {
+        if (policyBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(policy_);
+        } else {
+          return policyBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public int getPolicyCount() {
+        if (policyBuilder_ == null) {
+          return policy_.size();
+        } else {
+          return policyBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPolicy(int index) {
+        if (policyBuilder_ == null) {
+          return policy_.get(index);
+        } else {
+          return policyBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder setPolicy(
+          int index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy value) {
+        if (policyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePolicyIsMutable();
+          policy_.set(index, value);
+          onChanged();
+        } else {
+          policyBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder setPolicy(
+          int index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder builderForValue) {
+        if (policyBuilder_ == null) {
+          ensurePolicyIsMutable();
+          policy_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          policyBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder addPolicy(io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy value) {
+        if (policyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePolicyIsMutable();
+          policy_.add(value);
+          onChanged();
+        } else {
+          policyBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder addPolicy(
+          int index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy value) {
+        if (policyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePolicyIsMutable();
+          policy_.add(index, value);
+          onChanged();
+        } else {
+          policyBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder addPolicy(
+          io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder builderForValue) {
+        if (policyBuilder_ == null) {
+          ensurePolicyIsMutable();
+          policy_.add(builderForValue.build());
+          onChanged();
+        } else {
+          policyBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder addPolicy(
+          int index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder builderForValue) {
+        if (policyBuilder_ == null) {
+          ensurePolicyIsMutable();
+          policy_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          policyBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder addAllPolicy(
+          java.lang.Iterable<? extends io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> values) {
+        if (policyBuilder_ == null) {
+          ensurePolicyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, policy_);
+          onChanged();
+        } else {
+          policyBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder clearPolicy() {
+        if (policyBuilder_ == null) {
+          policy_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          policyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public Builder removePolicy(int index) {
+        if (policyBuilder_ == null) {
+          ensurePolicyIsMutable();
+          policy_.remove(index);
+          onChanged();
+        } else {
+          policyBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder getPolicyBuilder(
+          int index) {
+        return getPolicyFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder getPolicyOrBuilder(
+          int index) {
+        if (policyBuilder_ == null) {
+          return policy_.get(index);  } else {
+          return policyBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public java.util.List<? extends io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder> 
+           getPolicyOrBuilderList() {
+        if (policyBuilder_ != null) {
+          return policyBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(policy_);
+        }
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder addPolicyBuilder() {
+        return getPolicyFieldBuilder().addBuilder(
+            io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder addPolicyBuilder(
+          int index) {
+        return getPolicyFieldBuilder().addBuilder(
+            index, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Access policy records attached to this partner.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.AccessPolicy policy = 10 [(.gen_bq_schema.ignore) = true, (.core.collection) = { ... }</code>
+       */
+      public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder> 
+           getPolicyBuilderList() {
+        return getPolicyFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder> 
+          getPolicyFieldBuilder() {
+        if (policyBuilder_ == null) {
+          policyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder>(
+                  policy_,
+                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  getParentForChildren(),
+                  isClean());
+          policy_ = null;
+        }
+        return policyBuilder_;
+      }
+
       private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
@@ -3190,36 +3669,39 @@ public final class PartnerAccount {
       "Instant.proto\032\031contact/ContactInfo.proto" +
       "\032\032partner/PartnerFlags.proto\032\035partner/Pa" +
       "rtnerLocation.proto\032&partner/settings/Pa" +
-      "rtnerSettings.proto\"\251\010\n\007Partner\022W\n\004code\030" +
-      "\001 \001(\tBI\302\265\003\002\010\002\212@@Short string that unique" +
-      "ly identifies this partner organization." +
-      "\022I\n\004name\030\002 \001(\tB;\212@8Full human-readable l" +
-      "abel for this partner organization.\022s\n\005f" +
-      "lags\030\003 \001(\0132%.bloombox.schema.partner.Par" +
-      "tnerFlagsB=\302\265\003\002\010\004\212@4Flags for various th" +
-      "ings about this partner account.\022>\n\nlega" +
-      "l_name\030\004 \001(\tB*\212@\'Legal name of the partn" +
-      "er organization.\022a\n\007contact\030\005 \001(\0132!.open" +
-      "cannabis.contact.ContactInfoB-\212@*Contact" +
-      " information for this organization.\022_\n\010b" +
-      "randing\030\006 \001(\0132\035.opencannabis.media.Media" +
-      "ItemB.\212@+Branding information for this o" +
-      "rganization.\022\205\001\n\007channel\030\007 \001(\0162\'.bloombo" +
-      "x.schema.partner.PartnerChannelBK\212@HChan" +
-      "nel through which this partner organizat" +
-      "ion interacts with Bloombox.\022L\n\010settings" +
-      "\030\010 \001(\01321.bloombox.schema.partner.setting" +
-      "s.PartnerSettingsB\007\200@\001\322\265\003\000\022P\n\010location\030\t" +
-      " \003(\0132(.bloombox.schema.partner.PartnerLo" +
-      "cationB\024\200@\001\322\265\003\r\010\001\032\tlocations\022_\n\007created\030" +
-      "d \001(\0132\036.opencannabis.temporal.InstantB.\212" +
-      "@+Timestamp for when this record was cre" +
-      "ated.\022f\n\010modified\030e \001(\0132\036.opencannabis.t" +
-      "emporal.InstantB4\212@1Timestamp for when t" +
-      "his record was last modified.:\020\202\367\002\014\010\002\022\010p" +
-      "artners*\034\n\016PartnerChannel\022\n\n\006DIRECT\020\000B6\n" +
-      "\032io.bloombox.schema.partnerB\016PartnerAcco" +
-      "untH\001P\000\242\002\003BBSb\006proto3"
+      "rtnerSettings.proto\032(security/access/Par" +
+      "tnerPermissions.proto\"\375\010\n\007Partner\022W\n\004cod" +
+      "e\030\001 \001(\tBI\302\265\003\002\010\002\212@@Short string that uniq" +
+      "uely identifies this partner organizatio" +
+      "n.\022I\n\004name\030\002 \001(\tB;\212@8Full human-readable" +
+      " label for this partner organization.\022s\n" +
+      "\005flags\030\003 \001(\0132%.bloombox.schema.partner.P" +
+      "artnerFlagsB=\302\265\003\002\010\004\212@4Flags for various " +
+      "things about this partner account.\022>\n\nle" +
+      "gal_name\030\004 \001(\tB*\212@\'Legal name of the par" +
+      "tner organization.\022a\n\007contact\030\005 \001(\0132!.op" +
+      "encannabis.contact.ContactInfoB-\212@*Conta" +
+      "ct information for this organization.\022_\n" +
+      "\010branding\030\006 \001(\0132\035.opencannabis.media.Med" +
+      "iaItemB.\212@+Branding information for this" +
+      " organization.\022\205\001\n\007channel\030\007 \001(\0162\'.bloom" +
+      "box.schema.partner.PartnerChannelBK\212@HCh" +
+      "annel through which this partner organiz" +
+      "ation interacts with Bloombox.\022L\n\010settin" +
+      "gs\030\010 \001(\01321.bloombox.schema.partner.setti" +
+      "ngs.PartnerSettingsB\007\200@\001\322\265\003\000\022P\n\010location" +
+      "\030\t \003(\0132(.bloombox.schema.partner.Partner" +
+      "LocationB\024\200@\001\322\265\003\r\010\001\032\tlocations\022R\n\006policy" +
+      "\030\n \003(\0132-.bloombox.schema.security.access" +
+      ".AccessPolicyB\023\200@\001\322\265\003\014\010\001\032\010policies\022_\n\007cr" +
+      "eated\030d \001(\0132\036.opencannabis.temporal.Inst" +
+      "antB.\212@+Timestamp for when this record w" +
+      "as created.\022f\n\010modified\030e \001(\0132\036.opencann" +
+      "abis.temporal.InstantB4\212@1Timestamp for " +
+      "when this record was last modified.:\020\202\367\002" +
+      "\014\010\002\022\010partners*\034\n\016PartnerChannel\022\n\n\006DIREC" +
+      "T\020\000B6\n\032io.bloombox.schema.partnerB\016Partn" +
+      "erAccountH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3240,13 +3722,14 @@ public final class PartnerAccount {
           io.bloombox.schema.partner.PartnerInfo.getDescriptor(),
           io.bloombox.schema.partner.LocationAccount.getDescriptor(),
           io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.getDescriptor(),
+          io.bloombox.schema.security.access.PartnerPermissions.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_partner_Partner_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_bloombox_schema_partner_Partner_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_Partner_descriptor,
-        new java.lang.String[] { "Code", "Name", "Flags", "LegalName", "Contact", "Branding", "Channel", "Settings", "Location", "Created", "Modified", });
+        new java.lang.String[] { "Code", "Name", "Flags", "LegalName", "Contact", "Branding", "Channel", "Settings", "Location", "Policy", "Created", "Modified", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(core.Datamodel.collection);
@@ -3264,6 +3747,7 @@ public final class PartnerAccount {
     io.bloombox.schema.partner.PartnerInfo.getDescriptor();
     io.bloombox.schema.partner.LocationAccount.getDescriptor();
     io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.getDescriptor();
+    io.bloombox.schema.security.access.PartnerPermissions.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

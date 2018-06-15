@@ -2288,7 +2288,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    io.bloombox.schema.identity.AppUser.UserKey getUserKey();
+    io.bloombox.schema.identity.AppUserKey.UserKey getUserKey();
     /**
      * <pre>
      * Specifies the user associated with this event, if known.
@@ -2296,7 +2296,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getUserKeyOrBuilder();
+    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder();
 
     /**
      * <pre>
@@ -2593,11 +2593,11 @@ public final class AnalyticsContext {
               break;
             }
             case 18: {
-              io.bloombox.schema.identity.AppUser.UserKey.Builder subBuilder = null;
+              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
               if (userKey_ != null) {
                 subBuilder = userKey_.toBuilder();
               }
-              userKey_ = input.readMessage(io.bloombox.schema.identity.AppUser.UserKey.parser(), extensionRegistry);
+              userKey_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userKey_);
                 userKey_ = subBuilder.buildPartial();
@@ -2765,7 +2765,7 @@ public final class AnalyticsContext {
     }
 
     public static final int USER_KEY_FIELD_NUMBER = 2;
-    private io.bloombox.schema.identity.AppUser.UserKey userKey_;
+    private io.bloombox.schema.identity.AppUserKey.UserKey userKey_;
     /**
      * <pre>
      * Specifies the user associated with this event, if known.
@@ -2783,8 +2783,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKey getUserKey() {
-      return userKey_ == null ? io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : userKey_;
+    public io.bloombox.schema.identity.AppUserKey.UserKey getUserKey() {
+      return userKey_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : userKey_;
     }
     /**
      * <pre>
@@ -2793,7 +2793,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    public io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getUserKeyOrBuilder() {
+    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder() {
       return getUserKey();
     }
 
@@ -3899,9 +3899,9 @@ public final class AnalyticsContext {
         return collectionBuilder_;
       }
 
-      private io.bloombox.schema.identity.AppUser.UserKey userKey_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey userKey_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder> userKeyBuilder_;
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userKeyBuilder_;
       /**
        * <pre>
        * Specifies the user associated with this event, if known.
@@ -3919,9 +3919,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKey getUserKey() {
+      public io.bloombox.schema.identity.AppUserKey.UserKey getUserKey() {
         if (userKeyBuilder_ == null) {
-          return userKey_ == null ? io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : userKey_;
+          return userKey_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : userKey_;
         } else {
           return userKeyBuilder_.getMessage();
         }
@@ -3933,7 +3933,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public Builder setUserKey(io.bloombox.schema.identity.AppUser.UserKey value) {
+      public Builder setUserKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userKeyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3954,7 +3954,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public Builder setUserKey(
-          io.bloombox.schema.identity.AppUser.UserKey.Builder builderForValue) {
+          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
         if (userKeyBuilder_ == null) {
           userKey_ = builderForValue.build();
           onChanged();
@@ -3971,11 +3971,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public Builder mergeUserKey(io.bloombox.schema.identity.AppUser.UserKey value) {
+      public Builder mergeUserKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userKeyBuilder_ == null) {
           if (userKey_ != null) {
             userKey_ =
-              io.bloombox.schema.identity.AppUser.UserKey.newBuilder(userKey_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(userKey_).mergeFrom(value).buildPartial();
           } else {
             userKey_ = value;
           }
@@ -4011,7 +4011,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKey.Builder getUserKeyBuilder() {
+      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserKeyBuilder() {
         
         onChanged();
         return getUserKeyFieldBuilder().getBuilder();
@@ -4023,12 +4023,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.AppUser.UserKeyOrBuilder getUserKeyOrBuilder() {
+      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder() {
         if (userKeyBuilder_ != null) {
           return userKeyBuilder_.getMessageOrBuilder();
         } else {
           return userKey_ == null ?
-              io.bloombox.schema.identity.AppUser.UserKey.getDefaultInstance() : userKey_;
+              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : userKey_;
         }
       }
       /**
@@ -4039,11 +4039,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder> 
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
           getUserKeyFieldBuilder() {
         if (userKeyBuilder_ == null) {
           userKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.AppUser.UserKey, io.bloombox.schema.identity.AppUser.UserKey.Builder, io.bloombox.schema.identity.AppUser.UserKeyOrBuilder>(
+              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
                   getUserKey(),
                   getParentForChildren(),
                   isClean());
@@ -5414,80 +5414,81 @@ public final class AnalyticsContext {
     java.lang.String[] descriptorData = {
       "\n\027analytics/Context.proto\022\031bloombox.sche" +
       "ma.analytics\032\016bq_field.proto\032\022geo/Locati" +
-      "on.proto\032\023identity/User.proto\032\026temporal/" +
-      "Instant.proto\032\025partner/Partner.proto\032\035pa" +
-      "rtner/PartnerLocation.proto\032\025analytics/S" +
-      "cope.proto\032\037analytics/context/Browser.pr" +
-      "oto\032\037analytics/context/Library.proto\032\"an" +
-      "alytics/context/Collection.proto\032#analyt" +
-      "ics/context/Application.proto\032$analytics" +
-      "/context/NativeDevice.proto\"\322\004\n\rEventPos" +
-      "ition\022\226\001\n\006ingest\030\002 \001(\0132\036.opencannabis.te" +
-      "mporal.InstantBf\360?\001\372?\tTIMESTAMP\212@TTimest" +
-      "amp describing when this event was inges" +
-      "ted by the backend telemetry pipeline.\022\244" +
-      "\001\n\010occurred\030\003 \001(\0132\036.opencannabis.tempora" +
-      "l.InstantBr\360?\001\372?\tTIMESTAMP\212@`Timestamp d" +
-      "escribing when this event occurred, as r" +
-      "eported by the submitting device or endp" +
-      "oint.\022\202\001\n\tprocessed\030\004 \001(\004Bo\372?\tTIMESTAMP\212" +
-      "@`Timestamp describing when this event o" +
-      "ccurred, as reported by the submitting d" +
-      "evice or endpoint.\022|\n\010enriched\030\005 \001(\004Bj\372?" +
-      "\tTIMESTAMP\212@[Timestamps describing each " +
-      "instance of this event being enriched by" +
-      " the telemetry pipeline.\"\340\002\n\013EventActors" +
-      "\022n\n\004user\030\001 \001(\0132\036.bloombox.schema.identit" +
-      "y.UserB@\212@=User account that was logged " +
-      "in when the event was submitted.\022j\n\007part" +
-      "ner\030\002 \001(\0132 .bloombox.schema.partner.Part" +
-      "nerB7\212@4Partner account under which the " +
-      "event was submitted.\022u\n\010location\030\003 \001(\0132(" +
-      ".bloombox.schema.partner.PartnerLocation" +
-      "B9\212@6Location account under which this e" +
-      "vent was submitted.\"\322\014\n\007Context\022\202\001\n\ncoll" +
-      "ection\030\001 \001(\0132-.bloombox.schema.analytics" +
-      ".context.CollectionB?\360?\001\212@9Collection in" +
-      "formation, specifies event type or categ" +
-      "ory.\022p\n\010user_key\030\002 \001(\0132!.bloombox.schema" +
-      ".identity.UserKeyB;\212@8Specifies the user" +
-      " associated with this event, if known.\022M" +
-      "\n\013fingerprint\030\003 \001(\tB8\212@5Unique device fi" +
-      "ngerprint for this analytics context.\022\227\001" +
-      "\n\005group\030\004 \001(\tB\207\001\212@\203\001Arbitrary group ID f" +
-      "or this event. Gathers events into bucke" +
-      "ts of variable size, usually used to ind" +
-      "icate a user or device session.\022h\n\010hostn" +
-      "ame\030\005 \001(\tBV\212@SHostname of the server or " +
-      "client that transmitted this information" +
-      ", if it is known.\022l\n\nip_address\030\006 \001(\tBX\212" +
-      "@UIP address of the server or client tha" +
-      "t transmitted this information, if is is" +
-      " known.\022_\n\005scope\030\007 \001(\0132 .bloombox.schema" +
-      ".analytics.ScopeB.\212@+Partner and commerc" +
-      "ial scope of this event.\022f\n\003app\030\010 \001(\01324." +
-      "bloombox.schema.analytics.context.Device" +
-      "ApplicationB#\212@ Application version info" +
-      "rmation.\022b\n\007library\030\t \001(\01320.bloombox.sch" +
-      "ema.analytics.context.DeviceLibraryB\037\212@\034" +
-      "Library version information.\022\206\002\n\006native\030" +
-      "\n \001(\01326.bloombox.schema.analytics.contex" +
-      "t.NativeDeviceContextB\275\001\212@\271\001Specifies in" +
-      "formation about a native device, when th" +
-      "e event is being sent from a native cont" +
-      "ext of some kind, such as a mobile phone" +
-      " application or embedded device running " +
-      "partner code.\022\274\001\n\007browser\030\013 \001(\01327.bloomb" +
-      "ox.schema.analytics.context.BrowserDevic" +
-      "eContextBr\212@oSpecifies information about" +
-      " a web browser, when the event is being " +
-      "sent from some kind of web browsing cont" +
-      "ext.\022\231\001\n\010location\030\014 \001(\0132\032.opencannabis.g" +
-      "eo.LocationBk\212@hOrigin location for this" +
-      " event, as determined by geolocation or " +
-      "explicit inclusion in the event payload." +
-      "B:\n\034io.bloombox.schema.telemetryB\020Analyt" +
-      "icsContextH\001P\000\242\002\003BBSb\006proto3"
+      "on.proto\032\023identity/User.proto\032\026identity/" +
+      "UserKey.proto\032\026temporal/Instant.proto\032\025p" +
+      "artner/Partner.proto\032\035partner/PartnerLoc" +
+      "ation.proto\032\025analytics/Scope.proto\032\037anal" +
+      "ytics/context/Browser.proto\032\037analytics/c" +
+      "ontext/Library.proto\032\"analytics/context/" +
+      "Collection.proto\032#analytics/context/Appl" +
+      "ication.proto\032$analytics/context/NativeD" +
+      "evice.proto\"\322\004\n\rEventPosition\022\226\001\n\006ingest" +
+      "\030\002 \001(\0132\036.opencannabis.temporal.InstantBf" +
+      "\360?\001\372?\tTIMESTAMP\212@TTimestamp describing w" +
+      "hen this event was ingested by the backe" +
+      "nd telemetry pipeline.\022\244\001\n\010occurred\030\003 \001(" +
+      "\0132\036.opencannabis.temporal.InstantBr\360?\001\372?" +
+      "\tTIMESTAMP\212@`Timestamp describing when t" +
+      "his event occurred, as reported by the s" +
+      "ubmitting device or endpoint.\022\202\001\n\tproces" +
+      "sed\030\004 \001(\004Bo\372?\tTIMESTAMP\212@`Timestamp desc" +
+      "ribing when this event occurred, as repo" +
+      "rted by the submitting device or endpoin" +
+      "t.\022|\n\010enriched\030\005 \001(\004Bj\372?\tTIMESTAMP\212@[Tim" +
+      "estamps describing each instance of this" +
+      " event being enriched by the telemetry p" +
+      "ipeline.\"\340\002\n\013EventActors\022n\n\004user\030\001 \001(\0132\036" +
+      ".bloombox.schema.identity.UserB@\212@=User " +
+      "account that was logged in when the even" +
+      "t was submitted.\022j\n\007partner\030\002 \001(\0132 .bloo" +
+      "mbox.schema.partner.PartnerB7\212@4Partner " +
+      "account under which the event was submit" +
+      "ted.\022u\n\010location\030\003 \001(\0132(.bloombox.schema" +
+      ".partner.PartnerLocationB9\212@6Location ac" +
+      "count under which this event was submitt" +
+      "ed.\"\322\014\n\007Context\022\202\001\n\ncollection\030\001 \001(\0132-.b" +
+      "loombox.schema.analytics.context.Collect" +
+      "ionB?\360?\001\212@9Collection information, speci" +
+      "fies event type or category.\022p\n\010user_key" +
+      "\030\002 \001(\0132!.bloombox.schema.identity.UserKe" +
+      "yB;\212@8Specifies the user associated with" +
+      " this event, if known.\022M\n\013fingerprint\030\003 " +
+      "\001(\tB8\212@5Unique device fingerprint for th" +
+      "is analytics context.\022\227\001\n\005group\030\004 \001(\tB\207\001" +
+      "\212@\203\001Arbitrary group ID for this event. G" +
+      "athers events into buckets of variable s" +
+      "ize, usually used to indicate a user or " +
+      "device session.\022h\n\010hostname\030\005 \001(\tBV\212@SHo" +
+      "stname of the server or client that tran" +
+      "smitted this information, if it is known" +
+      ".\022l\n\nip_address\030\006 \001(\tBX\212@UIP address of " +
+      "the server or client that transmitted th" +
+      "is information, if is is known.\022_\n\005scope" +
+      "\030\007 \001(\0132 .bloombox.schema.analytics.Scope" +
+      "B.\212@+Partner and commercial scope of thi" +
+      "s event.\022f\n\003app\030\010 \001(\01324.bloombox.schema." +
+      "analytics.context.DeviceApplicationB#\212@ " +
+      "Application version information.\022b\n\007libr" +
+      "ary\030\t \001(\01320.bloombox.schema.analytics.co" +
+      "ntext.DeviceLibraryB\037\212@\034Library version " +
+      "information.\022\206\002\n\006native\030\n \001(\01326.bloombox" +
+      ".schema.analytics.context.NativeDeviceCo" +
+      "ntextB\275\001\212@\271\001Specifies information about " +
+      "a native device, when the event is being" +
+      " sent from a native context of some kind" +
+      ", such as a mobile phone application or " +
+      "embedded device running partner code.\022\274\001" +
+      "\n\007browser\030\013 \001(\01327.bloombox.schema.analyt" +
+      "ics.context.BrowserDeviceContextBr\212@oSpe" +
+      "cifies information about a web browser, " +
+      "when the event is being sent from some k" +
+      "ind of web browsing context.\022\231\001\n\010locatio" +
+      "n\030\014 \001(\0132\032.opencannabis.geo.LocationBk\212@h" +
+      "Origin location for this event, as deter" +
+      "mined by geolocation or explicit inclusi" +
+      "on in the event payload.B:\n\034io.bloombox." +
+      "schema.telemetryB\020AnalyticsContextH\001P\000\242\002" +
+      "\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5503,6 +5504,7 @@ public final class AnalyticsContext {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.geo.LocationOuterClass.getDescriptor(),
           io.bloombox.schema.identity.AppUser.getDescriptor(),
+          io.bloombox.schema.identity.AppUserKey.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.bloombox.schema.partner.PartnerAccount.getDescriptor(),
           io.bloombox.schema.partner.LocationAccount.getDescriptor(),
@@ -5541,6 +5543,7 @@ public final class AnalyticsContext {
     gen_bq_schema.BqField.getDescriptor();
     io.opencannabis.schema.geo.LocationOuterClass.getDescriptor();
     io.bloombox.schema.identity.AppUser.getDescriptor();
+    io.bloombox.schema.identity.AppUserKey.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.bloombox.schema.partner.PartnerAccount.getDescriptor();
     io.bloombox.schema.partner.LocationAccount.getDescriptor();

@@ -54,6 +54,21 @@ public final class PlatformServiceV1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_platform_v1_DomainResolve_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_platform_v1_DomainInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_platform_v1_DomainInfo_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_platform_v1_DomainInfo_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -74,58 +89,69 @@ public final class PlatformServiceV1 {
       "\030\001 \001(\t\"|\n\rDomainResolve\032\031\n\007Request\022\016\n\006or" +
       "igin\030\001 \001(\t\032P\n\010Response\022\017\n\007partner\030\001 \001(\t\022" +
       "\020\n\010location\030\002 \001(\t\022\016\n\006apikey\030\003 \001(\t\022\021\n\tcli" +
-      "ent_id\030\004 \001(\t*a\n\rPlatformError\022\014\n\010NO_ERRO" +
-      "R\020\000\022\030\n\024SEARCH_NOT_AVAILABLE\020\001\022\022\n\016ORIGIN_" +
-      "INVALID\020\002\022\024\n\020ORIGIN_NOT_FOUND\020\003*G\n\025Platf" +
-      "ormServiceStatus\022\013\n\007UNKNOWN\020\000\022\006\n\002UP\020\001\022\010\n" +
-      "\004DOWN\020\002\022\017\n\013MAINTENANCE\020\0032\330\005\n\010Platform\022\317\001" +
-      "\n\004Ping\0222.bloombox.schema.services.platfo" +
-      "rm.v1.Ping.Request\0323.bloombox.schema.ser" +
-      "vices.platform.v1.Ping.Response\"^\202\323\344\223\002\023\022" +
-      "\021/platform/v1/ping\222AB\022\014Service Ping\032,Que" +
-      "ry for service uptime/maintenance status" +
-      ".*\004Ping\022\313\001\n\006Health\022\026.google.protobuf.Emp" +
-      "ty\032\026.google.protobuf.Empty\"\220\001\202\323\344\223\002\025\022\023/pl" +
-      "atform/v1/health\222Ar\022\023Service Healthcheck" +
-      "\032NIf the service is running correctly, a" +
-      "lways responds with an empty HTTP200/OK." +
-      "*\013Healthcheck\022\253\002\n\007Resolve\022;.bloombox.sch" +
-      "ema.services.platform.v1.DomainResolve.R" +
-      "equest\032<.bloombox.schema.services.platfo" +
-      "rm.v1.DomainResolve.Response\"\244\001\202\323\344\223\002\036\022\034/" +
-      "platform/v1/domain/{origin}\222A}\022\016Resolve " +
-      "Domain\032bFor custom-hosting endpoints, gi" +
-      "ven a web origin, resolve the owning par" +
-      "tner and location account.*\007ResolveB\353\010\n\'" +
-      "io.bloombox.schema.services.platform.v1H" +
-      "\001P\001\242\002\003BBS\222A\264\010\022f\n\014Platform API\032\031https://b" +
-      "loombox.io/terms\"7\n\010Bloombox\022\023https://bl" +
-      "oombox.io\032\026developers@bloombox.io2\002v1\032\022a" +
-      "pi.bloombox.cloud*\001\0022\020application/json:\020" +
-      "application/jsonZ\270\006\nd\n\013ApiKeyParam\022U\010\002\022J" +
-      "Parameter for identifying API key owned " +
-      "by the invoking project or system.\032\003key " +
-      "\001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for identi" +
-      "fying API key owned by the invoking proj" +
-      "ect or system.\032\tX-API-Key \001\n\345\004\n\006OAuth2\022\332" +
-      "\004\010\003\022]Bloombox Identity-powered OAuth2 ac" +
-      "cess, authorized on behalf of an end-use" +
-      "r or organization.(\0042,https://authorize." +
-      "bloombox.cloud/oauth2/auth:-https://auth" +
-      "orize.bloombox.cloud/oauth2/tokenB\227\003\n1\n\007" +
-      "offline\022&Offline access to authorized us" +
-      "er data\n9\n\006openid\022/OIDC (OpenID Connect)" +
-      " access for seamless logon\nE\n\014partner:re" +
-      "ad\0225Read access to a partner\'s profile a" +
-      "nd basic settings\nG\n\rpartner:write\0226Writ" +
-      "e access to a partner\'s profile and basi" +
-      "c settings\nV\n\rpartner:admin\022EFull admini" +
-      "strative access rights to a partner\'s pr" +
-      "ofile and settings\n?\n\016platform:admin\022-Pl" +
-      "atform-level internal administrative acc" +
-      "essb#\n\017\n\013ApiKeyParam\022\000\n\020\n\014ApiKeyHeader\022\000" +
-      "r/\n\rBloombox APIs\022\036https://apidocs.bloom" +
-      "box.cloudb\006proto3"
+      "ent_id\030\004 \001(\t\"\225\001\n\nDomainInfo\0322\n\007Request\022\022" +
+      "\n\npartner_id\030\001 \001(\t\022\023\n\013location_id\030\002 \001(\t\032" +
+      "S\n\010Response\022\014\n\004shop\030\001 \001(\t\022\014\n\004menu\030\002 \001(\t\022" +
+      "\021\n\tdashboard\030\003 \001(\t\022\n\n\002tv\030\004 \001(\t\022\014\n\004link\030\005" +
+      " \001(\t*a\n\rPlatformError\022\014\n\010NO_ERROR\020\000\022\030\n\024S" +
+      "EARCH_NOT_AVAILABLE\020\001\022\022\n\016ORIGIN_INVALID\020" +
+      "\002\022\024\n\020ORIGIN_NOT_FOUND\020\003*G\n\025PlatformServi" +
+      "ceStatus\022\013\n\007UNKNOWN\020\000\022\006\n\002UP\020\001\022\010\n\004DOWN\020\002\022" +
+      "\017\n\013MAINTENANCE\020\0032\362\007\n\010Platform\022\317\001\n\004Ping\0222" +
+      ".bloombox.schema.services.platform.v1.Pi" +
+      "ng.Request\0323.bloombox.schema.services.pl" +
+      "atform.v1.Ping.Response\"^\202\323\344\223\002\023\022\021/platfo" +
+      "rm/v1/ping\222AB\022\014Service Ping\032,Query for s" +
+      "ervice uptime/maintenance status.*\004Ping\022" +
+      "\313\001\n\006Health\022\026.google.protobuf.Empty\032\026.goo" +
+      "gle.protobuf.Empty\"\220\001\202\323\344\223\002\025\022\023/platform/v" +
+      "1/health\222Ar\022\023Service Healthcheck\032NIf the" +
+      " service is running correctly, always re" +
+      "sponds with an empty HTTP200/OK.*\013Health" +
+      "check\022\253\002\n\007Resolve\022;.bloombox.schema.serv" +
+      "ices.platform.v1.DomainResolve.Request\032<" +
+      ".bloombox.schema.services.platform.v1.Do" +
+      "mainResolve.Response\"\244\001\202\323\344\223\002\036\022\034/platform" +
+      "/v1/domain/{origin}\222A}\022\016Resolve Domain\032b" +
+      "For custom-hosting endpoints, given a we" +
+      "b origin, resolve the owning partner and" +
+      " location account.*\007Resolve\022\227\002\n\007Domains\022" +
+      "8.bloombox.schema.services.platform.v1.D" +
+      "omainInfo.Request\0329.bloombox.schema.serv" +
+      "ices.platform.v1.DomainInfo.Response\"\226\001\202" +
+      "\323\344\223\002D\022B/platform/v1/partners/{partner_id" +
+      "}/locations/{location_id}/domains\222AI\022\007Do" +
+      "mains\0322Retreive domain info for a given " +
+      "partner/location.*\nDomainInfoB\353\010\n\'io.blo" +
+      "ombox.schema.services.platform.v1H\001P\001\242\002\003" +
+      "BBS\222A\264\010\022f\n\014Platform API\032\031https://bloombo" +
+      "x.io/terms\"7\n\010Bloombox\022\023https://bloombox" +
+      ".io\032\026developers@bloombox.io2\002v1\032\022api.blo" +
+      "ombox.cloud*\001\0022\020application/json:\020applic" +
+      "ation/jsonZ\270\006\nd\n\013ApiKeyParam\022U\010\002\022JParame" +
+      "ter for identifying API key owned by the" +
+      " invoking project or system.\032\003key \001\nh\n\014A" +
+      "piKeyHeader\022X\010\002\022GHeader for identifying " +
+      "API key owned by the invoking project or" +
+      " system.\032\tX-API-Key \001\n\345\004\n\006OAuth2\022\332\004\010\003\022]B" +
+      "loombox Identity-powered OAuth2 access, " +
+      "authorized on behalf of an end-user or o" +
+      "rganization.(\0042,https://authorize.bloomb" +
+      "ox.cloud/oauth2/auth:-https://authorize." +
+      "bloombox.cloud/oauth2/tokenB\227\003\n1\n\007offlin" +
+      "e\022&Offline access to authorized user dat" +
+      "a\n9\n\006openid\022/OIDC (OpenID Connect) acces" +
+      "s for seamless logon\nE\n\014partner:read\0225Re" +
+      "ad access to a partner\'s profile and bas" +
+      "ic settings\nG\n\rpartner:write\0226Write acce" +
+      "ss to a partner\'s profile and basic sett" +
+      "ings\nV\n\rpartner:admin\022EFull administrati" +
+      "ve access rights to a partner\'s profile " +
+      "and settings\n?\n\016platform:admin\022-Platform" +
+      "-level internal administrative accessb#\n" +
+      "\017\n\013ApiKeyParam\022\000\n\020\n\014ApiKeyHeader\022\000r/\n\rBl" +
+      "oombox APIs\022\036https://apidocs.bloombox.cl" +
+      "oudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -190,6 +216,24 @@ public final class PlatformServiceV1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_platform_v1_DomainResolve_Response_descriptor,
         new java.lang.String[] { "Partner", "Location", "Apikey", "ClientId", });
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_platform_v1_DomainInfo_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_Request_descriptor =
+      internal_static_bloombox_schema_services_platform_v1_DomainInfo_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_platform_v1_DomainInfo_Request_descriptor,
+        new java.lang.String[] { "PartnerId", "LocationId", });
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_Response_descriptor =
+      internal_static_bloombox_schema_services_platform_v1_DomainInfo_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_platform_v1_DomainInfo_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_platform_v1_DomainInfo_Response_descriptor,
+        new java.lang.String[] { "Shop", "Menu", "Dashboard", "Tv", "Link", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

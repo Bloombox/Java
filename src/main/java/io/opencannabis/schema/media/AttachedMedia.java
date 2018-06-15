@@ -91,7 +91,7 @@ public final class AttachedMedia {
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
     boolean hasLocation();
     /**
@@ -99,17 +99,17 @@ public final class AttachedMedia {
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
-    io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
      * <pre>
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
-    io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
 
     /**
      * <pre>
@@ -209,14 +209,14 @@ public final class AttachedMedia {
               break;
             }
             case 34: {
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder subBuilder = null;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
               if (attachmentCase_ == 4) {
-                subBuilder = ((io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_).toBuilder();
+                subBuilder = ((io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_).toBuilder();
               }
               attachment_ =
-                  input.readMessage(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.parser(), extensionRegistry);
+                  input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_);
+                subBuilder.mergeFrom((io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_);
                 attachment_ = subBuilder.buildPartial();
               }
               attachmentCase_ = 4;
@@ -417,7 +417,7 @@ public final class AttachedMedia {
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
     public boolean hasLocation() {
       return attachmentCase_ == 4;
@@ -427,26 +427,26 @@ public final class AttachedMedia {
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
-    public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation() {
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
       if (attachmentCase_ == 4) {
-         return (io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_;
+         return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_;
       }
-      return io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance();
+      return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
     }
     /**
      * <pre>
      * Specify a partner and location as the subject parent of this media.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
-    public io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       if (attachmentCase_ == 4) {
-         return (io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_;
+         return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_;
       }
-      return io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance();
+      return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
     }
 
     public static final int GLOBAL_FIELD_NUMBER = 5;
@@ -486,7 +486,7 @@ public final class AttachedMedia {
         output.writeMessage(3, (io.bloombox.schema.partner.PartnerMeta.PartnerKey) attachment_);
       }
       if (attachmentCase_ == 4) {
-        output.writeMessage(4, (io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_);
+        output.writeMessage(4, (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_);
       }
       if (attachmentCase_ == 5) {
         output.writeBool(
@@ -513,7 +513,7 @@ public final class AttachedMedia {
       }
       if (attachmentCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_);
+          .computeMessageSize(4, (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_);
       }
       if (attachmentCase_ == 5) {
         size += com.google.protobuf.CodedOutputStream
@@ -1323,13 +1323,13 @@ public final class AttachedMedia {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder> locationBuilder_;
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
       public boolean hasLocation() {
         return attachmentCase_ == 4;
@@ -1339,19 +1339,19 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey getLocation() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
           if (attachmentCase_ == 4) {
-            return (io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_;
+            return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_;
           }
-          return io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance();
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
         } else {
           if (attachmentCase_ == 4) {
             return locationBuilder_.getMessage();
           }
-          return io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance();
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
         }
       }
       /**
@@ -1359,9 +1359,9 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey value) {
+      public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1379,10 +1379,10 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder builderForValue) {
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
         if (locationBuilder_ == null) {
           attachment_ = builderForValue.build();
           onChanged();
@@ -1397,13 +1397,13 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocationKey value) {
+      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (attachmentCase_ == 4 &&
-              attachment_ != io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance()) {
-            attachment_ = io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.newBuilder((io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_)
+              attachment_ != io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance()) {
+            attachment_ = io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder((io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_)
                 .mergeFrom(value).buildPartial();
           } else {
             attachment_ = value;
@@ -1423,7 +1423,7 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -1446,9 +1446,9 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder getLocationBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         return getLocationFieldBuilder().getBuilder();
       }
       /**
@@ -1456,16 +1456,16 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if ((attachmentCase_ == 4) && (locationBuilder_ != null)) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           if (attachmentCase_ == 4) {
-            return (io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_;
+            return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_;
           }
-          return io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance();
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
         }
       }
       /**
@@ -1473,18 +1473,18 @@ public final class AttachedMedia {
        * Specify a partner and location as the subject parent of this media.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder> 
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           if (!(attachmentCase_ == 4)) {
-            attachment_ = io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.getDefaultInstance();
+            attachment_ = io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
           }
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.LocationAccount.PartnerLocationKey, io.bloombox.schema.partner.LocationAccount.PartnerLocationKey.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationKeyOrBuilder>(
-                  (io.bloombox.schema.partner.LocationAccount.PartnerLocationKey) attachment_,
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
+                  (io.bloombox.schema.partner.LocationAccountKey.LocationKey) attachment_,
                   getParentForChildren(),
                   isClean());
           attachment_ = null;
@@ -3030,25 +3030,24 @@ public final class AttachedMedia {
       "dia\032\024core/Datamodel.proto\032\024media/MediaKe" +
       "y.proto\032\025media/MediaType.proto\032\025base/Pro" +
       "ductKey.proto\032\030partner/PartnerKey.proto\032" +
-      "\035partner/PartnerLocation.proto\"\347\001\n\014Media" +
-      "Subject\022\014\n\004name\030\001 \001(\t\0220\n\007product\030\002 \001(\0132\035" +
-      ".opencannabis.base.ProductKeyH\000\0226\n\007partn" +
-      "er\030\003 \001(\0132#.bloombox.schema.partner.Partn" +
-      "erKeyH\000\022?\n\010location\030\004 \001(\0132+.bloombox.sch" +
-      "ema.partner.PartnerLocationKeyH\000\022\020\n\006glob" +
-      "al\030\005 \001(\010H\000B\014\n\nattachment\"\217\003\n\tMediaItem\022`" +
-      "\n\003key\030\001 \001(\0132\034.opencannabis.media.MediaKe" +
-      "yB5\302\265\003\002\010\001\302\265\003+\022)Key uniquely identifying " +
-      "this media item.\022T\n\004type\030\002 \001(\0132\035.opencan" +
-      "nabis.media.MediaTypeB\'\302\265\003#\022!Type of med" +
-      "ia this is describing.\0221\n\004name\030\003 \001(\tB#\302\265" +
-      "\003\037\022\035Friendly name for this media.\022.\n\003uri" +
-      "\030\004 \001(\tB!\302\265\003\035\022\033Absolute URI to this media" +
-      ".\022X\n\013serving_uri\030\005 \001(\tBC\302\265\003?\022=erving URI" +
-      " for this media, if it differs from the " +
-      "origin URI.:\r\202\367\002\t\010\002\022\005mediaB7\n\034io.opencan" +
-      "nabis.schema.mediaB\rAttachedMediaH\001P\000\242\002\003" +
-      "OCSb\006proto3"
+      "\031partner/LocationKey.proto\"\340\001\n\014MediaSubj" +
+      "ect\022\014\n\004name\030\001 \001(\t\0220\n\007product\030\002 \001(\0132\035.ope" +
+      "ncannabis.base.ProductKeyH\000\0226\n\007partner\030\003" +
+      " \001(\0132#.bloombox.schema.partner.PartnerKe" +
+      "yH\000\0228\n\010location\030\004 \001(\0132$.bloombox.schema." +
+      "partner.LocationKeyH\000\022\020\n\006global\030\005 \001(\010H\000B" +
+      "\014\n\nattachment\"\217\003\n\tMediaItem\022`\n\003key\030\001 \001(\013" +
+      "2\034.opencannabis.media.MediaKeyB5\302\265\003\002\010\001\302\265" +
+      "\003+\022)Key uniquely identifying this media " +
+      "item.\022T\n\004type\030\002 \001(\0132\035.opencannabis.media" +
+      ".MediaTypeB\'\302\265\003#\022!Type of media this is " +
+      "describing.\0221\n\004name\030\003 \001(\tB#\302\265\003\037\022\035Friendl" +
+      "y name for this media.\022.\n\003uri\030\004 \001(\tB!\302\265\003" +
+      "\035\022\033Absolute URI to this media.\022X\n\013servin" +
+      "g_uri\030\005 \001(\tBC\302\265\003?\022=erving URI for this m" +
+      "edia, if it differs from the origin URI." +
+      ":\r\202\367\002\t\010\002\022\005mediaB7\n\034io.opencannabis.schem" +
+      "a.mediaB\rAttachedMediaH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3066,7 +3065,7 @@ public final class AttachedMedia {
           io.opencannabis.schema.media.MediaItemType.getDescriptor(),
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
           io.bloombox.schema.partner.PartnerMeta.getDescriptor(),
-          io.bloombox.schema.partner.LocationAccount.getDescriptor(),
+          io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_media_MediaSubject_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3091,7 +3090,7 @@ public final class AttachedMedia {
     io.opencannabis.schema.media.MediaItemType.getDescriptor();
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
     io.bloombox.schema.partner.PartnerMeta.getDescriptor();
-    io.bloombox.schema.partner.LocationAccount.getDescriptor();
+    io.bloombox.schema.partner.LocationAccountKey.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
