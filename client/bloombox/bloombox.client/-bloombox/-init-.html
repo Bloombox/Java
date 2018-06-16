@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bloombox.<init> - bloombox</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">bloombox</a>&nbsp;/&nbsp;<a href="../index.html">bloombox.client</a>&nbsp;/&nbsp;<a href="index.html">Bloombox</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="bloombox.client.Bloombox$&lt;init&gt;(bloombox.client.Bloombox.Settings, bloombox.client.Bloombox.ClientTarget)"></a>
+<code><span class="identifier">Bloombox</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.Bloombox$<init>(bloombox.client.Bloombox.Settings, bloombox.client.Bloombox.ClientTarget)/settings">settings</span><span class="symbol">:</span>&nbsp;<a href="-settings/index.html"><span class="identifier">Settings</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.Bloombox$<init>(bloombox.client.Bloombox.Settings, bloombox.client.Bloombox.ClientTarget)/target">target</span><span class="symbol">:</span>&nbsp;<a href="-client-target/index.html"><span class="identifier">ClientTarget</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ClientTarget.PRODUCTION<span class="symbol">)</span></code>
+<p>Specifies a unified Bloombox API client, that is capable of calling methods on any service exposed by the Bloombox
+Cloud Platform. This is accomplished by integrating with lower-level gRPC-based APIs. Under the hood, Protobuf is
+used over HTTP2. Services are lazy-loaded and maintain a live connection with a reasonable keepalive (10 minutes).</p>
+<p>At the time of writing, supported services include:</p>
+<ul><li><code>shop/v1</code>: Shop service. For submitting orders, verifying customers, enrolling customers, etc.</li>
+<li><code>menu/v1beta1</code>: Menu service. For downloading product catalog data, subscribing to changes, and publishing updates.</li>
+<li><code>telemetry/v1beta3</code>: Telemetry service. For submitting telemetry event data of different kinds.</li>
+</ul>
+</BODY>
+</HTML>

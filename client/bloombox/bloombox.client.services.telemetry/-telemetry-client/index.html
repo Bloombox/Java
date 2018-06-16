@@ -1,0 +1,191 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TelemetryClient - bloombox</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">bloombox</a>&nbsp;/&nbsp;<a href="../index.html">bloombox.client.services.telemetry</a>&nbsp;/&nbsp;<a href="./index.html">TelemetryClient</a><br/>
+<br/>
+<h1>TelemetryClient</h1>
+<code><span class="keyword">class </span><span class="identifier">TelemetryClient</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RPCClient</span><span class="symbol">, </span><span class="identifier">ServiceClient</span></code> <a href="https://github.com/Bloombox/Java/blob/master/src/main/kotlin/bloombox/client/services/telemetry/TelemetryClient.kt#L52">(source)</a>
+<p>Telemetry API client, which allows developers to send telemetry event data to the Bloombox Telemetry service, so it
+may be considered with other built-in telemetry data during analytics and reporting calculations. Partners are also
+enabled to send their own arbitrary events and later perform analysis over them.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-event-context/index.html">EventContext</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">EventContext</span></code>
+<p>Context for an event, with the opportunity to override settings and configuration for the telemetry client. This is
+different from other API clients and services, in that it offers many more settings than usual - these values (i.e.
+the 'userKey', 'deviceUUID', and so on) are automatically attached as "event context" to events sent with the
+resulting client object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TelemetryClient</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/timeout">timeout</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><span class="identifier">Duration</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/transportMode">transportMode</span><span class="symbol">:</span>&nbsp;<span class="identifier">TransportMode</span>&nbsp;<span class="symbol">=</span>&nbsp;TransportMode.SECURE<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/clientAuth">clientAuth</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClientAuth</span>&nbsp;<span class="symbol">=</span>&nbsp;ClientAuth.NONE<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/clientCredentials">clientCredentials</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClientCredentials</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/clientAuthorityRoots">clientAuthorityRoots</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/executor">executor</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html"><span class="identifier">Executor</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Executors.newSingleThreadExecutor()<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/defaultPartner">defaultPartner</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/defaultLocation">defaultLocation</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String, kotlin.String)/deviceUUID">deviceUUID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Telemetry API client, which allows developers to send telemetry event data to the Bloombox Telemetry service, so it
+may be considered with other built-in telemetry data during analytics and reporting calculations. Partners are also
+enabled to send their own arbitrary events and later perform analysis over them.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="api-key.html">apiKey</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">apiKey</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>API key in use by this client. Identifies the implementing/integrating project that is operating this client. Can
+be obtained via the Bloombox Dashboard or a properly integrated Google Cloud Platform project.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="channel.html">channel</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">channel</span><span class="symbol">: </span><span class="identifier">ManagedChannel</span></code>
+<p>Channel for client-&gt;server traffic. Construction of this object is handled by the base RPC client class, which adds
+necessary items like base interceptors and crypto assets.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="client-auth.html">clientAuth</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clientAuth</span><span class="symbol">: </span><span class="identifier">ClientAuth</span></code>
+<p>Client TLS auth mode. This specifies whether client auth is enabled or not for a given API client object. The
+default value is no client auth. Client authentication (mTLS) is required in some circumstances.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="client-authority-roots.html">clientAuthorityRoots</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clientAuthorityRoots</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">?</span></code>
+<p>Authority roots to accept from the client-side. Defaults to the embedded 'authority-roots.pem', which includes
+issuing authority certificates for all Bloombox endpoints.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="client-credentials.html">clientCredentials</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clientCredentials</span><span class="symbol">: </span><span class="identifier">ClientCredentials</span><span class="symbol">?</span></code>
+<p>Client credential information. This specifies the client-side portion of mTLS (Mutual Transport-Layer Security)
+credential data. In particular, this includes a private key and identity certificate chain. First position is the
+private client key, second is the certificate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="executor.html">executor</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">executor</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html"><span class="identifier">Executor</span></a></code>
+<p>Executor for followup and RPC client activities. Defaults to a single-threaded executor that conducts API requests
+and any related followup in a background thread.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="host.html">host</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">host</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Host to send RPCs to. This is a regular hostname string, and can be a raw IP address (in the case of "127.0.0.1")
+or a DNS name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="port.html">port</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">port</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Port to send RPCs to. In some circumstances this may be a service-specific value, and so it is specified here, but
+by and large RPC traffic occurs over ports 443 and 465.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="timeout.html">timeout</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">timeout</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><span class="identifier">Duration</span></a></code>
+<p>RPC request timeout to apply. After this duration, an in-flight RPC request with no server response data will be
+considered failed due to a "time-out."</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transport-mode.html">transportMode</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">transportMode</span><span class="symbol">: </span><span class="identifier">TransportMode</span></code>
+<p>Transport mode setting. Available options are "INTERNAL" and "SECURE." In nearly all circumstances, including
+network-internal traffic, "SECURE" should be used, which enforces end-to-end SSL. "INTERNAL" mode is only useful
+during development and for machine-internal traffic.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="event.html">event</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">event</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)))/collection">collection</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)))/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Record a generic event. A "generic event" is any JSON-compatible payload, plus an "event collection," which is
+simply a string name.</p>
+<code><span class="keyword">fun </span><span class="identifier">event</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)), bloombox.client.services.telemetry.TelemetryClient.EventContext)/collection">collection</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)), bloombox.client.services.telemetry.TelemetryClient.EventContext)/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)), bloombox.client.services.telemetry.TelemetryClient.EventContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-event-context/index.html"><span class="identifier">EventContext</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Record a generic event. A "generic event" is any JSON-compatible payload, plus an "event collection," which is
+simply a string name. Additionally, context may be sent along with an event about how and where the event was
+recorded - i.e. native and browser-oriented device information, and so on.</p>
+<code><span class="keyword">fun </span><span class="identifier">event</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.String, kotlin.Long, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)), bloombox.client.services.telemetry.TelemetryClient.EventContext)/collection">collection</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.String, kotlin.Long, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)), bloombox.client.services.telemetry.TelemetryClient.EventContext)/uuid">uuid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.String, kotlin.Long, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)), bloombox.client.services.telemetry.TelemetryClient.EventContext)/occurred">occurred</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.String, kotlin.Long, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)), bloombox.client.services.telemetry.TelemetryClient.EventContext)/payload">payload</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">Value</span><span class="symbol">&gt;</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$event(kotlin.String, kotlin.String, kotlin.Long, kotlin.collections.Map((kotlin.String, com.google.protobuf.Value)), bloombox.client.services.telemetry.TelemetryClient.EventContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-event-context/index.html"><span class="identifier">EventContext</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Record a generic event. A "generic event" is any JSON-compatible payload, plus an "event collection," which is
+simply a string name. Additionally, context may be sent along with an event about how and where the event was
+recorded - i.e. native and browser-oriented device information, and so on. This variant allows the additional
+specification of an explicit event UUID and occurrence timestamp.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="ping.html">ping</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">ping</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.telemetry.TelemetryClient$ping(kotlin.Function1((kotlin.Long, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../-ping-callback.html"><span class="identifier">PingCallback</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Ping the service. This emits a lightweight message and asks the server to respond ASAP. In some cases, a telemetry
+ping may be used to establish session-level default context, by specifying global context in headers/trailers
+alongside the ping request.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

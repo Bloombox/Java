@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>bloombox.client.services.telemetry - bloombox</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">bloombox</a>&nbsp;/&nbsp;<a href="./index.html">bloombox.client.services.telemetry</a><br/>
+<br/>
+<h2>Package bloombox.client.services.telemetry</h2>
+<p>Used to emit telemetry data to the Bloombox Telemetry Service, which collects and ingests event data for later analysis.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-telemetry-client/index.html">TelemetryClient</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">TelemetryClient</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RPCClient</span><span class="symbol">, </span><span class="identifier">ServiceClient</span></code>
+<p>Telemetry API client, which allows developers to send telemetry event data to the Bloombox Telemetry service, so it
+may be considered with other built-in telemetry data during analytics and reporting calculations. Partners are also
+enabled to send their own arbitrary events and later perform analysis over them.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-ping-callback.html">PingCallback</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">PingCallback</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Callback to a simple telemetry ping, which warms an RPC connection and tests latency between the invoking client and
+the telemetry server. In some cases, a ping can also be used to establish default context information for a newly
+established streaming or unary telemetry session.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

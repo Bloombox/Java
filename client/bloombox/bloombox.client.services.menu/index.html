@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>bloombox.client.services.menu - bloombox</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">bloombox</a>&nbsp;/&nbsp;<a href="./index.html">bloombox.client.services.menu</a><br/>
+<br/>
+<h2>Package bloombox.client.services.menu</h2>
+<p>Retrieve menu/product catalog data, either in full, or section by section. Also exposes methods for retrieving
+individual product data from various perspectives.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-menu-client/index.html">MenuClient</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">MenuClient</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RPCClient</span><span class="symbol">, </span><span class="identifier">ServiceClient</span></code>
+<p>Menu API client. Provides access to menu/product catalog data for a particular partner and location pair. Menus can'
+be requested in full or section by section. By default, items marked as "invisible" are not returned - these are
+items considered out-of-stock or no longer carried by the partner. To retrieve all items, pass <code>full</code> as <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-menu-client-error/index.html">MenuClientError</a></p>
+</td>
+<td>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">MenuClientError</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../bloombox.client.interfaces/-client-error/index.html"><span class="identifier">ClientError</span></a></code>
+<p>Enumerates known or otherwise identifiable menu errors that might occur.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-menu-callback.html">MenuCallback</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">MenuCallback</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><span class="identifier">Response</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Callback type that provides an asynchronous response to a menu retrieval request. Accepts a response value - a <code>null</code>
+response is itself considered an error - and provides no return value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-menu-error-callback.html">MenuErrorCallback</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">MenuErrorCallback</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="../bloombox.client/-client-exception/index.html"><span class="identifier">ClientException</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Error case callback type that handles <code>ServiceClientException</code>-compliant throwables. Accepts a compliant instance of
+<code>ServiceClientException</code> and provides no return value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

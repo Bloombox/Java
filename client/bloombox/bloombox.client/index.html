@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>bloombox.client - bloombox</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">bloombox</a>&nbsp;/&nbsp;<a href="./index.html">bloombox.client</a><br/>
+<br/>
+<h2>Package bloombox.client</h2>
+<p>Contains the main API client classes, service client implementations, and so on. This package exposes the actual client
+library facade and methods to acquire service instances.</p>
+<h2>Acquiring an API client</h2>
+<p>After installing the library, you can acquire an API client instance with an <strong>API key</strong>, <strong>partner ID</strong> and
+<strong>location ID</strong>. These values can be found in your Bloombox Dashboard or you can get them via Bloombox support.</p>
+<p>Once you have your details ready, construct a new API client:</p>
+<h4>Java</h4>
+<pre><code class="lang-java">  final Bloombox client = new Bloombox(
+    Bloombox.Settings.defaults("[your-api-key]", "[your-partner-id]", "[your-location-id]"))
+</code></pre>
+<h4>Kotlin</h4>
+<pre><code class="lang-kotlin">  val client = Bloombox(
+        settings = Bloombox.Settings(
+              apiKey = "[your-api-key]",
+              partner = "[your-partner-id]",
+              location = "[your-location-id]"))
+</code></pre>
+<h3>Client Lifecycle</h3>
+<p>Keep in mind that any services initialized via the Java client stay alive for the lifetime of the outer API client
+object. This is to say, connections and other resources are kept around while the <code>client</code> variable above is.</p>
+<p>It's best to use the client in a singleton pattern, and that exercise is left to the user and their application-level
+architecture. Inside Bloombox, the library is either loaded statically or injected via Guice/Dagger.</p>
+<h3>Closing Down</h3>
+<p>When you're ready to get rid of an API client, simply call <code>close()</code>. There are additional parameters to the method that
+enable soft shutdown, blocking/non-blocking shutdown, and an optional await timeout.</p>
+<p>The API client is also compatible with <code>Closeable</code> and <code>AutoCloseable</code>, so you can do stuff like this:</p>
+<h4>Java</h4>
+<p>Using <code>close()</code>:</p>
+<pre><code class="lang-java">final Bloombox client = new Bloombox(...);
+client.close();
+</code></pre>
+<p>Using <code>Closeable</code>/<code>AutoCloseable</code>:</p>
+<pre><code class="lang-java">try(final Bloombox client = new Bloombox(...)) {
+  // use your client
+} catch (final ClientException exc) {
+  // handle critical client errors
+}
+</code></pre>
+<h4>Kotlin</h4>
+<p>Using <code>close()</code>:</p>
+<pre><code class="lang-kotlin">val client = Bloombox(settings = Bloombox.Settings(...))
+client.close()
+</code></pre>
+<p>Using <code>Closeable</code>/<code>AutoCloseable</code>:</p>
+<pre><code class="lang-kotlin">Bloombox(settings = Bloombox.Settings(...)).use {
+  // perform any work here
+}
+</code></pre>
+<p>Indeed, this is how the library's own testsuite easily stands up clients and shuts them down after they are no longer in
+use (i.e. the lifecycle of an individual unit test terminates).</p>
+<p>The API client will automatically keep track of any services initialized during its lifetime, and close them down when
+you ask it to do so.</p>
+<h2>Talking to Services</h2>
+<p>To talk to services using the API client, call the function for the appropriate service, which acquires an instance of
+the service's implementation. Then, just call methods on that resulting object. Refer to individual service docs for the
+particular method interfaces supported by each API.</p>
+<p>For instance, with the Shop API:</p>
+<h4>Java</h4>
+<pre><code class="lang-java">final Bloombox client = new Bloombox(...);
+final ShopClient shop = client.shop();
+final ShopInfo.Response info = shop.info();
+</code></pre>
+<h4>Kotlin</h4>
+<pre><code class="lang-kotlin">Bloombox(settings = Bloombox.Settings(...)).use {
+  val shopInfo: ShopInfo.Response = it.shop().info();
+}
+</code></pre>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-bloombox/index.html">Bloombox</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Bloombox</span></code>
+<p>Specifies a unified Bloombox API client, that is capable of calling methods on any service exposed by the Bloombox
+Cloud Platform. This is accomplished by integrating with lower-level gRPC-based APIs. Under the hood, Protobuf is
+used over HTTP2. Services are lazy-loaded and maintain a live connection with a reasonable keepalive (10 minutes).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-client-exception/index.html">ClientException</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ClientException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">, </span><a href="../bloombox.client.interfaces/-client-error/index.html"><span class="identifier">ClientError</span></a></code>
+<p>Exception object representing an error that occurred over-the-wire with a Bloombox Cloud API service. When a failure
+happens, it bubbles up through the underlying RPC machinery, is caught, decoded, and re-thrown as this exception.
+When invoking RPC methods, catch this exception, and use the embedded 'status' property to react accordingly.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

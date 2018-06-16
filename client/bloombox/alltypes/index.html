@@ -1,0 +1,156 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>alltypes - bloombox</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<p>This package provides a Java/Kotlin client for Bloombox Cloud services. Integrators have the option of using this (or 
+other language SDKs, like <a href="https://bloombox.github.io/JS">JS</a> or <a href="https://github.com/bloombox/swift">Swift</a>), or
+integration directly with the lower-level <a href="https://grpc.io">gRPC</a>-based APIs.</p>
+<h3>All Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../bloombox.client/-bloombox/index.html">bloombox.client.Bloombox</a></td>
+<td>
+<p>Specifies a unified Bloombox API client, that is capable of calling methods on any service exposed by the Bloombox
+Cloud Platform. This is accomplished by integrating with lower-level gRPC-based APIs. Under the hood, Protobuf is
+used over HTTP2. Services are lazy-loaded and maintain a live connection with a reasonable keepalive (10 minutes).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.interfaces/-client-error/index.html">bloombox.client.interfaces.ClientError</a></td>
+<td>
+<p>Specifies a Bloombox client error that is known and identifiable. This interface is implemented by service-specific
+error enumerations. Each enumeration must define properties to export its own domain, code, and message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client/-client-exception/index.html">bloombox.client.ClientException</a></td>
+<td>
+<p>Exception object representing an error that occurred over-the-wire with a Bloombox Cloud API service. When a failure
+happens, it bubbles up through the underlying RPC machinery, is caught, decoded, and re-thrown as this exception.
+When invoking RPC methods, catch this exception, and use the embedded 'status' property to react accordingly.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.shop/-get-order-callback.html">bloombox.client.services.shop.GetOrderCallback</a></td>
+<td>
+<p>Commercial order retrieval callback. Provides the response to a request to retrieve a commercial order's data by ID,
+and expects no return value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.shop/-info-callback.html">bloombox.client.services.shop.InfoCallback</a></td>
+<td>
+<p>Shop info RPC callback. Provides the response to a shop info retrieval operation and expects no return value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.menu/-menu-callback.html">bloombox.client.services.menu.MenuCallback</a></td>
+<td>
+<p>Callback type that provides an asynchronous response to a menu retrieval request. Accepts a response value - a <code>null</code>
+response is itself considered an error - and provides no return value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.menu/-menu-client/index.html">bloombox.client.services.menu.MenuClient</a></td>
+<td>
+<p>Menu API client. Provides access to menu/product catalog data for a particular partner and location pair. Menus can'
+be requested in full or section by section. By default, items marked as "invisible" are not returned - these are
+items considered out-of-stock or no longer carried by the partner. To retrieve all items, pass <code>full</code> as <code>true</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.menu/-menu-client-error/index.html">bloombox.client.services.menu.MenuClientError</a></td>
+<td>
+<p>Enumerates known or otherwise identifiable menu errors that might occur.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.menu/-menu-error-callback.html">bloombox.client.services.menu.MenuErrorCallback</a></td>
+<td>
+<p>Error case callback type that handles <code>ServiceClientException</code>-compliant throwables. Accepts a compliant instance of
+<code>ServiceClientException</code> and provides no return value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.telemetry/-ping-callback.html">bloombox.client.services.telemetry.PingCallback</a></td>
+<td>
+<p>Callback to a simple telemetry ping, which warms an RPC connection and tests latency between the invoking client and
+the telemetry server. In some cases, a ping can also be used to establish default context information for a newly
+established streaming or unary telemetry session.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.shop/-shop-client/index.html">bloombox.client.services.shop.ShopClient</a></td>
+<td>
+<p>Shop API client. Provides access to digital storefront and vendor services. With this API, you can communicate with
+the Bloombox Shop service to retrieve shop info and hours, verify and enroll members, and submit and retrieve
+commercial orders, among other things.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.shop/-shop-client-error/index.html">bloombox.client.services.shop.ShopClientError</a></td>
+<td>
+<p>Enumerates known or otherwise identifiable shop errors that might occur.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.shop/-shop-error-callback.html">bloombox.client.services.shop.ShopErrorCallback</a></td>
+<td>
+<p>Error case callback type that handles <code>ServiceClientException</code>-compliant throwables. Accepts a compliant instance of
+<code>ServiceClientException</code> and provides no return value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.shop/-submit-order-callback.html">bloombox.client.services.shop.SubmitOrderCallback</a></td>
+<td>
+<p>Commercial order submission callback. Provides the order submission status and the resulting order ID, if applicable,
+and expects no return value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.telemetry/-telemetry-client/index.html">bloombox.client.services.telemetry.TelemetryClient</a></td>
+<td>
+<p>Telemetry API client, which allows developers to send telemetry event data to the Bloombox Telemetry service, so it
+may be considered with other built-in telemetry data during analytics and reporting calculations. Partners are also
+enabled to send their own arbitrary events and later perform analysis over them.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.shop/-verify-member-callback.html">bloombox.client.services.shop.VerifyMemberCallback</a></td>
+<td>
+<p>User/member verification callback. Provides user verification status and information about any error that occurred
+while performing verification. Expects no return value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../bloombox.client.services.shop/-zipcheck-callback.html">bloombox.client.services.shop.ZipcheckCallback</a></td>
+<td>
+<p>Zipcode check RPC callback. Provides the response to a zipcode delivery eligibility check and expects no return
+value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

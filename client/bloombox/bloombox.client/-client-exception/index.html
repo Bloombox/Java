@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ClientException - bloombox</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">bloombox</a>&nbsp;/&nbsp;<a href="../index.html">bloombox.client</a>&nbsp;/&nbsp;<a href="./index.html">ClientException</a><br/>
+<br/>
+<h1>ClientException</h1>
+<code><span class="keyword">class </span><span class="identifier">ClientException</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">, </span><a href="../../bloombox.client.interfaces/-client-error/index.html"><span class="identifier">ClientError</span></a></code> <a href="https://github.com/Bloombox/Java/blob/master/src/main/kotlin/bloombox/client/ClientException.kt#L29">(source)</a>
+<p>Exception object representing an error that occurred over-the-wire with a Bloombox Cloud API service. When a failure
+happens, it bubbles up through the underlying RPC machinery, is caught, decoded, and re-thrown as this exception.
+When invoking RPC methods, catch this exception, and use the embedded 'status' property to react accordingly.</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="cause.html">cause</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">cause</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span></code>
+<p>Underlying exception provided by the gRPC runtime. This is generally just a wrapped Throwable around a gRPC
+status, which is itself exposed through this class.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="message.html">message</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">message</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Error message to return or display. The service's error code is sent for this value. In rare circumstances, the
+name of the resulting gRPC status may be returned if no specific error status is available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">status</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Status</span></code>
+<p>Underlying gRPC status code that resulted from this error. These error codes roughly map to HTTP errors, and can be
+found in gRPC's docs at https://grpc.io.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Return the status name of this error code for its string-ified form. An index of these error codes is available at
+https://grpc.io. Basically, the name of the status is taken, and any cause-exception message is appended.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

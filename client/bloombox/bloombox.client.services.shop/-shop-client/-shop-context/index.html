@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ShopClient.ShopContext - bloombox</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">bloombox</a>&nbsp;/&nbsp;<a href="../../index.html">bloombox.client.services.shop</a>&nbsp;/&nbsp;<a href="../index.html">ShopClient</a>&nbsp;/&nbsp;<a href="./index.html">ShopContext</a><br/>
+<br/>
+<h1>ShopContext</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ShopContext</span></code> <a href="https://github.com/Bloombox/Java/blob/master/src/main/kotlin/bloombox/client/services/shop/ShopClient.kt#L60">(source)</a>
+<p>Specifies contextual information for a shop operation. Required info, aside from the standard API key required for
+all transactions with the Bloombox API, includes the desired partner and location code. They can be specified here
+to override context for a specific client instance or request. If left unspecified, defaults are used.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ShopContext</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient.ShopContext$<init>(kotlin.String, kotlin.String)/partner">partner</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient.ShopContext$<init>(kotlin.String, kotlin.String)/location">location</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Specifies contextual information for a shop operation. Required info, aside from the standard API key required for
+all transactions with the Bloombox API, includes the desired partner and location code. They can be specified here
+to override context for a specific client instance or request. If left unspecified, defaults are used.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="default-context.html">defaultContext</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">defaultContext</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">ShopContext</span></a></code>
+<p>Generate a default shop context. In this case, resolution of the partner and location code is left to the outer
+library context. This is most useful in cases where the partner and location code won't change during the
+lifetime of an API client.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

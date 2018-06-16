@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bloombox.APIRegion - bloombox</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">bloombox</a>&nbsp;/&nbsp;<a href="../../index.html">bloombox.client</a>&nbsp;/&nbsp;<a href="../index.html">Bloombox</a>&nbsp;/&nbsp;<a href="./index.html">APIRegion</a><br/>
+<br/>
+<h1>APIRegion</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">APIRegion</span></code> <a href="https://github.com/Bloombox/Java/blob/master/src/main/kotlin/bloombox/client/Bloombox.kt#L86">(source)</a>
+<p>Describes available API regions. In some cases, library users may want to force-direct (or at least prefer) a
+particular API hosting region. Available options are "USW1" (hosted in Oregon, USA) or "USC1" (hosted in South
+Carolina, USA).</p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-u-s-w1.html">USW1</a></p>
+</td>
+<td>
+<p>'USW1' region code, which stands for "US West 1." Hosted from The Dalles, Oregon, on Google Cloud Platform. Use
+this for mostly west-coast-bound or originating traffic.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-u-s-c1.html">USC1</a></p>
+</td>
+<td>
+<p>'USC1' region code, which stands for "US Central 1." Hosted from South Carolina on Google Cloud Platform. Use
+this for east-coast-bound or central-US originating traffic.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="code.html">code</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">code</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Fetch the region code for a given region. This is basically the name of the region, i.e. 'USW1' or 'USC1', but
+in lowercase.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

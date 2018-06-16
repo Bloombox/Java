@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bloombox.APIEnvironment - bloombox</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">bloombox</a>&nbsp;/&nbsp;<a href="../../index.html">bloombox.client</a>&nbsp;/&nbsp;<a href="../index.html">Bloombox</a>&nbsp;/&nbsp;<a href="./index.html">APIEnvironment</a><br/>
+<br/>
+<h1>APIEnvironment</h1>
+<code><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">APIEnvironment</span></code> <a href="https://github.com/Bloombox/Java/blob/master/src/main/kotlin/bloombox/client/Bloombox.kt#L112">(source)</a>
+<p>Describes available API environments. In some cases, you may want to test systems against bleeding-edge or beta
+versions of Bloombox services. Use 'STAGING' to test against the beta environment. 'SANDBOX' is reserved for
+internal use only and refuses non-internal traffic. Note that this value describes the data namespace in use for a
+given API client, not the systems the traffic is sent to.</p>
+<h3>Enum Values</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-p-r-o-d-u-c-t-i-o-n.html">PRODUCTION</a></p>
+</td>
+<td>
+<p>Production API namespace. Default.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-t-a-g-i-n-g.html">STAGING</a></p>
+</td>
+<td>
+<p>Staging or beta API namespace.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-a-n-d-b-o-x.html">SANDBOX</a></p>
+</td>
+<td>
+<p>Sandbox namespace, for internal use only.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="code.html">code</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">code</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Fetch the region code for a given region. This is basically the name of the environment, but in lowercase, except
+for one exception: "production" has the code, "prod."</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ShopClientError.LOCATION_INVALID - bloombox</title>
+<link rel="stylesheet" href="../../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">bloombox</a>&nbsp;/&nbsp;<a href="../../index.html">bloombox.client.services.shop</a>&nbsp;/&nbsp;<a href="../index.html">ShopClientError</a>&nbsp;/&nbsp;<a href="./index.html">LOCATION_INVALID</a><br/>
+<br/>
+<h1>LOCATION_INVALID</h1>
+<a name="bloombox.client.services.shop.ShopClientError.LOCATION_INVALID"></a>
+<code><span class="identifier">LOCATION_INVALID</span></code> <a href="https://github.com/Bloombox/Java/blob/master/src/main/kotlin/bloombox/client/services/shop/ShopClientError.kt#L38">(source)</a>
+<p>Specifies that the location code was missing or invalid.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="message.html">message</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">message</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Error message to return or display. The service's error code is sent for this value. In rare circumstances, the
+name of the resulting gRPC status may be returned if no specific error status is available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="status.html">status</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">status</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Status</span></code>
+<p>Underlying gRPC status code that resulted from this error. These error codes rougly map to HTTP errors, and can be
+found in gRPC's docs at https://grpc.io.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

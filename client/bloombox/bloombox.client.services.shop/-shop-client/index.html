@@ -1,0 +1,241 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ShopClient - bloombox</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">bloombox</a>&nbsp;/&nbsp;<a href="../index.html">bloombox.client.services.shop</a>&nbsp;/&nbsp;<a href="./index.html">ShopClient</a><br/>
+<br/>
+<h1>ShopClient</h1>
+<code><span class="keyword">class </span><span class="identifier">ShopClient</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RPCClient</span><span class="symbol">, </span><span class="identifier">ServiceClient</span></code> <a href="https://github.com/Bloombox/Java/blob/master/src/main/kotlin/bloombox/client/services/shop/ShopClient.kt#L43">(source)</a>
+<p>Shop API client. Provides access to digital storefront and vendor services. With this API, you can communicate with
+the Bloombox Shop service to retrieve shop info and hours, verify and enroll members, and submit and retrieve
+commercial orders, among other things.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-shop-context/index.html">ShopContext</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">ShopContext</span></code>
+<p>Specifies contextual information for a shop operation. Required info, aside from the standard API key required for
+all transactions with the Bloombox API, includes the desired partner and location code. They can be specified here
+to override context for a specific client instance or request. If left unspecified, defaults are used.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ShopClient</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/host">host</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/port">port</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/timeout">timeout</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><span class="identifier">Duration</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/transportMode">transportMode</span><span class="symbol">:</span>&nbsp;<span class="identifier">TransportMode</span>&nbsp;<span class="symbol">=</span>&nbsp;TransportMode.SECURE<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/clientAuth">clientAuth</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClientAuth</span>&nbsp;<span class="symbol">=</span>&nbsp;ClientAuth.NONE<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/clientCredentials">clientCredentials</span><span class="symbol">:</span>&nbsp;<span class="identifier">ClientCredentials</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/clientAuthorityRoots">clientAuthorityRoots</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/executor">executor</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html"><span class="identifier">Executor</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Executors.newSingleThreadExecutor()<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/defaultPartner">defaultPartner</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$<init>(kotlin.String, kotlin.Int, kotlin.String, java.time.Duration, bloombox.client.internals.rpc.RPCClient.TransportMode, io.netty.handler.ssl.ClientAuth, bloombox.client.internals.mtls.ClientCredentials, java.io.InputStream, java.util.concurrent.Executor, kotlin.String, kotlin.String)/defaultLocation">defaultLocation</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>Shop API client. Provides access to digital storefront and vendor services. With this API, you can communicate with
+the Bloombox Shop service to retrieve shop info and hours, verify and enroll members, and submit and retrieve
+commercial orders, among other things.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="api-key.html">apiKey</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">apiKey</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>API key in use by this client. Identifies the implementing/integrating project that is operating this client. Can
+be obtained via the Bloombox Dashboard or a properly integrated Google Cloud Platform project.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="channel.html">channel</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">channel</span><span class="symbol">: </span><span class="identifier">ManagedChannel</span></code>
+<p>Channel for client-&gt;server traffic. Construction of this object is handled by the base RPC client class, which adds
+necessary items like base interceptors and crypto assets.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="client-auth.html">clientAuth</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clientAuth</span><span class="symbol">: </span><span class="identifier">ClientAuth</span></code>
+<p>Client TLS auth mode. This specifies whether client auth is enabled or not for a given API client object. The
+default value is no client auth. Client authentication (mTLS) is required in some circumstances.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="client-authority-roots.html">clientAuthorityRoots</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clientAuthorityRoots</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">?</span></code>
+<p>Authority roots to accept from the client-side. Defaults to the embedded 'authority-roots.pem', which includes
+issuing authority certificates for all Bloombox endpoints.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="client-credentials.html">clientCredentials</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clientCredentials</span><span class="symbol">: </span><span class="identifier">ClientCredentials</span><span class="symbol">?</span></code>
+<p>Client credential information. This specifies the client-side portion of mTLS (Mutual Transport-Layer Security)
+credential data. In particular, this includes a private key and identity certificate chain. First position is the
+private client key, second is the certificate.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="executor.html">executor</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">executor</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html"><span class="identifier">Executor</span></a></code>
+<p>Executor for followup and RPC client activities. Defaults to a single-threaded executor that conducts API requests
+and any related followup in a background thread.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="host.html">host</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">host</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Host to send RPCs to. This is a regular hostname string, and can be a raw IP address (in the case of "127.0.0.1")
+or a DNS name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="port.html">port</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">port</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Port to send RPCs to. In some circumstances this may be a service-specific value, and so it is specified here, but
+by and large RPC traffic occurs over ports 443 and 465.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="timeout.html">timeout</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">timeout</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/8/docs/api/java/time/Duration.html"><span class="identifier">Duration</span></a></code>
+<p>RPC request timeout to apply. After this duration, an in-flight RPC request with no server response data will be
+considered failed due to a "time-out."</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="transport-mode.html">transportMode</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">transportMode</span><span class="symbol">: </span><span class="identifier">TransportMode</span></code>
+<p>Transport mode setting. Available options are "INTERNAL" and "SECURE." In nearly all circumstances, including
+network-internal traffic, "SECURE" should be used, which enforces end-to-end SSL. "INTERNAL" mode is only useful
+during development and for machine-internal traffic.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="check-zipcode.html">checkZipcode</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">checkZipcode</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$checkZipcode(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.CheckZipcode.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/zipcode">zipcode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$checkZipcode(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.CheckZipcode.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../-zipcheck-callback.html"><span class="identifier">ZipcheckCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$checkZipcode(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.CheckZipcode.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/err">err</span><span class="symbol">:</span>&nbsp;<a href="../-shop-error-callback.html"><span class="identifier">ShopErrorCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$checkZipcode(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.CheckZipcode.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ListenableFuture</span><span class="symbol">&lt;</span><span class="identifier">Response</span><span class="symbol">&gt;</span></code>
+<p>Fetch information about a given U.S. zipcode, with regard to storefront sales, asynchronously. The resulting info
+contains support status for delivery to the subject zipcode, and any delivery minimum subtotal value, if specified.
+"NOT_FOUND", or 404 when operating over HTTP, is interpreted to mean the zipcode is not supported.</p>
+<code><span class="keyword">fun </span><span class="identifier">checkZipcode</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$checkZipcode(kotlin.String, bloombox.client.services.shop.ShopClient.ShopContext)/zipcode">zipcode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$checkZipcode(kotlin.String, bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Response</span></code>
+<p>Fetch information about a given U.S. zipcode, with regard to storefront sales. The resulting info contains support
+status for delivery to the subject zipcode, and any delivery minimum subtotal value, if specified. "NOT_FOUND", or
+404 when operating over HTTP, is interpreted to mean the zipcode is not supported.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-order.html">getOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getOrder</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$getOrder(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.GetOrder.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$getOrder(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.GetOrder.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../-get-order-callback.html"><span class="identifier">GetOrderCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$getOrder(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.GetOrder.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/err">err</span><span class="symbol">:</span>&nbsp;<a href="../-shop-error-callback.html"><span class="identifier">ShopErrorCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$getOrder(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.GetOrder.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ListenableFuture</span><span class="symbol">&lt;</span><span class="identifier">Response</span><span class="symbol">&gt;</span></code>
+<p>Fetch a commercial order, asynchronously, with all associated data, including its status, action history, ordering
+customer info, and constituent order items. If the order could not be found, or the invoking client does not have
+access to the order, a "NOT_FOUND" status is returned (code 404 if operating over HTTP).</p>
+<code><span class="keyword">fun </span><span class="identifier">getOrder</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$getOrder(kotlin.String, bloombox.client.services.shop.ShopClient.ShopContext)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$getOrder(kotlin.String, bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Response</span></code>
+<p>Fetch a commercial order, synchronously, with all associated data, including its status, action history, ordering
+customer info, and constituent order items. If the order could not be found, or the invoking client does not have
+access to the order, a "NOT_FOUND" status is returned (code 404 if operating over HTTP).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="info.html">info</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">info</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$info(kotlin.Function1((io.bloombox.schema.services.shop.v1.ShopInfo.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../-info-callback.html"><span class="identifier">InfoCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$info(kotlin.Function1((io.bloombox.schema.services.shop.v1.ShopInfo.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/err">err</span><span class="symbol">:</span>&nbsp;<a href="../-shop-error-callback.html"><span class="identifier">ShopErrorCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$info(kotlin.Function1((io.bloombox.schema.services.shop.v1.ShopInfo.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ListenableFuture</span><span class="symbol">&lt;</span><span class="identifier">Response</span><span class="symbol">&gt;</span></code>
+<p>Fetch "top-of-the-fold" (i.e. the most critical) information about a particular digital storefront, asynchronously.
+This includes its current status (OPEN/CLOSED/{PICKUP|DELIVERY}_ONLY) and any other requisite information to render
+a page. This may change in the future.</p>
+<code><span class="keyword">fun </span><span class="identifier">info</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$info(bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Response</span></code>
+<p>Fetch "top-of-the-fold" (i.e. the most critical) information about a particular digital storefront. This includes
+its current status (OPEN/CLOSED/{PICKUP|DELIVERY}_ONLY) and any other requisite information to render a page. This
+may change in the future.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="submit-order.html">submitOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">submitOrder</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$submitOrder(io.opencannabis.schema.commerce.CommercialOrder.Order, kotlin.Function1((io.bloombox.schema.services.shop.v1.SubmitOrder.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/order">order</span><span class="symbol">:</span>&nbsp;<span class="identifier">Order</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$submitOrder(io.opencannabis.schema.commerce.CommercialOrder.Order, kotlin.Function1((io.bloombox.schema.services.shop.v1.SubmitOrder.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../-submit-order-callback.html"><span class="identifier">SubmitOrderCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$submitOrder(io.opencannabis.schema.commerce.CommercialOrder.Order, kotlin.Function1((io.bloombox.schema.services.shop.v1.SubmitOrder.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/err">err</span><span class="symbol">:</span>&nbsp;<a href="../-shop-error-callback.html"><span class="identifier">ShopErrorCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$submitOrder(io.opencannabis.schema.commerce.CommercialOrder.Order, kotlin.Function1((io.bloombox.schema.services.shop.v1.SubmitOrder.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ListenableFuture</span><span class="symbol">&lt;</span><span class="identifier">Response</span><span class="symbol">&gt;</span></code>
+<p>Submit a commercial order, asynchronously, to a particular digital storefront via the shop service (identified by
+a partner and location code pair). The ordering customer must be a valid member of the storefront at the specified
+partner and location code pair, in addition to being a valid and active user account at all (i.e. active and valid
+identification, medical recommendation if applicable, and good account standing). Items in the order are specified
+as product keys with an associated desired count.</p>
+<code><span class="keyword">fun </span><span class="identifier">submitOrder</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$submitOrder(io.opencannabis.schema.commerce.CommercialOrder.Order, bloombox.client.services.shop.ShopClient.ShopContext)/order">order</span><span class="symbol">:</span>&nbsp;<span class="identifier">Order</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$submitOrder(io.opencannabis.schema.commerce.CommercialOrder.Order, bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Response</span></code>
+<p>Submit a commercial order, synchronously, to a particular digital storefront via the shop service (identified by a
+partner and location code pair). The ordering customer must be a valid member of the storefront at the specified
+partner and location code pair, in addition to being a valid and active user account at all (i.e. active and valid
+identification, medical recommendation if applicable, and good account standing). Items in the order are specified
+as product keys with an associated desired count.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="verify-member.html">verifyMember</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">verifyMember</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$verifyMember(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.VerifyMember.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/email">email</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$verifyMember(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.VerifyMember.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../-verify-member-callback.html"><span class="identifier">VerifyMemberCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$verifyMember(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.VerifyMember.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/err">err</span><span class="symbol">:</span>&nbsp;<a href="../-shop-error-callback.html"><span class="identifier">ShopErrorCallback</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$verifyMember(kotlin.String, kotlin.Function1((io.bloombox.schema.services.shop.v1.VerifyMember.Response, kotlin.Unit)), kotlin.Function1((bloombox.client.ClientException, kotlin.Unit)), bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ListenableFuture</span><span class="symbol">&lt;</span><span class="identifier">Response</span><span class="symbol">&gt;</span></code>
+<p>Verify that an end user account is a valid and active member of the subject partner and location, asynchronously.
+This involves re-verifying the subject account's identification and medical recommendation (if applicable), and
+checking to make sure they are an active member of the specified digital storefront (addressed by its partner and
+location code pair).</p>
+<code><span class="keyword">fun </span><span class="identifier">verifyMember</span><span class="symbol">(</span><span class="identifier" id="bloombox.client.services.shop.ShopClient$verifyMember(kotlin.String, bloombox.client.services.shop.ShopClient.ShopContext)/email">email</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="bloombox.client.services.shop.ShopClient$verifyMember(kotlin.String, bloombox.client.services.shop.ShopClient.ShopContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="-shop-context/index.html"><span class="identifier">ShopContext</span></a>&nbsp;<span class="symbol">=</span>&nbsp;ShopContext.defaultContext()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Response</span></code>
+<p>Verify that an end user account is a valid and active member of the subject partner and location, synchronously.
+This involves re-verifying the subject account's identification and medical recommendation (if applicable), and
+checking to make sure they are an active member of the specified digital storefront (addressed by its partner and
+location code pair).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
