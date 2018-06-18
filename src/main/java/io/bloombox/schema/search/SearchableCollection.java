@@ -145,7 +145,7 @@ public enum SearchableCollection
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.search.SearchSpecOuterClass.getDescriptor().getEnumTypes().get(0);
+    return io.bloombox.schema.search.SearchMetadata.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final SearchableCollection[] VALUES = values();

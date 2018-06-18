@@ -85,11 +85,11 @@ private static final long serialVersionUID = 0L;
           }
           case 18: {
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-              payload_ = new java.util.ArrayList<io.bloombox.schema.search.SearchResult>();
+              payload_ = new java.util.ArrayList<io.bloombox.schema.search.SearchResults.SearchResult>();
               mutable_bitField0_ |= 0x00000002;
             }
             payload_.add(
-                input.readMessage(io.bloombox.schema.search.SearchResult.parser(), extensionRegistry));
+                input.readMessage(io.bloombox.schema.search.SearchResults.SearchResult.parser(), extensionRegistry));
             break;
           }
         }
@@ -109,12 +109,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchResultset_descriptor;
+    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchResultset_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchResultset_fieldAccessorTable
+    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchResultset_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.search.SearchResultset.class, io.bloombox.schema.search.SearchResultset.Builder.class);
   }
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYLOAD_FIELD_NUMBER = 2;
-  private java.util.List<io.bloombox.schema.search.SearchResult> payload_;
+  private java.util.List<io.bloombox.schema.search.SearchResults.SearchResult> payload_;
   /**
    * <pre>
    * Search results matching the provided query.
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
    */
-  public java.util.List<io.bloombox.schema.search.SearchResult> getPayloadList() {
+  public java.util.List<io.bloombox.schema.search.SearchResults.SearchResult> getPayloadList() {
     return payload_;
   }
   /**
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
    */
-  public java.util.List<? extends io.bloombox.schema.search.SearchResultOrBuilder> 
+  public java.util.List<? extends io.bloombox.schema.search.SearchResults.SearchResultOrBuilder> 
       getPayloadOrBuilderList() {
     return payload_;
   }
@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
    */
-  public io.bloombox.schema.search.SearchResult getPayload(int index) {
+  public io.bloombox.schema.search.SearchResults.SearchResult getPayload(int index) {
     return payload_.get(index);
   }
   /**
@@ -203,7 +203,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
    */
-  public io.bloombox.schema.search.SearchResultOrBuilder getPayloadOrBuilder(
+  public io.bloombox.schema.search.SearchResults.SearchResultOrBuilder getPayloadOrBuilder(
       int index) {
     return payload_.get(index);
   }
@@ -390,12 +390,12 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.search.SearchResultsetOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchResultset_descriptor;
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchResultset_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchResultset_fieldAccessorTable
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchResultset_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.search.SearchResultset.class, io.bloombox.schema.search.SearchResultset.Builder.class);
     }
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchResultset_descriptor;
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchResultset_descriptor;
     }
 
     public io.bloombox.schema.search.SearchResultset getDefaultInstanceForType() {
@@ -720,17 +720,17 @@ private static final long serialVersionUID = 0L;
       return metadataBuilder_;
     }
 
-    private java.util.List<io.bloombox.schema.search.SearchResult> payload_ =
+    private java.util.List<io.bloombox.schema.search.SearchResults.SearchResult> payload_ =
       java.util.Collections.emptyList();
     private void ensurePayloadIsMutable() {
       if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-        payload_ = new java.util.ArrayList<io.bloombox.schema.search.SearchResult>(payload_);
+        payload_ = new java.util.ArrayList<io.bloombox.schema.search.SearchResults.SearchResult>(payload_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.bloombox.schema.search.SearchResult, io.bloombox.schema.search.SearchResult.Builder, io.bloombox.schema.search.SearchResultOrBuilder> payloadBuilder_;
+        io.bloombox.schema.search.SearchResults.SearchResult, io.bloombox.schema.search.SearchResults.SearchResult.Builder, io.bloombox.schema.search.SearchResults.SearchResultOrBuilder> payloadBuilder_;
 
     /**
      * <pre>
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public java.util.List<io.bloombox.schema.search.SearchResult> getPayloadList() {
+    public java.util.List<io.bloombox.schema.search.SearchResults.SearchResult> getPayloadList() {
       if (payloadBuilder_ == null) {
         return java.util.Collections.unmodifiableList(payload_);
       } else {
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public io.bloombox.schema.search.SearchResult getPayload(int index) {
+    public io.bloombox.schema.search.SearchResults.SearchResult getPayload(int index) {
       if (payloadBuilder_ == null) {
         return payload_.get(index);
       } else {
@@ -782,7 +782,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
     public Builder setPayload(
-        int index, io.bloombox.schema.search.SearchResult value) {
+        int index, io.bloombox.schema.search.SearchResults.SearchResult value) {
       if (payloadBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -803,7 +803,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
     public Builder setPayload(
-        int index, io.bloombox.schema.search.SearchResult.Builder builderForValue) {
+        int index, io.bloombox.schema.search.SearchResults.SearchResult.Builder builderForValue) {
       if (payloadBuilder_ == null) {
         ensurePayloadIsMutable();
         payload_.set(index, builderForValue.build());
@@ -820,7 +820,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public Builder addPayload(io.bloombox.schema.search.SearchResult value) {
+    public Builder addPayload(io.bloombox.schema.search.SearchResults.SearchResult value) {
       if (payloadBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -841,7 +841,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
     public Builder addPayload(
-        int index, io.bloombox.schema.search.SearchResult value) {
+        int index, io.bloombox.schema.search.SearchResults.SearchResult value) {
       if (payloadBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
     public Builder addPayload(
-        io.bloombox.schema.search.SearchResult.Builder builderForValue) {
+        io.bloombox.schema.search.SearchResults.SearchResult.Builder builderForValue) {
       if (payloadBuilder_ == null) {
         ensurePayloadIsMutable();
         payload_.add(builderForValue.build());
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
     public Builder addPayload(
-        int index, io.bloombox.schema.search.SearchResult.Builder builderForValue) {
+        int index, io.bloombox.schema.search.SearchResults.SearchResult.Builder builderForValue) {
       if (payloadBuilder_ == null) {
         ensurePayloadIsMutable();
         payload_.add(index, builderForValue.build());
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
     public Builder addAllPayload(
-        java.lang.Iterable<? extends io.bloombox.schema.search.SearchResult> values) {
+        java.lang.Iterable<? extends io.bloombox.schema.search.SearchResults.SearchResult> values) {
       if (payloadBuilder_ == null) {
         ensurePayloadIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -950,7 +950,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public io.bloombox.schema.search.SearchResult.Builder getPayloadBuilder(
+    public io.bloombox.schema.search.SearchResults.SearchResult.Builder getPayloadBuilder(
         int index) {
       return getPayloadFieldBuilder().getBuilder(index);
     }
@@ -961,7 +961,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public io.bloombox.schema.search.SearchResultOrBuilder getPayloadOrBuilder(
+    public io.bloombox.schema.search.SearchResults.SearchResultOrBuilder getPayloadOrBuilder(
         int index) {
       if (payloadBuilder_ == null) {
         return payload_.get(index);  } else {
@@ -975,7 +975,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public java.util.List<? extends io.bloombox.schema.search.SearchResultOrBuilder> 
+    public java.util.List<? extends io.bloombox.schema.search.SearchResults.SearchResultOrBuilder> 
          getPayloadOrBuilderList() {
       if (payloadBuilder_ != null) {
         return payloadBuilder_.getMessageOrBuilderList();
@@ -990,9 +990,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public io.bloombox.schema.search.SearchResult.Builder addPayloadBuilder() {
+    public io.bloombox.schema.search.SearchResults.SearchResult.Builder addPayloadBuilder() {
       return getPayloadFieldBuilder().addBuilder(
-          io.bloombox.schema.search.SearchResult.getDefaultInstance());
+          io.bloombox.schema.search.SearchResults.SearchResult.getDefaultInstance());
     }
     /**
      * <pre>
@@ -1001,10 +1001,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public io.bloombox.schema.search.SearchResult.Builder addPayloadBuilder(
+    public io.bloombox.schema.search.SearchResults.SearchResult.Builder addPayloadBuilder(
         int index) {
       return getPayloadFieldBuilder().addBuilder(
-          index, io.bloombox.schema.search.SearchResult.getDefaultInstance());
+          index, io.bloombox.schema.search.SearchResults.SearchResult.getDefaultInstance());
     }
     /**
      * <pre>
@@ -1013,16 +1013,16 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
      */
-    public java.util.List<io.bloombox.schema.search.SearchResult.Builder> 
+    public java.util.List<io.bloombox.schema.search.SearchResults.SearchResult.Builder> 
          getPayloadBuilderList() {
       return getPayloadFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        io.bloombox.schema.search.SearchResult, io.bloombox.schema.search.SearchResult.Builder, io.bloombox.schema.search.SearchResultOrBuilder> 
+        io.bloombox.schema.search.SearchResults.SearchResult, io.bloombox.schema.search.SearchResults.SearchResult.Builder, io.bloombox.schema.search.SearchResults.SearchResultOrBuilder> 
         getPayloadFieldBuilder() {
       if (payloadBuilder_ == null) {
         payloadBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            io.bloombox.schema.search.SearchResult, io.bloombox.schema.search.SearchResult.Builder, io.bloombox.schema.search.SearchResultOrBuilder>(
+            io.bloombox.schema.search.SearchResults.SearchResult, io.bloombox.schema.search.SearchResults.SearchResult.Builder, io.bloombox.schema.search.SearchResults.SearchResultOrBuilder>(
                 payload_,
                 ((bitField0_ & 0x00000002) == 0x00000002),
                 getParentForChildren(),

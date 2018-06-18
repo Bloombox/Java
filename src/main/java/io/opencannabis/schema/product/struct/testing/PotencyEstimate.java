@@ -20,23 +20,44 @@
 package io.opencannabis.schema.product.struct.testing;
 
 /**
+ * <pre>
+ * Generic potency estimate enumeration, either based on subjective product testing or calculated against some metric
+ * for the user's tolerance level.
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.structs.labtesting.PotencyEstimate}
  */
 public enum PotencyEstimate
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * Light potency.
+   * </pre>
+   *
    * <code>LIGHT = 0;</code>
    */
   LIGHT(0),
   /**
+   * <pre>
+   * Medium potency.
+   * </pre>
+   *
    * <code>MEDIUM = 1;</code>
    */
   MEDIUM(1),
   /**
+   * <pre>
+   * Heavy potency.
+   * </pre>
+   *
    * <code>HEAVY = 2;</code>
    */
   HEAVY(2),
   /**
+   * <pre>
+   * Top/super potency.
+   * </pre>
+   *
    * <code>SUPER = 3;</code>
    */
   SUPER(3),
@@ -44,18 +65,34 @@ public enum PotencyEstimate
   ;
 
   /**
+   * <pre>
+   * Light potency.
+   * </pre>
+   *
    * <code>LIGHT = 0;</code>
    */
   public static final int LIGHT_VALUE = 0;
   /**
+   * <pre>
+   * Medium potency.
+   * </pre>
+   *
    * <code>MEDIUM = 1;</code>
    */
   public static final int MEDIUM_VALUE = 1;
   /**
+   * <pre>
+   * Heavy potency.
+   * </pre>
+   *
    * <code>HEAVY = 2;</code>
    */
   public static final int HEAVY_VALUE = 2;
   /**
+   * <pre>
+   * Top/super potency.
+   * </pre>
+   *
    * <code>SUPER = 3;</code>
    */
   public static final int SUPER_VALUE = 3;
@@ -109,7 +146,7 @@ public enum PotencyEstimate
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor().getEnumTypes().get(4);
+    return io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor().getEnumTypes().get(5);
   }
 
   private static final PotencyEstimate[] VALUES = values();

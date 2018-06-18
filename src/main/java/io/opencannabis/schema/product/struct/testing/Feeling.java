@@ -21,7 +21,8 @@ package io.opencannabis.schema.product.struct.testing;
 
 /**
  * <pre>
- * -- Testing: Subjective
+ * Enumerates symptomatic/experiential feeling results from subjective product testing. Feeling states are not designed
+ * to be scientific or interpreted as medical advice.
  * </pre>
  *
  * Protobuf enum {@code opencannabis.structs.labtesting.Feeling}
@@ -29,34 +30,66 @@ package io.opencannabis.schema.product.struct.testing;
 public enum Feeling
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * No feeling preference or value.
+   * </pre>
+   *
    * <code>NO_FEELING_PREFERENCE = 0;</code>
    */
   NO_FEELING_PREFERENCE(0),
   /**
+   * <pre>
+   * "Grounding" feeling.
+   * </pre>
+   *
    * <code>GROUNDING = 1;</code>
    */
   GROUNDING(1),
   /**
+   * <pre>
+   * "Sleepy" feeling.
+   * </pre>
+   *
    * <code>SLEEP = 2;</code>
    */
   SLEEP(2),
   /**
+   * <pre>
+   * "Calming" feeling.
+   * </pre>
+   *
    * <code>CALMING = 3;</code>
    */
   CALMING(3),
   /**
+   * <pre>
+   * "Stimulating" feeling.
+   * </pre>
+   *
    * <code>STIMULATING = 4;</code>
    */
   STIMULATING(4),
   /**
+   * <pre>
+   * "Funny" feeling.
+   * </pre>
+   *
    * <code>FUNNY = 5;</code>
    */
   FUNNY(5),
   /**
+   * <pre>
+   * "Focus" feeling.
+   * </pre>
+   *
    * <code>FOCUS = 6;</code>
    */
   FOCUS(6),
   /**
+   * <pre>
+   * "Passion" feeling.
+   * </pre>
+   *
    * <code>PASSION = 7;</code>
    */
   PASSION(7),
@@ -64,34 +97,66 @@ public enum Feeling
   ;
 
   /**
+   * <pre>
+   * No feeling preference or value.
+   * </pre>
+   *
    * <code>NO_FEELING_PREFERENCE = 0;</code>
    */
   public static final int NO_FEELING_PREFERENCE_VALUE = 0;
   /**
+   * <pre>
+   * "Grounding" feeling.
+   * </pre>
+   *
    * <code>GROUNDING = 1;</code>
    */
   public static final int GROUNDING_VALUE = 1;
   /**
+   * <pre>
+   * "Sleepy" feeling.
+   * </pre>
+   *
    * <code>SLEEP = 2;</code>
    */
   public static final int SLEEP_VALUE = 2;
   /**
+   * <pre>
+   * "Calming" feeling.
+   * </pre>
+   *
    * <code>CALMING = 3;</code>
    */
   public static final int CALMING_VALUE = 3;
   /**
+   * <pre>
+   * "Stimulating" feeling.
+   * </pre>
+   *
    * <code>STIMULATING = 4;</code>
    */
   public static final int STIMULATING_VALUE = 4;
   /**
+   * <pre>
+   * "Funny" feeling.
+   * </pre>
+   *
    * <code>FUNNY = 5;</code>
    */
   public static final int FUNNY_VALUE = 5;
   /**
+   * <pre>
+   * "Focus" feeling.
+   * </pre>
+   *
    * <code>FOCUS = 6;</code>
    */
   public static final int FOCUS_VALUE = 6;
   /**
+   * <pre>
+   * "Passion" feeling.
+   * </pre>
+   *
    * <code>PASSION = 7;</code>
    */
   public static final int PASSION_VALUE = 7;
@@ -149,7 +214,7 @@ public enum Feeling
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor().getEnumTypes().get(2);
+    return io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor().getEnumTypes().get(3);
   }
 
   private static final Feeling[] VALUES = values();

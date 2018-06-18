@@ -324,7 +324,7 @@ public final class MenuServiceBeta1 {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
-          io.bloombox.schema.search.SearchSpecOuterClass.getDescriptor(),
+          io.bloombox.schema.search.SearchMetadata.getDescriptor(),
           io.opencannabis.schema.menu.MenuOuterClass.getDescriptor(),
           io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
@@ -490,7 +490,7 @@ public final class MenuServiceBeta1 {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
-    io.bloombox.schema.search.SearchSpecOuterClass.getDescriptor();
+    io.bloombox.schema.search.SearchMetadata.getDescriptor();
     io.opencannabis.schema.menu.MenuOuterClass.getDescriptor();
     io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();
     io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();

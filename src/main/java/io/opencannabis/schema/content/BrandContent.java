@@ -30,9 +30,1651 @@ public final class BrandContent {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface BrandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:opencannabis.content.Brand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Name name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Name name = 1;</code>
+     */
+    io.opencannabis.schema.content.NameContent.Name getName();
+    /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Name name = 1;</code>
+     */
+    io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder();
+
+    /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Brand parent = 2;</code>
+     */
+    boolean hasParent();
+    /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Brand parent = 2;</code>
+     */
+    io.opencannabis.schema.content.BrandContent.Brand getParent();
+    /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Brand parent = 2;</code>
+     */
+    io.opencannabis.schema.content.BrandContent.BrandOrBuilder getParentOrBuilder();
+
+    /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content summary = 3;</code>
+     */
+    boolean hasSummary();
+    /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content summary = 3;</code>
+     */
+    io.opencannabis.schema.content.GenericContent.Content getSummary();
+    /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content summary = 3;</code>
+     */
+    io.opencannabis.schema.content.GenericContent.ContentOrBuilder getSummaryOrBuilder();
+
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> 
+        getMediaList();
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index);
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    int getMediaCount();
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+        getMediaOrBuilderList();
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Information about a particular brand or producer of products or materials.
+   * </pre>
+   *
+   * Protobuf type {@code opencannabis.content.Brand}
+   */
+  public  static final class Brand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:opencannabis.content.Brand)
+      BrandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Brand.newBuilder() to construct.
+    private Brand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Brand() {
+      media_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Brand(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              io.opencannabis.schema.content.NameContent.Name.Builder subBuilder = null;
+              if (name_ != null) {
+                subBuilder = name_.toBuilder();
+              }
+              name_ = input.readMessage(io.opencannabis.schema.content.NameContent.Name.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(name_);
+                name_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              io.opencannabis.schema.content.BrandContent.Brand.Builder subBuilder = null;
+              if (parent_ != null) {
+                subBuilder = parent_.toBuilder();
+              }
+              parent_ = input.readMessage(io.opencannabis.schema.content.BrandContent.Brand.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(parent_);
+                parent_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.opencannabis.schema.content.GenericContent.Content.Builder subBuilder = null;
+              if (summary_ != null) {
+                subBuilder = summary_.toBuilder();
+              }
+              summary_ = input.readMessage(io.opencannabis.schema.content.GenericContent.Content.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(summary_);
+                summary_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 162: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                media_ = new java.util.ArrayList<io.opencannabis.schema.media.AttachedMedia.MediaItem>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              media_.add(
+                  input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaItem.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          media_ = java.util.Collections.unmodifiableList(media_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.opencannabis.schema.content.BrandContent.internal_static_opencannabis_content_Brand_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.opencannabis.schema.content.BrandContent.internal_static_opencannabis_content_Brand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.opencannabis.schema.content.BrandContent.Brand.class, io.opencannabis.schema.content.BrandContent.Brand.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private io.opencannabis.schema.content.NameContent.Name name_;
+    /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Name name = 1;</code>
+     */
+    public boolean hasName() {
+      return name_ != null;
+    }
+    /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Name name = 1;</code>
+     */
+    public io.opencannabis.schema.content.NameContent.Name getName() {
+      return name_ == null ? io.opencannabis.schema.content.NameContent.Name.getDefaultInstance() : name_;
+    }
+    /**
+     * <pre>
+     * Naming information for this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Name name = 1;</code>
+     */
+    public io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder() {
+      return getName();
+    }
+
+    public static final int PARENT_FIELD_NUMBER = 2;
+    private io.opencannabis.schema.content.BrandContent.Brand parent_;
+    /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Brand parent = 2;</code>
+     */
+    public boolean hasParent() {
+      return parent_ != null;
+    }
+    /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Brand parent = 2;</code>
+     */
+    public io.opencannabis.schema.content.BrandContent.Brand getParent() {
+      return parent_ == null ? io.opencannabis.schema.content.BrandContent.Brand.getDefaultInstance() : parent_;
+    }
+    /**
+     * <pre>
+     * Parent/owning brand, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Brand parent = 2;</code>
+     */
+    public io.opencannabis.schema.content.BrandContent.BrandOrBuilder getParentOrBuilder() {
+      return getParent();
+    }
+
+    public static final int SUMMARY_FIELD_NUMBER = 3;
+    private io.opencannabis.schema.content.GenericContent.Content summary_;
+    /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content summary = 3;</code>
+     */
+    public boolean hasSummary() {
+      return summary_ != null;
+    }
+    /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content summary = 3;</code>
+     */
+    public io.opencannabis.schema.content.GenericContent.Content getSummary() {
+      return summary_ == null ? io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : summary_;
+    }
+    /**
+     * <pre>
+     * Summary information or content about this brand.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content summary = 3;</code>
+     */
+    public io.opencannabis.schema.content.GenericContent.ContentOrBuilder getSummaryOrBuilder() {
+      return getSummary();
+    }
+
+    public static final int MEDIA_FIELD_NUMBER = 20;
+    private java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> media_;
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> getMediaList() {
+      return media_;
+    }
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    public java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+        getMediaOrBuilderList() {
+      return media_;
+    }
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    public int getMediaCount() {
+      return media_.size();
+    }
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index) {
+      return media_.get(index);
+    }
+    /**
+     * <pre>
+     * Media items attached to this brand.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+     */
+    public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
+        int index) {
+      return media_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (name_ != null) {
+        output.writeMessage(1, getName());
+      }
+      if (parent_ != null) {
+        output.writeMessage(2, getParent());
+      }
+      if (summary_ != null) {
+        output.writeMessage(3, getSummary());
+      }
+      for (int i = 0; i < media_.size(); i++) {
+        output.writeMessage(20, media_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (name_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getName());
+      }
+      if (parent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParent());
+      }
+      if (summary_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSummary());
+      }
+      for (int i = 0; i < media_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, media_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.opencannabis.schema.content.BrandContent.Brand)) {
+        return super.equals(obj);
+      }
+      io.opencannabis.schema.content.BrandContent.Brand other = (io.opencannabis.schema.content.BrandContent.Brand) obj;
+
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && (hasParent() == other.hasParent());
+      if (hasParent()) {
+        result = result && getParent()
+            .equals(other.getParent());
+      }
+      result = result && (hasSummary() == other.hasSummary());
+      if (hasSummary()) {
+        result = result && getSummary()
+            .equals(other.getSummary());
+      }
+      result = result && getMediaList()
+          .equals(other.getMediaList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasParent()) {
+        hash = (37 * hash) + PARENT_FIELD_NUMBER;
+        hash = (53 * hash) + getParent().hashCode();
+      }
+      if (hasSummary()) {
+        hash = (37 * hash) + SUMMARY_FIELD_NUMBER;
+        hash = (53 * hash) + getSummary().hashCode();
+      }
+      if (getMediaCount() > 0) {
+        hash = (37 * hash) + MEDIA_FIELD_NUMBER;
+        hash = (53 * hash) + getMediaList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.content.BrandContent.Brand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.opencannabis.schema.content.BrandContent.Brand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Information about a particular brand or producer of products or materials.
+     * </pre>
+     *
+     * Protobuf type {@code opencannabis.content.Brand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:opencannabis.content.Brand)
+        io.opencannabis.schema.content.BrandContent.BrandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.opencannabis.schema.content.BrandContent.internal_static_opencannabis_content_Brand_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.opencannabis.schema.content.BrandContent.internal_static_opencannabis_content_Brand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.opencannabis.schema.content.BrandContent.Brand.class, io.opencannabis.schema.content.BrandContent.Brand.Builder.class);
+      }
+
+      // Construct using io.opencannabis.schema.content.BrandContent.Brand.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMediaFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (nameBuilder_ == null) {
+          name_ = null;
+        } else {
+          name_ = null;
+          nameBuilder_ = null;
+        }
+        if (parentBuilder_ == null) {
+          parent_ = null;
+        } else {
+          parent_ = null;
+          parentBuilder_ = null;
+        }
+        if (summaryBuilder_ == null) {
+          summary_ = null;
+        } else {
+          summary_ = null;
+          summaryBuilder_ = null;
+        }
+        if (mediaBuilder_ == null) {
+          media_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          mediaBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.opencannabis.schema.content.BrandContent.internal_static_opencannabis_content_Brand_descriptor;
+      }
+
+      public io.opencannabis.schema.content.BrandContent.Brand getDefaultInstanceForType() {
+        return io.opencannabis.schema.content.BrandContent.Brand.getDefaultInstance();
+      }
+
+      public io.opencannabis.schema.content.BrandContent.Brand build() {
+        io.opencannabis.schema.content.BrandContent.Brand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.opencannabis.schema.content.BrandContent.Brand buildPartial() {
+        io.opencannabis.schema.content.BrandContent.Brand result = new io.opencannabis.schema.content.BrandContent.Brand(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (nameBuilder_ == null) {
+          result.name_ = name_;
+        } else {
+          result.name_ = nameBuilder_.build();
+        }
+        if (parentBuilder_ == null) {
+          result.parent_ = parent_;
+        } else {
+          result.parent_ = parentBuilder_.build();
+        }
+        if (summaryBuilder_ == null) {
+          result.summary_ = summary_;
+        } else {
+          result.summary_ = summaryBuilder_.build();
+        }
+        if (mediaBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            media_ = java.util.Collections.unmodifiableList(media_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.media_ = media_;
+        } else {
+          result.media_ = mediaBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.opencannabis.schema.content.BrandContent.Brand) {
+          return mergeFrom((io.opencannabis.schema.content.BrandContent.Brand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.opencannabis.schema.content.BrandContent.Brand other) {
+        if (other == io.opencannabis.schema.content.BrandContent.Brand.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          mergeName(other.getName());
+        }
+        if (other.hasParent()) {
+          mergeParent(other.getParent());
+        }
+        if (other.hasSummary()) {
+          mergeSummary(other.getSummary());
+        }
+        if (mediaBuilder_ == null) {
+          if (!other.media_.isEmpty()) {
+            if (media_.isEmpty()) {
+              media_ = other.media_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureMediaIsMutable();
+              media_.addAll(other.media_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.media_.isEmpty()) {
+            if (mediaBuilder_.isEmpty()) {
+              mediaBuilder_.dispose();
+              mediaBuilder_ = null;
+              media_ = other.media_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              mediaBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMediaFieldBuilder() : null;
+            } else {
+              mediaBuilder_.addAllMessages(other.media_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.opencannabis.schema.content.BrandContent.Brand parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.opencannabis.schema.content.BrandContent.Brand) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private io.opencannabis.schema.content.NameContent.Name name_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder> nameBuilder_;
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      public boolean hasName() {
+        return nameBuilder_ != null || name_ != null;
+      }
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      public io.opencannabis.schema.content.NameContent.Name getName() {
+        if (nameBuilder_ == null) {
+          return name_ == null ? io.opencannabis.schema.content.NameContent.Name.getDefaultInstance() : name_;
+        } else {
+          return nameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      public Builder setName(io.opencannabis.schema.content.NameContent.Name value) {
+        if (nameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          name_ = value;
+          onChanged();
+        } else {
+          nameBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      public Builder setName(
+          io.opencannabis.schema.content.NameContent.Name.Builder builderForValue) {
+        if (nameBuilder_ == null) {
+          name_ = builderForValue.build();
+          onChanged();
+        } else {
+          nameBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      public Builder mergeName(io.opencannabis.schema.content.NameContent.Name value) {
+        if (nameBuilder_ == null) {
+          if (name_ != null) {
+            name_ =
+              io.opencannabis.schema.content.NameContent.Name.newBuilder(name_).mergeFrom(value).buildPartial();
+          } else {
+            name_ = value;
+          }
+          onChanged();
+        } else {
+          nameBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      public Builder clearName() {
+        if (nameBuilder_ == null) {
+          name_ = null;
+          onChanged();
+        } else {
+          name_ = null;
+          nameBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      public io.opencannabis.schema.content.NameContent.Name.Builder getNameBuilder() {
+        
+        onChanged();
+        return getNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      public io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder() {
+        if (nameBuilder_ != null) {
+          return nameBuilder_.getMessageOrBuilder();
+        } else {
+          return name_ == null ?
+              io.opencannabis.schema.content.NameContent.Name.getDefaultInstance() : name_;
+        }
+      }
+      /**
+       * <pre>
+       * Naming information for this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Name name = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder> 
+          getNameFieldBuilder() {
+        if (nameBuilder_ == null) {
+          nameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder>(
+                  getName(),
+                  getParentForChildren(),
+                  isClean());
+          name_ = null;
+        }
+        return nameBuilder_;
+      }
+
+      private io.opencannabis.schema.content.BrandContent.Brand parent_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.content.BrandContent.Brand, io.opencannabis.schema.content.BrandContent.Brand.Builder, io.opencannabis.schema.content.BrandContent.BrandOrBuilder> parentBuilder_;
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      public boolean hasParent() {
+        return parentBuilder_ != null || parent_ != null;
+      }
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      public io.opencannabis.schema.content.BrandContent.Brand getParent() {
+        if (parentBuilder_ == null) {
+          return parent_ == null ? io.opencannabis.schema.content.BrandContent.Brand.getDefaultInstance() : parent_;
+        } else {
+          return parentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      public Builder setParent(io.opencannabis.schema.content.BrandContent.Brand value) {
+        if (parentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parent_ = value;
+          onChanged();
+        } else {
+          parentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      public Builder setParent(
+          io.opencannabis.schema.content.BrandContent.Brand.Builder builderForValue) {
+        if (parentBuilder_ == null) {
+          parent_ = builderForValue.build();
+          onChanged();
+        } else {
+          parentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      public Builder mergeParent(io.opencannabis.schema.content.BrandContent.Brand value) {
+        if (parentBuilder_ == null) {
+          if (parent_ != null) {
+            parent_ =
+              io.opencannabis.schema.content.BrandContent.Brand.newBuilder(parent_).mergeFrom(value).buildPartial();
+          } else {
+            parent_ = value;
+          }
+          onChanged();
+        } else {
+          parentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      public Builder clearParent() {
+        if (parentBuilder_ == null) {
+          parent_ = null;
+          onChanged();
+        } else {
+          parent_ = null;
+          parentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      public io.opencannabis.schema.content.BrandContent.Brand.Builder getParentBuilder() {
+        
+        onChanged();
+        return getParentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      public io.opencannabis.schema.content.BrandContent.BrandOrBuilder getParentOrBuilder() {
+        if (parentBuilder_ != null) {
+          return parentBuilder_.getMessageOrBuilder();
+        } else {
+          return parent_ == null ?
+              io.opencannabis.schema.content.BrandContent.Brand.getDefaultInstance() : parent_;
+        }
+      }
+      /**
+       * <pre>
+       * Parent/owning brand, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Brand parent = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.content.BrandContent.Brand, io.opencannabis.schema.content.BrandContent.Brand.Builder, io.opencannabis.schema.content.BrandContent.BrandOrBuilder> 
+          getParentFieldBuilder() {
+        if (parentBuilder_ == null) {
+          parentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.content.BrandContent.Brand, io.opencannabis.schema.content.BrandContent.Brand.Builder, io.opencannabis.schema.content.BrandContent.BrandOrBuilder>(
+                  getParent(),
+                  getParentForChildren(),
+                  isClean());
+          parent_ = null;
+        }
+        return parentBuilder_;
+      }
+
+      private io.opencannabis.schema.content.GenericContent.Content summary_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> summaryBuilder_;
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      public boolean hasSummary() {
+        return summaryBuilder_ != null || summary_ != null;
+      }
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      public io.opencannabis.schema.content.GenericContent.Content getSummary() {
+        if (summaryBuilder_ == null) {
+          return summary_ == null ? io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : summary_;
+        } else {
+          return summaryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      public Builder setSummary(io.opencannabis.schema.content.GenericContent.Content value) {
+        if (summaryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          summary_ = value;
+          onChanged();
+        } else {
+          summaryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      public Builder setSummary(
+          io.opencannabis.schema.content.GenericContent.Content.Builder builderForValue) {
+        if (summaryBuilder_ == null) {
+          summary_ = builderForValue.build();
+          onChanged();
+        } else {
+          summaryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      public Builder mergeSummary(io.opencannabis.schema.content.GenericContent.Content value) {
+        if (summaryBuilder_ == null) {
+          if (summary_ != null) {
+            summary_ =
+              io.opencannabis.schema.content.GenericContent.Content.newBuilder(summary_).mergeFrom(value).buildPartial();
+          } else {
+            summary_ = value;
+          }
+          onChanged();
+        } else {
+          summaryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      public Builder clearSummary() {
+        if (summaryBuilder_ == null) {
+          summary_ = null;
+          onChanged();
+        } else {
+          summary_ = null;
+          summaryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      public io.opencannabis.schema.content.GenericContent.Content.Builder getSummaryBuilder() {
+        
+        onChanged();
+        return getSummaryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      public io.opencannabis.schema.content.GenericContent.ContentOrBuilder getSummaryOrBuilder() {
+        if (summaryBuilder_ != null) {
+          return summaryBuilder_.getMessageOrBuilder();
+        } else {
+          return summary_ == null ?
+              io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : summary_;
+        }
+      }
+      /**
+       * <pre>
+       * Summary information or content about this brand.
+       * </pre>
+       *
+       * <code>.opencannabis.content.Content summary = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> 
+          getSummaryFieldBuilder() {
+        if (summaryBuilder_ == null) {
+          summaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder>(
+                  getSummary(),
+                  getParentForChildren(),
+                  isClean());
+          summary_ = null;
+        }
+        return summaryBuilder_;
+      }
+
+      private java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> media_ =
+        java.util.Collections.emptyList();
+      private void ensureMediaIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          media_ = new java.util.ArrayList<io.opencannabis.schema.media.AttachedMedia.MediaItem>(media_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> mediaBuilder_;
+
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> getMediaList() {
+        if (mediaBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(media_);
+        } else {
+          return mediaBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public int getMediaCount() {
+        if (mediaBuilder_ == null) {
+          return media_.size();
+        } else {
+          return mediaBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index) {
+        if (mediaBuilder_ == null) {
+          return media_.get(index);
+        } else {
+          return mediaBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder setMedia(
+          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
+        if (mediaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediaIsMutable();
+          media_.set(index, value);
+          onChanged();
+        } else {
+          mediaBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder setMedia(
+          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
+        if (mediaBuilder_ == null) {
+          ensureMediaIsMutable();
+          media_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          mediaBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder addMedia(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
+        if (mediaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediaIsMutable();
+          media_.add(value);
+          onChanged();
+        } else {
+          mediaBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder addMedia(
+          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
+        if (mediaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMediaIsMutable();
+          media_.add(index, value);
+          onChanged();
+        } else {
+          mediaBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder addMedia(
+          io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
+        if (mediaBuilder_ == null) {
+          ensureMediaIsMutable();
+          media_.add(builderForValue.build());
+          onChanged();
+        } else {
+          mediaBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder addMedia(
+          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
+        if (mediaBuilder_ == null) {
+          ensureMediaIsMutable();
+          media_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          mediaBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder addAllMedia(
+          java.lang.Iterable<? extends io.opencannabis.schema.media.AttachedMedia.MediaItem> values) {
+        if (mediaBuilder_ == null) {
+          ensureMediaIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, media_);
+          onChanged();
+        } else {
+          mediaBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder clearMedia() {
+        if (mediaBuilder_ == null) {
+          media_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          mediaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public Builder removeMedia(int index) {
+        if (mediaBuilder_ == null) {
+          ensureMediaIsMutable();
+          media_.remove(index);
+          onChanged();
+        } else {
+          mediaBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder getMediaBuilder(
+          int index) {
+        return getMediaFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
+          int index) {
+        if (mediaBuilder_ == null) {
+          return media_.get(index);  } else {
+          return mediaBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+           getMediaOrBuilderList() {
+        if (mediaBuilder_ != null) {
+          return mediaBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(media_);
+        }
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder addMediaBuilder() {
+        return getMediaFieldBuilder().addBuilder(
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder addMediaBuilder(
+          int index) {
+        return getMediaFieldBuilder().addBuilder(
+            index, io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Media items attached to this brand.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.media.MediaItem media = 20;</code>
+       */
+      public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder> 
+           getMediaBuilderList() {
+        return getMediaFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+          getMediaFieldBuilder() {
+        if (mediaBuilder_ == null) {
+          mediaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder>(
+                  media_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          media_ = null;
+        }
+        return mediaBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:opencannabis.content.Brand)
+    }
+
+    // @@protoc_insertion_point(class_scope:opencannabis.content.Brand)
+    private static final io.opencannabis.schema.content.BrandContent.Brand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.opencannabis.schema.content.BrandContent.Brand();
+    }
+
+    public static io.opencannabis.schema.content.BrandContent.Brand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Brand>
+        PARSER = new com.google.protobuf.AbstractParser<Brand>() {
+      public Brand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Brand(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Brand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Brand> getParserForType() {
+      return PARSER;
+    }
+
+    public io.opencannabis.schema.content.BrandContent.Brand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_opencannabis_content_Brand_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_opencannabis_content_Brand_fieldAccessorTable;
 
@@ -52,7 +1694,7 @@ public final class BrandContent {
       ".Brand\022.\n\007summary\030\003 \001(\0132\035.opencannabis.c" +
       "ontent.Content\022,\n\005media\030\024 \003(\0132\035.opencann" +
       "abis.media.MediaItemB8\n\036io.opencannabis." +
-      "schema.contentB\014BrandContentH\001P\001\242\002\003OCSb\006" +
+      "schema.contentB\014BrandContentH\001P\000\242\002\003OCSb\006" +
       "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

@@ -94,7 +94,7 @@ public final class OAuthClient {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.media.AttachedMedia.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.opencannabis.schema.oauth.AuthorizationScopeOuterClass.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_oauth_Client_descriptor =
@@ -116,7 +116,7 @@ public final class OAuthClient {
         internal_static_opencannabis_oauth_ConsentTicket_descriptor,
         new java.lang.String[] { "Client", "Consent", });
     io.opencannabis.schema.media.AttachedMedia.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.opencannabis.schema.oauth.AuthorizationScopeOuterClass.getDescriptor();
   }
 

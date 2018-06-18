@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
      * Subject attachment and scoping settings for the media item to be created.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+     * <code>.opencannabis.media.MediaSubject subject = 2;</code>
      */
     boolean hasSubject();
     /**
@@ -129,17 +129,17 @@ private static final long serialVersionUID = 0L;
      * Subject attachment and scoping settings for the media item to be created.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+     * <code>.opencannabis.media.MediaSubject subject = 2;</code>
      */
-    io.bloombox.schema.services.media.v1beta1.MediaSubject getSubject();
+    io.opencannabis.schema.media.AttachedMedia.MediaSubject getSubject();
     /**
      * <pre>
      * Subject attachment and scoping settings for the media item to be created.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+     * <code>.opencannabis.media.MediaSubject subject = 2;</code>
      */
-    io.bloombox.schema.services.media.v1beta1.MediaSubjectOrBuilder getSubjectOrBuilder();
+    io.opencannabis.schema.media.AttachedMedia.MediaSubjectOrBuilder getSubjectOrBuilder();
 
     /**
      * <pre>
@@ -224,11 +224,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              io.bloombox.schema.services.media.v1beta1.MediaSubject.Builder subBuilder = null;
+              io.opencannabis.schema.media.AttachedMedia.MediaSubject.Builder subBuilder = null;
               if (subject_ != null) {
                 subBuilder = subject_.toBuilder();
               }
-              subject_ = input.readMessage(io.bloombox.schema.services.media.v1beta1.MediaSubject.parser(), extensionRegistry);
+              subject_ = input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaSubject.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(subject_);
                 subject_ = subBuilder.buildPartial();
@@ -316,13 +316,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SUBJECT_FIELD_NUMBER = 2;
-    private io.bloombox.schema.services.media.v1beta1.MediaSubject subject_;
+    private io.opencannabis.schema.media.AttachedMedia.MediaSubject subject_;
     /**
      * <pre>
      * Subject attachment and scoping settings for the media item to be created.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+     * <code>.opencannabis.media.MediaSubject subject = 2;</code>
      */
     public boolean hasSubject() {
       return subject_ != null;
@@ -332,19 +332,19 @@ private static final long serialVersionUID = 0L;
      * Subject attachment and scoping settings for the media item to be created.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+     * <code>.opencannabis.media.MediaSubject subject = 2;</code>
      */
-    public io.bloombox.schema.services.media.v1beta1.MediaSubject getSubject() {
-      return subject_ == null ? io.bloombox.schema.services.media.v1beta1.MediaSubject.getDefaultInstance() : subject_;
+    public io.opencannabis.schema.media.AttachedMedia.MediaSubject getSubject() {
+      return subject_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaSubject.getDefaultInstance() : subject_;
     }
     /**
      * <pre>
      * Subject attachment and scoping settings for the media item to be created.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+     * <code>.opencannabis.media.MediaSubject subject = 2;</code>
      */
-    public io.bloombox.schema.services.media.v1beta1.MediaSubjectOrBuilder getSubjectOrBuilder() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaSubjectOrBuilder getSubjectOrBuilder() {
       return getSubject();
     }
 
@@ -817,15 +817,15 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.services.media.v1beta1.MediaSubject subject_ = null;
+      private io.opencannabis.schema.media.AttachedMedia.MediaSubject subject_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.media.v1beta1.MediaSubject, io.bloombox.schema.services.media.v1beta1.MediaSubject.Builder, io.bloombox.schema.services.media.v1beta1.MediaSubjectOrBuilder> subjectBuilder_;
+          io.opencannabis.schema.media.AttachedMedia.MediaSubject, io.opencannabis.schema.media.AttachedMedia.MediaSubject.Builder, io.opencannabis.schema.media.AttachedMedia.MediaSubjectOrBuilder> subjectBuilder_;
       /**
        * <pre>
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
       public boolean hasSubject() {
         return subjectBuilder_ != null || subject_ != null;
@@ -835,11 +835,11 @@ private static final long serialVersionUID = 0L;
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
-      public io.bloombox.schema.services.media.v1beta1.MediaSubject getSubject() {
+      public io.opencannabis.schema.media.AttachedMedia.MediaSubject getSubject() {
         if (subjectBuilder_ == null) {
-          return subject_ == null ? io.bloombox.schema.services.media.v1beta1.MediaSubject.getDefaultInstance() : subject_;
+          return subject_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaSubject.getDefaultInstance() : subject_;
         } else {
           return subjectBuilder_.getMessage();
         }
@@ -849,9 +849,9 @@ private static final long serialVersionUID = 0L;
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
-      public Builder setSubject(io.bloombox.schema.services.media.v1beta1.MediaSubject value) {
+      public Builder setSubject(io.opencannabis.schema.media.AttachedMedia.MediaSubject value) {
         if (subjectBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -869,10 +869,10 @@ private static final long serialVersionUID = 0L;
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
       public Builder setSubject(
-          io.bloombox.schema.services.media.v1beta1.MediaSubject.Builder builderForValue) {
+          io.opencannabis.schema.media.AttachedMedia.MediaSubject.Builder builderForValue) {
         if (subjectBuilder_ == null) {
           subject_ = builderForValue.build();
           onChanged();
@@ -887,13 +887,13 @@ private static final long serialVersionUID = 0L;
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
-      public Builder mergeSubject(io.bloombox.schema.services.media.v1beta1.MediaSubject value) {
+      public Builder mergeSubject(io.opencannabis.schema.media.AttachedMedia.MediaSubject value) {
         if (subjectBuilder_ == null) {
           if (subject_ != null) {
             subject_ =
-              io.bloombox.schema.services.media.v1beta1.MediaSubject.newBuilder(subject_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.media.AttachedMedia.MediaSubject.newBuilder(subject_).mergeFrom(value).buildPartial();
           } else {
             subject_ = value;
           }
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
       public Builder clearSubject() {
         if (subjectBuilder_ == null) {
@@ -927,9 +927,9 @@ private static final long serialVersionUID = 0L;
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
-      public io.bloombox.schema.services.media.v1beta1.MediaSubject.Builder getSubjectBuilder() {
+      public io.opencannabis.schema.media.AttachedMedia.MediaSubject.Builder getSubjectBuilder() {
         
         onChanged();
         return getSubjectFieldBuilder().getBuilder();
@@ -939,14 +939,14 @@ private static final long serialVersionUID = 0L;
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
-      public io.bloombox.schema.services.media.v1beta1.MediaSubjectOrBuilder getSubjectOrBuilder() {
+      public io.opencannabis.schema.media.AttachedMedia.MediaSubjectOrBuilder getSubjectOrBuilder() {
         if (subjectBuilder_ != null) {
           return subjectBuilder_.getMessageOrBuilder();
         } else {
           return subject_ == null ?
-              io.bloombox.schema.services.media.v1beta1.MediaSubject.getDefaultInstance() : subject_;
+              io.opencannabis.schema.media.AttachedMedia.MediaSubject.getDefaultInstance() : subject_;
         }
       }
       /**
@@ -954,14 +954,14 @@ private static final long serialVersionUID = 0L;
        * Subject attachment and scoping settings for the media item to be created.
        * </pre>
        *
-       * <code>.bloombox.schema.services.media.v1beta1.MediaSubject subject = 2;</code>
+       * <code>.opencannabis.media.MediaSubject subject = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.media.v1beta1.MediaSubject, io.bloombox.schema.services.media.v1beta1.MediaSubject.Builder, io.bloombox.schema.services.media.v1beta1.MediaSubjectOrBuilder> 
+          io.opencannabis.schema.media.AttachedMedia.MediaSubject, io.opencannabis.schema.media.AttachedMedia.MediaSubject.Builder, io.opencannabis.schema.media.AttachedMedia.MediaSubjectOrBuilder> 
           getSubjectFieldBuilder() {
         if (subjectBuilder_ == null) {
           subjectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.services.media.v1beta1.MediaSubject, io.bloombox.schema.services.media.v1beta1.MediaSubject.Builder, io.bloombox.schema.services.media.v1beta1.MediaSubjectOrBuilder>(
+              io.opencannabis.schema.media.AttachedMedia.MediaSubject, io.opencannabis.schema.media.AttachedMedia.MediaSubject.Builder, io.opencannabis.schema.media.AttachedMedia.MediaSubjectOrBuilder>(
                   getSubject(),
                   getParentForChildren(),
                   isClean());

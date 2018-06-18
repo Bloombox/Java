@@ -20,31 +20,61 @@
 package io.opencannabis.schema.product.struct.testing;
 
 /**
+ * <pre>
+ * Enumerates available cannabinoid ratio states. This value is computed from the THC and CBD test results, if
+ * available, and expresses the general (low-resolution) ratio between those two values, which are the most important in
+ * cannabis test result data.
+ * </pre>
+ *
  * Protobuf enum {@code opencannabis.structs.labtesting.CannabinoidRatio}
  */
 public enum CannabinoidRatio
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
+   * <pre>
+   * No cannabinoid dominance.
+   * </pre>
+   *
    * <code>NO_CANNABINOID_PREFERENCE = 0;</code>
    */
   NO_CANNABINOID_PREFERENCE(0),
   /**
+   * <pre>
+   * Majority THC or only THC.
+   * </pre>
+   *
    * <code>THC_ONLY = 1;</code>
    */
   THC_ONLY(1),
   /**
+   * <pre>
+   * THC majority, with a minority of CBD.
+   * </pre>
+   *
    * <code>THC_OVER_CBD = 2;</code>
    */
   THC_OVER_CBD(2),
   /**
+   * <pre>
+   * Equal THC and CBD content.
+   * </pre>
+   *
    * <code>EQUAL = 3;</code>
    */
   EQUAL(3),
   /**
+   * <pre>
+   * CBD majority, with a minority of THC.
+   * </pre>
+   *
    * <code>CBD_OVER_THC = 4;</code>
    */
   CBD_OVER_THC(4),
   /**
+   * <pre>
+   * Majority CBD or only CBD.
+   * </pre>
+   *
    * <code>CBD_ONLY = 5;</code>
    */
   CBD_ONLY(5),
@@ -52,26 +82,50 @@ public enum CannabinoidRatio
   ;
 
   /**
+   * <pre>
+   * No cannabinoid dominance.
+   * </pre>
+   *
    * <code>NO_CANNABINOID_PREFERENCE = 0;</code>
    */
   public static final int NO_CANNABINOID_PREFERENCE_VALUE = 0;
   /**
+   * <pre>
+   * Majority THC or only THC.
+   * </pre>
+   *
    * <code>THC_ONLY = 1;</code>
    */
   public static final int THC_ONLY_VALUE = 1;
   /**
+   * <pre>
+   * THC majority, with a minority of CBD.
+   * </pre>
+   *
    * <code>THC_OVER_CBD = 2;</code>
    */
   public static final int THC_OVER_CBD_VALUE = 2;
   /**
+   * <pre>
+   * Equal THC and CBD content.
+   * </pre>
+   *
    * <code>EQUAL = 3;</code>
    */
   public static final int EQUAL_VALUE = 3;
   /**
+   * <pre>
+   * CBD majority, with a minority of THC.
+   * </pre>
+   *
    * <code>CBD_OVER_THC = 4;</code>
    */
   public static final int CBD_OVER_THC_VALUE = 4;
   /**
+   * <pre>
+   * Majority CBD or only CBD.
+   * </pre>
+   *
    * <code>CBD_ONLY = 5;</code>
    */
   public static final int CBD_ONLY_VALUE = 5;
@@ -127,7 +181,7 @@ public enum CannabinoidRatio
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor().getEnumTypes().get(1);
+    return io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor().getEnumTypes().get(2);
   }
 
   private static final CannabinoidRatio[] VALUES = values();

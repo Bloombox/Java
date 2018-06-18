@@ -73,11 +73,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.opencannabis.schema.media.MediaItem.Builder subBuilder = null;
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder subBuilder = null;
             if (mediaItem_ != null) {
               subBuilder = mediaItem_.toBuilder();
             }
-            mediaItem_ = input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry);
+            mediaItem_ = input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaItem.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(mediaItem_);
               mediaItem_ = subBuilder.buildPartial();
@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MEDIA_ITEM_FIELD_NUMBER = 2;
-  private io.opencannabis.schema.media.MediaItem mediaItem_;
+  private io.opencannabis.schema.media.AttachedMedia.MediaItem mediaItem_;
   /**
    * <code>.opencannabis.media.MediaItem media_item = 2;</code>
    */
@@ -136,13 +136,13 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>.opencannabis.media.MediaItem media_item = 2;</code>
    */
-  public io.opencannabis.schema.media.MediaItem getMediaItem() {
-    return mediaItem_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : mediaItem_;
+  public io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaItem() {
+    return mediaItem_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : mediaItem_;
   }
   /**
    * <code>.opencannabis.media.MediaItem media_item = 2;</code>
    */
-  public io.opencannabis.schema.media.MediaItemOrBuilder getMediaItemOrBuilder() {
+  public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaItemOrBuilder() {
     return getMediaItem();
   }
 
@@ -502,9 +502,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.media.MediaItem mediaItem_ = null;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem mediaItem_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> mediaItemBuilder_;
+        io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> mediaItemBuilder_;
     /**
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
@@ -514,9 +514,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaItem getMediaItem() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaItem() {
       if (mediaItemBuilder_ == null) {
-        return mediaItem_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : mediaItem_;
+        return mediaItem_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : mediaItem_;
       } else {
         return mediaItemBuilder_.getMessage();
       }
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
-    public Builder setMediaItem(io.opencannabis.schema.media.MediaItem value) {
+    public Builder setMediaItem(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
       if (mediaItemBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -541,7 +541,7 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     public Builder setMediaItem(
-        io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+        io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
       if (mediaItemBuilder_ == null) {
         mediaItem_ = builderForValue.build();
         onChanged();
@@ -554,11 +554,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
-    public Builder mergeMediaItem(io.opencannabis.schema.media.MediaItem value) {
+    public Builder mergeMediaItem(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
       if (mediaItemBuilder_ == null) {
         if (mediaItem_ != null) {
           mediaItem_ =
-            io.opencannabis.schema.media.MediaItem.newBuilder(mediaItem_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.newBuilder(mediaItem_).mergeFrom(value).buildPartial();
         } else {
           mediaItem_ = value;
         }
@@ -586,7 +586,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaItem.Builder getMediaItemBuilder() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder getMediaItemBuilder() {
       
       onChanged();
       return getMediaItemFieldBuilder().getBuilder();
@@ -594,23 +594,23 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaItemOrBuilder getMediaItemOrBuilder() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaItemOrBuilder() {
       if (mediaItemBuilder_ != null) {
         return mediaItemBuilder_.getMessageOrBuilder();
       } else {
         return mediaItem_ == null ?
-            io.opencannabis.schema.media.MediaItem.getDefaultInstance() : mediaItem_;
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : mediaItem_;
       }
     }
     /**
      * <code>.opencannabis.media.MediaItem media_item = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
+        io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
         getMediaItemFieldBuilder() {
       if (mediaItemBuilder_ == null) {
         mediaItemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
+            io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder>(
                 getMediaItem(),
                 getParentForChildren(),
                 isClean());

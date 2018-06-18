@@ -30,9 +30,769 @@ public final class BaseCompression {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CompressionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:opencannabis.base.Compression)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enabled/disabled flag for compression. Defaults to not being set, so, falsy.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+     * </pre>
+     *
+     * <code>.opencannabis.base.Compression.Type type = 2;</code>
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+     * </pre>
+     *
+     * <code>.opencannabis.base.Compression.Type type = 2;</code>
+     */
+    io.opencannabis.schema.base.BaseCompression.Compression.Type getType();
+  }
+  /**
+   * <pre>
+   * Specifies enabled/disabled state and compression type, and is usually attached to arbitrary data or metadata.
+   * </pre>
+   *
+   * Protobuf type {@code opencannabis.base.Compression}
+   */
+  public  static final class Compression extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:opencannabis.base.Compression)
+      CompressionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Compression.newBuilder() to construct.
+    private Compression(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Compression() {
+      enabled_ = false;
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Compression(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.opencannabis.schema.base.BaseCompression.internal_static_opencannabis_base_Compression_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.opencannabis.schema.base.BaseCompression.internal_static_opencannabis_base_Compression_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.opencannabis.schema.base.BaseCompression.Compression.class, io.opencannabis.schema.base.BaseCompression.Compression.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Enumerates available types of compression, or strategies or algorithms for compressing data.
+     * </pre>
+     *
+     * Protobuf enum {@code opencannabis.base.Compression.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * No compression.
+       * </pre>
+       *
+       * <code>NO_COMPRESSION = 0;</code>
+       */
+      NO_COMPRESSION(0),
+      /**
+       * <pre>
+       * Gzip-based compression.
+       * </pre>
+       *
+       * <code>GZIP = 1;</code>
+       */
+      GZIP(1),
+      /**
+       * <pre>
+       * Brotli-based compression.
+       * </pre>
+       *
+       * <code>BROTLI = 2;</code>
+       */
+      BROTLI(2),
+      /**
+       * <pre>
+       * Snappy-based compression.
+       * </pre>
+       *
+       * <code>SNAPPY = 3;</code>
+       */
+      SNAPPY(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * No compression.
+       * </pre>
+       *
+       * <code>NO_COMPRESSION = 0;</code>
+       */
+      public static final int NO_COMPRESSION_VALUE = 0;
+      /**
+       * <pre>
+       * Gzip-based compression.
+       * </pre>
+       *
+       * <code>GZIP = 1;</code>
+       */
+      public static final int GZIP_VALUE = 1;
+      /**
+       * <pre>
+       * Brotli-based compression.
+       * </pre>
+       *
+       * <code>BROTLI = 2;</code>
+       */
+      public static final int BROTLI_VALUE = 2;
+      /**
+       * <pre>
+       * Snappy-based compression.
+       * </pre>
+       *
+       * <code>SNAPPY = 3;</code>
+       */
+      public static final int SNAPPY_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return NO_COMPRESSION;
+          case 1: return GZIP;
+          case 2: return BROTLI;
+          case 3: return SNAPPY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return io.opencannabis.schema.base.BaseCompression.Compression.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:opencannabis.base.Compression.Type)
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Enabled/disabled flag for compression. Defaults to not being set, so, falsy.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     */
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_;
+    /**
+     * <pre>
+     * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+     * </pre>
+     *
+     * <code>.opencannabis.base.Compression.Type type = 2;</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+     * </pre>
+     *
+     * <code>.opencannabis.base.Compression.Type type = 2;</code>
+     */
+    public io.opencannabis.schema.base.BaseCompression.Compression.Type getType() {
+      io.opencannabis.schema.base.BaseCompression.Compression.Type result = io.opencannabis.schema.base.BaseCompression.Compression.Type.valueOf(type_);
+      return result == null ? io.opencannabis.schema.base.BaseCompression.Compression.Type.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      if (type_ != io.opencannabis.schema.base.BaseCompression.Compression.Type.NO_COMPRESSION.getNumber()) {
+        output.writeEnum(2, type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      if (type_ != io.opencannabis.schema.base.BaseCompression.Compression.Type.NO_COMPRESSION.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.opencannabis.schema.base.BaseCompression.Compression)) {
+        return super.equals(obj);
+      }
+      io.opencannabis.schema.base.BaseCompression.Compression other = (io.opencannabis.schema.base.BaseCompression.Compression) obj;
+
+      boolean result = true;
+      result = result && (getEnabled()
+          == other.getEnabled());
+      result = result && type_ == other.type_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.base.BaseCompression.Compression parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.opencannabis.schema.base.BaseCompression.Compression prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies enabled/disabled state and compression type, and is usually attached to arbitrary data or metadata.
+     * </pre>
+     *
+     * Protobuf type {@code opencannabis.base.Compression}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:opencannabis.base.Compression)
+        io.opencannabis.schema.base.BaseCompression.CompressionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.opencannabis.schema.base.BaseCompression.internal_static_opencannabis_base_Compression_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.opencannabis.schema.base.BaseCompression.internal_static_opencannabis_base_Compression_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.opencannabis.schema.base.BaseCompression.Compression.class, io.opencannabis.schema.base.BaseCompression.Compression.Builder.class);
+      }
+
+      // Construct using io.opencannabis.schema.base.BaseCompression.Compression.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        type_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.opencannabis.schema.base.BaseCompression.internal_static_opencannabis_base_Compression_descriptor;
+      }
+
+      public io.opencannabis.schema.base.BaseCompression.Compression getDefaultInstanceForType() {
+        return io.opencannabis.schema.base.BaseCompression.Compression.getDefaultInstance();
+      }
+
+      public io.opencannabis.schema.base.BaseCompression.Compression build() {
+        io.opencannabis.schema.base.BaseCompression.Compression result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.opencannabis.schema.base.BaseCompression.Compression buildPartial() {
+        io.opencannabis.schema.base.BaseCompression.Compression result = new io.opencannabis.schema.base.BaseCompression.Compression(this);
+        result.enabled_ = enabled_;
+        result.type_ = type_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.opencannabis.schema.base.BaseCompression.Compression) {
+          return mergeFrom((io.opencannabis.schema.base.BaseCompression.Compression)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.opencannabis.schema.base.BaseCompression.Compression other) {
+        if (other == io.opencannabis.schema.base.BaseCompression.Compression.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.opencannabis.schema.base.BaseCompression.Compression parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.opencannabis.schema.base.BaseCompression.Compression) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Enabled/disabled flag for compression. Defaults to not being set, so, falsy.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Enabled/disabled flag for compression. Defaults to not being set, so, falsy.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabled/disabled flag for compression. Defaults to not being set, so, falsy.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+       * </pre>
+       *
+       * <code>.opencannabis.base.Compression.Type type = 2;</code>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+       * </pre>
+       *
+       * <code>.opencannabis.base.Compression.Type type = 2;</code>
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+       * </pre>
+       *
+       * <code>.opencannabis.base.Compression.Type type = 2;</code>
+       */
+      public io.opencannabis.schema.base.BaseCompression.Compression.Type getType() {
+        io.opencannabis.schema.base.BaseCompression.Compression.Type result = io.opencannabis.schema.base.BaseCompression.Compression.Type.valueOf(type_);
+        return result == null ? io.opencannabis.schema.base.BaseCompression.Compression.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+       * </pre>
+       *
+       * <code>.opencannabis.base.Compression.Type type = 2;</code>
+       */
+      public Builder setType(io.opencannabis.schema.base.BaseCompression.Compression.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of compression in use, if any. Enumerated herein via `Compression.Type`.
+       * </pre>
+       *
+       * <code>.opencannabis.base.Compression.Type type = 2;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:opencannabis.base.Compression)
+    }
+
+    // @@protoc_insertion_point(class_scope:opencannabis.base.Compression)
+    private static final io.opencannabis.schema.base.BaseCompression.Compression DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.opencannabis.schema.base.BaseCompression.Compression();
+    }
+
+    public static io.opencannabis.schema.base.BaseCompression.Compression getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Compression>
+        PARSER = new com.google.protobuf.AbstractParser<Compression>() {
+      public Compression parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Compression(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Compression> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Compression> getParserForType() {
+      return PARSER;
+    }
+
+    public io.opencannabis.schema.base.BaseCompression.Compression getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_opencannabis_base_Compression_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_opencannabis_base_Compression_fieldAccessorTable;
 
@@ -50,7 +810,7 @@ public final class BaseCompression {
       "on.Type\"<\n\004Type\022\022\n\016NO_COMPRESSION\020\000\022\010\n\004G" +
       "ZIP\020\001\022\n\n\006BROTLI\020\002\022\n\n\006SNAPPY\020\003B8\n\033io.open" +
       "cannabis.schema.baseB\017BaseCompressionH\001P" +
-      "\001\242\002\003OCSb\006proto3"
+      "\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

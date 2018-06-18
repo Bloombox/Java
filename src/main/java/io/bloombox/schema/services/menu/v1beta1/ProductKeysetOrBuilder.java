@@ -31,7 +31,7 @@ public interface ProductKeysetOrBuilder extends
    *
    * <code>repeated .opencannabis.base.ProductKey key = 1;</code>
    */
-  java.util.List<io.opencannabis.schema.base.ProductKey> 
+  java.util.List<io.opencannabis.schema.base.BaseProductKey.ProductKey> 
       getKeyList();
   /**
    * <pre>
@@ -40,7 +40,7 @@ public interface ProductKeysetOrBuilder extends
    *
    * <code>repeated .opencannabis.base.ProductKey key = 1;</code>
    */
-  io.opencannabis.schema.base.ProductKey getKey(int index);
+  io.opencannabis.schema.base.BaseProductKey.ProductKey getKey(int index);
   /**
    * <pre>
    * Specifies keys included in this key set.
@@ -56,7 +56,7 @@ public interface ProductKeysetOrBuilder extends
    *
    * <code>repeated .opencannabis.base.ProductKey key = 1;</code>
    */
-  java.util.List<? extends io.opencannabis.schema.base.ProductKeyOrBuilder> 
+  java.util.List<? extends io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> 
       getKeyOrBuilderList();
   /**
    * <pre>
@@ -65,6 +65,6 @@ public interface ProductKeysetOrBuilder extends
    *
    * <code>repeated .opencannabis.base.ProductKey key = 1;</code>
    */
-  io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder(
+  io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder(
       int index);
 }

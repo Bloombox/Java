@@ -934,6 +934,14 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>ENROLLMENT = 1;</code>
      */
     ENROLLMENT(1),
+    /**
+     * <pre>
+     * Specifies marketing/newsletter style communications.
+     * </pre>
+     *
+     * <code>MARKETING = 2;</code>
+     */
+    MARKETING(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -953,6 +961,14 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>ENROLLMENT = 1;</code>
      */
     public static final int ENROLLMENT_VALUE = 1;
+    /**
+     * <pre>
+     * Specifies marketing/newsletter style communications.
+     * </pre>
+     *
+     * <code>MARKETING = 2;</code>
+     */
+    public static final int MARKETING_VALUE = 2;
 
 
     public final int getNumber() {
@@ -975,6 +991,7 @@ public final class PartnerLocationSettingsOuterClass {
       switch (value) {
         case 0: return ORDERING;
         case 1: return ENROLLMENT;
+        case 2: return MARKETING;
         default: return null;
       }
     }
@@ -16735,7 +16752,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.temporal.Date date = 3;</code>
      */
-    io.opencannabis.schema.temporal.Date getDate();
+    io.opencannabis.schema.temporal.TemporalDate.Date getDate();
     /**
      * <pre>
      * Specifies the date upon which these special hours apply.
@@ -16743,7 +16760,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.temporal.Date date = 3;</code>
      */
-    io.opencannabis.schema.temporal.DateOrBuilder getDateOrBuilder();
+    io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getDateOrBuilder();
   }
   /**
    * <pre>
@@ -16816,11 +16833,11 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             case 26: {
-              io.opencannabis.schema.temporal.Date.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalDate.Date.Builder subBuilder = null;
               if (date_ != null) {
                 subBuilder = date_.toBuilder();
               }
-              date_ = input.readMessage(io.opencannabis.schema.temporal.Date.parser(), extensionRegistry);
+              date_ = input.readMessage(io.opencannabis.schema.temporal.TemporalDate.Date.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(date_);
                 date_ = subBuilder.buildPartial();
@@ -16910,7 +16927,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     public static final int DATE_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.temporal.Date date_;
+    private io.opencannabis.schema.temporal.TemporalDate.Date date_;
     /**
      * <pre>
      * Specifies the date upon which these special hours apply.
@@ -16928,8 +16945,8 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.temporal.Date date = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Date getDate() {
-      return date_ == null ? io.opencannabis.schema.temporal.Date.getDefaultInstance() : date_;
+    public io.opencannabis.schema.temporal.TemporalDate.Date getDate() {
+      return date_ == null ? io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : date_;
     }
     /**
      * <pre>
@@ -16938,7 +16955,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.temporal.Date date = 3;</code>
      */
-    public io.opencannabis.schema.temporal.DateOrBuilder getDateOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getDateOrBuilder() {
       return getDate();
     }
 
@@ -17505,9 +17522,9 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Date date_ = null;
+      private io.opencannabis.schema.temporal.TemporalDate.Date date_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder> dateBuilder_;
+          io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> dateBuilder_;
       /**
        * <pre>
        * Specifies the date upon which these special hours apply.
@@ -17525,9 +17542,9 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.temporal.Date date = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Date getDate() {
+      public io.opencannabis.schema.temporal.TemporalDate.Date getDate() {
         if (dateBuilder_ == null) {
-          return date_ == null ? io.opencannabis.schema.temporal.Date.getDefaultInstance() : date_;
+          return date_ == null ? io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : date_;
         } else {
           return dateBuilder_.getMessage();
         }
@@ -17539,7 +17556,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.temporal.Date date = 3;</code>
        */
-      public Builder setDate(io.opencannabis.schema.temporal.Date value) {
+      public Builder setDate(io.opencannabis.schema.temporal.TemporalDate.Date value) {
         if (dateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17560,7 +17577,7 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.temporal.Date date = 3;</code>
        */
       public Builder setDate(
-          io.opencannabis.schema.temporal.Date.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalDate.Date.Builder builderForValue) {
         if (dateBuilder_ == null) {
           date_ = builderForValue.build();
           onChanged();
@@ -17577,11 +17594,11 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.temporal.Date date = 3;</code>
        */
-      public Builder mergeDate(io.opencannabis.schema.temporal.Date value) {
+      public Builder mergeDate(io.opencannabis.schema.temporal.TemporalDate.Date value) {
         if (dateBuilder_ == null) {
           if (date_ != null) {
             date_ =
-              io.opencannabis.schema.temporal.Date.newBuilder(date_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalDate.Date.newBuilder(date_).mergeFrom(value).buildPartial();
           } else {
             date_ = value;
           }
@@ -17617,7 +17634,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.temporal.Date date = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Date.Builder getDateBuilder() {
+      public io.opencannabis.schema.temporal.TemporalDate.Date.Builder getDateBuilder() {
         
         onChanged();
         return getDateFieldBuilder().getBuilder();
@@ -17629,12 +17646,12 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.temporal.Date date = 3;</code>
        */
-      public io.opencannabis.schema.temporal.DateOrBuilder getDateOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getDateOrBuilder() {
         if (dateBuilder_ != null) {
           return dateBuilder_.getMessageOrBuilder();
         } else {
           return date_ == null ?
-              io.opencannabis.schema.temporal.Date.getDefaultInstance() : date_;
+              io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : date_;
         }
       }
       /**
@@ -17645,11 +17662,11 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.temporal.Date date = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> 
           getDateFieldBuilder() {
         if (dateBuilder_ == null) {
           dateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Date, io.opencannabis.schema.temporal.Date.Builder, io.opencannabis.schema.temporal.DateOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder>(
                   getDate(),
                   getParentForChildren(),
                   isClean());
@@ -18992,6 +19009,24 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>bool storefront = 4;</code>
      */
     boolean getStorefront();
+
+    /**
+     * <pre>
+     * Specifies whether this operator supports medical sales.
+     * </pre>
+     *
+     * <code>bool medical = 5;</code>
+     */
+    boolean getMedical();
+
+    /**
+     * <pre>
+     * Specifies whether this operator supports adult-use, or recreational, sales.
+     * </pre>
+     *
+     * <code>bool adult_use = 6;</code>
+     */
+    boolean getAdultUse();
   }
   /**
    * <pre>
@@ -19014,6 +19049,8 @@ public final class PartnerLocationSettingsOuterClass {
       express_ = false;
       pickup_ = false;
       storefront_ = false;
+      medical_ = false;
+      adultUse_ = false;
     }
 
     @java.lang.Override
@@ -19065,6 +19102,16 @@ public final class PartnerLocationSettingsOuterClass {
             case 32: {
 
               storefront_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              medical_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              adultUse_ = input.readBool();
               break;
             }
           }
@@ -19143,6 +19190,32 @@ public final class PartnerLocationSettingsOuterClass {
       return storefront_;
     }
 
+    public static final int MEDICAL_FIELD_NUMBER = 5;
+    private boolean medical_;
+    /**
+     * <pre>
+     * Specifies whether this operator supports medical sales.
+     * </pre>
+     *
+     * <code>bool medical = 5;</code>
+     */
+    public boolean getMedical() {
+      return medical_;
+    }
+
+    public static final int ADULT_USE_FIELD_NUMBER = 6;
+    private boolean adultUse_;
+    /**
+     * <pre>
+     * Specifies whether this operator supports adult-use, or recreational, sales.
+     * </pre>
+     *
+     * <code>bool adult_use = 6;</code>
+     */
+    public boolean getAdultUse() {
+      return adultUse_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -19166,6 +19239,12 @@ public final class PartnerLocationSettingsOuterClass {
       }
       if (storefront_ != false) {
         output.writeBool(4, storefront_);
+      }
+      if (medical_ != false) {
+        output.writeBool(5, medical_);
+      }
+      if (adultUse_ != false) {
+        output.writeBool(6, adultUse_);
       }
       unknownFields.writeTo(output);
     }
@@ -19191,6 +19270,14 @@ public final class PartnerLocationSettingsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, storefront_);
       }
+      if (medical_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, medical_);
+      }
+      if (adultUse_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, adultUse_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19215,6 +19302,10 @@ public final class PartnerLocationSettingsOuterClass {
           == other.getPickup());
       result = result && (getStorefront()
           == other.getStorefront());
+      result = result && (getMedical()
+          == other.getMedical());
+      result = result && (getAdultUse()
+          == other.getAdultUse());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -19238,6 +19329,12 @@ public final class PartnerLocationSettingsOuterClass {
       hash = (37 * hash) + STOREFRONT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getStorefront());
+      hash = (37 * hash) + MEDICAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMedical());
+      hash = (37 * hash) + ADULT_USE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAdultUse());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -19379,6 +19476,10 @@ public final class PartnerLocationSettingsOuterClass {
 
         storefront_ = false;
 
+        medical_ = false;
+
+        adultUse_ = false;
+
         return this;
       }
 
@@ -19405,6 +19506,8 @@ public final class PartnerLocationSettingsOuterClass {
         result.express_ = express_;
         result.pickup_ = pickup_;
         result.storefront_ = storefront_;
+        result.medical_ = medical_;
+        result.adultUse_ = adultUse_;
         onBuilt();
         return result;
       }
@@ -19457,6 +19560,12 @@ public final class PartnerLocationSettingsOuterClass {
         }
         if (other.getStorefront() != false) {
           setStorefront(other.getStorefront());
+        }
+        if (other.getMedical() != false) {
+          setMedical(other.getMedical());
+        }
+        if (other.getAdultUse() != false) {
+          setAdultUse(other.getAdultUse());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19633,6 +19742,82 @@ public final class PartnerLocationSettingsOuterClass {
       public Builder clearStorefront() {
         
         storefront_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean medical_ ;
+      /**
+       * <pre>
+       * Specifies whether this operator supports medical sales.
+       * </pre>
+       *
+       * <code>bool medical = 5;</code>
+       */
+      public boolean getMedical() {
+        return medical_;
+      }
+      /**
+       * <pre>
+       * Specifies whether this operator supports medical sales.
+       * </pre>
+       *
+       * <code>bool medical = 5;</code>
+       */
+      public Builder setMedical(boolean value) {
+        
+        medical_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether this operator supports medical sales.
+       * </pre>
+       *
+       * <code>bool medical = 5;</code>
+       */
+      public Builder clearMedical() {
+        
+        medical_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean adultUse_ ;
+      /**
+       * <pre>
+       * Specifies whether this operator supports adult-use, or recreational, sales.
+       * </pre>
+       *
+       * <code>bool adult_use = 6;</code>
+       */
+      public boolean getAdultUse() {
+        return adultUse_;
+      }
+      /**
+       * <pre>
+       * Specifies whether this operator supports adult-use, or recreational, sales.
+       * </pre>
+       *
+       * <code>bool adult_use = 6;</code>
+       */
+      public Builder setAdultUse(boolean value) {
+        
+        adultUse_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether this operator supports adult-use, or recreational, sales.
+       * </pre>
+       *
+       * <code>bool adult_use = 6;</code>
+       */
+      public Builder clearAdultUse() {
+        
+        adultUse_ = false;
         onChanged();
         return this;
       }
@@ -21897,6 +22082,31 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings enrollment = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getEnrollmentOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    boolean hasMarketing();
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing();
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder();
   }
   /**
    * <pre>
@@ -21970,6 +22180,19 @@ public final class PartnerLocationSettingsOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(enrollment_);
                 enrollment_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder subBuilder = null;
+              if (marketing_ != null) {
+                subBuilder = marketing_.toBuilder();
+              }
+              marketing_ = input.readMessage(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(marketing_);
+                marketing_ = subBuilder.buildPartial();
               }
 
               break;
@@ -22064,6 +22287,39 @@ public final class PartnerLocationSettingsOuterClass {
       return getEnrollment();
     }
 
+    public static final int MARKETING_FIELD_NUMBER = 3;
+    private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings marketing_;
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    public boolean hasMarketing() {
+      return marketing_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing() {
+      return marketing_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : marketing_;
+    }
+    /**
+     * <pre>
+     * Specifies channel-specific settings for marketing notifications.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+     */
+    public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder() {
+      return getMarketing();
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -22082,6 +22338,9 @@ public final class PartnerLocationSettingsOuterClass {
       if (enrollment_ != null) {
         output.writeMessage(2, getEnrollment());
       }
+      if (marketing_ != null) {
+        output.writeMessage(3, getMarketing());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -22097,6 +22356,10 @@ public final class PartnerLocationSettingsOuterClass {
       if (enrollment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEnrollment());
+      }
+      if (marketing_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMarketing());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22124,6 +22387,11 @@ public final class PartnerLocationSettingsOuterClass {
         result = result && getEnrollment()
             .equals(other.getEnrollment());
       }
+      result = result && (hasMarketing() == other.hasMarketing());
+      if (hasMarketing()) {
+        result = result && getMarketing()
+            .equals(other.getMarketing());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -22142,6 +22410,10 @@ public final class PartnerLocationSettingsOuterClass {
       if (hasEnrollment()) {
         hash = (37 * hash) + ENROLLMENT_FIELD_NUMBER;
         hash = (53 * hash) + getEnrollment().hashCode();
+      }
+      if (hasMarketing()) {
+        hash = (37 * hash) + MARKETING_FIELD_NUMBER;
+        hash = (53 * hash) + getMarketing().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -22288,6 +22560,12 @@ public final class PartnerLocationSettingsOuterClass {
           enrollment_ = null;
           enrollmentBuilder_ = null;
         }
+        if (marketingBuilder_ == null) {
+          marketing_ = null;
+        } else {
+          marketing_ = null;
+          marketingBuilder_ = null;
+        }
         return this;
       }
 
@@ -22319,6 +22597,11 @@ public final class PartnerLocationSettingsOuterClass {
           result.enrollment_ = enrollment_;
         } else {
           result.enrollment_ = enrollmentBuilder_.build();
+        }
+        if (marketingBuilder_ == null) {
+          result.marketing_ = marketing_;
+        } else {
+          result.marketing_ = marketingBuilder_.build();
         }
         onBuilt();
         return result;
@@ -22366,6 +22649,9 @@ public final class PartnerLocationSettingsOuterClass {
         }
         if (other.hasEnrollment()) {
           mergeEnrollment(other.getEnrollment());
+        }
+        if (other.hasMarketing()) {
+          mergeMarketing(other.getMarketing());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -22699,6 +22985,159 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return enrollmentBuilder_;
       }
+
+      private io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings marketing_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> marketingBuilder_;
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public boolean hasMarketing() {
+        return marketingBuilder_ != null || marketing_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings getMarketing() {
+        if (marketingBuilder_ == null) {
+          return marketing_ == null ? io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : marketing_;
+        } else {
+          return marketingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public Builder setMarketing(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
+        if (marketingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          marketing_ = value;
+          onChanged();
+        } else {
+          marketingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public Builder setMarketing(
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder builderForValue) {
+        if (marketingBuilder_ == null) {
+          marketing_ = builderForValue.build();
+          onChanged();
+        } else {
+          marketingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public Builder mergeMarketing(io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings value) {
+        if (marketingBuilder_ == null) {
+          if (marketing_ != null) {
+            marketing_ =
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.newBuilder(marketing_).mergeFrom(value).buildPartial();
+          } else {
+            marketing_ = value;
+          }
+          onChanged();
+        } else {
+          marketingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public Builder clearMarketing() {
+        if (marketingBuilder_ == null) {
+          marketing_ = null;
+          onChanged();
+        } else {
+          marketing_ = null;
+          marketingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder getMarketingBuilder() {
+        
+        onChanged();
+        return getMarketingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder getMarketingOrBuilder() {
+        if (marketingBuilder_ != null) {
+          return marketingBuilder_.getMessageOrBuilder();
+        } else {
+          return marketing_ == null ?
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.getDefaultInstance() : marketing_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies channel-specific settings for marketing notifications.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.settings.ShopContactChannelSettings marketing = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder> 
+          getMarketingFieldBuilder() {
+        if (marketingBuilder_ == null) {
+          marketingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettings.Builder, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopContactChannelSettingsOrBuilder>(
+                  getMarketing(),
+                  getParentForChildren(),
+                  isClean());
+          marketing_ = null;
+        }
+        return marketingBuilder_;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -22794,7 +23233,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 3;</code>
      */
-    io.opencannabis.schema.contact.EmailAddress getEmail();
+    io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail();
     /**
      * <pre>
      * Specifies an email address as part of this contact.
@@ -22802,7 +23241,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 3;</code>
      */
-    io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder();
+    io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder();
 
     /**
      * <pre>
@@ -22819,7 +23258,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
      */
-    io.opencannabis.schema.contact.PhoneNumber getPhone();
+    io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone();
     /**
      * <pre>
      * Specifies a phone number as part of this contact.
@@ -22827,7 +23266,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
      */
-    io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder();
+    io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder();
 
     /**
      * <pre>
@@ -22918,11 +23357,11 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             case 26: {
-              io.opencannabis.schema.contact.EmailAddress.Builder subBuilder = null;
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder subBuilder = null;
               if (email_ != null) {
                 subBuilder = email_.toBuilder();
               }
-              email_ = input.readMessage(io.opencannabis.schema.contact.EmailAddress.parser(), extensionRegistry);
+              email_ = input.readMessage(io.opencannabis.schema.contact.ContactEmail.EmailAddress.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(email_);
                 email_ = subBuilder.buildPartial();
@@ -22931,11 +23370,11 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             case 34: {
-              io.opencannabis.schema.contact.PhoneNumber.Builder subBuilder = null;
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder subBuilder = null;
               if (phone_ != null) {
                 subBuilder = phone_.toBuilder();
               }
-              phone_ = input.readMessage(io.opencannabis.schema.contact.PhoneNumber.parser(), extensionRegistry);
+              phone_ = input.readMessage(io.opencannabis.schema.contact.ContactPhone.PhoneNumber.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(phone_);
                 phone_ = subBuilder.buildPartial();
@@ -23036,7 +23475,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     public static final int EMAIL_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.contact.EmailAddress email_;
+    private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_;
     /**
      * <pre>
      * Specifies an email address as part of this contact.
@@ -23054,8 +23493,8 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 3;</code>
      */
-    public io.opencannabis.schema.contact.EmailAddress getEmail() {
-      return email_ == null ? io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : email_;
+    public io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail() {
+      return email_ == null ? io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : email_;
     }
     /**
      * <pre>
@@ -23064,12 +23503,12 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 3;</code>
      */
-    public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder() {
+    public io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder() {
       return getEmail();
     }
 
     public static final int PHONE_FIELD_NUMBER = 4;
-    private io.opencannabis.schema.contact.PhoneNumber phone_;
+    private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_;
     /**
      * <pre>
      * Specifies a phone number as part of this contact.
@@ -23087,8 +23526,8 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
      */
-    public io.opencannabis.schema.contact.PhoneNumber getPhone() {
-      return phone_ == null ? io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phone_;
+    public io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone() {
+      return phone_ == null ? io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phone_;
     }
     /**
      * <pre>
@@ -23097,7 +23536,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
      */
-    public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder() {
+    public io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder() {
       return getPhone();
     }
 
@@ -23656,9 +24095,9 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.contact.EmailAddress email_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> emailBuilder_;
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> emailBuilder_;
       /**
        * <pre>
        * Specifies an email address as part of this contact.
@@ -23676,9 +24115,9 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 3;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddress getEmail() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail() {
         if (emailBuilder_ == null) {
-          return email_ == null ? io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : email_;
+          return email_ == null ? io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : email_;
         } else {
           return emailBuilder_.getMessage();
         }
@@ -23690,7 +24129,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 3;</code>
        */
-      public Builder setEmail(io.opencannabis.schema.contact.EmailAddress value) {
+      public Builder setEmail(io.opencannabis.schema.contact.ContactEmail.EmailAddress value) {
         if (emailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23711,7 +24150,7 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.contact.EmailAddress email = 3;</code>
        */
       public Builder setEmail(
-          io.opencannabis.schema.contact.EmailAddress.Builder builderForValue) {
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder builderForValue) {
         if (emailBuilder_ == null) {
           email_ = builderForValue.build();
           onChanged();
@@ -23728,11 +24167,11 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 3;</code>
        */
-      public Builder mergeEmail(io.opencannabis.schema.contact.EmailAddress value) {
+      public Builder mergeEmail(io.opencannabis.schema.contact.ContactEmail.EmailAddress value) {
         if (emailBuilder_ == null) {
           if (email_ != null) {
             email_ =
-              io.opencannabis.schema.contact.EmailAddress.newBuilder(email_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.newBuilder(email_).mergeFrom(value).buildPartial();
           } else {
             email_ = value;
           }
@@ -23768,7 +24207,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 3;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddress.Builder getEmailBuilder() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder getEmailBuilder() {
         
         onChanged();
         return getEmailFieldBuilder().getBuilder();
@@ -23780,12 +24219,12 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 3;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder() {
         if (emailBuilder_ != null) {
           return emailBuilder_.getMessageOrBuilder();
         } else {
           return email_ == null ?
-              io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : email_;
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : email_;
         }
       }
       /**
@@ -23796,11 +24235,11 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.contact.EmailAddress email = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> 
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> 
           getEmailFieldBuilder() {
         if (emailBuilder_ == null) {
           emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder>(
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder>(
                   getEmail(),
                   getParentForChildren(),
                   isClean());
@@ -23809,9 +24248,9 @@ public final class PartnerLocationSettingsOuterClass {
         return emailBuilder_;
       }
 
-      private io.opencannabis.schema.contact.PhoneNumber phone_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> phoneBuilder_;
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> phoneBuilder_;
       /**
        * <pre>
        * Specifies a phone number as part of this contact.
@@ -23829,9 +24268,9 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumber getPhone() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone() {
         if (phoneBuilder_ == null) {
-          return phone_ == null ? io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phone_;
+          return phone_ == null ? io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phone_;
         } else {
           return phoneBuilder_.getMessage();
         }
@@ -23843,7 +24282,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
        */
-      public Builder setPhone(io.opencannabis.schema.contact.PhoneNumber value) {
+      public Builder setPhone(io.opencannabis.schema.contact.ContactPhone.PhoneNumber value) {
         if (phoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23864,7 +24303,7 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
        */
       public Builder setPhone(
-          io.opencannabis.schema.contact.PhoneNumber.Builder builderForValue) {
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder builderForValue) {
         if (phoneBuilder_ == null) {
           phone_ = builderForValue.build();
           onChanged();
@@ -23881,11 +24320,11 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
        */
-      public Builder mergePhone(io.opencannabis.schema.contact.PhoneNumber value) {
+      public Builder mergePhone(io.opencannabis.schema.contact.ContactPhone.PhoneNumber value) {
         if (phoneBuilder_ == null) {
           if (phone_ != null) {
             phone_ =
-              io.opencannabis.schema.contact.PhoneNumber.newBuilder(phone_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.newBuilder(phone_).mergeFrom(value).buildPartial();
           } else {
             phone_ = value;
           }
@@ -23921,7 +24360,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumber.Builder getPhoneBuilder() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder getPhoneBuilder() {
         
         onChanged();
         return getPhoneFieldBuilder().getBuilder();
@@ -23933,12 +24372,12 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder() {
         if (phoneBuilder_ != null) {
           return phoneBuilder_.getMessageOrBuilder();
         } else {
           return phone_ == null ?
-              io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phone_;
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phone_;
         }
       }
       /**
@@ -23949,11 +24388,11 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.contact.PhoneNumber phone = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> 
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> 
           getPhoneFieldBuilder() {
         if (phoneBuilder_ == null) {
           phoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder>(
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder>(
                   getPhone(),
                   getParentForChildren(),
                   isClean());
@@ -24182,7 +24621,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 1;</code>
      */
-    io.opencannabis.schema.contact.EmailAddress getEmail();
+    io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail();
     /**
      * <pre>
      * Specifies the email address to send from for a particular type of notifications.
@@ -24190,7 +24629,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 1;</code>
      */
-    io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder();
+    io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder();
 
     /**
      * <pre>
@@ -24207,7 +24646,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
      */
-    io.opencannabis.schema.contact.PhoneNumber getPhone();
+    io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone();
     /**
      * <pre>
      * Specifies the phone number to send SMS messages from for a particular type of notifications.
@@ -24215,7 +24654,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
      */
-    io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder();
+    io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder();
   }
   /**
    * <pre>
@@ -24268,11 +24707,11 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             case 10: {
-              io.opencannabis.schema.contact.EmailAddress.Builder subBuilder = null;
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder subBuilder = null;
               if (email_ != null) {
                 subBuilder = email_.toBuilder();
               }
-              email_ = input.readMessage(io.opencannabis.schema.contact.EmailAddress.parser(), extensionRegistry);
+              email_ = input.readMessage(io.opencannabis.schema.contact.ContactEmail.EmailAddress.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(email_);
                 email_ = subBuilder.buildPartial();
@@ -24281,11 +24720,11 @@ public final class PartnerLocationSettingsOuterClass {
               break;
             }
             case 18: {
-              io.opencannabis.schema.contact.PhoneNumber.Builder subBuilder = null;
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder subBuilder = null;
               if (phone_ != null) {
                 subBuilder = phone_.toBuilder();
               }
-              phone_ = input.readMessage(io.opencannabis.schema.contact.PhoneNumber.parser(), extensionRegistry);
+              phone_ = input.readMessage(io.opencannabis.schema.contact.ContactPhone.PhoneNumber.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(phone_);
                 phone_ = subBuilder.buildPartial();
@@ -24318,7 +24757,7 @@ public final class PartnerLocationSettingsOuterClass {
     }
 
     public static final int EMAIL_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.contact.EmailAddress email_;
+    private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_;
     /**
      * <pre>
      * Specifies the email address to send from for a particular type of notifications.
@@ -24336,8 +24775,8 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 1;</code>
      */
-    public io.opencannabis.schema.contact.EmailAddress getEmail() {
-      return email_ == null ? io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : email_;
+    public io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail() {
+      return email_ == null ? io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : email_;
     }
     /**
      * <pre>
@@ -24346,12 +24785,12 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 1;</code>
      */
-    public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder() {
+    public io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder() {
       return getEmail();
     }
 
     public static final int PHONE_FIELD_NUMBER = 2;
-    private io.opencannabis.schema.contact.PhoneNumber phone_;
+    private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_;
     /**
      * <pre>
      * Specifies the phone number to send SMS messages from for a particular type of notifications.
@@ -24369,8 +24808,8 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
      */
-    public io.opencannabis.schema.contact.PhoneNumber getPhone() {
-      return phone_ == null ? io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phone_;
+    public io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone() {
+      return phone_ == null ? io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phone_;
     }
     /**
      * <pre>
@@ -24379,7 +24818,7 @@ public final class PartnerLocationSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
      */
-    public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder() {
+    public io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder() {
       return getPhone();
     }
 
@@ -24713,9 +25152,9 @@ public final class PartnerLocationSettingsOuterClass {
         return this;
       }
 
-      private io.opencannabis.schema.contact.EmailAddress email_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress email_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> emailBuilder_;
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> emailBuilder_;
       /**
        * <pre>
        * Specifies the email address to send from for a particular type of notifications.
@@ -24733,9 +25172,9 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 1;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddress getEmail() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail() {
         if (emailBuilder_ == null) {
-          return email_ == null ? io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : email_;
+          return email_ == null ? io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : email_;
         } else {
           return emailBuilder_.getMessage();
         }
@@ -24747,7 +25186,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 1;</code>
        */
-      public Builder setEmail(io.opencannabis.schema.contact.EmailAddress value) {
+      public Builder setEmail(io.opencannabis.schema.contact.ContactEmail.EmailAddress value) {
         if (emailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -24768,7 +25207,7 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.contact.EmailAddress email = 1;</code>
        */
       public Builder setEmail(
-          io.opencannabis.schema.contact.EmailAddress.Builder builderForValue) {
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder builderForValue) {
         if (emailBuilder_ == null) {
           email_ = builderForValue.build();
           onChanged();
@@ -24785,11 +25224,11 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 1;</code>
        */
-      public Builder mergeEmail(io.opencannabis.schema.contact.EmailAddress value) {
+      public Builder mergeEmail(io.opencannabis.schema.contact.ContactEmail.EmailAddress value) {
         if (emailBuilder_ == null) {
           if (email_ != null) {
             email_ =
-              io.opencannabis.schema.contact.EmailAddress.newBuilder(email_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.newBuilder(email_).mergeFrom(value).buildPartial();
           } else {
             email_ = value;
           }
@@ -24825,7 +25264,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 1;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddress.Builder getEmailBuilder() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder getEmailBuilder() {
         
         onChanged();
         return getEmailFieldBuilder().getBuilder();
@@ -24837,12 +25276,12 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 1;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder() {
         if (emailBuilder_ != null) {
           return emailBuilder_.getMessageOrBuilder();
         } else {
           return email_ == null ?
-              io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : email_;
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : email_;
         }
       }
       /**
@@ -24853,11 +25292,11 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.contact.EmailAddress email = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> 
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> 
           getEmailFieldBuilder() {
         if (emailBuilder_ == null) {
           emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder>(
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder>(
                   getEmail(),
                   getParentForChildren(),
                   isClean());
@@ -24866,9 +25305,9 @@ public final class PartnerLocationSettingsOuterClass {
         return emailBuilder_;
       }
 
-      private io.opencannabis.schema.contact.PhoneNumber phone_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phone_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> phoneBuilder_;
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> phoneBuilder_;
       /**
        * <pre>
        * Specifies the phone number to send SMS messages from for a particular type of notifications.
@@ -24886,9 +25325,9 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumber getPhone() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone() {
         if (phoneBuilder_ == null) {
-          return phone_ == null ? io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phone_;
+          return phone_ == null ? io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phone_;
         } else {
           return phoneBuilder_.getMessage();
         }
@@ -24900,7 +25339,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
        */
-      public Builder setPhone(io.opencannabis.schema.contact.PhoneNumber value) {
+      public Builder setPhone(io.opencannabis.schema.contact.ContactPhone.PhoneNumber value) {
         if (phoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -24921,7 +25360,7 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
        */
       public Builder setPhone(
-          io.opencannabis.schema.contact.PhoneNumber.Builder builderForValue) {
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder builderForValue) {
         if (phoneBuilder_ == null) {
           phone_ = builderForValue.build();
           onChanged();
@@ -24938,11 +25377,11 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
        */
-      public Builder mergePhone(io.opencannabis.schema.contact.PhoneNumber value) {
+      public Builder mergePhone(io.opencannabis.schema.contact.ContactPhone.PhoneNumber value) {
         if (phoneBuilder_ == null) {
           if (phone_ != null) {
             phone_ =
-              io.opencannabis.schema.contact.PhoneNumber.newBuilder(phone_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.newBuilder(phone_).mergeFrom(value).buildPartial();
           } else {
             phone_ = value;
           }
@@ -24978,7 +25417,7 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumber.Builder getPhoneBuilder() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder getPhoneBuilder() {
         
         onChanged();
         return getPhoneFieldBuilder().getBuilder();
@@ -24990,12 +25429,12 @@ public final class PartnerLocationSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder() {
         if (phoneBuilder_ != null) {
           return phoneBuilder_.getMessageOrBuilder();
         } else {
           return phone_ == null ?
-              io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phone_;
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phone_;
         }
       }
       /**
@@ -25006,11 +25445,11 @@ public final class PartnerLocationSettingsOuterClass {
        * <code>.opencannabis.contact.PhoneNumber phone = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> 
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> 
           getPhoneFieldBuilder() {
         if (phoneBuilder_ == null) {
           phoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder>(
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder>(
                   getPhone(),
                   getParentForChildren(),
                   isClean());
@@ -27346,6 +27785,144 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>.bloombox.schema.partner.settings.ShopCommsSettings comms = 2;</code>
      */
     io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.ShopCommsSettingsOrBuilder getCommsOrBuilder();
+
+    /**
+     * <pre>
+     * Domain to use for online shop operations.
+     * </pre>
+     *
+     * <code>string domain = 3;</code>
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Domain to use for online shop operations.
+     * </pre>
+     *
+     * <code>string domain = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    /**
+     * <pre>
+     * Signup URL to use for online shop operations.
+     * </pre>
+     *
+     * <code>string signup = 4;</code>
+     */
+    java.lang.String getSignup();
+    /**
+     * <pre>
+     * Signup URL to use for online shop operations.
+     * </pre>
+     *
+     * <code>string signup = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignupBytes();
+
+    /**
+     * <pre>
+     * Login URL to use for online shop operations.
+     * </pre>
+     *
+     * <code>string login = 5;</code>
+     */
+    java.lang.String getLogin();
+    /**
+     * <pre>
+     * Login URL to use for online shop operations.
+     * </pre>
+     *
+     * <code>string login = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getLoginBytes();
+
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    java.util.List<io.opencannabis.schema.commerce.Payments.PaymentMethod> getAcceptedMethodList();
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    int getAcceptedMethodCount();
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    io.opencannabis.schema.commerce.Payments.PaymentMethod getAcceptedMethod(int index);
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getAcceptedMethodValueList();
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    int getAcceptedMethodValue(int index);
+
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    java.util.List<io.opencannabis.schema.commerce.Payments.PaymentCardType> getAcceptedCardList();
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    int getAcceptedCardCount();
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    io.opencannabis.schema.commerce.Payments.PaymentCardType getAcceptedCard(int index);
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getAcceptedCardValueList();
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    int getAcceptedCardValue(int index);
   }
   /**
    * <pre>
@@ -27365,6 +27942,11 @@ public final class PartnerLocationSettingsOuterClass {
     }
     private OnlineShopSettings() {
       origin_ = "";
+      domain_ = "";
+      signup_ = "";
+      login_ = "";
+      acceptedMethod_ = java.util.Collections.emptyList();
+      acceptedCard_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -27417,6 +27999,70 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              signup_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              login_ = s;
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              acceptedMethod_.add(rawValue);
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                  acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000020;
+                }
+                acceptedMethod_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                acceptedCard_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              acceptedCard_.add(rawValue);
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                  acceptedCard_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000040;
+                }
+                acceptedCard_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -27425,6 +28071,12 @@ public final class PartnerLocationSettingsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          acceptedMethod_ = java.util.Collections.unmodifiableList(acceptedMethod_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          acceptedCard_ = java.util.Collections.unmodifiableList(acceptedCard_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -27441,6 +28093,7 @@ public final class PartnerLocationSettingsOuterClass {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ORIGIN_FIELD_NUMBER = 1;
     private volatile java.lang.Object origin_;
     /**
@@ -27516,6 +28169,262 @@ public final class PartnerLocationSettingsOuterClass {
       return getComms();
     }
 
+    public static final int DOMAIN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Domain to use for online shop operations.
+     * </pre>
+     *
+     * <code>string domain = 3;</code>
+     */
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Domain to use for online shop operations.
+     * </pre>
+     *
+     * <code>string domain = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNUP_FIELD_NUMBER = 4;
+    private volatile java.lang.Object signup_;
+    /**
+     * <pre>
+     * Signup URL to use for online shop operations.
+     * </pre>
+     *
+     * <code>string signup = 4;</code>
+     */
+    public java.lang.String getSignup() {
+      java.lang.Object ref = signup_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signup_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Signup URL to use for online shop operations.
+     * </pre>
+     *
+     * <code>string signup = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignupBytes() {
+      java.lang.Object ref = signup_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signup_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOGIN_FIELD_NUMBER = 5;
+    private volatile java.lang.Object login_;
+    /**
+     * <pre>
+     * Login URL to use for online shop operations.
+     * </pre>
+     *
+     * <code>string login = 5;</code>
+     */
+    public java.lang.String getLogin() {
+      java.lang.Object ref = login_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        login_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Login URL to use for online shop operations.
+     * </pre>
+     *
+     * <code>string login = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLoginBytes() {
+      java.lang.Object ref = login_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        login_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCEPTED_METHOD_FIELD_NUMBER = 6;
+    private java.util.List<java.lang.Integer> acceptedMethod_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod> acceptedMethod_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod>() {
+              public io.opencannabis.schema.commerce.Payments.PaymentMethod convert(java.lang.Integer from) {
+                io.opencannabis.schema.commerce.Payments.PaymentMethod result = io.opencannabis.schema.commerce.Payments.PaymentMethod.valueOf(from);
+                return result == null ? io.opencannabis.schema.commerce.Payments.PaymentMethod.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    public java.util.List<io.opencannabis.schema.commerce.Payments.PaymentMethod> getAcceptedMethodList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod>(acceptedMethod_, acceptedMethod_converter_);
+    }
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    public int getAcceptedMethodCount() {
+      return acceptedMethod_.size();
+    }
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    public io.opencannabis.schema.commerce.Payments.PaymentMethod getAcceptedMethod(int index) {
+      return acceptedMethod_converter_.convert(acceptedMethod_.get(index));
+    }
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getAcceptedMethodValueList() {
+      return acceptedMethod_;
+    }
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+     */
+    public int getAcceptedMethodValue(int index) {
+      return acceptedMethod_.get(index);
+    }
+    private int acceptedMethodMemoizedSerializedSize;
+
+    public static final int ACCEPTED_CARD_FIELD_NUMBER = 7;
+    private java.util.List<java.lang.Integer> acceptedCard_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType> acceptedCard_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType>() {
+              public io.opencannabis.schema.commerce.Payments.PaymentCardType convert(java.lang.Integer from) {
+                io.opencannabis.schema.commerce.Payments.PaymentCardType result = io.opencannabis.schema.commerce.Payments.PaymentCardType.valueOf(from);
+                return result == null ? io.opencannabis.schema.commerce.Payments.PaymentCardType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    public java.util.List<io.opencannabis.schema.commerce.Payments.PaymentCardType> getAcceptedCardList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType>(acceptedCard_, acceptedCard_converter_);
+    }
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    public int getAcceptedCardCount() {
+      return acceptedCard_.size();
+    }
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    public io.opencannabis.schema.commerce.Payments.PaymentCardType getAcceptedCard(int index) {
+      return acceptedCard_converter_.convert(acceptedCard_.get(index));
+    }
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getAcceptedCardValueList() {
+      return acceptedCard_;
+    }
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's digital/online storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+     */
+    public int getAcceptedCardValue(int index) {
+      return acceptedCard_.get(index);
+    }
+    private int acceptedCardMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -27528,11 +28437,35 @@ public final class PartnerLocationSettingsOuterClass {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (!getOriginBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, origin_);
       }
       if (comms_ != null) {
         output.writeMessage(2, getComms());
+      }
+      if (!getDomainBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, domain_);
+      }
+      if (!getSignupBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, signup_);
+      }
+      if (!getLoginBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, login_);
+      }
+      if (getAcceptedMethodList().size() > 0) {
+        output.writeUInt32NoTag(50);
+        output.writeUInt32NoTag(acceptedMethodMemoizedSerializedSize);
+      }
+      for (int i = 0; i < acceptedMethod_.size(); i++) {
+        output.writeEnumNoTag(acceptedMethod_.get(i));
+      }
+      if (getAcceptedCardList().size() > 0) {
+        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(acceptedCardMemoizedSerializedSize);
+      }
+      for (int i = 0; i < acceptedCard_.size(); i++) {
+        output.writeEnumNoTag(acceptedCard_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -27548,6 +28481,39 @@ public final class PartnerLocationSettingsOuterClass {
       if (comms_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getComms());
+      }
+      if (!getDomainBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, domain_);
+      }
+      if (!getSignupBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, signup_);
+      }
+      if (!getLoginBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, login_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < acceptedMethod_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(acceptedMethod_.get(i));
+        }
+        size += dataSize;
+        if (!getAcceptedMethodList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }acceptedMethodMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < acceptedCard_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(acceptedCard_.get(i));
+        }
+        size += dataSize;
+        if (!getAcceptedCardList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }acceptedCardMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -27572,6 +28538,14 @@ public final class PartnerLocationSettingsOuterClass {
         result = result && getComms()
             .equals(other.getComms());
       }
+      result = result && getDomain()
+          .equals(other.getDomain());
+      result = result && getSignup()
+          .equals(other.getSignup());
+      result = result && getLogin()
+          .equals(other.getLogin());
+      result = result && acceptedMethod_.equals(other.acceptedMethod_);
+      result = result && acceptedCard_.equals(other.acceptedCard_);
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -27588,6 +28562,20 @@ public final class PartnerLocationSettingsOuterClass {
       if (hasComms()) {
         hash = (37 * hash) + COMMS_FIELD_NUMBER;
         hash = (53 * hash) + getComms().hashCode();
+      }
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + SIGNUP_FIELD_NUMBER;
+      hash = (53 * hash) + getSignup().hashCode();
+      hash = (37 * hash) + LOGIN_FIELD_NUMBER;
+      hash = (53 * hash) + getLogin().hashCode();
+      if (getAcceptedMethodCount() > 0) {
+        hash = (37 * hash) + ACCEPTED_METHOD_FIELD_NUMBER;
+        hash = (53 * hash) + acceptedMethod_.hashCode();
+      }
+      if (getAcceptedCardCount() > 0) {
+        hash = (37 * hash) + ACCEPTED_CARD_FIELD_NUMBER;
+        hash = (53 * hash) + acceptedCard_.hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -27730,6 +28718,16 @@ public final class PartnerLocationSettingsOuterClass {
           comms_ = null;
           commsBuilder_ = null;
         }
+        domain_ = "";
+
+        signup_ = "";
+
+        login_ = "";
+
+        acceptedMethod_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        acceptedCard_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -27752,12 +28750,28 @@ public final class PartnerLocationSettingsOuterClass {
 
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.OnlineShopSettings(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.origin_ = origin_;
         if (commsBuilder_ == null) {
           result.comms_ = comms_;
         } else {
           result.comms_ = commsBuilder_.build();
         }
+        result.domain_ = domain_;
+        result.signup_ = signup_;
+        result.login_ = login_;
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          acceptedMethod_ = java.util.Collections.unmodifiableList(acceptedMethod_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.acceptedMethod_ = acceptedMethod_;
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          acceptedCard_ = java.util.Collections.unmodifiableList(acceptedCard_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.acceptedCard_ = acceptedCard_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -27806,6 +28820,38 @@ public final class PartnerLocationSettingsOuterClass {
         if (other.hasComms()) {
           mergeComms(other.getComms());
         }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        if (!other.getSignup().isEmpty()) {
+          signup_ = other.signup_;
+          onChanged();
+        }
+        if (!other.getLogin().isEmpty()) {
+          login_ = other.login_;
+          onChanged();
+        }
+        if (!other.acceptedMethod_.isEmpty()) {
+          if (acceptedMethod_.isEmpty()) {
+            acceptedMethod_ = other.acceptedMethod_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureAcceptedMethodIsMutable();
+            acceptedMethod_.addAll(other.acceptedMethod_);
+          }
+          onChanged();
+        }
+        if (!other.acceptedCard_.isEmpty()) {
+          if (acceptedCard_.isEmpty()) {
+            acceptedCard_ = other.acceptedCard_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureAcceptedCardIsMutable();
+            acceptedCard_.addAll(other.acceptedCard_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -27832,6 +28878,7 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object origin_ = "";
       /**
@@ -28074,6 +29121,605 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return commsBuilder_;
       }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Domain to use for online shop operations.
+       * </pre>
+       *
+       * <code>string domain = 3;</code>
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain to use for online shop operations.
+       * </pre>
+       *
+       * <code>string domain = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Domain to use for online shop operations.
+       * </pre>
+       *
+       * <code>string domain = 3;</code>
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain to use for online shop operations.
+       * </pre>
+       *
+       * <code>string domain = 3;</code>
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Domain to use for online shop operations.
+       * </pre>
+       *
+       * <code>string domain = 3;</code>
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signup_ = "";
+      /**
+       * <pre>
+       * Signup URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string signup = 4;</code>
+       */
+      public java.lang.String getSignup() {
+        java.lang.Object ref = signup_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signup_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signup URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string signup = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignupBytes() {
+        java.lang.Object ref = signup_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signup_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Signup URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string signup = 4;</code>
+       */
+      public Builder setSignup(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signup_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signup URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string signup = 4;</code>
+       */
+      public Builder clearSignup() {
+        
+        signup_ = getDefaultInstance().getSignup();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Signup URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string signup = 4;</code>
+       */
+      public Builder setSignupBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signup_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object login_ = "";
+      /**
+       * <pre>
+       * Login URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string login = 5;</code>
+       */
+      public java.lang.String getLogin() {
+        java.lang.Object ref = login_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          login_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Login URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string login = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLoginBytes() {
+        java.lang.Object ref = login_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          login_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Login URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string login = 5;</code>
+       */
+      public Builder setLogin(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        login_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Login URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string login = 5;</code>
+       */
+      public Builder clearLogin() {
+        
+        login_ = getDefaultInstance().getLogin();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Login URL to use for online shop operations.
+       * </pre>
+       *
+       * <code>string login = 5;</code>
+       */
+      public Builder setLoginBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        login_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> acceptedMethod_ =
+        java.util.Collections.emptyList();
+      private void ensureAcceptedMethodIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>(acceptedMethod_);
+          bitField0_ |= 0x00000020;
+        }
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public java.util.List<io.opencannabis.schema.commerce.Payments.PaymentMethod> getAcceptedMethodList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod>(acceptedMethod_, acceptedMethod_converter_);
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public int getAcceptedMethodCount() {
+        return acceptedMethod_.size();
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public io.opencannabis.schema.commerce.Payments.PaymentMethod getAcceptedMethod(int index) {
+        return acceptedMethod_converter_.convert(acceptedMethod_.get(index));
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public Builder setAcceptedMethod(
+          int index, io.opencannabis.schema.commerce.Payments.PaymentMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAcceptedMethodIsMutable();
+        acceptedMethod_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public Builder addAcceptedMethod(io.opencannabis.schema.commerce.Payments.PaymentMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAcceptedMethodIsMutable();
+        acceptedMethod_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public Builder addAllAcceptedMethod(
+          java.lang.Iterable<? extends io.opencannabis.schema.commerce.Payments.PaymentMethod> values) {
+        ensureAcceptedMethodIsMutable();
+        for (io.opencannabis.schema.commerce.Payments.PaymentMethod value : values) {
+          acceptedMethod_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public Builder clearAcceptedMethod() {
+        acceptedMethod_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getAcceptedMethodValueList() {
+        return java.util.Collections.unmodifiableList(acceptedMethod_);
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public int getAcceptedMethodValue(int index) {
+        return acceptedMethod_.get(index);
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public Builder setAcceptedMethodValue(
+          int index, int value) {
+        ensureAcceptedMethodIsMutable();
+        acceptedMethod_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public Builder addAcceptedMethodValue(int value) {
+        ensureAcceptedMethodIsMutable();
+        acceptedMethod_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 6;</code>
+       */
+      public Builder addAllAcceptedMethodValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureAcceptedMethodIsMutable();
+        for (int value : values) {
+          acceptedMethod_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> acceptedCard_ =
+        java.util.Collections.emptyList();
+      private void ensureAcceptedCardIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          acceptedCard_ = new java.util.ArrayList<java.lang.Integer>(acceptedCard_);
+          bitField0_ |= 0x00000040;
+        }
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public java.util.List<io.opencannabis.schema.commerce.Payments.PaymentCardType> getAcceptedCardList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType>(acceptedCard_, acceptedCard_converter_);
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public int getAcceptedCardCount() {
+        return acceptedCard_.size();
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public io.opencannabis.schema.commerce.Payments.PaymentCardType getAcceptedCard(int index) {
+        return acceptedCard_converter_.convert(acceptedCard_.get(index));
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public Builder setAcceptedCard(
+          int index, io.opencannabis.schema.commerce.Payments.PaymentCardType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAcceptedCardIsMutable();
+        acceptedCard_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public Builder addAcceptedCard(io.opencannabis.schema.commerce.Payments.PaymentCardType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAcceptedCardIsMutable();
+        acceptedCard_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public Builder addAllAcceptedCard(
+          java.lang.Iterable<? extends io.opencannabis.schema.commerce.Payments.PaymentCardType> values) {
+        ensureAcceptedCardIsMutable();
+        for (io.opencannabis.schema.commerce.Payments.PaymentCardType value : values) {
+          acceptedCard_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public Builder clearAcceptedCard() {
+        acceptedCard_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getAcceptedCardValueList() {
+        return java.util.Collections.unmodifiableList(acceptedCard_);
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public int getAcceptedCardValue(int index) {
+        return acceptedCard_.get(index);
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public Builder setAcceptedCardValue(
+          int index, int value) {
+        ensureAcceptedCardIsMutable();
+        acceptedCard_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public Builder addAcceptedCardValue(int value) {
+        ensureAcceptedCardIsMutable();
+        acceptedCard_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's digital/online storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 7;</code>
+       */
+      public Builder addAllAcceptedCardValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureAcceptedCardIsMutable();
+        for (int value : values) {
+          acceptedCard_.add(value);
+        }
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -28151,6 +29797,90 @@ public final class PartnerLocationSettingsOuterClass {
      * <code>.opencannabis.geo.Location location = 1;</code>
      */
     io.opencannabis.schema.geo.LocationOrBuilder getLocationOrBuilder();
+
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    java.util.List<io.opencannabis.schema.commerce.Payments.PaymentMethod> getAcceptedMethodList();
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    int getAcceptedMethodCount();
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    io.opencannabis.schema.commerce.Payments.PaymentMethod getAcceptedMethod(int index);
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getAcceptedMethodValueList();
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    int getAcceptedMethodValue(int index);
+
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    java.util.List<io.opencannabis.schema.commerce.Payments.PaymentCardType> getAcceptedCardList();
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    int getAcceptedCardCount();
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    io.opencannabis.schema.commerce.Payments.PaymentCardType getAcceptedCard(int index);
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getAcceptedCardValueList();
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    int getAcceptedCardValue(int index);
   }
   /**
    * <pre>
@@ -28169,6 +29899,8 @@ public final class PartnerLocationSettingsOuterClass {
       super(builder);
     }
     private PhysicalStorefrontSettings() {
+      acceptedMethod_ = java.util.Collections.emptyList();
+      acceptedCard_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -28215,6 +29947,52 @@ public final class PartnerLocationSettingsOuterClass {
 
               break;
             }
+            case 16: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              acceptedMethod_.add(rawValue);
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                  acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                acceptedMethod_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                acceptedCard_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              acceptedCard_.add(rawValue);
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  acceptedCard_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                acceptedCard_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -28223,6 +30001,12 @@ public final class PartnerLocationSettingsOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          acceptedMethod_ = java.util.Collections.unmodifiableList(acceptedMethod_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          acceptedCard_ = java.util.Collections.unmodifiableList(acceptedCard_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -28239,6 +30023,7 @@ public final class PartnerLocationSettingsOuterClass {
               io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.class, io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings.Builder.class);
     }
 
+    private int bitField0_;
     public static final int LOCATION_FIELD_NUMBER = 1;
     private io.opencannabis.schema.geo.Location location_;
     /**
@@ -28272,6 +30057,136 @@ public final class PartnerLocationSettingsOuterClass {
       return getLocation();
     }
 
+    public static final int ACCEPTED_METHOD_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> acceptedMethod_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod> acceptedMethod_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod>() {
+              public io.opencannabis.schema.commerce.Payments.PaymentMethod convert(java.lang.Integer from) {
+                io.opencannabis.schema.commerce.Payments.PaymentMethod result = io.opencannabis.schema.commerce.Payments.PaymentMethod.valueOf(from);
+                return result == null ? io.opencannabis.schema.commerce.Payments.PaymentMethod.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    public java.util.List<io.opencannabis.schema.commerce.Payments.PaymentMethod> getAcceptedMethodList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod>(acceptedMethod_, acceptedMethod_converter_);
+    }
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    public int getAcceptedMethodCount() {
+      return acceptedMethod_.size();
+    }
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    public io.opencannabis.schema.commerce.Payments.PaymentMethod getAcceptedMethod(int index) {
+      return acceptedMethod_converter_.convert(acceptedMethod_.get(index));
+    }
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getAcceptedMethodValueList() {
+      return acceptedMethod_;
+    }
+    /**
+     * <pre>
+     * List of accepted payment methods at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+     */
+    public int getAcceptedMethodValue(int index) {
+      return acceptedMethod_.get(index);
+    }
+    private int acceptedMethodMemoizedSerializedSize;
+
+    public static final int ACCEPTED_CARD_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> acceptedCard_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType> acceptedCard_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType>() {
+              public io.opencannabis.schema.commerce.Payments.PaymentCardType convert(java.lang.Integer from) {
+                io.opencannabis.schema.commerce.Payments.PaymentCardType result = io.opencannabis.schema.commerce.Payments.PaymentCardType.valueOf(from);
+                return result == null ? io.opencannabis.schema.commerce.Payments.PaymentCardType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    public java.util.List<io.opencannabis.schema.commerce.Payments.PaymentCardType> getAcceptedCardList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType>(acceptedCard_, acceptedCard_converter_);
+    }
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    public int getAcceptedCardCount() {
+      return acceptedCard_.size();
+    }
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    public io.opencannabis.schema.commerce.Payments.PaymentCardType getAcceptedCard(int index) {
+      return acceptedCard_converter_.convert(acceptedCard_.get(index));
+    }
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getAcceptedCardValueList() {
+      return acceptedCard_;
+    }
+    /**
+     * <pre>
+     * List of accepted credit/debit card types at this location's physical storefront.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+     */
+    public int getAcceptedCardValue(int index) {
+      return acceptedCard_.get(index);
+    }
+    private int acceptedCardMemoizedSerializedSize;
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -28284,8 +30199,23 @@ public final class PartnerLocationSettingsOuterClass {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (location_ != null) {
         output.writeMessage(1, getLocation());
+      }
+      if (getAcceptedMethodList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(acceptedMethodMemoizedSerializedSize);
+      }
+      for (int i = 0; i < acceptedMethod_.size(); i++) {
+        output.writeEnumNoTag(acceptedMethod_.get(i));
+      }
+      if (getAcceptedCardList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(acceptedCardMemoizedSerializedSize);
+      }
+      for (int i = 0; i < acceptedCard_.size(); i++) {
+        output.writeEnumNoTag(acceptedCard_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -28298,6 +30228,30 @@ public final class PartnerLocationSettingsOuterClass {
       if (location_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getLocation());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < acceptedMethod_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(acceptedMethod_.get(i));
+        }
+        size += dataSize;
+        if (!getAcceptedMethodList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }acceptedMethodMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < acceptedCard_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(acceptedCard_.get(i));
+        }
+        size += dataSize;
+        if (!getAcceptedCardList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }acceptedCardMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -28320,6 +30274,8 @@ public final class PartnerLocationSettingsOuterClass {
         result = result && getLocation()
             .equals(other.getLocation());
       }
+      result = result && acceptedMethod_.equals(other.acceptedMethod_);
+      result = result && acceptedCard_.equals(other.acceptedCard_);
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -28334,6 +30290,14 @@ public final class PartnerLocationSettingsOuterClass {
       if (hasLocation()) {
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
         hash = (53 * hash) + getLocation().hashCode();
+      }
+      if (getAcceptedMethodCount() > 0) {
+        hash = (37 * hash) + ACCEPTED_METHOD_FIELD_NUMBER;
+        hash = (53 * hash) + acceptedMethod_.hashCode();
+      }
+      if (getAcceptedCardCount() > 0) {
+        hash = (37 * hash) + ACCEPTED_CARD_FIELD_NUMBER;
+        hash = (53 * hash) + acceptedCard_.hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -28474,6 +30438,10 @@ public final class PartnerLocationSettingsOuterClass {
           location_ = null;
           locationBuilder_ = null;
         }
+        acceptedMethod_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        acceptedCard_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -28496,11 +30464,24 @@ public final class PartnerLocationSettingsOuterClass {
 
       public io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings buildPartial() {
         io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings result = new io.bloombox.schema.partner.settings.PartnerLocationSettingsOuterClass.PhysicalStorefrontSettings(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (locationBuilder_ == null) {
           result.location_ = location_;
         } else {
           result.location_ = locationBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          acceptedMethod_ = java.util.Collections.unmodifiableList(acceptedMethod_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.acceptedMethod_ = acceptedMethod_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          acceptedCard_ = java.util.Collections.unmodifiableList(acceptedCard_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.acceptedCard_ = acceptedCard_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -28545,6 +30526,26 @@ public final class PartnerLocationSettingsOuterClass {
         if (other.hasLocation()) {
           mergeLocation(other.getLocation());
         }
+        if (!other.acceptedMethod_.isEmpty()) {
+          if (acceptedMethod_.isEmpty()) {
+            acceptedMethod_ = other.acceptedMethod_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureAcceptedMethodIsMutable();
+            acceptedMethod_.addAll(other.acceptedMethod_);
+          }
+          onChanged();
+        }
+        if (!other.acceptedCard_.isEmpty()) {
+          if (acceptedCard_.isEmpty()) {
+            acceptedCard_ = other.acceptedCard_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureAcceptedCardIsMutable();
+            acceptedCard_.addAll(other.acceptedCard_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -28571,6 +30572,7 @@ public final class PartnerLocationSettingsOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private io.opencannabis.schema.geo.Location location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -28723,6 +30725,338 @@ public final class PartnerLocationSettingsOuterClass {
           location_ = null;
         }
         return locationBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> acceptedMethod_ =
+        java.util.Collections.emptyList();
+      private void ensureAcceptedMethodIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          acceptedMethod_ = new java.util.ArrayList<java.lang.Integer>(acceptedMethod_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public java.util.List<io.opencannabis.schema.commerce.Payments.PaymentMethod> getAcceptedMethodList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentMethod>(acceptedMethod_, acceptedMethod_converter_);
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public int getAcceptedMethodCount() {
+        return acceptedMethod_.size();
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public io.opencannabis.schema.commerce.Payments.PaymentMethod getAcceptedMethod(int index) {
+        return acceptedMethod_converter_.convert(acceptedMethod_.get(index));
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public Builder setAcceptedMethod(
+          int index, io.opencannabis.schema.commerce.Payments.PaymentMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAcceptedMethodIsMutable();
+        acceptedMethod_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public Builder addAcceptedMethod(io.opencannabis.schema.commerce.Payments.PaymentMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAcceptedMethodIsMutable();
+        acceptedMethod_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public Builder addAllAcceptedMethod(
+          java.lang.Iterable<? extends io.opencannabis.schema.commerce.Payments.PaymentMethod> values) {
+        ensureAcceptedMethodIsMutable();
+        for (io.opencannabis.schema.commerce.Payments.PaymentMethod value : values) {
+          acceptedMethod_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public Builder clearAcceptedMethod() {
+        acceptedMethod_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getAcceptedMethodValueList() {
+        return java.util.Collections.unmodifiableList(acceptedMethod_);
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public int getAcceptedMethodValue(int index) {
+        return acceptedMethod_.get(index);
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public Builder setAcceptedMethodValue(
+          int index, int value) {
+        ensureAcceptedMethodIsMutable();
+        acceptedMethod_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public Builder addAcceptedMethodValue(int value) {
+        ensureAcceptedMethodIsMutable();
+        acceptedMethod_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted payment methods at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentMethod accepted_method = 2;</code>
+       */
+      public Builder addAllAcceptedMethodValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureAcceptedMethodIsMutable();
+        for (int value : values) {
+          acceptedMethod_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> acceptedCard_ =
+        java.util.Collections.emptyList();
+      private void ensureAcceptedCardIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          acceptedCard_ = new java.util.ArrayList<java.lang.Integer>(acceptedCard_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public java.util.List<io.opencannabis.schema.commerce.Payments.PaymentCardType> getAcceptedCardList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.opencannabis.schema.commerce.Payments.PaymentCardType>(acceptedCard_, acceptedCard_converter_);
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public int getAcceptedCardCount() {
+        return acceptedCard_.size();
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public io.opencannabis.schema.commerce.Payments.PaymentCardType getAcceptedCard(int index) {
+        return acceptedCard_converter_.convert(acceptedCard_.get(index));
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public Builder setAcceptedCard(
+          int index, io.opencannabis.schema.commerce.Payments.PaymentCardType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAcceptedCardIsMutable();
+        acceptedCard_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public Builder addAcceptedCard(io.opencannabis.schema.commerce.Payments.PaymentCardType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAcceptedCardIsMutable();
+        acceptedCard_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public Builder addAllAcceptedCard(
+          java.lang.Iterable<? extends io.opencannabis.schema.commerce.Payments.PaymentCardType> values) {
+        ensureAcceptedCardIsMutable();
+        for (io.opencannabis.schema.commerce.Payments.PaymentCardType value : values) {
+          acceptedCard_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public Builder clearAcceptedCard() {
+        acceptedCard_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getAcceptedCardValueList() {
+        return java.util.Collections.unmodifiableList(acceptedCard_);
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public int getAcceptedCardValue(int index) {
+        return acceptedCard_.get(index);
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public Builder setAcceptedCardValue(
+          int index, int value) {
+        ensureAcceptedCardIsMutable();
+        acceptedCard_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public Builder addAcceptedCardValue(int value) {
+        ensureAcceptedCardIsMutable();
+        acceptedCard_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of accepted credit/debit card types at this location's physical storefront.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PaymentCardType accepted_card = 3;</code>
+       */
+      public Builder addAllAcceptedCardValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureAcceptedCardIsMutable();
+        for (int value : values) {
+          acceptedCard_.add(value);
+        }
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -35001,175 +37335,187 @@ public final class PartnerLocationSettingsOuterClass {
       "\n.partner/settings/PartnerLocationSettin" +
       "gs.proto\022 bloombox.schema.partner.settin" +
       "gs\032\022geo/Location.proto\032\023temporal/Date.pr" +
-      "oto\032\024commerce/Order.proto\032\031contact/Phone" +
-      "Number.proto\032\032contact/EmailAddress.proto" +
-      "\032.partner/integrations/IntegrationSettin" +
-      "gs.proto\"\034\n\013APISettings\022\r\n\005embed\030\001 \001(\t\"," +
-      "\n\014InHouseBrand\022\r\n\005label\030\001 \001(\t\022\r\n\005brand\030\002" +
-      " \003(\t\"W\n\024ProductBrandSettings\022?\n\007inhouse\030" +
-      "\001 \003(\0132..bloombox.schema.partner.settings" +
-      ".InHouseBrand\"0\n\017PublishSettings\022\014\n\004menu" +
-      "\030\001 \001(\010\022\017\n\007profile\030\002 \001(\010\"z\n\025CustomSection" +
-      "Settings\022\014\n\004spec\030\001 \001(\t\022G\n\006filter\030\002 \001(\01625" +
-      ".bloombox.schema.partner.settings.Filter" +
-      "edSectionTypeH\000B\n\n\010settings\"\354\001\n\026SectionS" +
-      "ettingsPayload\022\014\n\004hide\030\001 \001(\010\022\r\n\005label\030\002 " +
-      "\001(\010\022\r\n\005media\030\003 \001(\t\022\014\n\004text\030\004 \001(\t\022E\n\004type" +
-      "\030\005 \001(\01625.bloombox.schema.partner.setting" +
-      "s.SectionSettingsTypeH\000\022I\n\006custom\030\006 \001(\0132" +
-      "7.bloombox.schema.partner.settings.Custo" +
-      "mSectionSettingsH\000B\006\n\004kind\"\322\006\n\017SectionSe" +
-      "ttings\022L\n\napothecary\030\001 \001(\01328.bloombox.sc" +
-      "hema.partner.settings.SectionSettingsPay" +
-      "load\022L\n\ncartridges\030\002 \001(\01328.bloombox.sche" +
-      "ma.partner.settings.SectionSettingsPaylo" +
-      "ad\022N\n\014concentrates\030\003 \001(\01328.bloombox.sche" +
-      "ma.partner.settings.SectionSettingsPaylo" +
-      "ad\022I\n\007edibles\030\004 \001(\01328.bloombox.schema.pa" +
-      "rtner.settings.SectionSettingsPayload\022I\n" +
-      "\007flowers\030\005 \001(\01328.bloombox.schema.partner" +
-      ".settings.SectionSettingsPayload\022J\n\010prer" +
-      "olls\030\006 \001(\01328.bloombox.schema.partner.set" +
-      "tings.SectionSettingsPayload\022M\n\013merchand" +
-      "ise\030\007 \001(\01328.bloombox.schema.partner.sett" +
-      "ings.SectionSettingsPayload\022H\n\006plants\030\010 " +
+      "oto\032\024commerce/Order.proto\032\026commerce/Paym" +
+      "ent.proto\032\031contact/PhoneNumber.proto\032\032co" +
+      "ntact/EmailAddress.proto\032.partner/integr" +
+      "ations/IntegrationSettings.proto\"\034\n\013APIS" +
+      "ettings\022\r\n\005embed\030\001 \001(\t\",\n\014InHouseBrand\022\r" +
+      "\n\005label\030\001 \001(\t\022\r\n\005brand\030\002 \003(\t\"W\n\024ProductB" +
+      "randSettings\022?\n\007inhouse\030\001 \003(\0132..bloombox" +
+      ".schema.partner.settings.InHouseBrand\"0\n" +
+      "\017PublishSettings\022\014\n\004menu\030\001 \001(\010\022\017\n\007profil" +
+      "e\030\002 \001(\010\"z\n\025CustomSectionSettings\022\014\n\004spec" +
+      "\030\001 \001(\t\022G\n\006filter\030\002 \001(\01625.bloombox.schema" +
+      ".partner.settings.FilteredSectionTypeH\000B" +
+      "\n\n\010settings\"\354\001\n\026SectionSettingsPayload\022\014" +
+      "\n\004hide\030\001 \001(\010\022\r\n\005label\030\002 \001(\010\022\r\n\005media\030\003 \001" +
+      "(\t\022\014\n\004text\030\004 \001(\t\022E\n\004type\030\005 \001(\01625.bloombo" +
+      "x.schema.partner.settings.SectionSetting" +
+      "sTypeH\000\022I\n\006custom\030\006 \001(\01327.bloombox.schem" +
+      "a.partner.settings.CustomSectionSettings" +
+      "H\000B\006\n\004kind\"\322\006\n\017SectionSettings\022L\n\napothe" +
+      "cary\030\001 \001(\01328.bloombox.schema.partner.set" +
+      "tings.SectionSettingsPayload\022L\n\ncartridg" +
+      "es\030\002 \001(\01328.bloombox.schema.partner.setti" +
+      "ngs.SectionSettingsPayload\022N\n\014concentrat" +
+      "es\030\003 \001(\01328.bloombox.schema.partner.setti" +
+      "ngs.SectionSettingsPayload\022I\n\007edibles\030\004 " +
       "\001(\01328.bloombox.schema.partner.settings.S" +
-      "ectionSettingsPayload\022E\n\003cbd\030\024 \001(\01328.blo" +
+      "ectionSettingsPayload\022I\n\007flowers\030\005 \001(\01328" +
+      ".bloombox.schema.partner.settings.Sectio" +
+      "nSettingsPayload\022J\n\010prerolls\030\006 \001(\01328.blo" +
       "ombox.schema.partner.settings.SectionSet" +
-      "tingsPayload\022G\n\005house\030\025 \001(\01328.bloombox.s" +
+      "tingsPayload\022M\n\013merchandise\030\007 \001(\01328.bloo" +
+      "mbox.schema.partner.settings.SectionSett" +
+      "ingsPayload\022H\n\006plants\030\010 \001(\01328.bloombox.s" +
       "chema.partner.settings.SectionSettingsPa" +
-      "yload\022H\n\006onsale\030\026 \001(\01328.bloombox.schema." +
-      "partner.settings.SectionSettingsPayload\"" +
-      "6\n\020TVBannerSettings\022\023\n\013banner_text\030\001 \001(\t" +
-      "\022\r\n\005image\030\002 \001(\t\"F\n\030TVSectionSettingsPayl" +
-      "oad\022\014\n\004sort\030\001 \001(\r\022\r\n\005title\030\002 \001(\t\022\r\n\005imag" +
-      "e\030\003 \001(\t\"\207\005\n\016TVMenuSettings\022N\n\napothecary" +
-      "\030\001 \001(\0132:.bloombox.schema.partner.setting" +
-      "s.TVSectionSettingsPayload\022N\n\ncartridges" +
-      "\030\002 \001(\0132:.bloombox.schema.partner.setting" +
-      "s.TVSectionSettingsPayload\022P\n\014concentrat" +
-      "es\030\003 \001(\0132:.bloombox.schema.partner.setti" +
-      "ngs.TVSectionSettingsPayload\022K\n\007edibles\030" +
-      "\004 \001(\0132:.bloombox.schema.partner.settings" +
-      ".TVSectionSettingsPayload\022K\n\007flowers\030\005 \001" +
-      "(\0132:.bloombox.schema.partner.settings.TV" +
-      "SectionSettingsPayload\022L\n\010prerolls\030\006 \001(\013" +
-      "2:.bloombox.schema.partner.settings.TVSe" +
-      "ctionSettingsPayload\022O\n\013merchandise\030\007 \001(" +
-      "\0132:.bloombox.schema.partner.settings.TVS" +
-      "ectionSettingsPayload\022J\n\006plants\030\010 \001(\0132:." +
-      "bloombox.schema.partner.settings.TVSecti" +
-      "onSettingsPayload\"\224\001\n\nTVSettings\022B\n\006bann" +
-      "er\030\001 \001(\01322.bloombox.schema.partner.setti" +
-      "ngs.TVBannerSettings\022B\n\010settings\030\002 \001(\01320" +
-      ".bloombox.schema.partner.settings.TVMenu" +
-      "Settings\")\n\tHoursSpec\022\014\n\004hour\030\001 \001(\r\022\016\n\006m" +
-      "inute\030\002 \001(\r\"\300\001\n\rHoursBoundary\022:\n\005begin\030\001" +
-      " \001(\0132+.bloombox.schema.partner.settings." +
-      "HoursSpec\0228\n\003end\030\002 \001(\0132+.bloombox.schema" +
-      ".partner.settings.HoursSpec\0229\n\004span\030\003 \001(" +
-      "\0162+.bloombox.schema.partner.settings.Hou" +
-      "rsSpan\"\223\001\n\024RegularHoursSettings\022?\n\006bound" +
-      "s\030\001 \001(\0132/.bloombox.schema.partner.settin" +
-      "gs.HoursBoundary\022:\n\004mode\030\002 \001(\0162,.bloombo" +
-      "x.schema.partner.settings.ShopStatus\"\276\001\n" +
-      "\024SpecialHoursSettings\022?\n\006bounds\030\001 \001(\0132/." +
-      "bloombox.schema.partner.settings.HoursBo" +
-      "undary\022:\n\004mode\030\002 \001(\0162,.bloombox.schema.p" +
-      "artner.settings.ShopStatus\022)\n\004date\030\003 \001(\013" +
-      "2\033.opencannabis.temporal.Date\"\227\002\n\021ShopHo" +
-      "ursSettings\022G\n\007regular\030\001 \003(\01326.bloombox." +
-      "schema.partner.settings.RegularHoursSett" +
-      "ings\022Q\n\007special\030\002 \003(\0132@.bloombox.schema." +
-      "partner.settings.ShopHoursSettings.Speci" +
-      "alEntry\032f\n\014SpecialEntry\022\013\n\003key\030\001 \001(\t\022E\n\005" +
-      "value\030\002 \001(\01326.bloombox.schema.partner.se" +
-      "ttings.SpecialHoursSettings:\0028\001\"\\\n\023ShopS" +
-      "erviceSettings\022\020\n\010delivery\030\001 \001(\010\022\017\n\007expr" +
-      "ess\030\002 \001(\010\022\016\n\006pickup\030\003 \001(\010\022\022\n\nstorefront\030" +
-      "\004 \001(\010\"U\n\027DeliveryZipcodeSettings\022\017\n\007zipc" +
-      "ode\030\001 \001(\t\022\017\n\007enabled\030\002 \001(\010\022\030\n\020delivery_m" +
-      "inimum\030\003 \001(\r\"\352\001\n\020DeliverySettings\022\026\n\016glo" +
-      "bal_minimum\030\001 \001(\r\022R\n\010zipcodes\030\002 \003(\0132@.bl" +
-      "oombox.schema.partner.settings.DeliveryS" +
-      "ettings.ZipcodesEntry\032j\n\rZipcodesEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022H\n\005value\030\002 \001(\01329.bloombox.sc" +
-      "hema.partner.settings.DeliveryZipcodeSet" +
-      "tings:\0028\001\"8\n\032ShopContactChannelSettings\022" +
-      "\r\n\005email\030\001 \001(\010\022\013\n\003sms\030\002 \001(\010\"\265\001\n\023ShopChan" +
-      "nelSettings\022L\n\006orders\030\001 \001(\0132<.bloombox.s" +
-      "chema.partner.settings.ShopContactChanne" +
-      "lSettings\022P\n\nenrollment\030\002 \001(\0132<.bloombox" +
-      ".schema.partner.settings.ShopContactChan" +
-      "nelSettings\"\337\001\n\021ShopContactTarget\022\r\n\005lab" +
-      "el\030\001 \001(\t\022\r\n\005debug\030\002 \001(\010\0221\n\005email\030\003 \001(\0132\"" +
-      ".opencannabis.contact.EmailAddress\0220\n\005ph" +
-      "one\030\004 \001(\0132!.opencannabis.contact.PhoneNu" +
-      "mber\022G\n\010channels\030\005 \001(\01325.bloombox.schema" +
-      ".partner.settings.ShopChannelSettings\"z\n" +
-      "\023CommsSenderSettings\0221\n\005email\030\001 \001(\0132\".op" +
-      "encannabis.contact.EmailAddress\0220\n\005phone" +
-      "\030\002 \001(\0132!.opencannabis.contact.PhoneNumbe" +
-      "r\"\343\001\n\024CommsSettingsPayload\022=\n\004type\030\001 \001(\016" +
-      "2/.bloombox.schema.partner.settings.Shop" +
-      "CommsType\022E\n\010contacts\030\002 \003(\01323.bloombox.s" +
-      "chema.partner.settings.ShopContactTarget" +
-      "\022E\n\006sender\030\003 \001(\01325.bloombox.schema.partn" +
-      "er.settings.CommsSenderSettings\"\247\001\n\021Shop" +
-      "CommsSettings\022H\n\010internal\030\001 \001(\01326.bloomb" +
-      "ox.schema.partner.settings.CommsSettings" +
-      "Payload\022H\n\010external\030\002 \001(\01326.bloombox.sch" +
-      "ema.partner.settings.CommsSettingsPayloa" +
-      "d\"h\n\022OnlineShopSettings\022\016\n\006origin\030\001 \001(\t\022" +
-      "B\n\005comms\030\002 \001(\01323.bloombox.schema.partner" +
-      ".settings.ShopCommsSettings\"J\n\032PhysicalS" +
-      "torefrontSettings\022,\n\010location\030\001 \001(\0132\032.op" +
-      "encannabis.geo.Location\"\360\001\n\022StorefrontSe" +
-      "ttings\022D\n\010delivery\030\001 \001(\01322.bloombox.sche" +
-      "ma.partner.settings.DeliverySettings\022D\n\006" +
-      "online\030\002 \001(\01324.bloombox.schema.partner.s" +
-      "ettings.OnlineShopSettings\022N\n\010physical\030\003" +
-      " \001(\0132<.bloombox.schema.partner.settings." +
-      "PhysicalStorefrontSettings\"\345\001\n\014ShopSetti" +
-      "ngs\022B\n\005hours\030\001 \001(\01323.bloombox.schema.par" +
-      "tner.settings.ShopHoursSettings\022G\n\010servi" +
-      "ces\030\002 \001(\01325.bloombox.schema.partner.sett" +
-      "ings.ShopServiceSettings\022H\n\nstorefront\030\003" +
-      " \001(\01324.bloombox.schema.partner.settings." +
-      "StorefrontSettings\"~\n\014CartSettings\0228\n\004mo" +
-      "de\030\001 \001(\0162*.bloombox.schema.partner.setti" +
-      "ngs.CartMode\0224\n\norder_type\030\002 \001(\0162 .openc" +
-      "annabis.commerce.OrderType\"N\n\016TabletSett" +
-      "ings\022<\n\004cart\030\001 \001(\0132..bloombox.schema.par" +
-      "tner.settings.CartSettings\"\270\004\n\027PartnerLo" +
-      "cationSettings\022:\n\003api\030\001 \001(\0132-.bloombox.s" +
-      "chema.partner.settings.APISettings\022F\n\006br" +
-      "ands\030\002 \001(\01326.bloombox.schema.partner.set" +
-      "tings.ProductBrandSettings\022B\n\007publish\030\003 " +
-      "\001(\01321.bloombox.schema.partner.settings.P" +
-      "ublishSettings\022C\n\010sections\030\004 \001(\01321.bloom" +
-      "box.schema.partner.settings.SectionSetti" +
-      "ngs\022<\n\004shop\030\005 \001(\0132..bloombox.schema.part" +
-      "ner.settings.ShopSettings\0228\n\002tv\030\006 \001(\0132,." +
-      "bloombox.schema.partner.settings.TVSetti" +
-      "ngs\022@\n\006tablet\030\007 \001(\01320.bloombox.schema.pa" +
-      "rtner.settings.TabletSettings\022V\n\013integra" +
-      "tion\030\024 \001(\0132A.bloombox.schema.partner.int" +
-      "egrations.LocationIntegrationSettings*1\n" +
-      "\023SectionSettingsType\022\014\n\010STANDARD\020\000\022\014\n\010FI" +
-      "LTERED\020\001*5\n\023FilteredSectionType\022\007\n\003CBD\020\000" +
-      "\022\t\n\005HOUSE\020\001\022\n\n\006ONSALE\020\002* \n\022CustomSetting" +
-      "sType\022\n\n\006FILTER\020\000*\221\001\n\tHoursSpan\022\014\n\010EVERY" +
-      "DAY\020\000\022\014\n\010WEEKDAYS\020\001\022\014\n\010WEEKENDS\020\002\022\n\n\006MON" +
-      "DAY\020\003\022\013\n\007TUESDAY\020\004\022\r\n\tWEDNESDAY\020\005\022\014\n\010THU" +
-      "RSDAY\020\006\022\n\n\006FRIDAY\020\007\022\014\n\010SATURDAY\020\010\022\n\n\006SUN" +
-      "DAY\020\t*F\n\nShopStatus\022\010\n\004OPEN\020\000\022\n\n\006CLOSED\020" +
-      "\001\022\021\n\rDELIVERY_ONLY\020\002\022\017\n\013PICKUP_ONLY\020\003*+\n" +
-      "\rShopCommsType\022\014\n\010INTERNAL\020\000\022\014\n\010EXTERNAL" +
-      "\020\001*2\n\022ShopContactChannel\022\014\n\010ORDERING\020\000\022\016" +
-      "\n\nENROLLMENT\020\001*&\n\010CartMode\022\007\n\003OFF\020\000\022\007\n\003B" +
-      "AG\020\001\022\010\n\004CART\020\002B/\n#io.bloombox.schema.par" +
-      "tner.settingsH\001P\000\242\002\003BBSb\006proto3"
+      "yload\022E\n\003cbd\030\024 \001(\01328.bloombox.schema.par" +
+      "tner.settings.SectionSettingsPayload\022G\n\005" +
+      "house\030\025 \001(\01328.bloombox.schema.partner.se" +
+      "ttings.SectionSettingsPayload\022H\n\006onsale\030" +
+      "\026 \001(\01328.bloombox.schema.partner.settings" +
+      ".SectionSettingsPayload\"6\n\020TVBannerSetti" +
+      "ngs\022\023\n\013banner_text\030\001 \001(\t\022\r\n\005image\030\002 \001(\t\"" +
+      "F\n\030TVSectionSettingsPayload\022\014\n\004sort\030\001 \001(" +
+      "\r\022\r\n\005title\030\002 \001(\t\022\r\n\005image\030\003 \001(\t\"\207\005\n\016TVMe" +
+      "nuSettings\022N\n\napothecary\030\001 \001(\0132:.bloombo" +
+      "x.schema.partner.settings.TVSectionSetti" +
+      "ngsPayload\022N\n\ncartridges\030\002 \001(\0132:.bloombo" +
+      "x.schema.partner.settings.TVSectionSetti" +
+      "ngsPayload\022P\n\014concentrates\030\003 \001(\0132:.bloom" +
+      "box.schema.partner.settings.TVSectionSet" +
+      "tingsPayload\022K\n\007edibles\030\004 \001(\0132:.bloombox" +
+      ".schema.partner.settings.TVSectionSettin" +
+      "gsPayload\022K\n\007flowers\030\005 \001(\0132:.bloombox.sc" +
+      "hema.partner.settings.TVSectionSettingsP" +
+      "ayload\022L\n\010prerolls\030\006 \001(\0132:.bloombox.sche" +
+      "ma.partner.settings.TVSectionSettingsPay" +
+      "load\022O\n\013merchandise\030\007 \001(\0132:.bloombox.sch" +
+      "ema.partner.settings.TVSectionSettingsPa" +
+      "yload\022J\n\006plants\030\010 \001(\0132:.bloombox.schema." +
+      "partner.settings.TVSectionSettingsPayloa" +
+      "d\"\224\001\n\nTVSettings\022B\n\006banner\030\001 \001(\01322.bloom" +
+      "box.schema.partner.settings.TVBannerSett" +
+      "ings\022B\n\010settings\030\002 \001(\01320.bloombox.schema" +
+      ".partner.settings.TVMenuSettings\")\n\tHour" +
+      "sSpec\022\014\n\004hour\030\001 \001(\r\022\016\n\006minute\030\002 \001(\r\"\300\001\n\r" +
+      "HoursBoundary\022:\n\005begin\030\001 \001(\0132+.bloombox." +
+      "schema.partner.settings.HoursSpec\0228\n\003end" +
+      "\030\002 \001(\0132+.bloombox.schema.partner.setting" +
+      "s.HoursSpec\0229\n\004span\030\003 \001(\0162+.bloombox.sch" +
+      "ema.partner.settings.HoursSpan\"\223\001\n\024Regul" +
+      "arHoursSettings\022?\n\006bounds\030\001 \001(\0132/.bloomb" +
+      "ox.schema.partner.settings.HoursBoundary" +
+      "\022:\n\004mode\030\002 \001(\0162,.bloombox.schema.partner" +
+      ".settings.ShopStatus\"\276\001\n\024SpecialHoursSet" +
+      "tings\022?\n\006bounds\030\001 \001(\0132/.bloombox.schema." +
+      "partner.settings.HoursBoundary\022:\n\004mode\030\002" +
+      " \001(\0162,.bloombox.schema.partner.settings." +
+      "ShopStatus\022)\n\004date\030\003 \001(\0132\033.opencannabis." +
+      "temporal.Date\"\227\002\n\021ShopHoursSettings\022G\n\007r" +
+      "egular\030\001 \003(\01326.bloombox.schema.partner.s" +
+      "ettings.RegularHoursSettings\022Q\n\007special\030" +
+      "\002 \003(\0132@.bloombox.schema.partner.settings" +
+      ".ShopHoursSettings.SpecialEntry\032f\n\014Speci" +
+      "alEntry\022\013\n\003key\030\001 \001(\t\022E\n\005value\030\002 \001(\01326.bl" +
+      "oombox.schema.partner.settings.SpecialHo" +
+      "ursSettings:\0028\001\"\200\001\n\023ShopServiceSettings\022" +
+      "\020\n\010delivery\030\001 \001(\010\022\017\n\007express\030\002 \001(\010\022\016\n\006pi" +
+      "ckup\030\003 \001(\010\022\022\n\nstorefront\030\004 \001(\010\022\017\n\007medica" +
+      "l\030\005 \001(\010\022\021\n\tadult_use\030\006 \001(\010\"U\n\027DeliveryZi" +
+      "pcodeSettings\022\017\n\007zipcode\030\001 \001(\t\022\017\n\007enable" +
+      "d\030\002 \001(\010\022\030\n\020delivery_minimum\030\003 \001(\r\"\352\001\n\020De" +
+      "liverySettings\022\026\n\016global_minimum\030\001 \001(\r\022R" +
+      "\n\010zipcodes\030\002 \003(\0132@.bloombox.schema.partn" +
+      "er.settings.DeliverySettings.ZipcodesEnt" +
+      "ry\032j\n\rZipcodesEntry\022\013\n\003key\030\001 \001(\t\022H\n\005valu" +
+      "e\030\002 \001(\01329.bloombox.schema.partner.settin" +
+      "gs.DeliveryZipcodeSettings:\0028\001\"8\n\032ShopCo" +
+      "ntactChannelSettings\022\r\n\005email\030\001 \001(\010\022\013\n\003s" +
+      "ms\030\002 \001(\010\"\206\002\n\023ShopChannelSettings\022L\n\006orde" +
+      "rs\030\001 \001(\0132<.bloombox.schema.partner.setti" +
+      "ngs.ShopContactChannelSettings\022P\n\nenroll" +
+      "ment\030\002 \001(\0132<.bloombox.schema.partner.set" +
+      "tings.ShopContactChannelSettings\022O\n\tmark" +
+      "eting\030\003 \001(\0132<.bloombox.schema.partner.se" +
+      "ttings.ShopContactChannelSettings\"\337\001\n\021Sh" +
+      "opContactTarget\022\r\n\005label\030\001 \001(\t\022\r\n\005debug\030" +
+      "\002 \001(\010\0221\n\005email\030\003 \001(\0132\".opencannabis.cont" +
+      "act.EmailAddress\0220\n\005phone\030\004 \001(\0132!.openca" +
+      "nnabis.contact.PhoneNumber\022G\n\010channels\030\005" +
+      " \001(\01325.bloombox.schema.partner.settings." +
+      "ShopChannelSettings\"z\n\023CommsSenderSettin" +
+      "gs\0221\n\005email\030\001 \001(\0132\".opencannabis.contact" +
+      ".EmailAddress\0220\n\005phone\030\002 \001(\0132!.opencanna" +
+      "bis.contact.PhoneNumber\"\343\001\n\024CommsSetting" +
+      "sPayload\022=\n\004type\030\001 \001(\0162/.bloombox.schema" +
+      ".partner.settings.ShopCommsType\022E\n\010conta" +
+      "cts\030\002 \003(\01323.bloombox.schema.partner.sett" +
+      "ings.ShopContactTarget\022E\n\006sender\030\003 \001(\01325" +
+      ".bloombox.schema.partner.settings.CommsS" +
+      "enderSettings\"\247\001\n\021ShopCommsSettings\022H\n\010i" +
+      "nternal\030\001 \001(\01326.bloombox.schema.partner." +
+      "settings.CommsSettingsPayload\022H\n\010externa" +
+      "l\030\002 \001(\01326.bloombox.schema.partner.settin" +
+      "gs.CommsSettingsPayload\"\225\002\n\022OnlineShopSe" +
+      "ttings\022\016\n\006origin\030\001 \001(\t\022B\n\005comms\030\002 \001(\01323." +
+      "bloombox.schema.partner.settings.ShopCom" +
+      "msSettings\022\016\n\006domain\030\003 \001(\t\022\016\n\006signup\030\004 \001" +
+      "(\t\022\r\n\005login\030\005 \001(\t\022=\n\017accepted_method\030\006 \003" +
+      "(\0162$.opencannabis.commerce.PaymentMethod" +
+      "\022=\n\raccepted_card\030\007 \003(\0162&.opencannabis.c" +
+      "ommerce.PaymentCardType\"\310\001\n\032PhysicalStor" +
+      "efrontSettings\022,\n\010location\030\001 \001(\0132\032.openc" +
+      "annabis.geo.Location\022=\n\017accepted_method\030" +
+      "\002 \003(\0162$.opencannabis.commerce.PaymentMet" +
+      "hod\022=\n\raccepted_card\030\003 \003(\0162&.opencannabi" +
+      "s.commerce.PaymentCardType\"\360\001\n\022Storefron" +
+      "tSettings\022D\n\010delivery\030\001 \001(\01322.bloombox.s" +
+      "chema.partner.settings.DeliverySettings\022" +
+      "D\n\006online\030\002 \001(\01324.bloombox.schema.partne" +
+      "r.settings.OnlineShopSettings\022N\n\010physica" +
+      "l\030\003 \001(\0132<.bloombox.schema.partner.settin" +
+      "gs.PhysicalStorefrontSettings\"\345\001\n\014ShopSe" +
+      "ttings\022B\n\005hours\030\001 \001(\01323.bloombox.schema." +
+      "partner.settings.ShopHoursSettings\022G\n\010se" +
+      "rvices\030\002 \001(\01325.bloombox.schema.partner.s" +
+      "ettings.ShopServiceSettings\022H\n\nstorefron" +
+      "t\030\003 \001(\01324.bloombox.schema.partner.settin" +
+      "gs.StorefrontSettings\"~\n\014CartSettings\0228\n" +
+      "\004mode\030\001 \001(\0162*.bloombox.schema.partner.se" +
+      "ttings.CartMode\0224\n\norder_type\030\002 \001(\0162 .op" +
+      "encannabis.commerce.OrderType\"N\n\016TabletS" +
+      "ettings\022<\n\004cart\030\001 \001(\0132..bloombox.schema." +
+      "partner.settings.CartSettings\"\270\004\n\027Partne" +
+      "rLocationSettings\022:\n\003api\030\001 \001(\0132-.bloombo" +
+      "x.schema.partner.settings.APISettings\022F\n" +
+      "\006brands\030\002 \001(\01326.bloombox.schema.partner." +
+      "settings.ProductBrandSettings\022B\n\007publish" +
+      "\030\003 \001(\01321.bloombox.schema.partner.setting" +
+      "s.PublishSettings\022C\n\010sections\030\004 \001(\01321.bl" +
+      "oombox.schema.partner.settings.SectionSe" +
+      "ttings\022<\n\004shop\030\005 \001(\0132..bloombox.schema.p" +
+      "artner.settings.ShopSettings\0228\n\002tv\030\006 \001(\013" +
+      "2,.bloombox.schema.partner.settings.TVSe" +
+      "ttings\022@\n\006tablet\030\007 \001(\01320.bloombox.schema" +
+      ".partner.settings.TabletSettings\022V\n\013inte" +
+      "gration\030\024 \001(\0132A.bloombox.schema.partner." +
+      "integrations.LocationIntegrationSettings" +
+      "*1\n\023SectionSettingsType\022\014\n\010STANDARD\020\000\022\014\n" +
+      "\010FILTERED\020\001*5\n\023FilteredSectionType\022\007\n\003CB" +
+      "D\020\000\022\t\n\005HOUSE\020\001\022\n\n\006ONSALE\020\002* \n\022CustomSett" +
+      "ingsType\022\n\n\006FILTER\020\000*\221\001\n\tHoursSpan\022\014\n\010EV" +
+      "ERYDAY\020\000\022\014\n\010WEEKDAYS\020\001\022\014\n\010WEEKENDS\020\002\022\n\n\006" +
+      "MONDAY\020\003\022\013\n\007TUESDAY\020\004\022\r\n\tWEDNESDAY\020\005\022\014\n\010" +
+      "THURSDAY\020\006\022\n\n\006FRIDAY\020\007\022\014\n\010SATURDAY\020\010\022\n\n\006" +
+      "SUNDAY\020\t*F\n\nShopStatus\022\010\n\004OPEN\020\000\022\n\n\006CLOS" +
+      "ED\020\001\022\021\n\rDELIVERY_ONLY\020\002\022\017\n\013PICKUP_ONLY\020\003" +
+      "*+\n\rShopCommsType\022\014\n\010INTERNAL\020\000\022\014\n\010EXTER" +
+      "NAL\020\001*A\n\022ShopContactChannel\022\014\n\010ORDERING\020" +
+      "\000\022\016\n\nENROLLMENT\020\001\022\r\n\tMARKETING\020\002*&\n\010Cart" +
+      "Mode\022\007\n\003OFF\020\000\022\007\n\003BAG\020\001\022\010\n\004CART\020\002B/\n#io.b" +
+      "loombox.schema.partner.settingsH\001P\000\242\002\003BB" +
+      "Sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35183,10 +37529,11 @@ public final class PartnerLocationSettingsOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.geo.LocationOuterClass.getDescriptor(),
-          io.opencannabis.schema.temporal.DateOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalDate.getDescriptor(),
           io.opencannabis.schema.commerce.CommercialOrder.getDescriptor(),
-          io.opencannabis.schema.contact.PhoneNumberOuterClass.getDescriptor(),
-          io.opencannabis.schema.contact.EmailAddressOuterClass.getDescriptor(),
+          io.opencannabis.schema.commerce.Payments.getDescriptor(),
+          io.opencannabis.schema.contact.ContactPhone.getDescriptor(),
+          io.opencannabis.schema.contact.ContactEmail.getDescriptor(),
           io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_partner_settings_APISettings_descriptor =
@@ -35296,7 +37643,7 @@ public final class PartnerLocationSettingsOuterClass {
     internal_static_bloombox_schema_partner_settings_ShopServiceSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_ShopServiceSettings_descriptor,
-        new java.lang.String[] { "Delivery", "Express", "Pickup", "Storefront", });
+        new java.lang.String[] { "Delivery", "Express", "Pickup", "Storefront", "Medical", "AdultUse", });
     internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_bloombox_schema_partner_settings_DeliveryZipcodeSettings_fieldAccessorTable = new
@@ -35326,7 +37673,7 @@ public final class PartnerLocationSettingsOuterClass {
     internal_static_bloombox_schema_partner_settings_ShopChannelSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_ShopChannelSettings_descriptor,
-        new java.lang.String[] { "Orders", "Enrollment", });
+        new java.lang.String[] { "Orders", "Enrollment", "Marketing", });
     internal_static_bloombox_schema_partner_settings_ShopContactTarget_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_bloombox_schema_partner_settings_ShopContactTarget_fieldAccessorTable = new
@@ -35356,13 +37703,13 @@ public final class PartnerLocationSettingsOuterClass {
     internal_static_bloombox_schema_partner_settings_OnlineShopSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_OnlineShopSettings_descriptor,
-        new java.lang.String[] { "Origin", "Comms", });
+        new java.lang.String[] { "Origin", "Comms", "Domain", "Signup", "Login", "AcceptedMethod", "AcceptedCard", });
     internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_descriptor =
       getDescriptor().getMessageTypes().get(26);
     internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_PhysicalStorefrontSettings_descriptor,
-        new java.lang.String[] { "Location", });
+        new java.lang.String[] { "Location", "AcceptedMethod", "AcceptedCard", });
     internal_static_bloombox_schema_partner_settings_StorefrontSettings_descriptor =
       getDescriptor().getMessageTypes().get(27);
     internal_static_bloombox_schema_partner_settings_StorefrontSettings_fieldAccessorTable = new
@@ -35394,10 +37741,11 @@ public final class PartnerLocationSettingsOuterClass {
         internal_static_bloombox_schema_partner_settings_PartnerLocationSettings_descriptor,
         new java.lang.String[] { "Api", "Brands", "Publish", "Sections", "Shop", "Tv", "Tablet", "Integration", });
     io.opencannabis.schema.geo.LocationOuterClass.getDescriptor();
-    io.opencannabis.schema.temporal.DateOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalDate.getDescriptor();
     io.opencannabis.schema.commerce.CommercialOrder.getDescriptor();
-    io.opencannabis.schema.contact.PhoneNumberOuterClass.getDescriptor();
-    io.opencannabis.schema.contact.EmailAddressOuterClass.getDescriptor();
+    io.opencannabis.schema.commerce.Payments.getDescriptor();
+    io.opencannabis.schema.contact.ContactPhone.getDescriptor();
+    io.opencannabis.schema.contact.ContactEmail.getDescriptor();
     io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor();
   }
 

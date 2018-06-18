@@ -76,8 +76,8 @@ public final class PersonOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.opencannabis.schema.temporal.DateOuterClass.getDescriptor(),
-          io.opencannabis.schema.contact.ContactInfoOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalDate.getDescriptor(),
+          io.opencannabis.schema.contact.GenericContact.getDescriptor(),
           io.opencannabis.schema.person.PersonName.getDescriptor(),
         }, assigner);
     internal_static_opencannabis_person_Person_descriptor =
@@ -92,8 +92,8 @@ public final class PersonOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.opencannabis.schema.temporal.DateOuterClass.getDescriptor();
-    io.opencannabis.schema.contact.ContactInfoOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalDate.getDescriptor();
+    io.opencannabis.schema.contact.GenericContact.getDescriptor();
     io.opencannabis.schema.person.PersonName.getDescriptor();
   }
 

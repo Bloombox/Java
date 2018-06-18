@@ -123,12 +123,12 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchOptions_descriptor;
+    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchOptions_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchOptions_fieldAccessorTable
+    return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchOptions_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.search.SearchOptions.class, io.bloombox.schema.search.SearchOptions.Builder.class);
   }
@@ -454,12 +454,12 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.search.SearchOptionsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchOptions_descriptor;
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchOptions_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchOptions_fieldAccessorTable
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.search.SearchOptions.class, io.bloombox.schema.search.SearchOptions.Builder.class);
     }
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.search.SearchSpecOuterClass.internal_static_bloombox_schema_search_SearchOptions_descriptor;
+      return io.bloombox.schema.search.SearchMetadata.internal_static_bloombox_schema_search_SearchOptions_descriptor;
     }
 
     public io.bloombox.schema.search.SearchOptions getDefaultInstanceForType() {

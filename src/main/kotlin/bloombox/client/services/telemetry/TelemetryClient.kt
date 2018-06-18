@@ -22,8 +22,8 @@ import bloombox.client.internals.mtls.ClientCredentials
 import bloombox.client.internals.rpc.RPCClient
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
-import io.bloombox.schema.identity.UserOuterClass.UserKey
-import io.opencannabis.schema.base.ProductKey
+import io.bloombox.schema.identity.AppUserKey.UserKey
+import io.opencannabis.schema.base.BaseProductKey.ProductKey
 import io.opencannabis.schema.menu.section.Section
 import io.bloombox.schema.services.telemetry.v1beta3.*
 import io.bloombox.schema.telemetry.AnalyticsContext
@@ -31,7 +31,7 @@ import io.bloombox.schema.telemetry.AnalyticsEvent
 import io.bloombox.schema.telemetry.AnalyticsScope
 import io.bloombox.schema.telemetry.context.*
 import io.opencannabis.schema.struct.VersionSpec
-import io.opencannabis.schema.temporal.Instant
+import io.opencannabis.schema.temporal.TemporalInstant.Instant
 import io.grpc.*
 import io.netty.handler.ssl.ClientAuth
 import java.io.InputStream

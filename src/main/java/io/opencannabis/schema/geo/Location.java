@@ -70,11 +70,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 10: {
-            io.opencannabis.schema.content.Name.Builder subBuilder = null;
+            io.opencannabis.schema.content.NameContent.Name.Builder subBuilder = null;
             if (name_ != null) {
               subBuilder = name_.toBuilder();
             }
-            name_ = input.readMessage(io.opencannabis.schema.content.Name.parser(), extensionRegistry);
+            name_ = input.readMessage(io.opencannabis.schema.content.NameContent.Name.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(name_);
               name_ = subBuilder.buildPartial();
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  private io.opencannabis.schema.content.Name name_;
+  private io.opencannabis.schema.content.NameContent.Name name_;
   /**
    * <pre>
    * Name for this location, if applicable.
@@ -164,8 +164,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
    */
-  public io.opencannabis.schema.content.Name getName() {
-    return name_ == null ? io.opencannabis.schema.content.Name.getDefaultInstance() : name_;
+  public io.opencannabis.schema.content.NameContent.Name getName() {
+    return name_ == null ? io.opencannabis.schema.content.NameContent.Name.getDefaultInstance() : name_;
   }
   /**
    * <pre>
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
    */
-  public io.opencannabis.schema.content.NameOrBuilder getNameOrBuilder() {
+  public io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder() {
     return getName();
   }
 
@@ -667,9 +667,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.content.Name name_ = null;
+    private io.opencannabis.schema.content.NameContent.Name name_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.content.Name, io.opencannabis.schema.content.Name.Builder, io.opencannabis.schema.content.NameOrBuilder> nameBuilder_;
+        io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder> nameBuilder_;
     /**
      * <pre>
      * Name for this location, if applicable.
@@ -687,9 +687,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
      */
-    public io.opencannabis.schema.content.Name getName() {
+    public io.opencannabis.schema.content.NameContent.Name getName() {
       if (nameBuilder_ == null) {
-        return name_ == null ? io.opencannabis.schema.content.Name.getDefaultInstance() : name_;
+        return name_ == null ? io.opencannabis.schema.content.NameContent.Name.getDefaultInstance() : name_;
       } else {
         return nameBuilder_.getMessage();
       }
@@ -701,7 +701,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
      */
-    public Builder setName(io.opencannabis.schema.content.Name value) {
+    public Builder setName(io.opencannabis.schema.content.NameContent.Name value) {
       if (nameBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -722,7 +722,7 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
      */
     public Builder setName(
-        io.opencannabis.schema.content.Name.Builder builderForValue) {
+        io.opencannabis.schema.content.NameContent.Name.Builder builderForValue) {
       if (nameBuilder_ == null) {
         name_ = builderForValue.build();
         onChanged();
@@ -739,11 +739,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
      */
-    public Builder mergeName(io.opencannabis.schema.content.Name value) {
+    public Builder mergeName(io.opencannabis.schema.content.NameContent.Name value) {
       if (nameBuilder_ == null) {
         if (name_ != null) {
           name_ =
-            io.opencannabis.schema.content.Name.newBuilder(name_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.content.NameContent.Name.newBuilder(name_).mergeFrom(value).buildPartial();
         } else {
           name_ = value;
         }
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
      */
-    public io.opencannabis.schema.content.Name.Builder getNameBuilder() {
+    public io.opencannabis.schema.content.NameContent.Name.Builder getNameBuilder() {
       
       onChanged();
       return getNameFieldBuilder().getBuilder();
@@ -791,12 +791,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
      */
-    public io.opencannabis.schema.content.NameOrBuilder getNameOrBuilder() {
+    public io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
         return nameBuilder_.getMessageOrBuilder();
       } else {
         return name_ == null ?
-            io.opencannabis.schema.content.Name.getDefaultInstance() : name_;
+            io.opencannabis.schema.content.NameContent.Name.getDefaultInstance() : name_;
       }
     }
     /**
@@ -807,11 +807,11 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.content.Name, io.opencannabis.schema.content.Name.Builder, io.opencannabis.schema.content.NameOrBuilder> 
+        io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder> 
         getNameFieldBuilder() {
       if (nameBuilder_ == null) {
         nameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.content.Name, io.opencannabis.schema.content.Name.Builder, io.opencannabis.schema.content.NameOrBuilder>(
+            io.opencannabis.schema.content.NameContent.Name, io.opencannabis.schema.content.NameContent.Name.Builder, io.opencannabis.schema.content.NameContent.NameOrBuilder>(
                 getName(),
                 getParentForChildren(),
                 isClean());

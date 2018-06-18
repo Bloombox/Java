@@ -209,7 +209,7 @@ public final class MenuOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
           io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor(),
           io.opencannabis.schema.product.ApothecaryProduct.getDescriptor(),
@@ -312,7 +312,7 @@ public final class MenuOuterClass {
         internal_static_opencannabis_products_menu_Menu_descriptor,
         new java.lang.String[] { "Metadata", "Payload", "Menu", "Content", });
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();
     io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor();
     io.opencannabis.schema.product.ApothecaryProduct.getDescriptor();

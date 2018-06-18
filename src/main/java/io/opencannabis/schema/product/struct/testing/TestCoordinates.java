@@ -21,8 +21,8 @@ package io.opencannabis.schema.product.struct.testing;
 
 /**
  * <pre>
- * Specifies coordinate values for a given lab testing result. This generally consists of a 'lot' and 'batch' value,
- * which essentially correlate to a 'zone' and 'group', which are expressed here.
+ * Specifies coordinate values for a given lab testing result. This consists of 'zones' (i.e. floors, greenhouses), 
+ * made up of 'batches' (i.e. rooms, sections), containing 'lots' (i.e. rows, trays) of individual plants or products.
  * </pre>
  *
  * Protobuf type {@code opencannabis.structs.labtesting.TestCoordinates}
@@ -38,7 +38,9 @@ private static final long serialVersionUID = 0L;
   }
   private TestCoordinates() {
     zone_ = "";
-    group_ = "";
+    lot_ = "";
+    batch_ = "";
+    sampleId_ = "";
   }
 
   @java.lang.Override
@@ -81,7 +83,19 @@ private static final long serialVersionUID = 0L;
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            group_ = s;
+            lot_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            batch_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            sampleId_ = s;
             break;
           }
         }
@@ -112,7 +126,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object zone_;
   /**
    * <pre>
-   * Specifies the 'zone,' or 'lot,' value for a set of test results.
+   * Specifies the 'zone' value for a set of test results. This is usually used as/by a floor or greenhouse ID.
    * </pre>
    *
    * <code>string zone = 1;</code>
@@ -131,7 +145,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies the 'zone,' or 'lot,' value for a set of test results.
+   * Specifies the 'zone' value for a set of test results. This is usually used as/by a floor or greenhouse ID.
    * </pre>
    *
    * <code>string zone = 1;</code>
@@ -150,42 +164,130 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int GROUP_FIELD_NUMBER = 2;
-  private volatile java.lang.Object group_;
+  public static final int LOT_FIELD_NUMBER = 2;
+  private volatile java.lang.Object lot_;
   /**
    * <pre>
-   * Specifies the 'group,' or 'batch,' value for a set of test results.
+   * Specifies the 'lot' value for a set of test results. This is usually used as/by a room or section ID.
    * </pre>
    *
-   * <code>string group = 2;</code>
+   * <code>string lot = 2;</code>
    */
-  public java.lang.String getGroup() {
-    java.lang.Object ref = group_;
+  public java.lang.String getLot() {
+    java.lang.Object ref = lot_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      group_ = s;
+      lot_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * Specifies the 'group,' or 'batch,' value for a set of test results.
+   * Specifies the 'lot' value for a set of test results. This is usually used as/by a room or section ID.
    * </pre>
    *
-   * <code>string group = 2;</code>
+   * <code>string lot = 2;</code>
    */
   public com.google.protobuf.ByteString
-      getGroupBytes() {
-    java.lang.Object ref = group_;
+      getLotBytes() {
+    java.lang.Object ref = lot_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      group_ = b;
+      lot_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BATCH_FIELD_NUMBER = 3;
+  private volatile java.lang.Object batch_;
+  /**
+   * <pre>
+   * Specifies the 'batch' value for a set of test results. This is usually used as/by a row or tray ID for individual
+   * plants or test sample products.
+   * </pre>
+   *
+   * <code>string batch = 3;</code>
+   */
+  public java.lang.String getBatch() {
+    java.lang.Object ref = batch_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      batch_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Specifies the 'batch' value for a set of test results. This is usually used as/by a row or tray ID for individual
+   * plants or test sample products.
+   * </pre>
+   *
+   * <code>string batch = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getBatchBytes() {
+    java.lang.Object ref = batch_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      batch_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SAMPLE_ID_FIELD_NUMBER = 4;
+  private volatile java.lang.Object sampleId_;
+  /**
+   * <pre>
+   * Unique ID given to the sample that was tested. This may represent individual plants or products, grouped lots or
+   * batches, or even random selections from entire zones.
+   * </pre>
+   *
+   * <code>string sample_id = 4;</code>
+   */
+  public java.lang.String getSampleId() {
+    java.lang.Object ref = sampleId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      sampleId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Unique ID given to the sample that was tested. This may represent individual plants or products, grouped lots or
+   * batches, or even random selections from entire zones.
+   * </pre>
+   *
+   * <code>string sample_id = 4;</code>
+   */
+  public com.google.protobuf.ByteString
+      getSampleIdBytes() {
+    java.lang.Object ref = sampleId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sampleId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -207,8 +309,14 @@ private static final long serialVersionUID = 0L;
     if (!getZoneBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, zone_);
     }
-    if (!getGroupBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, group_);
+    if (!getLotBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, lot_);
+    }
+    if (!getBatchBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, batch_);
+    }
+    if (!getSampleIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sampleId_);
     }
     unknownFields.writeTo(output);
   }
@@ -221,8 +329,14 @@ private static final long serialVersionUID = 0L;
     if (!getZoneBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, zone_);
     }
-    if (!getGroupBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, group_);
+    if (!getLotBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, lot_);
+    }
+    if (!getBatchBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, batch_);
+    }
+    if (!getSampleIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sampleId_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -242,8 +356,12 @@ private static final long serialVersionUID = 0L;
     boolean result = true;
     result = result && getZone()
         .equals(other.getZone());
-    result = result && getGroup()
-        .equals(other.getGroup());
+    result = result && getLot()
+        .equals(other.getLot());
+    result = result && getBatch()
+        .equals(other.getBatch());
+    result = result && getSampleId()
+        .equals(other.getSampleId());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -257,8 +375,12 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ZONE_FIELD_NUMBER;
     hash = (53 * hash) + getZone().hashCode();
-    hash = (37 * hash) + GROUP_FIELD_NUMBER;
-    hash = (53 * hash) + getGroup().hashCode();
+    hash = (37 * hash) + LOT_FIELD_NUMBER;
+    hash = (53 * hash) + getLot().hashCode();
+    hash = (37 * hash) + BATCH_FIELD_NUMBER;
+    hash = (53 * hash) + getBatch().hashCode();
+    hash = (37 * hash) + SAMPLE_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getSampleId().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -354,8 +476,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies coordinate values for a given lab testing result. This generally consists of a 'lot' and 'batch' value,
-   * which essentially correlate to a 'zone' and 'group', which are expressed here.
+   * Specifies coordinate values for a given lab testing result. This consists of 'zones' (i.e. floors, greenhouses), 
+   * made up of 'batches' (i.e. rooms, sections), containing 'lots' (i.e. rows, trays) of individual plants or products.
    * </pre>
    *
    * Protobuf type {@code opencannabis.structs.labtesting.TestCoordinates}
@@ -395,7 +517,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       zone_ = "";
 
-      group_ = "";
+      lot_ = "";
+
+      batch_ = "";
+
+      sampleId_ = "";
 
       return this;
     }
@@ -420,7 +546,9 @@ private static final long serialVersionUID = 0L;
     public io.opencannabis.schema.product.struct.testing.TestCoordinates buildPartial() {
       io.opencannabis.schema.product.struct.testing.TestCoordinates result = new io.opencannabis.schema.product.struct.testing.TestCoordinates(this);
       result.zone_ = zone_;
-      result.group_ = group_;
+      result.lot_ = lot_;
+      result.batch_ = batch_;
+      result.sampleId_ = sampleId_;
       onBuilt();
       return result;
     }
@@ -466,8 +594,16 @@ private static final long serialVersionUID = 0L;
         zone_ = other.zone_;
         onChanged();
       }
-      if (!other.getGroup().isEmpty()) {
-        group_ = other.group_;
+      if (!other.getLot().isEmpty()) {
+        lot_ = other.lot_;
+        onChanged();
+      }
+      if (!other.getBatch().isEmpty()) {
+        batch_ = other.batch_;
+        onChanged();
+      }
+      if (!other.getSampleId().isEmpty()) {
+        sampleId_ = other.sampleId_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -500,7 +636,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object zone_ = "";
     /**
      * <pre>
-     * Specifies the 'zone,' or 'lot,' value for a set of test results.
+     * Specifies the 'zone' value for a set of test results. This is usually used as/by a floor or greenhouse ID.
      * </pre>
      *
      * <code>string zone = 1;</code>
@@ -519,7 +655,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies the 'zone,' or 'lot,' value for a set of test results.
+     * Specifies the 'zone' value for a set of test results. This is usually used as/by a floor or greenhouse ID.
      * </pre>
      *
      * <code>string zone = 1;</code>
@@ -539,7 +675,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies the 'zone,' or 'lot,' value for a set of test results.
+     * Specifies the 'zone' value for a set of test results. This is usually used as/by a floor or greenhouse ID.
      * </pre>
      *
      * <code>string zone = 1;</code>
@@ -556,7 +692,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies the 'zone,' or 'lot,' value for a set of test results.
+     * Specifies the 'zone' value for a set of test results. This is usually used as/by a floor or greenhouse ID.
      * </pre>
      *
      * <code>string zone = 1;</code>
@@ -569,7 +705,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies the 'zone,' or 'lot,' value for a set of test results.
+     * Specifies the 'zone' value for a set of test results. This is usually used as/by a floor or greenhouse ID.
      * </pre>
      *
      * <code>string zone = 1;</code>
@@ -586,21 +722,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object group_ = "";
+    private java.lang.Object lot_ = "";
     /**
      * <pre>
-     * Specifies the 'group,' or 'batch,' value for a set of test results.
+     * Specifies the 'lot' value for a set of test results. This is usually used as/by a room or section ID.
      * </pre>
      *
-     * <code>string group = 2;</code>
+     * <code>string lot = 2;</code>
      */
-    public java.lang.String getGroup() {
-      java.lang.Object ref = group_;
+    public java.lang.String getLot() {
+      java.lang.Object ref = lot_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        group_ = s;
+        lot_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -608,19 +744,19 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies the 'group,' or 'batch,' value for a set of test results.
+     * Specifies the 'lot' value for a set of test results. This is usually used as/by a room or section ID.
      * </pre>
      *
-     * <code>string group = 2;</code>
+     * <code>string lot = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getGroupBytes() {
-      java.lang.Object ref = group_;
+        getLotBytes() {
+      java.lang.Object ref = lot_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        group_ = b;
+        lot_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -628,49 +764,237 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies the 'group,' or 'batch,' value for a set of test results.
+     * Specifies the 'lot' value for a set of test results. This is usually used as/by a room or section ID.
      * </pre>
      *
-     * <code>string group = 2;</code>
+     * <code>string lot = 2;</code>
      */
-    public Builder setGroup(
+    public Builder setLot(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      group_ = value;
+      lot_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Specifies the 'group,' or 'batch,' value for a set of test results.
+     * Specifies the 'lot' value for a set of test results. This is usually used as/by a room or section ID.
      * </pre>
      *
-     * <code>string group = 2;</code>
+     * <code>string lot = 2;</code>
      */
-    public Builder clearGroup() {
+    public Builder clearLot() {
       
-      group_ = getDefaultInstance().getGroup();
+      lot_ = getDefaultInstance().getLot();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Specifies the 'group,' or 'batch,' value for a set of test results.
+     * Specifies the 'lot' value for a set of test results. This is usually used as/by a room or section ID.
      * </pre>
      *
-     * <code>string group = 2;</code>
+     * <code>string lot = 2;</code>
      */
-    public Builder setGroupBytes(
+    public Builder setLotBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      group_ = value;
+      lot_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object batch_ = "";
+    /**
+     * <pre>
+     * Specifies the 'batch' value for a set of test results. This is usually used as/by a row or tray ID for individual
+     * plants or test sample products.
+     * </pre>
+     *
+     * <code>string batch = 3;</code>
+     */
+    public java.lang.String getBatch() {
+      java.lang.Object ref = batch_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        batch_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies the 'batch' value for a set of test results. This is usually used as/by a row or tray ID for individual
+     * plants or test sample products.
+     * </pre>
+     *
+     * <code>string batch = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBatchBytes() {
+      java.lang.Object ref = batch_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        batch_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies the 'batch' value for a set of test results. This is usually used as/by a row or tray ID for individual
+     * plants or test sample products.
+     * </pre>
+     *
+     * <code>string batch = 3;</code>
+     */
+    public Builder setBatch(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      batch_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the 'batch' value for a set of test results. This is usually used as/by a row or tray ID for individual
+     * plants or test sample products.
+     * </pre>
+     *
+     * <code>string batch = 3;</code>
+     */
+    public Builder clearBatch() {
+      
+      batch_ = getDefaultInstance().getBatch();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the 'batch' value for a set of test results. This is usually used as/by a row or tray ID for individual
+     * plants or test sample products.
+     * </pre>
+     *
+     * <code>string batch = 3;</code>
+     */
+    public Builder setBatchBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      batch_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object sampleId_ = "";
+    /**
+     * <pre>
+     * Unique ID given to the sample that was tested. This may represent individual plants or products, grouped lots or
+     * batches, or even random selections from entire zones.
+     * </pre>
+     *
+     * <code>string sample_id = 4;</code>
+     */
+    public java.lang.String getSampleId() {
+      java.lang.Object ref = sampleId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sampleId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Unique ID given to the sample that was tested. This may represent individual plants or products, grouped lots or
+     * batches, or even random selections from entire zones.
+     * </pre>
+     *
+     * <code>string sample_id = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSampleIdBytes() {
+      java.lang.Object ref = sampleId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sampleId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Unique ID given to the sample that was tested. This may represent individual plants or products, grouped lots or
+     * batches, or even random selections from entire zones.
+     * </pre>
+     *
+     * <code>string sample_id = 4;</code>
+     */
+    public Builder setSampleId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      sampleId_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unique ID given to the sample that was tested. This may represent individual plants or products, grouped lots or
+     * batches, or even random selections from entire zones.
+     * </pre>
+     *
+     * <code>string sample_id = 4;</code>
+     */
+    public Builder clearSampleId() {
+      
+      sampleId_ = getDefaultInstance().getSampleId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Unique ID given to the sample that was tested. This may represent individual plants or products, grouped lots or
+     * batches, or even random selections from entire zones.
+     * </pre>
+     *
+     * <code>string sample_id = 4;</code>
+     */
+    public Builder setSampleIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      sampleId_ = value;
       onChanged();
       return this;
     }

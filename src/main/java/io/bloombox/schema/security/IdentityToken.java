@@ -20,6 +20,11 @@
 package io.bloombox.schema.security;
 
 /**
+ * <pre>
+ * Specifies an individual token asserting the identity of a user. An identity token does not make any claim related to
+ * authorization, only identity.
+ * </pre>
+ *
  * Protobuf type {@code bloombox.schema.security.IdentityToken}
  */
 public  final class IdentityToken extends
@@ -113,6 +118,10 @@ private static final long serialVersionUID = 0L;
   public static final int UID_FIELD_NUMBER = 1;
   private volatile java.lang.Object uid_;
   /**
+   * <pre>
+   * ID for the subject user.
+   * </pre>
+   *
    * <code>string uid = 1;</code>
    */
   public java.lang.String getUid() {
@@ -128,6 +137,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * ID for the subject user.
+   * </pre>
+   *
    * <code>string uid = 1;</code>
    */
   public com.google.protobuf.ByteString
@@ -147,6 +160,10 @@ private static final long serialVersionUID = 0L;
   public static final int ENCODED_FIELD_NUMBER = 2;
   private volatile java.lang.Object encoded_;
   /**
+   * <pre>
+   * Encoded JWT identity token.
+   * </pre>
+   *
    * <code>string encoded = 2;</code>
    */
   public java.lang.String getEncoded() {
@@ -162,6 +179,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * Encoded JWT identity token.
+   * </pre>
+   *
    * <code>string encoded = 2;</code>
    */
   public com.google.protobuf.ByteString
@@ -181,12 +202,20 @@ private static final long serialVersionUID = 0L;
   public static final int ISSUER_FIELD_NUMBER = 3;
   private int issuer_;
   /**
+   * <pre>
+   * Token issuer, or authorizing IdP (Identity Provider).
+   * </pre>
+   *
    * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
    */
   public int getIssuerValue() {
     return issuer_;
   }
   /**
+   * <pre>
+   * Token issuer, or authorizing IdP (Identity Provider).
+   * </pre>
+   *
    * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
    */
   public io.bloombox.schema.security.IdentityTokenIssuer getIssuer() {
@@ -365,6 +394,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies an individual token asserting the identity of a user. An identity token does not make any claim related to
+   * authorization, only identity.
+   * </pre>
+   *
    * Protobuf type {@code bloombox.schema.security.IdentityToken}
    */
   public static final class Builder extends
@@ -512,6 +546,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object uid_ = "";
     /**
+     * <pre>
+     * ID for the subject user.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     public java.lang.String getUid() {
@@ -527,6 +565,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID for the subject user.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -543,6 +585,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * ID for the subject user.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     public Builder setUid(
@@ -556,6 +602,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID for the subject user.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     public Builder clearUid() {
@@ -565,6 +615,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * ID for the subject user.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     public Builder setUidBytes(
@@ -581,6 +635,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object encoded_ = "";
     /**
+     * <pre>
+     * Encoded JWT identity token.
+     * </pre>
+     *
      * <code>string encoded = 2;</code>
      */
     public java.lang.String getEncoded() {
@@ -596,6 +654,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Encoded JWT identity token.
+     * </pre>
+     *
      * <code>string encoded = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -612,6 +674,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Encoded JWT identity token.
+     * </pre>
+     *
      * <code>string encoded = 2;</code>
      */
     public Builder setEncoded(
@@ -625,6 +691,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Encoded JWT identity token.
+     * </pre>
+     *
      * <code>string encoded = 2;</code>
      */
     public Builder clearEncoded() {
@@ -634,6 +704,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Encoded JWT identity token.
+     * </pre>
+     *
      * <code>string encoded = 2;</code>
      */
     public Builder setEncodedBytes(
@@ -650,12 +724,20 @@ private static final long serialVersionUID = 0L;
 
     private int issuer_ = 0;
     /**
+     * <pre>
+     * Token issuer, or authorizing IdP (Identity Provider).
+     * </pre>
+     *
      * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public int getIssuerValue() {
       return issuer_;
     }
     /**
+     * <pre>
+     * Token issuer, or authorizing IdP (Identity Provider).
+     * </pre>
+     *
      * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder setIssuerValue(int value) {
@@ -664,6 +746,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Token issuer, or authorizing IdP (Identity Provider).
+     * </pre>
+     *
      * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public io.bloombox.schema.security.IdentityTokenIssuer getIssuer() {
@@ -671,6 +757,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? io.bloombox.schema.security.IdentityTokenIssuer.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * Token issuer, or authorizing IdP (Identity Provider).
+     * </pre>
+     *
      * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder setIssuer(io.bloombox.schema.security.IdentityTokenIssuer value) {
@@ -683,6 +773,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Token issuer, or authorizing IdP (Identity Provider).
+     * </pre>
+     *
      * <code>.bloombox.schema.security.IdentityTokenIssuer issuer = 3;</code>
      */
     public Builder clearIssuer() {

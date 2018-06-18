@@ -38,7 +38,7 @@ public interface SectionMediaOrBuilder extends
    *
    * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
    */
-  io.opencannabis.schema.media.MediaItem getTabletHomescreenMedia();
+  io.opencannabis.schema.media.AttachedMedia.MediaItem getTabletHomescreenMedia();
   /**
    * <pre>
    * Specifies a media item to use as a tablet homescreen tile for this section.
@@ -46,5 +46,5 @@ public interface SectionMediaOrBuilder extends
    *
    * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
    */
-  io.opencannabis.schema.media.MediaItemOrBuilder getTabletHomescreenMediaOrBuilder();
+  io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getTabletHomescreenMediaOrBuilder();
 }

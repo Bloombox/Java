@@ -21,7 +21,7 @@ package io.opencannabis.schema.product.struct.testing;
 
 /**
  * <pre>
- * -- Testing: Pesticides
+ * Specifies results of pesticide testing.
  * </pre>
  *
  * Protobuf type {@code opencannabis.structs.labtesting.Pesticides}
@@ -127,6 +127,10 @@ private static final long serialVersionUID = 0L;
   public static final int PESTICIDE_FREE_FIELD_NUMBER = 1;
   private boolean pesticideFree_;
   /**
+   * <pre>
+   * Flag indicating the product is pesticide free.
+   * </pre>
+   *
    * <code>bool pesticide_free = 1;</code>
    */
   public boolean getPesticideFree() {
@@ -160,6 +164,10 @@ private static final long serialVersionUID = 0L;
     return internalGetMeasurements().getMap().size();
   }
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
 
@@ -176,6 +184,10 @@ private static final long serialVersionUID = 0L;
     return getMeasurementsMap();
   }
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
 
@@ -183,6 +195,10 @@ private static final long serialVersionUID = 0L;
     return internalGetMeasurements().getMap();
   }
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
 
@@ -195,6 +211,10 @@ private static final long serialVersionUID = 0L;
     return map.containsKey(key) ? map.get(key) : defaultValue;
   }
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
 
@@ -385,7 +405,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * -- Testing: Pesticides
+   * Specifies results of pesticide testing.
    * </pre>
    *
    * Protobuf type {@code opencannabis.structs.labtesting.Pesticides}
@@ -552,12 +572,20 @@ private static final long serialVersionUID = 0L;
 
     private boolean pesticideFree_ ;
     /**
+     * <pre>
+     * Flag indicating the product is pesticide free.
+     * </pre>
+     *
      * <code>bool pesticide_free = 1;</code>
      */
     public boolean getPesticideFree() {
       return pesticideFree_;
     }
     /**
+     * <pre>
+     * Flag indicating the product is pesticide free.
+     * </pre>
+     *
      * <code>bool pesticide_free = 1;</code>
      */
     public Builder setPesticideFree(boolean value) {
@@ -567,6 +595,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Flag indicating the product is pesticide free.
+     * </pre>
+     *
      * <code>bool pesticide_free = 1;</code>
      */
     public Builder clearPesticideFree() {
@@ -603,6 +635,10 @@ private static final long serialVersionUID = 0L;
       return internalGetMeasurements().getMap().size();
     }
     /**
+     * <pre>
+     * Measurements for specific, named, pesticides.
+     * </pre>
+     *
      * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
      */
 
@@ -619,6 +655,10 @@ private static final long serialVersionUID = 0L;
       return getMeasurementsMap();
     }
     /**
+     * <pre>
+     * Measurements for specific, named, pesticides.
+     * </pre>
+     *
      * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
      */
 
@@ -626,6 +666,10 @@ private static final long serialVersionUID = 0L;
       return internalGetMeasurements().getMap();
     }
     /**
+     * <pre>
+     * Measurements for specific, named, pesticides.
+     * </pre>
+     *
      * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
      */
 
@@ -638,6 +682,10 @@ private static final long serialVersionUID = 0L;
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Measurements for specific, named, pesticides.
+     * </pre>
+     *
      * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
      */
 
@@ -658,6 +706,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Measurements for specific, named, pesticides.
+     * </pre>
+     *
      * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
      */
 
@@ -677,6 +729,10 @@ private static final long serialVersionUID = 0L;
       return internalGetMutableMeasurements().getMutableMap();
     }
     /**
+     * <pre>
+     * Measurements for specific, named, pesticides.
+     * </pre>
+     *
      * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
      */
     public Builder putMeasurements(
@@ -689,6 +745,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Measurements for specific, named, pesticides.
+     * </pre>
+     *
      * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
      */
 

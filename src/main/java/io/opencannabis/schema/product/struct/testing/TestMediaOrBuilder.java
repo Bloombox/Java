@@ -39,9 +39,9 @@ public interface TestMediaOrBuilder extends
   /**
    * <code>.opencannabis.media.MediaItem media_item = 2;</code>
    */
-  io.opencannabis.schema.media.MediaItem getMediaItem();
+  io.opencannabis.schema.media.AttachedMedia.MediaItem getMediaItem();
   /**
    * <code>.opencannabis.media.MediaItem media_item = 2;</code>
    */
-  io.opencannabis.schema.media.MediaItemOrBuilder getMediaItemOrBuilder();
+  io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaItemOrBuilder();
 }

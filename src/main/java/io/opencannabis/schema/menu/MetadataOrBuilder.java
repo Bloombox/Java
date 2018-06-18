@@ -124,7 +124,7 @@ public interface MetadataOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant published = 5;</code>
    */
-  io.opencannabis.schema.temporal.Instant getPublished();
+  io.opencannabis.schema.temporal.TemporalInstant.Instant getPublished();
   /**
    * <pre>
    * When this menu data was published.
@@ -132,7 +132,7 @@ public interface MetadataOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant published = 5;</code>
    */
-  io.opencannabis.schema.temporal.InstantOrBuilder getPublishedOrBuilder();
+  io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getPublishedOrBuilder();
 
   /**
    * <pre>

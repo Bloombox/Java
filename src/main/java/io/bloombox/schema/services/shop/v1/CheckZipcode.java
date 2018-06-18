@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
     boolean hasLocation();
     /**
@@ -128,17 +128,17 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
-    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
      * <pre>
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
-    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
   }
   /**
    * Protobuf type {@code bloombox.schema.services.shop.v1.CheckZipcode.Request}
@@ -194,11 +194,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder subBuilder = null;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
               if (location_ != null) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.parser(), extensionRegistry);
+              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -273,13 +273,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LOCATION_FIELD_NUMBER = 2;
-    private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_;
+    private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
     /**
      * <pre>
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -289,19 +289,19 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
     }
     /**
      * <pre>
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
@@ -707,15 +707,15 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_ = null;
+      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> locationBuilder_;
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -725,11 +725,11 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+          return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
@@ -739,9 +739,9 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
+      public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -759,10 +759,10 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder builderForValue) {
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -777,13 +777,13 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
+      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (location_ != null) {
             location_ =
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -817,9 +817,9 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder getLocationBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -829,14 +829,14 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
         }
       }
       /**
@@ -844,14 +844,14 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 2;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> 
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder>(
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());

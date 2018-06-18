@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
      */
-    io.opencannabis.schema.contact.EmailAddress getEmailAddress();
+    io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmailAddress();
     /**
      * <pre>
      * Email Address string. 
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
      */
-    io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailAddressOrBuilder();
+    io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailAddressOrBuilder();
 
     /**
      * <pre>
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
      */
-    io.opencannabis.schema.contact.PhoneNumber getPhoneNumber();
+    io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhoneNumber();
     /**
      * <pre>
      * Phone Number string.
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
      */
-    io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneNumberOrBuilder();
+    io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneNumberOrBuilder();
 
     /**
      * <pre>
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
     boolean hasLocation();
     /**
@@ -185,17 +185,17 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
-    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
     /**
      * <pre>
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
-    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder();
+    io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
   }
   /**
    * Protobuf type {@code bloombox.schema.services.shop.v1.ShareOrder.Request}
@@ -244,11 +244,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.opencannabis.schema.contact.EmailAddress.Builder subBuilder = null;
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder subBuilder = null;
               if (emailAddress_ != null) {
                 subBuilder = emailAddress_.toBuilder();
               }
-              emailAddress_ = input.readMessage(io.opencannabis.schema.contact.EmailAddress.parser(), extensionRegistry);
+              emailAddress_ = input.readMessage(io.opencannabis.schema.contact.ContactEmail.EmailAddress.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(emailAddress_);
                 emailAddress_ = subBuilder.buildPartial();
@@ -257,11 +257,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              io.opencannabis.schema.contact.PhoneNumber.Builder subBuilder = null;
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder subBuilder = null;
               if (phoneNumber_ != null) {
                 subBuilder = phoneNumber_.toBuilder();
               }
-              phoneNumber_ = input.readMessage(io.opencannabis.schema.contact.PhoneNumber.parser(), extensionRegistry);
+              phoneNumber_ = input.readMessage(io.opencannabis.schema.contact.ContactPhone.PhoneNumber.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(phoneNumber_);
                 phoneNumber_ = subBuilder.buildPartial();
@@ -283,11 +283,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 34: {
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder subBuilder = null;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
               if (location_ != null) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.parser(), extensionRegistry);
+              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -320,7 +320,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int EMAIL_ADDRESS_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.contact.EmailAddress emailAddress_;
+    private io.opencannabis.schema.contact.ContactEmail.EmailAddress emailAddress_;
     /**
      * <pre>
      * Email Address string. 
@@ -338,8 +338,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
      */
-    public io.opencannabis.schema.contact.EmailAddress getEmailAddress() {
-      return emailAddress_ == null ? io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : emailAddress_;
+    public io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmailAddress() {
+      return emailAddress_ == null ? io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : emailAddress_;
     }
     /**
      * <pre>
@@ -348,12 +348,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
      */
-    public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailAddressOrBuilder() {
+    public io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailAddressOrBuilder() {
       return getEmailAddress();
     }
 
     public static final int PHONE_NUMBER_FIELD_NUMBER = 2;
-    private io.opencannabis.schema.contact.PhoneNumber phoneNumber_;
+    private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phoneNumber_;
     /**
      * <pre>
      * Phone Number string.
@@ -371,8 +371,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
      */
-    public io.opencannabis.schema.contact.PhoneNumber getPhoneNumber() {
-      return phoneNumber_ == null ? io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phoneNumber_;
+    public io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhoneNumber() {
+      return phoneNumber_ == null ? io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phoneNumber_;
     }
     /**
      * <pre>
@@ -381,7 +381,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
      */
-    public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneNumberOrBuilder() {
+    public io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneNumberOrBuilder() {
       return getPhoneNumber();
     }
 
@@ -419,13 +419,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LOCATION_FIELD_NUMBER = 4;
-    private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_;
+    private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
     /**
      * <pre>
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -435,19 +435,19 @@ private static final long serialVersionUID = 0L;
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
     }
     /**
      * <pre>
      * Location to check.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+     * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
@@ -837,9 +837,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.opencannabis.schema.contact.EmailAddress emailAddress_ = null;
+      private io.opencannabis.schema.contact.ContactEmail.EmailAddress emailAddress_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> emailAddressBuilder_;
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> emailAddressBuilder_;
       /**
        * <pre>
        * Email Address string. 
@@ -857,9 +857,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddress getEmailAddress() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmailAddress() {
         if (emailAddressBuilder_ == null) {
-          return emailAddress_ == null ? io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : emailAddress_;
+          return emailAddress_ == null ? io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : emailAddress_;
         } else {
           return emailAddressBuilder_.getMessage();
         }
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
        */
-      public Builder setEmailAddress(io.opencannabis.schema.contact.EmailAddress value) {
+      public Builder setEmailAddress(io.opencannabis.schema.contact.ContactEmail.EmailAddress value) {
         if (emailAddressBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -892,7 +892,7 @@ private static final long serialVersionUID = 0L;
        * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
        */
       public Builder setEmailAddress(
-          io.opencannabis.schema.contact.EmailAddress.Builder builderForValue) {
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder builderForValue) {
         if (emailAddressBuilder_ == null) {
           emailAddress_ = builderForValue.build();
           onChanged();
@@ -909,11 +909,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
        */
-      public Builder mergeEmailAddress(io.opencannabis.schema.contact.EmailAddress value) {
+      public Builder mergeEmailAddress(io.opencannabis.schema.contact.ContactEmail.EmailAddress value) {
         if (emailAddressBuilder_ == null) {
           if (emailAddress_ != null) {
             emailAddress_ =
-              io.opencannabis.schema.contact.EmailAddress.newBuilder(emailAddress_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.newBuilder(emailAddress_).mergeFrom(value).buildPartial();
           } else {
             emailAddress_ = value;
           }
@@ -949,7 +949,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddress.Builder getEmailAddressBuilder() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder getEmailAddressBuilder() {
         
         onChanged();
         return getEmailAddressFieldBuilder().getBuilder();
@@ -961,12 +961,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailAddressOrBuilder() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailAddressOrBuilder() {
         if (emailAddressBuilder_ != null) {
           return emailAddressBuilder_.getMessageOrBuilder();
         } else {
           return emailAddress_ == null ?
-              io.opencannabis.schema.contact.EmailAddress.getDefaultInstance() : emailAddress_;
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance() : emailAddress_;
         }
       }
       /**
@@ -977,11 +977,11 @@ private static final long serialVersionUID = 0L;
        * <code>.opencannabis.contact.EmailAddress email_address = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> 
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> 
           getEmailAddressFieldBuilder() {
         if (emailAddressBuilder_ == null) {
           emailAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder>(
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder>(
                   getEmailAddress(),
                   getParentForChildren(),
                   isClean());
@@ -990,9 +990,9 @@ private static final long serialVersionUID = 0L;
         return emailAddressBuilder_;
       }
 
-      private io.opencannabis.schema.contact.PhoneNumber phoneNumber_ = null;
+      private io.opencannabis.schema.contact.ContactPhone.PhoneNumber phoneNumber_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> phoneNumberBuilder_;
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> phoneNumberBuilder_;
       /**
        * <pre>
        * Phone Number string.
@@ -1010,9 +1010,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumber getPhoneNumber() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhoneNumber() {
         if (phoneNumberBuilder_ == null) {
-          return phoneNumber_ == null ? io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phoneNumber_;
+          return phoneNumber_ == null ? io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phoneNumber_;
         } else {
           return phoneNumberBuilder_.getMessage();
         }
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
        */
-      public Builder setPhoneNumber(io.opencannabis.schema.contact.PhoneNumber value) {
+      public Builder setPhoneNumber(io.opencannabis.schema.contact.ContactPhone.PhoneNumber value) {
         if (phoneNumberBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1045,7 +1045,7 @@ private static final long serialVersionUID = 0L;
        * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
        */
       public Builder setPhoneNumber(
-          io.opencannabis.schema.contact.PhoneNumber.Builder builderForValue) {
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder builderForValue) {
         if (phoneNumberBuilder_ == null) {
           phoneNumber_ = builderForValue.build();
           onChanged();
@@ -1062,11 +1062,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
        */
-      public Builder mergePhoneNumber(io.opencannabis.schema.contact.PhoneNumber value) {
+      public Builder mergePhoneNumber(io.opencannabis.schema.contact.ContactPhone.PhoneNumber value) {
         if (phoneNumberBuilder_ == null) {
           if (phoneNumber_ != null) {
             phoneNumber_ =
-              io.opencannabis.schema.contact.PhoneNumber.newBuilder(phoneNumber_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.newBuilder(phoneNumber_).mergeFrom(value).buildPartial();
           } else {
             phoneNumber_ = value;
           }
@@ -1102,7 +1102,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumber.Builder getPhoneNumberBuilder() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder getPhoneNumberBuilder() {
         
         onChanged();
         return getPhoneNumberFieldBuilder().getBuilder();
@@ -1114,12 +1114,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneNumberOrBuilder() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneNumberOrBuilder() {
         if (phoneNumberBuilder_ != null) {
           return phoneNumberBuilder_.getMessageOrBuilder();
         } else {
           return phoneNumber_ == null ?
-              io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance() : phoneNumber_;
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance() : phoneNumber_;
         }
       }
       /**
@@ -1130,11 +1130,11 @@ private static final long serialVersionUID = 0L;
        * <code>.opencannabis.contact.PhoneNumber phone_number = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> 
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> 
           getPhoneNumberFieldBuilder() {
         if (phoneNumberBuilder_ == null) {
           phoneNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder>(
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder>(
                   getPhoneNumber(),
                   getParentForChildren(),
                   isClean());
@@ -1296,15 +1296,15 @@ private static final long serialVersionUID = 0L;
         return orderBuilder_;
       }
 
-      private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey location_ = null;
+      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> locationBuilder_;
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -1314,11 +1314,11 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey getLocation() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+          return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
@@ -1328,9 +1328,9 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
+      public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1348,10 +1348,10 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder builderForValue) {
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -1366,13 +1366,13 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey value) {
+      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
         if (locationBuilder_ == null) {
           if (location_ != null) {
             location_ =
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -1388,7 +1388,7 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -1406,9 +1406,9 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder getLocationBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
         
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -1418,14 +1418,14 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder getLocationOrBuilder() {
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.getDefaultInstance() : location_;
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
         }
       }
       /**
@@ -1433,14 +1433,14 @@ private static final long serialVersionUID = 0L;
        * Location to check.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.PartnerLocationKey location = 4;</code>
+       * <code>.bloombox.schema.partner.LocationKey location = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder> 
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKeyOrBuilder>(
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());

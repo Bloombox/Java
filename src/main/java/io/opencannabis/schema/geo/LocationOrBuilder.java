@@ -38,7 +38,7 @@ public interface LocationOrBuilder extends
    *
    * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
    */
-  io.opencannabis.schema.content.Name getName();
+  io.opencannabis.schema.content.NameContent.Name getName();
   /**
    * <pre>
    * Name for this location, if applicable.
@@ -46,7 +46,7 @@ public interface LocationOrBuilder extends
    *
    * <code>.opencannabis.content.Name name = 1 [(.gen_bq_schema.description) = "Name for this location, if applicable."];</code>
    */
-  io.opencannabis.schema.content.NameOrBuilder getNameOrBuilder();
+  io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder();
 
   /**
    * <pre>

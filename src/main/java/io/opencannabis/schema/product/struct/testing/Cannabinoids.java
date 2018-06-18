@@ -20,6 +20,11 @@
 package io.opencannabis.schema.product.struct.testing;
 
 /**
+ * <pre>
+ * Specifies test results with regard to cannabinoid compounds, enumerated in `Cannabinoid`. THC and CBD testing is
+ * elevated to a dedicated spot in test results due to its notability as a consumer decision-making signal.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.labtesting.Cannabinoids}
  */
 public  final class Cannabinoids extends
@@ -33,6 +38,8 @@ private static final long serialVersionUID = 0L;
   }
   private Cannabinoids() {
     results_ = java.util.Collections.emptyList();
+    ratio_ = 0;
+    potency_ = 0;
   }
 
   @java.lang.Override
@@ -101,6 +108,18 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(io.opencannabis.schema.product.struct.testing.Cannabinoids.Result.parser(), extensionRegistry));
             break;
           }
+          case 32: {
+            int rawValue = input.readEnum();
+
+            ratio_ = rawValue;
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+
+            potency_ = rawValue;
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -133,37 +152,52 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Cannabinoid this result is expressing results for.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
      */
     int getCannabinoidValue();
     /**
+     * <pre>
+     * Cannabinoid this result is expressing results for.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
      */
     io.opencannabis.schema.product.struct.testing.Cannabinoid getCannabinoid();
 
     /**
-     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-     */
-    int getRatioValue();
-    /**
-     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-     */
-    io.opencannabis.schema.product.struct.testing.CannabinoidRatio getRatio();
-
-    /**
+     * <pre>
+     * Measurement value for this individual result.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
      */
     boolean hasMeasurement();
     /**
+     * <pre>
+     * Measurement value for this individual result.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
      */
     io.opencannabis.schema.product.struct.testing.TestValue getMeasurement();
     /**
+     * <pre>
+     * Measurement value for this individual result.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
      */
     io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder();
   }
   /**
+   * <pre>
+   * Individual payload for a cannabinoid test result.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.labtesting.Cannabinoids.Result}
    */
   public  static final class Result extends
@@ -177,7 +211,6 @@ private static final long serialVersionUID = 0L;
     }
     private Result() {
       cannabinoid_ = 0;
-      ratio_ = 0;
     }
 
     @java.lang.Override
@@ -215,12 +248,6 @@ private static final long serialVersionUID = 0L;
               int rawValue = input.readEnum();
 
               cannabinoid_ = rawValue;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              ratio_ = rawValue;
               break;
             }
             case 26: {
@@ -263,12 +290,20 @@ private static final long serialVersionUID = 0L;
     public static final int CANNABINOID_FIELD_NUMBER = 1;
     private int cannabinoid_;
     /**
+     * <pre>
+     * Cannabinoid this result is expressing results for.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
      */
     public int getCannabinoidValue() {
       return cannabinoid_;
     }
     /**
+     * <pre>
+     * Cannabinoid this result is expressing results for.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Cannabinoid getCannabinoid() {
@@ -276,37 +311,33 @@ private static final long serialVersionUID = 0L;
       return result == null ? io.opencannabis.schema.product.struct.testing.Cannabinoid.UNRECOGNIZED : result;
     }
 
-    public static final int RATIO_FIELD_NUMBER = 2;
-    private int ratio_;
-    /**
-     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-     */
-    public int getRatioValue() {
-      return ratio_;
-    }
-    /**
-     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-     */
-    public io.opencannabis.schema.product.struct.testing.CannabinoidRatio getRatio() {
-      io.opencannabis.schema.product.struct.testing.CannabinoidRatio result = io.opencannabis.schema.product.struct.testing.CannabinoidRatio.valueOf(ratio_);
-      return result == null ? io.opencannabis.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
-    }
-
     public static final int MEASUREMENT_FIELD_NUMBER = 3;
     private io.opencannabis.schema.product.struct.testing.TestValue measurement_;
     /**
+     * <pre>
+     * Measurement value for this individual result.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
      */
     public boolean hasMeasurement() {
       return measurement_ != null;
     }
     /**
+     * <pre>
+     * Measurement value for this individual result.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue getMeasurement() {
       return measurement_ == null ? io.opencannabis.schema.product.struct.testing.TestValue.getDefaultInstance() : measurement_;
     }
     /**
+     * <pre>
+     * Measurement value for this individual result.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder() {
@@ -328,9 +359,6 @@ private static final long serialVersionUID = 0L;
       if (cannabinoid_ != io.opencannabis.schema.product.struct.testing.Cannabinoid.THC.getNumber()) {
         output.writeEnum(1, cannabinoid_);
       }
-      if (ratio_ != io.opencannabis.schema.product.struct.testing.CannabinoidRatio.NO_CANNABINOID_PREFERENCE.getNumber()) {
-        output.writeEnum(2, ratio_);
-      }
       if (measurement_ != null) {
         output.writeMessage(3, getMeasurement());
       }
@@ -345,10 +373,6 @@ private static final long serialVersionUID = 0L;
       if (cannabinoid_ != io.opencannabis.schema.product.struct.testing.Cannabinoid.THC.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, cannabinoid_);
-      }
-      if (ratio_ != io.opencannabis.schema.product.struct.testing.CannabinoidRatio.NO_CANNABINOID_PREFERENCE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, ratio_);
       }
       if (measurement_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -371,7 +395,6 @@ private static final long serialVersionUID = 0L;
 
       boolean result = true;
       result = result && cannabinoid_ == other.cannabinoid_;
-      result = result && ratio_ == other.ratio_;
       result = result && (hasMeasurement() == other.hasMeasurement());
       if (hasMeasurement()) {
         result = result && getMeasurement()
@@ -390,8 +413,6 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CANNABINOID_FIELD_NUMBER;
       hash = (53 * hash) + cannabinoid_;
-      hash = (37 * hash) + RATIO_FIELD_NUMBER;
-      hash = (53 * hash) + ratio_;
       if (hasMeasurement()) {
         hash = (37 * hash) + MEASUREMENT_FIELD_NUMBER;
         hash = (53 * hash) + getMeasurement().hashCode();
@@ -490,6 +511,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Individual payload for a cannabinoid test result.
+     * </pre>
+     *
      * Protobuf type {@code opencannabis.structs.labtesting.Cannabinoids.Result}
      */
     public static final class Builder extends
@@ -527,8 +552,6 @@ private static final long serialVersionUID = 0L;
         super.clear();
         cannabinoid_ = 0;
 
-        ratio_ = 0;
-
         if (measurementBuilder_ == null) {
           measurement_ = null;
         } else {
@@ -558,7 +581,6 @@ private static final long serialVersionUID = 0L;
       public io.opencannabis.schema.product.struct.testing.Cannabinoids.Result buildPartial() {
         io.opencannabis.schema.product.struct.testing.Cannabinoids.Result result = new io.opencannabis.schema.product.struct.testing.Cannabinoids.Result(this);
         result.cannabinoid_ = cannabinoid_;
-        result.ratio_ = ratio_;
         if (measurementBuilder_ == null) {
           result.measurement_ = measurement_;
         } else {
@@ -608,9 +630,6 @@ private static final long serialVersionUID = 0L;
         if (other.cannabinoid_ != 0) {
           setCannabinoidValue(other.getCannabinoidValue());
         }
-        if (other.ratio_ != 0) {
-          setRatioValue(other.getRatioValue());
-        }
         if (other.hasMeasurement()) {
           mergeMeasurement(other.getMeasurement());
         }
@@ -643,12 +662,20 @@ private static final long serialVersionUID = 0L;
 
       private int cannabinoid_ = 0;
       /**
+       * <pre>
+       * Cannabinoid this result is expressing results for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
        */
       public int getCannabinoidValue() {
         return cannabinoid_;
       }
       /**
+       * <pre>
+       * Cannabinoid this result is expressing results for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
        */
       public Builder setCannabinoidValue(int value) {
@@ -657,6 +684,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Cannabinoid this result is expressing results for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
        */
       public io.opencannabis.schema.product.struct.testing.Cannabinoid getCannabinoid() {
@@ -664,6 +695,10 @@ private static final long serialVersionUID = 0L;
         return result == null ? io.opencannabis.schema.product.struct.testing.Cannabinoid.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Cannabinoid this result is expressing results for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
        */
       public Builder setCannabinoid(io.opencannabis.schema.product.struct.testing.Cannabinoid value) {
@@ -676,6 +711,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Cannabinoid this result is expressing results for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Cannabinoid cannabinoid = 1;</code>
        */
       public Builder clearCannabinoid() {
@@ -685,60 +724,24 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private int ratio_ = 0;
-      /**
-       * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-       */
-      public int getRatioValue() {
-        return ratio_;
-      }
-      /**
-       * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-       */
-      public Builder setRatioValue(int value) {
-        ratio_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-       */
-      public io.opencannabis.schema.product.struct.testing.CannabinoidRatio getRatio() {
-        io.opencannabis.schema.product.struct.testing.CannabinoidRatio result = io.opencannabis.schema.product.struct.testing.CannabinoidRatio.valueOf(ratio_);
-        return result == null ? io.opencannabis.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-       */
-      public Builder setRatio(io.opencannabis.schema.product.struct.testing.CannabinoidRatio value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        ratio_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 2;</code>
-       */
-      public Builder clearRatio() {
-        
-        ratio_ = 0;
-        onChanged();
-        return this;
-      }
-
       private io.opencannabis.schema.product.struct.testing.TestValue measurement_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> measurementBuilder_;
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       public boolean hasMeasurement() {
         return measurementBuilder_ != null || measurement_ != null;
       }
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       public io.opencannabis.schema.product.struct.testing.TestValue getMeasurement() {
@@ -749,6 +752,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       public Builder setMeasurement(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -765,6 +772,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       public Builder setMeasurement(
@@ -779,6 +790,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       public Builder mergeMeasurement(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -797,6 +812,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       public Builder clearMeasurement() {
@@ -811,6 +830,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       public io.opencannabis.schema.product.struct.testing.TestValue.Builder getMeasurementBuilder() {
@@ -819,6 +842,10 @@ private static final long serialVersionUID = 0L;
         return getMeasurementFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder() {
@@ -830,6 +857,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Measurement value for this individual result.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -898,18 +929,30 @@ private static final long serialVersionUID = 0L;
   public static final int THC_FIELD_NUMBER = 1;
   private io.opencannabis.schema.product.struct.testing.TestValue thc_;
   /**
+   * <pre>
+   * THC testing value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
    */
   public boolean hasThc() {
     return thc_ != null;
   }
   /**
+   * <pre>
+   * THC testing value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValue getThc() {
     return thc_ == null ? io.opencannabis.schema.product.struct.testing.TestValue.getDefaultInstance() : thc_;
   }
   /**
+   * <pre>
+   * THC testing value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getThcOrBuilder() {
@@ -919,18 +962,30 @@ private static final long serialVersionUID = 0L;
   public static final int CBD_FIELD_NUMBER = 2;
   private io.opencannabis.schema.product.struct.testing.TestValue cbd_;
   /**
+   * <pre>
+   * CBD testing value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
    */
   public boolean hasCbd() {
     return cbd_ != null;
   }
   /**
+   * <pre>
+   * CBD testing value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValue getCbd() {
     return cbd_ == null ? io.opencannabis.schema.product.struct.testing.TestValue.getDefaultInstance() : cbd_;
   }
   /**
+   * <pre>
+   * CBD testing value.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getCbdOrBuilder() {
@@ -940,12 +995,20 @@ private static final long serialVersionUID = 0L;
   public static final int RESULTS_FIELD_NUMBER = 3;
   private java.util.List<io.opencannabis.schema.product.struct.testing.Cannabinoids.Result> results_;
   /**
+   * <pre>
+   * Individual results payloads for other cannabinoids.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
    */
   public java.util.List<io.opencannabis.schema.product.struct.testing.Cannabinoids.Result> getResultsList() {
     return results_;
   }
   /**
+   * <pre>
+   * Individual results payloads for other cannabinoids.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
    */
   public java.util.List<? extends io.opencannabis.schema.product.struct.testing.Cannabinoids.ResultOrBuilder> 
@@ -953,23 +1016,83 @@ private static final long serialVersionUID = 0L;
     return results_;
   }
   /**
+   * <pre>
+   * Individual results payloads for other cannabinoids.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
    */
   public int getResultsCount() {
     return results_.size();
   }
   /**
+   * <pre>
+   * Individual results payloads for other cannabinoids.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
    */
   public io.opencannabis.schema.product.struct.testing.Cannabinoids.Result getResults(int index) {
     return results_.get(index);
   }
   /**
+   * <pre>
+   * Individual results payloads for other cannabinoids.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
    */
   public io.opencannabis.schema.product.struct.testing.Cannabinoids.ResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
+  }
+
+  public static final int RATIO_FIELD_NUMBER = 4;
+  private int ratio_;
+  /**
+   * <pre>
+   * Overall THC to CBD ratio, calculated if underlying data is available.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 4;</code>
+   */
+  public int getRatioValue() {
+    return ratio_;
+  }
+  /**
+   * <pre>
+   * Overall THC to CBD ratio, calculated if underlying data is available.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 4;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.CannabinoidRatio getRatio() {
+    io.opencannabis.schema.product.struct.testing.CannabinoidRatio result = io.opencannabis.schema.product.struct.testing.CannabinoidRatio.valueOf(ratio_);
+    return result == null ? io.opencannabis.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
+  }
+
+  public static final int POTENCY_FIELD_NUMBER = 5;
+  private int potency_;
+  /**
+   * <pre>
+   * Calculated potency estimate, based on this product's type/kind and test results.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 5;</code>
+   */
+  public int getPotencyValue() {
+    return potency_;
+  }
+  /**
+   * <pre>
+   * Calculated potency estimate, based on this product's type/kind and test results.
+   * </pre>
+   *
+   * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 5;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.PotencyEstimate getPotency() {
+    io.opencannabis.schema.product.struct.testing.PotencyEstimate result = io.opencannabis.schema.product.struct.testing.PotencyEstimate.valueOf(potency_);
+    return result == null ? io.opencannabis.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -993,6 +1116,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < results_.size(); i++) {
       output.writeMessage(3, results_.get(i));
     }
+    if (ratio_ != io.opencannabis.schema.product.struct.testing.CannabinoidRatio.NO_CANNABINOID_PREFERENCE.getNumber()) {
+      output.writeEnum(4, ratio_);
+    }
+    if (potency_ != io.opencannabis.schema.product.struct.testing.PotencyEstimate.LIGHT.getNumber()) {
+      output.writeEnum(5, potency_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1012,6 +1141,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < results_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, results_.get(i));
+    }
+    if (ratio_ != io.opencannabis.schema.product.struct.testing.CannabinoidRatio.NO_CANNABINOID_PREFERENCE.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, ratio_);
+    }
+    if (potency_ != io.opencannabis.schema.product.struct.testing.PotencyEstimate.LIGHT.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(5, potency_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1041,6 +1178,8 @@ private static final long serialVersionUID = 0L;
     }
     result = result && getResultsList()
         .equals(other.getResultsList());
+    result = result && ratio_ == other.ratio_;
+    result = result && potency_ == other.potency_;
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -1064,6 +1203,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RESULTS_FIELD_NUMBER;
       hash = (53 * hash) + getResultsList().hashCode();
     }
+    hash = (37 * hash) + RATIO_FIELD_NUMBER;
+    hash = (53 * hash) + ratio_;
+    hash = (37 * hash) + POTENCY_FIELD_NUMBER;
+    hash = (53 * hash) + potency_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1158,6 +1301,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies test results with regard to cannabinoid compounds, enumerated in `Cannabinoid`. THC and CBD testing is
+   * elevated to a dedicated spot in test results due to its notability as a consumer decision-making signal.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.labtesting.Cannabinoids}
    */
   public static final class Builder extends
@@ -1212,6 +1360,10 @@ private static final long serialVersionUID = 0L;
       } else {
         resultsBuilder_.clear();
       }
+      ratio_ = 0;
+
+      potency_ = 0;
+
       return this;
     }
 
@@ -1255,6 +1407,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.results_ = resultsBuilder_.build();
       }
+      result.ratio_ = ratio_;
+      result.potency_ = potency_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1329,6 +1483,12 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.ratio_ != 0) {
+        setRatioValue(other.getRatioValue());
+      }
+      if (other.potency_ != 0) {
+        setPotencyValue(other.getPotencyValue());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -1361,12 +1521,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> thcBuilder_;
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     public boolean hasThc() {
       return thcBuilder_ != null || thc_ != null;
     }
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue getThc() {
@@ -1377,6 +1545,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     public Builder setThc(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -1393,6 +1565,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     public Builder setThc(
@@ -1407,6 +1583,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     public Builder mergeThc(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -1425,6 +1605,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     public Builder clearThc() {
@@ -1439,6 +1623,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue.Builder getThcBuilder() {
@@ -1447,6 +1635,10 @@ private static final long serialVersionUID = 0L;
       return getThcFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getThcOrBuilder() {
@@ -1458,6 +1650,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * THC testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue thc = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1478,12 +1674,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> cbdBuilder_;
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     public boolean hasCbd() {
       return cbdBuilder_ != null || cbd_ != null;
     }
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue getCbd() {
@@ -1494,6 +1698,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     public Builder setCbd(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -1510,6 +1718,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     public Builder setCbd(
@@ -1524,6 +1736,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     public Builder mergeCbd(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -1542,6 +1758,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     public Builder clearCbd() {
@@ -1556,6 +1776,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue.Builder getCbdBuilder() {
@@ -1564,6 +1788,10 @@ private static final long serialVersionUID = 0L;
       return getCbdFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getCbdOrBuilder() {
@@ -1575,6 +1803,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * CBD testing value.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue cbd = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1604,6 +1836,10 @@ private static final long serialVersionUID = 0L;
         io.opencannabis.schema.product.struct.testing.Cannabinoids.Result, io.opencannabis.schema.product.struct.testing.Cannabinoids.Result.Builder, io.opencannabis.schema.product.struct.testing.Cannabinoids.ResultOrBuilder> resultsBuilder_;
 
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.testing.Cannabinoids.Result> getResultsList() {
@@ -1614,6 +1850,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public int getResultsCount() {
@@ -1624,6 +1864,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Cannabinoids.Result getResults(int index) {
@@ -1634,6 +1878,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder setResults(
@@ -1651,6 +1899,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder setResults(
@@ -1665,6 +1917,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder addResults(io.opencannabis.schema.product.struct.testing.Cannabinoids.Result value) {
@@ -1681,6 +1937,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder addResults(
@@ -1698,6 +1958,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder addResults(
@@ -1712,6 +1976,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder addResults(
@@ -1726,6 +1994,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder addAllResults(
@@ -1741,6 +2013,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder clearResults() {
@@ -1754,6 +2030,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public Builder removeResults(int index) {
@@ -1767,6 +2047,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Cannabinoids.Result.Builder getResultsBuilder(
@@ -1774,6 +2058,10 @@ private static final long serialVersionUID = 0L;
       return getResultsFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Cannabinoids.ResultOrBuilder getResultsOrBuilder(
@@ -1784,6 +2072,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.product.struct.testing.Cannabinoids.ResultOrBuilder> 
@@ -1795,6 +2087,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Cannabinoids.Result.Builder addResultsBuilder() {
@@ -1802,6 +2098,10 @@ private static final long serialVersionUID = 0L;
           io.opencannabis.schema.product.struct.testing.Cannabinoids.Result.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Cannabinoids.Result.Builder addResultsBuilder(
@@ -1810,6 +2110,10 @@ private static final long serialVersionUID = 0L;
           index, io.opencannabis.schema.product.struct.testing.Cannabinoids.Result.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Individual results payloads for other cannabinoids.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Cannabinoids.Result results = 3;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.testing.Cannabinoids.Result.Builder> 
@@ -1829,6 +2133,134 @@ private static final long serialVersionUID = 0L;
         results_ = null;
       }
       return resultsBuilder_;
+    }
+
+    private int ratio_ = 0;
+    /**
+     * <pre>
+     * Overall THC to CBD ratio, calculated if underlying data is available.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 4;</code>
+     */
+    public int getRatioValue() {
+      return ratio_;
+    }
+    /**
+     * <pre>
+     * Overall THC to CBD ratio, calculated if underlying data is available.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 4;</code>
+     */
+    public Builder setRatioValue(int value) {
+      ratio_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Overall THC to CBD ratio, calculated if underlying data is available.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 4;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.CannabinoidRatio getRatio() {
+      io.opencannabis.schema.product.struct.testing.CannabinoidRatio result = io.opencannabis.schema.product.struct.testing.CannabinoidRatio.valueOf(ratio_);
+      return result == null ? io.opencannabis.schema.product.struct.testing.CannabinoidRatio.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Overall THC to CBD ratio, calculated if underlying data is available.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 4;</code>
+     */
+    public Builder setRatio(io.opencannabis.schema.product.struct.testing.CannabinoidRatio value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      ratio_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Overall THC to CBD ratio, calculated if underlying data is available.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.CannabinoidRatio ratio = 4;</code>
+     */
+    public Builder clearRatio() {
+      
+      ratio_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int potency_ = 0;
+    /**
+     * <pre>
+     * Calculated potency estimate, based on this product's type/kind and test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 5;</code>
+     */
+    public int getPotencyValue() {
+      return potency_;
+    }
+    /**
+     * <pre>
+     * Calculated potency estimate, based on this product's type/kind and test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 5;</code>
+     */
+    public Builder setPotencyValue(int value) {
+      potency_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Calculated potency estimate, based on this product's type/kind and test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 5;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.PotencyEstimate getPotency() {
+      io.opencannabis.schema.product.struct.testing.PotencyEstimate result = io.opencannabis.schema.product.struct.testing.PotencyEstimate.valueOf(potency_);
+      return result == null ? io.opencannabis.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Calculated potency estimate, based on this product's type/kind and test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 5;</code>
+     */
+    public Builder setPotency(io.opencannabis.schema.product.struct.testing.PotencyEstimate value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      potency_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Calculated potency estimate, based on this product's type/kind and test results.
+     * </pre>
+     *
+     * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 5;</code>
+     */
+    public Builder clearPotency() {
+      
+      potency_ = 0;
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

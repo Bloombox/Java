@@ -32,141 +32,6 @@ public final class MarketingCampaign {
   }
   /**
    * <pre>
-   * Specifies channels which marketing campaigns may be associated with.
-   * </pre>
-   *
-   * Protobuf enum {@code bloombox.schema.marketing.Channel}
-   */
-  public enum Channel
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <pre>
-     * Unspecified, or default, channel type.
-     * </pre>
-     *
-     * <code>UNSPECIFIED = 0;</code>
-     */
-    UNSPECIFIED(0),
-    /**
-     * <pre>
-     * Email channel type.
-     * </pre>
-     *
-     * <code>EMAIL = 1;</code>
-     */
-    EMAIL(1),
-    /**
-     * <pre>
-     * SMS, or text, channel type.
-     * </pre>
-     *
-     * <code>SMS = 2;</code>
-     */
-    SMS(2),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <pre>
-     * Unspecified, or default, channel type.
-     * </pre>
-     *
-     * <code>UNSPECIFIED = 0;</code>
-     */
-    public static final int UNSPECIFIED_VALUE = 0;
-    /**
-     * <pre>
-     * Email channel type.
-     * </pre>
-     *
-     * <code>EMAIL = 1;</code>
-     */
-    public static final int EMAIL_VALUE = 1;
-    /**
-     * <pre>
-     * SMS, or text, channel type.
-     * </pre>
-     *
-     * <code>SMS = 2;</code>
-     */
-    public static final int SMS_VALUE = 2;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static Channel valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static Channel forNumber(int value) {
-      switch (value) {
-        case 0: return UNSPECIFIED;
-        case 1: return EMAIL;
-        case 2: return SMS;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<Channel>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        Channel> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<Channel>() {
-            public Channel findValueByNumber(int number) {
-              return Channel.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final Channel[] VALUES = values();
-
-    public static Channel valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private Channel(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:bloombox.schema.marketing.Channel)
-  }
-
-  /**
-   * <pre>
    * Enumerates the statuses a campaign object may live in.
    * </pre>
    *
@@ -308,7 +173,7 @@ public final class MarketingCampaign {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.getDescriptor().getEnumTypes().get(1);
+      return io.bloombox.schema.marketing.MarketingCampaign.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final CampaignStatus[] VALUES = values();
@@ -1085,7 +950,7 @@ public final class MarketingCampaign {
      * Channel for which we are specifying settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 1;</code>
      */
     int getChannelValue();
     /**
@@ -1093,9 +958,9 @@ public final class MarketingCampaign {
      * Channel for which we are specifying settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 1;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel();
+    io.bloombox.schema.comms.GenericComms.Channel getChannel();
 
     /**
      * <pre>
@@ -1111,7 +976,7 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
      */
     boolean hasSms();
     /**
@@ -1119,24 +984,24 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS getSms();
+    io.bloombox.schema.comms.SMSComms.SMSSettings getSms();
     /**
      * <pre>
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMSOrBuilder getSmsOrBuilder();
+    io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder getSmsOrBuilder();
 
     /**
      * <pre>
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
      */
     boolean hasEmail();
     /**
@@ -1144,17 +1009,17 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email getEmail();
+    io.bloombox.schema.comms.EmailComms.EmailSettings getEmail();
     /**
      * <pre>
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.EmailOrBuilder getEmailOrBuilder();
+    io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder getEmailOrBuilder();
 
     public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SettingsCase getSettingsCase();
   }
@@ -1222,28 +1087,28 @@ public final class MarketingCampaign {
               break;
             }
             case 162: {
-              io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.Builder subBuilder = null;
+              io.bloombox.schema.comms.SMSComms.SMSSettings.Builder subBuilder = null;
               if (settingsCase_ == 20) {
-                subBuilder = ((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_).toBuilder();
+                subBuilder = ((io.bloombox.schema.comms.SMSComms.SMSSettings) settings_).toBuilder();
               }
               settings_ =
-                  input.readMessage(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.parser(), extensionRegistry);
+                  input.readMessage(io.bloombox.schema.comms.SMSComms.SMSSettings.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_);
+                subBuilder.mergeFrom((io.bloombox.schema.comms.SMSComms.SMSSettings) settings_);
                 settings_ = subBuilder.buildPartial();
               }
               settingsCase_ = 20;
               break;
             }
             case 170: {
-              io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.Builder subBuilder = null;
+              io.bloombox.schema.comms.EmailComms.EmailSettings.Builder subBuilder = null;
               if (settingsCase_ == 21) {
-                subBuilder = ((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_).toBuilder();
+                subBuilder = ((io.bloombox.schema.comms.EmailComms.EmailSettings) settings_).toBuilder();
               }
               settings_ =
-                  input.readMessage(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.parser(), extensionRegistry);
+                  input.readMessage(io.bloombox.schema.comms.EmailComms.EmailSettings.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_);
+                subBuilder.mergeFrom((io.bloombox.schema.comms.EmailComms.EmailSettings) settings_);
                 settings_ = subBuilder.buildPartial();
               }
               settingsCase_ = 21;
@@ -1271,1836 +1136,6 @@ public final class MarketingCampaign {
       return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.class, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Builder.class);
-    }
-
-    public interface SMSOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.ChannelSettings.SMS)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <pre>
-       * Origin phone number to send the SMS from.
-       * </pre>
-       *
-       * <code>string sender = 1;</code>
-       */
-      java.lang.String getSender();
-      /**
-       * <pre>
-       * Origin phone number to send the SMS from.
-       * </pre>
-       *
-       * <code>string sender = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getSenderBytes();
-    }
-    /**
-     * <pre>
-     * SMS-specific settings.
-     * </pre>
-     *
-     * Protobuf type {@code bloombox.schema.marketing.ChannelSettings.SMS}
-     */
-    public  static final class SMS extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.ChannelSettings.SMS)
-        SMSOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use SMS.newBuilder() to construct.
-      private SMS(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private SMS() {
-        sender_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private SMS(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                sender_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_SMS_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_SMS_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.class, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.Builder.class);
-      }
-
-      public static final int SENDER_FIELD_NUMBER = 1;
-      private volatile java.lang.Object sender_;
-      /**
-       * <pre>
-       * Origin phone number to send the SMS from.
-       * </pre>
-       *
-       * <code>string sender = 1;</code>
-       */
-      public java.lang.String getSender() {
-        java.lang.Object ref = sender_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sender_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       * Origin phone number to send the SMS from.
-       * </pre>
-       *
-       * <code>string sender = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSenderBytes() {
-        java.lang.Object ref = sender_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sender_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getSenderBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getSenderBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS)) {
-          return super.equals(obj);
-        }
-        io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS other = (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) obj;
-
-        boolean result = true;
-        result = result && getSender()
-            .equals(other.getSender());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + SENDER_FIELD_NUMBER;
-        hash = (53 * hash) + getSender().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * SMS-specific settings.
-       * </pre>
-       *
-       * Protobuf type {@code bloombox.schema.marketing.ChannelSettings.SMS}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.ChannelSettings.SMS)
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMSOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_SMS_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_SMS_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.class, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.Builder.class);
-        }
-
-        // Construct using io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          sender_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_SMS_descriptor;
-        }
-
-        public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS getDefaultInstanceForType() {
-          return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance();
-        }
-
-        public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS build() {
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS buildPartial() {
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS result = new io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS(this);
-          result.sender_ = sender_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) {
-            return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS other) {
-          if (other == io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance()) return this;
-          if (!other.getSender().isEmpty()) {
-            sender_ = other.sender_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object sender_ = "";
-        /**
-         * <pre>
-         * Origin phone number to send the SMS from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public java.lang.String getSender() {
-          java.lang.Object ref = sender_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            sender_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Origin phone number to send the SMS from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getSenderBytes() {
-          java.lang.Object ref = sender_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            sender_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Origin phone number to send the SMS from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public Builder setSender(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          sender_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Origin phone number to send the SMS from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public Builder clearSender() {
-          
-          sender_ = getDefaultInstance().getSender();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Origin phone number to send the SMS from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public Builder setSenderBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          sender_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.ChannelSettings.SMS)
-      }
-
-      // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.ChannelSettings.SMS)
-      private static final io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS();
-      }
-
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<SMS>
-          PARSER = new com.google.protobuf.AbstractParser<SMS>() {
-        public SMS parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SMS(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<SMS> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<SMS> getParserForType() {
-        return PARSER;
-      }
-
-      public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface EmailOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.ChannelSettings.Email)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <pre>
-       * Origin email address to send the email from.
-       * </pre>
-       *
-       * <code>string sender = 1;</code>
-       */
-      java.lang.String getSender();
-      /**
-       * <pre>
-       * Origin email address to send the email from.
-       * </pre>
-       *
-       * <code>string sender = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getSenderBytes();
-
-      /**
-       * <pre>
-       * Reply-to email address, if different from sender.
-       * </pre>
-       *
-       * <code>string reply_to = 2;</code>
-       */
-      java.lang.String getReplyTo();
-      /**
-       * <pre>
-       * Reply-to email address, if different from sender.
-       * </pre>
-       *
-       * <code>string reply_to = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getReplyToBytes();
-
-      /**
-       * <pre>
-       * Email addresses to include via CC.
-       * </pre>
-       *
-       * <code>repeated string cc = 3;</code>
-       */
-      java.util.List<java.lang.String>
-          getCcList();
-      /**
-       * <pre>
-       * Email addresses to include via CC.
-       * </pre>
-       *
-       * <code>repeated string cc = 3;</code>
-       */
-      int getCcCount();
-      /**
-       * <pre>
-       * Email addresses to include via CC.
-       * </pre>
-       *
-       * <code>repeated string cc = 3;</code>
-       */
-      java.lang.String getCc(int index);
-      /**
-       * <pre>
-       * Email addresses to include via CC.
-       * </pre>
-       *
-       * <code>repeated string cc = 3;</code>
-       */
-      com.google.protobuf.ByteString
-          getCcBytes(int index);
-
-      /**
-       * <pre>
-       * Email addresses to include via BCC.
-       * </pre>
-       *
-       * <code>repeated string bcc = 4;</code>
-       */
-      java.util.List<java.lang.String>
-          getBccList();
-      /**
-       * <pre>
-       * Email addresses to include via BCC.
-       * </pre>
-       *
-       * <code>repeated string bcc = 4;</code>
-       */
-      int getBccCount();
-      /**
-       * <pre>
-       * Email addresses to include via BCC.
-       * </pre>
-       *
-       * <code>repeated string bcc = 4;</code>
-       */
-      java.lang.String getBcc(int index);
-      /**
-       * <pre>
-       * Email addresses to include via BCC.
-       * </pre>
-       *
-       * <code>repeated string bcc = 4;</code>
-       */
-      com.google.protobuf.ByteString
-          getBccBytes(int index);
-    }
-    /**
-     * <pre>
-     * Email-specific settings.
-     * </pre>
-     *
-     * Protobuf type {@code bloombox.schema.marketing.ChannelSettings.Email}
-     */
-    public  static final class Email extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.ChannelSettings.Email)
-        EmailOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Email.newBuilder() to construct.
-      private Email(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Email() {
-        sender_ = "";
-        replyTo_ = "";
-        cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Email(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                sender_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                replyTo_ = s;
-                break;
-              }
-              case 26: {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                  cc_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000004;
-                }
-                cc_.add(s);
-                break;
-              }
-              case 34: {
-                java.lang.String s = input.readStringRequireUtf8();
-                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                  bcc_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000008;
-                }
-                bcc_.add(s);
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-            cc_ = cc_.getUnmodifiableView();
-          }
-          if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-            bcc_ = bcc_.getUnmodifiableView();
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_Email_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_Email_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.class, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int SENDER_FIELD_NUMBER = 1;
-      private volatile java.lang.Object sender_;
-      /**
-       * <pre>
-       * Origin email address to send the email from.
-       * </pre>
-       *
-       * <code>string sender = 1;</code>
-       */
-      public java.lang.String getSender() {
-        java.lang.Object ref = sender_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sender_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       * Origin email address to send the email from.
-       * </pre>
-       *
-       * <code>string sender = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSenderBytes() {
-        java.lang.Object ref = sender_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sender_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int REPLY_TO_FIELD_NUMBER = 2;
-      private volatile java.lang.Object replyTo_;
-      /**
-       * <pre>
-       * Reply-to email address, if different from sender.
-       * </pre>
-       *
-       * <code>string reply_to = 2;</code>
-       */
-      public java.lang.String getReplyTo() {
-        java.lang.Object ref = replyTo_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          replyTo_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       * Reply-to email address, if different from sender.
-       * </pre>
-       *
-       * <code>string reply_to = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getReplyToBytes() {
-        java.lang.Object ref = replyTo_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          replyTo_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int CC_FIELD_NUMBER = 3;
-      private com.google.protobuf.LazyStringList cc_;
-      /**
-       * <pre>
-       * Email addresses to include via CC.
-       * </pre>
-       *
-       * <code>repeated string cc = 3;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getCcList() {
-        return cc_;
-      }
-      /**
-       * <pre>
-       * Email addresses to include via CC.
-       * </pre>
-       *
-       * <code>repeated string cc = 3;</code>
-       */
-      public int getCcCount() {
-        return cc_.size();
-      }
-      /**
-       * <pre>
-       * Email addresses to include via CC.
-       * </pre>
-       *
-       * <code>repeated string cc = 3;</code>
-       */
-      public java.lang.String getCc(int index) {
-        return cc_.get(index);
-      }
-      /**
-       * <pre>
-       * Email addresses to include via CC.
-       * </pre>
-       *
-       * <code>repeated string cc = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getCcBytes(int index) {
-        return cc_.getByteString(index);
-      }
-
-      public static final int BCC_FIELD_NUMBER = 4;
-      private com.google.protobuf.LazyStringList bcc_;
-      /**
-       * <pre>
-       * Email addresses to include via BCC.
-       * </pre>
-       *
-       * <code>repeated string bcc = 4;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getBccList() {
-        return bcc_;
-      }
-      /**
-       * <pre>
-       * Email addresses to include via BCC.
-       * </pre>
-       *
-       * <code>repeated string bcc = 4;</code>
-       */
-      public int getBccCount() {
-        return bcc_.size();
-      }
-      /**
-       * <pre>
-       * Email addresses to include via BCC.
-       * </pre>
-       *
-       * <code>repeated string bcc = 4;</code>
-       */
-      public java.lang.String getBcc(int index) {
-        return bcc_.get(index);
-      }
-      /**
-       * <pre>
-       * Email addresses to include via BCC.
-       * </pre>
-       *
-       * <code>repeated string bcc = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBccBytes(int index) {
-        return bcc_.getByteString(index);
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getSenderBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sender_);
-        }
-        if (!getReplyToBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, replyTo_);
-        }
-        for (int i = 0; i < cc_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cc_.getRaw(i));
-        }
-        for (int i = 0; i < bcc_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bcc_.getRaw(i));
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getSenderBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sender_);
-        }
-        if (!getReplyToBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, replyTo_);
-        }
-        {
-          int dataSize = 0;
-          for (int i = 0; i < cc_.size(); i++) {
-            dataSize += computeStringSizeNoTag(cc_.getRaw(i));
-          }
-          size += dataSize;
-          size += 1 * getCcList().size();
-        }
-        {
-          int dataSize = 0;
-          for (int i = 0; i < bcc_.size(); i++) {
-            dataSize += computeStringSizeNoTag(bcc_.getRaw(i));
-          }
-          size += dataSize;
-          size += 1 * getBccList().size();
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email)) {
-          return super.equals(obj);
-        }
-        io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email other = (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) obj;
-
-        boolean result = true;
-        result = result && getSender()
-            .equals(other.getSender());
-        result = result && getReplyTo()
-            .equals(other.getReplyTo());
-        result = result && getCcList()
-            .equals(other.getCcList());
-        result = result && getBccList()
-            .equals(other.getBccList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + SENDER_FIELD_NUMBER;
-        hash = (53 * hash) + getSender().hashCode();
-        hash = (37 * hash) + REPLY_TO_FIELD_NUMBER;
-        hash = (53 * hash) + getReplyTo().hashCode();
-        if (getCcCount() > 0) {
-          hash = (37 * hash) + CC_FIELD_NUMBER;
-          hash = (53 * hash) + getCcList().hashCode();
-        }
-        if (getBccCount() > 0) {
-          hash = (37 * hash) + BCC_FIELD_NUMBER;
-          hash = (53 * hash) + getBccList().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * Email-specific settings.
-       * </pre>
-       *
-       * Protobuf type {@code bloombox.schema.marketing.ChannelSettings.Email}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.ChannelSettings.Email)
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.EmailOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_Email_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_Email_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.class, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.Builder.class);
-        }
-
-        // Construct using io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          sender_ = "";
-
-          replyTo_ = "";
-
-          cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000004);
-          bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000008);
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_ChannelSettings_Email_descriptor;
-        }
-
-        public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email getDefaultInstanceForType() {
-          return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance();
-        }
-
-        public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email build() {
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email buildPartial() {
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email result = new io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          result.sender_ = sender_;
-          result.replyTo_ = replyTo_;
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            cc_ = cc_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.cc_ = cc_;
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            bcc_ = bcc_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.bcc_ = bcc_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) {
-            return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email other) {
-          if (other == io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance()) return this;
-          if (!other.getSender().isEmpty()) {
-            sender_ = other.sender_;
-            onChanged();
-          }
-          if (!other.getReplyTo().isEmpty()) {
-            replyTo_ = other.replyTo_;
-            onChanged();
-          }
-          if (!other.cc_.isEmpty()) {
-            if (cc_.isEmpty()) {
-              cc_ = other.cc_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureCcIsMutable();
-              cc_.addAll(other.cc_);
-            }
-            onChanged();
-          }
-          if (!other.bcc_.isEmpty()) {
-            if (bcc_.isEmpty()) {
-              bcc_ = other.bcc_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureBccIsMutable();
-              bcc_.addAll(other.bcc_);
-            }
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object sender_ = "";
-        /**
-         * <pre>
-         * Origin email address to send the email from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public java.lang.String getSender() {
-          java.lang.Object ref = sender_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            sender_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Origin email address to send the email from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getSenderBytes() {
-          java.lang.Object ref = sender_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            sender_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Origin email address to send the email from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public Builder setSender(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          sender_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Origin email address to send the email from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public Builder clearSender() {
-          
-          sender_ = getDefaultInstance().getSender();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Origin email address to send the email from.
-         * </pre>
-         *
-         * <code>string sender = 1;</code>
-         */
-        public Builder setSenderBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          sender_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object replyTo_ = "";
-        /**
-         * <pre>
-         * Reply-to email address, if different from sender.
-         * </pre>
-         *
-         * <code>string reply_to = 2;</code>
-         */
-        public java.lang.String getReplyTo() {
-          java.lang.Object ref = replyTo_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            replyTo_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Reply-to email address, if different from sender.
-         * </pre>
-         *
-         * <code>string reply_to = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getReplyToBytes() {
-          java.lang.Object ref = replyTo_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            replyTo_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Reply-to email address, if different from sender.
-         * </pre>
-         *
-         * <code>string reply_to = 2;</code>
-         */
-        public Builder setReplyTo(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          replyTo_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Reply-to email address, if different from sender.
-         * </pre>
-         *
-         * <code>string reply_to = 2;</code>
-         */
-        public Builder clearReplyTo() {
-          
-          replyTo_ = getDefaultInstance().getReplyTo();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Reply-to email address, if different from sender.
-         * </pre>
-         *
-         * <code>string reply_to = 2;</code>
-         */
-        public Builder setReplyToBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          replyTo_ = value;
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.LazyStringList cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        private void ensureCcIsMutable() {
-          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-            cc_ = new com.google.protobuf.LazyStringArrayList(cc_);
-            bitField0_ |= 0x00000004;
-           }
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public com.google.protobuf.ProtocolStringList
-            getCcList() {
-          return cc_.getUnmodifiableView();
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public int getCcCount() {
-          return cc_.size();
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public java.lang.String getCc(int index) {
-          return cc_.get(index);
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public com.google.protobuf.ByteString
-            getCcBytes(int index) {
-          return cc_.getByteString(index);
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public Builder setCc(
-            int index, java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCcIsMutable();
-          cc_.set(index, value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public Builder addCc(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCcIsMutable();
-          cc_.add(value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public Builder addAllCc(
-            java.lang.Iterable<java.lang.String> values) {
-          ensureCcIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, cc_);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public Builder clearCc() {
-          cc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Email addresses to include via CC.
-         * </pre>
-         *
-         * <code>repeated string cc = 3;</code>
-         */
-        public Builder addCcBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          ensureCcIsMutable();
-          cc_.add(value);
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.LazyStringList bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        private void ensureBccIsMutable() {
-          if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-            bcc_ = new com.google.protobuf.LazyStringArrayList(bcc_);
-            bitField0_ |= 0x00000008;
-           }
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public com.google.protobuf.ProtocolStringList
-            getBccList() {
-          return bcc_.getUnmodifiableView();
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public int getBccCount() {
-          return bcc_.size();
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public java.lang.String getBcc(int index) {
-          return bcc_.get(index);
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public com.google.protobuf.ByteString
-            getBccBytes(int index) {
-          return bcc_.getByteString(index);
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public Builder setBcc(
-            int index, java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBccIsMutable();
-          bcc_.set(index, value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public Builder addBcc(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBccIsMutable();
-          bcc_.add(value);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public Builder addAllBcc(
-            java.lang.Iterable<java.lang.String> values) {
-          ensureBccIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, bcc_);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public Builder clearBcc() {
-          bcc_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Email addresses to include via BCC.
-         * </pre>
-         *
-         * <code>repeated string bcc = 4;</code>
-         */
-        public Builder addBccBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          ensureBccIsMutable();
-          bcc_.add(value);
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.ChannelSettings.Email)
-      }
-
-      // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.ChannelSettings.Email)
-      private static final io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email();
-      }
-
-      public static io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Email>
-          PARSER = new com.google.protobuf.AbstractParser<Email>() {
-        public Email parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Email(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Email> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Email> getParserForType() {
-        return PARSER;
-      }
-
-      public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
     }
 
     private int settingsCase_ = 0;
@@ -3148,7 +1183,7 @@ public final class MarketingCampaign {
      * Channel for which we are specifying settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 1;</code>
      */
     public int getChannelValue() {
       return channel_;
@@ -3158,11 +1193,11 @@ public final class MarketingCampaign {
      * Channel for which we are specifying settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 1;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel() {
-      io.bloombox.schema.marketing.MarketingCampaign.Channel result = io.bloombox.schema.marketing.MarketingCampaign.Channel.valueOf(channel_);
-      return result == null ? io.bloombox.schema.marketing.MarketingCampaign.Channel.UNRECOGNIZED : result;
+    public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+      io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
+      return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
     }
 
     public static final int ACTIVE_FIELD_NUMBER = 2;
@@ -3184,7 +1219,7 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
      */
     public boolean hasSms() {
       return settingsCase_ == 20;
@@ -3194,26 +1229,26 @@ public final class MarketingCampaign {
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS getSms() {
+    public io.bloombox.schema.comms.SMSComms.SMSSettings getSms() {
       if (settingsCase_ == 20) {
-         return (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_;
+         return (io.bloombox.schema.comms.SMSComms.SMSSettings) settings_;
       }
-      return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance();
+      return io.bloombox.schema.comms.SMSComms.SMSSettings.getDefaultInstance();
     }
     /**
      * <pre>
      * SMS settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+     * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMSOrBuilder getSmsOrBuilder() {
+    public io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder getSmsOrBuilder() {
       if (settingsCase_ == 20) {
-         return (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_;
+         return (io.bloombox.schema.comms.SMSComms.SMSSettings) settings_;
       }
-      return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance();
+      return io.bloombox.schema.comms.SMSComms.SMSSettings.getDefaultInstance();
     }
 
     public static final int EMAIL_FIELD_NUMBER = 21;
@@ -3222,7 +1257,7 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
      */
     public boolean hasEmail() {
       return settingsCase_ == 21;
@@ -3232,26 +1267,26 @@ public final class MarketingCampaign {
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email getEmail() {
+    public io.bloombox.schema.comms.EmailComms.EmailSettings getEmail() {
       if (settingsCase_ == 21) {
-         return (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_;
+         return (io.bloombox.schema.comms.EmailComms.EmailSettings) settings_;
       }
-      return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance();
+      return io.bloombox.schema.comms.EmailComms.EmailSettings.getDefaultInstance();
     }
     /**
      * <pre>
      * Email settings.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+     * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.EmailOrBuilder getEmailOrBuilder() {
+    public io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder getEmailOrBuilder() {
       if (settingsCase_ == 21) {
-         return (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_;
+         return (io.bloombox.schema.comms.EmailComms.EmailSettings) settings_;
       }
-      return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance();
+      return io.bloombox.schema.comms.EmailComms.EmailSettings.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3266,17 +1301,17 @@ public final class MarketingCampaign {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (channel_ != io.bloombox.schema.marketing.MarketingCampaign.Channel.UNSPECIFIED.getNumber()) {
+      if (channel_ != io.bloombox.schema.comms.GenericComms.Channel.UNSPECIFIED.getNumber()) {
         output.writeEnum(1, channel_);
       }
       if (active_ != false) {
         output.writeBool(2, active_);
       }
       if (settingsCase_ == 20) {
-        output.writeMessage(20, (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_);
+        output.writeMessage(20, (io.bloombox.schema.comms.SMSComms.SMSSettings) settings_);
       }
       if (settingsCase_ == 21) {
-        output.writeMessage(21, (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_);
+        output.writeMessage(21, (io.bloombox.schema.comms.EmailComms.EmailSettings) settings_);
       }
       unknownFields.writeTo(output);
     }
@@ -3286,7 +1321,7 @@ public final class MarketingCampaign {
       if (size != -1) return size;
 
       size = 0;
-      if (channel_ != io.bloombox.schema.marketing.MarketingCampaign.Channel.UNSPECIFIED.getNumber()) {
+      if (channel_ != io.bloombox.schema.comms.GenericComms.Channel.UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, channel_);
       }
@@ -3296,11 +1331,11 @@ public final class MarketingCampaign {
       }
       if (settingsCase_ == 20) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(20, (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_);
+          .computeMessageSize(20, (io.bloombox.schema.comms.SMSComms.SMSSettings) settings_);
       }
       if (settingsCase_ == 21) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(21, (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_);
+          .computeMessageSize(21, (io.bloombox.schema.comms.EmailComms.EmailSettings) settings_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3650,7 +1685,7 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
        */
       public int getChannelValue() {
         return channel_;
@@ -3660,7 +1695,7 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
        */
       public Builder setChannelValue(int value) {
         channel_ = value;
@@ -3672,20 +1707,20 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel() {
-        io.bloombox.schema.marketing.MarketingCampaign.Channel result = io.bloombox.schema.marketing.MarketingCampaign.Channel.valueOf(channel_);
-        return result == null ? io.bloombox.schema.marketing.MarketingCampaign.Channel.UNRECOGNIZED : result;
+      public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+        io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
+        return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
        */
-      public Builder setChannel(io.bloombox.schema.marketing.MarketingCampaign.Channel value) {
+      public Builder setChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3699,7 +1734,7 @@ public final class MarketingCampaign {
        * Channel for which we are specifying settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 1;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 1;</code>
        */
       public Builder clearChannel() {
         
@@ -3747,13 +1782,13 @@ public final class MarketingCampaign {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.Builder, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMSOrBuilder> smsBuilder_;
+          io.bloombox.schema.comms.SMSComms.SMSSettings, io.bloombox.schema.comms.SMSComms.SMSSettings.Builder, io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder> smsBuilder_;
       /**
        * <pre>
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
       public boolean hasSms() {
         return settingsCase_ == 20;
@@ -3763,19 +1798,19 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS getSms() {
+      public io.bloombox.schema.comms.SMSComms.SMSSettings getSms() {
         if (smsBuilder_ == null) {
           if (settingsCase_ == 20) {
-            return (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_;
+            return (io.bloombox.schema.comms.SMSComms.SMSSettings) settings_;
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance();
+          return io.bloombox.schema.comms.SMSComms.SMSSettings.getDefaultInstance();
         } else {
           if (settingsCase_ == 20) {
             return smsBuilder_.getMessage();
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance();
+          return io.bloombox.schema.comms.SMSComms.SMSSettings.getDefaultInstance();
         }
       }
       /**
@@ -3783,9 +1818,9 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
-      public Builder setSms(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS value) {
+      public Builder setSms(io.bloombox.schema.comms.SMSComms.SMSSettings value) {
         if (smsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3803,10 +1838,10 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
       public Builder setSms(
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.Builder builderForValue) {
+          io.bloombox.schema.comms.SMSComms.SMSSettings.Builder builderForValue) {
         if (smsBuilder_ == null) {
           settings_ = builderForValue.build();
           onChanged();
@@ -3821,13 +1856,13 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
-      public Builder mergeSms(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS value) {
+      public Builder mergeSms(io.bloombox.schema.comms.SMSComms.SMSSettings value) {
         if (smsBuilder_ == null) {
           if (settingsCase_ == 20 &&
-              settings_ != io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance()) {
-            settings_ = io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.newBuilder((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_)
+              settings_ != io.bloombox.schema.comms.SMSComms.SMSSettings.getDefaultInstance()) {
+            settings_ = io.bloombox.schema.comms.SMSComms.SMSSettings.newBuilder((io.bloombox.schema.comms.SMSComms.SMSSettings) settings_)
                 .mergeFrom(value).buildPartial();
           } else {
             settings_ = value;
@@ -3847,7 +1882,7 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
       public Builder clearSms() {
         if (smsBuilder_ == null) {
@@ -3870,9 +1905,9 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.Builder getSmsBuilder() {
+      public io.bloombox.schema.comms.SMSComms.SMSSettings.Builder getSmsBuilder() {
         return getSmsFieldBuilder().getBuilder();
       }
       /**
@@ -3880,16 +1915,16 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMSOrBuilder getSmsOrBuilder() {
+      public io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder getSmsOrBuilder() {
         if ((settingsCase_ == 20) && (smsBuilder_ != null)) {
           return smsBuilder_.getMessageOrBuilder();
         } else {
           if (settingsCase_ == 20) {
-            return (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_;
+            return (io.bloombox.schema.comms.SMSComms.SMSSettings) settings_;
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance();
+          return io.bloombox.schema.comms.SMSComms.SMSSettings.getDefaultInstance();
         }
       }
       /**
@@ -3897,18 +1932,18 @@ public final class MarketingCampaign {
        * SMS settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.SMS sms = 20;</code>
+       * <code>.bloombox.schema.comms.SMSSettings sms = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.Builder, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMSOrBuilder> 
+          io.bloombox.schema.comms.SMSComms.SMSSettings, io.bloombox.schema.comms.SMSComms.SMSSettings.Builder, io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder> 
           getSmsFieldBuilder() {
         if (smsBuilder_ == null) {
           if (!(settingsCase_ == 20)) {
-            settings_ = io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.getDefaultInstance();
+            settings_ = io.bloombox.schema.comms.SMSComms.SMSSettings.getDefaultInstance();
           }
           smsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS.Builder, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMSOrBuilder>(
-                  (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.SMS) settings_,
+              io.bloombox.schema.comms.SMSComms.SMSSettings, io.bloombox.schema.comms.SMSComms.SMSSettings.Builder, io.bloombox.schema.comms.SMSComms.SMSSettingsOrBuilder>(
+                  (io.bloombox.schema.comms.SMSComms.SMSSettings) settings_,
                   getParentForChildren(),
                   isClean());
           settings_ = null;
@@ -3919,13 +1954,13 @@ public final class MarketingCampaign {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.Builder, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.EmailOrBuilder> emailBuilder_;
+          io.bloombox.schema.comms.EmailComms.EmailSettings, io.bloombox.schema.comms.EmailComms.EmailSettings.Builder, io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder> emailBuilder_;
       /**
        * <pre>
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
       public boolean hasEmail() {
         return settingsCase_ == 21;
@@ -3935,19 +1970,19 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email getEmail() {
+      public io.bloombox.schema.comms.EmailComms.EmailSettings getEmail() {
         if (emailBuilder_ == null) {
           if (settingsCase_ == 21) {
-            return (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_;
+            return (io.bloombox.schema.comms.EmailComms.EmailSettings) settings_;
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance();
+          return io.bloombox.schema.comms.EmailComms.EmailSettings.getDefaultInstance();
         } else {
           if (settingsCase_ == 21) {
             return emailBuilder_.getMessage();
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance();
+          return io.bloombox.schema.comms.EmailComms.EmailSettings.getDefaultInstance();
         }
       }
       /**
@@ -3955,9 +1990,9 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
-      public Builder setEmail(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email value) {
+      public Builder setEmail(io.bloombox.schema.comms.EmailComms.EmailSettings value) {
         if (emailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3975,10 +2010,10 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
       public Builder setEmail(
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.Builder builderForValue) {
+          io.bloombox.schema.comms.EmailComms.EmailSettings.Builder builderForValue) {
         if (emailBuilder_ == null) {
           settings_ = builderForValue.build();
           onChanged();
@@ -3993,13 +2028,13 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
-      public Builder mergeEmail(io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email value) {
+      public Builder mergeEmail(io.bloombox.schema.comms.EmailComms.EmailSettings value) {
         if (emailBuilder_ == null) {
           if (settingsCase_ == 21 &&
-              settings_ != io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance()) {
-            settings_ = io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.newBuilder((io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_)
+              settings_ != io.bloombox.schema.comms.EmailComms.EmailSettings.getDefaultInstance()) {
+            settings_ = io.bloombox.schema.comms.EmailComms.EmailSettings.newBuilder((io.bloombox.schema.comms.EmailComms.EmailSettings) settings_)
                 .mergeFrom(value).buildPartial();
           } else {
             settings_ = value;
@@ -4019,7 +2054,7 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
       public Builder clearEmail() {
         if (emailBuilder_ == null) {
@@ -4042,9 +2077,9 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.Builder getEmailBuilder() {
+      public io.bloombox.schema.comms.EmailComms.EmailSettings.Builder getEmailBuilder() {
         return getEmailFieldBuilder().getBuilder();
       }
       /**
@@ -4052,16 +2087,16 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.EmailOrBuilder getEmailOrBuilder() {
+      public io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder getEmailOrBuilder() {
         if ((settingsCase_ == 21) && (emailBuilder_ != null)) {
           return emailBuilder_.getMessageOrBuilder();
         } else {
           if (settingsCase_ == 21) {
-            return (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_;
+            return (io.bloombox.schema.comms.EmailComms.EmailSettings) settings_;
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance();
+          return io.bloombox.schema.comms.EmailComms.EmailSettings.getDefaultInstance();
         }
       }
       /**
@@ -4069,18 +2104,18 @@ public final class MarketingCampaign {
        * Email settings.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.ChannelSettings.Email email = 21;</code>
+       * <code>.bloombox.schema.comms.EmailSettings email = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.Builder, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.EmailOrBuilder> 
+          io.bloombox.schema.comms.EmailComms.EmailSettings, io.bloombox.schema.comms.EmailComms.EmailSettings.Builder, io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder> 
           getEmailFieldBuilder() {
         if (emailBuilder_ == null) {
           if (!(settingsCase_ == 21)) {
-            settings_ = io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.getDefaultInstance();
+            settings_ = io.bloombox.schema.comms.EmailComms.EmailSettings.getDefaultInstance();
           }
           emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email.Builder, io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.EmailOrBuilder>(
-                  (io.bloombox.schema.marketing.MarketingCampaign.ChannelSettings.Email) settings_,
+              io.bloombox.schema.comms.EmailComms.EmailSettings, io.bloombox.schema.comms.EmailComms.EmailSettings.Builder, io.bloombox.schema.comms.EmailComms.EmailSettingsOrBuilder>(
+                  (io.bloombox.schema.comms.EmailComms.EmailSettings) settings_,
                   getParentForChildren(),
                   isClean());
           settings_ = null;
@@ -4138,2534 +2173,6 @@ public final class MarketingCampaign {
 
   }
 
-  public interface SMSContentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.SMSContent)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Optional SMS subject line.
-     * </pre>
-     *
-     * <code>string subject = 1;</code>
-     */
-    java.lang.String getSubject();
-    /**
-     * <pre>
-     * Optional SMS subject line.
-     * </pre>
-     *
-     * <code>string subject = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getSubjectBytes();
-
-    /**
-     * <pre>
-     * SMS content to send.
-     * </pre>
-     *
-     * <code>string content = 2;</code>
-     */
-    java.lang.String getContent();
-    /**
-     * <pre>
-     * SMS content to send.
-     * </pre>
-     *
-     * <code>string content = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getContentBytes();
-
-    /**
-     * <pre>
-     * Attached media item, if applicable.
-     * </pre>
-     *
-     * <code>.opencannabis.media.MediaItem media = 3;</code>
-     */
-    boolean hasMedia();
-    /**
-     * <pre>
-     * Attached media item, if applicable.
-     * </pre>
-     *
-     * <code>.opencannabis.media.MediaItem media = 3;</code>
-     */
-    io.opencannabis.schema.media.MediaItem getMedia();
-    /**
-     * <pre>
-     * Attached media item, if applicable.
-     * </pre>
-     *
-     * <code>.opencannabis.media.MediaItem media = 3;</code>
-     */
-    io.opencannabis.schema.media.MediaItemOrBuilder getMediaOrBuilder();
-  }
-  /**
-   * <pre>
-   * Specifies SMS content for a given ad group.
-   * </pre>
-   *
-   * Protobuf type {@code bloombox.schema.marketing.SMSContent}
-   */
-  public  static final class SMSContent extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.SMSContent)
-      SMSContentOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SMSContent.newBuilder() to construct.
-    private SMSContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SMSContent() {
-      subject_ = "";
-      content_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SMSContent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              subject_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              content_ = s;
-              break;
-            }
-            case 26: {
-              io.opencannabis.schema.media.MediaItem.Builder subBuilder = null;
-              if (media_ != null) {
-                subBuilder = media_.toBuilder();
-              }
-              media_ = input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(media_);
-                media_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_SMSContent_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_SMSContent_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.marketing.MarketingCampaign.SMSContent.class, io.bloombox.schema.marketing.MarketingCampaign.SMSContent.Builder.class);
-    }
-
-    public static final int SUBJECT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object subject_;
-    /**
-     * <pre>
-     * Optional SMS subject line.
-     * </pre>
-     *
-     * <code>string subject = 1;</code>
-     */
-    public java.lang.String getSubject() {
-      java.lang.Object ref = subject_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        subject_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Optional SMS subject line.
-     * </pre>
-     *
-     * <code>string subject = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getSubjectBytes() {
-      java.lang.Object ref = subject_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        subject_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONTENT_FIELD_NUMBER = 2;
-    private volatile java.lang.Object content_;
-    /**
-     * <pre>
-     * SMS content to send.
-     * </pre>
-     *
-     * <code>string content = 2;</code>
-     */
-    public java.lang.String getContent() {
-      java.lang.Object ref = content_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        content_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * SMS content to send.
-     * </pre>
-     *
-     * <code>string content = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getContentBytes() {
-      java.lang.Object ref = content_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        content_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MEDIA_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.media.MediaItem media_;
-    /**
-     * <pre>
-     * Attached media item, if applicable.
-     * </pre>
-     *
-     * <code>.opencannabis.media.MediaItem media = 3;</code>
-     */
-    public boolean hasMedia() {
-      return media_ != null;
-    }
-    /**
-     * <pre>
-     * Attached media item, if applicable.
-     * </pre>
-     *
-     * <code>.opencannabis.media.MediaItem media = 3;</code>
-     */
-    public io.opencannabis.schema.media.MediaItem getMedia() {
-      return media_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : media_;
-    }
-    /**
-     * <pre>
-     * Attached media item, if applicable.
-     * </pre>
-     *
-     * <code>.opencannabis.media.MediaItem media = 3;</code>
-     */
-    public io.opencannabis.schema.media.MediaItemOrBuilder getMediaOrBuilder() {
-      return getMedia();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getSubjectBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subject_);
-      }
-      if (!getContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, content_);
-      }
-      if (media_ != null) {
-        output.writeMessage(3, getMedia());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getSubjectBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subject_);
-      }
-      if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, content_);
-      }
-      if (media_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getMedia());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof io.bloombox.schema.marketing.MarketingCampaign.SMSContent)) {
-        return super.equals(obj);
-      }
-      io.bloombox.schema.marketing.MarketingCampaign.SMSContent other = (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) obj;
-
-      boolean result = true;
-      result = result && getSubject()
-          .equals(other.getSubject());
-      result = result && getContent()
-          .equals(other.getContent());
-      result = result && (hasMedia() == other.hasMedia());
-      if (hasMedia()) {
-        result = result && getMedia()
-            .equals(other.getMedia());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
-      hash = (53 * hash) + getSubject().hashCode();
-      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getContent().hashCode();
-      if (hasMedia()) {
-        hash = (37 * hash) + MEDIA_FIELD_NUMBER;
-        hash = (53 * hash) + getMedia().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.SMSContent prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Specifies SMS content for a given ad group.
-     * </pre>
-     *
-     * Protobuf type {@code bloombox.schema.marketing.SMSContent}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.SMSContent)
-        io.bloombox.schema.marketing.MarketingCampaign.SMSContentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_SMSContent_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_SMSContent_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.marketing.MarketingCampaign.SMSContent.class, io.bloombox.schema.marketing.MarketingCampaign.SMSContent.Builder.class);
-      }
-
-      // Construct using io.bloombox.schema.marketing.MarketingCampaign.SMSContent.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        subject_ = "";
-
-        content_ = "";
-
-        if (mediaBuilder_ == null) {
-          media_ = null;
-        } else {
-          media_ = null;
-          mediaBuilder_ = null;
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_SMSContent_descriptor;
-      }
-
-      public io.bloombox.schema.marketing.MarketingCampaign.SMSContent getDefaultInstanceForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance();
-      }
-
-      public io.bloombox.schema.marketing.MarketingCampaign.SMSContent build() {
-        io.bloombox.schema.marketing.MarketingCampaign.SMSContent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public io.bloombox.schema.marketing.MarketingCampaign.SMSContent buildPartial() {
-        io.bloombox.schema.marketing.MarketingCampaign.SMSContent result = new io.bloombox.schema.marketing.MarketingCampaign.SMSContent(this);
-        result.subject_ = subject_;
-        result.content_ = content_;
-        if (mediaBuilder_ == null) {
-          result.media_ = media_;
-        } else {
-          result.media_ = mediaBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.SMSContent) {
-          return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.SMSContent)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(io.bloombox.schema.marketing.MarketingCampaign.SMSContent other) {
-        if (other == io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance()) return this;
-        if (!other.getSubject().isEmpty()) {
-          subject_ = other.subject_;
-          onChanged();
-        }
-        if (!other.getContent().isEmpty()) {
-          content_ = other.content_;
-          onChanged();
-        }
-        if (other.hasMedia()) {
-          mergeMedia(other.getMedia());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        io.bloombox.schema.marketing.MarketingCampaign.SMSContent parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object subject_ = "";
-      /**
-       * <pre>
-       * Optional SMS subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public java.lang.String getSubject() {
-        java.lang.Object ref = subject_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          subject_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional SMS subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSubjectBytes() {
-        java.lang.Object ref = subject_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subject_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional SMS subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public Builder setSubject(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        subject_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional SMS subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public Builder clearSubject() {
-        
-        subject_ = getDefaultInstance().getSubject();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional SMS subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public Builder setSubjectBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        subject_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object content_ = "";
-      /**
-       * <pre>
-       * SMS content to send.
-       * </pre>
-       *
-       * <code>string content = 2;</code>
-       */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          content_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * SMS content to send.
-       * </pre>
-       *
-       * <code>string content = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          content_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * SMS content to send.
-       * </pre>
-       *
-       * <code>string content = 2;</code>
-       */
-      public Builder setContent(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        content_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SMS content to send.
-       * </pre>
-       *
-       * <code>string content = 2;</code>
-       */
-      public Builder clearContent() {
-        
-        content_ = getDefaultInstance().getContent();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SMS content to send.
-       * </pre>
-       *
-       * <code>string content = 2;</code>
-       */
-      public Builder setContentBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        content_ = value;
-        onChanged();
-        return this;
-      }
-
-      private io.opencannabis.schema.media.MediaItem media_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> mediaBuilder_;
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      public boolean hasMedia() {
-        return mediaBuilder_ != null || media_ != null;
-      }
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      public io.opencannabis.schema.media.MediaItem getMedia() {
-        if (mediaBuilder_ == null) {
-          return media_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : media_;
-        } else {
-          return mediaBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      public Builder setMedia(io.opencannabis.schema.media.MediaItem value) {
-        if (mediaBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          media_ = value;
-          onChanged();
-        } else {
-          mediaBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      public Builder setMedia(
-          io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
-        if (mediaBuilder_ == null) {
-          media_ = builderForValue.build();
-          onChanged();
-        } else {
-          mediaBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      public Builder mergeMedia(io.opencannabis.schema.media.MediaItem value) {
-        if (mediaBuilder_ == null) {
-          if (media_ != null) {
-            media_ =
-              io.opencannabis.schema.media.MediaItem.newBuilder(media_).mergeFrom(value).buildPartial();
-          } else {
-            media_ = value;
-          }
-          onChanged();
-        } else {
-          mediaBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      public Builder clearMedia() {
-        if (mediaBuilder_ == null) {
-          media_ = null;
-          onChanged();
-        } else {
-          media_ = null;
-          mediaBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      public io.opencannabis.schema.media.MediaItem.Builder getMediaBuilder() {
-        
-        onChanged();
-        return getMediaFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      public io.opencannabis.schema.media.MediaItemOrBuilder getMediaOrBuilder() {
-        if (mediaBuilder_ != null) {
-          return mediaBuilder_.getMessageOrBuilder();
-        } else {
-          return media_ == null ?
-              io.opencannabis.schema.media.MediaItem.getDefaultInstance() : media_;
-        }
-      }
-      /**
-       * <pre>
-       * Attached media item, if applicable.
-       * </pre>
-       *
-       * <code>.opencannabis.media.MediaItem media = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
-          getMediaFieldBuilder() {
-        if (mediaBuilder_ == null) {
-          mediaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
-                  getMedia(),
-                  getParentForChildren(),
-                  isClean());
-          media_ = null;
-        }
-        return mediaBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.SMSContent)
-    }
-
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.SMSContent)
-    private static final io.bloombox.schema.marketing.MarketingCampaign.SMSContent DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.SMSContent();
-    }
-
-    public static io.bloombox.schema.marketing.MarketingCampaign.SMSContent getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SMSContent>
-        PARSER = new com.google.protobuf.AbstractParser<SMSContent>() {
-      public SMSContent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SMSContent(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SMSContent> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SMSContent> getParserForType() {
-      return PARSER;
-    }
-
-    public io.bloombox.schema.marketing.MarketingCampaign.SMSContent getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EmailContentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.EmailContent)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Email subject line.
-     * </pre>
-     *
-     * <code>string subject = 1;</code>
-     */
-    java.lang.String getSubject();
-    /**
-     * <pre>
-     * Email subject line.
-     * </pre>
-     *
-     * <code>string subject = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getSubjectBytes();
-
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    java.util.List<io.opencannabis.schema.content.Content> 
-        getContentList();
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    io.opencannabis.schema.content.Content getContent(int index);
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    int getContentCount();
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    java.util.List<? extends io.opencannabis.schema.content.ContentOrBuilder> 
-        getContentOrBuilderList();
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    io.opencannabis.schema.content.ContentOrBuilder getContentOrBuilder(
-        int index);
-
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    java.util.List<io.opencannabis.schema.media.MediaItem> 
-        getAttachmentList();
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    io.opencannabis.schema.media.MediaItem getAttachment(int index);
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    int getAttachmentCount();
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    java.util.List<? extends io.opencannabis.schema.media.MediaItemOrBuilder> 
-        getAttachmentOrBuilderList();
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    io.opencannabis.schema.media.MediaItemOrBuilder getAttachmentOrBuilder(
-        int index);
-  }
-  /**
-   * <pre>
-   * Specifies email content for a given ad group.
-   * </pre>
-   *
-   * Protobuf type {@code bloombox.schema.marketing.EmailContent}
-   */
-  public  static final class EmailContent extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.marketing.EmailContent)
-      EmailContentOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use EmailContent.newBuilder() to construct.
-    private EmailContent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private EmailContent() {
-      subject_ = "";
-      content_ = java.util.Collections.emptyList();
-      attachment_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EmailContent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              subject_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                content_ = new java.util.ArrayList<io.opencannabis.schema.content.Content>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              content_.add(
-                  input.readMessage(io.opencannabis.schema.content.Content.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                attachment_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItem>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              attachment_.add(
-                  input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          content_ = java.util.Collections.unmodifiableList(content_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          attachment_ = java.util.Collections.unmodifiableList(attachment_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_EmailContent_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_EmailContent_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.marketing.MarketingCampaign.EmailContent.class, io.bloombox.schema.marketing.MarketingCampaign.EmailContent.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int SUBJECT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object subject_;
-    /**
-     * <pre>
-     * Email subject line.
-     * </pre>
-     *
-     * <code>string subject = 1;</code>
-     */
-    public java.lang.String getSubject() {
-      java.lang.Object ref = subject_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        subject_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Email subject line.
-     * </pre>
-     *
-     * <code>string subject = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getSubjectBytes() {
-      java.lang.Object ref = subject_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        subject_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONTENT_FIELD_NUMBER = 2;
-    private java.util.List<io.opencannabis.schema.content.Content> content_;
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    public java.util.List<io.opencannabis.schema.content.Content> getContentList() {
-      return content_;
-    }
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    public java.util.List<? extends io.opencannabis.schema.content.ContentOrBuilder> 
-        getContentOrBuilderList() {
-      return content_;
-    }
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    public int getContentCount() {
-      return content_.size();
-    }
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    public io.opencannabis.schema.content.Content getContent(int index) {
-      return content_.get(index);
-    }
-    /**
-     * <pre>
-     * Email content.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.content.Content content = 2;</code>
-     */
-    public io.opencannabis.schema.content.ContentOrBuilder getContentOrBuilder(
-        int index) {
-      return content_.get(index);
-    }
-
-    public static final int ATTACHMENT_FIELD_NUMBER = 3;
-    private java.util.List<io.opencannabis.schema.media.MediaItem> attachment_;
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    public java.util.List<io.opencannabis.schema.media.MediaItem> getAttachmentList() {
-      return attachment_;
-    }
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    public java.util.List<? extends io.opencannabis.schema.media.MediaItemOrBuilder> 
-        getAttachmentOrBuilderList() {
-      return attachment_;
-    }
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    public int getAttachmentCount() {
-      return attachment_.size();
-    }
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    public io.opencannabis.schema.media.MediaItem getAttachment(int index) {
-      return attachment_.get(index);
-    }
-    /**
-     * <pre>
-     * Email attachments.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-     */
-    public io.opencannabis.schema.media.MediaItemOrBuilder getAttachmentOrBuilder(
-        int index) {
-      return attachment_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getSubjectBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subject_);
-      }
-      for (int i = 0; i < content_.size(); i++) {
-        output.writeMessage(2, content_.get(i));
-      }
-      for (int i = 0; i < attachment_.size(); i++) {
-        output.writeMessage(3, attachment_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getSubjectBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subject_);
-      }
-      for (int i = 0; i < content_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, content_.get(i));
-      }
-      for (int i = 0; i < attachment_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, attachment_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof io.bloombox.schema.marketing.MarketingCampaign.EmailContent)) {
-        return super.equals(obj);
-      }
-      io.bloombox.schema.marketing.MarketingCampaign.EmailContent other = (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) obj;
-
-      boolean result = true;
-      result = result && getSubject()
-          .equals(other.getSubject());
-      result = result && getContentList()
-          .equals(other.getContentList());
-      result = result && getAttachmentList()
-          .equals(other.getAttachmentList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
-      hash = (53 * hash) + getSubject().hashCode();
-      if (getContentCount() > 0) {
-        hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-        hash = (53 * hash) + getContentList().hashCode();
-      }
-      if (getAttachmentCount() > 0) {
-        hash = (37 * hash) + ATTACHMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getAttachmentList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(io.bloombox.schema.marketing.MarketingCampaign.EmailContent prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Specifies email content for a given ad group.
-     * </pre>
-     *
-     * Protobuf type {@code bloombox.schema.marketing.EmailContent}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.marketing.EmailContent)
-        io.bloombox.schema.marketing.MarketingCampaign.EmailContentOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_EmailContent_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_EmailContent_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.marketing.MarketingCampaign.EmailContent.class, io.bloombox.schema.marketing.MarketingCampaign.EmailContent.Builder.class);
-      }
-
-      // Construct using io.bloombox.schema.marketing.MarketingCampaign.EmailContent.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getContentFieldBuilder();
-          getAttachmentFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        subject_ = "";
-
-        if (contentBuilder_ == null) {
-          content_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          contentBuilder_.clear();
-        }
-        if (attachmentBuilder_ == null) {
-          attachment_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          attachmentBuilder_.clear();
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.internal_static_bloombox_schema_marketing_EmailContent_descriptor;
-      }
-
-      public io.bloombox.schema.marketing.MarketingCampaign.EmailContent getDefaultInstanceForType() {
-        return io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance();
-      }
-
-      public io.bloombox.schema.marketing.MarketingCampaign.EmailContent build() {
-        io.bloombox.schema.marketing.MarketingCampaign.EmailContent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public io.bloombox.schema.marketing.MarketingCampaign.EmailContent buildPartial() {
-        io.bloombox.schema.marketing.MarketingCampaign.EmailContent result = new io.bloombox.schema.marketing.MarketingCampaign.EmailContent(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.subject_ = subject_;
-        if (contentBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            content_ = java.util.Collections.unmodifiableList(content_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.content_ = content_;
-        } else {
-          result.content_ = contentBuilder_.build();
-        }
-        if (attachmentBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            attachment_ = java.util.Collections.unmodifiableList(attachment_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.attachment_ = attachment_;
-        } else {
-          result.attachment_ = attachmentBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.marketing.MarketingCampaign.EmailContent) {
-          return mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.EmailContent)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(io.bloombox.schema.marketing.MarketingCampaign.EmailContent other) {
-        if (other == io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance()) return this;
-        if (!other.getSubject().isEmpty()) {
-          subject_ = other.subject_;
-          onChanged();
-        }
-        if (contentBuilder_ == null) {
-          if (!other.content_.isEmpty()) {
-            if (content_.isEmpty()) {
-              content_ = other.content_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureContentIsMutable();
-              content_.addAll(other.content_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.content_.isEmpty()) {
-            if (contentBuilder_.isEmpty()) {
-              contentBuilder_.dispose();
-              contentBuilder_ = null;
-              content_ = other.content_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              contentBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getContentFieldBuilder() : null;
-            } else {
-              contentBuilder_.addAllMessages(other.content_);
-            }
-          }
-        }
-        if (attachmentBuilder_ == null) {
-          if (!other.attachment_.isEmpty()) {
-            if (attachment_.isEmpty()) {
-              attachment_ = other.attachment_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureAttachmentIsMutable();
-              attachment_.addAll(other.attachment_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.attachment_.isEmpty()) {
-            if (attachmentBuilder_.isEmpty()) {
-              attachmentBuilder_.dispose();
-              attachmentBuilder_ = null;
-              attachment_ = other.attachment_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              attachmentBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAttachmentFieldBuilder() : null;
-            } else {
-              attachmentBuilder_.addAllMessages(other.attachment_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        io.bloombox.schema.marketing.MarketingCampaign.EmailContent parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object subject_ = "";
-      /**
-       * <pre>
-       * Email subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public java.lang.String getSubject() {
-        java.lang.Object ref = subject_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          subject_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Email subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSubjectBytes() {
-        java.lang.Object ref = subject_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subject_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Email subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public Builder setSubject(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        subject_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Email subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public Builder clearSubject() {
-        
-        subject_ = getDefaultInstance().getSubject();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Email subject line.
-       * </pre>
-       *
-       * <code>string subject = 1;</code>
-       */
-      public Builder setSubjectBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        subject_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<io.opencannabis.schema.content.Content> content_ =
-        java.util.Collections.emptyList();
-      private void ensureContentIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          content_ = new java.util.ArrayList<io.opencannabis.schema.content.Content>(content_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder> contentBuilder_;
-
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public java.util.List<io.opencannabis.schema.content.Content> getContentList() {
-        if (contentBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(content_);
-        } else {
-          return contentBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public int getContentCount() {
-        if (contentBuilder_ == null) {
-          return content_.size();
-        } else {
-          return contentBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public io.opencannabis.schema.content.Content getContent(int index) {
-        if (contentBuilder_ == null) {
-          return content_.get(index);
-        } else {
-          return contentBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder setContent(
-          int index, io.opencannabis.schema.content.Content value) {
-        if (contentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureContentIsMutable();
-          content_.set(index, value);
-          onChanged();
-        } else {
-          contentBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder setContent(
-          int index, io.opencannabis.schema.content.Content.Builder builderForValue) {
-        if (contentBuilder_ == null) {
-          ensureContentIsMutable();
-          content_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          contentBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder addContent(io.opencannabis.schema.content.Content value) {
-        if (contentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureContentIsMutable();
-          content_.add(value);
-          onChanged();
-        } else {
-          contentBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder addContent(
-          int index, io.opencannabis.schema.content.Content value) {
-        if (contentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureContentIsMutable();
-          content_.add(index, value);
-          onChanged();
-        } else {
-          contentBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder addContent(
-          io.opencannabis.schema.content.Content.Builder builderForValue) {
-        if (contentBuilder_ == null) {
-          ensureContentIsMutable();
-          content_.add(builderForValue.build());
-          onChanged();
-        } else {
-          contentBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder addContent(
-          int index, io.opencannabis.schema.content.Content.Builder builderForValue) {
-        if (contentBuilder_ == null) {
-          ensureContentIsMutable();
-          content_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          contentBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder addAllContent(
-          java.lang.Iterable<? extends io.opencannabis.schema.content.Content> values) {
-        if (contentBuilder_ == null) {
-          ensureContentIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, content_);
-          onChanged();
-        } else {
-          contentBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder clearContent() {
-        if (contentBuilder_ == null) {
-          content_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          contentBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public Builder removeContent(int index) {
-        if (contentBuilder_ == null) {
-          ensureContentIsMutable();
-          content_.remove(index);
-          onChanged();
-        } else {
-          contentBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public io.opencannabis.schema.content.Content.Builder getContentBuilder(
-          int index) {
-        return getContentFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public io.opencannabis.schema.content.ContentOrBuilder getContentOrBuilder(
-          int index) {
-        if (contentBuilder_ == null) {
-          return content_.get(index);  } else {
-          return contentBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public java.util.List<? extends io.opencannabis.schema.content.ContentOrBuilder> 
-           getContentOrBuilderList() {
-        if (contentBuilder_ != null) {
-          return contentBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(content_);
-        }
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public io.opencannabis.schema.content.Content.Builder addContentBuilder() {
-        return getContentFieldBuilder().addBuilder(
-            io.opencannabis.schema.content.Content.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public io.opencannabis.schema.content.Content.Builder addContentBuilder(
-          int index) {
-        return getContentFieldBuilder().addBuilder(
-            index, io.opencannabis.schema.content.Content.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Email content.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.content.Content content = 2;</code>
-       */
-      public java.util.List<io.opencannabis.schema.content.Content.Builder> 
-           getContentBuilderList() {
-        return getContentFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder> 
-          getContentFieldBuilder() {
-        if (contentBuilder_ == null) {
-          contentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder>(
-                  content_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          content_ = null;
-        }
-        return contentBuilder_;
-      }
-
-      private java.util.List<io.opencannabis.schema.media.MediaItem> attachment_ =
-        java.util.Collections.emptyList();
-      private void ensureAttachmentIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          attachment_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItem>(attachment_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> attachmentBuilder_;
-
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public java.util.List<io.opencannabis.schema.media.MediaItem> getAttachmentList() {
-        if (attachmentBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(attachment_);
-        } else {
-          return attachmentBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public int getAttachmentCount() {
-        if (attachmentBuilder_ == null) {
-          return attachment_.size();
-        } else {
-          return attachmentBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public io.opencannabis.schema.media.MediaItem getAttachment(int index) {
-        if (attachmentBuilder_ == null) {
-          return attachment_.get(index);
-        } else {
-          return attachmentBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder setAttachment(
-          int index, io.opencannabis.schema.media.MediaItem value) {
-        if (attachmentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAttachmentIsMutable();
-          attachment_.set(index, value);
-          onChanged();
-        } else {
-          attachmentBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder setAttachment(
-          int index, io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          attachment_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          attachmentBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder addAttachment(io.opencannabis.schema.media.MediaItem value) {
-        if (attachmentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAttachmentIsMutable();
-          attachment_.add(value);
-          onChanged();
-        } else {
-          attachmentBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder addAttachment(
-          int index, io.opencannabis.schema.media.MediaItem value) {
-        if (attachmentBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAttachmentIsMutable();
-          attachment_.add(index, value);
-          onChanged();
-        } else {
-          attachmentBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder addAttachment(
-          io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          attachment_.add(builderForValue.build());
-          onChanged();
-        } else {
-          attachmentBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder addAttachment(
-          int index, io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          attachment_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          attachmentBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder addAllAttachment(
-          java.lang.Iterable<? extends io.opencannabis.schema.media.MediaItem> values) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, attachment_);
-          onChanged();
-        } else {
-          attachmentBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder clearAttachment() {
-        if (attachmentBuilder_ == null) {
-          attachment_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          attachmentBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public Builder removeAttachment(int index) {
-        if (attachmentBuilder_ == null) {
-          ensureAttachmentIsMutable();
-          attachment_.remove(index);
-          onChanged();
-        } else {
-          attachmentBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public io.opencannabis.schema.media.MediaItem.Builder getAttachmentBuilder(
-          int index) {
-        return getAttachmentFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public io.opencannabis.schema.media.MediaItemOrBuilder getAttachmentOrBuilder(
-          int index) {
-        if (attachmentBuilder_ == null) {
-          return attachment_.get(index);  } else {
-          return attachmentBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public java.util.List<? extends io.opencannabis.schema.media.MediaItemOrBuilder> 
-           getAttachmentOrBuilderList() {
-        if (attachmentBuilder_ != null) {
-          return attachmentBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(attachment_);
-        }
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public io.opencannabis.schema.media.MediaItem.Builder addAttachmentBuilder() {
-        return getAttachmentFieldBuilder().addBuilder(
-            io.opencannabis.schema.media.MediaItem.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public io.opencannabis.schema.media.MediaItem.Builder addAttachmentBuilder(
-          int index) {
-        return getAttachmentFieldBuilder().addBuilder(
-            index, io.opencannabis.schema.media.MediaItem.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Email attachments.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.media.MediaItem attachment = 3;</code>
-       */
-      public java.util.List<io.opencannabis.schema.media.MediaItem.Builder> 
-           getAttachmentBuilderList() {
-        return getAttachmentFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
-          getAttachmentFieldBuilder() {
-        if (attachmentBuilder_ == null) {
-          attachmentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
-                  attachment_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
-                  getParentForChildren(),
-                  isClean());
-          attachment_ = null;
-        }
-        return attachmentBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.marketing.EmailContent)
-    }
-
-    // @@protoc_insertion_point(class_scope:bloombox.schema.marketing.EmailContent)
-    private static final io.bloombox.schema.marketing.MarketingCampaign.EmailContent DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.marketing.MarketingCampaign.EmailContent();
-    }
-
-    public static io.bloombox.schema.marketing.MarketingCampaign.EmailContent getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EmailContent>
-        PARSER = new com.google.protobuf.AbstractParser<EmailContent>() {
-      public EmailContent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EmailContent(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<EmailContent> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EmailContent> getParserForType() {
-      return PARSER;
-    }
-
-    public io.bloombox.schema.marketing.MarketingCampaign.EmailContent getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface CreativeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bloombox.schema.marketing.Creative)
       com.google.protobuf.MessageOrBuilder {
@@ -6675,7 +2182,7 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
      */
     boolean hasSms();
     /**
@@ -6683,24 +2190,24 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.SMSContent getSms();
+    io.bloombox.schema.comms.SMSComms.SMSContent getSms();
     /**
      * <pre>
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.SMSContentOrBuilder getSmsOrBuilder();
+    io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getSmsOrBuilder();
 
     /**
      * <pre>
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
      */
     boolean hasEmail();
     /**
@@ -6708,17 +2215,17 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.EmailContent getEmail();
+    io.bloombox.schema.comms.EmailComms.EmailContent getEmail();
     /**
      * <pre>
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.EmailContentOrBuilder getEmailOrBuilder();
+    io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getEmailOrBuilder();
 
     public io.bloombox.schema.marketing.MarketingCampaign.Creative.ContentCase getContentCase();
   }
@@ -6773,28 +2280,28 @@ public final class MarketingCampaign {
               break;
             }
             case 82: {
-              io.bloombox.schema.marketing.MarketingCampaign.SMSContent.Builder subBuilder = null;
+              io.bloombox.schema.comms.SMSComms.SMSContent.Builder subBuilder = null;
               if (contentCase_ == 10) {
-                subBuilder = ((io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_).toBuilder();
+                subBuilder = ((io.bloombox.schema.comms.SMSComms.SMSContent) content_).toBuilder();
               }
               content_ =
-                  input.readMessage(io.bloombox.schema.marketing.MarketingCampaign.SMSContent.parser(), extensionRegistry);
+                  input.readMessage(io.bloombox.schema.comms.SMSComms.SMSContent.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_);
+                subBuilder.mergeFrom((io.bloombox.schema.comms.SMSComms.SMSContent) content_);
                 content_ = subBuilder.buildPartial();
               }
               contentCase_ = 10;
               break;
             }
             case 90: {
-              io.bloombox.schema.marketing.MarketingCampaign.EmailContent.Builder subBuilder = null;
+              io.bloombox.schema.comms.EmailComms.EmailContent.Builder subBuilder = null;
               if (contentCase_ == 11) {
-                subBuilder = ((io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_).toBuilder();
+                subBuilder = ((io.bloombox.schema.comms.EmailComms.EmailContent) content_).toBuilder();
               }
               content_ =
-                  input.readMessage(io.bloombox.schema.marketing.MarketingCampaign.EmailContent.parser(), extensionRegistry);
+                  input.readMessage(io.bloombox.schema.comms.EmailComms.EmailContent.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_);
+                subBuilder.mergeFrom((io.bloombox.schema.comms.EmailComms.EmailContent) content_);
                 content_ = subBuilder.buildPartial();
               }
               contentCase_ = 11;
@@ -6868,7 +2375,7 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
      */
     public boolean hasSms() {
       return contentCase_ == 10;
@@ -6878,26 +2385,26 @@ public final class MarketingCampaign {
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.SMSContent getSms() {
+    public io.bloombox.schema.comms.SMSComms.SMSContent getSms() {
       if (contentCase_ == 10) {
-         return (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_;
+         return (io.bloombox.schema.comms.SMSComms.SMSContent) content_;
       }
-      return io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance();
+      return io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance();
     }
     /**
      * <pre>
      * SMS-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+     * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.SMSContentOrBuilder getSmsOrBuilder() {
+    public io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getSmsOrBuilder() {
       if (contentCase_ == 10) {
-         return (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_;
+         return (io.bloombox.schema.comms.SMSComms.SMSContent) content_;
       }
-      return io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance();
+      return io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance();
     }
 
     public static final int EMAIL_FIELD_NUMBER = 11;
@@ -6906,7 +2413,7 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
      */
     public boolean hasEmail() {
       return contentCase_ == 11;
@@ -6916,26 +2423,26 @@ public final class MarketingCampaign {
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.EmailContent getEmail() {
+    public io.bloombox.schema.comms.EmailComms.EmailContent getEmail() {
       if (contentCase_ == 11) {
-         return (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_;
+         return (io.bloombox.schema.comms.EmailComms.EmailContent) content_;
       }
-      return io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance();
+      return io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance();
     }
     /**
      * <pre>
      * Email-specific content.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+     * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.EmailContentOrBuilder getEmailOrBuilder() {
+    public io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getEmailOrBuilder() {
       if (contentCase_ == 11) {
-         return (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_;
+         return (io.bloombox.schema.comms.EmailComms.EmailContent) content_;
       }
-      return io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance();
+      return io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6951,10 +2458,10 @@ public final class MarketingCampaign {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (contentCase_ == 10) {
-        output.writeMessage(10, (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_);
+        output.writeMessage(10, (io.bloombox.schema.comms.SMSComms.SMSContent) content_);
       }
       if (contentCase_ == 11) {
-        output.writeMessage(11, (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_);
+        output.writeMessage(11, (io.bloombox.schema.comms.EmailComms.EmailContent) content_);
       }
       unknownFields.writeTo(output);
     }
@@ -6966,11 +2473,11 @@ public final class MarketingCampaign {
       size = 0;
       if (contentCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_);
+          .computeMessageSize(10, (io.bloombox.schema.comms.SMSComms.SMSContent) content_);
       }
       if (contentCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_);
+          .computeMessageSize(11, (io.bloombox.schema.comms.EmailComms.EmailContent) content_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7295,13 +2802,13 @@ public final class MarketingCampaign {
 
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.MarketingCampaign.SMSContent, io.bloombox.schema.marketing.MarketingCampaign.SMSContent.Builder, io.bloombox.schema.marketing.MarketingCampaign.SMSContentOrBuilder> smsBuilder_;
+          io.bloombox.schema.comms.SMSComms.SMSContent, io.bloombox.schema.comms.SMSComms.SMSContent.Builder, io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder> smsBuilder_;
       /**
        * <pre>
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
       public boolean hasSms() {
         return contentCase_ == 10;
@@ -7311,19 +2818,19 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.SMSContent getSms() {
+      public io.bloombox.schema.comms.SMSComms.SMSContent getSms() {
         if (smsBuilder_ == null) {
           if (contentCase_ == 10) {
-            return (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_;
+            return (io.bloombox.schema.comms.SMSComms.SMSContent) content_;
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance();
+          return io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance();
         } else {
           if (contentCase_ == 10) {
             return smsBuilder_.getMessage();
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance();
+          return io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance();
         }
       }
       /**
@@ -7331,9 +2838,9 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
-      public Builder setSms(io.bloombox.schema.marketing.MarketingCampaign.SMSContent value) {
+      public Builder setSms(io.bloombox.schema.comms.SMSComms.SMSContent value) {
         if (smsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7351,10 +2858,10 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
       public Builder setSms(
-          io.bloombox.schema.marketing.MarketingCampaign.SMSContent.Builder builderForValue) {
+          io.bloombox.schema.comms.SMSComms.SMSContent.Builder builderForValue) {
         if (smsBuilder_ == null) {
           content_ = builderForValue.build();
           onChanged();
@@ -7369,13 +2876,13 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
-      public Builder mergeSms(io.bloombox.schema.marketing.MarketingCampaign.SMSContent value) {
+      public Builder mergeSms(io.bloombox.schema.comms.SMSComms.SMSContent value) {
         if (smsBuilder_ == null) {
           if (contentCase_ == 10 &&
-              content_ != io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance()) {
-            content_ = io.bloombox.schema.marketing.MarketingCampaign.SMSContent.newBuilder((io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_)
+              content_ != io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance()) {
+            content_ = io.bloombox.schema.comms.SMSComms.SMSContent.newBuilder((io.bloombox.schema.comms.SMSComms.SMSContent) content_)
                 .mergeFrom(value).buildPartial();
           } else {
             content_ = value;
@@ -7395,7 +2902,7 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
       public Builder clearSms() {
         if (smsBuilder_ == null) {
@@ -7418,9 +2925,9 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.SMSContent.Builder getSmsBuilder() {
+      public io.bloombox.schema.comms.SMSComms.SMSContent.Builder getSmsBuilder() {
         return getSmsFieldBuilder().getBuilder();
       }
       /**
@@ -7428,16 +2935,16 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.SMSContentOrBuilder getSmsOrBuilder() {
+      public io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder getSmsOrBuilder() {
         if ((contentCase_ == 10) && (smsBuilder_ != null)) {
           return smsBuilder_.getMessageOrBuilder();
         } else {
           if (contentCase_ == 10) {
-            return (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_;
+            return (io.bloombox.schema.comms.SMSComms.SMSContent) content_;
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance();
+          return io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance();
         }
       }
       /**
@@ -7445,18 +2952,18 @@ public final class MarketingCampaign {
        * SMS-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.SMSContent sms = 10;</code>
+       * <code>.bloombox.schema.comms.SMSContent sms = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.MarketingCampaign.SMSContent, io.bloombox.schema.marketing.MarketingCampaign.SMSContent.Builder, io.bloombox.schema.marketing.MarketingCampaign.SMSContentOrBuilder> 
+          io.bloombox.schema.comms.SMSComms.SMSContent, io.bloombox.schema.comms.SMSComms.SMSContent.Builder, io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder> 
           getSmsFieldBuilder() {
         if (smsBuilder_ == null) {
           if (!(contentCase_ == 10)) {
-            content_ = io.bloombox.schema.marketing.MarketingCampaign.SMSContent.getDefaultInstance();
+            content_ = io.bloombox.schema.comms.SMSComms.SMSContent.getDefaultInstance();
           }
           smsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.marketing.MarketingCampaign.SMSContent, io.bloombox.schema.marketing.MarketingCampaign.SMSContent.Builder, io.bloombox.schema.marketing.MarketingCampaign.SMSContentOrBuilder>(
-                  (io.bloombox.schema.marketing.MarketingCampaign.SMSContent) content_,
+              io.bloombox.schema.comms.SMSComms.SMSContent, io.bloombox.schema.comms.SMSComms.SMSContent.Builder, io.bloombox.schema.comms.SMSComms.SMSContentOrBuilder>(
+                  (io.bloombox.schema.comms.SMSComms.SMSContent) content_,
                   getParentForChildren(),
                   isClean());
           content_ = null;
@@ -7467,13 +2974,13 @@ public final class MarketingCampaign {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.MarketingCampaign.EmailContent, io.bloombox.schema.marketing.MarketingCampaign.EmailContent.Builder, io.bloombox.schema.marketing.MarketingCampaign.EmailContentOrBuilder> emailBuilder_;
+          io.bloombox.schema.comms.EmailComms.EmailContent, io.bloombox.schema.comms.EmailComms.EmailContent.Builder, io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder> emailBuilder_;
       /**
        * <pre>
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
       public boolean hasEmail() {
         return contentCase_ == 11;
@@ -7483,19 +2990,19 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.EmailContent getEmail() {
+      public io.bloombox.schema.comms.EmailComms.EmailContent getEmail() {
         if (emailBuilder_ == null) {
           if (contentCase_ == 11) {
-            return (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_;
+            return (io.bloombox.schema.comms.EmailComms.EmailContent) content_;
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance();
+          return io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance();
         } else {
           if (contentCase_ == 11) {
             return emailBuilder_.getMessage();
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance();
+          return io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance();
         }
       }
       /**
@@ -7503,9 +3010,9 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
-      public Builder setEmail(io.bloombox.schema.marketing.MarketingCampaign.EmailContent value) {
+      public Builder setEmail(io.bloombox.schema.comms.EmailComms.EmailContent value) {
         if (emailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7523,10 +3030,10 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
       public Builder setEmail(
-          io.bloombox.schema.marketing.MarketingCampaign.EmailContent.Builder builderForValue) {
+          io.bloombox.schema.comms.EmailComms.EmailContent.Builder builderForValue) {
         if (emailBuilder_ == null) {
           content_ = builderForValue.build();
           onChanged();
@@ -7541,13 +3048,13 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
-      public Builder mergeEmail(io.bloombox.schema.marketing.MarketingCampaign.EmailContent value) {
+      public Builder mergeEmail(io.bloombox.schema.comms.EmailComms.EmailContent value) {
         if (emailBuilder_ == null) {
           if (contentCase_ == 11 &&
-              content_ != io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance()) {
-            content_ = io.bloombox.schema.marketing.MarketingCampaign.EmailContent.newBuilder((io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_)
+              content_ != io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance()) {
+            content_ = io.bloombox.schema.comms.EmailComms.EmailContent.newBuilder((io.bloombox.schema.comms.EmailComms.EmailContent) content_)
                 .mergeFrom(value).buildPartial();
           } else {
             content_ = value;
@@ -7567,7 +3074,7 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
       public Builder clearEmail() {
         if (emailBuilder_ == null) {
@@ -7590,9 +3097,9 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.EmailContent.Builder getEmailBuilder() {
+      public io.bloombox.schema.comms.EmailComms.EmailContent.Builder getEmailBuilder() {
         return getEmailFieldBuilder().getBuilder();
       }
       /**
@@ -7600,16 +3107,16 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.EmailContentOrBuilder getEmailOrBuilder() {
+      public io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder getEmailOrBuilder() {
         if ((contentCase_ == 11) && (emailBuilder_ != null)) {
           return emailBuilder_.getMessageOrBuilder();
         } else {
           if (contentCase_ == 11) {
-            return (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_;
+            return (io.bloombox.schema.comms.EmailComms.EmailContent) content_;
           }
-          return io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance();
+          return io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance();
         }
       }
       /**
@@ -7617,18 +3124,18 @@ public final class MarketingCampaign {
        * Email-specific content.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.EmailContent email = 11;</code>
+       * <code>.bloombox.schema.comms.EmailContent email = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.marketing.MarketingCampaign.EmailContent, io.bloombox.schema.marketing.MarketingCampaign.EmailContent.Builder, io.bloombox.schema.marketing.MarketingCampaign.EmailContentOrBuilder> 
+          io.bloombox.schema.comms.EmailComms.EmailContent, io.bloombox.schema.comms.EmailComms.EmailContent.Builder, io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder> 
           getEmailFieldBuilder() {
         if (emailBuilder_ == null) {
           if (!(contentCase_ == 11)) {
-            content_ = io.bloombox.schema.marketing.MarketingCampaign.EmailContent.getDefaultInstance();
+            content_ = io.bloombox.schema.comms.EmailComms.EmailContent.getDefaultInstance();
           }
           emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.marketing.MarketingCampaign.EmailContent, io.bloombox.schema.marketing.MarketingCampaign.EmailContent.Builder, io.bloombox.schema.marketing.MarketingCampaign.EmailContentOrBuilder>(
-                  (io.bloombox.schema.marketing.MarketingCampaign.EmailContent) content_,
+              io.bloombox.schema.comms.EmailComms.EmailContent, io.bloombox.schema.comms.EmailComms.EmailContent.Builder, io.bloombox.schema.comms.EmailComms.EmailContentOrBuilder>(
+                  (io.bloombox.schema.comms.EmailComms.EmailContent) content_,
                   getParentForChildren(),
                   isClean());
           content_ = null;
@@ -7738,7 +3245,7 @@ public final class MarketingCampaign {
      * Channel for this specification.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 3;</code>
      */
     int getChannelValue();
     /**
@@ -7746,9 +3253,9 @@ public final class MarketingCampaign {
      * Channel for this specification.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 3;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel();
+    io.bloombox.schema.comms.GenericComms.Channel getChannel();
 
     /**
      * <pre>
@@ -7991,7 +3498,7 @@ public final class MarketingCampaign {
      * Channel for this specification.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 3;</code>
      */
     public int getChannelValue() {
       return channel_;
@@ -8001,11 +3508,11 @@ public final class MarketingCampaign {
      * Channel for this specification.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 3;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel() {
-      io.bloombox.schema.marketing.MarketingCampaign.Channel result = io.bloombox.schema.marketing.MarketingCampaign.Channel.valueOf(channel_);
-      return result == null ? io.bloombox.schema.marketing.MarketingCampaign.Channel.UNRECOGNIZED : result;
+    public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+      io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
+      return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
     }
 
     public static final int CREATIVE_FIELD_NUMBER = 4;
@@ -8081,7 +3588,7 @@ public final class MarketingCampaign {
       if (campaign_ != null) {
         output.writeMessage(2, getCampaign());
       }
-      if (channel_ != io.bloombox.schema.marketing.MarketingCampaign.Channel.UNSPECIFIED.getNumber()) {
+      if (channel_ != io.bloombox.schema.comms.GenericComms.Channel.UNSPECIFIED.getNumber()) {
         output.writeEnum(3, channel_);
       }
       for (int i = 0; i < creative_.size(); i++) {
@@ -8102,7 +3609,7 @@ public final class MarketingCampaign {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCampaign());
       }
-      if (channel_ != io.bloombox.schema.marketing.MarketingCampaign.Channel.UNSPECIFIED.getNumber()) {
+      if (channel_ != io.bloombox.schema.comms.GenericComms.Channel.UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, channel_);
       }
@@ -8703,7 +4210,7 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
        */
       public int getChannelValue() {
         return channel_;
@@ -8713,7 +4220,7 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
        */
       public Builder setChannelValue(int value) {
         channel_ = value;
@@ -8725,20 +4232,20 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel() {
-        io.bloombox.schema.marketing.MarketingCampaign.Channel result = io.bloombox.schema.marketing.MarketingCampaign.Channel.valueOf(channel_);
-        return result == null ? io.bloombox.schema.marketing.MarketingCampaign.Channel.UNRECOGNIZED : result;
+      public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+        io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
+        return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
        */
-      public Builder setChannel(io.bloombox.schema.marketing.MarketingCampaign.Channel value) {
+      public Builder setChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -8752,7 +4259,7 @@ public final class MarketingCampaign {
        * Channel for this specification.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 3;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 3;</code>
        */
       public Builder clearChannel() {
         
@@ -9141,7 +4648,7 @@ public final class MarketingCampaign {
      *
      * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
      */
-    java.util.List<io.bloombox.schema.marketing.TargetingPolicy> 
+    java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> 
         getBlockList();
     /**
      * <pre>
@@ -9150,7 +4657,7 @@ public final class MarketingCampaign {
      *
      * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
      */
-    io.bloombox.schema.marketing.TargetingPolicy getBlock(int index);
+    io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy getBlock(int index);
     /**
      * <pre>
      * Targeting policy payload block.
@@ -9166,7 +4673,7 @@ public final class MarketingCampaign {
      *
      * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
      */
-    java.util.List<? extends io.bloombox.schema.marketing.TargetingPolicyOrBuilder> 
+    java.util.List<? extends io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder> 
         getBlockOrBuilderList();
     /**
      * <pre>
@@ -9175,7 +4682,7 @@ public final class MarketingCampaign {
      *
      * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
      */
-    io.bloombox.schema.marketing.TargetingPolicyOrBuilder getBlockOrBuilder(
+    io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder getBlockOrBuilder(
         int index);
   }
   /**
@@ -9237,11 +4744,11 @@ public final class MarketingCampaign {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                block_ = new java.util.ArrayList<io.bloombox.schema.marketing.TargetingPolicy>();
+                block_ = new java.util.ArrayList<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy>();
                 mutable_bitField0_ |= 0x00000002;
               }
               block_.add(
-                  input.readMessage(io.bloombox.schema.marketing.TargetingPolicy.parser(), extensionRegistry));
+                  input.readMessage(io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.parser(), extensionRegistry));
               break;
             }
           }
@@ -9286,7 +4793,7 @@ public final class MarketingCampaign {
     }
 
     public static final int BLOCK_FIELD_NUMBER = 2;
-    private java.util.List<io.bloombox.schema.marketing.TargetingPolicy> block_;
+    private java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> block_;
     /**
      * <pre>
      * Targeting policy payload block.
@@ -9294,7 +4801,7 @@ public final class MarketingCampaign {
      *
      * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
      */
-    public java.util.List<io.bloombox.schema.marketing.TargetingPolicy> getBlockList() {
+    public java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> getBlockList() {
       return block_;
     }
     /**
@@ -9304,7 +4811,7 @@ public final class MarketingCampaign {
      *
      * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
      */
-    public java.util.List<? extends io.bloombox.schema.marketing.TargetingPolicyOrBuilder> 
+    public java.util.List<? extends io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder> 
         getBlockOrBuilderList() {
       return block_;
     }
@@ -9325,7 +4832,7 @@ public final class MarketingCampaign {
      *
      * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
      */
-    public io.bloombox.schema.marketing.TargetingPolicy getBlock(int index) {
+    public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy getBlock(int index) {
       return block_.get(index);
     }
     /**
@@ -9335,7 +4842,7 @@ public final class MarketingCampaign {
      *
      * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
      */
-    public io.bloombox.schema.marketing.TargetingPolicyOrBuilder getBlockOrBuilder(
+    public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder getBlockOrBuilder(
         int index) {
       return block_.get(index);
     }
@@ -9725,17 +5232,17 @@ public final class MarketingCampaign {
         return this;
       }
 
-      private java.util.List<io.bloombox.schema.marketing.TargetingPolicy> block_ =
+      private java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> block_ =
         java.util.Collections.emptyList();
       private void ensureBlockIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          block_ = new java.util.ArrayList<io.bloombox.schema.marketing.TargetingPolicy>(block_);
+          block_ = new java.util.ArrayList<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy>(block_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.marketing.TargetingPolicy, io.bloombox.schema.marketing.TargetingPolicy.Builder, io.bloombox.schema.marketing.TargetingPolicyOrBuilder> blockBuilder_;
+          io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder> blockBuilder_;
 
       /**
        * <pre>
@@ -9744,7 +5251,7 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public java.util.List<io.bloombox.schema.marketing.TargetingPolicy> getBlockList() {
+      public java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> getBlockList() {
         if (blockBuilder_ == null) {
           return java.util.Collections.unmodifiableList(block_);
         } else {
@@ -9772,7 +5279,7 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public io.bloombox.schema.marketing.TargetingPolicy getBlock(int index) {
+      public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy getBlock(int index) {
         if (blockBuilder_ == null) {
           return block_.get(index);
         } else {
@@ -9787,7 +5294,7 @@ public final class MarketingCampaign {
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder setBlock(
-          int index, io.bloombox.schema.marketing.TargetingPolicy value) {
+          int index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy value) {
         if (blockBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9808,7 +5315,7 @@ public final class MarketingCampaign {
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder setBlock(
-          int index, io.bloombox.schema.marketing.TargetingPolicy.Builder builderForValue) {
+          int index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder builderForValue) {
         if (blockBuilder_ == null) {
           ensureBlockIsMutable();
           block_.set(index, builderForValue.build());
@@ -9825,7 +5332,7 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public Builder addBlock(io.bloombox.schema.marketing.TargetingPolicy value) {
+      public Builder addBlock(io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy value) {
         if (blockBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9846,7 +5353,7 @@ public final class MarketingCampaign {
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addBlock(
-          int index, io.bloombox.schema.marketing.TargetingPolicy value) {
+          int index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy value) {
         if (blockBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9867,7 +5374,7 @@ public final class MarketingCampaign {
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addBlock(
-          io.bloombox.schema.marketing.TargetingPolicy.Builder builderForValue) {
+          io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder builderForValue) {
         if (blockBuilder_ == null) {
           ensureBlockIsMutable();
           block_.add(builderForValue.build());
@@ -9885,7 +5392,7 @@ public final class MarketingCampaign {
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addBlock(
-          int index, io.bloombox.schema.marketing.TargetingPolicy.Builder builderForValue) {
+          int index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder builderForValue) {
         if (blockBuilder_ == null) {
           ensureBlockIsMutable();
           block_.add(index, builderForValue.build());
@@ -9903,7 +5410,7 @@ public final class MarketingCampaign {
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
       public Builder addAllBlock(
-          java.lang.Iterable<? extends io.bloombox.schema.marketing.TargetingPolicy> values) {
+          java.lang.Iterable<? extends io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy> values) {
         if (blockBuilder_ == null) {
           ensureBlockIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -9955,7 +5462,7 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public io.bloombox.schema.marketing.TargetingPolicy.Builder getBlockBuilder(
+      public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder getBlockBuilder(
           int index) {
         return getBlockFieldBuilder().getBuilder(index);
       }
@@ -9966,7 +5473,7 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public io.bloombox.schema.marketing.TargetingPolicyOrBuilder getBlockOrBuilder(
+      public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder getBlockOrBuilder(
           int index) {
         if (blockBuilder_ == null) {
           return block_.get(index);  } else {
@@ -9980,7 +5487,7 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public java.util.List<? extends io.bloombox.schema.marketing.TargetingPolicyOrBuilder> 
+      public java.util.List<? extends io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder> 
            getBlockOrBuilderList() {
         if (blockBuilder_ != null) {
           return blockBuilder_.getMessageOrBuilderList();
@@ -9995,9 +5502,9 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public io.bloombox.schema.marketing.TargetingPolicy.Builder addBlockBuilder() {
+      public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder addBlockBuilder() {
         return getBlockFieldBuilder().addBuilder(
-            io.bloombox.schema.marketing.TargetingPolicy.getDefaultInstance());
+            io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.getDefaultInstance());
       }
       /**
        * <pre>
@@ -10006,10 +5513,10 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public io.bloombox.schema.marketing.TargetingPolicy.Builder addBlockBuilder(
+      public io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder addBlockBuilder(
           int index) {
         return getBlockFieldBuilder().addBuilder(
-            index, io.bloombox.schema.marketing.TargetingPolicy.getDefaultInstance());
+            index, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.getDefaultInstance());
       }
       /**
        * <pre>
@@ -10018,16 +5525,16 @@ public final class MarketingCampaign {
        *
        * <code>repeated .bloombox.schema.marketing.TargetingPolicy block = 2;</code>
        */
-      public java.util.List<io.bloombox.schema.marketing.TargetingPolicy.Builder> 
+      public java.util.List<io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder> 
            getBlockBuilderList() {
         return getBlockFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.bloombox.schema.marketing.TargetingPolicy, io.bloombox.schema.marketing.TargetingPolicy.Builder, io.bloombox.schema.marketing.TargetingPolicyOrBuilder> 
+          io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder> 
           getBlockFieldBuilder() {
         if (blockBuilder_ == null) {
           blockBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.bloombox.schema.marketing.TargetingPolicy, io.bloombox.schema.marketing.TargetingPolicy.Builder, io.bloombox.schema.marketing.TargetingPolicyOrBuilder>(
+              io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicy.Builder, io.bloombox.schema.marketing.CampaignTargeting.TargetingPolicyOrBuilder>(
                   block_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -11263,7 +6770,7 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant published = 10;</code>
      */
-    io.opencannabis.schema.temporal.Instant getPublished();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getPublished();
     /**
      * <pre>
      * Timestamp indicating when this campaign was created.
@@ -11271,7 +6778,7 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant published = 10;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getPublishedOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getPublishedOrBuilder();
 
     /**
      * <pre>
@@ -11288,7 +6795,7 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant created = 11;</code>
      */
-    io.opencannabis.schema.temporal.Instant getCreated();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated();
     /**
      * <pre>
      * Timestamp indicating when this campaign was created.
@@ -11296,7 +6803,7 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant created = 11;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getCreatedOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder();
 
     /**
      * <pre>
@@ -11313,7 +6820,7 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant modified = 12;</code>
      */
-    io.opencannabis.schema.temporal.Instant getModified();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getModified();
     /**
      * <pre>
      * When this campaign was last modified.
@@ -11321,7 +6828,7 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant modified = 12;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder();
   }
   /**
    * <pre>
@@ -11458,11 +6965,11 @@ public final class MarketingCampaign {
               break;
             }
             case 82: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (published_ != null) {
                 subBuilder = published_.toBuilder();
               }
-              published_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              published_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(published_);
                 published_ = subBuilder.buildPartial();
@@ -11471,11 +6978,11 @@ public final class MarketingCampaign {
               break;
             }
             case 90: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (created_ != null) {
                 subBuilder = created_.toBuilder();
               }
-              created_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              created_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(created_);
                 created_ = subBuilder.buildPartial();
@@ -11484,11 +6991,11 @@ public final class MarketingCampaign {
               break;
             }
             case 98: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (modified_ != null) {
                 subBuilder = modified_.toBuilder();
               }
-              modified_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              modified_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(modified_);
                 modified_ = subBuilder.buildPartial();
@@ -11883,7 +7390,7 @@ public final class MarketingCampaign {
     }
 
     public static final int PUBLISHED_FIELD_NUMBER = 10;
-    private io.opencannabis.schema.temporal.Instant published_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant published_;
     /**
      * <pre>
      * Timestamp indicating when this campaign was created.
@@ -11901,8 +7408,8 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant published = 10;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getPublished() {
-      return published_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : published_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getPublished() {
+      return published_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : published_;
     }
     /**
      * <pre>
@@ -11911,12 +7418,12 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant published = 10;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getPublishedOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getPublishedOrBuilder() {
       return getPublished();
     }
 
     public static final int CREATED_FIELD_NUMBER = 11;
-    private io.opencannabis.schema.temporal.Instant created_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
     /**
      * <pre>
      * Timestamp indicating when this campaign was created.
@@ -11934,8 +7441,8 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant created = 11;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getCreated() {
-      return created_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : created_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated() {
+      return created_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : created_;
     }
     /**
      * <pre>
@@ -11944,12 +7451,12 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant created = 11;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getCreatedOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder() {
       return getCreated();
     }
 
     public static final int MODIFIED_FIELD_NUMBER = 12;
-    private io.opencannabis.schema.temporal.Instant modified_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
     /**
      * <pre>
      * When this campaign was last modified.
@@ -11967,8 +7474,8 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant modified = 12;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getModified() {
-      return modified_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
+      return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
     }
     /**
      * <pre>
@@ -11977,7 +7484,7 @@ public final class MarketingCampaign {
      *
      * <code>.opencannabis.temporal.Instant modified = 12;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
       return getModified();
     }
 
@@ -14161,9 +9668,9 @@ public final class MarketingCampaign {
         return groupBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.Instant published_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant published_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> publishedBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> publishedBuilder_;
       /**
        * <pre>
        * Timestamp indicating when this campaign was created.
@@ -14181,9 +9688,9 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant published = 10;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getPublished() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getPublished() {
         if (publishedBuilder_ == null) {
-          return published_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : published_;
+          return published_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : published_;
         } else {
           return publishedBuilder_.getMessage();
         }
@@ -14195,7 +9702,7 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant published = 10;</code>
        */
-      public Builder setPublished(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setPublished(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (publishedBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14216,7 +9723,7 @@ public final class MarketingCampaign {
        * <code>.opencannabis.temporal.Instant published = 10;</code>
        */
       public Builder setPublished(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (publishedBuilder_ == null) {
           published_ = builderForValue.build();
           onChanged();
@@ -14233,11 +9740,11 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant published = 10;</code>
        */
-      public Builder mergePublished(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergePublished(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (publishedBuilder_ == null) {
           if (published_ != null) {
             published_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(published_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(published_).mergeFrom(value).buildPartial();
           } else {
             published_ = value;
           }
@@ -14273,7 +9780,7 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant published = 10;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getPublishedBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getPublishedBuilder() {
         
         onChanged();
         return getPublishedFieldBuilder().getBuilder();
@@ -14285,12 +9792,12 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant published = 10;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getPublishedOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getPublishedOrBuilder() {
         if (publishedBuilder_ != null) {
           return publishedBuilder_.getMessageOrBuilder();
         } else {
           return published_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : published_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : published_;
         }
       }
       /**
@@ -14301,11 +9808,11 @@ public final class MarketingCampaign {
        * <code>.opencannabis.temporal.Instant published = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getPublishedFieldBuilder() {
         if (publishedBuilder_ == null) {
           publishedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getPublished(),
                   getParentForChildren(),
                   isClean());
@@ -14314,9 +9821,9 @@ public final class MarketingCampaign {
         return publishedBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.Instant created_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> createdBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
       /**
        * <pre>
        * Timestamp indicating when this campaign was created.
@@ -14334,9 +9841,9 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant created = 11;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getCreated() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated() {
         if (createdBuilder_ == null) {
-          return created_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : created_;
+          return created_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : created_;
         } else {
           return createdBuilder_.getMessage();
         }
@@ -14348,7 +9855,7 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant created = 11;</code>
        */
-      public Builder setCreated(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setCreated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (createdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14369,7 +9876,7 @@ public final class MarketingCampaign {
        * <code>.opencannabis.temporal.Instant created = 11;</code>
        */
       public Builder setCreated(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
           onChanged();
@@ -14386,11 +9893,11 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant created = 11;</code>
        */
-      public Builder mergeCreated(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeCreated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (createdBuilder_ == null) {
           if (created_ != null) {
             created_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(created_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(created_).mergeFrom(value).buildPartial();
           } else {
             created_ = value;
           }
@@ -14426,7 +9933,7 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant created = 11;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getCreatedBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getCreatedBuilder() {
         
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
@@ -14438,12 +9945,12 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant created = 11;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getCreatedOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder() {
         if (createdBuilder_ != null) {
           return createdBuilder_.getMessageOrBuilder();
         } else {
           return created_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : created_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : created_;
         }
       }
       /**
@@ -14454,11 +9961,11 @@ public final class MarketingCampaign {
        * <code>.opencannabis.temporal.Instant created = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getCreatedFieldBuilder() {
         if (createdBuilder_ == null) {
           createdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getCreated(),
                   getParentForChildren(),
                   isClean());
@@ -14467,9 +9974,9 @@ public final class MarketingCampaign {
         return createdBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.Instant modified_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> modifiedBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
       /**
        * <pre>
        * When this campaign was last modified.
@@ -14487,9 +9994,9 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant modified = 12;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getModified() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
         if (modifiedBuilder_ == null) {
-          return modified_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
+          return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
         } else {
           return modifiedBuilder_.getMessage();
         }
@@ -14501,7 +10008,7 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant modified = 12;</code>
        */
-      public Builder setModified(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (modifiedBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -14522,7 +10029,7 @@ public final class MarketingCampaign {
        * <code>.opencannabis.temporal.Instant modified = 12;</code>
        */
       public Builder setModified(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (modifiedBuilder_ == null) {
           modified_ = builderForValue.build();
           onChanged();
@@ -14539,11 +10046,11 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant modified = 12;</code>
        */
-      public Builder mergeModified(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (modifiedBuilder_ == null) {
           if (modified_ != null) {
             modified_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(modified_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(modified_).mergeFrom(value).buildPartial();
           } else {
             modified_ = value;
           }
@@ -14579,7 +10086,7 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant modified = 12;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getModifiedBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getModifiedBuilder() {
         
         onChanged();
         return getModifiedFieldBuilder().getBuilder();
@@ -14591,12 +10098,12 @@ public final class MarketingCampaign {
        *
        * <code>.opencannabis.temporal.Instant modified = 12;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
         if (modifiedBuilder_ != null) {
           return modifiedBuilder_.getMessageOrBuilder();
         } else {
           return modified_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
         }
       }
       /**
@@ -14607,11 +10114,11 @@ public final class MarketingCampaign {
        * <code>.opencannabis.temporal.Instant modified = 12;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getModifiedFieldBuilder() {
         if (modifiedBuilder_ == null) {
           modifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getModified(),
                   getParentForChildren(),
                   isClean());
@@ -14679,26 +10186,6 @@ public final class MarketingCampaign {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_marketing_ChannelSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_ChannelSettings_SMS_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_ChannelSettings_SMS_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_ChannelSettings_Email_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_ChannelSettings_Email_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_SMSContent_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_SMSContent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_marketing_EmailContent_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_marketing_EmailContent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_marketing_Creative_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14733,57 +10220,47 @@ public final class MarketingCampaign {
   static {
     java.lang.String[] descriptorData = {
       "\n\030marketing/Campaign.proto\022\031bloombox.sch" +
-      "ema.marketing\032\024core/Datamodel.proto\032\025med" +
-      "ia/MediaItem.proto\032\025content/Content.prot" +
-      "o\032\026temporal/Instant.proto\032\031marketing/Tar" +
-      "geting.proto\"0\n\013CampaignTag\022\022\n\002id\030\001 \001(\tB" +
-      "\006\302\265\003\002\010\002\022\r\n\005label\030\002 \001(\t\"\277\002\n\017ChannelSettin" +
-      "gs\0223\n\007channel\030\001 \001(\0162\".bloombox.schema.ma" +
-      "rketing.Channel\022\016\n\006active\030\002 \001(\010\022=\n\003sms\030\024" +
-      " \001(\0132..bloombox.schema.marketing.Channel" +
-      "Settings.SMSH\000\022A\n\005email\030\025 \001(\01320.bloombox" +
-      ".schema.marketing.ChannelSettings.EmailH" +
-      "\000\032\025\n\003SMS\022\016\n\006sender\030\001 \001(\t\032B\n\005Email\022\016\n\006sen" +
-      "der\030\001 \001(\t\022\020\n\010reply_to\030\002 \001(\t\022\n\n\002cc\030\003 \003(\t\022" +
-      "\013\n\003bcc\030\004 \003(\tB\n\n\010settings\"\\\n\nSMSContent\022\017" +
-      "\n\007subject\030\001 \001(\t\022\017\n\007content\030\002 \001(\t\022,\n\005medi" +
-      "a\030\003 \001(\0132\035.opencannabis.media.MediaItem\"\202" +
-      "\001\n\014EmailContent\022\017\n\007subject\030\001 \001(\t\022.\n\007cont" +
-      "ent\030\002 \003(\0132\035.opencannabis.content.Content" +
-      "\0221\n\nattachment\030\003 \003(\0132\035.opencannabis.medi" +
-      "a.MediaItem\"\205\001\n\010Creative\0224\n\003sms\030\n \001(\0132%." +
-      "bloombox.schema.marketing.SMSContentH\000\0228" +
-      "\n\005email\030\013 \001(\0132\'.bloombox.schema.marketin" +
-      "g.EmailContentH\000B\t\n\007content\"\313\001\n\007AdGroup\022" +
-      "\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002\0228\n\010campaign\030\002 \001(\0132&." +
-      "bloombox.schema.marketing.CampaignKey\0223\n" +
-      "\007channel\030\003 \001(\0162\".bloombox.schema.marketi" +
-      "ng.Channel\0225\n\010creative\030\004 \003(\0132#.bloombox." +
-      "schema.marketing.Creative:\006\202\367\002\002\010\001\"^\n\021Cam" +
-      "paignTargeting\022\016\n\006strict\030\001 \001(\010\0229\n\005block\030" +
-      "\002 \003(\0132*.bloombox.schema.marketing.Target" +
-      "ingPolicy\"D\n\013CampaignKey\022\022\n\002id\030\001 \001(\tB\006\302\265" +
-      "\003\002\010\002\022\017\n\007partner\030\002 \001(\t\022\020\n\010location\030\003 \001(\t\"" +
-      "\330\004\n\010Campaign\022;\n\003key\030\001 \001(\0132&.bloombox.sch" +
-      "ema.marketing.CampaignKeyB\006\302\265\003\002\010\001\022\014\n\004nam" +
-      "e\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\0229\n\006status\030\004" +
-      " \001(\0162).bloombox.schema.marketing.Campaig" +
-      "nStatus\022\014\n\004live\030\005 \001(\010\022?\n\ttargeting\030\006 \001(\013" +
-      "2,.bloombox.schema.marketing.CampaignTar" +
-      "geting\022;\n\007channel\030\007 \003(\0132*.bloombox.schem" +
-      "a.marketing.ChannelSettings\022A\n\003tag\030\010 \003(\013" +
-      "2&.bloombox.schema.marketing.CampaignTag" +
-      "B\014\322\265\003\010\010\001\032\004tags\0229\n\005group\030\t \003(\0132\".bloombox" +
-      ".schema.marketing.AdGroupB\006\322\265\003\002\010\001\0221\n\tpub" +
-      "lished\030\n \001(\0132\036.opencannabis.temporal.Ins" +
-      "tant\022/\n\007created\030\013 \001(\0132\036.opencannabis.tem" +
-      "poral.Instant\0220\n\010modified\030\014 \001(\0132\036.openca" +
-      "nnabis.temporal.Instant:\021\202\367\002\r\010\002\022\tcampaig" +
-      "ns*.\n\007Channel\022\017\n\013UNSPECIFIED\020\000\022\t\n\005EMAIL\020" +
-      "\001\022\007\n\003SMS\020\002*K\n\016CampaignStatus\022\013\n\007PENDING\020" +
-      "\000\022\t\n\005DRAFT\020\001\022\n\n\006QUEUED\020\002\022\013\n\007SENDING\020\003\022\010\n" +
-      "\004DONE\020\004B;\n\034io.bloombox.schema.marketingB" +
-      "\021MarketingCampaignH\001P\000\242\002\003OCSb\006proto3"
+      "ema.marketing\032\024core/Datamodel.proto\032\017com" +
+      "ms/SMS.proto\032\021comms/Email.proto\032\021comms/C" +
+      "omms.proto\032\026temporal/Instant.proto\032\031mark" +
+      "eting/Targeting.proto\"0\n\013CampaignTag\022\022\n\002" +
+      "id\030\001 \001(\tB\006\302\265\003\002\010\002\022\r\n\005label\030\002 \001(\t\"\310\001\n\017Chan" +
+      "nelSettings\022/\n\007channel\030\001 \001(\0162\036.bloombox." +
+      "schema.comms.Channel\022\016\n\006active\030\002 \001(\010\0221\n\003" +
+      "sms\030\024 \001(\0132\".bloombox.schema.comms.SMSSet" +
+      "tingsH\000\0225\n\005email\030\025 \001(\0132$.bloombox.schema" +
+      ".comms.EmailSettingsH\000B\n\n\010settings\"}\n\010Cr" +
+      "eative\0220\n\003sms\030\n \001(\0132!.bloombox.schema.co" +
+      "mms.SMSContentH\000\0224\n\005email\030\013 \001(\0132#.bloomb" +
+      "ox.schema.comms.EmailContentH\000B\t\n\007conten" +
+      "t\"\307\001\n\007AdGroup\022\022\n\002id\030\001 \001(\tB\006\302\265\003\002\010\002\0228\n\010cam" +
+      "paign\030\002 \001(\0132&.bloombox.schema.marketing." +
+      "CampaignKey\022/\n\007channel\030\003 \001(\0162\036.bloombox." +
+      "schema.comms.Channel\0225\n\010creative\030\004 \003(\0132#" +
+      ".bloombox.schema.marketing.Creative:\006\202\367\002" +
+      "\002\010\001\"^\n\021CampaignTargeting\022\016\n\006strict\030\001 \001(\010" +
+      "\0229\n\005block\030\002 \003(\0132*.bloombox.schema.market" +
+      "ing.TargetingPolicy\"D\n\013CampaignKey\022\022\n\002id" +
+      "\030\001 \001(\tB\006\302\265\003\002\010\002\022\017\n\007partner\030\002 \001(\t\022\020\n\010locat" +
+      "ion\030\003 \001(\t\"\330\004\n\010Campaign\022;\n\003key\030\001 \001(\0132&.bl" +
+      "oombox.schema.marketing.CampaignKeyB\006\302\265\003" +
+      "\002\010\001\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\0229" +
+      "\n\006status\030\004 \001(\0162).bloombox.schema.marketi" +
+      "ng.CampaignStatus\022\014\n\004live\030\005 \001(\010\022?\n\ttarge" +
+      "ting\030\006 \001(\0132,.bloombox.schema.marketing.C" +
+      "ampaignTargeting\022;\n\007channel\030\007 \003(\0132*.bloo" +
+      "mbox.schema.marketing.ChannelSettings\022A\n" +
+      "\003tag\030\010 \003(\0132&.bloombox.schema.marketing.C" +
+      "ampaignTagB\014\322\265\003\010\010\001\032\004tags\0229\n\005group\030\t \003(\0132" +
+      "\".bloombox.schema.marketing.AdGroupB\006\322\265\003" +
+      "\002\010\001\0221\n\tpublished\030\n \001(\0132\036.opencannabis.te" +
+      "mporal.Instant\022/\n\007created\030\013 \001(\0132\036.openca" +
+      "nnabis.temporal.Instant\0220\n\010modified\030\014 \001(" +
+      "\0132\036.opencannabis.temporal.Instant:\021\202\367\002\r\010" +
+      "\002\022\tcampaigns*K\n\016CampaignStatus\022\013\n\007PENDIN" +
+      "G\020\000\022\t\n\005DRAFT\020\001\022\n\n\006QUEUED\020\002\022\013\n\007SENDING\020\003\022" +
+      "\010\n\004DONE\020\004B;\n\034io.bloombox.schema.marketin" +
+      "gB\021MarketingCampaignH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14797,10 +10274,11 @@ public final class MarketingCampaign {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           core.Datamodel.getDescriptor(),
-          io.opencannabis.schema.media.AttachedMedia.getDescriptor(),
-          io.opencannabis.schema.content.GenericContent.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
-          io.bloombox.schema.marketing.Targeting.getDescriptor(),
+          io.bloombox.schema.comms.SMSComms.getDescriptor(),
+          io.bloombox.schema.comms.EmailComms.getDescriptor(),
+          io.bloombox.schema.comms.GenericComms.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
+          io.bloombox.schema.marketing.CampaignTargeting.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_marketing_CampaignTag_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14814,56 +10292,32 @@ public final class MarketingCampaign {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_marketing_ChannelSettings_descriptor,
         new java.lang.String[] { "Channel", "Active", "Sms", "Email", "Settings", });
-    internal_static_bloombox_schema_marketing_ChannelSettings_SMS_descriptor =
-      internal_static_bloombox_schema_marketing_ChannelSettings_descriptor.getNestedTypes().get(0);
-    internal_static_bloombox_schema_marketing_ChannelSettings_SMS_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_ChannelSettings_SMS_descriptor,
-        new java.lang.String[] { "Sender", });
-    internal_static_bloombox_schema_marketing_ChannelSettings_Email_descriptor =
-      internal_static_bloombox_schema_marketing_ChannelSettings_descriptor.getNestedTypes().get(1);
-    internal_static_bloombox_schema_marketing_ChannelSettings_Email_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_ChannelSettings_Email_descriptor,
-        new java.lang.String[] { "Sender", "ReplyTo", "Cc", "Bcc", });
-    internal_static_bloombox_schema_marketing_SMSContent_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_bloombox_schema_marketing_SMSContent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_SMSContent_descriptor,
-        new java.lang.String[] { "Subject", "Content", "Media", });
-    internal_static_bloombox_schema_marketing_EmailContent_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_bloombox_schema_marketing_EmailContent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_marketing_EmailContent_descriptor,
-        new java.lang.String[] { "Subject", "Content", "Attachment", });
     internal_static_bloombox_schema_marketing_Creative_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_bloombox_schema_marketing_Creative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_marketing_Creative_descriptor,
         new java.lang.String[] { "Sms", "Email", "Content", });
     internal_static_bloombox_schema_marketing_AdGroup_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_bloombox_schema_marketing_AdGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_marketing_AdGroup_descriptor,
         new java.lang.String[] { "Id", "Campaign", "Channel", "Creative", });
     internal_static_bloombox_schema_marketing_CampaignTargeting_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_bloombox_schema_marketing_CampaignTargeting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_marketing_CampaignTargeting_descriptor,
         new java.lang.String[] { "Strict", "Block", });
     internal_static_bloombox_schema_marketing_CampaignKey_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_bloombox_schema_marketing_CampaignKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_marketing_CampaignKey_descriptor,
         new java.lang.String[] { "Id", "Partner", "Location", });
     internal_static_bloombox_schema_marketing_Campaign_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_bloombox_schema_marketing_Campaign_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_marketing_Campaign_descriptor,
@@ -14876,10 +10330,11 @@ public final class MarketingCampaign {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     core.Datamodel.getDescriptor();
-    io.opencannabis.schema.media.AttachedMedia.getDescriptor();
-    io.opencannabis.schema.content.GenericContent.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
-    io.bloombox.schema.marketing.Targeting.getDescriptor();
+    io.bloombox.schema.comms.SMSComms.getDescriptor();
+    io.bloombox.schema.comms.EmailComms.getDescriptor();
+    io.bloombox.schema.comms.GenericComms.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
+    io.bloombox.schema.marketing.CampaignTargeting.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

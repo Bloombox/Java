@@ -304,7 +304,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.opencannabis.schema.base.ProductKey getKey();
+    io.opencannabis.schema.base.BaseProductKey.ProductKey getKey();
     /**
      * <pre>
      * Key for the product that was viewed.
@@ -312,7 +312,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+    io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder();
 
     /**
      * <pre>
@@ -347,7 +347,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    io.opencannabis.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
     /**
      * <pre>
      * Timestamp for when this impression occurred.
@@ -355,7 +355,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -411,11 +411,11 @@ public final class ProductAnalytics {
               break;
             }
             case 10: {
-              io.opencannabis.schema.base.ProductKey.Builder subBuilder = null;
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
                 subBuilder = key_.toBuilder();
               }
-              key_ = input.readMessage(io.opencannabis.schema.base.ProductKey.parser(), extensionRegistry);
+              key_ = input.readMessage(io.opencannabis.schema.base.BaseProductKey.ProductKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(key_);
                 key_ = subBuilder.buildPartial();
@@ -434,11 +434,11 @@ public final class ProductAnalytics {
               break;
             }
             case 34: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -471,7 +471,7 @@ public final class ProductAnalytics {
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.base.ProductKey key_;
+    private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
     /**
      * <pre>
      * Key for the product that was viewed.
@@ -489,8 +489,8 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.opencannabis.schema.base.ProductKey getKey() {
-      return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
+      return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
@@ -499,7 +499,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+    public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
@@ -530,7 +530,7 @@ public final class ProductAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 4;
-    private io.opencannabis.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
     /**
      * <pre>
      * Timestamp for when this impression occurred.
@@ -548,8 +548,8 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
@@ -558,7 +558,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 4;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -929,9 +929,9 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.base.ProductKey key_ = null;
+      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> keyBuilder_;
+          io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
        * Key for the product that was viewed.
@@ -949,9 +949,9 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKey getKey() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
         if (keyBuilder_ == null) {
-          return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+          return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
         } else {
           return keyBuilder_.getMessage();
         }
@@ -963,7 +963,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder setKey(io.opencannabis.schema.base.ProductKey value) {
+      public Builder setKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -984,7 +984,7 @@ public final class ProductAnalytics {
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder setKey(
-          io.opencannabis.schema.base.ProductKey.Builder builderForValue) {
+          io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
           key_ = builderForValue.build();
           onChanged();
@@ -1001,11 +1001,11 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder mergeKey(io.opencannabis.schema.base.ProductKey value) {
+      public Builder mergeKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
           if (key_ != null) {
             key_ =
-              io.opencannabis.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
           } else {
             key_ = value;
           }
@@ -1041,7 +1041,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKey.Builder getKeyBuilder() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder getKeyBuilder() {
         
         onChanged();
         return getKeyFieldBuilder().getBuilder();
@@ -1053,12 +1053,12 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
           return keyBuilder_.getMessageOrBuilder();
         } else {
           return key_ == null ?
-              io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
         }
       }
       /**
@@ -1069,11 +1069,11 @@ public final class ProductAnalytics {
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> 
+          io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
           keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder>(
+              io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder>(
                   getKey(),
                   getParentForChildren(),
                   isClean());
@@ -1158,9 +1158,9 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Timestamp for when this impression occurred.
@@ -1178,9 +1178,9 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -1192,7 +1192,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1213,7 +1213,7 @@ public final class ProductAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       public Builder setOccurred(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -1230,11 +1230,11 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -1270,7 +1270,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -1282,12 +1282,12 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1298,11 +1298,11 @@ public final class ProductAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -1378,7 +1378,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.opencannabis.schema.base.ProductKey getKey();
+    io.opencannabis.schema.base.BaseProductKey.ProductKey getKey();
     /**
      * <pre>
      * Key for the product that was viewed.
@@ -1386,7 +1386,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+    io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder();
 
     /**
      * <pre>
@@ -1412,7 +1412,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.opencannabis.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
     /**
      * <pre>
      * Timestamp for when this view occurred.
@@ -1420,7 +1420,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -1474,11 +1474,11 @@ public final class ProductAnalytics {
               break;
             }
             case 10: {
-              io.opencannabis.schema.base.ProductKey.Builder subBuilder = null;
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
                 subBuilder = key_.toBuilder();
               }
-              key_ = input.readMessage(io.opencannabis.schema.base.ProductKey.parser(), extensionRegistry);
+              key_ = input.readMessage(io.opencannabis.schema.base.BaseProductKey.ProductKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(key_);
                 key_ = subBuilder.buildPartial();
@@ -1492,11 +1492,11 @@ public final class ProductAnalytics {
               break;
             }
             case 26: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -1529,7 +1529,7 @@ public final class ProductAnalytics {
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.base.ProductKey key_;
+    private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
     /**
      * <pre>
      * Key for the product that was viewed.
@@ -1547,8 +1547,8 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.opencannabis.schema.base.ProductKey getKey() {
-      return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
+      return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
@@ -1557,7 +1557,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+    public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
@@ -1575,7 +1575,7 @@ public final class ProductAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
     /**
      * <pre>
      * Timestamp for when this view occurred.
@@ -1593,8 +1593,8 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
@@ -1603,7 +1603,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -1955,9 +1955,9 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.base.ProductKey key_ = null;
+      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> keyBuilder_;
+          io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
        * Key for the product that was viewed.
@@ -1975,9 +1975,9 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKey getKey() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
         if (keyBuilder_ == null) {
-          return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+          return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
         } else {
           return keyBuilder_.getMessage();
         }
@@ -1989,7 +1989,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder setKey(io.opencannabis.schema.base.ProductKey value) {
+      public Builder setKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2010,7 +2010,7 @@ public final class ProductAnalytics {
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder setKey(
-          io.opencannabis.schema.base.ProductKey.Builder builderForValue) {
+          io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
           key_ = builderForValue.build();
           onChanged();
@@ -2027,11 +2027,11 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder mergeKey(io.opencannabis.schema.base.ProductKey value) {
+      public Builder mergeKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
           if (key_ != null) {
             key_ =
-              io.opencannabis.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
           } else {
             key_ = value;
           }
@@ -2067,7 +2067,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKey.Builder getKeyBuilder() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder getKeyBuilder() {
         
         onChanged();
         return getKeyFieldBuilder().getBuilder();
@@ -2079,12 +2079,12 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
           return keyBuilder_.getMessageOrBuilder();
         } else {
           return key_ == null ?
-              io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
         }
       }
       /**
@@ -2095,11 +2095,11 @@ public final class ProductAnalytics {
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> 
+          io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
           keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder>(
+              io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder>(
                   getKey(),
                   getParentForChildren(),
                   isClean());
@@ -2146,9 +2146,9 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Timestamp for when this view occurred.
@@ -2166,9 +2166,9 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -2180,7 +2180,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2201,7 +2201,7 @@ public final class ProductAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -2218,11 +2218,11 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -2258,7 +2258,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -2270,12 +2270,12 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -2286,11 +2286,11 @@ public final class ProductAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -2366,7 +2366,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.opencannabis.schema.base.ProductKey getKey();
+    io.opencannabis.schema.base.BaseProductKey.ProductKey getKey();
     /**
      * <pre>
      * Key for the product that action was taken on.
@@ -2374,7 +2374,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+    io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder();
 
     /**
      * <pre>
@@ -2408,7 +2408,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.opencannabis.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
     /**
      * <pre>
      * Timestamp for when this action occurred.
@@ -2416,7 +2416,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -2470,11 +2470,11 @@ public final class ProductAnalytics {
               break;
             }
             case 10: {
-              io.opencannabis.schema.base.ProductKey.Builder subBuilder = null;
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
                 subBuilder = key_.toBuilder();
               }
-              key_ = input.readMessage(io.opencannabis.schema.base.ProductKey.parser(), extensionRegistry);
+              key_ = input.readMessage(io.opencannabis.schema.base.BaseProductKey.ProductKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(key_);
                 key_ = subBuilder.buildPartial();
@@ -2489,11 +2489,11 @@ public final class ProductAnalytics {
               break;
             }
             case 26: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -2526,7 +2526,7 @@ public final class ProductAnalytics {
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.base.ProductKey key_;
+    private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
     /**
      * <pre>
      * Key for the product that action was taken on.
@@ -2544,8 +2544,8 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.opencannabis.schema.base.ProductKey getKey() {
-      return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
+      return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
@@ -2554,7 +2554,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+    public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
@@ -2583,7 +2583,7 @@ public final class ProductAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
     /**
      * <pre>
      * Timestamp for when this action occurred.
@@ -2601,8 +2601,8 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
@@ -2611,7 +2611,7 @@ public final class ProductAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -2961,9 +2961,9 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.base.ProductKey key_ = null;
+      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> keyBuilder_;
+          io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
        * Key for the product that action was taken on.
@@ -2981,9 +2981,9 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKey getKey() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
         if (keyBuilder_ == null) {
-          return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+          return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
         } else {
           return keyBuilder_.getMessage();
         }
@@ -2995,7 +2995,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder setKey(io.opencannabis.schema.base.ProductKey value) {
+      public Builder setKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3016,7 +3016,7 @@ public final class ProductAnalytics {
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder setKey(
-          io.opencannabis.schema.base.ProductKey.Builder builderForValue) {
+          io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
           key_ = builderForValue.build();
           onChanged();
@@ -3033,11 +3033,11 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder mergeKey(io.opencannabis.schema.base.ProductKey value) {
+      public Builder mergeKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
           if (key_ != null) {
             key_ =
-              io.opencannabis.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
           } else {
             key_ = value;
           }
@@ -3073,7 +3073,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKey.Builder getKeyBuilder() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder getKeyBuilder() {
         
         onChanged();
         return getKeyFieldBuilder().getBuilder();
@@ -3085,12 +3085,12 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
           return keyBuilder_.getMessageOrBuilder();
         } else {
           return key_ == null ?
-              io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
         }
       }
       /**
@@ -3101,11 +3101,11 @@ public final class ProductAnalytics {
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> 
+          io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
           keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder>(
+              io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder>(
                   getKey(),
                   getParentForChildren(),
                   isClean());
@@ -3178,9 +3178,9 @@ public final class ProductAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Timestamp for when this action occurred.
@@ -3198,9 +3198,9 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -3212,7 +3212,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3233,7 +3233,7 @@ public final class ProductAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -3250,11 +3250,11 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -3290,7 +3290,7 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -3302,12 +3302,12 @@ public final class ProductAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -3318,11 +3318,11 @@ public final class ProductAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -3436,7 +3436,7 @@ public final class ProductAnalytics {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.base.BaseProductKey.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_analytics_product_Impression_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3457,7 +3457,7 @@ public final class ProductAnalytics {
         internal_static_bloombox_schema_analytics_product_Action_descriptor,
         new java.lang.String[] { "Key", "Verb", "Occurred", });
     io.opencannabis.schema.base.BaseProductKey.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

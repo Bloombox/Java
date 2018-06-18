@@ -111,7 +111,7 @@ public enum SearchSortMode
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.search.SearchSpecOuterClass.getDescriptor().getEnumTypes().get(3);
+    return io.bloombox.schema.search.SearchMetadata.getDescriptor().getEnumTypes().get(3);
   }
 
   private static final SearchSortMode[] VALUES = values();

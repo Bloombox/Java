@@ -89,11 +89,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
             if (lastUpdated_ != null) {
               subBuilder = lastUpdated_.toBuilder();
             }
-            lastUpdated_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+            lastUpdated_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(lastUpdated_);
               lastUpdated_ = subBuilder.buildPartial();
@@ -102,11 +102,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
             if (sealed_ != null) {
               subBuilder = sealed_.toBuilder();
             }
-            sealed_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+            sealed_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(sealed_);
               sealed_ = subBuilder.buildPartial();
@@ -154,14 +154,14 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 258: {
-            io.opencannabis.schema.product.struct.testing.Pesticides.Builder subBuilder = null;
-            if (pesticides_ != null) {
-              subBuilder = pesticides_.toBuilder();
+            io.opencannabis.schema.product.struct.testing.Contaminants.Builder subBuilder = null;
+            if (contaminants_ != null) {
+              subBuilder = contaminants_.toBuilder();
             }
-            pesticides_ = input.readMessage(io.opencannabis.schema.product.struct.testing.Pesticides.parser(), extensionRegistry);
+            contaminants_ = input.readMessage(io.opencannabis.schema.product.struct.testing.Contaminants.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(pesticides_);
-              pesticides_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(contaminants_);
+              contaminants_ = subBuilder.buildPartial();
             }
 
             break;
@@ -332,7 +332,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LAST_UPDATED_FIELD_NUMBER = 3;
-  private io.opencannabis.schema.temporal.Instant lastUpdated_;
+  private io.opencannabis.schema.temporal.TemporalInstant.Instant lastUpdated_;
   /**
    * <pre>
    * Last-updated value for these lab test results. Updated each time the record is updated.
@@ -350,8 +350,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
    */
-  public io.opencannabis.schema.temporal.Instant getLastUpdated() {
-    return lastUpdated_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : lastUpdated_;
+  public io.opencannabis.schema.temporal.TemporalInstant.Instant getLastUpdated() {
+    return lastUpdated_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : lastUpdated_;
   }
   /**
    * <pre>
@@ -360,12 +360,12 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
    */
-  public io.opencannabis.schema.temporal.InstantOrBuilder getLastUpdatedOrBuilder() {
+  public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getLastUpdatedOrBuilder() {
     return getLastUpdated();
   }
 
   public static final int SEALED_FIELD_NUMBER = 4;
-  private io.opencannabis.schema.temporal.Instant sealed_;
+  private io.opencannabis.schema.temporal.TemporalInstant.Instant sealed_;
   /**
    * <pre>
    * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
@@ -385,8 +385,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.temporal.Instant sealed = 4;</code>
    */
-  public io.opencannabis.schema.temporal.Instant getSealed() {
-    return sealed_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : sealed_;
+  public io.opencannabis.schema.temporal.TemporalInstant.Instant getSealed() {
+    return sealed_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : sealed_;
   }
   /**
    * <pre>
@@ -396,7 +396,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.temporal.Instant sealed = 4;</code>
    */
-  public io.opencannabis.schema.temporal.InstantOrBuilder getSealedOrBuilder() {
+  public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSealedOrBuilder() {
     return getSealed();
   }
 
@@ -505,37 +505,37 @@ private static final long serialVersionUID = 0L;
     return getTerpenes();
   }
 
-  public static final int PESTICIDES_FIELD_NUMBER = 32;
-  private io.opencannabis.schema.product.struct.testing.Pesticides pesticides_;
+  public static final int CONTAMINANTS_FIELD_NUMBER = 32;
+  private io.opencannabis.schema.product.struct.testing.Contaminants contaminants_;
   /**
    * <pre>
-   * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+   * Contaminants that may be present within the sample.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+   * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
    */
-  public boolean hasPesticides() {
-    return pesticides_ != null;
+  public boolean hasContaminants() {
+    return contaminants_ != null;
   }
   /**
    * <pre>
-   * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+   * Contaminants that may be present within the sample.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+   * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.Pesticides getPesticides() {
-    return pesticides_ == null ? io.opencannabis.schema.product.struct.testing.Pesticides.getDefaultInstance() : pesticides_;
+  public io.opencannabis.schema.product.struct.testing.Contaminants getContaminants() {
+    return contaminants_ == null ? io.opencannabis.schema.product.struct.testing.Contaminants.getDefaultInstance() : contaminants_;
   }
   /**
    * <pre>
-   * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+   * Contaminants that may be present within the sample.
    * </pre>
    *
-   * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+   * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.PesticidesOrBuilder getPesticidesOrBuilder() {
-    return getPesticides();
+  public io.opencannabis.schema.product.struct.testing.ContaminantsOrBuilder getContaminantsOrBuilder() {
+    return getContaminants();
   }
 
   public static final int MOISTURE_FIELD_NUMBER = 33;
@@ -763,8 +763,8 @@ private static final long serialVersionUID = 0L;
     if (terpenes_ != null) {
       output.writeMessage(31, getTerpenes());
     }
-    if (pesticides_ != null) {
-      output.writeMessage(32, getPesticides());
+    if (contaminants_ != null) {
+      output.writeMessage(32, getContaminants());
     }
     if (moisture_ != null) {
       output.writeMessage(33, getMoisture());
@@ -818,9 +818,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(31, getTerpenes());
     }
-    if (pesticides_ != null) {
+    if (contaminants_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(32, getPesticides());
+        .computeMessageSize(32, getContaminants());
     }
     if (moisture_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -891,10 +891,10 @@ private static final long serialVersionUID = 0L;
       result = result && getTerpenes()
           .equals(other.getTerpenes());
     }
-    result = result && (hasPesticides() == other.hasPesticides());
-    if (hasPesticides()) {
-      result = result && getPesticides()
-          .equals(other.getPesticides());
+    result = result && (hasContaminants() == other.hasContaminants());
+    if (hasContaminants()) {
+      result = result && getContaminants()
+          .equals(other.getContaminants());
     }
     result = result && (hasMoisture() == other.hasMoisture());
     if (hasMoisture()) {
@@ -947,9 +947,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TERPENES_FIELD_NUMBER;
       hash = (53 * hash) + getTerpenes().hashCode();
     }
-    if (hasPesticides()) {
-      hash = (37 * hash) + PESTICIDES_FIELD_NUMBER;
-      hash = (53 * hash) + getPesticides().hashCode();
+    if (hasContaminants()) {
+      hash = (37 * hash) + CONTAMINANTS_FIELD_NUMBER;
+      hash = (53 * hash) + getContaminants().hashCode();
     }
     if (hasMoisture()) {
       hash = (37 * hash) + MOISTURE_FIELD_NUMBER;
@@ -1141,11 +1141,11 @@ private static final long serialVersionUID = 0L;
         terpenes_ = null;
         terpenesBuilder_ = null;
       }
-      if (pesticidesBuilder_ == null) {
-        pesticides_ = null;
+      if (contaminantsBuilder_ == null) {
+        contaminants_ = null;
       } else {
-        pesticides_ = null;
-        pesticidesBuilder_ = null;
+        contaminants_ = null;
+        contaminantsBuilder_ = null;
       }
       if (moistureBuilder_ == null) {
         moisture_ = null;
@@ -1226,10 +1226,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.terpenes_ = terpenesBuilder_.build();
       }
-      if (pesticidesBuilder_ == null) {
-        result.pesticides_ = pesticides_;
+      if (contaminantsBuilder_ == null) {
+        result.contaminants_ = contaminants_;
       } else {
-        result.pesticides_ = pesticidesBuilder_.build();
+        result.contaminants_ = contaminantsBuilder_.build();
       }
       if (moistureBuilder_ == null) {
         result.moisture_ = moisture_;
@@ -1341,8 +1341,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasTerpenes()) {
         mergeTerpenes(other.getTerpenes());
       }
-      if (other.hasPesticides()) {
-        mergePesticides(other.getPesticides());
+      if (other.hasContaminants()) {
+        mergeContaminants(other.getContaminants());
       }
       if (other.hasMoisture()) {
         mergeMoisture(other.getMoisture());
@@ -1782,9 +1782,9 @@ private static final long serialVersionUID = 0L;
       return mediaBuilder_;
     }
 
-    private io.opencannabis.schema.temporal.Instant lastUpdated_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant lastUpdated_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> lastUpdatedBuilder_;
+        io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> lastUpdatedBuilder_;
     /**
      * <pre>
      * Last-updated value for these lab test results. Updated each time the record is updated.
@@ -1802,9 +1802,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getLastUpdated() {
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getLastUpdated() {
       if (lastUpdatedBuilder_ == null) {
-        return lastUpdated_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : lastUpdated_;
+        return lastUpdated_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : lastUpdated_;
       } else {
         return lastUpdatedBuilder_.getMessage();
       }
@@ -1816,7 +1816,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
-    public Builder setLastUpdated(io.opencannabis.schema.temporal.Instant value) {
+    public Builder setLastUpdated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
       if (lastUpdatedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1837,7 +1837,7 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     public Builder setLastUpdated(
-        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
       if (lastUpdatedBuilder_ == null) {
         lastUpdated_ = builderForValue.build();
         onChanged();
@@ -1854,11 +1854,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
-    public Builder mergeLastUpdated(io.opencannabis.schema.temporal.Instant value) {
+    public Builder mergeLastUpdated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
       if (lastUpdatedBuilder_ == null) {
         if (lastUpdated_ != null) {
           lastUpdated_ =
-            io.opencannabis.schema.temporal.Instant.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
         } else {
           lastUpdated_ = value;
         }
@@ -1894,7 +1894,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Instant.Builder getLastUpdatedBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getLastUpdatedBuilder() {
       
       onChanged();
       return getLastUpdatedFieldBuilder().getBuilder();
@@ -1906,12 +1906,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getLastUpdatedOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getLastUpdatedOrBuilder() {
       if (lastUpdatedBuilder_ != null) {
         return lastUpdatedBuilder_.getMessageOrBuilder();
       } else {
         return lastUpdated_ == null ?
-            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : lastUpdated_;
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : lastUpdated_;
       }
     }
     /**
@@ -1922,11 +1922,11 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.temporal.Instant last_updated = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
         getLastUpdatedFieldBuilder() {
       if (lastUpdatedBuilder_ == null) {
         lastUpdatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                 getLastUpdated(),
                 getParentForChildren(),
                 isClean());
@@ -1935,9 +1935,9 @@ private static final long serialVersionUID = 0L;
       return lastUpdatedBuilder_;
     }
 
-    private io.opencannabis.schema.temporal.Instant sealed_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant sealed_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> sealedBuilder_;
+        io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> sealedBuilder_;
     /**
      * <pre>
      * Precise moment that these results were considered 'sealed' and returned. Once this timestamp is set, a given set of
@@ -1957,9 +1957,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant sealed = 4;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getSealed() {
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getSealed() {
       if (sealedBuilder_ == null) {
-        return sealed_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : sealed_;
+        return sealed_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : sealed_;
       } else {
         return sealedBuilder_.getMessage();
       }
@@ -1972,7 +1972,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant sealed = 4;</code>
      */
-    public Builder setSealed(io.opencannabis.schema.temporal.Instant value) {
+    public Builder setSealed(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
       if (sealedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1994,7 +1994,7 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.temporal.Instant sealed = 4;</code>
      */
     public Builder setSealed(
-        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
       if (sealedBuilder_ == null) {
         sealed_ = builderForValue.build();
         onChanged();
@@ -2012,11 +2012,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant sealed = 4;</code>
      */
-    public Builder mergeSealed(io.opencannabis.schema.temporal.Instant value) {
+    public Builder mergeSealed(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
       if (sealedBuilder_ == null) {
         if (sealed_ != null) {
           sealed_ =
-            io.opencannabis.schema.temporal.Instant.newBuilder(sealed_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(sealed_).mergeFrom(value).buildPartial();
         } else {
           sealed_ = value;
         }
@@ -2054,7 +2054,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant sealed = 4;</code>
      */
-    public io.opencannabis.schema.temporal.Instant.Builder getSealedBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getSealedBuilder() {
       
       onChanged();
       return getSealedFieldBuilder().getBuilder();
@@ -2067,12 +2067,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant sealed = 4;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getSealedOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSealedOrBuilder() {
       if (sealedBuilder_ != null) {
         return sealedBuilder_.getMessageOrBuilder();
       } else {
         return sealed_ == null ?
-            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : sealed_;
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : sealed_;
       }
     }
     /**
@@ -2084,11 +2084,11 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.temporal.Instant sealed = 4;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
         getSealedFieldBuilder() {
       if (sealedBuilder_ == null) {
         sealedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                 getSealed(),
                 getParentForChildren(),
                 isClean());
@@ -2574,157 +2574,157 @@ private static final long serialVersionUID = 0L;
       return terpenesBuilder_;
     }
 
-    private io.opencannabis.schema.product.struct.testing.Pesticides pesticides_ = null;
+    private io.opencannabis.schema.product.struct.testing.Contaminants contaminants_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.product.struct.testing.Pesticides, io.opencannabis.schema.product.struct.testing.Pesticides.Builder, io.opencannabis.schema.product.struct.testing.PesticidesOrBuilder> pesticidesBuilder_;
+        io.opencannabis.schema.product.struct.testing.Contaminants, io.opencannabis.schema.product.struct.testing.Contaminants.Builder, io.opencannabis.schema.product.struct.testing.ContaminantsOrBuilder> contaminantsBuilder_;
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
-    public boolean hasPesticides() {
-      return pesticidesBuilder_ != null || pesticides_ != null;
+    public boolean hasContaminants() {
+      return contaminantsBuilder_ != null || contaminants_ != null;
     }
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.Pesticides getPesticides() {
-      if (pesticidesBuilder_ == null) {
-        return pesticides_ == null ? io.opencannabis.schema.product.struct.testing.Pesticides.getDefaultInstance() : pesticides_;
+    public io.opencannabis.schema.product.struct.testing.Contaminants getContaminants() {
+      if (contaminantsBuilder_ == null) {
+        return contaminants_ == null ? io.opencannabis.schema.product.struct.testing.Contaminants.getDefaultInstance() : contaminants_;
       } else {
-        return pesticidesBuilder_.getMessage();
+        return contaminantsBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
-    public Builder setPesticides(io.opencannabis.schema.product.struct.testing.Pesticides value) {
-      if (pesticidesBuilder_ == null) {
+    public Builder setContaminants(io.opencannabis.schema.product.struct.testing.Contaminants value) {
+      if (contaminantsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        pesticides_ = value;
+        contaminants_ = value;
         onChanged();
       } else {
-        pesticidesBuilder_.setMessage(value);
+        contaminantsBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
-    public Builder setPesticides(
-        io.opencannabis.schema.product.struct.testing.Pesticides.Builder builderForValue) {
-      if (pesticidesBuilder_ == null) {
-        pesticides_ = builderForValue.build();
+    public Builder setContaminants(
+        io.opencannabis.schema.product.struct.testing.Contaminants.Builder builderForValue) {
+      if (contaminantsBuilder_ == null) {
+        contaminants_ = builderForValue.build();
         onChanged();
       } else {
-        pesticidesBuilder_.setMessage(builderForValue.build());
+        contaminantsBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
-    public Builder mergePesticides(io.opencannabis.schema.product.struct.testing.Pesticides value) {
-      if (pesticidesBuilder_ == null) {
-        if (pesticides_ != null) {
-          pesticides_ =
-            io.opencannabis.schema.product.struct.testing.Pesticides.newBuilder(pesticides_).mergeFrom(value).buildPartial();
+    public Builder mergeContaminants(io.opencannabis.schema.product.struct.testing.Contaminants value) {
+      if (contaminantsBuilder_ == null) {
+        if (contaminants_ != null) {
+          contaminants_ =
+            io.opencannabis.schema.product.struct.testing.Contaminants.newBuilder(contaminants_).mergeFrom(value).buildPartial();
         } else {
-          pesticides_ = value;
+          contaminants_ = value;
         }
         onChanged();
       } else {
-        pesticidesBuilder_.mergeFrom(value);
+        contaminantsBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
-    public Builder clearPesticides() {
-      if (pesticidesBuilder_ == null) {
-        pesticides_ = null;
+    public Builder clearContaminants() {
+      if (contaminantsBuilder_ == null) {
+        contaminants_ = null;
         onChanged();
       } else {
-        pesticides_ = null;
-        pesticidesBuilder_ = null;
+        contaminants_ = null;
+        contaminantsBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.Pesticides.Builder getPesticidesBuilder() {
+    public io.opencannabis.schema.product.struct.testing.Contaminants.Builder getContaminantsBuilder() {
       
       onChanged();
-      return getPesticidesFieldBuilder().getBuilder();
+      return getContaminantsFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.PesticidesOrBuilder getPesticidesOrBuilder() {
-      if (pesticidesBuilder_ != null) {
-        return pesticidesBuilder_.getMessageOrBuilder();
+    public io.opencannabis.schema.product.struct.testing.ContaminantsOrBuilder getContaminantsOrBuilder() {
+      if (contaminantsBuilder_ != null) {
+        return contaminantsBuilder_.getMessageOrBuilder();
       } else {
-        return pesticides_ == null ?
-            io.opencannabis.schema.product.struct.testing.Pesticides.getDefaultInstance() : pesticides_;
+        return contaminants_ == null ?
+            io.opencannabis.schema.product.struct.testing.Contaminants.getDefaultInstance() : contaminants_;
       }
     }
     /**
      * <pre>
-     * Pesticide-specific test results. Indicates a pesticide reading, by chemical compound name, and a reading value.
+     * Contaminants that may be present within the sample.
      * </pre>
      *
-     * <code>.opencannabis.structs.labtesting.Pesticides pesticides = 32;</code>
+     * <code>.opencannabis.structs.labtesting.Contaminants contaminants = 32;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.product.struct.testing.Pesticides, io.opencannabis.schema.product.struct.testing.Pesticides.Builder, io.opencannabis.schema.product.struct.testing.PesticidesOrBuilder> 
-        getPesticidesFieldBuilder() {
-      if (pesticidesBuilder_ == null) {
-        pesticidesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.product.struct.testing.Pesticides, io.opencannabis.schema.product.struct.testing.Pesticides.Builder, io.opencannabis.schema.product.struct.testing.PesticidesOrBuilder>(
-                getPesticides(),
+        io.opencannabis.schema.product.struct.testing.Contaminants, io.opencannabis.schema.product.struct.testing.Contaminants.Builder, io.opencannabis.schema.product.struct.testing.ContaminantsOrBuilder> 
+        getContaminantsFieldBuilder() {
+      if (contaminantsBuilder_ == null) {
+        contaminantsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.product.struct.testing.Contaminants, io.opencannabis.schema.product.struct.testing.Contaminants.Builder, io.opencannabis.schema.product.struct.testing.ContaminantsOrBuilder>(
+                getContaminants(),
                 getParentForChildren(),
                 isClean());
-        pesticides_ = null;
+        contaminants_ = null;
       }
-      return pesticidesBuilder_;
+      return contaminantsBuilder_;
     }
 
     private io.opencannabis.schema.product.struct.testing.Moisture moisture_ = null;

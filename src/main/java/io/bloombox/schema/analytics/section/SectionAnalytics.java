@@ -210,7 +210,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
-    io.opencannabis.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
     /**
      * <pre>
      * Specifies when this impression event occurred.
@@ -218,7 +218,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -284,11 +284,11 @@ public final class SectionAnalytics {
               break;
             }
             case 18: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -354,7 +354,7 @@ public final class SectionAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 2;
-    private io.opencannabis.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
     /**
      * <pre>
      * Specifies when this impression event occurred.
@@ -372,8 +372,8 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
@@ -382,7 +382,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 2;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -869,9 +869,9 @@ public final class SectionAnalytics {
         return specBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Specifies when this impression event occurred.
@@ -889,9 +889,9 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -903,7 +903,7 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -924,7 +924,7 @@ public final class SectionAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
       public Builder setOccurred(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -941,11 +941,11 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -981,7 +981,7 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -993,12 +993,12 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1009,11 +1009,11 @@ public final class SectionAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -1123,7 +1123,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.opencannabis.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
     /**
      * <pre>
      * Specifies when this view event occurred.
@@ -1131,7 +1131,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -1203,11 +1203,11 @@ public final class SectionAnalytics {
               break;
             }
             case 26: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -1286,7 +1286,7 @@ public final class SectionAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
     /**
      * <pre>
      * Specifies when this view event occurred.
@@ -1304,8 +1304,8 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
@@ -1314,7 +1314,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -1857,9 +1857,9 @@ public final class SectionAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Specifies when this view event occurred.
@@ -1877,9 +1877,9 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -1891,7 +1891,7 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1912,7 +1912,7 @@ public final class SectionAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -1929,11 +1929,11 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -1969,7 +1969,7 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -1981,12 +1981,12 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1997,11 +1997,11 @@ public final class SectionAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -2119,7 +2119,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.opencannabis.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
     /**
      * <pre>
      * Specifies when this action event occurred.
@@ -2127,7 +2127,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
   }
   /**
    * <pre>
@@ -2201,11 +2201,11 @@ public final class SectionAnalytics {
               break;
             }
             case 26: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -2295,7 +2295,7 @@ public final class SectionAnalytics {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
     /**
      * <pre>
      * Specifies when this action event occurred.
@@ -2313,8 +2313,8 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
@@ -2323,7 +2323,7 @@ public final class SectionAnalytics {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -2891,9 +2891,9 @@ public final class SectionAnalytics {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Specifies when this action event occurred.
@@ -2911,9 +2911,9 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -2925,7 +2925,7 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2946,7 +2946,7 @@ public final class SectionAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       public Builder setOccurred(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -2963,11 +2963,11 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -3003,7 +3003,7 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -3015,12 +3015,12 @@ public final class SectionAnalytics {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -3031,11 +3031,11 @@ public final class SectionAnalytics {
        * <code>.opencannabis.temporal.Instant occurred = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -3146,7 +3146,7 @@ public final class SectionAnalytics {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_analytics_section_Impression_descriptor =
@@ -3167,7 +3167,7 @@ public final class SectionAnalytics {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_analytics_section_Action_descriptor,
         new java.lang.String[] { "Spec", "Verb", "Occurred", });
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();
   }
 

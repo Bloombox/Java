@@ -68,7 +68,7 @@ public final class DeviceTokenOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
           io.bloombox.schema.security.Token.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_security_DeviceToken_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -78,7 +78,7 @@ public final class DeviceTokenOuterClass {
         new java.lang.String[] { "Token", "Device", "Issued", "Expires", });
     io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
     io.bloombox.schema.security.Token.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -24,81 +24,153 @@ public interface SubjectiveOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Subjective description of using this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content description = 1;</code>
    */
   boolean hasDescription();
   /**
+   * <pre>
+   * Subjective description of using this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content description = 1;</code>
    */
-  io.opencannabis.schema.content.Content getDescription();
+  io.opencannabis.schema.content.GenericContent.Content getDescription();
   /**
+   * <pre>
+   * Subjective description of using this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content description = 1;</code>
    */
-  io.opencannabis.schema.content.ContentOrBuilder getDescriptionOrBuilder();
+  io.opencannabis.schema.content.GenericContent.ContentOrBuilder getDescriptionOrBuilder();
 
   /**
+   * <pre>
+   * Subjective description of the taste of this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content taste = 2;</code>
    */
   boolean hasTaste();
   /**
+   * <pre>
+   * Subjective description of the taste of this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content taste = 2;</code>
    */
-  io.opencannabis.schema.content.Content getTaste();
+  io.opencannabis.schema.content.GenericContent.Content getTaste();
   /**
+   * <pre>
+   * Subjective description of the taste of this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content taste = 2;</code>
    */
-  io.opencannabis.schema.content.ContentOrBuilder getTasteOrBuilder();
+  io.opencannabis.schema.content.GenericContent.ContentOrBuilder getTasteOrBuilder();
 
   /**
+   * <pre>
+   * Subjective potency estimate for this product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
    */
   int getPotencyValue();
   /**
+   * <pre>
+   * Subjective potency estimate for this product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
    */
   io.opencannabis.schema.product.struct.testing.PotencyEstimate getPotency();
 
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
-  java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingTagsList();
+  java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingList();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
-  int getFeelingTagsCount();
+  int getFeelingCount();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
-  io.opencannabis.schema.product.struct.testing.Feeling getFeelingTags(int index);
+  io.opencannabis.schema.product.struct.testing.Feeling getFeeling(int index);
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
   java.util.List<java.lang.Integer>
-  getFeelingTagsValueList();
+  getFeelingValueList();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
-  int getFeelingTagsValue(int index);
+  int getFeelingValue(int index);
 
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
-  java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getTastingNotesList();
+  java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getAromaList();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
-  int getTastingNotesCount();
+  int getAromaCount();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
-  io.opencannabis.schema.product.struct.testing.TasteNote getTastingNotes(int index);
+  io.opencannabis.schema.product.struct.testing.TasteNote getAroma(int index);
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
   java.util.List<java.lang.Integer>
-  getTastingNotesValueList();
+  getAromaValueList();
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
-  int getTastingNotesValue(int index);
+  int getAromaValue(int index);
 }

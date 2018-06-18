@@ -95,7 +95,7 @@ public final class SessionTelemetry {
      *
      * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
      */
-    io.opencannabis.schema.temporal.Instant getBegin();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getBegin();
     /**
      * <pre>
      * Timestamp representing the first event seen in this session.
@@ -103,7 +103,7 @@ public final class SessionTelemetry {
      *
      * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getBeginOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getBeginOrBuilder();
 
     /**
      * <pre>
@@ -120,7 +120,7 @@ public final class SessionTelemetry {
      *
      * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
      */
-    io.opencannabis.schema.temporal.Instant getEnd();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getEnd();
     /**
      * <pre>
      * Timestamp representing the last event seen in this session.
@@ -128,7 +128,7 @@ public final class SessionTelemetry {
      *
      * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getEndOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEndOrBuilder();
 
     /**
      * <pre>
@@ -239,11 +239,11 @@ public final class SessionTelemetry {
               break;
             }
             case 34: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (begin_ != null) {
                 subBuilder = begin_.toBuilder();
               }
-              begin_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              begin_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(begin_);
                 begin_ = subBuilder.buildPartial();
@@ -252,11 +252,11 @@ public final class SessionTelemetry {
               break;
             }
             case 42: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (end_ != null) {
                 subBuilder = end_.toBuilder();
               }
-              end_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              end_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(end_);
                 end_ = subBuilder.buildPartial();
@@ -398,7 +398,7 @@ public final class SessionTelemetry {
     }
 
     public static final int BEGIN_FIELD_NUMBER = 4;
-    private io.opencannabis.schema.temporal.Instant begin_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant begin_;
     /**
      * <pre>
      * Timestamp representing the first event seen in this session.
@@ -416,8 +416,8 @@ public final class SessionTelemetry {
      *
      * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
      */
-    public io.opencannabis.schema.temporal.Instant getBegin() {
-      return begin_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : begin_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getBegin() {
+      return begin_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : begin_;
     }
     /**
      * <pre>
@@ -426,12 +426,12 @@ public final class SessionTelemetry {
      *
      * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getBeginOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getBeginOrBuilder() {
       return getBegin();
     }
 
     public static final int END_FIELD_NUMBER = 5;
-    private io.opencannabis.schema.temporal.Instant end_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant end_;
     /**
      * <pre>
      * Timestamp representing the last event seen in this session.
@@ -449,8 +449,8 @@ public final class SessionTelemetry {
      *
      * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
      */
-    public io.opencannabis.schema.temporal.Instant getEnd() {
-      return end_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : end_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getEnd() {
+      return end_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : end_;
     }
     /**
      * <pre>
@@ -459,7 +459,7 @@ public final class SessionTelemetry {
      *
      * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getEndOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEndOrBuilder() {
       return getEnd();
     }
 
@@ -1178,9 +1178,9 @@ public final class SessionTelemetry {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant begin_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant begin_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> beginBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> beginBuilder_;
       /**
        * <pre>
        * Timestamp representing the first event seen in this session.
@@ -1198,9 +1198,9 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant getBegin() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getBegin() {
         if (beginBuilder_ == null) {
-          return begin_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : begin_;
+          return begin_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : begin_;
         } else {
           return beginBuilder_.getMessage();
         }
@@ -1212,7 +1212,7 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public Builder setBegin(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setBegin(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (beginBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1233,7 +1233,7 @@ public final class SessionTelemetry {
        * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
       public Builder setBegin(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (beginBuilder_ == null) {
           begin_ = builderForValue.build();
           onChanged();
@@ -1250,11 +1250,11 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public Builder mergeBegin(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeBegin(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (beginBuilder_ == null) {
           if (begin_ != null) {
             begin_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(begin_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(begin_).mergeFrom(value).buildPartial();
           } else {
             begin_ = value;
           }
@@ -1290,7 +1290,7 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getBeginBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getBeginBuilder() {
         
         onChanged();
         return getBeginFieldBuilder().getBuilder();
@@ -1302,12 +1302,12 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getBeginOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getBeginOrBuilder() {
         if (beginBuilder_ != null) {
           return beginBuilder_.getMessageOrBuilder();
         } else {
           return begin_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : begin_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : begin_;
         }
       }
       /**
@@ -1318,11 +1318,11 @@ public final class SessionTelemetry {
        * <code>.opencannabis.temporal.Instant begin = 4 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getBeginFieldBuilder() {
         if (beginBuilder_ == null) {
           beginBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getBegin(),
                   getParentForChildren(),
                   isClean());
@@ -1331,9 +1331,9 @@ public final class SessionTelemetry {
         return beginBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.Instant end_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant end_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> endBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> endBuilder_;
       /**
        * <pre>
        * Timestamp representing the last event seen in this session.
@@ -1351,9 +1351,9 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant getEnd() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getEnd() {
         if (endBuilder_ == null) {
-          return end_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : end_;
+          return end_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : end_;
         } else {
           return endBuilder_.getMessage();
         }
@@ -1365,7 +1365,7 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
        */
-      public Builder setEnd(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setEnd(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (endBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1386,7 +1386,7 @@ public final class SessionTelemetry {
        * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
        */
       public Builder setEnd(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (endBuilder_ == null) {
           end_ = builderForValue.build();
           onChanged();
@@ -1403,11 +1403,11 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
        */
-      public Builder mergeEnd(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeEnd(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (endBuilder_ == null) {
           if (end_ != null) {
             end_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(end_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(end_).mergeFrom(value).buildPartial();
           } else {
             end_ = value;
           }
@@ -1443,7 +1443,7 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getEndBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getEndBuilder() {
         
         onChanged();
         return getEndFieldBuilder().getBuilder();
@@ -1455,12 +1455,12 @@ public final class SessionTelemetry {
        *
        * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getEndOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEndOrBuilder() {
         if (endBuilder_ != null) {
           return endBuilder_.getMessageOrBuilder();
         } else {
           return end_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : end_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : end_;
         }
       }
       /**
@@ -1471,11 +1471,11 @@ public final class SessionTelemetry {
        * <code>.opencannabis.temporal.Instant end = 5 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the last event seen in this session."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getEndFieldBuilder() {
         if (endBuilder_ == null) {
           endBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getEnd(),
                   getParentForChildren(),
                   isClean());
@@ -1757,7 +1757,7 @@ public final class SessionTelemetry {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_analytics_stats_SessionStats_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1772,7 +1772,7 @@ public final class SessionTelemetry {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

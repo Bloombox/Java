@@ -24,15 +24,27 @@ public interface PesticidesOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Flag indicating the product is pesticide free.
+   * </pre>
+   *
    * <code>bool pesticide_free = 1;</code>
    */
   boolean getPesticideFree();
 
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
   int getMeasurementsCount();
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
   boolean containsMeasurements(
@@ -44,11 +56,19 @@ public interface PesticidesOrBuilder extends
   java.util.Map<java.lang.String, io.opencannabis.schema.product.struct.testing.TestValue>
   getMeasurements();
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
   java.util.Map<java.lang.String, io.opencannabis.schema.product.struct.testing.TestValue>
   getMeasurementsMap();
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
 
@@ -56,6 +76,10 @@ public interface PesticidesOrBuilder extends
       java.lang.String key,
       io.opencannabis.schema.product.struct.testing.TestValue defaultValue);
   /**
+   * <pre>
+   * Measurements for specific, named, pesticides.
+   * </pre>
+   *
    * <code>map&lt;string, .opencannabis.structs.labtesting.TestValue&gt; measurements = 2;</code>
    */
 

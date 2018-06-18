@@ -36,6 +36,11 @@ public final class BaseTestingSpec {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_opencannabis_structs_labtesting_TestValue_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_opencannabis_structs_labtesting_TestValue_TestError_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_opencannabis_structs_labtesting_TestValue_TestError_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_opencannabis_structs_labtesting_TestMedia_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -51,18 +56,24 @@ public final class BaseTestingSpec {
     java.lang.String[] descriptorData = {
       "\n\"structs/labtesting/TestValue.proto\022\037op" +
       "encannabis.structs.labtesting\032\025media/Med" +
-      "iaItem.proto\"|\n\tTestValue\022<\n\004type\030\001 \001(\0162" +
-      "..opencannabis.structs.labtesting.TestVa" +
-      "lueType\022\025\n\013measurement\030\n \001(\001H\000\022\021\n\007presen" +
-      "t\030\024 \001(\010H\000B\007\n\005value\"|\n\tTestMedia\022<\n\004type\030" +
+      "iaItem.proto\"\233\002\n\tTestValue\022<\n\004type\030\001 \001(\016" +
+      "2..opencannabis.structs.labtesting.TestV" +
+      "alueType\022C\n\005error\030\002 \001(\01324.opencannabis.s" +
+      "tructs.labtesting.TestValue.TestError\022\025\n" +
+      "\013measurement\030\n \001(\001H\000\022\021\n\007present\030\024 \001(\010H\000\032" +
+      "X\n\tTestError\022<\n\004type\030\001 \001(\0162..opencannabi" +
+      "s.structs.labtesting.TestErrorType\022\r\n\005va" +
+      "lue\030\002 \001(\001B\007\n\005value\"|\n\tTestMedia\022<\n\004type\030" +
       "\001 \001(\0162..opencannabis.structs.labtesting." +
       "TestMediaType\0221\n\nmedia_item\030\002 \001(\0132\035.open" +
       "cannabis.media.MediaItem*=\n\rTestValueTyp" +
       "e\022\016\n\nMILLIGRAMS\020\000\022\016\n\nPERCENTAGE\020\001\022\014\n\010PRE" +
-      "SENCE\020\003*@\n\rTestMediaType\022\017\n\013CERTIFICATE\020" +
-      "\000\022\013\n\007RESULTS\020\001\022\021\n\rPRODUCT_IMAGE\020\002BJ\n-io." +
-      "opencannabis.schema.product.struct.testi" +
-      "ngB\017BaseTestingSpecH\001P\001\242\002\003OCSb\006proto3"
+      "SENCE\020\002*8\n\rTestErrorType\022\013\n\007PERCENT\020\000\022\014\n" +
+      "\010ABSOLUTE\020\001\022\014\n\010RELATIVE\020\002*@\n\rTestMediaTy" +
+      "pe\022\017\n\013CERTIFICATE\020\000\022\013\n\007RESULTS\020\001\022\021\n\rPROD" +
+      "UCT_IMAGE\020\002BJ\n-io.opencannabis.schema.pr" +
+      "oduct.struct.testingB\017BaseTestingSpecH\001P" +
+      "\001\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -82,7 +93,13 @@ public final class BaseTestingSpec {
     internal_static_opencannabis_structs_labtesting_TestValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_structs_labtesting_TestValue_descriptor,
-        new java.lang.String[] { "Type", "Measurement", "Present", "Value", });
+        new java.lang.String[] { "Type", "Error", "Measurement", "Present", "Value", });
+    internal_static_opencannabis_structs_labtesting_TestValue_TestError_descriptor =
+      internal_static_opencannabis_structs_labtesting_TestValue_descriptor.getNestedTypes().get(0);
+    internal_static_opencannabis_structs_labtesting_TestValue_TestError_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_opencannabis_structs_labtesting_TestValue_TestError_descriptor,
+        new java.lang.String[] { "Type", "Value", });
     internal_static_opencannabis_structs_labtesting_TestMedia_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_opencannabis_structs_labtesting_TestMedia_fieldAccessorTable = new

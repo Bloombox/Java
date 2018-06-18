@@ -24,14 +24,26 @@ public interface MoistureOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * Measurement for the moisture level of the subject product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
    */
   boolean hasMeasurement();
   /**
+   * <pre>
+   * Measurement for the moisture level of the subject product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
    */
   io.opencannabis.schema.product.struct.testing.TestValue getMeasurement();
   /**
+   * <pre>
+   * Measurement for the moisture level of the subject product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
    */
   io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder();

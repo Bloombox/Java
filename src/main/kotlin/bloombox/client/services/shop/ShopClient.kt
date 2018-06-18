@@ -22,8 +22,8 @@ import bloombox.client.internals.mtls.ClientCredentials
 import bloombox.client.internals.rpc.RPCClient
 import com.google.common.util.concurrent.ListenableFuture
 import io.opencannabis.schema.commerce.CommercialOrder
-import io.bloombox.schema.partner.PartnerKeyOuterClass.PartnerKey
-import io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationKey
+import io.bloombox.schema.partner.PartnerMeta.PartnerKey
+import io.bloombox.schema.partner.LocationAccountKey.LocationKey
 import io.bloombox.schema.services.shop.v1.*
 import io.grpc.*
 import io.netty.handler.ssl.ClientAuth
@@ -116,7 +116,7 @@ class ShopClient(override val host: String,
     val (partnerKey, locationKey) = validateShopContext(context, defaultPartner, defaultLocation)
 
     val request = ShopInfo.Request.newBuilder()
-          .setLocation(PartnerLocationKey.newBuilder()
+          .setLocation(LocationKey.newBuilder()
                 .setCode(locationKey)
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()
@@ -150,7 +150,7 @@ class ShopClient(override val host: String,
 
     val request = CheckZipcode.Request.newBuilder()
           .setZipcode(zipcode)
-          .setLocation(PartnerLocationKey.newBuilder()
+          .setLocation(LocationKey.newBuilder()
                 .setCode(locationKey)
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()
@@ -186,7 +186,7 @@ class ShopClient(override val host: String,
 
     val request = VerifyMember.Request.newBuilder()
           .setEmailAddress(email)
-          .setLocation(PartnerLocationKey.newBuilder()
+          .setLocation(LocationKey.newBuilder()
                 .setCode(locationKey)
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey)))
@@ -225,7 +225,7 @@ class ShopClient(override val host: String,
 
     val request = SubmitOrder.Request.newBuilder()
           .setOrder(order)
-          .setLocation(PartnerLocationKey.newBuilder()
+          .setLocation(LocationKey.newBuilder()
                 .setCode(locationKey)
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey)))
@@ -263,7 +263,7 @@ class ShopClient(override val host: String,
 
     val request = GetOrder.Request.newBuilder()
           .setOrderId(id)
-          .setLocation(PartnerLocationKey.newBuilder()
+          .setLocation(LocationKey.newBuilder()
                 .setCode(locationKey)
                 .setPartner(PartnerKey.newBuilder()
                       .setCode(partnerKey))).build()

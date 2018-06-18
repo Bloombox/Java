@@ -38,7 +38,7 @@ public interface SectionSettingsOrBuilder extends
    *
    * <code>.opencannabis.content.Name name = 1;</code>
    */
-  io.opencannabis.schema.content.Name getName();
+  io.opencannabis.schema.content.NameContent.Name getName();
   /**
    * <pre>
    * Presentable name for this section.
@@ -46,7 +46,7 @@ public interface SectionSettingsOrBuilder extends
    *
    * <code>.opencannabis.content.Name name = 1;</code>
    */
-  io.opencannabis.schema.content.NameOrBuilder getNameOrBuilder();
+  io.opencannabis.schema.content.NameContent.NameOrBuilder getNameOrBuilder();
 
   /**
    * <pre>

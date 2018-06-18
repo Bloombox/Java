@@ -39,7 +39,7 @@ public interface OperationResultOrBuilder extends
    *
    * <code>.opencannabis.media.MediaKey key = 1;</code>
    */
-  io.opencannabis.schema.media.MediaKey getKey();
+  io.opencannabis.schema.media.MediaItemKey.MediaKey getKey();
   /**
    * <pre>
    * Resulting key, provisioned fresh for this media item.
@@ -47,5 +47,5 @@ public interface OperationResultOrBuilder extends
    *
    * <code>.opencannabis.media.MediaKey key = 1;</code>
    */
-  io.opencannabis.schema.media.MediaKeyOrBuilder getKeyOrBuilder();
+  io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getKeyOrBuilder();
 }

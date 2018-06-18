@@ -70,11 +70,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.opencannabis.schema.media.MediaItem.Builder subBuilder = null;
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder subBuilder = null;
             if (tabletHomescreenMedia_ != null) {
               subBuilder = tabletHomescreenMedia_.toBuilder();
             }
-            tabletHomescreenMedia_ = input.readMessage(io.opencannabis.schema.media.MediaItem.parser(), extensionRegistry);
+            tabletHomescreenMedia_ = input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaItem.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(tabletHomescreenMedia_);
               tabletHomescreenMedia_ = subBuilder.buildPartial();
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TABLET_HOMESCREEN_MEDIA_FIELD_NUMBER = 2;
-  private io.opencannabis.schema.media.MediaItem tabletHomescreenMedia_;
+  private io.opencannabis.schema.media.AttachedMedia.MediaItem tabletHomescreenMedia_;
   /**
    * <pre>
    * Specifies a media item to use as a tablet homescreen tile for this section.
@@ -125,8 +125,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
    */
-  public io.opencannabis.schema.media.MediaItem getTabletHomescreenMedia() {
-    return tabletHomescreenMedia_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : tabletHomescreenMedia_;
+  public io.opencannabis.schema.media.AttachedMedia.MediaItem getTabletHomescreenMedia() {
+    return tabletHomescreenMedia_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : tabletHomescreenMedia_;
   }
   /**
    * <pre>
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
    */
-  public io.opencannabis.schema.media.MediaItemOrBuilder getTabletHomescreenMediaOrBuilder() {
+  public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getTabletHomescreenMediaOrBuilder() {
     return getTabletHomescreenMedia();
   }
 
@@ -439,9 +439,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.media.MediaItem tabletHomescreenMedia_ = null;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem tabletHomescreenMedia_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> tabletHomescreenMediaBuilder_;
+        io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> tabletHomescreenMediaBuilder_;
     /**
      * <pre>
      * Specifies a media item to use as a tablet homescreen tile for this section.
@@ -459,9 +459,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaItem getTabletHomescreenMedia() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem getTabletHomescreenMedia() {
       if (tabletHomescreenMediaBuilder_ == null) {
-        return tabletHomescreenMedia_ == null ? io.opencannabis.schema.media.MediaItem.getDefaultInstance() : tabletHomescreenMedia_;
+        return tabletHomescreenMedia_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : tabletHomescreenMedia_;
       } else {
         return tabletHomescreenMediaBuilder_.getMessage();
       }
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
      */
-    public Builder setTabletHomescreenMedia(io.opencannabis.schema.media.MediaItem value) {
+    public Builder setTabletHomescreenMedia(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
       if (tabletHomescreenMediaBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -494,7 +494,7 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
      */
     public Builder setTabletHomescreenMedia(
-        io.opencannabis.schema.media.MediaItem.Builder builderForValue) {
+        io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
       if (tabletHomescreenMediaBuilder_ == null) {
         tabletHomescreenMedia_ = builderForValue.build();
         onChanged();
@@ -511,11 +511,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
      */
-    public Builder mergeTabletHomescreenMedia(io.opencannabis.schema.media.MediaItem value) {
+    public Builder mergeTabletHomescreenMedia(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
       if (tabletHomescreenMediaBuilder_ == null) {
         if (tabletHomescreenMedia_ != null) {
           tabletHomescreenMedia_ =
-            io.opencannabis.schema.media.MediaItem.newBuilder(tabletHomescreenMedia_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.newBuilder(tabletHomescreenMedia_).mergeFrom(value).buildPartial();
         } else {
           tabletHomescreenMedia_ = value;
         }
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaItem.Builder getTabletHomescreenMediaBuilder() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder getTabletHomescreenMediaBuilder() {
       
       onChanged();
       return getTabletHomescreenMediaFieldBuilder().getBuilder();
@@ -563,12 +563,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
      */
-    public io.opencannabis.schema.media.MediaItemOrBuilder getTabletHomescreenMediaOrBuilder() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getTabletHomescreenMediaOrBuilder() {
       if (tabletHomescreenMediaBuilder_ != null) {
         return tabletHomescreenMediaBuilder_.getMessageOrBuilder();
       } else {
         return tabletHomescreenMedia_ == null ?
-            io.opencannabis.schema.media.MediaItem.getDefaultInstance() : tabletHomescreenMedia_;
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : tabletHomescreenMedia_;
       }
     }
     /**
@@ -579,11 +579,11 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.media.MediaItem tablet_homescreen_media = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder> 
+        io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
         getTabletHomescreenMediaFieldBuilder() {
       if (tabletHomescreenMediaBuilder_ == null) {
         tabletHomescreenMediaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.media.MediaItem, io.opencannabis.schema.media.MediaItem.Builder, io.opencannabis.schema.media.MediaItemOrBuilder>(
+            io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder>(
                 getTabletHomescreenMedia(),
                 getParentForChildren(),
                 isClean());

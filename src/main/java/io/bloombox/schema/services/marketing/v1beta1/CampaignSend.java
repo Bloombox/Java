@@ -114,6 +114,15 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getCampaignIdBytes();
+
+    /**
+     * <pre>
+     * Set to `true` to prevent actual sending operations.
+     * </pre>
+     *
+     * <code>bool dry_run = 2;</code>
+     */
+    boolean getDryRun();
   }
   /**
    * <pre>
@@ -133,6 +142,7 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       campaignId_ = "";
+      dryRun_ = false;
     }
 
     @java.lang.Override
@@ -170,6 +180,11 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               campaignId_ = s;
+              break;
+            }
+            case 16: {
+
+              dryRun_ = input.readBool();
               break;
             }
           }
@@ -238,6 +253,19 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int DRY_RUN_FIELD_NUMBER = 2;
+    private boolean dryRun_;
+    /**
+     * <pre>
+     * Set to `true` to prevent actual sending operations.
+     * </pre>
+     *
+     * <code>bool dry_run = 2;</code>
+     */
+    public boolean getDryRun() {
+      return dryRun_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -253,6 +281,9 @@ private static final long serialVersionUID = 0L;
       if (!getCampaignIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, campaignId_);
       }
+      if (dryRun_ != false) {
+        output.writeBool(2, dryRun_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -263,6 +294,10 @@ private static final long serialVersionUID = 0L;
       size = 0;
       if (!getCampaignIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, campaignId_);
+      }
+      if (dryRun_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, dryRun_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -282,6 +317,8 @@ private static final long serialVersionUID = 0L;
       boolean result = true;
       result = result && getCampaignId()
           .equals(other.getCampaignId());
+      result = result && (getDryRun()
+          == other.getDryRun());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -295,6 +332,9 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CAMPAIGN_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignId().hashCode();
+      hash = (37 * hash) + DRY_RUN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDryRun());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -430,6 +470,8 @@ private static final long serialVersionUID = 0L;
         super.clear();
         campaignId_ = "";
 
+        dryRun_ = false;
+
         return this;
       }
 
@@ -453,6 +495,7 @@ private static final long serialVersionUID = 0L;
       public io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request buildPartial() {
         io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request result = new io.bloombox.schema.services.marketing.v1beta1.CampaignSend.Request(this);
         result.campaignId_ = campaignId_;
+        result.dryRun_ = dryRun_;
         onBuilt();
         return result;
       }
@@ -497,6 +540,9 @@ private static final long serialVersionUID = 0L;
         if (!other.getCampaignId().isEmpty()) {
           campaignId_ = other.campaignId_;
           onChanged();
+        }
+        if (other.getDryRun() != false) {
+          setDryRun(other.getDryRun());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -610,6 +656,44 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
         
         campaignId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean dryRun_ ;
+      /**
+       * <pre>
+       * Set to `true` to prevent actual sending operations.
+       * </pre>
+       *
+       * <code>bool dry_run = 2;</code>
+       */
+      public boolean getDryRun() {
+        return dryRun_;
+      }
+      /**
+       * <pre>
+       * Set to `true` to prevent actual sending operations.
+       * </pre>
+       *
+       * <code>bool dry_run = 2;</code>
+       */
+      public Builder setDryRun(boolean value) {
+        
+        dryRun_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set to `true` to prevent actual sending operations.
+       * </pre>
+       *
+       * <code>bool dry_run = 2;</code>
+       */
+      public Builder clearDryRun() {
+        
+        dryRun_ = false;
         onChanged();
         return this;
       }

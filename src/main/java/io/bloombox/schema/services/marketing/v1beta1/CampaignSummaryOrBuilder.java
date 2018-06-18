@@ -188,7 +188,7 @@ public interface CampaignSummaryOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant modified = 9;</code>
    */
-  io.opencannabis.schema.temporal.Instant getModified();
+  io.opencannabis.schema.temporal.TemporalInstant.Instant getModified();
   /**
    * <pre>
    * When the subject campaign was last modified.
@@ -196,5 +196,5 @@ public interface CampaignSummaryOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant modified = 9;</code>
    */
-  io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder();
+  io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder();
 }

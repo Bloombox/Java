@@ -20,6 +20,11 @@
 package io.opencannabis.schema.product.struct.testing;
 
 /**
+ * <pre>
+ * Specifies the structure of terpene testing. Includes space for a full set of terpene test result values, and
+ * corresponding values (computed) for estimated feelings and tasting notes.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.labtesting.Terpenes}
  */
 public  final class Terpenes extends
@@ -34,6 +39,8 @@ private static final long serialVersionUID = 0L;
   private Terpenes() {
     available_ = false;
     terpene_ = java.util.Collections.emptyList();
+    feeling_ = java.util.Collections.emptyList();
+    aroma_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -72,6 +79,52 @@ private static final long serialVersionUID = 0L;
             available_ = input.readBool();
             break;
           }
+          case 16: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              feeling_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            feeling_.add(rawValue);
+            break;
+          }
+          case 18: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                feeling_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              feeling_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              aroma_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            aroma_.add(rawValue);
+            break;
+          }
+          case 26: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                aroma_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              aroma_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
           case 82: {
             if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
               terpene_ = new java.util.ArrayList<io.opencannabis.schema.product.struct.testing.Terpenes.Result>();
@@ -89,6 +142,12 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        feeling_ = java.util.Collections.unmodifiableList(feeling_);
+      }
+      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        aroma_ = java.util.Collections.unmodifiableList(aroma_);
+      }
       if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
         terpene_ = java.util.Collections.unmodifiableList(terpene_);
       }
@@ -113,28 +172,52 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Terpene this test result is for.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
      */
     int getTerpeneValue();
     /**
+     * <pre>
+     * Terpene this test result is for.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
      */
     io.opencannabis.schema.product.struct.testing.Terpene getTerpene();
 
     /**
+     * <pre>
+     * Measured value of the terpene in question for the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
      */
     boolean hasMeasurement();
     /**
+     * <pre>
+     * Measured value of the terpene in question for the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
      */
     io.opencannabis.schema.product.struct.testing.TestValue getMeasurement();
     /**
+     * <pre>
+     * Measured value of the terpene in question for the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
      */
     io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder();
   }
   /**
+   * <pre>
+   * Specifies the structure of an individual terpene testing result.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.labtesting.Terpenes.Result}
    */
   public  static final class Result extends
@@ -227,12 +310,20 @@ private static final long serialVersionUID = 0L;
     public static final int TERPENE_FIELD_NUMBER = 1;
     private int terpene_;
     /**
+     * <pre>
+     * Terpene this test result is for.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
      */
     public int getTerpeneValue() {
       return terpene_;
     }
     /**
+     * <pre>
+     * Terpene this test result is for.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Terpene getTerpene() {
@@ -243,18 +334,30 @@ private static final long serialVersionUID = 0L;
     public static final int MEASUREMENT_FIELD_NUMBER = 2;
     private io.opencannabis.schema.product.struct.testing.TestValue measurement_;
     /**
+     * <pre>
+     * Measured value of the terpene in question for the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
      */
     public boolean hasMeasurement() {
       return measurement_ != null;
     }
     /**
+     * <pre>
+     * Measured value of the terpene in question for the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue getMeasurement() {
       return measurement_ == null ? io.opencannabis.schema.product.struct.testing.TestValue.getDefaultInstance() : measurement_;
     }
     /**
+     * <pre>
+     * Measured value of the terpene in question for the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder() {
@@ -428,6 +531,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Specifies the structure of an individual terpene testing result.
+     * </pre>
+     *
      * Protobuf type {@code opencannabis.structs.labtesting.Terpenes.Result}
      */
     public static final class Builder extends
@@ -575,12 +682,20 @@ private static final long serialVersionUID = 0L;
 
       private int terpene_ = 0;
       /**
+       * <pre>
+       * Terpene this test result is for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
        */
       public int getTerpeneValue() {
         return terpene_;
       }
       /**
+       * <pre>
+       * Terpene this test result is for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
        */
       public Builder setTerpeneValue(int value) {
@@ -589,6 +704,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Terpene this test result is for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
        */
       public io.opencannabis.schema.product.struct.testing.Terpene getTerpene() {
@@ -596,6 +715,10 @@ private static final long serialVersionUID = 0L;
         return result == null ? io.opencannabis.schema.product.struct.testing.Terpene.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Terpene this test result is for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
        */
       public Builder setTerpene(io.opencannabis.schema.product.struct.testing.Terpene value) {
@@ -608,6 +731,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Terpene this test result is for.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.Terpene terpene = 1;</code>
        */
       public Builder clearTerpene() {
@@ -621,12 +748,20 @@ private static final long serialVersionUID = 0L;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> measurementBuilder_;
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       public boolean hasMeasurement() {
         return measurementBuilder_ != null || measurement_ != null;
       }
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       public io.opencannabis.schema.product.struct.testing.TestValue getMeasurement() {
@@ -637,6 +772,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       public Builder setMeasurement(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -653,6 +792,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       public Builder setMeasurement(
@@ -667,6 +810,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       public Builder mergeMeasurement(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -685,6 +832,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       public Builder clearMeasurement() {
@@ -699,6 +850,10 @@ private static final long serialVersionUID = 0L;
         return this;
       }
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       public io.opencannabis.schema.product.struct.testing.TestValue.Builder getMeasurementBuilder() {
@@ -707,6 +862,10 @@ private static final long serialVersionUID = 0L;
         return getMeasurementFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder() {
@@ -718,6 +877,10 @@ private static final long serialVersionUID = 0L;
         }
       }
       /**
+       * <pre>
+       * Measured value of the terpene in question for the subject product.
+       * </pre>
+       *
        * <code>.opencannabis.structs.labtesting.TestValue measurement = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -786,6 +949,10 @@ private static final long serialVersionUID = 0L;
   public static final int AVAILABLE_FIELD_NUMBER = 1;
   private boolean available_;
   /**
+   * <pre>
+   * Flag indicating whether terpene testing is available yet or not.
+   * </pre>
+   *
    * <code>bool available = 1;</code>
    */
   public boolean getAvailable() {
@@ -795,12 +962,20 @@ private static final long serialVersionUID = 0L;
   public static final int TERPENE_FIELD_NUMBER = 10;
   private java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> terpene_;
   /**
+   * <pre>
+   * Individual terpene testing results.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
   public java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> getTerpeneList() {
     return terpene_;
   }
   /**
+   * <pre>
+   * Individual terpene testing results.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
   public java.util.List<? extends io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> 
@@ -808,24 +983,166 @@ private static final long serialVersionUID = 0L;
     return terpene_;
   }
   /**
+   * <pre>
+   * Individual terpene testing results.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
   public int getTerpeneCount() {
     return terpene_.size();
   }
   /**
+   * <pre>
+   * Individual terpene testing results.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
   public io.opencannabis.schema.product.struct.testing.Terpenes.Result getTerpene(int index) {
     return terpene_.get(index);
   }
   /**
+   * <pre>
+   * Individual terpene testing results.
+   * </pre>
+   *
    * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
    */
   public io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder getTerpeneOrBuilder(
       int index) {
     return terpene_.get(index);
   }
+
+  public static final int FEELING_FIELD_NUMBER = 2;
+  private java.util.List<java.lang.Integer> feeling_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling> feeling_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>() {
+            public io.opencannabis.schema.product.struct.testing.Feeling convert(java.lang.Integer from) {
+              io.opencannabis.schema.product.struct.testing.Feeling result = io.opencannabis.schema.product.struct.testing.Feeling.valueOf(from);
+              return result == null ? io.opencannabis.schema.product.struct.testing.Feeling.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Enumerates computed feeling notes, based on the specified terpene results.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+   */
+  public java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>(feeling_, feeling_converter_);
+  }
+  /**
+   * <pre>
+   * Enumerates computed feeling notes, based on the specified terpene results.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+   */
+  public int getFeelingCount() {
+    return feeling_.size();
+  }
+  /**
+   * <pre>
+   * Enumerates computed feeling notes, based on the specified terpene results.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.Feeling getFeeling(int index) {
+    return feeling_converter_.convert(feeling_.get(index));
+  }
+  /**
+   * <pre>
+   * Enumerates computed feeling notes, based on the specified terpene results.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+   */
+  public java.util.List<java.lang.Integer>
+  getFeelingValueList() {
+    return feeling_;
+  }
+  /**
+   * <pre>
+   * Enumerates computed feeling notes, based on the specified terpene results.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+   */
+  public int getFeelingValue(int index) {
+    return feeling_.get(index);
+  }
+  private int feelingMemoizedSerializedSize;
+
+  public static final int AROMA_FIELD_NUMBER = 3;
+  private java.util.List<java.lang.Integer> aroma_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote> aroma_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>() {
+            public io.opencannabis.schema.product.struct.testing.TasteNote convert(java.lang.Integer from) {
+              io.opencannabis.schema.product.struct.testing.TasteNote result = io.opencannabis.schema.product.struct.testing.TasteNote.valueOf(from);
+              return result == null ? io.opencannabis.schema.product.struct.testing.TasteNote.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Enumerates computed aroma/flavor notes.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+   */
+  public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getAromaList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(aroma_, aroma_converter_);
+  }
+  /**
+   * <pre>
+   * Enumerates computed aroma/flavor notes.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+   */
+  public int getAromaCount() {
+    return aroma_.size();
+  }
+  /**
+   * <pre>
+   * Enumerates computed aroma/flavor notes.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+   */
+  public io.opencannabis.schema.product.struct.testing.TasteNote getAroma(int index) {
+    return aroma_converter_.convert(aroma_.get(index));
+  }
+  /**
+   * <pre>
+   * Enumerates computed aroma/flavor notes.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+   */
+  public java.util.List<java.lang.Integer>
+  getAromaValueList() {
+    return aroma_;
+  }
+  /**
+   * <pre>
+   * Enumerates computed aroma/flavor notes.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+   */
+  public int getAromaValue(int index) {
+    return aroma_.get(index);
+  }
+  private int aromaMemoizedSerializedSize;
 
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
@@ -839,8 +1156,23 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (available_ != false) {
       output.writeBool(1, available_);
+    }
+    if (getFeelingList().size() > 0) {
+      output.writeUInt32NoTag(18);
+      output.writeUInt32NoTag(feelingMemoizedSerializedSize);
+    }
+    for (int i = 0; i < feeling_.size(); i++) {
+      output.writeEnumNoTag(feeling_.get(i));
+    }
+    if (getAromaList().size() > 0) {
+      output.writeUInt32NoTag(26);
+      output.writeUInt32NoTag(aromaMemoizedSerializedSize);
+    }
+    for (int i = 0; i < aroma_.size(); i++) {
+      output.writeEnumNoTag(aroma_.get(i));
     }
     for (int i = 0; i < terpene_.size(); i++) {
       output.writeMessage(10, terpene_.get(i));
@@ -856,6 +1188,30 @@ private static final long serialVersionUID = 0L;
     if (available_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, available_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < feeling_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(feeling_.get(i));
+      }
+      size += dataSize;
+      if (!getFeelingList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }feelingMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < aroma_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(aroma_.get(i));
+      }
+      size += dataSize;
+      if (!getAromaList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }aromaMemoizedSerializedSize = dataSize;
     }
     for (int i = 0; i < terpene_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -881,6 +1237,8 @@ private static final long serialVersionUID = 0L;
         == other.getAvailable());
     result = result && getTerpeneList()
         .equals(other.getTerpeneList());
+    result = result && feeling_.equals(other.feeling_);
+    result = result && aroma_.equals(other.aroma_);
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -898,6 +1256,14 @@ private static final long serialVersionUID = 0L;
     if (getTerpeneCount() > 0) {
       hash = (37 * hash) + TERPENE_FIELD_NUMBER;
       hash = (53 * hash) + getTerpeneList().hashCode();
+    }
+    if (getFeelingCount() > 0) {
+      hash = (37 * hash) + FEELING_FIELD_NUMBER;
+      hash = (53 * hash) + feeling_.hashCode();
+    }
+    if (getAromaCount() > 0) {
+      hash = (37 * hash) + AROMA_FIELD_NUMBER;
+      hash = (53 * hash) + aroma_.hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -993,6 +1359,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies the structure of terpene testing. Includes space for a full set of terpene test result values, and
+   * corresponding values (computed) for estimated feelings and tasting notes.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.labtesting.Terpenes}
    */
   public static final class Builder extends
@@ -1037,6 +1408,10 @@ private static final long serialVersionUID = 0L;
       } else {
         terpeneBuilder_.clear();
       }
+      feeling_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      aroma_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -1071,6 +1446,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.terpene_ = terpeneBuilder_.build();
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        feeling_ = java.util.Collections.unmodifiableList(feeling_);
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.feeling_ = feeling_;
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        aroma_ = java.util.Collections.unmodifiableList(aroma_);
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.aroma_ = aroma_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1142,6 +1527,26 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.feeling_.isEmpty()) {
+        if (feeling_.isEmpty()) {
+          feeling_ = other.feeling_;
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          ensureFeelingIsMutable();
+          feeling_.addAll(other.feeling_);
+        }
+        onChanged();
+      }
+      if (!other.aroma_.isEmpty()) {
+        if (aroma_.isEmpty()) {
+          aroma_ = other.aroma_;
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ensureAromaIsMutable();
+          aroma_.addAll(other.aroma_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -1172,12 +1577,20 @@ private static final long serialVersionUID = 0L;
 
     private boolean available_ ;
     /**
+     * <pre>
+     * Flag indicating whether terpene testing is available yet or not.
+     * </pre>
+     *
      * <code>bool available = 1;</code>
      */
     public boolean getAvailable() {
       return available_;
     }
     /**
+     * <pre>
+     * Flag indicating whether terpene testing is available yet or not.
+     * </pre>
+     *
      * <code>bool available = 1;</code>
      */
     public Builder setAvailable(boolean value) {
@@ -1187,6 +1600,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Flag indicating whether terpene testing is available yet or not.
+     * </pre>
+     *
      * <code>bool available = 1;</code>
      */
     public Builder clearAvailable() {
@@ -1209,6 +1626,10 @@ private static final long serialVersionUID = 0L;
         io.opencannabis.schema.product.struct.testing.Terpenes.Result, io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder, io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> terpeneBuilder_;
 
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result> getTerpeneList() {
@@ -1219,6 +1640,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public int getTerpeneCount() {
@@ -1229,6 +1654,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Terpenes.Result getTerpene(int index) {
@@ -1239,6 +1668,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder setTerpene(
@@ -1256,6 +1689,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder setTerpene(
@@ -1270,6 +1707,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder addTerpene(io.opencannabis.schema.product.struct.testing.Terpenes.Result value) {
@@ -1286,6 +1727,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder addTerpene(
@@ -1303,6 +1748,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder addTerpene(
@@ -1317,6 +1766,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder addTerpene(
@@ -1331,6 +1784,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder addAllTerpene(
@@ -1346,6 +1803,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder clearTerpene() {
@@ -1359,6 +1820,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public Builder removeTerpene(int index) {
@@ -1372,6 +1837,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder getTerpeneBuilder(
@@ -1379,6 +1848,10 @@ private static final long serialVersionUID = 0L;
       return getTerpeneFieldBuilder().getBuilder(index);
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder getTerpeneOrBuilder(
@@ -1389,6 +1862,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.product.struct.testing.Terpenes.ResultOrBuilder> 
@@ -1400,6 +1877,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder addTerpeneBuilder() {
@@ -1407,6 +1888,10 @@ private static final long serialVersionUID = 0L;
           io.opencannabis.schema.product.struct.testing.Terpenes.Result.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder addTerpeneBuilder(
@@ -1415,6 +1900,10 @@ private static final long serialVersionUID = 0L;
           index, io.opencannabis.schema.product.struct.testing.Terpenes.Result.getDefaultInstance());
     }
     /**
+     * <pre>
+     * Individual terpene testing results.
+     * </pre>
+     *
      * <code>repeated .opencannabis.structs.labtesting.Terpenes.Result terpene = 10;</code>
      */
     public java.util.List<io.opencannabis.schema.product.struct.testing.Terpenes.Result.Builder> 
@@ -1434,6 +1923,338 @@ private static final long serialVersionUID = 0L;
         terpene_ = null;
       }
       return terpeneBuilder_;
+    }
+
+    private java.util.List<java.lang.Integer> feeling_ =
+      java.util.Collections.emptyList();
+    private void ensureFeelingIsMutable() {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        feeling_ = new java.util.ArrayList<java.lang.Integer>(feeling_);
+        bitField0_ |= 0x00000004;
+      }
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>(feeling_, feeling_converter_);
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public int getFeelingCount() {
+      return feeling_.size();
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.Feeling getFeeling(int index) {
+      return feeling_converter_.convert(feeling_.get(index));
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public Builder setFeeling(
+        int index, io.opencannabis.schema.product.struct.testing.Feeling value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureFeelingIsMutable();
+      feeling_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public Builder addFeeling(io.opencannabis.schema.product.struct.testing.Feeling value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureFeelingIsMutable();
+      feeling_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public Builder addAllFeeling(
+        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.Feeling> values) {
+      ensureFeelingIsMutable();
+      for (io.opencannabis.schema.product.struct.testing.Feeling value : values) {
+        feeling_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public Builder clearFeeling() {
+      feeling_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getFeelingValueList() {
+      return java.util.Collections.unmodifiableList(feeling_);
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public int getFeelingValue(int index) {
+      return feeling_.get(index);
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public Builder setFeelingValue(
+        int index, int value) {
+      ensureFeelingIsMutable();
+      feeling_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public Builder addFeelingValue(int value) {
+      ensureFeelingIsMutable();
+      feeling_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed feeling notes, based on the specified terpene results.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 2;</code>
+     */
+    public Builder addAllFeelingValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureFeelingIsMutable();
+      for (int value : values) {
+        feeling_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> aroma_ =
+      java.util.Collections.emptyList();
+    private void ensureAromaIsMutable() {
+      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        aroma_ = new java.util.ArrayList<java.lang.Integer>(aroma_);
+        bitField0_ |= 0x00000008;
+      }
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getAromaList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(aroma_, aroma_converter_);
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public int getAromaCount() {
+      return aroma_.size();
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public io.opencannabis.schema.product.struct.testing.TasteNote getAroma(int index) {
+      return aroma_converter_.convert(aroma_.get(index));
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public Builder setAroma(
+        int index, io.opencannabis.schema.product.struct.testing.TasteNote value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureAromaIsMutable();
+      aroma_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public Builder addAroma(io.opencannabis.schema.product.struct.testing.TasteNote value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureAromaIsMutable();
+      aroma_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public Builder addAllAroma(
+        java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.TasteNote> values) {
+      ensureAromaIsMutable();
+      for (io.opencannabis.schema.product.struct.testing.TasteNote value : values) {
+        aroma_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public Builder clearAroma() {
+      aroma_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getAromaValueList() {
+      return java.util.Collections.unmodifiableList(aroma_);
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public int getAromaValue(int index) {
+      return aroma_.get(index);
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public Builder setAromaValue(
+        int index, int value) {
+      ensureAromaIsMutable();
+      aroma_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public Builder addAromaValue(int value) {
+      ensureAromaIsMutable();
+      aroma_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Enumerates computed aroma/flavor notes.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 3;</code>
+     */
+    public Builder addAllAromaValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureAromaIsMutable();
+      for (int value : values) {
+        aroma_.add(value);
+      }
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

@@ -86,11 +86,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
             if (expiresAt_ != null) {
               subBuilder = expiresAt_.toBuilder();
             }
-            expiresAt_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+            expiresAt_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(expiresAt_);
               expiresAt_ = subBuilder.buildPartial();
@@ -226,7 +226,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXPIRES_AT_FIELD_NUMBER = 3;
-  private io.opencannabis.schema.temporal.Instant expiresAt_;
+  private io.opencannabis.schema.temporal.TemporalInstant.Instant expiresAt_;
   /**
    * <pre>
    * Expires-at value.
@@ -244,8 +244,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
    */
-  public io.opencannabis.schema.temporal.Instant getExpiresAt() {
-    return expiresAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : expiresAt_;
+  public io.opencannabis.schema.temporal.TemporalInstant.Instant getExpiresAt() {
+    return expiresAt_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : expiresAt_;
   }
   /**
    * <pre>
@@ -254,7 +254,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
    */
-  public io.opencannabis.schema.temporal.InstantOrBuilder getExpiresAtOrBuilder() {
+  public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getExpiresAtOrBuilder() {
     return getExpiresAt();
   }
 
@@ -912,9 +912,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.temporal.Instant expiresAt_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant expiresAt_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> expiresAtBuilder_;
+        io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> expiresAtBuilder_;
     /**
      * <pre>
      * Expires-at value.
@@ -932,9 +932,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getExpiresAt() {
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getExpiresAt() {
       if (expiresAtBuilder_ == null) {
-        return expiresAt_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : expiresAt_;
+        return expiresAt_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : expiresAt_;
       } else {
         return expiresAtBuilder_.getMessage();
       }
@@ -946,7 +946,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
      */
-    public Builder setExpiresAt(io.opencannabis.schema.temporal.Instant value) {
+    public Builder setExpiresAt(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
       if (expiresAtBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -967,7 +967,7 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
      */
     public Builder setExpiresAt(
-        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
       if (expiresAtBuilder_ == null) {
         expiresAt_ = builderForValue.build();
         onChanged();
@@ -984,11 +984,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
      */
-    public Builder mergeExpiresAt(io.opencannabis.schema.temporal.Instant value) {
+    public Builder mergeExpiresAt(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
       if (expiresAtBuilder_ == null) {
         if (expiresAt_ != null) {
           expiresAt_ =
-            io.opencannabis.schema.temporal.Instant.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
         } else {
           expiresAt_ = value;
         }
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
      */
-    public io.opencannabis.schema.temporal.Instant.Builder getExpiresAtBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getExpiresAtBuilder() {
       
       onChanged();
       return getExpiresAtFieldBuilder().getBuilder();
@@ -1036,12 +1036,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getExpiresAtOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getExpiresAtOrBuilder() {
       if (expiresAtBuilder_ != null) {
         return expiresAtBuilder_.getMessageOrBuilder();
       } else {
         return expiresAt_ == null ?
-            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : expiresAt_;
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : expiresAt_;
       }
     }
     /**
@@ -1052,11 +1052,11 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
         getExpiresAtFieldBuilder() {
       if (expiresAtBuilder_ == null) {
         expiresAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                 getExpiresAt(),
                 getParentForChildren(),
                 isClean());

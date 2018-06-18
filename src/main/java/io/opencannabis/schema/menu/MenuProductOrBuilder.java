@@ -38,7 +38,7 @@ public interface MenuProductOrBuilder extends
    *
    * <code>.opencannabis.base.ProductKey key = 1;</code>
    */
-  io.opencannabis.schema.base.ProductKey getKey();
+  io.opencannabis.schema.base.BaseProductKey.ProductKey getKey();
   /**
    * <pre>
    * Section that this data is attached to.
@@ -46,7 +46,7 @@ public interface MenuProductOrBuilder extends
    *
    * <code>.opencannabis.base.ProductKey key = 1;</code>
    */
-  io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+  io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder();
 
   /**
    * <pre>

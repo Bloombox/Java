@@ -338,7 +338,7 @@ public final class IntegrationSettings {
      *
      * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
      */
-    io.opencannabis.schema.temporal.Instant getLastTested();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getLastTested();
     /**
      * <pre>
      * Timestamp for when this integration was last tested.
@@ -346,7 +346,7 @@ public final class IntegrationSettings {
      *
      * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getLastTestedOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getLastTestedOrBuilder();
   }
   /**
    * <pre>
@@ -418,11 +418,11 @@ public final class IntegrationSettings {
               break;
             }
             case 34: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (lastTested_ != null) {
                 subBuilder = lastTested_.toBuilder();
               }
-              lastTested_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              lastTested_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(lastTested_);
                 lastTested_ = subBuilder.buildPartial();
@@ -505,7 +505,7 @@ public final class IntegrationSettings {
     }
 
     public static final int LAST_TESTED_FIELD_NUMBER = 4;
-    private io.opencannabis.schema.temporal.Instant lastTested_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant lastTested_;
     /**
      * <pre>
      * Timestamp for when this integration was last tested.
@@ -523,8 +523,8 @@ public final class IntegrationSettings {
      *
      * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getLastTested() {
-      return lastTested_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : lastTested_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getLastTested() {
+      return lastTested_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : lastTested_;
     }
     /**
      * <pre>
@@ -533,7 +533,7 @@ public final class IntegrationSettings {
      *
      * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getLastTestedOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getLastTestedOrBuilder() {
       return getLastTested();
     }
 
@@ -1029,9 +1029,9 @@ public final class IntegrationSettings {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant lastTested_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant lastTested_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> lastTestedBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> lastTestedBuilder_;
       /**
        * <pre>
        * Timestamp for when this integration was last tested.
@@ -1049,9 +1049,9 @@ public final class IntegrationSettings {
        *
        * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
        */
-      public io.opencannabis.schema.temporal.Instant getLastTested() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getLastTested() {
         if (lastTestedBuilder_ == null) {
-          return lastTested_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : lastTested_;
+          return lastTested_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : lastTested_;
         } else {
           return lastTestedBuilder_.getMessage();
         }
@@ -1063,7 +1063,7 @@ public final class IntegrationSettings {
        *
        * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
        */
-      public Builder setLastTested(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setLastTested(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (lastTestedBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1084,7 +1084,7 @@ public final class IntegrationSettings {
        * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
        */
       public Builder setLastTested(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (lastTestedBuilder_ == null) {
           lastTested_ = builderForValue.build();
           onChanged();
@@ -1101,11 +1101,11 @@ public final class IntegrationSettings {
        *
        * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
        */
-      public Builder mergeLastTested(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeLastTested(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (lastTestedBuilder_ == null) {
           if (lastTested_ != null) {
             lastTested_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(lastTested_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(lastTested_).mergeFrom(value).buildPartial();
           } else {
             lastTested_ = value;
           }
@@ -1141,7 +1141,7 @@ public final class IntegrationSettings {
        *
        * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getLastTestedBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getLastTestedBuilder() {
         
         onChanged();
         return getLastTestedFieldBuilder().getBuilder();
@@ -1153,12 +1153,12 @@ public final class IntegrationSettings {
        *
        * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getLastTestedOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getLastTestedOrBuilder() {
         if (lastTestedBuilder_ != null) {
           return lastTestedBuilder_.getMessageOrBuilder();
         } else {
           return lastTested_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : lastTested_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : lastTested_;
         }
       }
       /**
@@ -1169,11 +1169,11 @@ public final class IntegrationSettings {
        * <code>.opencannabis.temporal.Instant last_tested = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getLastTestedFieldBuilder() {
         if (lastTestedBuilder_ == null) {
           lastTestedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getLastTested(),
                   getParentForChildren(),
                   isClean());
@@ -3870,6 +3870,127 @@ public final class IntegrationSettings {
   public interface PartnerIntegrationSettingsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bloombox.schema.partner.integrations.PartnerIntegrationSettings)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList();
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    int getIntegrationsCount();
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index);
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getIntegrationsValueList();
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    int getIntegrationsValue(int index);
+
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+    int getGenericCount();
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+    boolean containsGeneric(
+        java.lang.String key);
+    /**
+     * Use {@link #getGenericMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
+    getGeneric();
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+    java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
+    getGenericMap();
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+
+    io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
+        java.lang.String key,
+        io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings defaultValue);
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+
+    io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with GSuite.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     */
+    boolean hasGsuite();
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with GSuite.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     */
+    io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings getGsuite();
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with GSuite.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     */
+    io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder getGsuiteOrBuilder();
   }
   /**
    * <pre>
@@ -3888,6 +4009,7 @@ public final class IntegrationSettings {
       super(builder);
     }
     private PartnerIntegrationSettings() {
+      integrations_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3903,6 +4025,7 @@ public final class IntegrationSettings {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3920,6 +4043,55 @@ public final class IntegrationSettings {
               }
               break;
             }
+            case 8: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                integrations_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              integrations_.add(rawValue);
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  integrations_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                integrations_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                generic_ = com.google.protobuf.MapField.newMapField(
+                    GenericDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
+              generic__ = input.readMessage(
+                  GenericDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              generic_.getMutableMap().put(
+                  generic__.getKey(), generic__.getValue());
+              break;
+            }
+            case 82: {
+              io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder subBuilder = null;
+              if (gsuite_ != null) {
+                subBuilder = gsuite_.toBuilder();
+              }
+              gsuite_ = input.readMessage(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gsuite_);
+                gsuite_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3928,6 +4100,9 @@ public final class IntegrationSettings {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          integrations_ = java.util.Collections.unmodifiableList(integrations_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3937,11 +4112,213 @@ public final class IntegrationSettings {
       return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetGeneric();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.class, io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int INTEGRATIONS_FIELD_NUMBER = 1;
+    private java.util.List<java.lang.Integer> integrations_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> integrations_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner>() {
+              public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner convert(java.lang.Integer from) {
+                io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner result = io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.valueOf(from);
+                return result == null ? io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    public java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner>(integrations_, integrations_converter_);
+    }
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    public int getIntegrationsCount() {
+      return integrations_.size();
+    }
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index) {
+      return integrations_converter_.convert(integrations_.get(index));
+    }
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getIntegrationsValueList() {
+      return integrations_;
+    }
+    /**
+     * <pre>
+     * Specifies integrations that a specific partner has setup.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+     */
+    public int getIntegrationsValue(int index) {
+      return integrations_.get(index);
+    }
+    private int integrationsMemoizedSerializedSize;
+
+    public static final int GENERIC_FIELD_NUMBER = 2;
+    private static final class GenericDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>newDefaultInstance(
+                  io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> generic_;
+    private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
+    internalGetGeneric() {
+      if (generic_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            GenericDefaultEntryHolder.defaultEntry);
+      }
+      return generic_;
+    }
+
+    public int getGenericCount() {
+      return internalGetGeneric().getMap().size();
+    }
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+
+    public boolean containsGeneric(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetGeneric().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getGenericMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> getGeneric() {
+      return getGenericMap();
+    }
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> getGenericMap() {
+      return internalGetGeneric().getMap();
+    }
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+
+    public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
+        java.lang.String key,
+        io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> map =
+          internalGetGeneric().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Generic settings, specified for each partner-level integration.
+     * </pre>
+     *
+     * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+     */
+
+    public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> map =
+          internalGetGeneric().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int GSUITE_FIELD_NUMBER = 10;
+    private io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings gsuite_;
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with GSuite.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     */
+    public boolean hasGsuite() {
+      return gsuite_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with GSuite.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     */
+    public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings getGsuite() {
+      return gsuite_ == null ? io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.getDefaultInstance() : gsuite_;
+    }
+    /**
+     * <pre>
+     * Specifies location-specific integration settings with GSuite.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+     */
+    public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder getGsuiteOrBuilder() {
+      return getGsuite();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3956,6 +4333,23 @@ public final class IntegrationSettings {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
+      if (getIntegrationsList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(integrationsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < integrations_.size(); i++) {
+        output.writeEnumNoTag(integrations_.get(i));
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetGeneric(),
+          GenericDefaultEntryHolder.defaultEntry,
+          2);
+      if (gsuite_ != null) {
+        output.writeMessage(10, getGsuite());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3964,6 +4358,32 @@ public final class IntegrationSettings {
       if (size != -1) return size;
 
       size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < integrations_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(integrations_.get(i));
+        }
+        size += dataSize;
+        if (!getIntegrationsList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }integrationsMemoizedSerializedSize = dataSize;
+      }
+      for (java.util.Map.Entry<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> entry
+           : internalGetGeneric().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
+        generic__ = GenericDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, generic__);
+      }
+      if (gsuite_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getGsuite());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3980,6 +4400,14 @@ public final class IntegrationSettings {
       io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings other = (io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings) obj;
 
       boolean result = true;
+      result = result && integrations_.equals(other.integrations_);
+      result = result && internalGetGeneric().equals(
+          other.internalGetGeneric());
+      result = result && (hasGsuite() == other.hasGsuite());
+      if (hasGsuite()) {
+        result = result && getGsuite()
+            .equals(other.getGsuite());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3991,6 +4419,18 @@ public final class IntegrationSettings {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (getIntegrationsCount() > 0) {
+        hash = (37 * hash) + INTEGRATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + integrations_.hashCode();
+      }
+      if (!internalGetGeneric().getMap().isEmpty()) {
+        hash = (37 * hash) + GENERIC_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetGeneric().hashCode();
+      }
+      if (hasGsuite()) {
+        hash = (37 * hash) + GSUITE_FIELD_NUMBER;
+        hash = (53 * hash) + getGsuite().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4100,6 +4540,28 @@ public final class IntegrationSettings {
         return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetGeneric();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableGeneric();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return io.bloombox.schema.partner.integrations.IntegrationSettings.internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable
@@ -4124,6 +4586,15 @@ public final class IntegrationSettings {
       }
       public Builder clear() {
         super.clear();
+        integrations_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        internalGetMutableGeneric().clear();
+        if (gsuiteBuilder_ == null) {
+          gsuite_ = null;
+        } else {
+          gsuite_ = null;
+          gsuiteBuilder_ = null;
+        }
         return this;
       }
 
@@ -4146,6 +4617,21 @@ public final class IntegrationSettings {
 
       public io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings buildPartial() {
         io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings result = new io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          integrations_ = java.util.Collections.unmodifiableList(integrations_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.integrations_ = integrations_;
+        result.generic_ = internalGetGeneric();
+        result.generic_.makeImmutable();
+        if (gsuiteBuilder_ == null) {
+          result.gsuite_ = gsuite_;
+        } else {
+          result.gsuite_ = gsuiteBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -4187,6 +4673,21 @@ public final class IntegrationSettings {
 
       public Builder mergeFrom(io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings other) {
         if (other == io.bloombox.schema.partner.integrations.IntegrationSettings.PartnerIntegrationSettings.getDefaultInstance()) return this;
+        if (!other.integrations_.isEmpty()) {
+          if (integrations_.isEmpty()) {
+            integrations_ = other.integrations_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureIntegrationsIsMutable();
+            integrations_.addAll(other.integrations_);
+          }
+          onChanged();
+        }
+        internalGetMutableGeneric().mergeFrom(
+            other.internalGetGeneric());
+        if (other.hasGsuite()) {
+          mergeGsuite(other.getGsuite());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4212,6 +4713,477 @@ public final class IntegrationSettings {
           }
         }
         return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<java.lang.Integer> integrations_ =
+        java.util.Collections.emptyList();
+      private void ensureIntegrationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          integrations_ = new java.util.ArrayList<java.lang.Integer>(integrations_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public java.util.List<io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> getIntegrationsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner>(integrations_, integrations_converter_);
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public int getIntegrationsCount() {
+        return integrations_.size();
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner getIntegrations(int index) {
+        return integrations_converter_.convert(integrations_.get(index));
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public Builder setIntegrations(
+          int index, io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureIntegrationsIsMutable();
+        integrations_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public Builder addIntegrations(io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureIntegrationsIsMutable();
+        integrations_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public Builder addAllIntegrations(
+          java.lang.Iterable<? extends io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner> values) {
+        ensureIntegrationsIsMutable();
+        for (io.bloombox.schema.partner.integrations.IntegrationSettings.IntegrationPartner value : values) {
+          integrations_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public Builder clearIntegrations() {
+        integrations_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getIntegrationsValueList() {
+        return java.util.Collections.unmodifiableList(integrations_);
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public int getIntegrationsValue(int index) {
+        return integrations_.get(index);
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public Builder setIntegrationsValue(
+          int index, int value) {
+        ensureIntegrationsIsMutable();
+        integrations_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public Builder addIntegrationsValue(int value) {
+        ensureIntegrationsIsMutable();
+        integrations_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies integrations that a specific partner has setup.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.partner.integrations.IntegrationPartner integrations = 1;</code>
+       */
+      public Builder addAllIntegrationsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureIntegrationsIsMutable();
+        for (int value : values) {
+          integrations_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> generic_;
+      private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
+      internalGetGeneric() {
+        if (generic_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              GenericDefaultEntryHolder.defaultEntry);
+        }
+        return generic_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
+      internalGetMutableGeneric() {
+        onChanged();;
+        if (generic_ == null) {
+          generic_ = com.google.protobuf.MapField.newMapField(
+              GenericDefaultEntryHolder.defaultEntry);
+        }
+        if (!generic_.isMutable()) {
+          generic_ = generic_.copy();
+        }
+        return generic_;
+      }
+
+      public int getGenericCount() {
+        return internalGetGeneric().getMap().size();
+      }
+      /**
+       * <pre>
+       * Generic settings, specified for each partner-level integration.
+       * </pre>
+       *
+       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       */
+
+      public boolean containsGeneric(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetGeneric().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getGenericMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> getGeneric() {
+        return getGenericMap();
+      }
+      /**
+       * <pre>
+       * Generic settings, specified for each partner-level integration.
+       * </pre>
+       *
+       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> getGenericMap() {
+        return internalGetGeneric().getMap();
+      }
+      /**
+       * <pre>
+       * Generic settings, specified for each partner-level integration.
+       * </pre>
+       *
+       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       */
+
+      public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrDefault(
+          java.lang.String key,
+          io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> map =
+            internalGetGeneric().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Generic settings, specified for each partner-level integration.
+       * </pre>
+       *
+       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       */
+
+      public io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings getGenericOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> map =
+            internalGetGeneric().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearGeneric() {
+        internalGetMutableGeneric().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Generic settings, specified for each partner-level integration.
+       * </pre>
+       *
+       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       */
+
+      public Builder removeGeneric(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableGeneric().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings>
+      getMutableGeneric() {
+        return internalGetMutableGeneric().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Generic settings, specified for each partner-level integration.
+       * </pre>
+       *
+       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       */
+      public Builder putGeneric(
+          java.lang.String key,
+          io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableGeneric().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Generic settings, specified for each partner-level integration.
+       * </pre>
+       *
+       * <code>map&lt;string, .bloombox.schema.partner.integrations.GenericIntegrationSettings&gt; generic = 2;</code>
+       */
+
+      public Builder putAllGeneric(
+          java.util.Map<java.lang.String, io.bloombox.schema.partner.integrations.IntegrationSettings.GenericIntegrationSettings> values) {
+        internalGetMutableGeneric().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings gsuite_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder> gsuiteBuilder_;
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      public boolean hasGsuite() {
+        return gsuiteBuilder_ != null || gsuite_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings getGsuite() {
+        if (gsuiteBuilder_ == null) {
+          return gsuite_ == null ? io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.getDefaultInstance() : gsuite_;
+        } else {
+          return gsuiteBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      public Builder setGsuite(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings value) {
+        if (gsuiteBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gsuite_ = value;
+          onChanged();
+        } else {
+          gsuiteBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      public Builder setGsuite(
+          io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder builderForValue) {
+        if (gsuiteBuilder_ == null) {
+          gsuite_ = builderForValue.build();
+          onChanged();
+        } else {
+          gsuiteBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      public Builder mergeGsuite(io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings value) {
+        if (gsuiteBuilder_ == null) {
+          if (gsuite_ != null) {
+            gsuite_ =
+              io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.newBuilder(gsuite_).mergeFrom(value).buildPartial();
+          } else {
+            gsuite_ = value;
+          }
+          onChanged();
+        } else {
+          gsuiteBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      public Builder clearGsuite() {
+        if (gsuiteBuilder_ == null) {
+          gsuite_ = null;
+          onChanged();
+        } else {
+          gsuite_ = null;
+          gsuiteBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder getGsuiteBuilder() {
+        
+        onChanged();
+        return getGsuiteFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      public io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder getGsuiteOrBuilder() {
+        if (gsuiteBuilder_ != null) {
+          return gsuiteBuilder_.getMessageOrBuilder();
+        } else {
+          return gsuite_ == null ?
+              io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.getDefaultInstance() : gsuite_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies location-specific integration settings with GSuite.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.integrations.gsuite.GSuiteSettings gsuite = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder> 
+          getGsuiteFieldBuilder() {
+        if (gsuiteBuilder_ == null) {
+          gsuiteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettings.Builder, io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.GSuiteSettingsOrBuilder>(
+                  getGsuite(),
+                  getParentForChildren(),
+                  isClean());
+          gsuite_ = null;
+        }
+        return gsuiteBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4282,6 +5254,11 @@ public final class IntegrationSettings {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4295,43 +5272,53 @@ public final class IntegrationSettings {
       "gs.proto\022$bloombox.schema.partner.integr" +
       "ations\032\026temporal/Instant.proto\032(partner/" +
       "integrations/TreezSettings.proto\032)partne" +
-      "r/integrations/TwilioSettings.proto\032*par" +
-      "tner/integrations/OnFleetSettings.proto\032" +
-      "+partner/integrations/SendgridSettings.p" +
-      "roto\032,partner/integrations/MailchimpSett" +
-      "ings.proto\032,partner/integrations/Greenbi" +
-      "tsSettings.proto\"\302\001\n\032GenericIntegrationS" +
-      "ettings\022I\n\007partner\030\001 \001(\01628.bloombox.sche" +
-      "ma.partner.integrations.IntegrationPartn" +
-      "er\022\017\n\007enabled\030\002 \001(\010\022\023\n\013fully_setup\030\003 \001(\010" +
-      "\0223\n\013last_tested\030\004 \001(\0132\036.opencannabis.tem" +
-      "poral.Instant\"\246\006\n\033LocationIntegrationSet" +
-      "tings\022N\n\014integrations\030\001 \003(\01628.bloombox.s" +
+      "r/integrations/GSuiteSettings.proto\032)par" +
+      "tner/integrations/TwilioSettings.proto\032*" +
+      "partner/integrations/OnFleetSettings.pro" +
+      "to\032+partner/integrations/SendgridSetting" +
+      "s.proto\032,partner/integrations/MailchimpS" +
+      "ettings.proto\032,partner/integrations/Gree" +
+      "nbitsSettings.proto\"\302\001\n\032GenericIntegrati" +
+      "onSettings\022I\n\007partner\030\001 \001(\01628.bloombox.s" +
       "chema.partner.integrations.IntegrationPa" +
-      "rtner\022_\n\007generic\030\002 \003(\0132N.bloombox.schema" +
-      ".partner.integrations.LocationIntegratio" +
-      "nSettings.GenericEntry\022T\n\tgreenbits\030\n \001(" +
-      "\0132A.bloombox.schema.partner.integrations" +
-      ".greenbits.GreenbitsSettings\022T\n\tmailchim" +
-      "p\030\013 \001(\0132A.bloombox.schema.partner.integr" +
-      "ations.mailchimp.MailchimpSettings\022Q\n\010se" +
-      "ndgrid\030\014 \001(\0132?.bloombox.schema.partner.i" +
-      "ntegrations.sendgrid.SendgridSettings\022K\n" +
-      "\006twilio\030\r \001(\0132;.bloombox.schema.partner." +
-      "integrations.twilio.TwilioSettings\022N\n\007on" +
-      "fleet\030\016 \001(\0132=.bloombox.schema.partner.in" +
-      "tegrations.onfleet.OnFleetSettings\022H\n\005tr" +
-      "eez\030\017 \001(\01329.bloombox.schema.partner.inte" +
-      "grations.treez.TreezSettings\032p\n\014GenericE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022O\n\005value\030\002 \001(\0132@.bloom" +
-      "box.schema.partner.integrations.GenericI" +
-      "ntegrationSettings:\0028\001\"\034\n\032PartnerIntegra" +
-      "tionSettings*\225\001\n\022IntegrationPartner\022\014\n\010I" +
-      "NTERNAL\020\000\022\013\n\007SALSIFY\020\001\022\010\n\004KEEN\020\002\022\r\n\tGREE" +
-      "NBITS\020\003\022\r\n\tMAILCHIMP\020\004\022\014\n\010SENDGRID\020\005\022\n\n\006" +
-      "TWILIO\020\006\022\013\n\007ONFLEET\020\007\022\n\n\006GSUITE\020\010\022\t\n\005TRE" +
-      "EZ\020\tB3\n\'io.bloombox.schema.partner.integ" +
-      "rationsH\001P\000\242\002\003BBSb\006proto3"
+      "rtner\022\017\n\007enabled\030\002 \001(\010\022\023\n\013fully_setup\030\003 " +
+      "\001(\010\0223\n\013last_tested\030\004 \001(\0132\036.opencannabis." +
+      "temporal.Instant\"\246\006\n\033LocationIntegration" +
+      "Settings\022N\n\014integrations\030\001 \003(\01628.bloombo" +
+      "x.schema.partner.integrations.Integratio" +
+      "nPartner\022_\n\007generic\030\002 \003(\0132N.bloombox.sch" +
+      "ema.partner.integrations.LocationIntegra" +
+      "tionSettings.GenericEntry\022T\n\tgreenbits\030\n" +
+      " \001(\0132A.bloombox.schema.partner.integrati" +
+      "ons.greenbits.GreenbitsSettings\022T\n\tmailc" +
+      "himp\030\013 \001(\0132A.bloombox.schema.partner.int" +
+      "egrations.mailchimp.MailchimpSettings\022Q\n" +
+      "\010sendgrid\030\014 \001(\0132?.bloombox.schema.partne" +
+      "r.integrations.sendgrid.SendgridSettings" +
+      "\022K\n\006twilio\030\r \001(\0132;.bloombox.schema.partn" +
+      "er.integrations.twilio.TwilioSettings\022N\n" +
+      "\007onfleet\030\016 \001(\0132=.bloombox.schema.partner" +
+      ".integrations.onfleet.OnFleetSettings\022H\n" +
+      "\005treez\030\017 \001(\01329.bloombox.schema.partner.i" +
+      "ntegrations.treez.TreezSettings\032p\n\014Gener" +
+      "icEntry\022\013\n\003key\030\001 \001(\t\022O\n\005value\030\002 \001(\0132@.bl" +
+      "oombox.schema.partner.integrations.Gener" +
+      "icIntegrationSettings:\0028\001\"\213\003\n\032PartnerInt" +
+      "egrationSettings\022N\n\014integrations\030\001 \003(\01628" +
+      ".bloombox.schema.partner.integrations.In" +
+      "tegrationPartner\022^\n\007generic\030\002 \003(\0132M.bloo" +
+      "mbox.schema.partner.integrations.Partner" +
+      "IntegrationSettings.GenericEntry\022K\n\006gsui" +
+      "te\030\n \001(\0132;.bloombox.schema.partner.integ" +
+      "rations.gsuite.GSuiteSettings\032p\n\014Generic" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022O\n\005value\030\002 \001(\0132@.bloo" +
+      "mbox.schema.partner.integrations.Generic" +
+      "IntegrationSettings:\0028\001*\225\001\n\022IntegrationP" +
+      "artner\022\014\n\010INTERNAL\020\000\022\013\n\007SALSIFY\020\001\022\010\n\004KEE" +
+      "N\020\002\022\r\n\tGREENBITS\020\003\022\r\n\tMAILCHIMP\020\004\022\014\n\010SEN" +
+      "DGRID\020\005\022\n\n\006TWILIO\020\006\022\013\n\007ONFLEET\020\007\022\n\n\006GSUI" +
+      "TE\020\010\022\t\n\005TREEZ\020\tB3\n\'io.bloombox.schema.pa" +
+      "rtner.integrationsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4344,8 +5331,9 @@ public final class IntegrationSettings {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.getDescriptor(),
+          io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.getDescriptor(),
           io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.getDescriptor(),
           io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.getDescriptor(),
           io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.getDescriptor(),
@@ -4375,9 +5363,16 @@ public final class IntegrationSettings {
     internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor,
-        new java.lang.String[] { });
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+        new java.lang.String[] { "Integrations", "Generic", "Gsuite", });
+    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor =
+      internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_partner_integrations_PartnerIntegrationSettings_GenericEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.bloombox.schema.partner.integrations.treez.TreezSettingsOuterClass.getDescriptor();
+    io.bloombox.schema.partner.integrations.gsuite.GSuiteSettingsOuterClass.getDescriptor();
     io.bloombox.schema.partner.integrations.twilio.TwilioSettingsOuterClass.getDescriptor();
     io.bloombox.schema.partner.integrations.onfleet.OnFleetSettingsOuterClass.getDescriptor();
     io.bloombox.schema.partner.integrations.sendgrid.SendgridSettingsOuterClass.getDescriptor();

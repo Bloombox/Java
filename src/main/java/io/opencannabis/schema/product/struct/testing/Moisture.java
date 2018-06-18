@@ -21,7 +21,7 @@ package io.opencannabis.schema.product.struct.testing;
 
 /**
  * <pre>
- * -- Testing: Moisture
+ * Specifies test result structure for product moisture level testing.
  * </pre>
  *
  * Protobuf type {@code opencannabis.structs.labtesting.Moisture}
@@ -109,18 +109,30 @@ private static final long serialVersionUID = 0L;
   public static final int MEASUREMENT_FIELD_NUMBER = 1;
   private io.opencannabis.schema.product.struct.testing.TestValue measurement_;
   /**
+   * <pre>
+   * Measurement for the moisture level of the subject product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
    */
   public boolean hasMeasurement() {
     return measurement_ != null;
   }
   /**
+   * <pre>
+   * Measurement for the moisture level of the subject product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValue getMeasurement() {
     return measurement_ == null ? io.opencannabis.schema.product.struct.testing.TestValue.getDefaultInstance() : measurement_;
   }
   /**
+   * <pre>
+   * Measurement for the moisture level of the subject product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
    */
   public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder() {
@@ -285,7 +297,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * -- Testing: Moisture
+   * Specifies test result structure for product moisture level testing.
    * </pre>
    *
    * Protobuf type {@code opencannabis.structs.labtesting.Moisture}
@@ -431,12 +443,20 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.product.struct.testing.TestValue, io.opencannabis.schema.product.struct.testing.TestValue.Builder, io.opencannabis.schema.product.struct.testing.TestValueOrBuilder> measurementBuilder_;
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     public boolean hasMeasurement() {
       return measurementBuilder_ != null || measurement_ != null;
     }
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue getMeasurement() {
@@ -447,6 +467,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     public Builder setMeasurement(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -463,6 +487,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     public Builder setMeasurement(
@@ -477,6 +505,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     public Builder mergeMeasurement(io.opencannabis.schema.product.struct.testing.TestValue value) {
@@ -495,6 +527,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     public Builder clearMeasurement() {
@@ -509,6 +545,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValue.Builder getMeasurementBuilder() {
@@ -517,6 +557,10 @@ private static final long serialVersionUID = 0L;
       return getMeasurementFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     public io.opencannabis.schema.product.struct.testing.TestValueOrBuilder getMeasurementOrBuilder() {
@@ -528,6 +572,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Measurement for the moisture level of the subject product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.TestValue measurement = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<

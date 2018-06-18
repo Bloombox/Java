@@ -74,7 +74,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
    */
-  io.opencannabis.schema.temporal.Instant getExpiresAt();
+  io.opencannabis.schema.temporal.TemporalInstant.Instant getExpiresAt();
   /**
    * <pre>
    * Expires-at value.
@@ -82,7 +82,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant expires_at = 3;</code>
    */
-  io.opencannabis.schema.temporal.InstantOrBuilder getExpiresAtOrBuilder();
+  io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getExpiresAtOrBuilder();
 
   /**
    * <pre>

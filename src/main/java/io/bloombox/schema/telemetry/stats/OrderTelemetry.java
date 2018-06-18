@@ -86,7 +86,7 @@ public final class OrderTelemetry {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
      */
-    io.opencannabis.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
     /**
      * <pre>
      * Timestamp representing when this order was submitted.
@@ -94,7 +94,7 @@ public final class OrderTelemetry {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
 
     /**
      * <pre>
@@ -181,11 +181,11 @@ public final class OrderTelemetry {
               break;
             }
             case 26: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -312,7 +312,7 @@ public final class OrderTelemetry {
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
     /**
      * <pre>
      * Timestamp representing when this order was submitted.
@@ -330,8 +330,8 @@ public final class OrderTelemetry {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
      */
-    public io.opencannabis.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
@@ -340,7 +340,7 @@ public final class OrderTelemetry {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -916,9 +916,9 @@ public final class OrderTelemetry {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Timestamp representing when this order was submitted.
@@ -936,9 +936,9 @@ public final class OrderTelemetry {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -950,7 +950,7 @@ public final class OrderTelemetry {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -971,7 +971,7 @@ public final class OrderTelemetry {
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
       public Builder setOccurred(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -988,11 +988,11 @@ public final class OrderTelemetry {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -1028,7 +1028,7 @@ public final class OrderTelemetry {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -1040,12 +1040,12 @@ public final class OrderTelemetry {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -1056,11 +1056,11 @@ public final class OrderTelemetry {
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.description) = "Timestamp representing the first event seen in this session."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -1237,7 +1237,7 @@ public final class OrderTelemetry {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_analytics_stats_OrderStats_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1252,7 +1252,7 @@ public final class OrderTelemetry {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

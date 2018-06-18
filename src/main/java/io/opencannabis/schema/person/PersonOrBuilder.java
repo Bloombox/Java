@@ -113,7 +113,7 @@ public interface PersonOrBuilder extends
    *
    * <code>.opencannabis.contact.ContactInfo contact = 4 [(.gen_bq_schema.description) = "Person&#92;'s contact information."];</code>
    */
-  io.opencannabis.schema.contact.ContactInfo getContact();
+  io.opencannabis.schema.contact.GenericContact.ContactInfo getContact();
   /**
    * <pre>
    * Person's contact information.
@@ -121,7 +121,7 @@ public interface PersonOrBuilder extends
    *
    * <code>.opencannabis.contact.ContactInfo contact = 4 [(.gen_bq_schema.description) = "Person&#92;'s contact information."];</code>
    */
-  io.opencannabis.schema.contact.ContactInfoOrBuilder getContactOrBuilder();
+  io.opencannabis.schema.contact.GenericContact.ContactInfoOrBuilder getContactOrBuilder();
 
   /**
    * <pre>
@@ -138,7 +138,7 @@ public interface PersonOrBuilder extends
    *
    * <code>.opencannabis.temporal.Date date_of_birth = 5 [(.gen_bq_schema.description) = "Date of birth."];</code>
    */
-  io.opencannabis.schema.temporal.Date getDateOfBirth();
+  io.opencannabis.schema.temporal.TemporalDate.Date getDateOfBirth();
   /**
    * <pre>
    * Date of birth.
@@ -146,7 +146,7 @@ public interface PersonOrBuilder extends
    *
    * <code>.opencannabis.temporal.Date date_of_birth = 5 [(.gen_bq_schema.description) = "Date of birth."];</code>
    */
-  io.opencannabis.schema.temporal.DateOrBuilder getDateOfBirthOrBuilder();
+  io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getDateOfBirthOrBuilder();
 
   /**
    * <code>.opencannabis.person.Gender gender = 6 [(.gen_bq_schema.description) = "Gender."];</code>

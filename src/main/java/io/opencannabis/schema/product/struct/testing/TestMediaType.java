@@ -100,7 +100,7 @@ public enum TestMediaType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.opencannabis.schema.product.struct.testing.BaseTestingSpec.getDescriptor().getEnumTypes().get(1);
+    return io.opencannabis.schema.product.struct.testing.BaseTestingSpec.getDescriptor().getEnumTypes().get(2);
   }
 
   private static final TestMediaType[] VALUES = values();

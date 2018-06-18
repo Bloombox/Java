@@ -935,7 +935,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.opencannabis.schema.base.ProductKey getKey();
+    io.opencannabis.schema.base.BaseProductKey.ProductKey getKey();
     /**
      * <pre>
      * Resulting product key.
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder();
+    io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder();
   }
   /**
    * <pre>
@@ -996,11 +996,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.opencannabis.schema.base.ProductKey.Builder subBuilder = null;
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder subBuilder = null;
               if (key_ != null) {
                 subBuilder = key_.toBuilder();
               }
-              key_ = input.readMessage(io.opencannabis.schema.base.ProductKey.parser(), extensionRegistry);
+              key_ = input.readMessage(io.opencannabis.schema.base.BaseProductKey.ProductKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(key_);
                 key_ = subBuilder.buildPartial();
@@ -1033,7 +1033,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.base.ProductKey key_;
+    private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
     /**
      * <pre>
      * Resulting product key.
@@ -1051,8 +1051,8 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.opencannabis.schema.base.ProductKey getKey() {
-      return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
+      return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
@@ -1061,7 +1061,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.base.ProductKey key = 1;</code>
      */
-    public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+    public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
       return getKey();
     }
 
@@ -1365,9 +1365,9 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.opencannabis.schema.base.ProductKey key_ = null;
+      private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> keyBuilder_;
+          io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
        * Resulting product key.
@@ -1385,9 +1385,9 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKey getKey() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
         if (keyBuilder_ == null) {
-          return key_ == null ? io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+          return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
         } else {
           return keyBuilder_.getMessage();
         }
@@ -1399,7 +1399,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder setKey(io.opencannabis.schema.base.ProductKey value) {
+      public Builder setKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1420,7 +1420,7 @@ private static final long serialVersionUID = 0L;
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       public Builder setKey(
-          io.opencannabis.schema.base.ProductKey.Builder builderForValue) {
+          io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
           key_ = builderForValue.build();
           onChanged();
@@ -1437,11 +1437,11 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public Builder mergeKey(io.opencannabis.schema.base.ProductKey value) {
+      public Builder mergeKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
         if (keyBuilder_ == null) {
           if (key_ != null) {
             key_ =
-              io.opencannabis.schema.base.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.newBuilder(key_).mergeFrom(value).buildPartial();
           } else {
             key_ = value;
           }
@@ -1477,7 +1477,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKey.Builder getKeyBuilder() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder getKeyBuilder() {
         
         onChanged();
         return getKeyFieldBuilder().getBuilder();
@@ -1489,12 +1489,12 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
-      public io.opencannabis.schema.base.ProductKeyOrBuilder getKeyOrBuilder() {
+      public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
           return keyBuilder_.getMessageOrBuilder();
         } else {
           return key_ == null ?
-              io.opencannabis.schema.base.ProductKey.getDefaultInstance() : key_;
+              io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
         }
       }
       /**
@@ -1505,11 +1505,11 @@ private static final long serialVersionUID = 0L;
        * <code>.opencannabis.base.ProductKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder> 
+          io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
           keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.base.ProductKey, io.opencannabis.schema.base.ProductKey.Builder, io.opencannabis.schema.base.ProductKeyOrBuilder>(
+              io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder>(
                   getKey(),
                   getParentForChildren(),
                   isClean());

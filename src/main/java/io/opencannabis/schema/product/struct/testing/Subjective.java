@@ -20,6 +20,11 @@
 package io.opencannabis.schema.product.struct.testing;
 
 /**
+ * <pre>
+ * Specifies the structure of "subjective testing" results, wherein a consumer or user has tried the product and
+ * evaluated its subjective effects.
+ * </pre>
+ *
  * Protobuf type {@code opencannabis.structs.labtesting.Subjective}
  */
 public  final class Subjective extends
@@ -33,8 +38,8 @@ private static final long serialVersionUID = 0L;
   }
   private Subjective() {
     potency_ = 0;
-    feelingTags_ = java.util.Collections.emptyList();
-    tastingNotes_ = java.util.Collections.emptyList();
+    feeling_ = java.util.Collections.emptyList();
+    aroma_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -69,11 +74,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 10: {
-            io.opencannabis.schema.content.Content.Builder subBuilder = null;
+            io.opencannabis.schema.content.GenericContent.Content.Builder subBuilder = null;
             if (description_ != null) {
               subBuilder = description_.toBuilder();
             }
-            description_ = input.readMessage(io.opencannabis.schema.content.Content.parser(), extensionRegistry);
+            description_ = input.readMessage(io.opencannabis.schema.content.GenericContent.Content.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(description_);
               description_ = subBuilder.buildPartial();
@@ -82,11 +87,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.opencannabis.schema.content.Content.Builder subBuilder = null;
+            io.opencannabis.schema.content.GenericContent.Content.Builder subBuilder = null;
             if (taste_ != null) {
               subBuilder = taste_.toBuilder();
             }
-            taste_ = input.readMessage(io.opencannabis.schema.content.Content.parser(), extensionRegistry);
+            taste_ = input.readMessage(io.opencannabis.schema.content.GenericContent.Content.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(taste_);
               taste_ = subBuilder.buildPartial();
@@ -103,10 +108,10 @@ private static final long serialVersionUID = 0L;
           case 32: {
             int rawValue = input.readEnum();
             if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-              feelingTags_ = new java.util.ArrayList<java.lang.Integer>();
+              feeling_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000008;
             }
-            feelingTags_.add(rawValue);
+            feeling_.add(rawValue);
             break;
           }
           case 34: {
@@ -115,10 +120,10 @@ private static final long serialVersionUID = 0L;
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
               if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                feelingTags_ = new java.util.ArrayList<java.lang.Integer>();
+                feeling_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              feelingTags_.add(rawValue);
+              feeling_.add(rawValue);
             }
             input.popLimit(oldLimit);
             break;
@@ -126,10 +131,10 @@ private static final long serialVersionUID = 0L;
           case 40: {
             int rawValue = input.readEnum();
             if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-              tastingNotes_ = new java.util.ArrayList<java.lang.Integer>();
+              aroma_ = new java.util.ArrayList<java.lang.Integer>();
               mutable_bitField0_ |= 0x00000010;
             }
-            tastingNotes_.add(rawValue);
+            aroma_.add(rawValue);
             break;
           }
           case 42: {
@@ -138,10 +143,10 @@ private static final long serialVersionUID = 0L;
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                tastingNotes_ = new java.util.ArrayList<java.lang.Integer>();
+                aroma_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000010;
               }
-              tastingNotes_.add(rawValue);
+              aroma_.add(rawValue);
             }
             input.popLimit(oldLimit);
             break;
@@ -155,10 +160,10 @@ private static final long serialVersionUID = 0L;
           e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-        feelingTags_ = java.util.Collections.unmodifiableList(feelingTags_);
+        feeling_ = java.util.Collections.unmodifiableList(feeling_);
       }
       if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-        tastingNotes_ = java.util.Collections.unmodifiableList(tastingNotes_);
+        aroma_ = java.util.Collections.unmodifiableList(aroma_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -178,56 +183,88 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int DESCRIPTION_FIELD_NUMBER = 1;
-  private io.opencannabis.schema.content.Content description_;
+  private io.opencannabis.schema.content.GenericContent.Content description_;
   /**
+   * <pre>
+   * Subjective description of using this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content description = 1;</code>
    */
   public boolean hasDescription() {
     return description_ != null;
   }
   /**
+   * <pre>
+   * Subjective description of using this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content description = 1;</code>
    */
-  public io.opencannabis.schema.content.Content getDescription() {
-    return description_ == null ? io.opencannabis.schema.content.Content.getDefaultInstance() : description_;
+  public io.opencannabis.schema.content.GenericContent.Content getDescription() {
+    return description_ == null ? io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : description_;
   }
   /**
+   * <pre>
+   * Subjective description of using this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content description = 1;</code>
    */
-  public io.opencannabis.schema.content.ContentOrBuilder getDescriptionOrBuilder() {
+  public io.opencannabis.schema.content.GenericContent.ContentOrBuilder getDescriptionOrBuilder() {
     return getDescription();
   }
 
   public static final int TASTE_FIELD_NUMBER = 2;
-  private io.opencannabis.schema.content.Content taste_;
+  private io.opencannabis.schema.content.GenericContent.Content taste_;
   /**
+   * <pre>
+   * Subjective description of the taste of this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content taste = 2;</code>
    */
   public boolean hasTaste() {
     return taste_ != null;
   }
   /**
+   * <pre>
+   * Subjective description of the taste of this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content taste = 2;</code>
    */
-  public io.opencannabis.schema.content.Content getTaste() {
-    return taste_ == null ? io.opencannabis.schema.content.Content.getDefaultInstance() : taste_;
+  public io.opencannabis.schema.content.GenericContent.Content getTaste() {
+    return taste_ == null ? io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : taste_;
   }
   /**
+   * <pre>
+   * Subjective description of the taste of this product.
+   * </pre>
+   *
    * <code>.opencannabis.content.Content taste = 2;</code>
    */
-  public io.opencannabis.schema.content.ContentOrBuilder getTasteOrBuilder() {
+  public io.opencannabis.schema.content.GenericContent.ContentOrBuilder getTasteOrBuilder() {
     return getTaste();
   }
 
   public static final int POTENCY_FIELD_NUMBER = 3;
   private int potency_;
   /**
+   * <pre>
+   * Subjective potency estimate for this product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
    */
   public int getPotencyValue() {
     return potency_;
   }
   /**
+   * <pre>
+   * Subjective potency estimate for this product.
+   * </pre>
+   *
    * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
    */
   public io.opencannabis.schema.product.struct.testing.PotencyEstimate getPotency() {
@@ -235,10 +272,10 @@ private static final long serialVersionUID = 0L;
     return result == null ? io.opencannabis.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
   }
 
-  public static final int FEELING_TAGS_FIELD_NUMBER = 4;
-  private java.util.List<java.lang.Integer> feelingTags_;
+  public static final int FEELING_FIELD_NUMBER = 4;
+  private java.util.List<java.lang.Integer> feeling_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling> feelingTags_converter_ =
+      java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling> feeling_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>() {
             public io.opencannabis.schema.product.struct.testing.Feeling convert(java.lang.Integer from) {
@@ -247,43 +284,63 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
-  public java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingTagsList() {
+  public java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>(feelingTags_, feelingTags_converter_);
+        java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>(feeling_, feeling_converter_);
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
-  public int getFeelingTagsCount() {
-    return feelingTags_.size();
+  public int getFeelingCount() {
+    return feeling_.size();
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.Feeling getFeelingTags(int index) {
-    return feelingTags_converter_.convert(feelingTags_.get(index));
+  public io.opencannabis.schema.product.struct.testing.Feeling getFeeling(int index) {
+    return feeling_converter_.convert(feeling_.get(index));
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
   public java.util.List<java.lang.Integer>
-  getFeelingTagsValueList() {
-    return feelingTags_;
+  getFeelingValueList() {
+    return feeling_;
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+   * <pre>
+   * Subjective feeling tags for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
    */
-  public int getFeelingTagsValue(int index) {
-    return feelingTags_.get(index);
+  public int getFeelingValue(int index) {
+    return feeling_.get(index);
   }
-  private int feelingTagsMemoizedSerializedSize;
+  private int feelingMemoizedSerializedSize;
 
-  public static final int TASTING_NOTES_FIELD_NUMBER = 5;
-  private java.util.List<java.lang.Integer> tastingNotes_;
+  public static final int AROMA_FIELD_NUMBER = 5;
+  private java.util.List<java.lang.Integer> aroma_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote> tastingNotes_converter_ =
+      java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote> aroma_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>() {
             public io.opencannabis.schema.product.struct.testing.TasteNote convert(java.lang.Integer from) {
@@ -292,38 +349,58 @@ private static final long serialVersionUID = 0L;
             }
           };
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
-  public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getTastingNotesList() {
+  public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getAromaList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(tastingNotes_, tastingNotes_converter_);
+        java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(aroma_, aroma_converter_);
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
-  public int getTastingNotesCount() {
-    return tastingNotes_.size();
+  public int getAromaCount() {
+    return aroma_.size();
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
-  public io.opencannabis.schema.product.struct.testing.TasteNote getTastingNotes(int index) {
-    return tastingNotes_converter_.convert(tastingNotes_.get(index));
+  public io.opencannabis.schema.product.struct.testing.TasteNote getAroma(int index) {
+    return aroma_converter_.convert(aroma_.get(index));
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
   public java.util.List<java.lang.Integer>
-  getTastingNotesValueList() {
-    return tastingNotes_;
+  getAromaValueList() {
+    return aroma_;
   }
   /**
-   * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+   * <pre>
+   * Subjective taste or aroma notes for this product.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
    */
-  public int getTastingNotesValue(int index) {
-    return tastingNotes_.get(index);
+  public int getAromaValue(int index) {
+    return aroma_.get(index);
   }
-  private int tastingNotesMemoizedSerializedSize;
+  private int aromaMemoizedSerializedSize;
 
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
@@ -347,19 +424,19 @@ private static final long serialVersionUID = 0L;
     if (potency_ != io.opencannabis.schema.product.struct.testing.PotencyEstimate.LIGHT.getNumber()) {
       output.writeEnum(3, potency_);
     }
-    if (getFeelingTagsList().size() > 0) {
+    if (getFeelingList().size() > 0) {
       output.writeUInt32NoTag(34);
-      output.writeUInt32NoTag(feelingTagsMemoizedSerializedSize);
+      output.writeUInt32NoTag(feelingMemoizedSerializedSize);
     }
-    for (int i = 0; i < feelingTags_.size(); i++) {
-      output.writeEnumNoTag(feelingTags_.get(i));
+    for (int i = 0; i < feeling_.size(); i++) {
+      output.writeEnumNoTag(feeling_.get(i));
     }
-    if (getTastingNotesList().size() > 0) {
+    if (getAromaList().size() > 0) {
       output.writeUInt32NoTag(42);
-      output.writeUInt32NoTag(tastingNotesMemoizedSerializedSize);
+      output.writeUInt32NoTag(aromaMemoizedSerializedSize);
     }
-    for (int i = 0; i < tastingNotes_.size(); i++) {
-      output.writeEnumNoTag(tastingNotes_.get(i));
+    for (int i = 0; i < aroma_.size(); i++) {
+      output.writeEnumNoTag(aroma_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -383,27 +460,27 @@ private static final long serialVersionUID = 0L;
     }
     {
       int dataSize = 0;
-      for (int i = 0; i < feelingTags_.size(); i++) {
+      for (int i = 0; i < feeling_.size(); i++) {
         dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(feelingTags_.get(i));
+          .computeEnumSizeNoTag(feeling_.get(i));
       }
       size += dataSize;
-      if (!getFeelingTagsList().isEmpty()) {  size += 1;
+      if (!getFeelingList().isEmpty()) {  size += 1;
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32SizeNoTag(dataSize);
-      }feelingTagsMemoizedSerializedSize = dataSize;
+      }feelingMemoizedSerializedSize = dataSize;
     }
     {
       int dataSize = 0;
-      for (int i = 0; i < tastingNotes_.size(); i++) {
+      for (int i = 0; i < aroma_.size(); i++) {
         dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(tastingNotes_.get(i));
+          .computeEnumSizeNoTag(aroma_.get(i));
       }
       size += dataSize;
-      if (!getTastingNotesList().isEmpty()) {  size += 1;
+      if (!getAromaList().isEmpty()) {  size += 1;
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32SizeNoTag(dataSize);
-      }tastingNotesMemoizedSerializedSize = dataSize;
+      }aromaMemoizedSerializedSize = dataSize;
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -432,8 +509,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getTaste());
     }
     result = result && potency_ == other.potency_;
-    result = result && feelingTags_.equals(other.feelingTags_);
-    result = result && tastingNotes_.equals(other.tastingNotes_);
+    result = result && feeling_.equals(other.feeling_);
+    result = result && aroma_.equals(other.aroma_);
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -455,13 +532,13 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + POTENCY_FIELD_NUMBER;
     hash = (53 * hash) + potency_;
-    if (getFeelingTagsCount() > 0) {
-      hash = (37 * hash) + FEELING_TAGS_FIELD_NUMBER;
-      hash = (53 * hash) + feelingTags_.hashCode();
+    if (getFeelingCount() > 0) {
+      hash = (37 * hash) + FEELING_FIELD_NUMBER;
+      hash = (53 * hash) + feeling_.hashCode();
     }
-    if (getTastingNotesCount() > 0) {
-      hash = (37 * hash) + TASTING_NOTES_FIELD_NUMBER;
-      hash = (53 * hash) + tastingNotes_.hashCode();
+    if (getAromaCount() > 0) {
+      hash = (37 * hash) + AROMA_FIELD_NUMBER;
+      hash = (53 * hash) + aroma_.hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -557,6 +634,11 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Specifies the structure of "subjective testing" results, wherein a consumer or user has tried the product and
+   * evaluated its subjective effects.
+   * </pre>
+   *
    * Protobuf type {@code opencannabis.structs.labtesting.Subjective}
    */
   public static final class Builder extends
@@ -606,9 +688,9 @@ private static final long serialVersionUID = 0L;
       }
       potency_ = 0;
 
-      feelingTags_ = java.util.Collections.emptyList();
+      feeling_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000008);
-      tastingNotes_ = java.util.Collections.emptyList();
+      aroma_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
@@ -646,15 +728,15 @@ private static final long serialVersionUID = 0L;
       }
       result.potency_ = potency_;
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        feelingTags_ = java.util.Collections.unmodifiableList(feelingTags_);
+        feeling_ = java.util.Collections.unmodifiableList(feeling_);
         bitField0_ = (bitField0_ & ~0x00000008);
       }
-      result.feelingTags_ = feelingTags_;
+      result.feeling_ = feeling_;
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        tastingNotes_ = java.util.Collections.unmodifiableList(tastingNotes_);
+        aroma_ = java.util.Collections.unmodifiableList(aroma_);
         bitField0_ = (bitField0_ & ~0x00000010);
       }
-      result.tastingNotes_ = tastingNotes_;
+      result.aroma_ = aroma_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -706,23 +788,23 @@ private static final long serialVersionUID = 0L;
       if (other.potency_ != 0) {
         setPotencyValue(other.getPotencyValue());
       }
-      if (!other.feelingTags_.isEmpty()) {
-        if (feelingTags_.isEmpty()) {
-          feelingTags_ = other.feelingTags_;
+      if (!other.feeling_.isEmpty()) {
+        if (feeling_.isEmpty()) {
+          feeling_ = other.feeling_;
           bitField0_ = (bitField0_ & ~0x00000008);
         } else {
-          ensureFeelingTagsIsMutable();
-          feelingTags_.addAll(other.feelingTags_);
+          ensureFeelingIsMutable();
+          feeling_.addAll(other.feeling_);
         }
         onChanged();
       }
-      if (!other.tastingNotes_.isEmpty()) {
-        if (tastingNotes_.isEmpty()) {
-          tastingNotes_ = other.tastingNotes_;
+      if (!other.aroma_.isEmpty()) {
+        if (aroma_.isEmpty()) {
+          aroma_ = other.aroma_;
           bitField0_ = (bitField0_ & ~0x00000010);
         } else {
-          ensureTastingNotesIsMutable();
-          tastingNotes_.addAll(other.tastingNotes_);
+          ensureAromaIsMutable();
+          aroma_.addAll(other.aroma_);
         }
         onChanged();
       }
@@ -754,29 +836,41 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private io.opencannabis.schema.content.Content description_ = null;
+    private io.opencannabis.schema.content.GenericContent.Content description_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder> descriptionBuilder_;
+        io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> descriptionBuilder_;
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
     public boolean hasDescription() {
       return descriptionBuilder_ != null || description_ != null;
     }
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
-    public io.opencannabis.schema.content.Content getDescription() {
+    public io.opencannabis.schema.content.GenericContent.Content getDescription() {
       if (descriptionBuilder_ == null) {
-        return description_ == null ? io.opencannabis.schema.content.Content.getDefaultInstance() : description_;
+        return description_ == null ? io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : description_;
       } else {
         return descriptionBuilder_.getMessage();
       }
     }
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
-    public Builder setDescription(io.opencannabis.schema.content.Content value) {
+    public Builder setDescription(io.opencannabis.schema.content.GenericContent.Content value) {
       if (descriptionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -790,10 +884,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
     public Builder setDescription(
-        io.opencannabis.schema.content.Content.Builder builderForValue) {
+        io.opencannabis.schema.content.GenericContent.Content.Builder builderForValue) {
       if (descriptionBuilder_ == null) {
         description_ = builderForValue.build();
         onChanged();
@@ -804,13 +902,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
-    public Builder mergeDescription(io.opencannabis.schema.content.Content value) {
+    public Builder mergeDescription(io.opencannabis.schema.content.GenericContent.Content value) {
       if (descriptionBuilder_ == null) {
         if (description_ != null) {
           description_ =
-            io.opencannabis.schema.content.Content.newBuilder(description_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.content.GenericContent.Content.newBuilder(description_).mergeFrom(value).buildPartial();
         } else {
           description_ = value;
         }
@@ -822,6 +924,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
     public Builder clearDescription() {
@@ -836,33 +942,45 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
-    public io.opencannabis.schema.content.Content.Builder getDescriptionBuilder() {
+    public io.opencannabis.schema.content.GenericContent.Content.Builder getDescriptionBuilder() {
       
       onChanged();
       return getDescriptionFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
-    public io.opencannabis.schema.content.ContentOrBuilder getDescriptionOrBuilder() {
+    public io.opencannabis.schema.content.GenericContent.ContentOrBuilder getDescriptionOrBuilder() {
       if (descriptionBuilder_ != null) {
         return descriptionBuilder_.getMessageOrBuilder();
       } else {
         return description_ == null ?
-            io.opencannabis.schema.content.Content.getDefaultInstance() : description_;
+            io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : description_;
       }
     }
     /**
+     * <pre>
+     * Subjective description of using this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content description = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder> 
+        io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> 
         getDescriptionFieldBuilder() {
       if (descriptionBuilder_ == null) {
         descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder>(
+            io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder>(
                 getDescription(),
                 getParentForChildren(),
                 isClean());
@@ -871,29 +989,41 @@ private static final long serialVersionUID = 0L;
       return descriptionBuilder_;
     }
 
-    private io.opencannabis.schema.content.Content taste_ = null;
+    private io.opencannabis.schema.content.GenericContent.Content taste_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder> tasteBuilder_;
+        io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> tasteBuilder_;
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
     public boolean hasTaste() {
       return tasteBuilder_ != null || taste_ != null;
     }
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
-    public io.opencannabis.schema.content.Content getTaste() {
+    public io.opencannabis.schema.content.GenericContent.Content getTaste() {
       if (tasteBuilder_ == null) {
-        return taste_ == null ? io.opencannabis.schema.content.Content.getDefaultInstance() : taste_;
+        return taste_ == null ? io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : taste_;
       } else {
         return tasteBuilder_.getMessage();
       }
     }
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
-    public Builder setTaste(io.opencannabis.schema.content.Content value) {
+    public Builder setTaste(io.opencannabis.schema.content.GenericContent.Content value) {
       if (tasteBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -907,10 +1037,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
     public Builder setTaste(
-        io.opencannabis.schema.content.Content.Builder builderForValue) {
+        io.opencannabis.schema.content.GenericContent.Content.Builder builderForValue) {
       if (tasteBuilder_ == null) {
         taste_ = builderForValue.build();
         onChanged();
@@ -921,13 +1055,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
-    public Builder mergeTaste(io.opencannabis.schema.content.Content value) {
+    public Builder mergeTaste(io.opencannabis.schema.content.GenericContent.Content value) {
       if (tasteBuilder_ == null) {
         if (taste_ != null) {
           taste_ =
-            io.opencannabis.schema.content.Content.newBuilder(taste_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.content.GenericContent.Content.newBuilder(taste_).mergeFrom(value).buildPartial();
         } else {
           taste_ = value;
         }
@@ -939,6 +1077,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
     public Builder clearTaste() {
@@ -953,33 +1095,45 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
-    public io.opencannabis.schema.content.Content.Builder getTasteBuilder() {
+    public io.opencannabis.schema.content.GenericContent.Content.Builder getTasteBuilder() {
       
       onChanged();
       return getTasteFieldBuilder().getBuilder();
     }
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
-    public io.opencannabis.schema.content.ContentOrBuilder getTasteOrBuilder() {
+    public io.opencannabis.schema.content.GenericContent.ContentOrBuilder getTasteOrBuilder() {
       if (tasteBuilder_ != null) {
         return tasteBuilder_.getMessageOrBuilder();
       } else {
         return taste_ == null ?
-            io.opencannabis.schema.content.Content.getDefaultInstance() : taste_;
+            io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : taste_;
       }
     }
     /**
+     * <pre>
+     * Subjective description of the taste of this product.
+     * </pre>
+     *
      * <code>.opencannabis.content.Content taste = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder> 
+        io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> 
         getTasteFieldBuilder() {
       if (tasteBuilder_ == null) {
         tasteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.content.Content, io.opencannabis.schema.content.Content.Builder, io.opencannabis.schema.content.ContentOrBuilder>(
+            io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder>(
                 getTaste(),
                 getParentForChildren(),
                 isClean());
@@ -990,12 +1144,20 @@ private static final long serialVersionUID = 0L;
 
     private int potency_ = 0;
     /**
+     * <pre>
+     * Subjective potency estimate for this product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
      */
     public int getPotencyValue() {
       return potency_;
     }
     /**
+     * <pre>
+     * Subjective potency estimate for this product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
      */
     public Builder setPotencyValue(int value) {
@@ -1004,6 +1166,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective potency estimate for this product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
      */
     public io.opencannabis.schema.product.struct.testing.PotencyEstimate getPotency() {
@@ -1011,6 +1177,10 @@ private static final long serialVersionUID = 0L;
       return result == null ? io.opencannabis.schema.product.struct.testing.PotencyEstimate.UNRECOGNIZED : result;
     }
     /**
+     * <pre>
+     * Subjective potency estimate for this product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
      */
     public Builder setPotency(io.opencannabis.schema.product.struct.testing.PotencyEstimate value) {
@@ -1023,6 +1193,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Subjective potency estimate for this product.
+     * </pre>
+     *
      * <code>.opencannabis.structs.labtesting.PotencyEstimate potency = 3;</code>
      */
     public Builder clearPotency() {
@@ -1032,237 +1206,333 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<java.lang.Integer> feelingTags_ =
+    private java.util.List<java.lang.Integer> feeling_ =
       java.util.Collections.emptyList();
-    private void ensureFeelingTagsIsMutable() {
+    private void ensureFeelingIsMutable() {
       if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-        feelingTags_ = new java.util.ArrayList<java.lang.Integer>(feelingTags_);
+        feeling_ = new java.util.ArrayList<java.lang.Integer>(feeling_);
         bitField0_ |= 0x00000008;
       }
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingTagsList() {
+    public java.util.List<io.opencannabis.schema.product.struct.testing.Feeling> getFeelingList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>(feelingTags_, feelingTags_converter_);
+          java.lang.Integer, io.opencannabis.schema.product.struct.testing.Feeling>(feeling_, feeling_converter_);
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public int getFeelingTagsCount() {
-      return feelingTags_.size();
+    public int getFeelingCount() {
+      return feeling_.size();
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.Feeling getFeelingTags(int index) {
-      return feelingTags_converter_.convert(feelingTags_.get(index));
+    public io.opencannabis.schema.product.struct.testing.Feeling getFeeling(int index) {
+      return feeling_converter_.convert(feeling_.get(index));
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public Builder setFeelingTags(
+    public Builder setFeeling(
         int index, io.opencannabis.schema.product.struct.testing.Feeling value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      ensureFeelingTagsIsMutable();
-      feelingTags_.set(index, value.getNumber());
+      ensureFeelingIsMutable();
+      feeling_.set(index, value.getNumber());
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public Builder addFeelingTags(io.opencannabis.schema.product.struct.testing.Feeling value) {
+    public Builder addFeeling(io.opencannabis.schema.product.struct.testing.Feeling value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      ensureFeelingTagsIsMutable();
-      feelingTags_.add(value.getNumber());
+      ensureFeelingIsMutable();
+      feeling_.add(value.getNumber());
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public Builder addAllFeelingTags(
+    public Builder addAllFeeling(
         java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.Feeling> values) {
-      ensureFeelingTagsIsMutable();
+      ensureFeelingIsMutable();
       for (io.opencannabis.schema.product.struct.testing.Feeling value : values) {
-        feelingTags_.add(value.getNumber());
+        feeling_.add(value.getNumber());
       }
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public Builder clearFeelingTags() {
-      feelingTags_ = java.util.Collections.emptyList();
+    public Builder clearFeeling() {
+      feeling_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
     public java.util.List<java.lang.Integer>
-    getFeelingTagsValueList() {
-      return java.util.Collections.unmodifiableList(feelingTags_);
+    getFeelingValueList() {
+      return java.util.Collections.unmodifiableList(feeling_);
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public int getFeelingTagsValue(int index) {
-      return feelingTags_.get(index);
+    public int getFeelingValue(int index) {
+      return feeling_.get(index);
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public Builder setFeelingTagsValue(
+    public Builder setFeelingValue(
         int index, int value) {
-      ensureFeelingTagsIsMutable();
-      feelingTags_.set(index, value);
+      ensureFeelingIsMutable();
+      feeling_.set(index, value);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public Builder addFeelingTagsValue(int value) {
-      ensureFeelingTagsIsMutable();
-      feelingTags_.add(value);
+    public Builder addFeelingValue(int value) {
+      ensureFeelingIsMutable();
+      feeling_.add(value);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling_tags = 4;</code>
+     * <pre>
+     * Subjective feeling tags for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.Feeling feeling = 4;</code>
      */
-    public Builder addAllFeelingTagsValue(
+    public Builder addAllFeelingValue(
         java.lang.Iterable<java.lang.Integer> values) {
-      ensureFeelingTagsIsMutable();
+      ensureFeelingIsMutable();
       for (int value : values) {
-        feelingTags_.add(value);
+        feeling_.add(value);
       }
       onChanged();
       return this;
     }
 
-    private java.util.List<java.lang.Integer> tastingNotes_ =
+    private java.util.List<java.lang.Integer> aroma_ =
       java.util.Collections.emptyList();
-    private void ensureTastingNotesIsMutable() {
+    private void ensureAromaIsMutable() {
       if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-        tastingNotes_ = new java.util.ArrayList<java.lang.Integer>(tastingNotes_);
+        aroma_ = new java.util.ArrayList<java.lang.Integer>(aroma_);
         bitField0_ |= 0x00000010;
       }
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getTastingNotesList() {
+    public java.util.List<io.opencannabis.schema.product.struct.testing.TasteNote> getAromaList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(tastingNotes_, tastingNotes_converter_);
+          java.lang.Integer, io.opencannabis.schema.product.struct.testing.TasteNote>(aroma_, aroma_converter_);
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public int getTastingNotesCount() {
-      return tastingNotes_.size();
+    public int getAromaCount() {
+      return aroma_.size();
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public io.opencannabis.schema.product.struct.testing.TasteNote getTastingNotes(int index) {
-      return tastingNotes_converter_.convert(tastingNotes_.get(index));
+    public io.opencannabis.schema.product.struct.testing.TasteNote getAroma(int index) {
+      return aroma_converter_.convert(aroma_.get(index));
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public Builder setTastingNotes(
+    public Builder setAroma(
         int index, io.opencannabis.schema.product.struct.testing.TasteNote value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      ensureTastingNotesIsMutable();
-      tastingNotes_.set(index, value.getNumber());
+      ensureAromaIsMutable();
+      aroma_.set(index, value.getNumber());
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public Builder addTastingNotes(io.opencannabis.schema.product.struct.testing.TasteNote value) {
+    public Builder addAroma(io.opencannabis.schema.product.struct.testing.TasteNote value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      ensureTastingNotesIsMutable();
-      tastingNotes_.add(value.getNumber());
+      ensureAromaIsMutable();
+      aroma_.add(value.getNumber());
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public Builder addAllTastingNotes(
+    public Builder addAllAroma(
         java.lang.Iterable<? extends io.opencannabis.schema.product.struct.testing.TasteNote> values) {
-      ensureTastingNotesIsMutable();
+      ensureAromaIsMutable();
       for (io.opencannabis.schema.product.struct.testing.TasteNote value : values) {
-        tastingNotes_.add(value.getNumber());
+        aroma_.add(value.getNumber());
       }
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public Builder clearTastingNotes() {
-      tastingNotes_ = java.util.Collections.emptyList();
+    public Builder clearAroma() {
+      aroma_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
     public java.util.List<java.lang.Integer>
-    getTastingNotesValueList() {
-      return java.util.Collections.unmodifiableList(tastingNotes_);
+    getAromaValueList() {
+      return java.util.Collections.unmodifiableList(aroma_);
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public int getTastingNotesValue(int index) {
-      return tastingNotes_.get(index);
+    public int getAromaValue(int index) {
+      return aroma_.get(index);
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public Builder setTastingNotesValue(
+    public Builder setAromaValue(
         int index, int value) {
-      ensureTastingNotesIsMutable();
-      tastingNotes_.set(index, value);
+      ensureAromaIsMutable();
+      aroma_.set(index, value);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public Builder addTastingNotesValue(int value) {
-      ensureTastingNotesIsMutable();
-      tastingNotes_.add(value);
+    public Builder addAromaValue(int value) {
+      ensureAromaIsMutable();
+      aroma_.add(value);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated .opencannabis.structs.labtesting.TasteNote tasting_notes = 5;</code>
+     * <pre>
+     * Subjective taste or aroma notes for this product.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.structs.labtesting.TasteNote aroma = 5;</code>
      */
-    public Builder addAllTastingNotesValue(
+    public Builder addAllAromaValue(
         java.lang.Iterable<java.lang.Integer> values) {
-      ensureTastingNotesIsMutable();
+      ensureAromaIsMutable();
       for (int value : values) {
-        tastingNotes_.add(value);
+        aroma_.add(value);
       }
       onChanged();
       return this;

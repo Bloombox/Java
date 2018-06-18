@@ -88,7 +88,7 @@ public interface DeviceTokenOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant issued = 3;</code>
    */
-  io.opencannabis.schema.temporal.Instant getIssued();
+  io.opencannabis.schema.temporal.TemporalInstant.Instant getIssued();
   /**
    * <pre>
    * Issuance timestamp for this device token.
@@ -96,7 +96,7 @@ public interface DeviceTokenOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant issued = 3;</code>
    */
-  io.opencannabis.schema.temporal.InstantOrBuilder getIssuedOrBuilder();
+  io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getIssuedOrBuilder();
 
   /**
    * <pre>
@@ -113,7 +113,7 @@ public interface DeviceTokenOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant expires = 4;</code>
    */
-  io.opencannabis.schema.temporal.Instant getExpires();
+  io.opencannabis.schema.temporal.TemporalInstant.Instant getExpires();
   /**
    * <pre>
    * Expiry timestamp for this device token.
@@ -121,5 +121,5 @@ public interface DeviceTokenOrBuilder extends
    *
    * <code>.opencannabis.temporal.Instant expires = 4;</code>
    */
-  io.opencannabis.schema.temporal.InstantOrBuilder getExpiresOrBuilder();
+  io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getExpiresOrBuilder();
 }

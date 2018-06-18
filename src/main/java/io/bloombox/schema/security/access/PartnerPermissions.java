@@ -30,16 +30,3430 @@ public final class PartnerPermissions {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_security_access_PartnerAccess_descriptor;
-  static final 
+  /**
+   * <pre>
+   * Enumerates roles that may be granted, on behalf of a partner or partner location account, to an end-user account, by
+   * a location or partner admin.
+   * </pre>
+   *
+   * Protobuf enum {@code bloombox.schema.security.access.PartnerRole}
+   */
+  public enum PartnerRole
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * Read-only permission for the specified scope.
+     * </pre>
+     *
+     * <code>READONLY = 0;</code>
+     */
+    READONLY(0),
+    /**
+     * <pre>
+     * Supervisor (edit, but not admin) permission for the specified scope.
+     * </pre>
+     *
+     * <code>SUPERVISOR = 1;</code>
+     */
+    SUPERVISOR(1),
+    /**
+     * <pre>
+     * Billing administration rights. Can edit payment methods and see/manage invoices.
+     * </pre>
+     *
+     * <code>BILLING = 2;</code>
+     */
+    BILLING(2),
+    /**
+     * <pre>
+     * Audit rights. Allows outside auditors to see account data in a read-only manner.
+     * </pre>
+     *
+     * <code>AUDIT = 3;</code>
+     */
+    AUDIT(3),
+    /**
+     * <pre>
+     * Employee rights. Can manage data but not settings.
+     * </pre>
+     *
+     * <code>EMPLOYEE = 4;</code>
+     */
+    EMPLOYEE(4),
+    /**
+     * <pre>
+     * Software-level access, with ability to manage API keys and technical settings.
+     * </pre>
+     *
+     * <code>DEVELOPER = 5;</code>
+     */
+    DEVELOPER(5),
+    /**
+     * <pre>
+     * Administrator account, with full access to user and account-level settings.
+     * </pre>
+     *
+     * <code>ADMIN = 6;</code>
+     */
+    ADMIN(6),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * Read-only permission for the specified scope.
+     * </pre>
+     *
+     * <code>READONLY = 0;</code>
+     */
+    public static final int READONLY_VALUE = 0;
+    /**
+     * <pre>
+     * Supervisor (edit, but not admin) permission for the specified scope.
+     * </pre>
+     *
+     * <code>SUPERVISOR = 1;</code>
+     */
+    public static final int SUPERVISOR_VALUE = 1;
+    /**
+     * <pre>
+     * Billing administration rights. Can edit payment methods and see/manage invoices.
+     * </pre>
+     *
+     * <code>BILLING = 2;</code>
+     */
+    public static final int BILLING_VALUE = 2;
+    /**
+     * <pre>
+     * Audit rights. Allows outside auditors to see account data in a read-only manner.
+     * </pre>
+     *
+     * <code>AUDIT = 3;</code>
+     */
+    public static final int AUDIT_VALUE = 3;
+    /**
+     * <pre>
+     * Employee rights. Can manage data but not settings.
+     * </pre>
+     *
+     * <code>EMPLOYEE = 4;</code>
+     */
+    public static final int EMPLOYEE_VALUE = 4;
+    /**
+     * <pre>
+     * Software-level access, with ability to manage API keys and technical settings.
+     * </pre>
+     *
+     * <code>DEVELOPER = 5;</code>
+     */
+    public static final int DEVELOPER_VALUE = 5;
+    /**
+     * <pre>
+     * Administrator account, with full access to user and account-level settings.
+     * </pre>
+     *
+     * <code>ADMIN = 6;</code>
+     */
+    public static final int ADMIN_VALUE = 6;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PartnerRole valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static PartnerRole forNumber(int value) {
+      switch (value) {
+        case 0: return READONLY;
+        case 1: return SUPERVISOR;
+        case 2: return BILLING;
+        case 3: return AUDIT;
+        case 4: return EMPLOYEE;
+        case 5: return DEVELOPER;
+        case 6: return ADMIN;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PartnerRole>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PartnerRole> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PartnerRole>() {
+            public PartnerRole findValueByNumber(int number) {
+              return PartnerRole.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return io.bloombox.schema.security.access.PartnerPermissions.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PartnerRole[] VALUES = values();
+
+    public static PartnerRole valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PartnerRole(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.security.access.PartnerRole)
+  }
+
+  public interface AccessSubjectOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.security.access.AccessSubject)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Partner-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     */
+    boolean hasPartner();
+    /**
+     * <pre>
+     * Partner-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     */
+    io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner();
+    /**
+     * <pre>
+     * Partner-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     */
+    io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder();
+
+    /**
+     * <pre>
+     * Partner location-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     */
+    boolean hasLocation();
+    /**
+     * <pre>
+     * Partner location-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     */
+    io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
+    /**
+     * <pre>
+     * Partner location-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     */
+    io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
+
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.AccountCase getAccountCase();
+  }
+  /**
+   * <pre>
+   * Specifies the subject account for a given access policy. The subject "account," in this case, is the partner or
+   * partner location for which right are being specified.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.security.access.AccessSubject}
+   */
+  public  static final class AccessSubject extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.security.access.AccessSubject)
+      AccessSubjectOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessSubject.newBuilder() to construct.
+    private AccessSubject(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessSubject() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessSubject(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 82: {
+              io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder subBuilder = null;
+              if (accountCase_ == 10) {
+                subBuilder = ((io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_).toBuilder();
+              }
+              account_ =
+                  input.readMessage(io.bloombox.schema.partner.PartnerMeta.PartnerKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_);
+                account_ = subBuilder.buildPartial();
+              }
+              accountCase_ = 10;
+              break;
+            }
+            case 162: {
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
+              if (accountCase_ == 20) {
+                subBuilder = ((io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_).toBuilder();
+              }
+              account_ =
+                  input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_);
+                account_ = subBuilder.buildPartial();
+              }
+              accountCase_ = 20;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.class, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder.class);
+    }
+
+    private int accountCase_ = 0;
+    private java.lang.Object account_;
+    public enum AccountCase
+        implements com.google.protobuf.Internal.EnumLite {
+      PARTNER(10),
+      LOCATION(20),
+      ACCOUNT_NOT_SET(0);
+      private final int value;
+      private AccountCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AccountCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static AccountCase forNumber(int value) {
+        switch (value) {
+          case 10: return PARTNER;
+          case 20: return LOCATION;
+          case 0: return ACCOUNT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public AccountCase
+    getAccountCase() {
+      return AccountCase.forNumber(
+          accountCase_);
+    }
+
+    public static final int PARTNER_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Partner-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     */
+    public boolean hasPartner() {
+      return accountCase_ == 10;
+    }
+    /**
+     * <pre>
+     * Partner-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     */
+    public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
+      if (accountCase_ == 10) {
+         return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_;
+      }
+      return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Partner-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+     */
+    public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
+      if (accountCase_ == 10) {
+         return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_;
+      }
+      return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 20;
+    /**
+     * <pre>
+     * Partner location-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     */
+    public boolean hasLocation() {
+      return accountCase_ == 20;
+    }
+    /**
+     * <pre>
+     * Partner location-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     */
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
+      if (accountCase_ == 20) {
+         return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_;
+      }
+      return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Partner location-level access scope.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+     */
+    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
+      if (accountCase_ == 20) {
+         return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_;
+      }
+      return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (accountCase_ == 10) {
+        output.writeMessage(10, (io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_);
+      }
+      if (accountCase_ == 20) {
+        output.writeMessage(20, (io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (accountCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_);
+      }
+      if (accountCase_ == 20) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, (io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.security.access.PartnerPermissions.AccessSubject)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.security.access.PartnerPermissions.AccessSubject other = (io.bloombox.schema.security.access.PartnerPermissions.AccessSubject) obj;
+
+      boolean result = true;
+      result = result && getAccountCase().equals(
+          other.getAccountCase());
+      if (!result) return false;
+      switch (accountCase_) {
+        case 10:
+          result = result && getPartner()
+              .equals(other.getPartner());
+          break;
+        case 20:
+          result = result && getLocation()
+              .equals(other.getLocation());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (accountCase_) {
+        case 10:
+          hash = (37 * hash) + PARTNER_FIELD_NUMBER;
+          hash = (53 * hash) + getPartner().hashCode();
+          break;
+        case 20:
+          hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+          hash = (53 * hash) + getLocation().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.security.access.PartnerPermissions.AccessSubject prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies the subject account for a given access policy. The subject "account," in this case, is the partner or
+     * partner location for which right are being specified.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.security.access.AccessSubject}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.security.access.AccessSubject)
+        io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.class, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        accountCase_ = 0;
+        account_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessSubject_descriptor;
+      }
+
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getDefaultInstanceForType() {
+        return io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject build() {
+        io.bloombox.schema.security.access.PartnerPermissions.AccessSubject result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject buildPartial() {
+        io.bloombox.schema.security.access.PartnerPermissions.AccessSubject result = new io.bloombox.schema.security.access.PartnerPermissions.AccessSubject(this);
+        if (accountCase_ == 10) {
+          if (partnerBuilder_ == null) {
+            result.account_ = account_;
+          } else {
+            result.account_ = partnerBuilder_.build();
+          }
+        }
+        if (accountCase_ == 20) {
+          if (locationBuilder_ == null) {
+            result.account_ = account_;
+          } else {
+            result.account_ = locationBuilder_.build();
+          }
+        }
+        result.accountCase_ = accountCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.security.access.PartnerPermissions.AccessSubject) {
+          return mergeFrom((io.bloombox.schema.security.access.PartnerPermissions.AccessSubject)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.security.access.PartnerPermissions.AccessSubject other) {
+        if (other == io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.getDefaultInstance()) return this;
+        switch (other.getAccountCase()) {
+          case PARTNER: {
+            mergePartner(other.getPartner());
+            break;
+          }
+          case LOCATION: {
+            mergeLocation(other.getLocation());
+            break;
+          }
+          case ACCOUNT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.security.access.PartnerPermissions.AccessSubject parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.security.access.PartnerPermissions.AccessSubject) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int accountCase_ = 0;
+      private java.lang.Object account_;
+      public AccountCase
+          getAccountCase() {
+        return AccountCase.forNumber(
+            accountCase_);
+      }
+
+      public Builder clearAccount() {
+        accountCase_ = 0;
+        account_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> partnerBuilder_;
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      public boolean hasPartner() {
+        return accountCase_ == 10;
+      }
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      public io.bloombox.schema.partner.PartnerMeta.PartnerKey getPartner() {
+        if (partnerBuilder_ == null) {
+          if (accountCase_ == 10) {
+            return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_;
+          }
+          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+        } else {
+          if (accountCase_ == 10) {
+            return partnerBuilder_.getMessage();
+          }
+          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      public Builder setPartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
+        if (partnerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          account_ = value;
+          onChanged();
+        } else {
+          partnerBuilder_.setMessage(value);
+        }
+        accountCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      public Builder setPartner(
+          io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder builderForValue) {
+        if (partnerBuilder_ == null) {
+          account_ = builderForValue.build();
+          onChanged();
+        } else {
+          partnerBuilder_.setMessage(builderForValue.build());
+        }
+        accountCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      public Builder mergePartner(io.bloombox.schema.partner.PartnerMeta.PartnerKey value) {
+        if (partnerBuilder_ == null) {
+          if (accountCase_ == 10 &&
+              account_ != io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance()) {
+            account_ = io.bloombox.schema.partner.PartnerMeta.PartnerKey.newBuilder((io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            account_ = value;
+          }
+          onChanged();
+        } else {
+          if (accountCase_ == 10) {
+            partnerBuilder_.mergeFrom(value);
+          }
+          partnerBuilder_.setMessage(value);
+        }
+        accountCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      public Builder clearPartner() {
+        if (partnerBuilder_ == null) {
+          if (accountCase_ == 10) {
+            accountCase_ = 0;
+            account_ = null;
+            onChanged();
+          }
+        } else {
+          if (accountCase_ == 10) {
+            accountCase_ = 0;
+            account_ = null;
+          }
+          partnerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      public io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder getPartnerBuilder() {
+        return getPartnerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      public io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder getPartnerOrBuilder() {
+        if ((accountCase_ == 10) && (partnerBuilder_ != null)) {
+          return partnerBuilder_.getMessageOrBuilder();
+        } else {
+          if (accountCase_ == 10) {
+            return (io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_;
+          }
+          return io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Partner-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerKey partner = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder> 
+          getPartnerFieldBuilder() {
+        if (partnerBuilder_ == null) {
+          if (!(accountCase_ == 10)) {
+            account_ = io.bloombox.schema.partner.PartnerMeta.PartnerKey.getDefaultInstance();
+          }
+          partnerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.PartnerMeta.PartnerKey, io.bloombox.schema.partner.PartnerMeta.PartnerKey.Builder, io.bloombox.schema.partner.PartnerMeta.PartnerKeyOrBuilder>(
+                  (io.bloombox.schema.partner.PartnerMeta.PartnerKey) account_,
+                  getParentForChildren(),
+                  isClean());
+          account_ = null;
+        }
+        accountCase_ = 10;
+        onChanged();;
+        return partnerBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      public boolean hasLocation() {
+        return accountCase_ == 20;
+      }
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
+        if (locationBuilder_ == null) {
+          if (accountCase_ == 20) {
+            return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_;
+          }
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+        } else {
+          if (accountCase_ == 20) {
+            return locationBuilder_.getMessage();
+          }
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
+        if (locationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          account_ = value;
+          onChanged();
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+        accountCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      public Builder setLocation(
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
+        if (locationBuilder_ == null) {
+          account_ = builderForValue.build();
+          onChanged();
+        } else {
+          locationBuilder_.setMessage(builderForValue.build());
+        }
+        accountCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
+        if (locationBuilder_ == null) {
+          if (accountCase_ == 20 &&
+              account_ != io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance()) {
+            account_ = io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder((io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            account_ = value;
+          }
+          onChanged();
+        } else {
+          if (accountCase_ == 20) {
+            locationBuilder_.mergeFrom(value);
+          }
+          locationBuilder_.setMessage(value);
+        }
+        accountCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      public Builder clearLocation() {
+        if (locationBuilder_ == null) {
+          if (accountCase_ == 20) {
+            accountCase_ = 0;
+            account_ = null;
+            onChanged();
+          }
+        } else {
+          if (accountCase_ == 20) {
+            accountCase_ = 0;
+            account_ = null;
+          }
+          locationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
+        return getLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
+        if ((accountCase_ == 20) && (locationBuilder_ != null)) {
+          return locationBuilder_.getMessageOrBuilder();
+        } else {
+          if (accountCase_ == 20) {
+            return (io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_;
+          }
+          return io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Partner location-level access scope.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.LocationKey location = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
+          getLocationFieldBuilder() {
+        if (locationBuilder_ == null) {
+          if (!(accountCase_ == 20)) {
+            account_ = io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance();
+          }
+          locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
+                  (io.bloombox.schema.partner.LocationAccountKey.LocationKey) account_,
+                  getParentForChildren(),
+                  isClean());
+          account_ = null;
+        }
+        accountCase_ = 20;
+        onChanged();;
+        return locationBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.security.access.AccessSubject)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.security.access.AccessSubject)
+    private static final io.bloombox.schema.security.access.PartnerPermissions.AccessSubject DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.security.access.PartnerPermissions.AccessSubject();
+    }
+
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessSubject>
+        PARSER = new com.google.protobuf.AbstractParser<AccessSubject>() {
+      public AccessSubject parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessSubject(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessSubject> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessSubject> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccessPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.security.access.AccessPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique ID assigned to this access policy.
+     * </pre>
+     *
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
+     */
+    java.lang.String getUuid();
+    /**
+     * <pre>
+     * Unique ID assigned to this access policy.
+     * </pre>
+     *
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <pre>
+     * Partner account or location that we are specifying access rights for.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     */
+    boolean hasSubject();
+    /**
+     * <pre>
+     * Partner account or location that we are specifying access rights for.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     */
+    io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getSubject();
+    /**
+     * <pre>
+     * Partner account or location that we are specifying access rights for.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     */
+    io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder getSubjectOrBuilder();
+
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    java.util.List<io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> getPrivilegeList();
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    int getPrivilegeCount();
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    io.bloombox.schema.security.access.PartnerPermissions.PartnerRole getPrivilege(int index);
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getPrivilegeValueList();
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    int getPrivilegeValue(int index);
+
+    /**
+     * <pre>
+     * User being granted rights as part of this policy.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     */
+    boolean hasUser();
+    /**
+     * <pre>
+     * User being granted rights as part of this policy.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     */
+    io.bloombox.schema.identity.AppUserKey.UserKey getUser();
+    /**
+     * <pre>
+     * User being granted rights as part of this policy.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     */
+    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder();
+
+    /**
+     * <pre>
+     * Permissions grantor.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     */
+    boolean hasGrantor();
+    /**
+     * <pre>
+     * Permissions grantor.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     */
+    io.bloombox.schema.identity.AppUserKey.UserKey getGrantor();
+    /**
+     * <pre>
+     * Permissions grantor.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     */
+    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getGrantorOrBuilder();
+
+    /**
+     * <pre>
+     * Modified timestamp for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 98;</code>
+     */
+    boolean hasModified();
+    /**
+     * <pre>
+     * Modified timestamp for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 98;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getModified();
+    /**
+     * <pre>
+     * Modified timestamp for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 98;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder();
+
+    /**
+     * <pre>
+     * Created timestmap for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant created = 99;</code>
+     */
+    boolean hasCreated();
+    /**
+     * <pre>
+     * Created timestmap for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant created = 99;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated();
+    /**
+     * <pre>
+     * Created timestmap for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant created = 99;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder();
+  }
+  /**
+   * <pre>
+   * Specifies a policy that grants access to a given security subject (a user or a domain) for a given resource (a kind
+   * of data, login access at all, etc).
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.security.access.AccessPolicy}
+   */
+  public  static final class AccessPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.security.access.AccessPolicy)
+      AccessPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessPolicy.newBuilder() to construct.
+    private AccessPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessPolicy() {
+      uuid_ = "";
+      privilege_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessPolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 18: {
+              io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder subBuilder = null;
+              if (subject_ != null) {
+                subBuilder = subject_.toBuilder();
+              }
+              subject_ = input.readMessage(io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(subject_);
+                subject_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                privilege_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              privilege_.add(rawValue);
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  privilege_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                privilege_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 34: {
+              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
+              if (user_ != null) {
+                subBuilder = user_.toBuilder();
+              }
+              user_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(user_);
+                user_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
+              if (grantor_ != null) {
+                subBuilder = grantor_.toBuilder();
+              }
+              grantor_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(grantor_);
+                grantor_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 786: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (modified_ != null) {
+                subBuilder = modified_.toBuilder();
+              }
+              modified_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modified_);
+                modified_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 794: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (created_ != null) {
+                subBuilder = created_.toBuilder();
+              }
+              created_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(created_);
+                created_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          privilege_ = java.util.Collections.unmodifiableList(privilege_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.class, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <pre>
+     * Unique ID assigned to this access policy.
+     * </pre>
+     *
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique ID assigned to this access policy.
+     * </pre>
+     *
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBJECT_FIELD_NUMBER = 2;
+    private io.bloombox.schema.security.access.PartnerPermissions.AccessSubject subject_;
+    /**
+     * <pre>
+     * Partner account or location that we are specifying access rights for.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     */
+    public boolean hasSubject() {
+      return subject_ != null;
+    }
+    /**
+     * <pre>
+     * Partner account or location that we are specifying access rights for.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     */
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getSubject() {
+      return subject_ == null ? io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.getDefaultInstance() : subject_;
+    }
+    /**
+     * <pre>
+     * Partner account or location that we are specifying access rights for.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+     */
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder getSubjectOrBuilder() {
+      return getSubject();
+    }
+
+    public static final int PRIVILEGE_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> privilege_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> privilege_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, io.bloombox.schema.security.access.PartnerPermissions.PartnerRole>() {
+              public io.bloombox.schema.security.access.PartnerPermissions.PartnerRole convert(java.lang.Integer from) {
+                io.bloombox.schema.security.access.PartnerPermissions.PartnerRole result = io.bloombox.schema.security.access.PartnerPermissions.PartnerRole.valueOf(from);
+                return result == null ? io.bloombox.schema.security.access.PartnerPermissions.PartnerRole.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> getPrivilegeList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, io.bloombox.schema.security.access.PartnerPermissions.PartnerRole>(privilege_, privilege_converter_);
+    }
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    public int getPrivilegeCount() {
+      return privilege_.size();
+    }
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    public io.bloombox.schema.security.access.PartnerPermissions.PartnerRole getPrivilege(int index) {
+      return privilege_converter_.convert(privilege_.get(index));
+    }
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getPrivilegeValueList() {
+      return privilege_;
+    }
+    /**
+     * <pre>
+     * Roles granted as part of this policy.
+     * </pre>
+     *
+     * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+     */
+    public int getPrivilegeValue(int index) {
+      return privilege_.get(index);
+    }
+    private int privilegeMemoizedSerializedSize;
+
+    public static final int USER_FIELD_NUMBER = 4;
+    private io.bloombox.schema.identity.AppUserKey.UserKey user_;
+    /**
+     * <pre>
+     * User being granted rights as part of this policy.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     */
+    public boolean hasUser() {
+      return user_ != null;
+    }
+    /**
+     * <pre>
+     * User being granted rights as part of this policy.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     */
+    public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
+      return user_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
+    }
+    /**
+     * <pre>
+     * User being granted rights as part of this policy.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+     */
+    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
+      return getUser();
+    }
+
+    public static final int GRANTOR_FIELD_NUMBER = 5;
+    private io.bloombox.schema.identity.AppUserKey.UserKey grantor_;
+    /**
+     * <pre>
+     * Permissions grantor.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     */
+    public boolean hasGrantor() {
+      return grantor_ != null;
+    }
+    /**
+     * <pre>
+     * Permissions grantor.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     */
+    public io.bloombox.schema.identity.AppUserKey.UserKey getGrantor() {
+      return grantor_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : grantor_;
+    }
+    /**
+     * <pre>
+     * Permissions grantor.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+     */
+    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getGrantorOrBuilder() {
+      return getGrantor();
+    }
+
+    public static final int MODIFIED_FIELD_NUMBER = 98;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
+    /**
+     * <pre>
+     * Modified timestamp for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 98;</code>
+     */
+    public boolean hasModified() {
+      return modified_ != null;
+    }
+    /**
+     * <pre>
+     * Modified timestamp for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 98;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
+      return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
+    }
+    /**
+     * <pre>
+     * Modified timestamp for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant modified = 98;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
+      return getModified();
+    }
+
+    public static final int CREATED_FIELD_NUMBER = 99;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
+    /**
+     * <pre>
+     * Created timestmap for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant created = 99;</code>
+     */
+    public boolean hasCreated() {
+      return created_ != null;
+    }
+    /**
+     * <pre>
+     * Created timestmap for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant created = 99;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated() {
+      return created_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : created_;
+    }
+    /**
+     * <pre>
+     * Created timestmap for this record.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant created = 99;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder() {
+      return getCreated();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
+      }
+      if (subject_ != null) {
+        output.writeMessage(2, getSubject());
+      }
+      if (getPrivilegeList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(privilegeMemoizedSerializedSize);
+      }
+      for (int i = 0; i < privilege_.size(); i++) {
+        output.writeEnumNoTag(privilege_.get(i));
+      }
+      if (user_ != null) {
+        output.writeMessage(4, getUser());
+      }
+      if (grantor_ != null) {
+        output.writeMessage(5, getGrantor());
+      }
+      if (modified_ != null) {
+        output.writeMessage(98, getModified());
+      }
+      if (created_ != null) {
+        output.writeMessage(99, getCreated());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
+      }
+      if (subject_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSubject());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < privilege_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(privilege_.get(i));
+        }
+        size += dataSize;
+        if (!getPrivilegeList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }privilegeMemoizedSerializedSize = dataSize;
+      }
+      if (user_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getUser());
+      }
+      if (grantor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getGrantor());
+      }
+      if (modified_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(98, getModified());
+      }
+      if (created_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getCreated());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy other = (io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy) obj;
+
+      boolean result = true;
+      result = result && getUuid()
+          .equals(other.getUuid());
+      result = result && (hasSubject() == other.hasSubject());
+      if (hasSubject()) {
+        result = result && getSubject()
+            .equals(other.getSubject());
+      }
+      result = result && privilege_.equals(other.privilege_);
+      result = result && (hasUser() == other.hasUser());
+      if (hasUser()) {
+        result = result && getUser()
+            .equals(other.getUser());
+      }
+      result = result && (hasGrantor() == other.hasGrantor());
+      if (hasGrantor()) {
+        result = result && getGrantor()
+            .equals(other.getGrantor());
+      }
+      result = result && (hasModified() == other.hasModified());
+      if (hasModified()) {
+        result = result && getModified()
+            .equals(other.getModified());
+      }
+      result = result && (hasCreated() == other.hasCreated());
+      if (hasCreated()) {
+        result = result && getCreated()
+            .equals(other.getCreated());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getUuid().hashCode();
+      if (hasSubject()) {
+        hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+        hash = (53 * hash) + getSubject().hashCode();
+      }
+      if (getPrivilegeCount() > 0) {
+        hash = (37 * hash) + PRIVILEGE_FIELD_NUMBER;
+        hash = (53 * hash) + privilege_.hashCode();
+      }
+      if (hasUser()) {
+        hash = (37 * hash) + USER_FIELD_NUMBER;
+        hash = (53 * hash) + getUser().hashCode();
+      }
+      if (hasGrantor()) {
+        hash = (37 * hash) + GRANTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getGrantor().hashCode();
+      }
+      if (hasModified()) {
+        hash = (37 * hash) + MODIFIED_FIELD_NUMBER;
+        hash = (53 * hash) + getModified().hashCode();
+      }
+      if (hasCreated()) {
+        hash = (37 * hash) + CREATED_FIELD_NUMBER;
+        hash = (53 * hash) + getCreated().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies a policy that grants access to a given security subject (a user or a domain) for a given resource (a kind
+     * of data, login access at all, etc).
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.security.access.AccessPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.security.access.AccessPolicy)
+        io.bloombox.schema.security.access.PartnerPermissions.AccessPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.class, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        uuid_ = "";
+
+        if (subjectBuilder_ == null) {
+          subject_ = null;
+        } else {
+          subject_ = null;
+          subjectBuilder_ = null;
+        }
+        privilege_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (userBuilder_ == null) {
+          user_ = null;
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+        if (grantorBuilder_ == null) {
+          grantor_ = null;
+        } else {
+          grantor_ = null;
+          grantorBuilder_ = null;
+        }
+        if (modifiedBuilder_ == null) {
+          modified_ = null;
+        } else {
+          modified_ = null;
+          modifiedBuilder_ = null;
+        }
+        if (createdBuilder_ == null) {
+          created_ = null;
+        } else {
+          created_ = null;
+          createdBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.security.access.PartnerPermissions.internal_static_bloombox_schema_security_access_AccessPolicy_descriptor;
+      }
+
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getDefaultInstanceForType() {
+        return io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy build() {
+        io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy buildPartial() {
+        io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy result = new io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.uuid_ = uuid_;
+        if (subjectBuilder_ == null) {
+          result.subject_ = subject_;
+        } else {
+          result.subject_ = subjectBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          privilege_ = java.util.Collections.unmodifiableList(privilege_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.privilege_ = privilege_;
+        if (userBuilder_ == null) {
+          result.user_ = user_;
+        } else {
+          result.user_ = userBuilder_.build();
+        }
+        if (grantorBuilder_ == null) {
+          result.grantor_ = grantor_;
+        } else {
+          result.grantor_ = grantorBuilder_.build();
+        }
+        if (modifiedBuilder_ == null) {
+          result.modified_ = modified_;
+        } else {
+          result.modified_ = modifiedBuilder_.build();
+        }
+        if (createdBuilder_ == null) {
+          result.created_ = created_;
+        } else {
+          result.created_ = createdBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy) {
+          return mergeFrom((io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy other) {
+        if (other == io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy.getDefaultInstance()) return this;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (other.hasSubject()) {
+          mergeSubject(other.getSubject());
+        }
+        if (!other.privilege_.isEmpty()) {
+          if (privilege_.isEmpty()) {
+            privilege_ = other.privilege_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensurePrivilegeIsMutable();
+            privilege_.addAll(other.privilege_);
+          }
+          onChanged();
+        }
+        if (other.hasUser()) {
+          mergeUser(other.getUser());
+        }
+        if (other.hasGrantor()) {
+          mergeGrantor(other.getGrantor());
+        }
+        if (other.hasModified()) {
+          mergeModified(other.getModified());
+        }
+        if (other.hasCreated()) {
+          mergeCreated(other.getCreated());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <pre>
+       * Unique ID assigned to this access policy.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique ID assigned to this access policy.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique ID assigned to this access policy.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique ID assigned to this access policy.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique ID assigned to this access policy.
+       * </pre>
+       *
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private io.bloombox.schema.security.access.PartnerPermissions.AccessSubject subject_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.security.access.PartnerPermissions.AccessSubject, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder> subjectBuilder_;
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      public boolean hasSubject() {
+        return subjectBuilder_ != null || subject_ != null;
+      }
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject getSubject() {
+        if (subjectBuilder_ == null) {
+          return subject_ == null ? io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.getDefaultInstance() : subject_;
+        } else {
+          return subjectBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      public Builder setSubject(io.bloombox.schema.security.access.PartnerPermissions.AccessSubject value) {
+        if (subjectBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          subject_ = value;
+          onChanged();
+        } else {
+          subjectBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      public Builder setSubject(
+          io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder builderForValue) {
+        if (subjectBuilder_ == null) {
+          subject_ = builderForValue.build();
+          onChanged();
+        } else {
+          subjectBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      public Builder mergeSubject(io.bloombox.schema.security.access.PartnerPermissions.AccessSubject value) {
+        if (subjectBuilder_ == null) {
+          if (subject_ != null) {
+            subject_ =
+              io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.newBuilder(subject_).mergeFrom(value).buildPartial();
+          } else {
+            subject_ = value;
+          }
+          onChanged();
+        } else {
+          subjectBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      public Builder clearSubject() {
+        if (subjectBuilder_ == null) {
+          subject_ = null;
+          onChanged();
+        } else {
+          subject_ = null;
+          subjectBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder getSubjectBuilder() {
+        
+        onChanged();
+        return getSubjectFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder getSubjectOrBuilder() {
+        if (subjectBuilder_ != null) {
+          return subjectBuilder_.getMessageOrBuilder();
+        } else {
+          return subject_ == null ?
+              io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.getDefaultInstance() : subject_;
+        }
+      }
+      /**
+       * <pre>
+       * Partner account or location that we are specifying access rights for.
+       * </pre>
+       *
+       * <code>.bloombox.schema.security.access.AccessSubject subject = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.security.access.PartnerPermissions.AccessSubject, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder> 
+          getSubjectFieldBuilder() {
+        if (subjectBuilder_ == null) {
+          subjectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.security.access.PartnerPermissions.AccessSubject, io.bloombox.schema.security.access.PartnerPermissions.AccessSubject.Builder, io.bloombox.schema.security.access.PartnerPermissions.AccessSubjectOrBuilder>(
+                  getSubject(),
+                  getParentForChildren(),
+                  isClean());
+          subject_ = null;
+        }
+        return subjectBuilder_;
+      }
+
+      private java.util.List<java.lang.Integer> privilege_ =
+        java.util.Collections.emptyList();
+      private void ensurePrivilegeIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          privilege_ = new java.util.ArrayList<java.lang.Integer>(privilege_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public java.util.List<io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> getPrivilegeList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, io.bloombox.schema.security.access.PartnerPermissions.PartnerRole>(privilege_, privilege_converter_);
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public int getPrivilegeCount() {
+        return privilege_.size();
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public io.bloombox.schema.security.access.PartnerPermissions.PartnerRole getPrivilege(int index) {
+        return privilege_converter_.convert(privilege_.get(index));
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public Builder setPrivilege(
+          int index, io.bloombox.schema.security.access.PartnerPermissions.PartnerRole value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePrivilegeIsMutable();
+        privilege_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public Builder addPrivilege(io.bloombox.schema.security.access.PartnerPermissions.PartnerRole value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePrivilegeIsMutable();
+        privilege_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public Builder addAllPrivilege(
+          java.lang.Iterable<? extends io.bloombox.schema.security.access.PartnerPermissions.PartnerRole> values) {
+        ensurePrivilegeIsMutable();
+        for (io.bloombox.schema.security.access.PartnerPermissions.PartnerRole value : values) {
+          privilege_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public Builder clearPrivilege() {
+        privilege_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getPrivilegeValueList() {
+        return java.util.Collections.unmodifiableList(privilege_);
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public int getPrivilegeValue(int index) {
+        return privilege_.get(index);
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public Builder setPrivilegeValue(
+          int index, int value) {
+        ensurePrivilegeIsMutable();
+        privilege_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public Builder addPrivilegeValue(int value) {
+        ensurePrivilegeIsMutable();
+        privilege_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Roles granted as part of this policy.
+       * </pre>
+       *
+       * <code>repeated .bloombox.schema.security.access.PartnerRole privilege = 3;</code>
+       */
+      public Builder addAllPrivilegeValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensurePrivilegeIsMutable();
+        for (int value : values) {
+          privilege_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private io.bloombox.schema.identity.AppUserKey.UserKey user_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userBuilder_;
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      public boolean hasUser() {
+        return userBuilder_ != null || user_ != null;
+      }
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKey getUser() {
+        if (userBuilder_ == null) {
+          return user_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
+        } else {
+          return userBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      public Builder setUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
+        if (userBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          user_ = value;
+          onChanged();
+        } else {
+          userBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      public Builder setUser(
+          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
+        if (userBuilder_ == null) {
+          user_ = builderForValue.build();
+          onChanged();
+        } else {
+          userBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      public Builder mergeUser(io.bloombox.schema.identity.AppUserKey.UserKey value) {
+        if (userBuilder_ == null) {
+          if (user_ != null) {
+            user_ =
+              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(user_).mergeFrom(value).buildPartial();
+          } else {
+            user_ = value;
+          }
+          onChanged();
+        } else {
+          userBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      public Builder clearUser() {
+        if (userBuilder_ == null) {
+          user_ = null;
+          onChanged();
+        } else {
+          user_ = null;
+          userBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserBuilder() {
+        
+        onChanged();
+        return getUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserOrBuilder() {
+        if (userBuilder_ != null) {
+          return userBuilder_.getMessageOrBuilder();
+        } else {
+          return user_ == null ?
+              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : user_;
+        }
+      }
+      /**
+       * <pre>
+       * User being granted rights as part of this policy.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey user = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
+          getUserFieldBuilder() {
+        if (userBuilder_ == null) {
+          userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
+                  getUser(),
+                  getParentForChildren(),
+                  isClean());
+          user_ = null;
+        }
+        return userBuilder_;
+      }
+
+      private io.bloombox.schema.identity.AppUserKey.UserKey grantor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> grantorBuilder_;
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      public boolean hasGrantor() {
+        return grantorBuilder_ != null || grantor_ != null;
+      }
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKey getGrantor() {
+        if (grantorBuilder_ == null) {
+          return grantor_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : grantor_;
+        } else {
+          return grantorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      public Builder setGrantor(io.bloombox.schema.identity.AppUserKey.UserKey value) {
+        if (grantorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          grantor_ = value;
+          onChanged();
+        } else {
+          grantorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      public Builder setGrantor(
+          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
+        if (grantorBuilder_ == null) {
+          grantor_ = builderForValue.build();
+          onChanged();
+        } else {
+          grantorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      public Builder mergeGrantor(io.bloombox.schema.identity.AppUserKey.UserKey value) {
+        if (grantorBuilder_ == null) {
+          if (grantor_ != null) {
+            grantor_ =
+              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(grantor_).mergeFrom(value).buildPartial();
+          } else {
+            grantor_ = value;
+          }
+          onChanged();
+        } else {
+          grantorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      public Builder clearGrantor() {
+        if (grantorBuilder_ == null) {
+          grantor_ = null;
+          onChanged();
+        } else {
+          grantor_ = null;
+          grantorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getGrantorBuilder() {
+        
+        onChanged();
+        return getGrantorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getGrantorOrBuilder() {
+        if (grantorBuilder_ != null) {
+          return grantorBuilder_.getMessageOrBuilder();
+        } else {
+          return grantor_ == null ?
+              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : grantor_;
+        }
+      }
+      /**
+       * <pre>
+       * Permissions grantor.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.UserKey grantor = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
+          getGrantorFieldBuilder() {
+        if (grantorBuilder_ == null) {
+          grantorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
+                  getGrantor(),
+                  getParentForChildren(),
+                  isClean());
+          grantor_ = null;
+        }
+        return grantorBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      public boolean hasModified() {
+        return modifiedBuilder_ != null || modified_ != null;
+      }
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
+        if (modifiedBuilder_ == null) {
+          return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
+        } else {
+          return modifiedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      public Builder setModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (modifiedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          modified_ = value;
+          onChanged();
+        } else {
+          modifiedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      public Builder setModified(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (modifiedBuilder_ == null) {
+          modified_ = builderForValue.build();
+          onChanged();
+        } else {
+          modifiedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      public Builder mergeModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (modifiedBuilder_ == null) {
+          if (modified_ != null) {
+            modified_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(modified_).mergeFrom(value).buildPartial();
+          } else {
+            modified_ = value;
+          }
+          onChanged();
+        } else {
+          modifiedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      public Builder clearModified() {
+        if (modifiedBuilder_ == null) {
+          modified_ = null;
+          onChanged();
+        } else {
+          modified_ = null;
+          modifiedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getModifiedBuilder() {
+        
+        onChanged();
+        return getModifiedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
+        if (modifiedBuilder_ != null) {
+          return modifiedBuilder_.getMessageOrBuilder();
+        } else {
+          return modified_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
+        }
+      }
+      /**
+       * <pre>
+       * Modified timestamp for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant modified = 98;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getModifiedFieldBuilder() {
+        if (modifiedBuilder_ == null) {
+          modifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getModified(),
+                  getParentForChildren(),
+                  isClean());
+          modified_ = null;
+        }
+        return modifiedBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant created_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> createdBuilder_;
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      public boolean hasCreated() {
+        return createdBuilder_ != null || created_ != null;
+      }
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated() {
+        if (createdBuilder_ == null) {
+          return created_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : created_;
+        } else {
+          return createdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      public Builder setCreated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (createdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          created_ = value;
+          onChanged();
+        } else {
+          createdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      public Builder setCreated(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (createdBuilder_ == null) {
+          created_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      public Builder mergeCreated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (createdBuilder_ == null) {
+          if (created_ != null) {
+            created_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(created_).mergeFrom(value).buildPartial();
+          } else {
+            created_ = value;
+          }
+          onChanged();
+        } else {
+          createdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      public Builder clearCreated() {
+        if (createdBuilder_ == null) {
+          created_ = null;
+          onChanged();
+        } else {
+          created_ = null;
+          createdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getCreatedBuilder() {
+        
+        onChanged();
+        return getCreatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder() {
+        if (createdBuilder_ != null) {
+          return createdBuilder_.getMessageOrBuilder();
+        } else {
+          return created_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : created_;
+        }
+      }
+      /**
+       * <pre>
+       * Created timestmap for this record.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant created = 99;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getCreatedFieldBuilder() {
+        if (createdBuilder_ == null) {
+          createdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getCreated(),
+                  getParentForChildren(),
+                  isClean());
+          created_ = null;
+        }
+        return createdBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.security.access.AccessPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.security.access.AccessPolicy)
+    private static final io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy();
+    }
+
+    public static io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<AccessPolicy>() {
+      public AccessPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessPolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_security_access_AccessSubject_descriptor;
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_security_access_PartnerAccess_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_bloombox_schema_security_access_LocationAccess_descriptor;
-  static final 
+      internal_static_bloombox_schema_security_access_AccessSubject_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_security_access_AccessPolicy_descriptor;
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_bloombox_schema_security_access_LocationAccess_fieldAccessorTable;
+      internal_static_bloombox_schema_security_access_AccessPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,22 +3464,28 @@ public final class PartnerPermissions {
   static {
     java.lang.String[] descriptorData = {
       "\n(security/access/PartnerPermissions.pro" +
-      "to\022\037bloombox.schema.security.access\032\026tem" +
-      "poral/Instant.proto\"\231\002\n\rPartnerAccess\022\016\n" +
-      "\006active\030\001 \001(\010\022\022\n\ngranted_by\030\002 \001(\t\0222\n\ngra" +
-      "nted_at\030\003 \001(\0132\036.opencannabis.temporal.In" +
-      "stant\022F\n\nprivileges\030\004 \003(\01622.bloombox.sch" +
-      "ema.security.access.PartnerPermission\022B\n" +
-      "\tlocations\030\005 \003(\0132/.bloombox.schema.secur" +
-      "ity.access.LocationAccess\022\025\n\rall_locatio" +
-      "ns\030\006 \001(\010\022\r\n\005admin\030d \001(\010\"w\n\016LocationAcces" +
-      "s\022\016\n\006active\030\001 \001(\010\022\022\n\ngranted_by\030\002 \001(\t\0222\n" +
-      "\ngranted_at\030\003 \001(\0132\036.opencannabis.tempora" +
-      "l.Instant\022\r\n\005admin\030d \001(\010*T\n\021PartnerPermi" +
-      "ssion\022\t\n\005OWNER\020\000\022\016\n\nSUPERVISOR\020\001\022\013\n\007BILL" +
-      "ING\020\002\022\t\n\005AUDIT\020\003\022\014\n\010READONLY\020\004B.\n\"io.blo" +
-      "ombox.schema.security.accessH\001P\001\242\002\003BBSb\006" +
-      "proto3"
+      "to\022\037bloombox.schema.security.access\032\024cor" +
+      "e/Datamodel.proto\032\026identity/UserKey.prot" +
+      "o\032\030partner/PartnerKey.proto\032\031partner/Loc" +
+      "ationKey.proto\032\026temporal/Instant.proto\"\214" +
+      "\001\n\rAccessSubject\0226\n\007partner\030\n \001(\0132#.bloo" +
+      "mbox.schema.partner.PartnerKeyH\000\0228\n\010loca" +
+      "tion\030\024 \001(\0132$.bloombox.schema.partner.Loc" +
+      "ationKeyH\000B\t\n\007account\"\200\003\n\014AccessPolicy\022\024" +
+      "\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022?\n\007subject\030\002 \001(\0132.." +
+      "bloombox.schema.security.access.AccessSu" +
+      "bject\022?\n\tprivilege\030\003 \003(\0162,.bloombox.sche" +
+      "ma.security.access.PartnerRole\022/\n\004user\030\004" +
+      " \001(\0132!.bloombox.schema.identity.UserKey\022" +
+      "2\n\007grantor\030\005 \001(\0132!.bloombox.schema.ident" +
+      "ity.UserKey\0220\n\010modified\030b \001(\0132\036.opencann" +
+      "abis.temporal.Instant\022/\n\007created\030c \001(\0132\036" +
+      ".opencannabis.temporal.Instant:\020\202\367\002\014\010\001\022\010" +
+      "policies*k\n\013PartnerRole\022\014\n\010READONLY\020\000\022\016\n" +
+      "\nSUPERVISOR\020\001\022\013\n\007BILLING\020\002\022\t\n\005AUDIT\020\003\022\014\n" +
+      "\010EMPLOYEE\020\004\022\r\n\tDEVELOPER\020\005\022\t\n\005ADMIN\020\006BB\n" +
+      "\"io.bloombox.schema.security.accessB\022Par" +
+      "tnerPermissionsH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -78,21 +3498,35 @@ public final class PartnerPermissions {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
+          core.Datamodel.getDescriptor(),
+          io.bloombox.schema.identity.AppUserKey.getDescriptor(),
+          io.bloombox.schema.partner.PartnerMeta.getDescriptor(),
+          io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_security_access_PartnerAccess_descriptor =
+    internal_static_bloombox_schema_security_access_AccessSubject_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_bloombox_schema_security_access_PartnerAccess_fieldAccessorTable = new
+    internal_static_bloombox_schema_security_access_AccessSubject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_security_access_PartnerAccess_descriptor,
-        new java.lang.String[] { "Active", "GrantedBy", "GrantedAt", "Privileges", "Locations", "AllLocations", "Admin", });
-    internal_static_bloombox_schema_security_access_LocationAccess_descriptor =
+        internal_static_bloombox_schema_security_access_AccessSubject_descriptor,
+        new java.lang.String[] { "Partner", "Location", "Account", });
+    internal_static_bloombox_schema_security_access_AccessPolicy_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_bloombox_schema_security_access_LocationAccess_fieldAccessorTable = new
+    internal_static_bloombox_schema_security_access_AccessPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_bloombox_schema_security_access_LocationAccess_descriptor,
-        new java.lang.String[] { "Active", "GrantedBy", "GrantedAt", "Admin", });
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
+        internal_static_bloombox_schema_security_access_AccessPolicy_descriptor,
+        new java.lang.String[] { "Uuid", "Subject", "Privilege", "User", "Grantor", "Modified", "Created", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(core.Datamodel.db);
+    registry.add(core.Datamodel.field);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    core.Datamodel.getDescriptor();
+    io.bloombox.schema.identity.AppUserKey.getDescriptor();
+    io.bloombox.schema.partner.PartnerMeta.getDescriptor();
+    io.bloombox.schema.partner.LocationAccountKey.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

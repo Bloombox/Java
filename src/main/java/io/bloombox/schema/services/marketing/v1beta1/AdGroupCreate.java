@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
      * Marketing communication channel to employ.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
      */
     int getChannelValue();
     /**
@@ -129,9 +129,9 @@ private static final long serialVersionUID = 0L;
      * Marketing communication channel to employ.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
      */
-    io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel();
+    io.bloombox.schema.comms.GenericComms.Channel getChannel();
 
     /**
      * <pre>
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
      * Marketing communication channel to employ.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
      */
     public int getChannelValue() {
       return channel_;
@@ -318,11 +318,11 @@ private static final long serialVersionUID = 0L;
      * Marketing communication channel to employ.
      * </pre>
      *
-     * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+     * <code>.bloombox.schema.comms.Channel channel = 2;</code>
      */
-    public io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel() {
-      io.bloombox.schema.marketing.MarketingCampaign.Channel result = io.bloombox.schema.marketing.MarketingCampaign.Channel.valueOf(channel_);
-      return result == null ? io.bloombox.schema.marketing.MarketingCampaign.Channel.UNRECOGNIZED : result;
+    public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+      io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
+      return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
     }
 
     public static final int CREATIVE_FIELD_NUMBER = 3;
@@ -373,7 +373,7 @@ private static final long serialVersionUID = 0L;
       if (!getCampaignIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, campaignId_);
       }
-      if (channel_ != io.bloombox.schema.marketing.MarketingCampaign.Channel.UNSPECIFIED.getNumber()) {
+      if (channel_ != io.bloombox.schema.comms.GenericComms.Channel.UNSPECIFIED.getNumber()) {
         output.writeEnum(2, channel_);
       }
       if (creative_ != null) {
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
       if (!getCampaignIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, campaignId_);
       }
-      if (channel_ != io.bloombox.schema.marketing.MarketingCampaign.Channel.UNSPECIFIED.getNumber()) {
+      if (channel_ != io.bloombox.schema.comms.GenericComms.Channel.UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, channel_);
       }
@@ -786,7 +786,7 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
        */
       public int getChannelValue() {
         return channel_;
@@ -796,7 +796,7 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
        */
       public Builder setChannelValue(int value) {
         channel_ = value;
@@ -808,20 +808,20 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
        */
-      public io.bloombox.schema.marketing.MarketingCampaign.Channel getChannel() {
-        io.bloombox.schema.marketing.MarketingCampaign.Channel result = io.bloombox.schema.marketing.MarketingCampaign.Channel.valueOf(channel_);
-        return result == null ? io.bloombox.schema.marketing.MarketingCampaign.Channel.UNRECOGNIZED : result;
+      public io.bloombox.schema.comms.GenericComms.Channel getChannel() {
+        io.bloombox.schema.comms.GenericComms.Channel result = io.bloombox.schema.comms.GenericComms.Channel.valueOf(channel_);
+        return result == null ? io.bloombox.schema.comms.GenericComms.Channel.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
        */
-      public Builder setChannel(io.bloombox.schema.marketing.MarketingCampaign.Channel value) {
+      public Builder setChannel(io.bloombox.schema.comms.GenericComms.Channel value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
        * Marketing communication channel to employ.
        * </pre>
        *
-       * <code>.bloombox.schema.marketing.Channel channel = 2;</code>
+       * <code>.bloombox.schema.comms.Channel channel = 2;</code>
        */
       public Builder clearChannel() {
         

@@ -133,11 +133,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 74: {
-            io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
             if (modified_ != null) {
               subBuilder = modified_.toBuilder();
             }
-            modified_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+            modified_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(modified_);
               modified_ = subBuilder.buildPartial();
@@ -409,7 +409,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MODIFIED_FIELD_NUMBER = 9;
-  private io.opencannabis.schema.temporal.Instant modified_;
+  private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
   /**
    * <pre>
    * When the subject campaign was last modified.
@@ -427,8 +427,8 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.temporal.Instant modified = 9;</code>
    */
-  public io.opencannabis.schema.temporal.Instant getModified() {
-    return modified_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
+  public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
+    return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
   }
   /**
    * <pre>
@@ -437,7 +437,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.opencannabis.temporal.Instant modified = 9;</code>
    */
-  public io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder() {
+  public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
     return getModified();
   }
 
@@ -1755,9 +1755,9 @@ private static final long serialVersionUID = 0L;
       return tagBuilder_;
     }
 
-    private io.opencannabis.schema.temporal.Instant modified_ = null;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> modifiedBuilder_;
+        io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> modifiedBuilder_;
     /**
      * <pre>
      * When the subject campaign was last modified.
@@ -1775,9 +1775,9 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant modified = 9;</code>
      */
-    public io.opencannabis.schema.temporal.Instant getModified() {
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
       if (modifiedBuilder_ == null) {
-        return modified_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
+        return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
       } else {
         return modifiedBuilder_.getMessage();
       }
@@ -1789,7 +1789,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant modified = 9;</code>
      */
-    public Builder setModified(io.opencannabis.schema.temporal.Instant value) {
+    public Builder setModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
       if (modifiedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1810,7 +1810,7 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.temporal.Instant modified = 9;</code>
      */
     public Builder setModified(
-        io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+        io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
       if (modifiedBuilder_ == null) {
         modified_ = builderForValue.build();
         onChanged();
@@ -1827,11 +1827,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant modified = 9;</code>
      */
-    public Builder mergeModified(io.opencannabis.schema.temporal.Instant value) {
+    public Builder mergeModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
       if (modifiedBuilder_ == null) {
         if (modified_ != null) {
           modified_ =
-            io.opencannabis.schema.temporal.Instant.newBuilder(modified_).mergeFrom(value).buildPartial();
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(modified_).mergeFrom(value).buildPartial();
         } else {
           modified_ = value;
         }
@@ -1867,7 +1867,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant modified = 9;</code>
      */
-    public io.opencannabis.schema.temporal.Instant.Builder getModifiedBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getModifiedBuilder() {
       
       onChanged();
       return getModifiedFieldBuilder().getBuilder();
@@ -1879,12 +1879,12 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.opencannabis.temporal.Instant modified = 9;</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getModifiedOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
       if (modifiedBuilder_ != null) {
         return modifiedBuilder_.getMessageOrBuilder();
       } else {
         return modified_ == null ?
-            io.opencannabis.schema.temporal.Instant.getDefaultInstance() : modified_;
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
       }
     }
     /**
@@ -1895,11 +1895,11 @@ private static final long serialVersionUID = 0L;
      * <code>.opencannabis.temporal.Instant modified = 9;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+        io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
         getModifiedFieldBuilder() {
       if (modifiedBuilder_ == null) {
         modifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+            io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                 getModified(),
                 getParentForChildren(),
                 isClean());

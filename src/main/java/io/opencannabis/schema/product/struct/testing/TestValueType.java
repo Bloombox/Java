@@ -37,9 +37,9 @@ public enum TestValueType
    */
   PERCENTAGE(1),
   /**
-   * <code>PRESENCE = 3;</code>
+   * <code>PRESENCE = 2;</code>
    */
-  PRESENCE(3),
+  PRESENCE(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -52,9 +52,9 @@ public enum TestValueType
    */
   public static final int PERCENTAGE_VALUE = 1;
   /**
-   * <code>PRESENCE = 3;</code>
+   * <code>PRESENCE = 2;</code>
    */
-  public static final int PRESENCE_VALUE = 3;
+  public static final int PRESENCE_VALUE = 2;
 
 
   public final int getNumber() {
@@ -77,7 +77,7 @@ public enum TestValueType
     switch (value) {
       case 0: return MILLIGRAMS;
       case 1: return PERCENTAGE;
-      case 3: return PRESENCE;
+      case 2: return PRESENCE;
       default: return null;
     }
   }

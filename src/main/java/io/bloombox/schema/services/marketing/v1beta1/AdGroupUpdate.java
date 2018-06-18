@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Adgroup ID to fetch.
+     * Adgroup ID to update.
      * </pre>
      *
      * <code>string adgroup_id = 2;</code>
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getAdgroupId();
     /**
      * <pre>
-     * Adgroup ID to fetch.
+     * Adgroup ID to update.
      * </pre>
      *
      * <code>string adgroup_id = 2;</code>
@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object adgroupId_;
     /**
      * <pre>
-     * Adgroup ID to fetch.
+     * Adgroup ID to update.
      * </pre>
      *
      * <code>string adgroup_id = 2;</code>
@@ -344,7 +344,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Adgroup ID to fetch.
+     * Adgroup ID to update.
      * </pre>
      *
      * <code>string adgroup_id = 2;</code>
@@ -873,7 +873,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object adgroupId_ = "";
       /**
        * <pre>
-       * Adgroup ID to fetch.
+       * Adgroup ID to update.
        * </pre>
        *
        * <code>string adgroup_id = 2;</code>
@@ -892,7 +892,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Adgroup ID to fetch.
+       * Adgroup ID to update.
        * </pre>
        *
        * <code>string adgroup_id = 2;</code>
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Adgroup ID to fetch.
+       * Adgroup ID to update.
        * </pre>
        *
        * <code>string adgroup_id = 2;</code>
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Adgroup ID to fetch.
+       * Adgroup ID to update.
        * </pre>
        *
        * <code>string adgroup_id = 2;</code>
@@ -942,7 +942,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Adgroup ID to fetch.
+       * Adgroup ID to update.
        * </pre>
        *
        * <code>string adgroup_id = 2;</code>

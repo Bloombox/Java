@@ -33,6 +33,19 @@ public interface TestValueOrBuilder extends
   io.opencannabis.schema.product.struct.testing.TestValueType getType();
 
   /**
+   * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
+   */
+  boolean hasError();
+  /**
+   * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
+   */
+  io.opencannabis.schema.product.struct.testing.TestValue.TestError getError();
+  /**
+   * <code>.opencannabis.structs.labtesting.TestValue.TestError error = 2;</code>
+   */
+  io.opencannabis.schema.product.struct.testing.TestValue.TestErrorOrBuilder getErrorOrBuilder();
+
+  /**
    * <code>double measurement = 10;</code>
    */
   double getMeasurement();

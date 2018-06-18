@@ -58,7 +58,7 @@ public final class PartnerSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
      */
-    io.opencannabis.schema.contact.PhoneNumber getPhone();
+    io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone();
     /**
      * <pre>
      * Phone number contact target.
@@ -66,7 +66,7 @@ public final class PartnerSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
      */
-    io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder();
+    io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder();
 
     /**
      * <pre>
@@ -83,7 +83,7 @@ public final class PartnerSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 11;</code>
      */
-    io.opencannabis.schema.contact.EmailAddress getEmail();
+    io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail();
     /**
      * <pre>
      * Email address contact target.
@@ -91,7 +91,7 @@ public final class PartnerSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 11;</code>
      */
-    io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder();
+    io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder();
 
     public io.bloombox.schema.partner.settings.PartnerSettingsOuterClass.PartnerNotificationTarget.ContactCase getContactCase();
   }
@@ -152,28 +152,28 @@ public final class PartnerSettingsOuterClass {
               break;
             }
             case 82: {
-              io.opencannabis.schema.contact.PhoneNumber.Builder subBuilder = null;
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder subBuilder = null;
               if (contactCase_ == 10) {
-                subBuilder = ((io.opencannabis.schema.contact.PhoneNumber) contact_).toBuilder();
+                subBuilder = ((io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_).toBuilder();
               }
               contact_ =
-                  input.readMessage(io.opencannabis.schema.contact.PhoneNumber.parser(), extensionRegistry);
+                  input.readMessage(io.opencannabis.schema.contact.ContactPhone.PhoneNumber.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((io.opencannabis.schema.contact.PhoneNumber) contact_);
+                subBuilder.mergeFrom((io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_);
                 contact_ = subBuilder.buildPartial();
               }
               contactCase_ = 10;
               break;
             }
             case 90: {
-              io.opencannabis.schema.contact.EmailAddress.Builder subBuilder = null;
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder subBuilder = null;
               if (contactCase_ == 11) {
-                subBuilder = ((io.opencannabis.schema.contact.EmailAddress) contact_).toBuilder();
+                subBuilder = ((io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_).toBuilder();
               }
               contact_ =
-                  input.readMessage(io.opencannabis.schema.contact.EmailAddress.parser(), extensionRegistry);
+                  input.readMessage(io.opencannabis.schema.contact.ContactEmail.EmailAddress.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((io.opencannabis.schema.contact.EmailAddress) contact_);
+                subBuilder.mergeFrom((io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_);
                 contact_ = subBuilder.buildPartial();
               }
               contactCase_ = 11;
@@ -272,11 +272,11 @@ public final class PartnerSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
      */
-    public io.opencannabis.schema.contact.PhoneNumber getPhone() {
+    public io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone() {
       if (contactCase_ == 10) {
-         return (io.opencannabis.schema.contact.PhoneNumber) contact_;
+         return (io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_;
       }
-      return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+      return io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance();
     }
     /**
      * <pre>
@@ -285,11 +285,11 @@ public final class PartnerSettingsOuterClass {
      *
      * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
      */
-    public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder() {
+    public io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder() {
       if (contactCase_ == 10) {
-         return (io.opencannabis.schema.contact.PhoneNumber) contact_;
+         return (io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_;
       }
-      return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+      return io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance();
     }
 
     public static final int EMAIL_FIELD_NUMBER = 11;
@@ -310,11 +310,11 @@ public final class PartnerSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 11;</code>
      */
-    public io.opencannabis.schema.contact.EmailAddress getEmail() {
+    public io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail() {
       if (contactCase_ == 11) {
-         return (io.opencannabis.schema.contact.EmailAddress) contact_;
+         return (io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_;
       }
-      return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+      return io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance();
     }
     /**
      * <pre>
@@ -323,11 +323,11 @@ public final class PartnerSettingsOuterClass {
      *
      * <code>.opencannabis.contact.EmailAddress email = 11;</code>
      */
-    public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder() {
+    public io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder() {
       if (contactCase_ == 11) {
-         return (io.opencannabis.schema.contact.EmailAddress) contact_;
+         return (io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_;
       }
-      return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+      return io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -346,10 +346,10 @@ public final class PartnerSettingsOuterClass {
         output.writeBool(1, disabled_);
       }
       if (contactCase_ == 10) {
-        output.writeMessage(10, (io.opencannabis.schema.contact.PhoneNumber) contact_);
+        output.writeMessage(10, (io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_);
       }
       if (contactCase_ == 11) {
-        output.writeMessage(11, (io.opencannabis.schema.contact.EmailAddress) contact_);
+        output.writeMessage(11, (io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_);
       }
       unknownFields.writeTo(output);
     }
@@ -365,11 +365,11 @@ public final class PartnerSettingsOuterClass {
       }
       if (contactCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, (io.opencannabis.schema.contact.PhoneNumber) contact_);
+          .computeMessageSize(10, (io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_);
       }
       if (contactCase_ == 11) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, (io.opencannabis.schema.contact.EmailAddress) contact_);
+          .computeMessageSize(11, (io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -743,7 +743,7 @@ public final class PartnerSettingsOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> phoneBuilder_;
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> phoneBuilder_;
       /**
        * <pre>
        * Phone number contact target.
@@ -761,17 +761,17 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumber getPhone() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumber getPhone() {
         if (phoneBuilder_ == null) {
           if (contactCase_ == 10) {
-            return (io.opencannabis.schema.contact.PhoneNumber) contact_;
+            return (io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_;
           }
-          return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+          return io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance();
         } else {
           if (contactCase_ == 10) {
             return phoneBuilder_.getMessage();
           }
-          return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+          return io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance();
         }
       }
       /**
@@ -781,7 +781,7 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
        */
-      public Builder setPhone(io.opencannabis.schema.contact.PhoneNumber value) {
+      public Builder setPhone(io.opencannabis.schema.contact.ContactPhone.PhoneNumber value) {
         if (phoneBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -802,7 +802,7 @@ public final class PartnerSettingsOuterClass {
        * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
        */
       public Builder setPhone(
-          io.opencannabis.schema.contact.PhoneNumber.Builder builderForValue) {
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder builderForValue) {
         if (phoneBuilder_ == null) {
           contact_ = builderForValue.build();
           onChanged();
@@ -819,11 +819,11 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
        */
-      public Builder mergePhone(io.opencannabis.schema.contact.PhoneNumber value) {
+      public Builder mergePhone(io.opencannabis.schema.contact.ContactPhone.PhoneNumber value) {
         if (phoneBuilder_ == null) {
           if (contactCase_ == 10 &&
-              contact_ != io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance()) {
-            contact_ = io.opencannabis.schema.contact.PhoneNumber.newBuilder((io.opencannabis.schema.contact.PhoneNumber) contact_)
+              contact_ != io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance()) {
+            contact_ = io.opencannabis.schema.contact.ContactPhone.PhoneNumber.newBuilder((io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_)
                 .mergeFrom(value).buildPartial();
           } else {
             contact_ = value;
@@ -868,7 +868,7 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumber.Builder getPhoneBuilder() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder getPhoneBuilder() {
         return getPhoneFieldBuilder().getBuilder();
       }
       /**
@@ -878,14 +878,14 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
        */
-      public io.opencannabis.schema.contact.PhoneNumberOrBuilder getPhoneOrBuilder() {
+      public io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder getPhoneOrBuilder() {
         if ((contactCase_ == 10) && (phoneBuilder_ != null)) {
           return phoneBuilder_.getMessageOrBuilder();
         } else {
           if (contactCase_ == 10) {
-            return (io.opencannabis.schema.contact.PhoneNumber) contact_;
+            return (io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_;
           }
-          return io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+          return io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance();
         }
       }
       /**
@@ -896,15 +896,15 @@ public final class PartnerSettingsOuterClass {
        * <code>.opencannabis.contact.PhoneNumber phone = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder> 
+          io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder> 
           getPhoneFieldBuilder() {
         if (phoneBuilder_ == null) {
           if (!(contactCase_ == 10)) {
-            contact_ = io.opencannabis.schema.contact.PhoneNumber.getDefaultInstance();
+            contact_ = io.opencannabis.schema.contact.ContactPhone.PhoneNumber.getDefaultInstance();
           }
           phoneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.contact.PhoneNumber, io.opencannabis.schema.contact.PhoneNumber.Builder, io.opencannabis.schema.contact.PhoneNumberOrBuilder>(
-                  (io.opencannabis.schema.contact.PhoneNumber) contact_,
+              io.opencannabis.schema.contact.ContactPhone.PhoneNumber, io.opencannabis.schema.contact.ContactPhone.PhoneNumber.Builder, io.opencannabis.schema.contact.ContactPhone.PhoneNumberOrBuilder>(
+                  (io.opencannabis.schema.contact.ContactPhone.PhoneNumber) contact_,
                   getParentForChildren(),
                   isClean());
           contact_ = null;
@@ -915,7 +915,7 @@ public final class PartnerSettingsOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> emailBuilder_;
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> emailBuilder_;
       /**
        * <pre>
        * Email address contact target.
@@ -933,17 +933,17 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 11;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddress getEmail() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddress getEmail() {
         if (emailBuilder_ == null) {
           if (contactCase_ == 11) {
-            return (io.opencannabis.schema.contact.EmailAddress) contact_;
+            return (io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_;
           }
-          return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+          return io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance();
         } else {
           if (contactCase_ == 11) {
             return emailBuilder_.getMessage();
           }
-          return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+          return io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance();
         }
       }
       /**
@@ -953,7 +953,7 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 11;</code>
        */
-      public Builder setEmail(io.opencannabis.schema.contact.EmailAddress value) {
+      public Builder setEmail(io.opencannabis.schema.contact.ContactEmail.EmailAddress value) {
         if (emailBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -974,7 +974,7 @@ public final class PartnerSettingsOuterClass {
        * <code>.opencannabis.contact.EmailAddress email = 11;</code>
        */
       public Builder setEmail(
-          io.opencannabis.schema.contact.EmailAddress.Builder builderForValue) {
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder builderForValue) {
         if (emailBuilder_ == null) {
           contact_ = builderForValue.build();
           onChanged();
@@ -991,11 +991,11 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 11;</code>
        */
-      public Builder mergeEmail(io.opencannabis.schema.contact.EmailAddress value) {
+      public Builder mergeEmail(io.opencannabis.schema.contact.ContactEmail.EmailAddress value) {
         if (emailBuilder_ == null) {
           if (contactCase_ == 11 &&
-              contact_ != io.opencannabis.schema.contact.EmailAddress.getDefaultInstance()) {
-            contact_ = io.opencannabis.schema.contact.EmailAddress.newBuilder((io.opencannabis.schema.contact.EmailAddress) contact_)
+              contact_ != io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance()) {
+            contact_ = io.opencannabis.schema.contact.ContactEmail.EmailAddress.newBuilder((io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_)
                 .mergeFrom(value).buildPartial();
           } else {
             contact_ = value;
@@ -1040,7 +1040,7 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 11;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddress.Builder getEmailBuilder() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder getEmailBuilder() {
         return getEmailFieldBuilder().getBuilder();
       }
       /**
@@ -1050,14 +1050,14 @@ public final class PartnerSettingsOuterClass {
        *
        * <code>.opencannabis.contact.EmailAddress email = 11;</code>
        */
-      public io.opencannabis.schema.contact.EmailAddressOrBuilder getEmailOrBuilder() {
+      public io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder getEmailOrBuilder() {
         if ((contactCase_ == 11) && (emailBuilder_ != null)) {
           return emailBuilder_.getMessageOrBuilder();
         } else {
           if (contactCase_ == 11) {
-            return (io.opencannabis.schema.contact.EmailAddress) contact_;
+            return (io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_;
           }
-          return io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+          return io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance();
         }
       }
       /**
@@ -1068,15 +1068,15 @@ public final class PartnerSettingsOuterClass {
        * <code>.opencannabis.contact.EmailAddress email = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder> 
+          io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder> 
           getEmailFieldBuilder() {
         if (emailBuilder_ == null) {
           if (!(contactCase_ == 11)) {
-            contact_ = io.opencannabis.schema.contact.EmailAddress.getDefaultInstance();
+            contact_ = io.opencannabis.schema.contact.ContactEmail.EmailAddress.getDefaultInstance();
           }
           emailBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.contact.EmailAddress, io.opencannabis.schema.contact.EmailAddress.Builder, io.opencannabis.schema.contact.EmailAddressOrBuilder>(
-                  (io.opencannabis.schema.contact.EmailAddress) contact_,
+              io.opencannabis.schema.contact.ContactEmail.EmailAddress, io.opencannabis.schema.contact.ContactEmail.EmailAddress.Builder, io.opencannabis.schema.contact.ContactEmail.EmailAddressOrBuilder>(
+                  (io.opencannabis.schema.contact.ContactEmail.EmailAddress) contact_,
                   getParentForChildren(),
                   isClean());
           contact_ = null;
@@ -6613,8 +6613,8 @@ public final class PartnerSettingsOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          io.opencannabis.schema.contact.PhoneNumberOuterClass.getDescriptor(),
-          io.opencannabis.schema.contact.EmailAddressOuterClass.getDescriptor(),
+          io.opencannabis.schema.contact.ContactPhone.getDescriptor(),
+          io.opencannabis.schema.contact.ContactEmail.getDescriptor(),
           io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_partner_settings_PartnerNotificationTarget_descriptor =
@@ -6659,8 +6659,8 @@ public final class PartnerSettingsOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_partner_settings_PartnerSettings_descriptor,
         new java.lang.String[] { "Alerts", "Beta", "Features", "Search", "Integration", });
-    io.opencannabis.schema.contact.PhoneNumberOuterClass.getDescriptor();
-    io.opencannabis.schema.contact.EmailAddressOuterClass.getDescriptor();
+    io.opencannabis.schema.contact.ContactPhone.getDescriptor();
+    io.opencannabis.schema.contact.ContactEmail.getDescriptor();
     io.bloombox.schema.partner.integrations.IntegrationSettings.getDescriptor();
   }
 

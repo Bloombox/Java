@@ -185,7 +185,7 @@ public enum SearchResultExtension
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.search.SearchSpecOuterClass.getDescriptor().getEnumTypes().get(1);
+    return io.bloombox.schema.search.SearchMetadata.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final SearchResultExtension[] VALUES = values();

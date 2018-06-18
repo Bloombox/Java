@@ -55,7 +55,7 @@ public interface SearchResultsetOrBuilder extends
    *
    * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
    */
-  java.util.List<io.bloombox.schema.search.SearchResult> 
+  java.util.List<io.bloombox.schema.search.SearchResults.SearchResult> 
       getPayloadList();
   /**
    * <pre>
@@ -64,7 +64,7 @@ public interface SearchResultsetOrBuilder extends
    *
    * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
    */
-  io.bloombox.schema.search.SearchResult getPayload(int index);
+  io.bloombox.schema.search.SearchResults.SearchResult getPayload(int index);
   /**
    * <pre>
    * Search results matching the provided query.
@@ -80,7 +80,7 @@ public interface SearchResultsetOrBuilder extends
    *
    * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
    */
-  java.util.List<? extends io.bloombox.schema.search.SearchResultOrBuilder> 
+  java.util.List<? extends io.bloombox.schema.search.SearchResults.SearchResultOrBuilder> 
       getPayloadOrBuilderList();
   /**
    * <pre>
@@ -89,6 +89,6 @@ public interface SearchResultsetOrBuilder extends
    *
    * <code>repeated .bloombox.schema.search.SearchResult payload = 2;</code>
    */
-  io.bloombox.schema.search.SearchResultOrBuilder getPayloadOrBuilder(
+  io.bloombox.schema.search.SearchResults.SearchResultOrBuilder getPayloadOrBuilder(
       int index);
 }

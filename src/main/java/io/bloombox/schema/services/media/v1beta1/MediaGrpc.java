@@ -49,6 +49,30 @@ public final class MediaGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.ListMedia.Request,
+      io.bloombox.schema.services.media.v1beta1.ListMedia.Response> METHOD_LIST =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.ListMedia.Request, io.bloombox.schema.services.media.v1beta1.ListMedia.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.media.v1beta1.Media", "List"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.media.v1beta1.ListMedia.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.media.v1beta1.ListMedia.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.GetMedia.Request,
+      io.bloombox.schema.services.media.v1beta1.GetMedia.Response> METHOD_RETRIEVE =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.GetMedia.Request, io.bloombox.schema.services.media.v1beta1.GetMedia.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.media.v1beta1.Media", "Retrieve"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.media.v1beta1.GetMedia.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.media.v1beta1.GetMedia.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.media.v1beta1.UploadMedia.Request,
       io.bloombox.schema.services.media.v1beta1.UploadMedia.Response> METHOD_UPLOAD =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.media.v1beta1.UploadMedia.Request, io.bloombox.schema.services.media.v1beta1.UploadMedia.Response>newBuilder()
@@ -106,6 +130,28 @@ public final class MediaGrpc {
 
     /**
      * <pre>
+     * List media items for a given ownership scope (usually a partner or partner location). Only media items owned by
+     * the invoking partner/location are listed.
+     * </pre>
+     */
+    public void list(io.bloombox.schema.services.media.v1beta1.ListMedia.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.ListMedia.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_LIST, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual media item, addressable by its media key. If it cannot be found or the invoking user does
+     * not have permission to access it, a 404 is returned.
+     * </pre>
+     */
+    public void retrieve(io.bloombox.schema.services.media.v1beta1.GetMedia.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.GetMedia.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_RETRIEVE, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Provision a record for a new media item, and update the data attached to that record with an initial value. That
      * is, upload and store a new, individual media item.
      * </pre>
@@ -129,6 +175,20 @@ public final class MediaGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            METHOD_LIST,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.media.v1beta1.ListMedia.Request,
+                io.bloombox.schema.services.media.v1beta1.ListMedia.Response>(
+                  this, METHODID_LIST)))
+          .addMethod(
+            METHOD_RETRIEVE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.media.v1beta1.GetMedia.Request,
+                io.bloombox.schema.services.media.v1beta1.GetMedia.Response>(
+                  this, METHODID_RETRIEVE)))
           .addMethod(
             METHOD_UPLOAD,
             asyncUnaryCall(
@@ -167,6 +227,30 @@ public final class MediaGrpc {
     protected MediaStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new MediaStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * List media items for a given ownership scope (usually a partner or partner location). Only media items owned by
+     * the invoking partner/location are listed.
+     * </pre>
+     */
+    public void list(io.bloombox.schema.services.media.v1beta1.ListMedia.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.ListMedia.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_LIST, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual media item, addressable by its media key. If it cannot be found or the invoking user does
+     * not have permission to access it, a 404 is returned.
+     * </pre>
+     */
+    public void retrieve(io.bloombox.schema.services.media.v1beta1.GetMedia.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.GetMedia.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -219,6 +303,28 @@ public final class MediaGrpc {
 
     /**
      * <pre>
+     * List media items for a given ownership scope (usually a partner or partner location). Only media items owned by
+     * the invoking partner/location are listed.
+     * </pre>
+     */
+    public io.bloombox.schema.services.media.v1beta1.ListMedia.Response list(io.bloombox.schema.services.media.v1beta1.ListMedia.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_LIST, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual media item, addressable by its media key. If it cannot be found or the invoking user does
+     * not have permission to access it, a 404 is returned.
+     * </pre>
+     */
+    public io.bloombox.schema.services.media.v1beta1.GetMedia.Response retrieve(io.bloombox.schema.services.media.v1beta1.GetMedia.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_RETRIEVE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Provision a record for a new media item, and update the data attached to that record with an initial value. That
      * is, upload and store a new, individual media item.
      * </pre>
@@ -265,6 +371,30 @@ public final class MediaGrpc {
 
     /**
      * <pre>
+     * List media items for a given ownership scope (usually a partner or partner location). Only media items owned by
+     * the invoking partner/location are listed.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.media.v1beta1.ListMedia.Response> list(
+        io.bloombox.schema.services.media.v1beta1.ListMedia.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_LIST, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve an individual media item, addressable by its media key. If it cannot be found or the invoking user does
+     * not have permission to access it, a 404 is returned.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.media.v1beta1.GetMedia.Response> retrieve(
+        io.bloombox.schema.services.media.v1beta1.GetMedia.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_RETRIEVE, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Provision a record for a new media item, and update the data attached to that record with an initial value. That
      * is, upload and store a new, individual media item.
      * </pre>
@@ -289,8 +419,10 @@ public final class MediaGrpc {
     }
   }
 
-  private static final int METHODID_UPLOAD = 0;
-  private static final int METHODID_ATTACH = 1;
+  private static final int METHODID_LIST = 0;
+  private static final int METHODID_RETRIEVE = 1;
+  private static final int METHODID_UPLOAD = 2;
+  private static final int METHODID_ATTACH = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -309,6 +441,14 @@ public final class MediaGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_LIST:
+          serviceImpl.list((io.bloombox.schema.services.media.v1beta1.ListMedia.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.ListMedia.Response>) responseObserver);
+          break;
+        case METHODID_RETRIEVE:
+          serviceImpl.retrieve((io.bloombox.schema.services.media.v1beta1.GetMedia.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.GetMedia.Response>) responseObserver);
+          break;
         case METHODID_UPLOAD:
           serviceImpl.upload((io.bloombox.schema.services.media.v1beta1.UploadMedia.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.media.v1beta1.UploadMedia.Response>) responseObserver);
@@ -350,6 +490,8 @@ public final class MediaGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MediaDescriptorSupplier())
+              .addMethod(METHOD_LIST)
+              .addMethod(METHOD_RETRIEVE)
               .addMethod(METHOD_UPLOAD)
               .addMethod(METHOD_ATTACH)
               .build();

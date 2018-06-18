@@ -303,7 +303,7 @@ public final class AuthServiceBeta1 {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           io.opencannabis.schema.oauth.OAuthClient.getDescriptor(),
-          io.bloombox.schema.identity.UserOuterClass.getDescriptor(),
+          io.bloombox.schema.identity.AppUser.getDescriptor(),
           io.bloombox.schema.security.Token.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -449,7 +449,7 @@ public final class AuthServiceBeta1 {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     io.opencannabis.schema.oauth.OAuthClient.getDescriptor();
-    io.bloombox.schema.identity.UserOuterClass.getDescriptor();
+    io.bloombox.schema.identity.AppUser.getDescriptor();
     io.bloombox.schema.security.Token.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

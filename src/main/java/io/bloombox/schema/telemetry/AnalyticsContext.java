@@ -50,7 +50,7 @@ public final class AnalyticsContext {
      *
      * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
      */
-    io.opencannabis.schema.temporal.Instant getIngest();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getIngest();
     /**
      * <pre>
      * Timestamp describing when this event was ingested by the backend telemetry pipeline.
@@ -58,7 +58,7 @@ public final class AnalyticsContext {
      *
      * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getIngestOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getIngestOrBuilder();
 
     /**
      * <pre>
@@ -75,7 +75,7 @@ public final class AnalyticsContext {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
      */
-    io.opencannabis.schema.temporal.Instant getOccurred();
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
     /**
      * <pre>
      * Timestamp describing when this event occurred, as reported by the submitting device or endpoint.
@@ -83,7 +83,7 @@ public final class AnalyticsContext {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
      */
-    io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder();
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
 
     /**
      * <pre>
@@ -156,11 +156,11 @@ public final class AnalyticsContext {
               break;
             }
             case 18: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (ingest_ != null) {
                 subBuilder = ingest_.toBuilder();
               }
-              ingest_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              ingest_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(ingest_);
                 ingest_ = subBuilder.buildPartial();
@@ -169,11 +169,11 @@ public final class AnalyticsContext {
               break;
             }
             case 26: {
-              io.opencannabis.schema.temporal.Instant.Builder subBuilder = null;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (occurred_ != null) {
                 subBuilder = occurred_.toBuilder();
               }
-              occurred_ = input.readMessage(io.opencannabis.schema.temporal.Instant.parser(), extensionRegistry);
+              occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(occurred_);
                 occurred_ = subBuilder.buildPartial();
@@ -216,7 +216,7 @@ public final class AnalyticsContext {
     }
 
     public static final int INGEST_FIELD_NUMBER = 2;
-    private io.opencannabis.schema.temporal.Instant ingest_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant ingest_;
     /**
      * <pre>
      * Timestamp describing when this event was ingested by the backend telemetry pipeline.
@@ -234,8 +234,8 @@ public final class AnalyticsContext {
      *
      * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
      */
-    public io.opencannabis.schema.temporal.Instant getIngest() {
-      return ingest_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : ingest_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getIngest() {
+      return ingest_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : ingest_;
     }
     /**
      * <pre>
@@ -244,12 +244,12 @@ public final class AnalyticsContext {
      *
      * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getIngestOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getIngestOrBuilder() {
       return getIngest();
     }
 
     public static final int OCCURRED_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.temporal.Instant occurred_;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
     /**
      * <pre>
      * Timestamp describing when this event occurred, as reported by the submitting device or endpoint.
@@ -267,8 +267,8 @@ public final class AnalyticsContext {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
      */
-    public io.opencannabis.schema.temporal.Instant getOccurred() {
-      return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+      return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
     }
     /**
      * <pre>
@@ -277,7 +277,7 @@ public final class AnalyticsContext {
      *
      * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
      */
-    public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
       return getOccurred();
     }
 
@@ -673,9 +673,9 @@ public final class AnalyticsContext {
         return this;
       }
 
-      private io.opencannabis.schema.temporal.Instant ingest_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant ingest_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> ingestBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> ingestBuilder_;
       /**
        * <pre>
        * Timestamp describing when this event was ingested by the backend telemetry pipeline.
@@ -693,9 +693,9 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant getIngest() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getIngest() {
         if (ingestBuilder_ == null) {
-          return ingest_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : ingest_;
+          return ingest_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : ingest_;
         } else {
           return ingestBuilder_.getMessage();
         }
@@ -707,7 +707,7 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
        */
-      public Builder setIngest(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setIngest(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (ingestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -728,7 +728,7 @@ public final class AnalyticsContext {
        * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
        */
       public Builder setIngest(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (ingestBuilder_ == null) {
           ingest_ = builderForValue.build();
           onChanged();
@@ -745,11 +745,11 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
        */
-      public Builder mergeIngest(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeIngest(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (ingestBuilder_ == null) {
           if (ingest_ != null) {
             ingest_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(ingest_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(ingest_).mergeFrom(value).buildPartial();
           } else {
             ingest_ = value;
           }
@@ -785,7 +785,7 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getIngestBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getIngestBuilder() {
         
         onChanged();
         return getIngestFieldBuilder().getBuilder();
@@ -797,12 +797,12 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getIngestOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getIngestOrBuilder() {
         if (ingestBuilder_ != null) {
           return ingestBuilder_.getMessageOrBuilder();
         } else {
           return ingest_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : ingest_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : ingest_;
         }
       }
       /**
@@ -813,11 +813,11 @@ public final class AnalyticsContext {
        * <code>.opencannabis.temporal.Instant ingest = 2 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event was ingested by the backend telemetry pipeline."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getIngestFieldBuilder() {
         if (ingestBuilder_ == null) {
           ingestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getIngest(),
                   getParentForChildren(),
                   isClean());
@@ -826,9 +826,9 @@ public final class AnalyticsContext {
         return ingestBuilder_;
       }
 
-      private io.opencannabis.schema.temporal.Instant occurred_ = null;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> occurredBuilder_;
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
       /**
        * <pre>
        * Timestamp describing when this event occurred, as reported by the submitting device or endpoint.
@@ -846,9 +846,9 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant getOccurred() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
         if (occurredBuilder_ == null) {
-          return occurred_ == null ? io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+          return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         } else {
           return occurredBuilder_.getMessage();
         }
@@ -860,7 +860,7 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
        */
-      public Builder setOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -881,7 +881,7 @@ public final class AnalyticsContext {
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
        */
       public Builder setOccurred(
-          io.opencannabis.schema.temporal.Instant.Builder builderForValue) {
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
         if (occurredBuilder_ == null) {
           occurred_ = builderForValue.build();
           onChanged();
@@ -898,11 +898,11 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
        */
-      public Builder mergeOccurred(io.opencannabis.schema.temporal.Instant value) {
+      public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (occurredBuilder_ == null) {
           if (occurred_ != null) {
             occurred_ =
-              io.opencannabis.schema.temporal.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
           } else {
             occurred_ = value;
           }
@@ -938,7 +938,7 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
        */
-      public io.opencannabis.schema.temporal.Instant.Builder getOccurredBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
         
         onChanged();
         return getOccurredFieldBuilder().getBuilder();
@@ -950,12 +950,12 @@ public final class AnalyticsContext {
        *
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
        */
-      public io.opencannabis.schema.temporal.InstantOrBuilder getOccurredOrBuilder() {
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
         if (occurredBuilder_ != null) {
           return occurredBuilder_.getMessageOrBuilder();
         } else {
           return occurred_ == null ?
-              io.opencannabis.schema.temporal.Instant.getDefaultInstance() : occurred_;
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
         }
       }
       /**
@@ -966,11 +966,11 @@ public final class AnalyticsContext {
        * <code>.opencannabis.temporal.Instant occurred = 3 [(.gen_bq_schema.require) = true, (.gen_bq_schema.type_override) = "TIMESTAMP", (.gen_bq_schema.description) = "Timestamp describing when this event occurred, as reported by the submitting device or endpoint."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder> 
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
           getOccurredFieldBuilder() {
         if (occurredBuilder_ == null) {
           occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.Instant, io.opencannabis.schema.temporal.Instant.Builder, io.opencannabis.schema.temporal.InstantOrBuilder>(
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
                   getOccurred(),
                   getParentForChildren(),
                   isClean());
@@ -1122,7 +1122,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
-    io.bloombox.schema.identity.UserOuterClass.User getUser();
+    io.bloombox.schema.identity.AppUser.User getUser();
     /**
      * <pre>
      * User account that was logged in when the event was submitted.
@@ -1130,7 +1130,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
-    io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getUserOrBuilder();
+    io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder();
 
     /**
      * <pre>
@@ -1147,7 +1147,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
-    io.bloombox.schema.partner.PartnerOuterClass.Partner getPartner();
+    io.bloombox.schema.partner.PartnerAccount.Partner getPartner();
     /**
      * <pre>
      * Partner account under which the event was submitted.
@@ -1155,7 +1155,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
-    io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder getPartnerOrBuilder();
+    io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder();
 
     /**
      * <pre>
@@ -1172,7 +1172,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
-    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation getLocation();
+    io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation();
     /**
      * <pre>
      * Location account under which this event was submitted.
@@ -1180,7 +1180,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
-    io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder getLocationOrBuilder();
+    io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder();
   }
   /**
    * <pre>
@@ -1233,11 +1233,11 @@ public final class AnalyticsContext {
               break;
             }
             case 10: {
-              io.bloombox.schema.identity.UserOuterClass.User.Builder subBuilder = null;
+              io.bloombox.schema.identity.AppUser.User.Builder subBuilder = null;
               if (user_ != null) {
                 subBuilder = user_.toBuilder();
               }
-              user_ = input.readMessage(io.bloombox.schema.identity.UserOuterClass.User.parser(), extensionRegistry);
+              user_ = input.readMessage(io.bloombox.schema.identity.AppUser.User.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(user_);
                 user_ = subBuilder.buildPartial();
@@ -1246,11 +1246,11 @@ public final class AnalyticsContext {
               break;
             }
             case 18: {
-              io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder subBuilder = null;
+              io.bloombox.schema.partner.PartnerAccount.Partner.Builder subBuilder = null;
               if (partner_ != null) {
                 subBuilder = partner_.toBuilder();
               }
-              partner_ = input.readMessage(io.bloombox.schema.partner.PartnerOuterClass.Partner.parser(), extensionRegistry);
+              partner_ = input.readMessage(io.bloombox.schema.partner.PartnerAccount.Partner.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(partner_);
                 partner_ = subBuilder.buildPartial();
@@ -1259,11 +1259,11 @@ public final class AnalyticsContext {
               break;
             }
             case 26: {
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder subBuilder = null;
+              io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder subBuilder = null;
               if (location_ != null) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.parser(), extensionRegistry);
+              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccount.PartnerLocation.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -1296,7 +1296,7 @@ public final class AnalyticsContext {
     }
 
     public static final int USER_FIELD_NUMBER = 1;
-    private io.bloombox.schema.identity.UserOuterClass.User user_;
+    private io.bloombox.schema.identity.AppUser.User user_;
     /**
      * <pre>
      * User account that was logged in when the event was submitted.
@@ -1314,8 +1314,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
-    public io.bloombox.schema.identity.UserOuterClass.User getUser() {
-      return user_ == null ? io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : user_;
+    public io.bloombox.schema.identity.AppUser.User getUser() {
+      return user_ == null ? io.bloombox.schema.identity.AppUser.User.getDefaultInstance() : user_;
     }
     /**
      * <pre>
@@ -1324,12 +1324,12 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
      */
-    public io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getUserOrBuilder() {
+    public io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder() {
       return getUser();
     }
 
     public static final int PARTNER_FIELD_NUMBER = 2;
-    private io.bloombox.schema.partner.PartnerOuterClass.Partner partner_;
+    private io.bloombox.schema.partner.PartnerAccount.Partner partner_;
     /**
      * <pre>
      * Partner account under which the event was submitted.
@@ -1347,8 +1347,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
-    public io.bloombox.schema.partner.PartnerOuterClass.Partner getPartner() {
-      return partner_ == null ? io.bloombox.schema.partner.PartnerOuterClass.Partner.getDefaultInstance() : partner_;
+    public io.bloombox.schema.partner.PartnerAccount.Partner getPartner() {
+      return partner_ == null ? io.bloombox.schema.partner.PartnerAccount.Partner.getDefaultInstance() : partner_;
     }
     /**
      * <pre>
@@ -1357,12 +1357,12 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
      */
-    public io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder getPartnerOrBuilder() {
+    public io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder() {
       return getPartner();
     }
 
     public static final int LOCATION_FIELD_NUMBER = 3;
-    private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation location_;
+    private io.bloombox.schema.partner.LocationAccount.PartnerLocation location_;
     /**
      * <pre>
      * Location account under which this event was submitted.
@@ -1380,8 +1380,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.getDefaultInstance() : location_;
+    public io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation() {
+      return location_ == null ? io.bloombox.schema.partner.LocationAccount.PartnerLocation.getDefaultInstance() : location_;
     }
     /**
      * <pre>
@@ -1390,7 +1390,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
      */
-    public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder getLocationOrBuilder() {
+    public io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder() {
       return getLocation();
     }
 
@@ -1754,9 +1754,9 @@ public final class AnalyticsContext {
         return this;
       }
 
-      private io.bloombox.schema.identity.UserOuterClass.User user_ = null;
+      private io.bloombox.schema.identity.AppUser.User user_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder> userBuilder_;
+          io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder> userBuilder_;
       /**
        * <pre>
        * User account that was logged in when the event was submitted.
@@ -1774,9 +1774,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public io.bloombox.schema.identity.UserOuterClass.User getUser() {
+      public io.bloombox.schema.identity.AppUser.User getUser() {
         if (userBuilder_ == null) {
-          return user_ == null ? io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : user_;
+          return user_ == null ? io.bloombox.schema.identity.AppUser.User.getDefaultInstance() : user_;
         } else {
           return userBuilder_.getMessage();
         }
@@ -1788,7 +1788,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public Builder setUser(io.bloombox.schema.identity.UserOuterClass.User value) {
+      public Builder setUser(io.bloombox.schema.identity.AppUser.User value) {
         if (userBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1809,7 +1809,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       public Builder setUser(
-          io.bloombox.schema.identity.UserOuterClass.User.Builder builderForValue) {
+          io.bloombox.schema.identity.AppUser.User.Builder builderForValue) {
         if (userBuilder_ == null) {
           user_ = builderForValue.build();
           onChanged();
@@ -1826,11 +1826,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public Builder mergeUser(io.bloombox.schema.identity.UserOuterClass.User value) {
+      public Builder mergeUser(io.bloombox.schema.identity.AppUser.User value) {
         if (userBuilder_ == null) {
           if (user_ != null) {
             user_ =
-              io.bloombox.schema.identity.UserOuterClass.User.newBuilder(user_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.AppUser.User.newBuilder(user_).mergeFrom(value).buildPartial();
           } else {
             user_ = value;
           }
@@ -1866,7 +1866,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public io.bloombox.schema.identity.UserOuterClass.User.Builder getUserBuilder() {
+      public io.bloombox.schema.identity.AppUser.User.Builder getUserBuilder() {
         
         onChanged();
         return getUserFieldBuilder().getBuilder();
@@ -1878,12 +1878,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
-      public io.bloombox.schema.identity.UserOuterClass.UserOrBuilder getUserOrBuilder() {
+      public io.bloombox.schema.identity.AppUser.UserOrBuilder getUserOrBuilder() {
         if (userBuilder_ != null) {
           return userBuilder_.getMessageOrBuilder();
         } else {
           return user_ == null ?
-              io.bloombox.schema.identity.UserOuterClass.User.getDefaultInstance() : user_;
+              io.bloombox.schema.identity.AppUser.User.getDefaultInstance() : user_;
         }
       }
       /**
@@ -1894,11 +1894,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.User user = 1 [(.gen_bq_schema.description) = "User account that was logged in when the event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder> 
+          io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder> 
           getUserFieldBuilder() {
         if (userBuilder_ == null) {
           userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.UserOuterClass.User, io.bloombox.schema.identity.UserOuterClass.User.Builder, io.bloombox.schema.identity.UserOuterClass.UserOrBuilder>(
+              io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder>(
                   getUser(),
                   getParentForChildren(),
                   isClean());
@@ -1907,9 +1907,9 @@ public final class AnalyticsContext {
         return userBuilder_;
       }
 
-      private io.bloombox.schema.partner.PartnerOuterClass.Partner partner_ = null;
+      private io.bloombox.schema.partner.PartnerAccount.Partner partner_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerOuterClass.Partner, io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder, io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder> partnerBuilder_;
+          io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder> partnerBuilder_;
       /**
        * <pre>
        * Partner account under which the event was submitted.
@@ -1927,9 +1927,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerOuterClass.Partner getPartner() {
+      public io.bloombox.schema.partner.PartnerAccount.Partner getPartner() {
         if (partnerBuilder_ == null) {
-          return partner_ == null ? io.bloombox.schema.partner.PartnerOuterClass.Partner.getDefaultInstance() : partner_;
+          return partner_ == null ? io.bloombox.schema.partner.PartnerAccount.Partner.getDefaultInstance() : partner_;
         } else {
           return partnerBuilder_.getMessage();
         }
@@ -1941,7 +1941,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public Builder setPartner(io.bloombox.schema.partner.PartnerOuterClass.Partner value) {
+      public Builder setPartner(io.bloombox.schema.partner.PartnerAccount.Partner value) {
         if (partnerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1962,7 +1962,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       public Builder setPartner(
-          io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder builderForValue) {
+          io.bloombox.schema.partner.PartnerAccount.Partner.Builder builderForValue) {
         if (partnerBuilder_ == null) {
           partner_ = builderForValue.build();
           onChanged();
@@ -1979,11 +1979,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public Builder mergePartner(io.bloombox.schema.partner.PartnerOuterClass.Partner value) {
+      public Builder mergePartner(io.bloombox.schema.partner.PartnerAccount.Partner value) {
         if (partnerBuilder_ == null) {
           if (partner_ != null) {
             partner_ =
-              io.bloombox.schema.partner.PartnerOuterClass.Partner.newBuilder(partner_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.PartnerAccount.Partner.newBuilder(partner_).mergeFrom(value).buildPartial();
           } else {
             partner_ = value;
           }
@@ -2019,7 +2019,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder getPartnerBuilder() {
+      public io.bloombox.schema.partner.PartnerAccount.Partner.Builder getPartnerBuilder() {
         
         onChanged();
         return getPartnerFieldBuilder().getBuilder();
@@ -2031,12 +2031,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder getPartnerOrBuilder() {
+      public io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder getPartnerOrBuilder() {
         if (partnerBuilder_ != null) {
           return partnerBuilder_.getMessageOrBuilder();
         } else {
           return partner_ == null ?
-              io.bloombox.schema.partner.PartnerOuterClass.Partner.getDefaultInstance() : partner_;
+              io.bloombox.schema.partner.PartnerAccount.Partner.getDefaultInstance() : partner_;
         }
       }
       /**
@@ -2047,11 +2047,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.partner.Partner partner = 2 [(.gen_bq_schema.description) = "Partner account under which the event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerOuterClass.Partner, io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder, io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder> 
+          io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder> 
           getPartnerFieldBuilder() {
         if (partnerBuilder_ == null) {
           partnerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerOuterClass.Partner, io.bloombox.schema.partner.PartnerOuterClass.Partner.Builder, io.bloombox.schema.partner.PartnerOuterClass.PartnerOrBuilder>(
+              io.bloombox.schema.partner.PartnerAccount.Partner, io.bloombox.schema.partner.PartnerAccount.Partner.Builder, io.bloombox.schema.partner.PartnerAccount.PartnerOrBuilder>(
                   getPartner(),
                   getParentForChildren(),
                   isClean());
@@ -2060,9 +2060,9 @@ public final class AnalyticsContext {
         return partnerBuilder_;
       }
 
-      private io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation location_ = null;
+      private io.bloombox.schema.partner.LocationAccount.PartnerLocation location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder> locationBuilder_;
+          io.bloombox.schema.partner.LocationAccount.PartnerLocation, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Location account under which this event was submitted.
@@ -2080,9 +2080,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation getLocation() {
+      public io.bloombox.schema.partner.LocationAccount.PartnerLocation getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.getDefaultInstance() : location_;
+          return location_ == null ? io.bloombox.schema.partner.LocationAccount.PartnerLocation.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
@@ -2094,7 +2094,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation value) {
+      public Builder setLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2115,7 +2115,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder builderForValue) {
+          io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -2132,11 +2132,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation value) {
+      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccount.PartnerLocation value) {
         if (locationBuilder_ == null) {
           if (location_ != null) {
             location_ =
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.newBuilder(location_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.partner.LocationAccount.PartnerLocation.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -2172,7 +2172,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder getLocationBuilder() {
+      public io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder getLocationBuilder() {
         
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -2184,12 +2184,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
-      public io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder getLocationOrBuilder() {
+      public io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.getDefaultInstance() : location_;
+              io.bloombox.schema.partner.LocationAccount.PartnerLocation.getDefaultInstance() : location_;
         }
       }
       /**
@@ -2200,11 +2200,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.partner.PartnerLocation location = 3 [(.gen_bq_schema.description) = "Location account under which this event was submitted."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder> 
+          io.bloombox.schema.partner.LocationAccount.PartnerLocation, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocation.Builder, io.bloombox.schema.partner.PartnerLocationOuterClass.PartnerLocationOrBuilder>(
+              io.bloombox.schema.partner.LocationAccount.PartnerLocation, io.bloombox.schema.partner.LocationAccount.PartnerLocation.Builder, io.bloombox.schema.partner.LocationAccount.PartnerLocationOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -2305,7 +2305,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    io.bloombox.schema.identity.UserOuterClass.UserKey getUserKey();
+    io.bloombox.schema.identity.AppUserKey.UserKey getUserKey();
     /**
      * <pre>
      * Specifies the user associated with this event, if known.
@@ -2313,7 +2313,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder getUserKeyOrBuilder();
+    io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder();
 
     /**
      * <pre>
@@ -2610,11 +2610,11 @@ public final class AnalyticsContext {
               break;
             }
             case 18: {
-              io.bloombox.schema.identity.UserOuterClass.UserKey.Builder subBuilder = null;
+              io.bloombox.schema.identity.AppUserKey.UserKey.Builder subBuilder = null;
               if (userKey_ != null) {
                 subBuilder = userKey_.toBuilder();
               }
-              userKey_ = input.readMessage(io.bloombox.schema.identity.UserOuterClass.UserKey.parser(), extensionRegistry);
+              userKey_ = input.readMessage(io.bloombox.schema.identity.AppUserKey.UserKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(userKey_);
                 userKey_ = subBuilder.buildPartial();
@@ -2782,7 +2782,7 @@ public final class AnalyticsContext {
     }
 
     public static final int USER_KEY_FIELD_NUMBER = 2;
-    private io.bloombox.schema.identity.UserOuterClass.UserKey userKey_;
+    private io.bloombox.schema.identity.AppUserKey.UserKey userKey_;
     /**
      * <pre>
      * Specifies the user associated with this event, if known.
@@ -2800,8 +2800,8 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    public io.bloombox.schema.identity.UserOuterClass.UserKey getUserKey() {
-      return userKey_ == null ? io.bloombox.schema.identity.UserOuterClass.UserKey.getDefaultInstance() : userKey_;
+    public io.bloombox.schema.identity.AppUserKey.UserKey getUserKey() {
+      return userKey_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : userKey_;
     }
     /**
      * <pre>
@@ -2810,7 +2810,7 @@ public final class AnalyticsContext {
      *
      * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
      */
-    public io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder getUserKeyOrBuilder() {
+    public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder() {
       return getUserKey();
     }
 
@@ -3916,9 +3916,9 @@ public final class AnalyticsContext {
         return collectionBuilder_;
       }
 
-      private io.bloombox.schema.identity.UserOuterClass.UserKey userKey_ = null;
+      private io.bloombox.schema.identity.AppUserKey.UserKey userKey_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.UserOuterClass.UserKey, io.bloombox.schema.identity.UserOuterClass.UserKey.Builder, io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder> userKeyBuilder_;
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> userKeyBuilder_;
       /**
        * <pre>
        * Specifies the user associated with this event, if known.
@@ -3936,9 +3936,9 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.UserOuterClass.UserKey getUserKey() {
+      public io.bloombox.schema.identity.AppUserKey.UserKey getUserKey() {
         if (userKeyBuilder_ == null) {
-          return userKey_ == null ? io.bloombox.schema.identity.UserOuterClass.UserKey.getDefaultInstance() : userKey_;
+          return userKey_ == null ? io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : userKey_;
         } else {
           return userKeyBuilder_.getMessage();
         }
@@ -3950,7 +3950,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public Builder setUserKey(io.bloombox.schema.identity.UserOuterClass.UserKey value) {
+      public Builder setUserKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userKeyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3971,7 +3971,7 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       public Builder setUserKey(
-          io.bloombox.schema.identity.UserOuterClass.UserKey.Builder builderForValue) {
+          io.bloombox.schema.identity.AppUserKey.UserKey.Builder builderForValue) {
         if (userKeyBuilder_ == null) {
           userKey_ = builderForValue.build();
           onChanged();
@@ -3988,11 +3988,11 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public Builder mergeUserKey(io.bloombox.schema.identity.UserOuterClass.UserKey value) {
+      public Builder mergeUserKey(io.bloombox.schema.identity.AppUserKey.UserKey value) {
         if (userKeyBuilder_ == null) {
           if (userKey_ != null) {
             userKey_ =
-              io.bloombox.schema.identity.UserOuterClass.UserKey.newBuilder(userKey_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.identity.AppUserKey.UserKey.newBuilder(userKey_).mergeFrom(value).buildPartial();
           } else {
             userKey_ = value;
           }
@@ -4028,7 +4028,7 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.UserOuterClass.UserKey.Builder getUserKeyBuilder() {
+      public io.bloombox.schema.identity.AppUserKey.UserKey.Builder getUserKeyBuilder() {
         
         onChanged();
         return getUserKeyFieldBuilder().getBuilder();
@@ -4040,12 +4040,12 @@ public final class AnalyticsContext {
        *
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
-      public io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder getUserKeyOrBuilder() {
+      public io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder getUserKeyOrBuilder() {
         if (userKeyBuilder_ != null) {
           return userKeyBuilder_.getMessageOrBuilder();
         } else {
           return userKey_ == null ?
-              io.bloombox.schema.identity.UserOuterClass.UserKey.getDefaultInstance() : userKey_;
+              io.bloombox.schema.identity.AppUserKey.UserKey.getDefaultInstance() : userKey_;
         }
       }
       /**
@@ -4056,11 +4056,11 @@ public final class AnalyticsContext {
        * <code>.bloombox.schema.identity.UserKey user_key = 2 [(.gen_bq_schema.description) = "Specifies the user associated with this event, if known."];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.UserOuterClass.UserKey, io.bloombox.schema.identity.UserOuterClass.UserKey.Builder, io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder> 
+          io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder> 
           getUserKeyFieldBuilder() {
         if (userKeyBuilder_ == null) {
           userKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.UserOuterClass.UserKey, io.bloombox.schema.identity.UserOuterClass.UserKey.Builder, io.bloombox.schema.identity.UserOuterClass.UserKeyOrBuilder>(
+              io.bloombox.schema.identity.AppUserKey.UserKey, io.bloombox.schema.identity.AppUserKey.UserKey.Builder, io.bloombox.schema.identity.AppUserKey.UserKeyOrBuilder>(
                   getUserKey(),
                   getParentForChildren(),
                   isClean());
@@ -5431,80 +5431,81 @@ public final class AnalyticsContext {
     java.lang.String[] descriptorData = {
       "\n\027analytics/Context.proto\022\031bloombox.sche" +
       "ma.analytics\032\016bq_field.proto\032\022geo/Locati" +
-      "on.proto\032\023identity/User.proto\032\026temporal/" +
-      "Instant.proto\032\025partner/Partner.proto\032\035pa" +
-      "rtner/PartnerLocation.proto\032\025analytics/S" +
-      "cope.proto\032\037analytics/context/Browser.pr" +
-      "oto\032\037analytics/context/Library.proto\032\"an" +
-      "alytics/context/Collection.proto\032#analyt" +
-      "ics/context/Application.proto\032$analytics" +
-      "/context/NativeDevice.proto\"\322\004\n\rEventPos" +
-      "ition\022\226\001\n\006ingest\030\002 \001(\0132\036.opencannabis.te" +
-      "mporal.InstantBf\360?\001\372?\tTIMESTAMP\212@TTimest" +
-      "amp describing when this event was inges" +
-      "ted by the backend telemetry pipeline.\022\244" +
-      "\001\n\010occurred\030\003 \001(\0132\036.opencannabis.tempora" +
-      "l.InstantBr\360?\001\372?\tTIMESTAMP\212@`Timestamp d" +
-      "escribing when this event occurred, as r" +
-      "eported by the submitting device or endp" +
-      "oint.\022\202\001\n\tprocessed\030\004 \001(\004Bo\372?\tTIMESTAMP\212" +
-      "@`Timestamp describing when this event o" +
-      "ccurred, as reported by the submitting d" +
-      "evice or endpoint.\022|\n\010enriched\030\005 \001(\004Bj\372?" +
-      "\tTIMESTAMP\212@[Timestamps describing each " +
-      "instance of this event being enriched by" +
-      " the telemetry pipeline.\"\340\002\n\013EventActors" +
-      "\022n\n\004user\030\001 \001(\0132\036.bloombox.schema.identit" +
-      "y.UserB@\212@=User account that was logged " +
-      "in when the event was submitted.\022j\n\007part" +
-      "ner\030\002 \001(\0132 .bloombox.schema.partner.Part" +
-      "nerB7\212@4Partner account under which the " +
-      "event was submitted.\022u\n\010location\030\003 \001(\0132(" +
-      ".bloombox.schema.partner.PartnerLocation" +
-      "B9\212@6Location account under which this e" +
-      "vent was submitted.\"\322\014\n\007Context\022\202\001\n\ncoll" +
-      "ection\030\001 \001(\0132-.bloombox.schema.analytics" +
-      ".context.CollectionB?\360?\001\212@9Collection in" +
-      "formation, specifies event type or categ" +
-      "ory.\022p\n\010user_key\030\002 \001(\0132!.bloombox.schema" +
-      ".identity.UserKeyB;\212@8Specifies the user" +
-      " associated with this event, if known.\022M" +
-      "\n\013fingerprint\030\003 \001(\tB8\212@5Unique device fi" +
-      "ngerprint for this analytics context.\022\227\001" +
-      "\n\005group\030\004 \001(\tB\207\001\212@\203\001Arbitrary group ID f" +
-      "or this event. Gathers events into bucke" +
-      "ts of variable size, usually used to ind" +
-      "icate a user or device session.\022h\n\010hostn" +
-      "ame\030\005 \001(\tBV\212@SHostname of the server or " +
-      "client that transmitted this information" +
-      ", if it is known.\022l\n\nip_address\030\006 \001(\tBX\212" +
-      "@UIP address of the server or client tha" +
-      "t transmitted this information, if is is" +
-      " known.\022_\n\005scope\030\007 \001(\0132 .bloombox.schema" +
-      ".analytics.ScopeB.\212@+Partner and commerc" +
-      "ial scope of this event.\022f\n\003app\030\010 \001(\01324." +
-      "bloombox.schema.analytics.context.Device" +
-      "ApplicationB#\212@ Application version info" +
-      "rmation.\022b\n\007library\030\t \001(\01320.bloombox.sch" +
-      "ema.analytics.context.DeviceLibraryB\037\212@\034" +
-      "Library version information.\022\206\002\n\006native\030" +
-      "\n \001(\01326.bloombox.schema.analytics.contex" +
-      "t.NativeDeviceContextB\275\001\212@\271\001Specifies in" +
-      "formation about a native device, when th" +
-      "e event is being sent from a native cont" +
-      "ext of some kind, such as a mobile phone" +
-      " application or embedded device running " +
-      "partner code.\022\274\001\n\007browser\030\013 \001(\01327.bloomb" +
-      "ox.schema.analytics.context.BrowserDevic" +
-      "eContextBr\212@oSpecifies information about" +
-      " a web browser, when the event is being " +
-      "sent from some kind of web browsing cont" +
-      "ext.\022\231\001\n\010location\030\014 \001(\0132\032.opencannabis.g" +
-      "eo.LocationBk\212@hOrigin location for this" +
-      " event, as determined by geolocation or " +
-      "explicit inclusion in the event payload." +
-      "B:\n\034io.bloombox.schema.telemetryB\020Analyt" +
-      "icsContextH\001P\000\242\002\003BBSb\006proto3"
+      "on.proto\032\023identity/User.proto\032\026identity/" +
+      "UserKey.proto\032\026temporal/Instant.proto\032\025p" +
+      "artner/Partner.proto\032\035partner/PartnerLoc" +
+      "ation.proto\032\025analytics/Scope.proto\032\037anal" +
+      "ytics/context/Browser.proto\032\037analytics/c" +
+      "ontext/Library.proto\032\"analytics/context/" +
+      "Collection.proto\032#analytics/context/Appl" +
+      "ication.proto\032$analytics/context/NativeD" +
+      "evice.proto\"\322\004\n\rEventPosition\022\226\001\n\006ingest" +
+      "\030\002 \001(\0132\036.opencannabis.temporal.InstantBf" +
+      "\360?\001\372?\tTIMESTAMP\212@TTimestamp describing w" +
+      "hen this event was ingested by the backe" +
+      "nd telemetry pipeline.\022\244\001\n\010occurred\030\003 \001(" +
+      "\0132\036.opencannabis.temporal.InstantBr\360?\001\372?" +
+      "\tTIMESTAMP\212@`Timestamp describing when t" +
+      "his event occurred, as reported by the s" +
+      "ubmitting device or endpoint.\022\202\001\n\tproces" +
+      "sed\030\004 \001(\004Bo\372?\tTIMESTAMP\212@`Timestamp desc" +
+      "ribing when this event occurred, as repo" +
+      "rted by the submitting device or endpoin" +
+      "t.\022|\n\010enriched\030\005 \001(\004Bj\372?\tTIMESTAMP\212@[Tim" +
+      "estamps describing each instance of this" +
+      " event being enriched by the telemetry p" +
+      "ipeline.\"\340\002\n\013EventActors\022n\n\004user\030\001 \001(\0132\036" +
+      ".bloombox.schema.identity.UserB@\212@=User " +
+      "account that was logged in when the even" +
+      "t was submitted.\022j\n\007partner\030\002 \001(\0132 .bloo" +
+      "mbox.schema.partner.PartnerB7\212@4Partner " +
+      "account under which the event was submit" +
+      "ted.\022u\n\010location\030\003 \001(\0132(.bloombox.schema" +
+      ".partner.PartnerLocationB9\212@6Location ac" +
+      "count under which this event was submitt" +
+      "ed.\"\322\014\n\007Context\022\202\001\n\ncollection\030\001 \001(\0132-.b" +
+      "loombox.schema.analytics.context.Collect" +
+      "ionB?\360?\001\212@9Collection information, speci" +
+      "fies event type or category.\022p\n\010user_key" +
+      "\030\002 \001(\0132!.bloombox.schema.identity.UserKe" +
+      "yB;\212@8Specifies the user associated with" +
+      " this event, if known.\022M\n\013fingerprint\030\003 " +
+      "\001(\tB8\212@5Unique device fingerprint for th" +
+      "is analytics context.\022\227\001\n\005group\030\004 \001(\tB\207\001" +
+      "\212@\203\001Arbitrary group ID for this event. G" +
+      "athers events into buckets of variable s" +
+      "ize, usually used to indicate a user or " +
+      "device session.\022h\n\010hostname\030\005 \001(\tBV\212@SHo" +
+      "stname of the server or client that tran" +
+      "smitted this information, if it is known" +
+      ".\022l\n\nip_address\030\006 \001(\tBX\212@UIP address of " +
+      "the server or client that transmitted th" +
+      "is information, if is is known.\022_\n\005scope" +
+      "\030\007 \001(\0132 .bloombox.schema.analytics.Scope" +
+      "B.\212@+Partner and commercial scope of thi" +
+      "s event.\022f\n\003app\030\010 \001(\01324.bloombox.schema." +
+      "analytics.context.DeviceApplicationB#\212@ " +
+      "Application version information.\022b\n\007libr" +
+      "ary\030\t \001(\01320.bloombox.schema.analytics.co" +
+      "ntext.DeviceLibraryB\037\212@\034Library version " +
+      "information.\022\206\002\n\006native\030\n \001(\01326.bloombox" +
+      ".schema.analytics.context.NativeDeviceCo" +
+      "ntextB\275\001\212@\271\001Specifies information about " +
+      "a native device, when the event is being" +
+      " sent from a native context of some kind" +
+      ", such as a mobile phone application or " +
+      "embedded device running partner code.\022\274\001" +
+      "\n\007browser\030\013 \001(\01327.bloombox.schema.analyt" +
+      "ics.context.BrowserDeviceContextBr\212@oSpe" +
+      "cifies information about a web browser, " +
+      "when the event is being sent from some k" +
+      "ind of web browsing context.\022\231\001\n\010locatio" +
+      "n\030\014 \001(\0132\032.opencannabis.geo.LocationBk\212@h" +
+      "Origin location for this event, as deter" +
+      "mined by geolocation or explicit inclusi" +
+      "on in the event payload.B:\n\034io.bloombox." +
+      "schema.telemetryB\020AnalyticsContextH\001P\000\242\002" +
+      "\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5519,10 +5520,11 @@ public final class AnalyticsContext {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.geo.LocationOuterClass.getDescriptor(),
-          io.bloombox.schema.identity.UserOuterClass.getDescriptor(),
-          io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor(),
-          io.bloombox.schema.partner.PartnerOuterClass.getDescriptor(),
-          io.bloombox.schema.partner.PartnerLocationOuterClass.getDescriptor(),
+          io.bloombox.schema.identity.AppUser.getDescriptor(),
+          io.bloombox.schema.identity.AppUserKey.getDescriptor(),
+          io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
+          io.bloombox.schema.partner.PartnerAccount.getDescriptor(),
+          io.bloombox.schema.partner.LocationAccount.getDescriptor(),
           io.bloombox.schema.telemetry.AnalyticsScope.getDescriptor(),
           io.bloombox.schema.telemetry.context.BrowserContext.getDescriptor(),
           io.bloombox.schema.telemetry.context.LibraryContext.getDescriptor(),
@@ -5557,10 +5559,11 @@ public final class AnalyticsContext {
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
     io.opencannabis.schema.geo.LocationOuterClass.getDescriptor();
-    io.bloombox.schema.identity.UserOuterClass.getDescriptor();
-    io.opencannabis.schema.temporal.InstantOuterClass.getDescriptor();
-    io.bloombox.schema.partner.PartnerOuterClass.getDescriptor();
-    io.bloombox.schema.partner.PartnerLocationOuterClass.getDescriptor();
+    io.bloombox.schema.identity.AppUser.getDescriptor();
+    io.bloombox.schema.identity.AppUserKey.getDescriptor();
+    io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
+    io.bloombox.schema.partner.PartnerAccount.getDescriptor();
+    io.bloombox.schema.partner.LocationAccount.getDescriptor();
     io.bloombox.schema.telemetry.AnalyticsScope.getDescriptor();
     io.bloombox.schema.telemetry.context.BrowserContext.getDescriptor();
     io.bloombox.schema.telemetry.context.LibraryContext.getDescriptor();
