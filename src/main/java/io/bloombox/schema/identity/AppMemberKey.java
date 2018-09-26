@@ -1479,11 +1479,1174 @@ public final class AppMemberKey {
 
   }
 
+  public interface MembershipReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.MembershipReference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specifies a unique code identifying this user membership.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     */
+    boolean hasKey();
+    /**
+     * <pre>
+     * Specifies a unique code identifying this user membership.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     */
+    io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey();
+    /**
+     * <pre>
+     * Specifies a unique code identifying this user membership.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     */
+    io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder();
+
+    /**
+     * <pre>
+     * Display name for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.person.Name name = 2;</code>
+     */
+    boolean hasName();
+    /**
+     * <pre>
+     * Display name for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.person.Name name = 2;</code>
+     */
+    io.opencannabis.schema.person.Name getName();
+    /**
+     * <pre>
+     * Display name for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.person.Name name = 2;</code>
+     */
+    io.opencannabis.schema.person.NameOrBuilder getNameOrBuilder();
+
+    /**
+     * <pre>
+     * Avatar/portrait for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+     */
+    boolean hasPortrait();
+    /**
+     * <pre>
+     * Avatar/portrait for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+     */
+    io.opencannabis.schema.media.MediaItemKey.MediaKey getPortrait();
+    /**
+     * <pre>
+     * Avatar/portrait for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+     */
+    io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getPortraitOrBuilder();
+  }
+  /**
+   * <pre>
+   * Makes reference to a user in a particular membership context.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.identity.MembershipReference}
+   */
+  public  static final class MembershipReference extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.MembershipReference)
+      MembershipReferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MembershipReference.newBuilder() to construct.
+    private MembershipReference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MembershipReference() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MembershipReference(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder subBuilder = null;
+              if (key_ != null) {
+                subBuilder = key_.toBuilder();
+              }
+              key_ = input.readMessage(io.bloombox.schema.identity.AppMemberKey.MembershipKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(key_);
+                key_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              io.opencannabis.schema.person.Name.Builder subBuilder = null;
+              if (name_ != null) {
+                subBuilder = name_.toBuilder();
+              }
+              name_ = input.readMessage(io.opencannabis.schema.person.Name.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(name_);
+                name_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder subBuilder = null;
+              if (portrait_ != null) {
+                subBuilder = portrait_.toBuilder();
+              }
+              portrait_ = input.readMessage(io.opencannabis.schema.media.MediaItemKey.MediaKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(portrait_);
+                portrait_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.identity.AppMemberKey.MembershipReference.class, io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_;
+    /**
+     * <pre>
+     * Specifies a unique code identifying this user membership.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     */
+    public boolean hasKey() {
+      return key_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies a unique code identifying this user membership.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     */
+    public io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey() {
+      return key_ == null ? io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : key_;
+    }
+    /**
+     * <pre>
+     * Specifies a unique code identifying this user membership.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+     */
+    public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder() {
+      return getKey();
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private io.opencannabis.schema.person.Name name_;
+    /**
+     * <pre>
+     * Display name for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.person.Name name = 2;</code>
+     */
+    public boolean hasName() {
+      return name_ != null;
+    }
+    /**
+     * <pre>
+     * Display name for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.person.Name name = 2;</code>
+     */
+    public io.opencannabis.schema.person.Name getName() {
+      return name_ == null ? io.opencannabis.schema.person.Name.getDefaultInstance() : name_;
+    }
+    /**
+     * <pre>
+     * Display name for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.person.Name name = 2;</code>
+     */
+    public io.opencannabis.schema.person.NameOrBuilder getNameOrBuilder() {
+      return getName();
+    }
+
+    public static final int PORTRAIT_FIELD_NUMBER = 3;
+    private io.opencannabis.schema.media.MediaItemKey.MediaKey portrait_;
+    /**
+     * <pre>
+     * Avatar/portrait for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+     */
+    public boolean hasPortrait() {
+      return portrait_ != null;
+    }
+    /**
+     * <pre>
+     * Avatar/portrait for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+     */
+    public io.opencannabis.schema.media.MediaItemKey.MediaKey getPortrait() {
+      return portrait_ == null ? io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : portrait_;
+    }
+    /**
+     * <pre>
+     * Avatar/portrait for the logged-in user.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+     */
+    public io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getPortraitOrBuilder() {
+      return getPortrait();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (key_ != null) {
+        output.writeMessage(1, getKey());
+      }
+      if (name_ != null) {
+        output.writeMessage(2, getName());
+      }
+      if (portrait_ != null) {
+        output.writeMessage(3, getPortrait());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (key_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getKey());
+      }
+      if (name_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getName());
+      }
+      if (portrait_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPortrait());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.identity.AppMemberKey.MembershipReference)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.identity.AppMemberKey.MembershipReference other = (io.bloombox.schema.identity.AppMemberKey.MembershipReference) obj;
+
+      boolean result = true;
+      result = result && (hasKey() == other.hasKey());
+      if (hasKey()) {
+        result = result && getKey()
+            .equals(other.getKey());
+      }
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && (hasPortrait() == other.hasPortrait());
+      if (hasPortrait()) {
+        result = result && getPortrait()
+            .equals(other.getPortrait());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasKey()) {
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+      }
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasPortrait()) {
+        hash = (37 * hash) + PORTRAIT_FIELD_NUMBER;
+        hash = (53 * hash) + getPortrait().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.identity.AppMemberKey.MembershipReference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Makes reference to a user in a particular membership context.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.identity.MembershipReference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.MembershipReference)
+        io.bloombox.schema.identity.AppMemberKey.MembershipReferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.identity.AppMemberKey.MembershipReference.class, io.bloombox.schema.identity.AppMemberKey.MembershipReference.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.identity.AppMemberKey.MembershipReference.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (keyBuilder_ == null) {
+          key_ = null;
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
+        if (nameBuilder_ == null) {
+          name_ = null;
+        } else {
+          name_ = null;
+          nameBuilder_ = null;
+        }
+        if (portraitBuilder_ == null) {
+          portrait_ = null;
+        } else {
+          portrait_ = null;
+          portraitBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.identity.AppMemberKey.internal_static_bloombox_schema_identity_MembershipReference_descriptor;
+      }
+
+      public io.bloombox.schema.identity.AppMemberKey.MembershipReference getDefaultInstanceForType() {
+        return io.bloombox.schema.identity.AppMemberKey.MembershipReference.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.identity.AppMemberKey.MembershipReference build() {
+        io.bloombox.schema.identity.AppMemberKey.MembershipReference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.identity.AppMemberKey.MembershipReference buildPartial() {
+        io.bloombox.schema.identity.AppMemberKey.MembershipReference result = new io.bloombox.schema.identity.AppMemberKey.MembershipReference(this);
+        if (keyBuilder_ == null) {
+          result.key_ = key_;
+        } else {
+          result.key_ = keyBuilder_.build();
+        }
+        if (nameBuilder_ == null) {
+          result.name_ = name_;
+        } else {
+          result.name_ = nameBuilder_.build();
+        }
+        if (portraitBuilder_ == null) {
+          result.portrait_ = portrait_;
+        } else {
+          result.portrait_ = portraitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.identity.AppMemberKey.MembershipReference) {
+          return mergeFrom((io.bloombox.schema.identity.AppMemberKey.MembershipReference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.identity.AppMemberKey.MembershipReference other) {
+        if (other == io.bloombox.schema.identity.AppMemberKey.MembershipReference.getDefaultInstance()) return this;
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
+        }
+        if (other.hasName()) {
+          mergeName(other.getName());
+        }
+        if (other.hasPortrait()) {
+          mergePortrait(other.getPortrait());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.identity.AppMemberKey.MembershipReference parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.identity.AppMemberKey.MembershipReference) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> keyBuilder_;
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      public boolean hasKey() {
+        return keyBuilder_ != null || key_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      public io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey() {
+        if (keyBuilder_ == null) {
+          return key_ == null ? io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : key_;
+        } else {
+          return keyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      public Builder setKey(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
+        if (keyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          key_ = value;
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      public Builder setKey(
+          io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder builderForValue) {
+        if (keyBuilder_ == null) {
+          key_ = builderForValue.build();
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      public Builder mergeKey(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
+        if (keyBuilder_ == null) {
+          if (key_ != null) {
+            key_ =
+              io.bloombox.schema.identity.AppMemberKey.MembershipKey.newBuilder(key_).mergeFrom(value).buildPartial();
+          } else {
+            key_ = value;
+          }
+          onChanged();
+        } else {
+          keyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      public Builder clearKey() {
+        if (keyBuilder_ == null) {
+          key_ = null;
+          onChanged();
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      public io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder getKeyBuilder() {
+        
+        onChanged();
+        return getKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder() {
+        if (keyBuilder_ != null) {
+          return keyBuilder_.getMessageOrBuilder();
+        } else {
+          return key_ == null ?
+              io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : key_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a unique code identifying this user membership.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> 
+          getKeyFieldBuilder() {
+        if (keyBuilder_ == null) {
+          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder>(
+                  getKey(),
+                  getParentForChildren(),
+                  isClean());
+          key_ = null;
+        }
+        return keyBuilder_;
+      }
+
+      private io.opencannabis.schema.person.Name name_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.person.Name, io.opencannabis.schema.person.Name.Builder, io.opencannabis.schema.person.NameOrBuilder> nameBuilder_;
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      public boolean hasName() {
+        return nameBuilder_ != null || name_ != null;
+      }
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      public io.opencannabis.schema.person.Name getName() {
+        if (nameBuilder_ == null) {
+          return name_ == null ? io.opencannabis.schema.person.Name.getDefaultInstance() : name_;
+        } else {
+          return nameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      public Builder setName(io.opencannabis.schema.person.Name value) {
+        if (nameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          name_ = value;
+          onChanged();
+        } else {
+          nameBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      public Builder setName(
+          io.opencannabis.schema.person.Name.Builder builderForValue) {
+        if (nameBuilder_ == null) {
+          name_ = builderForValue.build();
+          onChanged();
+        } else {
+          nameBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      public Builder mergeName(io.opencannabis.schema.person.Name value) {
+        if (nameBuilder_ == null) {
+          if (name_ != null) {
+            name_ =
+              io.opencannabis.schema.person.Name.newBuilder(name_).mergeFrom(value).buildPartial();
+          } else {
+            name_ = value;
+          }
+          onChanged();
+        } else {
+          nameBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      public Builder clearName() {
+        if (nameBuilder_ == null) {
+          name_ = null;
+          onChanged();
+        } else {
+          name_ = null;
+          nameBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      public io.opencannabis.schema.person.Name.Builder getNameBuilder() {
+        
+        onChanged();
+        return getNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      public io.opencannabis.schema.person.NameOrBuilder getNameOrBuilder() {
+        if (nameBuilder_ != null) {
+          return nameBuilder_.getMessageOrBuilder();
+        } else {
+          return name_ == null ?
+              io.opencannabis.schema.person.Name.getDefaultInstance() : name_;
+        }
+      }
+      /**
+       * <pre>
+       * Display name for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.person.Name name = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.person.Name, io.opencannabis.schema.person.Name.Builder, io.opencannabis.schema.person.NameOrBuilder> 
+          getNameFieldBuilder() {
+        if (nameBuilder_ == null) {
+          nameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.person.Name, io.opencannabis.schema.person.Name.Builder, io.opencannabis.schema.person.NameOrBuilder>(
+                  getName(),
+                  getParentForChildren(),
+                  isClean());
+          name_ = null;
+        }
+        return nameBuilder_;
+      }
+
+      private io.opencannabis.schema.media.MediaItemKey.MediaKey portrait_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> portraitBuilder_;
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      public boolean hasPortrait() {
+        return portraitBuilder_ != null || portrait_ != null;
+      }
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      public io.opencannabis.schema.media.MediaItemKey.MediaKey getPortrait() {
+        if (portraitBuilder_ == null) {
+          return portrait_ == null ? io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : portrait_;
+        } else {
+          return portraitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      public Builder setPortrait(io.opencannabis.schema.media.MediaItemKey.MediaKey value) {
+        if (portraitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          portrait_ = value;
+          onChanged();
+        } else {
+          portraitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      public Builder setPortrait(
+          io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder builderForValue) {
+        if (portraitBuilder_ == null) {
+          portrait_ = builderForValue.build();
+          onChanged();
+        } else {
+          portraitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      public Builder mergePortrait(io.opencannabis.schema.media.MediaItemKey.MediaKey value) {
+        if (portraitBuilder_ == null) {
+          if (portrait_ != null) {
+            portrait_ =
+              io.opencannabis.schema.media.MediaItemKey.MediaKey.newBuilder(portrait_).mergeFrom(value).buildPartial();
+          } else {
+            portrait_ = value;
+          }
+          onChanged();
+        } else {
+          portraitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      public Builder clearPortrait() {
+        if (portraitBuilder_ == null) {
+          portrait_ = null;
+          onChanged();
+        } else {
+          portrait_ = null;
+          portraitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      public io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder getPortraitBuilder() {
+        
+        onChanged();
+        return getPortraitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      public io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getPortraitOrBuilder() {
+        if (portraitBuilder_ != null) {
+          return portraitBuilder_.getMessageOrBuilder();
+        } else {
+          return portrait_ == null ?
+              io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : portrait_;
+        }
+      }
+      /**
+       * <pre>
+       * Avatar/portrait for the logged-in user.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey portrait = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> 
+          getPortraitFieldBuilder() {
+        if (portraitBuilder_ == null) {
+          portraitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder>(
+                  getPortrait(),
+                  getParentForChildren(),
+                  isClean());
+          portrait_ = null;
+        }
+        return portraitBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.MembershipReference)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.MembershipReference)
+    private static final io.bloombox.schema.identity.AppMemberKey.MembershipReference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.identity.AppMemberKey.MembershipReference();
+    }
+
+    public static io.bloombox.schema.identity.AppMemberKey.MembershipReference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MembershipReference>
+        PARSER = new com.google.protobuf.AbstractParser<MembershipReference>() {
+      public MembershipReference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MembershipReference(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MembershipReference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MembershipReference> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.identity.AppMemberKey.MembershipReference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_identity_MembershipKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_identity_MembershipKey_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_identity_MembershipReference_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_identity_MembershipReference_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1495,16 +2658,21 @@ public final class AppMemberKey {
     java.lang.String[] descriptorData = {
       "\n\034identity/MembershipKey.proto\022\030bloombox" +
       ".schema.identity\032\016bq_field.proto\032\024core/D" +
-      "atamodel.proto\032\026identity/UserKey.proto\032\030" +
-      "partner/PartnerKey.proto\032\031partner/Locati" +
-      "onKey.proto\"\321\001\n\rMembershipKey\022\024\n\004uuid\030\001 " +
-      "\001(\tB\006\302\265\003\002\010\002\022/\n\004user\030\002 \001(\0132!.bloombox.sch" +
-      "ema.identity.UserKey\0226\n\007partner\030\003 \001(\0132#." +
-      "bloombox.schema.partner.PartnerKeyH\000\0228\n\010" +
-      "location\030\004 \001(\0132$.bloombox.schema.partner" +
-      ".LocationKeyH\000B\007\n\005scopeB5\n\033io.bloombox.s" +
-      "chema.identityB\014AppMemberKeyH\001P\000\242\002\003BBSb\006" +
-      "proto3"
+      "atamodel.proto\032\024media/MediaKey.proto\032\026id" +
+      "entity/UserKey.proto\032\027person/PersonName." +
+      "proto\032\030partner/PartnerKey.proto\032\031partner" +
+      "/LocationKey.proto\"\321\001\n\rMembershipKey\022\024\n\004" +
+      "uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022/\n\004user\030\002 \001(\0132!.bloom" +
+      "box.schema.identity.UserKey\0226\n\007partner\030\003" +
+      " \001(\0132#.bloombox.schema.partner.PartnerKe" +
+      "yH\000\0228\n\010location\030\004 \001(\0132$.bloombox.schema." +
+      "partner.LocationKeyH\000B\007\n\005scope\"\244\001\n\023Membe" +
+      "rshipReference\0224\n\003key\030\001 \001(\0132\'.bloombox.s" +
+      "chema.identity.MembershipKey\022\'\n\004name\030\002 \001" +
+      "(\0132\031.opencannabis.person.Name\022.\n\010portrai" +
+      "t\030\003 \001(\0132\034.opencannabis.media.MediaKeyB5\n" +
+      "\033io.bloombox.schema.identityB\014AppMemberK" +
+      "eyH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1519,7 +2687,9 @@ public final class AppMemberKey {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
           core.Datamodel.getDescriptor(),
+          io.opencannabis.schema.media.MediaItemKey.getDescriptor(),
           io.bloombox.schema.identity.AppUserKey.getDescriptor(),
+          io.opencannabis.schema.person.PersonName.getDescriptor(),
           io.bloombox.schema.partner.PartnerMeta.getDescriptor(),
           io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
         }, assigner);
@@ -1529,6 +2699,12 @@ public final class AppMemberKey {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_MembershipKey_descriptor,
         new java.lang.String[] { "Uuid", "User", "Partner", "Location", "Scope", });
+    internal_static_bloombox_schema_identity_MembershipReference_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_bloombox_schema_identity_MembershipReference_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_identity_MembershipReference_descriptor,
+        new java.lang.String[] { "Key", "Name", "Portrait", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(core.Datamodel.field);
@@ -1536,7 +2712,9 @@ public final class AppMemberKey {
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
     core.Datamodel.getDescriptor();
+    io.opencannabis.schema.media.MediaItemKey.getDescriptor();
     io.bloombox.schema.identity.AppUserKey.getDescriptor();
+    io.opencannabis.schema.person.PersonName.getDescriptor();
     io.bloombox.schema.partner.PartnerMeta.getDescriptor();
     io.bloombox.schema.partner.LocationAccountKey.getDescriptor();
   }

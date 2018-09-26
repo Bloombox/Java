@@ -124,10 +124,35 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Specifies the device for which a ticket is being requested.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     */
+    boolean hasRegister();
+    /**
+     * <pre>
+     * Specifies the device for which a ticket is being requested.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     */
+    io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getRegister();
+    /**
+     * <pre>
+     * Specifies the device for which a ticket is being requested.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     */
+    io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getRegisterOrBuilder();
+
+    /**
+     * <pre>
      * Flag to indicate that the ticket is fresh and we're notifying the server.
      * </pre>
      *
-     * <code>bool fresh = 2;</code>
+     * <code>bool fresh = 3;</code>
      */
     boolean getFresh();
   }
@@ -195,7 +220,20 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
-            case 16: {
+            case 18: {
+              io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder subBuilder = null;
+              if (register_ != null) {
+                subBuilder = register_.toBuilder();
+              }
+              register_ = input.readMessage(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(register_);
+                register_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
 
               fresh_ = input.readBool();
               break;
@@ -257,14 +295,47 @@ private static final long serialVersionUID = 0L;
       return getPurchase();
     }
 
-    public static final int FRESH_FIELD_NUMBER = 2;
+    public static final int REGISTER_FIELD_NUMBER = 2;
+    private io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey register_;
+    /**
+     * <pre>
+     * Specifies the device for which a ticket is being requested.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     */
+    public boolean hasRegister() {
+      return register_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the device for which a ticket is being requested.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     */
+    public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getRegister() {
+      return register_ == null ? io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.getDefaultInstance() : register_;
+    }
+    /**
+     * <pre>
+     * Specifies the device for which a ticket is being requested.
+     * </pre>
+     *
+     * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+     */
+    public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
+      return getRegister();
+    }
+
+    public static final int FRESH_FIELD_NUMBER = 3;
     private boolean fresh_;
     /**
      * <pre>
      * Flag to indicate that the ticket is fresh and we're notifying the server.
      * </pre>
      *
-     * <code>bool fresh = 2;</code>
+     * <code>bool fresh = 3;</code>
      */
     public boolean getFresh() {
       return fresh_;
@@ -285,8 +356,11 @@ private static final long serialVersionUID = 0L;
       if (purchase_ != null) {
         output.writeMessage(1, getPurchase());
       }
+      if (register_ != null) {
+        output.writeMessage(2, getRegister());
+      }
       if (fresh_ != false) {
-        output.writeBool(2, fresh_);
+        output.writeBool(3, fresh_);
       }
       unknownFields.writeTo(output);
     }
@@ -300,9 +374,13 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPurchase());
       }
+      if (register_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRegister());
+      }
       if (fresh_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, fresh_);
+          .computeBoolSize(3, fresh_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -325,6 +403,11 @@ private static final long serialVersionUID = 0L;
         result = result && getPurchase()
             .equals(other.getPurchase());
       }
+      result = result && (hasRegister() == other.hasRegister());
+      if (hasRegister()) {
+        result = result && getRegister()
+            .equals(other.getRegister());
+      }
       result = result && (getFresh()
           == other.getFresh());
       result = result && unknownFields.equals(other.unknownFields);
@@ -341,6 +424,10 @@ private static final long serialVersionUID = 0L;
       if (hasPurchase()) {
         hash = (37 * hash) + PURCHASE_FIELD_NUMBER;
         hash = (53 * hash) + getPurchase().hashCode();
+      }
+      if (hasRegister()) {
+        hash = (37 * hash) + REGISTER_FIELD_NUMBER;
+        hash = (53 * hash) + getRegister().hashCode();
       }
       hash = (37 * hash) + FRESH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -484,6 +571,12 @@ private static final long serialVersionUID = 0L;
           purchase_ = null;
           purchaseBuilder_ = null;
         }
+        if (registerBuilder_ == null) {
+          register_ = null;
+        } else {
+          register_ = null;
+          registerBuilder_ = null;
+        }
         fresh_ = false;
 
         return this;
@@ -512,6 +605,11 @@ private static final long serialVersionUID = 0L;
           result.purchase_ = purchase_;
         } else {
           result.purchase_ = purchaseBuilder_.build();
+        }
+        if (registerBuilder_ == null) {
+          result.register_ = register_;
+        } else {
+          result.register_ = registerBuilder_.build();
         }
         result.fresh_ = fresh_;
         onBuilt();
@@ -557,6 +655,9 @@ private static final long serialVersionUID = 0L;
         if (other == io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request.getDefaultInstance()) return this;
         if (other.hasPurchase()) {
           mergePurchase(other.getPurchase());
+        }
+        if (other.hasRegister()) {
+          mergeRegister(other.getRegister());
         }
         if (other.getFresh() != false) {
           setFresh(other.getFresh());
@@ -741,13 +842,166 @@ private static final long serialVersionUID = 0L;
         return purchaseBuilder_;
       }
 
+      private io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey register_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder> registerBuilder_;
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      public boolean hasRegister() {
+        return registerBuilder_ != null || register_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getRegister() {
+        if (registerBuilder_ == null) {
+          return register_ == null ? io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.getDefaultInstance() : register_;
+        } else {
+          return registerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      public Builder setRegister(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey value) {
+        if (registerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          register_ = value;
+          onChanged();
+        } else {
+          registerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      public Builder setRegister(
+          io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder builderForValue) {
+        if (registerBuilder_ == null) {
+          register_ = builderForValue.build();
+          onChanged();
+        } else {
+          registerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      public Builder mergeRegister(io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey value) {
+        if (registerBuilder_ == null) {
+          if (register_ != null) {
+            register_ =
+              io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.newBuilder(register_).mergeFrom(value).buildPartial();
+          } else {
+            register_ = value;
+          }
+          onChanged();
+        } else {
+          registerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      public Builder clearRegister() {
+        if (registerBuilder_ == null) {
+          register_ = null;
+          onChanged();
+        } else {
+          register_ = null;
+          registerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder getRegisterBuilder() {
+        
+        onChanged();
+        return getRegisterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      public io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder getRegisterOrBuilder() {
+        if (registerBuilder_ != null) {
+          return registerBuilder_.getMessageOrBuilder();
+        } else {
+          return register_ == null ?
+              io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.getDefaultInstance() : register_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the device for which a ticket is being requested.
+       * </pre>
+       *
+       * <code>.bloombox.schema.partner.PartnerDeviceKey register = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder> 
+          getRegisterFieldBuilder() {
+        if (registerBuilder_ == null) {
+          registerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder>(
+                  getRegister(),
+                  getParentForChildren(),
+                  isClean());
+          register_ = null;
+        }
+        return registerBuilder_;
+      }
+
       private boolean fresh_ ;
       /**
        * <pre>
        * Flag to indicate that the ticket is fresh and we're notifying the server.
        * </pre>
        *
-       * <code>bool fresh = 2;</code>
+       * <code>bool fresh = 3;</code>
        */
       public boolean getFresh() {
         return fresh_;
@@ -757,7 +1011,7 @@ private static final long serialVersionUID = 0L;
        * Flag to indicate that the ticket is fresh and we're notifying the server.
        * </pre>
        *
-       * <code>bool fresh = 2;</code>
+       * <code>bool fresh = 3;</code>
        */
       public Builder setFresh(boolean value) {
         
@@ -770,7 +1024,7 @@ private static final long serialVersionUID = 0L;
        * Flag to indicate that the ticket is fresh and we're notifying the server.
        * </pre>
        *
-       * <code>bool fresh = 2;</code>
+       * <code>bool fresh = 3;</code>
        */
       public Builder clearFresh() {
         
@@ -836,25 +1090,25 @@ private static final long serialVersionUID = 0L;
      * Specifies the ticket ID that was opened.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+     * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
      */
-    boolean hasKey();
+    boolean hasPurchase();
     /**
      * <pre>
      * Specifies the ticket ID that was opened.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+     * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
      */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getKey();
+    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getPurchase();
     /**
      * <pre>
      * Specifies the ticket ID that was opened.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+     * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
      */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getKeyOrBuilder();
+    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getPurchaseOrBuilder();
 
     /**
      * <pre>
@@ -995,13 +1249,13 @@ private static final long serialVersionUID = 0L;
             }
             case 10: {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder subBuilder = null;
-              if (key_ != null) {
-                subBuilder = key_.toBuilder();
+              if (purchase_ != null) {
+                subBuilder = purchase_.toBuilder();
               }
-              key_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.parser(), extensionRegistry);
+              purchase_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(key_);
-                key_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(purchase_);
+                purchase_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1068,37 +1322,37 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response.class, io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response.Builder.class);
     }
 
-    public static final int KEY_FIELD_NUMBER = 1;
-    private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey key_;
+    public static final int PURCHASE_FIELD_NUMBER = 1;
+    private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey purchase_;
     /**
      * <pre>
      * Specifies the ticket ID that was opened.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+     * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
      */
-    public boolean hasKey() {
-      return key_ != null;
+    public boolean hasPurchase() {
+      return purchase_ != null;
     }
     /**
      * <pre>
      * Specifies the ticket ID that was opened.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+     * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
      */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getKey() {
-      return key_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getPurchase() {
+      return purchase_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : purchase_;
     }
     /**
      * <pre>
      * Specifies the ticket ID that was opened.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+     * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
      */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getKeyOrBuilder() {
-      return getKey();
+    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getPurchaseOrBuilder() {
+      return getPurchase();
     }
 
     public static final int CLAIM_FIELD_NUMBER = 2;
@@ -1245,8 +1499,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (key_ != null) {
-        output.writeMessage(1, getKey());
+      if (purchase_ != null) {
+        output.writeMessage(1, getPurchase());
       }
       if (!getClaimBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, claim_);
@@ -1268,9 +1522,9 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (key_ != null) {
+      if (purchase_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getKey());
+          .computeMessageSize(1, getPurchase());
       }
       if (!getClaimBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, claim_);
@@ -1303,10 +1557,10 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response other = (io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response) obj;
 
       boolean result = true;
-      result = result && (hasKey() == other.hasKey());
-      if (hasKey()) {
-        result = result && getKey()
-            .equals(other.getKey());
+      result = result && (hasPurchase() == other.hasPurchase());
+      if (hasPurchase()) {
+        result = result && getPurchase()
+            .equals(other.getPurchase());
       }
       result = result && getClaim()
           .equals(other.getClaim());
@@ -1332,9 +1586,9 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasKey()) {
-        hash = (37 * hash) + KEY_FIELD_NUMBER;
-        hash = (53 * hash) + getKey().hashCode();
+      if (hasPurchase()) {
+        hash = (37 * hash) + PURCHASE_FIELD_NUMBER;
+        hash = (53 * hash) + getPurchase().hashCode();
       }
       hash = (37 * hash) + CLAIM_FIELD_NUMBER;
       hash = (53 * hash) + getClaim().hashCode();
@@ -1481,11 +1735,11 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        if (keyBuilder_ == null) {
-          key_ = null;
+        if (purchaseBuilder_ == null) {
+          purchase_ = null;
         } else {
-          key_ = null;
-          keyBuilder_ = null;
+          purchase_ = null;
+          purchaseBuilder_ = null;
         }
         claim_ = "";
 
@@ -1525,10 +1779,10 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response result = new io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response(this);
-        if (keyBuilder_ == null) {
-          result.key_ = key_;
+        if (purchaseBuilder_ == null) {
+          result.purchase_ = purchase_;
         } else {
-          result.key_ = keyBuilder_.build();
+          result.purchase_ = purchaseBuilder_.build();
         }
         result.claim_ = claim_;
         result.status_ = status_;
@@ -1583,8 +1837,8 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response other) {
         if (other == io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response.getDefaultInstance()) return this;
-        if (other.hasKey()) {
-          mergeKey(other.getKey());
+        if (other.hasPurchase()) {
+          mergePurchase(other.getPurchase());
         }
         if (!other.getClaim().isEmpty()) {
           claim_ = other.claim_;
@@ -1626,31 +1880,31 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey key_ = null;
+      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey purchase_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> keyBuilder_;
+          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> purchaseBuilder_;
       /**
        * <pre>
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
-      public boolean hasKey() {
-        return keyBuilder_ != null || key_ != null;
+      public boolean hasPurchase() {
+        return purchaseBuilder_ != null || purchase_ != null;
       }
       /**
        * <pre>
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getKey() {
-        if (keyBuilder_ == null) {
-          return key_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : key_;
+      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getPurchase() {
+        if (purchaseBuilder_ == null) {
+          return purchase_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : purchase_;
         } else {
-          return keyBuilder_.getMessage();
+          return purchaseBuilder_.getMessage();
         }
       }
       /**
@@ -1658,17 +1912,17 @@ private static final long serialVersionUID = 0L;
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
-      public Builder setKey(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
-        if (keyBuilder_ == null) {
+      public Builder setPurchase(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
+        if (purchaseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          key_ = value;
+          purchase_ = value;
           onChanged();
         } else {
-          keyBuilder_.setMessage(value);
+          purchaseBuilder_.setMessage(value);
         }
 
         return this;
@@ -1678,15 +1932,15 @@ private static final long serialVersionUID = 0L;
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
-      public Builder setKey(
+      public Builder setPurchase(
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder builderForValue) {
-        if (keyBuilder_ == null) {
-          key_ = builderForValue.build();
+        if (purchaseBuilder_ == null) {
+          purchase_ = builderForValue.build();
           onChanged();
         } else {
-          keyBuilder_.setMessage(builderForValue.build());
+          purchaseBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
@@ -1696,19 +1950,19 @@ private static final long serialVersionUID = 0L;
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
-      public Builder mergeKey(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
-        if (keyBuilder_ == null) {
-          if (key_ != null) {
-            key_ =
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.newBuilder(key_).mergeFrom(value).buildPartial();
+      public Builder mergePurchase(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
+        if (purchaseBuilder_ == null) {
+          if (purchase_ != null) {
+            purchase_ =
+              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.newBuilder(purchase_).mergeFrom(value).buildPartial();
           } else {
-            key_ = value;
+            purchase_ = value;
           }
           onChanged();
         } else {
-          keyBuilder_.mergeFrom(value);
+          purchaseBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -1718,15 +1972,15 @@ private static final long serialVersionUID = 0L;
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
-      public Builder clearKey() {
-        if (keyBuilder_ == null) {
-          key_ = null;
+      public Builder clearPurchase() {
+        if (purchaseBuilder_ == null) {
+          purchase_ = null;
           onChanged();
         } else {
-          key_ = null;
-          keyBuilder_ = null;
+          purchase_ = null;
+          purchaseBuilder_ = null;
         }
 
         return this;
@@ -1736,26 +1990,26 @@ private static final long serialVersionUID = 0L;
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder getKeyBuilder() {
+      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder getPurchaseBuilder() {
         
         onChanged();
-        return getKeyFieldBuilder().getBuilder();
+        return getPurchaseFieldBuilder().getBuilder();
       }
       /**
        * <pre>
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getKeyOrBuilder() {
-        if (keyBuilder_ != null) {
-          return keyBuilder_.getMessageOrBuilder();
+      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getPurchaseOrBuilder() {
+        if (purchaseBuilder_ != null) {
+          return purchaseBuilder_.getMessageOrBuilder();
         } else {
-          return key_ == null ?
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : key_;
+          return purchase_ == null ?
+              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : purchase_;
         }
       }
       /**
@@ -1763,20 +2017,20 @@ private static final long serialVersionUID = 0L;
        * Specifies the ticket ID that was opened.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseKey key = 1;</code>
+       * <code>.opencannabis.commerce.PurchaseKey purchase = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> 
-          getKeyFieldBuilder() {
-        if (keyBuilder_ == null) {
-          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getPurchaseFieldBuilder() {
+        if (purchaseBuilder_ == null) {
+          purchaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder>(
-                  getKey(),
+                  getPurchase(),
                   getParentForChildren(),
                   isClean());
-          key_ = null;
+          purchase_ = null;
         }
-        return keyBuilder_;
+        return purchaseBuilder_;
       }
 
       private java.lang.Object claim_ = "";

@@ -25,9 +25,9 @@ package io.bloombox.schema.services.pos.v1beta1;
  * Enumerates types of events for a live inventory connection.
  * </pre>
  *
- * Protobuf enum {@code bloombox.schema.services.pos.v1beta1.InventoryEventType}
+ * Protobuf enum {@code bloombox.schema.services.pos.v1beta1.InventoryStreamEvent}
  */
-public enum InventoryEventType
+public enum InventoryStreamEvent
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <pre>
@@ -39,20 +39,20 @@ public enum InventoryEventType
   PING_PONG(0),
   /**
    * <pre>
-   * Broadcasted stock update.
+   * Indicate that the client's dataset is up to date.
    * </pre>
    *
-   * <code>STOCK = 1;</code>
+   * <code>NO_CHANGE = 1;</code>
    */
-  STOCK(1),
+  NO_CHANGE(1),
   /**
    * <pre>
-   * Request or response for a specific stock enquiry.
+   * Indicate that an update to stock status has occurred.
    * </pre>
    *
-   * <code>ENQUERY = 2;</code>
+   * <code>UPDATE = 2;</code>
    */
-  ENQUERY(2),
+  UPDATE(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -66,20 +66,20 @@ public enum InventoryEventType
   public static final int PING_PONG_VALUE = 0;
   /**
    * <pre>
-   * Broadcasted stock update.
+   * Indicate that the client's dataset is up to date.
    * </pre>
    *
-   * <code>STOCK = 1;</code>
+   * <code>NO_CHANGE = 1;</code>
    */
-  public static final int STOCK_VALUE = 1;
+  public static final int NO_CHANGE_VALUE = 1;
   /**
    * <pre>
-   * Request or response for a specific stock enquiry.
+   * Indicate that an update to stock status has occurred.
    * </pre>
    *
-   * <code>ENQUERY = 2;</code>
+   * <code>UPDATE = 2;</code>
    */
-  public static final int ENQUERY_VALUE = 2;
+  public static final int UPDATE_VALUE = 2;
 
 
   public final int getNumber() {
@@ -94,28 +94,28 @@ public enum InventoryEventType
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static InventoryEventType valueOf(int value) {
+  public static InventoryStreamEvent valueOf(int value) {
     return forNumber(value);
   }
 
-  public static InventoryEventType forNumber(int value) {
+  public static InventoryStreamEvent forNumber(int value) {
     switch (value) {
       case 0: return PING_PONG;
-      case 1: return STOCK;
-      case 2: return ENQUERY;
+      case 1: return NO_CHANGE;
+      case 2: return UPDATE;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<InventoryEventType>
+  public static com.google.protobuf.Internal.EnumLiteMap<InventoryStreamEvent>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      InventoryEventType> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<InventoryEventType>() {
-          public InventoryEventType findValueByNumber(int number) {
-            return InventoryEventType.forNumber(number);
+      InventoryStreamEvent> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<InventoryStreamEvent>() {
+          public InventoryStreamEvent findValueByNumber(int number) {
+            return InventoryStreamEvent.forNumber(number);
           }
         };
 
@@ -132,9 +132,9 @@ public enum InventoryEventType
     return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.getDescriptor().getEnumTypes().get(1);
   }
 
-  private static final InventoryEventType[] VALUES = values();
+  private static final InventoryStreamEvent[] VALUES = values();
 
-  public static InventoryEventType valueOf(
+  public static InventoryStreamEvent valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -148,10 +148,10 @@ public enum InventoryEventType
 
   private final int value;
 
-  private InventoryEventType(int value) {
+  private InventoryStreamEvent(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.pos.v1beta1.InventoryEventType)
+  // @@protoc_insertion_point(enum_scope:bloombox.schema.services.pos.v1beta1.InventoryStreamEvent)
 }
 

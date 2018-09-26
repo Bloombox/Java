@@ -12806,18 +12806,50 @@ public final class CommercialPurchase {
        * The amount of cash tendered by the customer for payment.
        * </pre>
        *
-       * <code>double tendered = 1;</code>
+       * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
        */
-      double getTendered();
+      boolean hasTendered();
+      /**
+       * <pre>
+       * The amount of cash tendered by the customer for payment.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+       */
+      io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getTendered();
+      /**
+       * <pre>
+       * The amount of cash tendered by the customer for payment.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+       */
+      io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getTenderedOrBuilder();
 
       /**
        * <pre>
        * The amount of change given back to the customer after payment.
        * </pre>
        *
-       * <code>double change = 2;</code>
+       * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
        */
-      double getChange();
+      boolean hasChange();
+      /**
+       * <pre>
+       * The amount of change given back to the customer after payment.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+       */
+      io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getChange();
+      /**
+       * <pre>
+       * The amount of change given back to the customer after payment.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+       */
+      io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getChangeOrBuilder();
     }
     /**
      * <pre>
@@ -12836,8 +12868,6 @@ public final class CommercialPurchase {
         super(builder);
       }
       private CashPayment() {
-        tendered_ = 0D;
-        change_ = 0D;
       }
 
       @java.lang.Override
@@ -12871,14 +12901,30 @@ public final class CommercialPurchase {
                 }
                 break;
               }
-              case 9: {
+              case 10: {
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder subBuilder = null;
+                if (tendered_ != null) {
+                  subBuilder = tendered_.toBuilder();
+                }
+                tendered_ = input.readMessage(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(tendered_);
+                  tendered_ = subBuilder.buildPartial();
+                }
 
-                tendered_ = input.readDouble();
                 break;
               }
-              case 17: {
+              case 18: {
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder subBuilder = null;
+                if (change_ != null) {
+                  subBuilder = change_.toBuilder();
+                }
+                change_ = input.readMessage(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(change_);
+                  change_ = subBuilder.buildPartial();
+                }
 
-                change_ = input.readDouble();
                 break;
               }
             }
@@ -12906,29 +12952,69 @@ public final class CommercialPurchase {
       }
 
       public static final int TENDERED_FIELD_NUMBER = 1;
-      private double tendered_;
+      private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue tendered_;
       /**
        * <pre>
        * The amount of cash tendered by the customer for payment.
        * </pre>
        *
-       * <code>double tendered = 1;</code>
+       * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
        */
-      public double getTendered() {
-        return tendered_;
+      public boolean hasTendered() {
+        return tendered_ != null;
+      }
+      /**
+       * <pre>
+       * The amount of cash tendered by the customer for payment.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+       */
+      public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getTendered() {
+        return tendered_ == null ? io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : tendered_;
+      }
+      /**
+       * <pre>
+       * The amount of cash tendered by the customer for payment.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+       */
+      public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getTenderedOrBuilder() {
+        return getTendered();
       }
 
       public static final int CHANGE_FIELD_NUMBER = 2;
-      private double change_;
+      private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue change_;
       /**
        * <pre>
        * The amount of change given back to the customer after payment.
        * </pre>
        *
-       * <code>double change = 2;</code>
+       * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
        */
-      public double getChange() {
-        return change_;
+      public boolean hasChange() {
+        return change_ != null;
+      }
+      /**
+       * <pre>
+       * The amount of change given back to the customer after payment.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+       */
+      public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getChange() {
+        return change_ == null ? io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : change_;
+      }
+      /**
+       * <pre>
+       * The amount of change given back to the customer after payment.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+       */
+      public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getChangeOrBuilder() {
+        return getChange();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -12943,11 +13029,11 @@ public final class CommercialPurchase {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (tendered_ != 0D) {
-          output.writeDouble(1, tendered_);
+        if (tendered_ != null) {
+          output.writeMessage(1, getTendered());
         }
-        if (change_ != 0D) {
-          output.writeDouble(2, change_);
+        if (change_ != null) {
+          output.writeMessage(2, getChange());
         }
         unknownFields.writeTo(output);
       }
@@ -12957,13 +13043,13 @@ public final class CommercialPurchase {
         if (size != -1) return size;
 
         size = 0;
-        if (tendered_ != 0D) {
+        if (tendered_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeDoubleSize(1, tendered_);
+            .computeMessageSize(1, getTendered());
         }
-        if (change_ != 0D) {
+        if (change_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeDoubleSize(2, change_);
+            .computeMessageSize(2, getChange());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -12981,14 +13067,16 @@ public final class CommercialPurchase {
         io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment other = (io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment) obj;
 
         boolean result = true;
-        result = result && (
-            java.lang.Double.doubleToLongBits(getTendered())
-            == java.lang.Double.doubleToLongBits(
-                other.getTendered()));
-        result = result && (
-            java.lang.Double.doubleToLongBits(getChange())
-            == java.lang.Double.doubleToLongBits(
-                other.getChange()));
+        result = result && (hasTendered() == other.hasTendered());
+        if (hasTendered()) {
+          result = result && getTendered()
+              .equals(other.getTendered());
+        }
+        result = result && (hasChange() == other.hasChange());
+        if (hasChange()) {
+          result = result && getChange()
+              .equals(other.getChange());
+        }
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -13000,12 +13088,14 @@ public final class CommercialPurchase {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + TENDERED_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            java.lang.Double.doubleToLongBits(getTendered()));
-        hash = (37 * hash) + CHANGE_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            java.lang.Double.doubleToLongBits(getChange()));
+        if (hasTendered()) {
+          hash = (37 * hash) + TENDERED_FIELD_NUMBER;
+          hash = (53 * hash) + getTendered().hashCode();
+        }
+        if (hasChange()) {
+          hash = (37 * hash) + CHANGE_FIELD_NUMBER;
+          hash = (53 * hash) + getChange().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -13139,10 +13229,18 @@ public final class CommercialPurchase {
         }
         public Builder clear() {
           super.clear();
-          tendered_ = 0D;
-
-          change_ = 0D;
-
+          if (tenderedBuilder_ == null) {
+            tendered_ = null;
+          } else {
+            tendered_ = null;
+            tenderedBuilder_ = null;
+          }
+          if (changeBuilder_ == null) {
+            change_ = null;
+          } else {
+            change_ = null;
+            changeBuilder_ = null;
+          }
           return this;
         }
 
@@ -13165,8 +13263,16 @@ public final class CommercialPurchase {
 
         public io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment buildPartial() {
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment result = new io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment(this);
-          result.tendered_ = tendered_;
-          result.change_ = change_;
+          if (tenderedBuilder_ == null) {
+            result.tendered_ = tendered_;
+          } else {
+            result.tendered_ = tenderedBuilder_.build();
+          }
+          if (changeBuilder_ == null) {
+            result.change_ = change_;
+          } else {
+            result.change_ = changeBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -13208,11 +13314,11 @@ public final class CommercialPurchase {
 
         public Builder mergeFrom(io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment other) {
           if (other == io.opencannabis.schema.commerce.CommercialPurchase.Payment.CashPayment.getDefaultInstance()) return this;
-          if (other.getTendered() != 0D) {
-            setTendered(other.getTendered());
+          if (other.hasTendered()) {
+            mergeTendered(other.getTendered());
           }
-          if (other.getChange() != 0D) {
-            setChange(other.getChange());
+          if (other.hasChange()) {
+            mergeChange(other.getChange());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -13241,28 +13347,51 @@ public final class CommercialPurchase {
           return this;
         }
 
-        private double tendered_ ;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue tendered_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> tenderedBuilder_;
         /**
          * <pre>
          * The amount of cash tendered by the customer for payment.
          * </pre>
          *
-         * <code>double tendered = 1;</code>
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
          */
-        public double getTendered() {
-          return tendered_;
+        public boolean hasTendered() {
+          return tenderedBuilder_ != null || tendered_ != null;
         }
         /**
          * <pre>
          * The amount of cash tendered by the customer for payment.
          * </pre>
          *
-         * <code>double tendered = 1;</code>
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
          */
-        public Builder setTendered(double value) {
-          
-          tendered_ = value;
-          onChanged();
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getTendered() {
+          if (tenderedBuilder_ == null) {
+            return tendered_ == null ? io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : tendered_;
+          } else {
+            return tenderedBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The amount of cash tendered by the customer for payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+         */
+        public Builder setTendered(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue value) {
+          if (tenderedBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            tendered_ = value;
+            onChanged();
+          } else {
+            tenderedBuilder_.setMessage(value);
+          }
+
           return this;
         }
         /**
@@ -13270,37 +13399,152 @@ public final class CommercialPurchase {
          * The amount of cash tendered by the customer for payment.
          * </pre>
          *
-         * <code>double tendered = 1;</code>
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+         */
+        public Builder setTendered(
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder builderForValue) {
+          if (tenderedBuilder_ == null) {
+            tendered_ = builderForValue.build();
+            onChanged();
+          } else {
+            tenderedBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of cash tendered by the customer for payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+         */
+        public Builder mergeTendered(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue value) {
+          if (tenderedBuilder_ == null) {
+            if (tendered_ != null) {
+              tendered_ =
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.newBuilder(tendered_).mergeFrom(value).buildPartial();
+            } else {
+              tendered_ = value;
+            }
+            onChanged();
+          } else {
+            tenderedBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of cash tendered by the customer for payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
          */
         public Builder clearTendered() {
-          
-          tendered_ = 0D;
-          onChanged();
+          if (tenderedBuilder_ == null) {
+            tendered_ = null;
+            onChanged();
+          } else {
+            tendered_ = null;
+            tenderedBuilder_ = null;
+          }
+
           return this;
+        }
+        /**
+         * <pre>
+         * The amount of cash tendered by the customer for payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder getTenderedBuilder() {
+          
+          onChanged();
+          return getTenderedFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The amount of cash tendered by the customer for payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getTenderedOrBuilder() {
+          if (tenderedBuilder_ != null) {
+            return tenderedBuilder_.getMessageOrBuilder();
+          } else {
+            return tendered_ == null ?
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : tendered_;
+          }
+        }
+        /**
+         * <pre>
+         * The amount of cash tendered by the customer for payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue tendered = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> 
+            getTenderedFieldBuilder() {
+          if (tenderedBuilder_ == null) {
+            tenderedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder>(
+                    getTendered(),
+                    getParentForChildren(),
+                    isClean());
+            tendered_ = null;
+          }
+          return tenderedBuilder_;
         }
 
-        private double change_ ;
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue change_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> changeBuilder_;
         /**
          * <pre>
          * The amount of change given back to the customer after payment.
          * </pre>
          *
-         * <code>double change = 2;</code>
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
          */
-        public double getChange() {
-          return change_;
+        public boolean hasChange() {
+          return changeBuilder_ != null || change_ != null;
         }
         /**
          * <pre>
          * The amount of change given back to the customer after payment.
          * </pre>
          *
-         * <code>double change = 2;</code>
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
          */
-        public Builder setChange(double value) {
-          
-          change_ = value;
-          onChanged();
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getChange() {
+          if (changeBuilder_ == null) {
+            return change_ == null ? io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : change_;
+          } else {
+            return changeBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The amount of change given back to the customer after payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+         */
+        public Builder setChange(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue value) {
+          if (changeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            change_ = value;
+            onChanged();
+          } else {
+            changeBuilder_.setMessage(value);
+          }
+
           return this;
         }
         /**
@@ -13308,13 +13552,105 @@ public final class CommercialPurchase {
          * The amount of change given back to the customer after payment.
          * </pre>
          *
-         * <code>double change = 2;</code>
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+         */
+        public Builder setChange(
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder builderForValue) {
+          if (changeBuilder_ == null) {
+            change_ = builderForValue.build();
+            onChanged();
+          } else {
+            changeBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of change given back to the customer after payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+         */
+        public Builder mergeChange(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue value) {
+          if (changeBuilder_ == null) {
+            if (change_ != null) {
+              change_ =
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.newBuilder(change_).mergeFrom(value).buildPartial();
+            } else {
+              change_ = value;
+            }
+            onChanged();
+          } else {
+            changeBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The amount of change given back to the customer after payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
          */
         public Builder clearChange() {
-          
-          change_ = 0D;
-          onChanged();
+          if (changeBuilder_ == null) {
+            change_ = null;
+            onChanged();
+          } else {
+            change_ = null;
+            changeBuilder_ = null;
+          }
+
           return this;
+        }
+        /**
+         * <pre>
+         * The amount of change given back to the customer after payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder getChangeBuilder() {
+          
+          onChanged();
+          return getChangeFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The amount of change given back to the customer after payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getChangeOrBuilder() {
+          if (changeBuilder_ != null) {
+            return changeBuilder_.getMessageOrBuilder();
+          } else {
+            return change_ == null ?
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : change_;
+          }
+        }
+        /**
+         * <pre>
+         * The amount of change given back to the customer after payment.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue change = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> 
+            getChangeFieldBuilder() {
+          if (changeBuilder_ == null) {
+            changeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder>(
+                    getChange(),
+                    getParentForChildren(),
+                    isClean());
+            change_ = null;
+          }
+          return changeBuilder_;
         }
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -22401,106 +22737,109 @@ public final class CommercialPurchase {
       "\n\027commerce/Purchase.proto\022\025opencannabis." +
       "commerce\032\024core/Datamodel.proto\032\033partner/" +
       "PartnerDevice.proto\032\026accounting/Taxes.pr" +
-      "oto\032\023commerce/Item.proto\032\030commerce/Disco" +
-      "unts.proto\032\037commerce/payments/Payment.pr" +
-      "oto\032\021identity/ID.proto\032\026identity/UserKey" +
-      ".proto\032\033identity/pass/PassKey.proto\032\034ide" +
-      "ntity/MembershipKey.proto\032 inventory/Inv" +
-      "entoryProduct.proto\032\037crypto/primitives/K" +
-      "eypair.proto\032!crypto/primitives/Integrit" +
-      "y.proto\032\026temporal/Instant.proto\"\315\001\n\020Purc" +
-      "haseLogEntry\0225\n\006status\030\001 \001(\0162%.opencanna" +
-      "bis.commerce.PurchaseStatus\0223\n\005event\030\002 \001" +
-      "(\0162$.opencannabis.commerce.PurchaseEvent" +
-      "\022/\n\007instant\030\003 \001(\0132\036.opencannabis.tempora" +
-      "l.Instant\022\013\n\003sku\030\004 \001(\t\022\017\n\007message\030\005 \001(\t\"" +
-      "\355\001\n\rBillOfCharges\0221\n\006status\030\001 \001(\0162!.open" +
-      "cannabis.commerce.BillStatus\022$\n\003tax\030\002 \003(" +
-      "\0132\027.opencannabis.taxes.Tax\0221\n\010discount\030\003" +
-      " \003(\0132\037.opencannabis.commerce.Discount\022\r\n" +
-      "\005price\030\004 \001(\001\022\r\n\005taxes\030\005 \001(\001\022\021\n\tdiscounts" +
-      "\030\006 \001(\001\022\020\n\010subtotal\030\007 \001(\001\022\r\n\005total\030\010 \001(\001\"" +
-      "\253\001\n\nTicketItem\0221\n\003key\030\001 \001(\0132$.opencannab" +
-      "is.inventory.InventoryKey\022\013\n\003sku\030\002 \001(\t\022)" +
-      "\n\004item\030\003 \001(\0132\033.opencannabis.commerce.Ite" +
-      "m\0222\n\004line\030\004 \001(\0132$.opencannabis.commerce." +
-      "BillOfCharges\"\221\002\n\022PurchaseTimestamps\0223\n\013" +
-      "established\030\001 \001(\0132\036.opencannabis.tempora" +
-      "l.Instant\022/\n\007created\030\002 \001(\0132\036.opencannabi" +
-      "s.temporal.Instant\0220\n\010modified\030\003 \001(\0132\036.o" +
-      "pencannabis.temporal.Instant\0220\n\010executed" +
-      "\030\004 \001(\0132\036.opencannabis.temporal.Instant\0221" +
-      "\n\tfinalized\030\005 \001(\0132\036.opencannabis.tempora" +
-      "l.Instant\"#\n\013PurchaseKey\022\024\n\004uuid\030\001 \001(\tB\006" +
-      "\302\265\003\002\010\002\"\366\001\n\021PurchaseSignature\022\016\n\006key_id\030\001" +
-      " \001(\t\022C\n\npublic_key\030\002 \001(\0132/.opencannabis." +
-      "crypto.primitives.pki.KeyMaterial\022C\n\013fin" +
-      "gerprint\030\003 \001(\0132..opencannabis.crypto.pri" +
-      "mitives.integrity.Hash\022\r\n\005nonce\030\004 \001(\t\022\r\n" +
-      "\003raw\030\005 \001(\014H\000\022\r\n\003b64\030\006 \001(\tH\000\022\r\n\003hex\030\007 \001(\t" +
-      "H\000B\013\n\tsignature\"\370\001\n\020PurchaseCustomer\0224\n\016" +
-      "identification\030\001 \001(\0132\034.bloombox.schema.i" +
-      "dentity.ID\0224\n\004pass\030\002 \001(\0132&.bloombox.sche" +
-      "ma.identity.pass.PassKey\022;\n\nmembership\030\003" +
-      " \001(\0132\'.bloombox.schema.identity.Membersh" +
-      "ipKey\022;\n\tsignature\030\004 \001(\0132(.opencannabis." +
-      "commerce.PurchaseSignature\"\374\001\n\023PurchaseF" +
-      "acilitator\022;\n\tauthority\030\001 \001(\0162(.opencann" +
-      "abis.commerce.PurchaseAuthority\0220\n\005agent" +
-      "\030\002 \001(\0132!.bloombox.schema.identity.UserKe" +
-      "y\0229\n\006device\030\003 \001(\0132).bloombox.schema.part" +
-      "ner.PartnerDeviceKey\022;\n\tsignature\030\004 \001(\0132" +
-      "(.opencannabis.commerce.PurchaseSignatur" +
-      "e\"\"\n\nPaymentKey\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\"\310\007" +
-      "\n\007Payment\0226\n\003key\030\001 \001(\0132!.opencannabis.co" +
-      "mmerce.PaymentKeyB\006\302\265\003\002\010\001\0224\n\006method\030\002 \001(" +
-      "\0162$.opencannabis.commerce.PaymentMethod\022" +
-      "4\n\006status\030\003 \001(\0162$.opencannabis.commerce." +
-      "PaymentStatus\022\016\n\006amount\030\004 \001(\001\022\014\n\004full\030\005 " +
-      "\001(\010\022:\n\004cash\030\n \001(\0132*.opencannabis.commerc" +
-      "e.Payment.CashPaymentH\000\022<\n\005check\030\013 \001(\0132+" +
-      ".opencannabis.commerce.Payment.CheckPaym" +
-      "entH\000\022:\n\004card\030\014 \001(\0132*.opencannabis.comme" +
-      "rce.Payment.CardPaymentH\000\022:\n\004bank\030\r \001(\0132" +
-      "*.opencannabis.commerce.Payment.BankPaym" +
-      "entH\000\022@\n\007digital\030\016 \001(\0132-.opencannabis.co" +
-      "mmerce.Payment.DigitalPaymentH\000\032/\n\013CashP" +
-      "ayment\022\020\n\010tendered\030\001 \001(\001\022\016\n\006change\030\002 \001(\001" +
-      "\032|\n\014CheckPayment\022\024\n\014check_number\030\001 \001(\t\022\026" +
-      "\n\016routing_number\030\002 \001(\t\022\026\n\016account_number" +
-      "\030\003 \001(\t\022\023\n\013institution\030\004 \001(\t\022\021\n\tcertified" +
-      "\030\005 \001(\010\032H\n\013CardPayment\0229\n\tcard_type\030\001 \001(\016" +
-      "2&.opencannabis.commerce.PaymentCardType" +
-      "\032P\n\013BankPayment\022\026\n\016routing_number\030\001 \001(\t\022" +
-      "\026\n\016account_number\030\002 \001(\t\022\021\n\treference\030\003 \001" +
-      "(\t\032t\n\016DigitalPayment\022=\n\007network\030\001 \001(\0162,." +
-      "opencannabis.commerce.DigitalPaymentNetw" +
-      "ork\022\020\n\010username\030\002 \001(\t\022\021\n\treference\030\003 \001(\t" +
-      "B\006\n\004spec\"\246\004\n\016PurchaseTicket\0227\n\003key\030\001 \001(\013" +
-      "2\".opencannabis.commerce.PurchaseKeyB\006\302\265" +
-      "\003\002\010\001\022\017\n\007version\030\002 \001(\r\0225\n\006status\030\003 \001(\0162%." +
-      "opencannabis.commerce.PurchaseStatus\022?\n\013" +
-      "facilitator\030\004 \001(\0132*.opencannabis.commerc" +
-      "e.PurchaseFacilitator\0229\n\010customer\030\005 \001(\0132" +
-      "\'.opencannabis.commerce.PurchaseCustomer" +
-      "\0222\n\004bill\030\006 \001(\0132$.opencannabis.commerce.B" +
-      "illOfCharges\022/\n\004item\030\007 \003(\0132!.opencannabi" +
-      "s.commerce.TicketItem\022/\n\007payment\030\010 \003(\0132\036" +
-      ".opencannabis.commerce.Payment\0227\n\006action" +
-      "\030\t \003(\0132\'.opencannabis.commerce.PurchaseL" +
-      "ogEntry\0225\n\002ts\030\n \001(\0132).opencannabis.comme" +
-      "rce.PurchaseTimestamps:\021\202\367\002\r\010\002\022\tpurchase" +
-      "s*\\\n\016PurchaseStatus\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001" +
-      "\022\n\n\006CLOSED\020\002\022\n\n\006VOIDED\020\003\022\r\n\tFINALIZED\020\004\022" +
-      "\016\n\nRECONCILED\020\005*=\n\021PurchaseAuthority\022\014\n\010" +
-      "STANDARD\020\000\022\013\n\007MEDICAL\020\001\022\r\n\tADULT_USE\020\002*\312" +
-      "\001\n\rPurchaseEvent\022\n\n\006STATUS\020\000\022\010\n\004SAVE\020\001\022\010" +
-      "\n\004LOAD\020\002\022\016\n\nITEM_ADDED\020\n\022\020\n\014ITEM_REMOVED" +
-      "\020\013\022\031\n\025ITEM_QUANTITY_CHANGED\020\014\022\027\n\023ITEM_DI" +
-      "SCOUNT_ADDED\020\r\022\031\n\025ITEM_DISCOUNT_REMOVED\020" +
-      "\016\022\021\n\rPURCHASE_VOID\020\024\022\025\n\021PURCHASE_FINALIZ" +
-      "E\020\025B?\n\037io.opencannabis.schema.commerceB\022" +
-      "CommercialPurchaseH\001P\000\242\002\003OCSb\006proto3"
+      "oto\032\023commerce/Item.proto\032\027commerce/Curre" +
+      "ncy.proto\032\030commerce/Discounts.proto\032\037com" +
+      "merce/payments/Payment.proto\032\021identity/I" +
+      "D.proto\032\026identity/UserKey.proto\032\033identit" +
+      "y/pass/PassKey.proto\032\034identity/Membershi" +
+      "pKey.proto\032 inventory/InventoryProduct.p" +
+      "roto\032\037crypto/primitives/Keypair.proto\032!c" +
+      "rypto/primitives/Integrity.proto\032\026tempor" +
+      "al/Instant.proto\"\315\001\n\020PurchaseLogEntry\0225\n" +
+      "\006status\030\001 \001(\0162%.opencannabis.commerce.Pu" +
+      "rchaseStatus\0223\n\005event\030\002 \001(\0162$.opencannab" +
+      "is.commerce.PurchaseEvent\022/\n\007instant\030\003 \001" +
+      "(\0132\036.opencannabis.temporal.Instant\022\013\n\003sk" +
+      "u\030\004 \001(\t\022\017\n\007message\030\005 \001(\t\"\355\001\n\rBillOfCharg" +
+      "es\0221\n\006status\030\001 \001(\0162!.opencannabis.commer" +
+      "ce.BillStatus\022$\n\003tax\030\002 \003(\0132\027.opencannabi" +
+      "s.taxes.Tax\0221\n\010discount\030\003 \003(\0132\037.opencann" +
+      "abis.commerce.Discount\022\r\n\005price\030\004 \001(\001\022\r\n" +
+      "\005taxes\030\005 \001(\001\022\021\n\tdiscounts\030\006 \001(\001\022\020\n\010subto" +
+      "tal\030\007 \001(\001\022\r\n\005total\030\010 \001(\001\"\253\001\n\nTicketItem\022" +
+      "1\n\003key\030\001 \001(\0132$.opencannabis.inventory.In" +
+      "ventoryKey\022\013\n\003sku\030\002 \001(\t\022)\n\004item\030\003 \001(\0132\033." +
+      "opencannabis.commerce.Item\0222\n\004line\030\004 \001(\013" +
+      "2$.opencannabis.commerce.BillOfCharges\"\221" +
+      "\002\n\022PurchaseTimestamps\0223\n\013established\030\001 \001" +
+      "(\0132\036.opencannabis.temporal.Instant\022/\n\007cr" +
+      "eated\030\002 \001(\0132\036.opencannabis.temporal.Inst" +
+      "ant\0220\n\010modified\030\003 \001(\0132\036.opencannabis.tem" +
+      "poral.Instant\0220\n\010executed\030\004 \001(\0132\036.openca" +
+      "nnabis.temporal.Instant\0221\n\tfinalized\030\005 \001" +
+      "(\0132\036.opencannabis.temporal.Instant\"#\n\013Pu" +
+      "rchaseKey\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\"\366\001\n\021Purc" +
+      "haseSignature\022\016\n\006key_id\030\001 \001(\t\022C\n\npublic_" +
+      "key\030\002 \001(\0132/.opencannabis.crypto.primitiv" +
+      "es.pki.KeyMaterial\022C\n\013fingerprint\030\003 \001(\0132" +
+      "..opencannabis.crypto.primitives.integri" +
+      "ty.Hash\022\r\n\005nonce\030\004 \001(\t\022\r\n\003raw\030\005 \001(\014H\000\022\r\n" +
+      "\003b64\030\006 \001(\tH\000\022\r\n\003hex\030\007 \001(\tH\000B\013\n\tsignature" +
+      "\"\370\001\n\020PurchaseCustomer\0224\n\016identification\030" +
+      "\001 \001(\0132\034.bloombox.schema.identity.ID\0224\n\004p" +
+      "ass\030\002 \001(\0132&.bloombox.schema.identity.pas" +
+      "s.PassKey\022;\n\nmembership\030\003 \001(\0132\'.bloombox" +
+      ".schema.identity.MembershipKey\022;\n\tsignat" +
+      "ure\030\004 \001(\0132(.opencannabis.commerce.Purcha" +
+      "seSignature\"\374\001\n\023PurchaseFacilitator\022;\n\ta" +
+      "uthority\030\001 \001(\0162(.opencannabis.commerce.P" +
+      "urchaseAuthority\0220\n\005agent\030\002 \001(\0132!.bloomb" +
+      "ox.schema.identity.UserKey\0229\n\006device\030\003 \001" +
+      "(\0132).bloombox.schema.partner.PartnerDevi" +
+      "ceKey\022;\n\tsignature\030\004 \001(\0132(.opencannabis." +
+      "commerce.PurchaseSignature\"\"\n\nPaymentKey" +
+      "\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\"\224\010\n\007Payment\0226\n\003ke" +
+      "y\030\001 \001(\0132!.opencannabis.commerce.PaymentK" +
+      "eyB\006\302\265\003\002\010\001\0224\n\006method\030\002 \001(\0162$.opencannabi" +
+      "s.commerce.PaymentMethod\0224\n\006status\030\003 \001(\016" +
+      "2$.opencannabis.commerce.PaymentStatus\022\016" +
+      "\n\006amount\030\004 \001(\001\022\014\n\004full\030\005 \001(\010\022:\n\004cash\030\n \001" +
+      "(\0132*.opencannabis.commerce.Payment.CashP" +
+      "aymentH\000\022<\n\005check\030\013 \001(\0132+.opencannabis.c" +
+      "ommerce.Payment.CheckPaymentH\000\022:\n\004card\030\014" +
+      " \001(\0132*.opencannabis.commerce.Payment.Car" +
+      "dPaymentH\000\022:\n\004bank\030\r \001(\0132*.opencannabis." +
+      "commerce.Payment.BankPaymentH\000\022@\n\007digita" +
+      "l\030\016 \001(\0132-.opencannabis.commerce.Payment." +
+      "DigitalPaymentH\000\032{\n\013CashPayment\0226\n\010tende" +
+      "red\030\001 \001(\0132$.opencannabis.commerce.Curren" +
+      "cyValue\0224\n\006change\030\002 \001(\0132$.opencannabis.c" +
+      "ommerce.CurrencyValue\032|\n\014CheckPayment\022\024\n" +
+      "\014check_number\030\001 \001(\t\022\026\n\016routing_number\030\002 " +
+      "\001(\t\022\026\n\016account_number\030\003 \001(\t\022\023\n\013instituti" +
+      "on\030\004 \001(\t\022\021\n\tcertified\030\005 \001(\010\032H\n\013CardPayme" +
+      "nt\0229\n\tcard_type\030\001 \001(\0162&.opencannabis.com" +
+      "merce.PaymentCardType\032P\n\013BankPayment\022\026\n\016" +
+      "routing_number\030\001 \001(\t\022\026\n\016account_number\030\002" +
+      " \001(\t\022\021\n\treference\030\003 \001(\t\032t\n\016DigitalPaymen" +
+      "t\022=\n\007network\030\001 \001(\0162,.opencannabis.commer" +
+      "ce.DigitalPaymentNetwork\022\020\n\010username\030\002 \001" +
+      "(\t\022\021\n\treference\030\003 \001(\tB\006\n\004spec\"\246\004\n\016Purcha" +
+      "seTicket\0227\n\003key\030\001 \001(\0132\".opencannabis.com" +
+      "merce.PurchaseKeyB\006\302\265\003\002\010\001\022\017\n\007version\030\002 \001" +
+      "(\r\0225\n\006status\030\003 \001(\0162%.opencannabis.commer" +
+      "ce.PurchaseStatus\022?\n\013facilitator\030\004 \001(\0132*" +
+      ".opencannabis.commerce.PurchaseFacilitat" +
+      "or\0229\n\010customer\030\005 \001(\0132\'.opencannabis.comm" +
+      "erce.PurchaseCustomer\0222\n\004bill\030\006 \001(\0132$.op" +
+      "encannabis.commerce.BillOfCharges\022/\n\004ite" +
+      "m\030\007 \003(\0132!.opencannabis.commerce.TicketIt" +
+      "em\022/\n\007payment\030\010 \003(\0132\036.opencannabis.comme" +
+      "rce.Payment\0227\n\006action\030\t \003(\0132\'.opencannab" +
+      "is.commerce.PurchaseLogEntry\0225\n\002ts\030\n \001(\013" +
+      "2).opencannabis.commerce.PurchaseTimesta" +
+      "mps:\021\202\367\002\r\010\002\022\tpurchases*\\\n\016PurchaseStatus" +
+      "\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001\022\n\n\006CLOSED\020\002\022\n\n\006VOI" +
+      "DED\020\003\022\r\n\tFINALIZED\020\004\022\016\n\nRECONCILED\020\005*=\n\021" +
+      "PurchaseAuthority\022\014\n\010STANDARD\020\000\022\013\n\007MEDIC" +
+      "AL\020\001\022\r\n\tADULT_USE\020\002*\312\001\n\rPurchaseEvent\022\n\n" +
+      "\006STATUS\020\000\022\010\n\004SAVE\020\001\022\010\n\004LOAD\020\002\022\016\n\nITEM_AD" +
+      "DED\020\n\022\020\n\014ITEM_REMOVED\020\013\022\031\n\025ITEM_QUANTITY" +
+      "_CHANGED\020\014\022\027\n\023ITEM_DISCOUNT_ADDED\020\r\022\031\n\025I" +
+      "TEM_DISCOUNT_REMOVED\020\016\022\021\n\rPURCHASE_VOID\020" +
+      "\024\022\025\n\021PURCHASE_FINALIZE\020\025B?\n\037io.opencanna" +
+      "bis.schema.commerceB\022CommercialPurchaseH" +
+      "\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22517,6 +22856,7 @@ public final class CommercialPurchase {
           io.bloombox.schema.partner.PartnerDevices.getDescriptor(),
           io.opencannabis.schema.accounting.AccountingTaxes.getDescriptor(),
           io.opencannabis.schema.commerce.OrderItem.getDescriptor(),
+          io.opencannabis.schema.currency.CommerceCurrency.getDescriptor(),
           io.opencannabis.schema.accounting.CommercialDiscounts.getDescriptor(),
           io.opencannabis.schema.commerce.Payments.getDescriptor(),
           io.bloombox.schema.identity.IdentityID.getDescriptor(),
@@ -22634,6 +22974,7 @@ public final class CommercialPurchase {
     io.bloombox.schema.partner.PartnerDevices.getDescriptor();
     io.opencannabis.schema.accounting.AccountingTaxes.getDescriptor();
     io.opencannabis.schema.commerce.OrderItem.getDescriptor();
+    io.opencannabis.schema.currency.CommerceCurrency.getDescriptor();
     io.opencannabis.schema.accounting.CommercialDiscounts.getDescriptor();
     io.opencannabis.schema.commerce.Payments.getDescriptor();
     io.bloombox.schema.identity.IdentityID.getDescriptor();

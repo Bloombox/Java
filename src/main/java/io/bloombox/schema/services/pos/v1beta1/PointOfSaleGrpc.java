@@ -87,14 +87,14 @@ public final class PointOfSaleGrpc {
               io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request,
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request,
       io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> METHOD_TICKET_LOAD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request, io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>newBuilder()
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request, io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketLoad"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request.getDefaultInstance()))
+              io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response.getDefaultInstance()))
           .build();
@@ -121,6 +121,42 @@ public final class PointOfSaleGrpc {
               io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request,
+      io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> METHOD_SEARCH_MEMBERS =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request, io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.pos.v1beta1.PointOfSale", "SearchMembers"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request,
+      io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> METHOD_INVENTORY_RETRIEVE =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request, io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.pos.v1beta1.PointOfSale", "InventoryRetrieve"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request,
+      io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> METHOD_INVENTORY_STREAM =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request, io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.pos.v1beta1.PointOfSale", "InventoryStream"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload.getDefaultInstance()))
           .build();
 
   /**
@@ -191,7 +227,7 @@ public final class PointOfSaleGrpc {
      * Load an existing purchase ticket for read-only access.
      * </pre>
      */
-    public void ticketLoad(io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request request,
+    public void ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_TICKET_LOAD, responseObserver);
     }
@@ -214,6 +250,36 @@ public final class PointOfSaleGrpc {
     public void ticketFinalize(io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_TICKET_FINALIZE, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Perform a search across retail consumer memberships.
+     * </pre>
+     */
+    public void searchMembers(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SEARCH_MEMBERS, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve inventory items.
+     * </pre>
+     */
+    public void inventoryRetrieve(io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_INVENTORY_RETRIEVE, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Establish an inventory stream.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request> inventoryStream(
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> responseObserver) {
+      return asyncUnimplementedStreamingCall(METHOD_INVENTORY_STREAM, responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -243,7 +309,7 @@ public final class PointOfSaleGrpc {
             METHOD_TICKET_LOAD,
             asyncUnaryCall(
               new MethodHandlers<
-                io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request,
+                io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>(
                   this, METHODID_TICKET_LOAD)))
           .addMethod(
@@ -260,6 +326,27 @@ public final class PointOfSaleGrpc {
                 io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response>(
                   this, METHODID_TICKET_FINALIZE)))
+          .addMethod(
+            METHOD_SEARCH_MEMBERS,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request,
+                io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response>(
+                  this, METHODID_SEARCH_MEMBERS)))
+          .addMethod(
+            METHOD_INVENTORY_RETRIEVE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request,
+                io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response>(
+                  this, METHODID_INVENTORY_RETRIEVE)))
+          .addMethod(
+            METHOD_INVENTORY_STREAM,
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request,
+                io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload>(
+                  this, METHODID_INVENTORY_STREAM)))
           .build();
     }
   }
@@ -326,7 +413,7 @@ public final class PointOfSaleGrpc {
      * Load an existing purchase ticket for read-only access.
      * </pre>
      */
-    public void ticketLoad(io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request request,
+    public void ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request,
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_TICKET_LOAD, getCallOptions()), request, responseObserver);
@@ -352,6 +439,39 @@ public final class PointOfSaleGrpc {
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_TICKET_FINALIZE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Perform a search across retail consumer memberships.
+     * </pre>
+     */
+    public void searchMembers(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SEARCH_MEMBERS, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieve inventory items.
+     * </pre>
+     */
+    public void inventoryRetrieve(io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_INVENTORY_RETRIEVE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Establish an inventory stream.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Request> inventoryStream(
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(METHOD_INVENTORY_STREAM, getCallOptions()), responseObserver);
     }
   }
 
@@ -414,7 +534,7 @@ public final class PointOfSaleGrpc {
      * Load an existing purchase ticket for read-only access.
      * </pre>
      */
-    public io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response ticketLoad(io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request request) {
+    public io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_TICKET_LOAD, getCallOptions(), request);
     }
@@ -437,6 +557,26 @@ public final class PointOfSaleGrpc {
     public io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response ticketFinalize(io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_TICKET_FINALIZE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Perform a search across retail consumer memberships.
+     * </pre>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response searchMembers(io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SEARCH_MEMBERS, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve inventory items.
+     * </pre>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response inventoryRetrieve(io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_INVENTORY_RETRIEVE, getCallOptions(), request);
     }
   }
 
@@ -503,7 +643,7 @@ public final class PointOfSaleGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> ticketLoad(
-        io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request request) {
+        io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_TICKET_LOAD, getCallOptions()), request);
     }
@@ -529,6 +669,28 @@ public final class PointOfSaleGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_TICKET_FINALIZE, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Perform a search across retail consumer memberships.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response> searchMembers(
+        io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SEARCH_MEMBERS, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve inventory items.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response> inventoryRetrieve(
+        io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_INVENTORY_RETRIEVE, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_AUTHORIZE = 0;
@@ -537,6 +699,9 @@ public final class PointOfSaleGrpc {
   private static final int METHODID_TICKET_LOAD = 3;
   private static final int METHODID_TICKET_VOID = 4;
   private static final int METHODID_TICKET_FINALIZE = 5;
+  private static final int METHODID_SEARCH_MEMBERS = 6;
+  private static final int METHODID_INVENTORY_RETRIEVE = 7;
+  private static final int METHODID_INVENTORY_STREAM = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -568,7 +733,7 @@ public final class PointOfSaleGrpc {
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>) responseObserver);
           break;
         case METHODID_TICKET_LOAD:
-          serviceImpl.ticketLoad((io.bloombox.schema.services.pos.v1beta1.SaveTicket.Request) request,
+          serviceImpl.ticketLoad((io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>) responseObserver);
           break;
         case METHODID_TICKET_VOID:
@@ -578,6 +743,14 @@ public final class PointOfSaleGrpc {
         case METHODID_TICKET_FINALIZE:
           serviceImpl.ticketFinalize((io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response>) responseObserver);
+          break;
+        case METHODID_SEARCH_MEMBERS:
+          serviceImpl.searchMembers((io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.MemberSearch.Response>) responseObserver);
+          break;
+        case METHODID_INVENTORY_RETRIEVE:
+          serviceImpl.inventoryRetrieve((io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryQuery.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -589,6 +762,9 @@ public final class PointOfSaleGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_INVENTORY_STREAM:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.inventoryStream(
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.InventoryStream.Payload>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -618,6 +794,9 @@ public final class PointOfSaleGrpc {
               .addMethod(METHOD_TICKET_LOAD)
               .addMethod(METHOD_TICKET_VOID)
               .addMethod(METHOD_TICKET_FINALIZE)
+              .addMethod(METHOD_SEARCH_MEMBERS)
+              .addMethod(METHOD_INVENTORY_RETRIEVE)
+              .addMethod(METHOD_INVENTORY_STREAM)
               .build();
         }
       }
