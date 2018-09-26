@@ -76,4 +76,39 @@ public interface DeviceAssignmentOrBuilder extends
    * <code>.bloombox.schema.services.devices.v1beta1.DeviceRole role = 3;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceRole getRole();
+
+  /**
+   * <pre>
+   * Environment name to make use of. Usually "V1".
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+   */
+  int getEnvironmentValue();
+  /**
+   * <pre>
+   * Environment name to make use of. Usually "V1".
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+   */
+  io.bloombox.schema.services.devices.v1beta1.DataEnvironment getEnvironment();
+
+  /**
+   * <pre>
+   * Optional human-readable name or label for the subject device.
+   * </pre>
+   *
+   * <code>string label = 5;</code>
+   */
+  java.lang.String getLabel();
+  /**
+   * <pre>
+   * Optional human-readable name or label for the subject device.
+   * </pre>
+   *
+   * <code>string label = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getLabelBytes();
 }

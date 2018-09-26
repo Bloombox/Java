@@ -22,7 +22,7 @@ package io.bloombox.schema.services.pos.v1beta1;
 
 /**
  * <pre>
- * Enumerated error states that may be served from the POS service.
+ * Enumerates error states that may be served from the POS service.
  * </pre>
  *
  * Protobuf enum {@code bloombox.schema.services.pos.v1beta1.POSError}
@@ -34,65 +34,73 @@ public enum POSError
    * An unknown internal error occurred.
    * </pre>
    *
-   * <code>UNKNOWN = 0;</code>
+   * <code>NO_ERROR = 0;</code>
    */
-  UNKNOWN(0),
-  /**
-   * <pre>
-   * The collection value was missing or found to be invalid.
-   * </pre>
-   *
-   * <code>INVALID_COLLECTION = 1;</code>
-   */
-  INVALID_COLLECTION(1),
+  NO_ERROR(0),
   /**
    * <pre>
    * The partner code was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_PARTNER = 2;</code>
+   * <code>INVALID_PARTNER = 1;</code>
    */
-  INVALID_PARTNER(2),
+  INVALID_PARTNER(1),
   /**
    * <pre>
    * The location code was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_LOCATION = 3;</code>
+   * <code>INVALID_LOCATION = 2;</code>
    */
-  INVALID_LOCATION(3),
+  INVALID_LOCATION(2),
   /**
    * <pre>
    * The device key was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_DEVICE = 4;</code>
+   * <code>INVALID_DEVICE = 3;</code>
    */
-  INVALID_DEVICE(4),
+  INVALID_DEVICE(3),
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The specified ID token was invalid or missing.
    * </pre>
    *
-   * <code>PARTNER_NOT_FOUND = 5;</code>
+   * <code>ID_TOKEN_INVALID = 4;</code>
    */
-  PARTNER_NOT_FOUND(5),
+  ID_TOKEN_INVALID(4),
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The device's signature was invalid or missing.
    * </pre>
    *
-   * <code>LOCATION_NOT_FOUND = 6;</code>
+   * <code>DEVICE_SIGNATURE_INVALID = 5;</code>
    */
-  LOCATION_NOT_FOUND(6),
+  DEVICE_SIGNATURE_INVALID(5),
   /**
    * <pre>
-   * The request payload was invalid in some manner.
+   * Access was denied due to authorization failure.
    * </pre>
    *
-   * <code>INVALID_PAYLOAD = 99;</code>
+   * <code>AUTHORIZATION_DENIED = 97;</code>
    */
-  INVALID_PAYLOAD(99),
+  AUTHORIZATION_DENIED(97),
+  /**
+   * <pre>
+   * Access cannot be granted due to a conflict.
+   * </pre>
+   *
+   * <code>ACCESS_CONFLICT = 98;</code>
+   */
+  ACCESS_CONFLICT(98),
+  /**
+   * <pre>
+   * An internal error occurred.
+   * </pre>
+   *
+   * <code>INTERNAL_ERROR = 99;</code>
+   */
+  INTERNAL_ERROR(99),
   UNRECOGNIZED(-1),
   ;
 
@@ -101,65 +109,73 @@ public enum POSError
    * An unknown internal error occurred.
    * </pre>
    *
-   * <code>UNKNOWN = 0;</code>
+   * <code>NO_ERROR = 0;</code>
    */
-  public static final int UNKNOWN_VALUE = 0;
-  /**
-   * <pre>
-   * The collection value was missing or found to be invalid.
-   * </pre>
-   *
-   * <code>INVALID_COLLECTION = 1;</code>
-   */
-  public static final int INVALID_COLLECTION_VALUE = 1;
+  public static final int NO_ERROR_VALUE = 0;
   /**
    * <pre>
    * The partner code was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_PARTNER = 2;</code>
+   * <code>INVALID_PARTNER = 1;</code>
    */
-  public static final int INVALID_PARTNER_VALUE = 2;
+  public static final int INVALID_PARTNER_VALUE = 1;
   /**
    * <pre>
    * The location code was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_LOCATION = 3;</code>
+   * <code>INVALID_LOCATION = 2;</code>
    */
-  public static final int INVALID_LOCATION_VALUE = 3;
+  public static final int INVALID_LOCATION_VALUE = 2;
   /**
    * <pre>
    * The device key was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_DEVICE = 4;</code>
+   * <code>INVALID_DEVICE = 3;</code>
    */
-  public static final int INVALID_DEVICE_VALUE = 4;
+  public static final int INVALID_DEVICE_VALUE = 3;
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The specified ID token was invalid or missing.
    * </pre>
    *
-   * <code>PARTNER_NOT_FOUND = 5;</code>
+   * <code>ID_TOKEN_INVALID = 4;</code>
    */
-  public static final int PARTNER_NOT_FOUND_VALUE = 5;
+  public static final int ID_TOKEN_INVALID_VALUE = 4;
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The device's signature was invalid or missing.
    * </pre>
    *
-   * <code>LOCATION_NOT_FOUND = 6;</code>
+   * <code>DEVICE_SIGNATURE_INVALID = 5;</code>
    */
-  public static final int LOCATION_NOT_FOUND_VALUE = 6;
+  public static final int DEVICE_SIGNATURE_INVALID_VALUE = 5;
   /**
    * <pre>
-   * The request payload was invalid in some manner.
+   * Access was denied due to authorization failure.
    * </pre>
    *
-   * <code>INVALID_PAYLOAD = 99;</code>
+   * <code>AUTHORIZATION_DENIED = 97;</code>
    */
-  public static final int INVALID_PAYLOAD_VALUE = 99;
+  public static final int AUTHORIZATION_DENIED_VALUE = 97;
+  /**
+   * <pre>
+   * Access cannot be granted due to a conflict.
+   * </pre>
+   *
+   * <code>ACCESS_CONFLICT = 98;</code>
+   */
+  public static final int ACCESS_CONFLICT_VALUE = 98;
+  /**
+   * <pre>
+   * An internal error occurred.
+   * </pre>
+   *
+   * <code>INTERNAL_ERROR = 99;</code>
+   */
+  public static final int INTERNAL_ERROR_VALUE = 99;
 
 
   public final int getNumber() {
@@ -180,14 +196,15 @@ public enum POSError
 
   public static POSError forNumber(int value) {
     switch (value) {
-      case 0: return UNKNOWN;
-      case 1: return INVALID_COLLECTION;
-      case 2: return INVALID_PARTNER;
-      case 3: return INVALID_LOCATION;
-      case 4: return INVALID_DEVICE;
-      case 5: return PARTNER_NOT_FOUND;
-      case 6: return LOCATION_NOT_FOUND;
-      case 99: return INVALID_PAYLOAD;
+      case 0: return NO_ERROR;
+      case 1: return INVALID_PARTNER;
+      case 2: return INVALID_LOCATION;
+      case 3: return INVALID_DEVICE;
+      case 4: return ID_TOKEN_INVALID;
+      case 5: return DEVICE_SIGNATURE_INVALID;
+      case 97: return AUTHORIZATION_DENIED;
+      case 98: return ACCESS_CONFLICT;
+      case 99: return INTERNAL_ERROR;
       default: return null;
     }
   }

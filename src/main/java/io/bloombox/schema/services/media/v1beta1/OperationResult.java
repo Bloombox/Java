@@ -71,14 +71,14 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 10: {
-            io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder subBuilder = null;
-            if (key_ != null) {
-              subBuilder = key_.toBuilder();
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder subBuilder = null;
+            if (item_ != null) {
+              subBuilder = item_.toBuilder();
             }
-            key_ = input.readMessage(io.opencannabis.schema.media.MediaItemKey.MediaKey.parser(), extensionRegistry);
+            item_ = input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaItem.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(key_);
-              key_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(item_);
+              item_ = subBuilder.buildPartial();
             }
 
             break;
@@ -107,37 +107,37 @@ private static final long serialVersionUID = 0L;
             io.bloombox.schema.services.media.v1beta1.OperationResult.class, io.bloombox.schema.services.media.v1beta1.OperationResult.Builder.class);
   }
 
-  public static final int KEY_FIELD_NUMBER = 1;
-  private io.opencannabis.schema.media.MediaItemKey.MediaKey key_;
+  public static final int ITEM_FIELD_NUMBER = 1;
+  private io.opencannabis.schema.media.AttachedMedia.MediaItem item_;
   /**
    * <pre>
-   * Resulting key, provisioned fresh for this media item.
+   * URI to access this item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1;</code>
+   * <code>.opencannabis.media.MediaItem item = 1;</code>
    */
-  public boolean hasKey() {
-    return key_ != null;
+  public boolean hasItem() {
+    return item_ != null;
   }
   /**
    * <pre>
-   * Resulting key, provisioned fresh for this media item.
+   * URI to access this item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1;</code>
+   * <code>.opencannabis.media.MediaItem item = 1;</code>
    */
-  public io.opencannabis.schema.media.MediaItemKey.MediaKey getKey() {
-    return key_ == null ? io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : key_;
+  public io.opencannabis.schema.media.AttachedMedia.MediaItem getItem() {
+    return item_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : item_;
   }
   /**
    * <pre>
-   * Resulting key, provisioned fresh for this media item.
+   * URI to access this item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1;</code>
+   * <code>.opencannabis.media.MediaItem item = 1;</code>
    */
-  public io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getKeyOrBuilder() {
-    return getKey();
+  public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getItemOrBuilder() {
+    return getItem();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -152,8 +152,8 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (key_ != null) {
-      output.writeMessage(1, getKey());
+    if (item_ != null) {
+      output.writeMessage(1, getItem());
     }
     unknownFields.writeTo(output);
   }
@@ -163,9 +163,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (key_ != null) {
+    if (item_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getKey());
+        .computeMessageSize(1, getItem());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -183,10 +183,10 @@ private static final long serialVersionUID = 0L;
     io.bloombox.schema.services.media.v1beta1.OperationResult other = (io.bloombox.schema.services.media.v1beta1.OperationResult) obj;
 
     boolean result = true;
-    result = result && (hasKey() == other.hasKey());
-    if (hasKey()) {
-      result = result && getKey()
-          .equals(other.getKey());
+    result = result && (hasItem() == other.hasItem());
+    if (hasItem()) {
+      result = result && getItem()
+          .equals(other.getItem());
     }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
@@ -199,9 +199,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasKey()) {
-      hash = (37 * hash) + KEY_FIELD_NUMBER;
-      hash = (53 * hash) + getKey().hashCode();
+    if (hasItem()) {
+      hash = (37 * hash) + ITEM_FIELD_NUMBER;
+      hash = (53 * hash) + getItem().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -336,11 +336,11 @@ private static final long serialVersionUID = 0L;
     }
     public Builder clear() {
       super.clear();
-      if (keyBuilder_ == null) {
-        key_ = null;
+      if (itemBuilder_ == null) {
+        item_ = null;
       } else {
-        key_ = null;
-        keyBuilder_ = null;
+        item_ = null;
+        itemBuilder_ = null;
       }
       return this;
     }
@@ -364,10 +364,10 @@ private static final long serialVersionUID = 0L;
 
     public io.bloombox.schema.services.media.v1beta1.OperationResult buildPartial() {
       io.bloombox.schema.services.media.v1beta1.OperationResult result = new io.bloombox.schema.services.media.v1beta1.OperationResult(this);
-      if (keyBuilder_ == null) {
-        result.key_ = key_;
+      if (itemBuilder_ == null) {
+        result.item_ = item_;
       } else {
-        result.key_ = keyBuilder_.build();
+        result.item_ = itemBuilder_.build();
       }
       onBuilt();
       return result;
@@ -410,8 +410,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(io.bloombox.schema.services.media.v1beta1.OperationResult other) {
       if (other == io.bloombox.schema.services.media.v1beta1.OperationResult.getDefaultInstance()) return this;
-      if (other.hasKey()) {
-        mergeKey(other.getKey());
+      if (other.hasItem()) {
+        mergeItem(other.getItem());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -440,157 +440,157 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.opencannabis.schema.media.MediaItemKey.MediaKey key_ = null;
+    private io.opencannabis.schema.media.AttachedMedia.MediaItem item_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> keyBuilder_;
+        io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> itemBuilder_;
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
-    public boolean hasKey() {
-      return keyBuilder_ != null || key_ != null;
+    public boolean hasItem() {
+      return itemBuilder_ != null || item_ != null;
     }
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
-    public io.opencannabis.schema.media.MediaItemKey.MediaKey getKey() {
-      if (keyBuilder_ == null) {
-        return key_ == null ? io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : key_;
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem getItem() {
+      if (itemBuilder_ == null) {
+        return item_ == null ? io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : item_;
       } else {
-        return keyBuilder_.getMessage();
+        return itemBuilder_.getMessage();
       }
     }
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
-    public Builder setKey(io.opencannabis.schema.media.MediaItemKey.MediaKey value) {
-      if (keyBuilder_ == null) {
+    public Builder setItem(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
+      if (itemBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        key_ = value;
+        item_ = value;
         onChanged();
       } else {
-        keyBuilder_.setMessage(value);
+        itemBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
-    public Builder setKey(
-        io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder builderForValue) {
-      if (keyBuilder_ == null) {
-        key_ = builderForValue.build();
+    public Builder setItem(
+        io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
+      if (itemBuilder_ == null) {
+        item_ = builderForValue.build();
         onChanged();
       } else {
-        keyBuilder_.setMessage(builderForValue.build());
+        itemBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
-    public Builder mergeKey(io.opencannabis.schema.media.MediaItemKey.MediaKey value) {
-      if (keyBuilder_ == null) {
-        if (key_ != null) {
-          key_ =
-            io.opencannabis.schema.media.MediaItemKey.MediaKey.newBuilder(key_).mergeFrom(value).buildPartial();
+    public Builder mergeItem(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
+      if (itemBuilder_ == null) {
+        if (item_ != null) {
+          item_ =
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.newBuilder(item_).mergeFrom(value).buildPartial();
         } else {
-          key_ = value;
+          item_ = value;
         }
         onChanged();
       } else {
-        keyBuilder_.mergeFrom(value);
+        itemBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
-    public Builder clearKey() {
-      if (keyBuilder_ == null) {
-        key_ = null;
+    public Builder clearItem() {
+      if (itemBuilder_ == null) {
+        item_ = null;
         onChanged();
       } else {
-        key_ = null;
-        keyBuilder_ = null;
+        item_ = null;
+        itemBuilder_ = null;
       }
 
       return this;
     }
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
-    public io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder getKeyBuilder() {
+    public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder getItemBuilder() {
       
       onChanged();
-      return getKeyFieldBuilder().getBuilder();
+      return getItemFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
-    public io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getKeyOrBuilder() {
-      if (keyBuilder_ != null) {
-        return keyBuilder_.getMessageOrBuilder();
+    public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getItemOrBuilder() {
+      if (itemBuilder_ != null) {
+        return itemBuilder_.getMessageOrBuilder();
       } else {
-        return key_ == null ?
-            io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : key_;
+        return item_ == null ?
+            io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance() : item_;
       }
     }
     /**
      * <pre>
-     * Resulting key, provisioned fresh for this media item.
+     * URI to access this item.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaKey key = 1;</code>
+     * <code>.opencannabis.media.MediaItem item = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> 
-        getKeyFieldBuilder() {
-      if (keyBuilder_ == null) {
-        keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder>(
-                getKey(),
+        io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+        getItemFieldBuilder() {
+      if (itemBuilder_ == null) {
+        itemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder>(
+                getItem(),
                 getParentForChildren(),
                 isClean());
-        key_ = null;
+        item_ = null;
       }
-      return keyBuilder_;
+      return itemBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

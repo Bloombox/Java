@@ -165,6 +165,41 @@ private static final long serialVersionUID = 0L;
      * <code>.bloombox.schema.services.media.v1beta1.MediaContent content = 3;</code>
      */
     io.bloombox.schema.services.media.v1beta1.MediaContentOrBuilder getContentOrBuilder();
+
+    /**
+     * <pre>
+     * Whether the content should be exposed publicly, or at some other privacy level.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+     */
+    int getPrivacyValue();
+    /**
+     * <pre>
+     * Whether the content should be exposed publicly, or at some other privacy level.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+     */
+    io.opencannabis.schema.media.AttachedMedia.MediaPrivacy getPrivacy();
+
+    /**
+     * <pre>
+     * Origin from which we are uploading data.
+     * </pre>
+     *
+     * <code>string origin = 5;</code>
+     */
+    java.lang.String getOrigin();
+    /**
+     * <pre>
+     * Origin from which we are uploading data.
+     * </pre>
+     *
+     * <code>string origin = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getOriginBytes();
   }
   /**
    * <pre>
@@ -184,6 +219,8 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       scope_ = "";
+      privacy_ = 0;
+      origin_ = "";
     }
 
     @java.lang.Override
@@ -247,6 +284,18 @@ private static final long serialVersionUID = 0L;
                 content_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              privacy_ = rawValue;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              origin_ = s;
               break;
             }
           }
@@ -381,6 +430,72 @@ private static final long serialVersionUID = 0L;
       return getContent();
     }
 
+    public static final int PRIVACY_FIELD_NUMBER = 4;
+    private int privacy_;
+    /**
+     * <pre>
+     * Whether the content should be exposed publicly, or at some other privacy level.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+     */
+    public int getPrivacyValue() {
+      return privacy_;
+    }
+    /**
+     * <pre>
+     * Whether the content should be exposed publicly, or at some other privacy level.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+     */
+    public io.opencannabis.schema.media.AttachedMedia.MediaPrivacy getPrivacy() {
+      io.opencannabis.schema.media.AttachedMedia.MediaPrivacy result = io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.valueOf(privacy_);
+      return result == null ? io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.UNRECOGNIZED : result;
+    }
+
+    public static final int ORIGIN_FIELD_NUMBER = 5;
+    private volatile java.lang.Object origin_;
+    /**
+     * <pre>
+     * Origin from which we are uploading data.
+     * </pre>
+     *
+     * <code>string origin = 5;</code>
+     */
+    public java.lang.String getOrigin() {
+      java.lang.Object ref = origin_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        origin_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Origin from which we are uploading data.
+     * </pre>
+     *
+     * <code>string origin = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOriginBytes() {
+      java.lang.Object ref = origin_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        origin_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -402,6 +517,12 @@ private static final long serialVersionUID = 0L;
       if (content_ != null) {
         output.writeMessage(3, getContent());
       }
+      if (privacy_ != io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.DEFAULT_PRIVACY.getNumber()) {
+        output.writeEnum(4, privacy_);
+      }
+      if (!getOriginBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, origin_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -420,6 +541,13 @@ private static final long serialVersionUID = 0L;
       if (content_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getContent());
+      }
+      if (privacy_ != io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.DEFAULT_PRIVACY.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, privacy_);
+      }
+      if (!getOriginBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, origin_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -449,6 +577,9 @@ private static final long serialVersionUID = 0L;
         result = result && getContent()
             .equals(other.getContent());
       }
+      result = result && privacy_ == other.privacy_;
+      result = result && getOrigin()
+          .equals(other.getOrigin());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -470,6 +601,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CONTENT_FIELD_NUMBER;
         hash = (53 * hash) + getContent().hashCode();
       }
+      hash = (37 * hash) + PRIVACY_FIELD_NUMBER;
+      hash = (53 * hash) + privacy_;
+      hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
+      hash = (53 * hash) + getOrigin().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -617,6 +752,10 @@ private static final long serialVersionUID = 0L;
           content_ = null;
           contentBuilder_ = null;
         }
+        privacy_ = 0;
+
+        origin_ = "";
+
         return this;
       }
 
@@ -650,6 +789,8 @@ private static final long serialVersionUID = 0L;
         } else {
           result.content_ = contentBuilder_.build();
         }
+        result.privacy_ = privacy_;
+        result.origin_ = origin_;
         onBuilt();
         return result;
       }
@@ -700,6 +841,13 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasContent()) {
           mergeContent(other.getContent());
+        }
+        if (other.privacy_ != 0) {
+          setPrivacyValue(other.getPrivacyValue());
+        }
+        if (!other.getOrigin().isEmpty()) {
+          origin_ = other.origin_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1121,6 +1269,159 @@ private static final long serialVersionUID = 0L;
           content_ = null;
         }
         return contentBuilder_;
+      }
+
+      private int privacy_ = 0;
+      /**
+       * <pre>
+       * Whether the content should be exposed publicly, or at some other privacy level.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+       */
+      public int getPrivacyValue() {
+        return privacy_;
+      }
+      /**
+       * <pre>
+       * Whether the content should be exposed publicly, or at some other privacy level.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+       */
+      public Builder setPrivacyValue(int value) {
+        privacy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the content should be exposed publicly, or at some other privacy level.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+       */
+      public io.opencannabis.schema.media.AttachedMedia.MediaPrivacy getPrivacy() {
+        io.opencannabis.schema.media.AttachedMedia.MediaPrivacy result = io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.valueOf(privacy_);
+        return result == null ? io.opencannabis.schema.media.AttachedMedia.MediaPrivacy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Whether the content should be exposed publicly, or at some other privacy level.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+       */
+      public Builder setPrivacy(io.opencannabis.schema.media.AttachedMedia.MediaPrivacy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        privacy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the content should be exposed publicly, or at some other privacy level.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaPrivacy privacy = 4;</code>
+       */
+      public Builder clearPrivacy() {
+        
+        privacy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object origin_ = "";
+      /**
+       * <pre>
+       * Origin from which we are uploading data.
+       * </pre>
+       *
+       * <code>string origin = 5;</code>
+       */
+      public java.lang.String getOrigin() {
+        java.lang.Object ref = origin_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          origin_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Origin from which we are uploading data.
+       * </pre>
+       *
+       * <code>string origin = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOriginBytes() {
+        java.lang.Object ref = origin_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          origin_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Origin from which we are uploading data.
+       * </pre>
+       *
+       * <code>string origin = 5;</code>
+       */
+      public Builder setOrigin(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        origin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Origin from which we are uploading data.
+       * </pre>
+       *
+       * <code>string origin = 5;</code>
+       */
+      public Builder clearOrigin() {
+        
+        origin_ = getDefaultInstance().getOrigin();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Origin from which we are uploading data.
+       * </pre>
+       *
+       * <code>string origin = 5;</code>
+       */
+      public Builder setOriginBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        origin_ = value;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

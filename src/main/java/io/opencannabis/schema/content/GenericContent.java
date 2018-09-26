@@ -70,28 +70,10 @@ public final class GenericContent {
 
     /**
      * <pre>
-     * Raw bytes of underlying content data.
-     * </pre>
-     *
-     * <code>string content = 3;</code>
-     */
-    java.lang.String getContent();
-    /**
-     * <pre>
-     * Raw bytes of underlying content data.
-     * </pre>
-     *
-     * <code>string content = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getContentBytes();
-
-    /**
-     * <pre>
      * Language information for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Language language = 4;</code>
+     * <code>.opencannabis.base.Language language = 3;</code>
      */
     int getLanguageValue();
     /**
@@ -99,7 +81,7 @@ public final class GenericContent {
      * Language information for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Language language = 4;</code>
+     * <code>.opencannabis.base.Language language = 3;</code>
      */
     io.opencannabis.schema.base.BaseLanguage.Language getLanguage();
 
@@ -108,7 +90,7 @@ public final class GenericContent {
      * Compression settings for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Compression compression = 5;</code>
+     * <code>.opencannabis.base.Compression compression = 4;</code>
      */
     boolean hasCompression();
     /**
@@ -116,7 +98,7 @@ public final class GenericContent {
      * Compression settings for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Compression compression = 5;</code>
+     * <code>.opencannabis.base.Compression compression = 4;</code>
      */
     io.opencannabis.schema.base.BaseCompression.Compression getCompression();
     /**
@@ -124,9 +106,38 @@ public final class GenericContent {
      * Compression settings for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Compression compression = 5;</code>
+     * <code>.opencannabis.base.Compression compression = 4;</code>
      */
     io.opencannabis.schema.base.BaseCompression.CompressionOrBuilder getCompressionOrBuilder();
+
+    /**
+     * <pre>
+     * Raw bytes of underlying content data.
+     * </pre>
+     *
+     * <code>string content = 10;</code>
+     */
+    java.lang.String getContent();
+    /**
+     * <pre>
+     * Raw bytes of underlying content data.
+     * </pre>
+     *
+     * <code>string content = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getContentBytes();
+
+    /**
+     * <pre>
+     * Raw data attached to this content blob.
+     * </pre>
+     *
+     * <code>bytes raw = 20;</code>
+     */
+    com.google.protobuf.ByteString getRaw();
+
+    public io.opencannabis.schema.content.GenericContent.Content.PayloadCase getPayloadCase();
   }
   /**
    * <pre>
@@ -147,7 +158,6 @@ public final class GenericContent {
     private Content() {
       type_ = 0;
       encoding_ = 0;
-      content_ = "";
       language_ = 0;
     }
 
@@ -194,19 +204,13 @@ public final class GenericContent {
               encoding_ = rawValue;
               break;
             }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              content_ = s;
-              break;
-            }
-            case 32: {
+            case 24: {
               int rawValue = input.readEnum();
 
               language_ = rawValue;
               break;
             }
-            case 42: {
+            case 34: {
               io.opencannabis.schema.base.BaseCompression.Compression.Builder subBuilder = null;
               if (compression_ != null) {
                 subBuilder = compression_.toBuilder();
@@ -217,6 +221,17 @@ public final class GenericContent {
                 compression_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              payloadCase_ = 10;
+              payload_ = s;
+              break;
+            }
+            case 162: {
+              payloadCase_ = 20;
+              payload_ = input.readBytes();
               break;
             }
           }
@@ -276,6 +291,14 @@ public final class GenericContent {
        * <code>HTML = 2;</code>
        */
       HTML(2),
+      /**
+       * <pre>
+       * Binary data of some kind (for instance, images).
+       * </pre>
+       *
+       * <code>BINARY = 3;</code>
+       */
+      BINARY(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -303,6 +326,14 @@ public final class GenericContent {
        * <code>HTML = 2;</code>
        */
       public static final int HTML_VALUE = 2;
+      /**
+       * <pre>
+       * Binary data of some kind (for instance, images).
+       * </pre>
+       *
+       * <code>BINARY = 3;</code>
+       */
+      public static final int BINARY_VALUE = 3;
 
 
       public final int getNumber() {
@@ -326,6 +357,7 @@ public final class GenericContent {
           case 0: return TEXT;
           case 1: return MARKDOWN;
           case 2: return HTML;
+          case 3: return BINARY;
           default: return null;
         }
       }
@@ -513,6 +545,44 @@ public final class GenericContent {
       // @@protoc_insertion_point(enum_scope:opencannabis.content.Content.Encoding)
     }
 
+    private int payloadCase_ = 0;
+    private java.lang.Object payload_;
+    public enum PayloadCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CONTENT(10),
+      RAW(20),
+      PAYLOAD_NOT_SET(0);
+      private final int value;
+      private PayloadCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadCase forNumber(int value) {
+        switch (value) {
+          case 10: return CONTENT;
+          case 20: return RAW;
+          case 0: return PAYLOAD_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadCase
+    getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
+    }
+
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
@@ -561,56 +631,14 @@ public final class GenericContent {
       return result == null ? io.opencannabis.schema.content.GenericContent.Content.Encoding.UNRECOGNIZED : result;
     }
 
-    public static final int CONTENT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object content_;
-    /**
-     * <pre>
-     * Raw bytes of underlying content data.
-     * </pre>
-     *
-     * <code>string content = 3;</code>
-     */
-    public java.lang.String getContent() {
-      java.lang.Object ref = content_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        content_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Raw bytes of underlying content data.
-     * </pre>
-     *
-     * <code>string content = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getContentBytes() {
-      java.lang.Object ref = content_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        content_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LANGUAGE_FIELD_NUMBER = 4;
+    public static final int LANGUAGE_FIELD_NUMBER = 3;
     private int language_;
     /**
      * <pre>
      * Language information for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Language language = 4;</code>
+     * <code>.opencannabis.base.Language language = 3;</code>
      */
     public int getLanguageValue() {
       return language_;
@@ -620,21 +648,21 @@ public final class GenericContent {
      * Language information for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Language language = 4;</code>
+     * <code>.opencannabis.base.Language language = 3;</code>
      */
     public io.opencannabis.schema.base.BaseLanguage.Language getLanguage() {
       io.opencannabis.schema.base.BaseLanguage.Language result = io.opencannabis.schema.base.BaseLanguage.Language.valueOf(language_);
       return result == null ? io.opencannabis.schema.base.BaseLanguage.Language.UNRECOGNIZED : result;
     }
 
-    public static final int COMPRESSION_FIELD_NUMBER = 5;
+    public static final int COMPRESSION_FIELD_NUMBER = 4;
     private io.opencannabis.schema.base.BaseCompression.Compression compression_;
     /**
      * <pre>
      * Compression settings for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Compression compression = 5;</code>
+     * <code>.opencannabis.base.Compression compression = 4;</code>
      */
     public boolean hasCompression() {
       return compression_ != null;
@@ -644,7 +672,7 @@ public final class GenericContent {
      * Compression settings for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Compression compression = 5;</code>
+     * <code>.opencannabis.base.Compression compression = 4;</code>
      */
     public io.opencannabis.schema.base.BaseCompression.Compression getCompression() {
       return compression_ == null ? io.opencannabis.schema.base.BaseCompression.Compression.getDefaultInstance() : compression_;
@@ -654,10 +682,76 @@ public final class GenericContent {
      * Compression settings for underlying content.
      * </pre>
      *
-     * <code>.opencannabis.base.Compression compression = 5;</code>
+     * <code>.opencannabis.base.Compression compression = 4;</code>
      */
     public io.opencannabis.schema.base.BaseCompression.CompressionOrBuilder getCompressionOrBuilder() {
       return getCompression();
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     * Raw bytes of underlying content data.
+     * </pre>
+     *
+     * <code>string content = 10;</code>
+     */
+    public java.lang.String getContent() {
+      java.lang.Object ref = "";
+      if (payloadCase_ == 10) {
+        ref = payload_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (payloadCase_ == 10) {
+          payload_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Raw bytes of underlying content data.
+     * </pre>
+     *
+     * <code>string content = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getContentBytes() {
+      java.lang.Object ref = "";
+      if (payloadCase_ == 10) {
+        ref = payload_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (payloadCase_ == 10) {
+          payload_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RAW_FIELD_NUMBER = 20;
+    /**
+     * <pre>
+     * Raw data attached to this content blob.
+     * </pre>
+     *
+     * <code>bytes raw = 20;</code>
+     */
+    public com.google.protobuf.ByteString getRaw() {
+      if (payloadCase_ == 20) {
+        return (com.google.protobuf.ByteString) payload_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -678,14 +772,18 @@ public final class GenericContent {
       if (encoding_ != io.opencannabis.schema.content.GenericContent.Content.Encoding.UTF8.getNumber()) {
         output.writeEnum(2, encoding_);
       }
-      if (!getContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, content_);
-      }
-      if (language_ != io.opencannabis.schema.base.BaseLanguage.Language.ENGLISH.getNumber()) {
-        output.writeEnum(4, language_);
+      if (language_ != io.opencannabis.schema.base.BaseLanguage.Language.LANGUAGE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, language_);
       }
       if (compression_ != null) {
-        output.writeMessage(5, getCompression());
+        output.writeMessage(4, getCompression());
+      }
+      if (payloadCase_ == 10) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, payload_);
+      }
+      if (payloadCase_ == 20) {
+        output.writeBytes(
+            20, (com.google.protobuf.ByteString) payload_);
       }
       unknownFields.writeTo(output);
     }
@@ -703,16 +801,21 @@ public final class GenericContent {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, encoding_);
       }
-      if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, content_);
-      }
-      if (language_ != io.opencannabis.schema.base.BaseLanguage.Language.ENGLISH.getNumber()) {
+      if (language_ != io.opencannabis.schema.base.BaseLanguage.Language.LANGUAGE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, language_);
+          .computeEnumSize(3, language_);
       }
       if (compression_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getCompression());
+          .computeMessageSize(4, getCompression());
+      }
+      if (payloadCase_ == 10) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, payload_);
+      }
+      if (payloadCase_ == 20) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              20, (com.google.protobuf.ByteString) payload_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -732,13 +835,26 @@ public final class GenericContent {
       boolean result = true;
       result = result && type_ == other.type_;
       result = result && encoding_ == other.encoding_;
-      result = result && getContent()
-          .equals(other.getContent());
       result = result && language_ == other.language_;
       result = result && (hasCompression() == other.hasCompression());
       if (hasCompression()) {
         result = result && getCompression()
             .equals(other.getCompression());
+      }
+      result = result && getPayloadCase().equals(
+          other.getPayloadCase());
+      if (!result) return false;
+      switch (payloadCase_) {
+        case 10:
+          result = result && getContent()
+              .equals(other.getContent());
+          break;
+        case 20:
+          result = result && getRaw()
+              .equals(other.getRaw());
+          break;
+        case 0:
+        default:
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -755,13 +871,23 @@ public final class GenericContent {
       hash = (53 * hash) + type_;
       hash = (37 * hash) + ENCODING_FIELD_NUMBER;
       hash = (53 * hash) + encoding_;
-      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getContent().hashCode();
       hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
       hash = (53 * hash) + language_;
       if (hasCompression()) {
         hash = (37 * hash) + COMPRESSION_FIELD_NUMBER;
         hash = (53 * hash) + getCompression().hashCode();
+      }
+      switch (payloadCase_) {
+        case 10:
+          hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+          hash = (53 * hash) + getContent().hashCode();
+          break;
+        case 20:
+          hash = (37 * hash) + RAW_FIELD_NUMBER;
+          hash = (53 * hash) + getRaw().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -900,8 +1026,6 @@ public final class GenericContent {
 
         encoding_ = 0;
 
-        content_ = "";
-
         language_ = 0;
 
         if (compressionBuilder_ == null) {
@@ -910,6 +1034,8 @@ public final class GenericContent {
           compression_ = null;
           compressionBuilder_ = null;
         }
+        payloadCase_ = 0;
+        payload_ = null;
         return this;
       }
 
@@ -934,13 +1060,19 @@ public final class GenericContent {
         io.opencannabis.schema.content.GenericContent.Content result = new io.opencannabis.schema.content.GenericContent.Content(this);
         result.type_ = type_;
         result.encoding_ = encoding_;
-        result.content_ = content_;
         result.language_ = language_;
         if (compressionBuilder_ == null) {
           result.compression_ = compression_;
         } else {
           result.compression_ = compressionBuilder_.build();
         }
+        if (payloadCase_ == 10) {
+          result.payload_ = payload_;
+        }
+        if (payloadCase_ == 20) {
+          result.payload_ = payload_;
+        }
+        result.payloadCase_ = payloadCase_;
         onBuilt();
         return result;
       }
@@ -988,15 +1120,26 @@ public final class GenericContent {
         if (other.encoding_ != 0) {
           setEncodingValue(other.getEncodingValue());
         }
-        if (!other.getContent().isEmpty()) {
-          content_ = other.content_;
-          onChanged();
-        }
         if (other.language_ != 0) {
           setLanguageValue(other.getLanguageValue());
         }
         if (other.hasCompression()) {
           mergeCompression(other.getCompression());
+        }
+        switch (other.getPayloadCase()) {
+          case CONTENT: {
+            payloadCase_ = 10;
+            payload_ = other.payload_;
+            onChanged();
+            break;
+          }
+          case RAW: {
+            setRaw(other.getRaw());
+            break;
+          }
+          case PAYLOAD_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1024,6 +1167,21 @@ public final class GenericContent {
         }
         return this;
       }
+      private int payloadCase_ = 0;
+      private java.lang.Object payload_;
+      public PayloadCase
+          getPayloadCase() {
+        return PayloadCase.forNumber(
+            payloadCase_);
+      }
+
+      public Builder clearPayload() {
+        payloadCase_ = 0;
+        payload_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private int type_ = 0;
       /**
@@ -1153,102 +1311,13 @@ public final class GenericContent {
         return this;
       }
 
-      private java.lang.Object content_ = "";
-      /**
-       * <pre>
-       * Raw bytes of underlying content data.
-       * </pre>
-       *
-       * <code>string content = 3;</code>
-       */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          content_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Raw bytes of underlying content data.
-       * </pre>
-       *
-       * <code>string content = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          content_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Raw bytes of underlying content data.
-       * </pre>
-       *
-       * <code>string content = 3;</code>
-       */
-      public Builder setContent(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        content_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Raw bytes of underlying content data.
-       * </pre>
-       *
-       * <code>string content = 3;</code>
-       */
-      public Builder clearContent() {
-        
-        content_ = getDefaultInstance().getContent();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Raw bytes of underlying content data.
-       * </pre>
-       *
-       * <code>string content = 3;</code>
-       */
-      public Builder setContentBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        content_ = value;
-        onChanged();
-        return this;
-      }
-
       private int language_ = 0;
       /**
        * <pre>
        * Language information for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Language language = 4;</code>
+       * <code>.opencannabis.base.Language language = 3;</code>
        */
       public int getLanguageValue() {
         return language_;
@@ -1258,7 +1327,7 @@ public final class GenericContent {
        * Language information for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Language language = 4;</code>
+       * <code>.opencannabis.base.Language language = 3;</code>
        */
       public Builder setLanguageValue(int value) {
         language_ = value;
@@ -1270,7 +1339,7 @@ public final class GenericContent {
        * Language information for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Language language = 4;</code>
+       * <code>.opencannabis.base.Language language = 3;</code>
        */
       public io.opencannabis.schema.base.BaseLanguage.Language getLanguage() {
         io.opencannabis.schema.base.BaseLanguage.Language result = io.opencannabis.schema.base.BaseLanguage.Language.valueOf(language_);
@@ -1281,7 +1350,7 @@ public final class GenericContent {
        * Language information for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Language language = 4;</code>
+       * <code>.opencannabis.base.Language language = 3;</code>
        */
       public Builder setLanguage(io.opencannabis.schema.base.BaseLanguage.Language value) {
         if (value == null) {
@@ -1297,7 +1366,7 @@ public final class GenericContent {
        * Language information for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Language language = 4;</code>
+       * <code>.opencannabis.base.Language language = 3;</code>
        */
       public Builder clearLanguage() {
         
@@ -1314,7 +1383,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       public boolean hasCompression() {
         return compressionBuilder_ != null || compression_ != null;
@@ -1324,7 +1393,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       public io.opencannabis.schema.base.BaseCompression.Compression getCompression() {
         if (compressionBuilder_ == null) {
@@ -1338,7 +1407,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       public Builder setCompression(io.opencannabis.schema.base.BaseCompression.Compression value) {
         if (compressionBuilder_ == null) {
@@ -1358,7 +1427,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       public Builder setCompression(
           io.opencannabis.schema.base.BaseCompression.Compression.Builder builderForValue) {
@@ -1376,7 +1445,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       public Builder mergeCompression(io.opencannabis.schema.base.BaseCompression.Compression value) {
         if (compressionBuilder_ == null) {
@@ -1398,7 +1467,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       public Builder clearCompression() {
         if (compressionBuilder_ == null) {
@@ -1416,7 +1485,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       public io.opencannabis.schema.base.BaseCompression.Compression.Builder getCompressionBuilder() {
         
@@ -1428,7 +1497,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       public io.opencannabis.schema.base.BaseCompression.CompressionOrBuilder getCompressionOrBuilder() {
         if (compressionBuilder_ != null) {
@@ -1443,7 +1512,7 @@ public final class GenericContent {
        * Compression settings for underlying content.
        * </pre>
        *
-       * <code>.opencannabis.base.Compression compression = 5;</code>
+       * <code>.opencannabis.base.Compression compression = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.base.BaseCompression.Compression, io.opencannabis.schema.base.BaseCompression.Compression.Builder, io.opencannabis.schema.base.BaseCompression.CompressionOrBuilder> 
@@ -1457,6 +1526,151 @@ public final class GenericContent {
           compression_ = null;
         }
         return compressionBuilder_;
+      }
+
+      /**
+       * <pre>
+       * Raw bytes of underlying content data.
+       * </pre>
+       *
+       * <code>string content = 10;</code>
+       */
+      public java.lang.String getContent() {
+        java.lang.Object ref = "";
+        if (payloadCase_ == 10) {
+          ref = payload_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (payloadCase_ == 10) {
+            payload_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Raw bytes of underlying content data.
+       * </pre>
+       *
+       * <code>string content = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getContentBytes() {
+        java.lang.Object ref = "";
+        if (payloadCase_ == 10) {
+          ref = payload_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (payloadCase_ == 10) {
+            payload_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Raw bytes of underlying content data.
+       * </pre>
+       *
+       * <code>string content = 10;</code>
+       */
+      public Builder setContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  payloadCase_ = 10;
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw bytes of underlying content data.
+       * </pre>
+       *
+       * <code>string content = 10;</code>
+       */
+      public Builder clearContent() {
+        if (payloadCase_ == 10) {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw bytes of underlying content data.
+       * </pre>
+       *
+       * <code>string content = 10;</code>
+       */
+      public Builder setContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        payloadCase_ = 10;
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Raw data attached to this content blob.
+       * </pre>
+       *
+       * <code>bytes raw = 20;</code>
+       */
+      public com.google.protobuf.ByteString getRaw() {
+        if (payloadCase_ == 20) {
+          return (com.google.protobuf.ByteString) payload_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <pre>
+       * Raw data attached to this content blob.
+       * </pre>
+       *
+       * <code>bytes raw = 20;</code>
+       */
+      public Builder setRaw(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  payloadCase_ = 20;
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw data attached to this content blob.
+       * </pre>
+       *
+       * <code>bytes raw = 20;</code>
+       */
+      public Builder clearRaw() {
+        if (payloadCase_ == 20) {
+          payloadCase_ = 0;
+          payload_ = null;
+          onChanged();
+        }
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1523,15 +1737,16 @@ public final class GenericContent {
     java.lang.String[] descriptorData = {
       "\n\025content/Content.proto\022\024opencannabis.co" +
       "ntent\032\016bq_field.proto\032\023base/Language.pro" +
-      "to\032\026base/Compression.proto\"\302\002\n\007Content\0220" +
+      "to\032\026base/Compression.proto\"\352\002\n\007Content\0220" +
       "\n\004type\030\001 \001(\0162\".opencannabis.content.Cont" +
       "ent.Type\0228\n\010encoding\030\002 \001(\0162&.opencannabi" +
-      "s.content.Content.Encoding\022\017\n\007content\030\003 " +
-      "\001(\t\022-\n\010language\030\004 \001(\0162\033.opencannabis.bas" +
-      "e.Language\0223\n\013compression\030\005 \001(\0132\036.openca" +
-      "nnabis.base.Compression\"(\n\004Type\022\010\n\004TEXT\020" +
-      "\000\022\014\n\010MARKDOWN\020\001\022\010\n\004HTML\020\002\",\n\010Encoding\022\010\n" +
-      "\004UTF8\020\000\022\007\n\003B64\020\001\022\r\n\tB64_ASCII\020\002B:\n\036io.op" +
+      "s.content.Content.Encoding\022-\n\010language\030\003" +
+      " \001(\0162\033.opencannabis.base.Language\0223\n\013com" +
+      "pression\030\004 \001(\0132\036.opencannabis.base.Compr" +
+      "ession\022\021\n\007content\030\n \001(\tH\000\022\r\n\003raw\030\024 \001(\014H\000" +
+      "\"4\n\004Type\022\010\n\004TEXT\020\000\022\014\n\010MARKDOWN\020\001\022\010\n\004HTML" +
+      "\020\002\022\n\n\006BINARY\020\003\",\n\010Encoding\022\010\n\004UTF8\020\000\022\007\n\003" +
+      "B64\020\001\022\r\n\tB64_ASCII\020\002B\t\n\007payloadB:\n\036io.op" +
       "encannabis.schema.contentB\016GenericConten" +
       "tH\001P\000\242\002\003OCSb\006proto3"
     };
@@ -1555,7 +1770,7 @@ public final class GenericContent {
     internal_static_opencannabis_content_Content_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_content_Content_descriptor,
-        new java.lang.String[] { "Type", "Encoding", "Content", "Language", "Compression", });
+        new java.lang.String[] { "Type", "Encoding", "Language", "Compression", "Content", "Raw", "Payload", });
     gen_bq_schema.BqField.getDescriptor();
     io.opencannabis.schema.base.BaseLanguage.getDescriptor();
     io.opencannabis.schema.base.BaseCompression.getDescriptor();

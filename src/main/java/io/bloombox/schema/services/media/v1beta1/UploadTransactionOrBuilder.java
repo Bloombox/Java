@@ -44,21 +44,26 @@ public interface UploadTransactionOrBuilder extends
 
   /**
    * <pre>
-   * Token uniquely identifying this upload transaction, so the resulting media may later be attached after being
-   * uploaded by the client.
+   * Key provisioned for the media item we are being asked to accept as an upload.
    * </pre>
    *
-   * <code>string token = 2;</code>
+   * <code>.opencannabis.media.MediaKey key = 2;</code>
    */
-  java.lang.String getToken();
+  boolean hasKey();
   /**
    * <pre>
-   * Token uniquely identifying this upload transaction, so the resulting media may later be attached after being
-   * uploaded by the client.
+   * Key provisioned for the media item we are being asked to accept as an upload.
    * </pre>
    *
-   * <code>string token = 2;</code>
+   * <code>.opencannabis.media.MediaKey key = 2;</code>
    */
-  com.google.protobuf.ByteString
-      getTokenBytes();
+  io.opencannabis.schema.media.MediaItemKey.MediaKey getKey();
+  /**
+   * <pre>
+   * Key provisioned for the media item we are being asked to accept as an upload.
+   * </pre>
+   *
+   * <code>.opencannabis.media.MediaKey key = 2;</code>
+   */
+  io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getKeyOrBuilder();
 }

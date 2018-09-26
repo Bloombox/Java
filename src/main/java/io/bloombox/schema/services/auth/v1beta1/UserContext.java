@@ -844,28 +844,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Resulting JSON web token.
-     * </pre>
-     *
-     * <code>string jwt = 1;</code>
-     */
-    java.lang.String getJwt();
-    /**
-     * <pre>
-     * Resulting JSON web token.
-     * </pre>
-     *
-     * <code>string jwt = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getJwtBytes();
-
-    /**
-     * <pre>
      * User profile key.
      * </pre>
      *
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      */
     java.lang.String getKey();
     /**
@@ -873,7 +855,7 @@ private static final long serialVersionUID = 0L;
      * User profile key.
      * </pre>
      *
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      */
     com.google.protobuf.ByteString
         getKeyBytes();
@@ -883,7 +865,7 @@ private static final long serialVersionUID = 0L;
      * User's profile object.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 3;</code>
+     * <code>.bloombox.schema.identity.User profile = 2;</code>
      */
     boolean hasProfile();
     /**
@@ -891,7 +873,7 @@ private static final long serialVersionUID = 0L;
      * User's profile object.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 3;</code>
+     * <code>.bloombox.schema.identity.User profile = 2;</code>
      */
     io.bloombox.schema.identity.AppUser.User getProfile();
     /**
@@ -899,7 +881,7 @@ private static final long serialVersionUID = 0L;
      * User's profile object.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 3;</code>
+     * <code>.bloombox.schema.identity.User profile = 2;</code>
      */
     io.bloombox.schema.identity.AppUser.UserOrBuilder getProfileOrBuilder();
   }
@@ -921,7 +903,6 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      jwt_ = "";
       key_ = "";
     }
 
@@ -959,16 +940,10 @@ private static final long serialVersionUID = 0L;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              jwt_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
               key_ = s;
               break;
             }
-            case 26: {
+            case 18: {
               io.bloombox.schema.identity.AppUser.User.Builder subBuilder = null;
               if (profile_ != null) {
                 subBuilder = profile_.toBuilder();
@@ -1005,56 +980,14 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.auth.v1beta1.UserContext.Response.class, io.bloombox.schema.services.auth.v1beta1.UserContext.Response.Builder.class);
     }
 
-    public static final int JWT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object jwt_;
-    /**
-     * <pre>
-     * Resulting JSON web token.
-     * </pre>
-     *
-     * <code>string jwt = 1;</code>
-     */
-    public java.lang.String getJwt() {
-      java.lang.Object ref = jwt_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        jwt_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Resulting JSON web token.
-     * </pre>
-     *
-     * <code>string jwt = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getJwtBytes() {
-      java.lang.Object ref = jwt_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        jwt_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int KEY_FIELD_NUMBER = 2;
+    public static final int KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object key_;
     /**
      * <pre>
      * User profile key.
      * </pre>
      *
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      */
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
@@ -1073,7 +1006,7 @@ private static final long serialVersionUID = 0L;
      * User profile key.
      * </pre>
      *
-     * <code>string key = 2;</code>
+     * <code>string key = 1;</code>
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
@@ -1089,14 +1022,14 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    public static final int PROFILE_FIELD_NUMBER = 3;
+    public static final int PROFILE_FIELD_NUMBER = 2;
     private io.bloombox.schema.identity.AppUser.User profile_;
     /**
      * <pre>
      * User's profile object.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 3;</code>
+     * <code>.bloombox.schema.identity.User profile = 2;</code>
      */
     public boolean hasProfile() {
       return profile_ != null;
@@ -1106,7 +1039,7 @@ private static final long serialVersionUID = 0L;
      * User's profile object.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 3;</code>
+     * <code>.bloombox.schema.identity.User profile = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.User getProfile() {
       return profile_ == null ? io.bloombox.schema.identity.AppUser.User.getDefaultInstance() : profile_;
@@ -1116,7 +1049,7 @@ private static final long serialVersionUID = 0L;
      * User's profile object.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.User profile = 3;</code>
+     * <code>.bloombox.schema.identity.User profile = 2;</code>
      */
     public io.bloombox.schema.identity.AppUser.UserOrBuilder getProfileOrBuilder() {
       return getProfile();
@@ -1134,14 +1067,11 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getJwtBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jwt_);
-      }
       if (!getKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
       }
       if (profile_ != null) {
-        output.writeMessage(3, getProfile());
+        output.writeMessage(2, getProfile());
       }
       unknownFields.writeTo(output);
     }
@@ -1151,15 +1081,12 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getJwtBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, jwt_);
-      }
       if (!getKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
       }
       if (profile_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getProfile());
+          .computeMessageSize(2, getProfile());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1177,8 +1104,6 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.auth.v1beta1.UserContext.Response other = (io.bloombox.schema.services.auth.v1beta1.UserContext.Response) obj;
 
       boolean result = true;
-      result = result && getJwt()
-          .equals(other.getJwt());
       result = result && getKey()
           .equals(other.getKey());
       result = result && (hasProfile() == other.hasProfile());
@@ -1197,8 +1122,6 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + JWT_FIELD_NUMBER;
-      hash = (53 * hash) + getJwt().hashCode();
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey().hashCode();
       if (hasProfile()) {
@@ -1339,8 +1262,6 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        jwt_ = "";
-
         key_ = "";
 
         if (profileBuilder_ == null) {
@@ -1371,7 +1292,6 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.auth.v1beta1.UserContext.Response buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.UserContext.Response result = new io.bloombox.schema.services.auth.v1beta1.UserContext.Response(this);
-        result.jwt_ = jwt_;
         result.key_ = key_;
         if (profileBuilder_ == null) {
           result.profile_ = profile_;
@@ -1419,10 +1339,6 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.auth.v1beta1.UserContext.Response other) {
         if (other == io.bloombox.schema.services.auth.v1beta1.UserContext.Response.getDefaultInstance()) return this;
-        if (!other.getJwt().isEmpty()) {
-          jwt_ = other.jwt_;
-          onChanged();
-        }
         if (!other.getKey().isEmpty()) {
           key_ = other.key_;
           onChanged();
@@ -1457,102 +1373,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object jwt_ = "";
-      /**
-       * <pre>
-       * Resulting JSON web token.
-       * </pre>
-       *
-       * <code>string jwt = 1;</code>
-       */
-      public java.lang.String getJwt() {
-        java.lang.Object ref = jwt_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          jwt_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Resulting JSON web token.
-       * </pre>
-       *
-       * <code>string jwt = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getJwtBytes() {
-        java.lang.Object ref = jwt_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          jwt_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Resulting JSON web token.
-       * </pre>
-       *
-       * <code>string jwt = 1;</code>
-       */
-      public Builder setJwt(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        jwt_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Resulting JSON web token.
-       * </pre>
-       *
-       * <code>string jwt = 1;</code>
-       */
-      public Builder clearJwt() {
-        
-        jwt_ = getDefaultInstance().getJwt();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Resulting JSON web token.
-       * </pre>
-       *
-       * <code>string jwt = 1;</code>
-       */
-      public Builder setJwtBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        jwt_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object key_ = "";
       /**
        * <pre>
        * User profile key.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        */
       public java.lang.String getKey() {
         java.lang.Object ref = key_;
@@ -1571,7 +1398,7 @@ private static final long serialVersionUID = 0L;
        * User profile key.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        */
       public com.google.protobuf.ByteString
           getKeyBytes() {
@@ -1591,7 +1418,7 @@ private static final long serialVersionUID = 0L;
        * User profile key.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        */
       public Builder setKey(
           java.lang.String value) {
@@ -1608,7 +1435,7 @@ private static final long serialVersionUID = 0L;
        * User profile key.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        */
       public Builder clearKey() {
         
@@ -1621,7 +1448,7 @@ private static final long serialVersionUID = 0L;
        * User profile key.
        * </pre>
        *
-       * <code>string key = 2;</code>
+       * <code>string key = 1;</code>
        */
       public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -1643,7 +1470,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       public boolean hasProfile() {
         return profileBuilder_ != null || profile_ != null;
@@ -1653,7 +1480,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.User getProfile() {
         if (profileBuilder_ == null) {
@@ -1667,7 +1494,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       public Builder setProfile(io.bloombox.schema.identity.AppUser.User value) {
         if (profileBuilder_ == null) {
@@ -1687,7 +1514,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       public Builder setProfile(
           io.bloombox.schema.identity.AppUser.User.Builder builderForValue) {
@@ -1705,7 +1532,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       public Builder mergeProfile(io.bloombox.schema.identity.AppUser.User value) {
         if (profileBuilder_ == null) {
@@ -1727,7 +1554,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       public Builder clearProfile() {
         if (profileBuilder_ == null) {
@@ -1745,7 +1572,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.User.Builder getProfileBuilder() {
         
@@ -1757,7 +1584,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       public io.bloombox.schema.identity.AppUser.UserOrBuilder getProfileOrBuilder() {
         if (profileBuilder_ != null) {
@@ -1772,7 +1599,7 @@ private static final long serialVersionUID = 0L;
        * User's profile object.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.User profile = 3;</code>
+       * <code>.bloombox.schema.identity.User profile = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.bloombox.schema.identity.AppUser.User, io.bloombox.schema.identity.AppUser.User.Builder, io.bloombox.schema.identity.AppUser.UserOrBuilder> 

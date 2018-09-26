@@ -1324,24 +1324,24 @@ public final class AttachedContent {
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
-    java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> 
+    java.util.List<io.opencannabis.schema.media.MediaItemKey.MediaReference> 
         getMediaList();
     /**
      * <pre>
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
-    io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index);
+    io.opencannabis.schema.media.MediaItemKey.MediaReference getMedia(int index);
     /**
      * <pre>
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
     int getMediaCount();
     /**
@@ -1349,18 +1349,18 @@ public final class AttachedContent {
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
-    java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+    java.util.List<? extends io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder> 
         getMediaOrBuilderList();
     /**
      * <pre>
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
-    io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
+    io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder getMediaOrBuilder(
         int index);
 
     /**
@@ -1600,11 +1600,11 @@ public final class AttachedContent {
             }
             case 50: {
               if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                media_ = new java.util.ArrayList<io.opencannabis.schema.media.AttachedMedia.MediaItem>();
+                media_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItemKey.MediaReference>();
                 mutable_bitField0_ |= 0x00000020;
               }
               media_.add(
-                  input.readMessage(io.opencannabis.schema.media.AttachedMedia.MediaItem.parser(), extensionRegistry));
+                  input.readMessage(io.opencannabis.schema.media.MediaItemKey.MediaReference.parser(), extensionRegistry));
               break;
             }
             case 58: {
@@ -1866,15 +1866,15 @@ public final class AttachedContent {
     }
 
     public static final int MEDIA_FIELD_NUMBER = 6;
-    private java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> media_;
+    private java.util.List<io.opencannabis.schema.media.MediaItemKey.MediaReference> media_;
     /**
      * <pre>
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
-    public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> getMediaList() {
+    public java.util.List<io.opencannabis.schema.media.MediaItemKey.MediaReference> getMediaList() {
       return media_;
     }
     /**
@@ -1882,9 +1882,9 @@ public final class AttachedContent {
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
-    public java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+    public java.util.List<? extends io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder> 
         getMediaOrBuilderList() {
       return media_;
     }
@@ -1893,7 +1893,7 @@ public final class AttachedContent {
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
     public int getMediaCount() {
       return media_.size();
@@ -1903,9 +1903,9 @@ public final class AttachedContent {
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
-    public io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index) {
+    public io.opencannabis.schema.media.MediaItemKey.MediaReference getMedia(int index) {
       return media_.get(index);
     }
     /**
@@ -1913,9 +1913,9 @@ public final class AttachedContent {
      * Product media, including images, videos, and so on.
      * </pre>
      *
-     * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+     * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
      */
-    public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
+    public io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder getMediaOrBuilder(
         int index) {
       return media_.get(index);
     }
@@ -3461,26 +3461,26 @@ public final class AttachedContent {
         return dosageBuilder_;
       }
 
-      private java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> media_ =
+      private java.util.List<io.opencannabis.schema.media.MediaItemKey.MediaReference> media_ =
         java.util.Collections.emptyList();
       private void ensureMediaIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          media_ = new java.util.ArrayList<io.opencannabis.schema.media.AttachedMedia.MediaItem>(media_);
+          media_ = new java.util.ArrayList<io.opencannabis.schema.media.MediaItemKey.MediaReference>(media_);
           bitField0_ |= 0x00000020;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> mediaBuilder_;
+          io.opencannabis.schema.media.MediaItemKey.MediaReference, io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder, io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder> mediaBuilder_;
 
       /**
        * <pre>
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem> getMediaList() {
+      public java.util.List<io.opencannabis.schema.media.MediaItemKey.MediaReference> getMediaList() {
         if (mediaBuilder_ == null) {
           return java.util.Collections.unmodifiableList(media_);
         } else {
@@ -3492,7 +3492,7 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public int getMediaCount() {
         if (mediaBuilder_ == null) {
@@ -3506,9 +3506,9 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public io.opencannabis.schema.media.AttachedMedia.MediaItem getMedia(int index) {
+      public io.opencannabis.schema.media.MediaItemKey.MediaReference getMedia(int index) {
         if (mediaBuilder_ == null) {
           return media_.get(index);
         } else {
@@ -3520,10 +3520,10 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public Builder setMedia(
-          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
+          int index, io.opencannabis.schema.media.MediaItemKey.MediaReference value) {
         if (mediaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3541,10 +3541,10 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public Builder setMedia(
-          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
+          int index, io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder builderForValue) {
         if (mediaBuilder_ == null) {
           ensureMediaIsMutable();
           media_.set(index, builderForValue.build());
@@ -3559,9 +3559,9 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public Builder addMedia(io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
+      public Builder addMedia(io.opencannabis.schema.media.MediaItemKey.MediaReference value) {
         if (mediaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3579,10 +3579,10 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public Builder addMedia(
-          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem value) {
+          int index, io.opencannabis.schema.media.MediaItemKey.MediaReference value) {
         if (mediaBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3600,10 +3600,10 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public Builder addMedia(
-          io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
+          io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder builderForValue) {
         if (mediaBuilder_ == null) {
           ensureMediaIsMutable();
           media_.add(builderForValue.build());
@@ -3618,10 +3618,10 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public Builder addMedia(
-          int index, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder builderForValue) {
+          int index, io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder builderForValue) {
         if (mediaBuilder_ == null) {
           ensureMediaIsMutable();
           media_.add(index, builderForValue.build());
@@ -3636,10 +3636,10 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public Builder addAllMedia(
-          java.lang.Iterable<? extends io.opencannabis.schema.media.AttachedMedia.MediaItem> values) {
+          java.lang.Iterable<? extends io.opencannabis.schema.media.MediaItemKey.MediaReference> values) {
         if (mediaBuilder_ == null) {
           ensureMediaIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3655,7 +3655,7 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public Builder clearMedia() {
         if (mediaBuilder_ == null) {
@@ -3672,7 +3672,7 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
       public Builder removeMedia(int index) {
         if (mediaBuilder_ == null) {
@@ -3689,9 +3689,9 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder getMediaBuilder(
+      public io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder getMediaBuilder(
           int index) {
         return getMediaFieldBuilder().getBuilder(index);
       }
@@ -3700,9 +3700,9 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getMediaOrBuilder(
+      public io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder getMediaOrBuilder(
           int index) {
         if (mediaBuilder_ == null) {
           return media_.get(index);  } else {
@@ -3714,9 +3714,9 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public java.util.List<? extends io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+      public java.util.List<? extends io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder> 
            getMediaOrBuilderList() {
         if (mediaBuilder_ != null) {
           return mediaBuilder_.getMessageOrBuilderList();
@@ -3729,41 +3729,41 @@ public final class AttachedContent {
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder addMediaBuilder() {
+      public io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder addMediaBuilder() {
         return getMediaFieldBuilder().addBuilder(
-            io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance());
+            io.opencannabis.schema.media.MediaItemKey.MediaReference.getDefaultInstance());
       }
       /**
        * <pre>
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder addMediaBuilder(
+      public io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder addMediaBuilder(
           int index) {
         return getMediaFieldBuilder().addBuilder(
-            index, io.opencannabis.schema.media.AttachedMedia.MediaItem.getDefaultInstance());
+            index, io.opencannabis.schema.media.MediaItemKey.MediaReference.getDefaultInstance());
       }
       /**
        * <pre>
        * Product media, including images, videos, and so on.
        * </pre>
        *
-       * <code>repeated .opencannabis.media.MediaItem media = 6;</code>
+       * <code>repeated .opencannabis.media.MediaReference media = 6;</code>
        */
-      public java.util.List<io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder> 
+      public java.util.List<io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder> 
            getMediaBuilderList() {
         return getMediaFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder> 
+          io.opencannabis.schema.media.MediaItemKey.MediaReference, io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder, io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder> 
           getMediaFieldBuilder() {
         if (mediaBuilder_ == null) {
           mediaBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              io.opencannabis.schema.media.AttachedMedia.MediaItem, io.opencannabis.schema.media.AttachedMedia.MediaItem.Builder, io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder>(
+              io.opencannabis.schema.media.MediaItemKey.MediaReference, io.opencannabis.schema.media.MediaItemKey.MediaReference.Builder, io.opencannabis.schema.media.MediaItemKey.MediaReferenceOrBuilder>(
                   media_,
                   ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
@@ -4468,29 +4468,29 @@ public final class AttachedContent {
       "\n\034content/ProductContent.proto\022\024opencann" +
       "abis.content\032\022content/Name.proto\032\025conten" +
       "t/Content.proto\032\023content/Brand.proto\032\026te" +
-      "mporal/Instant.proto\032\025media/MediaItem.pr" +
-      "oto\032\032structs/ProductFlags.proto\032$structs" +
-      "/labtesting/TestResults.proto\032\'structs/p" +
-      "ricing/PricingDescriptor.proto\"\251\001\n\021Produ" +
-      "ctTimestamps\022/\n\007created\030\001 \001(\0132\036.opencann" +
-      "abis.temporal.Instant\0220\n\010modified\030\002 \001(\0132" +
-      "\036.opencannabis.temporal.Instant\0221\n\tpubli" +
-      "shed\030\003 \001(\0132\036.opencannabis.temporal.Insta" +
-      "nt\"\204\004\n\016ProductContent\022(\n\004name\030\001 \001(\0132\032.op" +
-      "encannabis.content.Name\022*\n\005brand\030\002 \001(\0132\033" +
-      ".opencannabis.content.Brand\022.\n\007summary\030\003" +
-      " \001(\0132\035.opencannabis.content.Content\022,\n\005u" +
-      "sage\030\004 \001(\0132\035.opencannabis.content.Conten" +
-      "t\022-\n\006dosage\030\005 \001(\0132\035.opencannabis.content" +
-      ".Content\022,\n\005media\030\006 \003(\0132\035.opencannabis.m" +
-      "edia.MediaItem\022=\n\007pricing\030\007 \001(\0132,.openca" +
-      "nnabis.structs.pricing.ProductPricing\022;\n" +
-      "\005tests\030\010 \001(\0132,.opencannabis.structs.labt" +
-      "esting.TestResults\0220\n\005flags\030\t \003(\0162!.open" +
-      "cannabis.structs.ProductFlag\0223\n\002ts\030\n \001(\013" +
-      "2\'.opencannabis.content.ProductTimestamp" +
-      "sB;\n\036io.opencannabis.schema.contentB\017Att" +
-      "achedContentH\001P\000\242\002\003OCSb\006proto3"
+      "mporal/Instant.proto\032\024media/MediaKey.pro" +
+      "to\032\032structs/ProductFlags.proto\032$structs/" +
+      "labtesting/TestResults.proto\032\'structs/pr" +
+      "icing/PricingDescriptor.proto\"\251\001\n\021Produc" +
+      "tTimestamps\022/\n\007created\030\001 \001(\0132\036.opencanna" +
+      "bis.temporal.Instant\0220\n\010modified\030\002 \001(\0132\036" +
+      ".opencannabis.temporal.Instant\0221\n\tpublis" +
+      "hed\030\003 \001(\0132\036.opencannabis.temporal.Instan" +
+      "t\"\211\004\n\016ProductContent\022(\n\004name\030\001 \001(\0132\032.ope" +
+      "ncannabis.content.Name\022*\n\005brand\030\002 \001(\0132\033." +
+      "opencannabis.content.Brand\022.\n\007summary\030\003 " +
+      "\001(\0132\035.opencannabis.content.Content\022,\n\005us" +
+      "age\030\004 \001(\0132\035.opencannabis.content.Content" +
+      "\022-\n\006dosage\030\005 \001(\0132\035.opencannabis.content." +
+      "Content\0221\n\005media\030\006 \003(\0132\".opencannabis.me" +
+      "dia.MediaReference\022=\n\007pricing\030\007 \001(\0132,.op" +
+      "encannabis.structs.pricing.ProductPricin" +
+      "g\022;\n\005tests\030\010 \001(\0132,.opencannabis.structs." +
+      "labtesting.TestResults\0220\n\005flags\030\t \003(\0162!." +
+      "opencannabis.structs.ProductFlag\0223\n\002ts\030\n" +
+      " \001(\0132\'.opencannabis.content.ProductTimes" +
+      "tampsB;\n\036io.opencannabis.schema.contentB" +
+      "\017AttachedContentH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4507,7 +4507,7 @@ public final class AttachedContent {
           io.opencannabis.schema.content.GenericContent.getDescriptor(),
           io.opencannabis.schema.content.BrandContent.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
-          io.opencannabis.schema.media.AttachedMedia.getDescriptor(),
+          io.opencannabis.schema.media.MediaItemKey.getDescriptor(),
           io.opencannabis.schema.product.struct.BaseStructs.getDescriptor(),
           io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor(),
           io.opencannabis.schema.product.struct.ProductPricingSpec.getDescriptor(),
@@ -4528,7 +4528,7 @@ public final class AttachedContent {
     io.opencannabis.schema.content.GenericContent.getDescriptor();
     io.opencannabis.schema.content.BrandContent.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
-    io.opencannabis.schema.media.AttachedMedia.getDescriptor();
+    io.opencannabis.schema.media.MediaItemKey.getDescriptor();
     io.opencannabis.schema.product.struct.BaseStructs.getDescriptor();
     io.opencannabis.schema.product.struct.testing.LabTesting.getDescriptor();
     io.opencannabis.schema.product.struct.ProductPricingSpec.getDescriptor();

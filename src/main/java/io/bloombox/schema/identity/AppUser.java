@@ -206,6 +206,14 @@ public final class AppUser {
      * <code>TWITTER = 3;</code>
      */
     TWITTER(3),
+    /**
+     * <pre>
+     * Phone-based authentication.
+     * </pre>
+     *
+     * <code>PHONE = 4;</code>
+     */
+    PHONE(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -241,6 +249,14 @@ public final class AppUser {
      * <code>TWITTER = 3;</code>
      */
     public static final int TWITTER_VALUE = 3;
+    /**
+     * <pre>
+     * Phone-based authentication.
+     * </pre>
+     *
+     * <code>PHONE = 4;</code>
+     */
+    public static final int PHONE_VALUE = 4;
 
 
     public final int getNumber() {
@@ -265,6 +281,7 @@ public final class AppUser {
         case 1: return GOOGLE;
         case 2: return FACEBOOK;
         case 3: return TWITTER;
+        case 4: return PHONE;
         default: return null;
       }
     }
@@ -688,7 +705,7 @@ public final class AppUser {
      *
      * <code>UNVALIDATED = 0;</code>
      */
-    UNVALIDATED(0),
+    UNVALIDATED(0, 0),
     /**
      * <pre>
      * The consumer is a recreational user.
@@ -696,7 +713,7 @@ public final class AppUser {
      *
      * <code>RECREATIONAL = 1;</code>
      */
-    RECREATIONAL(1),
+    RECREATIONAL(1, 1),
     /**
      * <pre>
      * The consumer is a validated medical user. Considered a superset of 'RECREATIONAL'.
@@ -704,10 +721,18 @@ public final class AppUser {
      *
      * <code>MEDICAL = 2;</code>
      */
-    MEDICAL(2),
-    UNRECOGNIZED(-1),
+    MEDICAL(3, 2),
+    UNRECOGNIZED(-1, -1),
     ;
 
+    /**
+     * <pre>
+     * Specifies the alternate name for recreational-use.
+     * </pre>
+     *
+     * <code>ADULT_USE = 1;</code>
+     */
+    public static final ConsumerType ADULT_USE = RECREATIONAL;
     /**
      * <pre>
      * The consumer type is not yet determined.
@@ -726,6 +751,14 @@ public final class AppUser {
     public static final int RECREATIONAL_VALUE = 1;
     /**
      * <pre>
+     * Specifies the alternate name for recreational-use.
+     * </pre>
+     *
+     * <code>ADULT_USE = 1;</code>
+     */
+    public static final int ADULT_USE_VALUE = 1;
+    /**
+     * <pre>
      * The consumer is a validated medical user. Considered a superset of 'RECREATIONAL'.
      * </pre>
      *
@@ -735,7 +768,7 @@ public final class AppUser {
 
 
     public final int getNumber() {
-      if (this == UNRECOGNIZED) {
+      if (index == -1) {
         throw new java.lang.IllegalArgumentException(
             "Can't get the number of an unknown enum value.");
       }
@@ -773,7 +806,7 @@ public final class AppUser {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
+      return getDescriptor().getValues().get(index);
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -784,7 +817,9 @@ public final class AppUser {
       return io.bloombox.schema.identity.AppUser.getDescriptor().getEnumTypes().get(4);
     }
 
-    private static final ConsumerType[] VALUES = values();
+    private static final ConsumerType[] VALUES = {
+      UNVALIDATED, RECREATIONAL, ADULT_USE, MEDICAL, 
+    };
 
     public static ConsumerType valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
@@ -798,9 +833,11 @@ public final class AppUser {
       return VALUES[desc.getIndex()];
     }
 
+    private final int index;
     private final int value;
 
-    private ConsumerType(int value) {
+    private ConsumerType(int index, int value) {
+      this.index = index;
       this.value = value;
     }
 
@@ -11188,6 +11225,31 @@ public final class AppUser {
      */
     com.google.protobuf.ByteString
         getForeignIdBytes();
+
+    /**
+     * <pre>
+     * Key representing this user's membership at this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     */
+    boolean hasKey();
+    /**
+     * <pre>
+     * Key representing this user's membership at this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     */
+    io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey();
+    /**
+     * <pre>
+     * Key representing this user's membership at this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     */
+    io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder();
   }
   /**
    * <pre>
@@ -11284,6 +11346,19 @@ public final class AppUser {
               java.lang.String s = input.readStringRequireUtf8();
 
               foreignId_ = s;
+              break;
+            }
+            case 50: {
+              io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder subBuilder = null;
+              if (key_ != null) {
+                subBuilder = key_.toBuilder();
+              }
+              key_ = input.readMessage(io.bloombox.schema.identity.AppMemberKey.MembershipKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(key_);
+                key_ = subBuilder.buildPartial();
+              }
+
               break;
             }
           }
@@ -11484,6 +11559,39 @@ public final class AppUser {
       }
     }
 
+    public static final int KEY_FIELD_NUMBER = 6;
+    private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_;
+    /**
+     * <pre>
+     * Key representing this user's membership at this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     */
+    public boolean hasKey() {
+      return key_ != null;
+    }
+    /**
+     * <pre>
+     * Key representing this user's membership at this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     */
+    public io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey() {
+      return key_ == null ? io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : key_;
+    }
+    /**
+     * <pre>
+     * Key representing this user's membership at this location.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+     */
+    public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder() {
+      return getKey();
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -11511,6 +11619,9 @@ public final class AppUser {
       if (!getForeignIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, foreignId_);
       }
+      if (key_ != null) {
+        output.writeMessage(6, getKey());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11536,6 +11647,10 @@ public final class AppUser {
       }
       if (!getForeignIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, foreignId_);
+      }
+      if (key_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getKey());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11568,6 +11683,11 @@ public final class AppUser {
       }
       result = result && getForeignId()
           .equals(other.getForeignId());
+      result = result && (hasKey() == other.hasKey());
+      if (hasKey()) {
+        result = result && getKey()
+            .equals(other.getKey());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11593,6 +11713,10 @@ public final class AppUser {
       }
       hash = (37 * hash) + FOREIGN_ID_FIELD_NUMBER;
       hash = (53 * hash) + getForeignId().hashCode();
+      if (hasKey()) {
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11744,6 +11868,12 @@ public final class AppUser {
         }
         foreignId_ = "";
 
+        if (keyBuilder_ == null) {
+          key_ = null;
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
         return this;
       }
 
@@ -11779,6 +11909,11 @@ public final class AppUser {
           result.seen_ = seenBuilder_.build();
         }
         result.foreignId_ = foreignId_;
+        if (keyBuilder_ == null) {
+          result.key_ = key_;
+        } else {
+          result.key_ = keyBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -11836,6 +11971,9 @@ public final class AppUser {
         if (!other.getForeignId().isEmpty()) {
           foreignId_ = other.foreignId_;
           onChanged();
+        }
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12411,6 +12549,159 @@ public final class AppUser {
         onChanged();
         return this;
       }
+
+      private io.bloombox.schema.identity.AppMemberKey.MembershipKey key_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> keyBuilder_;
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      public boolean hasKey() {
+        return keyBuilder_ != null || key_ != null;
+      }
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      public io.bloombox.schema.identity.AppMemberKey.MembershipKey getKey() {
+        if (keyBuilder_ == null) {
+          return key_ == null ? io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : key_;
+        } else {
+          return keyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      public Builder setKey(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
+        if (keyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          key_ = value;
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      public Builder setKey(
+          io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder builderForValue) {
+        if (keyBuilder_ == null) {
+          key_ = builderForValue.build();
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      public Builder mergeKey(io.bloombox.schema.identity.AppMemberKey.MembershipKey value) {
+        if (keyBuilder_ == null) {
+          if (key_ != null) {
+            key_ =
+              io.bloombox.schema.identity.AppMemberKey.MembershipKey.newBuilder(key_).mergeFrom(value).buildPartial();
+          } else {
+            key_ = value;
+          }
+          onChanged();
+        } else {
+          keyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      public Builder clearKey() {
+        if (keyBuilder_ == null) {
+          key_ = null;
+          onChanged();
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      public io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder getKeyBuilder() {
+        
+        onChanged();
+        return getKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      public io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder getKeyOrBuilder() {
+        if (keyBuilder_ != null) {
+          return keyBuilder_.getMessageOrBuilder();
+        } else {
+          return key_ == null ?
+              io.bloombox.schema.identity.AppMemberKey.MembershipKey.getDefaultInstance() : key_;
+        }
+      }
+      /**
+       * <pre>
+       * Key representing this user's membership at this location.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.MembershipKey key = 6 [(.gen_bq_schema.description) = "Membership key representing this user&#92;'s membership at this location."];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder> 
+          getKeyFieldBuilder() {
+        if (keyBuilder_ == null) {
+          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.identity.AppMemberKey.MembershipKey, io.bloombox.schema.identity.AppMemberKey.MembershipKey.Builder, io.bloombox.schema.identity.AppMemberKey.MembershipKeyOrBuilder>(
+                  getKey(),
+                  getParentForChildren(),
+                  isClean());
+          key_ = null;
+        }
+        return keyBuilder_;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -12478,7 +12769,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
     int getPartnersCount();
     /**
@@ -12486,7 +12777,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
     boolean containsPartners(
         java.lang.String key);
@@ -12501,7 +12792,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
     java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy>
     getPartnersMap();
@@ -12510,7 +12801,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
@@ -12521,7 +12812,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
@@ -12676,7 +12967,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     public boolean containsPartners(
@@ -12696,7 +12987,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPartnersMap() {
@@ -12707,7 +12998,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
@@ -12723,7 +13014,7 @@ public final class AppUser {
      * Map of partner accesses levels to partner codes.
      * </pre>
      *
-     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+     * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
      */
 
     public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
@@ -13147,7 +13438,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public boolean containsPartners(
@@ -13167,7 +13458,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public java.util.Map<java.lang.String, io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy> getPartnersMap() {
@@ -13178,7 +13469,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrDefault(
@@ -13194,7 +13485,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public io.bloombox.schema.security.access.PartnerPermissions.AccessPolicy getPartnersOrThrow(
@@ -13218,7 +13509,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public Builder removePartners(
@@ -13241,7 +13532,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
       public Builder putPartners(
           java.lang.String key,
@@ -13257,7 +13548,7 @@ public final class AppUser {
        * Map of partner accesses levels to partner codes.
        * </pre>
        *
-       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner codes."];</code>
+       * <code>map&lt;string, .bloombox.schema.security.access.AccessPolicy&gt; partners = 2 [(.gen_bq_schema.description) = "Map of partner accesses levels to partner and location codes."];</code>
        */
 
       public Builder putAllPartners(
@@ -13384,134 +13675,139 @@ public final class AppUser {
       "proto\032\025media/MediaItem.proto\032\026temporal/I" +
       "nstant.proto\032\023person/Person.proto\032\021ident" +
       "ity/ID.proto\032 identity/ids/UserDoctorRec" +
-      ".proto\032\033products/menu/Section.proto\032\022str" +
-      "ucts/Grow.proto\032\025structs/Species.proto\032$" +
-      "structs/labtesting/TestResults.proto\032(se" +
-      "curity/access/PartnerPermissions.proto\"\223" +
-      "\n\n\004User\022-\n\003uid\030\001 \001(\tB \302\265\003\002\010\002\212@\027Unique ID" +
-      " for the user.\022Y\n\005flags\030\002 \001(\0132#.bloombox" +
-      ".schema.identity.UserFlagsB%\302\265\003\002\010\004\212@\034Boo" +
-      "lean flags for this user.\022Z\n\006person\030\003 \001(" +
-      "\0132\033.opencannabis.person.PersonB-\212@*Perso" +
-      "n\'s information that backs this user.\022z\n" +
-      "\016identification\030\024 \003(\0132\034.bloombox.schema." +
-      "identity.IDBD\200@\001\212@(Government ID associa" +
-      "ted with this user.\322\265\003\022\010\001\032\016identificatio" +
-      "n\022\217\001\n\ndoctor_rec\030\025 \003(\0132+.bloombox.schema" +
-      ".identity.ids.UserDoctorRecBN\200@\001\212@3Docto" +
-      "r\'s recommendations associated with this" +
-      " user.\322\265\003\021\010\001\032\rprescriptions\022m\n\004seen\030\036 \001(" +
-      "\0132\036.opencannabis.temporal.InstantB?\212@<La" +
-      "st time this user was seen, via auth/log" +
-      "in/enrollment etc.\022\\\n\006signup\030\037 \001(\0132\036.ope" +
-      "ncannabis.temporal.InstantB,\212@)Timestamp" +
-      " for when this user was created.\022o\n\niden" +
-      "tities\030( \003(\0132..bloombox.schema.identity." +
-      "User.IdentitiesEntryB+\200@\001\212@%Identities a" +
-      "ssociated with this user.\022`\n\005media\030) \003(\013" +
-      "2).bloombox.schema.identity.User.MediaEn" +
-      "tryB&\200@\001\212@ Media associated with this us" +
-      "er.\022_\n\010consumer\030d \001(\0132).bloombox.schema." +
-      "identity.ConsumerProfileB\"\212@\037Consumer pr" +
-      "ofile for this user.\022_\n\010industry\030e \001(\0132)" +
-      ".bloombox.schema.identity.IndustryProfil" +
-      "eB\"\212@\037Industry profile for this user.\032Y\n" +
-      "\017IdentitiesEntry\022\013\n\003key\030\001 \001(\t\0225\n\005value\030\002" +
-      " \001(\0132&.bloombox.schema.identity.UserIden" +
-      "tity:\0028\001\032K\n\nMediaEntry\022\013\n\003key\030\001 \001(\t\022,\n\005v" +
-      "alue\030\002 \001(\0132\035.opencannabis.media.MediaIte" +
-      "m:\0028\001:\r\202\367\002\t\010\002\022\005users\"\367\002\n\tUserFlags\022D\n\tva" +
-      "lidated\030\001 \001(\010B1\212@.Indicates that the acc" +
-      "ount has been validated.\022H\n\tsuspended\030\002 " +
-      "\001(\010B5\212@2Indicates that the account is cu" +
-      "rrently suspended.\022B\n\005admin\030\003 \001(\010B3\212@0In" +
-      "dicates that the account has admin privi" +
-      "leges.\022G\n\004beta\030\004 \001(\010B9\212@6Indicates that " +
-      "the account has access to beta systems.\022" +
-      "M\n\007sandbox\030\005 \001(\010B<\212@9Indicates that the " +
-      "account has access to sandbox systems.\"\345" +
-      "\002\n\014UserIdentity\022l\n\010provider\030\001 \001(\0162*.bloo" +
-      "mbox.schema.identity.IdentityProviderB.\212" +
-      "@+Provider for this external/foreign acc" +
-      "ount.\022L\n\002id\030\002 \001(\tB@\302\265\003\002\010\002\212@7Unique ID fo" +
-      "r this account with the specified provid" +
-      "er.\022\204\001\n\004seen\030\003 \001(\0132\036.opencannabis.tempor" +
-      "al.InstantBV\212@STimestamp for when this i" +
-      "dentity was last user to authenticate th" +
-      "e underlying user.:\022\202\367\002\016\010\002\022\nidentities\"\220" +
-      "\006\n\017ConsumerProfile\0220\n\006active\030\001 \001(\010B \212@\035P" +
-      "rofile active/inactive flag.\022N\n\025favorite" +
-      "_dispensaries\030\002 \003(\tB/\212@,Enumerates favor" +
-      "ite dispensaries for a user.\022~\n\021enrollme" +
-      "nt_source\030\003 \001(\0162*.bloombox.schema.identi" +
-      "ty.EnrollmentSourceB7\212@4Specifies enroll" +
-      "ment source attribution information.\022a\n\022" +
-      "enrollment_channel\030\004 \001(\tBE\212@BArbitrary s" +
-      "tring for the channel through which this" +
-      " user enrolled.\022r\n\013preferences\030\005 \001(\0132-.b" +
-      "loombox.schema.identity.ConsumerPreferen" +
-      "cesB.\212@+Preferences attached to a consum" +
-      "er account.\022n\n\004type\030\006 \001(\0162&.bloombox.sch" +
-      "ema.identity.ConsumerTypeB8\212@5Specifies " +
-      "the primary consumer type for this accou" +
-      "nt.\022x\n\017referral_source\030\007 \001(\0162(.bloombox." +
-      "schema.identity.ReferralSourceB5\212@2Speci" +
-      "fies referral source attribution informa" +
-      "tion.\022:\n\017referral_detail\030\010 \001(\tB!\212@\036Speci" +
-      "fies the referrer\'s name.\"\250\005\n\017MenuPrefer" +
-      "ences\022j\n\007section\030\001 \003(\0162+.opencannabis.pr" +
-      "oducts.menu.section.SectionB,\212@)Preferre" +
-      "d menu sections or product types.\022h\n\007fee" +
-      "ling\030\002 \003(\0162(.opencannabis.structs.labtes" +
-      "ting.FeelingB-\212@*Preferred feelings or e" +
-      "xperiential states.\022[\n\ntaste_note\030\003 \003(\0162" +
-      "*.opencannabis.structs.labtesting.TasteN" +
-      "oteB\033\212@\030Preferred tasting notes.\022d\n\017desi" +
-      "red_potency\030\004 \001(\01620.opencannabis.structs" +
-      ".labtesting.PotencyEstimateB\031\212@\026Desired " +
-      "potency level.\022k\n\021cannabinoid_ratio\030\005 \001(" +
-      "\01621.opencannabis.structs.labtesting.Cann" +
-      "abinoidRatioB\035\212@\032Desired cannabinoid rat" +
-      "io.\022K\n\007species\030\006 \003(\0162\035.opencannabis.stru" +
-      "cts.SpeciesB\033\212@\030Preferred species types." +
-      "\022B\n\004grow\030\007 \003(\0162\032.opencannabis.structs.Gr" +
-      "owB\030\212@\025Preferred grow types.\"\204\001\n\023Consume" +
-      "rPreferences\022m\n\004menu\030\n \001(\0132).bloombox.sc" +
-      "hema.identity.MenuPreferencesB4\212@1Prefer" +
-      "red menu sections/product types, and so " +
-      "on.\"\213\004\n\022ConsumerMembership\022l\n\017referral_s" +
-      "ource\030\001 \001(\0162*.bloombox.schema.identity.E" +
-      "nrollmentSourceB\'\212@$Referral source for " +
-      "this enrollment.\022^\n\020referral_channel\030\002 \001" +
-      "(\tBD\212@AReferral channel token - an artbi" +
-      "rary, end-system provided value.\022b\n\014sign" +
-      "ed_up_at\030\003 \001(\0132\036.opencannabis.temporal.I" +
-      "nstantB,\212@)Timestamp for when this profi" +
-      "le enrolled.\022_\n\004seen\030\004 \001(\0132\036.opencannabi" +
-      "s.temporal.InstantB1\212@.Timestamp for whe" +
-      "n this profile was last seen.\022b\n\nforeign" +
-      "_id\030\005 \001(\tBN\212@KForeign ID for this member" +
-      "ship, in the partner-colocated membershi" +
-      "p system.\"\245\002\n\017IndustryProfile\0222\n\006active\030" +
-      "\001 \001(\010B\"\212@\037Profile inactive/active status" +
-      ".\022~\n\010partners\030\002 \003(\01327.bloombox.schema.id" +
-      "entity.IndustryProfile.PartnersEntryB3\212@" +
-      "0Map of partner accesses levels to partn" +
-      "er codes.\032^\n\rPartnersEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "<\n\005value\030\002 \001(\0132-.bloombox.schema.securit" +
-      "y.access.AccessPolicy:\0028\001*A\n\rUserMediaTy" +
-      "pe\022\013\n\007PICTURE\020\000\022\023\n\017DRIVERS_LICENSE\020\001\022\016\n\n" +
-      "DOCTOR_REC\020\002*D\n\020IdentityProvider\022\t\n\005EMAI" +
-      "L\020\000\022\n\n\006GOOGLE\020\001\022\014\n\010FACEBOOK\020\002\022\013\n\007TWITTER" +
-      "\020\003*l\n\020EnrollmentSource\022\017\n\013UNSPECIFIED\020\000\022" +
-      "\n\n\006ONLINE\020\001\022\020\n\014INTERNAL_APP\020\002\022\017\n\013PARTNER" +
-      "_APP\020\003\022\014\n\010IN_STORE\020\004\022\n\n\006IMPORT\020\005*U\n\016Refe" +
-      "rralSource\022\013\n\007UNKNOWN\020\000\022\013\n\007OUTDOOR\020\001\022\013\n\007" +
-      "DIGITAL\020\002\022\020\n\014SOCIAL_MEDIA\020\003\022\n\n\006FRIEND\020\004*" +
-      ">\n\014ConsumerType\022\017\n\013UNVALIDATED\020\000\022\020\n\014RECR" +
-      "EATIONAL\020\001\022\013\n\007MEDICAL\020\002B0\n\033io.bloombox.s" +
-      "chema.identityB\007AppUserH\001P\000\242\002\003BBSb\006proto" +
-      "3"
+      ".proto\032\034identity/MembershipKey.proto\032\033pr" +
+      "oducts/menu/Section.proto\032\022structs/Grow." +
+      "proto\032\025structs/Species.proto\032$structs/la" +
+      "btesting/TestResults.proto\032(security/acc" +
+      "ess/PartnerPermissions.proto\"\223\n\n\004User\022-\n" +
+      "\003uid\030\001 \001(\tB \302\265\003\002\010\002\212@\027Unique ID for the u" +
+      "ser.\022Y\n\005flags\030\002 \001(\0132#.bloombox.schema.id" +
+      "entity.UserFlagsB%\302\265\003\002\010\004\212@\034Boolean flags" +
+      " for this user.\022Z\n\006person\030\003 \001(\0132\033.openca" +
+      "nnabis.person.PersonB-\212@*Person\'s inform" +
+      "ation that backs this user.\022z\n\016identific" +
+      "ation\030\024 \003(\0132\034.bloombox.schema.identity.I" +
+      "DBD\200@\001\212@(Government ID associated with t" +
+      "his user.\322\265\003\022\010\001\032\016identification\022\217\001\n\ndoct" +
+      "or_rec\030\025 \003(\0132+.bloombox.schema.identity." +
+      "ids.UserDoctorRecBN\200@\001\212@3Doctor\'s recomm" +
+      "endations associated with this user.\322\265\003\021" +
+      "\010\001\032\rprescriptions\022m\n\004seen\030\036 \001(\0132\036.openca" +
+      "nnabis.temporal.InstantB?\212@<Last time th" +
+      "is user was seen, via auth/login/enrollm" +
+      "ent etc.\022\\\n\006signup\030\037 \001(\0132\036.opencannabis." +
+      "temporal.InstantB,\212@)Timestamp for when " +
+      "this user was created.\022o\n\nidentities\030( \003" +
+      "(\0132..bloombox.schema.identity.User.Ident" +
+      "itiesEntryB+\200@\001\212@%Identities associated " +
+      "with this user.\022`\n\005media\030) \003(\0132).bloombo" +
+      "x.schema.identity.User.MediaEntryB&\200@\001\212@" +
+      " Media associated with this user.\022_\n\010con" +
+      "sumer\030d \001(\0132).bloombox.schema.identity.C" +
+      "onsumerProfileB\"\212@\037Consumer profile for " +
+      "this user.\022_\n\010industry\030e \001(\0132).bloombox." +
+      "schema.identity.IndustryProfileB\"\212@\037Indu" +
+      "stry profile for this user.\032Y\n\017Identitie" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\0225\n\005value\030\002 \001(\0132&.blo" +
+      "ombox.schema.identity.UserIdentity:\0028\001\032K" +
+      "\n\nMediaEntry\022\013\n\003key\030\001 \001(\t\022,\n\005value\030\002 \001(\013" +
+      "2\035.opencannabis.media.MediaItem:\0028\001:\r\202\367\002" +
+      "\t\010\002\022\005users\"\367\002\n\tUserFlags\022D\n\tvalidated\030\001 " +
+      "\001(\010B1\212@.Indicates that the account has b" +
+      "een validated.\022H\n\tsuspended\030\002 \001(\010B5\212@2In" +
+      "dicates that the account is currently su" +
+      "spended.\022B\n\005admin\030\003 \001(\010B3\212@0Indicates th" +
+      "at the account has admin privileges.\022G\n\004" +
+      "beta\030\004 \001(\010B9\212@6Indicates that the accoun" +
+      "t has access to beta systems.\022M\n\007sandbox" +
+      "\030\005 \001(\010B<\212@9Indicates that the account ha" +
+      "s access to sandbox systems.\"\345\002\n\014UserIde" +
+      "ntity\022l\n\010provider\030\001 \001(\0162*.bloombox.schem" +
+      "a.identity.IdentityProviderB.\212@+Provider" +
+      " for this external/foreign account.\022L\n\002i" +
+      "d\030\002 \001(\tB@\302\265\003\002\010\002\212@7Unique ID for this acc" +
+      "ount with the specified provider.\022\204\001\n\004se" +
+      "en\030\003 \001(\0132\036.opencannabis.temporal.Instant" +
+      "BV\212@STimestamp for when this identity wa" +
+      "s last user to authenticate the underlyi" +
+      "ng user.:\022\202\367\002\016\010\002\022\nidentities\"\220\006\n\017Consume" +
+      "rProfile\0220\n\006active\030\001 \001(\010B \212@\035Profile act" +
+      "ive/inactive flag.\022N\n\025favorite_dispensar" +
+      "ies\030\002 \003(\tB/\212@,Enumerates favorite dispen" +
+      "saries for a user.\022~\n\021enrollment_source\030" +
+      "\003 \001(\0162*.bloombox.schema.identity.Enrollm" +
+      "entSourceB7\212@4Specifies enrollment sourc" +
+      "e attribution information.\022a\n\022enrollment" +
+      "_channel\030\004 \001(\tBE\212@BArbitrary string for " +
+      "the channel through which this user enro" +
+      "lled.\022r\n\013preferences\030\005 \001(\0132-.bloombox.sc" +
+      "hema.identity.ConsumerPreferencesB.\212@+Pr" +
+      "eferences attached to a consumer account" +
+      ".\022n\n\004type\030\006 \001(\0162&.bloombox.schema.identi" +
+      "ty.ConsumerTypeB8\212@5Specifies the primar" +
+      "y consumer type for this account.\022x\n\017ref" +
+      "erral_source\030\007 \001(\0162(.bloombox.schema.ide" +
+      "ntity.ReferralSourceB5\212@2Specifies refer" +
+      "ral source attribution information.\022:\n\017r" +
+      "eferral_detail\030\010 \001(\tB!\212@\036Specifies the r" +
+      "eferrer\'s name.\"\250\005\n\017MenuPreferences\022j\n\007s" +
+      "ection\030\001 \003(\0162+.opencannabis.products.men" +
+      "u.section.SectionB,\212@)Preferred menu sec" +
+      "tions or product types.\022h\n\007feeling\030\002 \003(\016" +
+      "2(.opencannabis.structs.labtesting.Feeli" +
+      "ngB-\212@*Preferred feelings or experientia" +
+      "l states.\022[\n\ntaste_note\030\003 \003(\0162*.opencann" +
+      "abis.structs.labtesting.TasteNoteB\033\212@\030Pr" +
+      "eferred tasting notes.\022d\n\017desired_potenc" +
+      "y\030\004 \001(\01620.opencannabis.structs.labtestin" +
+      "g.PotencyEstimateB\031\212@\026Desired potency le" +
+      "vel.\022k\n\021cannabinoid_ratio\030\005 \001(\01621.openca" +
+      "nnabis.structs.labtesting.CannabinoidRat" +
+      "ioB\035\212@\032Desired cannabinoid ratio.\022K\n\007spe" +
+      "cies\030\006 \003(\0162\035.opencannabis.structs.Specie" +
+      "sB\033\212@\030Preferred species types.\022B\n\004grow\030\007" +
+      " \003(\0162\032.opencannabis.structs.GrowB\030\212@\025Pre" +
+      "ferred grow types.\"\204\001\n\023ConsumerPreferenc" +
+      "es\022m\n\004menu\030\n \001(\0132).bloombox.schema.ident" +
+      "ity.MenuPreferencesB4\212@1Preferred menu s" +
+      "ections/product types, and so on.\"\212\005\n\022Co" +
+      "nsumerMembership\022l\n\017referral_source\030\001 \001(" +
+      "\0162*.bloombox.schema.identity.EnrollmentS" +
+      "ourceB\'\212@$Referral source for this enrol" +
+      "lment.\022^\n\020referral_channel\030\002 \001(\tBD\212@ARef" +
+      "erral channel token - an artbirary, end-" +
+      "system provided value.\022b\n\014signed_up_at\030\003" +
+      " \001(\0132\036.opencannabis.temporal.InstantB,\212@" +
+      ")Timestamp for when this profile enrolle" +
+      "d.\022_\n\004seen\030\004 \001(\0132\036.opencannabis.temporal" +
+      ".InstantB1\212@.Timestamp for when this pro" +
+      "file was last seen.\022b\n\nforeign_id\030\005 \001(\tB" +
+      "N\212@KForeign ID for this membership, in t" +
+      "he partner-colocated membership system.\022" +
+      "}\n\003key\030\006 \001(\0132\'.bloombox.schema.identity." +
+      "MembershipKeyBG\212@DMembership key represe" +
+      "nting this user\'s membership at this loc" +
+      "ation.\"\263\002\n\017IndustryProfile\0222\n\006active\030\001 \001" +
+      "(\010B\"\212@\037Profile inactive/active status.\022\213" +
+      "\001\n\010partners\030\002 \003(\01327.bloombox.schema.iden" +
+      "tity.IndustryProfile.PartnersEntryB@\212@=M" +
+      "ap of partner accesses levels to partner" +
+      " and location codes.\032^\n\rPartnersEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022<\n\005value\030\002 \001(\0132-.bloombox.sch" +
+      "ema.security.access.AccessPolicy:\0028\001*A\n\r" +
+      "UserMediaType\022\013\n\007PICTURE\020\000\022\023\n\017DRIVERS_LI" +
+      "CENSE\020\001\022\016\n\nDOCTOR_REC\020\002*O\n\020IdentityProvi" +
+      "der\022\t\n\005EMAIL\020\000\022\n\n\006GOOGLE\020\001\022\014\n\010FACEBOOK\020\002" +
+      "\022\013\n\007TWITTER\020\003\022\t\n\005PHONE\020\004*l\n\020EnrollmentSo" +
+      "urce\022\017\n\013UNSPECIFIED\020\000\022\n\n\006ONLINE\020\001\022\020\n\014INT" +
+      "ERNAL_APP\020\002\022\017\n\013PARTNER_APP\020\003\022\014\n\010IN_STORE" +
+      "\020\004\022\n\n\006IMPORT\020\005*U\n\016ReferralSource\022\013\n\007UNKN" +
+      "OWN\020\000\022\013\n\007OUTDOOR\020\001\022\013\n\007DIGITAL\020\002\022\020\n\014SOCIA" +
+      "L_MEDIA\020\003\022\n\n\006FRIEND\020\004*Q\n\014ConsumerType\022\017\n" +
+      "\013UNVALIDATED\020\000\022\020\n\014RECREATIONAL\020\001\022\r\n\tADUL" +
+      "T_USE\020\001\022\013\n\007MEDICAL\020\002\032\002\020\001B0\n\033io.bloombox." +
+      "schema.identityB\007AppUserH\001P\000\242\002\003BBSb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13531,6 +13827,7 @@ public final class AppUser {
           io.opencannabis.schema.person.PersonOuterClass.getDescriptor(),
           io.bloombox.schema.identity.IdentityID.getDescriptor(),
           io.bloombox.schema.identity.ids.PrescriptionID.getDescriptor(),
+          io.bloombox.schema.identity.AppMemberKey.getDescriptor(),
           io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor(),
           io.opencannabis.schema.product.struct.MaterialGrow.getDescriptor(),
           io.opencannabis.schema.product.struct.MaterialSpecies.getDescriptor(),
@@ -13590,7 +13887,7 @@ public final class AppUser {
     internal_static_bloombox_schema_identity_ConsumerMembership_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_ConsumerMembership_descriptor,
-        new java.lang.String[] { "ReferralSource", "ReferralChannel", "SignedUpAt", "Seen", "ForeignId", });
+        new java.lang.String[] { "ReferralSource", "ReferralChannel", "SignedUpAt", "Seen", "ForeignId", "Key", });
     internal_static_bloombox_schema_identity_IndustryProfile_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_bloombox_schema_identity_IndustryProfile_fieldAccessorTable = new
@@ -13619,6 +13916,7 @@ public final class AppUser {
     io.opencannabis.schema.person.PersonOuterClass.getDescriptor();
     io.bloombox.schema.identity.IdentityID.getDescriptor();
     io.bloombox.schema.identity.ids.PrescriptionID.getDescriptor();
+    io.bloombox.schema.identity.AppMemberKey.getDescriptor();
     io.opencannabis.schema.menu.section.SectionOuterClass.getDescriptor();
     io.opencannabis.schema.product.struct.MaterialGrow.getDescriptor();
     io.opencannabis.schema.product.struct.MaterialSpecies.getDescriptor();

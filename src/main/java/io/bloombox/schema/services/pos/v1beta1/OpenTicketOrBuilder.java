@@ -20,7 +20,7 @@
 
 package io.bloombox.schema.services.pos.v1beta1;
 
-public interface PingOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.Ping)
+public interface OpenTicketOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.OpenTicket)
     com.google.protobuf.MessageOrBuilder {
 }

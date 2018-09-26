@@ -25,28 +25,129 @@ public interface MenuProductOrBuilder extends
 
   /**
    * <pre>
-   * Section that this data is attached to.
+   * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+   * attached concrete record below.
    * </pre>
    *
-   * <code>.opencannabis.base.ProductKey key = 1;</code>
+   * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
    */
   boolean hasKey();
   /**
    * <pre>
-   * Section that this data is attached to.
+   * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+   * attached concrete record below.
    * </pre>
    *
-   * <code>.opencannabis.base.ProductKey key = 1;</code>
+   * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
    */
   io.opencannabis.schema.base.BaseProductKey.ProductKey getKey();
   /**
    * <pre>
-   * Section that this data is attached to.
+   * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+   * attached concrete record below.
    * </pre>
    *
-   * <code>.opencannabis.base.ProductKey key = 1;</code>
+   * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
    */
   io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder();
+
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  java.util.List<io.opencannabis.schema.menu.ProductTag> 
+      getTagList();
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  io.opencannabis.schema.menu.ProductTag getTag(int index);
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  int getTagCount();
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  java.util.List<? extends io.opencannabis.schema.menu.ProductTagOrBuilder> 
+      getTagOrBuilderList();
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  io.opencannabis.schema.menu.ProductTagOrBuilder getTagOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  java.util.List<io.opencannabis.schema.menu.ForeignReference> 
+      getRefList();
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  io.opencannabis.schema.menu.ForeignReference getRef(int index);
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  int getRefCount();
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  java.util.List<? extends io.opencannabis.schema.menu.ForeignReferenceOrBuilder> 
+      getRefOrBuilderList();
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  io.opencannabis.schema.menu.ForeignReferenceOrBuilder getRefOrBuilder(
+      int index);
 
   /**
    * <pre>
