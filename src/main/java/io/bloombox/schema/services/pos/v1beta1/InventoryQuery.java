@@ -99,47 +99,28 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Specific keys the requestor is interested in, if applicable.
+     * Specific key the requestor is interested in, if applicable.
      * </pre>
      *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+     * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
      */
-    java.util.List<io.opencannabis.schema.inventory.InventoryKey> 
-        getKeyList();
+    boolean hasKey();
     /**
      * <pre>
-     * Specific keys the requestor is interested in, if applicable.
+     * Specific key the requestor is interested in, if applicable.
      * </pre>
      *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+     * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
      */
-    io.opencannabis.schema.inventory.InventoryKey getKey(int index);
+    io.opencannabis.schema.inventory.InventoryKey getKey();
     /**
      * <pre>
-     * Specific keys the requestor is interested in, if applicable.
+     * Specific key the requestor is interested in, if applicable.
      * </pre>
      *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+     * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
      */
-    int getKeyCount();
-    /**
-     * <pre>
-     * Specific keys the requestor is interested in, if applicable.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-     */
-    java.util.List<? extends io.opencannabis.schema.inventory.InventoryKeyOrBuilder> 
-        getKeyOrBuilderList();
-    /**
-     * <pre>
-     * Specific keys the requestor is interested in, if applicable.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-     */
-    io.opencannabis.schema.inventory.InventoryKeyOrBuilder getKeyOrBuilder(
-        int index);
+    io.opencannabis.schema.inventory.InventoryKeyOrBuilder getKeyOrBuilder();
   }
   /**
    * <pre>
@@ -158,7 +139,6 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private KeyQuerySpec() {
-      key_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -193,12 +173,16 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                key_ = new java.util.ArrayList<io.opencannabis.schema.inventory.InventoryKey>();
-                mutable_bitField0_ |= 0x00000001;
+              io.opencannabis.schema.inventory.InventoryKey.Builder subBuilder = null;
+              if (key_ != null) {
+                subBuilder = key_.toBuilder();
               }
-              key_.add(
-                  input.readMessage(io.opencannabis.schema.inventory.InventoryKey.parser(), extensionRegistry));
+              key_ = input.readMessage(io.opencannabis.schema.inventory.InventoryKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(key_);
+                key_ = subBuilder.buildPartial();
+              }
+
               break;
             }
           }
@@ -209,9 +193,6 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          key_ = java.util.Collections.unmodifiableList(key_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -229,58 +210,36 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int KEY_FIELD_NUMBER = 1;
-    private java.util.List<io.opencannabis.schema.inventory.InventoryKey> key_;
+    private io.opencannabis.schema.inventory.InventoryKey key_;
     /**
      * <pre>
-     * Specific keys the requestor is interested in, if applicable.
+     * Specific key the requestor is interested in, if applicable.
      * </pre>
      *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+     * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
      */
-    public java.util.List<io.opencannabis.schema.inventory.InventoryKey> getKeyList() {
-      return key_;
+    public boolean hasKey() {
+      return key_ != null;
     }
     /**
      * <pre>
-     * Specific keys the requestor is interested in, if applicable.
+     * Specific key the requestor is interested in, if applicable.
      * </pre>
      *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+     * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
      */
-    public java.util.List<? extends io.opencannabis.schema.inventory.InventoryKeyOrBuilder> 
-        getKeyOrBuilderList() {
-      return key_;
+    public io.opencannabis.schema.inventory.InventoryKey getKey() {
+      return key_ == null ? io.opencannabis.schema.inventory.InventoryKey.getDefaultInstance() : key_;
     }
     /**
      * <pre>
-     * Specific keys the requestor is interested in, if applicable.
+     * Specific key the requestor is interested in, if applicable.
      * </pre>
      *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+     * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
      */
-    public int getKeyCount() {
-      return key_.size();
-    }
-    /**
-     * <pre>
-     * Specific keys the requestor is interested in, if applicable.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-     */
-    public io.opencannabis.schema.inventory.InventoryKey getKey(int index) {
-      return key_.get(index);
-    }
-    /**
-     * <pre>
-     * Specific keys the requestor is interested in, if applicable.
-     * </pre>
-     *
-     * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-     */
-    public io.opencannabis.schema.inventory.InventoryKeyOrBuilder getKeyOrBuilder(
-        int index) {
-      return key_.get(index);
+    public io.opencannabis.schema.inventory.InventoryKeyOrBuilder getKeyOrBuilder() {
+      return getKey();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -295,8 +254,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < key_.size(); i++) {
-        output.writeMessage(1, key_.get(i));
+      if (key_ != null) {
+        output.writeMessage(1, getKey());
       }
       unknownFields.writeTo(output);
     }
@@ -306,9 +265,9 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < key_.size(); i++) {
+      if (key_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, key_.get(i));
+          .computeMessageSize(1, getKey());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -326,8 +285,11 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.pos.v1beta1.InventoryQuery.KeyQuerySpec other = (io.bloombox.schema.services.pos.v1beta1.InventoryQuery.KeyQuerySpec) obj;
 
       boolean result = true;
-      result = result && getKeyList()
-          .equals(other.getKeyList());
+      result = result && (hasKey() == other.hasKey());
+      if (hasKey()) {
+        result = result && getKey()
+            .equals(other.getKey());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -339,9 +301,9 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getKeyCount() > 0) {
+      if (hasKey()) {
         hash = (37 * hash) + KEY_FIELD_NUMBER;
-        hash = (53 * hash) + getKeyList().hashCode();
+        hash = (53 * hash) + getKey().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -472,16 +434,15 @@ private static final long serialVersionUID = 0L;
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getKeyFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
         if (keyBuilder_ == null) {
-          key_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          key_ = null;
         } else {
-          keyBuilder_.clear();
+          key_ = null;
+          keyBuilder_ = null;
         }
         return this;
       }
@@ -505,12 +466,7 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.pos.v1beta1.InventoryQuery.KeyQuerySpec buildPartial() {
         io.bloombox.schema.services.pos.v1beta1.InventoryQuery.KeyQuerySpec result = new io.bloombox.schema.services.pos.v1beta1.InventoryQuery.KeyQuerySpec(this);
-        int from_bitField0_ = bitField0_;
         if (keyBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            key_ = java.util.Collections.unmodifiableList(key_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
           result.key_ = key_;
         } else {
           result.key_ = keyBuilder_.build();
@@ -556,31 +512,8 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.InventoryQuery.KeyQuerySpec other) {
         if (other == io.bloombox.schema.services.pos.v1beta1.InventoryQuery.KeyQuerySpec.getDefaultInstance()) return this;
-        if (keyBuilder_ == null) {
-          if (!other.key_.isEmpty()) {
-            if (key_.isEmpty()) {
-              key_ = other.key_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureKeyIsMutable();
-              key_.addAll(other.key_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.key_.isEmpty()) {
-            if (keyBuilder_.isEmpty()) {
-              keyBuilder_.dispose();
-              keyBuilder_ = null;
-              key_ = other.key_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              keyBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getKeyFieldBuilder() : null;
-            } else {
-              keyBuilder_.addAllMessages(other.key_);
-            }
-          }
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -608,313 +541,153 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
-      private int bitField0_;
 
-      private java.util.List<io.opencannabis.schema.inventory.InventoryKey> key_ =
-        java.util.Collections.emptyList();
-      private void ensureKeyIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          key_ = new java.util.ArrayList<io.opencannabis.schema.inventory.InventoryKey>(key_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
+      private io.opencannabis.schema.inventory.InventoryKey key_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.inventory.InventoryKey, io.opencannabis.schema.inventory.InventoryKey.Builder, io.opencannabis.schema.inventory.InventoryKeyOrBuilder> keyBuilder_;
+      /**
+       * <pre>
+       * Specific key the requestor is interested in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
+       */
+      public boolean hasKey() {
+        return keyBuilder_ != null || key_ != null;
+      }
+      /**
+       * <pre>
+       * Specific key the requestor is interested in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
+       */
+      public io.opencannabis.schema.inventory.InventoryKey getKey() {
+        if (keyBuilder_ == null) {
+          return key_ == null ? io.opencannabis.schema.inventory.InventoryKey.getDefaultInstance() : key_;
+        } else {
+          return keyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specific key the requestor is interested in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
+       */
+      public Builder setKey(io.opencannabis.schema.inventory.InventoryKey value) {
+        if (keyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          key_ = value;
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(value);
+        }
 
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public java.util.List<io.opencannabis.schema.inventory.InventoryKey> getKeyList() {
-        if (keyBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(key_);
-        } else {
-          return keyBuilder_.getMessageList();
-        }
+        return this;
       }
       /**
        * <pre>
-       * Specific keys the requestor is interested in, if applicable.
+       * Specific key the requestor is interested in, if applicable.
        * </pre>
        *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public int getKeyCount() {
-        if (keyBuilder_ == null) {
-          return key_.size();
-        } else {
-          return keyBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public io.opencannabis.schema.inventory.InventoryKey getKey(int index) {
-        if (keyBuilder_ == null) {
-          return key_.get(index);
-        } else {
-          return keyBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
        */
       public Builder setKey(
-          int index, io.opencannabis.schema.inventory.InventoryKey value) {
-        if (keyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureKeyIsMutable();
-          key_.set(index, value);
-          onChanged();
-        } else {
-          keyBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public Builder setKey(
-          int index, io.opencannabis.schema.inventory.InventoryKey.Builder builderForValue) {
-        if (keyBuilder_ == null) {
-          ensureKeyIsMutable();
-          key_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          keyBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public Builder addKey(io.opencannabis.schema.inventory.InventoryKey value) {
-        if (keyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureKeyIsMutable();
-          key_.add(value);
-          onChanged();
-        } else {
-          keyBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public Builder addKey(
-          int index, io.opencannabis.schema.inventory.InventoryKey value) {
-        if (keyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureKeyIsMutable();
-          key_.add(index, value);
-          onChanged();
-        } else {
-          keyBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public Builder addKey(
           io.opencannabis.schema.inventory.InventoryKey.Builder builderForValue) {
         if (keyBuilder_ == null) {
-          ensureKeyIsMutable();
-          key_.add(builderForValue.build());
+          key_ = builderForValue.build();
           onChanged();
         } else {
-          keyBuilder_.addMessage(builderForValue.build());
+          keyBuilder_.setMessage(builderForValue.build());
         }
+
         return this;
       }
       /**
        * <pre>
-       * Specific keys the requestor is interested in, if applicable.
+       * Specific key the requestor is interested in, if applicable.
        * </pre>
        *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
        */
-      public Builder addKey(
-          int index, io.opencannabis.schema.inventory.InventoryKey.Builder builderForValue) {
+      public Builder mergeKey(io.opencannabis.schema.inventory.InventoryKey value) {
         if (keyBuilder_ == null) {
-          ensureKeyIsMutable();
-          key_.add(index, builderForValue.build());
+          if (key_ != null) {
+            key_ =
+              io.opencannabis.schema.inventory.InventoryKey.newBuilder(key_).mergeFrom(value).buildPartial();
+          } else {
+            key_ = value;
+          }
           onChanged();
         } else {
-          keyBuilder_.addMessage(index, builderForValue.build());
+          keyBuilder_.mergeFrom(value);
         }
+
         return this;
       }
       /**
        * <pre>
-       * Specific keys the requestor is interested in, if applicable.
+       * Specific key the requestor is interested in, if applicable.
        * </pre>
        *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public Builder addAllKey(
-          java.lang.Iterable<? extends io.opencannabis.schema.inventory.InventoryKey> values) {
-        if (keyBuilder_ == null) {
-          ensureKeyIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, key_);
-          onChanged();
-        } else {
-          keyBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
        */
       public Builder clearKey() {
         if (keyBuilder_ == null) {
-          key_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          key_ = null;
           onChanged();
         } else {
-          keyBuilder_.clear();
+          key_ = null;
+          keyBuilder_ = null;
         }
+
         return this;
       }
       /**
        * <pre>
-       * Specific keys the requestor is interested in, if applicable.
+       * Specific key the requestor is interested in, if applicable.
        * </pre>
        *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
        */
-      public Builder removeKey(int index) {
-        if (keyBuilder_ == null) {
-          ensureKeyIsMutable();
-          key_.remove(index);
-          onChanged();
-        } else {
-          keyBuilder_.remove(index);
-        }
-        return this;
+      public io.opencannabis.schema.inventory.InventoryKey.Builder getKeyBuilder() {
+        
+        onChanged();
+        return getKeyFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Specific keys the requestor is interested in, if applicable.
+       * Specific key the requestor is interested in, if applicable.
        * </pre>
        *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
        */
-      public io.opencannabis.schema.inventory.InventoryKey.Builder getKeyBuilder(
-          int index) {
-        return getKeyFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public io.opencannabis.schema.inventory.InventoryKeyOrBuilder getKeyOrBuilder(
-          int index) {
-        if (keyBuilder_ == null) {
-          return key_.get(index);  } else {
-          return keyBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public java.util.List<? extends io.opencannabis.schema.inventory.InventoryKeyOrBuilder> 
-           getKeyOrBuilderList() {
+      public io.opencannabis.schema.inventory.InventoryKeyOrBuilder getKeyOrBuilder() {
         if (keyBuilder_ != null) {
-          return keyBuilder_.getMessageOrBuilderList();
+          return keyBuilder_.getMessageOrBuilder();
         } else {
-          return java.util.Collections.unmodifiableList(key_);
+          return key_ == null ?
+              io.opencannabis.schema.inventory.InventoryKey.getDefaultInstance() : key_;
         }
       }
       /**
        * <pre>
-       * Specific keys the requestor is interested in, if applicable.
+       * Specific key the requestor is interested in, if applicable.
        * </pre>
        *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
+       * <code>.opencannabis.inventory.InventoryKey key = 1;</code>
        */
-      public io.opencannabis.schema.inventory.InventoryKey.Builder addKeyBuilder() {
-        return getKeyFieldBuilder().addBuilder(
-            io.opencannabis.schema.inventory.InventoryKey.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public io.opencannabis.schema.inventory.InventoryKey.Builder addKeyBuilder(
-          int index) {
-        return getKeyFieldBuilder().addBuilder(
-            index, io.opencannabis.schema.inventory.InventoryKey.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Specific keys the requestor is interested in, if applicable.
-       * </pre>
-       *
-       * <code>repeated .opencannabis.inventory.InventoryKey key = 1;</code>
-       */
-      public java.util.List<io.opencannabis.schema.inventory.InventoryKey.Builder> 
-           getKeyBuilderList() {
-        return getKeyFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
+      private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.inventory.InventoryKey, io.opencannabis.schema.inventory.InventoryKey.Builder, io.opencannabis.schema.inventory.InventoryKeyOrBuilder> 
           getKeyFieldBuilder() {
         if (keyBuilder_ == null) {
-          keyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               io.opencannabis.schema.inventory.InventoryKey, io.opencannabis.schema.inventory.InventoryKey.Builder, io.opencannabis.schema.inventory.InventoryKeyOrBuilder>(
-                  key_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getKey(),
                   getParentForChildren(),
                   isClean());
           key_ = null;

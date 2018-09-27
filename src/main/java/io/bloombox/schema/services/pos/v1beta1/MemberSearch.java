@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 2;</code>
+     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
      */
     boolean hasIdentification();
     /**
@@ -877,17 +877,17 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 2;</code>
+     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
      */
-    io.bloombox.schema.identity.IdentityID.ID getIdentification();
+    io.bloombox.schema.identity.IdentityID.IDReference getIdentification();
     /**
      * <pre>
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 2;</code>
+     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
      */
-    io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder();
+    io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder();
 
     /**
      * <pre>
@@ -1030,14 +1030,14 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              io.bloombox.schema.identity.IdentityID.ID.Builder subBuilder = null;
+              io.bloombox.schema.identity.IdentityID.IDReference.Builder subBuilder = null;
               if (specCase_ == 2) {
-                subBuilder = ((io.bloombox.schema.identity.IdentityID.ID) spec_).toBuilder();
+                subBuilder = ((io.bloombox.schema.identity.IdentityID.IDReference) spec_).toBuilder();
               }
               spec_ =
-                  input.readMessage(io.bloombox.schema.identity.IdentityID.ID.parser(), extensionRegistry);
+                  input.readMessage(io.bloombox.schema.identity.IdentityID.IDReference.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((io.bloombox.schema.identity.IdentityID.ID) spec_);
+                subBuilder.mergeFrom((io.bloombox.schema.identity.IdentityID.IDReference) spec_);
                 spec_ = subBuilder.buildPartial();
               }
               specCase_ = 2;
@@ -1180,7 +1180,7 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 2;</code>
+     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
      */
     public boolean hasIdentification() {
       return specCase_ == 2;
@@ -1190,26 +1190,26 @@ private static final long serialVersionUID = 0L;
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 2;</code>
+     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
      */
-    public io.bloombox.schema.identity.IdentityID.ID getIdentification() {
+    public io.bloombox.schema.identity.IdentityID.IDReference getIdentification() {
       if (specCase_ == 2) {
-         return (io.bloombox.schema.identity.IdentityID.ID) spec_;
+         return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
       }
-      return io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance();
+      return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
     }
     /**
      * <pre>
      * Identification presented by the user.
      * </pre>
      *
-     * <code>.bloombox.schema.identity.ID identification = 2;</code>
+     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
      */
-    public io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder() {
+    public io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder() {
       if (specCase_ == 2) {
-         return (io.bloombox.schema.identity.IdentityID.ID) spec_;
+         return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
       }
-      return io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance();
+      return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
     }
 
     public static final int LOBBY_FIELD_NUMBER = 3;
@@ -1343,7 +1343,7 @@ private static final long serialVersionUID = 0L;
         output.writeMessage(1, (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_);
       }
       if (specCase_ == 2) {
-        output.writeMessage(2, (io.bloombox.schema.identity.IdentityID.ID) spec_);
+        output.writeMessage(2, (io.bloombox.schema.identity.IdentityID.IDReference) spec_);
       }
       if (specCase_ == 3) {
         output.writeBool(
@@ -1372,7 +1372,7 @@ private static final long serialVersionUID = 0L;
       }
       if (specCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (io.bloombox.schema.identity.IdentityID.ID) spec_);
+          .computeMessageSize(2, (io.bloombox.schema.identity.IdentityID.IDReference) spec_);
       }
       if (specCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
@@ -1953,13 +1953,13 @@ private static final long serialVersionUID = 0L;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder> identificationBuilder_;
+          io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder> identificationBuilder_;
       /**
        * <pre>
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
       public boolean hasIdentification() {
         return specCase_ == 2;
@@ -1969,19 +1969,19 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
-      public io.bloombox.schema.identity.IdentityID.ID getIdentification() {
+      public io.bloombox.schema.identity.IdentityID.IDReference getIdentification() {
         if (identificationBuilder_ == null) {
           if (specCase_ == 2) {
-            return (io.bloombox.schema.identity.IdentityID.ID) spec_;
+            return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
           }
-          return io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance();
+          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
         } else {
           if (specCase_ == 2) {
             return identificationBuilder_.getMessage();
           }
-          return io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance();
+          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
         }
       }
       /**
@@ -1989,9 +1989,9 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
-      public Builder setIdentification(io.bloombox.schema.identity.IdentityID.ID value) {
+      public Builder setIdentification(io.bloombox.schema.identity.IdentityID.IDReference value) {
         if (identificationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2009,10 +2009,10 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
       public Builder setIdentification(
-          io.bloombox.schema.identity.IdentityID.ID.Builder builderForValue) {
+          io.bloombox.schema.identity.IdentityID.IDReference.Builder builderForValue) {
         if (identificationBuilder_ == null) {
           spec_ = builderForValue.build();
           onChanged();
@@ -2027,13 +2027,13 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
-      public Builder mergeIdentification(io.bloombox.schema.identity.IdentityID.ID value) {
+      public Builder mergeIdentification(io.bloombox.schema.identity.IdentityID.IDReference value) {
         if (identificationBuilder_ == null) {
           if (specCase_ == 2 &&
-              spec_ != io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance()) {
-            spec_ = io.bloombox.schema.identity.IdentityID.ID.newBuilder((io.bloombox.schema.identity.IdentityID.ID) spec_)
+              spec_ != io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance()) {
+            spec_ = io.bloombox.schema.identity.IdentityID.IDReference.newBuilder((io.bloombox.schema.identity.IdentityID.IDReference) spec_)
                 .mergeFrom(value).buildPartial();
           } else {
             spec_ = value;
@@ -2053,7 +2053,7 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
       public Builder clearIdentification() {
         if (identificationBuilder_ == null) {
@@ -2076,9 +2076,9 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
-      public io.bloombox.schema.identity.IdentityID.ID.Builder getIdentificationBuilder() {
+      public io.bloombox.schema.identity.IdentityID.IDReference.Builder getIdentificationBuilder() {
         return getIdentificationFieldBuilder().getBuilder();
       }
       /**
@@ -2086,16 +2086,16 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
-      public io.bloombox.schema.identity.IdentityID.IDOrBuilder getIdentificationOrBuilder() {
+      public io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder() {
         if ((specCase_ == 2) && (identificationBuilder_ != null)) {
           return identificationBuilder_.getMessageOrBuilder();
         } else {
           if (specCase_ == 2) {
-            return (io.bloombox.schema.identity.IdentityID.ID) spec_;
+            return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
           }
-          return io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance();
+          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
         }
       }
       /**
@@ -2103,18 +2103,18 @@ private static final long serialVersionUID = 0L;
        * Identification presented by the user.
        * </pre>
        *
-       * <code>.bloombox.schema.identity.ID identification = 2;</code>
+       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder> 
+          io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder> 
           getIdentificationFieldBuilder() {
         if (identificationBuilder_ == null) {
           if (!(specCase_ == 2)) {
-            spec_ = io.bloombox.schema.identity.IdentityID.ID.getDefaultInstance();
+            spec_ = io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
           }
           identificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.IdentityID.ID, io.bloombox.schema.identity.IdentityID.ID.Builder, io.bloombox.schema.identity.IdentityID.IDOrBuilder>(
-                  (io.bloombox.schema.identity.IdentityID.ID) spec_,
+              io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder>(
+                  (io.bloombox.schema.identity.IdentityID.IDReference) spec_,
                   getParentForChildren(),
                   isClean());
           spec_ = null;
