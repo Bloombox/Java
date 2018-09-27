@@ -66,17 +66,105 @@ public enum POSError
    * The specified ID token was invalid or missing.
    * </pre>
    *
-   * <code>ID_TOKEN_INVALID = 4;</code>
+   * <code>INVALID_ID_TOKEN = 4;</code>
    */
-  ID_TOKEN_INVALID(4),
+  INVALID_ID_TOKEN(4),
   /**
    * <pre>
    * The device's signature was invalid or missing.
    * </pre>
    *
-   * <code>DEVICE_SIGNATURE_INVALID = 5;</code>
+   * <code>INVALID_DEVICE_SIGNATURE = 5;</code>
    */
-  DEVICE_SIGNATURE_INVALID(5),
+  INVALID_DEVICE_SIGNATURE(5),
+  /**
+   * <pre>
+   * Invalid purchase payload.
+   * </pre>
+   *
+   * <code>INVALID_TICKET = 6;</code>
+   */
+  INVALID_TICKET(6),
+  /**
+   * <pre>
+   * Invalid purchase key.
+   * </pre>
+   *
+   * <code>INVALID_TICKET_KEY = 7;</code>
+   */
+  INVALID_TICKET_KEY(7),
+  /**
+   * <pre>
+   * Purchase signature could not be validated.
+   * </pre>
+   *
+   * <code>INVALID_TICKET_SIGNATURE = 8;</code>
+   */
+  INVALID_TICKET_SIGNATURE(8),
+  /**
+   * <pre>
+   * An invalid timestamp was provided.
+   * </pre>
+   *
+   * <code>INVALID_TIMESTAMP = 9;</code>
+   */
+  INVALID_TIMESTAMP(9),
+  /**
+   * <pre>
+   * The given purchase was structurally invalid.
+   * </pre>
+   *
+   * <code>ILLEGAL_TICKET_STRUCTURE = 20;</code>
+   */
+  ILLEGAL_TICKET_STRUCTURE(20),
+  /**
+   * <pre>
+   * The specified ticket version is out of date or invalid.
+   * </pre>
+   *
+   * <code>ILLEGAL_TICKET_VERSION = 21;</code>
+   */
+  ILLEGAL_TICKET_VERSION(21),
+  /**
+   * <pre>
+   * The provided timestamp occurs before the last known event.
+   * </pre>
+   *
+   * <code>ILLEGAL_TIMESTAMP = 22;</code>
+   */
+  ILLEGAL_TIMESTAMP(22),
+  /**
+   * <pre>
+   * Purchase could not be found.
+   * </pre>
+   *
+   * <code>TICKET_NOT_FOUND = 30;</code>
+   */
+  TICKET_NOT_FOUND(30),
+  /**
+   * <pre>
+   * There was a conflict preventing the ticket operation.
+   * </pre>
+   *
+   * <code>TICKET_CONFLICT = 31;</code>
+   */
+  TICKET_CONFLICT(31),
+  /**
+   * <pre>
+   * The ticket in question is currently claimed and cannot be claimed again until closed.
+   * </pre>
+   *
+   * <code>TICKET_CLAIMED = 32;</code>
+   */
+  TICKET_CLAIMED(32),
+  /**
+   * <pre>
+   * Generic invalid request.
+   * </pre>
+   *
+   * <code>INVALID_REQUEST = 96;</code>
+   */
+  INVALID_REQUEST(96),
   /**
    * <pre>
    * Access was denied due to authorization failure.
@@ -141,17 +229,105 @@ public enum POSError
    * The specified ID token was invalid or missing.
    * </pre>
    *
-   * <code>ID_TOKEN_INVALID = 4;</code>
+   * <code>INVALID_ID_TOKEN = 4;</code>
    */
-  public static final int ID_TOKEN_INVALID_VALUE = 4;
+  public static final int INVALID_ID_TOKEN_VALUE = 4;
   /**
    * <pre>
    * The device's signature was invalid or missing.
    * </pre>
    *
-   * <code>DEVICE_SIGNATURE_INVALID = 5;</code>
+   * <code>INVALID_DEVICE_SIGNATURE = 5;</code>
    */
-  public static final int DEVICE_SIGNATURE_INVALID_VALUE = 5;
+  public static final int INVALID_DEVICE_SIGNATURE_VALUE = 5;
+  /**
+   * <pre>
+   * Invalid purchase payload.
+   * </pre>
+   *
+   * <code>INVALID_TICKET = 6;</code>
+   */
+  public static final int INVALID_TICKET_VALUE = 6;
+  /**
+   * <pre>
+   * Invalid purchase key.
+   * </pre>
+   *
+   * <code>INVALID_TICKET_KEY = 7;</code>
+   */
+  public static final int INVALID_TICKET_KEY_VALUE = 7;
+  /**
+   * <pre>
+   * Purchase signature could not be validated.
+   * </pre>
+   *
+   * <code>INVALID_TICKET_SIGNATURE = 8;</code>
+   */
+  public static final int INVALID_TICKET_SIGNATURE_VALUE = 8;
+  /**
+   * <pre>
+   * An invalid timestamp was provided.
+   * </pre>
+   *
+   * <code>INVALID_TIMESTAMP = 9;</code>
+   */
+  public static final int INVALID_TIMESTAMP_VALUE = 9;
+  /**
+   * <pre>
+   * The given purchase was structurally invalid.
+   * </pre>
+   *
+   * <code>ILLEGAL_TICKET_STRUCTURE = 20;</code>
+   */
+  public static final int ILLEGAL_TICKET_STRUCTURE_VALUE = 20;
+  /**
+   * <pre>
+   * The specified ticket version is out of date or invalid.
+   * </pre>
+   *
+   * <code>ILLEGAL_TICKET_VERSION = 21;</code>
+   */
+  public static final int ILLEGAL_TICKET_VERSION_VALUE = 21;
+  /**
+   * <pre>
+   * The provided timestamp occurs before the last known event.
+   * </pre>
+   *
+   * <code>ILLEGAL_TIMESTAMP = 22;</code>
+   */
+  public static final int ILLEGAL_TIMESTAMP_VALUE = 22;
+  /**
+   * <pre>
+   * Purchase could not be found.
+   * </pre>
+   *
+   * <code>TICKET_NOT_FOUND = 30;</code>
+   */
+  public static final int TICKET_NOT_FOUND_VALUE = 30;
+  /**
+   * <pre>
+   * There was a conflict preventing the ticket operation.
+   * </pre>
+   *
+   * <code>TICKET_CONFLICT = 31;</code>
+   */
+  public static final int TICKET_CONFLICT_VALUE = 31;
+  /**
+   * <pre>
+   * The ticket in question is currently claimed and cannot be claimed again until closed.
+   * </pre>
+   *
+   * <code>TICKET_CLAIMED = 32;</code>
+   */
+  public static final int TICKET_CLAIMED_VALUE = 32;
+  /**
+   * <pre>
+   * Generic invalid request.
+   * </pre>
+   *
+   * <code>INVALID_REQUEST = 96;</code>
+   */
+  public static final int INVALID_REQUEST_VALUE = 96;
   /**
    * <pre>
    * Access was denied due to authorization failure.
@@ -200,8 +376,19 @@ public enum POSError
       case 1: return INVALID_PARTNER;
       case 2: return INVALID_LOCATION;
       case 3: return INVALID_DEVICE;
-      case 4: return ID_TOKEN_INVALID;
-      case 5: return DEVICE_SIGNATURE_INVALID;
+      case 4: return INVALID_ID_TOKEN;
+      case 5: return INVALID_DEVICE_SIGNATURE;
+      case 6: return INVALID_TICKET;
+      case 7: return INVALID_TICKET_KEY;
+      case 8: return INVALID_TICKET_SIGNATURE;
+      case 9: return INVALID_TIMESTAMP;
+      case 20: return ILLEGAL_TICKET_STRUCTURE;
+      case 21: return ILLEGAL_TICKET_VERSION;
+      case 22: return ILLEGAL_TIMESTAMP;
+      case 30: return TICKET_NOT_FOUND;
+      case 31: return TICKET_CONFLICT;
+      case 32: return TICKET_CLAIMED;
+      case 96: return INVALID_REQUEST;
       case 97: return AUTHORIZATION_DENIED;
       case 98: return ACCESS_CONFLICT;
       case 99: return INTERNAL_ERROR;

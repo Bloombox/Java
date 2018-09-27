@@ -139,33 +139,33 @@ public final class DevicesServiceBeta1 {
       ".schema.services.devices.v1beta1.Ping.Re" +
       "quest\022I\n\010response\030\002 \001(\01327.bloombox.schem" +
       "a.services.devices.v1beta1.Ping.Response" +
-      "\"\233\003\n\nActivation\032.\n\007Request\022\016\n\006serial\030\001 \001" +
-      "(\t\022\023\n\013fingerprint\030\002 \001(\t\032\256\001\n\010Response\022\016\n\006" +
-      "active\030\001 \001(\010\022D\n\005error\030\002 \001(\01625.bloombox.s" +
-      "chema.services.devices.v1beta1.DeviceErr" +
-      "or\022L\n\010manifest\030\003 \001(\0132:.bloombox.schema.s" +
-      "ervices.devices.v1beta1.DeviceActivation" +
-      "\032\253\001\n\tOperation\022M\n\007request\030\001 \001(\0132<.bloomb" +
-      "ox.schema.services.devices.v1beta1.Activ" +
-      "ation.Request\022O\n\010response\030\002 \001(\0132=.bloomb" +
-      "ox.schema.services.devices.v1beta1.Activ" +
-      "ation.Response*p\n\013DeviceError\022\014\n\010NO_ERRO" +
-      "R\020\000\022\022\n\016INVALID_SERIAL\020\001\022\024\n\020DEVICE_NOT_FO" +
-      "UND\020\002\022\022\n\016INTERNAL_ERROR\020\003\022\025\n\021DEVICE_UNAS" +
-      "SIGNED\020\004*H\n\nDeviceRole\022\016\n\nUNASSIGNED\020\000\022\010" +
-      "\n\004MENU\020\001\022\013\n\007CHECKIN\020\002\022\n\n\006BEACON\020\003\022\007\n\003POS" +
-      "\020\004*!\n\017DataEnvironment\022\006\n\002V1\020\000\022\006\n\002V2\020\0012\337\002" +
-      "\n\007Devices\022\226\001\n\004Ping\0226.bloombox.schema.ser" +
-      "vices.devices.v1beta1.Ping.Request\0327.blo" +
-      "ombox.schema.services.devices.v1beta1.Pi" +
-      "ng.Response\"\035\202\323\344\223\002\027\022\025/devices/v1beta1/pi" +
-      "ng\022\272\001\n\010Activate\022<.bloombox.schema.servic" +
-      "es.devices.v1beta1.Activation.Request\032=." +
-      "bloombox.schema.services.devices.v1beta1" +
-      ".Activation.Response\"1\202\323\344\223\002+\022)/devices/v" +
-      "1beta1/{serial}/device:activateB7\n+io.bl" +
-      "oombox.schema.services.devices.v1beta1H\001" +
-      "P\001\242\002\003BBSb\006proto3"
+      "\"\257\003\n\nActivation\032B\n\007Request\022\016\n\006serial\030\001 \001" +
+      "(\t\022\023\n\013fingerprint\030\002 \001(\t\022\022\n\npublic_key\030\003 " +
+      "\001(\t\032\256\001\n\010Response\022\016\n\006active\030\001 \001(\010\022D\n\005erro" +
+      "r\030\002 \001(\01625.bloombox.schema.services.devic" +
+      "es.v1beta1.DeviceError\022L\n\010manifest\030\003 \001(\013" +
+      "2:.bloombox.schema.services.devices.v1be" +
+      "ta1.DeviceActivation\032\253\001\n\tOperation\022M\n\007re" +
+      "quest\030\001 \001(\0132<.bloombox.schema.services.d" +
+      "evices.v1beta1.Activation.Request\022O\n\010res" +
+      "ponse\030\002 \001(\0132=.bloombox.schema.services.d" +
+      "evices.v1beta1.Activation.Response*p\n\013De" +
+      "viceError\022\014\n\010NO_ERROR\020\000\022\022\n\016INVALID_SERIA" +
+      "L\020\001\022\024\n\020DEVICE_NOT_FOUND\020\002\022\022\n\016INTERNAL_ER" +
+      "ROR\020\003\022\025\n\021DEVICE_UNASSIGNED\020\004*H\n\nDeviceRo" +
+      "le\022\016\n\nUNASSIGNED\020\000\022\010\n\004MENU\020\001\022\013\n\007CHECKIN\020" +
+      "\002\022\n\n\006BEACON\020\003\022\007\n\003POS\020\004*!\n\017DataEnvironmen" +
+      "t\022\006\n\002V1\020\000\022\006\n\002V2\020\0012\337\002\n\007Devices\022\226\001\n\004Ping\0226" +
+      ".bloombox.schema.services.devices.v1beta" +
+      "1.Ping.Request\0327.bloombox.schema.service" +
+      "s.devices.v1beta1.Ping.Response\"\035\202\323\344\223\002\027\022" +
+      "\025/devices/v1beta1/ping\022\272\001\n\010Activate\022<.bl" +
+      "oombox.schema.services.devices.v1beta1.A" +
+      "ctivation.Request\032=.bloombox.schema.serv" +
+      "ices.devices.v1beta1.Activation.Response" +
+      "\"1\202\323\344\223\002+\022)/devices/v1beta1/{serial}/devi" +
+      "ce:activateB7\n+io.bloombox.schema.servic" +
+      "es.devices.v1beta1H\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -248,7 +248,7 @@ public final class DevicesServiceBeta1 {
     internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_descriptor,
-        new java.lang.String[] { "Serial", "Fingerprint", });
+        new java.lang.String[] { "Serial", "Fingerprint", "PublicKey", });
     internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_descriptor =
       internal_static_bloombox_schema_services_devices_v1beta1_Activation_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_fieldAccessorTable = new

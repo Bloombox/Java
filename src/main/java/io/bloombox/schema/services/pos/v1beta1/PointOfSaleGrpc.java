@@ -88,15 +88,15 @@ public final class PointOfSaleGrpc {
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request,
-      io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> METHOD_TICKET_LOAD =
-      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request, io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>newBuilder()
+      io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> METHOD_TICKET_LOAD =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request, io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response>newBuilder()
           .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
           .setFullMethodName(generateFullMethodName(
               "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketLoad"))
           .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request.getDefaultInstance()))
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response.getDefaultInstance()))
+              io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request,
@@ -228,7 +228,7 @@ public final class PointOfSaleGrpc {
      * </pre>
      */
     public void ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request,
-        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> responseObserver) {
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> responseObserver) {
       asyncUnimplementedUnaryCall(METHOD_TICKET_LOAD, responseObserver);
     }
 
@@ -310,7 +310,7 @@ public final class PointOfSaleGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request,
-                io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>(
+                io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response>(
                   this, METHODID_TICKET_LOAD)))
           .addMethod(
             METHOD_TICKET_VOID,
@@ -414,7 +414,7 @@ public final class PointOfSaleGrpc {
      * </pre>
      */
     public void ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request,
-        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> responseObserver) {
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_TICKET_LOAD, getCallOptions()), request, responseObserver);
     }
@@ -534,7 +534,7 @@ public final class PointOfSaleGrpc {
      * Load an existing purchase ticket for read-only access.
      * </pre>
      */
-    public io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request) {
+    public io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response ticketLoad(io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_TICKET_LOAD, getCallOptions(), request);
     }
@@ -642,7 +642,7 @@ public final class PointOfSaleGrpc {
      * Load an existing purchase ticket for read-only access.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response> ticketLoad(
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response> ticketLoad(
         io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request request) {
       return futureUnaryCall(
           getChannel().newCall(METHOD_TICKET_LOAD, getCallOptions()), request);
@@ -734,7 +734,7 @@ public final class PointOfSaleGrpc {
           break;
         case METHODID_TICKET_LOAD:
           serviceImpl.ticketLoad((io.bloombox.schema.services.pos.v1beta1.LoadTicket.Request) request,
-              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.SaveTicket.Response>) responseObserver);
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.LoadTicket.Response>) responseObserver);
           break;
         case METHODID_TICKET_VOID:
           serviceImpl.ticketVoid((io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request) request,

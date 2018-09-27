@@ -132,6 +132,24 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getFingerprintBytes();
+
+    /**
+     * <pre>
+     * Public key fingerprint, in SHA2.
+     * </pre>
+     *
+     * <code>string public_key = 3;</code>
+     */
+    java.lang.String getPublicKey();
+    /**
+     * <pre>
+     * Public key fingerprint, in SHA2.
+     * </pre>
+     *
+     * <code>string public_key = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getPublicKeyBytes();
   }
   /**
    * <pre>
@@ -152,6 +170,7 @@ private static final long serialVersionUID = 0L;
     private Request() {
       serial_ = "";
       fingerprint_ = "";
+      publicKey_ = "";
     }
 
     @java.lang.Override
@@ -195,6 +214,12 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               fingerprint_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              publicKey_ = s;
               break;
             }
           }
@@ -305,6 +330,48 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int PUBLIC_KEY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object publicKey_;
+    /**
+     * <pre>
+     * Public key fingerprint, in SHA2.
+     * </pre>
+     *
+     * <code>string public_key = 3;</code>
+     */
+    public java.lang.String getPublicKey() {
+      java.lang.Object ref = publicKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publicKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Public key fingerprint, in SHA2.
+     * </pre>
+     *
+     * <code>string public_key = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPublicKeyBytes() {
+      java.lang.Object ref = publicKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publicKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -323,6 +390,9 @@ private static final long serialVersionUID = 0L;
       if (!getFingerprintBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fingerprint_);
       }
+      if (!getPublicKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, publicKey_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -336,6 +406,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!getFingerprintBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fingerprint_);
+      }
+      if (!getPublicKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, publicKey_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -357,6 +430,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getSerial());
       result = result && getFingerprint()
           .equals(other.getFingerprint());
+      result = result && getPublicKey()
+          .equals(other.getPublicKey());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -372,6 +447,8 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getSerial().hashCode();
       hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
       hash = (53 * hash) + getFingerprint().hashCode();
+      hash = (37 * hash) + PUBLIC_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPublicKey().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -509,6 +586,8 @@ private static final long serialVersionUID = 0L;
 
         fingerprint_ = "";
 
+        publicKey_ = "";
+
         return this;
       }
 
@@ -533,6 +612,7 @@ private static final long serialVersionUID = 0L;
         io.bloombox.schema.services.devices.v1beta1.Activation.Request result = new io.bloombox.schema.services.devices.v1beta1.Activation.Request(this);
         result.serial_ = serial_;
         result.fingerprint_ = fingerprint_;
+        result.publicKey_ = publicKey_;
         onBuilt();
         return result;
       }
@@ -580,6 +660,10 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getFingerprint().isEmpty()) {
           fingerprint_ = other.fingerprint_;
+          onChanged();
+        }
+        if (!other.getPublicKey().isEmpty()) {
+          publicKey_ = other.publicKey_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -783,6 +867,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
         
         fingerprint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object publicKey_ = "";
+      /**
+       * <pre>
+       * Public key fingerprint, in SHA2.
+       * </pre>
+       *
+       * <code>string public_key = 3;</code>
+       */
+      public java.lang.String getPublicKey() {
+        java.lang.Object ref = publicKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publicKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Public key fingerprint, in SHA2.
+       * </pre>
+       *
+       * <code>string public_key = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPublicKeyBytes() {
+        java.lang.Object ref = publicKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publicKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Public key fingerprint, in SHA2.
+       * </pre>
+       *
+       * <code>string public_key = 3;</code>
+       */
+      public Builder setPublicKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        publicKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Public key fingerprint, in SHA2.
+       * </pre>
+       *
+       * <code>string public_key = 3;</code>
+       */
+      public Builder clearPublicKey() {
+        
+        publicKey_ = getDefaultInstance().getPublicKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Public key fingerprint, in SHA2.
+       * </pre>
+       *
+       * <code>string public_key = 3;</code>
+       */
+      public Builder setPublicKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        publicKey_ = value;
         onChanged();
         return this;
       }
