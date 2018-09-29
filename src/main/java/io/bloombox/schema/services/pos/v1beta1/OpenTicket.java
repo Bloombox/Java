@@ -149,10 +149,28 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    java.lang.String getSession();
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getSessionBytes();
+
+    /**
+     * <pre>
      * Flag to indicate that the ticket is fresh and we're notifying the server.
      * </pre>
      *
-     * <code>bool fresh = 3;</code>
+     * <code>bool fresh = 4;</code>
      */
     boolean getFresh();
   }
@@ -173,6 +191,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
+      session_ = "";
       fresh_ = false;
     }
 
@@ -233,7 +252,13 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
-            case 24: {
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              session_ = s;
+              break;
+            }
+            case 32: {
 
               fresh_ = input.readBool();
               break;
@@ -328,14 +353,56 @@ private static final long serialVersionUID = 0L;
       return getRegister();
     }
 
-    public static final int FRESH_FIELD_NUMBER = 3;
+    public static final int SESSION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object session_;
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    public java.lang.String getSession() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        session_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSessionBytes() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        session_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FRESH_FIELD_NUMBER = 4;
     private boolean fresh_;
     /**
      * <pre>
      * Flag to indicate that the ticket is fresh and we're notifying the server.
      * </pre>
      *
-     * <code>bool fresh = 3;</code>
+     * <code>bool fresh = 4;</code>
      */
     public boolean getFresh() {
       return fresh_;
@@ -359,8 +426,11 @@ private static final long serialVersionUID = 0L;
       if (register_ != null) {
         output.writeMessage(2, getRegister());
       }
+      if (!getSessionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, session_);
+      }
       if (fresh_ != false) {
-        output.writeBool(3, fresh_);
+        output.writeBool(4, fresh_);
       }
       unknownFields.writeTo(output);
     }
@@ -378,9 +448,12 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRegister());
       }
+      if (!getSessionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, session_);
+      }
       if (fresh_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, fresh_);
+          .computeBoolSize(4, fresh_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -408,6 +481,8 @@ private static final long serialVersionUID = 0L;
         result = result && getRegister()
             .equals(other.getRegister());
       }
+      result = result && getSession()
+          .equals(other.getSession());
       result = result && (getFresh()
           == other.getFresh());
       result = result && unknownFields.equals(other.unknownFields);
@@ -429,6 +504,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + REGISTER_FIELD_NUMBER;
         hash = (53 * hash) + getRegister().hashCode();
       }
+      hash = (37 * hash) + SESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSession().hashCode();
       hash = (37 * hash) + FRESH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getFresh());
@@ -577,6 +654,8 @@ private static final long serialVersionUID = 0L;
           register_ = null;
           registerBuilder_ = null;
         }
+        session_ = "";
+
         fresh_ = false;
 
         return this;
@@ -611,6 +690,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.register_ = registerBuilder_.build();
         }
+        result.session_ = session_;
         result.fresh_ = fresh_;
         onBuilt();
         return result;
@@ -658,6 +738,10 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasRegister()) {
           mergeRegister(other.getRegister());
+        }
+        if (!other.getSession().isEmpty()) {
+          session_ = other.session_;
+          onChanged();
         }
         if (other.getFresh() != false) {
           setFresh(other.getFresh());
@@ -995,13 +1079,102 @@ private static final long serialVersionUID = 0L;
         return registerBuilder_;
       }
 
+      private java.lang.Object session_ = "";
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public java.lang.String getSession() {
+        java.lang.Object ref = session_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          session_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSessionBytes() {
+        java.lang.Object ref = session_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          session_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder setSession(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        session_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder clearSession() {
+        
+        session_ = getDefaultInstance().getSession();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder setSessionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        session_ = value;
+        onChanged();
+        return this;
+      }
+
       private boolean fresh_ ;
       /**
        * <pre>
        * Flag to indicate that the ticket is fresh and we're notifying the server.
        * </pre>
        *
-       * <code>bool fresh = 3;</code>
+       * <code>bool fresh = 4;</code>
        */
       public boolean getFresh() {
         return fresh_;
@@ -1011,7 +1184,7 @@ private static final long serialVersionUID = 0L;
        * Flag to indicate that the ticket is fresh and we're notifying the server.
        * </pre>
        *
-       * <code>bool fresh = 3;</code>
+       * <code>bool fresh = 4;</code>
        */
       public Builder setFresh(boolean value) {
         
@@ -1024,7 +1197,7 @@ private static final long serialVersionUID = 0L;
        * Flag to indicate that the ticket is fresh and we're notifying the server.
        * </pre>
        *
-       * <code>bool fresh = 3;</code>
+       * <code>bool fresh = 4;</code>
        */
       public Builder clearFresh() {
         

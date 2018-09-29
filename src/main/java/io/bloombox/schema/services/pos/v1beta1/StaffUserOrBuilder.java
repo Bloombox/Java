@@ -98,4 +98,13 @@ public interface StaffUserOrBuilder extends
    * <code>.bloombox.schema.identity.UserIdentity identity = 4;</code>
    */
   io.bloombox.schema.identity.AppUser.UserIdentityOrBuilder getIdentityOrBuilder();
+
+  /**
+   * <pre>
+   * Flag to indicate whether the user needs to setup their POS profile.
+   * </pre>
+   *
+   * <code>bool setup = 5;</code>
+   */
+  boolean getSetup();
 }

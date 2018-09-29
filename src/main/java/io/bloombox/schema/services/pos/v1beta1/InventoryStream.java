@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the location at which we wish to query inventory.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
      */
     boolean hasLocation();
     /**
@@ -111,17 +111,35 @@ private static final long serialVersionUID = 0L;
      * Specifies the location at which we wish to query inventory.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
      */
-    io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation();
+    io.opencannabis.schema.inventory.InventoryLocationKey getLocation();
     /**
      * <pre>
      * Specifies the location at which we wish to query inventory.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
      */
-    io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder();
+    io.opencannabis.schema.inventory.InventoryLocationKeyOrBuilder getLocationOrBuilder();
+
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    java.lang.String getSession();
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getSessionBytes();
 
     /**
      * <pre>
@@ -175,6 +193,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
+      session_ = "";
       local_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -210,11 +229,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder subBuilder = null;
+              io.opencannabis.schema.inventory.InventoryLocationKey.Builder subBuilder = null;
               if (location_ != null) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(io.bloombox.schema.partner.LocationAccountKey.LocationKey.parser(), extensionRegistry);
+              location_ = input.readMessage(io.opencannabis.schema.inventory.InventoryLocationKey.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -224,11 +243,17 @@ private static final long serialVersionUID = 0L;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 local_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000004;
               }
               local_.add(s);
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              session_ = s;
               break;
             }
           }
@@ -239,7 +264,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           local_ = local_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -260,13 +285,13 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int LOCATION_FIELD_NUMBER = 1;
-    private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_;
+    private io.opencannabis.schema.inventory.InventoryLocationKey location_;
     /**
      * <pre>
      * Specifies the location at which we wish to query inventory.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
      */
     public boolean hasLocation() {
       return location_ != null;
@@ -276,20 +301,62 @@ private static final long serialVersionUID = 0L;
      * Specifies the location at which we wish to query inventory.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
      */
-    public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
-      return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
+    public io.opencannabis.schema.inventory.InventoryLocationKey getLocation() {
+      return location_ == null ? io.opencannabis.schema.inventory.InventoryLocationKey.getDefaultInstance() : location_;
     }
     /**
      * <pre>
      * Specifies the location at which we wish to query inventory.
      * </pre>
      *
-     * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+     * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
      */
-    public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
+    public io.opencannabis.schema.inventory.InventoryLocationKeyOrBuilder getLocationOrBuilder() {
       return getLocation();
+    }
+
+    public static final int SESSION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object session_;
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    public java.lang.String getSession() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        session_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSessionBytes() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        session_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int LOCAL_FIELD_NUMBER = 2;
@@ -355,6 +422,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < local_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, local_.getRaw(i));
       }
+      if (!getSessionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, session_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -374,6 +444,9 @@ private static final long serialVersionUID = 0L;
         }
         size += dataSize;
         size += 1 * getLocalList().size();
+      }
+      if (!getSessionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, session_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -396,6 +469,8 @@ private static final long serialVersionUID = 0L;
         result = result && getLocation()
             .equals(other.getLocation());
       }
+      result = result && getSession()
+          .equals(other.getSession());
       result = result && getLocalList()
           .equals(other.getLocalList());
       result = result && unknownFields.equals(other.unknownFields);
@@ -413,6 +488,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + LOCATION_FIELD_NUMBER;
         hash = (53 * hash) + getLocation().hashCode();
       }
+      hash = (37 * hash) + SESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSession().hashCode();
       if (getLocalCount() > 0) {
         hash = (37 * hash) + LOCAL_FIELD_NUMBER;
         hash = (53 * hash) + getLocalList().hashCode();
@@ -556,8 +633,10 @@ private static final long serialVersionUID = 0L;
           location_ = null;
           locationBuilder_ = null;
         }
+        session_ = "";
+
         local_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -587,9 +666,10 @@ private static final long serialVersionUID = 0L;
         } else {
           result.location_ = locationBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        result.session_ = session_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           local_ = local_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.local_ = local_;
         result.bitField0_ = to_bitField0_;
@@ -637,10 +717,14 @@ private static final long serialVersionUID = 0L;
         if (other.hasLocation()) {
           mergeLocation(other.getLocation());
         }
+        if (!other.getSession().isEmpty()) {
+          session_ = other.session_;
+          onChanged();
+        }
         if (!other.local_.isEmpty()) {
           if (local_.isEmpty()) {
             local_ = other.local_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLocalIsMutable();
             local_.addAll(other.local_);
@@ -675,15 +759,15 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private io.bloombox.schema.partner.LocationAccountKey.LocationKey location_ = null;
+      private io.opencannabis.schema.inventory.InventoryLocationKey location_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> locationBuilder_;
+          io.opencannabis.schema.inventory.InventoryLocationKey, io.opencannabis.schema.inventory.InventoryLocationKey.Builder, io.opencannabis.schema.inventory.InventoryLocationKeyOrBuilder> locationBuilder_;
       /**
        * <pre>
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
       public boolean hasLocation() {
         return locationBuilder_ != null || location_ != null;
@@ -693,11 +777,11 @@ private static final long serialVersionUID = 0L;
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
-      public io.bloombox.schema.partner.LocationAccountKey.LocationKey getLocation() {
+      public io.opencannabis.schema.inventory.InventoryLocationKey getLocation() {
         if (locationBuilder_ == null) {
-          return location_ == null ? io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
+          return location_ == null ? io.opencannabis.schema.inventory.InventoryLocationKey.getDefaultInstance() : location_;
         } else {
           return locationBuilder_.getMessage();
         }
@@ -707,9 +791,9 @@ private static final long serialVersionUID = 0L;
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
-      public Builder setLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
+      public Builder setLocation(io.opencannabis.schema.inventory.InventoryLocationKey value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -727,10 +811,10 @@ private static final long serialVersionUID = 0L;
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
       public Builder setLocation(
-          io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder builderForValue) {
+          io.opencannabis.schema.inventory.InventoryLocationKey.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -745,13 +829,13 @@ private static final long serialVersionUID = 0L;
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
-      public Builder mergeLocation(io.bloombox.schema.partner.LocationAccountKey.LocationKey value) {
+      public Builder mergeLocation(io.opencannabis.schema.inventory.InventoryLocationKey value) {
         if (locationBuilder_ == null) {
           if (location_ != null) {
             location_ =
-              io.bloombox.schema.partner.LocationAccountKey.LocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.inventory.InventoryLocationKey.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -767,7 +851,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -785,9 +869,9 @@ private static final long serialVersionUID = 0L;
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
-      public io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder getLocationBuilder() {
+      public io.opencannabis.schema.inventory.InventoryLocationKey.Builder getLocationBuilder() {
         
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -797,14 +881,14 @@ private static final long serialVersionUID = 0L;
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
-      public io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder getLocationOrBuilder() {
+      public io.opencannabis.schema.inventory.InventoryLocationKeyOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
           return location_ == null ?
-              io.bloombox.schema.partner.LocationAccountKey.LocationKey.getDefaultInstance() : location_;
+              io.opencannabis.schema.inventory.InventoryLocationKey.getDefaultInstance() : location_;
         }
       }
       /**
@@ -812,14 +896,14 @@ private static final long serialVersionUID = 0L;
        * Specifies the location at which we wish to query inventory.
        * </pre>
        *
-       * <code>.bloombox.schema.partner.LocationKey location = 1;</code>
+       * <code>.opencannabis.inventory.InventoryLocationKey location = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder> 
+          io.opencannabis.schema.inventory.InventoryLocationKey, io.opencannabis.schema.inventory.InventoryLocationKey.Builder, io.opencannabis.schema.inventory.InventoryLocationKeyOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.partner.LocationAccountKey.LocationKey, io.bloombox.schema.partner.LocationAccountKey.LocationKey.Builder, io.bloombox.schema.partner.LocationAccountKey.LocationKeyOrBuilder>(
+              io.opencannabis.schema.inventory.InventoryLocationKey, io.opencannabis.schema.inventory.InventoryLocationKey.Builder, io.opencannabis.schema.inventory.InventoryLocationKeyOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -828,11 +912,100 @@ private static final long serialVersionUID = 0L;
         return locationBuilder_;
       }
 
+      private java.lang.Object session_ = "";
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public java.lang.String getSession() {
+        java.lang.Object ref = session_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          session_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSessionBytes() {
+        java.lang.Object ref = session_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          session_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder setSession(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        session_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder clearSession() {
+        
+        session_ = getDefaultInstance().getSession();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder setSessionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        session_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.LazyStringList local_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureLocalIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           local_ = new com.google.protobuf.LazyStringArrayList(local_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -935,7 +1108,7 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearLocal() {
         local_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }

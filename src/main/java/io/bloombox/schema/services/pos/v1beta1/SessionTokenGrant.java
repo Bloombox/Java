@@ -129,7 +129,7 @@ public enum SessionTokenGrant
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.getDescriptor().getEnumTypes().get(2);
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.getDescriptor().getEnumTypes().get(3);
   }
 
   private static final SessionTokenGrant[] VALUES = values();

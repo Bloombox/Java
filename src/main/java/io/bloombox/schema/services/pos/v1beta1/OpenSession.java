@@ -22,21 +22,21 @@ package io.bloombox.schema.services.pos.v1beta1;
 
 /**
  * <pre>
- * Specifies an RPC operation to void an existing, open ticket.
+ * Specifies an RPC operation to open a formal point-of-sale session.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.pos.v1beta1.VoidTicket}
+ * Protobuf type {@code bloombox.schema.services.pos.v1beta1.OpenSession}
  */
-public  final class VoidTicket extends
+public  final class OpenSession extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.VoidTicket)
-    VoidTicketOrBuilder {
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.OpenSession)
+    OpenSessionOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use VoidTicket.newBuilder() to construct.
-  private VoidTicket(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use OpenSession.newBuilder() to construct.
+  private OpenSession(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private VoidTicket() {
+  private OpenSession() {
   }
 
   @java.lang.Override
@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private VoidTicket(
+  private OpenSession(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -83,23 +83,23 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_descriptor;
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_fieldAccessorTable
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            io.bloombox.schema.services.pos.v1beta1.VoidTicket.class, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Builder.class);
+            io.bloombox.schema.services.pos.v1beta1.OpenSession.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Builder.class);
   }
 
   public interface RequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.VoidTicket.Request)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.OpenSession.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Device key, including the location and partner.
+     * Device key, including the location and partner where the device is located.
      * </pre>
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
     boolean hasRegister();
     /**
      * <pre>
-     * Device key, including the location and partner.
+     * Device key, including the location and partner where the device is located.
      * </pre>
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
     io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey getRegister();
     /**
      * <pre>
-     * Device key, including the location and partner.
+     * Device key, including the location and partner where the device is located.
      * </pre>
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -124,57 +124,75 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Specifies the purchase key to void.
+     * ID of the session that the callee wishes to open.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-     */
-    boolean hasPurchase();
-    /**
-     * <pre>
-     * Specifies the purchase key to void.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getPurchase();
-    /**
-     * <pre>
-     * Specifies the purchase key to void.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-     */
-    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getPurchaseOrBuilder();
-
-    /**
-     * <pre>
-     * Active and valid point-of-sale session.
-     * </pre>
-     *
-     * <code>string session = 3;</code>
+     * <code>string session = 2;</code>
      */
     java.lang.String getSession();
     /**
      * <pre>
-     * Active and valid point-of-sale session.
+     * ID of the session that the callee wishes to open.
      * </pre>
      *
-     * <code>string session = 3;</code>
+     * <code>string session = 2;</code>
      */
     com.google.protobuf.ByteString
         getSessionBytes();
+
+    /**
+     * <pre>
+     * Authorization token corresponding to the user's security/authorization state.
+     * </pre>
+     *
+     * <code>string token = 3;</code>
+     */
+    java.lang.String getToken();
+    /**
+     * <pre>
+     * Authorization token corresponding to the user's security/authorization state.
+     * </pre>
+     *
+     * <code>string token = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+
+    /**
+     * <pre>
+     * Specifies the opening state of the cash register, including the beginning float for the session.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     */
+    boolean hasOpen();
+    /**
+     * <pre>
+     * Specifies the opening state of the cash register, including the beginning float for the session.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     */
+    io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen getOpen();
+    /**
+     * <pre>
+     * Specifies the opening state of the cash register, including the beginning float for the session.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     */
+    io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder();
   }
   /**
    * <pre>
-   * Specifies a request to void a purchase ticket.
+   * Specifies a request to open an authorized, formal POS session.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.VoidTicket.Request}
+   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.OpenSession.Request}
    */
   public  static final class Request extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.VoidTicket.Request)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.OpenSession.Request)
       RequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Request.newBuilder() to construct.
@@ -183,6 +201,7 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       session_ = "";
+      token_ = "";
     }
 
     @java.lang.Override
@@ -230,22 +249,28 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder subBuilder = null;
-              if (purchase_ != null) {
-                subBuilder = purchase_.toBuilder();
-              }
-              purchase_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(purchase_);
-                purchase_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              session_ = s;
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              session_ = s;
+              token_ = s;
+              break;
+            }
+            case 34: {
+              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder subBuilder = null;
+              if (open_ != null) {
+                subBuilder = open_.toBuilder();
+              }
+              open_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(open_);
+                open_ = subBuilder.buildPartial();
+              }
+
               break;
             }
           }
@@ -262,21 +287,21 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Request_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Request_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Request_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.class, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.Builder.class);
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder.class);
     }
 
     public static final int REGISTER_FIELD_NUMBER = 1;
     private io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey register_;
     /**
      * <pre>
-     * Device key, including the location and partner.
+     * Device key, including the location and partner where the device is located.
      * </pre>
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -286,7 +311,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Device key, including the location and partner.
+     * Device key, including the location and partner where the device is located.
      * </pre>
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -296,7 +321,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Device key, including the location and partner.
+     * Device key, including the location and partner where the device is located.
      * </pre>
      *
      * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -305,47 +330,14 @@ private static final long serialVersionUID = 0L;
       return getRegister();
     }
 
-    public static final int PURCHASE_FIELD_NUMBER = 2;
-    private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey purchase_;
-    /**
-     * <pre>
-     * Specifies the purchase key to void.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-     */
-    public boolean hasPurchase() {
-      return purchase_ != null;
-    }
-    /**
-     * <pre>
-     * Specifies the purchase key to void.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getPurchase() {
-      return purchase_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : purchase_;
-    }
-    /**
-     * <pre>
-     * Specifies the purchase key to void.
-     * </pre>
-     *
-     * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-     */
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getPurchaseOrBuilder() {
-      return getPurchase();
-    }
-
-    public static final int SESSION_FIELD_NUMBER = 3;
+    public static final int SESSION_FIELD_NUMBER = 2;
     private volatile java.lang.Object session_;
     /**
      * <pre>
-     * Active and valid point-of-sale session.
+     * ID of the session that the callee wishes to open.
      * </pre>
      *
-     * <code>string session = 3;</code>
+     * <code>string session = 2;</code>
      */
     public java.lang.String getSession() {
       java.lang.Object ref = session_;
@@ -361,10 +353,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Active and valid point-of-sale session.
+     * ID of the session that the callee wishes to open.
      * </pre>
      *
-     * <code>string session = 3;</code>
+     * <code>string session = 2;</code>
      */
     public com.google.protobuf.ByteString
         getSessionBytes() {
@@ -378,6 +370,81 @@ private static final long serialVersionUID = 0L;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object token_;
+    /**
+     * <pre>
+     * Authorization token corresponding to the user's security/authorization state.
+     * </pre>
+     *
+     * <code>string token = 3;</code>
+     */
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Authorization token corresponding to the user's security/authorization state.
+     * </pre>
+     *
+     * <code>string token = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OPEN_FIELD_NUMBER = 4;
+    private io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open_;
+    /**
+     * <pre>
+     * Specifies the opening state of the cash register, including the beginning float for the session.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     */
+    public boolean hasOpen() {
+      return open_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the opening state of the cash register, including the beginning float for the session.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen getOpen() {
+      return open_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+    }
+    /**
+     * <pre>
+     * Specifies the opening state of the cash register, including the beginning float for the session.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder() {
+      return getOpen();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -395,11 +462,14 @@ private static final long serialVersionUID = 0L;
       if (register_ != null) {
         output.writeMessage(1, getRegister());
       }
-      if (purchase_ != null) {
-        output.writeMessage(2, getPurchase());
-      }
       if (!getSessionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, session_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, session_);
+      }
+      if (!getTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
+      }
+      if (open_ != null) {
+        output.writeMessage(4, getOpen());
       }
       unknownFields.writeTo(output);
     }
@@ -413,12 +483,15 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRegister());
       }
-      if (purchase_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPurchase());
-      }
       if (!getSessionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, session_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, session_);
+      }
+      if (!getTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
+      }
+      if (open_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getOpen());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -430,10 +503,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request)) {
+      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.OpenSession.Request)) {
         return super.equals(obj);
       }
-      io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request other = (io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request) obj;
+      io.bloombox.schema.services.pos.v1beta1.OpenSession.Request other = (io.bloombox.schema.services.pos.v1beta1.OpenSession.Request) obj;
 
       boolean result = true;
       result = result && (hasRegister() == other.hasRegister());
@@ -441,13 +514,15 @@ private static final long serialVersionUID = 0L;
         result = result && getRegister()
             .equals(other.getRegister());
       }
-      result = result && (hasPurchase() == other.hasPurchase());
-      if (hasPurchase()) {
-        result = result && getPurchase()
-            .equals(other.getPurchase());
-      }
       result = result && getSession()
           .equals(other.getSession());
+      result = result && getToken()
+          .equals(other.getToken());
+      result = result && (hasOpen() == other.hasOpen());
+      if (hasOpen()) {
+        result = result && getOpen()
+            .equals(other.getOpen());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -463,80 +538,82 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + REGISTER_FIELD_NUMBER;
         hash = (53 * hash) + getRegister().hashCode();
       }
-      if (hasPurchase()) {
-        hash = (37 * hash) + PURCHASE_FIELD_NUMBER;
-        hash = (53 * hash) + getPurchase().hashCode();
-      }
       hash = (37 * hash) + SESSION_FIELD_NUMBER;
       hash = (53 * hash) + getSession().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
+      if (hasOpen()) {
+        hash = (37 * hash) + OPEN_FIELD_NUMBER;
+        hash = (53 * hash) + getOpen().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(byte[] data)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseDelimitedFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseDelimitedFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -548,7 +625,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request prototype) {
+    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -564,28 +641,28 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies a request to void a purchase ticket.
+     * Specifies a request to open an authorized, formal POS session.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.VoidTicket.Request}
+     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.OpenSession.Request}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.VoidTicket.Request)
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.RequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.OpenSession.Request)
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.RequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Request_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Request_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Request_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.class, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.Builder.class);
+                io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder.class);
       }
 
-      // Construct using io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.newBuilder()
+      // Construct using io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -608,47 +685,50 @@ private static final long serialVersionUID = 0L;
           register_ = null;
           registerBuilder_ = null;
         }
-        if (purchaseBuilder_ == null) {
-          purchase_ = null;
-        } else {
-          purchase_ = null;
-          purchaseBuilder_ = null;
-        }
         session_ = "";
 
+        token_ = "";
+
+        if (openBuilder_ == null) {
+          open_ = null;
+        } else {
+          open_ = null;
+          openBuilder_ = null;
+        }
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Request_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Request_descriptor;
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request getDefaultInstanceForType() {
-        return io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.getDefaultInstance();
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Request getDefaultInstanceForType() {
+        return io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.getDefaultInstance();
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request build() {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request result = buildPartial();
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Request build() {
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Request result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request buildPartial() {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request result = new io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request(this);
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Request buildPartial() {
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Request result = new io.bloombox.schema.services.pos.v1beta1.OpenSession.Request(this);
         if (registerBuilder_ == null) {
           result.register_ = register_;
         } else {
           result.register_ = registerBuilder_.build();
         }
-        if (purchaseBuilder_ == null) {
-          result.purchase_ = purchase_;
-        } else {
-          result.purchase_ = purchaseBuilder_.build();
-        }
         result.session_ = session_;
+        result.token_ = token_;
+        if (openBuilder_ == null) {
+          result.open_ = open_;
+        } else {
+          result.open_ = openBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -680,25 +760,29 @@ private static final long serialVersionUID = 0L;
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request) {
-          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request)other);
+        if (other instanceof io.bloombox.schema.services.pos.v1beta1.OpenSession.Request) {
+          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.OpenSession.Request)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request other) {
-        if (other == io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.getDefaultInstance()) return this;
+      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request other) {
+        if (other == io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.getDefaultInstance()) return this;
         if (other.hasRegister()) {
           mergeRegister(other.getRegister());
-        }
-        if (other.hasPurchase()) {
-          mergePurchase(other.getPurchase());
         }
         if (!other.getSession().isEmpty()) {
           session_ = other.session_;
           onChanged();
+        }
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          onChanged();
+        }
+        if (other.hasOpen()) {
+          mergeOpen(other.getOpen());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -713,11 +797,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request parsedMessage = null;
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Request parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request) e.getUnfinishedMessage();
+          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.OpenSession.Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -732,7 +816,7 @@ private static final long serialVersionUID = 0L;
           io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey.Builder, io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKeyOrBuilder> registerBuilder_;
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -742,7 +826,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -756,7 +840,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -776,7 +860,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -794,7 +878,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -816,7 +900,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -834,7 +918,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -846,7 +930,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -861,7 +945,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Device key, including the location and partner.
+       * Device key, including the location and partner where the device is located.
        * </pre>
        *
        * <code>.bloombox.schema.partner.PartnerDeviceKey register = 1;</code>
@@ -880,166 +964,13 @@ private static final long serialVersionUID = 0L;
         return registerBuilder_;
       }
 
-      private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey purchase_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> purchaseBuilder_;
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      public boolean hasPurchase() {
-        return purchaseBuilder_ != null || purchase_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getPurchase() {
-        if (purchaseBuilder_ == null) {
-          return purchase_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : purchase_;
-        } else {
-          return purchaseBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      public Builder setPurchase(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
-        if (purchaseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          purchase_ = value;
-          onChanged();
-        } else {
-          purchaseBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      public Builder setPurchase(
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder builderForValue) {
-        if (purchaseBuilder_ == null) {
-          purchase_ = builderForValue.build();
-          onChanged();
-        } else {
-          purchaseBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      public Builder mergePurchase(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
-        if (purchaseBuilder_ == null) {
-          if (purchase_ != null) {
-            purchase_ =
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.newBuilder(purchase_).mergeFrom(value).buildPartial();
-          } else {
-            purchase_ = value;
-          }
-          onChanged();
-        } else {
-          purchaseBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      public Builder clearPurchase() {
-        if (purchaseBuilder_ == null) {
-          purchase_ = null;
-          onChanged();
-        } else {
-          purchase_ = null;
-          purchaseBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder getPurchaseBuilder() {
-        
-        onChanged();
-        return getPurchaseFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getPurchaseOrBuilder() {
-        if (purchaseBuilder_ != null) {
-          return purchaseBuilder_.getMessageOrBuilder();
-        } else {
-          return purchase_ == null ?
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance() : purchase_;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the purchase key to void.
-       * </pre>
-       *
-       * <code>.opencannabis.commerce.PurchaseKey purchase = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> 
-          getPurchaseFieldBuilder() {
-        if (purchaseBuilder_ == null) {
-          purchaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder>(
-                  getPurchase(),
-                  getParentForChildren(),
-                  isClean());
-          purchase_ = null;
-        }
-        return purchaseBuilder_;
-      }
-
       private java.lang.Object session_ = "";
       /**
        * <pre>
-       * Active and valid point-of-sale session.
+       * ID of the session that the callee wishes to open.
        * </pre>
        *
-       * <code>string session = 3;</code>
+       * <code>string session = 2;</code>
        */
       public java.lang.String getSession() {
         java.lang.Object ref = session_;
@@ -1055,10 +986,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Active and valid point-of-sale session.
+       * ID of the session that the callee wishes to open.
        * </pre>
        *
-       * <code>string session = 3;</code>
+       * <code>string session = 2;</code>
        */
       public com.google.protobuf.ByteString
           getSessionBytes() {
@@ -1075,10 +1006,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Active and valid point-of-sale session.
+       * ID of the session that the callee wishes to open.
        * </pre>
        *
-       * <code>string session = 3;</code>
+       * <code>string session = 2;</code>
        */
       public Builder setSession(
           java.lang.String value) {
@@ -1092,10 +1023,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Active and valid point-of-sale session.
+       * ID of the session that the callee wishes to open.
        * </pre>
        *
-       * <code>string session = 3;</code>
+       * <code>string session = 2;</code>
        */
       public Builder clearSession() {
         
@@ -1105,10 +1036,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Active and valid point-of-sale session.
+       * ID of the session that the callee wishes to open.
        * </pre>
        *
-       * <code>string session = 3;</code>
+       * <code>string session = 2;</code>
        */
       public Builder setSessionBytes(
           com.google.protobuf.ByteString value) {
@@ -1121,6 +1052,248 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private java.lang.Object token_ = "";
+      /**
+       * <pre>
+       * Authorization token corresponding to the user's security/authorization state.
+       * </pre>
+       *
+       * <code>string token = 3;</code>
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authorization token corresponding to the user's security/authorization state.
+       * </pre>
+       *
+       * <code>string token = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Authorization token corresponding to the user's security/authorization state.
+       * </pre>
+       *
+       * <code>string token = 3;</code>
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        token_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authorization token corresponding to the user's security/authorization state.
+       * </pre>
+       *
+       * <code>string token = 3;</code>
+       */
+      public Builder clearToken() {
+        
+        token_ = getDefaultInstance().getToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Authorization token corresponding to the user's security/authorization state.
+       * </pre>
+       *
+       * <code>string token = 3;</code>
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        token_ = value;
+        onChanged();
+        return this;
+      }
+
+      private io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder> openBuilder_;
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      public boolean hasOpen() {
+        return openBuilder_ != null || open_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen getOpen() {
+        if (openBuilder_ == null) {
+          return open_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+        } else {
+          return openBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      public Builder setOpen(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen value) {
+        if (openBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          open_ = value;
+          onChanged();
+        } else {
+          openBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      public Builder setOpen(
+          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder builderForValue) {
+        if (openBuilder_ == null) {
+          open_ = builderForValue.build();
+          onChanged();
+        } else {
+          openBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      public Builder mergeOpen(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen value) {
+        if (openBuilder_ == null) {
+          if (open_ != null) {
+            open_ =
+              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.newBuilder(open_).mergeFrom(value).buildPartial();
+          } else {
+            open_ = value;
+          }
+          onChanged();
+        } else {
+          openBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      public Builder clearOpen() {
+        if (openBuilder_ == null) {
+          open_ = null;
+          onChanged();
+        } else {
+          open_ = null;
+          openBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder getOpenBuilder() {
+        
+        onChanged();
+        return getOpenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder() {
+        if (openBuilder_ != null) {
+          return openBuilder_.getMessageOrBuilder();
+        } else {
+          return open_ == null ?
+              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the opening state of the cash register, including the beginning float for the session.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder> 
+          getOpenFieldBuilder() {
+        if (openBuilder_ == null) {
+          openBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder>(
+                  getOpen(),
+                  getParentForChildren(),
+                  isClean());
+          open_ = null;
+        }
+        return openBuilder_;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -1132,16 +1305,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.VoidTicket.Request)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.OpenSession.Request)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.VoidTicket.Request)
-    private static final io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.OpenSession.Request)
+    private static final io.bloombox.schema.services.pos.v1beta1.OpenSession.Request DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request();
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.OpenSession.Request();
     }
 
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request getDefaultInstance() {
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Request getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1164,60 +1337,51 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request getDefaultInstanceForType() {
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.Request getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.VoidTicket.Response)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.OpenSession.Response)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Specifies the version of the ticket that was voided.
+     * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>uint32 version = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
      */
-    int getVersion();
-
+    boolean hasSession();
     /**
      * <pre>
-     * Specifies the timestamp at which the ticket was voided.
+     * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
      */
-    boolean hasTimestamp();
+    io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getSession();
     /**
      * <pre>
-     * Specifies the timestamp at which the ticket was voided.
+     * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
      */
-    io.opencannabis.schema.temporal.TemporalInstant.Instant getTimestamp();
-    /**
-     * <pre>
-     * Specifies the timestamp at which the ticket was voided.
-     * </pre>
-     *
-     * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
-     */
-    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getTimestampOrBuilder();
+    io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder getSessionOrBuilder();
   }
   /**
    * <pre>
-   * Response to a request to void a purchase ticket.
+   * Specifies a response to a request to open a POS operation.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.VoidTicket.Response}
+   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.OpenSession.Response}
    */
   public  static final class Response extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.VoidTicket.Response)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.OpenSession.Response)
       ResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Response.newBuilder() to construct.
@@ -1225,7 +1389,6 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      version_ = 0;
     }
 
     @java.lang.Override
@@ -1259,20 +1422,15 @@ private static final long serialVersionUID = 0L;
               }
               break;
             }
-            case 8: {
-
-              version_ = input.readUInt32();
-              break;
-            }
-            case 18: {
-              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
-              if (timestamp_ != null) {
-                subBuilder = timestamp_.toBuilder();
+            case 10: {
+              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder subBuilder = null;
+              if (session_ != null) {
+                subBuilder = session_.toBuilder();
               }
-              timestamp_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              session_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(timestamp_);
-                timestamp_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(session_);
+                session_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1291,60 +1449,47 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Response_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Response_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Response_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.class, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.Builder.class);
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.Builder.class);
     }
 
-    public static final int VERSION_FIELD_NUMBER = 1;
-    private int version_;
+    public static final int SESSION_FIELD_NUMBER = 1;
+    private io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session_;
     /**
      * <pre>
-     * Specifies the version of the ticket that was voided.
+     * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>uint32 version = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
      */
-    public int getVersion() {
-      return version_;
-    }
-
-    public static final int TIMESTAMP_FIELD_NUMBER = 2;
-    private io.opencannabis.schema.temporal.TemporalInstant.Instant timestamp_;
-    /**
-     * <pre>
-     * Specifies the timestamp at which the ticket was voided.
-     * </pre>
-     *
-     * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
-     */
-    public boolean hasTimestamp() {
-      return timestamp_ != null;
+    public boolean hasSession() {
+      return session_ != null;
     }
     /**
      * <pre>
-     * Specifies the timestamp at which the ticket was voided.
+     * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
      */
-    public io.opencannabis.schema.temporal.TemporalInstant.Instant getTimestamp() {
-      return timestamp_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : timestamp_;
+    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getSession() {
+      return session_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.getDefaultInstance() : session_;
     }
     /**
      * <pre>
-     * Specifies the timestamp at which the ticket was voided.
+     * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
      */
-    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getTimestampOrBuilder() {
-      return getTimestamp();
+    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder getSessionOrBuilder() {
+      return getSession();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1359,11 +1504,8 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (version_ != 0) {
-        output.writeUInt32(1, version_);
-      }
-      if (timestamp_ != null) {
-        output.writeMessage(2, getTimestamp());
+      if (session_ != null) {
+        output.writeMessage(1, getSession());
       }
       unknownFields.writeTo(output);
     }
@@ -1373,13 +1515,9 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (version_ != 0) {
+      if (session_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, version_);
-      }
-      if (timestamp_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getTimestamp());
+          .computeMessageSize(1, getSession());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1391,18 +1529,16 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response)) {
+      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.OpenSession.Response)) {
         return super.equals(obj);
       }
-      io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response other = (io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response) obj;
+      io.bloombox.schema.services.pos.v1beta1.OpenSession.Response other = (io.bloombox.schema.services.pos.v1beta1.OpenSession.Response) obj;
 
       boolean result = true;
-      result = result && (getVersion()
-          == other.getVersion());
-      result = result && (hasTimestamp() == other.hasTimestamp());
-      if (hasTimestamp()) {
-        result = result && getTimestamp()
-            .equals(other.getTimestamp());
+      result = result && (hasSession() == other.hasSession());
+      if (hasSession()) {
+        result = result && getSession()
+            .equals(other.getSession());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -1415,80 +1551,78 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getVersion();
-      if (hasTimestamp()) {
-        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
-        hash = (53 * hash) + getTimestamp().hashCode();
+      if (hasSession()) {
+        hash = (37 * hash) + SESSION_FIELD_NUMBER;
+        hash = (53 * hash) + getSession().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(byte[] data)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseDelimitedFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseDelimitedFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1500,7 +1634,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response prototype) {
+    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.OpenSession.Response prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1516,28 +1650,28 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Response to a request to void a purchase ticket.
+     * Specifies a response to a request to open a POS operation.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.VoidTicket.Response}
+     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.OpenSession.Response}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.VoidTicket.Response)
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.ResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.OpenSession.Response)
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.ResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Response_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Response_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Response_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.class, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.Builder.class);
+                io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.Builder.class);
       }
 
-      // Construct using io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.newBuilder()
+      // Construct using io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1554,41 +1688,38 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        version_ = 0;
-
-        if (timestampBuilder_ == null) {
-          timestamp_ = null;
+        if (sessionBuilder_ == null) {
+          session_ = null;
         } else {
-          timestamp_ = null;
-          timestampBuilder_ = null;
+          session_ = null;
+          sessionBuilder_ = null;
         }
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Response_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Response_descriptor;
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response getDefaultInstanceForType() {
-        return io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.getDefaultInstance();
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response getDefaultInstanceForType() {
+        return io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.getDefaultInstance();
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response build() {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response result = buildPartial();
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response build() {
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Response result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response buildPartial() {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response result = new io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response(this);
-        result.version_ = version_;
-        if (timestampBuilder_ == null) {
-          result.timestamp_ = timestamp_;
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response buildPartial() {
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Response result = new io.bloombox.schema.services.pos.v1beta1.OpenSession.Response(this);
+        if (sessionBuilder_ == null) {
+          result.session_ = session_;
         } else {
-          result.timestamp_ = timestampBuilder_.build();
+          result.session_ = sessionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1621,21 +1752,18 @@ private static final long serialVersionUID = 0L;
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response) {
-          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response)other);
+        if (other instanceof io.bloombox.schema.services.pos.v1beta1.OpenSession.Response) {
+          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.OpenSession.Response)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response other) {
-        if (other == io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.getDefaultInstance()) return this;
-        if (other.getVersion() != 0) {
-          setVersion(other.getVersion());
-        }
-        if (other.hasTimestamp()) {
-          mergeTimestamp(other.getTimestamp());
+      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.OpenSession.Response other) {
+        if (other == io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.getDefaultInstance()) return this;
+        if (other.hasSession()) {
+          mergeSession(other.getSession());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1650,11 +1778,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response parsedMessage = null;
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Response parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response) e.getUnfinishedMessage();
+          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.OpenSession.Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1664,195 +1792,157 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private int version_ ;
-      /**
-       * <pre>
-       * Specifies the version of the ticket that was voided.
-       * </pre>
-       *
-       * <code>uint32 version = 1;</code>
-       */
-      public int getVersion() {
-        return version_;
-      }
-      /**
-       * <pre>
-       * Specifies the version of the ticket that was voided.
-       * </pre>
-       *
-       * <code>uint32 version = 1;</code>
-       */
-      public Builder setVersion(int value) {
-        
-        version_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the version of the ticket that was voided.
-       * </pre>
-       *
-       * <code>uint32 version = 1;</code>
-       */
-      public Builder clearVersion() {
-        
-        version_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private io.opencannabis.schema.temporal.TemporalInstant.Instant timestamp_ = null;
+      private io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> timestampBuilder_;
+          io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder> sessionBuilder_;
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
-      public boolean hasTimestamp() {
-        return timestampBuilder_ != null || timestamp_ != null;
+      public boolean hasSession() {
+        return sessionBuilder_ != null || session_ != null;
       }
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
-      public io.opencannabis.schema.temporal.TemporalInstant.Instant getTimestamp() {
-        if (timestampBuilder_ == null) {
-          return timestamp_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : timestamp_;
+      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getSession() {
+        if (sessionBuilder_ == null) {
+          return session_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.getDefaultInstance() : session_;
         } else {
-          return timestampBuilder_.getMessage();
+          return sessionBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
-      public Builder setTimestamp(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
-        if (timestampBuilder_ == null) {
+      public Builder setSession(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession value) {
+        if (sessionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          timestamp_ = value;
+          session_ = value;
           onChanged();
         } else {
-          timestampBuilder_.setMessage(value);
+          sessionBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
-      public Builder setTimestamp(
-          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
-        if (timestampBuilder_ == null) {
-          timestamp_ = builderForValue.build();
+      public Builder setSession(
+          io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder builderForValue) {
+        if (sessionBuilder_ == null) {
+          session_ = builderForValue.build();
           onChanged();
         } else {
-          timestampBuilder_.setMessage(builderForValue.build());
+          sessionBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
-      public Builder mergeTimestamp(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
-        if (timestampBuilder_ == null) {
-          if (timestamp_ != null) {
-            timestamp_ =
-              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+      public Builder mergeSession(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession value) {
+        if (sessionBuilder_ == null) {
+          if (session_ != null) {
+            session_ =
+              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.newBuilder(session_).mergeFrom(value).buildPartial();
           } else {
-            timestamp_ = value;
+            session_ = value;
           }
           onChanged();
         } else {
-          timestampBuilder_.mergeFrom(value);
+          sessionBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
-      public Builder clearTimestamp() {
-        if (timestampBuilder_ == null) {
-          timestamp_ = null;
+      public Builder clearSession() {
+        if (sessionBuilder_ == null) {
+          session_ = null;
           onChanged();
         } else {
-          timestamp_ = null;
-          timestampBuilder_ = null;
+          session_ = null;
+          sessionBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
-      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getTimestampBuilder() {
+      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder getSessionBuilder() {
         
         onChanged();
-        return getTimestampFieldBuilder().getBuilder();
+        return getSessionFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
-      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getTimestampOrBuilder() {
-        if (timestampBuilder_ != null) {
-          return timestampBuilder_.getMessageOrBuilder();
+      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder getSessionOrBuilder() {
+        if (sessionBuilder_ != null) {
+          return sessionBuilder_.getMessageOrBuilder();
         } else {
-          return timestamp_ == null ?
-              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : timestamp_;
+          return session_ == null ?
+              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.getDefaultInstance() : session_;
         }
       }
       /**
        * <pre>
-       * Specifies the timestamp at which the ticket was voided.
+       * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
-          getTimestampFieldBuilder() {
-        if (timestampBuilder_ == null) {
-          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
-                  getTimestamp(),
+          io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder> 
+          getSessionFieldBuilder() {
+        if (sessionBuilder_ == null) {
+          sessionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder>(
+                  getSession(),
                   getParentForChildren(),
                   isClean());
-          timestamp_ = null;
+          session_ = null;
         }
-        return timestampBuilder_;
+        return sessionBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1865,16 +1955,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.VoidTicket.Response)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.OpenSession.Response)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.VoidTicket.Response)
-    private static final io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.OpenSession.Response)
+    private static final io.bloombox.schema.services.pos.v1beta1.OpenSession.Response DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response();
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.OpenSession.Response();
     }
 
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response getDefaultInstance() {
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Response getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1897,76 +1987,76 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response getDefaultInstanceForType() {
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface OperationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.VoidTicket.Operation)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.OpenSession.Operation)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Request to void a ticket.
+     * Request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
      */
     boolean hasRequest();
     /**
      * <pre>
-     * Request to void a ticket.
+     * Request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request getRequest();
+    io.bloombox.schema.services.pos.v1beta1.OpenSession.Request getRequest();
     /**
      * <pre>
-     * Request to void a ticket.
+     * Request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.VoidTicket.RequestOrBuilder getRequestOrBuilder();
+    io.bloombox.schema.services.pos.v1beta1.OpenSession.RequestOrBuilder getRequestOrBuilder();
 
     /**
      * <pre>
-     * Response to a request to void a ticket.
+     * Response to a request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
      */
     boolean hasResponse();
     /**
      * <pre>
-     * Response to a request to void a ticket.
+     * Response to a request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response getResponse();
+    io.bloombox.schema.services.pos.v1beta1.OpenSession.Response getResponse();
     /**
      * <pre>
-     * Response to a request to void a ticket.
+     * Response to a request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.VoidTicket.ResponseOrBuilder getResponseOrBuilder();
+    io.bloombox.schema.services.pos.v1beta1.OpenSession.ResponseOrBuilder getResponseOrBuilder();
   }
   /**
    * <pre>
-   * Specifies an entire ticket-void operation.
+   * Specifies one entire open-session operation.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.VoidTicket.Operation}
+   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.OpenSession.Operation}
    */
   public  static final class Operation extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.VoidTicket.Operation)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.OpenSession.Operation)
       OperationOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use Operation.newBuilder() to construct.
@@ -2008,11 +2098,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.Builder subBuilder = null;
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder subBuilder = null;
               if (request_ != null) {
                 subBuilder = request_.toBuilder();
               }
-              request_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.parser(), extensionRegistry);
+              request_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(request_);
                 request_ = subBuilder.buildPartial();
@@ -2021,11 +2111,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.Builder subBuilder = null;
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.Builder subBuilder = null;
               if (response_ != null) {
                 subBuilder = response_.toBuilder();
               }
-              response_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.parser(), extensionRegistry);
+              response_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(response_);
                 response_ = subBuilder.buildPartial();
@@ -2047,79 +2137,79 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Operation_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Operation_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Operation_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Operation_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation.class, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation.Builder.class);
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation.Builder.class);
     }
 
     public static final int REQUEST_FIELD_NUMBER = 1;
-    private io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request_;
+    private io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request_;
     /**
      * <pre>
-     * Request to void a ticket.
+     * Request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
     }
     /**
      * <pre>
-     * Request to void a ticket.
+     * Request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request getRequest() {
-      return request_ == null ? io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.getDefaultInstance() : request_;
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.Request getRequest() {
+      return request_ == null ? io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.getDefaultInstance() : request_;
     }
     /**
      * <pre>
-     * Request to void a ticket.
+     * Request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket.RequestOrBuilder getRequestOrBuilder() {
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.RequestOrBuilder getRequestOrBuilder() {
       return getRequest();
     }
 
     public static final int RESPONSE_FIELD_NUMBER = 2;
-    private io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response_;
+    private io.bloombox.schema.services.pos.v1beta1.OpenSession.Response response_;
     /**
      * <pre>
-     * Response to a request to void a ticket.
+     * Response to a request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
     }
     /**
      * <pre>
-     * Response to a request to void a ticket.
+     * Response to a request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response getResponse() {
-      return response_ == null ? io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.getDefaultInstance() : response_;
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response getResponse() {
+      return response_ == null ? io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.getDefaultInstance() : response_;
     }
     /**
      * <pre>
-     * Response to a request to void a ticket.
+     * Response to a request to open a POS session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket.ResponseOrBuilder getResponseOrBuilder() {
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.ResponseOrBuilder getResponseOrBuilder() {
       return getResponse();
     }
 
@@ -2167,10 +2257,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation)) {
+      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation)) {
         return super.equals(obj);
       }
-      io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation other = (io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation) obj;
+      io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation other = (io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation) obj;
 
       boolean result = true;
       result = result && (hasRequest() == other.hasRequest());
@@ -2207,69 +2297,69 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(byte[] data)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseDelimitedFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseDelimitedFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2281,7 +2371,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation prototype) {
+    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -2297,28 +2387,28 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies an entire ticket-void operation.
+     * Specifies one entire open-session operation.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.VoidTicket.Operation}
+     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.OpenSession.Operation}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.VoidTicket.Operation)
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.OperationOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.OpenSession.Operation)
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.OperationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Operation_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Operation_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Operation_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Operation_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation.class, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation.Builder.class);
+                io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation.Builder.class);
       }
 
-      // Construct using io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation.newBuilder()
+      // Construct using io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2352,23 +2442,23 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_Operation_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Operation_descriptor;
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation getDefaultInstanceForType() {
-        return io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation.getDefaultInstance();
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation getDefaultInstanceForType() {
+        return io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation.getDefaultInstance();
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation build() {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation result = buildPartial();
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation build() {
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation buildPartial() {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation result = new io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation(this);
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation buildPartial() {
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation result = new io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation(this);
         if (requestBuilder_ == null) {
           result.request_ = request_;
         } else {
@@ -2410,16 +2500,16 @@ private static final long serialVersionUID = 0L;
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation) {
-          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation)other);
+        if (other instanceof io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation) {
+          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation other) {
-        if (other == io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation.getDefaultInstance()) return this;
+      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation other) {
+        if (other == io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation.getDefaultInstance()) return this;
         if (other.hasRequest()) {
           mergeRequest(other.getRequest());
         }
@@ -2439,11 +2529,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation parsedMessage = null;
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation) e.getUnfinishedMessage();
+          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2453,41 +2543,41 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request_ = null;
+      private io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.Builder, io.bloombox.schema.services.pos.v1beta1.VoidTicket.RequestOrBuilder> requestBuilder_;
+          io.bloombox.schema.services.pos.v1beta1.OpenSession.Request, io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder, io.bloombox.schema.services.pos.v1beta1.OpenSession.RequestOrBuilder> requestBuilder_;
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
       }
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request getRequest() {
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Request getRequest() {
         if (requestBuilder_ == null) {
-          return request_ == null ? io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.getDefaultInstance() : request_;
+          return request_ == null ? io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.getDefaultInstance() : request_;
         } else {
           return requestBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
-      public Builder setRequest(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request value) {
+      public Builder setRequest(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request value) {
         if (requestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2502,13 +2592,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
       public Builder setRequest(
-          io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.Builder builderForValue) {
+          io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder builderForValue) {
         if (requestBuilder_ == null) {
           request_ = builderForValue.build();
           onChanged();
@@ -2520,16 +2610,16 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
-      public Builder mergeRequest(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request value) {
+      public Builder mergeRequest(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request value) {
         if (requestBuilder_ == null) {
           if (request_ != null) {
             request_ =
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.newBuilder(request_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.newBuilder(request_).mergeFrom(value).buildPartial();
           } else {
             request_ = value;
           }
@@ -2542,10 +2632,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
       public Builder clearRequest() {
         if (requestBuilder_ == null) {
@@ -2560,44 +2650,44 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.Builder getRequestBuilder() {
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder getRequestBuilder() {
         
         onChanged();
         return getRequestFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.RequestOrBuilder getRequestOrBuilder() {
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.RequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
           return requestBuilder_.getMessageOrBuilder();
         } else {
           return request_ == null ?
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.getDefaultInstance() : request_;
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.getDefaultInstance() : request_;
         }
       }
       /**
        * <pre>
-       * Request to void a ticket.
+       * Request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Request request = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Request request = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.Builder, io.bloombox.schema.services.pos.v1beta1.VoidTicket.RequestOrBuilder> 
+          io.bloombox.schema.services.pos.v1beta1.OpenSession.Request, io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder, io.bloombox.schema.services.pos.v1beta1.OpenSession.RequestOrBuilder> 
           getRequestFieldBuilder() {
         if (requestBuilder_ == null) {
           requestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request.Builder, io.bloombox.schema.services.pos.v1beta1.VoidTicket.RequestOrBuilder>(
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Request, io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder, io.bloombox.schema.services.pos.v1beta1.OpenSession.RequestOrBuilder>(
                   getRequest(),
                   getParentForChildren(),
                   isClean());
@@ -2606,41 +2696,41 @@ private static final long serialVersionUID = 0L;
         return requestBuilder_;
       }
 
-      private io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response_ = null;
+      private io.bloombox.schema.services.pos.v1beta1.OpenSession.Response response_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.Builder, io.bloombox.schema.services.pos.v1beta1.VoidTicket.ResponseOrBuilder> responseBuilder_;
+          io.bloombox.schema.services.pos.v1beta1.OpenSession.Response, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.Builder, io.bloombox.schema.services.pos.v1beta1.OpenSession.ResponseOrBuilder> responseBuilder_;
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
       }
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response getResponse() {
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response getResponse() {
         if (responseBuilder_ == null) {
-          return response_ == null ? io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.getDefaultInstance() : response_;
+          return response_ == null ? io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.getDefaultInstance() : response_;
         } else {
           return responseBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
-      public Builder setResponse(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response value) {
+      public Builder setResponse(io.bloombox.schema.services.pos.v1beta1.OpenSession.Response value) {
         if (responseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2655,13 +2745,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
       public Builder setResponse(
-          io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.Builder builderForValue) {
+          io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.Builder builderForValue) {
         if (responseBuilder_ == null) {
           response_ = builderForValue.build();
           onChanged();
@@ -2673,16 +2763,16 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
-      public Builder mergeResponse(io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response value) {
+      public Builder mergeResponse(io.bloombox.schema.services.pos.v1beta1.OpenSession.Response value) {
         if (responseBuilder_ == null) {
           if (response_ != null) {
             response_ =
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.newBuilder(response_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.newBuilder(response_).mergeFrom(value).buildPartial();
           } else {
             response_ = value;
           }
@@ -2695,10 +2785,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
       public Builder clearResponse() {
         if (responseBuilder_ == null) {
@@ -2713,44 +2803,44 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.Builder getResponseBuilder() {
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.Builder getResponseBuilder() {
         
         onChanged();
         return getResponseFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.VoidTicket.ResponseOrBuilder getResponseOrBuilder() {
+      public io.bloombox.schema.services.pos.v1beta1.OpenSession.ResponseOrBuilder getResponseOrBuilder() {
         if (responseBuilder_ != null) {
           return responseBuilder_.getMessageOrBuilder();
         } else {
           return response_ == null ?
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.getDefaultInstance() : response_;
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.getDefaultInstance() : response_;
         }
       }
       /**
        * <pre>
-       * Response to a request to void a ticket.
+       * Response to a request to open a POS session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.VoidTicket.Response response = 2;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.OpenSession.Response response = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.Builder, io.bloombox.schema.services.pos.v1beta1.VoidTicket.ResponseOrBuilder> 
+          io.bloombox.schema.services.pos.v1beta1.OpenSession.Response, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.Builder, io.bloombox.schema.services.pos.v1beta1.OpenSession.ResponseOrBuilder> 
           getResponseFieldBuilder() {
         if (responseBuilder_ == null) {
           responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.Builder, io.bloombox.schema.services.pos.v1beta1.VoidTicket.ResponseOrBuilder>(
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Response, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.Builder, io.bloombox.schema.services.pos.v1beta1.OpenSession.ResponseOrBuilder>(
                   getResponse(),
                   getParentForChildren(),
                   isClean());
@@ -2769,16 +2859,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.VoidTicket.Operation)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.OpenSession.Operation)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.VoidTicket.Operation)
-    private static final io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.OpenSession.Operation)
+    private static final io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation();
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation();
     }
 
-    public static io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation getDefaultInstance() {
+    public static io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2801,7 +2891,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket.Operation getDefaultInstanceForType() {
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.Operation getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2837,10 +2927,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.VoidTicket)) {
+    if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.OpenSession)) {
       return super.equals(obj);
     }
-    io.bloombox.schema.services.pos.v1beta1.VoidTicket other = (io.bloombox.schema.services.pos.v1beta1.VoidTicket) obj;
+    io.bloombox.schema.services.pos.v1beta1.OpenSession other = (io.bloombox.schema.services.pos.v1beta1.OpenSession) obj;
 
     boolean result = true;
     result = result && unknownFields.equals(other.unknownFields);
@@ -2859,69 +2949,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(byte[] data)
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(java.io.InputStream input)
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseDelimitedFrom(java.io.InputStream input)
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseDelimitedFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -2933,7 +3023,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.VoidTicket prototype) {
+  public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.OpenSession prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -2949,28 +3039,28 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Specifies an RPC operation to void an existing, open ticket.
+   * Specifies an RPC operation to open a formal point-of-sale session.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.VoidTicket}
+   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.OpenSession}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.VoidTicket)
-      io.bloombox.schema.services.pos.v1beta1.VoidTicketOrBuilder {
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.OpenSession)
+      io.bloombox.schema.services.pos.v1beta1.OpenSessionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.pos.v1beta1.VoidTicket.class, io.bloombox.schema.services.pos.v1beta1.VoidTicket.Builder.class);
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Builder.class);
     }
 
-    // Construct using io.bloombox.schema.services.pos.v1beta1.VoidTicket.newBuilder()
+    // Construct using io.bloombox.schema.services.pos.v1beta1.OpenSession.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -2992,23 +3082,23 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_VoidTicket_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_descriptor;
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket getDefaultInstanceForType() {
-      return io.bloombox.schema.services.pos.v1beta1.VoidTicket.getDefaultInstance();
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession getDefaultInstanceForType() {
+      return io.bloombox.schema.services.pos.v1beta1.OpenSession.getDefaultInstance();
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket build() {
-      io.bloombox.schema.services.pos.v1beta1.VoidTicket result = buildPartial();
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession build() {
+      io.bloombox.schema.services.pos.v1beta1.OpenSession result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.VoidTicket buildPartial() {
-      io.bloombox.schema.services.pos.v1beta1.VoidTicket result = new io.bloombox.schema.services.pos.v1beta1.VoidTicket(this);
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession buildPartial() {
+      io.bloombox.schema.services.pos.v1beta1.OpenSession result = new io.bloombox.schema.services.pos.v1beta1.OpenSession(this);
       onBuilt();
       return result;
     }
@@ -3040,16 +3130,16 @@ private static final long serialVersionUID = 0L;
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof io.bloombox.schema.services.pos.v1beta1.VoidTicket) {
-        return mergeFrom((io.bloombox.schema.services.pos.v1beta1.VoidTicket)other);
+      if (other instanceof io.bloombox.schema.services.pos.v1beta1.OpenSession) {
+        return mergeFrom((io.bloombox.schema.services.pos.v1beta1.OpenSession)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.VoidTicket other) {
-      if (other == io.bloombox.schema.services.pos.v1beta1.VoidTicket.getDefaultInstance()) return this;
+    public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.OpenSession other) {
+      if (other == io.bloombox.schema.services.pos.v1beta1.OpenSession.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -3063,11 +3153,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      io.bloombox.schema.services.pos.v1beta1.VoidTicket parsedMessage = null;
+      io.bloombox.schema.services.pos.v1beta1.OpenSession parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (io.bloombox.schema.services.pos.v1beta1.VoidTicket) e.getUnfinishedMessage();
+        parsedMessage = (io.bloombox.schema.services.pos.v1beta1.OpenSession) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -3087,39 +3177,39 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.VoidTicket)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.OpenSession)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.VoidTicket)
-  private static final io.bloombox.schema.services.pos.v1beta1.VoidTicket DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.OpenSession)
+  private static final io.bloombox.schema.services.pos.v1beta1.OpenSession DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.VoidTicket();
+    DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.OpenSession();
   }
 
-  public static io.bloombox.schema.services.pos.v1beta1.VoidTicket getDefaultInstance() {
+  public static io.bloombox.schema.services.pos.v1beta1.OpenSession getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<VoidTicket>
-      PARSER = new com.google.protobuf.AbstractParser<VoidTicket>() {
-    public VoidTicket parsePartialFrom(
+  private static final com.google.protobuf.Parser<OpenSession>
+      PARSER = new com.google.protobuf.AbstractParser<OpenSession>() {
+    public OpenSession parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new VoidTicket(input, extensionRegistry);
+      return new OpenSession(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<VoidTicket> parser() {
+  public static com.google.protobuf.Parser<OpenSession> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<VoidTicket> getParserForType() {
+  public com.google.protobuf.Parser<OpenSession> getParserForType() {
     return PARSER;
   }
 
-  public io.bloombox.schema.services.pos.v1beta1.VoidTicket getDefaultInstanceForType() {
+  public io.bloombox.schema.services.pos.v1beta1.OpenSession getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

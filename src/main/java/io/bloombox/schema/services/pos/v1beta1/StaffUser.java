@@ -37,6 +37,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private StaffUser() {
+    setup_ = false;
   }
 
   @java.lang.Override
@@ -107,6 +108,11 @@ private static final long serialVersionUID = 0L;
               identity_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 40: {
+
+            setup_ = input.readBool();
             break;
           }
         }
@@ -232,6 +238,19 @@ private static final long serialVersionUID = 0L;
     return getIdentity();
   }
 
+  public static final int SETUP_FIELD_NUMBER = 5;
+  private boolean setup_;
+  /**
+   * <pre>
+   * Flag to indicate whether the user needs to setup their POS profile.
+   * </pre>
+   *
+   * <code>bool setup = 5;</code>
+   */
+  public boolean getSetup() {
+    return setup_;
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -253,6 +272,9 @@ private static final long serialVersionUID = 0L;
     if (identity_ != null) {
       output.writeMessage(4, getIdentity());
     }
+    if (setup_ != false) {
+      output.writeBool(5, setup_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -272,6 +294,10 @@ private static final long serialVersionUID = 0L;
     if (identity_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getIdentity());
+    }
+    if (setup_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(5, setup_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -304,6 +330,8 @@ private static final long serialVersionUID = 0L;
       result = result && getIdentity()
           .equals(other.getIdentity());
     }
+    result = result && (getSetup()
+        == other.getSetup());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -327,6 +355,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IDENTITY_FIELD_NUMBER;
       hash = (53 * hash) + getIdentity().hashCode();
     }
+    hash = (37 * hash) + SETUP_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getSetup());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -478,6 +509,8 @@ private static final long serialVersionUID = 0L;
         identity_ = null;
         identityBuilder_ = null;
       }
+      setup_ = false;
+
       return this;
     }
 
@@ -515,6 +548,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.identity_ = identityBuilder_.build();
       }
+      result.setup_ = setup_;
       onBuilt();
       return result;
     }
@@ -564,6 +598,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasIdentity()) {
         mergeIdentity(other.getIdentity());
+      }
+      if (other.getSetup() != false) {
+        setSetup(other.getSetup());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1049,6 +1086,44 @@ private static final long serialVersionUID = 0L;
         identity_ = null;
       }
       return identityBuilder_;
+    }
+
+    private boolean setup_ ;
+    /**
+     * <pre>
+     * Flag to indicate whether the user needs to setup their POS profile.
+     * </pre>
+     *
+     * <code>bool setup = 5;</code>
+     */
+    public boolean getSetup() {
+      return setup_;
+    }
+    /**
+     * <pre>
+     * Flag to indicate whether the user needs to setup their POS profile.
+     * </pre>
+     *
+     * <code>bool setup = 5;</code>
+     */
+    public Builder setSetup(boolean value) {
+      
+      setup_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Flag to indicate whether the user needs to setup their POS profile.
+     * </pre>
+     *
+     * <code>bool setup = 5;</code>
+     */
+    public Builder clearSetup() {
+      
+      setup_ = false;
+      onChanged();
+      return this;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

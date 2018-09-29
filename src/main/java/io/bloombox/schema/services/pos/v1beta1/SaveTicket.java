@@ -149,10 +149,28 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    java.lang.String getSession();
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getSessionBytes();
+
+    /**
+     * <pre>
      * Cryptographic signature from the facilitating partner device.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
      */
     boolean hasSignature();
     /**
@@ -160,7 +178,7 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature from the facilitating partner device.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature getSignature();
     /**
@@ -168,7 +186,7 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature from the facilitating partner device.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder getSignatureOrBuilder();
 
@@ -177,7 +195,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp identifying when, precisely, this ticket was frozen for persistence.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+     * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
      */
     boolean hasTimestamp();
     /**
@@ -185,7 +203,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp identifying when, precisely, this ticket was frozen for persistence.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+     * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getTimestamp();
     /**
@@ -193,7 +211,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp identifying when, precisely, this ticket was frozen for persistence.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+     * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getTimestampOrBuilder();
 
@@ -202,7 +220,7 @@ private static final long serialVersionUID = 0L;
      * Specifies whether this save operation was auto-initiated or user-initiated.
      * </pre>
      *
-     * <code>bool auto = 5;</code>
+     * <code>bool auto = 6;</code>
      */
     boolean getAuto();
 
@@ -211,7 +229,7 @@ private static final long serialVersionUID = 0L;
      * Close the ticket, i.e., do not allow it to be modified any further without opening.
      * </pre>
      *
-     * <code>bool close = 6;</code>
+     * <code>bool close = 7;</code>
      */
     boolean getClose();
   }
@@ -232,6 +250,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
+      session_ = "";
       auto_ = false;
       close_ = false;
     }
@@ -294,6 +313,12 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              session_ = s;
+              break;
+            }
+            case 34: {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder subBuilder = null;
               if (signature_ != null) {
                 subBuilder = signature_.toBuilder();
@@ -306,7 +331,7 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
-            case 34: {
+            case 42: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (timestamp_ != null) {
                 subBuilder = timestamp_.toBuilder();
@@ -319,12 +344,12 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
-            case 40: {
+            case 48: {
 
               auto_ = input.readBool();
               break;
             }
-            case 48: {
+            case 56: {
 
               close_ = input.readBool();
               break;
@@ -419,14 +444,56 @@ private static final long serialVersionUID = 0L;
       return getTicket();
     }
 
-    public static final int SIGNATURE_FIELD_NUMBER = 3;
+    public static final int SESSION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object session_;
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    public java.lang.String getSession() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        session_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Active and valid point-of-sale session.
+     * </pre>
+     *
+     * <code>string session = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSessionBytes() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        session_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 4;
     private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_;
     /**
      * <pre>
      * Cryptographic signature from the facilitating partner device.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
      */
     public boolean hasSignature() {
       return signature_ != null;
@@ -436,7 +503,7 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature from the facilitating partner device.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature getSignature() {
       return signature_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.getDefaultInstance() : signature_;
@@ -446,20 +513,20 @@ private static final long serialVersionUID = 0L;
      * Cryptographic signature from the facilitating partner device.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+     * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder getSignatureOrBuilder() {
       return getSignature();
     }
 
-    public static final int TIMESTAMP_FIELD_NUMBER = 4;
+    public static final int TIMESTAMP_FIELD_NUMBER = 5;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant timestamp_;
     /**
      * <pre>
      * Timestamp identifying when, precisely, this ticket was frozen for persistence.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+     * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
      */
     public boolean hasTimestamp() {
       return timestamp_ != null;
@@ -469,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * Timestamp identifying when, precisely, this ticket was frozen for persistence.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+     * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getTimestamp() {
       return timestamp_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : timestamp_;
@@ -479,33 +546,33 @@ private static final long serialVersionUID = 0L;
      * Timestamp identifying when, precisely, this ticket was frozen for persistence.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+     * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getTimestampOrBuilder() {
       return getTimestamp();
     }
 
-    public static final int AUTO_FIELD_NUMBER = 5;
+    public static final int AUTO_FIELD_NUMBER = 6;
     private boolean auto_;
     /**
      * <pre>
      * Specifies whether this save operation was auto-initiated or user-initiated.
      * </pre>
      *
-     * <code>bool auto = 5;</code>
+     * <code>bool auto = 6;</code>
      */
     public boolean getAuto() {
       return auto_;
     }
 
-    public static final int CLOSE_FIELD_NUMBER = 6;
+    public static final int CLOSE_FIELD_NUMBER = 7;
     private boolean close_;
     /**
      * <pre>
      * Close the ticket, i.e., do not allow it to be modified any further without opening.
      * </pre>
      *
-     * <code>bool close = 6;</code>
+     * <code>bool close = 7;</code>
      */
     public boolean getClose() {
       return close_;
@@ -529,17 +596,20 @@ private static final long serialVersionUID = 0L;
       if (ticket_ != null) {
         output.writeMessage(2, getTicket());
       }
+      if (!getSessionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, session_);
+      }
       if (signature_ != null) {
-        output.writeMessage(3, getSignature());
+        output.writeMessage(4, getSignature());
       }
       if (timestamp_ != null) {
-        output.writeMessage(4, getTimestamp());
+        output.writeMessage(5, getTimestamp());
       }
       if (auto_ != false) {
-        output.writeBool(5, auto_);
+        output.writeBool(6, auto_);
       }
       if (close_ != false) {
-        output.writeBool(6, close_);
+        output.writeBool(7, close_);
       }
       unknownFields.writeTo(output);
     }
@@ -557,21 +627,24 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTicket());
       }
+      if (!getSessionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, session_);
+      }
       if (signature_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getSignature());
+          .computeMessageSize(4, getSignature());
       }
       if (timestamp_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTimestamp());
+          .computeMessageSize(5, getTimestamp());
       }
       if (auto_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, auto_);
+          .computeBoolSize(6, auto_);
       }
       if (close_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, close_);
+          .computeBoolSize(7, close_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -599,6 +672,8 @@ private static final long serialVersionUID = 0L;
         result = result && getTicket()
             .equals(other.getTicket());
       }
+      result = result && getSession()
+          .equals(other.getSession());
       result = result && (hasSignature() == other.hasSignature());
       if (hasSignature()) {
         result = result && getSignature()
@@ -632,6 +707,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + TICKET_FIELD_NUMBER;
         hash = (53 * hash) + getTicket().hashCode();
       }
+      hash = (37 * hash) + SESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSession().hashCode();
       if (hasSignature()) {
         hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
         hash = (53 * hash) + getSignature().hashCode();
@@ -791,6 +868,8 @@ private static final long serialVersionUID = 0L;
           ticket_ = null;
           ticketBuilder_ = null;
         }
+        session_ = "";
+
         if (signatureBuilder_ == null) {
           signature_ = null;
         } else {
@@ -839,6 +918,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.ticket_ = ticketBuilder_.build();
         }
+        result.session_ = session_;
         if (signatureBuilder_ == null) {
           result.signature_ = signature_;
         } else {
@@ -897,6 +977,10 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasTicket()) {
           mergeTicket(other.getTicket());
+        }
+        if (!other.getSession().isEmpty()) {
+          session_ = other.session_;
+          onChanged();
         }
         if (other.hasSignature()) {
           mergeSignature(other.getSignature());
@@ -1243,6 +1327,95 @@ private static final long serialVersionUID = 0L;
         return ticketBuilder_;
       }
 
+      private java.lang.Object session_ = "";
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public java.lang.String getSession() {
+        java.lang.Object ref = session_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          session_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSessionBytes() {
+        java.lang.Object ref = session_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          session_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder setSession(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        session_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder clearSession() {
+        
+        session_ = getDefaultInstance().getSession();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Active and valid point-of-sale session.
+       * </pre>
+       *
+       * <code>string session = 3;</code>
+       */
+      public Builder setSessionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        session_ = value;
+        onChanged();
+        return this;
+      }
+
       private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature signature_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder> signatureBuilder_;
@@ -1251,7 +1424,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       public boolean hasSignature() {
         return signatureBuilder_ != null || signature_ != null;
@@ -1261,7 +1434,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature getSignature() {
         if (signatureBuilder_ == null) {
@@ -1275,7 +1448,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       public Builder setSignature(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature value) {
         if (signatureBuilder_ == null) {
@@ -1295,7 +1468,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       public Builder setSignature(
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder builderForValue) {
@@ -1313,7 +1486,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       public Builder mergeSignature(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature value) {
         if (signatureBuilder_ == null) {
@@ -1335,7 +1508,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       public Builder clearSignature() {
         if (signatureBuilder_ == null) {
@@ -1353,7 +1526,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder getSignatureBuilder() {
         
@@ -1365,7 +1538,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder getSignatureOrBuilder() {
         if (signatureBuilder_ != null) {
@@ -1380,7 +1553,7 @@ private static final long serialVersionUID = 0L;
        * Cryptographic signature from the facilitating partner device.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseSignature signature = 3;</code>
+       * <code>.opencannabis.commerce.PurchaseSignature signature = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignatureOrBuilder> 
@@ -1404,7 +1577,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
@@ -1414,7 +1587,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getTimestamp() {
         if (timestampBuilder_ == null) {
@@ -1428,7 +1601,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       public Builder setTimestamp(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (timestampBuilder_ == null) {
@@ -1448,7 +1621,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       public Builder setTimestamp(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -1466,7 +1639,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       public Builder mergeTimestamp(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (timestampBuilder_ == null) {
@@ -1488,7 +1661,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       public Builder clearTimestamp() {
         if (timestampBuilder_ == null) {
@@ -1506,7 +1679,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getTimestampBuilder() {
         
@@ -1518,7 +1691,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getTimestampOrBuilder() {
         if (timestampBuilder_ != null) {
@@ -1533,7 +1706,7 @@ private static final long serialVersionUID = 0L;
        * Timestamp identifying when, precisely, this ticket was frozen for persistence.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant timestamp = 4;</code>
+       * <code>.opencannabis.temporal.Instant timestamp = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -1555,7 +1728,7 @@ private static final long serialVersionUID = 0L;
        * Specifies whether this save operation was auto-initiated or user-initiated.
        * </pre>
        *
-       * <code>bool auto = 5;</code>
+       * <code>bool auto = 6;</code>
        */
       public boolean getAuto() {
         return auto_;
@@ -1565,7 +1738,7 @@ private static final long serialVersionUID = 0L;
        * Specifies whether this save operation was auto-initiated or user-initiated.
        * </pre>
        *
-       * <code>bool auto = 5;</code>
+       * <code>bool auto = 6;</code>
        */
       public Builder setAuto(boolean value) {
         
@@ -1578,7 +1751,7 @@ private static final long serialVersionUID = 0L;
        * Specifies whether this save operation was auto-initiated or user-initiated.
        * </pre>
        *
-       * <code>bool auto = 5;</code>
+       * <code>bool auto = 6;</code>
        */
       public Builder clearAuto() {
         
@@ -1593,7 +1766,7 @@ private static final long serialVersionUID = 0L;
        * Close the ticket, i.e., do not allow it to be modified any further without opening.
        * </pre>
        *
-       * <code>bool close = 6;</code>
+       * <code>bool close = 7;</code>
        */
       public boolean getClose() {
         return close_;
@@ -1603,7 +1776,7 @@ private static final long serialVersionUID = 0L;
        * Close the ticket, i.e., do not allow it to be modified any further without opening.
        * </pre>
        *
-       * <code>bool close = 6;</code>
+       * <code>bool close = 7;</code>
        */
       public Builder setClose(boolean value) {
         
@@ -1616,7 +1789,7 @@ private static final long serialVersionUID = 0L;
        * Close the ticket, i.e., do not allow it to be modified any further without opening.
        * </pre>
        *
-       * <code>bool close = 6;</code>
+       * <code>bool close = 7;</code>
        */
       public Builder clearClose() {
         

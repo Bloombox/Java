@@ -182,6 +182,22 @@ public final class CommerceCurrency {
      * <code>USD = 0;</code>
      */
     USD(0),
+    /**
+     * <pre>
+     * Specifies 'Canadian Dollar' as a currency.
+     * </pre>
+     *
+     * <code>CAD = 1;</code>
+     */
+    CAD(1),
+    /**
+     * <pre>
+     * Specifies 'Euro' as a currency.
+     * </pre>
+     *
+     * <code>EUR = 2;</code>
+     */
+    EUR(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -193,6 +209,22 @@ public final class CommerceCurrency {
      * <code>USD = 0;</code>
      */
     public static final int USD_VALUE = 0;
+    /**
+     * <pre>
+     * Specifies 'Canadian Dollar' as a currency.
+     * </pre>
+     *
+     * <code>CAD = 1;</code>
+     */
+    public static final int CAD_VALUE = 1;
+    /**
+     * <pre>
+     * Specifies 'Euro' as a currency.
+     * </pre>
+     *
+     * <code>EUR = 2;</code>
+     */
+    public static final int EUR_VALUE = 2;
 
 
     public final int getNumber() {
@@ -214,6 +246,8 @@ public final class CommerceCurrency {
     public static FiatCurrency forNumber(int value) {
       switch (value) {
         case 0: return USD;
+        case 1: return CAD;
+        case 2: return EUR;
         default: return null;
       }
     }
@@ -1316,9 +1350,10 @@ public final class CommerceCurrency {
       "CurrencyType\0223\n\004fiat\030\n \001(\0162#.opencannabi" +
       "s.commerce.FiatCurrencyH\000\022\020\n\006custom\030d \001(" +
       "\tH\000B\006\n\004spec*.\n\014CurrencyType\022\010\n\004FIAT\020\000\022\010\n" +
-      "\004REAL\020\001\022\n\n\006CRYPTO\020\002*\027\n\014FiatCurrency\022\007\n\003U" +
-      "SD\020\000B=\n\037io.opencannabis.schema.currencyB" +
-      "\020CommerceCurrencyH\001P\000\242\002\003OCSb\006proto3"
+      "\004REAL\020\001\022\n\n\006CRYPTO\020\002*)\n\014FiatCurrency\022\007\n\003U" +
+      "SD\020\000\022\007\n\003CAD\020\001\022\007\n\003EUR\020\002B=\n\037io.opencannabi" +
+      "s.schema.currencyB\020CommerceCurrencyH\001P\000\242" +
+      "\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -63,6 +63,30 @@ public final class PointOfSaleGrpc {
               io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenSession.Request,
+      io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> METHOD_SESSION_OPEN =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.OpenSession.Request, io.bloombox.schema.services.pos.v1beta1.OpenSession.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.pos.v1beta1.PointOfSale", "SessionOpen"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.OpenSession.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloseSession.Request,
+      io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> METHOD_SESSION_CLOSE =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.CloseSession.Request, io.bloombox.schema.services.pos.v1beta1.CloseSession.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.pos.v1beta1.PointOfSale", "SessionClose"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.CloseSession.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.CloseSession.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request,
       io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response> METHOD_TICKET_OPEN =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request, io.bloombox.schema.services.pos.v1beta1.OpenTicket.Response>newBuilder()
@@ -204,6 +228,26 @@ public final class PointOfSaleGrpc {
 
     /**
      * <pre>
+     * Open an established point-of-sale session, to begin accepting transactions.
+     * </pre>
+     */
+    public void sessionOpen(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SESSION_OPEN, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Close an open point-of-sale session, usually at the end of a working shift.
+     * </pre>
+     */
+    public void sessionClose(io.bloombox.schema.services.pos.v1beta1.CloseSession.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_SESSION_CLOSE, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Open a new or existing purchase ticket for read/write access.
      * </pre>
      */
@@ -291,6 +335,20 @@ public final class PointOfSaleGrpc {
                 io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request,
                 io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response>(
                   this, METHODID_AUTHORIZE)))
+          .addMethod(
+            METHOD_SESSION_OPEN,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.pos.v1beta1.OpenSession.Request,
+                io.bloombox.schema.services.pos.v1beta1.OpenSession.Response>(
+                  this, METHODID_SESSION_OPEN)))
+          .addMethod(
+            METHOD_SESSION_CLOSE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.pos.v1beta1.CloseSession.Request,
+                io.bloombox.schema.services.pos.v1beta1.CloseSession.Response>(
+                  this, METHODID_SESSION_CLOSE)))
           .addMethod(
             METHOD_TICKET_OPEN,
             asyncUnaryCall(
@@ -384,6 +442,28 @@ public final class PointOfSaleGrpc {
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_AUTHORIZE, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Open an established point-of-sale session, to begin accepting transactions.
+     * </pre>
+     */
+    public void sessionOpen(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SESSION_OPEN, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Close an open point-of-sale session, usually at the end of a working shift.
+     * </pre>
+     */
+    public void sessionClose(io.bloombox.schema.services.pos.v1beta1.CloseSession.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_SESSION_CLOSE, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -511,6 +591,26 @@ public final class PointOfSaleGrpc {
 
     /**
      * <pre>
+     * Open an established point-of-sale session, to begin accepting transactions.
+     * </pre>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.Response sessionOpen(io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SESSION_OPEN, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Close an open point-of-sale session, usually at the end of a working shift.
+     * </pre>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.CloseSession.Response sessionClose(io.bloombox.schema.services.pos.v1beta1.CloseSession.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_SESSION_CLOSE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Open a new or existing purchase ticket for read/write access.
      * </pre>
      */
@@ -617,6 +717,28 @@ public final class PointOfSaleGrpc {
 
     /**
      * <pre>
+     * Open an established point-of-sale session, to begin accepting transactions.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.OpenSession.Response> sessionOpen(
+        io.bloombox.schema.services.pos.v1beta1.OpenSession.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SESSION_OPEN, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Close an open point-of-sale session, usually at the end of a working shift.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.CloseSession.Response> sessionClose(
+        io.bloombox.schema.services.pos.v1beta1.CloseSession.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_SESSION_CLOSE, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Open a new or existing purchase ticket for read/write access.
      * </pre>
      */
@@ -694,14 +816,16 @@ public final class PointOfSaleGrpc {
   }
 
   private static final int METHODID_AUTHORIZE = 0;
-  private static final int METHODID_TICKET_OPEN = 1;
-  private static final int METHODID_TICKET_SAVE = 2;
-  private static final int METHODID_TICKET_LOAD = 3;
-  private static final int METHODID_TICKET_VOID = 4;
-  private static final int METHODID_TICKET_FINALIZE = 5;
-  private static final int METHODID_SEARCH_MEMBERS = 6;
-  private static final int METHODID_INVENTORY_RETRIEVE = 7;
-  private static final int METHODID_INVENTORY_STREAM = 8;
+  private static final int METHODID_SESSION_OPEN = 1;
+  private static final int METHODID_SESSION_CLOSE = 2;
+  private static final int METHODID_TICKET_OPEN = 3;
+  private static final int METHODID_TICKET_SAVE = 4;
+  private static final int METHODID_TICKET_LOAD = 5;
+  private static final int METHODID_TICKET_VOID = 6;
+  private static final int METHODID_TICKET_FINALIZE = 7;
+  private static final int METHODID_SEARCH_MEMBERS = 8;
+  private static final int METHODID_INVENTORY_RETRIEVE = 9;
+  private static final int METHODID_INVENTORY_STREAM = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -723,6 +847,14 @@ public final class PointOfSaleGrpc {
         case METHODID_AUTHORIZE:
           serviceImpl.authorize((io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.AuthorizeUser.Response>) responseObserver);
+          break;
+        case METHODID_SESSION_OPEN:
+          serviceImpl.sessionOpen((io.bloombox.schema.services.pos.v1beta1.OpenSession.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.OpenSession.Response>) responseObserver);
+          break;
+        case METHODID_SESSION_CLOSE:
+          serviceImpl.sessionClose((io.bloombox.schema.services.pos.v1beta1.CloseSession.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloseSession.Response>) responseObserver);
           break;
         case METHODID_TICKET_OPEN:
           serviceImpl.ticketOpen((io.bloombox.schema.services.pos.v1beta1.OpenTicket.Request) request,
@@ -789,6 +921,8 @@ public final class PointOfSaleGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PointOfSaleDescriptorSupplier())
               .addMethod(METHOD_AUTHORIZE)
+              .addMethod(METHOD_SESSION_OPEN)
+              .addMethod(METHOD_SESSION_CLOSE)
               .addMethod(METHOD_TICKET_OPEN)
               .addMethod(METHOD_TICKET_SAVE)
               .addMethod(METHOD_TICKET_LOAD)
