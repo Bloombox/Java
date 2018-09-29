@@ -20,8 +20,8 @@
 
 package io.bloombox.schema.services.pos.v1beta1;
 
-public interface PointOfSaleSessionOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.PointOfSaleSession)
+public interface CashRegisterSessionOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -47,7 +47,7 @@ public interface PointOfSaleSessionOrBuilder extends
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
    */
   boolean hasUser();
   /**
@@ -55,24 +55,24 @@ public interface PointOfSaleSessionOrBuilder extends
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
    */
-  io.bloombox.schema.services.pos.v1beta1.StaffUser getUser();
+  io.bloombox.schema.identity.AppStaff.StaffUser getUser();
   /**
    * <pre>
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
    */
-  io.bloombox.schema.services.pos.v1beta1.StaffUserOrBuilder getUserOrBuilder();
+  io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder getUserOrBuilder();
 
   /**
    * <pre>
    * Specifies the current/active status of a particular point of sale session.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+   * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
    */
   int getStatusValue();
   /**
@@ -80,9 +80,9 @@ public interface PointOfSaleSessionOrBuilder extends
    * Specifies the current/active status of a particular point of sale session.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+   * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
    */
-  io.bloombox.schema.services.pos.v1beta1.SessionStatus getStatus();
+  io.opencannabis.schema.commerce.CommercialPOS.SessionStatus getStatus();
 
   /**
    * <pre>
@@ -158,7 +158,7 @@ public interface PointOfSaleSessionOrBuilder extends
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
   boolean hasMessaging();
   /**
@@ -166,17 +166,17 @@ public interface PointOfSaleSessionOrBuilder extends
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
-  io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession getMessaging();
+  io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getMessaging();
   /**
    * <pre>
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
-  io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSessionOrBuilder getMessagingOrBuilder();
+  io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder getMessagingOrBuilder();
 
   /**
    * <pre>

@@ -25,18 +25,18 @@ package io.bloombox.schema.services.pos.v1beta1;
  * Specifies the notion of a point-of-sale session, bound to a user and particular POS device.
  * </pre>
  *
- * Protobuf type {@code bloombox.schema.services.pos.v1beta1.PointOfSaleSession}
+ * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CashRegisterSession}
  */
-public  final class PointOfSaleSession extends
+public  final class CashRegisterSession extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.PointOfSaleSession)
-    PointOfSaleSessionOrBuilder {
+    // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
+    CashRegisterSessionOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use PointOfSaleSession.newBuilder() to construct.
-  private PointOfSaleSession(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use CashRegisterSession.newBuilder() to construct.
+  private CashRegisterSession(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private PointOfSaleSession() {
+  private CashRegisterSession() {
     id_ = "";
     status_ = 0;
     authorization_ = java.util.Collections.emptyList();
@@ -47,7 +47,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private PointOfSaleSession(
+  private CashRegisterSession(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -80,11 +80,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            io.bloombox.schema.services.pos.v1beta1.StaffUser.Builder subBuilder = null;
+            io.bloombox.schema.identity.AppStaff.StaffUser.Builder subBuilder = null;
             if (user_ != null) {
               subBuilder = user_.toBuilder();
             }
-            user_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.StaffUser.parser(), extensionRegistry);
+            user_ = input.readMessage(io.bloombox.schema.identity.AppStaff.StaffUser.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(user_);
               user_ = subBuilder.buildPartial();
@@ -121,11 +121,11 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.Builder subBuilder = null;
+            io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder subBuilder = null;
             if (messaging_ != null) {
               subBuilder = messaging_.toBuilder();
             }
-            messaging_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.parser(), extensionRegistry);
+            messaging_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.parser(), extensionRegistry);
             if (subBuilder != null) {
               subBuilder.mergeFrom(messaging_);
               messaging_ = subBuilder.buildPartial();
@@ -189,18 +189,18 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_descriptor;
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_fieldAccessorTable
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.class, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder.class);
+            io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.class, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder.class);
   }
 
   public interface MessagingSessionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession)
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -226,11 +226,11 @@ private static final long serialVersionUID = 0L;
    * Properties related to a messaging session, if one was established.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession}
+   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession}
    */
   public  static final class MessagingSession extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession)
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
       MessagingSessionOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use MessagingSession.newBuilder() to construct.
@@ -292,14 +292,14 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_MessagingSession_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_MessagingSession_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.class, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.Builder.class);
+              io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.class, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder.class);
     }
 
     public static final int IDENTITY_FIELD_NUMBER = 1;
@@ -380,10 +380,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession)) {
+      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)) {
         return super.equals(obj);
       }
-      io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession other = (io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession) obj;
+      io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession other = (io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession) obj;
 
       boolean result = true;
       result = result && getIdentity()
@@ -406,69 +406,69 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(byte[] data)
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseDelimitedFrom(java.io.InputStream input)
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseDelimitedFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parseFrom(
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession prototype) {
+    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -499,25 +499,25 @@ private static final long serialVersionUID = 0L;
      * Properties related to a messaging session, if one was established.
      * </pre>
      *
-     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession}
+     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession)
-        io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSessionOrBuilder {
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
+        io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_MessagingSession_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_MessagingSession_fieldAccessorTable
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.class, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.Builder.class);
+                io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.class, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder.class);
       }
 
-      // Construct using io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.newBuilder()
+      // Construct using io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -541,23 +541,23 @@ private static final long serialVersionUID = 0L;
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_MessagingSession_descriptor;
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_MessagingSession_descriptor;
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession getDefaultInstanceForType() {
-        return io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.getDefaultInstance();
+      public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getDefaultInstanceForType() {
+        return io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.getDefaultInstance();
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession build() {
-        io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession result = buildPartial();
+      public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession build() {
+        io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession buildPartial() {
-        io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession result = new io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession(this);
+      public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession buildPartial() {
+        io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession result = new io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession(this);
         result.identity_ = identity_;
         onBuilt();
         return result;
@@ -590,16 +590,16 @@ private static final long serialVersionUID = 0L;
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession) {
-          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession)other);
+        if (other instanceof io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession) {
+          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession other) {
-        if (other == io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.getDefaultInstance()) return this;
+      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession other) {
+        if (other == io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.getDefaultInstance()) return this;
         if (!other.getIdentity().isEmpty()) {
           identity_ = other.identity_;
           onChanged();
@@ -617,11 +617,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession parsedMessage = null;
+        io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession) e.getUnfinishedMessage();
+          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -730,16 +730,16 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession)
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
     }
 
-    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession)
-    private static final io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession)
+    private static final io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession();
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession();
     }
 
-    public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession getDefaultInstance() {
+    public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
       return PARSER;
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession getDefaultInstanceForType() {
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -812,13 +812,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_FIELD_NUMBER = 2;
-  private io.bloombox.schema.services.pos.v1beta1.StaffUser user_;
+  private io.bloombox.schema.identity.AppStaff.StaffUser user_;
   /**
    * <pre>
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
    */
   public boolean hasUser() {
     return user_ != null;
@@ -828,19 +828,19 @@ private static final long serialVersionUID = 0L;
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
    */
-  public io.bloombox.schema.services.pos.v1beta1.StaffUser getUser() {
-    return user_ == null ? io.bloombox.schema.services.pos.v1beta1.StaffUser.getDefaultInstance() : user_;
+  public io.bloombox.schema.identity.AppStaff.StaffUser getUser() {
+    return user_ == null ? io.bloombox.schema.identity.AppStaff.StaffUser.getDefaultInstance() : user_;
   }
   /**
    * <pre>
    * Specifies the staff user logged in via this operation.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+   * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
    */
-  public io.bloombox.schema.services.pos.v1beta1.StaffUserOrBuilder getUserOrBuilder() {
+  public io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder getUserOrBuilder() {
     return getUser();
   }
 
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the current/active status of a particular point of sale session.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+   * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
    */
   public int getStatusValue() {
     return status_;
@@ -861,11 +861,11 @@ private static final long serialVersionUID = 0L;
    * Specifies the current/active status of a particular point of sale session.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+   * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
    */
-  public io.bloombox.schema.services.pos.v1beta1.SessionStatus getStatus() {
-    io.bloombox.schema.services.pos.v1beta1.SessionStatus result = io.bloombox.schema.services.pos.v1beta1.SessionStatus.valueOf(status_);
-    return result == null ? io.bloombox.schema.services.pos.v1beta1.SessionStatus.UNRECOGNIZED : result;
+  public io.opencannabis.schema.commerce.CommercialPOS.SessionStatus getStatus() {
+    io.opencannabis.schema.commerce.CommercialPOS.SessionStatus result = io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.valueOf(status_);
+    return result == null ? io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.UNRECOGNIZED : result;
   }
 
   public static final int RIGHTS_FIELD_NUMBER = 5;
@@ -957,13 +957,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MESSAGING_FIELD_NUMBER = 7;
-  private io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging_;
+  private io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging_;
   /**
    * <pre>
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
   public boolean hasMessaging() {
     return messaging_ != null;
@@ -973,19 +973,19 @@ private static final long serialVersionUID = 0L;
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
-  public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession getMessaging() {
-    return messaging_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.getDefaultInstance() : messaging_;
+  public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getMessaging() {
+    return messaging_ == null ? io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.getDefaultInstance() : messaging_;
   }
   /**
    * <pre>
    * Messaging session configuration, if applicable.
    * </pre>
    *
-   * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+   * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
    */
-  public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSessionOrBuilder getMessagingOrBuilder() {
+  public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder getMessagingOrBuilder() {
     return getMessaging();
   }
 
@@ -1106,7 +1106,7 @@ private static final long serialVersionUID = 0L;
     if (user_ != null) {
       output.writeMessage(2, getUser());
     }
-    if (status_ != io.bloombox.schema.services.pos.v1beta1.SessionStatus.ESTABLISHED.getNumber()) {
+    if (status_ != io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.ESTABLISHED.getNumber()) {
       output.writeEnum(3, status_);
     }
     if (rights_ != null) {
@@ -1142,7 +1142,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getUser());
     }
-    if (status_ != io.bloombox.schema.services.pos.v1beta1.SessionStatus.ESTABLISHED.getNumber()) {
+    if (status_ != io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.ESTABLISHED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, status_);
     }
@@ -1180,10 +1180,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession)) {
+    if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.CashRegisterSession)) {
       return super.equals(obj);
     }
-    io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession other = (io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession) obj;
+    io.bloombox.schema.services.pos.v1beta1.CashRegisterSession other = (io.bloombox.schema.services.pos.v1beta1.CashRegisterSession) obj;
 
     boolean result = true;
     result = result && getId()
@@ -1269,69 +1269,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(byte[] data)
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(java.io.InputStream input)
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseDelimitedFrom(java.io.InputStream input)
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseDelimitedFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parseFrom(
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -1343,7 +1343,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession prototype) {
+  public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -1362,25 +1362,25 @@ private static final long serialVersionUID = 0L;
    * Specifies the notion of a point-of-sale session, bound to a user and particular POS device.
    * </pre>
    *
-   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.PointOfSaleSession}
+   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.CashRegisterSession}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.PointOfSaleSession)
-      io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder {
+      // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
+      io.bloombox.schema.services.pos.v1beta1.CashRegisterSessionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_fieldAccessorTable
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.class, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder.class);
+              io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.class, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder.class);
     }
 
-    // Construct using io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.newBuilder()
+    // Construct using io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -1449,23 +1449,23 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_PointOfSaleSession_descriptor;
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_CashRegisterSession_descriptor;
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getDefaultInstanceForType() {
-      return io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.getDefaultInstance();
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession getDefaultInstanceForType() {
+      return io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.getDefaultInstance();
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession build() {
-      io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession result = buildPartial();
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession build() {
+      io.bloombox.schema.services.pos.v1beta1.CashRegisterSession result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession buildPartial() {
-      io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession result = new io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession(this);
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession buildPartial() {
+      io.bloombox.schema.services.pos.v1beta1.CashRegisterSession result = new io.bloombox.schema.services.pos.v1beta1.CashRegisterSession(this);
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       result.id_ = id_;
@@ -1541,16 +1541,16 @@ private static final long serialVersionUID = 0L;
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession) {
-        return mergeFrom((io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession)other);
+      if (other instanceof io.bloombox.schema.services.pos.v1beta1.CashRegisterSession) {
+        return mergeFrom((io.bloombox.schema.services.pos.v1beta1.CashRegisterSession)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession other) {
-      if (other == io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.getDefaultInstance()) return this;
+    public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession other) {
+      if (other == io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         onChanged();
@@ -1615,11 +1615,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession parsedMessage = null;
+      io.bloombox.schema.services.pos.v1beta1.CashRegisterSession parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession) e.getUnfinishedMessage();
+        parsedMessage = (io.bloombox.schema.services.pos.v1beta1.CashRegisterSession) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -1719,15 +1719,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private io.bloombox.schema.services.pos.v1beta1.StaffUser user_ = null;
+    private io.bloombox.schema.identity.AppStaff.StaffUser user_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.services.pos.v1beta1.StaffUser, io.bloombox.schema.services.pos.v1beta1.StaffUser.Builder, io.bloombox.schema.services.pos.v1beta1.StaffUserOrBuilder> userBuilder_;
+        io.bloombox.schema.identity.AppStaff.StaffUser, io.bloombox.schema.identity.AppStaff.StaffUser.Builder, io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder> userBuilder_;
     /**
      * <pre>
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
     public boolean hasUser() {
       return userBuilder_ != null || user_ != null;
@@ -1737,11 +1737,11 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.StaffUser getUser() {
+    public io.bloombox.schema.identity.AppStaff.StaffUser getUser() {
       if (userBuilder_ == null) {
-        return user_ == null ? io.bloombox.schema.services.pos.v1beta1.StaffUser.getDefaultInstance() : user_;
+        return user_ == null ? io.bloombox.schema.identity.AppStaff.StaffUser.getDefaultInstance() : user_;
       } else {
         return userBuilder_.getMessage();
       }
@@ -1751,9 +1751,9 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
-    public Builder setUser(io.bloombox.schema.services.pos.v1beta1.StaffUser value) {
+    public Builder setUser(io.bloombox.schema.identity.AppStaff.StaffUser value) {
       if (userBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1771,10 +1771,10 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
     public Builder setUser(
-        io.bloombox.schema.services.pos.v1beta1.StaffUser.Builder builderForValue) {
+        io.bloombox.schema.identity.AppStaff.StaffUser.Builder builderForValue) {
       if (userBuilder_ == null) {
         user_ = builderForValue.build();
         onChanged();
@@ -1789,13 +1789,13 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
-    public Builder mergeUser(io.bloombox.schema.services.pos.v1beta1.StaffUser value) {
+    public Builder mergeUser(io.bloombox.schema.identity.AppStaff.StaffUser value) {
       if (userBuilder_ == null) {
         if (user_ != null) {
           user_ =
-            io.bloombox.schema.services.pos.v1beta1.StaffUser.newBuilder(user_).mergeFrom(value).buildPartial();
+            io.bloombox.schema.identity.AppStaff.StaffUser.newBuilder(user_).mergeFrom(value).buildPartial();
         } else {
           user_ = value;
         }
@@ -1811,7 +1811,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
     public Builder clearUser() {
       if (userBuilder_ == null) {
@@ -1829,9 +1829,9 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.StaffUser.Builder getUserBuilder() {
+    public io.bloombox.schema.identity.AppStaff.StaffUser.Builder getUserBuilder() {
       
       onChanged();
       return getUserFieldBuilder().getBuilder();
@@ -1841,14 +1841,14 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.StaffUserOrBuilder getUserOrBuilder() {
+    public io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder getUserOrBuilder() {
       if (userBuilder_ != null) {
         return userBuilder_.getMessageOrBuilder();
       } else {
         return user_ == null ?
-            io.bloombox.schema.services.pos.v1beta1.StaffUser.getDefaultInstance() : user_;
+            io.bloombox.schema.identity.AppStaff.StaffUser.getDefaultInstance() : user_;
       }
     }
     /**
@@ -1856,14 +1856,14 @@ private static final long serialVersionUID = 0L;
      * Specifies the staff user logged in via this operation.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.StaffUser user = 2;</code>
+     * <code>.bloombox.schema.identity.StaffUser user = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.services.pos.v1beta1.StaffUser, io.bloombox.schema.services.pos.v1beta1.StaffUser.Builder, io.bloombox.schema.services.pos.v1beta1.StaffUserOrBuilder> 
+        io.bloombox.schema.identity.AppStaff.StaffUser, io.bloombox.schema.identity.AppStaff.StaffUser.Builder, io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder> 
         getUserFieldBuilder() {
       if (userBuilder_ == null) {
         userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.services.pos.v1beta1.StaffUser, io.bloombox.schema.services.pos.v1beta1.StaffUser.Builder, io.bloombox.schema.services.pos.v1beta1.StaffUserOrBuilder>(
+            io.bloombox.schema.identity.AppStaff.StaffUser, io.bloombox.schema.identity.AppStaff.StaffUser.Builder, io.bloombox.schema.identity.AppStaff.StaffUserOrBuilder>(
                 getUser(),
                 getParentForChildren(),
                 isClean());
@@ -1878,7 +1878,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
      */
     public int getStatusValue() {
       return status_;
@@ -1888,7 +1888,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -1900,20 +1900,20 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.SessionStatus getStatus() {
-      io.bloombox.schema.services.pos.v1beta1.SessionStatus result = io.bloombox.schema.services.pos.v1beta1.SessionStatus.valueOf(status_);
-      return result == null ? io.bloombox.schema.services.pos.v1beta1.SessionStatus.UNRECOGNIZED : result;
+    public io.opencannabis.schema.commerce.CommercialPOS.SessionStatus getStatus() {
+      io.opencannabis.schema.commerce.CommercialPOS.SessionStatus result = io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.valueOf(status_);
+      return result == null ? io.opencannabis.schema.commerce.CommercialPOS.SessionStatus.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
      */
-    public Builder setStatus(io.bloombox.schema.services.pos.v1beta1.SessionStatus value) {
+    public Builder setStatus(io.opencannabis.schema.commerce.CommercialPOS.SessionStatus value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1927,7 +1927,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the current/active status of a particular point of sale session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.SessionStatus status = 3;</code>
+     * <code>.opencannabis.commerce.SessionStatus status = 3;</code>
      */
     public Builder clearStatus() {
       
@@ -2401,15 +2401,15 @@ private static final long serialVersionUID = 0L;
       return authorizationBuilder_;
     }
 
-    private io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging_ = null;
+    private io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSessionOrBuilder> messagingBuilder_;
+        io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder> messagingBuilder_;
     /**
      * <pre>
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public boolean hasMessaging() {
       return messagingBuilder_ != null || messaging_ != null;
@@ -2419,11 +2419,11 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession getMessaging() {
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession getMessaging() {
       if (messagingBuilder_ == null) {
-        return messaging_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.getDefaultInstance() : messaging_;
+        return messaging_ == null ? io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.getDefaultInstance() : messaging_;
       } else {
         return messagingBuilder_.getMessage();
       }
@@ -2433,9 +2433,9 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
-    public Builder setMessaging(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession value) {
+    public Builder setMessaging(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession value) {
       if (messagingBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2453,10 +2453,10 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public Builder setMessaging(
-        io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.Builder builderForValue) {
+        io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder builderForValue) {
       if (messagingBuilder_ == null) {
         messaging_ = builderForValue.build();
         onChanged();
@@ -2471,13 +2471,13 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
-    public Builder mergeMessaging(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession value) {
+    public Builder mergeMessaging(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession value) {
       if (messagingBuilder_ == null) {
         if (messaging_ != null) {
           messaging_ =
-            io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.newBuilder(messaging_).mergeFrom(value).buildPartial();
+            io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.newBuilder(messaging_).mergeFrom(value).buildPartial();
         } else {
           messaging_ = value;
         }
@@ -2493,7 +2493,7 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     public Builder clearMessaging() {
       if (messagingBuilder_ == null) {
@@ -2511,9 +2511,9 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.Builder getMessagingBuilder() {
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder getMessagingBuilder() {
       
       onChanged();
       return getMessagingFieldBuilder().getBuilder();
@@ -2523,14 +2523,14 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSessionOrBuilder getMessagingOrBuilder() {
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder getMessagingOrBuilder() {
       if (messagingBuilder_ != null) {
         return messagingBuilder_.getMessageOrBuilder();
       } else {
         return messaging_ == null ?
-            io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.getDefaultInstance() : messaging_;
+            io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.getDefaultInstance() : messaging_;
       }
     }
     /**
@@ -2538,14 +2538,14 @@ private static final long serialVersionUID = 0L;
      * Messaging session configuration, if applicable.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession messaging = 7;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession messaging = 7;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSessionOrBuilder> 
+        io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder> 
         getMessagingFieldBuilder() {
       if (messagingBuilder_ == null) {
         messagingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.MessagingSessionOrBuilder>(
+            io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSession.Builder, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.MessagingSessionOrBuilder>(
                 getMessaging(),
                 getParentForChildren(),
                 isClean());
@@ -3023,39 +3023,39 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.PointOfSaleSession)
+    // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
   }
 
-  // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.PointOfSaleSession)
-  private static final io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.CashRegisterSession)
+  private static final io.bloombox.schema.services.pos.v1beta1.CashRegisterSession DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession();
+    DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.CashRegisterSession();
   }
 
-  public static io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getDefaultInstance() {
+  public static io.bloombox.schema.services.pos.v1beta1.CashRegisterSession getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<PointOfSaleSession>
-      PARSER = new com.google.protobuf.AbstractParser<PointOfSaleSession>() {
-    public PointOfSaleSession parsePartialFrom(
+  private static final com.google.protobuf.Parser<CashRegisterSession>
+      PARSER = new com.google.protobuf.AbstractParser<CashRegisterSession>() {
+    public CashRegisterSession parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PointOfSaleSession(input, extensionRegistry);
+      return new CashRegisterSession(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<PointOfSaleSession> parser() {
+  public static com.google.protobuf.Parser<CashRegisterSession> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<PointOfSaleSession> getParserForType() {
+  public com.google.protobuf.Parser<CashRegisterSession> getParserForType() {
     return PARSER;
   }
 
-  public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getDefaultInstanceForType() {
+  public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -1630,7 +1630,7 @@ private static final long serialVersionUID = 0L;
      * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
      */
     boolean hasSession();
     /**
@@ -1638,17 +1638,17 @@ private static final long serialVersionUID = 0L;
      * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getSession();
+    io.bloombox.schema.services.pos.v1beta1.CashRegisterSession getSession();
     /**
      * <pre>
      * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder getSessionOrBuilder();
+    io.bloombox.schema.services.pos.v1beta1.CashRegisterSessionOrBuilder getSessionOrBuilder();
   }
   /**
    * <pre>
@@ -1701,11 +1701,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder subBuilder = null;
+              io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder subBuilder = null;
               if (session_ != null) {
                 subBuilder = session_.toBuilder();
               }
-              session_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.parser(), extensionRegistry);
+              session_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(session_);
                 session_ = subBuilder.buildPartial();
@@ -1738,13 +1738,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SESSION_FIELD_NUMBER = 1;
-    private io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session_;
+    private io.bloombox.schema.services.pos.v1beta1.CashRegisterSession session_;
     /**
      * <pre>
      * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
      */
     public boolean hasSession() {
       return session_ != null;
@@ -1754,19 +1754,19 @@ private static final long serialVersionUID = 0L;
      * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getSession() {
-      return session_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.getDefaultInstance() : session_;
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession getSession() {
+      return session_ == null ? io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.getDefaultInstance() : session_;
     }
     /**
      * <pre>
      * Session allocated to coordinate this user's point-of-sale transactions.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+     * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder getSessionOrBuilder() {
+    public io.bloombox.schema.services.pos.v1beta1.CashRegisterSessionOrBuilder getSessionOrBuilder() {
       return getSession();
     }
 
@@ -2070,15 +2070,15 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session_ = null;
+      private io.bloombox.schema.services.pos.v1beta1.CashRegisterSession session_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder> sessionBuilder_;
+          io.bloombox.schema.services.pos.v1beta1.CashRegisterSession, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder, io.bloombox.schema.services.pos.v1beta1.CashRegisterSessionOrBuilder> sessionBuilder_;
       /**
        * <pre>
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
       public boolean hasSession() {
         return sessionBuilder_ != null || session_ != null;
@@ -2088,11 +2088,11 @@ private static final long serialVersionUID = 0L;
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession getSession() {
+      public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession getSession() {
         if (sessionBuilder_ == null) {
-          return session_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.getDefaultInstance() : session_;
+          return session_ == null ? io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.getDefaultInstance() : session_;
         } else {
           return sessionBuilder_.getMessage();
         }
@@ -2102,9 +2102,9 @@ private static final long serialVersionUID = 0L;
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
-      public Builder setSession(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession value) {
+      public Builder setSession(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession value) {
         if (sessionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2122,10 +2122,10 @@ private static final long serialVersionUID = 0L;
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
       public Builder setSession(
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder builderForValue) {
+          io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder builderForValue) {
         if (sessionBuilder_ == null) {
           session_ = builderForValue.build();
           onChanged();
@@ -2140,13 +2140,13 @@ private static final long serialVersionUID = 0L;
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
-      public Builder mergeSession(io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession value) {
+      public Builder mergeSession(io.bloombox.schema.services.pos.v1beta1.CashRegisterSession value) {
         if (sessionBuilder_ == null) {
           if (session_ != null) {
             session_ =
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.newBuilder(session_).mergeFrom(value).buildPartial();
+              io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.newBuilder(session_).mergeFrom(value).buildPartial();
           } else {
             session_ = value;
           }
@@ -2162,7 +2162,7 @@ private static final long serialVersionUID = 0L;
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
       public Builder clearSession() {
         if (sessionBuilder_ == null) {
@@ -2180,9 +2180,9 @@ private static final long serialVersionUID = 0L;
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder getSessionBuilder() {
+      public io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder getSessionBuilder() {
         
         onChanged();
         return getSessionFieldBuilder().getBuilder();
@@ -2192,14 +2192,14 @@ private static final long serialVersionUID = 0L;
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder getSessionOrBuilder() {
+      public io.bloombox.schema.services.pos.v1beta1.CashRegisterSessionOrBuilder getSessionOrBuilder() {
         if (sessionBuilder_ != null) {
           return sessionBuilder_.getMessageOrBuilder();
         } else {
           return session_ == null ?
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.getDefaultInstance() : session_;
+              io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.getDefaultInstance() : session_;
         }
       }
       /**
@@ -2207,14 +2207,14 @@ private static final long serialVersionUID = 0L;
        * Session allocated to coordinate this user's point-of-sale transactions.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleSession session = 1;</code>
+       * <code>.bloombox.schema.services.pos.v1beta1.CashRegisterSession session = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder> 
+          io.bloombox.schema.services.pos.v1beta1.CashRegisterSession, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder, io.bloombox.schema.services.pos.v1beta1.CashRegisterSessionOrBuilder> 
           getSessionFieldBuilder() {
         if (sessionBuilder_ == null) {
           sessionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSession.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleSessionOrBuilder>(
+              io.bloombox.schema.services.pos.v1beta1.CashRegisterSession, io.bloombox.schema.services.pos.v1beta1.CashRegisterSession.Builder, io.bloombox.schema.services.pos.v1beta1.CashRegisterSessionOrBuilder>(
                   getSession(),
                   getParentForChildren(),
                   isClean());

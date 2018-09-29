@@ -129,7 +129,7 @@ public enum InventoryStreamEvent
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.getDescriptor().getEnumTypes().get(2);
+    return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final InventoryStreamEvent[] VALUES = values();
