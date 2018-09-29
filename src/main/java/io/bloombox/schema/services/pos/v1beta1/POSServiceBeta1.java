@@ -306,310 +306,314 @@ public final class POSServiceBeta1 {
       "gger/options/swagger.proto\032\026temporal/Ins" +
       "tant.proto\032\027commerce/Purchase.proto\032\027com" +
       "merce/Currency.proto\032\032commerce/PointOfSa" +
-      "le.proto\032\021identity/ID.proto\032\023identity/Us" +
-      "er.proto\032\030identity/StaffUser.proto\032\034iden" +
-      "tity/MembershipKey.proto\032\033products/menu/" +
-      "Section.proto\032 inventory/InventoryProduc" +
-      "t.proto\032!inventory/InventoryLocation.pro" +
-      "to\032\031partner/LocationKey.proto\032\024security/" +
-      "Token.proto\032\034security/IdentityToken.prot" +
-      "o\032!crypto/primitives/Integrity.proto\032\033pa" +
-      "rtner/PartnerDevice.proto\"\222\001\n\024RegisterSe" +
-      "ssionToken\022F\n\005grant\030\001 \001(\01627.bloombox.sch" +
-      "ema.services.pos.v1beta1.SessionTokenGra" +
-      "nt\0222\n\005token\030\002 \001(\0132#.bloombox.schema.secu" +
-      "rity.AuthToken\"\036\n\rMessagingAuth\022\r\n\005nonce" +
-      "\030\001 \001(\t\"\265\004\n\023CashRegisterSession\022\n\n\002id\030\001 \001" +
-      "(\t\0221\n\004user\030\002 \001(\0132#.bloombox.schema.ident" +
-      "ity.StaffUser\0224\n\006status\030\003 \001(\0162$.opencann" +
-      "abis.commerce.SessionStatus\0229\n\006rights\030\005 " +
-      "\001(\0132).bloombox.schema.identity.IndustryP" +
-      "rofile\022Q\n\rauthorization\030\006 \003(\0132:.bloombox" +
-      ".schema.services.pos.v1beta1.RegisterSes" +
-      "sionToken\022]\n\tmessaging\030\007 \001(\0132J.bloombox." +
-      "schema.services.pos.v1beta1.CashRegister" +
-      "Session.MessagingSession\0220\n\010check_in\030\010 \001" +
-      "(\0132\036.opencannabis.temporal.Instant\022/\n\007ex" +
-      "pires\030\t \001(\0132\036.opencannabis.temporal.Inst" +
-      "ant\0223\n\013established\030\n \001(\0132\036.opencannabis." +
-      "temporal.Instant\032$\n\020MessagingSession\022\020\n\010" +
-      "identity\030\001 \001(\t\"\356\003\n\020PointOfSaleState\022P\n\004o" +
-      "pen\030\001 \001(\0132B.bloombox.schema.services.pos" +
-      ".v1beta1.PointOfSaleState.SessionOpen\0227\n" +
-      "\013transaction\030\002 \003(\0132\".opencannabis.commer" +
-      "ce.PurchaseKey\022R\n\005close\030\003 \001(\0132C.bloombox" +
-      ".schema.services.pos.v1beta1.PointOfSale" +
-      "State.SessionClose\032|\n\013SessionOpen\022;\n\rope" +
-      "ning_float\030\001 \001(\0132$.opencannabis.commerce" +
-      ".CurrencyValue\0220\n\010occurred\030\002 \001(\0132\036.openc" +
-      "annabis.temporal.Instant\032}\n\014SessionClose" +
-      "\022;\n\rclosing_count\030\001 \001(\0132$.opencannabis.c" +
-      "ommerce.CurrencyValue\0220\n\010occurred\030\002 \001(\0132" +
-      "\036.opencannabis.temporal.Instant\"\253\004\n\rAuth" +
-      "orizeUser\032\225\002\n\007Request\022;\n\010register\030\001 \001(\0132" +
-      ").bloombox.schema.partner.PartnerDeviceK" +
-      "ey\022F\n\tmessaging\030\002 \001(\01323.bloombox.schema." +
-      "services.pos.v1beta1.MessagingAuth\0228\n\005to" +
-      "ken\030\n \001(\0132\'.bloombox.schema.security.Ide" +
-      "ntityTokenH\000\022C\n\tchallenge\030\013 \001(\0132..openca" +
-      "nnabis.crypto.primitives.integrity.HashH" +
-      "\000B\006\n\004auth\032V\n\010Response\022J\n\007session\030\001 \001(\01329" +
-      ".bloombox.schema.services.pos.v1beta1.Ca" +
-      "shRegisterSession\032\251\001\n\tOperation\022L\n\007reque" +
-      "st\030\001 \001(\0132;.bloombox.schema.services.pos." +
-      "v1beta1.AuthorizeUser.Request\022N\n\010respons" +
-      "e\030\002 \001(\0132<.bloombox.schema.services.pos.v" +
-      "1beta1.AuthorizeUser.Response\"\310\003\n\013OpenSe" +
-      "ssion\032\270\001\n\007Request\022;\n\010register\030\001 \001(\0132).bl" +
-      "oombox.schema.partner.PartnerDeviceKey\022\017" +
-      "\n\007session\030\002 \001(\t\022\r\n\005token\030\003 \001(\t\022P\n\004open\030\004" +
-      " \001(\0132B.bloombox.schema.services.pos.v1be" +
-      "ta1.PointOfSaleState.SessionOpen\032V\n\010Resp" +
-      "onse\022J\n\007session\030\001 \001(\01329.bloombox.schema." +
-      "services.pos.v1beta1.CashRegisterSession" +
-      "\032\245\001\n\tOperation\022J\n\007request\030\001 \001(\01329.bloomb" +
-      "ox.schema.services.pos.v1beta1.OpenSessi" +
-      "on.Request\022L\n\010response\030\002 \001(\0132:.bloombox." +
-      "schema.services.pos.v1beta1.OpenSession." +
-      "Response\"\333\003\n\014CloseSession\032\344\001\n\007Request\022;\n" +
-      "\010register\030\001 \001(\0132).bloombox.schema.partne" +
-      "r.PartnerDeviceKey\022\017\n\007session\030\002 \001(\t\022R\n\005c" +
-      "lose\030\003 \001(\0132C.bloombox.schema.services.po" +
-      "s.v1beta1.PointOfSaleState.SessionClose\022" +
-      "7\n\013transaction\030\004 \003(\0132\".opencannabis.comm" +
-      "erce.PurchaseKey\032:\n\010Response\022.\n\006closed\030\002" +
-      " \001(\0132\036.opencannabis.temporal.Instant\032\247\001\n" +
-      "\tOperation\022K\n\007request\030\001 \001(\0132:.bloombox.s" +
-      "chema.services.pos.v1beta1.CloseSession." +
-      "Request\022M\n\010response\030\002 \001(\0132;.bloombox.sch" +
-      "ema.services.pos.v1beta1.CloseSession.Re" +
-      "sponse\"\274\004\n\nOpenTicket\032\234\001\n\007Request\0224\n\010pur" +
-      "chase\030\001 \001(\0132\".opencannabis.commerce.Purc" +
-      "haseKey\022;\n\010register\030\002 \001(\0132).bloombox.sch" +
-      "ema.partner.PartnerDeviceKey\022\017\n\007session\030" +
-      "\003 \001(\t\022\r\n\005fresh\030\004 \001(\010\032\350\001\n\010Response\0224\n\010pur" +
-      "chase\030\001 \001(\0132\".opencannabis.commerce.Purc" +
-      "haseKey\022\r\n\005claim\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%" +
-      ".opencannabis.commerce.PurchaseStatus\022/\n" +
-      "\007granted\030\004 \001(\0132\036.opencannabis.temporal.I" +
-      "nstant\022/\n\007expires\030\005 \001(\0132\036.opencannabis.t" +
-      "emporal.Instant\032\243\001\n\tOperation\022I\n\007request" +
-      "\030\001 \001(\01328.bloombox.schema.services.pos.v1" +
-      "beta1.OpenTicket.Request\022K\n\010response\030\002 \001" +
-      "(\01329.bloombox.schema.services.pos.v1beta" +
-      "1.OpenTicket.Response\"\207\005\n\nSaveTicket\032\233\002\n" +
-      "\007Request\022;\n\010register\030\001 \001(\0132).bloombox.sc" +
-      "hema.partner.PartnerDeviceKey\0225\n\006ticket\030" +
-      "\002 \001(\0132%.opencannabis.commerce.PurchaseTi" +
-      "cket\022\017\n\007session\030\003 \001(\t\022;\n\tsignature\030\004 \001(\013" +
-      "2(.opencannabis.commerce.PurchaseSignatu" +
-      "re\0221\n\ttimestamp\030\005 \001(\0132\036.opencannabis.tem" +
-      "poral.Instant\022\014\n\004auto\030\006 \001(\010\022\r\n\005close\030\007 \001" +
-      "(\010\032\264\001\n\010Response\022\017\n\007version\030\001 \001(\r\0225\n\006stat" +
-      "us\030\002 \001(\0162%.opencannabis.commerce.Purchas" +
-      "eStatus\022/\n\007granted\030\003 \001(\0132\036.opencannabis." +
-      "temporal.Instant\022/\n\007expires\030\004 \001(\0132\036.open" +
-      "cannabis.temporal.Instant\032\243\001\n\tOperation\022" +
-      "I\n\007request\030\001 \001(\01328.bloombox.schema.servi" +
-      "ces.pos.v1beta1.SaveTicket.Request\022K\n\010re" +
-      "sponse\030\002 \001(\01329.bloombox.schema.services." +
-      "pos.v1beta1.SaveTicket.Response\"\205\003\n\nLoad" +
-      "Ticket\032\215\001\n\007Request\022;\n\010register\030\001 \001(\0132).b" +
+      "le.proto\032#analytics/context/Application." +
+      "proto\032\021identity/ID.proto\032\023identity/User." +
+      "proto\032\030identity/StaffUser.proto\032\034identit" +
+      "y/MembershipKey.proto\032\033products/menu/Sec" +
+      "tion.proto\032 inventory/InventoryProduct.p" +
+      "roto\032!inventory/InventoryLocation.proto\032" +
+      "\031partner/LocationKey.proto\032\024security/Tok" +
+      "en.proto\032\034security/IdentityToken.proto\032!" +
+      "crypto/primitives/Integrity.proto\032\033partn" +
+      "er/PartnerDevice.proto\"\222\001\n\024RegisterSessi" +
+      "onToken\022F\n\005grant\030\001 \001(\01627.bloombox.schema" +
+      ".services.pos.v1beta1.SessionTokenGrant\022" +
+      "2\n\005token\030\002 \001(\0132#.bloombox.schema.securit" +
+      "y.AuthToken\"\036\n\rMessagingAuth\022\r\n\005nonce\030\001 " +
+      "\001(\t\"\265\004\n\023CashRegisterSession\022\n\n\002id\030\001 \001(\t\022" +
+      "1\n\004user\030\002 \001(\0132#.bloombox.schema.identity" +
+      ".StaffUser\0224\n\006status\030\003 \001(\0162$.opencannabi" +
+      "s.commerce.SessionStatus\0229\n\006rights\030\005 \001(\013" +
+      "2).bloombox.schema.identity.IndustryProf" +
+      "ile\022Q\n\rauthorization\030\006 \003(\0132:.bloombox.sc" +
+      "hema.services.pos.v1beta1.RegisterSessio" +
+      "nToken\022]\n\tmessaging\030\007 \001(\0132J.bloombox.sch" +
+      "ema.services.pos.v1beta1.CashRegisterSes" +
+      "sion.MessagingSession\0220\n\010check_in\030\010 \001(\0132" +
+      "\036.opencannabis.temporal.Instant\022/\n\007expir" +
+      "es\030\t \001(\0132\036.opencannabis.temporal.Instant" +
+      "\0223\n\013established\030\n \001(\0132\036.opencannabis.tem" +
+      "poral.Instant\032$\n\020MessagingSession\022\020\n\010ide" +
+      "ntity\030\001 \001(\t\"\356\003\n\020PointOfSaleState\022P\n\004open" +
+      "\030\001 \001(\0132B.bloombox.schema.services.pos.v1" +
+      "beta1.PointOfSaleState.SessionOpen\0227\n\013tr" +
+      "ansaction\030\002 \003(\0132\".opencannabis.commerce." +
+      "PurchaseKey\022R\n\005close\030\003 \001(\0132C.bloombox.sc" +
+      "hema.services.pos.v1beta1.PointOfSaleSta" +
+      "te.SessionClose\032|\n\013SessionOpen\022;\n\ropenin" +
+      "g_float\030\001 \001(\0132$.opencannabis.commerce.Cu" +
+      "rrencyValue\0220\n\010occurred\030\002 \001(\0132\036.opencann" +
+      "abis.temporal.Instant\032}\n\014SessionClose\022;\n" +
+      "\rclosing_count\030\001 \001(\0132$.opencannabis.comm" +
+      "erce.CurrencyValue\0220\n\010occurred\030\002 \001(\0132\036.o" +
+      "pencannabis.temporal.Instant\"\244\005\n\rAuthori" +
+      "zeUser\032\216\003\n\007Request\022;\n\010register\030\001 \001(\0132).b" +
       "loombox.schema.partner.PartnerDeviceKey\022" +
-      "4\n\010purchase\030\002 \001(\0132\".opencannabis.commerc" +
-      "e.PurchaseKey\022\017\n\007session\030\003 \001(\t\032A\n\010Respon" +
-      "se\0225\n\006ticket\030\001 \001(\0132%.opencannabis.commer" +
-      "ce.PurchaseTicket\032\243\001\n\tOperation\022I\n\007reque" +
-      "st\030\001 \001(\01328.bloombox.schema.services.pos." +
-      "v1beta1.LoadTicket.Request\022K\n\010response\030\002" +
-      " \001(\01329.bloombox.schema.services.pos.v1be" +
-      "ta1.LoadTicket.Response\"\222\003\n\nVoidTicket\032\215" +
-      "\001\n\007Request\022;\n\010register\030\001 \001(\0132).bloombox." +
-      "schema.partner.PartnerDeviceKey\0224\n\010purch" +
-      "ase\030\002 \001(\0132\".opencannabis.commerce.Purcha" +
-      "seKey\022\017\n\007session\030\003 \001(\t\032N\n\010Response\022\017\n\007ve" +
-      "rsion\030\001 \001(\r\0221\n\ttimestamp\030\002 \001(\0132\036.opencan" +
-      "nabis.temporal.Instant\032\243\001\n\tOperation\022I\n\007" +
-      "request\030\001 \001(\01328.bloombox.schema.services" +
-      ".pos.v1beta1.VoidTicket.Request\022K\n\010respo" +
-      "nse\030\002 \001(\01329.bloombox.schema.services.pos" +
-      ".v1beta1.VoidTicket.Response\"\236\003\n\016Finaliz" +
-      "eTicket\032\215\001\n\007Request\022;\n\010register\030\001 \001(\0132)." +
-      "bloombox.schema.partner.PartnerDeviceKey" +
-      "\0224\n\010purchase\030\002 \001(\0132\".opencannabis.commer" +
-      "ce.PurchaseKey\022\017\n\007session\030\003 \001(\t\032N\n\010Respo" +
-      "nse\022\017\n\007version\030\001 \001(\r\0221\n\ttimestamp\030\002 \001(\0132" +
-      "\036.opencannabis.temporal.Instant\032\253\001\n\tOper" +
-      "ation\022M\n\007request\030\001 \001(\0132<.bloombox.schema" +
-      ".services.pos.v1beta1.FinalizeTicket.Req" +
-      "uest\022O\n\010response\030\002 \001(\0132=.bloombox.schema" +
-      ".services.pos.v1beta1.FinalizeTicket.Res" +
-      "ponse\"\315\004\n\014MemberSearch\032/\n\017MemberPredicat" +
-      "e\022\r\n\005email\030\001 \001(\t\022\r\n\005phone\030\002 \001(\t\032\350\001\n\007Requ" +
-      "est\022T\n\006search\030\001 \001(\0132B.bloombox.schema.se" +
-      "rvices.pos.v1beta1.MemberSearch.MemberPr" +
-      "edicateH\000\022?\n\016identification\030\002 \001(\0132%.bloo" +
-      "mbox.schema.identity.IDReferenceH\000\022\017\n\005lo" +
-      "bby\030\003 \001(\010H\000\022\016\n\006cursor\030\004 \001(\t\022\r\n\005limit\030\005 \001" +
-      "(\r\022\016\n\006signal\030\006 \003(\tB\006\n\004spec\032w\n\010Response\022\016" +
-      "\n\006cursor\030\001 \001(\t\022\r\n\005count\030\002 \001(\r\022\r\n\005total\030\003" +
-      " \001(\r\022=\n\006member\030\004 \003(\0132-.bloombox.schema.i" +
-      "dentity.MembershipReference\032\247\001\n\tOperatio" +
-      "n\022K\n\007request\030\001 \001(\0132:.bloombox.schema.ser" +
-      "vices.pos.v1beta1.MemberSearch.Request\022M" +
-      "\n\010response\030\002 \001(\0132;.bloombox.schema.servi" +
-      "ces.pos.v1beta1.MemberSearch.Response\"\261\004" +
-      "\n\016InventoryQuery\032A\n\014KeyQuerySpec\0221\n\003key\030" +
-      "\001 \001(\0132$.opencannabis.inventory.Inventory" +
-      "Key\032P\n\020SectionQuerySpec\022<\n\007section\030\001 \001(\016" +
-      "2+.opencannabis.products.menu.section.Se" +
-      "ction\032\305\002\n\007Request\022;\n\010register\030\001 \001(\0132).bl" +
-      "oombox.schema.partner.PartnerDeviceKey\0226" +
-      "\n\010location\030\002 \001(\0132$.bloombox.schema.partn" +
-      "er.LocationKey\022\016\n\004full\030\003 \001(\010H\000\022Q\n\004keys\030\004" +
-      " \001(\0132A.bloombox.schema.services.pos.v1be" +
-      "ta1.InventoryQuery.KeyQuerySpecH\000\022Y\n\010sec" +
-      "tions\030\005 \001(\0132E.bloombox.schema.services.p" +
-      "os.v1beta1.InventoryQuery.SectionQuerySp" +
-      "ecH\000B\007\n\005query\032B\n\010Response\0226\n\004item\030\001 \003(\0132" +
-      "(.opencannabis.inventory.InventoryProduc" +
-      "t\"\213\002\n\017InventoryStream\032i\n\007Request\022>\n\010loca" +
-      "tion\030\001 \001(\0132,.opencannabis.inventory.Inve" +
-      "ntoryLocationKey\022\017\n\007session\030\003 \001(\t\022\r\n\005loc" +
-      "al\030\002 \003(\t\032\214\001\n\007Payload\022I\n\005event\030\001 \001(\0162:.bl" +
-      "oombox.schema.services.pos.v1beta1.Inven" +
-      "toryStreamEvent\0226\n\004item\030\002 \003(\0132(.opencann" +
-      "abis.inventory.InventoryProduct*\324\003\n\010POSE" +
-      "rror\022\014\n\010NO_ERROR\020\000\022\023\n\017INVALID_PARTNER\020\001\022" +
-      "\024\n\020INVALID_LOCATION\020\002\022\022\n\016INVALID_DEVICE\020" +
-      "\003\022\024\n\020INVALID_ID_TOKEN\020\004\022\034\n\030INVALID_DEVIC" +
-      "E_SIGNATURE\020\005\022\022\n\016INVALID_TICKET\020\006\022\026\n\022INV" +
-      "ALID_TICKET_KEY\020\007\022\034\n\030INVALID_TICKET_SIGN" +
-      "ATURE\020\010\022\025\n\021INVALID_TIMESTAMP\020\t\022\034\n\030ILLEGA" +
-      "L_TICKET_STRUCTURE\020\024\022\032\n\026ILLEGAL_TICKET_V" +
-      "ERSION\020\025\022\025\n\021ILLEGAL_TIMESTAMP\020\026\022\024\n\020TICKE" +
-      "T_NOT_FOUND\020\036\022\023\n\017TICKET_CONFLICT\020\037\022\022\n\016TI" +
-      "CKET_CLAIMED\020 \022\023\n\017INVALID_REQUEST\020`\022\030\n\024A" +
-      "UTHORIZATION_DENIED\020a\022\023\n\017ACCESS_CONFLICT" +
-      "\020b\022\022\n\016INTERNAL_ERROR\020c*@\n\024InventoryStrea" +
-      "mEvent\022\r\n\tPING_PONG\020\000\022\r\n\tNO_CHANGE\020\001\022\n\n\006" +
-      "UPDATE\020\002*7\n\021SessionTokenGrant\022\007\n\003API\020\000\022\n" +
-      "\n\006STREAM\020\001\022\r\n\tMESSAGING\020\0022\266\031\n\013PointOfSal" +
-      "e\022\220\002\n\tAuthorize\022;.bloombox.schema.servic" +
-      "es.pos.v1beta1.AuthorizeUser.Request\032<.b" +
-      "loombox.schema.services.pos.v1beta1.Auth" +
-      "orizeUser.Response\"\207\001\202\323\344\223\002+\"&/pos/v1beta" +
-      "1/{register.uuid}/authorize:\001*\222AS\022\021Sessi" +
-      "on Authorize\0323Establish a user session o" +
-      "n a point-of-sale device.*\tAuthorize\022\274\002\n" +
-      "\013SessionOpen\0229.bloombox.schema.services." +
-      "pos.v1beta1.OpenSession.Request\032:.bloomb" +
-      "ox.schema.services.pos.v1beta1.OpenSessi" +
-      "on.Response\"\265\001\202\323\344\223\0028\"3/pos/v1beta1/{regi" +
-      "ster.uuid}/session/{session}/open:\001*\222At\022" +
-      "\014Session Open\032WOpen a formal (pre-establ" +
-      "ished) point-of-sale session, to begin a" +
-      "ccepting transactions.*\013SessionOpen\022\303\002\n\014" +
-      "SessionClose\022:.bloombox.schema.services." +
-      "pos.v1beta1.CloseSession.Request\032;.bloom" +
-      "box.schema.services.pos.v1beta1.CloseSes" +
-      "sion.Response\"\271\001\202\323\344\223\0029\"4/pos/v1beta1/{re" +
-      "gister.uuid}/session/{session}/close:\001*\222" +
-      "Aw\022\rSession Close\032XClose a formal (curre" +
-      "ntly-open) point-of-sale session, usuall" +
-      "y at the end of each shift.*\014SessionClos" +
-      "e\022\315\003\n\nTicketOpen\0228.bloombox.schema.servi" +
-      "ces.pos.v1beta1.OpenTicket.Request\0329.blo" +
-      "ombox.schema.services.pos.v1beta1.OpenTi" +
-      "cket.Response\"\311\002\202\323\344\223\002\360\001\")/pos/v1beta1/{r" +
-      "egister.uuid}/tickets/openZE\"C/pos/v1bet" +
-      "a1/{register.uuid}/{session}/tickets/{pu" +
-      "rchase.uuid}/openZ5\0223/pos/v1beta1/{regis" +
-      "ter.uuid}/{session}/tickets/openZE\022C/pos" +
-      "/v1beta1/{register.uuid}/{session}/ticke" +
-      "ts/{purchase.uuid}/open\222AO\022\013Open Ticket\032" +
-      "4Open a new or existing ticket for read/" +
-      "write access.*\nTicketOpen\022\224\002\n\nTicketSave" +
-      "\0228.bloombox.schema.services.pos.v1beta1." +
-      "SaveTicket.Request\0329.bloombox.schema.ser" +
-      "vices.pos.v1beta1.SaveTicket.Response\"\220\001" +
-      "\202\323\344\223\002E\032@/pos/v1beta1/{register.uuid}/{se" +
-      "ssion}/tickets/{ticket.key.uuid}:\001*\222AB\022\013" +
-      "Save Ticket\032\'Persist/save a ticket for l" +
-      "ater recall.*\nTicketSave\022\227\002\n\nTicketLoad\022" +
-      "8.bloombox.schema.services.pos.v1beta1.L" +
-      "oadTicket.Request\0329.bloombox.schema.serv" +
-      "ices.pos.v1beta1.LoadTicket.Response\"\223\001\202" +
-      "\323\344\223\002@\022>/pos/v1beta1/{register.uuid}/{ses" +
-      "sion}/tickets/{purchase.uuid}\222AJ\022\013Load T" +
-      "icket\032/Recall an existing ticket for rea" +
-      "d-only access.*\nTicketLoad\022\237\002\n\nTicketVoi" +
-      "d\0228.bloombox.schema.services.pos.v1beta1" +
-      ".VoidTicket.Request\0329.bloombox.schema.se" +
-      "rvices.pos.v1beta1.VoidTicket.Response\"\233" +
-      "\001\202\323\344\223\002G\"E/pos/v1beta1/{register.uuid}/{s" +
-      "ession}/tickets/{purchase.uuid}/cancel\222A" +
-      "K\022\013Void Ticket\0320Void (cancel) an existin" +
-      "g, open purchase ticket.*\nTicketVoid\022\260\002\n" +
-      "\016TicketFinalize\022<.bloombox.schema.servic" +
-      "es.pos.v1beta1.FinalizeTicket.Request\032=." +
-      "bloombox.schema.services.pos.v1beta1.Fin" +
-      "alizeTicket.Response\"\240\001\202\323\344\223\002I\"G/pos/v1be" +
-      "ta1/{register.uuid}/{session}/tickets/{p" +
-      "urchase.uuid}/finalize\222AN\022\017Finalize Tick" +
-      "et\032+Finalize an existing, open purchase " +
-      "ticket.*\016TicketFinalize\022\365\001\n\rSearchMember" +
-      "s\022:.bloombox.schema.services.pos.v1beta1" +
-      ".MemberSearch.Request\032;.bloombox.schema." +
-      "services.pos.v1beta1.MemberSearch.Respon" +
-      "se\"k\202\323\344\223\002\026\"\024/pos/v1beta1/members\222AL\022\016Sea" +
-      "rch Members\032+Finalize an existing, open " +
-      "purchase ticket.*\rSearchMembers\022\252\002\n\021Inve" +
-      "ntoryRetrieve\022<.bloombox.schema.services" +
-      ".pos.v1beta1.InventoryQuery.Request\032=.bl" +
-      "oombox.schema.services.pos.v1beta1.Inven" +
-      "toryQuery.Response\"\227\001\202\323\344\223\002(\"&/pos/v1beta" +
-      "1/{register.uuid}/inventory\222Af\022\017Fetch In" +
-      "ventory\032@Retrieve live inventory records" +
-      " according to specified criteria.*\021Inven" +
-      "toryRetrieve\022\223\001\n\017InventoryStream\022=.bloom" +
-      "box.schema.services.pos.v1beta1.Inventor" +
-      "yStream.Request\032=.bloombox.schema.servic" +
-      "es.pos.v1beta1.InventoryStream.Payload(\001" +
-      "0\001B\243\n\n\'io.bloombox.schema.services.pos.v" +
-      "1beta1H\001P\001\242\002\003BBS\222A\354\t\022k\n\021Point of Sale AP" +
-      "I\032\031https://bloombox.io/terms\"7\n\010Bloombox" +
-      "\022\023https://bloombox.io\032\026developers@bloomb" +
-      "ox.io2\002v1\032\022api.bloombox.cloud*\001\0022\020applic" +
-      "ation/json:\020application/jsonZ\353\007\nd\n\013ApiKe" +
-      "yParam\022U\010\002\022JParameter for identifying AP" +
-      "I key owned by the invoking project or s" +
-      "ystem.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeade" +
-      "r for identifying API key owned by the i" +
-      "nvoking project or system.\032\tX-API-Key \001\n" +
-      "\230\006\n\006OAuth2\022\215\006\010\003\022]Bloombox Identity-power" +
-      "ed OAuth2 access, authorized on behalf o" +
-      "f an end-user or organization.(\0042,https:" +
-      "//authorize.bloombox.cloud/oauth2/auth:-" +
-      "https://authorize.bloombox.cloud/oauth2/" +
-      "tokenB\312\004\n1\n\007offline\022&Offline access to a" +
-      "uthorized user data\n9\n\006openid\022/OIDC (Ope" +
-      "nID Connect) access for seamless logon\n:" +
-      "\n\022profile.basic:read\022$Read-access to use" +
-      "r\'s basic profile.\nO\n\033profile.identifica" +
-      "tion:read\0220Read-access to user\'s governm" +
-      "ent identification.\nG\n\030profile.preferenc" +
-      "es:read\022+Read-access to user\'s cannabis " +
-      "preferences.\nV\n\026consumer.checkin:write\022<" +
-      "Write-access to check a user in by their" +
-      " ID or digital card.\nj\n\033consumer.bioprin" +
-      "t:recommend\022KRead-access to generate pro" +
-      "duct recommendations based on a user\'s b" +
-      "ioprint.\n@\n\017purchases:write\022-Write-acces" +
-      "s to a user\'s in-person purchases.b#\n\017\n\013" +
-      "ApiKeyParam\022\000\n\020\n\014ApiKeyHeader\022\000r/\n\rBloom" +
-      "box APIs\022\036https://apidocs.bloombox.cloud" +
-      "b\006proto3"
+      "F\n\tmessaging\030\002 \001(\01323.bloombox.schema.ser" +
+      "vices.pos.v1beta1.MessagingAuth\0224\n\010hardw" +
+      "are\030\003 \001(\0132\".opencannabis.commerce.POSHar" +
+      "dware\022A\n\003app\030\004 \001(\01324.bloombox.schema.ana" +
+      "lytics.context.DeviceApplication\0228\n\005toke" +
+      "n\030\n \001(\0132\'.bloombox.schema.security.Ident" +
+      "ityTokenH\000\022C\n\tchallenge\030\013 \001(\0132..opencann" +
+      "abis.crypto.primitives.integrity.HashH\000B" +
+      "\006\n\004auth\032V\n\010Response\022J\n\007session\030\001 \001(\01329.b" +
+      "loombox.schema.services.pos.v1beta1.Cash" +
+      "RegisterSession\032\251\001\n\tOperation\022L\n\007request" +
+      "\030\001 \001(\0132;.bloombox.schema.services.pos.v1" +
+      "beta1.AuthorizeUser.Request\022N\n\010response\030" +
+      "\002 \001(\0132<.bloombox.schema.services.pos.v1b" +
+      "eta1.AuthorizeUser.Response\"\310\003\n\013OpenSess" +
+      "ion\032\270\001\n\007Request\022;\n\010register\030\001 \001(\0132).bloo" +
+      "mbox.schema.partner.PartnerDeviceKey\022\017\n\007" +
+      "session\030\002 \001(\t\022\r\n\005token\030\003 \001(\t\022P\n\004open\030\004 \001" +
+      "(\0132B.bloombox.schema.services.pos.v1beta" +
+      "1.PointOfSaleState.SessionOpen\032V\n\010Respon" +
+      "se\022J\n\007session\030\001 \001(\01329.bloombox.schema.se" +
+      "rvices.pos.v1beta1.CashRegisterSession\032\245" +
+      "\001\n\tOperation\022J\n\007request\030\001 \001(\01329.bloombox" +
+      ".schema.services.pos.v1beta1.OpenSession" +
+      ".Request\022L\n\010response\030\002 \001(\0132:.bloombox.sc" +
+      "hema.services.pos.v1beta1.OpenSession.Re" +
+      "sponse\"\333\003\n\014CloseSession\032\344\001\n\007Request\022;\n\010r" +
+      "egister\030\001 \001(\0132).bloombox.schema.partner." +
+      "PartnerDeviceKey\022\017\n\007session\030\002 \001(\t\022R\n\005clo" +
+      "se\030\003 \001(\0132C.bloombox.schema.services.pos." +
+      "v1beta1.PointOfSaleState.SessionClose\0227\n" +
+      "\013transaction\030\004 \003(\0132\".opencannabis.commer" +
+      "ce.PurchaseKey\032:\n\010Response\022.\n\006closed\030\002 \001" +
+      "(\0132\036.opencannabis.temporal.Instant\032\247\001\n\tO" +
+      "peration\022K\n\007request\030\001 \001(\0132:.bloombox.sch" +
+      "ema.services.pos.v1beta1.CloseSession.Re" +
+      "quest\022M\n\010response\030\002 \001(\0132;.bloombox.schem" +
+      "a.services.pos.v1beta1.CloseSession.Resp" +
+      "onse\"\274\004\n\nOpenTicket\032\234\001\n\007Request\0224\n\010purch" +
+      "ase\030\001 \001(\0132\".opencannabis.commerce.Purcha" +
+      "seKey\022;\n\010register\030\002 \001(\0132).bloombox.schem" +
+      "a.partner.PartnerDeviceKey\022\017\n\007session\030\003 " +
+      "\001(\t\022\r\n\005fresh\030\004 \001(\010\032\350\001\n\010Response\0224\n\010purch" +
+      "ase\030\001 \001(\0132\".opencannabis.commerce.Purcha" +
+      "seKey\022\r\n\005claim\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.o" +
+      "pencannabis.commerce.PurchaseStatus\022/\n\007g" +
+      "ranted\030\004 \001(\0132\036.opencannabis.temporal.Ins" +
+      "tant\022/\n\007expires\030\005 \001(\0132\036.opencannabis.tem" +
+      "poral.Instant\032\243\001\n\tOperation\022I\n\007request\030\001" +
+      " \001(\01328.bloombox.schema.services.pos.v1be" +
+      "ta1.OpenTicket.Request\022K\n\010response\030\002 \001(\013" +
+      "29.bloombox.schema.services.pos.v1beta1." +
+      "OpenTicket.Response\"\207\005\n\nSaveTicket\032\233\002\n\007R" +
+      "equest\022;\n\010register\030\001 \001(\0132).bloombox.sche" +
+      "ma.partner.PartnerDeviceKey\0225\n\006ticket\030\002 " +
+      "\001(\0132%.opencannabis.commerce.PurchaseTick" +
+      "et\022\017\n\007session\030\003 \001(\t\022;\n\tsignature\030\004 \001(\0132(" +
+      ".opencannabis.commerce.PurchaseSignature" +
+      "\0221\n\ttimestamp\030\005 \001(\0132\036.opencannabis.tempo" +
+      "ral.Instant\022\014\n\004auto\030\006 \001(\010\022\r\n\005close\030\007 \001(\010" +
+      "\032\264\001\n\010Response\022\017\n\007version\030\001 \001(\r\0225\n\006status" +
+      "\030\002 \001(\0162%.opencannabis.commerce.PurchaseS" +
+      "tatus\022/\n\007granted\030\003 \001(\0132\036.opencannabis.te" +
+      "mporal.Instant\022/\n\007expires\030\004 \001(\0132\036.openca" +
+      "nnabis.temporal.Instant\032\243\001\n\tOperation\022I\n" +
+      "\007request\030\001 \001(\01328.bloombox.schema.service" +
+      "s.pos.v1beta1.SaveTicket.Request\022K\n\010resp" +
+      "onse\030\002 \001(\01329.bloombox.schema.services.po" +
+      "s.v1beta1.SaveTicket.Response\"\205\003\n\nLoadTi" +
+      "cket\032\215\001\n\007Request\022;\n\010register\030\001 \001(\0132).blo" +
+      "ombox.schema.partner.PartnerDeviceKey\0224\n" +
+      "\010purchase\030\002 \001(\0132\".opencannabis.commerce." +
+      "PurchaseKey\022\017\n\007session\030\003 \001(\t\032A\n\010Response" +
+      "\0225\n\006ticket\030\001 \001(\0132%.opencannabis.commerce" +
+      ".PurchaseTicket\032\243\001\n\tOperation\022I\n\007request" +
+      "\030\001 \001(\01328.bloombox.schema.services.pos.v1" +
+      "beta1.LoadTicket.Request\022K\n\010response\030\002 \001" +
+      "(\01329.bloombox.schema.services.pos.v1beta" +
+      "1.LoadTicket.Response\"\222\003\n\nVoidTicket\032\215\001\n" +
+      "\007Request\022;\n\010register\030\001 \001(\0132).bloombox.sc" +
+      "hema.partner.PartnerDeviceKey\0224\n\010purchas" +
+      "e\030\002 \001(\0132\".opencannabis.commerce.Purchase" +
+      "Key\022\017\n\007session\030\003 \001(\t\032N\n\010Response\022\017\n\007vers" +
+      "ion\030\001 \001(\r\0221\n\ttimestamp\030\002 \001(\0132\036.opencanna" +
+      "bis.temporal.Instant\032\243\001\n\tOperation\022I\n\007re" +
+      "quest\030\001 \001(\01328.bloombox.schema.services.p" +
+      "os.v1beta1.VoidTicket.Request\022K\n\010respons" +
+      "e\030\002 \001(\01329.bloombox.schema.services.pos.v" +
+      "1beta1.VoidTicket.Response\"\236\003\n\016FinalizeT" +
+      "icket\032\215\001\n\007Request\022;\n\010register\030\001 \001(\0132).bl" +
+      "oombox.schema.partner.PartnerDeviceKey\0224" +
+      "\n\010purchase\030\002 \001(\0132\".opencannabis.commerce" +
+      ".PurchaseKey\022\017\n\007session\030\003 \001(\t\032N\n\010Respons" +
+      "e\022\017\n\007version\030\001 \001(\r\0221\n\ttimestamp\030\002 \001(\0132\036." +
+      "opencannabis.temporal.Instant\032\253\001\n\tOperat" +
+      "ion\022M\n\007request\030\001 \001(\0132<.bloombox.schema.s" +
+      "ervices.pos.v1beta1.FinalizeTicket.Reque" +
+      "st\022O\n\010response\030\002 \001(\0132=.bloombox.schema.s" +
+      "ervices.pos.v1beta1.FinalizeTicket.Respo" +
+      "nse\"\315\004\n\014MemberSearch\032/\n\017MemberPredicate\022" +
+      "\r\n\005email\030\001 \001(\t\022\r\n\005phone\030\002 \001(\t\032\350\001\n\007Reques" +
+      "t\022T\n\006search\030\001 \001(\0132B.bloombox.schema.serv" +
+      "ices.pos.v1beta1.MemberSearch.MemberPred" +
+      "icateH\000\022?\n\016identification\030\002 \001(\0132%.bloomb" +
+      "ox.schema.identity.IDReferenceH\000\022\017\n\005lobb" +
+      "y\030\003 \001(\010H\000\022\016\n\006cursor\030\004 \001(\t\022\r\n\005limit\030\005 \001(\r" +
+      "\022\016\n\006signal\030\006 \003(\tB\006\n\004spec\032w\n\010Response\022\016\n\006" +
+      "cursor\030\001 \001(\t\022\r\n\005count\030\002 \001(\r\022\r\n\005total\030\003 \001" +
+      "(\r\022=\n\006member\030\004 \003(\0132-.bloombox.schema.ide" +
+      "ntity.MembershipReference\032\247\001\n\tOperation\022" +
+      "K\n\007request\030\001 \001(\0132:.bloombox.schema.servi" +
+      "ces.pos.v1beta1.MemberSearch.Request\022M\n\010" +
+      "response\030\002 \001(\0132;.bloombox.schema.service" +
+      "s.pos.v1beta1.MemberSearch.Response\"\261\004\n\016" +
+      "InventoryQuery\032A\n\014KeyQuerySpec\0221\n\003key\030\001 " +
+      "\001(\0132$.opencannabis.inventory.InventoryKe" +
+      "y\032P\n\020SectionQuerySpec\022<\n\007section\030\001 \001(\0162+" +
+      ".opencannabis.products.menu.section.Sect" +
+      "ion\032\305\002\n\007Request\022;\n\010register\030\001 \001(\0132).bloo" +
+      "mbox.schema.partner.PartnerDeviceKey\0226\n\010" +
+      "location\030\002 \001(\0132$.bloombox.schema.partner" +
+      ".LocationKey\022\016\n\004full\030\003 \001(\010H\000\022Q\n\004keys\030\004 \001" +
+      "(\0132A.bloombox.schema.services.pos.v1beta" +
+      "1.InventoryQuery.KeyQuerySpecH\000\022Y\n\010secti" +
+      "ons\030\005 \001(\0132E.bloombox.schema.services.pos" +
+      ".v1beta1.InventoryQuery.SectionQuerySpec" +
+      "H\000B\007\n\005query\032B\n\010Response\0226\n\004item\030\001 \003(\0132(." +
+      "opencannabis.inventory.InventoryProduct\"" +
+      "\213\002\n\017InventoryStream\032i\n\007Request\022>\n\010locati" +
+      "on\030\001 \001(\0132,.opencannabis.inventory.Invent" +
+      "oryLocationKey\022\017\n\007session\030\003 \001(\t\022\r\n\005local" +
+      "\030\002 \003(\t\032\214\001\n\007Payload\022I\n\005event\030\001 \001(\0162:.bloo" +
+      "mbox.schema.services.pos.v1beta1.Invento" +
+      "ryStreamEvent\0226\n\004item\030\002 \003(\0132(.opencannab" +
+      "is.inventory.InventoryProduct*\324\003\n\010POSErr" +
+      "or\022\014\n\010NO_ERROR\020\000\022\023\n\017INVALID_PARTNER\020\001\022\024\n" +
+      "\020INVALID_LOCATION\020\002\022\022\n\016INVALID_DEVICE\020\003\022" +
+      "\024\n\020INVALID_ID_TOKEN\020\004\022\034\n\030INVALID_DEVICE_" +
+      "SIGNATURE\020\005\022\022\n\016INVALID_TICKET\020\006\022\026\n\022INVAL" +
+      "ID_TICKET_KEY\020\007\022\034\n\030INVALID_TICKET_SIGNAT" +
+      "URE\020\010\022\025\n\021INVALID_TIMESTAMP\020\t\022\034\n\030ILLEGAL_" +
+      "TICKET_STRUCTURE\020\024\022\032\n\026ILLEGAL_TICKET_VER" +
+      "SION\020\025\022\025\n\021ILLEGAL_TIMESTAMP\020\026\022\024\n\020TICKET_" +
+      "NOT_FOUND\020\036\022\023\n\017TICKET_CONFLICT\020\037\022\022\n\016TICK" +
+      "ET_CLAIMED\020 \022\023\n\017INVALID_REQUEST\020`\022\030\n\024AUT" +
+      "HORIZATION_DENIED\020a\022\023\n\017ACCESS_CONFLICT\020b" +
+      "\022\022\n\016INTERNAL_ERROR\020c*@\n\024InventoryStreamE" +
+      "vent\022\r\n\tPING_PONG\020\000\022\r\n\tNO_CHANGE\020\001\022\n\n\006UP" +
+      "DATE\020\002*7\n\021SessionTokenGrant\022\007\n\003API\020\000\022\n\n\006" +
+      "STREAM\020\001\022\r\n\tMESSAGING\020\0022\266\031\n\013PointOfSale\022" +
+      "\220\002\n\tAuthorize\022;.bloombox.schema.services" +
+      ".pos.v1beta1.AuthorizeUser.Request\032<.blo" +
+      "ombox.schema.services.pos.v1beta1.Author" +
+      "izeUser.Response\"\207\001\202\323\344\223\002+\"&/pos/v1beta1/" +
+      "{register.uuid}/authorize:\001*\222AS\022\021Session" +
+      " Authorize\0323Establish a user session on " +
+      "a point-of-sale device.*\tAuthorize\022\274\002\n\013S" +
+      "essionOpen\0229.bloombox.schema.services.po" +
+      "s.v1beta1.OpenSession.Request\032:.bloombox" +
+      ".schema.services.pos.v1beta1.OpenSession" +
+      ".Response\"\265\001\202\323\344\223\0028\"3/pos/v1beta1/{regist" +
+      "er.uuid}/session/{session}/open:\001*\222At\022\014S" +
+      "ession Open\032WOpen a formal (pre-establis" +
+      "hed) point-of-sale session, to begin acc" +
+      "epting transactions.*\013SessionOpen\022\303\002\n\014Se" +
+      "ssionClose\022:.bloombox.schema.services.po" +
+      "s.v1beta1.CloseSession.Request\032;.bloombo" +
+      "x.schema.services.pos.v1beta1.CloseSessi" +
+      "on.Response\"\271\001\202\323\344\223\0029\"4/pos/v1beta1/{regi" +
+      "ster.uuid}/session/{session}/close:\001*\222Aw" +
+      "\022\rSession Close\032XClose a formal (current" +
+      "ly-open) point-of-sale session, usually " +
+      "at the end of each shift.*\014SessionClose\022" +
+      "\315\003\n\nTicketOpen\0228.bloombox.schema.service" +
+      "s.pos.v1beta1.OpenTicket.Request\0329.bloom" +
+      "box.schema.services.pos.v1beta1.OpenTick" +
+      "et.Response\"\311\002\202\323\344\223\002\360\001\")/pos/v1beta1/{reg" +
+      "ister.uuid}/tickets/openZE\"C/pos/v1beta1" +
+      "/{register.uuid}/{session}/tickets/{purc" +
+      "hase.uuid}/openZ5\0223/pos/v1beta1/{registe" +
+      "r.uuid}/{session}/tickets/openZE\022C/pos/v" +
+      "1beta1/{register.uuid}/{session}/tickets" +
+      "/{purchase.uuid}/open\222AO\022\013Open Ticket\0324O" +
+      "pen a new or existing ticket for read/wr" +
+      "ite access.*\nTicketOpen\022\224\002\n\nTicketSave\0228" +
+      ".bloombox.schema.services.pos.v1beta1.Sa" +
+      "veTicket.Request\0329.bloombox.schema.servi" +
+      "ces.pos.v1beta1.SaveTicket.Response\"\220\001\202\323" +
+      "\344\223\002E\032@/pos/v1beta1/{register.uuid}/{sess" +
+      "ion}/tickets/{ticket.key.uuid}:\001*\222AB\022\013Sa" +
+      "ve Ticket\032\'Persist/save a ticket for lat" +
+      "er recall.*\nTicketSave\022\227\002\n\nTicketLoad\0228." +
+      "bloombox.schema.services.pos.v1beta1.Loa" +
+      "dTicket.Request\0329.bloombox.schema.servic" +
+      "es.pos.v1beta1.LoadTicket.Response\"\223\001\202\323\344" +
+      "\223\002@\022>/pos/v1beta1/{register.uuid}/{sessi" +
+      "on}/tickets/{purchase.uuid}\222AJ\022\013Load Tic" +
+      "ket\032/Recall an existing ticket for read-" +
+      "only access.*\nTicketLoad\022\237\002\n\nTicketVoid\022" +
+      "8.bloombox.schema.services.pos.v1beta1.V" +
+      "oidTicket.Request\0329.bloombox.schema.serv" +
+      "ices.pos.v1beta1.VoidTicket.Response\"\233\001\202" +
+      "\323\344\223\002G\"E/pos/v1beta1/{register.uuid}/{ses" +
+      "sion}/tickets/{purchase.uuid}/cancel\222AK\022" +
+      "\013Void Ticket\0320Void (cancel) an existing," +
+      " open purchase ticket.*\nTicketVoid\022\260\002\n\016T" +
+      "icketFinalize\022<.bloombox.schema.services" +
+      ".pos.v1beta1.FinalizeTicket.Request\032=.bl" +
+      "oombox.schema.services.pos.v1beta1.Final" +
+      "izeTicket.Response\"\240\001\202\323\344\223\002I\"G/pos/v1beta" +
+      "1/{register.uuid}/{session}/tickets/{pur" +
+      "chase.uuid}/finalize\222AN\022\017Finalize Ticket" +
+      "\032+Finalize an existing, open purchase ti" +
+      "cket.*\016TicketFinalize\022\365\001\n\rSearchMembers\022" +
+      ":.bloombox.schema.services.pos.v1beta1.M" +
+      "emberSearch.Request\032;.bloombox.schema.se" +
+      "rvices.pos.v1beta1.MemberSearch.Response" +
+      "\"k\202\323\344\223\002\026\"\024/pos/v1beta1/members\222AL\022\016Searc" +
+      "h Members\032+Finalize an existing, open pu" +
+      "rchase ticket.*\rSearchMembers\022\252\002\n\021Invent" +
+      "oryRetrieve\022<.bloombox.schema.services.p" +
+      "os.v1beta1.InventoryQuery.Request\032=.bloo" +
+      "mbox.schema.services.pos.v1beta1.Invento" +
+      "ryQuery.Response\"\227\001\202\323\344\223\002(\"&/pos/v1beta1/" +
+      "{register.uuid}/inventory\222Af\022\017Fetch Inve" +
+      "ntory\032@Retrieve live inventory records a" +
+      "ccording to specified criteria.*\021Invento" +
+      "ryRetrieve\022\223\001\n\017InventoryStream\022=.bloombo" +
+      "x.schema.services.pos.v1beta1.InventoryS" +
+      "tream.Request\032=.bloombox.schema.services" +
+      ".pos.v1beta1.InventoryStream.Payload(\0010\001" +
+      "B\243\n\n\'io.bloombox.schema.services.pos.v1b" +
+      "eta1H\001P\001\242\002\003BBS\222A\354\t\022k\n\021Point of Sale API\032" +
+      "\031https://bloombox.io/terms\"7\n\010Bloombox\022\023" +
+      "https://bloombox.io\032\026developers@bloombox" +
+      ".io2\002v1\032\022api.bloombox.cloud*\001\0022\020applicat" +
+      "ion/json:\020application/jsonZ\353\007\nd\n\013ApiKeyP" +
+      "aram\022U\010\002\022JParameter for identifying API " +
+      "key owned by the invoking project or sys" +
+      "tem.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader " +
+      "for identifying API key owned by the inv" +
+      "oking project or system.\032\tX-API-Key \001\n\230\006" +
+      "\n\006OAuth2\022\215\006\010\003\022]Bloombox Identity-powered" +
+      " OAuth2 access, authorized on behalf of " +
+      "an end-user or organization.(\0042,https://" +
+      "authorize.bloombox.cloud/oauth2/auth:-ht" +
+      "tps://authorize.bloombox.cloud/oauth2/to" +
+      "kenB\312\004\n1\n\007offline\022&Offline access to aut" +
+      "horized user data\n9\n\006openid\022/OIDC (OpenI" +
+      "D Connect) access for seamless logon\n:\n\022" +
+      "profile.basic:read\022$Read-access to user\'" +
+      "s basic profile.\nO\n\033profile.identificati" +
+      "on:read\0220Read-access to user\'s governmen" +
+      "t identification.\nG\n\030profile.preferences" +
+      ":read\022+Read-access to user\'s cannabis pr" +
+      "eferences.\nV\n\026consumer.checkin:write\022<Wr" +
+      "ite-access to check a user in by their I" +
+      "D or digital card.\nj\n\033consumer.bioprint:" +
+      "recommend\022KRead-access to generate produ" +
+      "ct recommendations based on a user\'s bio" +
+      "print.\n@\n\017purchases:write\022-Write-access " +
+      "to a user\'s in-person purchases.b#\n\017\n\013Ap" +
+      "iKeyParam\022\000\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombo" +
+      "x APIs\022\036https://apidocs.bloombox.cloudb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -628,6 +632,7 @@ public final class POSServiceBeta1 {
           io.opencannabis.schema.commerce.CommercialPurchase.getDescriptor(),
           io.opencannabis.schema.currency.CommerceCurrency.getDescriptor(),
           io.opencannabis.schema.commerce.CommercialPOS.getDescriptor(),
+          io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor(),
           io.bloombox.schema.identity.IdentityID.getDescriptor(),
           io.bloombox.schema.identity.AppUser.getDescriptor(),
           io.bloombox.schema.identity.AppStaff.getDescriptor(),
@@ -694,7 +699,7 @@ public final class POSServiceBeta1 {
     internal_static_bloombox_schema_services_pos_v1beta1_AuthorizeUser_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_pos_v1beta1_AuthorizeUser_Request_descriptor,
-        new java.lang.String[] { "Register", "Messaging", "Token", "Challenge", "Auth", });
+        new java.lang.String[] { "Register", "Messaging", "Hardware", "App", "Token", "Challenge", "Auth", });
     internal_static_bloombox_schema_services_pos_v1beta1_AuthorizeUser_Response_descriptor =
       internal_static_bloombox_schema_services_pos_v1beta1_AuthorizeUser_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_pos_v1beta1_AuthorizeUser_Response_fieldAccessorTable = new
@@ -966,6 +971,7 @@ public final class POSServiceBeta1 {
     io.opencannabis.schema.commerce.CommercialPurchase.getDescriptor();
     io.opencannabis.schema.currency.CommerceCurrency.getDescriptor();
     io.opencannabis.schema.commerce.CommercialPOS.getDescriptor();
+    io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor();
     io.bloombox.schema.identity.IdentityID.getDescriptor();
     io.bloombox.schema.identity.AppUser.getDescriptor();
     io.bloombox.schema.identity.AppStaff.getDescriptor();

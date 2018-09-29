@@ -19379,10 +19379,28 @@ public final class CommercialPurchase {
 
     /**
      * <pre>
+     * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+     * </pre>
+     *
+     * <code>string claim = 4;</code>
+     */
+    java.lang.String getClaim();
+    /**
+     * <pre>
+     * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+     * </pre>
+     *
+     * <code>string claim = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getClaimBytes();
+
+    /**
+     * <pre>
      * Partner organization, location, device, and staff member that facilitated this transaction.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
      */
     boolean hasFacilitator();
     /**
@@ -19390,7 +19408,7 @@ public final class CommercialPurchase {
      * Partner organization, location, device, and staff member that facilitated this transaction.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator getFacilitator();
     /**
@@ -19398,7 +19416,7 @@ public final class CommercialPurchase {
      * Partner organization, location, device, and staff member that facilitated this transaction.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder getFacilitatorOrBuilder();
 
@@ -19407,7 +19425,7 @@ public final class CommercialPurchase {
      * Specifies information regarding the customer that made this purchase.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
      */
     boolean hasCustomer();
     /**
@@ -19415,7 +19433,7 @@ public final class CommercialPurchase {
      * Specifies information regarding the customer that made this purchase.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer getCustomer();
     /**
@@ -19423,7 +19441,7 @@ public final class CommercialPurchase {
      * Specifies information regarding the customer that made this purchase.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder getCustomerOrBuilder();
 
@@ -19432,7 +19450,7 @@ public final class CommercialPurchase {
      * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
      * </pre>
      *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
      */
     boolean hasBill();
     /**
@@ -19440,7 +19458,7 @@ public final class CommercialPurchase {
      * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
      * </pre>
      *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getBill();
     /**
@@ -19448,7 +19466,7 @@ public final class CommercialPurchase {
      * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
      * </pre>
      *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getBillOrBuilder();
 
@@ -19457,7 +19475,7 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> 
         getItemList();
@@ -19466,7 +19484,7 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.TicketItem getItem(int index);
     /**
@@ -19474,7 +19492,7 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     int getItemCount();
     /**
@@ -19482,7 +19500,7 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder> 
         getItemOrBuilderList();
@@ -19491,7 +19509,7 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder getItemOrBuilder(
         int index);
@@ -19501,7 +19519,7 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> 
         getPaymentList();
@@ -19510,7 +19528,7 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.Payment getPayment(int index);
     /**
@@ -19518,7 +19536,7 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     int getPaymentCount();
     /**
@@ -19526,7 +19544,7 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder> 
         getPaymentOrBuilderList();
@@ -19535,7 +19553,7 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder getPaymentOrBuilder(
         int index);
@@ -19545,7 +19563,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> 
         getActionList();
@@ -19554,7 +19572,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry getAction(int index);
     /**
@@ -19562,7 +19580,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     int getActionCount();
     /**
@@ -19570,7 +19588,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder> 
         getActionOrBuilderList();
@@ -19579,7 +19597,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder getActionOrBuilder(
         int index);
@@ -19589,7 +19607,7 @@ public final class CommercialPurchase {
      * Timestamps that record the temporal position of individual purchase lifecycle events.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
      */
     boolean hasTs();
     /**
@@ -19597,7 +19615,7 @@ public final class CommercialPurchase {
      * Timestamps that record the temporal position of individual purchase lifecycle events.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps getTs();
     /**
@@ -19605,7 +19623,7 @@ public final class CommercialPurchase {
      * Timestamps that record the temporal position of individual purchase lifecycle events.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder getTsOrBuilder();
   }
@@ -19630,6 +19648,7 @@ public final class CommercialPurchase {
     private PurchaseTicket() {
       version_ = 0;
       status_ = 0;
+      claim_ = "";
       item_ = java.util.Collections.emptyList();
       payment_ = java.util.Collections.emptyList();
       action_ = java.util.Collections.emptyList();
@@ -19691,6 +19710,12 @@ public final class CommercialPurchase {
               break;
             }
             case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              claim_ = s;
+              break;
+            }
+            case 42: {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder subBuilder = null;
               if (facilitator_ != null) {
                 subBuilder = facilitator_.toBuilder();
@@ -19703,7 +19728,7 @@ public final class CommercialPurchase {
 
               break;
             }
-            case 42: {
+            case 50: {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder subBuilder = null;
               if (customer_ != null) {
                 subBuilder = customer_.toBuilder();
@@ -19716,7 +19741,7 @@ public final class CommercialPurchase {
 
               break;
             }
-            case 50: {
+            case 58: {
               io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder subBuilder = null;
               if (bill_ != null) {
                 subBuilder = bill_.toBuilder();
@@ -19729,34 +19754,34 @@ public final class CommercialPurchase {
 
               break;
             }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
                 item_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem>();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000080;
               }
               item_.add(
                   input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.parser(), extensionRegistry));
               break;
             }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
                 payment_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.Payment>();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000100;
               }
               payment_.add(
                   input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.Payment.parser(), extensionRegistry));
               break;
             }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
                 action_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry>();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000200;
               }
               action_.add(
                   input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.parser(), extensionRegistry));
               break;
             }
-            case 82: {
+            case 90: {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder subBuilder = null;
               if (ts_ != null) {
                 subBuilder = ts_.toBuilder();
@@ -19777,13 +19802,13 @@ public final class CommercialPurchase {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           item_ = java.util.Collections.unmodifiableList(item_);
         }
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
           payment_ = java.util.Collections.unmodifiableList(payment_);
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
           action_ = java.util.Collections.unmodifiableList(action_);
         }
         this.unknownFields = unknownFields.build();
@@ -19873,14 +19898,56 @@ public final class CommercialPurchase {
       return result == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.UNRECOGNIZED : result;
     }
 
-    public static final int FACILITATOR_FIELD_NUMBER = 4;
+    public static final int CLAIM_FIELD_NUMBER = 4;
+    private volatile java.lang.Object claim_;
+    /**
+     * <pre>
+     * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+     * </pre>
+     *
+     * <code>string claim = 4;</code>
+     */
+    public java.lang.String getClaim() {
+      java.lang.Object ref = claim_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        claim_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+     * </pre>
+     *
+     * <code>string claim = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClaimBytes() {
+      java.lang.Object ref = claim_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        claim_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FACILITATOR_FIELD_NUMBER = 5;
     private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator facilitator_;
     /**
      * <pre>
      * Partner organization, location, device, and staff member that facilitated this transaction.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
      */
     public boolean hasFacilitator() {
       return facilitator_ != null;
@@ -19890,7 +19957,7 @@ public final class CommercialPurchase {
      * Partner organization, location, device, and staff member that facilitated this transaction.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator getFacilitator() {
       return facilitator_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.getDefaultInstance() : facilitator_;
@@ -19900,20 +19967,20 @@ public final class CommercialPurchase {
      * Partner organization, location, device, and staff member that facilitated this transaction.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+     * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder getFacilitatorOrBuilder() {
       return getFacilitator();
     }
 
-    public static final int CUSTOMER_FIELD_NUMBER = 5;
+    public static final int CUSTOMER_FIELD_NUMBER = 6;
     private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer customer_;
     /**
      * <pre>
      * Specifies information regarding the customer that made this purchase.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
      */
     public boolean hasCustomer() {
       return customer_ != null;
@@ -19923,7 +19990,7 @@ public final class CommercialPurchase {
      * Specifies information regarding the customer that made this purchase.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer getCustomer() {
       return customer_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.getDefaultInstance() : customer_;
@@ -19933,20 +20000,20 @@ public final class CommercialPurchase {
      * Specifies information regarding the customer that made this purchase.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+     * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder getCustomerOrBuilder() {
       return getCustomer();
     }
 
-    public static final int BILL_FIELD_NUMBER = 6;
+    public static final int BILL_FIELD_NUMBER = 7;
     private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges bill_;
     /**
      * <pre>
      * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
      * </pre>
      *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
      */
     public boolean hasBill() {
       return bill_ != null;
@@ -19956,7 +20023,7 @@ public final class CommercialPurchase {
      * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
      * </pre>
      *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getBill() {
       return bill_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.getDefaultInstance() : bill_;
@@ -19966,20 +20033,20 @@ public final class CommercialPurchase {
      * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
      * </pre>
      *
-     * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+     * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getBillOrBuilder() {
       return getBill();
     }
 
-    public static final int ITEM_FIELD_NUMBER = 7;
+    public static final int ITEM_FIELD_NUMBER = 8;
     private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> item_;
     /**
      * <pre>
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> getItemList() {
       return item_;
@@ -19989,7 +20056,7 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder> 
         getItemOrBuilderList() {
@@ -20000,7 +20067,7 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     public int getItemCount() {
       return item_.size();
@@ -20010,7 +20077,7 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem getItem(int index) {
       return item_.get(index);
@@ -20020,21 +20087,21 @@ public final class CommercialPurchase {
      * Constituent items purchased as part of this commercial purchase ticket.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+     * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder getItemOrBuilder(
         int index) {
       return item_.get(index);
     }
 
-    public static final int PAYMENT_FIELD_NUMBER = 8;
+    public static final int PAYMENT_FIELD_NUMBER = 9;
     private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> payment_;
     /**
      * <pre>
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> getPaymentList() {
       return payment_;
@@ -20044,7 +20111,7 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder> 
         getPaymentOrBuilderList() {
@@ -20055,7 +20122,7 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     public int getPaymentCount() {
       return payment_.size();
@@ -20065,7 +20132,7 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.Payment getPayment(int index) {
       return payment_.get(index);
@@ -20075,21 +20142,21 @@ public final class CommercialPurchase {
      * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+     * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder getPaymentOrBuilder(
         int index) {
       return payment_.get(index);
     }
 
-    public static final int ACTION_FIELD_NUMBER = 9;
+    public static final int ACTION_FIELD_NUMBER = 10;
     private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> action_;
     /**
      * <pre>
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> getActionList() {
       return action_;
@@ -20099,7 +20166,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder> 
         getActionOrBuilderList() {
@@ -20110,7 +20177,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     public int getActionCount() {
       return action_.size();
@@ -20120,7 +20187,7 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry getAction(int index) {
       return action_.get(index);
@@ -20130,21 +20197,21 @@ public final class CommercialPurchase {
      * Actions taken on this order.
      * </pre>
      *
-     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+     * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder getActionOrBuilder(
         int index) {
       return action_.get(index);
     }
 
-    public static final int TS_FIELD_NUMBER = 10;
+    public static final int TS_FIELD_NUMBER = 11;
     private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps ts_;
     /**
      * <pre>
      * Timestamps that record the temporal position of individual purchase lifecycle events.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
      */
     public boolean hasTs() {
       return ts_ != null;
@@ -20154,7 +20221,7 @@ public final class CommercialPurchase {
      * Timestamps that record the temporal position of individual purchase lifecycle events.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps getTs() {
       return ts_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.getDefaultInstance() : ts_;
@@ -20164,7 +20231,7 @@ public final class CommercialPurchase {
      * Timestamps that record the temporal position of individual purchase lifecycle events.
      * </pre>
      *
-     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+     * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
      */
     public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder getTsOrBuilder() {
       return getTs();
@@ -20191,26 +20258,29 @@ public final class CommercialPurchase {
       if (status_ != io.opencannabis.schema.commerce.CommercialPurchase.PurchaseStatus.FRESH.getNumber()) {
         output.writeEnum(3, status_);
       }
+      if (!getClaimBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, claim_);
+      }
       if (facilitator_ != null) {
-        output.writeMessage(4, getFacilitator());
+        output.writeMessage(5, getFacilitator());
       }
       if (customer_ != null) {
-        output.writeMessage(5, getCustomer());
+        output.writeMessage(6, getCustomer());
       }
       if (bill_ != null) {
-        output.writeMessage(6, getBill());
+        output.writeMessage(7, getBill());
       }
       for (int i = 0; i < item_.size(); i++) {
-        output.writeMessage(7, item_.get(i));
+        output.writeMessage(8, item_.get(i));
       }
       for (int i = 0; i < payment_.size(); i++) {
-        output.writeMessage(8, payment_.get(i));
+        output.writeMessage(9, payment_.get(i));
       }
       for (int i = 0; i < action_.size(); i++) {
-        output.writeMessage(9, action_.get(i));
+        output.writeMessage(10, action_.get(i));
       }
       if (ts_ != null) {
-        output.writeMessage(10, getTs());
+        output.writeMessage(11, getTs());
       }
       unknownFields.writeTo(output);
     }
@@ -20232,33 +20302,36 @@ public final class CommercialPurchase {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, status_);
       }
+      if (!getClaimBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, claim_);
+      }
       if (facilitator_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getFacilitator());
+          .computeMessageSize(5, getFacilitator());
       }
       if (customer_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getCustomer());
+          .computeMessageSize(6, getCustomer());
       }
       if (bill_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getBill());
+          .computeMessageSize(7, getBill());
       }
       for (int i = 0; i < item_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, item_.get(i));
+          .computeMessageSize(8, item_.get(i));
       }
       for (int i = 0; i < payment_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, payment_.get(i));
+          .computeMessageSize(9, payment_.get(i));
       }
       for (int i = 0; i < action_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, action_.get(i));
+          .computeMessageSize(10, action_.get(i));
       }
       if (ts_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getTs());
+          .computeMessageSize(11, getTs());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -20284,6 +20357,8 @@ public final class CommercialPurchase {
       result = result && (getVersion()
           == other.getVersion());
       result = result && status_ == other.status_;
+      result = result && getClaim()
+          .equals(other.getClaim());
       result = result && (hasFacilitator() == other.hasFacilitator());
       if (hasFacilitator()) {
         result = result && getFacilitator()
@@ -20329,6 +20404,8 @@ public final class CommercialPurchase {
       hash = (53 * hash) + getVersion();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + CLAIM_FIELD_NUMBER;
+      hash = (53 * hash) + getClaim().hashCode();
       if (hasFacilitator()) {
         hash = (37 * hash) + FACILITATOR_FIELD_NUMBER;
         hash = (53 * hash) + getFacilitator().hashCode();
@@ -20505,6 +20582,8 @@ public final class CommercialPurchase {
 
         status_ = 0;
 
+        claim_ = "";
+
         if (facilitatorBuilder_ == null) {
           facilitator_ = null;
         } else {
@@ -20525,19 +20604,19 @@ public final class CommercialPurchase {
         }
         if (itemBuilder_ == null) {
           item_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           itemBuilder_.clear();
         }
         if (paymentBuilder_ == null) {
           payment_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           paymentBuilder_.clear();
         }
         if (actionBuilder_ == null) {
           action_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           actionBuilder_.clear();
         }
@@ -20578,6 +20657,7 @@ public final class CommercialPurchase {
         }
         result.version_ = version_;
         result.status_ = status_;
+        result.claim_ = claim_;
         if (facilitatorBuilder_ == null) {
           result.facilitator_ = facilitator_;
         } else {
@@ -20594,27 +20674,27 @@ public final class CommercialPurchase {
           result.bill_ = billBuilder_.build();
         }
         if (itemBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
             item_ = java.util.Collections.unmodifiableList(item_);
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.item_ = item_;
         } else {
           result.item_ = itemBuilder_.build();
         }
         if (paymentBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          if (((bitField0_ & 0x00000100) == 0x00000100)) {
             payment_ = java.util.Collections.unmodifiableList(payment_);
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000100);
           }
           result.payment_ = payment_;
         } else {
           result.payment_ = paymentBuilder_.build();
         }
         if (actionBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
             action_ = java.util.Collections.unmodifiableList(action_);
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000200);
           }
           result.action_ = action_;
         } else {
@@ -20676,6 +20756,10 @@ public final class CommercialPurchase {
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
         }
+        if (!other.getClaim().isEmpty()) {
+          claim_ = other.claim_;
+          onChanged();
+        }
         if (other.hasFacilitator()) {
           mergeFacilitator(other.getFacilitator());
         }
@@ -20689,7 +20773,7 @@ public final class CommercialPurchase {
           if (!other.item_.isEmpty()) {
             if (item_.isEmpty()) {
               item_ = other.item_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureItemIsMutable();
               item_.addAll(other.item_);
@@ -20702,7 +20786,7 @@ public final class CommercialPurchase {
               itemBuilder_.dispose();
               itemBuilder_ = null;
               item_ = other.item_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+              bitField0_ = (bitField0_ & ~0x00000080);
               itemBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getItemFieldBuilder() : null;
@@ -20715,7 +20799,7 @@ public final class CommercialPurchase {
           if (!other.payment_.isEmpty()) {
             if (payment_.isEmpty()) {
               payment_ = other.payment_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000100);
             } else {
               ensurePaymentIsMutable();
               payment_.addAll(other.payment_);
@@ -20728,7 +20812,7 @@ public final class CommercialPurchase {
               paymentBuilder_.dispose();
               paymentBuilder_ = null;
               payment_ = other.payment_;
-              bitField0_ = (bitField0_ & ~0x00000080);
+              bitField0_ = (bitField0_ & ~0x00000100);
               paymentBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPaymentFieldBuilder() : null;
@@ -20741,7 +20825,7 @@ public final class CommercialPurchase {
           if (!other.action_.isEmpty()) {
             if (action_.isEmpty()) {
               action_ = other.action_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000200);
             } else {
               ensureActionIsMutable();
               action_.addAll(other.action_);
@@ -20754,7 +20838,7 @@ public final class CommercialPurchase {
               actionBuilder_.dispose();
               actionBuilder_ = null;
               action_ = other.action_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000200);
               actionBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getActionFieldBuilder() : null;
@@ -21049,6 +21133,95 @@ public final class CommercialPurchase {
         return this;
       }
 
+      private java.lang.Object claim_ = "";
+      /**
+       * <pre>
+       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+       * </pre>
+       *
+       * <code>string claim = 4;</code>
+       */
+      public java.lang.String getClaim() {
+        java.lang.Object ref = claim_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          claim_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+       * </pre>
+       *
+       * <code>string claim = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClaimBytes() {
+        java.lang.Object ref = claim_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          claim_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+       * </pre>
+       *
+       * <code>string claim = 4;</code>
+       */
+      public Builder setClaim(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        claim_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+       * </pre>
+       *
+       * <code>string claim = 4;</code>
+       */
+      public Builder clearClaim() {
+        
+        claim_ = getDefaultInstance().getClaim();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Point-of-sale session that is currently claiming this ticket, or last claimed this ticket.
+       * </pre>
+       *
+       * <code>string claim = 4;</code>
+       */
+      public Builder setClaimBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        claim_ = value;
+        onChanged();
+        return this;
+      }
+
       private io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator facilitator_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder> facilitatorBuilder_;
@@ -21057,7 +21230,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       public boolean hasFacilitator() {
         return facilitatorBuilder_ != null || facilitator_ != null;
@@ -21067,7 +21240,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator getFacilitator() {
         if (facilitatorBuilder_ == null) {
@@ -21081,7 +21254,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       public Builder setFacilitator(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator value) {
         if (facilitatorBuilder_ == null) {
@@ -21101,7 +21274,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       public Builder setFacilitator(
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder builderForValue) {
@@ -21119,7 +21292,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       public Builder mergeFacilitator(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator value) {
         if (facilitatorBuilder_ == null) {
@@ -21141,7 +21314,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       public Builder clearFacilitator() {
         if (facilitatorBuilder_ == null) {
@@ -21159,7 +21332,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder getFacilitatorBuilder() {
         
@@ -21171,7 +21344,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder getFacilitatorOrBuilder() {
         if (facilitatorBuilder_ != null) {
@@ -21186,7 +21359,7 @@ public final class CommercialPurchase {
        * Partner organization, location, device, and staff member that facilitated this transaction.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 4;</code>
+       * <code>.opencannabis.commerce.PurchaseFacilitator facilitator = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitator.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseFacilitatorOrBuilder> 
@@ -21210,7 +21383,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       public boolean hasCustomer() {
         return customerBuilder_ != null || customer_ != null;
@@ -21220,7 +21393,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer getCustomer() {
         if (customerBuilder_ == null) {
@@ -21234,7 +21407,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       public Builder setCustomer(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer value) {
         if (customerBuilder_ == null) {
@@ -21254,7 +21427,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       public Builder setCustomer(
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder builderForValue) {
@@ -21272,7 +21445,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       public Builder mergeCustomer(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer value) {
         if (customerBuilder_ == null) {
@@ -21294,7 +21467,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       public Builder clearCustomer() {
         if (customerBuilder_ == null) {
@@ -21312,7 +21485,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder getCustomerBuilder() {
         
@@ -21324,7 +21497,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder getCustomerOrBuilder() {
         if (customerBuilder_ != null) {
@@ -21339,7 +21512,7 @@ public final class CommercialPurchase {
        * Specifies information regarding the customer that made this purchase.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseCustomer customer = 5;</code>
+       * <code>.opencannabis.commerce.PurchaseCustomer customer = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomer.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseCustomerOrBuilder> 
@@ -21363,7 +21536,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       public boolean hasBill() {
         return billBuilder_ != null || bill_ != null;
@@ -21373,7 +21546,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getBill() {
         if (billBuilder_ == null) {
@@ -21387,7 +21560,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       public Builder setBill(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges value) {
         if (billBuilder_ == null) {
@@ -21407,7 +21580,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       public Builder setBill(
           io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder builderForValue) {
@@ -21425,7 +21598,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       public Builder mergeBill(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges value) {
         if (billBuilder_ == null) {
@@ -21447,7 +21620,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       public Builder clearBill() {
         if (billBuilder_ == null) {
@@ -21465,7 +21638,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder getBillBuilder() {
         
@@ -21477,7 +21650,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getBillOrBuilder() {
         if (billBuilder_ != null) {
@@ -21492,7 +21665,7 @@ public final class CommercialPurchase {
        * Line-item bill of charges, or purchase sums. Includes taxes and discounts.
        * </pre>
        *
-       * <code>.opencannabis.commerce.BillOfCharges bill = 6;</code>
+       * <code>.opencannabis.commerce.BillOfCharges bill = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder> 
@@ -21511,9 +21684,9 @@ public final class CommercialPurchase {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> item_ =
         java.util.Collections.emptyList();
       private void ensureItemIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
           item_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem>(item_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -21525,7 +21698,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> getItemList() {
         if (itemBuilder_ == null) {
@@ -21539,7 +21712,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public int getItemCount() {
         if (itemBuilder_ == null) {
@@ -21553,7 +21726,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem getItem(int index) {
         if (itemBuilder_ == null) {
@@ -21567,7 +21740,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder setItem(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem value) {
@@ -21588,7 +21761,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder setItem(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder builderForValue) {
@@ -21606,7 +21779,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder addItem(io.opencannabis.schema.commerce.CommercialPurchase.TicketItem value) {
         if (itemBuilder_ == null) {
@@ -21626,7 +21799,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder addItem(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem value) {
@@ -21647,7 +21820,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder addItem(
           io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder builderForValue) {
@@ -21665,7 +21838,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder addItem(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder builderForValue) {
@@ -21683,7 +21856,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder addAllItem(
           java.lang.Iterable<? extends io.opencannabis.schema.commerce.CommercialPurchase.TicketItem> values) {
@@ -21702,12 +21875,12 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder clearItem() {
         if (itemBuilder_ == null) {
           item_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           itemBuilder_.clear();
@@ -21719,7 +21892,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public Builder removeItem(int index) {
         if (itemBuilder_ == null) {
@@ -21736,7 +21909,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder getItemBuilder(
           int index) {
@@ -21747,7 +21920,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder getItemOrBuilder(
           int index) {
@@ -21761,7 +21934,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder> 
            getItemOrBuilderList() {
@@ -21776,7 +21949,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder addItemBuilder() {
         return getItemFieldBuilder().addBuilder(
@@ -21787,7 +21960,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder addItemBuilder(
           int index) {
@@ -21799,7 +21972,7 @@ public final class CommercialPurchase {
        * Constituent items purchased as part of this commercial purchase ticket.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.TicketItem item = 7;</code>
+       * <code>repeated .opencannabis.commerce.TicketItem item = 8;</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder> 
            getItemBuilderList() {
@@ -21812,7 +21985,7 @@ public final class CommercialPurchase {
           itemBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPurchase.TicketItem, io.opencannabis.schema.commerce.CommercialPurchase.TicketItem.Builder, io.opencannabis.schema.commerce.CommercialPurchase.TicketItemOrBuilder>(
                   item_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  ((bitField0_ & 0x00000080) == 0x00000080),
                   getParentForChildren(),
                   isClean());
           item_ = null;
@@ -21823,9 +21996,9 @@ public final class CommercialPurchase {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> payment_ =
         java.util.Collections.emptyList();
       private void ensurePaymentIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
           payment_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.Payment>(payment_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
          }
       }
 
@@ -21837,7 +22010,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment> getPaymentList() {
         if (paymentBuilder_ == null) {
@@ -21851,7 +22024,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public int getPaymentCount() {
         if (paymentBuilder_ == null) {
@@ -21865,7 +22038,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment getPayment(int index) {
         if (paymentBuilder_ == null) {
@@ -21879,7 +22052,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder setPayment(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.Payment value) {
@@ -21900,7 +22073,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder setPayment(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder builderForValue) {
@@ -21918,7 +22091,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder addPayment(io.opencannabis.schema.commerce.CommercialPurchase.Payment value) {
         if (paymentBuilder_ == null) {
@@ -21938,7 +22111,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder addPayment(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.Payment value) {
@@ -21959,7 +22132,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder addPayment(
           io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder builderForValue) {
@@ -21977,7 +22150,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder addPayment(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder builderForValue) {
@@ -21995,7 +22168,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder addAllPayment(
           java.lang.Iterable<? extends io.opencannabis.schema.commerce.CommercialPurchase.Payment> values) {
@@ -22014,12 +22187,12 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder clearPayment() {
         if (paymentBuilder_ == null) {
           payment_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000100);
           onChanged();
         } else {
           paymentBuilder_.clear();
@@ -22031,7 +22204,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public Builder removePayment(int index) {
         if (paymentBuilder_ == null) {
@@ -22048,7 +22221,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder getPaymentBuilder(
           int index) {
@@ -22059,7 +22232,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder getPaymentOrBuilder(
           int index) {
@@ -22073,7 +22246,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder> 
            getPaymentOrBuilderList() {
@@ -22088,7 +22261,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder addPaymentBuilder() {
         return getPaymentFieldBuilder().addBuilder(
@@ -22099,7 +22272,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder addPaymentBuilder(
           int index) {
@@ -22111,7 +22284,7 @@ public final class CommercialPurchase {
        * Specifies how this order was paid for, if applicable at this point in the ticket lifecycle.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.Payment payment = 8;</code>
+       * <code>repeated .opencannabis.commerce.Payment payment = 9;</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder> 
            getPaymentBuilderList() {
@@ -22124,7 +22297,7 @@ public final class CommercialPurchase {
           paymentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPurchase.Payment, io.opencannabis.schema.commerce.CommercialPurchase.Payment.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PaymentOrBuilder>(
                   payment_,
-                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  ((bitField0_ & 0x00000100) == 0x00000100),
                   getParentForChildren(),
                   isClean());
           payment_ = null;
@@ -22135,9 +22308,9 @@ public final class CommercialPurchase {
       private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> action_ =
         java.util.Collections.emptyList();
       private void ensureActionIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
           action_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry>(action_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
          }
       }
 
@@ -22149,7 +22322,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> getActionList() {
         if (actionBuilder_ == null) {
@@ -22163,7 +22336,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public int getActionCount() {
         if (actionBuilder_ == null) {
@@ -22177,7 +22350,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry getAction(int index) {
         if (actionBuilder_ == null) {
@@ -22191,7 +22364,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder setAction(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry value) {
@@ -22212,7 +22385,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder setAction(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder builderForValue) {
@@ -22230,7 +22403,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder addAction(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry value) {
         if (actionBuilder_ == null) {
@@ -22250,7 +22423,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder addAction(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry value) {
@@ -22271,7 +22444,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder addAction(
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder builderForValue) {
@@ -22289,7 +22462,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder addAction(
           int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder builderForValue) {
@@ -22307,7 +22480,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder addAllAction(
           java.lang.Iterable<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry> values) {
@@ -22326,12 +22499,12 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder clearAction() {
         if (actionBuilder_ == null) {
           action_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000200);
           onChanged();
         } else {
           actionBuilder_.clear();
@@ -22343,7 +22516,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public Builder removeAction(int index) {
         if (actionBuilder_ == null) {
@@ -22360,7 +22533,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder getActionBuilder(
           int index) {
@@ -22371,7 +22544,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder getActionOrBuilder(
           int index) {
@@ -22385,7 +22558,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder> 
            getActionOrBuilderList() {
@@ -22400,7 +22573,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder addActionBuilder() {
         return getActionFieldBuilder().addBuilder(
@@ -22411,7 +22584,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder addActionBuilder(
           int index) {
@@ -22423,7 +22596,7 @@ public final class CommercialPurchase {
        * Actions taken on this order.
        * </pre>
        *
-       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 9;</code>
+       * <code>repeated .opencannabis.commerce.PurchaseLogEntry action = 10;</code>
        */
       public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder> 
            getActionBuilderList() {
@@ -22436,7 +22609,7 @@ public final class CommercialPurchase {
           actionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntry.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseLogEntryOrBuilder>(
                   action_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000200) == 0x00000200),
                   getParentForChildren(),
                   isClean());
           action_ = null;
@@ -22452,7 +22625,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       public boolean hasTs() {
         return tsBuilder_ != null || ts_ != null;
@@ -22462,7 +22635,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps getTs() {
         if (tsBuilder_ == null) {
@@ -22476,7 +22649,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       public Builder setTs(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps value) {
         if (tsBuilder_ == null) {
@@ -22496,7 +22669,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       public Builder setTs(
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder builderForValue) {
@@ -22514,7 +22687,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       public Builder mergeTs(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps value) {
         if (tsBuilder_ == null) {
@@ -22536,7 +22709,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       public Builder clearTs() {
         if (tsBuilder_ == null) {
@@ -22554,7 +22727,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder getTsBuilder() {
         
@@ -22566,7 +22739,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder getTsOrBuilder() {
         if (tsBuilder_ != null) {
@@ -22581,7 +22754,7 @@ public final class CommercialPurchase {
        * Timestamps that record the temporal position of individual purchase lifecycle events.
        * </pre>
        *
-       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 10;</code>
+       * <code>.opencannabis.commerce.PurchaseTimestamps ts = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestamps.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseTimestampsOrBuilder> 
@@ -22814,32 +22987,32 @@ public final class CommercialPurchase {
       " \001(\t\022\021\n\treference\030\003 \001(\t\032t\n\016DigitalPaymen" +
       "t\022=\n\007network\030\001 \001(\0162,.opencannabis.commer" +
       "ce.DigitalPaymentNetwork\022\020\n\010username\030\002 \001" +
-      "(\t\022\021\n\treference\030\003 \001(\tB\006\n\004spec\"\246\004\n\016Purcha" +
+      "(\t\022\021\n\treference\030\003 \001(\tB\006\n\004spec\"\265\004\n\016Purcha" +
       "seTicket\0227\n\003key\030\001 \001(\0132\".opencannabis.com" +
       "merce.PurchaseKeyB\006\302\265\003\002\010\001\022\017\n\007version\030\002 \001" +
       "(\r\0225\n\006status\030\003 \001(\0162%.opencannabis.commer" +
-      "ce.PurchaseStatus\022?\n\013facilitator\030\004 \001(\0132*" +
-      ".opencannabis.commerce.PurchaseFacilitat" +
-      "or\0229\n\010customer\030\005 \001(\0132\'.opencannabis.comm" +
-      "erce.PurchaseCustomer\0222\n\004bill\030\006 \001(\0132$.op" +
-      "encannabis.commerce.BillOfCharges\022/\n\004ite" +
-      "m\030\007 \003(\0132!.opencannabis.commerce.TicketIt" +
-      "em\022/\n\007payment\030\010 \003(\0132\036.opencannabis.comme" +
-      "rce.Payment\0227\n\006action\030\t \003(\0132\'.opencannab" +
-      "is.commerce.PurchaseLogEntry\0225\n\002ts\030\n \001(\013" +
-      "2).opencannabis.commerce.PurchaseTimesta" +
-      "mps:\021\202\367\002\r\010\002\022\tpurchases*\\\n\016PurchaseStatus" +
-      "\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001\022\n\n\006CLOSED\020\002\022\n\n\006VOI" +
-      "DED\020\003\022\r\n\tFINALIZED\020\004\022\016\n\nRECONCILED\020\005*=\n\021" +
-      "PurchaseAuthority\022\014\n\010STANDARD\020\000\022\013\n\007MEDIC" +
-      "AL\020\001\022\r\n\tADULT_USE\020\002*\312\001\n\rPurchaseEvent\022\n\n" +
-      "\006STATUS\020\000\022\010\n\004SAVE\020\001\022\010\n\004LOAD\020\002\022\016\n\nITEM_AD" +
-      "DED\020\n\022\020\n\014ITEM_REMOVED\020\013\022\031\n\025ITEM_QUANTITY" +
-      "_CHANGED\020\014\022\027\n\023ITEM_DISCOUNT_ADDED\020\r\022\031\n\025I" +
-      "TEM_DISCOUNT_REMOVED\020\016\022\021\n\rPURCHASE_VOID\020" +
-      "\024\022\025\n\021PURCHASE_FINALIZE\020\025B?\n\037io.opencanna" +
-      "bis.schema.commerceB\022CommercialPurchaseH" +
-      "\001P\000\242\002\003OCSb\006proto3"
+      "ce.PurchaseStatus\022\r\n\005claim\030\004 \001(\t\022?\n\013faci" +
+      "litator\030\005 \001(\0132*.opencannabis.commerce.Pu" +
+      "rchaseFacilitator\0229\n\010customer\030\006 \001(\0132\'.op" +
+      "encannabis.commerce.PurchaseCustomer\0222\n\004" +
+      "bill\030\007 \001(\0132$.opencannabis.commerce.BillO" +
+      "fCharges\022/\n\004item\030\010 \003(\0132!.opencannabis.co" +
+      "mmerce.TicketItem\022/\n\007payment\030\t \003(\0132\036.ope" +
+      "ncannabis.commerce.Payment\0227\n\006action\030\n \003" +
+      "(\0132\'.opencannabis.commerce.PurchaseLogEn" +
+      "try\0225\n\002ts\030\013 \001(\0132).opencannabis.commerce." +
+      "PurchaseTimestamps:\021\202\367\002\r\010\002\022\tpurchases*\\\n" +
+      "\016PurchaseStatus\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001\022\n\n\006" +
+      "CLOSED\020\002\022\n\n\006VOIDED\020\003\022\r\n\tFINALIZED\020\004\022\016\n\nR" +
+      "ECONCILED\020\005*=\n\021PurchaseAuthority\022\014\n\010STAN" +
+      "DARD\020\000\022\013\n\007MEDICAL\020\001\022\r\n\tADULT_USE\020\002*\312\001\n\rP" +
+      "urchaseEvent\022\n\n\006STATUS\020\000\022\010\n\004SAVE\020\001\022\010\n\004LO" +
+      "AD\020\002\022\016\n\nITEM_ADDED\020\n\022\020\n\014ITEM_REMOVED\020\013\022\031" +
+      "\n\025ITEM_QUANTITY_CHANGED\020\014\022\027\n\023ITEM_DISCOU" +
+      "NT_ADDED\020\r\022\031\n\025ITEM_DISCOUNT_REMOVED\020\016\022\021\n" +
+      "\rPURCHASE_VOID\020\024\022\025\n\021PURCHASE_FINALIZE\020\025B" +
+      "?\n\037io.opencannabis.schema.commerceB\022Comm" +
+      "ercialPurchaseH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22963,7 +23136,7 @@ public final class CommercialPurchase {
     internal_static_opencannabis_commerce_PurchaseTicket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_PurchaseTicket_descriptor,
-        new java.lang.String[] { "Key", "Version", "Status", "Facilitator", "Customer", "Bill", "Item", "Payment", "Action", "Ts", });
+        new java.lang.String[] { "Key", "Version", "Status", "Claim", "Facilitator", "Customer", "Bill", "Item", "Payment", "Action", "Ts", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(core.Datamodel.db);

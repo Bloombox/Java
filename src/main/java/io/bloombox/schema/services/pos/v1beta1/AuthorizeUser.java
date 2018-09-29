@@ -149,6 +149,56 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Information about point-of-sale hardware installed or supported on this device.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+     */
+    boolean hasHardware();
+    /**
+     * <pre>
+     * Information about point-of-sale hardware installed or supported on this device.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.POSHardware getHardware();
+    /**
+     * <pre>
+     * Information about point-of-sale hardware installed or supported on this device.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.POSHardwareOrBuilder getHardwareOrBuilder();
+
+    /**
+     * <pre>
+     * Information about the POS app in use.
+     * </pre>
+     *
+     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+     */
+    boolean hasApp();
+    /**
+     * <pre>
+     * Information about the POS app in use.
+     * </pre>
+     *
+     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+     */
+    io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication getApp();
+    /**
+     * <pre>
+     * Information about the POS app in use.
+     * </pre>
+     *
+     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+     */
+    io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder getAppOrBuilder();
+
+    /**
+     * <pre>
      * Resolved identity provided by the user, including their provider and identity ID.
      * </pre>
      *
@@ -271,6 +321,32 @@ private static final long serialVersionUID = 0L;
               if (subBuilder != null) {
                 subBuilder.mergeFrom(messaging_);
                 messaging_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Builder subBuilder = null;
+              if (hardware_ != null) {
+                subBuilder = hardware_.toBuilder();
+              }
+              hardware_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPOS.POSHardware.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(hardware_);
+                hardware_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder subBuilder = null;
+              if (app_ != null) {
+                subBuilder = app_.toBuilder();
+              }
+              app_ = input.readMessage(io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(app_);
+                app_ = subBuilder.buildPartial();
               }
 
               break;
@@ -431,6 +507,72 @@ private static final long serialVersionUID = 0L;
       return getMessaging();
     }
 
+    public static final int HARDWARE_FIELD_NUMBER = 3;
+    private io.opencannabis.schema.commerce.CommercialPOS.POSHardware hardware_;
+    /**
+     * <pre>
+     * Information about point-of-sale hardware installed or supported on this device.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+     */
+    public boolean hasHardware() {
+      return hardware_ != null;
+    }
+    /**
+     * <pre>
+     * Information about point-of-sale hardware installed or supported on this device.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.POSHardware getHardware() {
+      return hardware_ == null ? io.opencannabis.schema.commerce.CommercialPOS.POSHardware.getDefaultInstance() : hardware_;
+    }
+    /**
+     * <pre>
+     * Information about point-of-sale hardware installed or supported on this device.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.POSHardwareOrBuilder getHardwareOrBuilder() {
+      return getHardware();
+    }
+
+    public static final int APP_FIELD_NUMBER = 4;
+    private io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication app_;
+    /**
+     * <pre>
+     * Information about the POS app in use.
+     * </pre>
+     *
+     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+     */
+    public boolean hasApp() {
+      return app_ != null;
+    }
+    /**
+     * <pre>
+     * Information about the POS app in use.
+     * </pre>
+     *
+     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+     */
+    public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication getApp() {
+      return app_ == null ? io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.getDefaultInstance() : app_;
+    }
+    /**
+     * <pre>
+     * Information about the POS app in use.
+     * </pre>
+     *
+     * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+     */
+    public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder getAppOrBuilder() {
+      return getApp();
+    }
+
     public static final int TOKEN_FIELD_NUMBER = 10;
     /**
      * <pre>
@@ -525,6 +667,12 @@ private static final long serialVersionUID = 0L;
       if (messaging_ != null) {
         output.writeMessage(2, getMessaging());
       }
+      if (hardware_ != null) {
+        output.writeMessage(3, getHardware());
+      }
+      if (app_ != null) {
+        output.writeMessage(4, getApp());
+      }
       if (authCase_ == 10) {
         output.writeMessage(10, (io.bloombox.schema.security.IdentityToken) auth_);
       }
@@ -546,6 +694,14 @@ private static final long serialVersionUID = 0L;
       if (messaging_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMessaging());
+      }
+      if (hardware_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getHardware());
+      }
+      if (app_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getApp());
       }
       if (authCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
@@ -581,6 +737,16 @@ private static final long serialVersionUID = 0L;
         result = result && getMessaging()
             .equals(other.getMessaging());
       }
+      result = result && (hasHardware() == other.hasHardware());
+      if (hasHardware()) {
+        result = result && getHardware()
+            .equals(other.getHardware());
+      }
+      result = result && (hasApp() == other.hasApp());
+      if (hasApp()) {
+        result = result && getApp()
+            .equals(other.getApp());
+      }
       result = result && getAuthCase().equals(
           other.getAuthCase());
       if (!result) return false;
@@ -614,6 +780,14 @@ private static final long serialVersionUID = 0L;
       if (hasMessaging()) {
         hash = (37 * hash) + MESSAGING_FIELD_NUMBER;
         hash = (53 * hash) + getMessaging().hashCode();
+      }
+      if (hasHardware()) {
+        hash = (37 * hash) + HARDWARE_FIELD_NUMBER;
+        hash = (53 * hash) + getHardware().hashCode();
+      }
+      if (hasApp()) {
+        hash = (37 * hash) + APP_FIELD_NUMBER;
+        hash = (53 * hash) + getApp().hashCode();
       }
       switch (authCase_) {
         case 10:
@@ -772,6 +946,18 @@ private static final long serialVersionUID = 0L;
           messaging_ = null;
           messagingBuilder_ = null;
         }
+        if (hardwareBuilder_ == null) {
+          hardware_ = null;
+        } else {
+          hardware_ = null;
+          hardwareBuilder_ = null;
+        }
+        if (appBuilder_ == null) {
+          app_ = null;
+        } else {
+          app_ = null;
+          appBuilder_ = null;
+        }
         authCase_ = 0;
         auth_ = null;
         return this;
@@ -805,6 +991,16 @@ private static final long serialVersionUID = 0L;
           result.messaging_ = messaging_;
         } else {
           result.messaging_ = messagingBuilder_.build();
+        }
+        if (hardwareBuilder_ == null) {
+          result.hardware_ = hardware_;
+        } else {
+          result.hardware_ = hardwareBuilder_.build();
+        }
+        if (appBuilder_ == null) {
+          result.app_ = app_;
+        } else {
+          result.app_ = appBuilder_.build();
         }
         if (authCase_ == 10) {
           if (tokenBuilder_ == null) {
@@ -867,6 +1063,12 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasMessaging()) {
           mergeMessaging(other.getMessaging());
+        }
+        if (other.hasHardware()) {
+          mergeHardware(other.getHardware());
+        }
+        if (other.hasApp()) {
+          mergeApp(other.getApp());
         }
         switch (other.getAuthCase()) {
           case TOKEN: {
@@ -1227,6 +1429,312 @@ private static final long serialVersionUID = 0L;
           messaging_ = null;
         }
         return messagingBuilder_;
+      }
+
+      private io.opencannabis.schema.commerce.CommercialPOS.POSHardware hardware_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.POSHardware, io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Builder, io.opencannabis.schema.commerce.CommercialPOS.POSHardwareOrBuilder> hardwareBuilder_;
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      public boolean hasHardware() {
+        return hardwareBuilder_ != null || hardware_ != null;
+      }
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.POSHardware getHardware() {
+        if (hardwareBuilder_ == null) {
+          return hardware_ == null ? io.opencannabis.schema.commerce.CommercialPOS.POSHardware.getDefaultInstance() : hardware_;
+        } else {
+          return hardwareBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      public Builder setHardware(io.opencannabis.schema.commerce.CommercialPOS.POSHardware value) {
+        if (hardwareBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hardware_ = value;
+          onChanged();
+        } else {
+          hardwareBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      public Builder setHardware(
+          io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Builder builderForValue) {
+        if (hardwareBuilder_ == null) {
+          hardware_ = builderForValue.build();
+          onChanged();
+        } else {
+          hardwareBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      public Builder mergeHardware(io.opencannabis.schema.commerce.CommercialPOS.POSHardware value) {
+        if (hardwareBuilder_ == null) {
+          if (hardware_ != null) {
+            hardware_ =
+              io.opencannabis.schema.commerce.CommercialPOS.POSHardware.newBuilder(hardware_).mergeFrom(value).buildPartial();
+          } else {
+            hardware_ = value;
+          }
+          onChanged();
+        } else {
+          hardwareBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      public Builder clearHardware() {
+        if (hardwareBuilder_ == null) {
+          hardware_ = null;
+          onChanged();
+        } else {
+          hardware_ = null;
+          hardwareBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Builder getHardwareBuilder() {
+        
+        onChanged();
+        return getHardwareFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.POSHardwareOrBuilder getHardwareOrBuilder() {
+        if (hardwareBuilder_ != null) {
+          return hardwareBuilder_.getMessageOrBuilder();
+        } else {
+          return hardware_ == null ?
+              io.opencannabis.schema.commerce.CommercialPOS.POSHardware.getDefaultInstance() : hardware_;
+        }
+      }
+      /**
+       * <pre>
+       * Information about point-of-sale hardware installed or supported on this device.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.POSHardware hardware = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.POSHardware, io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Builder, io.opencannabis.schema.commerce.CommercialPOS.POSHardwareOrBuilder> 
+          getHardwareFieldBuilder() {
+        if (hardwareBuilder_ == null) {
+          hardwareBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.commerce.CommercialPOS.POSHardware, io.opencannabis.schema.commerce.CommercialPOS.POSHardware.Builder, io.opencannabis.schema.commerce.CommercialPOS.POSHardwareOrBuilder>(
+                  getHardware(),
+                  getParentForChildren(),
+                  isClean());
+          hardware_ = null;
+        }
+        return hardwareBuilder_;
+      }
+
+      private io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication app_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder> appBuilder_;
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      public boolean hasApp() {
+        return appBuilder_ != null || app_ != null;
+      }
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication getApp() {
+        if (appBuilder_ == null) {
+          return app_ == null ? io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.getDefaultInstance() : app_;
+        } else {
+          return appBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      public Builder setApp(io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication value) {
+        if (appBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          app_ = value;
+          onChanged();
+        } else {
+          appBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      public Builder setApp(
+          io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder builderForValue) {
+        if (appBuilder_ == null) {
+          app_ = builderForValue.build();
+          onChanged();
+        } else {
+          appBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      public Builder mergeApp(io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication value) {
+        if (appBuilder_ == null) {
+          if (app_ != null) {
+            app_ =
+              io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.newBuilder(app_).mergeFrom(value).buildPartial();
+          } else {
+            app_ = value;
+          }
+          onChanged();
+        } else {
+          appBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      public Builder clearApp() {
+        if (appBuilder_ == null) {
+          app_ = null;
+          onChanged();
+        } else {
+          app_ = null;
+          appBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder getAppBuilder() {
+        
+        onChanged();
+        return getAppFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      public io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder getAppOrBuilder() {
+        if (appBuilder_ != null) {
+          return appBuilder_.getMessageOrBuilder();
+        } else {
+          return app_ == null ?
+              io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.getDefaultInstance() : app_;
+        }
+      }
+      /**
+       * <pre>
+       * Information about the POS app in use.
+       * </pre>
+       *
+       * <code>.bloombox.schema.analytics.context.DeviceApplication app = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder> 
+          getAppFieldBuilder() {
+        if (appBuilder_ == null) {
+          appBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplication.Builder, io.bloombox.schema.telemetry.context.ApplicationContext.DeviceApplicationOrBuilder>(
+                  getApp(),
+                  getParentForChildren(),
+                  isClean());
+          app_ = null;
+        }
+        return appBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
