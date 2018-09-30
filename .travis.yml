@@ -9,6 +9,9 @@ language: java
 cache:
   directories:
   - $HOME/.m2
+branches:
+  except:
+    - embedded
 git:
   submodules: false
 jdk:
