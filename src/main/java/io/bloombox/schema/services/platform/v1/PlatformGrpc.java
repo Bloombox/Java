@@ -96,6 +96,18 @@ public final class PlatformGrpc {
           .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
               io.bloombox.schema.services.platform.v1.DomainInfo.Response.getDefaultInstance()))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.platform.v1.BrandInfo.Request,
+      io.bloombox.schema.services.platform.v1.BrandInfo.Response> METHOD_BRAND =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.platform.v1.BrandInfo.Request, io.bloombox.schema.services.platform.v1.BrandInfo.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.platform.v1.Platform", "Brand"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.platform.v1.BrandInfo.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.platform.v1.BrandInfo.Response.getDefaultInstance()))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -168,6 +180,16 @@ public final class PlatformGrpc {
       asyncUnimplementedUnaryCall(METHOD_DOMAINS, responseObserver);
     }
 
+    /**
+     * <pre>
+     * Retrieve brand assets and info for a given partner/location.
+     * </pre>
+     */
+    public void brand(io.bloombox.schema.services.platform.v1.BrandInfo.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.BrandInfo.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_BRAND, responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -198,6 +220,13 @@ public final class PlatformGrpc {
                 io.bloombox.schema.services.platform.v1.DomainInfo.Request,
                 io.bloombox.schema.services.platform.v1.DomainInfo.Response>(
                   this, METHODID_DOMAINS)))
+          .addMethod(
+            METHOD_BRAND,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.platform.v1.BrandInfo.Request,
+                io.bloombox.schema.services.platform.v1.BrandInfo.Response>(
+                  this, METHODID_BRAND)))
           .build();
     }
   }
@@ -267,6 +296,17 @@ public final class PlatformGrpc {
       asyncUnaryCall(
           getChannel().newCall(METHOD_DOMAINS, getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Retrieve brand assets and info for a given partner/location.
+     * </pre>
+     */
+    public void brand(io.bloombox.schema.services.platform.v1.BrandInfo.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.BrandInfo.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_BRAND, getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -329,6 +369,16 @@ public final class PlatformGrpc {
     public io.bloombox.schema.services.platform.v1.DomainInfo.Response domains(io.bloombox.schema.services.platform.v1.DomainInfo.Request request) {
       return blockingUnaryCall(
           getChannel(), METHOD_DOMAINS, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieve brand assets and info for a given partner/location.
+     * </pre>
+     */
+    public io.bloombox.schema.services.platform.v1.BrandInfo.Response brand(io.bloombox.schema.services.platform.v1.BrandInfo.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_BRAND, getCallOptions(), request);
     }
   }
 
@@ -397,12 +447,24 @@ public final class PlatformGrpc {
       return futureUnaryCall(
           getChannel().newCall(METHOD_DOMAINS, getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Retrieve brand assets and info for a given partner/location.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.platform.v1.BrandInfo.Response> brand(
+        io.bloombox.schema.services.platform.v1.BrandInfo.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_BRAND, getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PING = 0;
   private static final int METHODID_HEALTH = 1;
   private static final int METHODID_RESOLVE = 2;
   private static final int METHODID_DOMAINS = 3;
+  private static final int METHODID_BRAND = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -436,6 +498,10 @@ public final class PlatformGrpc {
         case METHODID_DOMAINS:
           serviceImpl.domains((io.bloombox.schema.services.platform.v1.DomainInfo.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.DomainInfo.Response>) responseObserver);
+          break;
+        case METHODID_BRAND:
+          serviceImpl.brand((io.bloombox.schema.services.platform.v1.BrandInfo.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.platform.v1.BrandInfo.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -474,6 +540,7 @@ public final class PlatformGrpc {
               .addMethod(METHOD_HEALTH)
               .addMethod(METHOD_RESOLVE)
               .addMethod(METHOD_DOMAINS)
+              .addMethod(METHOD_BRAND)
               .build();
         }
       }

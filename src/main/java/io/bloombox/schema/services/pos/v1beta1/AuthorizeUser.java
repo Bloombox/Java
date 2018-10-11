@@ -199,6 +199,24 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Specifies an existing session ID, implying a desire to resume the session referenced.
+     * </pre>
+     *
+     * <code>string session = 5;</code>
+     */
+    java.lang.String getSession();
+    /**
+     * <pre>
+     * Specifies an existing session ID, implying a desire to resume the session referenced.
+     * </pre>
+     *
+     * <code>string session = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getSessionBytes();
+
+    /**
+     * <pre>
      * Resolved identity provided by the user, including their provider and identity ID.
      * </pre>
      *
@@ -266,6 +284,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Request() {
+      session_ = "";
     }
 
     @java.lang.Override
@@ -349,6 +368,12 @@ private static final long serialVersionUID = 0L;
                 app_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              session_ = s;
               break;
             }
             case 82: {
@@ -573,6 +598,48 @@ private static final long serialVersionUID = 0L;
       return getApp();
     }
 
+    public static final int SESSION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object session_;
+    /**
+     * <pre>
+     * Specifies an existing session ID, implying a desire to resume the session referenced.
+     * </pre>
+     *
+     * <code>string session = 5;</code>
+     */
+    public java.lang.String getSession() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        session_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies an existing session ID, implying a desire to resume the session referenced.
+     * </pre>
+     *
+     * <code>string session = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSessionBytes() {
+      java.lang.Object ref = session_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        session_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int TOKEN_FIELD_NUMBER = 10;
     /**
      * <pre>
@@ -673,6 +740,9 @@ private static final long serialVersionUID = 0L;
       if (app_ != null) {
         output.writeMessage(4, getApp());
       }
+      if (!getSessionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, session_);
+      }
       if (authCase_ == 10) {
         output.writeMessage(10, (io.bloombox.schema.security.IdentityToken) auth_);
       }
@@ -702,6 +772,9 @@ private static final long serialVersionUID = 0L;
       if (app_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getApp());
+      }
+      if (!getSessionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, session_);
       }
       if (authCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
@@ -747,6 +820,8 @@ private static final long serialVersionUID = 0L;
         result = result && getApp()
             .equals(other.getApp());
       }
+      result = result && getSession()
+          .equals(other.getSession());
       result = result && getAuthCase().equals(
           other.getAuthCase());
       if (!result) return false;
@@ -789,6 +864,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + APP_FIELD_NUMBER;
         hash = (53 * hash) + getApp().hashCode();
       }
+      hash = (37 * hash) + SESSION_FIELD_NUMBER;
+      hash = (53 * hash) + getSession().hashCode();
       switch (authCase_) {
         case 10:
           hash = (37 * hash) + TOKEN_FIELD_NUMBER;
@@ -958,6 +1035,8 @@ private static final long serialVersionUID = 0L;
           app_ = null;
           appBuilder_ = null;
         }
+        session_ = "";
+
         authCase_ = 0;
         auth_ = null;
         return this;
@@ -1002,6 +1081,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.app_ = appBuilder_.build();
         }
+        result.session_ = session_;
         if (authCase_ == 10) {
           if (tokenBuilder_ == null) {
             result.auth_ = auth_;
@@ -1069,6 +1149,10 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasApp()) {
           mergeApp(other.getApp());
+        }
+        if (!other.getSession().isEmpty()) {
+          session_ = other.session_;
+          onChanged();
         }
         switch (other.getAuthCase()) {
           case TOKEN: {
@@ -1735,6 +1819,95 @@ private static final long serialVersionUID = 0L;
           app_ = null;
         }
         return appBuilder_;
+      }
+
+      private java.lang.Object session_ = "";
+      /**
+       * <pre>
+       * Specifies an existing session ID, implying a desire to resume the session referenced.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public java.lang.String getSession() {
+        java.lang.Object ref = session_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          session_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies an existing session ID, implying a desire to resume the session referenced.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSessionBytes() {
+        java.lang.Object ref = session_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          session_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies an existing session ID, implying a desire to resume the session referenced.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public Builder setSession(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        session_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies an existing session ID, implying a desire to resume the session referenced.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public Builder clearSession() {
+        
+        session_ = getDefaultInstance().getSession();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies an existing session ID, implying a desire to resume the session referenced.
+       * </pre>
+       *
+       * <code>string session = 5;</code>
+       */
+      public Builder setSessionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        session_ = value;
+        onChanged();
+        return this;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<

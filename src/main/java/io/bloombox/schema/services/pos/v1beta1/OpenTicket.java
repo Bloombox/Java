@@ -173,6 +173,24 @@ private static final long serialVersionUID = 0L;
      * <code>bool fresh = 4;</code>
      */
     boolean getFresh();
+
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    java.lang.String getSignature();
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignatureBytes();
   }
   /**
    * <pre>
@@ -193,6 +211,7 @@ private static final long serialVersionUID = 0L;
     private Request() {
       session_ = "";
       fresh_ = false;
+      signature_ = "";
     }
 
     @java.lang.Override
@@ -261,6 +280,12 @@ private static final long serialVersionUID = 0L;
             case 32: {
 
               fresh_ = input.readBool();
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              signature_ = s;
               break;
             }
           }
@@ -408,6 +433,48 @@ private static final long serialVersionUID = 0L;
       return fresh_;
     }
 
+    public static final int SIGNATURE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object signature_;
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    public java.lang.String getSignature() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signature_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignatureBytes() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signature_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -432,6 +499,9 @@ private static final long serialVersionUID = 0L;
       if (fresh_ != false) {
         output.writeBool(4, fresh_);
       }
+      if (!getSignatureBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, signature_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -454,6 +524,9 @@ private static final long serialVersionUID = 0L;
       if (fresh_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, fresh_);
+      }
+      if (!getSignatureBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, signature_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -485,6 +558,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getSession());
       result = result && (getFresh()
           == other.getFresh());
+      result = result && getSignature()
+          .equals(other.getSignature());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -509,6 +584,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FRESH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getFresh());
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -658,6 +735,8 @@ private static final long serialVersionUID = 0L;
 
         fresh_ = false;
 
+        signature_ = "";
+
         return this;
       }
 
@@ -692,6 +771,7 @@ private static final long serialVersionUID = 0L;
         }
         result.session_ = session_;
         result.fresh_ = fresh_;
+        result.signature_ = signature_;
         onBuilt();
         return result;
       }
@@ -745,6 +825,10 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getFresh() != false) {
           setFresh(other.getFresh());
+        }
+        if (!other.getSignature().isEmpty()) {
+          signature_ = other.signature_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1202,6 +1286,95 @@ private static final long serialVersionUID = 0L;
       public Builder clearFresh() {
         
         fresh_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object signature_ = "";
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public java.lang.String getSignature() {
+        java.lang.Object ref = signature_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signature_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignatureBytes() {
+        java.lang.Object ref = signature_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signature_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder setSignature(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signature_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder clearSignature() {
+        
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded purchase key.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder setSignatureBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signature_ = value;
         onChanged();
         return this;
       }

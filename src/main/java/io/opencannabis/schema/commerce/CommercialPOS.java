@@ -2586,10 +2586,35 @@ public final class CommercialPOS {
 
     /**
      * <pre>
+     * Indicates the current state of the point-of-sale device, including the current till value.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+     */
+    boolean hasState();
+    /**
+     * <pre>
+     * Indicates the current state of the point-of-sale device, including the current till value.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getState();
+    /**
+     * <pre>
+     * Indicates the current state of the point-of-sale device, including the current till value.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder getStateOrBuilder();
+
+    /**
+     * <pre>
      * Last time this point-of-sale device was seen.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 8;</code>
+     * <code>.opencannabis.temporal.Instant seen = 9;</code>
      */
     boolean hasSeen();
     /**
@@ -2597,7 +2622,7 @@ public final class CommercialPOS {
      * Last time this point-of-sale device was seen.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 8;</code>
+     * <code>.opencannabis.temporal.Instant seen = 9;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen();
     /**
@@ -2605,7 +2630,7 @@ public final class CommercialPOS {
      * Last time this point-of-sale device was seen.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 8;</code>
+     * <code>.opencannabis.temporal.Instant seen = 9;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder();
 
@@ -2614,7 +2639,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 9;</code>
+     * <code>.opencannabis.temporal.Instant created = 98;</code>
      */
     boolean hasCreated();
     /**
@@ -2622,7 +2647,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 9;</code>
+     * <code>.opencannabis.temporal.Instant created = 98;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated();
     /**
@@ -2630,7 +2655,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 9;</code>
+     * <code>.opencannabis.temporal.Instant created = 98;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder();
 
@@ -2639,7 +2664,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was last modified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 10;</code>
+     * <code>.opencannabis.temporal.Instant modified = 99;</code>
      */
     boolean hasModified();
     /**
@@ -2647,7 +2672,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was last modified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 10;</code>
+     * <code>.opencannabis.temporal.Instant modified = 99;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getModified();
     /**
@@ -2655,7 +2680,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was last modified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 10;</code>
+     * <code>.opencannabis.temporal.Instant modified = 99;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder();
   }
@@ -2775,6 +2800,19 @@ public final class CommercialPOS {
               break;
             }
             case 66: {
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder subBuilder = null;
+              if (state_ != null) {
+                subBuilder = state_.toBuilder();
+              }
+              state_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(state_);
+                state_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (seen_ != null) {
                 subBuilder = seen_.toBuilder();
@@ -2787,7 +2825,7 @@ public final class CommercialPOS {
 
               break;
             }
-            case 74: {
+            case 786: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (created_ != null) {
                 subBuilder = created_.toBuilder();
@@ -2800,7 +2838,7 @@ public final class CommercialPOS {
 
               break;
             }
-            case 82: {
+            case 794: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (modified_ != null) {
                 subBuilder = modified_.toBuilder();
@@ -3112,14 +3150,47 @@ public final class CommercialPOS {
       return session_.get(index);
     }
 
-    public static final int SEEN_FIELD_NUMBER = 8;
+    public static final int STATE_FIELD_NUMBER = 8;
+    private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState state_;
+    /**
+     * <pre>
+     * Indicates the current state of the point-of-sale device, including the current till value.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+     */
+    public boolean hasState() {
+      return state_ != null;
+    }
+    /**
+     * <pre>
+     * Indicates the current state of the point-of-sale device, including the current till value.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getState() {
+      return state_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.getDefaultInstance() : state_;
+    }
+    /**
+     * <pre>
+     * Indicates the current state of the point-of-sale device, including the current till value.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder getStateOrBuilder() {
+      return getState();
+    }
+
+    public static final int SEEN_FIELD_NUMBER = 9;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
     /**
      * <pre>
      * Last time this point-of-sale device was seen.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 8;</code>
+     * <code>.opencannabis.temporal.Instant seen = 9;</code>
      */
     public boolean hasSeen() {
       return seen_ != null;
@@ -3129,7 +3200,7 @@ public final class CommercialPOS {
      * Last time this point-of-sale device was seen.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 8;</code>
+     * <code>.opencannabis.temporal.Instant seen = 9;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen() {
       return seen_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : seen_;
@@ -3139,20 +3210,20 @@ public final class CommercialPOS {
      * Last time this point-of-sale device was seen.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 8;</code>
+     * <code>.opencannabis.temporal.Instant seen = 9;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder() {
       return getSeen();
     }
 
-    public static final int CREATED_FIELD_NUMBER = 9;
+    public static final int CREATED_FIELD_NUMBER = 98;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
     /**
      * <pre>
      * Timestamp for when this device was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 9;</code>
+     * <code>.opencannabis.temporal.Instant created = 98;</code>
      */
     public boolean hasCreated() {
       return created_ != null;
@@ -3162,7 +3233,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 9;</code>
+     * <code>.opencannabis.temporal.Instant created = 98;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated() {
       return created_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : created_;
@@ -3172,20 +3243,20 @@ public final class CommercialPOS {
      * Timestamp for when this device was created.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 9;</code>
+     * <code>.opencannabis.temporal.Instant created = 98;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder() {
       return getCreated();
     }
 
-    public static final int MODIFIED_FIELD_NUMBER = 10;
+    public static final int MODIFIED_FIELD_NUMBER = 99;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
     /**
      * <pre>
      * Timestamp for when this device was last modified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 10;</code>
+     * <code>.opencannabis.temporal.Instant modified = 99;</code>
      */
     public boolean hasModified() {
       return modified_ != null;
@@ -3195,7 +3266,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was last modified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 10;</code>
+     * <code>.opencannabis.temporal.Instant modified = 99;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
       return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
@@ -3205,7 +3276,7 @@ public final class CommercialPOS {
      * Timestamp for when this device was last modified.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 10;</code>
+     * <code>.opencannabis.temporal.Instant modified = 99;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
       return getModified();
@@ -3244,14 +3315,17 @@ public final class CommercialPOS {
       for (int i = 0; i < session_.size(); i++) {
         output.writeMessage(7, session_.get(i));
       }
+      if (state_ != null) {
+        output.writeMessage(8, getState());
+      }
       if (seen_ != null) {
-        output.writeMessage(8, getSeen());
+        output.writeMessage(9, getSeen());
       }
       if (created_ != null) {
-        output.writeMessage(9, getCreated());
+        output.writeMessage(98, getCreated());
       }
       if (modified_ != null) {
-        output.writeMessage(10, getModified());
+        output.writeMessage(99, getModified());
       }
       unknownFields.writeTo(output);
     }
@@ -3286,17 +3360,21 @@ public final class CommercialPOS {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, session_.get(i));
       }
+      if (state_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getState());
+      }
       if (seen_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getSeen());
+          .computeMessageSize(9, getSeen());
       }
       if (created_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getCreated());
+          .computeMessageSize(98, getCreated());
       }
       if (modified_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getModified());
+          .computeMessageSize(99, getModified());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3333,6 +3411,11 @@ public final class CommercialPOS {
       }
       result = result && getSessionList()
           .equals(other.getSessionList());
+      result = result && (hasState() == other.hasState());
+      if (hasState()) {
+        result = result && getState()
+            .equals(other.getState());
+      }
       result = result && (hasSeen() == other.hasSeen());
       if (hasSeen()) {
         result = result && getSeen()
@@ -3378,6 +3461,10 @@ public final class CommercialPOS {
       if (getSessionCount() > 0) {
         hash = (37 * hash) + SESSION_FIELD_NUMBER;
         hash = (53 * hash) + getSessionList().hashCode();
+      }
+      if (hasState()) {
+        hash = (37 * hash) + STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getState().hashCode();
       }
       if (hasSeen()) {
         hash = (37 * hash) + SEEN_FIELD_NUMBER;
@@ -3552,6 +3639,12 @@ public final class CommercialPOS {
         } else {
           sessionBuilder_.clear();
         }
+        if (stateBuilder_ == null) {
+          state_ = null;
+        } else {
+          state_ = null;
+          stateBuilder_ = null;
+        }
         if (seenBuilder_ == null) {
           seen_ = null;
         } else {
@@ -3616,6 +3709,11 @@ public final class CommercialPOS {
           result.session_ = session_;
         } else {
           result.session_ = sessionBuilder_.build();
+        }
+        if (stateBuilder_ == null) {
+          result.state_ = state_;
+        } else {
+          result.state_ = stateBuilder_.build();
         }
         if (seenBuilder_ == null) {
           result.seen_ = seen_;
@@ -3720,6 +3818,9 @@ public final class CommercialPOS {
               sessionBuilder_.addAllMessages(other.session_);
             }
           }
+        }
+        if (other.hasState()) {
+          mergeState(other.getState());
         }
         if (other.hasSeen()) {
           mergeSeen(other.getSeen());
@@ -4707,6 +4808,159 @@ public final class CommercialPOS {
         return sessionBuilder_;
       }
 
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState state_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder> stateBuilder_;
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      public boolean hasState() {
+        return stateBuilder_ != null || state_ != null;
+      }
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getState() {
+        if (stateBuilder_ == null) {
+          return state_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.getDefaultInstance() : state_;
+        } else {
+          return stateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      public Builder setState(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState value) {
+        if (stateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          state_ = value;
+          onChanged();
+        } else {
+          stateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      public Builder setState(
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder builderForValue) {
+        if (stateBuilder_ == null) {
+          state_ = builderForValue.build();
+          onChanged();
+        } else {
+          stateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      public Builder mergeState(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState value) {
+        if (stateBuilder_ == null) {
+          if (state_ != null) {
+            state_ =
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.newBuilder(state_).mergeFrom(value).buildPartial();
+          } else {
+            state_ = value;
+          }
+          onChanged();
+        } else {
+          stateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      public Builder clearState() {
+        if (stateBuilder_ == null) {
+          state_ = null;
+          onChanged();
+        } else {
+          state_ = null;
+          stateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder getStateBuilder() {
+        
+        onChanged();
+        return getStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder getStateOrBuilder() {
+        if (stateBuilder_ != null) {
+          return stateBuilder_.getMessageOrBuilder();
+        } else {
+          return state_ == null ?
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.getDefaultInstance() : state_;
+        }
+      }
+      /**
+       * <pre>
+       * Indicates the current state of the point-of-sale device, including the current till value.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder> 
+          getStateFieldBuilder() {
+        if (stateBuilder_ == null) {
+          stateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder>(
+                  getState(),
+                  getParentForChildren(),
+                  isClean());
+          state_ = null;
+        }
+        return stateBuilder_;
+      }
+
       private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
@@ -4715,7 +4969,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       public boolean hasSeen() {
         return seenBuilder_ != null || seen_ != null;
@@ -4725,7 +4979,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen() {
         if (seenBuilder_ == null) {
@@ -4739,7 +4993,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       public Builder setSeen(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (seenBuilder_ == null) {
@@ -4759,7 +5013,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       public Builder setSeen(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -4777,7 +5031,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       public Builder mergeSeen(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (seenBuilder_ == null) {
@@ -4799,7 +5053,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       public Builder clearSeen() {
         if (seenBuilder_ == null) {
@@ -4817,7 +5071,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getSeenBuilder() {
         
@@ -4829,7 +5083,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder() {
         if (seenBuilder_ != null) {
@@ -4844,7 +5098,7 @@ public final class CommercialPOS {
        * Last time this point-of-sale device was seen.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 8;</code>
+       * <code>.opencannabis.temporal.Instant seen = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -4868,7 +5122,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       public boolean hasCreated() {
         return createdBuilder_ != null || created_ != null;
@@ -4878,7 +5132,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated() {
         if (createdBuilder_ == null) {
@@ -4892,7 +5146,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       public Builder setCreated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (createdBuilder_ == null) {
@@ -4912,7 +5166,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       public Builder setCreated(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -4930,7 +5184,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       public Builder mergeCreated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (createdBuilder_ == null) {
@@ -4952,7 +5206,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       public Builder clearCreated() {
         if (createdBuilder_ == null) {
@@ -4970,7 +5224,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getCreatedBuilder() {
         
@@ -4982,7 +5236,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder() {
         if (createdBuilder_ != null) {
@@ -4997,7 +5251,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was created.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 9;</code>
+       * <code>.opencannabis.temporal.Instant created = 98;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -5021,7 +5275,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       public boolean hasModified() {
         return modifiedBuilder_ != null || modified_ != null;
@@ -5031,7 +5285,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
         if (modifiedBuilder_ == null) {
@@ -5045,7 +5299,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       public Builder setModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (modifiedBuilder_ == null) {
@@ -5065,7 +5319,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       public Builder setModified(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -5083,7 +5337,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       public Builder mergeModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (modifiedBuilder_ == null) {
@@ -5105,7 +5359,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       public Builder clearModified() {
         if (modifiedBuilder_ == null) {
@@ -5123,7 +5377,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getModifiedBuilder() {
         
@@ -5135,7 +5389,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
         if (modifiedBuilder_ != null) {
@@ -5150,7 +5404,7 @@ public final class CommercialPOS {
        * Timestamp for when this device was last modified.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 10;</code>
+       * <code>.opencannabis.temporal.Instant modified = 99;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -5209,6 +5463,3456 @@ public final class CommercialPOS {
     }
 
     public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleDevice getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PointOfSaleStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:opencannabis.commerce.PointOfSaleState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Describes the opening state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+     */
+    boolean hasOpen();
+    /**
+     * <pre>
+     * Describes the opening state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getOpen();
+    /**
+     * <pre>
+     * Describes the opening state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder();
+
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey> 
+        getTransactionList();
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getTransaction(int index);
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    int getTransactionCount();
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> 
+        getTransactionOrBuilderList();
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getTransactionOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+     */
+    boolean hasCurrent();
+    /**
+     * <pre>
+     * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getCurrent();
+    /**
+     * <pre>
+     * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getCurrentOrBuilder();
+
+    /**
+     * <pre>
+     * Describes the closing state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+     */
+    boolean hasClose();
+    /**
+     * <pre>
+     * Describes the closing state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getClose();
+    /**
+     * <pre>
+     * Describes the closing state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder();
+  }
+  /**
+   * <pre>
+   * Specifies a combined state payload, provided to the point-of-sale unit once a session changes status.
+   * </pre>
+   *
+   * Protobuf type {@code opencannabis.commerce.PointOfSaleState}
+   */
+  public  static final class PointOfSaleState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:opencannabis.commerce.PointOfSaleState)
+      PointOfSaleStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PointOfSaleState.newBuilder() to construct.
+    private PointOfSaleState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PointOfSaleState() {
+      transaction_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PointOfSaleState(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder subBuilder = null;
+              if (open_ != null) {
+                subBuilder = open_.toBuilder();
+              }
+              open_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(open_);
+                open_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                transaction_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              transaction_.add(
+                  input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder subBuilder = null;
+              if (current_ != null) {
+                subBuilder = current_.toBuilder();
+              }
+              current_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(current_);
+                current_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder subBuilder = null;
+              if (close_ != null) {
+                subBuilder = close_.toBuilder();
+              }
+              close_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(close_);
+                close_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          transaction_ = java.util.Collections.unmodifiableList(transaction_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.class, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder.class);
+    }
+
+    public interface SessionOpenOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:opencannabis.commerce.PointOfSaleState.SessionOpen)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+       */
+      boolean hasOpeningFloat();
+      /**
+       * <pre>
+       * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+       */
+      io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getOpeningFloat();
+      /**
+       * <pre>
+       * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+       */
+      io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getOpeningFloatOrBuilder();
+
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      boolean hasOccurred();
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
+    }
+    /**
+     * <pre>
+     * Message payload when a session has been opened.
+     * </pre>
+     *
+     * Protobuf type {@code opencannabis.commerce.PointOfSaleState.SessionOpen}
+     */
+    public  static final class SessionOpen extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:opencannabis.commerce.PointOfSaleState.SessionOpen)
+        SessionOpenOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SessionOpen.newBuilder() to construct.
+      private SessionOpen(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SessionOpen() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SessionOpen(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder subBuilder = null;
+                if (openingFloat_ != null) {
+                  subBuilder = openingFloat_.toBuilder();
+                }
+                openingFloat_ = input.readMessage(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(openingFloat_);
+                  openingFloat_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+                if (occurred_ != null) {
+                  subBuilder = occurred_.toBuilder();
+                }
+                occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(occurred_);
+                  occurred_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.class, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder.class);
+      }
+
+      public static final int OPENING_FLOAT_FIELD_NUMBER = 1;
+      private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue openingFloat_;
+      /**
+       * <pre>
+       * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+       */
+      public boolean hasOpeningFloat() {
+        return openingFloat_ != null;
+      }
+      /**
+       * <pre>
+       * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+       */
+      public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getOpeningFloat() {
+        return openingFloat_ == null ? io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : openingFloat_;
+      }
+      /**
+       * <pre>
+       * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+       */
+      public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getOpeningFloatOrBuilder() {
+        return getOpeningFloat();
+      }
+
+      public static final int OCCURRED_FIELD_NUMBER = 2;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      public boolean hasOccurred() {
+        return occurred_ != null;
+      }
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+        return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
+      }
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
+        return getOccurred();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (openingFloat_ != null) {
+          output.writeMessage(1, getOpeningFloat());
+        }
+        if (occurred_ != null) {
+          output.writeMessage(2, getOccurred());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (openingFloat_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getOpeningFloat());
+        }
+        if (occurred_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getOccurred());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen)) {
+          return super.equals(obj);
+        }
+        io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen other = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) obj;
+
+        boolean result = true;
+        result = result && (hasOpeningFloat() == other.hasOpeningFloat());
+        if (hasOpeningFloat()) {
+          result = result && getOpeningFloat()
+              .equals(other.getOpeningFloat());
+        }
+        result = result && (hasOccurred() == other.hasOccurred());
+        if (hasOccurred()) {
+          result = result && getOccurred()
+              .equals(other.getOccurred());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasOpeningFloat()) {
+          hash = (37 * hash) + OPENING_FLOAT_FIELD_NUMBER;
+          hash = (53 * hash) + getOpeningFloat().hashCode();
+        }
+        if (hasOccurred()) {
+          hash = (37 * hash) + OCCURRED_FIELD_NUMBER;
+          hash = (53 * hash) + getOccurred().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Message payload when a session has been opened.
+       * </pre>
+       *
+       * Protobuf type {@code opencannabis.commerce.PointOfSaleState.SessionOpen}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:opencannabis.commerce.PointOfSaleState.SessionOpen)
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.class, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder.class);
+        }
+
+        // Construct using io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          if (openingFloatBuilder_ == null) {
+            openingFloat_ = null;
+          } else {
+            openingFloat_ = null;
+            openingFloatBuilder_ = null;
+          }
+          if (occurredBuilder_ == null) {
+            occurred_ = null;
+          } else {
+            occurred_ = null;
+            occurredBuilder_ = null;
+          }
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_descriptor;
+        }
+
+        public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getDefaultInstanceForType() {
+          return io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance();
+        }
+
+        public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen build() {
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen buildPartial() {
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen result = new io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen(this);
+          if (openingFloatBuilder_ == null) {
+            result.openingFloat_ = openingFloat_;
+          } else {
+            result.openingFloat_ = openingFloatBuilder_.build();
+          }
+          if (occurredBuilder_ == null) {
+            result.occurred_ = occurred_;
+          } else {
+            result.occurred_ = occurredBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) {
+            return mergeFrom((io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen other) {
+          if (other == io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance()) return this;
+          if (other.hasOpeningFloat()) {
+            mergeOpeningFloat(other.getOpeningFloat());
+          }
+          if (other.hasOccurred()) {
+            mergeOccurred(other.getOccurred());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue openingFloat_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> openingFloatBuilder_;
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        public boolean hasOpeningFloat() {
+          return openingFloatBuilder_ != null || openingFloat_ != null;
+        }
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getOpeningFloat() {
+          if (openingFloatBuilder_ == null) {
+            return openingFloat_ == null ? io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : openingFloat_;
+          } else {
+            return openingFloatBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        public Builder setOpeningFloat(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue value) {
+          if (openingFloatBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            openingFloat_ = value;
+            onChanged();
+          } else {
+            openingFloatBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        public Builder setOpeningFloat(
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder builderForValue) {
+          if (openingFloatBuilder_ == null) {
+            openingFloat_ = builderForValue.build();
+            onChanged();
+          } else {
+            openingFloatBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        public Builder mergeOpeningFloat(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue value) {
+          if (openingFloatBuilder_ == null) {
+            if (openingFloat_ != null) {
+              openingFloat_ =
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.newBuilder(openingFloat_).mergeFrom(value).buildPartial();
+            } else {
+              openingFloat_ = value;
+            }
+            onChanged();
+          } else {
+            openingFloatBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        public Builder clearOpeningFloat() {
+          if (openingFloatBuilder_ == null) {
+            openingFloat_ = null;
+            onChanged();
+          } else {
+            openingFloat_ = null;
+            openingFloatBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder getOpeningFloatBuilder() {
+          
+          onChanged();
+          return getOpeningFloatFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getOpeningFloatOrBuilder() {
+          if (openingFloatBuilder_ != null) {
+            return openingFloatBuilder_.getMessageOrBuilder();
+          } else {
+            return openingFloat_ == null ?
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : openingFloat_;
+          }
+        }
+        /**
+         * <pre>
+         * Opening float value for the cash register. This is the initial cash amount used for change, etc.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue opening_float = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> 
+            getOpeningFloatFieldBuilder() {
+          if (openingFloatBuilder_ == null) {
+            openingFloatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder>(
+                    getOpeningFloat(),
+                    getParentForChildren(),
+                    isClean());
+            openingFloat_ = null;
+          }
+          return openingFloatBuilder_;
+        }
+
+        private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public boolean hasOccurred() {
+          return occurredBuilder_ != null || occurred_ != null;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+          if (occurredBuilder_ == null) {
+            return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
+          } else {
+            return occurredBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+          if (occurredBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            occurred_ = value;
+            onChanged();
+          } else {
+            occurredBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public Builder setOccurred(
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+          if (occurredBuilder_ == null) {
+            occurred_ = builderForValue.build();
+            onChanged();
+          } else {
+            occurredBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+          if (occurredBuilder_ == null) {
+            if (occurred_ != null) {
+              occurred_ =
+                io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+            } else {
+              occurred_ = value;
+            }
+            onChanged();
+          } else {
+            occurredBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public Builder clearOccurred() {
+          if (occurredBuilder_ == null) {
+            occurred_ = null;
+            onChanged();
+          } else {
+            occurred_ = null;
+            occurredBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
+          
+          onChanged();
+          return getOccurredFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
+          if (occurredBuilder_ != null) {
+            return occurredBuilder_.getMessageOrBuilder();
+          } else {
+            return occurred_ == null ?
+                io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
+          }
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+            getOccurredFieldBuilder() {
+          if (occurredBuilder_ == null) {
+            occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                    getOccurred(),
+                    getParentForChildren(),
+                    isClean());
+            occurred_ = null;
+          }
+          return occurredBuilder_;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:opencannabis.commerce.PointOfSaleState.SessionOpen)
+      }
+
+      // @@protoc_insertion_point(class_scope:opencannabis.commerce.PointOfSaleState.SessionOpen)
+      private static final io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen();
+      }
+
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SessionOpen>
+          PARSER = new com.google.protobuf.AbstractParser<SessionOpen>() {
+        public SessionOpen parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SessionOpen(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SessionOpen> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SessionOpen> getParserForType() {
+        return PARSER;
+      }
+
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SessionCloseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:opencannabis.commerce.PointOfSaleState.SessionClose)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Closing cash value for the session. This is the total cash amount in the register upon closing.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+       */
+      boolean hasClosingCount();
+      /**
+       * <pre>
+       * Closing cash value for the session. This is the total cash amount in the register upon closing.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+       */
+      io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getClosingCount();
+      /**
+       * <pre>
+       * Closing cash value for the session. This is the total cash amount in the register upon closing.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+       */
+      io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getClosingCountOrBuilder();
+
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      boolean hasOccurred();
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred();
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder();
+    }
+    /**
+     * <pre>
+     * Message payload when a session has been closed.
+     * </pre>
+     *
+     * Protobuf type {@code opencannabis.commerce.PointOfSaleState.SessionClose}
+     */
+    public  static final class SessionClose extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:opencannabis.commerce.PointOfSaleState.SessionClose)
+        SessionCloseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SessionClose.newBuilder() to construct.
+      private SessionClose(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SessionClose() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SessionClose(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder subBuilder = null;
+                if (closingCount_ != null) {
+                  subBuilder = closingCount_.toBuilder();
+                }
+                closingCount_ = input.readMessage(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(closingCount_);
+                  closingCount_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+                if (occurred_ != null) {
+                  subBuilder = occurred_.toBuilder();
+                }
+                occurred_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(occurred_);
+                  occurred_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.class, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder.class);
+      }
+
+      public static final int CLOSING_COUNT_FIELD_NUMBER = 1;
+      private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue closingCount_;
+      /**
+       * <pre>
+       * Closing cash value for the session. This is the total cash amount in the register upon closing.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+       */
+      public boolean hasClosingCount() {
+        return closingCount_ != null;
+      }
+      /**
+       * <pre>
+       * Closing cash value for the session. This is the total cash amount in the register upon closing.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+       */
+      public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getClosingCount() {
+        return closingCount_ == null ? io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : closingCount_;
+      }
+      /**
+       * <pre>
+       * Closing cash value for the session. This is the total cash amount in the register upon closing.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+       */
+      public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getClosingCountOrBuilder() {
+        return getClosingCount();
+      }
+
+      public static final int OCCURRED_FIELD_NUMBER = 2;
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_;
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      public boolean hasOccurred() {
+        return occurred_ != null;
+      }
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+        return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
+      }
+      /**
+       * <pre>
+       * Describes the moment the session was actually opened.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
+        return getOccurred();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (closingCount_ != null) {
+          output.writeMessage(1, getClosingCount());
+        }
+        if (occurred_ != null) {
+          output.writeMessage(2, getOccurred());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (closingCount_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getClosingCount());
+        }
+        if (occurred_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getOccurred());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose)) {
+          return super.equals(obj);
+        }
+        io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose other = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose) obj;
+
+        boolean result = true;
+        result = result && (hasClosingCount() == other.hasClosingCount());
+        if (hasClosingCount()) {
+          result = result && getClosingCount()
+              .equals(other.getClosingCount());
+        }
+        result = result && (hasOccurred() == other.hasOccurred());
+        if (hasOccurred()) {
+          result = result && getOccurred()
+              .equals(other.getOccurred());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasClosingCount()) {
+          hash = (37 * hash) + CLOSING_COUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getClosingCount().hashCode();
+        }
+        if (hasOccurred()) {
+          hash = (37 * hash) + OCCURRED_FIELD_NUMBER;
+          hash = (53 * hash) + getOccurred().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Message payload when a session has been closed.
+       * </pre>
+       *
+       * Protobuf type {@code opencannabis.commerce.PointOfSaleState.SessionClose}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:opencannabis.commerce.PointOfSaleState.SessionClose)
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.class, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder.class);
+        }
+
+        // Construct using io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          if (closingCountBuilder_ == null) {
+            closingCount_ = null;
+          } else {
+            closingCount_ = null;
+            closingCountBuilder_ = null;
+          }
+          if (occurredBuilder_ == null) {
+            occurred_ = null;
+          } else {
+            occurred_ = null;
+            occurredBuilder_ = null;
+          }
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_descriptor;
+        }
+
+        public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getDefaultInstanceForType() {
+          return io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.getDefaultInstance();
+        }
+
+        public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose build() {
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose buildPartial() {
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose result = new io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose(this);
+          if (closingCountBuilder_ == null) {
+            result.closingCount_ = closingCount_;
+          } else {
+            result.closingCount_ = closingCountBuilder_.build();
+          }
+          if (occurredBuilder_ == null) {
+            result.occurred_ = occurred_;
+          } else {
+            result.occurred_ = occurredBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose) {
+            return mergeFrom((io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose other) {
+          if (other == io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.getDefaultInstance()) return this;
+          if (other.hasClosingCount()) {
+            mergeClosingCount(other.getClosingCount());
+          }
+          if (other.hasOccurred()) {
+            mergeOccurred(other.getOccurred());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue closingCount_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> closingCountBuilder_;
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        public boolean hasClosingCount() {
+          return closingCountBuilder_ != null || closingCount_ != null;
+        }
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue getClosingCount() {
+          if (closingCountBuilder_ == null) {
+            return closingCount_ == null ? io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : closingCount_;
+          } else {
+            return closingCountBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        public Builder setClosingCount(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue value) {
+          if (closingCountBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            closingCount_ = value;
+            onChanged();
+          } else {
+            closingCountBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        public Builder setClosingCount(
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder builderForValue) {
+          if (closingCountBuilder_ == null) {
+            closingCount_ = builderForValue.build();
+            onChanged();
+          } else {
+            closingCountBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        public Builder mergeClosingCount(io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue value) {
+          if (closingCountBuilder_ == null) {
+            if (closingCount_ != null) {
+              closingCount_ =
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.newBuilder(closingCount_).mergeFrom(value).buildPartial();
+            } else {
+              closingCount_ = value;
+            }
+            onChanged();
+          } else {
+            closingCountBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        public Builder clearClosingCount() {
+          if (closingCountBuilder_ == null) {
+            closingCount_ = null;
+            onChanged();
+          } else {
+            closingCount_ = null;
+            closingCountBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder getClosingCountBuilder() {
+          
+          onChanged();
+          return getClosingCountFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        public io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder getClosingCountOrBuilder() {
+          if (closingCountBuilder_ != null) {
+            return closingCountBuilder_.getMessageOrBuilder();
+          } else {
+            return closingCount_ == null ?
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.getDefaultInstance() : closingCount_;
+          }
+        }
+        /**
+         * <pre>
+         * Closing cash value for the session. This is the total cash amount in the register upon closing.
+         * </pre>
+         *
+         * <code>.opencannabis.commerce.CurrencyValue closing_count = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder> 
+            getClosingCountFieldBuilder() {
+          if (closingCountBuilder_ == null) {
+            closingCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValue.Builder, io.opencannabis.schema.currency.CommerceCurrency.CurrencyValueOrBuilder>(
+                    getClosingCount(),
+                    getParentForChildren(),
+                    isClean());
+            closingCount_ = null;
+          }
+          return closingCountBuilder_;
+        }
+
+        private io.opencannabis.schema.temporal.TemporalInstant.Instant occurred_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> occurredBuilder_;
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public boolean hasOccurred() {
+          return occurredBuilder_ != null || occurred_ != null;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public io.opencannabis.schema.temporal.TemporalInstant.Instant getOccurred() {
+          if (occurredBuilder_ == null) {
+            return occurred_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
+          } else {
+            return occurredBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public Builder setOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+          if (occurredBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            occurred_ = value;
+            onChanged();
+          } else {
+            occurredBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public Builder setOccurred(
+            io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+          if (occurredBuilder_ == null) {
+            occurred_ = builderForValue.build();
+            onChanged();
+          } else {
+            occurredBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public Builder mergeOccurred(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+          if (occurredBuilder_ == null) {
+            if (occurred_ != null) {
+              occurred_ =
+                io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(occurred_).mergeFrom(value).buildPartial();
+            } else {
+              occurred_ = value;
+            }
+            onChanged();
+          } else {
+            occurredBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public Builder clearOccurred() {
+          if (occurredBuilder_ == null) {
+            occurred_ = null;
+            onChanged();
+          } else {
+            occurred_ = null;
+            occurredBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getOccurredBuilder() {
+          
+          onChanged();
+          return getOccurredFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getOccurredOrBuilder() {
+          if (occurredBuilder_ != null) {
+            return occurredBuilder_.getMessageOrBuilder();
+          } else {
+            return occurred_ == null ?
+                io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : occurred_;
+          }
+        }
+        /**
+         * <pre>
+         * Describes the moment the session was actually opened.
+         * </pre>
+         *
+         * <code>.opencannabis.temporal.Instant occurred = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+            getOccurredFieldBuilder() {
+          if (occurredBuilder_ == null) {
+            occurredBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                    getOccurred(),
+                    getParentForChildren(),
+                    isClean());
+            occurred_ = null;
+          }
+          return occurredBuilder_;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:opencannabis.commerce.PointOfSaleState.SessionClose)
+      }
+
+      // @@protoc_insertion_point(class_scope:opencannabis.commerce.PointOfSaleState.SessionClose)
+      private static final io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose();
+      }
+
+      public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SessionClose>
+          PARSER = new com.google.protobuf.AbstractParser<SessionClose>() {
+        public SessionClose parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SessionClose(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SessionClose> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SessionClose> getParserForType() {
+        return PARSER;
+      }
+
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int OPEN_FIELD_NUMBER = 1;
+    private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen open_;
+    /**
+     * <pre>
+     * Describes the opening state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+     */
+    public boolean hasOpen() {
+      return open_ != null;
+    }
+    /**
+     * <pre>
+     * Describes the opening state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getOpen() {
+      return open_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+    }
+    /**
+     * <pre>
+     * Describes the opening state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder() {
+      return getOpen();
+    }
+
+    public static final int TRANSACTION_FIELD_NUMBER = 2;
+    private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey> transaction_;
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey> getTransactionList() {
+      return transaction_;
+    }
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> 
+        getTransactionOrBuilderList() {
+      return transaction_;
+    }
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    public int getTransactionCount() {
+      return transaction_.size();
+    }
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getTransaction(int index) {
+      return transaction_.get(index);
+    }
+    /**
+     * <pre>
+     * Describes all transactions that occurred during a point of sale session.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getTransactionOrBuilder(
+        int index) {
+      return transaction_.get(index);
+    }
+
+    public static final int CURRENT_FIELD_NUMBER = 3;
+    private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges current_;
+    /**
+     * <pre>
+     * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+     */
+    public boolean hasCurrent() {
+      return current_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getCurrent() {
+      return current_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.getDefaultInstance() : current_;
+    }
+    /**
+     * <pre>
+     * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getCurrentOrBuilder() {
+      return getCurrent();
+    }
+
+    public static final int CLOSE_FIELD_NUMBER = 4;
+    private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose close_;
+    /**
+     * <pre>
+     * Describes the closing state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+     */
+    public boolean hasClose() {
+      return close_ != null;
+    }
+    /**
+     * <pre>
+     * Describes the closing state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getClose() {
+      return close_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
+    }
+    /**
+     * <pre>
+     * Describes the closing state of a point of sale session.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder() {
+      return getClose();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (open_ != null) {
+        output.writeMessage(1, getOpen());
+      }
+      for (int i = 0; i < transaction_.size(); i++) {
+        output.writeMessage(2, transaction_.get(i));
+      }
+      if (current_ != null) {
+        output.writeMessage(3, getCurrent());
+      }
+      if (close_ != null) {
+        output.writeMessage(4, getClose());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (open_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOpen());
+      }
+      for (int i = 0; i < transaction_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, transaction_.get(i));
+      }
+      if (current_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCurrent());
+      }
+      if (close_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getClose());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState)) {
+        return super.equals(obj);
+      }
+      io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState other = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState) obj;
+
+      boolean result = true;
+      result = result && (hasOpen() == other.hasOpen());
+      if (hasOpen()) {
+        result = result && getOpen()
+            .equals(other.getOpen());
+      }
+      result = result && getTransactionList()
+          .equals(other.getTransactionList());
+      result = result && (hasCurrent() == other.hasCurrent());
+      if (hasCurrent()) {
+        result = result && getCurrent()
+            .equals(other.getCurrent());
+      }
+      result = result && (hasClose() == other.hasClose());
+      if (hasClose()) {
+        result = result && getClose()
+            .equals(other.getClose());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOpen()) {
+        hash = (37 * hash) + OPEN_FIELD_NUMBER;
+        hash = (53 * hash) + getOpen().hashCode();
+      }
+      if (getTransactionCount() > 0) {
+        hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
+        hash = (53 * hash) + getTransactionList().hashCode();
+      }
+      if (hasCurrent()) {
+        hash = (37 * hash) + CURRENT_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrent().hashCode();
+      }
+      if (hasClose()) {
+        hash = (37 * hash) + CLOSE_FIELD_NUMBER;
+        hash = (53 * hash) + getClose().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies a combined state payload, provided to the point-of-sale unit once a session changes status.
+     * </pre>
+     *
+     * Protobuf type {@code opencannabis.commerce.PointOfSaleState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:opencannabis.commerce.PointOfSaleState)
+        io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.class, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder.class);
+      }
+
+      // Construct using io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTransactionFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (openBuilder_ == null) {
+          open_ = null;
+        } else {
+          open_ = null;
+          openBuilder_ = null;
+        }
+        if (transactionBuilder_ == null) {
+          transaction_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          transactionBuilder_.clear();
+        }
+        if (currentBuilder_ == null) {
+          current_ = null;
+        } else {
+          current_ = null;
+          currentBuilder_ = null;
+        }
+        if (closeBuilder_ == null) {
+          close_ = null;
+        } else {
+          close_ = null;
+          closeBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.opencannabis.schema.commerce.CommercialPOS.internal_static_opencannabis_commerce_PointOfSaleState_descriptor;
+      }
+
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getDefaultInstanceForType() {
+        return io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.getDefaultInstance();
+      }
+
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState build() {
+        io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState buildPartial() {
+        io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState result = new io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (openBuilder_ == null) {
+          result.open_ = open_;
+        } else {
+          result.open_ = openBuilder_.build();
+        }
+        if (transactionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            transaction_ = java.util.Collections.unmodifiableList(transaction_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.transaction_ = transaction_;
+        } else {
+          result.transaction_ = transactionBuilder_.build();
+        }
+        if (currentBuilder_ == null) {
+          result.current_ = current_;
+        } else {
+          result.current_ = currentBuilder_.build();
+        }
+        if (closeBuilder_ == null) {
+          result.close_ = close_;
+        } else {
+          result.close_ = closeBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState) {
+          return mergeFrom((io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState other) {
+        if (other == io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.getDefaultInstance()) return this;
+        if (other.hasOpen()) {
+          mergeOpen(other.getOpen());
+        }
+        if (transactionBuilder_ == null) {
+          if (!other.transaction_.isEmpty()) {
+            if (transaction_.isEmpty()) {
+              transaction_ = other.transaction_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTransactionIsMutable();
+              transaction_.addAll(other.transaction_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.transaction_.isEmpty()) {
+            if (transactionBuilder_.isEmpty()) {
+              transactionBuilder_.dispose();
+              transactionBuilder_ = null;
+              transaction_ = other.transaction_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              transactionBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTransactionFieldBuilder() : null;
+            } else {
+              transactionBuilder_.addAllMessages(other.transaction_);
+            }
+          }
+        }
+        if (other.hasCurrent()) {
+          mergeCurrent(other.getCurrent());
+        }
+        if (other.hasClose()) {
+          mergeClose(other.getClose());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen open_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder> openBuilder_;
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      public boolean hasOpen() {
+        return openBuilder_ != null || open_ != null;
+      }
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getOpen() {
+        if (openBuilder_ == null) {
+          return open_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+        } else {
+          return openBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      public Builder setOpen(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen value) {
+        if (openBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          open_ = value;
+          onChanged();
+        } else {
+          openBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      public Builder setOpen(
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder builderForValue) {
+        if (openBuilder_ == null) {
+          open_ = builderForValue.build();
+          onChanged();
+        } else {
+          openBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      public Builder mergeOpen(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen value) {
+        if (openBuilder_ == null) {
+          if (open_ != null) {
+            open_ =
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.newBuilder(open_).mergeFrom(value).buildPartial();
+          } else {
+            open_ = value;
+          }
+          onChanged();
+        } else {
+          openBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      public Builder clearOpen() {
+        if (openBuilder_ == null) {
+          open_ = null;
+          onChanged();
+        } else {
+          open_ = null;
+          openBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder getOpenBuilder() {
+        
+        onChanged();
+        return getOpenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder() {
+        if (openBuilder_ != null) {
+          return openBuilder_.getMessageOrBuilder();
+        } else {
+          return open_ == null ?
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+        }
+      }
+      /**
+       * <pre>
+       * Describes the opening state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder> 
+          getOpenFieldBuilder() {
+        if (openBuilder_ == null) {
+          openBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder>(
+                  getOpen(),
+                  getParentForChildren(),
+                  isClean());
+          open_ = null;
+        }
+        return openBuilder_;
+      }
+
+      private java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey> transaction_ =
+        java.util.Collections.emptyList();
+      private void ensureTransactionIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          transaction_ = new java.util.ArrayList<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey>(transaction_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> transactionBuilder_;
+
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey> getTransactionList() {
+        if (transactionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(transaction_);
+        } else {
+          return transactionBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public int getTransactionCount() {
+        if (transactionBuilder_ == null) {
+          return transaction_.size();
+        } else {
+          return transactionBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey getTransaction(int index) {
+        if (transactionBuilder_ == null) {
+          return transaction_.get(index);
+        } else {
+          return transactionBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder setTransaction(
+          int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
+        if (transactionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransactionIsMutable();
+          transaction_.set(index, value);
+          onChanged();
+        } else {
+          transactionBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder setTransaction(
+          int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder builderForValue) {
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          transactionBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder addTransaction(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
+        if (transactionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransactionIsMutable();
+          transaction_.add(value);
+          onChanged();
+        } else {
+          transactionBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder addTransaction(
+          int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey value) {
+        if (transactionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTransactionIsMutable();
+          transaction_.add(index, value);
+          onChanged();
+        } else {
+          transactionBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder addTransaction(
+          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder builderForValue) {
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.add(builderForValue.build());
+          onChanged();
+        } else {
+          transactionBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder addTransaction(
+          int index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder builderForValue) {
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          transactionBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder addAllTransaction(
+          java.lang.Iterable<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey> values) {
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, transaction_);
+          onChanged();
+        } else {
+          transactionBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder clearTransaction() {
+        if (transactionBuilder_ == null) {
+          transaction_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          transactionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public Builder removeTransaction(int index) {
+        if (transactionBuilder_ == null) {
+          ensureTransactionIsMutable();
+          transaction_.remove(index);
+          onChanged();
+        } else {
+          transactionBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder getTransactionBuilder(
+          int index) {
+        return getTransactionFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getTransactionOrBuilder(
+          int index) {
+        if (transactionBuilder_ == null) {
+          return transaction_.get(index);  } else {
+          return transactionBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public java.util.List<? extends io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> 
+           getTransactionOrBuilderList() {
+        if (transactionBuilder_ != null) {
+          return transactionBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(transaction_);
+        }
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder addTransactionBuilder() {
+        return getTransactionFieldBuilder().addBuilder(
+            io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder addTransactionBuilder(
+          int index) {
+        return getTransactionFieldBuilder().addBuilder(
+            index, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Describes all transactions that occurred during a point of sale session.
+       * </pre>
+       *
+       * <code>repeated .opencannabis.commerce.PurchaseKey transaction = 2;</code>
+       */
+      public java.util.List<io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder> 
+           getTransactionBuilderList() {
+        return getTransactionFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder> 
+          getTransactionFieldBuilder() {
+        if (transactionBuilder_ == null) {
+          transactionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.Builder, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder>(
+                  transaction_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          transaction_ = null;
+        }
+        return transactionBuilder_;
+      }
+
+      private io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges current_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder> currentBuilder_;
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      public boolean hasCurrent() {
+        return currentBuilder_ != null || current_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges getCurrent() {
+        if (currentBuilder_ == null) {
+          return current_ == null ? io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.getDefaultInstance() : current_;
+        } else {
+          return currentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      public Builder setCurrent(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges value) {
+        if (currentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          current_ = value;
+          onChanged();
+        } else {
+          currentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      public Builder setCurrent(
+          io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder builderForValue) {
+        if (currentBuilder_ == null) {
+          current_ = builderForValue.build();
+          onChanged();
+        } else {
+          currentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      public Builder mergeCurrent(io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges value) {
+        if (currentBuilder_ == null) {
+          if (current_ != null) {
+            current_ =
+              io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.newBuilder(current_).mergeFrom(value).buildPartial();
+          } else {
+            current_ = value;
+          }
+          onChanged();
+        } else {
+          currentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      public Builder clearCurrent() {
+        if (currentBuilder_ == null) {
+          current_ = null;
+          onChanged();
+        } else {
+          current_ = null;
+          currentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder getCurrentBuilder() {
+        
+        onChanged();
+        return getCurrentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder getCurrentOrBuilder() {
+        if (currentBuilder_ != null) {
+          return currentBuilder_.getMessageOrBuilder();
+        } else {
+          return current_ == null ?
+              io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.getDefaultInstance() : current_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the current, complete, aggregated bill-of-charges state. Computed by the backend.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.BillOfCharges current = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder> 
+          getCurrentFieldBuilder() {
+        if (currentBuilder_ == null) {
+          currentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges, io.opencannabis.schema.commerce.CommercialPurchase.BillOfCharges.Builder, io.opencannabis.schema.commerce.CommercialPurchase.BillOfChargesOrBuilder>(
+                  getCurrent(),
+                  getParentForChildren(),
+                  isClean());
+          current_ = null;
+        }
+        return currentBuilder_;
+      }
+
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose close_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder> closeBuilder_;
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      public boolean hasClose() {
+        return closeBuilder_ != null || close_ != null;
+      }
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getClose() {
+        if (closeBuilder_ == null) {
+          return close_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
+        } else {
+          return closeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      public Builder setClose(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose value) {
+        if (closeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          close_ = value;
+          onChanged();
+        } else {
+          closeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      public Builder setClose(
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder builderForValue) {
+        if (closeBuilder_ == null) {
+          close_ = builderForValue.build();
+          onChanged();
+        } else {
+          closeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      public Builder mergeClose(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose value) {
+        if (closeBuilder_ == null) {
+          if (close_ != null) {
+            close_ =
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.newBuilder(close_).mergeFrom(value).buildPartial();
+          } else {
+            close_ = value;
+          }
+          onChanged();
+        } else {
+          closeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      public Builder clearClose() {
+        if (closeBuilder_ == null) {
+          close_ = null;
+          onChanged();
+        } else {
+          close_ = null;
+          closeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder getCloseBuilder() {
+        
+        onChanged();
+        return getCloseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder() {
+        if (closeBuilder_ != null) {
+          return closeBuilder_.getMessageOrBuilder();
+        } else {
+          return close_ == null ?
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
+        }
+      }
+      /**
+       * <pre>
+       * Describes the closing state of a point of sale session.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder> 
+          getCloseFieldBuilder() {
+        if (closeBuilder_ == null) {
+          closeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder>(
+                  getClose(),
+                  getParentForChildren(),
+                  isClean());
+          close_ = null;
+        }
+        return closeBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:opencannabis.commerce.PointOfSaleState)
+    }
+
+    // @@protoc_insertion_point(class_scope:opencannabis.commerce.PointOfSaleState)
+    private static final io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState();
+    }
+
+    public static io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PointOfSaleState>
+        PARSER = new com.google.protobuf.AbstractParser<PointOfSaleState>() {
+      public PointOfSaleState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PointOfSaleState(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PointOfSaleState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PointOfSaleState> getParserForType() {
+      return PARSER;
+    }
+
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5324,10 +9028,35 @@ public final class CommercialPOS {
 
     /**
      * <pre>
+     * Opening and closing state of the cash register.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+     */
+    boolean hasState();
+    /**
+     * <pre>
+     * Opening and closing state of the cash register.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getState();
+    /**
+     * <pre>
+     * Opening and closing state of the cash register.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+     */
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder getStateOrBuilder();
+
+    /**
+     * <pre>
      * Specifies the last moment this session was witnessed on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 5;</code>
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
      */
     boolean hasSeen();
     /**
@@ -5335,7 +9064,7 @@ public final class CommercialPOS {
      * Specifies the last moment this session was witnessed on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 5;</code>
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen();
     /**
@@ -5343,7 +9072,7 @@ public final class CommercialPOS {
      * Specifies the last moment this session was witnessed on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 5;</code>
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder();
 
@@ -5352,7 +9081,7 @@ public final class CommercialPOS {
      * Specifies the moment this session was created on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 6;</code>
+     * <code>.opencannabis.temporal.Instant created = 7;</code>
      */
     boolean hasCreated();
     /**
@@ -5360,7 +9089,7 @@ public final class CommercialPOS {
      * Specifies the moment this session was created on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 6;</code>
+     * <code>.opencannabis.temporal.Instant created = 7;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated();
     /**
@@ -5368,7 +9097,7 @@ public final class CommercialPOS {
      * Specifies the moment this session was created on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 6;</code>
+     * <code>.opencannabis.temporal.Instant created = 7;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder();
 
@@ -5377,7 +9106,7 @@ public final class CommercialPOS {
      * Specifies the last time this session was changed, except for `seen` updates.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 7;</code>
+     * <code>.opencannabis.temporal.Instant modified = 8;</code>
      */
     boolean hasModified();
     /**
@@ -5385,7 +9114,7 @@ public final class CommercialPOS {
      * Specifies the last time this session was changed, except for `seen` updates.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 7;</code>
+     * <code>.opencannabis.temporal.Instant modified = 8;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getModified();
     /**
@@ -5393,7 +9122,7 @@ public final class CommercialPOS {
      * Specifies the last time this session was changed, except for `seen` updates.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 7;</code>
+     * <code>.opencannabis.temporal.Instant modified = 8;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder();
   }
@@ -5487,6 +9216,19 @@ public final class CommercialPOS {
               break;
             }
             case 42: {
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder subBuilder = null;
+              if (state_ != null) {
+                subBuilder = state_.toBuilder();
+              }
+              state_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(state_);
+                state_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (seen_ != null) {
                 subBuilder = seen_.toBuilder();
@@ -5499,7 +9241,7 @@ public final class CommercialPOS {
 
               break;
             }
-            case 50: {
+            case 58: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (created_ != null) {
                 subBuilder = created_.toBuilder();
@@ -5512,7 +9254,7 @@ public final class CommercialPOS {
 
               break;
             }
-            case 58: {
+            case 66: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (modified_ != null) {
                 subBuilder = modified_.toBuilder();
@@ -5707,14 +9449,47 @@ public final class CommercialPOS {
       return ticket_.get(index);
     }
 
-    public static final int SEEN_FIELD_NUMBER = 5;
+    public static final int STATE_FIELD_NUMBER = 5;
+    private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState state_;
+    /**
+     * <pre>
+     * Opening and closing state of the cash register.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+     */
+    public boolean hasState() {
+      return state_ != null;
+    }
+    /**
+     * <pre>
+     * Opening and closing state of the cash register.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getState() {
+      return state_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.getDefaultInstance() : state_;
+    }
+    /**
+     * <pre>
+     * Opening and closing state of the cash register.
+     * </pre>
+     *
+     * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+     */
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder getStateOrBuilder() {
+      return getState();
+    }
+
+    public static final int SEEN_FIELD_NUMBER = 6;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
     /**
      * <pre>
      * Specifies the last moment this session was witnessed on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 5;</code>
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
      */
     public boolean hasSeen() {
       return seen_ != null;
@@ -5724,7 +9499,7 @@ public final class CommercialPOS {
      * Specifies the last moment this session was witnessed on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 5;</code>
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen() {
       return seen_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : seen_;
@@ -5734,20 +9509,20 @@ public final class CommercialPOS {
      * Specifies the last moment this session was witnessed on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant seen = 5;</code>
+     * <code>.opencannabis.temporal.Instant seen = 6;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder() {
       return getSeen();
     }
 
-    public static final int CREATED_FIELD_NUMBER = 6;
+    public static final int CREATED_FIELD_NUMBER = 7;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant created_;
     /**
      * <pre>
      * Specifies the moment this session was created on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 6;</code>
+     * <code>.opencannabis.temporal.Instant created = 7;</code>
      */
     public boolean hasCreated() {
       return created_ != null;
@@ -5757,7 +9532,7 @@ public final class CommercialPOS {
      * Specifies the moment this session was created on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 6;</code>
+     * <code>.opencannabis.temporal.Instant created = 7;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated() {
       return created_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : created_;
@@ -5767,20 +9542,20 @@ public final class CommercialPOS {
      * Specifies the moment this session was created on the API.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant created = 6;</code>
+     * <code>.opencannabis.temporal.Instant created = 7;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder() {
       return getCreated();
     }
 
-    public static final int MODIFIED_FIELD_NUMBER = 7;
+    public static final int MODIFIED_FIELD_NUMBER = 8;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant modified_;
     /**
      * <pre>
      * Specifies the last time this session was changed, except for `seen` updates.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 7;</code>
+     * <code>.opencannabis.temporal.Instant modified = 8;</code>
      */
     public boolean hasModified() {
       return modified_ != null;
@@ -5790,7 +9565,7 @@ public final class CommercialPOS {
      * Specifies the last time this session was changed, except for `seen` updates.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 7;</code>
+     * <code>.opencannabis.temporal.Instant modified = 8;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
       return modified_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : modified_;
@@ -5800,7 +9575,7 @@ public final class CommercialPOS {
      * Specifies the last time this session was changed, except for `seen` updates.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant modified = 7;</code>
+     * <code>.opencannabis.temporal.Instant modified = 8;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
       return getModified();
@@ -5830,14 +9605,17 @@ public final class CommercialPOS {
       for (int i = 0; i < ticket_.size(); i++) {
         output.writeMessage(4, ticket_.get(i));
       }
+      if (state_ != null) {
+        output.writeMessage(5, getState());
+      }
       if (seen_ != null) {
-        output.writeMessage(5, getSeen());
+        output.writeMessage(6, getSeen());
       }
       if (created_ != null) {
-        output.writeMessage(6, getCreated());
+        output.writeMessage(7, getCreated());
       }
       if (modified_ != null) {
-        output.writeMessage(7, getModified());
+        output.writeMessage(8, getModified());
       }
       unknownFields.writeTo(output);
     }
@@ -5862,17 +9640,21 @@ public final class CommercialPOS {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, ticket_.get(i));
       }
+      if (state_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getState());
+      }
       if (seen_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getSeen());
+          .computeMessageSize(6, getSeen());
       }
       if (created_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getCreated());
+          .computeMessageSize(7, getCreated());
       }
       if (modified_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getModified());
+          .computeMessageSize(8, getModified());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5900,6 +9682,11 @@ public final class CommercialPOS {
       }
       result = result && getTicketList()
           .equals(other.getTicketList());
+      result = result && (hasState() == other.hasState());
+      if (hasState()) {
+        result = result && getState()
+            .equals(other.getState());
+      }
       result = result && (hasSeen() == other.hasSeen());
       if (hasSeen()) {
         result = result && getSeen()
@@ -5937,6 +9724,10 @@ public final class CommercialPOS {
       if (getTicketCount() > 0) {
         hash = (37 * hash) + TICKET_FIELD_NUMBER;
         hash = (53 * hash) + getTicketList().hashCode();
+      }
+      if (hasState()) {
+        hash = (37 * hash) + STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getState().hashCode();
       }
       if (hasSeen()) {
         hash = (37 * hash) + SEEN_FIELD_NUMBER;
@@ -6102,6 +9893,12 @@ public final class CommercialPOS {
         } else {
           ticketBuilder_.clear();
         }
+        if (stateBuilder_ == null) {
+          state_ = null;
+        } else {
+          state_ = null;
+          stateBuilder_ = null;
+        }
         if (seenBuilder_ == null) {
           seen_ = null;
         } else {
@@ -6159,6 +9956,11 @@ public final class CommercialPOS {
           result.ticket_ = ticket_;
         } else {
           result.ticket_ = ticketBuilder_.build();
+        }
+        if (stateBuilder_ == null) {
+          result.state_ = state_;
+        } else {
+          result.state_ = stateBuilder_.build();
         }
         if (seenBuilder_ == null) {
           result.seen_ = seen_;
@@ -6252,6 +10054,9 @@ public final class CommercialPOS {
               ticketBuilder_.addAllMessages(other.ticket_);
             }
           }
+        }
+        if (other.hasState()) {
+          mergeState(other.getState());
         }
         if (other.hasSeen()) {
           mergeSeen(other.getSeen());
@@ -6908,6 +10713,159 @@ public final class CommercialPOS {
         return ticketBuilder_;
       }
 
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState state_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder> stateBuilder_;
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      public boolean hasState() {
+        return stateBuilder_ != null || state_ != null;
+      }
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState getState() {
+        if (stateBuilder_ == null) {
+          return state_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.getDefaultInstance() : state_;
+        } else {
+          return stateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      public Builder setState(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState value) {
+        if (stateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          state_ = value;
+          onChanged();
+        } else {
+          stateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      public Builder setState(
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder builderForValue) {
+        if (stateBuilder_ == null) {
+          state_ = builderForValue.build();
+          onChanged();
+        } else {
+          stateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      public Builder mergeState(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState value) {
+        if (stateBuilder_ == null) {
+          if (state_ != null) {
+            state_ =
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.newBuilder(state_).mergeFrom(value).buildPartial();
+          } else {
+            state_ = value;
+          }
+          onChanged();
+        } else {
+          stateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      public Builder clearState() {
+        if (stateBuilder_ == null) {
+          state_ = null;
+          onChanged();
+        } else {
+          state_ = null;
+          stateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder getStateBuilder() {
+        
+        onChanged();
+        return getStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder getStateOrBuilder() {
+        if (stateBuilder_ != null) {
+          return stateBuilder_.getMessageOrBuilder();
+        } else {
+          return state_ == null ?
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.getDefaultInstance() : state_;
+        }
+      }
+      /**
+       * <pre>
+       * Opening and closing state of the cash register.
+       * </pre>
+       *
+       * <code>.opencannabis.commerce.PointOfSaleState state = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder> 
+          getStateFieldBuilder() {
+        if (stateBuilder_ == null) {
+          stateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleStateOrBuilder>(
+                  getState(),
+                  getParentForChildren(),
+                  isClean());
+          state_ = null;
+        }
+        return stateBuilder_;
+      }
+
       private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
@@ -6916,7 +10874,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       public boolean hasSeen() {
         return seenBuilder_ != null || seen_ != null;
@@ -6926,7 +10884,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen() {
         if (seenBuilder_ == null) {
@@ -6940,7 +10898,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       public Builder setSeen(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (seenBuilder_ == null) {
@@ -6960,7 +10918,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       public Builder setSeen(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -6978,7 +10936,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       public Builder mergeSeen(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (seenBuilder_ == null) {
@@ -7000,7 +10958,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       public Builder clearSeen() {
         if (seenBuilder_ == null) {
@@ -7018,7 +10976,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getSeenBuilder() {
         
@@ -7030,7 +10988,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder() {
         if (seenBuilder_ != null) {
@@ -7045,7 +11003,7 @@ public final class CommercialPOS {
        * Specifies the last moment this session was witnessed on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant seen = 5;</code>
+       * <code>.opencannabis.temporal.Instant seen = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -7069,7 +11027,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       public boolean hasCreated() {
         return createdBuilder_ != null || created_ != null;
@@ -7079,7 +11037,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getCreated() {
         if (createdBuilder_ == null) {
@@ -7093,7 +11051,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       public Builder setCreated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (createdBuilder_ == null) {
@@ -7113,7 +11071,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       public Builder setCreated(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -7131,7 +11089,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       public Builder mergeCreated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (createdBuilder_ == null) {
@@ -7153,7 +11111,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       public Builder clearCreated() {
         if (createdBuilder_ == null) {
@@ -7171,7 +11129,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getCreatedBuilder() {
         
@@ -7183,7 +11141,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCreatedOrBuilder() {
         if (createdBuilder_ != null) {
@@ -7198,7 +11156,7 @@ public final class CommercialPOS {
        * Specifies the moment this session was created on the API.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant created = 6;</code>
+       * <code>.opencannabis.temporal.Instant created = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -7222,7 +11180,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       public boolean hasModified() {
         return modifiedBuilder_ != null || modified_ != null;
@@ -7232,7 +11190,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getModified() {
         if (modifiedBuilder_ == null) {
@@ -7246,7 +11204,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       public Builder setModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (modifiedBuilder_ == null) {
@@ -7266,7 +11224,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       public Builder setModified(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -7284,7 +11242,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       public Builder mergeModified(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (modifiedBuilder_ == null) {
@@ -7306,7 +11264,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       public Builder clearModified() {
         if (modifiedBuilder_ == null) {
@@ -7324,7 +11282,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getModifiedBuilder() {
         
@@ -7336,7 +11294,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getModifiedOrBuilder() {
         if (modifiedBuilder_ != null) {
@@ -7351,7 +11309,7 @@ public final class CommercialPOS {
        * Specifies the last time this session was changed, except for `seen` updates.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant modified = 7;</code>
+       * <code>.opencannabis.temporal.Instant modified = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -7431,6 +11389,21 @@ public final class CommercialPOS {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_opencannabis_commerce_PointOfSaleDevice_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_opencannabis_commerce_PointOfSaleState_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_opencannabis_commerce_PointOfSaleState_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_opencannabis_commerce_PointOfSaleSession_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7446,47 +11419,63 @@ public final class CommercialPOS {
     java.lang.String[] descriptorData = {
       "\n\032commerce/PointOfSale.proto\022\025opencannab" +
       "is.commerce\032\024core/Datamodel.proto\032\026ident" +
-      "ity/UserKey.proto\032\027commerce/Purchase.pro" +
-      "to\032\033partner/PartnerDevice.proto\032\037crypto/" +
-      "primitives/Keypair.proto\032#analytics/cont" +
-      "ext/Application.proto\032\026temporal/Instant." +
-      "proto\"\340\002\n\013POSHardware\0225\n\004type\030\001 \001(\0162\'.op" +
-      "encannabis.commerce.POSHardware.Type\022<\n\007" +
-      "support\030\002 \001(\0132+.opencannabis.commerce.PO" +
-      "SHardware.Features\022\017\n\007version\030\003 \001(\t\032X\n\010F" +
-      "eatures\022;\n\007feature\030\001 \003(\0162*.opencannabis." +
-      "commerce.POSHardware.Feature\022\017\n\007drawers\030" +
-      "\002 \001(\r\"%\n\004Type\022\017\n\013UNSPECIFIED\020\000\022\014\n\010BLOOMB" +
-      "OX\020\001\"J\n\007Feature\022\013\n\007PRINTER\020\000\022\007\n\003BCS\020\001\022\007\n" +
-      "\003MSR\020\002\022\007\n\003BLE\020\003\022\t\n\005SCALE\020\004\022\014\n\010LABELLER\020\005" +
-      "\"\337\003\n\021PointOfSaleDevice\022\024\n\004uuid\030\001 \001(\tB\006\302\265" +
-      "\003\002\010\002\022\014\n\004name\030\002 \001(\t\0226\n\006status\030\003 \001(\0162&.ope" +
-      "ncannabis.commerce.POSDeviceStatus\022\r\n\005cl" +
-      "aim\030\004 \001(\t\0224\n\010hardware\030\005 \001(\0132\".opencannab" +
-      "is.commerce.POSHardware\022A\n\003app\030\006 \001(\01324.b" +
-      "loombox.schema.analytics.context.DeviceA" +
-      "pplication\022B\n\007session\030\007 \003(\0132).opencannab" +
-      "is.commerce.PointOfSaleSessionB\006\322\265\003\002\010\001\022," +
-      "\n\004seen\030\010 \001(\0132\036.opencannabis.temporal.Ins" +
-      "tant\022/\n\007created\030\t \001(\0132\036.opencannabis.tem" +
-      "poral.Instant\0220\n\010modified\030\n \001(\0132\036.openca" +
-      "nnabis.temporal.Instant:\021\202\367\002\r\010\002\022\tregiste" +
-      "rs\"\205\003\n\022PointOfSaleSession\022\024\n\004uuid\030\001 \001(\tB" +
-      "\006\302\265\003\002\010\002\0224\n\006status\030\002 \001(\0162$.opencannabis.c" +
-      "ommerce.SessionStatus\022/\n\004user\030\003 \001(\0132!.bl" +
-      "oombox.schema.identity.UserKey\022O\n\006ticket" +
-      "\030\004 \003(\0132%.opencannabis.commerce.PurchaseT" +
-      "icketB\030\322\265\003\002\010\001\322\265\003\016\032\014transactions\022,\n\004seen\030" +
-      "\005 \001(\0132\036.opencannabis.temporal.Instant\022/\n" +
-      "\007created\030\006 \001(\0132\036.opencannabis.temporal.I" +
-      "nstant\0220\n\010modified\030\007 \001(\0132\036.opencannabis." +
-      "temporal.Instant:\020\202\367\002\014\010\001\022\010sessions*b\n\rSe" +
-      "ssionStatus\022\017\n\013ESTABLISHED\020\000\022\n\n\006ACTIVE\020\001" +
-      "\022\r\n\tSUSPENDED\020\002\022\013\n\007EXPIRED\020\003\022\016\n\nTERMINAT" +
-      "ED\020\004\022\010\n\004LOST\020\005*(\n\017POSDeviceStatus\022\010\n\004IDL" +
-      "E\020\000\022\013\n\007CLAIMED\020\001B:\n\037io.opencannabis.sche" +
-      "ma.commerceB\rCommercialPOSH\001P\000\242\002\003OCSb\006pr" +
-      "oto3"
+      "ity/UserKey.proto\032\027commerce/Currency.pro" +
+      "to\032\027commerce/Purchase.proto\032\033partner/Par" +
+      "tnerDevice.proto\032\037crypto/primitives/Keyp" +
+      "air.proto\032#analytics/context/Application" +
+      ".proto\032\026temporal/Instant.proto\"\340\002\n\013POSHa" +
+      "rdware\0225\n\004type\030\001 \001(\0162\'.opencannabis.comm" +
+      "erce.POSHardware.Type\022<\n\007support\030\002 \001(\0132+" +
+      ".opencannabis.commerce.POSHardware.Featu" +
+      "res\022\017\n\007version\030\003 \001(\t\032X\n\010Features\022;\n\007feat" +
+      "ure\030\001 \003(\0162*.opencannabis.commerce.POSHar" +
+      "dware.Feature\022\017\n\007drawers\030\002 \001(\r\"%\n\004Type\022\017" +
+      "\n\013UNSPECIFIED\020\000\022\014\n\010BLOOMBOX\020\001\"J\n\007Feature" +
+      "\022\013\n\007PRINTER\020\000\022\007\n\003BCS\020\001\022\007\n\003MSR\020\002\022\007\n\003BLE\020\003" +
+      "\022\t\n\005SCALE\020\004\022\014\n\010LABELLER\020\005\"\227\004\n\021PointOfSal" +
+      "eDevice\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\014\n\004name\030\002 " +
+      "\001(\t\0226\n\006status\030\003 \001(\0162&.opencannabis.comme" +
+      "rce.POSDeviceStatus\022\r\n\005claim\030\004 \001(\t\0224\n\010ha" +
+      "rdware\030\005 \001(\0132\".opencannabis.commerce.POS" +
+      "Hardware\022A\n\003app\030\006 \001(\01324.bloombox.schema." +
+      "analytics.context.DeviceApplication\022B\n\007s" +
+      "ession\030\007 \003(\0132).opencannabis.commerce.Poi" +
+      "ntOfSaleSessionB\006\322\265\003\002\010\001\0226\n\005state\030\010 \001(\0132\'" +
+      ".opencannabis.commerce.PointOfSaleState\022" +
+      ",\n\004seen\030\t \001(\0132\036.opencannabis.temporal.In" +
+      "stant\022/\n\007created\030b \001(\0132\036.opencannabis.te" +
+      "mporal.Instant\0220\n\010modified\030c \001(\0132\036.openc" +
+      "annabis.temporal.Instant:\021\202\367\002\r\010\002\022\tregist" +
+      "ers\"\207\004\n\020PointOfSaleState\022A\n\004open\030\001 \001(\01323" +
+      ".opencannabis.commerce.PointOfSaleState." +
+      "SessionOpen\0227\n\013transaction\030\002 \003(\0132\".openc" +
+      "annabis.commerce.PurchaseKey\0225\n\007current\030" +
+      "\003 \001(\0132$.opencannabis.commerce.BillOfChar" +
+      "ges\022C\n\005close\030\004 \001(\01324.opencannabis.commer" +
+      "ce.PointOfSaleState.SessionClose\032|\n\013Sess" +
+      "ionOpen\022;\n\ropening_float\030\001 \001(\0132$.opencan" +
+      "nabis.commerce.CurrencyValue\0220\n\010occurred" +
+      "\030\002 \001(\0132\036.opencannabis.temporal.Instant\032}" +
+      "\n\014SessionClose\022;\n\rclosing_count\030\001 \001(\0132$." +
+      "opencannabis.commerce.CurrencyValue\0220\n\010o" +
+      "ccurred\030\002 \001(\0132\036.opencannabis.temporal.In" +
+      "stant\"\275\003\n\022PointOfSaleSession\022\024\n\004uuid\030\001 \001" +
+      "(\tB\006\302\265\003\002\010\002\0224\n\006status\030\002 \001(\0162$.opencannabi" +
+      "s.commerce.SessionStatus\022/\n\004user\030\003 \001(\0132!" +
+      ".bloombox.schema.identity.UserKey\022O\n\006tic" +
+      "ket\030\004 \003(\0132%.opencannabis.commerce.Purcha" +
+      "seTicketB\030\322\265\003\002\010\001\322\265\003\016\032\014transactions\0226\n\005st" +
+      "ate\030\005 \001(\0132\'.opencannabis.commerce.PointO" +
+      "fSaleState\022,\n\004seen\030\006 \001(\0132\036.opencannabis." +
+      "temporal.Instant\022/\n\007created\030\007 \001(\0132\036.open" +
+      "cannabis.temporal.Instant\0220\n\010modified\030\010 " +
+      "\001(\0132\036.opencannabis.temporal.Instant:\020\202\367\002" +
+      "\014\010\001\022\010sessions*b\n\rSessionStatus\022\017\n\013ESTABL" +
+      "ISHED\020\000\022\n\n\006ACTIVE\020\001\022\r\n\tSUSPENDED\020\002\022\013\n\007EX" +
+      "PIRED\020\003\022\016\n\nTERMINATED\020\004\022\010\n\004LOST\020\005*(\n\017POS" +
+      "DeviceStatus\022\010\n\004IDLE\020\000\022\013\n\007CLAIMED\020\001B:\n\037i" +
+      "o.opencannabis.schema.commerceB\rCommerci" +
+      "alPOSH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7501,6 +11490,7 @@ public final class CommercialPOS {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           core.Datamodel.getDescriptor(),
           io.bloombox.schema.identity.AppUserKey.getDescriptor(),
+          io.opencannabis.schema.currency.CommerceCurrency.getDescriptor(),
           io.opencannabis.schema.commerce.CommercialPurchase.getDescriptor(),
           io.bloombox.schema.partner.PartnerDevices.getDescriptor(),
           io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor(),
@@ -7524,13 +11514,31 @@ public final class CommercialPOS {
     internal_static_opencannabis_commerce_PointOfSaleDevice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_PointOfSaleDevice_descriptor,
-        new java.lang.String[] { "Uuid", "Name", "Status", "Claim", "Hardware", "App", "Session", "Seen", "Created", "Modified", });
-    internal_static_opencannabis_commerce_PointOfSaleSession_descriptor =
+        new java.lang.String[] { "Uuid", "Name", "Status", "Claim", "Hardware", "App", "Session", "State", "Seen", "Created", "Modified", });
+    internal_static_opencannabis_commerce_PointOfSaleState_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_opencannabis_commerce_PointOfSaleState_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_opencannabis_commerce_PointOfSaleState_descriptor,
+        new java.lang.String[] { "Open", "Transaction", "Current", "Close", });
+    internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_descriptor =
+      internal_static_opencannabis_commerce_PointOfSaleState_descriptor.getNestedTypes().get(0);
+    internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_opencannabis_commerce_PointOfSaleState_SessionOpen_descriptor,
+        new java.lang.String[] { "OpeningFloat", "Occurred", });
+    internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_descriptor =
+      internal_static_opencannabis_commerce_PointOfSaleState_descriptor.getNestedTypes().get(1);
+    internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_opencannabis_commerce_PointOfSaleState_SessionClose_descriptor,
+        new java.lang.String[] { "ClosingCount", "Occurred", });
+    internal_static_opencannabis_commerce_PointOfSaleSession_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_opencannabis_commerce_PointOfSaleSession_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_PointOfSaleSession_descriptor,
-        new java.lang.String[] { "Uuid", "Status", "User", "Ticket", "Seen", "Created", "Modified", });
+        new java.lang.String[] { "Uuid", "Status", "User", "Ticket", "State", "Seen", "Created", "Modified", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(core.Datamodel.collection);
@@ -7540,6 +11548,7 @@ public final class CommercialPOS {
         .internalUpdateFileDescriptor(descriptor, registry);
     core.Datamodel.getDescriptor();
     io.bloombox.schema.identity.AppUserKey.getDescriptor();
+    io.opencannabis.schema.currency.CommerceCurrency.getDescriptor();
     io.opencannabis.schema.commerce.CommercialPurchase.getDescriptor();
     io.bloombox.schema.partner.PartnerDevices.getDescriptor();
     io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor();

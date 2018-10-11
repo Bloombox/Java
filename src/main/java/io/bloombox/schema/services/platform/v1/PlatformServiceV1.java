@@ -86,6 +86,21 @@ public final class PlatformServiceV1 {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_platform_v1_DomainInfo_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_platform_v1_BrandInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_platform_v1_BrandInfo_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_platform_v1_BrandInfo_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -99,76 +114,87 @@ public final class PlatformServiceV1 {
       "bloombox.schema.services.platform.v1\032\033go" +
       "ogle/protobuf/empty.proto\032\034google/api/an" +
       "notations.proto\032(protoc-gen-swagger/opti" +
-      "ons/swagger.proto\"j\n\004Ping\032\t\n\007Request\032W\n\010" +
-      "Response\022K\n\006status\030\001 \001(\0162;.bloombox.sche" +
-      "ma.services.platform.v1.PlatformServiceS" +
-      "tatus\"\'\n\013Healthcheck\032\030\n\007Request\022\r\n\005probe" +
-      "\030\001 \001(\t\"|\n\rDomainResolve\032\031\n\007Request\022\016\n\006or" +
-      "igin\030\001 \001(\t\032P\n\010Response\022\017\n\007partner\030\001 \001(\t\022" +
-      "\020\n\010location\030\002 \001(\t\022\016\n\006apikey\030\003 \001(\t\022\021\n\tcli" +
-      "ent_id\030\004 \001(\t\"\246\001\n\nDomainInfo\0322\n\007Request\022\022" +
-      "\n\npartner_id\030\001 \001(\t\022\023\n\013location_id\030\002 \001(\t\032" +
-      "d\n\010Response\022\014\n\004shop\030\001 \001(\t\022\014\n\004menu\030\002 \001(\t\022" +
-      "\021\n\tdashboard\030\003 \001(\t\022\n\n\002tv\030\004 \001(\t\022\014\n\004link\030\005" +
-      " \001(\t\022\017\n\007website\030\006 \001(\t*a\n\rPlatformError\022\014" +
-      "\n\010NO_ERROR\020\000\022\030\n\024SEARCH_NOT_AVAILABLE\020\001\022\022" +
-      "\n\016ORIGIN_INVALID\020\002\022\024\n\020ORIGIN_NOT_FOUND\020\003" +
-      "*G\n\025PlatformServiceStatus\022\013\n\007UNKNOWN\020\000\022\006" +
-      "\n\002UP\020\001\022\010\n\004DOWN\020\002\022\017\n\013MAINTENANCE\020\0032\362\007\n\010Pl" +
-      "atform\022\317\001\n\004Ping\0222.bloombox.schema.servic" +
-      "es.platform.v1.Ping.Request\0323.bloombox.s" +
-      "chema.services.platform.v1.Ping.Response" +
-      "\"^\202\323\344\223\002\023\022\021/platform/v1/ping\222AB\022\014Service " +
-      "Ping\032,Query for service uptime/maintenan" +
-      "ce status.*\004Ping\022\313\001\n\006Health\022\026.google.pro" +
-      "tobuf.Empty\032\026.google.protobuf.Empty\"\220\001\202\323" +
-      "\344\223\002\025\022\023/platform/v1/health\222Ar\022\023Service He" +
-      "althcheck\032NIf the service is running cor" +
-      "rectly, always responds with an empty HT" +
-      "TP200/OK.*\013Healthcheck\022\253\002\n\007Resolve\022;.blo" +
-      "ombox.schema.services.platform.v1.Domain" +
-      "Resolve.Request\032<.bloombox.schema.servic" +
-      "es.platform.v1.DomainResolve.Response\"\244\001" +
-      "\202\323\344\223\002\036\022\034/platform/v1/domain/{origin}\222A}\022" +
-      "\016Resolve Domain\032bFor custom-hosting endp" +
-      "oints, given a web origin, resolve the o" +
-      "wning partner and location account.*\007Res" +
-      "olve\022\227\002\n\007Domains\0228.bloombox.schema.servi" +
-      "ces.platform.v1.DomainInfo.Request\0329.blo" +
-      "ombox.schema.services.platform.v1.Domain" +
-      "Info.Response\"\226\001\202\323\344\223\002D\022B/platform/v1/par" +
-      "tners/{partner_id}/locations/{location_i" +
-      "d}/domains\222AI\022\007Domains\0322Retreive domain " +
-      "info for a given partner/location.*\nDoma" +
-      "inInfoB\353\010\n\'io.bloombox.schema.services.p" +
-      "latform.v1H\001P\001\242\002\003BBS\222A\264\010\022f\n\014Platform API" +
-      "\032\031https://bloombox.io/terms\"7\n\010Bloombox\022" +
-      "\023https://bloombox.io\032\026developers@bloombo" +
-      "x.io2\002v1\032\022api.bloombox.cloud*\001\0022\020applica" +
-      "tion/json:\020application/jsonZ\270\006\nd\n\013ApiKey" +
-      "Param\022U\010\002\022JParameter for identifying API" +
-      " key owned by the invoking project or sy" +
-      "stem.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader" +
-      " for identifying API key owned by the in" +
-      "voking project or system.\032\tX-API-Key \001\n\345" +
-      "\004\n\006OAuth2\022\332\004\010\003\022]Bloombox Identity-powere" +
-      "d OAuth2 access, authorized on behalf of" +
-      " an end-user or organization.(\0042,https:/" +
-      "/authorize.bloombox.cloud/oauth2/auth:-h" +
-      "ttps://authorize.bloombox.cloud/oauth2/t" +
-      "okenB\227\003\n1\n\007offline\022&Offline access to au" +
-      "thorized user data\n9\n\006openid\022/OIDC (Open" +
-      "ID Connect) access for seamless logon\nE\n" +
-      "\014partner:read\0225Read access to a partner\'" +
-      "s profile and basic settings\nG\n\rpartner:" +
-      "write\0226Write access to a partner\'s profi" +
-      "le and basic settings\nV\n\rpartner:admin\022E" +
-      "Full administrative access rights to a p" +
-      "artner\'s profile and settings\n?\n\016platfor" +
-      "m:admin\022-Platform-level internal adminis" +
-      "trative accessb#\n\017\n\013ApiKeyParam\022\000\n\020\n\014Api" +
-      "KeyHeader\022\000r/\n\rBloombox APIs\022\036https://ap" +
-      "idocs.bloombox.cloudb\006proto3"
+      "ons/swagger.proto\032\023content/Brand.proto\"j" +
+      "\n\004Ping\032\t\n\007Request\032W\n\010Response\022K\n\006status\030" +
+      "\001 \001(\0162;.bloombox.schema.services.platfor" +
+      "m.v1.PlatformServiceStatus\"\'\n\013Healthchec" +
+      "k\032\030\n\007Request\022\r\n\005probe\030\001 \001(\t\"|\n\rDomainRes" +
+      "olve\032\031\n\007Request\022\016\n\006origin\030\001 \001(\t\032P\n\010Respo" +
+      "nse\022\017\n\007partner\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022\016" +
+      "\n\006apikey\030\003 \001(\t\022\021\n\tclient_id\030\004 \001(\t\"\246\001\n\nDo" +
+      "mainInfo\0322\n\007Request\022\022\n\npartner_id\030\001 \001(\t\022" +
+      "\023\n\013location_id\030\002 \001(\t\032d\n\010Response\022\014\n\004shop" +
+      "\030\001 \001(\t\022\014\n\004menu\030\002 \001(\t\022\021\n\tdashboard\030\003 \001(\t\022" +
+      "\n\n\002tv\030\004 \001(\t\022\014\n\004link\030\005 \001(\t\022\017\n\007website\030\006 \001" +
+      "(\t\"q\n\tBrandInfo\032,\n\007Request\022\017\n\007partner\030\001 " +
+      "\001(\t\022\020\n\010location\030\002 \001(\t\0326\n\010Response\022*\n\005bra" +
+      "nd\030\001 \001(\0132\033.opencannabis.content.Brand*a\n" +
+      "\rPlatformError\022\014\n\010NO_ERROR\020\000\022\030\n\024SEARCH_N" +
+      "OT_AVAILABLE\020\001\022\022\n\016ORIGIN_INVALID\020\002\022\024\n\020OR" +
+      "IGIN_NOT_FOUND\020\003*G\n\025PlatformServiceStatu" +
+      "s\022\013\n\007UNKNOWN\020\000\022\006\n\002UP\020\001\022\010\n\004DOWN\020\002\022\017\n\013MAIN" +
+      "TENANCE\020\0032\212\n\n\010Platform\022\317\001\n\004Ping\0222.bloomb" +
+      "ox.schema.services.platform.v1.Ping.Requ" +
+      "est\0323.bloombox.schema.services.platform." +
+      "v1.Ping.Response\"^\202\323\344\223\002\023\022\021/platform/v1/p" +
+      "ing\222AB\022\014Service Ping\032,Query for service " +
+      "uptime/maintenance status.*\004Ping\022\313\001\n\006Hea" +
+      "lth\022\026.google.protobuf.Empty\032\026.google.pro" +
+      "tobuf.Empty\"\220\001\202\323\344\223\002\025\022\023/platform/v1/healt" +
+      "h\222Ar\022\023Service Healthcheck\032NIf the servic" +
+      "e is running correctly, always responds " +
+      "with an empty HTTP200/OK.*\013Healthcheck\022\253" +
+      "\002\n\007Resolve\022;.bloombox.schema.services.pl" +
+      "atform.v1.DomainResolve.Request\032<.bloomb" +
+      "ox.schema.services.platform.v1.DomainRes" +
+      "olve.Response\"\244\001\202\323\344\223\002\036\022\034/platform/v1/dom" +
+      "ain/{origin}\222A}\022\016Resolve Domain\032bFor cus" +
+      "tom-hosting endpoints, given a web origi" +
+      "n, resolve the owning partner and locati" +
+      "on account.*\007Resolve\022\227\002\n\007Domains\0228.bloom" +
+      "box.schema.services.platform.v1.DomainIn" +
+      "fo.Request\0329.bloombox.schema.services.pl" +
+      "atform.v1.DomainInfo.Response\"\226\001\202\323\344\223\002D\022B" +
+      "/platform/v1/partners/{partner_id}/locat" +
+      "ions/{location_id}/domains\222AI\022\007Domains\0322" +
+      "Retreive domain info for a given partner" +
+      "/location.*\nDomainInfo\022\225\002\n\005Brand\0227.bloom" +
+      "box.schema.services.platform.v1.BrandInf" +
+      "o.Request\0328.bloombox.schema.services.pla" +
+      "tform.v1.BrandInfo.Response\"\230\001\202\323\344\223\002?\022=/p" +
+      "latform/v1/partners/{partner}/locations/" +
+      "{location}/branding\222AP\022\005Brand\032<Retrieve " +
+      "brand assets and info for a given partne" +
+      "r/location.*\tBrandInfoB\353\010\n\'io.bloombox.s" +
+      "chema.services.platform.v1H\001P\001\242\002\003BBS\222A\264\010" +
+      "\022f\n\014Platform API\032\031https://bloombox.io/te" +
+      "rms\"7\n\010Bloombox\022\023https://bloombox.io\032\026de" +
+      "velopers@bloombox.io2\002v1\032\022api.bloombox.c" +
+      "loud*\001\0022\020application/json:\020application/j" +
+      "sonZ\270\006\nd\n\013ApiKeyParam\022U\010\002\022JParameter for" +
+      " identifying API key owned by the invoki" +
+      "ng project or system.\032\003key \001\nh\n\014ApiKeyHe" +
+      "ader\022X\010\002\022GHeader for identifying API key" +
+      " owned by the invoking project or system" +
+      ".\032\tX-API-Key \001\n\345\004\n\006OAuth2\022\332\004\010\003\022]Bloombox" +
+      " Identity-powered OAuth2 access, authori" +
+      "zed on behalf of an end-user or organiza" +
+      "tion.(\0042,https://authorize.bloombox.clou" +
+      "d/oauth2/auth:-https://authorize.bloombo" +
+      "x.cloud/oauth2/tokenB\227\003\n1\n\007offline\022&Offl" +
+      "ine access to authorized user data\n9\n\006op" +
+      "enid\022/OIDC (OpenID Connect) access for s" +
+      "eamless logon\nE\n\014partner:read\0225Read acce" +
+      "ss to a partner\'s profile and basic sett" +
+      "ings\nG\n\rpartner:write\0226Write access to a" +
+      " partner\'s profile and basic settings\nV\n" +
+      "\rpartner:admin\022EFull administrative acce" +
+      "ss rights to a partner\'s profile and set" +
+      "tings\n?\n\016platform:admin\022-Platform-level " +
+      "internal administrative accessb#\n\017\n\013ApiK" +
+      "eyParam\022\000\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox " +
+      "APIs\022\036https://apidocs.bloombox.cloudb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -184,6 +210,7 @@ public final class PlatformServiceV1 {
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
+          io.opencannabis.schema.content.BrandContent.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_services_platform_v1_Ping_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -251,6 +278,24 @@ public final class PlatformServiceV1 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_platform_v1_DomainInfo_Response_descriptor,
         new java.lang.String[] { "Shop", "Menu", "Dashboard", "Tv", "Link", "Website", });
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_platform_v1_BrandInfo_descriptor,
+        new java.lang.String[] { });
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_Request_descriptor =
+      internal_static_bloombox_schema_services_platform_v1_BrandInfo_descriptor.getNestedTypes().get(0);
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_platform_v1_BrandInfo_Request_descriptor,
+        new java.lang.String[] { "Partner", "Location", });
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_Response_descriptor =
+      internal_static_bloombox_schema_services_platform_v1_BrandInfo_descriptor.getNestedTypes().get(1);
+    internal_static_bloombox_schema_services_platform_v1_BrandInfo_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_platform_v1_BrandInfo_Response_descriptor,
+        new java.lang.String[] { "Brand", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -261,6 +306,7 @@ public final class PlatformServiceV1 {
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor();
+    io.opencannabis.schema.content.BrandContent.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

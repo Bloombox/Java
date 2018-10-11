@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the closing state of the cash register, including the final cash total for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
      */
     boolean hasClose();
     /**
@@ -153,17 +153,17 @@ private static final long serialVersionUID = 0L;
      * Specifies the closing state of the cash register, including the final cash total for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose getClose();
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getClose();
     /**
      * <pre>
      * Specifies the closing state of the cash register, including the final cash total for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder();
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder();
 
     /**
      * <pre>
@@ -208,6 +208,24 @@ private static final long serialVersionUID = 0L;
      */
     io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKeyOrBuilder getTransactionOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    java.lang.String getSignature();
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignatureBytes();
   }
   /**
    * <pre>
@@ -228,6 +246,7 @@ private static final long serialVersionUID = 0L;
     private Request() {
       session_ = "";
       transaction_ = java.util.Collections.emptyList();
+      signature_ = "";
     }
 
     @java.lang.Override
@@ -281,11 +300,11 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 26: {
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.Builder subBuilder = null;
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder subBuilder = null;
               if (close_ != null) {
                 subBuilder = close_.toBuilder();
               }
-              close_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.parser(), extensionRegistry);
+              close_ = input.readMessage(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(close_);
                 close_ = subBuilder.buildPartial();
@@ -300,6 +319,12 @@ private static final long serialVersionUID = 0L;
               }
               transaction_.add(
                   input.readMessage(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseKey.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              signature_ = s;
               break;
             }
           }
@@ -406,13 +431,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CLOSE_FIELD_NUMBER = 3;
-    private io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close_;
+    private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose close_;
     /**
      * <pre>
      * Specifies the closing state of the cash register, including the final cash total for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
      */
     public boolean hasClose() {
       return close_ != null;
@@ -422,19 +447,19 @@ private static final long serialVersionUID = 0L;
      * Specifies the closing state of the cash register, including the final cash total for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose getClose() {
-      return close_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getClose() {
+      return close_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
     }
     /**
      * <pre>
      * Specifies the closing state of the cash register, including the final cash total for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder() {
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder() {
       return getClose();
     }
 
@@ -493,6 +518,48 @@ private static final long serialVersionUID = 0L;
       return transaction_.get(index);
     }
 
+    public static final int SIGNATURE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object signature_;
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    public java.lang.String getSignature() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signature_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignatureBytes() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signature_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -517,6 +584,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < transaction_.size(); i++) {
         output.writeMessage(4, transaction_.get(i));
       }
+      if (!getSignatureBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, signature_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -539,6 +609,9 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < transaction_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, transaction_.get(i));
+      }
+      if (!getSignatureBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, signature_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -570,6 +643,8 @@ private static final long serialVersionUID = 0L;
       }
       result = result && getTransactionList()
           .equals(other.getTransactionList());
+      result = result && getSignature()
+          .equals(other.getSignature());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -595,6 +670,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
         hash = (53 * hash) + getTransactionList().hashCode();
       }
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -749,6 +826,8 @@ private static final long serialVersionUID = 0L;
         } else {
           transactionBuilder_.clear();
         }
+        signature_ = "";
+
         return this;
       }
 
@@ -793,6 +872,7 @@ private static final long serialVersionUID = 0L;
         } else {
           result.transaction_ = transactionBuilder_.build();
         }
+        result.signature_ = signature_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -870,6 +950,10 @@ private static final long serialVersionUID = 0L;
               transactionBuilder_.addAllMessages(other.transaction_);
             }
           }
+        }
+        if (!other.getSignature().isEmpty()) {
+          signature_ = other.signature_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1141,15 +1225,15 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close_ = null;
+      private io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose close_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionCloseOrBuilder> closeBuilder_;
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder> closeBuilder_;
       /**
        * <pre>
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
       public boolean hasClose() {
         return closeBuilder_ != null || close_ != null;
@@ -1159,11 +1243,11 @@ private static final long serialVersionUID = 0L;
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose getClose() {
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose getClose() {
         if (closeBuilder_ == null) {
-          return close_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
+          return close_ == null ? io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
         } else {
           return closeBuilder_.getMessage();
         }
@@ -1173,9 +1257,9 @@ private static final long serialVersionUID = 0L;
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
-      public Builder setClose(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose value) {
+      public Builder setClose(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose value) {
         if (closeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1193,10 +1277,10 @@ private static final long serialVersionUID = 0L;
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
       public Builder setClose(
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.Builder builderForValue) {
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder builderForValue) {
         if (closeBuilder_ == null) {
           close_ = builderForValue.build();
           onChanged();
@@ -1211,13 +1295,13 @@ private static final long serialVersionUID = 0L;
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
-      public Builder mergeClose(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose value) {
+      public Builder mergeClose(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose value) {
         if (closeBuilder_ == null) {
           if (close_ != null) {
             close_ =
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.newBuilder(close_).mergeFrom(value).buildPartial();
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.newBuilder(close_).mergeFrom(value).buildPartial();
           } else {
             close_ = value;
           }
@@ -1233,7 +1317,7 @@ private static final long serialVersionUID = 0L;
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
       public Builder clearClose() {
         if (closeBuilder_ == null) {
@@ -1251,9 +1335,9 @@ private static final long serialVersionUID = 0L;
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.Builder getCloseBuilder() {
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder getCloseBuilder() {
         
         onChanged();
         return getCloseFieldBuilder().getBuilder();
@@ -1263,14 +1347,14 @@ private static final long serialVersionUID = 0L;
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder() {
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder getCloseOrBuilder() {
         if (closeBuilder_ != null) {
           return closeBuilder_.getMessageOrBuilder();
         } else {
           return close_ == null ?
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.getDefaultInstance() : close_;
         }
       }
       /**
@@ -1278,14 +1362,14 @@ private static final long serialVersionUID = 0L;
        * Specifies the closing state of the cash register, including the final cash total for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose close = 3;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionClose close = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionCloseOrBuilder> 
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder> 
           getCloseFieldBuilder() {
         if (closeBuilder_ == null) {
           closeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionClose.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionCloseOrBuilder>(
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionClose.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionCloseOrBuilder>(
                   getClose(),
                   getParentForChildren(),
                   isClean());
@@ -1604,6 +1688,95 @@ private static final long serialVersionUID = 0L;
           transaction_ = null;
         }
         return transactionBuilder_;
+      }
+
+      private java.lang.Object signature_ = "";
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public java.lang.String getSignature() {
+        java.lang.Object ref = signature_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signature_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignatureBytes() {
+        java.lang.Object ref = signature_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signature_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder setSignature(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signature_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder clearSignature() {
+        
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder setSignatureBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signature_ = value;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

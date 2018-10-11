@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the opening state of the cash register, including the beginning float for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
      */
     boolean hasOpen();
     /**
@@ -171,17 +171,46 @@ private static final long serialVersionUID = 0L;
      * Specifies the opening state of the cash register, including the beginning float for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen getOpen();
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getOpen();
     /**
      * <pre>
      * Specifies the opening state of the cash register, including the beginning float for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
      */
-    io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder();
+    io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder();
+
+    /**
+     * <pre>
+     * Flag to indicate this session-open call is reclaiming or resuming a previously opened and established session.
+     * </pre>
+     *
+     * <code>bool resume = 5;</code>
+     */
+    boolean getResume();
+
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    java.lang.String getSignature();
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignatureBytes();
+
+    public io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.ClaimCase getClaimCase();
   }
   /**
    * <pre>
@@ -202,6 +231,7 @@ private static final long serialVersionUID = 0L;
     private Request() {
       session_ = "";
       token_ = "";
+      signature_ = "";
     }
 
     @java.lang.Override
@@ -261,16 +291,28 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 34: {
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder subBuilder = null;
-              if (open_ != null) {
-                subBuilder = open_.toBuilder();
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder subBuilder = null;
+              if (claimCase_ == 4) {
+                subBuilder = ((io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_).toBuilder();
               }
-              open_ = input.readMessage(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.parser(), extensionRegistry);
+              claim_ =
+                  input.readMessage(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(open_);
-                open_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom((io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_);
+                claim_ = subBuilder.buildPartial();
               }
+              claimCase_ = 4;
+              break;
+            }
+            case 40: {
+              claimCase_ = 5;
+              claim_ = input.readBool();
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
 
+              signature_ = s;
               break;
             }
           }
@@ -295,6 +337,44 @@ private static final long serialVersionUID = 0L;
       return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_OpenSession_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.class, io.bloombox.schema.services.pos.v1beta1.OpenSession.Request.Builder.class);
+    }
+
+    private int claimCase_ = 0;
+    private java.lang.Object claim_;
+    public enum ClaimCase
+        implements com.google.protobuf.Internal.EnumLite {
+      OPEN(4),
+      RESUME(5),
+      CLAIM_NOT_SET(0);
+      private final int value;
+      private ClaimCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ClaimCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ClaimCase forNumber(int value) {
+        switch (value) {
+          case 4: return OPEN;
+          case 5: return RESUME;
+          case 0: return CLAIM_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ClaimCase
+    getClaimCase() {
+      return ClaimCase.forNumber(
+          claimCase_);
     }
 
     public static final int REGISTER_FIELD_NUMBER = 1;
@@ -415,36 +495,98 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int OPEN_FIELD_NUMBER = 4;
-    private io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open_;
     /**
      * <pre>
      * Specifies the opening state of the cash register, including the beginning float for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
      */
     public boolean hasOpen() {
-      return open_ != null;
+      return claimCase_ == 4;
     }
     /**
      * <pre>
      * Specifies the opening state of the cash register, including the beginning float for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen getOpen() {
-      return open_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getOpen() {
+      if (claimCase_ == 4) {
+         return (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_;
+      }
+      return io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance();
     }
     /**
      * <pre>
      * Specifies the opening state of the cash register, including the beginning float for the session.
      * </pre>
      *
-     * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+     * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
      */
-    public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder() {
-      return getOpen();
+    public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder() {
+      if (claimCase_ == 4) {
+         return (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_;
+      }
+      return io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance();
+    }
+
+    public static final int RESUME_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * Flag to indicate this session-open call is reclaiming or resuming a previously opened and established session.
+     * </pre>
+     *
+     * <code>bool resume = 5;</code>
+     */
+    public boolean getResume() {
+      if (claimCase_ == 5) {
+        return (java.lang.Boolean) claim_;
+      }
+      return false;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object signature_;
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    public java.lang.String getSignature() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signature_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+     * </pre>
+     *
+     * <code>string signature = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignatureBytes() {
+      java.lang.Object ref = signature_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signature_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -468,8 +610,15 @@ private static final long serialVersionUID = 0L;
       if (!getTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
       }
-      if (open_ != null) {
-        output.writeMessage(4, getOpen());
+      if (claimCase_ == 4) {
+        output.writeMessage(4, (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_);
+      }
+      if (claimCase_ == 5) {
+        output.writeBool(
+            5, (boolean)((java.lang.Boolean) claim_));
+      }
+      if (!getSignatureBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, signature_);
       }
       unknownFields.writeTo(output);
     }
@@ -489,9 +638,17 @@ private static final long serialVersionUID = 0L;
       if (!getTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
       }
-      if (open_ != null) {
+      if (claimCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getOpen());
+          .computeMessageSize(4, (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_);
+      }
+      if (claimCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              5, (boolean)((java.lang.Boolean) claim_));
+      }
+      if (!getSignatureBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, signature_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -518,10 +675,22 @@ private static final long serialVersionUID = 0L;
           .equals(other.getSession());
       result = result && getToken()
           .equals(other.getToken());
-      result = result && (hasOpen() == other.hasOpen());
-      if (hasOpen()) {
-        result = result && getOpen()
-            .equals(other.getOpen());
+      result = result && getSignature()
+          .equals(other.getSignature());
+      result = result && getClaimCase().equals(
+          other.getClaimCase());
+      if (!result) return false;
+      switch (claimCase_) {
+        case 4:
+          result = result && getOpen()
+              .equals(other.getOpen());
+          break;
+        case 5:
+          result = result && (getResume()
+              == other.getResume());
+          break;
+        case 0:
+        default:
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -542,9 +711,20 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getSession().hashCode();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken().hashCode();
-      if (hasOpen()) {
-        hash = (37 * hash) + OPEN_FIELD_NUMBER;
-        hash = (53 * hash) + getOpen().hashCode();
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
+      switch (claimCase_) {
+        case 4:
+          hash = (37 * hash) + OPEN_FIELD_NUMBER;
+          hash = (53 * hash) + getOpen().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + RESUME_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getResume());
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -689,12 +869,10 @@ private static final long serialVersionUID = 0L;
 
         token_ = "";
 
-        if (openBuilder_ == null) {
-          open_ = null;
-        } else {
-          open_ = null;
-          openBuilder_ = null;
-        }
+        signature_ = "";
+
+        claimCase_ = 0;
+        claim_ = null;
         return this;
       }
 
@@ -724,11 +902,18 @@ private static final long serialVersionUID = 0L;
         }
         result.session_ = session_;
         result.token_ = token_;
-        if (openBuilder_ == null) {
-          result.open_ = open_;
-        } else {
-          result.open_ = openBuilder_.build();
+        if (claimCase_ == 4) {
+          if (openBuilder_ == null) {
+            result.claim_ = claim_;
+          } else {
+            result.claim_ = openBuilder_.build();
+          }
         }
+        if (claimCase_ == 5) {
+          result.claim_ = claim_;
+        }
+        result.signature_ = signature_;
+        result.claimCase_ = claimCase_;
         onBuilt();
         return result;
       }
@@ -781,8 +966,22 @@ private static final long serialVersionUID = 0L;
           token_ = other.token_;
           onChanged();
         }
-        if (other.hasOpen()) {
-          mergeOpen(other.getOpen());
+        if (!other.getSignature().isEmpty()) {
+          signature_ = other.signature_;
+          onChanged();
+        }
+        switch (other.getClaimCase()) {
+          case OPEN: {
+            mergeOpen(other.getOpen());
+            break;
+          }
+          case RESUME: {
+            setResume(other.getResume());
+            break;
+          }
+          case CLAIM_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -810,6 +1009,21 @@ private static final long serialVersionUID = 0L;
         }
         return this;
       }
+      private int claimCase_ = 0;
+      private java.lang.Object claim_;
+      public ClaimCase
+          getClaimCase() {
+        return ClaimCase.forNumber(
+            claimCase_);
+      }
+
+      public Builder clearClaim() {
+        claimCase_ = 0;
+        claim_ = null;
+        onChanged();
+        return this;
+      }
+
 
       private io.bloombox.schema.partner.PartnerDevices.PartnerDeviceKey register_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1142,31 +1356,36 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder> openBuilder_;
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder> openBuilder_;
       /**
        * <pre>
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
       public boolean hasOpen() {
-        return openBuilder_ != null || open_ != null;
+        return claimCase_ == 4;
       }
       /**
        * <pre>
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen getOpen() {
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen getOpen() {
         if (openBuilder_ == null) {
-          return open_ == null ? io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+          if (claimCase_ == 4) {
+            return (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_;
+          }
+          return io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance();
         } else {
-          return openBuilder_.getMessage();
+          if (claimCase_ == 4) {
+            return openBuilder_.getMessage();
+          }
+          return io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance();
         }
       }
       /**
@@ -1174,19 +1393,19 @@ private static final long serialVersionUID = 0L;
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
-      public Builder setOpen(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen value) {
+      public Builder setOpen(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen value) {
         if (openBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          open_ = value;
+          claim_ = value;
           onChanged();
         } else {
           openBuilder_.setMessage(value);
         }
-
+        claimCase_ = 4;
         return this;
       }
       /**
@@ -1194,17 +1413,17 @@ private static final long serialVersionUID = 0L;
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
       public Builder setOpen(
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder builderForValue) {
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder builderForValue) {
         if (openBuilder_ == null) {
-          open_ = builderForValue.build();
+          claim_ = builderForValue.build();
           onChanged();
         } else {
           openBuilder_.setMessage(builderForValue.build());
         }
-
+        claimCase_ = 4;
         return this;
       }
       /**
@@ -1212,21 +1431,25 @@ private static final long serialVersionUID = 0L;
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
-      public Builder mergeOpen(io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen value) {
+      public Builder mergeOpen(io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen value) {
         if (openBuilder_ == null) {
-          if (open_ != null) {
-            open_ =
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.newBuilder(open_).mergeFrom(value).buildPartial();
+          if (claimCase_ == 4 &&
+              claim_ != io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance()) {
+            claim_ = io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.newBuilder((io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_)
+                .mergeFrom(value).buildPartial();
           } else {
-            open_ = value;
+            claim_ = value;
           }
           onChanged();
         } else {
-          openBuilder_.mergeFrom(value);
+          if (claimCase_ == 4) {
+            openBuilder_.mergeFrom(value);
+          }
+          openBuilder_.setMessage(value);
         }
-
+        claimCase_ = 4;
         return this;
       }
       /**
@@ -1234,17 +1457,22 @@ private static final long serialVersionUID = 0L;
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
       public Builder clearOpen() {
         if (openBuilder_ == null) {
-          open_ = null;
-          onChanged();
+          if (claimCase_ == 4) {
+            claimCase_ = 0;
+            claim_ = null;
+            onChanged();
+          }
         } else {
-          open_ = null;
-          openBuilder_ = null;
+          if (claimCase_ == 4) {
+            claimCase_ = 0;
+            claim_ = null;
+          }
+          openBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -1252,11 +1480,9 @@ private static final long serialVersionUID = 0L;
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder getOpenBuilder() {
-        
-        onChanged();
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder getOpenBuilder() {
         return getOpenFieldBuilder().getBuilder();
       }
       /**
@@ -1264,14 +1490,16 @@ private static final long serialVersionUID = 0L;
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
-      public io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder() {
-        if (openBuilder_ != null) {
+      public io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder getOpenOrBuilder() {
+        if ((claimCase_ == 4) && (openBuilder_ != null)) {
           return openBuilder_.getMessageOrBuilder();
         } else {
-          return open_ == null ?
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.getDefaultInstance() : open_;
+          if (claimCase_ == 4) {
+            return (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_;
+          }
+          return io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance();
         }
       }
       /**
@@ -1279,20 +1507,156 @@ private static final long serialVersionUID = 0L;
        * Specifies the opening state of the cash register, including the beginning float for the session.
        * </pre>
        *
-       * <code>.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen open = 4;</code>
+       * <code>.opencannabis.commerce.PointOfSaleState.SessionOpen open = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder> 
+          io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder> 
           getOpenFieldBuilder() {
         if (openBuilder_ == null) {
+          if (!(claimCase_ == 4)) {
+            claim_ = io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.getDefaultInstance();
+          }
           openBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpen.Builder, io.bloombox.schema.services.pos.v1beta1.PointOfSaleState.SessionOpenOrBuilder>(
-                  getOpen(),
+              io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen.Builder, io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpenOrBuilder>(
+                  (io.opencannabis.schema.commerce.CommercialPOS.PointOfSaleState.SessionOpen) claim_,
                   getParentForChildren(),
                   isClean());
-          open_ = null;
+          claim_ = null;
         }
+        claimCase_ = 4;
+        onChanged();;
         return openBuilder_;
+      }
+
+      /**
+       * <pre>
+       * Flag to indicate this session-open call is reclaiming or resuming a previously opened and established session.
+       * </pre>
+       *
+       * <code>bool resume = 5;</code>
+       */
+      public boolean getResume() {
+        if (claimCase_ == 5) {
+          return (java.lang.Boolean) claim_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * Flag to indicate this session-open call is reclaiming or resuming a previously opened and established session.
+       * </pre>
+       *
+       * <code>bool resume = 5;</code>
+       */
+      public Builder setResume(boolean value) {
+        claimCase_ = 5;
+        claim_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag to indicate this session-open call is reclaiming or resuming a previously opened and established session.
+       * </pre>
+       *
+       * <code>bool resume = 5;</code>
+       */
+      public Builder clearResume() {
+        if (claimCase_ == 5) {
+          claimCase_ = 0;
+          claim_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private java.lang.Object signature_ = "";
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public java.lang.String getSignature() {
+        java.lang.Object ref = signature_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          signature_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSignatureBytes() {
+        java.lang.Object ref = signature_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          signature_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder setSignature(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        signature_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder clearSignature() {
+        
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session claim, if establishing.
+       * </pre>
+       *
+       * <code>string signature = 6;</code>
+       */
+      public Builder setSignatureBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        signature_ = value;
+        onChanged();
+        return this;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

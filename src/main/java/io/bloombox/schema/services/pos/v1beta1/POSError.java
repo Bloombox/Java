@@ -111,6 +111,30 @@ public enum POSError
   INVALID_TIMESTAMP(9),
   /**
    * <pre>
+   * Unable to locate the specified device.
+   * </pre>
+   *
+   * <code>DEVICE_NOT_FOUND = 10;</code>
+   */
+  DEVICE_NOT_FOUND(10),
+  /**
+   * <pre>
+   * Unable to locate the specified session.
+   * </pre>
+   *
+   * <code>SESSION_NOT_FOUND = 11;</code>
+   */
+  SESSION_NOT_FOUND(11),
+  /**
+   * <pre>
+   * Specifies an illegal session state.
+   * </pre>
+   *
+   * <code>SESSION_CONFLICT = 12;</code>
+   */
+  SESSION_CONFLICT(12),
+  /**
+   * <pre>
    * The given purchase was structurally invalid.
    * </pre>
    *
@@ -274,6 +298,30 @@ public enum POSError
   public static final int INVALID_TIMESTAMP_VALUE = 9;
   /**
    * <pre>
+   * Unable to locate the specified device.
+   * </pre>
+   *
+   * <code>DEVICE_NOT_FOUND = 10;</code>
+   */
+  public static final int DEVICE_NOT_FOUND_VALUE = 10;
+  /**
+   * <pre>
+   * Unable to locate the specified session.
+   * </pre>
+   *
+   * <code>SESSION_NOT_FOUND = 11;</code>
+   */
+  public static final int SESSION_NOT_FOUND_VALUE = 11;
+  /**
+   * <pre>
+   * Specifies an illegal session state.
+   * </pre>
+   *
+   * <code>SESSION_CONFLICT = 12;</code>
+   */
+  public static final int SESSION_CONFLICT_VALUE = 12;
+  /**
+   * <pre>
    * The given purchase was structurally invalid.
    * </pre>
    *
@@ -382,6 +430,9 @@ public enum POSError
       case 7: return INVALID_TICKET_KEY;
       case 8: return INVALID_TICKET_SIGNATURE;
       case 9: return INVALID_TIMESTAMP;
+      case 10: return DEVICE_NOT_FOUND;
+      case 11: return SESSION_NOT_FOUND;
+      case 12: return SESSION_CONFLICT;
       case 20: return ILLEGAL_TICKET_STRUCTURE;
       case 21: return ILLEGAL_TICKET_VERSION;
       case 22: return ILLEGAL_TIMESTAMP;
