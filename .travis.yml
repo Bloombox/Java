@@ -4,7 +4,6 @@ env:
     - CODACY_PROJECT_TOKEN=b61ce006b9444d58929dff058f06be2d
   matrix:
     - BUILDMODE=maven
-    - BUILDMODE=gradle
 language: java
 cache:
   directories:
