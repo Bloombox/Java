@@ -135,6 +135,30 @@ public final class PointOfSaleGrpc {
               io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> METHOD_TICKET_CLAIM =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request, io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketClaim"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request,
+      io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> METHOD_TICKET_CLONE =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request, io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.pos.v1beta1.PointOfSale", "TicketClone"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request,
       io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response> METHOD_TICKET_FINALIZE =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request, io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Response>newBuilder()
@@ -288,6 +312,26 @@ public final class PointOfSaleGrpc {
 
     /**
      * <pre>
+     * Claim an existing, open purchase ticket.
+     * </pre>
+     */
+    public void ticketClaim(io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_TICKET_CLAIM, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Clone an existing, open purchase ticket.
+     * </pre>
+     */
+    public void ticketClone(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_TICKET_CLONE, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Finalize an existing, open purchase ticket.
      * </pre>
      */
@@ -377,6 +421,20 @@ public final class PointOfSaleGrpc {
                 io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request,
                 io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response>(
                   this, METHODID_TICKET_VOID)))
+          .addMethod(
+            METHOD_TICKET_CLAIM,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request,
+                io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response>(
+                  this, METHODID_TICKET_CLAIM)))
+          .addMethod(
+            METHOD_TICKET_CLONE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request,
+                io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response>(
+                  this, METHODID_TICKET_CLONE)))
           .addMethod(
             METHOD_TICKET_FINALIZE,
             asyncUnaryCall(
@@ -508,6 +566,28 @@ public final class PointOfSaleGrpc {
         io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(METHOD_TICKET_VOID, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Claim an existing, open purchase ticket.
+     * </pre>
+     */
+    public void ticketClaim(io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_TICKET_CLAIM, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Clone an existing, open purchase ticket.
+     * </pre>
+     */
+    public void ticketClone(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_TICKET_CLONE, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -651,6 +731,26 @@ public final class PointOfSaleGrpc {
 
     /**
      * <pre>
+     * Claim an existing, open purchase ticket.
+     * </pre>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response ticketClaim(io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_TICKET_CLAIM, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Clone an existing, open purchase ticket.
+     * </pre>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response ticketClone(io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_TICKET_CLONE, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Finalize an existing, open purchase ticket.
      * </pre>
      */
@@ -783,6 +883,28 @@ public final class PointOfSaleGrpc {
 
     /**
      * <pre>
+     * Claim an existing, open purchase ticket.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response> ticketClaim(
+        io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_TICKET_CLAIM, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Clone an existing, open purchase ticket.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response> ticketClone(
+        io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_TICKET_CLONE, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Finalize an existing, open purchase ticket.
      * </pre>
      */
@@ -822,10 +944,12 @@ public final class PointOfSaleGrpc {
   private static final int METHODID_TICKET_SAVE = 4;
   private static final int METHODID_TICKET_LOAD = 5;
   private static final int METHODID_TICKET_VOID = 6;
-  private static final int METHODID_TICKET_FINALIZE = 7;
-  private static final int METHODID_SEARCH_MEMBERS = 8;
-  private static final int METHODID_INVENTORY_RETRIEVE = 9;
-  private static final int METHODID_INVENTORY_STREAM = 10;
+  private static final int METHODID_TICKET_CLAIM = 7;
+  private static final int METHODID_TICKET_CLONE = 8;
+  private static final int METHODID_TICKET_FINALIZE = 9;
+  private static final int METHODID_SEARCH_MEMBERS = 10;
+  private static final int METHODID_INVENTORY_RETRIEVE = 11;
+  private static final int METHODID_INVENTORY_STREAM = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -871,6 +995,14 @@ public final class PointOfSaleGrpc {
         case METHODID_TICKET_VOID:
           serviceImpl.ticketVoid((io.bloombox.schema.services.pos.v1beta1.VoidTicket.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.VoidTicket.Response>) responseObserver);
+          break;
+        case METHODID_TICKET_CLAIM:
+          serviceImpl.ticketClaim((io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.ClaimTicket.Response>) responseObserver);
+          break;
+        case METHODID_TICKET_CLONE:
+          serviceImpl.ticketClone((io.bloombox.schema.services.pos.v1beta1.CloneTicket.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.pos.v1beta1.CloneTicket.Response>) responseObserver);
           break;
         case METHODID_TICKET_FINALIZE:
           serviceImpl.ticketFinalize((io.bloombox.schema.services.pos.v1beta1.FinalizeTicket.Request) request,
@@ -927,6 +1059,8 @@ public final class PointOfSaleGrpc {
               .addMethod(METHOD_TICKET_SAVE)
               .addMethod(METHOD_TICKET_LOAD)
               .addMethod(METHOD_TICKET_VOID)
+              .addMethod(METHOD_TICKET_CLAIM)
+              .addMethod(METHOD_TICKET_CLONE)
               .addMethod(METHOD_TICKET_FINALIZE)
               .addMethod(METHOD_SEARCH_MEMBERS)
               .addMethod(METHOD_INVENTORY_RETRIEVE)

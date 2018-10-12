@@ -30,6 +30,192 @@ public final class PassID {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * <pre>
+   * Enumerates statuses that a digital pass record may be in.
+   * </pre>
+   *
+   * Protobuf enum {@code bloombox.schema.identity.pass.PassStatus}
+   */
+  public enum PassStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * The pass has been provisioned, but not issued.
+     * </pre>
+     *
+     * <code>PROVISIONED = 0;</code>
+     */
+    PROVISIONED(0),
+    /**
+     * <pre>
+     * The pass has been issued, meaning it has been sent to the user via some means.
+     * </pre>
+     *
+     * <code>ISSUED = 1;</code>
+     */
+    ISSUED(1),
+    /**
+     * <pre>
+     * The pass has been activated and is ready for use.
+     * </pre>
+     *
+     * <code>ACTIVE = 2;</code>
+     */
+    ACTIVE(2),
+    /**
+     * <pre>
+     * The pass has been decommissioned by the user. This status is terminal.
+     * </pre>
+     *
+     * <code>DECOMMISSIONED = 3;</code>
+     */
+    DECOMMISSIONED(3),
+    /**
+     * <pre>
+     * The pass has been suspended by the partner or location. It is temporarily not usable.
+     * </pre>
+     *
+     * <code>SUSPENDED = 4;</code>
+     */
+    SUSPENDED(4),
+    /**
+     * <pre>
+     * The pass is fully banned by the partner or location. This status is terminal and the pass is no longer usable.
+     * </pre>
+     *
+     * <code>BANNED = 5;</code>
+     */
+    BANNED(5),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * The pass has been provisioned, but not issued.
+     * </pre>
+     *
+     * <code>PROVISIONED = 0;</code>
+     */
+    public static final int PROVISIONED_VALUE = 0;
+    /**
+     * <pre>
+     * The pass has been issued, meaning it has been sent to the user via some means.
+     * </pre>
+     *
+     * <code>ISSUED = 1;</code>
+     */
+    public static final int ISSUED_VALUE = 1;
+    /**
+     * <pre>
+     * The pass has been activated and is ready for use.
+     * </pre>
+     *
+     * <code>ACTIVE = 2;</code>
+     */
+    public static final int ACTIVE_VALUE = 2;
+    /**
+     * <pre>
+     * The pass has been decommissioned by the user. This status is terminal.
+     * </pre>
+     *
+     * <code>DECOMMISSIONED = 3;</code>
+     */
+    public static final int DECOMMISSIONED_VALUE = 3;
+    /**
+     * <pre>
+     * The pass has been suspended by the partner or location. It is temporarily not usable.
+     * </pre>
+     *
+     * <code>SUSPENDED = 4;</code>
+     */
+    public static final int SUSPENDED_VALUE = 4;
+    /**
+     * <pre>
+     * The pass is fully banned by the partner or location. This status is terminal and the pass is no longer usable.
+     * </pre>
+     *
+     * <code>BANNED = 5;</code>
+     */
+    public static final int BANNED_VALUE = 5;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PassStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static PassStatus forNumber(int value) {
+      switch (value) {
+        case 0: return PROVISIONED;
+        case 1: return ISSUED;
+        case 2: return ACTIVE;
+        case 3: return DECOMMISSIONED;
+        case 4: return SUSPENDED;
+        case 5: return BANNED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PassStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PassStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PassStatus>() {
+            public PassStatus findValueByNumber(int number) {
+              return PassStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return io.bloombox.schema.pass.PassID.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final PassStatus[] VALUES = values();
+
+    public static PassStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PassStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.pass.PassStatus)
+  }
+
   public interface PassOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.pass.Pass)
       com.google.protobuf.MessageOrBuilder {
@@ -106,10 +292,70 @@ public final class PassID {
 
     /**
      * <pre>
+     * Whether this pass is personalizable.
+     * </pre>
+     *
+     * <code>bool personalizable = 5;</code>
+     */
+    boolean getPersonalizable();
+
+    /**
+     * <pre>
+     * Whether this pass is personalizable, and has been personalized.
+     * </pre>
+     *
+     * <code>bool personalized = 6;</code>
+     */
+    boolean getPersonalized();
+
+    /**
+     * <pre>
+     * Current status of this pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Current status of this pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+     */
+    io.bloombox.schema.pass.PassID.PassStatus getStatus();
+
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was originally provisioned.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+     */
+    boolean hasProvisioned();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was originally provisioned.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getProvisioned();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was originally provisioned.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getProvisionedOrBuilder();
+
+    /**
+     * <pre>
      * Timestamp indicating when this pass was originally issued.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 9;</code>
      */
     boolean hasIssued();
     /**
@@ -117,7 +363,7 @@ public final class PassID {
      * Timestamp indicating when this pass was originally issued.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 9;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getIssued();
     /**
@@ -125,16 +371,41 @@ public final class PassID {
      * Timestamp indicating when this pass was originally issued.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 9;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getIssuedOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was activated for use.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant activated = 10;</code>
+     */
+    boolean hasActivated();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was activated for use.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant activated = 10;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getActivated();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was activated for use.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant activated = 10;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getActivatedOrBuilder();
 
     /**
      * <pre>
      * Timestamp indicating when this pass was suspended, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 11;</code>
      */
     boolean hasSuspended();
     /**
@@ -142,7 +413,7 @@ public final class PassID {
      * Timestamp indicating when this pass was suspended, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 11;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.Instant getSuspended();
     /**
@@ -150,9 +421,109 @@ public final class PassID {
      * Timestamp indicating when this pass was suspended, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 11;</code>
      */
     io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSuspendedOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was banned, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant banned = 12;</code>
+     */
+    boolean hasBanned();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was banned, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant banned = 12;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getBanned();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was banned, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant banned = 12;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getBannedOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last seen.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 13;</code>
+     */
+    boolean hasSeen();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last seen.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 13;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last seen.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 13;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last used to check-in, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+     */
+    boolean hasCheckin();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last used to check-in, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getCheckin();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last used to check-in, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCheckinOrBuilder();
+
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+     */
+    boolean hasEnroll();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.Instant getEnroll();
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+     */
+    io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEnrollOrBuilder();
   }
   /**
    * <pre>
@@ -174,6 +545,9 @@ public final class PassID {
       token_ = "";
       uri_ = "";
       active_ = false;
+      personalizable_ = false;
+      personalized_ = false;
+      status_ = 0;
     }
 
     @java.lang.Override
@@ -237,7 +611,36 @@ public final class PassID {
               active_ = input.readBool();
               break;
             }
-            case 42: {
+            case 40: {
+
+              personalizable_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              personalized_ = input.readBool();
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 66: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (provisioned_ != null) {
+                subBuilder = provisioned_.toBuilder();
+              }
+              provisioned_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(provisioned_);
+                provisioned_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (issued_ != null) {
                 subBuilder = issued_.toBuilder();
@@ -250,7 +653,20 @@ public final class PassID {
 
               break;
             }
-            case 50: {
+            case 82: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (activated_ != null) {
+                subBuilder = activated_.toBuilder();
+              }
+              activated_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(activated_);
+                activated_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
               io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
               if (suspended_ != null) {
                 subBuilder = suspended_.toBuilder();
@@ -259,6 +675,58 @@ public final class PassID {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(suspended_);
                 suspended_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (banned_ != null) {
+                subBuilder = banned_.toBuilder();
+              }
+              banned_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(banned_);
+                banned_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (seen_ != null) {
+                subBuilder = seen_.toBuilder();
+              }
+              seen_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(seen_);
+                seen_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (checkin_ != null) {
+                subBuilder = checkin_.toBuilder();
+              }
+              checkin_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(checkin_);
+                checkin_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder subBuilder = null;
+              if (enroll_ != null) {
+                subBuilder = enroll_.toBuilder();
+              }
+              enroll_ = input.readMessage(io.opencannabis.schema.temporal.TemporalInstant.Instant.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enroll_);
+                enroll_ = subBuilder.buildPartial();
               }
 
               break;
@@ -417,14 +885,97 @@ public final class PassID {
       return active_;
     }
 
-    public static final int ISSUED_FIELD_NUMBER = 5;
+    public static final int PERSONALIZABLE_FIELD_NUMBER = 5;
+    private boolean personalizable_;
+    /**
+     * <pre>
+     * Whether this pass is personalizable.
+     * </pre>
+     *
+     * <code>bool personalizable = 5;</code>
+     */
+    public boolean getPersonalizable() {
+      return personalizable_;
+    }
+
+    public static final int PERSONALIZED_FIELD_NUMBER = 6;
+    private boolean personalized_;
+    /**
+     * <pre>
+     * Whether this pass is personalizable, and has been personalized.
+     * </pre>
+     *
+     * <code>bool personalized = 6;</code>
+     */
+    public boolean getPersonalized() {
+      return personalized_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 7;
+    private int status_;
+    /**
+     * <pre>
+     * Current status of this pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+     */
+    public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Current status of this pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+     */
+    public io.bloombox.schema.pass.PassID.PassStatus getStatus() {
+      io.bloombox.schema.pass.PassID.PassStatus result = io.bloombox.schema.pass.PassID.PassStatus.valueOf(status_);
+      return result == null ? io.bloombox.schema.pass.PassID.PassStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int PROVISIONED_FIELD_NUMBER = 8;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant provisioned_;
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was originally provisioned.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+     */
+    public boolean hasProvisioned() {
+      return provisioned_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was originally provisioned.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getProvisioned() {
+      return provisioned_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : provisioned_;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was originally provisioned.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getProvisionedOrBuilder() {
+      return getProvisioned();
+    }
+
+    public static final int ISSUED_FIELD_NUMBER = 9;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant issued_;
     /**
      * <pre>
      * Timestamp indicating when this pass was originally issued.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 9;</code>
      */
     public boolean hasIssued() {
       return issued_ != null;
@@ -434,7 +985,7 @@ public final class PassID {
      * Timestamp indicating when this pass was originally issued.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 9;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getIssued() {
       return issued_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : issued_;
@@ -444,20 +995,53 @@ public final class PassID {
      * Timestamp indicating when this pass was originally issued.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant issued = 5;</code>
+     * <code>.opencannabis.temporal.Instant issued = 9;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getIssuedOrBuilder() {
       return getIssued();
     }
 
-    public static final int SUSPENDED_FIELD_NUMBER = 6;
+    public static final int ACTIVATED_FIELD_NUMBER = 10;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant activated_;
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was activated for use.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant activated = 10;</code>
+     */
+    public boolean hasActivated() {
+      return activated_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was activated for use.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant activated = 10;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getActivated() {
+      return activated_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : activated_;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was activated for use.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant activated = 10;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getActivatedOrBuilder() {
+      return getActivated();
+    }
+
+    public static final int SUSPENDED_FIELD_NUMBER = 11;
     private io.opencannabis.schema.temporal.TemporalInstant.Instant suspended_;
     /**
      * <pre>
      * Timestamp indicating when this pass was suspended, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 11;</code>
      */
     public boolean hasSuspended() {
       return suspended_ != null;
@@ -467,7 +1051,7 @@ public final class PassID {
      * Timestamp indicating when this pass was suspended, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 11;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.Instant getSuspended() {
       return suspended_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : suspended_;
@@ -477,10 +1061,142 @@ public final class PassID {
      * Timestamp indicating when this pass was suspended, if applicable.
      * </pre>
      *
-     * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+     * <code>.opencannabis.temporal.Instant suspended = 11;</code>
      */
     public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSuspendedOrBuilder() {
       return getSuspended();
+    }
+
+    public static final int BANNED_FIELD_NUMBER = 12;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant banned_;
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was banned, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant banned = 12;</code>
+     */
+    public boolean hasBanned() {
+      return banned_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was banned, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant banned = 12;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getBanned() {
+      return banned_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : banned_;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was banned, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant banned = 12;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getBannedOrBuilder() {
+      return getBanned();
+    }
+
+    public static final int SEEN_FIELD_NUMBER = 13;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_;
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last seen.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 13;</code>
+     */
+    public boolean hasSeen() {
+      return seen_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last seen.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 13;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen() {
+      return seen_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : seen_;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last seen.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant seen = 13;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder() {
+      return getSeen();
+    }
+
+    public static final int CHECKIN_FIELD_NUMBER = 14;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant checkin_;
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last used to check-in, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+     */
+    public boolean hasCheckin() {
+      return checkin_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last used to check-in, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getCheckin() {
+      return checkin_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : checkin_;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was last used to check-in, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCheckinOrBuilder() {
+      return getCheckin();
+    }
+
+    public static final int ENROLL_FIELD_NUMBER = 15;
+    private io.opencannabis.schema.temporal.TemporalInstant.Instant enroll_;
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+     */
+    public boolean hasEnroll() {
+      return enroll_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.Instant getEnroll() {
+      return enroll_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : enroll_;
+    }
+    /**
+     * <pre>
+     * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEnrollOrBuilder() {
+      return getEnroll();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -507,11 +1223,38 @@ public final class PassID {
       if (active_ != false) {
         output.writeBool(4, active_);
       }
+      if (personalizable_ != false) {
+        output.writeBool(5, personalizable_);
+      }
+      if (personalized_ != false) {
+        output.writeBool(6, personalized_);
+      }
+      if (status_ != io.bloombox.schema.pass.PassID.PassStatus.PROVISIONED.getNumber()) {
+        output.writeEnum(7, status_);
+      }
+      if (provisioned_ != null) {
+        output.writeMessage(8, getProvisioned());
+      }
       if (issued_ != null) {
-        output.writeMessage(5, getIssued());
+        output.writeMessage(9, getIssued());
+      }
+      if (activated_ != null) {
+        output.writeMessage(10, getActivated());
       }
       if (suspended_ != null) {
-        output.writeMessage(6, getSuspended());
+        output.writeMessage(11, getSuspended());
+      }
+      if (banned_ != null) {
+        output.writeMessage(12, getBanned());
+      }
+      if (seen_ != null) {
+        output.writeMessage(13, getSeen());
+      }
+      if (checkin_ != null) {
+        output.writeMessage(14, getCheckin());
+      }
+      if (enroll_ != null) {
+        output.writeMessage(15, getEnroll());
       }
       unknownFields.writeTo(output);
     }
@@ -535,13 +1278,49 @@ public final class PassID {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, active_);
       }
+      if (personalizable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, personalizable_);
+      }
+      if (personalized_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, personalized_);
+      }
+      if (status_ != io.bloombox.schema.pass.PassID.PassStatus.PROVISIONED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, status_);
+      }
+      if (provisioned_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getProvisioned());
+      }
       if (issued_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getIssued());
+          .computeMessageSize(9, getIssued());
+      }
+      if (activated_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getActivated());
       }
       if (suspended_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getSuspended());
+          .computeMessageSize(11, getSuspended());
+      }
+      if (banned_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getBanned());
+      }
+      if (seen_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getSeen());
+      }
+      if (checkin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getCheckin());
+      }
+      if (enroll_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getEnroll());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -570,15 +1349,50 @@ public final class PassID {
           .equals(other.getUri());
       result = result && (getActive()
           == other.getActive());
+      result = result && (getPersonalizable()
+          == other.getPersonalizable());
+      result = result && (getPersonalized()
+          == other.getPersonalized());
+      result = result && status_ == other.status_;
+      result = result && (hasProvisioned() == other.hasProvisioned());
+      if (hasProvisioned()) {
+        result = result && getProvisioned()
+            .equals(other.getProvisioned());
+      }
       result = result && (hasIssued() == other.hasIssued());
       if (hasIssued()) {
         result = result && getIssued()
             .equals(other.getIssued());
       }
+      result = result && (hasActivated() == other.hasActivated());
+      if (hasActivated()) {
+        result = result && getActivated()
+            .equals(other.getActivated());
+      }
       result = result && (hasSuspended() == other.hasSuspended());
       if (hasSuspended()) {
         result = result && getSuspended()
             .equals(other.getSuspended());
+      }
+      result = result && (hasBanned() == other.hasBanned());
+      if (hasBanned()) {
+        result = result && getBanned()
+            .equals(other.getBanned());
+      }
+      result = result && (hasSeen() == other.hasSeen());
+      if (hasSeen()) {
+        result = result && getSeen()
+            .equals(other.getSeen());
+      }
+      result = result && (hasCheckin() == other.hasCheckin());
+      if (hasCheckin()) {
+        result = result && getCheckin()
+            .equals(other.getCheckin());
+      }
+      result = result && (hasEnroll() == other.hasEnroll());
+      if (hasEnroll()) {
+        result = result && getEnroll()
+            .equals(other.getEnroll());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -602,13 +1416,45 @@ public final class PassID {
       hash = (37 * hash) + ACTIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getActive());
+      hash = (37 * hash) + PERSONALIZABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPersonalizable());
+      hash = (37 * hash) + PERSONALIZED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPersonalized());
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasProvisioned()) {
+        hash = (37 * hash) + PROVISIONED_FIELD_NUMBER;
+        hash = (53 * hash) + getProvisioned().hashCode();
+      }
       if (hasIssued()) {
         hash = (37 * hash) + ISSUED_FIELD_NUMBER;
         hash = (53 * hash) + getIssued().hashCode();
       }
+      if (hasActivated()) {
+        hash = (37 * hash) + ACTIVATED_FIELD_NUMBER;
+        hash = (53 * hash) + getActivated().hashCode();
+      }
       if (hasSuspended()) {
         hash = (37 * hash) + SUSPENDED_FIELD_NUMBER;
         hash = (53 * hash) + getSuspended().hashCode();
+      }
+      if (hasBanned()) {
+        hash = (37 * hash) + BANNED_FIELD_NUMBER;
+        hash = (53 * hash) + getBanned().hashCode();
+      }
+      if (hasSeen()) {
+        hash = (37 * hash) + SEEN_FIELD_NUMBER;
+        hash = (53 * hash) + getSeen().hashCode();
+      }
+      if (hasCheckin()) {
+        hash = (37 * hash) + CHECKIN_FIELD_NUMBER;
+        hash = (53 * hash) + getCheckin().hashCode();
+      }
+      if (hasEnroll()) {
+        hash = (37 * hash) + ENROLL_FIELD_NUMBER;
+        hash = (53 * hash) + getEnroll().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -755,17 +1601,59 @@ public final class PassID {
 
         active_ = false;
 
+        personalizable_ = false;
+
+        personalized_ = false;
+
+        status_ = 0;
+
+        if (provisionedBuilder_ == null) {
+          provisioned_ = null;
+        } else {
+          provisioned_ = null;
+          provisionedBuilder_ = null;
+        }
         if (issuedBuilder_ == null) {
           issued_ = null;
         } else {
           issued_ = null;
           issuedBuilder_ = null;
         }
+        if (activatedBuilder_ == null) {
+          activated_ = null;
+        } else {
+          activated_ = null;
+          activatedBuilder_ = null;
+        }
         if (suspendedBuilder_ == null) {
           suspended_ = null;
         } else {
           suspended_ = null;
           suspendedBuilder_ = null;
+        }
+        if (bannedBuilder_ == null) {
+          banned_ = null;
+        } else {
+          banned_ = null;
+          bannedBuilder_ = null;
+        }
+        if (seenBuilder_ == null) {
+          seen_ = null;
+        } else {
+          seen_ = null;
+          seenBuilder_ = null;
+        }
+        if (checkinBuilder_ == null) {
+          checkin_ = null;
+        } else {
+          checkin_ = null;
+          checkinBuilder_ = null;
+        }
+        if (enrollBuilder_ == null) {
+          enroll_ = null;
+        } else {
+          enroll_ = null;
+          enrollBuilder_ = null;
         }
         return this;
       }
@@ -797,15 +1685,48 @@ public final class PassID {
         result.token_ = token_;
         result.uri_ = uri_;
         result.active_ = active_;
+        result.personalizable_ = personalizable_;
+        result.personalized_ = personalized_;
+        result.status_ = status_;
+        if (provisionedBuilder_ == null) {
+          result.provisioned_ = provisioned_;
+        } else {
+          result.provisioned_ = provisionedBuilder_.build();
+        }
         if (issuedBuilder_ == null) {
           result.issued_ = issued_;
         } else {
           result.issued_ = issuedBuilder_.build();
         }
+        if (activatedBuilder_ == null) {
+          result.activated_ = activated_;
+        } else {
+          result.activated_ = activatedBuilder_.build();
+        }
         if (suspendedBuilder_ == null) {
           result.suspended_ = suspended_;
         } else {
           result.suspended_ = suspendedBuilder_.build();
+        }
+        if (bannedBuilder_ == null) {
+          result.banned_ = banned_;
+        } else {
+          result.banned_ = bannedBuilder_.build();
+        }
+        if (seenBuilder_ == null) {
+          result.seen_ = seen_;
+        } else {
+          result.seen_ = seenBuilder_.build();
+        }
+        if (checkinBuilder_ == null) {
+          result.checkin_ = checkin_;
+        } else {
+          result.checkin_ = checkinBuilder_.build();
+        }
+        if (enrollBuilder_ == null) {
+          result.enroll_ = enroll_;
+        } else {
+          result.enroll_ = enrollBuilder_.build();
         }
         onBuilt();
         return result;
@@ -862,11 +1783,38 @@ public final class PassID {
         if (other.getActive() != false) {
           setActive(other.getActive());
         }
+        if (other.getPersonalizable() != false) {
+          setPersonalizable(other.getPersonalizable());
+        }
+        if (other.getPersonalized() != false) {
+          setPersonalized(other.getPersonalized());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasProvisioned()) {
+          mergeProvisioned(other.getProvisioned());
+        }
         if (other.hasIssued()) {
           mergeIssued(other.getIssued());
         }
+        if (other.hasActivated()) {
+          mergeActivated(other.getActivated());
+        }
         if (other.hasSuspended()) {
           mergeSuspended(other.getSuspended());
+        }
+        if (other.hasBanned()) {
+          mergeBanned(other.getBanned());
+        }
+        if (other.hasSeen()) {
+          mergeSeen(other.getSeen());
+        }
+        if (other.hasCheckin()) {
+          mergeCheckin(other.getCheckin());
+        }
+        if (other.hasEnroll()) {
+          mergeEnroll(other.getEnroll());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1264,6 +2212,299 @@ public final class PassID {
         return this;
       }
 
+      private boolean personalizable_ ;
+      /**
+       * <pre>
+       * Whether this pass is personalizable.
+       * </pre>
+       *
+       * <code>bool personalizable = 5;</code>
+       */
+      public boolean getPersonalizable() {
+        return personalizable_;
+      }
+      /**
+       * <pre>
+       * Whether this pass is personalizable.
+       * </pre>
+       *
+       * <code>bool personalizable = 5;</code>
+       */
+      public Builder setPersonalizable(boolean value) {
+        
+        personalizable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this pass is personalizable.
+       * </pre>
+       *
+       * <code>bool personalizable = 5;</code>
+       */
+      public Builder clearPersonalizable() {
+        
+        personalizable_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean personalized_ ;
+      /**
+       * <pre>
+       * Whether this pass is personalizable, and has been personalized.
+       * </pre>
+       *
+       * <code>bool personalized = 6;</code>
+       */
+      public boolean getPersonalized() {
+        return personalized_;
+      }
+      /**
+       * <pre>
+       * Whether this pass is personalizable, and has been personalized.
+       * </pre>
+       *
+       * <code>bool personalized = 6;</code>
+       */
+      public Builder setPersonalized(boolean value) {
+        
+        personalized_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this pass is personalizable, and has been personalized.
+       * </pre>
+       *
+       * <code>bool personalized = 6;</code>
+       */
+      public Builder clearPersonalized() {
+        
+        personalized_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Current status of this pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       */
+      public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Current status of this pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Current status of this pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       */
+      public io.bloombox.schema.pass.PassID.PassStatus getStatus() {
+        io.bloombox.schema.pass.PassID.PassStatus result = io.bloombox.schema.pass.PassID.PassStatus.valueOf(status_);
+        return result == null ? io.bloombox.schema.pass.PassID.PassStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Current status of this pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       */
+      public Builder setStatus(io.bloombox.schema.pass.PassID.PassStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Current status of this pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.PassStatus status = 7;</code>
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant provisioned_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> provisionedBuilder_;
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      public boolean hasProvisioned() {
+        return provisionedBuilder_ != null || provisioned_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getProvisioned() {
+        if (provisionedBuilder_ == null) {
+          return provisioned_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : provisioned_;
+        } else {
+          return provisionedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      public Builder setProvisioned(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (provisionedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          provisioned_ = value;
+          onChanged();
+        } else {
+          provisionedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      public Builder setProvisioned(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (provisionedBuilder_ == null) {
+          provisioned_ = builderForValue.build();
+          onChanged();
+        } else {
+          provisionedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      public Builder mergeProvisioned(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (provisionedBuilder_ == null) {
+          if (provisioned_ != null) {
+            provisioned_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(provisioned_).mergeFrom(value).buildPartial();
+          } else {
+            provisioned_ = value;
+          }
+          onChanged();
+        } else {
+          provisionedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      public Builder clearProvisioned() {
+        if (provisionedBuilder_ == null) {
+          provisioned_ = null;
+          onChanged();
+        } else {
+          provisioned_ = null;
+          provisionedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getProvisionedBuilder() {
+        
+        onChanged();
+        return getProvisionedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getProvisionedOrBuilder() {
+        if (provisionedBuilder_ != null) {
+          return provisionedBuilder_.getMessageOrBuilder();
+        } else {
+          return provisioned_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : provisioned_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was originally provisioned.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant provisioned = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getProvisionedFieldBuilder() {
+        if (provisionedBuilder_ == null) {
+          provisionedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getProvisioned(),
+                  getParentForChildren(),
+                  isClean());
+          provisioned_ = null;
+        }
+        return provisionedBuilder_;
+      }
+
       private io.opencannabis.schema.temporal.TemporalInstant.Instant issued_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> issuedBuilder_;
@@ -1272,7 +2513,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       public boolean hasIssued() {
         return issuedBuilder_ != null || issued_ != null;
@@ -1282,7 +2523,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getIssued() {
         if (issuedBuilder_ == null) {
@@ -1296,7 +2537,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       public Builder setIssued(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (issuedBuilder_ == null) {
@@ -1316,7 +2557,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       public Builder setIssued(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -1334,7 +2575,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       public Builder mergeIssued(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (issuedBuilder_ == null) {
@@ -1356,7 +2597,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       public Builder clearIssued() {
         if (issuedBuilder_ == null) {
@@ -1374,7 +2615,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getIssuedBuilder() {
         
@@ -1386,7 +2627,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getIssuedOrBuilder() {
         if (issuedBuilder_ != null) {
@@ -1401,7 +2642,7 @@ public final class PassID {
        * Timestamp indicating when this pass was originally issued.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant issued = 5;</code>
+       * <code>.opencannabis.temporal.Instant issued = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -1417,6 +2658,159 @@ public final class PassID {
         return issuedBuilder_;
       }
 
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant activated_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> activatedBuilder_;
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      public boolean hasActivated() {
+        return activatedBuilder_ != null || activated_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getActivated() {
+        if (activatedBuilder_ == null) {
+          return activated_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : activated_;
+        } else {
+          return activatedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      public Builder setActivated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (activatedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          activated_ = value;
+          onChanged();
+        } else {
+          activatedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      public Builder setActivated(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (activatedBuilder_ == null) {
+          activated_ = builderForValue.build();
+          onChanged();
+        } else {
+          activatedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      public Builder mergeActivated(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (activatedBuilder_ == null) {
+          if (activated_ != null) {
+            activated_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(activated_).mergeFrom(value).buildPartial();
+          } else {
+            activated_ = value;
+          }
+          onChanged();
+        } else {
+          activatedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      public Builder clearActivated() {
+        if (activatedBuilder_ == null) {
+          activated_ = null;
+          onChanged();
+        } else {
+          activated_ = null;
+          activatedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getActivatedBuilder() {
+        
+        onChanged();
+        return getActivatedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getActivatedOrBuilder() {
+        if (activatedBuilder_ != null) {
+          return activatedBuilder_.getMessageOrBuilder();
+        } else {
+          return activated_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : activated_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was activated for use.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant activated = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getActivatedFieldBuilder() {
+        if (activatedBuilder_ == null) {
+          activatedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getActivated(),
+                  getParentForChildren(),
+                  isClean());
+          activated_ = null;
+        }
+        return activatedBuilder_;
+      }
+
       private io.opencannabis.schema.temporal.TemporalInstant.Instant suspended_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> suspendedBuilder_;
@@ -1425,7 +2819,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       public boolean hasSuspended() {
         return suspendedBuilder_ != null || suspended_ != null;
@@ -1435,7 +2829,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant getSuspended() {
         if (suspendedBuilder_ == null) {
@@ -1449,7 +2843,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       public Builder setSuspended(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (suspendedBuilder_ == null) {
@@ -1469,7 +2863,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       public Builder setSuspended(
           io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
@@ -1487,7 +2881,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       public Builder mergeSuspended(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
         if (suspendedBuilder_ == null) {
@@ -1509,7 +2903,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       public Builder clearSuspended() {
         if (suspendedBuilder_ == null) {
@@ -1527,7 +2921,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getSuspendedBuilder() {
         
@@ -1539,7 +2933,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSuspendedOrBuilder() {
         if (suspendedBuilder_ != null) {
@@ -1554,7 +2948,7 @@ public final class PassID {
        * Timestamp indicating when this pass was suspended, if applicable.
        * </pre>
        *
-       * <code>.opencannabis.temporal.Instant suspended = 6;</code>
+       * <code>.opencannabis.temporal.Instant suspended = 11;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
@@ -1568,6 +2962,618 @@ public final class PassID {
           suspended_ = null;
         }
         return suspendedBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant banned_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> bannedBuilder_;
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      public boolean hasBanned() {
+        return bannedBuilder_ != null || banned_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getBanned() {
+        if (bannedBuilder_ == null) {
+          return banned_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : banned_;
+        } else {
+          return bannedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      public Builder setBanned(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (bannedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          banned_ = value;
+          onChanged();
+        } else {
+          bannedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      public Builder setBanned(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (bannedBuilder_ == null) {
+          banned_ = builderForValue.build();
+          onChanged();
+        } else {
+          bannedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      public Builder mergeBanned(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (bannedBuilder_ == null) {
+          if (banned_ != null) {
+            banned_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(banned_).mergeFrom(value).buildPartial();
+          } else {
+            banned_ = value;
+          }
+          onChanged();
+        } else {
+          bannedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      public Builder clearBanned() {
+        if (bannedBuilder_ == null) {
+          banned_ = null;
+          onChanged();
+        } else {
+          banned_ = null;
+          bannedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getBannedBuilder() {
+        
+        onChanged();
+        return getBannedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getBannedOrBuilder() {
+        if (bannedBuilder_ != null) {
+          return bannedBuilder_.getMessageOrBuilder();
+        } else {
+          return banned_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : banned_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was banned, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant banned = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getBannedFieldBuilder() {
+        if (bannedBuilder_ == null) {
+          bannedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getBanned(),
+                  getParentForChildren(),
+                  isClean());
+          banned_ = null;
+        }
+        return bannedBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant seen_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> seenBuilder_;
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      public boolean hasSeen() {
+        return seenBuilder_ != null || seen_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getSeen() {
+        if (seenBuilder_ == null) {
+          return seen_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : seen_;
+        } else {
+          return seenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      public Builder setSeen(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (seenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          seen_ = value;
+          onChanged();
+        } else {
+          seenBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      public Builder setSeen(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (seenBuilder_ == null) {
+          seen_ = builderForValue.build();
+          onChanged();
+        } else {
+          seenBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      public Builder mergeSeen(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (seenBuilder_ == null) {
+          if (seen_ != null) {
+            seen_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(seen_).mergeFrom(value).buildPartial();
+          } else {
+            seen_ = value;
+          }
+          onChanged();
+        } else {
+          seenBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      public Builder clearSeen() {
+        if (seenBuilder_ == null) {
+          seen_ = null;
+          onChanged();
+        } else {
+          seen_ = null;
+          seenBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getSeenBuilder() {
+        
+        onChanged();
+        return getSeenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getSeenOrBuilder() {
+        if (seenBuilder_ != null) {
+          return seenBuilder_.getMessageOrBuilder();
+        } else {
+          return seen_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : seen_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last seen.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant seen = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getSeenFieldBuilder() {
+        if (seenBuilder_ == null) {
+          seenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getSeen(),
+                  getParentForChildren(),
+                  isClean());
+          seen_ = null;
+        }
+        return seenBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant checkin_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> checkinBuilder_;
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      public boolean hasCheckin() {
+        return checkinBuilder_ != null || checkin_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getCheckin() {
+        if (checkinBuilder_ == null) {
+          return checkin_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : checkin_;
+        } else {
+          return checkinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      public Builder setCheckin(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (checkinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          checkin_ = value;
+          onChanged();
+        } else {
+          checkinBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      public Builder setCheckin(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (checkinBuilder_ == null) {
+          checkin_ = builderForValue.build();
+          onChanged();
+        } else {
+          checkinBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      public Builder mergeCheckin(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (checkinBuilder_ == null) {
+          if (checkin_ != null) {
+            checkin_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(checkin_).mergeFrom(value).buildPartial();
+          } else {
+            checkin_ = value;
+          }
+          onChanged();
+        } else {
+          checkinBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      public Builder clearCheckin() {
+        if (checkinBuilder_ == null) {
+          checkin_ = null;
+          onChanged();
+        } else {
+          checkin_ = null;
+          checkinBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getCheckinBuilder() {
+        
+        onChanged();
+        return getCheckinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getCheckinOrBuilder() {
+        if (checkinBuilder_ != null) {
+          return checkinBuilder_.getMessageOrBuilder();
+        } else {
+          return checkin_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : checkin_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was last used to check-in, if applicable.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant checkin = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getCheckinFieldBuilder() {
+        if (checkinBuilder_ == null) {
+          checkinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getCheckin(),
+                  getParentForChildren(),
+                  isClean());
+          checkin_ = null;
+        }
+        return checkinBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalInstant.Instant enroll_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> enrollBuilder_;
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      public boolean hasEnroll() {
+        return enrollBuilder_ != null || enroll_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant getEnroll() {
+        if (enrollBuilder_ == null) {
+          return enroll_ == null ? io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : enroll_;
+        } else {
+          return enrollBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      public Builder setEnroll(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (enrollBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enroll_ = value;
+          onChanged();
+        } else {
+          enrollBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      public Builder setEnroll(
+          io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder builderForValue) {
+        if (enrollBuilder_ == null) {
+          enroll_ = builderForValue.build();
+          onChanged();
+        } else {
+          enrollBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      public Builder mergeEnroll(io.opencannabis.schema.temporal.TemporalInstant.Instant value) {
+        if (enrollBuilder_ == null) {
+          if (enroll_ != null) {
+            enroll_ =
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.newBuilder(enroll_).mergeFrom(value).buildPartial();
+          } else {
+            enroll_ = value;
+          }
+          onChanged();
+        } else {
+          enrollBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      public Builder clearEnroll() {
+        if (enrollBuilder_ == null) {
+          enroll_ = null;
+          onChanged();
+        } else {
+          enroll_ = null;
+          enrollBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder getEnrollBuilder() {
+        
+        onChanged();
+        return getEnrollFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder getEnrollOrBuilder() {
+        if (enrollBuilder_ != null) {
+          return enrollBuilder_.getMessageOrBuilder();
+        } else {
+          return enroll_ == null ?
+              io.opencannabis.schema.temporal.TemporalInstant.Instant.getDefaultInstance() : enroll_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp indicating when this pass was enrolled, if it's a personalizable pass.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Instant enroll = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder> 
+          getEnrollFieldBuilder() {
+        if (enrollBuilder_ == null) {
+          enrollBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalInstant.Instant, io.opencannabis.schema.temporal.TemporalInstant.Instant.Builder, io.opencannabis.schema.temporal.TemporalInstant.InstantOrBuilder>(
+                  getEnroll(),
+                  getParentForChildren(),
+                  isClean());
+          enroll_ = null;
+        }
+        return enrollBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1635,13 +3641,26 @@ public final class PassID {
       "\n\030identity/pass/Pass.proto\022\035bloombox.sch" +
       "ema.identity.pass\032\024core/Datamodel.proto\032" +
       "\033identity/pass/PassKey.proto\032\026temporal/I" +
-      "nstant.proto\"\322\001\n\004Pass\022;\n\003key\030\001 \001(\0132&.blo" +
+      "nstant.proto\"\342\004\n\004Pass\022;\n\003key\030\001 \001(\0132&.blo" +
       "ombox.schema.identity.pass.PassKeyB\006\302\265\003\002" +
       "\010\001\022\r\n\005token\030\002 \001(\t\022\013\n\003uri\030\003 \001(\t\022\016\n\006active" +
-      "\030\004 \001(\010\022.\n\006issued\030\005 \001(\0132\036.opencannabis.te" +
-      "mporal.Instant\0221\n\tsuspended\030\006 \001(\0132\036.open" +
-      "cannabis.temporal.InstantB+\n\027io.bloombox" +
-      ".schema.passB\006PassIDH\001P\000\242\002\003BBSb\006proto3"
+      "\030\004 \001(\010\022\026\n\016personalizable\030\005 \001(\010\022\024\n\014person" +
+      "alized\030\006 \001(\010\0229\n\006status\030\007 \001(\0162).bloombox." +
+      "schema.identity.pass.PassStatus\0223\n\013provi" +
+      "sioned\030\010 \001(\0132\036.opencannabis.temporal.Ins" +
+      "tant\022.\n\006issued\030\t \001(\0132\036.opencannabis.temp" +
+      "oral.Instant\0221\n\tactivated\030\n \001(\0132\036.openca" +
+      "nnabis.temporal.Instant\0221\n\tsuspended\030\013 \001" +
+      "(\0132\036.opencannabis.temporal.Instant\022.\n\006ba" +
+      "nned\030\014 \001(\0132\036.opencannabis.temporal.Insta" +
+      "nt\022,\n\004seen\030\r \001(\0132\036.opencannabis.temporal" +
+      ".Instant\022/\n\007checkin\030\016 \001(\0132\036.opencannabis" +
+      ".temporal.Instant\022.\n\006enroll\030\017 \001(\0132\036.open" +
+      "cannabis.temporal.Instant*d\n\nPassStatus\022" +
+      "\017\n\013PROVISIONED\020\000\022\n\n\006ISSUED\020\001\022\n\n\006ACTIVE\020\002" +
+      "\022\022\n\016DECOMMISSIONED\020\003\022\r\n\tSUSPENDED\020\004\022\n\n\006B" +
+      "ANNED\020\005B+\n\027io.bloombox.schema.passB\006Pass" +
+      "IDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1663,7 +3682,7 @@ public final class PassID {
     internal_static_bloombox_schema_identity_pass_Pass_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_pass_Pass_descriptor,
-        new java.lang.String[] { "Key", "Token", "Uri", "Active", "Issued", "Suspended", });
+        new java.lang.String[] { "Key", "Token", "Uri", "Active", "Personalizable", "Personalized", "Status", "Provisioned", "Issued", "Activated", "Suspended", "Banned", "Seen", "Checkin", "Enroll", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(core.Datamodel.field);

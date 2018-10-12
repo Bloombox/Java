@@ -7312,78 +7312,10 @@ public final class CommercialPurchase {
 
     /**
      * <pre>
-     * Specifies the ID of a given public key.
-     * </pre>
-     *
-     * <code>string key_id = 1;</code>
-     */
-    java.lang.String getKeyId();
-    /**
-     * <pre>
-     * Specifies the ID of a given public key.
-     * </pre>
-     *
-     * <code>string key_id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getKeyIdBytes();
-
-    /**
-     * <pre>
-     * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-     */
-    boolean hasPublicKey();
-    /**
-     * <pre>
-     * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-     */
-    io.opencannabis.schema.crypto.primitives.pki.KeyMaterial getPublicKey();
-    /**
-     * <pre>
-     * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-     */
-    io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder getPublicKeyOrBuilder();
-
-    /**
-     * <pre>
-     * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-     */
-    boolean hasFingerprint();
-    /**
-     * <pre>
-     * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-     */
-    io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint();
-    /**
-     * <pre>
-     * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-     */
-    io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder();
-
-    /**
-     * <pre>
      * Verification number allocated for this transaction from a device under the customer's control.
      * </pre>
      *
-     * <code>string nonce = 4;</code>
+     * <code>string nonce = 1;</code>
      */
     java.lang.String getNonce();
     /**
@@ -7391,57 +7323,60 @@ public final class CommercialPurchase {
      * Verification number allocated for this transaction from a device under the customer's control.
      * </pre>
      *
-     * <code>string nonce = 4;</code>
+     * <code>string nonce = 1;</code>
      */
     com.google.protobuf.ByteString
         getNonceBytes();
 
     /**
      * <pre>
-     * Raw bytes of the cryptographic signature.
+     * Cryptographic signature issued by the point-of-sale device for this transaction.
      * </pre>
      *
-     * <code>bytes raw = 5;</code>
+     * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
      */
-    com.google.protobuf.ByteString getRaw();
+    boolean hasFacilitator();
+    /**
+     * <pre>
+     * Cryptographic signature issued by the point-of-sale device for this transaction.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+     */
+    io.opencannabis.schema.crypto.Signature getFacilitator();
+    /**
+     * <pre>
+     * Cryptographic signature issued by the point-of-sale device for this transaction.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+     */
+    io.opencannabis.schema.crypto.SignatureOrBuilder getFacilitatorOrBuilder();
 
     /**
      * <pre>
-     * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
+     * Cryptographic signature issued by the customer for this transaction.
      * </pre>
      *
-     * <code>string b64 = 6;</code>
+     * <code>.opencannabis.crypto.Signature customer = 3;</code>
      */
-    java.lang.String getB64();
+    boolean hasCustomer();
     /**
      * <pre>
-     * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
+     * Cryptographic signature issued by the customer for this transaction.
      * </pre>
      *
-     * <code>string b64 = 6;</code>
+     * <code>.opencannabis.crypto.Signature customer = 3;</code>
      */
-    com.google.protobuf.ByteString
-        getB64Bytes();
-
+    io.opencannabis.schema.crypto.Signature getCustomer();
     /**
      * <pre>
-     * Hex-encoded bytes of the cryptographic signature.
+     * Cryptographic signature issued by the customer for this transaction.
      * </pre>
      *
-     * <code>string hex = 7;</code>
+     * <code>.opencannabis.crypto.Signature customer = 3;</code>
      */
-    java.lang.String getHex();
-    /**
-     * <pre>
-     * Hex-encoded bytes of the cryptographic signature.
-     * </pre>
-     *
-     * <code>string hex = 7;</code>
-     */
-    com.google.protobuf.ByteString
-        getHexBytes();
-
-    public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.SignatureCase getSignatureCase();
+    io.opencannabis.schema.crypto.SignatureOrBuilder getCustomerOrBuilder();
   }
   /**
    * <pre>
@@ -7460,7 +7395,6 @@ public final class CommercialPurchase {
       super(builder);
     }
     private PurchaseSignature() {
-      keyId_ = "";
       nonce_ = "";
     }
 
@@ -7498,56 +7432,33 @@ public final class CommercialPurchase {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              keyId_ = s;
+              nonce_ = s;
               break;
             }
             case 18: {
-              io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder subBuilder = null;
-              if (publicKey_ != null) {
-                subBuilder = publicKey_.toBuilder();
+              io.opencannabis.schema.crypto.Signature.Builder subBuilder = null;
+              if (facilitator_ != null) {
+                subBuilder = facilitator_.toBuilder();
               }
-              publicKey_ = input.readMessage(io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.parser(), extensionRegistry);
+              facilitator_ = input.readMessage(io.opencannabis.schema.crypto.Signature.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(publicKey_);
-                publicKey_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(facilitator_);
+                facilitator_ = subBuilder.buildPartial();
               }
 
               break;
             }
             case 26: {
-              io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder subBuilder = null;
-              if (fingerprint_ != null) {
-                subBuilder = fingerprint_.toBuilder();
+              io.opencannabis.schema.crypto.Signature.Builder subBuilder = null;
+              if (customer_ != null) {
+                subBuilder = customer_.toBuilder();
               }
-              fingerprint_ = input.readMessage(io.opencannabis.schema.crypto.primitives.integrity.Hash.parser(), extensionRegistry);
+              customer_ = input.readMessage(io.opencannabis.schema.crypto.Signature.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(fingerprint_);
-                fingerprint_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(customer_);
+                customer_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nonce_ = s;
-              break;
-            }
-            case 42: {
-              signatureCase_ = 5;
-              signature_ = input.readBytes();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-              signatureCase_ = 6;
-              signature_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              signatureCase_ = 7;
-              signature_ = s;
               break;
             }
           }
@@ -7574,162 +7485,14 @@ public final class CommercialPurchase {
               io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.class, io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.Builder.class);
     }
 
-    private int signatureCase_ = 0;
-    private java.lang.Object signature_;
-    public enum SignatureCase
-        implements com.google.protobuf.Internal.EnumLite {
-      RAW(5),
-      B64(6),
-      HEX(7),
-      SIGNATURE_NOT_SET(0);
-      private final int value;
-      private SignatureCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static SignatureCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static SignatureCase forNumber(int value) {
-        switch (value) {
-          case 5: return RAW;
-          case 6: return B64;
-          case 7: return HEX;
-          case 0: return SIGNATURE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public SignatureCase
-    getSignatureCase() {
-      return SignatureCase.forNumber(
-          signatureCase_);
-    }
-
-    public static final int KEY_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object keyId_;
-    /**
-     * <pre>
-     * Specifies the ID of a given public key.
-     * </pre>
-     *
-     * <code>string key_id = 1;</code>
-     */
-    public java.lang.String getKeyId() {
-      java.lang.Object ref = keyId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        keyId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Specifies the ID of a given public key.
-     * </pre>
-     *
-     * <code>string key_id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getKeyIdBytes() {
-      java.lang.Object ref = keyId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        keyId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PUBLIC_KEY_FIELD_NUMBER = 2;
-    private io.opencannabis.schema.crypto.primitives.pki.KeyMaterial publicKey_;
-    /**
-     * <pre>
-     * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-     */
-    public boolean hasPublicKey() {
-      return publicKey_ != null;
-    }
-    /**
-     * <pre>
-     * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-     */
-    public io.opencannabis.schema.crypto.primitives.pki.KeyMaterial getPublicKey() {
-      return publicKey_ == null ? io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.getDefaultInstance() : publicKey_;
-    }
-    /**
-     * <pre>
-     * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-     */
-    public io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder getPublicKeyOrBuilder() {
-      return getPublicKey();
-    }
-
-    public static final int FINGERPRINT_FIELD_NUMBER = 3;
-    private io.opencannabis.schema.crypto.primitives.integrity.Hash fingerprint_;
-    /**
-     * <pre>
-     * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-     */
-    public boolean hasFingerprint() {
-      return fingerprint_ != null;
-    }
-    /**
-     * <pre>
-     * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-     */
-    public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
-      return fingerprint_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
-    }
-    /**
-     * <pre>
-     * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-     * </pre>
-     *
-     * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-     */
-    public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
-      return getFingerprint();
-    }
-
-    public static final int NONCE_FIELD_NUMBER = 4;
+    public static final int NONCE_FIELD_NUMBER = 1;
     private volatile java.lang.Object nonce_;
     /**
      * <pre>
      * Verification number allocated for this transaction from a device under the customer's control.
      * </pre>
      *
-     * <code>string nonce = 4;</code>
+     * <code>string nonce = 1;</code>
      */
     public java.lang.String getNonce() {
       java.lang.Object ref = nonce_;
@@ -7748,7 +7511,7 @@ public final class CommercialPurchase {
      * Verification number allocated for this transaction from a device under the customer's control.
      * </pre>
      *
-     * <code>string nonce = 4;</code>
+     * <code>string nonce = 1;</code>
      */
     public com.google.protobuf.ByteString
         getNonceBytes() {
@@ -7764,121 +7527,70 @@ public final class CommercialPurchase {
       }
     }
 
-    public static final int RAW_FIELD_NUMBER = 5;
+    public static final int FACILITATOR_FIELD_NUMBER = 2;
+    private io.opencannabis.schema.crypto.Signature facilitator_;
     /**
      * <pre>
-     * Raw bytes of the cryptographic signature.
+     * Cryptographic signature issued by the point-of-sale device for this transaction.
      * </pre>
      *
-     * <code>bytes raw = 5;</code>
+     * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
      */
-    public com.google.protobuf.ByteString getRaw() {
-      if (signatureCase_ == 5) {
-        return (com.google.protobuf.ByteString) signature_;
-      }
-      return com.google.protobuf.ByteString.EMPTY;
+    public boolean hasFacilitator() {
+      return facilitator_ != null;
+    }
+    /**
+     * <pre>
+     * Cryptographic signature issued by the point-of-sale device for this transaction.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+     */
+    public io.opencannabis.schema.crypto.Signature getFacilitator() {
+      return facilitator_ == null ? io.opencannabis.schema.crypto.Signature.getDefaultInstance() : facilitator_;
+    }
+    /**
+     * <pre>
+     * Cryptographic signature issued by the point-of-sale device for this transaction.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+     */
+    public io.opencannabis.schema.crypto.SignatureOrBuilder getFacilitatorOrBuilder() {
+      return getFacilitator();
     }
 
-    public static final int B64_FIELD_NUMBER = 6;
+    public static final int CUSTOMER_FIELD_NUMBER = 3;
+    private io.opencannabis.schema.crypto.Signature customer_;
     /**
      * <pre>
-     * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
+     * Cryptographic signature issued by the customer for this transaction.
      * </pre>
      *
-     * <code>string b64 = 6;</code>
+     * <code>.opencannabis.crypto.Signature customer = 3;</code>
      */
-    public java.lang.String getB64() {
-      java.lang.Object ref = "";
-      if (signatureCase_ == 6) {
-        ref = signature_;
-      }
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (signatureCase_ == 6) {
-          signature_ = s;
-        }
-        return s;
-      }
+    public boolean hasCustomer() {
+      return customer_ != null;
     }
     /**
      * <pre>
-     * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
+     * Cryptographic signature issued by the customer for this transaction.
      * </pre>
      *
-     * <code>string b64 = 6;</code>
+     * <code>.opencannabis.crypto.Signature customer = 3;</code>
      */
-    public com.google.protobuf.ByteString
-        getB64Bytes() {
-      java.lang.Object ref = "";
-      if (signatureCase_ == 6) {
-        ref = signature_;
-      }
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (signatureCase_ == 6) {
-          signature_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int HEX_FIELD_NUMBER = 7;
-    /**
-     * <pre>
-     * Hex-encoded bytes of the cryptographic signature.
-     * </pre>
-     *
-     * <code>string hex = 7;</code>
-     */
-    public java.lang.String getHex() {
-      java.lang.Object ref = "";
-      if (signatureCase_ == 7) {
-        ref = signature_;
-      }
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (signatureCase_ == 7) {
-          signature_ = s;
-        }
-        return s;
-      }
+    public io.opencannabis.schema.crypto.Signature getCustomer() {
+      return customer_ == null ? io.opencannabis.schema.crypto.Signature.getDefaultInstance() : customer_;
     }
     /**
      * <pre>
-     * Hex-encoded bytes of the cryptographic signature.
+     * Cryptographic signature issued by the customer for this transaction.
      * </pre>
      *
-     * <code>string hex = 7;</code>
+     * <code>.opencannabis.crypto.Signature customer = 3;</code>
      */
-    public com.google.protobuf.ByteString
-        getHexBytes() {
-      java.lang.Object ref = "";
-      if (signatureCase_ == 7) {
-        ref = signature_;
-      }
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (signatureCase_ == 7) {
-          signature_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public io.opencannabis.schema.crypto.SignatureOrBuilder getCustomerOrBuilder() {
+      return getCustomer();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7893,27 +7605,14 @@ public final class CommercialPurchase {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getKeyIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, keyId_);
-      }
-      if (publicKey_ != null) {
-        output.writeMessage(2, getPublicKey());
-      }
-      if (fingerprint_ != null) {
-        output.writeMessage(3, getFingerprint());
-      }
       if (!getNonceBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, nonce_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nonce_);
       }
-      if (signatureCase_ == 5) {
-        output.writeBytes(
-            5, (com.google.protobuf.ByteString) signature_);
+      if (facilitator_ != null) {
+        output.writeMessage(2, getFacilitator());
       }
-      if (signatureCase_ == 6) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, signature_);
-      }
-      if (signatureCase_ == 7) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, signature_);
+      if (customer_ != null) {
+        output.writeMessage(3, getCustomer());
       }
       unknownFields.writeTo(output);
     }
@@ -7923,30 +7622,16 @@ public final class CommercialPurchase {
       if (size != -1) return size;
 
       size = 0;
-      if (!getKeyIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, keyId_);
-      }
-      if (publicKey_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPublicKey());
-      }
-      if (fingerprint_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getFingerprint());
-      }
       if (!getNonceBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, nonce_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nonce_);
       }
-      if (signatureCase_ == 5) {
+      if (facilitator_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(
-              5, (com.google.protobuf.ByteString) signature_);
+          .computeMessageSize(2, getFacilitator());
       }
-      if (signatureCase_ == 6) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, signature_);
-      }
-      if (signatureCase_ == 7) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, signature_);
+      if (customer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCustomer());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7964,38 +7649,17 @@ public final class CommercialPurchase {
       io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature other = (io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature) obj;
 
       boolean result = true;
-      result = result && getKeyId()
-          .equals(other.getKeyId());
-      result = result && (hasPublicKey() == other.hasPublicKey());
-      if (hasPublicKey()) {
-        result = result && getPublicKey()
-            .equals(other.getPublicKey());
-      }
-      result = result && (hasFingerprint() == other.hasFingerprint());
-      if (hasFingerprint()) {
-        result = result && getFingerprint()
-            .equals(other.getFingerprint());
-      }
       result = result && getNonce()
           .equals(other.getNonce());
-      result = result && getSignatureCase().equals(
-          other.getSignatureCase());
-      if (!result) return false;
-      switch (signatureCase_) {
-        case 5:
-          result = result && getRaw()
-              .equals(other.getRaw());
-          break;
-        case 6:
-          result = result && getB64()
-              .equals(other.getB64());
-          break;
-        case 7:
-          result = result && getHex()
-              .equals(other.getHex());
-          break;
-        case 0:
-        default:
+      result = result && (hasFacilitator() == other.hasFacilitator());
+      if (hasFacilitator()) {
+        result = result && getFacilitator()
+            .equals(other.getFacilitator());
+      }
+      result = result && (hasCustomer() == other.hasCustomer());
+      if (hasCustomer()) {
+        result = result && getCustomer()
+            .equals(other.getCustomer());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -8008,33 +7672,15 @@ public final class CommercialPurchase {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getKeyId().hashCode();
-      if (hasPublicKey()) {
-        hash = (37 * hash) + PUBLIC_KEY_FIELD_NUMBER;
-        hash = (53 * hash) + getPublicKey().hashCode();
-      }
-      if (hasFingerprint()) {
-        hash = (37 * hash) + FINGERPRINT_FIELD_NUMBER;
-        hash = (53 * hash) + getFingerprint().hashCode();
-      }
       hash = (37 * hash) + NONCE_FIELD_NUMBER;
       hash = (53 * hash) + getNonce().hashCode();
-      switch (signatureCase_) {
-        case 5:
-          hash = (37 * hash) + RAW_FIELD_NUMBER;
-          hash = (53 * hash) + getRaw().hashCode();
-          break;
-        case 6:
-          hash = (37 * hash) + B64_FIELD_NUMBER;
-          hash = (53 * hash) + getB64().hashCode();
-          break;
-        case 7:
-          hash = (37 * hash) + HEX_FIELD_NUMBER;
-          hash = (53 * hash) + getHex().hashCode();
-          break;
-        case 0:
-        default:
+      if (hasFacilitator()) {
+        hash = (37 * hash) + FACILITATOR_FIELD_NUMBER;
+        hash = (53 * hash) + getFacilitator().hashCode();
+      }
+      if (hasCustomer()) {
+        hash = (37 * hash) + CUSTOMER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomer().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8169,24 +7815,20 @@ public final class CommercialPurchase {
       }
       public Builder clear() {
         super.clear();
-        keyId_ = "";
-
-        if (publicKeyBuilder_ == null) {
-          publicKey_ = null;
-        } else {
-          publicKey_ = null;
-          publicKeyBuilder_ = null;
-        }
-        if (fingerprintBuilder_ == null) {
-          fingerprint_ = null;
-        } else {
-          fingerprint_ = null;
-          fingerprintBuilder_ = null;
-        }
         nonce_ = "";
 
-        signatureCase_ = 0;
-        signature_ = null;
+        if (facilitatorBuilder_ == null) {
+          facilitator_ = null;
+        } else {
+          facilitator_ = null;
+          facilitatorBuilder_ = null;
+        }
+        if (customerBuilder_ == null) {
+          customer_ = null;
+        } else {
+          customer_ = null;
+          customerBuilder_ = null;
+        }
         return this;
       }
 
@@ -8209,28 +7851,17 @@ public final class CommercialPurchase {
 
       public io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature buildPartial() {
         io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature result = new io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature(this);
-        result.keyId_ = keyId_;
-        if (publicKeyBuilder_ == null) {
-          result.publicKey_ = publicKey_;
-        } else {
-          result.publicKey_ = publicKeyBuilder_.build();
-        }
-        if (fingerprintBuilder_ == null) {
-          result.fingerprint_ = fingerprint_;
-        } else {
-          result.fingerprint_ = fingerprintBuilder_.build();
-        }
         result.nonce_ = nonce_;
-        if (signatureCase_ == 5) {
-          result.signature_ = signature_;
+        if (facilitatorBuilder_ == null) {
+          result.facilitator_ = facilitator_;
+        } else {
+          result.facilitator_ = facilitatorBuilder_.build();
         }
-        if (signatureCase_ == 6) {
-          result.signature_ = signature_;
+        if (customerBuilder_ == null) {
+          result.customer_ = customer_;
+        } else {
+          result.customer_ = customerBuilder_.build();
         }
-        if (signatureCase_ == 7) {
-          result.signature_ = signature_;
-        }
-        result.signatureCase_ = signatureCase_;
         onBuilt();
         return result;
       }
@@ -8272,40 +7903,15 @@ public final class CommercialPurchase {
 
       public Builder mergeFrom(io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature other) {
         if (other == io.opencannabis.schema.commerce.CommercialPurchase.PurchaseSignature.getDefaultInstance()) return this;
-        if (!other.getKeyId().isEmpty()) {
-          keyId_ = other.keyId_;
-          onChanged();
-        }
-        if (other.hasPublicKey()) {
-          mergePublicKey(other.getPublicKey());
-        }
-        if (other.hasFingerprint()) {
-          mergeFingerprint(other.getFingerprint());
-        }
         if (!other.getNonce().isEmpty()) {
           nonce_ = other.nonce_;
           onChanged();
         }
-        switch (other.getSignatureCase()) {
-          case RAW: {
-            setRaw(other.getRaw());
-            break;
-          }
-          case B64: {
-            signatureCase_ = 6;
-            signature_ = other.signature_;
-            onChanged();
-            break;
-          }
-          case HEX: {
-            signatureCase_ = 7;
-            signature_ = other.signature_;
-            onChanged();
-            break;
-          }
-          case SIGNATURE_NOT_SET: {
-            break;
-          }
+        if (other.hasFacilitator()) {
+          mergeFacilitator(other.getFacilitator());
+        }
+        if (other.hasCustomer()) {
+          mergeCustomer(other.getCustomer());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8333,416 +7939,6 @@ public final class CommercialPurchase {
         }
         return this;
       }
-      private int signatureCase_ = 0;
-      private java.lang.Object signature_;
-      public SignatureCase
-          getSignatureCase() {
-        return SignatureCase.forNumber(
-            signatureCase_);
-      }
-
-      public Builder clearSignature() {
-        signatureCase_ = 0;
-        signature_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private java.lang.Object keyId_ = "";
-      /**
-       * <pre>
-       * Specifies the ID of a given public key.
-       * </pre>
-       *
-       * <code>string key_id = 1;</code>
-       */
-      public java.lang.String getKeyId() {
-        java.lang.Object ref = keyId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          keyId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the ID of a given public key.
-       * </pre>
-       *
-       * <code>string key_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyIdBytes() {
-        java.lang.Object ref = keyId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          keyId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies the ID of a given public key.
-       * </pre>
-       *
-       * <code>string key_id = 1;</code>
-       */
-      public Builder setKeyId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        keyId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the ID of a given public key.
-       * </pre>
-       *
-       * <code>string key_id = 1;</code>
-       */
-      public Builder clearKeyId() {
-        
-        keyId_ = getDefaultInstance().getKeyId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies the ID of a given public key.
-       * </pre>
-       *
-       * <code>string key_id = 1;</code>
-       */
-      public Builder setKeyIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        keyId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private io.opencannabis.schema.crypto.primitives.pki.KeyMaterial publicKey_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.crypto.primitives.pki.KeyMaterial, io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder> publicKeyBuilder_;
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      public boolean hasPublicKey() {
-        return publicKeyBuilder_ != null || publicKey_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      public io.opencannabis.schema.crypto.primitives.pki.KeyMaterial getPublicKey() {
-        if (publicKeyBuilder_ == null) {
-          return publicKey_ == null ? io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.getDefaultInstance() : publicKey_;
-        } else {
-          return publicKeyBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      public Builder setPublicKey(io.opencannabis.schema.crypto.primitives.pki.KeyMaterial value) {
-        if (publicKeyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          publicKey_ = value;
-          onChanged();
-        } else {
-          publicKeyBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      public Builder setPublicKey(
-          io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder builderForValue) {
-        if (publicKeyBuilder_ == null) {
-          publicKey_ = builderForValue.build();
-          onChanged();
-        } else {
-          publicKeyBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      public Builder mergePublicKey(io.opencannabis.schema.crypto.primitives.pki.KeyMaterial value) {
-        if (publicKeyBuilder_ == null) {
-          if (publicKey_ != null) {
-            publicKey_ =
-              io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.newBuilder(publicKey_).mergeFrom(value).buildPartial();
-          } else {
-            publicKey_ = value;
-          }
-          onChanged();
-        } else {
-          publicKeyBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      public Builder clearPublicKey() {
-        if (publicKeyBuilder_ == null) {
-          publicKey_ = null;
-          onChanged();
-        } else {
-          publicKey_ = null;
-          publicKeyBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      public io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder getPublicKeyBuilder() {
-        
-        onChanged();
-        return getPublicKeyFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      public io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder getPublicKeyOrBuilder() {
-        if (publicKeyBuilder_ != null) {
-          return publicKeyBuilder_.getMessageOrBuilder();
-        } else {
-          return publicKey_ == null ?
-              io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.getDefaultInstance() : publicKey_;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic hash and, potentially, the raw bytes of a given public key.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.pki.KeyMaterial public_key = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.crypto.primitives.pki.KeyMaterial, io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder> 
-          getPublicKeyFieldBuilder() {
-        if (publicKeyBuilder_ == null) {
-          publicKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.crypto.primitives.pki.KeyMaterial, io.opencannabis.schema.crypto.primitives.pki.KeyMaterial.Builder, io.opencannabis.schema.crypto.primitives.pki.KeyMaterialOrBuilder>(
-                  getPublicKey(),
-                  getParentForChildren(),
-                  isClean());
-          publicKey_ = null;
-        }
-        return publicKeyBuilder_;
-      }
-
-      private io.opencannabis.schema.crypto.primitives.integrity.Hash fingerprint_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> fingerprintBuilder_;
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      public boolean hasFingerprint() {
-        return fingerprintBuilder_ != null || fingerprint_ != null;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      public io.opencannabis.schema.crypto.primitives.integrity.Hash getFingerprint() {
-        if (fingerprintBuilder_ == null) {
-          return fingerprint_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
-        } else {
-          return fingerprintBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      public Builder setFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
-        if (fingerprintBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          fingerprint_ = value;
-          onChanged();
-        } else {
-          fingerprintBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      public Builder setFingerprint(
-          io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
-        if (fingerprintBuilder_ == null) {
-          fingerprint_ = builderForValue.build();
-          onChanged();
-        } else {
-          fingerprintBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      public Builder mergeFingerprint(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
-        if (fingerprintBuilder_ == null) {
-          if (fingerprint_ != null) {
-            fingerprint_ =
-              io.opencannabis.schema.crypto.primitives.integrity.Hash.newBuilder(fingerprint_).mergeFrom(value).buildPartial();
-          } else {
-            fingerprint_ = value;
-          }
-          onChanged();
-        } else {
-          fingerprintBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      public Builder clearFingerprint() {
-        if (fingerprintBuilder_ == null) {
-          fingerprint_ = null;
-          onChanged();
-        } else {
-          fingerprint_ = null;
-          fingerprintBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getFingerprintBuilder() {
-        
-        onChanged();
-        return getFingerprintFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getFingerprintOrBuilder() {
-        if (fingerprintBuilder_ != null) {
-          return fingerprintBuilder_.getMessageOrBuilder();
-        } else {
-          return fingerprint_ == null ?
-              io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : fingerprint_;
-        }
-      }
-      /**
-       * <pre>
-       * Specifies a cryptographic fingerprint of the transaction from a given party's perspective.
-       * </pre>
-       *
-       * <code>.opencannabis.crypto.primitives.integrity.Hash fingerprint = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
-          getFingerprintFieldBuilder() {
-        if (fingerprintBuilder_ == null) {
-          fingerprintBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder>(
-                  getFingerprint(),
-                  getParentForChildren(),
-                  isClean());
-          fingerprint_ = null;
-        }
-        return fingerprintBuilder_;
-      }
 
       private java.lang.Object nonce_ = "";
       /**
@@ -8750,7 +7946,7 @@ public final class CommercialPurchase {
        * Verification number allocated for this transaction from a device under the customer's control.
        * </pre>
        *
-       * <code>string nonce = 4;</code>
+       * <code>string nonce = 1;</code>
        */
       public java.lang.String getNonce() {
         java.lang.Object ref = nonce_;
@@ -8769,7 +7965,7 @@ public final class CommercialPurchase {
        * Verification number allocated for this transaction from a device under the customer's control.
        * </pre>
        *
-       * <code>string nonce = 4;</code>
+       * <code>string nonce = 1;</code>
        */
       public com.google.protobuf.ByteString
           getNonceBytes() {
@@ -8789,7 +7985,7 @@ public final class CommercialPurchase {
        * Verification number allocated for this transaction from a device under the customer's control.
        * </pre>
        *
-       * <code>string nonce = 4;</code>
+       * <code>string nonce = 1;</code>
        */
       public Builder setNonce(
           java.lang.String value) {
@@ -8806,7 +8002,7 @@ public final class CommercialPurchase {
        * Verification number allocated for this transaction from a device under the customer's control.
        * </pre>
        *
-       * <code>string nonce = 4;</code>
+       * <code>string nonce = 1;</code>
        */
       public Builder clearNonce() {
         
@@ -8819,7 +8015,7 @@ public final class CommercialPurchase {
        * Verification number allocated for this transaction from a device under the customer's control.
        * </pre>
        *
-       * <code>string nonce = 4;</code>
+       * <code>string nonce = 1;</code>
        */
       public Builder setNonceBytes(
           com.google.protobuf.ByteString value) {
@@ -8833,249 +8029,310 @@ public final class CommercialPurchase {
         return this;
       }
 
+      private io.opencannabis.schema.crypto.Signature facilitator_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> facilitatorBuilder_;
       /**
        * <pre>
-       * Raw bytes of the cryptographic signature.
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
        * </pre>
        *
-       * <code>bytes raw = 5;</code>
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
        */
-      public com.google.protobuf.ByteString getRaw() {
-        if (signatureCase_ == 5) {
-          return (com.google.protobuf.ByteString) signature_;
+      public boolean hasFacilitator() {
+        return facilitatorBuilder_ != null || facilitator_ != null;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+       */
+      public io.opencannabis.schema.crypto.Signature getFacilitator() {
+        if (facilitatorBuilder_ == null) {
+          return facilitator_ == null ? io.opencannabis.schema.crypto.Signature.getDefaultInstance() : facilitator_;
+        } else {
+          return facilitatorBuilder_.getMessage();
         }
-        return com.google.protobuf.ByteString.EMPTY;
       }
       /**
        * <pre>
-       * Raw bytes of the cryptographic signature.
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
        * </pre>
        *
-       * <code>bytes raw = 5;</code>
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
        */
-      public Builder setRaw(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  signatureCase_ = 5;
-        signature_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Raw bytes of the cryptographic signature.
-       * </pre>
-       *
-       * <code>bytes raw = 5;</code>
-       */
-      public Builder clearRaw() {
-        if (signatureCase_ == 5) {
-          signatureCase_ = 0;
-          signature_ = null;
+      public Builder setFacilitator(io.opencannabis.schema.crypto.Signature value) {
+        if (facilitatorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          facilitator_ = value;
           onChanged();
+        } else {
+          facilitatorBuilder_.setMessage(value);
         }
+
         return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+       */
+      public Builder setFacilitator(
+          io.opencannabis.schema.crypto.Signature.Builder builderForValue) {
+        if (facilitatorBuilder_ == null) {
+          facilitator_ = builderForValue.build();
+          onChanged();
+        } else {
+          facilitatorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+       */
+      public Builder mergeFacilitator(io.opencannabis.schema.crypto.Signature value) {
+        if (facilitatorBuilder_ == null) {
+          if (facilitator_ != null) {
+            facilitator_ =
+              io.opencannabis.schema.crypto.Signature.newBuilder(facilitator_).mergeFrom(value).buildPartial();
+          } else {
+            facilitator_ = value;
+          }
+          onChanged();
+        } else {
+          facilitatorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+       */
+      public Builder clearFacilitator() {
+        if (facilitatorBuilder_ == null) {
+          facilitator_ = null;
+          onChanged();
+        } else {
+          facilitator_ = null;
+          facilitatorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+       */
+      public io.opencannabis.schema.crypto.Signature.Builder getFacilitatorBuilder() {
+        
+        onChanged();
+        return getFacilitatorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+       */
+      public io.opencannabis.schema.crypto.SignatureOrBuilder getFacilitatorOrBuilder() {
+        if (facilitatorBuilder_ != null) {
+          return facilitatorBuilder_.getMessageOrBuilder();
+        } else {
+          return facilitator_ == null ?
+              io.opencannabis.schema.crypto.Signature.getDefaultInstance() : facilitator_;
+        }
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the point-of-sale device for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature facilitator = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> 
+          getFacilitatorFieldBuilder() {
+        if (facilitatorBuilder_ == null) {
+          facilitatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder>(
+                  getFacilitator(),
+                  getParentForChildren(),
+                  isClean());
+          facilitator_ = null;
+        }
+        return facilitatorBuilder_;
       }
 
+      private io.opencannabis.schema.crypto.Signature customer_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> customerBuilder_;
       /**
        * <pre>
-       * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
+       * Cryptographic signature issued by the customer for this transaction.
        * </pre>
        *
-       * <code>string b64 = 6;</code>
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
        */
-      public java.lang.String getB64() {
-        java.lang.Object ref = "";
-        if (signatureCase_ == 6) {
-          ref = signature_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (signatureCase_ == 6) {
-            signature_ = s;
-          }
-          return s;
+      public boolean hasCustomer() {
+        return customerBuilder_ != null || customer_ != null;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the customer for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
+       */
+      public io.opencannabis.schema.crypto.Signature getCustomer() {
+        if (customerBuilder_ == null) {
+          return customer_ == null ? io.opencannabis.schema.crypto.Signature.getDefaultInstance() : customer_;
         } else {
-          return (java.lang.String) ref;
+          return customerBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
+       * Cryptographic signature issued by the customer for this transaction.
        * </pre>
        *
-       * <code>string b64 = 6;</code>
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
        */
-      public com.google.protobuf.ByteString
-          getB64Bytes() {
-        java.lang.Object ref = "";
-        if (signatureCase_ == 6) {
-          ref = signature_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (signatureCase_ == 6) {
-            signature_ = b;
+      public Builder setCustomer(io.opencannabis.schema.crypto.Signature value) {
+        if (customerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
           }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
-       * </pre>
-       *
-       * <code>string b64 = 6;</code>
-       */
-      public Builder setB64(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  signatureCase_ = 6;
-        signature_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
-       * </pre>
-       *
-       * <code>string b64 = 6;</code>
-       */
-      public Builder clearB64() {
-        if (signatureCase_ == 6) {
-          signatureCase_ = 0;
-          signature_ = null;
+          customer_ = value;
           onChanged();
+        } else {
+          customerBuilder_.setMessage(value);
         }
-        return this;
-      }
-      /**
-       * <pre>
-       * Base64-encoded bytes of the cryptographic signature, with padding trimmed.
-       * </pre>
-       *
-       * <code>string b64 = 6;</code>
-       */
-      public Builder setB64Bytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        signatureCase_ = 6;
-        signature_ = value;
-        onChanged();
-        return this;
-      }
 
-      /**
-       * <pre>
-       * Hex-encoded bytes of the cryptographic signature.
-       * </pre>
-       *
-       * <code>string hex = 7;</code>
-       */
-      public java.lang.String getHex() {
-        java.lang.Object ref = "";
-        if (signatureCase_ == 7) {
-          ref = signature_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (signatureCase_ == 7) {
-            signature_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Hex-encoded bytes of the cryptographic signature.
-       * </pre>
-       *
-       * <code>string hex = 7;</code>
-       */
-      public com.google.protobuf.ByteString
-          getHexBytes() {
-        java.lang.Object ref = "";
-        if (signatureCase_ == 7) {
-          ref = signature_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (signatureCase_ == 7) {
-            signature_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Hex-encoded bytes of the cryptographic signature.
-       * </pre>
-       *
-       * <code>string hex = 7;</code>
-       */
-      public Builder setHex(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  signatureCase_ = 7;
-        signature_ = value;
-        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Hex-encoded bytes of the cryptographic signature.
+       * Cryptographic signature issued by the customer for this transaction.
        * </pre>
        *
-       * <code>string hex = 7;</code>
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
        */
-      public Builder clearHex() {
-        if (signatureCase_ == 7) {
-          signatureCase_ = 0;
-          signature_ = null;
+      public Builder setCustomer(
+          io.opencannabis.schema.crypto.Signature.Builder builderForValue) {
+        if (customerBuilder_ == null) {
+          customer_ = builderForValue.build();
           onChanged();
+        } else {
+          customerBuilder_.setMessage(builderForValue.build());
         }
+
         return this;
       }
       /**
        * <pre>
-       * Hex-encoded bytes of the cryptographic signature.
+       * Cryptographic signature issued by the customer for this transaction.
        * </pre>
        *
-       * <code>string hex = 7;</code>
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
        */
-      public Builder setHexBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        signatureCase_ = 7;
-        signature_ = value;
-        onChanged();
+      public Builder mergeCustomer(io.opencannabis.schema.crypto.Signature value) {
+        if (customerBuilder_ == null) {
+          if (customer_ != null) {
+            customer_ =
+              io.opencannabis.schema.crypto.Signature.newBuilder(customer_).mergeFrom(value).buildPartial();
+          } else {
+            customer_ = value;
+          }
+          onChanged();
+        } else {
+          customerBuilder_.mergeFrom(value);
+        }
+
         return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the customer for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
+       */
+      public Builder clearCustomer() {
+        if (customerBuilder_ == null) {
+          customer_ = null;
+          onChanged();
+        } else {
+          customer_ = null;
+          customerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the customer for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
+       */
+      public io.opencannabis.schema.crypto.Signature.Builder getCustomerBuilder() {
+        
+        onChanged();
+        return getCustomerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the customer for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
+       */
+      public io.opencannabis.schema.crypto.SignatureOrBuilder getCustomerOrBuilder() {
+        if (customerBuilder_ != null) {
+          return customerBuilder_.getMessageOrBuilder();
+        } else {
+          return customer_ == null ?
+              io.opencannabis.schema.crypto.Signature.getDefaultInstance() : customer_;
+        }
+      }
+      /**
+       * <pre>
+       * Cryptographic signature issued by the customer for this transaction.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature customer = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> 
+          getCustomerFieldBuilder() {
+        if (customerBuilder_ == null) {
+          customerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder>(
+                  getCustomer(),
+                  getParentForChildren(),
+                  isClean());
+          customer_ = null;
+        }
+        return customerBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -22916,103 +22173,101 @@ public final class CommercialPurchase {
       "D.proto\032\026identity/UserKey.proto\032\033identit" +
       "y/pass/PassKey.proto\032\034identity/Membershi" +
       "pKey.proto\032 inventory/InventoryProduct.p" +
-      "roto\032\037crypto/primitives/Keypair.proto\032!c" +
-      "rypto/primitives/Integrity.proto\032\026tempor" +
-      "al/Instant.proto\"\315\001\n\020PurchaseLogEntry\0225\n" +
-      "\006status\030\001 \001(\0162%.opencannabis.commerce.Pu" +
-      "rchaseStatus\0223\n\005event\030\002 \001(\0162$.opencannab" +
-      "is.commerce.PurchaseEvent\022/\n\007instant\030\003 \001" +
-      "(\0132\036.opencannabis.temporal.Instant\022\013\n\003sk" +
-      "u\030\004 \001(\t\022\017\n\007message\030\005 \001(\t\"\355\001\n\rBillOfCharg" +
-      "es\0221\n\006status\030\001 \001(\0162!.opencannabis.commer" +
-      "ce.BillStatus\022$\n\003tax\030\002 \003(\0132\027.opencannabi" +
-      "s.taxes.Tax\0221\n\010discount\030\003 \003(\0132\037.opencann" +
-      "abis.commerce.Discount\022\r\n\005price\030\004 \001(\001\022\r\n" +
-      "\005taxes\030\005 \001(\001\022\021\n\tdiscounts\030\006 \001(\001\022\020\n\010subto" +
-      "tal\030\007 \001(\001\022\r\n\005total\030\010 \001(\001\"\253\001\n\nTicketItem\022" +
-      "1\n\003key\030\001 \001(\0132$.opencannabis.inventory.In" +
-      "ventoryKey\022\013\n\003sku\030\002 \001(\t\022)\n\004item\030\003 \001(\0132\033." +
-      "opencannabis.commerce.Item\0222\n\004line\030\004 \001(\013" +
-      "2$.opencannabis.commerce.BillOfCharges\"\221" +
-      "\002\n\022PurchaseTimestamps\0223\n\013established\030\001 \001" +
-      "(\0132\036.opencannabis.temporal.Instant\022/\n\007cr" +
-      "eated\030\002 \001(\0132\036.opencannabis.temporal.Inst" +
-      "ant\0220\n\010modified\030\003 \001(\0132\036.opencannabis.tem" +
-      "poral.Instant\0220\n\010executed\030\004 \001(\0132\036.openca" +
-      "nnabis.temporal.Instant\0221\n\tfinalized\030\005 \001" +
-      "(\0132\036.opencannabis.temporal.Instant\"#\n\013Pu" +
-      "rchaseKey\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\"\366\001\n\021Purc" +
-      "haseSignature\022\016\n\006key_id\030\001 \001(\t\022C\n\npublic_" +
-      "key\030\002 \001(\0132/.opencannabis.crypto.primitiv" +
-      "es.pki.KeyMaterial\022C\n\013fingerprint\030\003 \001(\0132" +
-      "..opencannabis.crypto.primitives.integri" +
-      "ty.Hash\022\r\n\005nonce\030\004 \001(\t\022\r\n\003raw\030\005 \001(\014H\000\022\r\n" +
-      "\003b64\030\006 \001(\tH\000\022\r\n\003hex\030\007 \001(\tH\000B\013\n\tsignature" +
-      "\"\370\001\n\020PurchaseCustomer\0224\n\016identification\030" +
-      "\001 \001(\0132\034.bloombox.schema.identity.ID\0224\n\004p" +
-      "ass\030\002 \001(\0132&.bloombox.schema.identity.pas" +
-      "s.PassKey\022;\n\nmembership\030\003 \001(\0132\'.bloombox" +
-      ".schema.identity.MembershipKey\022;\n\tsignat" +
-      "ure\030\004 \001(\0132(.opencannabis.commerce.Purcha" +
-      "seSignature\"\374\001\n\023PurchaseFacilitator\022;\n\ta" +
-      "uthority\030\001 \001(\0162(.opencannabis.commerce.P" +
-      "urchaseAuthority\0220\n\005agent\030\002 \001(\0132!.bloomb" +
-      "ox.schema.identity.UserKey\0229\n\006device\030\003 \001" +
-      "(\0132).bloombox.schema.partner.PartnerDevi" +
-      "ceKey\022;\n\tsignature\030\004 \001(\0132(.opencannabis." +
-      "commerce.PurchaseSignature\"\"\n\nPaymentKey" +
-      "\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\"\224\010\n\007Payment\0226\n\003ke" +
-      "y\030\001 \001(\0132!.opencannabis.commerce.PaymentK" +
-      "eyB\006\302\265\003\002\010\001\0224\n\006method\030\002 \001(\0162$.opencannabi" +
-      "s.commerce.PaymentMethod\0224\n\006status\030\003 \001(\016" +
-      "2$.opencannabis.commerce.PaymentStatus\022\016" +
-      "\n\006amount\030\004 \001(\001\022\014\n\004full\030\005 \001(\010\022:\n\004cash\030\n \001" +
-      "(\0132*.opencannabis.commerce.Payment.CashP" +
-      "aymentH\000\022<\n\005check\030\013 \001(\0132+.opencannabis.c" +
-      "ommerce.Payment.CheckPaymentH\000\022:\n\004card\030\014" +
-      " \001(\0132*.opencannabis.commerce.Payment.Car" +
-      "dPaymentH\000\022:\n\004bank\030\r \001(\0132*.opencannabis." +
-      "commerce.Payment.BankPaymentH\000\022@\n\007digita" +
-      "l\030\016 \001(\0132-.opencannabis.commerce.Payment." +
-      "DigitalPaymentH\000\032{\n\013CashPayment\0226\n\010tende" +
-      "red\030\001 \001(\0132$.opencannabis.commerce.Curren" +
-      "cyValue\0224\n\006change\030\002 \001(\0132$.opencannabis.c" +
-      "ommerce.CurrencyValue\032|\n\014CheckPayment\022\024\n" +
-      "\014check_number\030\001 \001(\t\022\026\n\016routing_number\030\002 " +
-      "\001(\t\022\026\n\016account_number\030\003 \001(\t\022\023\n\013instituti" +
-      "on\030\004 \001(\t\022\021\n\tcertified\030\005 \001(\010\032H\n\013CardPayme" +
-      "nt\0229\n\tcard_type\030\001 \001(\0162&.opencannabis.com" +
-      "merce.PaymentCardType\032P\n\013BankPayment\022\026\n\016" +
-      "routing_number\030\001 \001(\t\022\026\n\016account_number\030\002" +
-      " \001(\t\022\021\n\treference\030\003 \001(\t\032t\n\016DigitalPaymen" +
-      "t\022=\n\007network\030\001 \001(\0162,.opencannabis.commer" +
-      "ce.DigitalPaymentNetwork\022\020\n\010username\030\002 \001" +
-      "(\t\022\021\n\treference\030\003 \001(\tB\006\n\004spec\"\265\004\n\016Purcha" +
-      "seTicket\0227\n\003key\030\001 \001(\0132\".opencannabis.com" +
-      "merce.PurchaseKeyB\006\302\265\003\002\010\001\022\017\n\007version\030\002 \001" +
-      "(\r\0225\n\006status\030\003 \001(\0162%.opencannabis.commer" +
-      "ce.PurchaseStatus\022\r\n\005claim\030\004 \001(\t\022?\n\013faci" +
-      "litator\030\005 \001(\0132*.opencannabis.commerce.Pu" +
-      "rchaseFacilitator\0229\n\010customer\030\006 \001(\0132\'.op" +
-      "encannabis.commerce.PurchaseCustomer\0222\n\004" +
-      "bill\030\007 \001(\0132$.opencannabis.commerce.BillO" +
-      "fCharges\022/\n\004item\030\010 \003(\0132!.opencannabis.co" +
-      "mmerce.TicketItem\022/\n\007payment\030\t \003(\0132\036.ope" +
-      "ncannabis.commerce.Payment\0227\n\006action\030\n \003" +
-      "(\0132\'.opencannabis.commerce.PurchaseLogEn" +
-      "try\0225\n\002ts\030\013 \001(\0132).opencannabis.commerce." +
-      "PurchaseTimestamps:\021\202\367\002\r\010\002\022\tpurchases*\\\n" +
-      "\016PurchaseStatus\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001\022\n\n\006" +
-      "CLOSED\020\002\022\n\n\006VOIDED\020\003\022\r\n\tFINALIZED\020\004\022\016\n\nR" +
-      "ECONCILED\020\005*=\n\021PurchaseAuthority\022\014\n\010STAN" +
-      "DARD\020\000\022\013\n\007MEDICAL\020\001\022\r\n\tADULT_USE\020\002*\312\001\n\rP" +
-      "urchaseEvent\022\n\n\006STATUS\020\000\022\010\n\004SAVE\020\001\022\010\n\004LO" +
-      "AD\020\002\022\016\n\nITEM_ADDED\020\n\022\020\n\014ITEM_REMOVED\020\013\022\031" +
-      "\n\025ITEM_QUANTITY_CHANGED\020\014\022\027\n\023ITEM_DISCOU" +
-      "NT_ADDED\020\r\022\031\n\025ITEM_DISCOUNT_REMOVED\020\016\022\021\n" +
-      "\rPURCHASE_VOID\020\024\022\025\n\021PURCHASE_FINALIZE\020\025B" +
-      "?\n\037io.opencannabis.schema.commerceB\022Comm" +
-      "ercialPurchaseH\001P\000\242\002\003OCSb\006proto3"
+      "roto\032\026crypto/Signature.proto\032\037crypto/pri" +
+      "mitives/Keypair.proto\032!crypto/primitives" +
+      "/Integrity.proto\032\026temporal/Instant.proto" +
+      "\"\315\001\n\020PurchaseLogEntry\0225\n\006status\030\001 \001(\0162%." +
+      "opencannabis.commerce.PurchaseStatus\0223\n\005" +
+      "event\030\002 \001(\0162$.opencannabis.commerce.Purc" +
+      "haseEvent\022/\n\007instant\030\003 \001(\0132\036.opencannabi" +
+      "s.temporal.Instant\022\013\n\003sku\030\004 \001(\t\022\017\n\007messa" +
+      "ge\030\005 \001(\t\"\355\001\n\rBillOfCharges\0221\n\006status\030\001 \001" +
+      "(\0162!.opencannabis.commerce.BillStatus\022$\n" +
+      "\003tax\030\002 \003(\0132\027.opencannabis.taxes.Tax\0221\n\010d" +
+      "iscount\030\003 \003(\0132\037.opencannabis.commerce.Di" +
+      "scount\022\r\n\005price\030\004 \001(\001\022\r\n\005taxes\030\005 \001(\001\022\021\n\t" +
+      "discounts\030\006 \001(\001\022\020\n\010subtotal\030\007 \001(\001\022\r\n\005tot" +
+      "al\030\010 \001(\001\"\253\001\n\nTicketItem\0221\n\003key\030\001 \001(\0132$.o" +
+      "pencannabis.inventory.InventoryKey\022\013\n\003sk" +
+      "u\030\002 \001(\t\022)\n\004item\030\003 \001(\0132\033.opencannabis.com" +
+      "merce.Item\0222\n\004line\030\004 \001(\0132$.opencannabis." +
+      "commerce.BillOfCharges\"\221\002\n\022PurchaseTimes" +
+      "tamps\0223\n\013established\030\001 \001(\0132\036.opencannabi" +
+      "s.temporal.Instant\022/\n\007created\030\002 \001(\0132\036.op" +
+      "encannabis.temporal.Instant\0220\n\010modified\030" +
+      "\003 \001(\0132\036.opencannabis.temporal.Instant\0220\n" +
+      "\010executed\030\004 \001(\0132\036.opencannabis.temporal." +
+      "Instant\0221\n\tfinalized\030\005 \001(\0132\036.opencannabi" +
+      "s.temporal.Instant\"#\n\013PurchaseKey\022\024\n\004uui" +
+      "d\030\001 \001(\tB\006\302\265\003\002\010\002\"\211\001\n\021PurchaseSignature\022\r\n" +
+      "\005nonce\030\001 \001(\t\0223\n\013facilitator\030\002 \001(\0132\036.open" +
+      "cannabis.crypto.Signature\0220\n\010customer\030\003 " +
+      "\001(\0132\036.opencannabis.crypto.Signature\"\370\001\n\020" +
+      "PurchaseCustomer\0224\n\016identification\030\001 \001(\013" +
+      "2\034.bloombox.schema.identity.ID\0224\n\004pass\030\002" +
+      " \001(\0132&.bloombox.schema.identity.pass.Pas" +
+      "sKey\022;\n\nmembership\030\003 \001(\0132\'.bloombox.sche" +
+      "ma.identity.MembershipKey\022;\n\tsignature\030\004" +
+      " \001(\0132(.opencannabis.commerce.PurchaseSig" +
+      "nature\"\374\001\n\023PurchaseFacilitator\022;\n\tauthor" +
+      "ity\030\001 \001(\0162(.opencannabis.commerce.Purcha" +
+      "seAuthority\0220\n\005agent\030\002 \001(\0132!.bloombox.sc" +
+      "hema.identity.UserKey\0229\n\006device\030\003 \001(\0132)." +
+      "bloombox.schema.partner.PartnerDeviceKey" +
+      "\022;\n\tsignature\030\004 \001(\0132(.opencannabis.comme" +
+      "rce.PurchaseSignature\"\"\n\nPaymentKey\022\024\n\004u" +
+      "uid\030\001 \001(\tB\006\302\265\003\002\010\002\"\224\010\n\007Payment\0226\n\003key\030\001 \001" +
+      "(\0132!.opencannabis.commerce.PaymentKeyB\006\302" +
+      "\265\003\002\010\001\0224\n\006method\030\002 \001(\0162$.opencannabis.com" +
+      "merce.PaymentMethod\0224\n\006status\030\003 \001(\0162$.op" +
+      "encannabis.commerce.PaymentStatus\022\016\n\006amo" +
+      "unt\030\004 \001(\001\022\014\n\004full\030\005 \001(\010\022:\n\004cash\030\n \001(\0132*." +
+      "opencannabis.commerce.Payment.CashPaymen" +
+      "tH\000\022<\n\005check\030\013 \001(\0132+.opencannabis.commer" +
+      "ce.Payment.CheckPaymentH\000\022:\n\004card\030\014 \001(\0132" +
+      "*.opencannabis.commerce.Payment.CardPaym" +
+      "entH\000\022:\n\004bank\030\r \001(\0132*.opencannabis.comme" +
+      "rce.Payment.BankPaymentH\000\022@\n\007digital\030\016 \001" +
+      "(\0132-.opencannabis.commerce.Payment.Digit" +
+      "alPaymentH\000\032{\n\013CashPayment\0226\n\010tendered\030\001" +
+      " \001(\0132$.opencannabis.commerce.CurrencyVal" +
+      "ue\0224\n\006change\030\002 \001(\0132$.opencannabis.commer" +
+      "ce.CurrencyValue\032|\n\014CheckPayment\022\024\n\014chec" +
+      "k_number\030\001 \001(\t\022\026\n\016routing_number\030\002 \001(\t\022\026" +
+      "\n\016account_number\030\003 \001(\t\022\023\n\013institution\030\004 " +
+      "\001(\t\022\021\n\tcertified\030\005 \001(\010\032H\n\013CardPayment\0229\n" +
+      "\tcard_type\030\001 \001(\0162&.opencannabis.commerce" +
+      ".PaymentCardType\032P\n\013BankPayment\022\026\n\016routi" +
+      "ng_number\030\001 \001(\t\022\026\n\016account_number\030\002 \001(\t\022" +
+      "\021\n\treference\030\003 \001(\t\032t\n\016DigitalPayment\022=\n\007" +
+      "network\030\001 \001(\0162,.opencannabis.commerce.Di" +
+      "gitalPaymentNetwork\022\020\n\010username\030\002 \001(\t\022\021\n" +
+      "\treference\030\003 \001(\tB\006\n\004spec\"\265\004\n\016PurchaseTic" +
+      "ket\0227\n\003key\030\001 \001(\0132\".opencannabis.commerce" +
+      ".PurchaseKeyB\006\302\265\003\002\010\001\022\017\n\007version\030\002 \001(\r\0225\n" +
+      "\006status\030\003 \001(\0162%.opencannabis.commerce.Pu" +
+      "rchaseStatus\022\r\n\005claim\030\004 \001(\t\022?\n\013facilitat" +
+      "or\030\005 \001(\0132*.opencannabis.commerce.Purchas" +
+      "eFacilitator\0229\n\010customer\030\006 \001(\0132\'.opencan" +
+      "nabis.commerce.PurchaseCustomer\0222\n\004bill\030" +
+      "\007 \001(\0132$.opencannabis.commerce.BillOfChar" +
+      "ges\022/\n\004item\030\010 \003(\0132!.opencannabis.commerc" +
+      "e.TicketItem\022/\n\007payment\030\t \003(\0132\036.opencann" +
+      "abis.commerce.Payment\0227\n\006action\030\n \003(\0132\'." +
+      "opencannabis.commerce.PurchaseLogEntry\0225" +
+      "\n\002ts\030\013 \001(\0132).opencannabis.commerce.Purch" +
+      "aseTimestamps:\021\202\367\002\r\010\002\022\tpurchases*\\\n\016Purc" +
+      "haseStatus\022\t\n\005FRESH\020\000\022\010\n\004OPEN\020\001\022\n\n\006CLOSE" +
+      "D\020\002\022\n\n\006VOIDED\020\003\022\r\n\tFINALIZED\020\004\022\016\n\nRECONC" +
+      "ILED\020\005*=\n\021PurchaseAuthority\022\014\n\010STANDARD\020" +
+      "\000\022\013\n\007MEDICAL\020\001\022\r\n\tADULT_USE\020\002*\312\001\n\rPurcha" +
+      "seEvent\022\n\n\006STATUS\020\000\022\010\n\004SAVE\020\001\022\010\n\004LOAD\020\002\022" +
+      "\016\n\nITEM_ADDED\020\n\022\020\n\014ITEM_REMOVED\020\013\022\031\n\025ITE" +
+      "M_QUANTITY_CHANGED\020\014\022\027\n\023ITEM_DISCOUNT_AD" +
+      "DED\020\r\022\031\n\025ITEM_DISCOUNT_REMOVED\020\016\022\021\n\rPURC" +
+      "HASE_VOID\020\024\022\025\n\021PURCHASE_FINALIZE\020\025B?\n\037io" +
+      ".opencannabis.schema.commerceB\022Commercia" +
+      "lPurchaseH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -23037,6 +22292,7 @@ public final class CommercialPurchase {
           io.bloombox.schema.pass.PassIDKey.getDescriptor(),
           io.bloombox.schema.identity.AppMemberKey.getDescriptor(),
           io.opencannabis.schema.inventory.InventoryProductOuterClass.getDescriptor(),
+          io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor(),
           io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor(),
           io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
@@ -23076,7 +22332,7 @@ public final class CommercialPurchase {
     internal_static_opencannabis_commerce_PurchaseSignature_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_opencannabis_commerce_PurchaseSignature_descriptor,
-        new java.lang.String[] { "KeyId", "PublicKey", "Fingerprint", "Nonce", "Raw", "B64", "Hex", "Signature", });
+        new java.lang.String[] { "Nonce", "Facilitator", "Customer", });
     internal_static_opencannabis_commerce_PurchaseCustomer_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_opencannabis_commerce_PurchaseCustomer_fieldAccessorTable = new
@@ -23155,6 +22411,7 @@ public final class CommercialPurchase {
     io.bloombox.schema.pass.PassIDKey.getDescriptor();
     io.bloombox.schema.identity.AppMemberKey.getDescriptor();
     io.opencannabis.schema.inventory.InventoryProductOuterClass.getDescriptor();
+    io.opencannabis.schema.crypto.SignatureOuterClass.getDescriptor();
     io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor();
     io.opencannabis.schema.crypto.primitives.integrity.Integrity.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();

@@ -214,18 +214,25 @@ private static final long serialVersionUID = 0L;
      * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
      * </pre>
      *
-     * <code>string signature = 6;</code>
+     * <code>.opencannabis.crypto.Signature signature = 6;</code>
      */
-    java.lang.String getSignature();
+    boolean hasSignature();
     /**
      * <pre>
      * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
      * </pre>
      *
-     * <code>string signature = 6;</code>
+     * <code>.opencannabis.crypto.Signature signature = 6;</code>
      */
-    com.google.protobuf.ByteString
-        getSignatureBytes();
+    io.opencannabis.schema.crypto.Signature getSignature();
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.Signature signature = 6;</code>
+     */
+    io.opencannabis.schema.crypto.SignatureOrBuilder getSignatureOrBuilder();
   }
   /**
    * <pre>
@@ -246,7 +253,6 @@ private static final long serialVersionUID = 0L;
     private Request() {
       session_ = "";
       transaction_ = java.util.Collections.emptyList();
-      signature_ = "";
     }
 
     @java.lang.Override
@@ -322,9 +328,16 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+              io.opencannabis.schema.crypto.Signature.Builder subBuilder = null;
+              if (signature_ != null) {
+                subBuilder = signature_.toBuilder();
+              }
+              signature_ = input.readMessage(io.opencannabis.schema.crypto.Signature.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signature_);
+                signature_ = subBuilder.buildPartial();
+              }
 
-              signature_ = s;
               break;
             }
           }
@@ -519,45 +532,36 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SIGNATURE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object signature_;
+    private io.opencannabis.schema.crypto.Signature signature_;
     /**
      * <pre>
      * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
      * </pre>
      *
-     * <code>string signature = 6;</code>
+     * <code>.opencannabis.crypto.Signature signature = 6;</code>
      */
-    public java.lang.String getSignature() {
-      java.lang.Object ref = signature_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        signature_ = s;
-        return s;
-      }
+    public boolean hasSignature() {
+      return signature_ != null;
     }
     /**
      * <pre>
      * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
      * </pre>
      *
-     * <code>string signature = 6;</code>
+     * <code>.opencannabis.crypto.Signature signature = 6;</code>
      */
-    public com.google.protobuf.ByteString
-        getSignatureBytes() {
-      java.lang.Object ref = signature_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        signature_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public io.opencannabis.schema.crypto.Signature getSignature() {
+      return signature_ == null ? io.opencannabis.schema.crypto.Signature.getDefaultInstance() : signature_;
+    }
+    /**
+     * <pre>
+     * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.Signature signature = 6;</code>
+     */
+    public io.opencannabis.schema.crypto.SignatureOrBuilder getSignatureOrBuilder() {
+      return getSignature();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -584,8 +588,8 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < transaction_.size(); i++) {
         output.writeMessage(4, transaction_.get(i));
       }
-      if (!getSignatureBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, signature_);
+      if (signature_ != null) {
+        output.writeMessage(6, getSignature());
       }
       unknownFields.writeTo(output);
     }
@@ -610,8 +614,9 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, transaction_.get(i));
       }
-      if (!getSignatureBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, signature_);
+      if (signature_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSignature());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -643,8 +648,11 @@ private static final long serialVersionUID = 0L;
       }
       result = result && getTransactionList()
           .equals(other.getTransactionList());
-      result = result && getSignature()
-          .equals(other.getSignature());
+      result = result && (hasSignature() == other.hasSignature());
+      if (hasSignature()) {
+        result = result && getSignature()
+            .equals(other.getSignature());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -670,8 +678,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + TRANSACTION_FIELD_NUMBER;
         hash = (53 * hash) + getTransactionList().hashCode();
       }
-      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
-      hash = (53 * hash) + getSignature().hashCode();
+      if (hasSignature()) {
+        hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+        hash = (53 * hash) + getSignature().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -826,8 +836,12 @@ private static final long serialVersionUID = 0L;
         } else {
           transactionBuilder_.clear();
         }
-        signature_ = "";
-
+        if (signatureBuilder_ == null) {
+          signature_ = null;
+        } else {
+          signature_ = null;
+          signatureBuilder_ = null;
+        }
         return this;
       }
 
@@ -872,7 +886,11 @@ private static final long serialVersionUID = 0L;
         } else {
           result.transaction_ = transactionBuilder_.build();
         }
-        result.signature_ = signature_;
+        if (signatureBuilder_ == null) {
+          result.signature_ = signature_;
+        } else {
+          result.signature_ = signatureBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -951,9 +969,8 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
-        if (!other.getSignature().isEmpty()) {
-          signature_ = other.signature_;
-          onChanged();
+        if (other.hasSignature()) {
+          mergeSignature(other.getSignature());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1690,24 +1707,31 @@ private static final long serialVersionUID = 0L;
         return transactionBuilder_;
       }
 
-      private java.lang.Object signature_ = "";
+      private io.opencannabis.schema.crypto.Signature signature_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> signatureBuilder_;
       /**
        * <pre>
        * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
        * </pre>
        *
-       * <code>string signature = 6;</code>
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
        */
-      public java.lang.String getSignature() {
-        java.lang.Object ref = signature_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          signature_ = s;
-          return s;
+      public boolean hasSignature() {
+        return signatureBuilder_ != null || signature_ != null;
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
+       */
+      public io.opencannabis.schema.crypto.Signature getSignature() {
+        if (signatureBuilder_ == null) {
+          return signature_ == null ? io.opencannabis.schema.crypto.Signature.getDefaultInstance() : signature_;
         } else {
-          return (java.lang.String) ref;
+          return signatureBuilder_.getMessage();
         }
       }
       /**
@@ -1715,36 +1739,37 @@ private static final long serialVersionUID = 0L;
        * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
        * </pre>
        *
-       * <code>string signature = 6;</code>
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
        */
-      public com.google.protobuf.ByteString
-          getSignatureBytes() {
-        java.lang.Object ref = signature_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          signature_ = b;
-          return b;
+      public Builder setSignature(io.opencannabis.schema.crypto.Signature value) {
+        if (signatureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signature_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          signatureBuilder_.setMessage(value);
         }
+
+        return this;
       }
       /**
        * <pre>
        * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
        * </pre>
        *
-       * <code>string signature = 6;</code>
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
        */
       public Builder setSignature(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        signature_ = value;
-        onChanged();
+          io.opencannabis.schema.crypto.Signature.Builder builderForValue) {
+        if (signatureBuilder_ == null) {
+          signature_ = builderForValue.build();
+          onChanged();
+        } else {
+          signatureBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
       }
       /**
@@ -1752,12 +1777,39 @@ private static final long serialVersionUID = 0L;
        * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
        * </pre>
        *
-       * <code>string signature = 6;</code>
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
+       */
+      public Builder mergeSignature(io.opencannabis.schema.crypto.Signature value) {
+        if (signatureBuilder_ == null) {
+          if (signature_ != null) {
+            signature_ =
+              io.opencannabis.schema.crypto.Signature.newBuilder(signature_).mergeFrom(value).buildPartial();
+          } else {
+            signature_ = value;
+          }
+          onChanged();
+        } else {
+          signatureBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
        */
       public Builder clearSignature() {
-        
-        signature_ = getDefaultInstance().getSignature();
-        onChanged();
+        if (signatureBuilder_ == null) {
+          signature_ = null;
+          onChanged();
+        } else {
+          signature_ = null;
+          signatureBuilder_ = null;
+        }
+
         return this;
       }
       /**
@@ -1765,18 +1817,47 @@ private static final long serialVersionUID = 0L;
        * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
        * </pre>
        *
-       * <code>string signature = 6;</code>
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
        */
-      public Builder setSignatureBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      public io.opencannabis.schema.crypto.Signature.Builder getSignatureBuilder() {
         
-        signature_ = value;
         onChanged();
-        return this;
+        return getSignatureFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
+       */
+      public io.opencannabis.schema.crypto.SignatureOrBuilder getSignatureOrBuilder() {
+        if (signatureBuilder_ != null) {
+          return signatureBuilder_.getMessageOrBuilder();
+        } else {
+          return signature_ == null ?
+              io.opencannabis.schema.crypto.Signature.getDefaultInstance() : signature_;
+        }
+      }
+      /**
+       * <pre>
+       * Hex-encoded signature of the SHA512-digest of the binary-encoded session close claim, and transactions.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.Signature signature = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder> 
+          getSignatureFieldBuilder() {
+        if (signatureBuilder_ == null) {
+          signatureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.crypto.Signature, io.opencannabis.schema.crypto.Signature.Builder, io.opencannabis.schema.crypto.SignatureOrBuilder>(
+                  getSignature(),
+                  getParentForChildren(),
+                  isClean());
+          signature_ = null;
+        }
+        return signatureBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

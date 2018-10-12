@@ -835,75 +835,920 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface DigitalPassOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specifies the scanned/received information from the pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     */
+    boolean hasPass();
+    /**
+     * <pre>
+     * Specifies the scanned/received information from the pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     */
+    io.bloombox.schema.pass.PassIDKey.DigitalPassKey getPass();
+    /**
+     * <pre>
+     * Specifies the scanned/received information from the pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     */
+    io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder getPassOrBuilder();
+
+    /**
+     * <pre>
+     * Cryptographic signature hash from the physical device that scanned the pass.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     */
+    boolean hasChallenge();
+    /**
+     * <pre>
+     * Cryptographic signature hash from the physical device that scanned the pass.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     */
+    io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge();
+    /**
+     * <pre>
+     * Cryptographic signature hash from the physical device that scanned the pass.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     */
+    io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder();
+  }
+  /**
+   * <pre>
+   * Criteria to qualify a search via a digital pass.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass}
+   */
+  public  static final class DigitalPass extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+      DigitalPassOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DigitalPass.newBuilder() to construct.
+    private DigitalPass(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DigitalPass() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DigitalPass(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder subBuilder = null;
+              if (pass_ != null) {
+                subBuilder = pass_.toBuilder();
+              }
+              pass_ = input.readMessage(io.bloombox.schema.pass.PassIDKey.DigitalPassKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pass_);
+                pass_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder subBuilder = null;
+              if (challenge_ != null) {
+                subBuilder = challenge_.toBuilder();
+              }
+              challenge_ = input.readMessage(io.opencannabis.schema.crypto.primitives.integrity.Hash.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(challenge_);
+                challenge_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder.class);
+    }
+
+    public static final int PASS_FIELD_NUMBER = 1;
+    private io.bloombox.schema.pass.PassIDKey.DigitalPassKey pass_;
+    /**
+     * <pre>
+     * Specifies the scanned/received information from the pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     */
+    public boolean hasPass() {
+      return pass_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the scanned/received information from the pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     */
+    public io.bloombox.schema.pass.PassIDKey.DigitalPassKey getPass() {
+      return pass_ == null ? io.bloombox.schema.pass.PassIDKey.DigitalPassKey.getDefaultInstance() : pass_;
+    }
+    /**
+     * <pre>
+     * Specifies the scanned/received information from the pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+     */
+    public io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder getPassOrBuilder() {
+      return getPass();
+    }
+
+    public static final int CHALLENGE_FIELD_NUMBER = 2;
+    private io.opencannabis.schema.crypto.primitives.integrity.Hash challenge_;
+    /**
+     * <pre>
+     * Cryptographic signature hash from the physical device that scanned the pass.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     */
+    public boolean hasChallenge() {
+      return challenge_ != null;
+    }
+    /**
+     * <pre>
+     * Cryptographic signature hash from the physical device that scanned the pass.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     */
+    public io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge() {
+      return challenge_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : challenge_;
+    }
+    /**
+     * <pre>
+     * Cryptographic signature hash from the physical device that scanned the pass.
+     * </pre>
+     *
+     * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+     */
+    public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder() {
+      return getChallenge();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pass_ != null) {
+        output.writeMessage(1, getPass());
+      }
+      if (challenge_ != null) {
+        output.writeMessage(2, getChallenge());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pass_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPass());
+      }
+      if (challenge_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getChallenge());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass other = (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) obj;
+
+      boolean result = true;
+      result = result && (hasPass() == other.hasPass());
+      if (hasPass()) {
+        result = result && getPass()
+            .equals(other.getPass());
+      }
+      result = result && (hasChallenge() == other.hasChallenge());
+      if (hasChallenge()) {
+        result = result && getChallenge()
+            .equals(other.getChallenge());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPass()) {
+        hash = (37 * hash) + PASS_FIELD_NUMBER;
+        hash = (53 * hash) + getPass().hashCode();
+      }
+      if (hasChallenge()) {
+        hash = (37 * hash) + CHALLENGE_FIELD_NUMBER;
+        hash = (53 * hash) + getChallenge().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Criteria to qualify a search via a digital pass.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+        io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.class, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (passBuilder_ == null) {
+          pass_ = null;
+        } else {
+          pass_ = null;
+          passBuilder_ = null;
+        }
+        if (challengeBuilder_ == null) {
+          challenge_ = null;
+        } else {
+          challenge_ = null;
+          challengeBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.services.pos.v1beta1.POSServiceBeta1.internal_static_bloombox_schema_services_pos_v1beta1_MemberSearch_DigitalPass_descriptor;
+      }
+
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getDefaultInstanceForType() {
+        return io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass build() {
+        io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass buildPartial() {
+        io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass result = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass(this);
+        if (passBuilder_ == null) {
+          result.pass_ = pass_;
+        } else {
+          result.pass_ = passBuilder_.build();
+        }
+        if (challengeBuilder_ == null) {
+          result.challenge_ = challenge_;
+        } else {
+          result.challenge_ = challengeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) {
+          return mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass other) {
+        if (other == io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance()) return this;
+        if (other.hasPass()) {
+          mergePass(other.getPass());
+        }
+        if (other.hasChallenge()) {
+          mergeChallenge(other.getChallenge());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private io.bloombox.schema.pass.PassIDKey.DigitalPassKey pass_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.pass.PassIDKey.DigitalPassKey, io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder, io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder> passBuilder_;
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      public boolean hasPass() {
+        return passBuilder_ != null || pass_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      public io.bloombox.schema.pass.PassIDKey.DigitalPassKey getPass() {
+        if (passBuilder_ == null) {
+          return pass_ == null ? io.bloombox.schema.pass.PassIDKey.DigitalPassKey.getDefaultInstance() : pass_;
+        } else {
+          return passBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      public Builder setPass(io.bloombox.schema.pass.PassIDKey.DigitalPassKey value) {
+        if (passBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pass_ = value;
+          onChanged();
+        } else {
+          passBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      public Builder setPass(
+          io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder builderForValue) {
+        if (passBuilder_ == null) {
+          pass_ = builderForValue.build();
+          onChanged();
+        } else {
+          passBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      public Builder mergePass(io.bloombox.schema.pass.PassIDKey.DigitalPassKey value) {
+        if (passBuilder_ == null) {
+          if (pass_ != null) {
+            pass_ =
+              io.bloombox.schema.pass.PassIDKey.DigitalPassKey.newBuilder(pass_).mergeFrom(value).buildPartial();
+          } else {
+            pass_ = value;
+          }
+          onChanged();
+        } else {
+          passBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      public Builder clearPass() {
+        if (passBuilder_ == null) {
+          pass_ = null;
+          onChanged();
+        } else {
+          pass_ = null;
+          passBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      public io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder getPassBuilder() {
+        
+        onChanged();
+        return getPassFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      public io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder getPassOrBuilder() {
+        if (passBuilder_ != null) {
+          return passBuilder_.getMessageOrBuilder();
+        } else {
+          return pass_ == null ?
+              io.bloombox.schema.pass.PassIDKey.DigitalPassKey.getDefaultInstance() : pass_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies the scanned/received information from the pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.pass.DigitalPassKey pass = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.pass.PassIDKey.DigitalPassKey, io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder, io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder> 
+          getPassFieldBuilder() {
+        if (passBuilder_ == null) {
+          passBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.pass.PassIDKey.DigitalPassKey, io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder, io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder>(
+                  getPass(),
+                  getParentForChildren(),
+                  isClean());
+          pass_ = null;
+        }
+        return passBuilder_;
+      }
+
+      private io.opencannabis.schema.crypto.primitives.integrity.Hash challenge_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> challengeBuilder_;
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      public boolean hasChallenge() {
+        return challengeBuilder_ != null || challenge_ != null;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      public io.opencannabis.schema.crypto.primitives.integrity.Hash getChallenge() {
+        if (challengeBuilder_ == null) {
+          return challenge_ == null ? io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : challenge_;
+        } else {
+          return challengeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      public Builder setChallenge(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
+        if (challengeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          challenge_ = value;
+          onChanged();
+        } else {
+          challengeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      public Builder setChallenge(
+          io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder builderForValue) {
+        if (challengeBuilder_ == null) {
+          challenge_ = builderForValue.build();
+          onChanged();
+        } else {
+          challengeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      public Builder mergeChallenge(io.opencannabis.schema.crypto.primitives.integrity.Hash value) {
+        if (challengeBuilder_ == null) {
+          if (challenge_ != null) {
+            challenge_ =
+              io.opencannabis.schema.crypto.primitives.integrity.Hash.newBuilder(challenge_).mergeFrom(value).buildPartial();
+          } else {
+            challenge_ = value;
+          }
+          onChanged();
+        } else {
+          challengeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      public Builder clearChallenge() {
+        if (challengeBuilder_ == null) {
+          challenge_ = null;
+          onChanged();
+        } else {
+          challenge_ = null;
+          challengeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      public io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder getChallengeBuilder() {
+        
+        onChanged();
+        return getChallengeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      public io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder getChallengeOrBuilder() {
+        if (challengeBuilder_ != null) {
+          return challengeBuilder_.getMessageOrBuilder();
+        } else {
+          return challenge_ == null ?
+              io.opencannabis.schema.crypto.primitives.integrity.Hash.getDefaultInstance() : challenge_;
+        }
+      }
+      /**
+       * <pre>
+       * Cryptographic signature hash from the physical device that scanned the pass.
+       * </pre>
+       *
+       * <code>.opencannabis.crypto.primitives.integrity.Hash challenge = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder> 
+          getChallengeFieldBuilder() {
+        if (challengeBuilder_ == null) {
+          challengeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.crypto.primitives.integrity.Hash, io.opencannabis.schema.crypto.primitives.integrity.Hash.Builder, io.opencannabis.schema.crypto.primitives.integrity.HashOrBuilder>(
+                  getChallenge(),
+                  getParentForChildren(),
+                  isClean());
+          challenge_ = null;
+        }
+        return challengeBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass)
+    private static final io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass();
+    }
+
+    public static io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DigitalPass>
+        PARSER = new com.google.protobuf.AbstractParser<DigitalPass>() {
+      public DigitalPass parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DigitalPass(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DigitalPass> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DigitalPass> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bloombox.schema.services.pos.v1beta1.MemberSearch.Request)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * Search criteria.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-     */
-    boolean hasSearch();
-    /**
-     * <pre>
-     * Search criteria.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-     */
-    io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch();
-    /**
-     * <pre>
-     * Search criteria.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-     */
-    io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder();
-
-    /**
-     * <pre>
-     * Identification presented by the user.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-     */
-    boolean hasIdentification();
-    /**
-     * <pre>
-     * Identification presented by the user.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-     */
-    io.bloombox.schema.identity.IdentityID.IDReference getIdentification();
-    /**
-     * <pre>
-     * Identification presented by the user.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-     */
-    io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder();
-
-    /**
-     * <pre>
-     * Flag to indicate lobby-checked-in users are desired.
-     * </pre>
-     *
-     * <code>bool lobby = 3;</code>
-     */
-    boolean getLobby();
-
-    /**
-     * <pre>
      * Cursor, specifying a previous operation to continue paging.
      * </pre>
      *
-     * <code>string cursor = 4;</code>
+     * <code>string cursor = 1;</code>
      */
     java.lang.String getCursor();
     /**
@@ -911,7 +1756,7 @@ private static final long serialVersionUID = 0L;
      * Cursor, specifying a previous operation to continue paging.
      * </pre>
      *
-     * <code>string cursor = 4;</code>
+     * <code>string cursor = 1;</code>
      */
     com.google.protobuf.ByteString
         getCursorBytes();
@@ -921,7 +1766,7 @@ private static final long serialVersionUID = 0L;
      * Result count limit for this operation.
      * </pre>
      *
-     * <code>uint32 limit = 5;</code>
+     * <code>uint32 limit = 2;</code>
      */
     int getLimit();
 
@@ -930,7 +1775,7 @@ private static final long serialVersionUID = 0L;
      * Bluetooth signals witnessed by the device forming this query, if applicable.
      * </pre>
      *
-     * <code>repeated string signal = 6;</code>
+     * <code>repeated string signal = 3;</code>
      */
     java.util.List<java.lang.String>
         getSignalList();
@@ -939,7 +1784,7 @@ private static final long serialVersionUID = 0L;
      * Bluetooth signals witnessed by the device forming this query, if applicable.
      * </pre>
      *
-     * <code>repeated string signal = 6;</code>
+     * <code>repeated string signal = 3;</code>
      */
     int getSignalCount();
     /**
@@ -947,7 +1792,7 @@ private static final long serialVersionUID = 0L;
      * Bluetooth signals witnessed by the device forming this query, if applicable.
      * </pre>
      *
-     * <code>repeated string signal = 6;</code>
+     * <code>repeated string signal = 3;</code>
      */
     java.lang.String getSignal(int index);
     /**
@@ -955,10 +1800,103 @@ private static final long serialVersionUID = 0L;
      * Bluetooth signals witnessed by the device forming this query, if applicable.
      * </pre>
      *
-     * <code>repeated string signal = 6;</code>
+     * <code>repeated string signal = 3;</code>
      */
     com.google.protobuf.ByteString
         getSignalBytes(int index);
+
+    /**
+     * <pre>
+     * Search criteria.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     */
+    boolean hasSearch();
+    /**
+     * <pre>
+     * Search criteria.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     */
+    io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch();
+    /**
+     * <pre>
+     * Search criteria.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     */
+    io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder();
+
+    /**
+     * <pre>
+     * Identification presented by the user.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     */
+    boolean hasIdentification();
+    /**
+     * <pre>
+     * Identification presented by the user.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     */
+    io.bloombox.schema.identity.IdentityID.IDReference getIdentification();
+    /**
+     * <pre>
+     * Identification presented by the user.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     */
+    io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder();
+
+    /**
+     * <pre>
+     * Flag to indicate lobby-checked-in users are desired.
+     * </pre>
+     *
+     * <code>bool lobby = 22;</code>
+     */
+    boolean getLobby();
+
+    /**
+     * <pre>
+     * Flag to indicate currently-shopping users with an open ticket.
+     * </pre>
+     *
+     * <code>bool shopping = 23;</code>
+     */
+    boolean getShopping();
+
+    /**
+     * <pre>
+     * Specifies a members-resolve request being requested based on a digital wallet pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     */
+    boolean hasWallet();
+    /**
+     * <pre>
+     * Specifies a members-resolve request being requested based on a digital wallet pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     */
+    io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getWallet();
+    /**
+     * <pre>
+     * Specifies a members-resolve request being requested based on a digital wallet pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     */
+    io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder getWalletOrBuilder();
 
     public io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request.SpecCase getSpecCase();
   }
@@ -1016,8 +1954,28 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cursor_ = s;
+              break;
+            }
+            case 16: {
+
+              limit_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                signal_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              signal_.add(s);
+              break;
+            }
+            case 162: {
               io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder subBuilder = null;
-              if (specCase_ == 1) {
+              if (specCase_ == 20) {
                 subBuilder = ((io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_).toBuilder();
               }
               spec_ =
@@ -1026,12 +1984,12 @@ private static final long serialVersionUID = 0L;
                 subBuilder.mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_);
                 spec_ = subBuilder.buildPartial();
               }
-              specCase_ = 1;
+              specCase_ = 20;
               break;
             }
-            case 18: {
+            case 170: {
               io.bloombox.schema.identity.IdentityID.IDReference.Builder subBuilder = null;
-              if (specCase_ == 2) {
+              if (specCase_ == 21) {
                 subBuilder = ((io.bloombox.schema.identity.IdentityID.IDReference) spec_).toBuilder();
               }
               spec_ =
@@ -1040,32 +1998,31 @@ private static final long serialVersionUID = 0L;
                 subBuilder.mergeFrom((io.bloombox.schema.identity.IdentityID.IDReference) spec_);
                 spec_ = subBuilder.buildPartial();
               }
-              specCase_ = 2;
+              specCase_ = 21;
               break;
             }
-            case 24: {
-              specCase_ = 3;
+            case 176: {
+              specCase_ = 22;
               spec_ = input.readBool();
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cursor_ = s;
+            case 184: {
+              specCase_ = 23;
+              spec_ = input.readBool();
               break;
             }
-            case 40: {
-
-              limit_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                signal_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000020;
+            case 194: {
+              io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder subBuilder = null;
+              if (specCase_ == 24) {
+                subBuilder = ((io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_).toBuilder();
               }
-              signal_.add(s);
+              spec_ =
+                  input.readMessage(io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_);
+                spec_ = subBuilder.buildPartial();
+              }
+              specCase_ = 24;
               break;
             }
           }
@@ -1076,7 +2033,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           signal_ = signal_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -1100,9 +2057,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object spec_;
     public enum SpecCase
         implements com.google.protobuf.Internal.EnumLite {
-      SEARCH(1),
-      IDENTIFICATION(2),
-      LOBBY(3),
+      SEARCH(20),
+      IDENTIFICATION(21),
+      LOBBY(22),
+      SHOPPING(23),
+      WALLET(24),
       SPEC_NOT_SET(0);
       private final int value;
       private SpecCase(int value) {
@@ -1118,9 +2077,11 @@ private static final long serialVersionUID = 0L;
 
       public static SpecCase forNumber(int value) {
         switch (value) {
-          case 1: return SEARCH;
-          case 2: return IDENTIFICATION;
-          case 3: return LOBBY;
+          case 20: return SEARCH;
+          case 21: return IDENTIFICATION;
+          case 22: return LOBBY;
+          case 23: return SHOPPING;
+          case 24: return WALLET;
           case 0: return SPEC_NOT_SET;
           default: return null;
         }
@@ -1136,105 +2097,14 @@ private static final long serialVersionUID = 0L;
           specCase_);
     }
 
-    public static final int SEARCH_FIELD_NUMBER = 1;
-    /**
-     * <pre>
-     * Search criteria.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-     */
-    public boolean hasSearch() {
-      return specCase_ == 1;
-    }
-    /**
-     * <pre>
-     * Search criteria.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-     */
-    public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch() {
-      if (specCase_ == 1) {
-         return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_;
-      }
-      return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Search criteria.
-     * </pre>
-     *
-     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-     */
-    public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder() {
-      if (specCase_ == 1) {
-         return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_;
-      }
-      return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
-    }
-
-    public static final int IDENTIFICATION_FIELD_NUMBER = 2;
-    /**
-     * <pre>
-     * Identification presented by the user.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-     */
-    public boolean hasIdentification() {
-      return specCase_ == 2;
-    }
-    /**
-     * <pre>
-     * Identification presented by the user.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-     */
-    public io.bloombox.schema.identity.IdentityID.IDReference getIdentification() {
-      if (specCase_ == 2) {
-         return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
-      }
-      return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Identification presented by the user.
-     * </pre>
-     *
-     * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-     */
-    public io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder() {
-      if (specCase_ == 2) {
-         return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
-      }
-      return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
-    }
-
-    public static final int LOBBY_FIELD_NUMBER = 3;
-    /**
-     * <pre>
-     * Flag to indicate lobby-checked-in users are desired.
-     * </pre>
-     *
-     * <code>bool lobby = 3;</code>
-     */
-    public boolean getLobby() {
-      if (specCase_ == 3) {
-        return (java.lang.Boolean) spec_;
-      }
-      return false;
-    }
-
-    public static final int CURSOR_FIELD_NUMBER = 4;
+    public static final int CURSOR_FIELD_NUMBER = 1;
     private volatile java.lang.Object cursor_;
     /**
      * <pre>
      * Cursor, specifying a previous operation to continue paging.
      * </pre>
      *
-     * <code>string cursor = 4;</code>
+     * <code>string cursor = 1;</code>
      */
     public java.lang.String getCursor() {
       java.lang.Object ref = cursor_;
@@ -1253,7 +2123,7 @@ private static final long serialVersionUID = 0L;
      * Cursor, specifying a previous operation to continue paging.
      * </pre>
      *
-     * <code>string cursor = 4;</code>
+     * <code>string cursor = 1;</code>
      */
     public com.google.protobuf.ByteString
         getCursorBytes() {
@@ -1269,27 +2139,27 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    public static final int LIMIT_FIELD_NUMBER = 5;
+    public static final int LIMIT_FIELD_NUMBER = 2;
     private int limit_;
     /**
      * <pre>
      * Result count limit for this operation.
      * </pre>
      *
-     * <code>uint32 limit = 5;</code>
+     * <code>uint32 limit = 2;</code>
      */
     public int getLimit() {
       return limit_;
     }
 
-    public static final int SIGNAL_FIELD_NUMBER = 6;
+    public static final int SIGNAL_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList signal_;
     /**
      * <pre>
      * Bluetooth signals witnessed by the device forming this query, if applicable.
      * </pre>
      *
-     * <code>repeated string signal = 6;</code>
+     * <code>repeated string signal = 3;</code>
      */
     public com.google.protobuf.ProtocolStringList
         getSignalList() {
@@ -1300,7 +2170,7 @@ private static final long serialVersionUID = 0L;
      * Bluetooth signals witnessed by the device forming this query, if applicable.
      * </pre>
      *
-     * <code>repeated string signal = 6;</code>
+     * <code>repeated string signal = 3;</code>
      */
     public int getSignalCount() {
       return signal_.size();
@@ -1310,7 +2180,7 @@ private static final long serialVersionUID = 0L;
      * Bluetooth signals witnessed by the device forming this query, if applicable.
      * </pre>
      *
-     * <code>repeated string signal = 6;</code>
+     * <code>repeated string signal = 3;</code>
      */
     public java.lang.String getSignal(int index) {
       return signal_.get(index);
@@ -1320,11 +2190,155 @@ private static final long serialVersionUID = 0L;
      * Bluetooth signals witnessed by the device forming this query, if applicable.
      * </pre>
      *
-     * <code>repeated string signal = 6;</code>
+     * <code>repeated string signal = 3;</code>
      */
     public com.google.protobuf.ByteString
         getSignalBytes(int index) {
       return signal_.getByteString(index);
+    }
+
+    public static final int SEARCH_FIELD_NUMBER = 20;
+    /**
+     * <pre>
+     * Search criteria.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     */
+    public boolean hasSearch() {
+      return specCase_ == 20;
+    }
+    /**
+     * <pre>
+     * Search criteria.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch() {
+      if (specCase_ == 20) {
+         return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_;
+      }
+      return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Search criteria.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder() {
+      if (specCase_ == 20) {
+         return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_;
+      }
+      return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
+    }
+
+    public static final int IDENTIFICATION_FIELD_NUMBER = 21;
+    /**
+     * <pre>
+     * Identification presented by the user.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     */
+    public boolean hasIdentification() {
+      return specCase_ == 21;
+    }
+    /**
+     * <pre>
+     * Identification presented by the user.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     */
+    public io.bloombox.schema.identity.IdentityID.IDReference getIdentification() {
+      if (specCase_ == 21) {
+         return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
+      }
+      return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Identification presented by the user.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+     */
+    public io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder() {
+      if (specCase_ == 21) {
+         return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
+      }
+      return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
+    }
+
+    public static final int LOBBY_FIELD_NUMBER = 22;
+    /**
+     * <pre>
+     * Flag to indicate lobby-checked-in users are desired.
+     * </pre>
+     *
+     * <code>bool lobby = 22;</code>
+     */
+    public boolean getLobby() {
+      if (specCase_ == 22) {
+        return (java.lang.Boolean) spec_;
+      }
+      return false;
+    }
+
+    public static final int SHOPPING_FIELD_NUMBER = 23;
+    /**
+     * <pre>
+     * Flag to indicate currently-shopping users with an open ticket.
+     * </pre>
+     *
+     * <code>bool shopping = 23;</code>
+     */
+    public boolean getShopping() {
+      if (specCase_ == 23) {
+        return (java.lang.Boolean) spec_;
+      }
+      return false;
+    }
+
+    public static final int WALLET_FIELD_NUMBER = 24;
+    /**
+     * <pre>
+     * Specifies a members-resolve request being requested based on a digital wallet pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     */
+    public boolean hasWallet() {
+      return specCase_ == 24;
+    }
+    /**
+     * <pre>
+     * Specifies a members-resolve request being requested based on a digital wallet pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getWallet() {
+      if (specCase_ == 24) {
+         return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_;
+      }
+      return io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Specifies a members-resolve request being requested based on a digital wallet pass.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+     */
+    public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder getWalletOrBuilder() {
+      if (specCase_ == 24) {
+         return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_;
+      }
+      return io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1339,24 +2353,31 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (specCase_ == 1) {
-        output.writeMessage(1, (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_);
-      }
-      if (specCase_ == 2) {
-        output.writeMessage(2, (io.bloombox.schema.identity.IdentityID.IDReference) spec_);
-      }
-      if (specCase_ == 3) {
-        output.writeBool(
-            3, (boolean)((java.lang.Boolean) spec_));
-      }
       if (!getCursorBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cursor_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cursor_);
       }
       if (limit_ != 0) {
-        output.writeUInt32(5, limit_);
+        output.writeUInt32(2, limit_);
       }
       for (int i = 0; i < signal_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, signal_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, signal_.getRaw(i));
+      }
+      if (specCase_ == 20) {
+        output.writeMessage(20, (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_);
+      }
+      if (specCase_ == 21) {
+        output.writeMessage(21, (io.bloombox.schema.identity.IdentityID.IDReference) spec_);
+      }
+      if (specCase_ == 22) {
+        output.writeBool(
+            22, (boolean)((java.lang.Boolean) spec_));
+      }
+      if (specCase_ == 23) {
+        output.writeBool(
+            23, (boolean)((java.lang.Boolean) spec_));
+      }
+      if (specCase_ == 24) {
+        output.writeMessage(24, (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_);
       }
       unknownFields.writeTo(output);
     }
@@ -1366,25 +2387,12 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (specCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_);
-      }
-      if (specCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (io.bloombox.schema.identity.IdentityID.IDReference) spec_);
-      }
-      if (specCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(
-              3, (boolean)((java.lang.Boolean) spec_));
-      }
       if (!getCursorBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cursor_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cursor_);
       }
       if (limit_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, limit_);
+          .computeUInt32Size(2, limit_);
       }
       {
         int dataSize = 0;
@@ -1393,6 +2401,28 @@ private static final long serialVersionUID = 0L;
         }
         size += dataSize;
         size += 1 * getSignalList().size();
+      }
+      if (specCase_ == 20) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_);
+      }
+      if (specCase_ == 21) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, (io.bloombox.schema.identity.IdentityID.IDReference) spec_);
+      }
+      if (specCase_ == 22) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              22, (boolean)((java.lang.Boolean) spec_));
+      }
+      if (specCase_ == 23) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              23, (boolean)((java.lang.Boolean) spec_));
+      }
+      if (specCase_ == 24) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1420,17 +2450,25 @@ private static final long serialVersionUID = 0L;
           other.getSpecCase());
       if (!result) return false;
       switch (specCase_) {
-        case 1:
+        case 20:
           result = result && getSearch()
               .equals(other.getSearch());
           break;
-        case 2:
+        case 21:
           result = result && getIdentification()
               .equals(other.getIdentification());
           break;
-        case 3:
+        case 22:
           result = result && (getLobby()
               == other.getLobby());
+          break;
+        case 23:
+          result = result && (getShopping()
+              == other.getShopping());
+          break;
+        case 24:
+          result = result && getWallet()
+              .equals(other.getWallet());
           break;
         case 0:
         default:
@@ -1455,18 +2493,27 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getSignalList().hashCode();
       }
       switch (specCase_) {
-        case 1:
+        case 20:
           hash = (37 * hash) + SEARCH_FIELD_NUMBER;
           hash = (53 * hash) + getSearch().hashCode();
           break;
-        case 2:
+        case 21:
           hash = (37 * hash) + IDENTIFICATION_FIELD_NUMBER;
           hash = (53 * hash) + getIdentification().hashCode();
           break;
-        case 3:
+        case 22:
           hash = (37 * hash) + LOBBY_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getLobby());
+          break;
+        case 23:
+          hash = (37 * hash) + SHOPPING_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getShopping());
+          break;
+        case 24:
+          hash = (37 * hash) + WALLET_FIELD_NUMBER;
+          hash = (53 * hash) + getWallet().hashCode();
           break;
         case 0:
         default:
@@ -1609,7 +2656,7 @@ private static final long serialVersionUID = 0L;
         limit_ = 0;
 
         signal_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000004);
         specCase_ = 0;
         spec_ = null;
         return this;
@@ -1636,30 +2683,40 @@ private static final long serialVersionUID = 0L;
         io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request result = new io.bloombox.schema.services.pos.v1beta1.MemberSearch.Request(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        if (specCase_ == 1) {
+        result.cursor_ = cursor_;
+        result.limit_ = limit_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          signal_ = signal_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.signal_ = signal_;
+        if (specCase_ == 20) {
           if (searchBuilder_ == null) {
             result.spec_ = spec_;
           } else {
             result.spec_ = searchBuilder_.build();
           }
         }
-        if (specCase_ == 2) {
+        if (specCase_ == 21) {
           if (identificationBuilder_ == null) {
             result.spec_ = spec_;
           } else {
             result.spec_ = identificationBuilder_.build();
           }
         }
-        if (specCase_ == 3) {
+        if (specCase_ == 22) {
           result.spec_ = spec_;
         }
-        result.cursor_ = cursor_;
-        result.limit_ = limit_;
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          signal_ = signal_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
+        if (specCase_ == 23) {
+          result.spec_ = spec_;
         }
-        result.signal_ = signal_;
+        if (specCase_ == 24) {
+          if (walletBuilder_ == null) {
+            result.spec_ = spec_;
+          } else {
+            result.spec_ = walletBuilder_.build();
+          }
+        }
         result.bitField0_ = to_bitField0_;
         result.specCase_ = specCase_;
         onBuilt();
@@ -1713,7 +2770,7 @@ private static final long serialVersionUID = 0L;
         if (!other.signal_.isEmpty()) {
           if (signal_.isEmpty()) {
             signal_ = other.signal_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSignalIsMutable();
             signal_.addAll(other.signal_);
@@ -1731,6 +2788,14 @@ private static final long serialVersionUID = 0L;
           }
           case LOBBY: {
             setLobby(other.getLobby());
+            break;
+          }
+          case SHOPPING: {
+            setShopping(other.getShopping());
+            break;
+          }
+          case WALLET: {
+            mergeWallet(other.getWallet());
             break;
           }
           case SPEC_NOT_SET: {
@@ -1780,399 +2845,13 @@ private static final long serialVersionUID = 0L;
 
       private int bitField0_;
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder> searchBuilder_;
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      public boolean hasSearch() {
-        return specCase_ == 1;
-      }
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch() {
-        if (searchBuilder_ == null) {
-          if (specCase_ == 1) {
-            return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_;
-          }
-          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
-        } else {
-          if (specCase_ == 1) {
-            return searchBuilder_.getMessage();
-          }
-          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      public Builder setSearch(io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate value) {
-        if (searchBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          spec_ = value;
-          onChanged();
-        } else {
-          searchBuilder_.setMessage(value);
-        }
-        specCase_ = 1;
-        return this;
-      }
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      public Builder setSearch(
-          io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder builderForValue) {
-        if (searchBuilder_ == null) {
-          spec_ = builderForValue.build();
-          onChanged();
-        } else {
-          searchBuilder_.setMessage(builderForValue.build());
-        }
-        specCase_ = 1;
-        return this;
-      }
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      public Builder mergeSearch(io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate value) {
-        if (searchBuilder_ == null) {
-          if (specCase_ == 1 &&
-              spec_ != io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance()) {
-            spec_ = io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.newBuilder((io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            spec_ = value;
-          }
-          onChanged();
-        } else {
-          if (specCase_ == 1) {
-            searchBuilder_.mergeFrom(value);
-          }
-          searchBuilder_.setMessage(value);
-        }
-        specCase_ = 1;
-        return this;
-      }
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      public Builder clearSearch() {
-        if (searchBuilder_ == null) {
-          if (specCase_ == 1) {
-            specCase_ = 0;
-            spec_ = null;
-            onChanged();
-          }
-        } else {
-          if (specCase_ == 1) {
-            specCase_ = 0;
-            spec_ = null;
-          }
-          searchBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder getSearchBuilder() {
-        return getSearchFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder() {
-        if ((specCase_ == 1) && (searchBuilder_ != null)) {
-          return searchBuilder_.getMessageOrBuilder();
-        } else {
-          if (specCase_ == 1) {
-            return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_;
-          }
-          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Search criteria.
-       * </pre>
-       *
-       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder> 
-          getSearchFieldBuilder() {
-        if (searchBuilder_ == null) {
-          if (!(specCase_ == 1)) {
-            spec_ = io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
-          }
-          searchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder>(
-                  (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_,
-                  getParentForChildren(),
-                  isClean());
-          spec_ = null;
-        }
-        specCase_ = 1;
-        onChanged();;
-        return searchBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder> identificationBuilder_;
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      public boolean hasIdentification() {
-        return specCase_ == 2;
-      }
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      public io.bloombox.schema.identity.IdentityID.IDReference getIdentification() {
-        if (identificationBuilder_ == null) {
-          if (specCase_ == 2) {
-            return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
-          }
-          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
-        } else {
-          if (specCase_ == 2) {
-            return identificationBuilder_.getMessage();
-          }
-          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      public Builder setIdentification(io.bloombox.schema.identity.IdentityID.IDReference value) {
-        if (identificationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          spec_ = value;
-          onChanged();
-        } else {
-          identificationBuilder_.setMessage(value);
-        }
-        specCase_ = 2;
-        return this;
-      }
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      public Builder setIdentification(
-          io.bloombox.schema.identity.IdentityID.IDReference.Builder builderForValue) {
-        if (identificationBuilder_ == null) {
-          spec_ = builderForValue.build();
-          onChanged();
-        } else {
-          identificationBuilder_.setMessage(builderForValue.build());
-        }
-        specCase_ = 2;
-        return this;
-      }
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      public Builder mergeIdentification(io.bloombox.schema.identity.IdentityID.IDReference value) {
-        if (identificationBuilder_ == null) {
-          if (specCase_ == 2 &&
-              spec_ != io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance()) {
-            spec_ = io.bloombox.schema.identity.IdentityID.IDReference.newBuilder((io.bloombox.schema.identity.IdentityID.IDReference) spec_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            spec_ = value;
-          }
-          onChanged();
-        } else {
-          if (specCase_ == 2) {
-            identificationBuilder_.mergeFrom(value);
-          }
-          identificationBuilder_.setMessage(value);
-        }
-        specCase_ = 2;
-        return this;
-      }
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      public Builder clearIdentification() {
-        if (identificationBuilder_ == null) {
-          if (specCase_ == 2) {
-            specCase_ = 0;
-            spec_ = null;
-            onChanged();
-          }
-        } else {
-          if (specCase_ == 2) {
-            specCase_ = 0;
-            spec_ = null;
-          }
-          identificationBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      public io.bloombox.schema.identity.IdentityID.IDReference.Builder getIdentificationBuilder() {
-        return getIdentificationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      public io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder() {
-        if ((specCase_ == 2) && (identificationBuilder_ != null)) {
-          return identificationBuilder_.getMessageOrBuilder();
-        } else {
-          if (specCase_ == 2) {
-            return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
-          }
-          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Identification presented by the user.
-       * </pre>
-       *
-       * <code>.bloombox.schema.identity.IDReference identification = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder> 
-          getIdentificationFieldBuilder() {
-        if (identificationBuilder_ == null) {
-          if (!(specCase_ == 2)) {
-            spec_ = io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
-          }
-          identificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder>(
-                  (io.bloombox.schema.identity.IdentityID.IDReference) spec_,
-                  getParentForChildren(),
-                  isClean());
-          spec_ = null;
-        }
-        specCase_ = 2;
-        onChanged();;
-        return identificationBuilder_;
-      }
-
-      /**
-       * <pre>
-       * Flag to indicate lobby-checked-in users are desired.
-       * </pre>
-       *
-       * <code>bool lobby = 3;</code>
-       */
-      public boolean getLobby() {
-        if (specCase_ == 3) {
-          return (java.lang.Boolean) spec_;
-        }
-        return false;
-      }
-      /**
-       * <pre>
-       * Flag to indicate lobby-checked-in users are desired.
-       * </pre>
-       *
-       * <code>bool lobby = 3;</code>
-       */
-      public Builder setLobby(boolean value) {
-        specCase_ = 3;
-        spec_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Flag to indicate lobby-checked-in users are desired.
-       * </pre>
-       *
-       * <code>bool lobby = 3;</code>
-       */
-      public Builder clearLobby() {
-        if (specCase_ == 3) {
-          specCase_ = 0;
-          spec_ = null;
-          onChanged();
-        }
-        return this;
-      }
-
       private java.lang.Object cursor_ = "";
       /**
        * <pre>
        * Cursor, specifying a previous operation to continue paging.
        * </pre>
        *
-       * <code>string cursor = 4;</code>
+       * <code>string cursor = 1;</code>
        */
       public java.lang.String getCursor() {
         java.lang.Object ref = cursor_;
@@ -2191,7 +2870,7 @@ private static final long serialVersionUID = 0L;
        * Cursor, specifying a previous operation to continue paging.
        * </pre>
        *
-       * <code>string cursor = 4;</code>
+       * <code>string cursor = 1;</code>
        */
       public com.google.protobuf.ByteString
           getCursorBytes() {
@@ -2211,7 +2890,7 @@ private static final long serialVersionUID = 0L;
        * Cursor, specifying a previous operation to continue paging.
        * </pre>
        *
-       * <code>string cursor = 4;</code>
+       * <code>string cursor = 1;</code>
        */
       public Builder setCursor(
           java.lang.String value) {
@@ -2228,7 +2907,7 @@ private static final long serialVersionUID = 0L;
        * Cursor, specifying a previous operation to continue paging.
        * </pre>
        *
-       * <code>string cursor = 4;</code>
+       * <code>string cursor = 1;</code>
        */
       public Builder clearCursor() {
         
@@ -2241,7 +2920,7 @@ private static final long serialVersionUID = 0L;
        * Cursor, specifying a previous operation to continue paging.
        * </pre>
        *
-       * <code>string cursor = 4;</code>
+       * <code>string cursor = 1;</code>
        */
       public Builder setCursorBytes(
           com.google.protobuf.ByteString value) {
@@ -2261,7 +2940,7 @@ private static final long serialVersionUID = 0L;
        * Result count limit for this operation.
        * </pre>
        *
-       * <code>uint32 limit = 5;</code>
+       * <code>uint32 limit = 2;</code>
        */
       public int getLimit() {
         return limit_;
@@ -2271,7 +2950,7 @@ private static final long serialVersionUID = 0L;
        * Result count limit for this operation.
        * </pre>
        *
-       * <code>uint32 limit = 5;</code>
+       * <code>uint32 limit = 2;</code>
        */
       public Builder setLimit(int value) {
         
@@ -2284,7 +2963,7 @@ private static final long serialVersionUID = 0L;
        * Result count limit for this operation.
        * </pre>
        *
-       * <code>uint32 limit = 5;</code>
+       * <code>uint32 limit = 2;</code>
        */
       public Builder clearLimit() {
         
@@ -2295,9 +2974,9 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.LazyStringList signal_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSignalIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           signal_ = new com.google.protobuf.LazyStringArrayList(signal_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -2305,7 +2984,7 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public com.google.protobuf.ProtocolStringList
           getSignalList() {
@@ -2316,7 +2995,7 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public int getSignalCount() {
         return signal_.size();
@@ -2326,7 +3005,7 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public java.lang.String getSignal(int index) {
         return signal_.get(index);
@@ -2336,7 +3015,7 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public com.google.protobuf.ByteString
           getSignalBytes(int index) {
@@ -2347,7 +3026,7 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public Builder setSignal(
           int index, java.lang.String value) {
@@ -2364,7 +3043,7 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public Builder addSignal(
           java.lang.String value) {
@@ -2381,7 +3060,7 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public Builder addAllSignal(
           java.lang.Iterable<java.lang.String> values) {
@@ -2396,11 +3075,11 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public Builder clearSignal() {
         signal_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2409,7 +3088,7 @@ private static final long serialVersionUID = 0L;
        * Bluetooth signals witnessed by the device forming this query, if applicable.
        * </pre>
        *
-       * <code>repeated string signal = 6;</code>
+       * <code>repeated string signal = 3;</code>
        */
       public Builder addSignalBytes(
           com.google.protobuf.ByteString value) {
@@ -2421,6 +3100,606 @@ private static final long serialVersionUID = 0L;
         signal_.add(value);
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder> searchBuilder_;
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      public boolean hasSearch() {
+        return specCase_ == 20;
+      }
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate getSearch() {
+        if (searchBuilder_ == null) {
+          if (specCase_ == 20) {
+            return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_;
+          }
+          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
+        } else {
+          if (specCase_ == 20) {
+            return searchBuilder_.getMessage();
+          }
+          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      public Builder setSearch(io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate value) {
+        if (searchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spec_ = value;
+          onChanged();
+        } else {
+          searchBuilder_.setMessage(value);
+        }
+        specCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      public Builder setSearch(
+          io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder builderForValue) {
+        if (searchBuilder_ == null) {
+          spec_ = builderForValue.build();
+          onChanged();
+        } else {
+          searchBuilder_.setMessage(builderForValue.build());
+        }
+        specCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      public Builder mergeSearch(io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate value) {
+        if (searchBuilder_ == null) {
+          if (specCase_ == 20 &&
+              spec_ != io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance()) {
+            spec_ = io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.newBuilder((io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            spec_ = value;
+          }
+          onChanged();
+        } else {
+          if (specCase_ == 20) {
+            searchBuilder_.mergeFrom(value);
+          }
+          searchBuilder_.setMessage(value);
+        }
+        specCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      public Builder clearSearch() {
+        if (searchBuilder_ == null) {
+          if (specCase_ == 20) {
+            specCase_ = 0;
+            spec_ = null;
+            onChanged();
+          }
+        } else {
+          if (specCase_ == 20) {
+            specCase_ = 0;
+            spec_ = null;
+          }
+          searchBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder getSearchBuilder() {
+        return getSearchFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder getSearchOrBuilder() {
+        if ((specCase_ == 20) && (searchBuilder_ != null)) {
+          return searchBuilder_.getMessageOrBuilder();
+        } else {
+          if (specCase_ == 20) {
+            return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_;
+          }
+          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Search criteria.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate search = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder> 
+          getSearchFieldBuilder() {
+        if (searchBuilder_ == null) {
+          if (!(specCase_ == 20)) {
+            spec_ = io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.getDefaultInstance();
+          }
+          searchBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicateOrBuilder>(
+                  (io.bloombox.schema.services.pos.v1beta1.MemberSearch.MemberPredicate) spec_,
+                  getParentForChildren(),
+                  isClean());
+          spec_ = null;
+        }
+        specCase_ = 20;
+        onChanged();;
+        return searchBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder> identificationBuilder_;
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      public boolean hasIdentification() {
+        return specCase_ == 21;
+      }
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      public io.bloombox.schema.identity.IdentityID.IDReference getIdentification() {
+        if (identificationBuilder_ == null) {
+          if (specCase_ == 21) {
+            return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
+          }
+          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
+        } else {
+          if (specCase_ == 21) {
+            return identificationBuilder_.getMessage();
+          }
+          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      public Builder setIdentification(io.bloombox.schema.identity.IdentityID.IDReference value) {
+        if (identificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spec_ = value;
+          onChanged();
+        } else {
+          identificationBuilder_.setMessage(value);
+        }
+        specCase_ = 21;
+        return this;
+      }
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      public Builder setIdentification(
+          io.bloombox.schema.identity.IdentityID.IDReference.Builder builderForValue) {
+        if (identificationBuilder_ == null) {
+          spec_ = builderForValue.build();
+          onChanged();
+        } else {
+          identificationBuilder_.setMessage(builderForValue.build());
+        }
+        specCase_ = 21;
+        return this;
+      }
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      public Builder mergeIdentification(io.bloombox.schema.identity.IdentityID.IDReference value) {
+        if (identificationBuilder_ == null) {
+          if (specCase_ == 21 &&
+              spec_ != io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance()) {
+            spec_ = io.bloombox.schema.identity.IdentityID.IDReference.newBuilder((io.bloombox.schema.identity.IdentityID.IDReference) spec_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            spec_ = value;
+          }
+          onChanged();
+        } else {
+          if (specCase_ == 21) {
+            identificationBuilder_.mergeFrom(value);
+          }
+          identificationBuilder_.setMessage(value);
+        }
+        specCase_ = 21;
+        return this;
+      }
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      public Builder clearIdentification() {
+        if (identificationBuilder_ == null) {
+          if (specCase_ == 21) {
+            specCase_ = 0;
+            spec_ = null;
+            onChanged();
+          }
+        } else {
+          if (specCase_ == 21) {
+            specCase_ = 0;
+            spec_ = null;
+          }
+          identificationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      public io.bloombox.schema.identity.IdentityID.IDReference.Builder getIdentificationBuilder() {
+        return getIdentificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      public io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder getIdentificationOrBuilder() {
+        if ((specCase_ == 21) && (identificationBuilder_ != null)) {
+          return identificationBuilder_.getMessageOrBuilder();
+        } else {
+          if (specCase_ == 21) {
+            return (io.bloombox.schema.identity.IdentityID.IDReference) spec_;
+          }
+          return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Identification presented by the user.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDReference identification = 21;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder> 
+          getIdentificationFieldBuilder() {
+        if (identificationBuilder_ == null) {
+          if (!(specCase_ == 21)) {
+            spec_ = io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
+          }
+          identificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.identity.IdentityID.IDReference, io.bloombox.schema.identity.IdentityID.IDReference.Builder, io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder>(
+                  (io.bloombox.schema.identity.IdentityID.IDReference) spec_,
+                  getParentForChildren(),
+                  isClean());
+          spec_ = null;
+        }
+        specCase_ = 21;
+        onChanged();;
+        return identificationBuilder_;
+      }
+
+      /**
+       * <pre>
+       * Flag to indicate lobby-checked-in users are desired.
+       * </pre>
+       *
+       * <code>bool lobby = 22;</code>
+       */
+      public boolean getLobby() {
+        if (specCase_ == 22) {
+          return (java.lang.Boolean) spec_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * Flag to indicate lobby-checked-in users are desired.
+       * </pre>
+       *
+       * <code>bool lobby = 22;</code>
+       */
+      public Builder setLobby(boolean value) {
+        specCase_ = 22;
+        spec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag to indicate lobby-checked-in users are desired.
+       * </pre>
+       *
+       * <code>bool lobby = 22;</code>
+       */
+      public Builder clearLobby() {
+        if (specCase_ == 22) {
+          specCase_ = 0;
+          spec_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Flag to indicate currently-shopping users with an open ticket.
+       * </pre>
+       *
+       * <code>bool shopping = 23;</code>
+       */
+      public boolean getShopping() {
+        if (specCase_ == 23) {
+          return (java.lang.Boolean) spec_;
+        }
+        return false;
+      }
+      /**
+       * <pre>
+       * Flag to indicate currently-shopping users with an open ticket.
+       * </pre>
+       *
+       * <code>bool shopping = 23;</code>
+       */
+      public Builder setShopping(boolean value) {
+        specCase_ = 23;
+        spec_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Flag to indicate currently-shopping users with an open ticket.
+       * </pre>
+       *
+       * <code>bool shopping = 23;</code>
+       */
+      public Builder clearShopping() {
+        if (specCase_ == 23) {
+          specCase_ = 0;
+          spec_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder> walletBuilder_;
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      public boolean hasWallet() {
+        return specCase_ == 24;
+      }
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass getWallet() {
+        if (walletBuilder_ == null) {
+          if (specCase_ == 24) {
+            return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_;
+          }
+          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance();
+        } else {
+          if (specCase_ == 24) {
+            return walletBuilder_.getMessage();
+          }
+          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      public Builder setWallet(io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass value) {
+        if (walletBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          spec_ = value;
+          onChanged();
+        } else {
+          walletBuilder_.setMessage(value);
+        }
+        specCase_ = 24;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      public Builder setWallet(
+          io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder builderForValue) {
+        if (walletBuilder_ == null) {
+          spec_ = builderForValue.build();
+          onChanged();
+        } else {
+          walletBuilder_.setMessage(builderForValue.build());
+        }
+        specCase_ = 24;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      public Builder mergeWallet(io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass value) {
+        if (walletBuilder_ == null) {
+          if (specCase_ == 24 &&
+              spec_ != io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance()) {
+            spec_ = io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.newBuilder((io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            spec_ = value;
+          }
+          onChanged();
+        } else {
+          if (specCase_ == 24) {
+            walletBuilder_.mergeFrom(value);
+          }
+          walletBuilder_.setMessage(value);
+        }
+        specCase_ = 24;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      public Builder clearWallet() {
+        if (walletBuilder_ == null) {
+          if (specCase_ == 24) {
+            specCase_ = 0;
+            spec_ = null;
+            onChanged();
+          }
+        } else {
+          if (specCase_ == 24) {
+            specCase_ = 0;
+            spec_ = null;
+          }
+          walletBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder getWalletBuilder() {
+        return getWalletFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      public io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder getWalletOrBuilder() {
+        if ((specCase_ == 24) && (walletBuilder_ != null)) {
+          return walletBuilder_.getMessageOrBuilder();
+        } else {
+          if (specCase_ == 24) {
+            return (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_;
+          }
+          return io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a members-resolve request being requested based on a digital wallet pass.
+       * </pre>
+       *
+       * <code>.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass wallet = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder> 
+          getWalletFieldBuilder() {
+        if (walletBuilder_ == null) {
+          if (!(specCase_ == 24)) {
+            spec_ = io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.getDefaultInstance();
+          }
+          walletBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass.Builder, io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPassOrBuilder>(
+                  (io.bloombox.schema.services.pos.v1beta1.MemberSearch.DigitalPass) spec_,
+                  getParentForChildren(),
+                  isClean());
+          spec_ = null;
+        }
+        specCase_ = 24;
+        onChanged();;
+        return walletBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

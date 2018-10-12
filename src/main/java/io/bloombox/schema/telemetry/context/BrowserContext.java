@@ -1606,30 +1606,26 @@ public final class BrowserContext {
     java.lang.String[] descriptorData = {
       "\n\037analytics/context/Browser.proto\022!bloom" +
       "box.schema.analytics.context\032\016bq_field.p" +
-      "roto\032\025structs/Version.proto\032\032analytics/c" +
-      "ontext/OS.proto\032\037analytics/context/Libra" +
-      "ry.proto\032#analytics/context/Application." +
-      "proto\032$analytics/context/NativeDevice.pr" +
-      "oto\"\305\004\n\024BrowserDeviceContext\022o\n\014browser_" +
-      "type\030\001 \001(\0162..bloombox.schema.analytics.c" +
-      "ontext.BrowserTypeB)\360?\001\212@#Specifies the " +
-      "general browser type.\022T\n\007version\030\002 \001(\0132!" +
-      ".opencannabis.structs.VersionSpecB \212@\035Ve" +
-      "rsion info for the browser.\022A\n\010language\030" +
-      "\003 \001(\tB/\212@,Active language, as reported b" +
-      "y the browser.\022M\n\nuser_agent\030\004 \001(\tB9\212@6R" +
-      "aw user-agent string sent or embedded by" +
-      " the browser.\022F\n\013touchpoints\030\005 \001(\rB1\212@.M" +
-      "aximum touch points for a particular bro" +
-      "wser.\022N\n\024hardware_concurrency\030\006 \001(\rB0\212@-" +
-      "Hardware concurrency reported by the bro" +
-      "wser.\022<\n\013color_depth\030\007 \001(\rB\'\212@$Color dep" +
-      "th reported by the browser.*b\n\013BrowserTy" +
-      "pe\022\023\n\017BROWSER_UNKNOWN\020\000\022\n\n\006CHROME\020\001\022\n\n\006S" +
-      "AFARI\020\002\022\013\n\007FIREFOX\020\003\022\t\n\005OPERA\020\004\022\016\n\nIE_OR" +
-      "_EDGE\020\005B@\n$io.bloombox.schema.telemetry." +
-      "contextB\016BrowserContextH\001P\000\242\002\003BBSb\006proto" +
-      "3"
+      "roto\032\025structs/Version.proto\"\305\004\n\024BrowserD" +
+      "eviceContext\022o\n\014browser_type\030\001 \001(\0162..blo" +
+      "ombox.schema.analytics.context.BrowserTy" +
+      "peB)\360?\001\212@#Specifies the general browser " +
+      "type.\022T\n\007version\030\002 \001(\0132!.opencannabis.st" +
+      "ructs.VersionSpecB \212@\035Version info for t" +
+      "he browser.\022A\n\010language\030\003 \001(\tB/\212@,Active" +
+      " language, as reported by the browser.\022M" +
+      "\n\nuser_agent\030\004 \001(\tB9\212@6Raw user-agent st" +
+      "ring sent or embedded by the browser.\022F\n" +
+      "\013touchpoints\030\005 \001(\rB1\212@.Maximum touch poi" +
+      "nts for a particular browser.\022N\n\024hardwar" +
+      "e_concurrency\030\006 \001(\rB0\212@-Hardware concurr" +
+      "ency reported by the browser.\022<\n\013color_d" +
+      "epth\030\007 \001(\rB\'\212@$Color depth reported by t" +
+      "he browser.*b\n\013BrowserType\022\023\n\017BROWSER_UN" +
+      "KNOWN\020\000\022\n\n\006CHROME\020\001\022\n\n\006SAFARI\020\002\022\013\n\007FIREF" +
+      "OX\020\003\022\t\n\005OPERA\020\004\022\016\n\nIE_OR_EDGE\020\005B@\n$io.bl" +
+      "oombox.schema.telemetry.contextB\016Browser" +
+      "ContextH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1644,10 +1640,6 @@ public final class BrowserContext {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.struct.Version.getDescriptor(),
-          io.bloombox.schema.telemetry.context.OperatingSystemContext.getDescriptor(),
-          io.bloombox.schema.telemetry.context.LibraryContext.getDescriptor(),
-          io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor(),
-          io.bloombox.schema.telemetry.context.DeviceContext.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_analytics_context_BrowserDeviceContext_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1663,10 +1655,6 @@ public final class BrowserContext {
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
     io.opencannabis.schema.struct.Version.getDescriptor();
-    io.bloombox.schema.telemetry.context.OperatingSystemContext.getDescriptor();
-    io.bloombox.schema.telemetry.context.LibraryContext.getDescriptor();
-    io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor();
-    io.bloombox.schema.telemetry.context.DeviceContext.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
