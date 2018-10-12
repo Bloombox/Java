@@ -114,7 +114,7 @@
 
         <!-- Settings -->
         <jvm.source>1.8</jvm.source>
-        <jvm.source.version>8<jvm.source.version>
+        <jvm.source.version>8</jvm.source.version>
         <jvm.target>1.8</jvm.target>
         <jvm.target.version>8</jvm.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
