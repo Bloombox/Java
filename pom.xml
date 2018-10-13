@@ -114,9 +114,7 @@
 
         <!-- Settings -->
         <jvm.source>1.8</jvm.source>
-        <jvm.source.version>8</jvm.source.version>
         <jvm.target>1.8</jvm.target>
-        <jvm.target.version>8</jvm.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -304,7 +302,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <jvmTarget>${jvm.target.version}</jvmTarget>
+                    <jvmTarget>${jvm.target}</jvmTarget>
                 </configuration>
             </plugin>
             <plugin>
@@ -429,7 +427,6 @@
                 <configuration>
                     <moduleName>bloombox</moduleName>
                     <outputFormat>html</outputFormat>
-                    <jdkVersion>${jvm.target}</jdkVersion>
                     <sourceDirectories>
                         <sourceDirectory>src/main/kotlin</sourceDirectory>
                     </sourceDirectories>
@@ -521,12 +518,10 @@
                 <configuration>
                     <moduleName>bloombox</moduleName>
                     <outputFormat>html</outputFormat>
-                    <jdkVersion>8</jdkVersion>
                     <sourceDirectories>
                         <sourceDirectory>src/main/kotlin</sourceDirectory>
                     </sourceDirectories>
                     <outputDir>target/site/client</outputDir>
-                    <jdkVersion>8</jdkVersion>
                     <includes>
                         <include>src/main/README.md</include>
                     </includes>
