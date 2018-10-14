@@ -27,6 +27,7 @@ RELEASE_ARGS ?= -DperformRelease=true
 RELEASE_GOALS ?= release:prepare release:perform
 EMBEDDED_SCHEMA ?= yes
 CURRENT_BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
+GRADLE_VERSION ?= 4.8.1
 
 ifeq ($(BUILDMODE),maven)
 TARGET ?= target/
@@ -72,6 +73,7 @@ endif
 ifeq ($(BUILDMODE),gradle)
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox (Gradle)..."
+	@./gradlew wrapper --gradle-version=$(GRADLE_VERSION) --distribution-type=bin
 	@./gradlew $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
 endif
 else
