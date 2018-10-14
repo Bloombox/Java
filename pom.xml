@@ -143,6 +143,118 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-site-plugin</artifactId>
+                        <version>${maven.site.version}</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven.source.version}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>attach-test-sources</id>
+                                <goals>
+                                    <goal>test-jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-project-info-reports-plugin</artifactId>
+                        <version>${maven.reports.version}</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.jetbrains.dokka</groupId>
+                        <artifactId>dokka-maven-plugin</artifactId>
+                        <version>${maven.dokka.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>dokka</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <moduleName>bloombox</moduleName>
+                            <outputFormat>html</outputFormat>
+                            <sourceDirectories>
+                                <sourceDirectory>src/main/kotlin</sourceDirectory>
+                            </sourceDirectories>
+                            <outputDir>target/site/client</outputDir>
+                            <includes>
+                                <include>src/main/README.md</include>
+                            </includes>
+                            <reportNotDocumented>false</reportNotDocumented>
+                            <impliedPlatforms>
+                                <impliedPlatform>JVM</impliedPlatform>
+                            </impliedPlatforms>
+
+                            <samplesDirs>
+                                <dir>example/src/main</dir>
+                            </samplesDirs>
+
+                            <sourceLinks>
+                                <link>
+                                    <dir>${project.basedir}/src/main/kotlin</dir>
+                                    <url>https://github.com/Bloombox/Java/blob/master/src/main/kotlin</url>
+                                    <urlSuffix>#L</urlSuffix>
+                                </link>
+                                <link>
+                                    <dir>${project.basedir}/src/main/java/io</dir>
+                                    <url>http://github.com/bloombox/schema</url>
+                                    <urlSuffix>#L</urlSuffix>
+                                </link>
+                            </sourceLinks>
+
+                            <perPackageOptions>
+                                <packageOptions>
+                                    <prefix>bloombox.client</prefix>
+                                    <skipDeprecated>false</skipDeprecated>
+                                    <reportUndocumented>true</reportUndocumented>
+                                    <includeNonPublic>false</includeNonPublic>
+                                </packageOptions>
+                                <packageOptions>
+                                    <prefix>bloombox.client.internals</prefix>
+                                    <suppress>true</suppress>
+                                </packageOptions>
+                                <packageOptions>
+                                    <prefix>bloombox.client.test</prefix>
+                                    <suppress>true</suppress>
+                                </packageOptions>
+                            </perPackageOptions>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven.javadoc.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>javadoc</goal>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <attach>true</attach>
+                            <classifier>javadoc</classifier>
+                            <level>public</level>
+                            <outputDirectory>target/site/schema</outputDirectory>
+                            <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*:io.bloombox.test.*</excludePackageNames>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
@@ -214,11 +326,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>${maven.site.version}</version>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
@@ -316,25 +423,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>${maven.source.version}</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar-no-fork</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>attach-test-sources</id>
-                        <goals>
-                            <goal>test-jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>${maven.shade.version}</version>
                 <configuration>
@@ -373,11 +461,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>${maven.reports.version}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>${maven.deploy.version}</version>
             </plugin>
@@ -410,89 +493,6 @@
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jetbrains.dokka</groupId>
-                <artifactId>dokka-maven-plugin</artifactId>
-                <version>${maven.dokka.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>dokka</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <moduleName>bloombox</moduleName>
-                    <outputFormat>html</outputFormat>
-                    <sourceDirectories>
-                        <sourceDirectory>src/main/kotlin</sourceDirectory>
-                    </sourceDirectories>
-                    <outputDir>target/site/client</outputDir>
-                    <includes>
-                        <include>src/main/README.md</include>
-                    </includes>
-                    <reportNotDocumented>false</reportNotDocumented>
-                    <impliedPlatforms>
-                        <impliedPlatform>JVM</impliedPlatform>
-                    </impliedPlatforms>
-
-                    <samplesDirs>
-                        <dir>example/src/main</dir>
-                    </samplesDirs>
-
-                    <sourceLinks>
-                        <link>
-                            <dir>${project.basedir}/src/main/kotlin</dir>
-                            <url>https://github.com/Bloombox/Java/blob/master/src/main/kotlin</url>
-                            <urlSuffix>#L</urlSuffix>
-                        </link>
-                        <link>
-                            <dir>${project.basedir}/src/main/java/io</dir>
-                            <url>http://github.com/bloombox/schema</url>
-                            <urlSuffix>#L</urlSuffix>
-                        </link>
-                    </sourceLinks>
-
-                    <perPackageOptions>
-                        <packageOptions>
-                            <prefix>bloombox.client</prefix>
-                            <skipDeprecated>false</skipDeprecated>
-                            <reportUndocumented>true</reportUndocumented>
-                            <includeNonPublic>false</includeNonPublic>
-                        </packageOptions>
-                        <packageOptions>
-                            <prefix>bloombox.client.internals</prefix>
-                            <suppress>true</suppress>
-                        </packageOptions>
-                        <packageOptions>
-                            <prefix>bloombox.client.test</prefix>
-                            <suppress>true</suppress>
-                        </packageOptions>
-                    </perPackageOptions>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven.javadoc.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>javadoc</goal>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <attach>true</attach>
-                    <classifier>javadoc</classifier>
-                    <level>public</level>
-                    <outputDirectory>target/site/schema</outputDirectory>
-                    <excludePackageNames>io.bloombox.schema.services.*:io.bloombox.schema.identity.*:io.bloombox.schema.services.*:io.bloombox.schema.security.*:io.bloombox.test.*</excludePackageNames>
                 </configuration>
             </plugin>
         </plugins>
