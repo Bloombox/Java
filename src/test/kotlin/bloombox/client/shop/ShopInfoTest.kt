@@ -37,12 +37,12 @@ class ShopInfoTest: ClientRPCTest() {
     /**
      * Partner ID to test hours with.
      */
-    private const val partnerID = "mm"
+    private const val partnerID = "caliva"
 
     /**
      * Location ID to test hours with.
      */
-    private const val locationID = "sacramento"
+    private const val locationID = "sjc"
   }
 
   /**
@@ -50,7 +50,7 @@ class ShopInfoTest: ClientRPCTest() {
    */
 //  @test
 //  fun testShopHours() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val response = client.platform.shop().info(
 //            ShopClient.ShopContext(
 //                  partner = partnerID,
@@ -58,7 +58,7 @@ class ShopInfoTest: ClientRPCTest() {
 //
 //      assertNotNull(response, "response from server for hours should not be null")
 //      assertNotNull(response.shopStatus, "response from server should specify shop status")
-//    })
+//    }
 //  }
 
   /**
@@ -66,7 +66,7 @@ class ShopInfoTest: ClientRPCTest() {
    */
 //  @test
 //  fun testShopHoursAsync() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val operation = client.platform.shop().info({ response ->
 //        assertNotNull(response, "response from server for hours should not be null")
 //        assertNotNull(response.shopStatus, "response from server should specify shop status")
@@ -76,7 +76,7 @@ class ShopInfoTest: ClientRPCTest() {
 //
 //      // make sure it executes, with a 10-second timeout
 //      operation.get(10, TimeUnit.SECONDS)
-//    })
+//    }
 //  }
 
   /**
@@ -117,7 +117,7 @@ class ShopInfoTest: ClientRPCTest() {
    */
 //  @test
 //  fun testZipcheckKnownGood() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val responseOne = client.platform.shop().checkZipcode("95120", ShopClient.ShopContext(
 //            partner = partnerID,
 //            location = locationID))
@@ -132,7 +132,7 @@ class ShopInfoTest: ClientRPCTest() {
 //      assertTrue(responseTwo.supported, "response from server for zipcheck 2 should grant access")
 //      assertEquals(responseOne.deliveryMinimum, (50.0).toFloat(), "response should specify correct delivery minimum for zipcheck 1")
 //      assertEquals(responseTwo.deliveryMinimum, (200.0).toFloat(), "response should specify correct delivery minimum for zipcheck 2")
-//    })
+//    }
 //  }
 
   /**
@@ -140,7 +140,7 @@ class ShopInfoTest: ClientRPCTest() {
    */
 //  @test
 //  fun testZipcheckKnownGoodAsync() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val opOne = client.platform.shop().checkZipcode("95120", { response ->
 //        assertNotNull(response, "response from server for zipcheck 1 should not be null")
 //        assertTrue(response.supported, "response from server for zipcheck 1 should grant access")
@@ -160,7 +160,7 @@ class ShopInfoTest: ClientRPCTest() {
 //      // make sure both ops execute, with a 5-second timeout each
 //      opOne.get(5, TimeUnit.SECONDS)
 //      opTwo.get(5, TimeUnit.SECONDS)
-//    })
+//    }
 //  }
 
   /**
@@ -168,13 +168,13 @@ class ShopInfoTest: ClientRPCTest() {
    */
 //  @test
 //  fun testZipcheckKnownBad() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val responseOne = client.platform.shop().checkZipcode("12345",
 //            ShopClient.ShopContext(partner = partnerID, location = locationID))
 //
 //      assertNotNull(responseOne, "response from server for bad zipcheck should not be null")
 //      assertTrue(!responseOne.supported, "response from server for bad zipcheck should withhold access")
-//    })
+//    }
 //  }
 
   /**
@@ -182,7 +182,7 @@ class ShopInfoTest: ClientRPCTest() {
    */
 //  @test
 //  fun testZipcheckKnownBadAsync() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val operation = client.platform.shop().checkZipcode("12345", { response ->
 //        assertNotNull(response, "response from server for bad zipcheck should not be null")
 //        assertTrue(!response.supported, "response from server for bad zipcheck should withhold access")
@@ -192,6 +192,6 @@ class ShopInfoTest: ClientRPCTest() {
 //
 //      // make sure it executes, with a 10-second timeout
 //      operation.get(10, TimeUnit.SECONDS)
-//    })
+//    }
 //  }
 }

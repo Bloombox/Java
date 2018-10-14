@@ -41,55 +41,71 @@ public final class BaseLanguage {
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
+     * Default or unset language.
+     * </pre>
+     *
+     * <code>LANGUAGE_UNSPECIFIED = 0;</code>
+     */
+    LANGUAGE_UNSPECIFIED(0),
+    /**
+     * <pre>
      * English.
      * </pre>
      *
-     * <code>ENGLISH = 0;</code>
+     * <code>ENGLISH = 1;</code>
      */
-    ENGLISH(0),
+    ENGLISH(1),
     /**
      * <pre>
      * Spanish.
      * </pre>
      *
-     * <code>SPANISH = 1;</code>
+     * <code>SPANISH = 2;</code>
      */
-    SPANISH(1),
+    SPANISH(2),
     /**
      * <pre>
      * French.
      * </pre>
      *
-     * <code>FRENCH = 2;</code>
+     * <code>FRENCH = 3;</code>
      */
-    FRENCH(2),
+    FRENCH(3),
     UNRECOGNIZED(-1),
     ;
 
     /**
      * <pre>
+     * Default or unset language.
+     * </pre>
+     *
+     * <code>LANGUAGE_UNSPECIFIED = 0;</code>
+     */
+    public static final int LANGUAGE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
      * English.
      * </pre>
      *
-     * <code>ENGLISH = 0;</code>
+     * <code>ENGLISH = 1;</code>
      */
-    public static final int ENGLISH_VALUE = 0;
+    public static final int ENGLISH_VALUE = 1;
     /**
      * <pre>
      * Spanish.
      * </pre>
      *
-     * <code>SPANISH = 1;</code>
+     * <code>SPANISH = 2;</code>
      */
-    public static final int SPANISH_VALUE = 1;
+    public static final int SPANISH_VALUE = 2;
     /**
      * <pre>
      * French.
      * </pre>
      *
-     * <code>FRENCH = 2;</code>
+     * <code>FRENCH = 3;</code>
      */
-    public static final int FRENCH_VALUE = 2;
+    public static final int FRENCH_VALUE = 3;
 
 
     public final int getNumber() {
@@ -110,9 +126,10 @@ public final class BaseLanguage {
 
     public static Language forNumber(int value) {
       switch (value) {
-        case 0: return ENGLISH;
-        case 1: return SPANISH;
-        case 2: return FRENCH;
+        case 0: return LANGUAGE_UNSPECIFIED;
+        case 1: return ENGLISH;
+        case 2: return SPANISH;
+        case 3: return FRENCH;
         default: return null;
       }
     }
@@ -175,9 +192,10 @@ public final class BaseLanguage {
   static {
     java.lang.String[] descriptorData = {
       "\n\023base/Language.proto\022\021opencannabis.base" +
-      "*0\n\010Language\022\013\n\007ENGLISH\020\000\022\013\n\007SPANISH\020\001\022\n" +
-      "\n\006FRENCH\020\002B5\n\033io.opencannabis.schema.bas" +
-      "eB\014BaseLanguageH\001P\000\242\002\003OCSb\006proto3"
+      "*J\n\010Language\022\030\n\024LANGUAGE_UNSPECIFIED\020\000\022\013" +
+      "\n\007ENGLISH\020\001\022\013\n\007SPANISH\020\002\022\n\n\006FRENCH\020\003B5\n\033" +
+      "io.opencannabis.schema.baseB\014BaseLanguag" +
+      "eH\001P\000\242\002\003OCSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

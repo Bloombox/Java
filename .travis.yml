@@ -9,13 +9,29 @@ language: java
 cache:
   directories:
   - $HOME/.m2
+branches:
+  except:
+    - embedded
 git:
   submodules: false
 jdk:
   - oraclejdk8
   - openjdk8
+  - oraclejdk9
+  - openjdk9
+  - oraclejdk10
+  - openjdk10
+  - oraclejdk11
+  - openjdk11
 matrix:
   fast_finish: true
+  allow_failures:
+  - jdk: oraclejdk9
+  - jdk: oraclejdk10
+  - jdk: openjdk9
+  - jdk: openjdk10
+  - jdk: oraclejdk11
+  - jdk: openjdk11
 cache:
   directories:
     - $HOME/.m2

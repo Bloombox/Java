@@ -26,19 +26,10 @@ public interface MediaContentOrBuilder extends
 
   /**
    * <pre>
-   * Raw data for the media content being uploaded, if applicable.
-   * </pre>
-   *
-   * <code>bytes content = 1;</code>
-   */
-  com.google.protobuf.ByteString getContent();
-
-  /**
-   * <pre>
    * Type specification for the media being uploaded.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2;</code>
+   * <code>.opencannabis.media.MediaType type = 1;</code>
    */
   boolean hasType();
   /**
@@ -46,7 +37,7 @@ public interface MediaContentOrBuilder extends
    * Type specification for the media being uploaded.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2;</code>
+   * <code>.opencannabis.media.MediaType type = 1;</code>
    */
   io.opencannabis.schema.media.MediaItemType.MediaType getType();
   /**
@@ -54,7 +45,7 @@ public interface MediaContentOrBuilder extends
    * Type specification for the media being uploaded.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2;</code>
+   * <code>.opencannabis.media.MediaType type = 1;</code>
    */
   io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder getTypeOrBuilder();
 
@@ -63,7 +54,7 @@ public interface MediaContentOrBuilder extends
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
    */
   boolean hasFile();
   /**
@@ -71,7 +62,7 @@ public interface MediaContentOrBuilder extends
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
    */
   io.bloombox.schema.services.media.v1beta1.MediaFile getFile();
   /**
@@ -79,7 +70,7 @@ public interface MediaContentOrBuilder extends
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
    */
   io.bloombox.schema.services.media.v1beta1.MediaFileOrBuilder getFileOrBuilder();
 
@@ -88,9 +79,52 @@ public interface MediaContentOrBuilder extends
    * Flag indicating the specified/attached content is a raw data blob.
    * </pre>
    *
-   * <code>bool blob = 4;</code>
+   * <code>bool blob = 3;</code>
    */
   boolean getBlob();
+
+  /**
+   * <pre>
+   * Raw data for the media content being uploaded, if applicable.
+   * </pre>
+   *
+   * <code>.opencannabis.content.Content content = 4;</code>
+   */
+  boolean hasContent();
+  /**
+   * <pre>
+   * Raw data for the media content being uploaded, if applicable.
+   * </pre>
+   *
+   * <code>.opencannabis.content.Content content = 4;</code>
+   */
+  io.opencannabis.schema.content.GenericContent.Content getContent();
+  /**
+   * <pre>
+   * Raw data for the media content being uploaded, if applicable.
+   * </pre>
+   *
+   * <code>.opencannabis.content.Content content = 4;</code>
+   */
+  io.opencannabis.schema.content.GenericContent.ContentOrBuilder getContentOrBuilder();
+
+  /**
+   * <pre>
+   * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+   * </pre>
+   *
+   * <code>string name = 5;</code>
+   */
+  java.lang.String getName();
+  /**
+   * <pre>
+   * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+   * </pre>
+   *
+   * <code>string name = 5;</code>
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
 
   public io.bloombox.schema.services.media.v1beta1.MediaContent.SpecCase getSpecCase();
 }

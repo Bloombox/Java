@@ -41,6 +41,8 @@ private static final long serialVersionUID = 0L;
     partner_ = "";
     location_ = "";
     role_ = 0;
+    environment_ = 0;
+    label_ = "";
   }
 
   @java.lang.Override
@@ -90,6 +92,18 @@ private static final long serialVersionUID = 0L;
             int rawValue = input.readEnum();
 
             role_ = rawValue;
+            break;
+          }
+          case 32: {
+            int rawValue = input.readEnum();
+
+            environment_ = rawValue;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            label_ = s;
             break;
           }
         }
@@ -224,6 +238,72 @@ private static final long serialVersionUID = 0L;
     return result == null ? io.bloombox.schema.services.devices.v1beta1.DeviceRole.UNRECOGNIZED : result;
   }
 
+  public static final int ENVIRONMENT_FIELD_NUMBER = 4;
+  private int environment_;
+  /**
+   * <pre>
+   * Environment name to make use of. Usually "V1".
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+   */
+  public int getEnvironmentValue() {
+    return environment_;
+  }
+  /**
+   * <pre>
+   * Environment name to make use of. Usually "V1".
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+   */
+  public io.bloombox.schema.services.devices.v1beta1.DataEnvironment getEnvironment() {
+    io.bloombox.schema.services.devices.v1beta1.DataEnvironment result = io.bloombox.schema.services.devices.v1beta1.DataEnvironment.valueOf(environment_);
+    return result == null ? io.bloombox.schema.services.devices.v1beta1.DataEnvironment.UNRECOGNIZED : result;
+  }
+
+  public static final int LABEL_FIELD_NUMBER = 5;
+  private volatile java.lang.Object label_;
+  /**
+   * <pre>
+   * Optional human-readable name or label for the subject device.
+   * </pre>
+   *
+   * <code>string label = 5;</code>
+   */
+  public java.lang.String getLabel() {
+    java.lang.Object ref = label_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      label_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Optional human-readable name or label for the subject device.
+   * </pre>
+   *
+   * <code>string label = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getLabelBytes() {
+    java.lang.Object ref = label_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      label_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -245,6 +325,12 @@ private static final long serialVersionUID = 0L;
     if (role_ != io.bloombox.schema.services.devices.v1beta1.DeviceRole.UNASSIGNED.getNumber()) {
       output.writeEnum(3, role_);
     }
+    if (environment_ != io.bloombox.schema.services.devices.v1beta1.DataEnvironment.V1.getNumber()) {
+      output.writeEnum(4, environment_);
+    }
+    if (!getLabelBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, label_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -262,6 +348,13 @@ private static final long serialVersionUID = 0L;
     if (role_ != io.bloombox.schema.services.devices.v1beta1.DeviceRole.UNASSIGNED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, role_);
+    }
+    if (environment_ != io.bloombox.schema.services.devices.v1beta1.DataEnvironment.V1.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, environment_);
+    }
+    if (!getLabelBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, label_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -284,6 +377,9 @@ private static final long serialVersionUID = 0L;
     result = result && getLocation()
         .equals(other.getLocation());
     result = result && role_ == other.role_;
+    result = result && environment_ == other.environment_;
+    result = result && getLabel()
+        .equals(other.getLabel());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -301,6 +397,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getLocation().hashCode();
     hash = (37 * hash) + ROLE_FIELD_NUMBER;
     hash = (53 * hash) + role_;
+    hash = (37 * hash) + ENVIRONMENT_FIELD_NUMBER;
+    hash = (53 * hash) + environment_;
+    hash = (37 * hash) + LABEL_FIELD_NUMBER;
+    hash = (53 * hash) + getLabel().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -441,6 +541,10 @@ private static final long serialVersionUID = 0L;
 
       role_ = 0;
 
+      environment_ = 0;
+
+      label_ = "";
+
       return this;
     }
 
@@ -466,6 +570,8 @@ private static final long serialVersionUID = 0L;
       result.partner_ = partner_;
       result.location_ = location_;
       result.role_ = role_;
+      result.environment_ = environment_;
+      result.label_ = label_;
       onBuilt();
       return result;
     }
@@ -517,6 +623,13 @@ private static final long serialVersionUID = 0L;
       }
       if (other.role_ != 0) {
         setRoleValue(other.getRoleValue());
+      }
+      if (other.environment_ != 0) {
+        setEnvironmentValue(other.getEnvironmentValue());
+      }
+      if (!other.getLabel().isEmpty()) {
+        label_ = other.label_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -783,6 +896,159 @@ private static final long serialVersionUID = 0L;
     public Builder clearRole() {
       
       role_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int environment_ = 0;
+    /**
+     * <pre>
+     * Environment name to make use of. Usually "V1".
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+     */
+    public int getEnvironmentValue() {
+      return environment_;
+    }
+    /**
+     * <pre>
+     * Environment name to make use of. Usually "V1".
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+     */
+    public Builder setEnvironmentValue(int value) {
+      environment_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Environment name to make use of. Usually "V1".
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+     */
+    public io.bloombox.schema.services.devices.v1beta1.DataEnvironment getEnvironment() {
+      io.bloombox.schema.services.devices.v1beta1.DataEnvironment result = io.bloombox.schema.services.devices.v1beta1.DataEnvironment.valueOf(environment_);
+      return result == null ? io.bloombox.schema.services.devices.v1beta1.DataEnvironment.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Environment name to make use of. Usually "V1".
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+     */
+    public Builder setEnvironment(io.bloombox.schema.services.devices.v1beta1.DataEnvironment value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      environment_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Environment name to make use of. Usually "V1".
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DataEnvironment environment = 4;</code>
+     */
+    public Builder clearEnvironment() {
+      
+      environment_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object label_ = "";
+    /**
+     * <pre>
+     * Optional human-readable name or label for the subject device.
+     * </pre>
+     *
+     * <code>string label = 5;</code>
+     */
+    public java.lang.String getLabel() {
+      java.lang.Object ref = label_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        label_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional human-readable name or label for the subject device.
+     * </pre>
+     *
+     * <code>string label = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLabelBytes() {
+      java.lang.Object ref = label_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        label_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional human-readable name or label for the subject device.
+     * </pre>
+     *
+     * <code>string label = 5;</code>
+     */
+    public Builder setLabel(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      label_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional human-readable name or label for the subject device.
+     * </pre>
+     *
+     * <code>string label = 5;</code>
+     */
+    public Builder clearLabel() {
+      
+      label_ = getDefaultInstance().getLabel();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional human-readable name or label for the subject device.
+     * </pre>
+     *
+     * <code>string label = 5;</code>
+     */
+    public Builder setLabelBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      label_ = value;
       onChanged();
       return this;
     }

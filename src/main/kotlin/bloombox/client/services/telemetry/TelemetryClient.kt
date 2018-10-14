@@ -25,7 +25,7 @@ import com.google.protobuf.Value
 import io.bloombox.schema.identity.AppUserKey.UserKey
 import io.opencannabis.schema.base.BaseProductKey.ProductKey
 import io.opencannabis.schema.menu.section.Section
-import io.bloombox.schema.services.telemetry.v1beta3.*
+import io.bloombox.schema.services.telemetry.v1beta4.*
 import io.bloombox.schema.telemetry.AnalyticsContext
 import io.bloombox.schema.telemetry.AnalyticsEvent
 import io.bloombox.schema.telemetry.AnalyticsScope

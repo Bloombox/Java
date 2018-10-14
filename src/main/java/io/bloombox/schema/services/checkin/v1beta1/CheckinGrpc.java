@@ -138,7 +138,7 @@ public final class CheckinGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to check a user in via their government ID.
+     * Specifies an operation to check a user in via their Bloombox digital card.
      * </pre>
      */
     public void card(io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request,
@@ -219,7 +219,7 @@ public final class CheckinGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to check a user in via their government ID.
+     * Specifies an operation to check a user in via their Bloombox digital card.
      * </pre>
      */
     public void card(io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request,
@@ -273,7 +273,7 @@ public final class CheckinGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to check a user in via their government ID.
+     * Specifies an operation to check a user in via their Bloombox digital card.
      * </pre>
      */
     public io.bloombox.schema.services.checkin.v1beta1.CheckinResponse card(io.bloombox.schema.services.checkin.v1beta1.CardCheckin.Request request) {
@@ -328,7 +328,7 @@ public final class CheckinGrpc {
 
     /**
      * <pre>
-     * Specifies an operation to check a user in via their government ID.
+     * Specifies an operation to check a user in via their Bloombox digital card.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.checkin.v1beta1.CheckinResponse> card(

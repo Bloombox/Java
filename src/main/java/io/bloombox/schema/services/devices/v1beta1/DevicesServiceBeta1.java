@@ -37,6 +37,21 @@ public final class DevicesServiceBeta1 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_devices_v1beta1_OAuth2Endpoints_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_devices_v1beta1_OAuth2Endpoints_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_devices_v1beta1_DeviceEndpoints_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_devices_v1beta1_DeviceEndpoints_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_services_devices_v1beta1_DeviceKeys_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_services_devices_v1beta1_DeviceKeys_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -92,46 +107,65 @@ public final class DevicesServiceBeta1 {
     java.lang.String[] descriptorData = {
       "\n*devices/v1beta1/DevicesService_Beta1.p" +
       "roto\022(bloombox.schema.services.devices.v" +
-      "1beta1\032\034services/ServiceStatus.proto\032\034go" +
-      "ogle/api/annotations.proto\"y\n\020DeviceAssi" +
-      "gnment\022\017\n\007partner\030\001 \001(\t\022\020\n\010location\030\002 \001(" +
-      "\t\022B\n\004role\030\003 \001(\01624.bloombox.schema.servic" +
-      "es.devices.v1beta1.DeviceRole\"\202\001\n\020Device" +
-      "Activation\022\014\n\004uuid\030\001 \001(\t\022\020\n\010hostname\030\002 \001" +
-      "(\t\022N\n\nassignment\030\003 \001(\0132:.bloombox.schema" +
-      ".services.devices.v1beta1.DeviceAssignme" +
-      "nt\"\370\001\n\004Ping\032\t\n\007Request\032C\n\010Response\0227\n\006st" +
-      "atus\030\001 \001(\0162\'.bloombox.schema.services.Se" +
-      "rviceStatus\032\237\001\n\tOperation\022G\n\007request\030\001 \001" +
-      "(\01326.bloombox.schema.services.devices.v1" +
-      "beta1.Ping.Request\022I\n\010response\030\002 \001(\01327.b" +
+      "1beta1\032\033security/DeviceTicket.proto\032\034ser" +
+      "vices/ServiceStatus.proto\032\037proximity/Blu" +
+      "etoothBeacon.proto\032\034google/api/annotatio" +
+      "ns.proto\"\330\001\n\020DeviceAssignment\022\017\n\007partner" +
+      "\030\001 \001(\t\022\020\n\010location\030\002 \001(\t\022B\n\004role\030\003 \001(\01624" +
+      ".bloombox.schema.services.devices.v1beta" +
+      "1.DeviceRole\022N\n\013environment\030\004 \001(\01629.bloo" +
+      "mbox.schema.services.devices.v1beta1.Dat" +
+      "aEnvironment\022\r\n\005label\030\005 \001(\t\"3\n\017OAuth2End" +
+      "points\022\021\n\tauthorize\030\001 \001(\t\022\r\n\005token\030\002 \001(\t" +
+      "\"\265\001\n\017DeviceEndpoints\022I\n\006oauth2\030\001 \001(\01329.b" +
       "loombox.schema.services.devices.v1beta1." +
-      "Ping.Response\"\233\003\n\nActivation\032.\n\007Request\022" +
-      "\016\n\006serial\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\032\256\001\n" +
-      "\010Response\022\016\n\006active\030\001 \001(\010\022D\n\005error\030\002 \001(\016" +
-      "25.bloombox.schema.services.devices.v1be" +
-      "ta1.DeviceError\022L\n\010manifest\030\003 \001(\0132:.bloo" +
-      "mbox.schema.services.devices.v1beta1.Dev" +
-      "iceActivation\032\253\001\n\tOperation\022M\n\007request\030\001" +
-      " \001(\0132<.bloombox.schema.services.devices." +
-      "v1beta1.Activation.Request\022O\n\010response\030\002" +
-      " \001(\0132=.bloombox.schema.services.devices." +
-      "v1beta1.Activation.Response*p\n\013DeviceErr" +
-      "or\022\014\n\010NO_ERROR\020\000\022\022\n\016INVALID_SERIAL\020\001\022\024\n\020" +
-      "DEVICE_NOT_FOUND\020\002\022\022\n\016INTERNAL_ERROR\020\003\022\025" +
-      "\n\021DEVICE_UNASSIGNED\020\004*H\n\nDeviceRole\022\016\n\nU" +
-      "NASSIGNED\020\000\022\010\n\004MENU\020\001\022\013\n\007CHECKIN\020\002\022\n\n\006BE" +
-      "ACON\020\003\022\007\n\003POS\020\0042\337\002\n\007Devices\022\226\001\n\004Ping\0226.b" +
-      "loombox.schema.services.devices.v1beta1." +
-      "Ping.Request\0327.bloombox.schema.services." +
-      "devices.v1beta1.Ping.Response\"\035\202\323\344\223\002\027\022\025/" +
-      "devices/v1beta1/ping\022\272\001\n\010Activate\022<.bloo" +
-      "mbox.schema.services.devices.v1beta1.Act" +
-      "ivation.Request\032=.bloombox.schema.servic" +
-      "es.devices.v1beta1.Activation.Response\"1" +
-      "\202\323\344\223\002+\022)/devices/v1beta1/{serial}/device" +
-      ":activateB7\n+io.bloombox.schema.services" +
-      ".devices.v1beta1H\001P\001\242\002\003BBSb\006proto3"
+      "OAuth2Endpoints\022\017\n\007account\030\002 \001(\t\022\013\n\003api\030" +
+      "\003 \001(\t\022\013\n\003rpc\030\004 \001(\t\022\016\n\006issuer\030\005 \001(\t\022\n\n\002db" +
+      "\030\006 \001(\t\022\020\n\010realtime\030\007 \001(\t\",\n\nDeviceKeys\022\013" +
+      "\n\003api\030\001 \001(\t\022\021\n\ttelemetry\030\002 \001(\t\"\214\003\n\020Devic" +
+      "eActivation\022\014\n\004uuid\030\001 \001(\t\022\020\n\010hostname\030\002 " +
+      "\001(\t\022N\n\nassignment\030\003 \001(\0132:.bloombox.schem" +
+      "a.services.devices.v1beta1.DeviceAssignm" +
+      "ent\0226\n\006ticket\030\004 \001(\0132&.bloombox.schema.se" +
+      "curity.DeviceTicket\022L\n\tendpoints\030\005 \001(\01329" +
+      ".bloombox.schema.services.devices.v1beta" +
+      "1.DeviceEndpoints\0227\n\006beacon\030\006 \001(\0132\'.open" +
+      "cannabis.proximity.BluetoothBeacon\022I\n\013cr" +
+      "edentials\030\007 \001(\01324.bloombox.schema.servic" +
+      "es.devices.v1beta1.DeviceKeys\"\370\001\n\004Ping\032\t" +
+      "\n\007Request\032C\n\010Response\0227\n\006status\030\001 \001(\0162\'." +
+      "bloombox.schema.services.ServiceStatus\032\237" +
+      "\001\n\tOperation\022G\n\007request\030\001 \001(\01326.bloombox" +
+      ".schema.services.devices.v1beta1.Ping.Re" +
+      "quest\022I\n\010response\030\002 \001(\01327.bloombox.schem" +
+      "a.services.devices.v1beta1.Ping.Response" +
+      "\"\257\003\n\nActivation\032B\n\007Request\022\016\n\006serial\030\001 \001" +
+      "(\t\022\023\n\013fingerprint\030\002 \001(\t\022\022\n\npublic_key\030\003 " +
+      "\001(\t\032\256\001\n\010Response\022\016\n\006active\030\001 \001(\010\022D\n\005erro" +
+      "r\030\002 \001(\01625.bloombox.schema.services.devic" +
+      "es.v1beta1.DeviceError\022L\n\010manifest\030\003 \001(\013" +
+      "2:.bloombox.schema.services.devices.v1be" +
+      "ta1.DeviceActivation\032\253\001\n\tOperation\022M\n\007re" +
+      "quest\030\001 \001(\0132<.bloombox.schema.services.d" +
+      "evices.v1beta1.Activation.Request\022O\n\010res" +
+      "ponse\030\002 \001(\0132=.bloombox.schema.services.d" +
+      "evices.v1beta1.Activation.Response*p\n\013De" +
+      "viceError\022\014\n\010NO_ERROR\020\000\022\022\n\016INVALID_SERIA" +
+      "L\020\001\022\024\n\020DEVICE_NOT_FOUND\020\002\022\022\n\016INTERNAL_ER" +
+      "ROR\020\003\022\025\n\021DEVICE_UNASSIGNED\020\004*H\n\nDeviceRo" +
+      "le\022\016\n\nUNASSIGNED\020\000\022\010\n\004MENU\020\001\022\013\n\007CHECKIN\020" +
+      "\002\022\n\n\006BEACON\020\003\022\007\n\003POS\020\004*!\n\017DataEnvironmen" +
+      "t\022\006\n\002V1\020\000\022\006\n\002V2\020\0012\337\002\n\007Devices\022\226\001\n\004Ping\0226" +
+      ".bloombox.schema.services.devices.v1beta" +
+      "1.Ping.Request\0327.bloombox.schema.service" +
+      "s.devices.v1beta1.Ping.Response\"\035\202\323\344\223\002\027\022" +
+      "\025/devices/v1beta1/ping\022\272\001\n\010Activate\022<.bl" +
+      "oombox.schema.services.devices.v1beta1.A" +
+      "ctivation.Request\032=.bloombox.schema.serv" +
+      "ices.devices.v1beta1.Activation.Response" +
+      "\"1\202\323\344\223\002+\022)/devices/v1beta1/{serial}/devi" +
+      "ce:activateB7\n+io.bloombox.schema.servic" +
+      "es.devices.v1beta1H\001P\001\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -144,7 +178,9 @@ public final class DevicesServiceBeta1 {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          io.bloombox.schema.security.DeviceSecurity.getDescriptor(),
           io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor(),
+          io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_descriptor =
@@ -152,15 +188,33 @@ public final class DevicesServiceBeta1 {
     internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_devices_v1beta1_DeviceAssignment_descriptor,
-        new java.lang.String[] { "Partner", "Location", "Role", });
-    internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_descriptor =
+        new java.lang.String[] { "Partner", "Location", "Role", "Environment", "Label", });
+    internal_static_bloombox_schema_services_devices_v1beta1_OAuth2Endpoints_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_bloombox_schema_services_devices_v1beta1_OAuth2Endpoints_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_devices_v1beta1_OAuth2Endpoints_descriptor,
+        new java.lang.String[] { "Authorize", "Token", });
+    internal_static_bloombox_schema_services_devices_v1beta1_DeviceEndpoints_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_bloombox_schema_services_devices_v1beta1_DeviceEndpoints_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_devices_v1beta1_DeviceEndpoints_descriptor,
+        new java.lang.String[] { "Oauth2", "Account", "Api", "Rpc", "Issuer", "Db", "Realtime", });
+    internal_static_bloombox_schema_services_devices_v1beta1_DeviceKeys_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_bloombox_schema_services_devices_v1beta1_DeviceKeys_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_services_devices_v1beta1_DeviceKeys_descriptor,
+        new java.lang.String[] { "Api", "Telemetry", });
+    internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_devices_v1beta1_DeviceActivation_descriptor,
-        new java.lang.String[] { "Uuid", "Hostname", "Assignment", });
+        new java.lang.String[] { "Uuid", "Hostname", "Assignment", "Ticket", "Endpoints", "Beacon", "Credentials", });
     internal_static_bloombox_schema_services_devices_v1beta1_Ping_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_bloombox_schema_services_devices_v1beta1_Ping_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_devices_v1beta1_Ping_descriptor,
@@ -184,7 +238,7 @@ public final class DevicesServiceBeta1 {
         internal_static_bloombox_schema_services_devices_v1beta1_Ping_Operation_descriptor,
         new java.lang.String[] { "Request", "Response", });
     internal_static_bloombox_schema_services_devices_v1beta1_Activation_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_bloombox_schema_services_devices_v1beta1_Activation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_devices_v1beta1_Activation_descriptor,
@@ -194,7 +248,7 @@ public final class DevicesServiceBeta1 {
     internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_devices_v1beta1_Activation_Request_descriptor,
-        new java.lang.String[] { "Serial", "Fingerprint", });
+        new java.lang.String[] { "Serial", "Fingerprint", "PublicKey", });
     internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_descriptor =
       internal_static_bloombox_schema_services_devices_v1beta1_Activation_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_devices_v1beta1_Activation_Response_fieldAccessorTable = new
@@ -212,7 +266,9 @@ public final class DevicesServiceBeta1 {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    io.bloombox.schema.security.DeviceSecurity.getDescriptor();
     io.bloombox.schema.services.ServiceStatusOuterClass.getDescriptor();
+    io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

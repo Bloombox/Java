@@ -22,7 +22,7 @@ package io.bloombox.schema.services.pos.v1beta1;
 
 /**
  * <pre>
- * Enumerated error states that may be served from the POS service.
+ * Enumerates error states that may be served from the POS service.
  * </pre>
  *
  * Protobuf enum {@code bloombox.schema.services.pos.v1beta1.POSError}
@@ -34,65 +34,185 @@ public enum POSError
    * An unknown internal error occurred.
    * </pre>
    *
-   * <code>UNKNOWN = 0;</code>
+   * <code>NO_ERROR = 0;</code>
    */
-  UNKNOWN(0),
-  /**
-   * <pre>
-   * The collection value was missing or found to be invalid.
-   * </pre>
-   *
-   * <code>INVALID_COLLECTION = 1;</code>
-   */
-  INVALID_COLLECTION(1),
+  NO_ERROR(0),
   /**
    * <pre>
    * The partner code was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_PARTNER = 2;</code>
+   * <code>INVALID_PARTNER = 1;</code>
    */
-  INVALID_PARTNER(2),
+  INVALID_PARTNER(1),
   /**
    * <pre>
    * The location code was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_LOCATION = 3;</code>
+   * <code>INVALID_LOCATION = 2;</code>
    */
-  INVALID_LOCATION(3),
+  INVALID_LOCATION(2),
   /**
    * <pre>
    * The device key was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_DEVICE = 4;</code>
+   * <code>INVALID_DEVICE = 3;</code>
    */
-  INVALID_DEVICE(4),
+  INVALID_DEVICE(3),
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The specified ID token was invalid or missing.
    * </pre>
    *
-   * <code>PARTNER_NOT_FOUND = 5;</code>
+   * <code>INVALID_ID_TOKEN = 4;</code>
    */
-  PARTNER_NOT_FOUND(5),
+  INVALID_ID_TOKEN(4),
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The device's signature was invalid or missing.
    * </pre>
    *
-   * <code>LOCATION_NOT_FOUND = 6;</code>
+   * <code>INVALID_DEVICE_SIGNATURE = 5;</code>
    */
-  LOCATION_NOT_FOUND(6),
+  INVALID_DEVICE_SIGNATURE(5),
   /**
    * <pre>
-   * The request payload was invalid in some manner.
+   * Invalid purchase payload.
    * </pre>
    *
-   * <code>INVALID_PAYLOAD = 99;</code>
+   * <code>INVALID_TICKET = 6;</code>
    */
-  INVALID_PAYLOAD(99),
+  INVALID_TICKET(6),
+  /**
+   * <pre>
+   * Invalid purchase key.
+   * </pre>
+   *
+   * <code>INVALID_TICKET_KEY = 7;</code>
+   */
+  INVALID_TICKET_KEY(7),
+  /**
+   * <pre>
+   * Purchase signature could not be validated.
+   * </pre>
+   *
+   * <code>INVALID_TICKET_SIGNATURE = 8;</code>
+   */
+  INVALID_TICKET_SIGNATURE(8),
+  /**
+   * <pre>
+   * An invalid timestamp was provided.
+   * </pre>
+   *
+   * <code>INVALID_TIMESTAMP = 9;</code>
+   */
+  INVALID_TIMESTAMP(9),
+  /**
+   * <pre>
+   * Unable to locate the specified device.
+   * </pre>
+   *
+   * <code>DEVICE_NOT_FOUND = 10;</code>
+   */
+  DEVICE_NOT_FOUND(10),
+  /**
+   * <pre>
+   * Unable to locate the specified session.
+   * </pre>
+   *
+   * <code>SESSION_NOT_FOUND = 11;</code>
+   */
+  SESSION_NOT_FOUND(11),
+  /**
+   * <pre>
+   * Specifies an illegal session state.
+   * </pre>
+   *
+   * <code>SESSION_CONFLICT = 12;</code>
+   */
+  SESSION_CONFLICT(12),
+  /**
+   * <pre>
+   * The given purchase was structurally invalid.
+   * </pre>
+   *
+   * <code>ILLEGAL_TICKET_STRUCTURE = 20;</code>
+   */
+  ILLEGAL_TICKET_STRUCTURE(20),
+  /**
+   * <pre>
+   * The specified ticket version is out of date or invalid.
+   * </pre>
+   *
+   * <code>ILLEGAL_TICKET_VERSION = 21;</code>
+   */
+  ILLEGAL_TICKET_VERSION(21),
+  /**
+   * <pre>
+   * The provided timestamp occurs before the last known event.
+   * </pre>
+   *
+   * <code>ILLEGAL_TIMESTAMP = 22;</code>
+   */
+  ILLEGAL_TIMESTAMP(22),
+  /**
+   * <pre>
+   * Purchase could not be found.
+   * </pre>
+   *
+   * <code>TICKET_NOT_FOUND = 30;</code>
+   */
+  TICKET_NOT_FOUND(30),
+  /**
+   * <pre>
+   * There was a conflict preventing the ticket operation.
+   * </pre>
+   *
+   * <code>TICKET_CONFLICT = 31;</code>
+   */
+  TICKET_CONFLICT(31),
+  /**
+   * <pre>
+   * The ticket in question is currently claimed and cannot be claimed again until closed.
+   * </pre>
+   *
+   * <code>TICKET_CLAIMED = 32;</code>
+   */
+  TICKET_CLAIMED(32),
+  /**
+   * <pre>
+   * Generic invalid request.
+   * </pre>
+   *
+   * <code>INVALID_REQUEST = 96;</code>
+   */
+  INVALID_REQUEST(96),
+  /**
+   * <pre>
+   * Access was denied due to authorization failure.
+   * </pre>
+   *
+   * <code>AUTHORIZATION_DENIED = 97;</code>
+   */
+  AUTHORIZATION_DENIED(97),
+  /**
+   * <pre>
+   * Access cannot be granted due to a conflict.
+   * </pre>
+   *
+   * <code>ACCESS_CONFLICT = 98;</code>
+   */
+  ACCESS_CONFLICT(98),
+  /**
+   * <pre>
+   * An internal error occurred.
+   * </pre>
+   *
+   * <code>INTERNAL_ERROR = 99;</code>
+   */
+  INTERNAL_ERROR(99),
   UNRECOGNIZED(-1),
   ;
 
@@ -101,65 +221,185 @@ public enum POSError
    * An unknown internal error occurred.
    * </pre>
    *
-   * <code>UNKNOWN = 0;</code>
+   * <code>NO_ERROR = 0;</code>
    */
-  public static final int UNKNOWN_VALUE = 0;
-  /**
-   * <pre>
-   * The collection value was missing or found to be invalid.
-   * </pre>
-   *
-   * <code>INVALID_COLLECTION = 1;</code>
-   */
-  public static final int INVALID_COLLECTION_VALUE = 1;
+  public static final int NO_ERROR_VALUE = 0;
   /**
    * <pre>
    * The partner code was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_PARTNER = 2;</code>
+   * <code>INVALID_PARTNER = 1;</code>
    */
-  public static final int INVALID_PARTNER_VALUE = 2;
+  public static final int INVALID_PARTNER_VALUE = 1;
   /**
    * <pre>
    * The location code was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_LOCATION = 3;</code>
+   * <code>INVALID_LOCATION = 2;</code>
    */
-  public static final int INVALID_LOCATION_VALUE = 3;
+  public static final int INVALID_LOCATION_VALUE = 2;
   /**
    * <pre>
    * The device key was missing or found to be invalid.
    * </pre>
    *
-   * <code>INVALID_DEVICE = 4;</code>
+   * <code>INVALID_DEVICE = 3;</code>
    */
-  public static final int INVALID_DEVICE_VALUE = 4;
+  public static final int INVALID_DEVICE_VALUE = 3;
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The specified ID token was invalid or missing.
    * </pre>
    *
-   * <code>PARTNER_NOT_FOUND = 5;</code>
+   * <code>INVALID_ID_TOKEN = 4;</code>
    */
-  public static final int PARTNER_NOT_FOUND_VALUE = 5;
+  public static final int INVALID_ID_TOKEN_VALUE = 4;
   /**
    * <pre>
-   * The specified partner could not be found.
+   * The device's signature was invalid or missing.
    * </pre>
    *
-   * <code>LOCATION_NOT_FOUND = 6;</code>
+   * <code>INVALID_DEVICE_SIGNATURE = 5;</code>
    */
-  public static final int LOCATION_NOT_FOUND_VALUE = 6;
+  public static final int INVALID_DEVICE_SIGNATURE_VALUE = 5;
   /**
    * <pre>
-   * The request payload was invalid in some manner.
+   * Invalid purchase payload.
    * </pre>
    *
-   * <code>INVALID_PAYLOAD = 99;</code>
+   * <code>INVALID_TICKET = 6;</code>
    */
-  public static final int INVALID_PAYLOAD_VALUE = 99;
+  public static final int INVALID_TICKET_VALUE = 6;
+  /**
+   * <pre>
+   * Invalid purchase key.
+   * </pre>
+   *
+   * <code>INVALID_TICKET_KEY = 7;</code>
+   */
+  public static final int INVALID_TICKET_KEY_VALUE = 7;
+  /**
+   * <pre>
+   * Purchase signature could not be validated.
+   * </pre>
+   *
+   * <code>INVALID_TICKET_SIGNATURE = 8;</code>
+   */
+  public static final int INVALID_TICKET_SIGNATURE_VALUE = 8;
+  /**
+   * <pre>
+   * An invalid timestamp was provided.
+   * </pre>
+   *
+   * <code>INVALID_TIMESTAMP = 9;</code>
+   */
+  public static final int INVALID_TIMESTAMP_VALUE = 9;
+  /**
+   * <pre>
+   * Unable to locate the specified device.
+   * </pre>
+   *
+   * <code>DEVICE_NOT_FOUND = 10;</code>
+   */
+  public static final int DEVICE_NOT_FOUND_VALUE = 10;
+  /**
+   * <pre>
+   * Unable to locate the specified session.
+   * </pre>
+   *
+   * <code>SESSION_NOT_FOUND = 11;</code>
+   */
+  public static final int SESSION_NOT_FOUND_VALUE = 11;
+  /**
+   * <pre>
+   * Specifies an illegal session state.
+   * </pre>
+   *
+   * <code>SESSION_CONFLICT = 12;</code>
+   */
+  public static final int SESSION_CONFLICT_VALUE = 12;
+  /**
+   * <pre>
+   * The given purchase was structurally invalid.
+   * </pre>
+   *
+   * <code>ILLEGAL_TICKET_STRUCTURE = 20;</code>
+   */
+  public static final int ILLEGAL_TICKET_STRUCTURE_VALUE = 20;
+  /**
+   * <pre>
+   * The specified ticket version is out of date or invalid.
+   * </pre>
+   *
+   * <code>ILLEGAL_TICKET_VERSION = 21;</code>
+   */
+  public static final int ILLEGAL_TICKET_VERSION_VALUE = 21;
+  /**
+   * <pre>
+   * The provided timestamp occurs before the last known event.
+   * </pre>
+   *
+   * <code>ILLEGAL_TIMESTAMP = 22;</code>
+   */
+  public static final int ILLEGAL_TIMESTAMP_VALUE = 22;
+  /**
+   * <pre>
+   * Purchase could not be found.
+   * </pre>
+   *
+   * <code>TICKET_NOT_FOUND = 30;</code>
+   */
+  public static final int TICKET_NOT_FOUND_VALUE = 30;
+  /**
+   * <pre>
+   * There was a conflict preventing the ticket operation.
+   * </pre>
+   *
+   * <code>TICKET_CONFLICT = 31;</code>
+   */
+  public static final int TICKET_CONFLICT_VALUE = 31;
+  /**
+   * <pre>
+   * The ticket in question is currently claimed and cannot be claimed again until closed.
+   * </pre>
+   *
+   * <code>TICKET_CLAIMED = 32;</code>
+   */
+  public static final int TICKET_CLAIMED_VALUE = 32;
+  /**
+   * <pre>
+   * Generic invalid request.
+   * </pre>
+   *
+   * <code>INVALID_REQUEST = 96;</code>
+   */
+  public static final int INVALID_REQUEST_VALUE = 96;
+  /**
+   * <pre>
+   * Access was denied due to authorization failure.
+   * </pre>
+   *
+   * <code>AUTHORIZATION_DENIED = 97;</code>
+   */
+  public static final int AUTHORIZATION_DENIED_VALUE = 97;
+  /**
+   * <pre>
+   * Access cannot be granted due to a conflict.
+   * </pre>
+   *
+   * <code>ACCESS_CONFLICT = 98;</code>
+   */
+  public static final int ACCESS_CONFLICT_VALUE = 98;
+  /**
+   * <pre>
+   * An internal error occurred.
+   * </pre>
+   *
+   * <code>INTERNAL_ERROR = 99;</code>
+   */
+  public static final int INTERNAL_ERROR_VALUE = 99;
 
 
   public final int getNumber() {
@@ -180,14 +420,29 @@ public enum POSError
 
   public static POSError forNumber(int value) {
     switch (value) {
-      case 0: return UNKNOWN;
-      case 1: return INVALID_COLLECTION;
-      case 2: return INVALID_PARTNER;
-      case 3: return INVALID_LOCATION;
-      case 4: return INVALID_DEVICE;
-      case 5: return PARTNER_NOT_FOUND;
-      case 6: return LOCATION_NOT_FOUND;
-      case 99: return INVALID_PAYLOAD;
+      case 0: return NO_ERROR;
+      case 1: return INVALID_PARTNER;
+      case 2: return INVALID_LOCATION;
+      case 3: return INVALID_DEVICE;
+      case 4: return INVALID_ID_TOKEN;
+      case 5: return INVALID_DEVICE_SIGNATURE;
+      case 6: return INVALID_TICKET;
+      case 7: return INVALID_TICKET_KEY;
+      case 8: return INVALID_TICKET_SIGNATURE;
+      case 9: return INVALID_TIMESTAMP;
+      case 10: return DEVICE_NOT_FOUND;
+      case 11: return SESSION_NOT_FOUND;
+      case 12: return SESSION_CONFLICT;
+      case 20: return ILLEGAL_TICKET_STRUCTURE;
+      case 21: return ILLEGAL_TICKET_VERSION;
+      case 22: return ILLEGAL_TIMESTAMP;
+      case 30: return TICKET_NOT_FOUND;
+      case 31: return TICKET_CONFLICT;
+      case 32: return TICKET_CLAIMED;
+      case 96: return INVALID_REQUEST;
+      case 97: return AUTHORIZATION_DENIED;
+      case 98: return ACCESS_CONFLICT;
+      case 99: return INTERNAL_ERROR;
       default: return null;
     }
   }

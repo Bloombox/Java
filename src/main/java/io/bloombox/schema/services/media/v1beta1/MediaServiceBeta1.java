@@ -118,79 +118,83 @@ public final class MediaServiceBeta1 {
       "\n&media/v1beta1/MediaService_Beta1.proto" +
       "\022&bloombox.schema.services.media.v1beta1" +
       "\032\024media/MediaKey.proto\032\025media/MediaType." +
-      "proto\032\025media/MediaItem.proto\032\033google/pro" +
-      "tobuf/empty.proto\032\034google/api/annotation" +
-      "s.proto\032(protoc-gen-swagger/options/swag" +
-      "ger.proto\"/\n\tMediaFile\022\020\n\010filename\030\001 \001(\t" +
-      "\022\020\n\010mimetype\030\002 \001(\t\"\247\001\n\014MediaContent\022\017\n\007c" +
-      "ontent\030\001 \001(\014\022+\n\004type\030\002 \001(\0132\035.opencannabi" +
-      "s.media.MediaType\022A\n\004file\030\003 \001(\01321.bloomb" +
-      "ox.schema.services.media.v1beta1.MediaFi" +
-      "leH\000\022\016\n\004blob\030\004 \001(\010H\000B\006\n\004spec\"2\n\021UploadTr" +
-      "ansaction\022\016\n\006target\030\001 \001(\t\022\r\n\005token\030\002 \001(\t" +
-      "\"<\n\017OperationResult\022)\n\003key\030\001 \001(\0132\034.openc" +
-      "annabis.media.MediaKey\"_\n\tListMedia\032\030\n\007R" +
-      "equest\022\r\n\005scope\030\001 \001(\t\0328\n\010Response\022,\n\005med" +
-      "ia\030\001 \003(\0132\035.opencannabis.media.MediaItem\"" +
-      "\211\001\n\010GetMedia\032C\n\007Request\022\r\n\005scope\030\001 \001(\t\022)" +
-      "\n\003key\030\002 \001(\0132\034.opencannabis.media.MediaKe" +
-      "y\0328\n\010Response\022,\n\005media\030\001 \001(\0132\035.opencanna" +
-      "bis.media.MediaItem\"\331\002\n\013UploadMedia\032\222\001\n\007" +
-      "Request\022\r\n\005scope\030\001 \001(\t\0221\n\007subject\030\002 \001(\0132" +
-      " .opencannabis.media.MediaSubject\022E\n\007con" +
-      "tent\030\003 \001(\01324.bloombox.schema.services.me" +
-      "dia.v1beta1.MediaContent\032\264\001\n\010Response\022P\n" +
-      "\013transaction\030\001 \001(\01329.bloombox.schema.ser" +
-      "vices.media.v1beta1.UploadTransactionH\000\022" +
-      "I\n\006result\030\002 \001(\01327.bloombox.schema.servic" +
-      "es.media.v1beta1.OperationResultH\000B\013\n\top" +
-      "eration\"6\n\013AttachMedia\032\'\n\007Request\022\r\n\005sco" +
-      "pe\030\001 \001(\t\022\r\n\005token\030\002 \001(\t*\224\001\n\nMediaError\022\014" +
-      "\n\010NO_ERROR\020\000\022\023\n\017PARTNER_INVALID\020\001\022\024\n\020LOC" +
-      "ATION_INVALID\020\002\022\021\n\rACCESS_DENIED\020\003\022\023\n\017ME" +
-      "DIA_NOT_FOUND\020\004\022\021\n\rMEDIA_INVALID\020\005\022\022\n\016IN" +
-      "TERNAL_ERROR\020c2\311\010\n\005Media\022\203\002\n\004List\0229.bloo" +
-      "mbox.schema.services.media.v1beta1.ListM" +
-      "edia.Request\032:.bloombox.schema.services." +
-      "media.v1beta1.ListMedia.Response\"\203\001\202\323\344\223\002" +
-      "2\022-/media/v1beta1/{scope=partners/*/loca" +
-      "tions/*}:\001*\222AH\022\nList Media\0324List media i" +
-      "tems for a given partner/location scope." +
-      "*\004List\022\204\002\n\010Retrieve\0228.bloombox.schema.se" +
-      "rvices.media.v1beta1.GetMedia.Request\0329." +
-      "bloombox.schema.services.media.v1beta1.G" +
-      "etMedia.Response\"\202\001\202\323\344\223\002;\0226/media/v1beta" +
-      "1/{scope=partners/*/locations/*}/{key.id" +
-      "}:\001*\222A>\022\016Retrieve Media\032\"Retrieve an ind" +
-      "ividual media item.*\010Retrieve\022\255\002\n\006Upload" +
-      "\022;.bloombox.schema.services.media.v1beta" +
-      "1.UploadMedia.Request\032<.bloombox.schema." +
-      "services.media.v1beta1.UploadMedia.Respo" +
-      "nse\"\247\001\202\323\344\223\0029\"4/media/v1beta1/{scope=part" +
-      "ners/*/locations/*}/upload:\001*\222Ae\022\014Create" +
-      " Media\032MProvision a new media item recor" +
-      "d, and update its data with an initial v" +
-      "alue.*\006Upload\022\202\002\n\006Attach\022;.bloombox.sche" +
-      "ma.services.media.v1beta1.AttachMedia.Re" +
-      "quest\032\026.google.protobuf.Empty\"\242\001\202\323\344\223\002A\032<" +
-      "/media/v1beta1/{scope=partners/*/locatio" +
-      "ns/*}/upload/{token}:\001*\222AX\022\014Attach Media" +
-      "\032@Notify the platform that uploaded medi" +
-      "a is ready to be attached.*\006AttachB\211\004\n)i" +
-      "o.bloombox.schema.services.media.v1beta1" +
-      "H\001P\001\242\002\003BBS\222A\320\003\022h\n\tMedia API\032\031https://blo" +
-      "ombox.io/terms\"7\n\010Bloombox\022\023https://bloo" +
-      "mbox.io\032\026developers@bloombox.io2\007v1beta1" +
-      "\032\022api.bloombox.cloud*\001\0022\020application/jso" +
-      "n:\020application/jsonZ\320\001\nd\n\013ApiKeyParam\022U\010" +
-      "\002\022JParameter for identifying API key own" +
-      "ed by the invoking project or system.\032\003k" +
-      "ey \001\nh\n\014ApiKeyHeader\022X\010\002\022GHeader for ide" +
-      "ntifying API key owned by the invoking p" +
-      "roject or system.\032\tX-API-Key \001b\021\n\017\n\013ApiK" +
-      "eyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombo" +
-      "x APIs\022\036https://apidocs.bloombox.cloudb\006" +
-      "proto3"
+      "proto\032\025media/MediaItem.proto\032\025content/Co" +
+      "ntent.proto\032\033google/protobuf/empty.proto" +
+      "\032\034google/api/annotations.proto\032(protoc-g" +
+      "en-swagger/options/swagger.proto\"/\n\tMedi" +
+      "aFile\022\020\n\010filename\030\001 \001(\t\022\020\n\010mimetype\030\002 \001(" +
+      "\t\"\324\001\n\014MediaContent\022+\n\004type\030\001 \001(\0132\035.openc" +
+      "annabis.media.MediaType\022A\n\004file\030\002 \001(\01321." +
+      "bloombox.schema.services.media.v1beta1.M" +
+      "ediaFileH\000\022\016\n\004blob\030\003 \001(\010H\000\022.\n\007content\030\004 " +
+      "\001(\0132\035.opencannabis.content.Content\022\014\n\004na" +
+      "me\030\005 \001(\tB\006\n\004spec\"N\n\021UploadTransaction\022\016\n" +
+      "\006target\030\001 \001(\t\022)\n\003key\030\002 \001(\0132\034.opencannabi" +
+      "s.media.MediaKey\">\n\017OperationResult\022+\n\004i" +
+      "tem\030\001 \001(\0132\035.opencannabis.media.MediaItem" +
+      "\"_\n\tListMedia\032\030\n\007Request\022\r\n\005scope\030\001 \001(\t\032" +
+      "8\n\010Response\022,\n\005media\030\001 \003(\0132\035.opencannabi" +
+      "s.media.MediaItem\"\211\001\n\010GetMedia\032C\n\007Reques" +
+      "t\022\r\n\005scope\030\001 \001(\t\022)\n\003key\030\002 \001(\0132\034.opencann" +
+      "abis.media.MediaKey\0328\n\010Response\022,\n\005media" +
+      "\030\001 \001(\0132\035.opencannabis.media.MediaItem\"\234\003" +
+      "\n\013UploadMedia\032\325\001\n\007Request\022\r\n\005scope\030\001 \001(\t" +
+      "\0221\n\007subject\030\002 \001(\0132 .opencannabis.media.M" +
+      "ediaSubject\022E\n\007content\030\003 \001(\01324.bloombox." +
+      "schema.services.media.v1beta1.MediaConte" +
+      "nt\0221\n\007privacy\030\004 \001(\0162 .opencannabis.media" +
+      ".MediaPrivacy\022\016\n\006origin\030\005 \001(\t\032\264\001\n\010Respon" +
+      "se\022P\n\013transaction\030\001 \001(\01329.bloombox.schem" +
+      "a.services.media.v1beta1.UploadTransacti" +
+      "onH\000\022I\n\006result\030\002 \001(\01327.bloombox.schema.s" +
+      "ervices.media.v1beta1.OperationResultH\000B" +
+      "\013\n\toperation\"R\n\013AttachMedia\032C\n\007Request\022\r" +
+      "\n\005scope\030\001 \001(\t\022)\n\003key\030\002 \001(\0132\034.opencannabi" +
+      "s.media.MediaKey*\224\001\n\nMediaError\022\014\n\010NO_ER" +
+      "ROR\020\000\022\023\n\017PARTNER_INVALID\020\001\022\024\n\020LOCATION_I" +
+      "NVALID\020\002\022\021\n\rACCESS_DENIED\020\003\022\023\n\017MEDIA_NOT" +
+      "_FOUND\020\004\022\021\n\rMEDIA_INVALID\020\005\022\022\n\016INTERNAL_" +
+      "ERROR\020c2\312\010\n\005Media\022\203\002\n\004List\0229.bloombox.sc" +
+      "hema.services.media.v1beta1.ListMedia.Re" +
+      "quest\032:.bloombox.schema.services.media.v" +
+      "1beta1.ListMedia.Response\"\203\001\202\323\344\223\0022\022-/med" +
+      "ia/v1beta1/{scope=partners/*/locations/*" +
+      "}:\001*\222AH\022\nList Media\0324List media items fo" +
+      "r a given partner/location scope.*\004List\022" +
+      "\204\002\n\010Retrieve\0228.bloombox.schema.services." +
+      "media.v1beta1.GetMedia.Request\0329.bloombo" +
+      "x.schema.services.media.v1beta1.GetMedia" +
+      ".Response\"\202\001\202\323\344\223\002;\0226/media/v1beta1/{scop" +
+      "e=partners/*/locations/*}/{key.id}:\001*\222A>" +
+      "\022\016Retrieve Media\032\"Retrieve an individual" +
+      " media item.*\010Retrieve\022\255\002\n\006Upload\022;.bloo" +
+      "mbox.schema.services.media.v1beta1.Uploa" +
+      "dMedia.Request\032<.bloombox.schema.service" +
+      "s.media.v1beta1.UploadMedia.Response\"\247\001\202" +
+      "\323\344\223\0029\"4/media/v1beta1/{scope=partners/*/" +
+      "locations/*}/upload:\001*\222Ae\022\014Create Media\032" +
+      "MProvision a new media item record, and " +
+      "update its data with an initial value.*\006" +
+      "Upload\022\203\002\n\006Attach\022;.bloombox.schema.serv" +
+      "ices.media.v1beta1.AttachMedia.Request\032\026" +
+      ".google.protobuf.Empty\"\243\001\202\323\344\223\002B\032=/media/" +
+      "v1beta1/{scope=partners/*/locations/*}/u" +
+      "pload/{key.id}:\001*\222AX\022\014Attach Media\032@Noti" +
+      "fy the platform that uploaded media is r" +
+      "eady to be attached.*\006AttachB\211\004\n)io.bloo" +
+      "mbox.schema.services.media.v1beta1H\001P\001\242\002" +
+      "\003BBS\222A\320\003\022h\n\tMedia API\032\031https://bloombox." +
+      "io/terms\"7\n\010Bloombox\022\023https://bloombox.i" +
+      "o\032\026developers@bloombox.io2\007v1beta1\032\022api." +
+      "bloombox.cloud*\001\0022\020application/json:\020app" +
+      "lication/jsonZ\320\001\nd\n\013ApiKeyParam\022U\010\002\022JPar" +
+      "ameter for identifying API key owned by " +
+      "the invoking project or system.\032\003key \001\nh" +
+      "\n\014ApiKeyHeader\022X\010\002\022GHeader for identifyi" +
+      "ng API key owned by the invoking project" +
+      " or system.\032\tX-API-Key \001b\021\n\017\n\013ApiKeyPara" +
+      "m\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs" +
+      "\022\036https://apidocs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -206,6 +210,7 @@ public final class MediaServiceBeta1 {
           io.opencannabis.schema.media.MediaItemKey.getDescriptor(),
           io.opencannabis.schema.media.MediaItemType.getDescriptor(),
           io.opencannabis.schema.media.AttachedMedia.getDescriptor(),
+          io.opencannabis.schema.content.GenericContent.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor(),
@@ -221,19 +226,19 @@ public final class MediaServiceBeta1 {
     internal_static_bloombox_schema_services_media_v1beta1_MediaContent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_media_v1beta1_MediaContent_descriptor,
-        new java.lang.String[] { "Content", "Type", "File", "Blob", "Spec", });
+        new java.lang.String[] { "Type", "File", "Blob", "Content", "Name", "Spec", });
     internal_static_bloombox_schema_services_media_v1beta1_UploadTransaction_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_bloombox_schema_services_media_v1beta1_UploadTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_media_v1beta1_UploadTransaction_descriptor,
-        new java.lang.String[] { "Target", "Token", });
+        new java.lang.String[] { "Target", "Key", });
     internal_static_bloombox_schema_services_media_v1beta1_OperationResult_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_bloombox_schema_services_media_v1beta1_OperationResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_media_v1beta1_OperationResult_descriptor,
-        new java.lang.String[] { "Key", });
+        new java.lang.String[] { "Item", });
     internal_static_bloombox_schema_services_media_v1beta1_ListMedia_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_bloombox_schema_services_media_v1beta1_ListMedia_fieldAccessorTable = new
@@ -281,7 +286,7 @@ public final class MediaServiceBeta1 {
     internal_static_bloombox_schema_services_media_v1beta1_UploadMedia_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_media_v1beta1_UploadMedia_Request_descriptor,
-        new java.lang.String[] { "Scope", "Subject", "Content", });
+        new java.lang.String[] { "Scope", "Subject", "Content", "Privacy", "Origin", });
     internal_static_bloombox_schema_services_media_v1beta1_UploadMedia_Response_descriptor =
       internal_static_bloombox_schema_services_media_v1beta1_UploadMedia_descriptor.getNestedTypes().get(1);
     internal_static_bloombox_schema_services_media_v1beta1_UploadMedia_Response_fieldAccessorTable = new
@@ -299,7 +304,7 @@ public final class MediaServiceBeta1 {
     internal_static_bloombox_schema_services_media_v1beta1_AttachMedia_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_services_media_v1beta1_AttachMedia_Request_descriptor,
-        new java.lang.String[] { "Scope", "Token", });
+        new java.lang.String[] { "Scope", "Key", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -310,6 +315,7 @@ public final class MediaServiceBeta1 {
     io.opencannabis.schema.media.MediaItemKey.getDescriptor();
     io.opencannabis.schema.media.MediaItemType.getDescriptor();
     io.opencannabis.schema.media.AttachedMedia.getDescriptor();
+    io.opencannabis.schema.content.GenericContent.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_swagger.options.Swagger.getDescriptor();

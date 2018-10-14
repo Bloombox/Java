@@ -148,6 +148,1662 @@ public final class IdentityID {
     // @@protoc_insertion_point(enum_scope:bloombox.schema.identity.IDType)
   }
 
+  public interface IDReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.IDReference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Type of ID we're specifying.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of ID we're specifying.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     */
+    io.bloombox.schema.identity.IdentityID.IDType getType();
+
+    /**
+     * <pre>
+     * Expiration date for this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     */
+    boolean hasExpireDate();
+    /**
+     * <pre>
+     * Expiration date for this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     */
+    io.opencannabis.schema.temporal.TemporalDate.Date getExpireDate();
+    /**
+     * <pre>
+     * Expiration date for this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     */
+    io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getExpireDateOrBuilder();
+
+    /**
+     * <pre>
+     * Birth date listed on this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     */
+    boolean hasBirthDate();
+    /**
+     * <pre>
+     * Birth date listed on this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     */
+    io.opencannabis.schema.temporal.TemporalDate.Date getBirthDate();
+    /**
+     * <pre>
+     * Birth date listed on this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     */
+    io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getBirthDateOrBuilder();
+
+    /**
+     * <pre>
+     * United States Driver's License.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     */
+    boolean hasLicense();
+    /**
+     * <pre>
+     * United States Driver's License.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     */
+    io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getLicense();
+    /**
+     * <pre>
+     * United States Driver's License.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     */
+    io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder getLicenseOrBuilder();
+
+    /**
+     * <pre>
+     * National passport.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     */
+    boolean hasPassport();
+    /**
+     * <pre>
+     * National passport.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     */
+    io.bloombox.schema.identity.ids.PassportID.PassportReference getPassport();
+    /**
+     * <pre>
+     * National passport.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     */
+    io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder getPassportOrBuilder();
+
+    public io.bloombox.schema.identity.IdentityID.IDReference.DocumentCase getDocumentCase();
+  }
+  /**
+   * <pre>
+   * Refererence to a government-issued ID.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.identity.IDReference}
+   */
+  public  static final class IDReference extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.IDReference)
+      IDReferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IDReference.newBuilder() to construct.
+    private IDReference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IDReference() {
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IDReference(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 18: {
+              io.opencannabis.schema.temporal.TemporalDate.Date.Builder subBuilder = null;
+              if (expireDate_ != null) {
+                subBuilder = expireDate_.toBuilder();
+              }
+              expireDate_ = input.readMessage(io.opencannabis.schema.temporal.TemporalDate.Date.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(expireDate_);
+                expireDate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              io.opencannabis.schema.temporal.TemporalDate.Date.Builder subBuilder = null;
+              if (birthDate_ != null) {
+                subBuilder = birthDate_.toBuilder();
+              }
+              birthDate_ = input.readMessage(io.opencannabis.schema.temporal.TemporalDate.Date.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(birthDate_);
+                birthDate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 162: {
+              io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder subBuilder = null;
+              if (documentCase_ == 20) {
+                subBuilder = ((io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_).toBuilder();
+              }
+              document_ =
+                  input.readMessage(io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_);
+                document_ = subBuilder.buildPartial();
+              }
+              documentCase_ = 20;
+              break;
+            }
+            case 170: {
+              io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder subBuilder = null;
+              if (documentCase_ == 21) {
+                subBuilder = ((io.bloombox.schema.identity.ids.PassportID.PassportReference) document_).toBuilder();
+              }
+              document_ =
+                  input.readMessage(io.bloombox.schema.identity.ids.PassportID.PassportReference.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.bloombox.schema.identity.ids.PassportID.PassportReference) document_);
+                document_ = subBuilder.buildPartial();
+              }
+              documentCase_ = 21;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.identity.IdentityID.IDReference.class, io.bloombox.schema.identity.IdentityID.IDReference.Builder.class);
+    }
+
+    private int documentCase_ = 0;
+    private java.lang.Object document_;
+    public enum DocumentCase
+        implements com.google.protobuf.Internal.EnumLite {
+      LICENSE(20),
+      PASSPORT(21),
+      DOCUMENT_NOT_SET(0);
+      private final int value;
+      private DocumentCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DocumentCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DocumentCase forNumber(int value) {
+        switch (value) {
+          case 20: return LICENSE;
+          case 21: return PASSPORT;
+          case 0: return DOCUMENT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DocumentCase
+    getDocumentCase() {
+      return DocumentCase.forNumber(
+          documentCase_);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <pre>
+     * Type of ID we're specifying.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of ID we're specifying.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+     */
+    public io.bloombox.schema.identity.IdentityID.IDType getType() {
+      io.bloombox.schema.identity.IdentityID.IDType result = io.bloombox.schema.identity.IdentityID.IDType.valueOf(type_);
+      return result == null ? io.bloombox.schema.identity.IdentityID.IDType.UNRECOGNIZED : result;
+    }
+
+    public static final int EXPIRE_DATE_FIELD_NUMBER = 2;
+    private io.opencannabis.schema.temporal.TemporalDate.Date expireDate_;
+    /**
+     * <pre>
+     * Expiration date for this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     */
+    public boolean hasExpireDate() {
+      return expireDate_ != null;
+    }
+    /**
+     * <pre>
+     * Expiration date for this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalDate.Date getExpireDate() {
+      return expireDate_ == null ? io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : expireDate_;
+    }
+    /**
+     * <pre>
+     * Expiration date for this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getExpireDateOrBuilder() {
+      return getExpireDate();
+    }
+
+    public static final int BIRTH_DATE_FIELD_NUMBER = 3;
+    private io.opencannabis.schema.temporal.TemporalDate.Date birthDate_;
+    /**
+     * <pre>
+     * Birth date listed on this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     */
+    public boolean hasBirthDate() {
+      return birthDate_ != null;
+    }
+    /**
+     * <pre>
+     * Birth date listed on this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalDate.Date getBirthDate() {
+      return birthDate_ == null ? io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : birthDate_;
+    }
+    /**
+     * <pre>
+     * Birth date listed on this document.
+     * </pre>
+     *
+     * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+     */
+    public io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getBirthDateOrBuilder() {
+      return getBirthDate();
+    }
+
+    public static final int LICENSE_FIELD_NUMBER = 20;
+    /**
+     * <pre>
+     * United States Driver's License.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     */
+    public boolean hasLicense() {
+      return documentCase_ == 20;
+    }
+    /**
+     * <pre>
+     * United States Driver's License.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     */
+    public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getLicense() {
+      if (documentCase_ == 20) {
+         return (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_;
+      }
+      return io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * United States Driver's License.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+     */
+    public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder getLicenseOrBuilder() {
+      if (documentCase_ == 20) {
+         return (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_;
+      }
+      return io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance();
+    }
+
+    public static final int PASSPORT_FIELD_NUMBER = 21;
+    /**
+     * <pre>
+     * National passport.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     */
+    public boolean hasPassport() {
+      return documentCase_ == 21;
+    }
+    /**
+     * <pre>
+     * National passport.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     */
+    public io.bloombox.schema.identity.ids.PassportID.PassportReference getPassport() {
+      if (documentCase_ == 21) {
+         return (io.bloombox.schema.identity.ids.PassportID.PassportReference) document_;
+      }
+      return io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * National passport.
+     * </pre>
+     *
+     * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+     */
+    public io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder getPassportOrBuilder() {
+      if (documentCase_ == 21) {
+         return (io.bloombox.schema.identity.ids.PassportID.PassportReference) document_;
+      }
+      return io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (type_ != io.bloombox.schema.identity.IdentityID.IDType.USDL.getNumber()) {
+        output.writeEnum(1, type_);
+      }
+      if (expireDate_ != null) {
+        output.writeMessage(2, getExpireDate());
+      }
+      if (birthDate_ != null) {
+        output.writeMessage(3, getBirthDate());
+      }
+      if (documentCase_ == 20) {
+        output.writeMessage(20, (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_);
+      }
+      if (documentCase_ == 21) {
+        output.writeMessage(21, (io.bloombox.schema.identity.ids.PassportID.PassportReference) document_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (type_ != io.bloombox.schema.identity.IdentityID.IDType.USDL.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_);
+      }
+      if (expireDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getExpireDate());
+      }
+      if (birthDate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBirthDate());
+      }
+      if (documentCase_ == 20) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_);
+      }
+      if (documentCase_ == 21) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, (io.bloombox.schema.identity.ids.PassportID.PassportReference) document_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.identity.IdentityID.IDReference)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.identity.IdentityID.IDReference other = (io.bloombox.schema.identity.IdentityID.IDReference) obj;
+
+      boolean result = true;
+      result = result && type_ == other.type_;
+      result = result && (hasExpireDate() == other.hasExpireDate());
+      if (hasExpireDate()) {
+        result = result && getExpireDate()
+            .equals(other.getExpireDate());
+      }
+      result = result && (hasBirthDate() == other.hasBirthDate());
+      if (hasBirthDate()) {
+        result = result && getBirthDate()
+            .equals(other.getBirthDate());
+      }
+      result = result && getDocumentCase().equals(
+          other.getDocumentCase());
+      if (!result) return false;
+      switch (documentCase_) {
+        case 20:
+          result = result && getLicense()
+              .equals(other.getLicense());
+          break;
+        case 21:
+          result = result && getPassport()
+              .equals(other.getPassport());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      if (hasExpireDate()) {
+        hash = (37 * hash) + EXPIRE_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getExpireDate().hashCode();
+      }
+      if (hasBirthDate()) {
+        hash = (37 * hash) + BIRTH_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getBirthDate().hashCode();
+      }
+      switch (documentCase_) {
+        case 20:
+          hash = (37 * hash) + LICENSE_FIELD_NUMBER;
+          hash = (53 * hash) + getLicense().hashCode();
+          break;
+        case 21:
+          hash = (37 * hash) + PASSPORT_FIELD_NUMBER;
+          hash = (53 * hash) + getPassport().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.IdentityID.IDReference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.identity.IdentityID.IDReference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Refererence to a government-issued ID.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.identity.IDReference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.IDReference)
+        io.bloombox.schema.identity.IdentityID.IDReferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.identity.IdentityID.IDReference.class, io.bloombox.schema.identity.IdentityID.IDReference.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.identity.IdentityID.IDReference.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        type_ = 0;
+
+        if (expireDateBuilder_ == null) {
+          expireDate_ = null;
+        } else {
+          expireDate_ = null;
+          expireDateBuilder_ = null;
+        }
+        if (birthDateBuilder_ == null) {
+          birthDate_ = null;
+        } else {
+          birthDate_ = null;
+          birthDateBuilder_ = null;
+        }
+        documentCase_ = 0;
+        document_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.identity.IdentityID.internal_static_bloombox_schema_identity_IDReference_descriptor;
+      }
+
+      public io.bloombox.schema.identity.IdentityID.IDReference getDefaultInstanceForType() {
+        return io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.identity.IdentityID.IDReference build() {
+        io.bloombox.schema.identity.IdentityID.IDReference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.identity.IdentityID.IDReference buildPartial() {
+        io.bloombox.schema.identity.IdentityID.IDReference result = new io.bloombox.schema.identity.IdentityID.IDReference(this);
+        result.type_ = type_;
+        if (expireDateBuilder_ == null) {
+          result.expireDate_ = expireDate_;
+        } else {
+          result.expireDate_ = expireDateBuilder_.build();
+        }
+        if (birthDateBuilder_ == null) {
+          result.birthDate_ = birthDate_;
+        } else {
+          result.birthDate_ = birthDateBuilder_.build();
+        }
+        if (documentCase_ == 20) {
+          if (licenseBuilder_ == null) {
+            result.document_ = document_;
+          } else {
+            result.document_ = licenseBuilder_.build();
+          }
+        }
+        if (documentCase_ == 21) {
+          if (passportBuilder_ == null) {
+            result.document_ = document_;
+          } else {
+            result.document_ = passportBuilder_.build();
+          }
+        }
+        result.documentCase_ = documentCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.identity.IdentityID.IDReference) {
+          return mergeFrom((io.bloombox.schema.identity.IdentityID.IDReference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.identity.IdentityID.IDReference other) {
+        if (other == io.bloombox.schema.identity.IdentityID.IDReference.getDefaultInstance()) return this;
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.hasExpireDate()) {
+          mergeExpireDate(other.getExpireDate());
+        }
+        if (other.hasBirthDate()) {
+          mergeBirthDate(other.getBirthDate());
+        }
+        switch (other.getDocumentCase()) {
+          case LICENSE: {
+            mergeLicense(other.getLicense());
+            break;
+          }
+          case PASSPORT: {
+            mergePassport(other.getPassport());
+            break;
+          }
+          case DOCUMENT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.identity.IdentityID.IDReference parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.identity.IdentityID.IDReference) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int documentCase_ = 0;
+      private java.lang.Object document_;
+      public DocumentCase
+          getDocumentCase() {
+        return DocumentCase.forNumber(
+            documentCase_);
+      }
+
+      public Builder clearDocument() {
+        documentCase_ = 0;
+        document_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of ID we're specifying.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of ID we're specifying.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of ID we're specifying.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       */
+      public io.bloombox.schema.identity.IdentityID.IDType getType() {
+        io.bloombox.schema.identity.IdentityID.IDType result = io.bloombox.schema.identity.IdentityID.IDType.valueOf(type_);
+        return result == null ? io.bloombox.schema.identity.IdentityID.IDType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of ID we're specifying.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       */
+      public Builder setType(io.bloombox.schema.identity.IdentityID.IDType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of ID we're specifying.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.IDType type = 1 [(.gen_bq_schema.description) = "Type of ID we&#92;'re specifying."];</code>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalDate.Date expireDate_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> expireDateBuilder_;
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      public boolean hasExpireDate() {
+        return expireDateBuilder_ != null || expireDate_ != null;
+      }
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalDate.Date getExpireDate() {
+        if (expireDateBuilder_ == null) {
+          return expireDate_ == null ? io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : expireDate_;
+        } else {
+          return expireDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      public Builder setExpireDate(io.opencannabis.schema.temporal.TemporalDate.Date value) {
+        if (expireDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          expireDate_ = value;
+          onChanged();
+        } else {
+          expireDateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      public Builder setExpireDate(
+          io.opencannabis.schema.temporal.TemporalDate.Date.Builder builderForValue) {
+        if (expireDateBuilder_ == null) {
+          expireDate_ = builderForValue.build();
+          onChanged();
+        } else {
+          expireDateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      public Builder mergeExpireDate(io.opencannabis.schema.temporal.TemporalDate.Date value) {
+        if (expireDateBuilder_ == null) {
+          if (expireDate_ != null) {
+            expireDate_ =
+              io.opencannabis.schema.temporal.TemporalDate.Date.newBuilder(expireDate_).mergeFrom(value).buildPartial();
+          } else {
+            expireDate_ = value;
+          }
+          onChanged();
+        } else {
+          expireDateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      public Builder clearExpireDate() {
+        if (expireDateBuilder_ == null) {
+          expireDate_ = null;
+          onChanged();
+        } else {
+          expireDate_ = null;
+          expireDateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalDate.Date.Builder getExpireDateBuilder() {
+        
+        onChanged();
+        return getExpireDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getExpireDateOrBuilder() {
+        if (expireDateBuilder_ != null) {
+          return expireDateBuilder_.getMessageOrBuilder();
+        } else {
+          return expireDate_ == null ?
+              io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : expireDate_;
+        }
+      }
+      /**
+       * <pre>
+       * Expiration date for this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date expire_date = 2 [(.gen_bq_schema.description) = "Expiration date for this document."];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> 
+          getExpireDateFieldBuilder() {
+        if (expireDateBuilder_ == null) {
+          expireDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder>(
+                  getExpireDate(),
+                  getParentForChildren(),
+                  isClean());
+          expireDate_ = null;
+        }
+        return expireDateBuilder_;
+      }
+
+      private io.opencannabis.schema.temporal.TemporalDate.Date birthDate_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> birthDateBuilder_;
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      public boolean hasBirthDate() {
+        return birthDateBuilder_ != null || birthDate_ != null;
+      }
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalDate.Date getBirthDate() {
+        if (birthDateBuilder_ == null) {
+          return birthDate_ == null ? io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : birthDate_;
+        } else {
+          return birthDateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      public Builder setBirthDate(io.opencannabis.schema.temporal.TemporalDate.Date value) {
+        if (birthDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          birthDate_ = value;
+          onChanged();
+        } else {
+          birthDateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      public Builder setBirthDate(
+          io.opencannabis.schema.temporal.TemporalDate.Date.Builder builderForValue) {
+        if (birthDateBuilder_ == null) {
+          birthDate_ = builderForValue.build();
+          onChanged();
+        } else {
+          birthDateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      public Builder mergeBirthDate(io.opencannabis.schema.temporal.TemporalDate.Date value) {
+        if (birthDateBuilder_ == null) {
+          if (birthDate_ != null) {
+            birthDate_ =
+              io.opencannabis.schema.temporal.TemporalDate.Date.newBuilder(birthDate_).mergeFrom(value).buildPartial();
+          } else {
+            birthDate_ = value;
+          }
+          onChanged();
+        } else {
+          birthDateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      public Builder clearBirthDate() {
+        if (birthDateBuilder_ == null) {
+          birthDate_ = null;
+          onChanged();
+        } else {
+          birthDate_ = null;
+          birthDateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalDate.Date.Builder getBirthDateBuilder() {
+        
+        onChanged();
+        return getBirthDateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      public io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder getBirthDateOrBuilder() {
+        if (birthDateBuilder_ != null) {
+          return birthDateBuilder_.getMessageOrBuilder();
+        } else {
+          return birthDate_ == null ?
+              io.opencannabis.schema.temporal.TemporalDate.Date.getDefaultInstance() : birthDate_;
+        }
+      }
+      /**
+       * <pre>
+       * Birth date listed on this document.
+       * </pre>
+       *
+       * <code>.opencannabis.temporal.Date birth_date = 3 [(.gen_bq_schema.description) = "Birth date listed on this document."];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder> 
+          getBirthDateFieldBuilder() {
+        if (birthDateBuilder_ == null) {
+          birthDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.temporal.TemporalDate.Date, io.opencannabis.schema.temporal.TemporalDate.Date.Builder, io.opencannabis.schema.temporal.TemporalDate.DateOrBuilder>(
+                  getBirthDate(),
+                  getParentForChildren(),
+                  isClean());
+          birthDate_ = null;
+        }
+        return birthDateBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder> licenseBuilder_;
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      public boolean hasLicense() {
+        return documentCase_ == 20;
+      }
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getLicense() {
+        if (licenseBuilder_ == null) {
+          if (documentCase_ == 20) {
+            return (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_;
+          }
+          return io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance();
+        } else {
+          if (documentCase_ == 20) {
+            return licenseBuilder_.getMessage();
+          }
+          return io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      public Builder setLicense(io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference value) {
+        if (licenseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          document_ = value;
+          onChanged();
+        } else {
+          licenseBuilder_.setMessage(value);
+        }
+        documentCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      public Builder setLicense(
+          io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder builderForValue) {
+        if (licenseBuilder_ == null) {
+          document_ = builderForValue.build();
+          onChanged();
+        } else {
+          licenseBuilder_.setMessage(builderForValue.build());
+        }
+        documentCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      public Builder mergeLicense(io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference value) {
+        if (licenseBuilder_ == null) {
+          if (documentCase_ == 20 &&
+              document_ != io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance()) {
+            document_ = io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.newBuilder((io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            document_ = value;
+          }
+          onChanged();
+        } else {
+          if (documentCase_ == 20) {
+            licenseBuilder_.mergeFrom(value);
+          }
+          licenseBuilder_.setMessage(value);
+        }
+        documentCase_ = 20;
+        return this;
+      }
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      public Builder clearLicense() {
+        if (licenseBuilder_ == null) {
+          if (documentCase_ == 20) {
+            documentCase_ = 0;
+            document_ = null;
+            onChanged();
+          }
+        } else {
+          if (documentCase_ == 20) {
+            documentCase_ = 0;
+            document_ = null;
+          }
+          licenseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder getLicenseBuilder() {
+        return getLicenseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder getLicenseOrBuilder() {
+        if ((documentCase_ == 20) && (licenseBuilder_ != null)) {
+          return licenseBuilder_.getMessageOrBuilder();
+        } else {
+          if (documentCase_ == 20) {
+            return (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_;
+          }
+          return io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * United States Driver's License.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.USDLReference license = 20 [(.gen_bq_schema.description) = "United States Driver&#92;'s License."];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder> 
+          getLicenseFieldBuilder() {
+        if (licenseBuilder_ == null) {
+          if (!(documentCase_ == 20)) {
+            document_ = io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance();
+          }
+          licenseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder>(
+                  (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) document_,
+                  getParentForChildren(),
+                  isClean());
+          document_ = null;
+        }
+        documentCase_ = 20;
+        onChanged();;
+        return licenseBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.ids.PassportID.PassportReference, io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder, io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder> passportBuilder_;
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      public boolean hasPassport() {
+        return documentCase_ == 21;
+      }
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      public io.bloombox.schema.identity.ids.PassportID.PassportReference getPassport() {
+        if (passportBuilder_ == null) {
+          if (documentCase_ == 21) {
+            return (io.bloombox.schema.identity.ids.PassportID.PassportReference) document_;
+          }
+          return io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance();
+        } else {
+          if (documentCase_ == 21) {
+            return passportBuilder_.getMessage();
+          }
+          return io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      public Builder setPassport(io.bloombox.schema.identity.ids.PassportID.PassportReference value) {
+        if (passportBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          document_ = value;
+          onChanged();
+        } else {
+          passportBuilder_.setMessage(value);
+        }
+        documentCase_ = 21;
+        return this;
+      }
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      public Builder setPassport(
+          io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder builderForValue) {
+        if (passportBuilder_ == null) {
+          document_ = builderForValue.build();
+          onChanged();
+        } else {
+          passportBuilder_.setMessage(builderForValue.build());
+        }
+        documentCase_ = 21;
+        return this;
+      }
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      public Builder mergePassport(io.bloombox.schema.identity.ids.PassportID.PassportReference value) {
+        if (passportBuilder_ == null) {
+          if (documentCase_ == 21 &&
+              document_ != io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance()) {
+            document_ = io.bloombox.schema.identity.ids.PassportID.PassportReference.newBuilder((io.bloombox.schema.identity.ids.PassportID.PassportReference) document_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            document_ = value;
+          }
+          onChanged();
+        } else {
+          if (documentCase_ == 21) {
+            passportBuilder_.mergeFrom(value);
+          }
+          passportBuilder_.setMessage(value);
+        }
+        documentCase_ = 21;
+        return this;
+      }
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      public Builder clearPassport() {
+        if (passportBuilder_ == null) {
+          if (documentCase_ == 21) {
+            documentCase_ = 0;
+            document_ = null;
+            onChanged();
+          }
+        } else {
+          if (documentCase_ == 21) {
+            documentCase_ = 0;
+            document_ = null;
+          }
+          passportBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      public io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder getPassportBuilder() {
+        return getPassportFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      public io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder getPassportOrBuilder() {
+        if ((documentCase_ == 21) && (passportBuilder_ != null)) {
+          return passportBuilder_.getMessageOrBuilder();
+        } else {
+          if (documentCase_ == 21) {
+            return (io.bloombox.schema.identity.ids.PassportID.PassportReference) document_;
+          }
+          return io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * National passport.
+       * </pre>
+       *
+       * <code>.bloombox.schema.identity.ids.PassportReference passport = 21 [(.gen_bq_schema.description) = "National passport."];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.bloombox.schema.identity.ids.PassportID.PassportReference, io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder, io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder> 
+          getPassportFieldBuilder() {
+        if (passportBuilder_ == null) {
+          if (!(documentCase_ == 21)) {
+            document_ = io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance();
+          }
+          passportBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.bloombox.schema.identity.ids.PassportID.PassportReference, io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder, io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder>(
+                  (io.bloombox.schema.identity.ids.PassportID.PassportReference) document_,
+                  getParentForChildren(),
+                  isClean());
+          document_ = null;
+        }
+        documentCase_ = 21;
+        onChanged();;
+        return passportBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.IDReference)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.IDReference)
+    private static final io.bloombox.schema.identity.IdentityID.IDReference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.identity.IdentityID.IDReference();
+    }
+
+    public static io.bloombox.schema.identity.IdentityID.IDReference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IDReference>
+        PARSER = new com.google.protobuf.AbstractParser<IDReference>() {
+      public IDReference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IDReference(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IDReference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IDReference> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.identity.IdentityID.IDReference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface IDOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ID)
       com.google.protobuf.MessageOrBuilder {
@@ -1978,6 +3634,11 @@ public final class IdentityID {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_identity_IDReference_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_identity_IDReference_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_identity_ID_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1994,22 +3655,34 @@ public final class IdentityID {
       "\n\021identity/ID.proto\022\030bloombox.schema.ide" +
       "ntity\032\016bq_field.proto\032\023temporal/Date.pro" +
       "to\032\027identity/ids/USDL.proto\032\033identity/id" +
-      "s/Passport.proto\"\211\004\n\002ID\022O\n\004type\030\001 \001(\0162 ." +
-      "bloombox.schema.identity.IDTypeB\037\212@\034Type" +
-      " of ID we\'re specifying.\022F\n\002id\030\002 \001(\tB:\212@" +
-      "7ID number or string identifying this id" +
-      "entity document.\022W\n\013expire_date\030\003 \001(\0132\033." +
-      "opencannabis.temporal.DateB%\212@\"Expiratio" +
-      "n date for this document.\022W\n\nbirth_date\030" +
-      "\004 \001(\0132\033.opencannabis.temporal.DateB&\212@#B" +
-      "irth date listed on this document.\022Y\n\007li" +
-      "cense\030\024 \001(\0132\".bloombox.schema.identity.i" +
-      "ds.USDLB\"\212@\037United States Driver\'s Licen" +
-      "se.H\000\022Q\n\010passport\030\025 \001(\0132&.bloombox.schem" +
-      "a.identity.ids.PassportB\025\212@\022National pas" +
-      "sport.H\000B\n\n\010document* \n\006IDType\022\010\n\004USDL\020\000" +
-      "\022\014\n\010PASSPORT\020\001B3\n\033io.bloombox.schema.ide" +
-      "ntityB\nIdentityIDH\001P\000\242\002\003BBSb\006proto3"
+      "s/Passport.proto\"\334\003\n\013IDReference\022O\n\004type" +
+      "\030\001 \001(\0162 .bloombox.schema.identity.IDType" +
+      "B\037\212@\034Type of ID we\'re specifying.\022W\n\013exp" +
+      "ire_date\030\002 \001(\0132\033.opencannabis.temporal.D" +
+      "ateB%\212@\"Expiration date for this documen" +
+      "t.\022W\n\nbirth_date\030\003 \001(\0132\033.opencannabis.te" +
+      "mporal.DateB&\212@#Birth date listed on thi" +
+      "s document.\022b\n\007license\030\024 \001(\0132+.bloombox." +
+      "schema.identity.ids.USDLReferenceB\"\212@\037Un" +
+      "ited States Driver\'s License.H\000\022Z\n\010passp" +
+      "ort\030\025 \001(\0132/.bloombox.schema.identity.ids" +
+      ".PassportReferenceB\025\212@\022National passport" +
+      ".H\000B\n\n\010document\"\211\004\n\002ID\022O\n\004type\030\001 \001(\0162 .b" +
+      "loombox.schema.identity.IDTypeB\037\212@\034Type " +
+      "of ID we\'re specifying.\022F\n\002id\030\002 \001(\tB:\212@7" +
+      "ID number or string identifying this ide" +
+      "ntity document.\022W\n\013expire_date\030\003 \001(\0132\033.o" +
+      "pencannabis.temporal.DateB%\212@\"Expiration" +
+      " date for this document.\022W\n\nbirth_date\030\004" +
+      " \001(\0132\033.opencannabis.temporal.DateB&\212@#Bi" +
+      "rth date listed on this document.\022Y\n\007lic" +
+      "ense\030\024 \001(\0132\".bloombox.schema.identity.id" +
+      "s.USDLB\"\212@\037United States Driver\'s Licens" +
+      "e.H\000\022Q\n\010passport\030\025 \001(\0132&.bloombox.schema" +
+      ".identity.ids.PassportB\025\212@\022National pass" +
+      "port.H\000B\n\n\010document* \n\006IDType\022\010\n\004USDL\020\000\022" +
+      "\014\n\010PASSPORT\020\001B3\n\033io.bloombox.schema.iden" +
+      "tityB\nIdentityIDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2027,8 +3700,14 @@ public final class IdentityID {
           io.bloombox.schema.identity.ids.DriversLicenseID.getDescriptor(),
           io.bloombox.schema.identity.ids.PassportID.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_ID_descriptor =
+    internal_static_bloombox_schema_identity_IDReference_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_bloombox_schema_identity_IDReference_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_identity_IDReference_descriptor,
+        new java.lang.String[] { "Type", "ExpireDate", "BirthDate", "License", "Passport", "Document", });
+    internal_static_bloombox_schema_identity_ID_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_bloombox_schema_identity_ID_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_ID_descriptor,

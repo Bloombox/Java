@@ -928,6 +928,24 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getLinkBytes();
+
+    /**
+     * <pre>
+     * Internal/store website for the partner location.
+     * </pre>
+     *
+     * <code>string website = 6;</code>
+     */
+    java.lang.String getWebsite();
+    /**
+     * <pre>
+     * Internal/store website for the partner location.
+     * </pre>
+     *
+     * <code>string website = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getWebsiteBytes();
   }
   /**
    * <pre>
@@ -951,6 +969,7 @@ private static final long serialVersionUID = 0L;
       dashboard_ = "";
       tv_ = "";
       link_ = "";
+      website_ = "";
     }
 
     @java.lang.Override
@@ -1012,6 +1031,12 @@ private static final long serialVersionUID = 0L;
               java.lang.String s = input.readStringRequireUtf8();
 
               link_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              website_ = s;
               break;
             }
           }
@@ -1248,6 +1273,48 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int WEBSITE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object website_;
+    /**
+     * <pre>
+     * Internal/store website for the partner location.
+     * </pre>
+     *
+     * <code>string website = 6;</code>
+     */
+    public java.lang.String getWebsite() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        website_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Internal/store website for the partner location.
+     * </pre>
+     *
+     * <code>string website = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getWebsiteBytes() {
+      java.lang.Object ref = website_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        website_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1275,6 +1342,9 @@ private static final long serialVersionUID = 0L;
       if (!getLinkBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, link_);
       }
+      if (!getWebsiteBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, website_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1297,6 +1367,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!getLinkBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, link_);
+      }
+      if (!getWebsiteBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, website_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1324,6 +1397,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getTv());
       result = result && getLink()
           .equals(other.getLink());
+      result = result && getWebsite()
+          .equals(other.getWebsite());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1345,6 +1420,8 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getTv().hashCode();
       hash = (37 * hash) + LINK_FIELD_NUMBER;
       hash = (53 * hash) + getLink().hashCode();
+      hash = (37 * hash) + WEBSITE_FIELD_NUMBER;
+      hash = (53 * hash) + getWebsite().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1488,6 +1565,8 @@ private static final long serialVersionUID = 0L;
 
         link_ = "";
 
+        website_ = "";
+
         return this;
       }
 
@@ -1515,6 +1594,7 @@ private static final long serialVersionUID = 0L;
         result.dashboard_ = dashboard_;
         result.tv_ = tv_;
         result.link_ = link_;
+        result.website_ = website_;
         onBuilt();
         return result;
       }
@@ -1574,6 +1654,10 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getLink().isEmpty()) {
           link_ = other.link_;
+          onChanged();
+        }
+        if (!other.getWebsite().isEmpty()) {
+          website_ = other.website_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2044,6 +2128,95 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
         
         link_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object website_ = "";
+      /**
+       * <pre>
+       * Internal/store website for the partner location.
+       * </pre>
+       *
+       * <code>string website = 6;</code>
+       */
+      public java.lang.String getWebsite() {
+        java.lang.Object ref = website_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          website_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Internal/store website for the partner location.
+       * </pre>
+       *
+       * <code>string website = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getWebsiteBytes() {
+        java.lang.Object ref = website_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          website_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Internal/store website for the partner location.
+       * </pre>
+       *
+       * <code>string website = 6;</code>
+       */
+      public Builder setWebsite(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        website_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal/store website for the partner location.
+       * </pre>
+       *
+       * <code>string website = 6;</code>
+       */
+      public Builder clearWebsite() {
+        
+        website_ = getDefaultInstance().getWebsite();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal/store website for the partner location.
+       * </pre>
+       *
+       * <code>string website = 6;</code>
+       */
+      public Builder setWebsiteBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        website_ = value;
         onChanged();
         return this;
       }

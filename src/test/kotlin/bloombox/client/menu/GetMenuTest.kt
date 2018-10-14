@@ -38,12 +38,12 @@ class GetMenuTest: ClientRPCTest() {
     /**
      * Partner ID to test the menu with.
      */
-    private const val partnerID = "mm"
+    private const val partnerID = "caliva"
 
     /**
      * Location ID to test the menu with.
      */
-    private const val locationID = "sacramento"
+    private const val locationID = "sjc"
   }
 
   /**
@@ -51,7 +51,7 @@ class GetMenuTest: ClientRPCTest() {
    */
 //  @test
 //  fun testGetBasicMenu() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val response = client.platform.menu().retrieve(
 //            MenuClient.MenuContext(
 //                  partner = partnerID,
@@ -59,7 +59,7 @@ class GetMenuTest: ClientRPCTest() {
 //
 //      assertNotNull(response, "response from server for menu should not be null")
 //      assertTrue(response.hasCatalog(), "response from server should specify menu data")
-//    })
+//    }
 //  }
 
   /**
@@ -67,7 +67,7 @@ class GetMenuTest: ClientRPCTest() {
    */
 //  @test
 //  fun testGetBasicMenuAsync() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val operation = client.platform.menu().retrieve(
 //            MenuClient.MenuContext(
 //                  partner = partnerID,
@@ -81,7 +81,7 @@ class GetMenuTest: ClientRPCTest() {
 //      })
 //
 //      operation.get(10000, TimeUnit.SECONDS)
-//    })
+//    }
 //  }
 
   /**
@@ -89,11 +89,11 @@ class GetMenuTest: ClientRPCTest() {
    */
 //  @test
 //  fun testGetBasicMenuDefaultContext() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val response = client.platform.menu().retrieve()
 //      assertNotNull(response, "response from server for menu should not be null")
 //      assertTrue(response.hasCatalog(), "response from server should specify menu data")
-//    })
+//    }
 //  }
 
   /**
@@ -101,11 +101,11 @@ class GetMenuTest: ClientRPCTest() {
    */
 //  @test
 //  fun testGetBasicMenuDefaultContextAsync() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val response = client.platform.menu().retrieve()
 //      assertNotNull(response, "response from server for menu should not be null")
 //      assertTrue(response.hasCatalog(), "response from server should specify menu data")
-//    })
+//    }
 //  }
 
   /**
@@ -113,7 +113,7 @@ class GetMenuTest: ClientRPCTest() {
    */
 //  @test(expected = ClientException::class)
 //  fun testGetBasicMenuInvalidPartner() {
-//    withClient({ client ->
+//    withClient { client ->
 //      try {
 //        client.platform.menu().retrieve(
 //              MenuClient.MenuContext(
@@ -125,7 +125,7 @@ class GetMenuTest: ClientRPCTest() {
 //        assertEquals(MenuClientError.PARTNER_INVALID.message(), ce.message(), "message for INVALID_PARTNER should be used")
 //        throw ce
 //      }
-//    })
+//    }
 //  }
 
   /**
@@ -133,7 +133,7 @@ class GetMenuTest: ClientRPCTest() {
    */
 //  @test(expected = ClientException::class)
 //  fun testGetBasicMenuInvalidLocation() {
-//    withClient({ client ->
+//    withClient { client ->
 //      try {
 //        client.platform.menu().retrieve(
 //              MenuClient.MenuContext(
@@ -145,7 +145,7 @@ class GetMenuTest: ClientRPCTest() {
 //        assertEquals(MenuClientError.LOCATION_INVALID.message(), ce.message(), "message for INVALID_LOCATION should be used")
 //        throw ce
 //      }
-//    })
+//    }
 //  }
 
   /**
@@ -153,13 +153,13 @@ class GetMenuTest: ClientRPCTest() {
    */
 //  @test(expected = ClientException::class)
 //  fun testGetBasicMenuDoesNotExist() {
-//    withClient({ client ->
+//    withClient { client ->
 //      val result = client.platform.menu().retrieve(
 //            MenuClient.MenuContext(
 //                  partner = "bunk-partner-id",
 //                  location = "bunk-location-id"))
 //
 //      assertFalse("catalog should not be returned when it could not be found", { result.hasCatalog() })
-//    })
+//    }
 //  }
 }

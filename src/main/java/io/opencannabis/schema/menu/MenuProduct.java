@@ -21,7 +21,9 @@ package io.opencannabis.schema.menu;
 
 /**
  * <pre>
- * Menu product payload stanza. Specifies a single product as a member of a menu section.
+ * Menu product payload stanza. Specifies a single product as a member of a menu section. This generic record is used to
+ * wrap concrete menu product structures to make them generically usable. In V2 data stores, menu products are stored
+ * generically as a top-level entity (as opposed to V1, in which this model is synthesized from raw map data).
  * </pre>
  *
  * Protobuf type {@code opencannabis.products.menu.MenuProduct}
@@ -36,6 +38,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MenuProduct() {
+    tag_ = java.util.Collections.emptyList();
+    ref_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -80,6 +84,24 @@ private static final long serialVersionUID = 0L;
               key_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              tag_ = new java.util.ArrayList<io.opencannabis.schema.menu.ProductTag>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            tag_.add(
+                input.readMessage(io.opencannabis.schema.menu.ProductTag.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              ref_ = new java.util.ArrayList<io.opencannabis.schema.menu.ForeignReference>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            ref_.add(
+                input.readMessage(io.opencannabis.schema.menu.ForeignReference.parser(), extensionRegistry));
             break;
           }
           case 82: {
@@ -202,6 +224,12 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        tag_ = java.util.Collections.unmodifiableList(tag_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        ref_ = java.util.Collections.unmodifiableList(ref_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -218,6 +246,7 @@ private static final long serialVersionUID = 0L;
             io.opencannabis.schema.menu.MenuProduct.class, io.opencannabis.schema.menu.MenuProduct.Builder.class);
   }
 
+  private int bitField0_;
   private int productCase_ = 0;
   private java.lang.Object product_;
   public enum ProductCase
@@ -272,33 +301,156 @@ private static final long serialVersionUID = 0L;
   private io.opencannabis.schema.base.BaseProductKey.ProductKey key_;
   /**
    * <pre>
-   * Section that this data is attached to.
+   * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+   * attached concrete record below.
    * </pre>
    *
-   * <code>.opencannabis.base.ProductKey key = 1;</code>
+   * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
    */
   public boolean hasKey() {
     return key_ != null;
   }
   /**
    * <pre>
-   * Section that this data is attached to.
+   * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+   * attached concrete record below.
    * </pre>
    *
-   * <code>.opencannabis.base.ProductKey key = 1;</code>
+   * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
    */
   public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
     return key_ == null ? io.opencannabis.schema.base.BaseProductKey.ProductKey.getDefaultInstance() : key_;
   }
   /**
    * <pre>
-   * Section that this data is attached to.
+   * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+   * attached concrete record below.
    * </pre>
    *
-   * <code>.opencannabis.base.ProductKey key = 1;</code>
+   * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
    */
   public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
     return getKey();
+  }
+
+  public static final int TAG_FIELD_NUMBER = 2;
+  private java.util.List<io.opencannabis.schema.menu.ProductTag> tag_;
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  public java.util.List<io.opencannabis.schema.menu.ProductTag> getTagList() {
+    return tag_;
+  }
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  public java.util.List<? extends io.opencannabis.schema.menu.ProductTagOrBuilder> 
+      getTagOrBuilderList() {
+    return tag_;
+  }
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  public int getTagCount() {
+    return tag_.size();
+  }
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  public io.opencannabis.schema.menu.ProductTag getTag(int index) {
+    return tag_.get(index);
+  }
+  /**
+   * <pre>
+   * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+   * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+   */
+  public io.opencannabis.schema.menu.ProductTagOrBuilder getTagOrBuilder(
+      int index) {
+    return tag_.get(index);
+  }
+
+  public static final int REF_FIELD_NUMBER = 3;
+  private java.util.List<io.opencannabis.schema.menu.ForeignReference> ref_;
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  public java.util.List<io.opencannabis.schema.menu.ForeignReference> getRefList() {
+    return ref_;
+  }
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  public java.util.List<? extends io.opencannabis.schema.menu.ForeignReferenceOrBuilder> 
+      getRefOrBuilderList() {
+    return ref_;
+  }
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  public int getRefCount() {
+    return ref_.size();
+  }
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  public io.opencannabis.schema.menu.ForeignReference getRef(int index) {
+    return ref_.get(index);
+  }
+  /**
+   * <pre>
+   * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+   * in a uniquely identifiable way.
+   * </pre>
+   *
+   * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+   */
+  public io.opencannabis.schema.menu.ForeignReferenceOrBuilder getRefOrBuilder(
+      int index) {
+    return ref_.get(index);
   }
 
   public static final int APOTHECARY_FIELD_NUMBER = 10;
@@ -620,6 +772,12 @@ private static final long serialVersionUID = 0L;
     if (key_ != null) {
       output.writeMessage(1, getKey());
     }
+    for (int i = 0; i < tag_.size(); i++) {
+      output.writeMessage(2, tag_.get(i));
+    }
+    for (int i = 0; i < ref_.size(); i++) {
+      output.writeMessage(3, ref_.get(i));
+    }
     if (productCase_ == 10) {
       output.writeMessage(10, (io.opencannabis.schema.product.ApothecaryProduct.Apothecary) product_);
     }
@@ -655,6 +813,14 @@ private static final long serialVersionUID = 0L;
     if (key_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getKey());
+    }
+    for (int i = 0; i < tag_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, tag_.get(i));
+    }
+    for (int i = 0; i < ref_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, ref_.get(i));
     }
     if (productCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
@@ -709,6 +875,10 @@ private static final long serialVersionUID = 0L;
       result = result && getKey()
           .equals(other.getKey());
     }
+    result = result && getTagList()
+        .equals(other.getTagList());
+    result = result && getRefList()
+        .equals(other.getRefList());
     result = result && getProductCase().equals(
         other.getProductCase());
     if (!result) return false;
@@ -762,6 +932,14 @@ private static final long serialVersionUID = 0L;
     if (hasKey()) {
       hash = (37 * hash) + KEY_FIELD_NUMBER;
       hash = (53 * hash) + getKey().hashCode();
+    }
+    if (getTagCount() > 0) {
+      hash = (37 * hash) + TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getTagList().hashCode();
+    }
+    if (getRefCount() > 0) {
+      hash = (37 * hash) + REF_FIELD_NUMBER;
+      hash = (53 * hash) + getRefList().hashCode();
     }
     switch (productCase_) {
       case 10:
@@ -894,7 +1072,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Menu product payload stanza. Specifies a single product as a member of a menu section.
+   * Menu product payload stanza. Specifies a single product as a member of a menu section. This generic record is used to
+   * wrap concrete menu product structures to make them generically usable. In V2 data stores, menu products are stored
+   * generically as a top-level entity (as opposed to V1, in which this model is synthesized from raw map data).
    * </pre>
    *
    * Protobuf type {@code opencannabis.products.menu.MenuProduct}
@@ -928,6 +1108,8 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getTagFieldBuilder();
+        getRefFieldBuilder();
       }
     }
     public Builder clear() {
@@ -937,6 +1119,18 @@ private static final long serialVersionUID = 0L;
       } else {
         key_ = null;
         keyBuilder_ = null;
+      }
+      if (tagBuilder_ == null) {
+        tag_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      } else {
+        tagBuilder_.clear();
+      }
+      if (refBuilder_ == null) {
+        ref_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      } else {
+        refBuilder_.clear();
       }
       productCase_ = 0;
       product_ = null;
@@ -962,10 +1156,30 @@ private static final long serialVersionUID = 0L;
 
     public io.opencannabis.schema.menu.MenuProduct buildPartial() {
       io.opencannabis.schema.menu.MenuProduct result = new io.opencannabis.schema.menu.MenuProduct(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (keyBuilder_ == null) {
         result.key_ = key_;
       } else {
         result.key_ = keyBuilder_.build();
+      }
+      if (tagBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          tag_ = java.util.Collections.unmodifiableList(tag_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.tag_ = tag_;
+      } else {
+        result.tag_ = tagBuilder_.build();
+      }
+      if (refBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          ref_ = java.util.Collections.unmodifiableList(ref_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.ref_ = ref_;
+      } else {
+        result.ref_ = refBuilder_.build();
       }
       if (productCase_ == 10) {
         if (apothecaryBuilder_ == null) {
@@ -1023,6 +1237,7 @@ private static final long serialVersionUID = 0L;
           result.product_ = prerollBuilder_.build();
         }
       }
+      result.bitField0_ = to_bitField0_;
       result.productCase_ = productCase_;
       onBuilt();
       return result;
@@ -1067,6 +1282,58 @@ private static final long serialVersionUID = 0L;
       if (other == io.opencannabis.schema.menu.MenuProduct.getDefaultInstance()) return this;
       if (other.hasKey()) {
         mergeKey(other.getKey());
+      }
+      if (tagBuilder_ == null) {
+        if (!other.tag_.isEmpty()) {
+          if (tag_.isEmpty()) {
+            tag_ = other.tag_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureTagIsMutable();
+            tag_.addAll(other.tag_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.tag_.isEmpty()) {
+          if (tagBuilder_.isEmpty()) {
+            tagBuilder_.dispose();
+            tagBuilder_ = null;
+            tag_ = other.tag_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            tagBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTagFieldBuilder() : null;
+          } else {
+            tagBuilder_.addAllMessages(other.tag_);
+          }
+        }
+      }
+      if (refBuilder_ == null) {
+        if (!other.ref_.isEmpty()) {
+          if (ref_.isEmpty()) {
+            ref_ = other.ref_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureRefIsMutable();
+            ref_.addAll(other.ref_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.ref_.isEmpty()) {
+          if (refBuilder_.isEmpty()) {
+            refBuilder_.dispose();
+            refBuilder_ = null;
+            ref_ = other.ref_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            refBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getRefFieldBuilder() : null;
+          } else {
+            refBuilder_.addAllMessages(other.ref_);
+          }
+        }
       }
       switch (other.getProductCase()) {
         case APOTHECARY: {
@@ -1146,26 +1413,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private io.opencannabis.schema.base.BaseProductKey.ProductKey key_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> keyBuilder_;
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     public boolean hasKey() {
       return keyBuilder_ != null || key_ != null;
     }
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.base.BaseProductKey.ProductKey getKey() {
       if (keyBuilder_ == null) {
@@ -1176,10 +1446,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     public Builder setKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
       if (keyBuilder_ == null) {
@@ -1196,10 +1467,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     public Builder setKey(
         io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder builderForValue) {
@@ -1214,10 +1486,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     public Builder mergeKey(io.opencannabis.schema.base.BaseProductKey.ProductKey value) {
       if (keyBuilder_ == null) {
@@ -1236,10 +1509,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     public Builder clearKey() {
       if (keyBuilder_ == null) {
@@ -1254,10 +1528,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder getKeyBuilder() {
       
@@ -1266,10 +1541,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     public io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder getKeyOrBuilder() {
       if (keyBuilder_ != null) {
@@ -1281,10 +1557,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Section that this data is attached to.
+     * Key record uniquely identifying this menu product. Keys for saved items are lifted to this property from the
+     * attached concrete record below.
      * </pre>
      *
-     * <code>.opencannabis.base.ProductKey key = 1;</code>
+     * <code>.opencannabis.base.ProductKey key = 1 [(.core.field) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.base.BaseProductKey.ProductKey, io.opencannabis.schema.base.BaseProductKey.ProductKey.Builder, io.opencannabis.schema.base.BaseProductKey.ProductKeyOrBuilder> 
@@ -1298,6 +1575,666 @@ private static final long serialVersionUID = 0L;
         key_ = null;
       }
       return keyBuilder_;
+    }
+
+    private java.util.List<io.opencannabis.schema.menu.ProductTag> tag_ =
+      java.util.Collections.emptyList();
+    private void ensureTagIsMutable() {
+      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        tag_ = new java.util.ArrayList<io.opencannabis.schema.menu.ProductTag>(tag_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.menu.ProductTag, io.opencannabis.schema.menu.ProductTag.Builder, io.opencannabis.schema.menu.ProductTagOrBuilder> tagBuilder_;
+
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public java.util.List<io.opencannabis.schema.menu.ProductTag> getTagList() {
+      if (tagBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(tag_);
+      } else {
+        return tagBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public int getTagCount() {
+      if (tagBuilder_ == null) {
+        return tag_.size();
+      } else {
+        return tagBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public io.opencannabis.schema.menu.ProductTag getTag(int index) {
+      if (tagBuilder_ == null) {
+        return tag_.get(index);
+      } else {
+        return tagBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder setTag(
+        int index, io.opencannabis.schema.menu.ProductTag value) {
+      if (tagBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTagIsMutable();
+        tag_.set(index, value);
+        onChanged();
+      } else {
+        tagBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder setTag(
+        int index, io.opencannabis.schema.menu.ProductTag.Builder builderForValue) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        tag_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        tagBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder addTag(io.opencannabis.schema.menu.ProductTag value) {
+      if (tagBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTagIsMutable();
+        tag_.add(value);
+        onChanged();
+      } else {
+        tagBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder addTag(
+        int index, io.opencannabis.schema.menu.ProductTag value) {
+      if (tagBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTagIsMutable();
+        tag_.add(index, value);
+        onChanged();
+      } else {
+        tagBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder addTag(
+        io.opencannabis.schema.menu.ProductTag.Builder builderForValue) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        tag_.add(builderForValue.build());
+        onChanged();
+      } else {
+        tagBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder addTag(
+        int index, io.opencannabis.schema.menu.ProductTag.Builder builderForValue) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        tag_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        tagBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder addAllTag(
+        java.lang.Iterable<? extends io.opencannabis.schema.menu.ProductTag> values) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tag_);
+        onChanged();
+      } else {
+        tagBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder clearTag() {
+      if (tagBuilder_ == null) {
+        tag_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        tagBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public Builder removeTag(int index) {
+      if (tagBuilder_ == null) {
+        ensureTagIsMutable();
+        tag_.remove(index);
+        onChanged();
+      } else {
+        tagBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public io.opencannabis.schema.menu.ProductTag.Builder getTagBuilder(
+        int index) {
+      return getTagFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public io.opencannabis.schema.menu.ProductTagOrBuilder getTagOrBuilder(
+        int index) {
+      if (tagBuilder_ == null) {
+        return tag_.get(index);  } else {
+        return tagBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public java.util.List<? extends io.opencannabis.schema.menu.ProductTagOrBuilder> 
+         getTagOrBuilderList() {
+      if (tagBuilder_ != null) {
+        return tagBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(tag_);
+      }
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public io.opencannabis.schema.menu.ProductTag.Builder addTagBuilder() {
+      return getTagFieldBuilder().addBuilder(
+          io.opencannabis.schema.menu.ProductTag.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public io.opencannabis.schema.menu.ProductTag.Builder addTagBuilder(
+        int index) {
+      return getTagFieldBuilder().addBuilder(
+          index, io.opencannabis.schema.menu.ProductTag.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Product tags attached to this entry. Product tags are arbitrary phrases or strings that may be attached to product
+     * records to help categorize them or facilitate their management. They are not generally end-user-visible.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ProductTag tag = 2;</code>
+     */
+    public java.util.List<io.opencannabis.schema.menu.ProductTag.Builder> 
+         getTagBuilderList() {
+      return getTagFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.menu.ProductTag, io.opencannabis.schema.menu.ProductTag.Builder, io.opencannabis.schema.menu.ProductTagOrBuilder> 
+        getTagFieldBuilder() {
+      if (tagBuilder_ == null) {
+        tagBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            io.opencannabis.schema.menu.ProductTag, io.opencannabis.schema.menu.ProductTag.Builder, io.opencannabis.schema.menu.ProductTagOrBuilder>(
+                tag_,
+                ((bitField0_ & 0x00000002) == 0x00000002),
+                getParentForChildren(),
+                isClean());
+        tag_ = null;
+      }
+      return tagBuilder_;
+    }
+
+    private java.util.List<io.opencannabis.schema.menu.ForeignReference> ref_ =
+      java.util.Collections.emptyList();
+    private void ensureRefIsMutable() {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        ref_ = new java.util.ArrayList<io.opencannabis.schema.menu.ForeignReference>(ref_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.menu.ForeignReference, io.opencannabis.schema.menu.ForeignReference.Builder, io.opencannabis.schema.menu.ForeignReferenceOrBuilder> refBuilder_;
+
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public java.util.List<io.opencannabis.schema.menu.ForeignReference> getRefList() {
+      if (refBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(ref_);
+      } else {
+        return refBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public int getRefCount() {
+      if (refBuilder_ == null) {
+        return ref_.size();
+      } else {
+        return refBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public io.opencannabis.schema.menu.ForeignReference getRef(int index) {
+      if (refBuilder_ == null) {
+        return ref_.get(index);
+      } else {
+        return refBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder setRef(
+        int index, io.opencannabis.schema.menu.ForeignReference value) {
+      if (refBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRefIsMutable();
+        ref_.set(index, value);
+        onChanged();
+      } else {
+        refBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder setRef(
+        int index, io.opencannabis.schema.menu.ForeignReference.Builder builderForValue) {
+      if (refBuilder_ == null) {
+        ensureRefIsMutable();
+        ref_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        refBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder addRef(io.opencannabis.schema.menu.ForeignReference value) {
+      if (refBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRefIsMutable();
+        ref_.add(value);
+        onChanged();
+      } else {
+        refBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder addRef(
+        int index, io.opencannabis.schema.menu.ForeignReference value) {
+      if (refBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureRefIsMutable();
+        ref_.add(index, value);
+        onChanged();
+      } else {
+        refBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder addRef(
+        io.opencannabis.schema.menu.ForeignReference.Builder builderForValue) {
+      if (refBuilder_ == null) {
+        ensureRefIsMutable();
+        ref_.add(builderForValue.build());
+        onChanged();
+      } else {
+        refBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder addRef(
+        int index, io.opencannabis.schema.menu.ForeignReference.Builder builderForValue) {
+      if (refBuilder_ == null) {
+        ensureRefIsMutable();
+        ref_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        refBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder addAllRef(
+        java.lang.Iterable<? extends io.opencannabis.schema.menu.ForeignReference> values) {
+      if (refBuilder_ == null) {
+        ensureRefIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ref_);
+        onChanged();
+      } else {
+        refBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder clearRef() {
+      if (refBuilder_ == null) {
+        ref_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        refBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public Builder removeRef(int index) {
+      if (refBuilder_ == null) {
+        ensureRefIsMutable();
+        ref_.remove(index);
+        onChanged();
+      } else {
+        refBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public io.opencannabis.schema.menu.ForeignReference.Builder getRefBuilder(
+        int index) {
+      return getRefFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public io.opencannabis.schema.menu.ForeignReferenceOrBuilder getRefOrBuilder(
+        int index) {
+      if (refBuilder_ == null) {
+        return ref_.get(index);  } else {
+        return refBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public java.util.List<? extends io.opencannabis.schema.menu.ForeignReferenceOrBuilder> 
+         getRefOrBuilderList() {
+      if (refBuilder_ != null) {
+        return refBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(ref_);
+      }
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public io.opencannabis.schema.menu.ForeignReference.Builder addRefBuilder() {
+      return getRefFieldBuilder().addBuilder(
+          io.opencannabis.schema.menu.ForeignReference.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public io.opencannabis.schema.menu.ForeignReference.Builder addRefBuilder(
+        int index) {
+      return getRefFieldBuilder().addBuilder(
+          index, io.opencannabis.schema.menu.ForeignReference.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Set of foreign references for this product, or, instances in which this product exists in an out-of-network system,
+     * in a uniquely identifiable way.
+     * </pre>
+     *
+     * <code>repeated .opencannabis.products.menu.ForeignReference ref = 3;</code>
+     */
+    public java.util.List<io.opencannabis.schema.menu.ForeignReference.Builder> 
+         getRefBuilderList() {
+      return getRefFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        io.opencannabis.schema.menu.ForeignReference, io.opencannabis.schema.menu.ForeignReference.Builder, io.opencannabis.schema.menu.ForeignReferenceOrBuilder> 
+        getRefFieldBuilder() {
+      if (refBuilder_ == null) {
+        refBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            io.opencannabis.schema.menu.ForeignReference, io.opencannabis.schema.menu.ForeignReference.Builder, io.opencannabis.schema.menu.ForeignReferenceOrBuilder>(
+                ref_,
+                ((bitField0_ & 0x00000004) == 0x00000004),
+                getParentForChildren(),
+                isClean());
+        ref_ = null;
+      }
+      return refBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

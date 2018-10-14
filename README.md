@@ -23,14 +23,14 @@ Via Maven:
     <dependency>
       <groupId>io.bloombox</groupId>
       <artifactId>java-client</artifactId>
-      <version>1.0</version>
+      <version>1.6</version>
     </dependency>
   </dependencies>
 ```
 
 Via Gradle:
 ```gradle
-  compile 'io.bloombox:java-client:1.0'
+  compile 'io.bloombox:java-client:1.6'
 ```
 
 Then, in your app, simply create a client (with your desired settings), and begin using services:
@@ -59,8 +59,8 @@ If you're developing on the code, you'll use `make`.
 
 #### Required tools:
 
-- `java` (Oracle or OpenJDK 8)
-- `maven` or `gradle`
+- `java` (JDK 8, 9 and 10 supported, both Oracle and Open)
+- `maven` or `gradle` (Gradle 4.8 or greater is required for JDK 10 and above)
 
 
 ## Services
@@ -144,8 +144,22 @@ client.telemetry().event(
 
 ### Menu API
 
-Docs coming soon.
+Using the Menu API, you can download product catalog content, geared for showcase/presentation (i.e. items that are out of stock are hidden by default, featured items are presented above the fold, etc). Menus are cached for only a short amount of time and are instantly purged when updates occur:
 
+###### Java
+```java
+client.menu().retrieve(MenuClient.MenuContext("[partner-id]", "[location-id]"));
+```
+
+###### Kotlin
+```kotlin
+client.menu().retrieve(
+    MenuClient.MenuContext(
+        partner = "[partner-id]",
+        location = "[location-id]"), false /* 'full' flag */, { response ->
+  // do something with your menu at response.catalog
+}
+```
 
 ### Tooling
 

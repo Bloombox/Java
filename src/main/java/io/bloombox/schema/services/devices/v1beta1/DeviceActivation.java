@@ -98,6 +98,58 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 34: {
+            io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder subBuilder = null;
+            if (ticket_ != null) {
+              subBuilder = ticket_.toBuilder();
+            }
+            ticket_ = input.readMessage(io.bloombox.schema.security.DeviceSecurity.DeviceTicket.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(ticket_);
+              ticket_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder subBuilder = null;
+            if (endpoints_ != null) {
+              subBuilder = endpoints_.toBuilder();
+            }
+            endpoints_ = input.readMessage(io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(endpoints_);
+              endpoints_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            io.opencannabis.schema.proximity.BluetoothBeacon.Builder subBuilder = null;
+            if (beacon_ != null) {
+              subBuilder = beacon_.toBuilder();
+            }
+            beacon_ = input.readMessage(io.opencannabis.schema.proximity.BluetoothBeacon.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(beacon_);
+              beacon_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder subBuilder = null;
+            if (credentials_ != null) {
+              subBuilder = credentials_.toBuilder();
+            }
+            credentials_ = input.readMessage(io.bloombox.schema.services.devices.v1beta1.DeviceKeys.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(credentials_);
+              credentials_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
         }
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -239,6 +291,150 @@ private static final long serialVersionUID = 0L;
     return getAssignment();
   }
 
+  public static final int TICKET_FIELD_NUMBER = 4;
+  private io.bloombox.schema.security.DeviceSecurity.DeviceTicket ticket_;
+  /**
+   * <pre>
+   * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+   * allows the device access to assigned information and credentials.
+   * </pre>
+   *
+   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   */
+  public boolean hasTicket() {
+    return ticket_ != null;
+  }
+  /**
+   * <pre>
+   * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+   * allows the device access to assigned information and credentials.
+   * </pre>
+   *
+   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   */
+  public io.bloombox.schema.security.DeviceSecurity.DeviceTicket getTicket() {
+    return ticket_ == null ? io.bloombox.schema.security.DeviceSecurity.DeviceTicket.getDefaultInstance() : ticket_;
+  }
+  /**
+   * <pre>
+   * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+   * allows the device access to assigned information and credentials.
+   * </pre>
+   *
+   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   */
+  public io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder getTicketOrBuilder() {
+    return getTicket();
+  }
+
+  public static final int ENDPOINTS_FIELD_NUMBER = 5;
+  private io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints_;
+  /**
+   * <pre>
+   * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+   * direct use of Firebase.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   */
+  public boolean hasEndpoints() {
+    return endpoints_ != null;
+  }
+  /**
+   * <pre>
+   * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+   * direct use of Firebase.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   */
+  public io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints getEndpoints() {
+    return endpoints_ == null ? io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.getDefaultInstance() : endpoints_;
+  }
+  /**
+   * <pre>
+   * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+   * direct use of Firebase.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   */
+  public io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder getEndpointsOrBuilder() {
+    return getEndpoints();
+  }
+
+  public static final int BEACON_FIELD_NUMBER = 6;
+  private io.opencannabis.schema.proximity.BluetoothBeacon beacon_;
+  /**
+   * <pre>
+   * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+   * the minimum required for an iBeacon (UUID, major and minor values).
+   * </pre>
+   *
+   * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+   */
+  public boolean hasBeacon() {
+    return beacon_ != null;
+  }
+  /**
+   * <pre>
+   * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+   * the minimum required for an iBeacon (UUID, major and minor values).
+   * </pre>
+   *
+   * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+   */
+  public io.opencannabis.schema.proximity.BluetoothBeacon getBeacon() {
+    return beacon_ == null ? io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
+  }
+  /**
+   * <pre>
+   * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+   * the minimum required for an iBeacon (UUID, major and minor values).
+   * </pre>
+   *
+   * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+   */
+  public io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder() {
+    return getBeacon();
+  }
+
+  public static final int CREDENTIALS_FIELD_NUMBER = 7;
+  private io.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials_;
+  /**
+   * <pre>
+   * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+   * Platform server-side systems.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   */
+  public boolean hasCredentials() {
+    return credentials_ != null;
+  }
+  /**
+   * <pre>
+   * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+   * Platform server-side systems.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   */
+  public io.bloombox.schema.services.devices.v1beta1.DeviceKeys getCredentials() {
+    return credentials_ == null ? io.bloombox.schema.services.devices.v1beta1.DeviceKeys.getDefaultInstance() : credentials_;
+  }
+  /**
+   * <pre>
+   * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+   * Platform server-side systems.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   */
+  public io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder getCredentialsOrBuilder() {
+    return getCredentials();
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -260,6 +456,18 @@ private static final long serialVersionUID = 0L;
     if (assignment_ != null) {
       output.writeMessage(3, getAssignment());
     }
+    if (ticket_ != null) {
+      output.writeMessage(4, getTicket());
+    }
+    if (endpoints_ != null) {
+      output.writeMessage(5, getEndpoints());
+    }
+    if (beacon_ != null) {
+      output.writeMessage(6, getBeacon());
+    }
+    if (credentials_ != null) {
+      output.writeMessage(7, getCredentials());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -277,6 +485,22 @@ private static final long serialVersionUID = 0L;
     if (assignment_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getAssignment());
+    }
+    if (ticket_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getTicket());
+    }
+    if (endpoints_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getEndpoints());
+    }
+    if (beacon_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getBeacon());
+    }
+    if (credentials_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getCredentials());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -303,6 +527,26 @@ private static final long serialVersionUID = 0L;
       result = result && getAssignment()
           .equals(other.getAssignment());
     }
+    result = result && (hasTicket() == other.hasTicket());
+    if (hasTicket()) {
+      result = result && getTicket()
+          .equals(other.getTicket());
+    }
+    result = result && (hasEndpoints() == other.hasEndpoints());
+    if (hasEndpoints()) {
+      result = result && getEndpoints()
+          .equals(other.getEndpoints());
+    }
+    result = result && (hasBeacon() == other.hasBeacon());
+    if (hasBeacon()) {
+      result = result && getBeacon()
+          .equals(other.getBeacon());
+    }
+    result = result && (hasCredentials() == other.hasCredentials());
+    if (hasCredentials()) {
+      result = result && getCredentials()
+          .equals(other.getCredentials());
+    }
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -321,6 +565,22 @@ private static final long serialVersionUID = 0L;
     if (hasAssignment()) {
       hash = (37 * hash) + ASSIGNMENT_FIELD_NUMBER;
       hash = (53 * hash) + getAssignment().hashCode();
+    }
+    if (hasTicket()) {
+      hash = (37 * hash) + TICKET_FIELD_NUMBER;
+      hash = (53 * hash) + getTicket().hashCode();
+    }
+    if (hasEndpoints()) {
+      hash = (37 * hash) + ENDPOINTS_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpoints().hashCode();
+    }
+    if (hasBeacon()) {
+      hash = (37 * hash) + BEACON_FIELD_NUMBER;
+      hash = (53 * hash) + getBeacon().hashCode();
+    }
+    if (hasCredentials()) {
+      hash = (37 * hash) + CREDENTIALS_FIELD_NUMBER;
+      hash = (53 * hash) + getCredentials().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -466,6 +726,30 @@ private static final long serialVersionUID = 0L;
         assignment_ = null;
         assignmentBuilder_ = null;
       }
+      if (ticketBuilder_ == null) {
+        ticket_ = null;
+      } else {
+        ticket_ = null;
+        ticketBuilder_ = null;
+      }
+      if (endpointsBuilder_ == null) {
+        endpoints_ = null;
+      } else {
+        endpoints_ = null;
+        endpointsBuilder_ = null;
+      }
+      if (beaconBuilder_ == null) {
+        beacon_ = null;
+      } else {
+        beacon_ = null;
+        beaconBuilder_ = null;
+      }
+      if (credentialsBuilder_ == null) {
+        credentials_ = null;
+      } else {
+        credentials_ = null;
+        credentialsBuilder_ = null;
+      }
       return this;
     }
 
@@ -494,6 +778,26 @@ private static final long serialVersionUID = 0L;
         result.assignment_ = assignment_;
       } else {
         result.assignment_ = assignmentBuilder_.build();
+      }
+      if (ticketBuilder_ == null) {
+        result.ticket_ = ticket_;
+      } else {
+        result.ticket_ = ticketBuilder_.build();
+      }
+      if (endpointsBuilder_ == null) {
+        result.endpoints_ = endpoints_;
+      } else {
+        result.endpoints_ = endpointsBuilder_.build();
+      }
+      if (beaconBuilder_ == null) {
+        result.beacon_ = beacon_;
+      } else {
+        result.beacon_ = beaconBuilder_.build();
+      }
+      if (credentialsBuilder_ == null) {
+        result.credentials_ = credentials_;
+      } else {
+        result.credentials_ = credentialsBuilder_.build();
       }
       onBuilt();
       return result;
@@ -546,6 +850,18 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasAssignment()) {
         mergeAssignment(other.getAssignment());
+      }
+      if (other.hasTicket()) {
+        mergeTicket(other.getTicket());
+      }
+      if (other.hasEndpoints()) {
+        mergeEndpoints(other.getEndpoints());
+      }
+      if (other.hasBeacon()) {
+        mergeBeacon(other.getBeacon());
+      }
+      if (other.hasCredentials()) {
+        mergeCredentials(other.getCredentials());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -903,6 +1219,654 @@ private static final long serialVersionUID = 0L;
         assignment_ = null;
       }
       return assignmentBuilder_;
+    }
+
+    private io.bloombox.schema.security.DeviceSecurity.DeviceTicket ticket_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.security.DeviceSecurity.DeviceTicket, io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder, io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder> ticketBuilder_;
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    public boolean hasTicket() {
+      return ticketBuilder_ != null || ticket_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    public io.bloombox.schema.security.DeviceSecurity.DeviceTicket getTicket() {
+      if (ticketBuilder_ == null) {
+        return ticket_ == null ? io.bloombox.schema.security.DeviceSecurity.DeviceTicket.getDefaultInstance() : ticket_;
+      } else {
+        return ticketBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    public Builder setTicket(io.bloombox.schema.security.DeviceSecurity.DeviceTicket value) {
+      if (ticketBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ticket_ = value;
+        onChanged();
+      } else {
+        ticketBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    public Builder setTicket(
+        io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder builderForValue) {
+      if (ticketBuilder_ == null) {
+        ticket_ = builderForValue.build();
+        onChanged();
+      } else {
+        ticketBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    public Builder mergeTicket(io.bloombox.schema.security.DeviceSecurity.DeviceTicket value) {
+      if (ticketBuilder_ == null) {
+        if (ticket_ != null) {
+          ticket_ =
+            io.bloombox.schema.security.DeviceSecurity.DeviceTicket.newBuilder(ticket_).mergeFrom(value).buildPartial();
+        } else {
+          ticket_ = value;
+        }
+        onChanged();
+      } else {
+        ticketBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    public Builder clearTicket() {
+      if (ticketBuilder_ == null) {
+        ticket_ = null;
+        onChanged();
+      } else {
+        ticket_ = null;
+        ticketBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    public io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder getTicketBuilder() {
+      
+      onChanged();
+      return getTicketFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    public io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder getTicketOrBuilder() {
+      if (ticketBuilder_ != null) {
+        return ticketBuilder_.getMessageOrBuilder();
+      } else {
+        return ticket_ == null ?
+            io.bloombox.schema.security.DeviceSecurity.DeviceTicket.getDefaultInstance() : ticket_;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+     * allows the device access to assigned information and credentials.
+     * </pre>
+     *
+     * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.security.DeviceSecurity.DeviceTicket, io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder, io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder> 
+        getTicketFieldBuilder() {
+      if (ticketBuilder_ == null) {
+        ticketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.bloombox.schema.security.DeviceSecurity.DeviceTicket, io.bloombox.schema.security.DeviceSecurity.DeviceTicket.Builder, io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder>(
+                getTicket(),
+                getParentForChildren(),
+                isClean());
+        ticket_ = null;
+      }
+      return ticketBuilder_;
+    }
+
+    private io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints, io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder> endpointsBuilder_;
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    public boolean hasEndpoints() {
+      return endpointsBuilder_ != null || endpoints_ != null;
+    }
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    public io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints getEndpoints() {
+      if (endpointsBuilder_ == null) {
+        return endpoints_ == null ? io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.getDefaultInstance() : endpoints_;
+      } else {
+        return endpointsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    public Builder setEndpoints(io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints value) {
+      if (endpointsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        endpoints_ = value;
+        onChanged();
+      } else {
+        endpointsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    public Builder setEndpoints(
+        io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder builderForValue) {
+      if (endpointsBuilder_ == null) {
+        endpoints_ = builderForValue.build();
+        onChanged();
+      } else {
+        endpointsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    public Builder mergeEndpoints(io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints value) {
+      if (endpointsBuilder_ == null) {
+        if (endpoints_ != null) {
+          endpoints_ =
+            io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.newBuilder(endpoints_).mergeFrom(value).buildPartial();
+        } else {
+          endpoints_ = value;
+        }
+        onChanged();
+      } else {
+        endpointsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    public Builder clearEndpoints() {
+      if (endpointsBuilder_ == null) {
+        endpoints_ = null;
+        onChanged();
+      } else {
+        endpoints_ = null;
+        endpointsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    public io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder getEndpointsBuilder() {
+      
+      onChanged();
+      return getEndpointsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    public io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder getEndpointsOrBuilder() {
+      if (endpointsBuilder_ != null) {
+        return endpointsBuilder_.getMessageOrBuilder();
+      } else {
+        return endpoints_ == null ?
+            io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.getDefaultInstance() : endpoints_;
+      }
+    }
+    /**
+     * <pre>
+     * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+     * direct use of Firebase.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints, io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder> 
+        getEndpointsFieldBuilder() {
+      if (endpointsBuilder_ == null) {
+        endpointsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints, io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder>(
+                getEndpoints(),
+                getParentForChildren(),
+                isClean());
+        endpoints_ = null;
+      }
+      return endpointsBuilder_;
+    }
+
+    private io.opencannabis.schema.proximity.BluetoothBeacon beacon_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> beaconBuilder_;
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    public boolean hasBeacon() {
+      return beaconBuilder_ != null || beacon_ != null;
+    }
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    public io.opencannabis.schema.proximity.BluetoothBeacon getBeacon() {
+      if (beaconBuilder_ == null) {
+        return beacon_ == null ? io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
+      } else {
+        return beaconBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    public Builder setBeacon(io.opencannabis.schema.proximity.BluetoothBeacon value) {
+      if (beaconBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        beacon_ = value;
+        onChanged();
+      } else {
+        beaconBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    public Builder setBeacon(
+        io.opencannabis.schema.proximity.BluetoothBeacon.Builder builderForValue) {
+      if (beaconBuilder_ == null) {
+        beacon_ = builderForValue.build();
+        onChanged();
+      } else {
+        beaconBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    public Builder mergeBeacon(io.opencannabis.schema.proximity.BluetoothBeacon value) {
+      if (beaconBuilder_ == null) {
+        if (beacon_ != null) {
+          beacon_ =
+            io.opencannabis.schema.proximity.BluetoothBeacon.newBuilder(beacon_).mergeFrom(value).buildPartial();
+        } else {
+          beacon_ = value;
+        }
+        onChanged();
+      } else {
+        beaconBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    public Builder clearBeacon() {
+      if (beaconBuilder_ == null) {
+        beacon_ = null;
+        onChanged();
+      } else {
+        beacon_ = null;
+        beaconBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    public io.opencannabis.schema.proximity.BluetoothBeacon.Builder getBeaconBuilder() {
+      
+      onChanged();
+      return getBeaconFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    public io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder() {
+      if (beaconBuilder_ != null) {
+        return beaconBuilder_.getMessageOrBuilder();
+      } else {
+        return beacon_ == null ?
+            io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance() : beacon_;
+      }
+    }
+    /**
+     * <pre>
+     * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+     * the minimum required for an iBeacon (UUID, major and minor values).
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> 
+        getBeaconFieldBuilder() {
+      if (beaconBuilder_ == null) {
+        beaconBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder>(
+                getBeacon(),
+                getParentForChildren(),
+                isClean());
+        beacon_ = null;
+      }
+      return beaconBuilder_;
+    }
+
+    private io.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.services.devices.v1beta1.DeviceKeys, io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder> credentialsBuilder_;
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    public boolean hasCredentials() {
+      return credentialsBuilder_ != null || credentials_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    public io.bloombox.schema.services.devices.v1beta1.DeviceKeys getCredentials() {
+      if (credentialsBuilder_ == null) {
+        return credentials_ == null ? io.bloombox.schema.services.devices.v1beta1.DeviceKeys.getDefaultInstance() : credentials_;
+      } else {
+        return credentialsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    public Builder setCredentials(io.bloombox.schema.services.devices.v1beta1.DeviceKeys value) {
+      if (credentialsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        credentials_ = value;
+        onChanged();
+      } else {
+        credentialsBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    public Builder setCredentials(
+        io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder builderForValue) {
+      if (credentialsBuilder_ == null) {
+        credentials_ = builderForValue.build();
+        onChanged();
+      } else {
+        credentialsBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    public Builder mergeCredentials(io.bloombox.schema.services.devices.v1beta1.DeviceKeys value) {
+      if (credentialsBuilder_ == null) {
+        if (credentials_ != null) {
+          credentials_ =
+            io.bloombox.schema.services.devices.v1beta1.DeviceKeys.newBuilder(credentials_).mergeFrom(value).buildPartial();
+        } else {
+          credentials_ = value;
+        }
+        onChanged();
+      } else {
+        credentialsBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    public Builder clearCredentials() {
+      if (credentialsBuilder_ == null) {
+        credentials_ = null;
+        onChanged();
+      } else {
+        credentials_ = null;
+        credentialsBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    public io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder getCredentialsBuilder() {
+      
+      onChanged();
+      return getCredentialsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    public io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder getCredentialsOrBuilder() {
+      if (credentialsBuilder_ != null) {
+        return credentialsBuilder_.getMessageOrBuilder();
+      } else {
+        return credentials_ == null ?
+            io.bloombox.schema.services.devices.v1beta1.DeviceKeys.getDefaultInstance() : credentials_;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+     * Platform server-side systems.
+     * </pre>
+     *
+     * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.bloombox.schema.services.devices.v1beta1.DeviceKeys, io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder> 
+        getCredentialsFieldBuilder() {
+      if (credentialsBuilder_ == null) {
+        credentialsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.bloombox.schema.services.devices.v1beta1.DeviceKeys, io.bloombox.schema.services.devices.v1beta1.DeviceKeys.Builder, io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder>(
+                getCredentials(),
+                getParentForChildren(),
+                isClean());
+        credentials_ = null;
+      }
+      return credentialsBuilder_;
     }
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {

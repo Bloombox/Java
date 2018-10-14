@@ -84,4 +84,116 @@ public interface DeviceActivationOrBuilder extends
    * <code>.bloombox.schema.services.devices.v1beta1.DeviceAssignment assignment = 3;</code>
    */
   io.bloombox.schema.services.devices.v1beta1.DeviceAssignmentOrBuilder getAssignmentOrBuilder();
+
+  /**
+   * <pre>
+   * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+   * allows the device access to assigned information and credentials.
+   * </pre>
+   *
+   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   */
+  boolean hasTicket();
+  /**
+   * <pre>
+   * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+   * allows the device access to assigned information and credentials.
+   * </pre>
+   *
+   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   */
+  io.bloombox.schema.security.DeviceSecurity.DeviceTicket getTicket();
+  /**
+   * <pre>
+   * Specifies an activation ticket for the subject device, including authorization information and a signed JWT that
+   * allows the device access to assigned information and credentials.
+   * </pre>
+   *
+   * <code>.bloombox.schema.security.DeviceTicket ticket = 4;</code>
+   */
+  io.bloombox.schema.security.DeviceSecurity.DeviceTicketOrBuilder getTicketOrBuilder();
+
+  /**
+   * <pre>
+   * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+   * direct use of Firebase.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   */
+  boolean hasEndpoints();
+  /**
+   * <pre>
+   * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+   * direct use of Firebase.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   */
+  io.bloombox.schema.services.devices.v1beta1.DeviceEndpoints getEndpoints();
+  /**
+   * <pre>
+   * Payload specifying endpoints the device should use under different circumstances, to include OAuth2, API use, and
+   * direct use of Firebase.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceEndpoints endpoints = 5;</code>
+   */
+  io.bloombox.schema.services.devices.v1beta1.DeviceEndpointsOrBuilder getEndpointsOrBuilder();
+
+  /**
+   * <pre>
+   * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+   * the minimum required for an iBeacon (UUID, major and minor values).
+   * </pre>
+   *
+   * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+   */
+  boolean hasBeacon();
+  /**
+   * <pre>
+   * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+   * the minimum required for an iBeacon (UUID, major and minor values).
+   * </pre>
+   *
+   * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+   */
+  io.opencannabis.schema.proximity.BluetoothBeacon getBeacon();
+  /**
+   * <pre>
+   * If this device is assigned to broadcast a BLE signal, its configuration parameters are specified here, including
+   * the minimum required for an iBeacon (UUID, major and minor values).
+   * </pre>
+   *
+   * <code>.opencannabis.proximity.BluetoothBeacon beacon = 6;</code>
+   */
+  io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder();
+
+  /**
+   * <pre>
+   * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+   * Platform server-side systems.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   */
+  boolean hasCredentials();
+  /**
+   * <pre>
+   * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+   * Platform server-side systems.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   */
+  io.bloombox.schema.services.devices.v1beta1.DeviceKeys getCredentials();
+  /**
+   * <pre>
+   * Specifies the cryptographic material this activated device should make use of when communicating with the Bloombox
+   * Platform server-side systems.
+   * </pre>
+   *
+   * <code>.bloombox.schema.services.devices.v1beta1.DeviceKeys credentials = 7;</code>
+   */
+  io.bloombox.schema.services.devices.v1beta1.DeviceKeysOrBuilder getCredentialsOrBuilder();
 }

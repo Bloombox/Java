@@ -30,6 +30,921 @@ public final class PassportID {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface PassportReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.PassportReference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Nation that issued the passport.
+     * </pre>
+     *
+     * <code>string nation = 1;</code>
+     */
+    java.lang.String getNation();
+    /**
+     * <pre>
+     * Nation that issued the passport.
+     * </pre>
+     *
+     * <code>string nation = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNationBytes();
+
+    /**
+     * <pre>
+     * ID number from the passport.
+     * </pre>
+     *
+     * <code>string id_number = 2;</code>
+     */
+    java.lang.String getIdNumber();
+    /**
+     * <pre>
+     * ID number from the passport.
+     * </pre>
+     *
+     * <code>string id_number = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdNumberBytes();
+
+    /**
+     * <pre>
+     * Raw base64 barcode data from the passport.
+     * </pre>
+     *
+     * <code>string barcode = 3;</code>
+     */
+    java.lang.String getBarcode();
+    /**
+     * <pre>
+     * Raw base64 barcode data from the passport.
+     * </pre>
+     *
+     * <code>string barcode = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getBarcodeBytes();
+  }
+  /**
+   * <pre>
+   * Reference to a nation-issued passport document.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.identity.ids.PassportReference}
+   */
+  public  static final class PassportReference extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.PassportReference)
+      PassportReferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PassportReference.newBuilder() to construct.
+    private PassportReference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PassportReference() {
+      nation_ = "";
+      idNumber_ = "";
+      barcode_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PassportReference(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nation_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              idNumber_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              barcode_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.identity.ids.PassportID.PassportReference.class, io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder.class);
+    }
+
+    public static final int NATION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object nation_;
+    /**
+     * <pre>
+     * Nation that issued the passport.
+     * </pre>
+     *
+     * <code>string nation = 1;</code>
+     */
+    public java.lang.String getNation() {
+      java.lang.Object ref = nation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Nation that issued the passport.
+     * </pre>
+     *
+     * <code>string nation = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNationBytes() {
+      java.lang.Object ref = nation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_NUMBER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object idNumber_;
+    /**
+     * <pre>
+     * ID number from the passport.
+     * </pre>
+     *
+     * <code>string id_number = 2;</code>
+     */
+    public java.lang.String getIdNumber() {
+      java.lang.Object ref = idNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        idNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID number from the passport.
+     * </pre>
+     *
+     * <code>string id_number = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdNumberBytes() {
+      java.lang.Object ref = idNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BARCODE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object barcode_;
+    /**
+     * <pre>
+     * Raw base64 barcode data from the passport.
+     * </pre>
+     *
+     * <code>string barcode = 3;</code>
+     */
+    public java.lang.String getBarcode() {
+      java.lang.Object ref = barcode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        barcode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Raw base64 barcode data from the passport.
+     * </pre>
+     *
+     * <code>string barcode = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBarcodeBytes() {
+      java.lang.Object ref = barcode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        barcode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNationBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nation_);
+      }
+      if (!getIdNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idNumber_);
+      }
+      if (!getBarcodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, barcode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNationBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nation_);
+      }
+      if (!getIdNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idNumber_);
+      }
+      if (!getBarcodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, barcode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.identity.ids.PassportID.PassportReference)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.identity.ids.PassportID.PassportReference other = (io.bloombox.schema.identity.ids.PassportID.PassportReference) obj;
+
+      boolean result = true;
+      result = result && getNation()
+          .equals(other.getNation());
+      result = result && getIdNumber()
+          .equals(other.getIdNumber());
+      result = result && getBarcode()
+          .equals(other.getBarcode());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NATION_FIELD_NUMBER;
+      hash = (53 * hash) + getNation().hashCode();
+      hash = (37 * hash) + ID_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getIdNumber().hashCode();
+      hash = (37 * hash) + BARCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getBarcode().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.identity.ids.PassportID.PassportReference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Reference to a nation-issued passport document.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.identity.ids.PassportReference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.PassportReference)
+        io.bloombox.schema.identity.ids.PassportID.PassportReferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.identity.ids.PassportID.PassportReference.class, io.bloombox.schema.identity.ids.PassportID.PassportReference.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.identity.ids.PassportID.PassportReference.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        nation_ = "";
+
+        idNumber_ = "";
+
+        barcode_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.identity.ids.PassportID.internal_static_bloombox_schema_identity_ids_PassportReference_descriptor;
+      }
+
+      public io.bloombox.schema.identity.ids.PassportID.PassportReference getDefaultInstanceForType() {
+        return io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.identity.ids.PassportID.PassportReference build() {
+        io.bloombox.schema.identity.ids.PassportID.PassportReference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.identity.ids.PassportID.PassportReference buildPartial() {
+        io.bloombox.schema.identity.ids.PassportID.PassportReference result = new io.bloombox.schema.identity.ids.PassportID.PassportReference(this);
+        result.nation_ = nation_;
+        result.idNumber_ = idNumber_;
+        result.barcode_ = barcode_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.identity.ids.PassportID.PassportReference) {
+          return mergeFrom((io.bloombox.schema.identity.ids.PassportID.PassportReference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.identity.ids.PassportID.PassportReference other) {
+        if (other == io.bloombox.schema.identity.ids.PassportID.PassportReference.getDefaultInstance()) return this;
+        if (!other.getNation().isEmpty()) {
+          nation_ = other.nation_;
+          onChanged();
+        }
+        if (!other.getIdNumber().isEmpty()) {
+          idNumber_ = other.idNumber_;
+          onChanged();
+        }
+        if (!other.getBarcode().isEmpty()) {
+          barcode_ = other.barcode_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.identity.ids.PassportID.PassportReference parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.identity.ids.PassportID.PassportReference) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object nation_ = "";
+      /**
+       * <pre>
+       * Nation that issued the passport.
+       * </pre>
+       *
+       * <code>string nation = 1;</code>
+       */
+      public java.lang.String getNation() {
+        java.lang.Object ref = nation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Nation that issued the passport.
+       * </pre>
+       *
+       * <code>string nation = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNationBytes() {
+        java.lang.Object ref = nation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Nation that issued the passport.
+       * </pre>
+       *
+       * <code>string nation = 1;</code>
+       */
+      public Builder setNation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Nation that issued the passport.
+       * </pre>
+       *
+       * <code>string nation = 1;</code>
+       */
+      public Builder clearNation() {
+        
+        nation_ = getDefaultInstance().getNation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Nation that issued the passport.
+       * </pre>
+       *
+       * <code>string nation = 1;</code>
+       */
+      public Builder setNationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nation_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idNumber_ = "";
+      /**
+       * <pre>
+       * ID number from the passport.
+       * </pre>
+       *
+       * <code>string id_number = 2;</code>
+       */
+      public java.lang.String getIdNumber() {
+        java.lang.Object ref = idNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          idNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID number from the passport.
+       * </pre>
+       *
+       * <code>string id_number = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdNumberBytes() {
+        java.lang.Object ref = idNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          idNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID number from the passport.
+       * </pre>
+       *
+       * <code>string id_number = 2;</code>
+       */
+      public Builder setIdNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        idNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID number from the passport.
+       * </pre>
+       *
+       * <code>string id_number = 2;</code>
+       */
+      public Builder clearIdNumber() {
+        
+        idNumber_ = getDefaultInstance().getIdNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID number from the passport.
+       * </pre>
+       *
+       * <code>string id_number = 2;</code>
+       */
+      public Builder setIdNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        idNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object barcode_ = "";
+      /**
+       * <pre>
+       * Raw base64 barcode data from the passport.
+       * </pre>
+       *
+       * <code>string barcode = 3;</code>
+       */
+      public java.lang.String getBarcode() {
+        java.lang.Object ref = barcode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          barcode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Raw base64 barcode data from the passport.
+       * </pre>
+       *
+       * <code>string barcode = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBarcodeBytes() {
+        java.lang.Object ref = barcode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          barcode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Raw base64 barcode data from the passport.
+       * </pre>
+       *
+       * <code>string barcode = 3;</code>
+       */
+      public Builder setBarcode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        barcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw base64 barcode data from the passport.
+       * </pre>
+       *
+       * <code>string barcode = 3;</code>
+       */
+      public Builder clearBarcode() {
+        
+        barcode_ = getDefaultInstance().getBarcode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw base64 barcode data from the passport.
+       * </pre>
+       *
+       * <code>string barcode = 3;</code>
+       */
+      public Builder setBarcodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        barcode_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.PassportReference)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.PassportReference)
+    private static final io.bloombox.schema.identity.ids.PassportID.PassportReference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.PassportID.PassportReference();
+    }
+
+    public static io.bloombox.schema.identity.ids.PassportID.PassportReference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PassportReference>
+        PARSER = new com.google.protobuf.AbstractParser<PassportReference>() {
+      public PassportReference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PassportReference(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PassportReference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PassportReference> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.identity.ids.PassportID.PassportReference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PassportOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.Passport)
       com.google.protobuf.MessageOrBuilder {
@@ -686,6 +1601,11 @@ public final class PassportID {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_identity_ids_PassportReference_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_identity_ids_PassportReference_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_identity_ids_Passport_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -700,12 +1620,14 @@ public final class PassportID {
   static {
     java.lang.String[] descriptorData = {
       "\n\033identity/ids/Passport.proto\022\034bloombox." +
-      "schema.identity.ids\032\016bq_field.proto\"\210\001\n\010" +
-      "Passport\022\024\n\007barcode\030\001 \001(\014B\003\200@\001\022f\n\006nation" +
-      "\030\002 \001(\tBV\212@SNation that issued this passp" +
-      "ort, as an abbreviated string code, like" +
-      " \"US\" or \"UK\".B7\n\037io.bloombox.schema.ide" +
-      "ntity.idsB\nPassportIDH\001P\000\242\002\003BBSb\006proto3"
+      "schema.identity.ids\032\016bq_field.proto\"G\n\021P" +
+      "assportReference\022\016\n\006nation\030\001 \001(\t\022\021\n\tid_n" +
+      "umber\030\002 \001(\t\022\017\n\007barcode\030\003 \001(\t\"\210\001\n\010Passpor" +
+      "t\022\024\n\007barcode\030\001 \001(\014B\003\200@\001\022f\n\006nation\030\002 \001(\tB" +
+      "V\212@SNation that issued this passport, as" +
+      " an abbreviated string code, like \"US\" o" +
+      "r \"UK\".B7\n\037io.bloombox.schema.identity.i" +
+      "dsB\nPassportIDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -720,8 +1642,14 @@ public final class PassportID {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
-    internal_static_bloombox_schema_identity_ids_Passport_descriptor =
+    internal_static_bloombox_schema_identity_ids_PassportReference_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_bloombox_schema_identity_ids_PassportReference_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_identity_ids_PassportReference_descriptor,
+        new java.lang.String[] { "Nation", "IdNumber", "Barcode", });
+    internal_static_bloombox_schema_identity_ids_Passport_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_bloombox_schema_identity_ids_Passport_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_ids_Passport_descriptor,

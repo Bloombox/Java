@@ -1788,21 +1788,39 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Resulting JSON web token.
+     * Resulting JSON web token, for main application use.
      * </pre>
      *
-     * <code>string jwt = 1;</code>
+     * <code>string app = 1;</code>
      */
-    java.lang.String getJwt();
+    java.lang.String getApp();
     /**
      * <pre>
-     * Resulting JSON web token.
+     * Resulting JSON web token, for main application use.
      * </pre>
      *
-     * <code>string jwt = 1;</code>
+     * <code>string app = 1;</code>
      */
     com.google.protobuf.ByteString
-        getJwtBytes();
+        getAppBytes();
+
+    /**
+     * <pre>
+     * Resulting JSON web token, for DB use.
+     * </pre>
+     *
+     * <code>string db = 2;</code>
+     */
+    java.lang.String getDb();
+    /**
+     * <pre>
+     * Resulting JSON web token, for DB use.
+     * </pre>
+     *
+     * <code>string db = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDbBytes();
   }
   /**
    * <pre>
@@ -1821,7 +1839,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      jwt_ = "";
+      app_ = "";
+      db_ = "";
     }
 
     @java.lang.Override
@@ -1858,7 +1877,13 @@ private static final long serialVersionUID = 0L;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              jwt_ = s;
+              app_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              db_ = s;
               break;
             }
           }
@@ -1885,42 +1910,84 @@ private static final long serialVersionUID = 0L;
               io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.class, io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.Builder.class);
     }
 
-    public static final int JWT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object jwt_;
+    public static final int APP_FIELD_NUMBER = 1;
+    private volatile java.lang.Object app_;
     /**
      * <pre>
-     * Resulting JSON web token.
+     * Resulting JSON web token, for main application use.
      * </pre>
      *
-     * <code>string jwt = 1;</code>
+     * <code>string app = 1;</code>
      */
-    public java.lang.String getJwt() {
-      java.lang.Object ref = jwt_;
+    public java.lang.String getApp() {
+      java.lang.Object ref = app_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        jwt_ = s;
+        app_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * Resulting JSON web token.
+     * Resulting JSON web token, for main application use.
      * </pre>
      *
-     * <code>string jwt = 1;</code>
+     * <code>string app = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getJwtBytes() {
-      java.lang.Object ref = jwt_;
+        getAppBytes() {
+      java.lang.Object ref = app_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        jwt_ = b;
+        app_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DB_FIELD_NUMBER = 2;
+    private volatile java.lang.Object db_;
+    /**
+     * <pre>
+     * Resulting JSON web token, for DB use.
+     * </pre>
+     *
+     * <code>string db = 2;</code>
+     */
+    public java.lang.String getDb() {
+      java.lang.Object ref = db_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        db_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Resulting JSON web token, for DB use.
+     * </pre>
+     *
+     * <code>string db = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDbBytes() {
+      java.lang.Object ref = db_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        db_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1939,8 +2006,11 @@ private static final long serialVersionUID = 0L;
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getJwtBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jwt_);
+      if (!getAppBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, app_);
+      }
+      if (!getDbBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, db_);
       }
       unknownFields.writeTo(output);
     }
@@ -1950,8 +2020,11 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getJwtBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, jwt_);
+      if (!getAppBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, app_);
+      }
+      if (!getDbBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, db_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1969,8 +2042,10 @@ private static final long serialVersionUID = 0L;
       io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response other = (io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response) obj;
 
       boolean result = true;
-      result = result && getJwt()
-          .equals(other.getJwt());
+      result = result && getApp()
+          .equals(other.getApp());
+      result = result && getDb()
+          .equals(other.getDb());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1982,8 +2057,10 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + JWT_FIELD_NUMBER;
-      hash = (53 * hash) + getJwt().hashCode();
+      hash = (37 * hash) + APP_FIELD_NUMBER;
+      hash = (53 * hash) + getApp().hashCode();
+      hash = (37 * hash) + DB_FIELD_NUMBER;
+      hash = (53 * hash) + getDb().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2117,7 +2194,9 @@ private static final long serialVersionUID = 0L;
       }
       public Builder clear() {
         super.clear();
-        jwt_ = "";
+        app_ = "";
+
+        db_ = "";
 
         return this;
       }
@@ -2141,7 +2220,8 @@ private static final long serialVersionUID = 0L;
 
       public io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response buildPartial() {
         io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response result = new io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response(this);
-        result.jwt_ = jwt_;
+        result.app_ = app_;
+        result.db_ = db_;
         onBuilt();
         return result;
       }
@@ -2183,8 +2263,12 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response other) {
         if (other == io.bloombox.schema.services.auth.v1beta1.ResolveToken.Response.getDefaultInstance()) return this;
-        if (!other.getJwt().isEmpty()) {
-          jwt_ = other.jwt_;
+        if (!other.getApp().isEmpty()) {
+          app_ = other.app_;
+          onChanged();
+        }
+        if (!other.getDb().isEmpty()) {
+          db_ = other.db_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2214,21 +2298,21 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object jwt_ = "";
+      private java.lang.Object app_ = "";
       /**
        * <pre>
-       * Resulting JSON web token.
+       * Resulting JSON web token, for main application use.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string app = 1;</code>
        */
-      public java.lang.String getJwt() {
-        java.lang.Object ref = jwt_;
+      public java.lang.String getApp() {
+        java.lang.Object ref = app_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          jwt_ = s;
+          app_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2236,19 +2320,19 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Resulting JSON web token.
+       * Resulting JSON web token, for main application use.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string app = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getJwtBytes() {
-        java.lang.Object ref = jwt_;
+          getAppBytes() {
+        java.lang.Object ref = app_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          jwt_ = b;
+          app_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -2256,49 +2340,138 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Resulting JSON web token.
+       * Resulting JSON web token, for main application use.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string app = 1;</code>
        */
-      public Builder setJwt(
+      public Builder setApp(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        jwt_ = value;
+        app_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Resulting JSON web token.
+       * Resulting JSON web token, for main application use.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string app = 1;</code>
        */
-      public Builder clearJwt() {
+      public Builder clearApp() {
         
-        jwt_ = getDefaultInstance().getJwt();
+        app_ = getDefaultInstance().getApp();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Resulting JSON web token.
+       * Resulting JSON web token, for main application use.
        * </pre>
        *
-       * <code>string jwt = 1;</code>
+       * <code>string app = 1;</code>
        */
-      public Builder setJwtBytes(
+      public Builder setAppBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        jwt_ = value;
+        app_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object db_ = "";
+      /**
+       * <pre>
+       * Resulting JSON web token, for DB use.
+       * </pre>
+       *
+       * <code>string db = 2;</code>
+       */
+      public java.lang.String getDb() {
+        java.lang.Object ref = db_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          db_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Resulting JSON web token, for DB use.
+       * </pre>
+       *
+       * <code>string db = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDbBytes() {
+        java.lang.Object ref = db_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          db_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Resulting JSON web token, for DB use.
+       * </pre>
+       *
+       * <code>string db = 2;</code>
+       */
+      public Builder setDb(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        db_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resulting JSON web token, for DB use.
+       * </pre>
+       *
+       * <code>string db = 2;</code>
+       */
+      public Builder clearDb() {
+        
+        db_ = getDefaultInstance().getDb();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resulting JSON web token, for DB use.
+       * </pre>
+       *
+       * <code>string db = 2;</code>
+       */
+      public Builder setDbBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        db_ = value;
         onChanged();
         return this;
       }

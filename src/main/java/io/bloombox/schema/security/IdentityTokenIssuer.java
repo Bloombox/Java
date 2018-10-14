@@ -62,6 +62,22 @@ public enum IdentityTokenIssuer
    * <code>GOOGLE = 3;</code>
    */
   GOOGLE(3),
+  /**
+   * <pre>
+   * Second-party domain authentication, perhaps via SAML or other SSO technologies.
+   * </pre>
+   *
+   * <code>DOMAIN = 4;</code>
+   */
+  DOMAIN(4),
+  /**
+   * <pre>
+   * External IDP-powered authentication.
+   * </pre>
+   *
+   * <code>EXTERNAL = 5;</code>
+   */
+  EXTERNAL(5),
   UNRECOGNIZED(-1),
   ;
 
@@ -97,6 +113,22 @@ public enum IdentityTokenIssuer
    * <code>GOOGLE = 3;</code>
    */
   public static final int GOOGLE_VALUE = 3;
+  /**
+   * <pre>
+   * Second-party domain authentication, perhaps via SAML or other SSO technologies.
+   * </pre>
+   *
+   * <code>DOMAIN = 4;</code>
+   */
+  public static final int DOMAIN_VALUE = 4;
+  /**
+   * <pre>
+   * External IDP-powered authentication.
+   * </pre>
+   *
+   * <code>EXTERNAL = 5;</code>
+   */
+  public static final int EXTERNAL_VALUE = 5;
 
 
   public final int getNumber() {
@@ -121,6 +153,8 @@ public enum IdentityTokenIssuer
       case 1: return FIREBASE;
       case 2: return AUTH0;
       case 3: return GOOGLE;
+      case 4: return DOMAIN;
+      case 5: return EXTERNAL;
       default: return null;
     }
   }

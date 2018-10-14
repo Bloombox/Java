@@ -1,5 +1,5 @@
 [submodule "schema"]
 	path = schema
 	url = git@github.com:bloombox/schema.git
-	branch = master
+	branch = feature/purchases
 

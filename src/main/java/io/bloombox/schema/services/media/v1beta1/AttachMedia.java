@@ -118,21 +118,28 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Upload transaction token, returned in a request to provision a new media upload.
+     * Key for the media item to attach.
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>.opencannabis.media.MediaKey key = 2;</code>
      */
-    java.lang.String getToken();
+    boolean hasKey();
     /**
      * <pre>
-     * Upload transaction token, returned in a request to provision a new media upload.
+     * Key for the media item to attach.
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>.opencannabis.media.MediaKey key = 2;</code>
      */
-    com.google.protobuf.ByteString
-        getTokenBytes();
+    io.opencannabis.schema.media.MediaItemKey.MediaKey getKey();
+    /**
+     * <pre>
+     * Key for the media item to attach.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaKey key = 2;</code>
+     */
+    io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getKeyOrBuilder();
   }
   /**
    * <pre>
@@ -153,7 +160,6 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       scope_ = "";
-      token_ = "";
     }
 
     @java.lang.Override
@@ -194,9 +200,16 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder subBuilder = null;
+              if (key_ != null) {
+                subBuilder = key_.toBuilder();
+              }
+              key_ = input.readMessage(io.opencannabis.schema.media.MediaItemKey.MediaKey.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(key_);
+                key_ = subBuilder.buildPartial();
+              }
 
-              token_ = s;
               break;
             }
           }
@@ -265,46 +278,37 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    public static final int TOKEN_FIELD_NUMBER = 2;
-    private volatile java.lang.Object token_;
+    public static final int KEY_FIELD_NUMBER = 2;
+    private io.opencannabis.schema.media.MediaItemKey.MediaKey key_;
     /**
      * <pre>
-     * Upload transaction token, returned in a request to provision a new media upload.
+     * Key for the media item to attach.
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>.opencannabis.media.MediaKey key = 2;</code>
      */
-    public java.lang.String getToken() {
-      java.lang.Object ref = token_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        token_ = s;
-        return s;
-      }
+    public boolean hasKey() {
+      return key_ != null;
     }
     /**
      * <pre>
-     * Upload transaction token, returned in a request to provision a new media upload.
+     * Key for the media item to attach.
      * </pre>
      *
-     * <code>string token = 2;</code>
+     * <code>.opencannabis.media.MediaKey key = 2;</code>
      */
-    public com.google.protobuf.ByteString
-        getTokenBytes() {
-      java.lang.Object ref = token_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        token_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public io.opencannabis.schema.media.MediaItemKey.MediaKey getKey() {
+      return key_ == null ? io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : key_;
+    }
+    /**
+     * <pre>
+     * Key for the media item to attach.
+     * </pre>
+     *
+     * <code>.opencannabis.media.MediaKey key = 2;</code>
+     */
+    public io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getKeyOrBuilder() {
+      return getKey();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -322,8 +326,8 @@ private static final long serialVersionUID = 0L;
       if (!getScopeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, scope_);
       }
-      if (!getTokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, token_);
+      if (key_ != null) {
+        output.writeMessage(2, getKey());
       }
       unknownFields.writeTo(output);
     }
@@ -336,8 +340,9 @@ private static final long serialVersionUID = 0L;
       if (!getScopeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, scope_);
       }
-      if (!getTokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, token_);
+      if (key_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getKey());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -357,8 +362,11 @@ private static final long serialVersionUID = 0L;
       boolean result = true;
       result = result && getScope()
           .equals(other.getScope());
-      result = result && getToken()
-          .equals(other.getToken());
+      result = result && (hasKey() == other.hasKey());
+      if (hasKey()) {
+        result = result && getKey()
+            .equals(other.getKey());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -372,8 +380,10 @@ private static final long serialVersionUID = 0L;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SCOPE_FIELD_NUMBER;
       hash = (53 * hash) + getScope().hashCode();
-      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getToken().hashCode();
+      if (hasKey()) {
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -510,8 +520,12 @@ private static final long serialVersionUID = 0L;
         super.clear();
         scope_ = "";
 
-        token_ = "";
-
+        if (keyBuilder_ == null) {
+          key_ = null;
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
         return this;
       }
 
@@ -535,7 +549,11 @@ private static final long serialVersionUID = 0L;
       public io.bloombox.schema.services.media.v1beta1.AttachMedia.Request buildPartial() {
         io.bloombox.schema.services.media.v1beta1.AttachMedia.Request result = new io.bloombox.schema.services.media.v1beta1.AttachMedia.Request(this);
         result.scope_ = scope_;
-        result.token_ = token_;
+        if (keyBuilder_ == null) {
+          result.key_ = key_;
+        } else {
+          result.key_ = keyBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -581,9 +599,8 @@ private static final long serialVersionUID = 0L;
           scope_ = other.scope_;
           onChanged();
         }
-        if (!other.getToken().isEmpty()) {
-          token_ = other.token_;
-          onChanged();
+        if (other.hasKey()) {
+          mergeKey(other.getKey());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -701,93 +718,157 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private java.lang.Object token_ = "";
+      private io.opencannabis.schema.media.MediaItemKey.MediaKey key_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> keyBuilder_;
       /**
        * <pre>
-       * Upload transaction token, returned in a request to provision a new media upload.
+       * Key for the media item to attach.
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
        */
-      public java.lang.String getToken() {
-        java.lang.Object ref = token_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          token_ = s;
-          return s;
+      public boolean hasKey() {
+        return keyBuilder_ != null || key_ != null;
+      }
+      /**
+       * <pre>
+       * Key for the media item to attach.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
+       */
+      public io.opencannabis.schema.media.MediaItemKey.MediaKey getKey() {
+        if (keyBuilder_ == null) {
+          return key_ == null ? io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : key_;
         } else {
-          return (java.lang.String) ref;
+          return keyBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Upload transaction token, returned in a request to provision a new media upload.
+       * Key for the media item to attach.
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
        */
-      public com.google.protobuf.ByteString
-          getTokenBytes() {
-        java.lang.Object ref = token_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          token_ = b;
-          return b;
+      public Builder setKey(io.opencannabis.schema.media.MediaItemKey.MediaKey value) {
+        if (keyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          key_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          keyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key for the media item to attach.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
+       */
+      public Builder setKey(
+          io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder builderForValue) {
+        if (keyBuilder_ == null) {
+          key_ = builderForValue.build();
+          onChanged();
+        } else {
+          keyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key for the media item to attach.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
+       */
+      public Builder mergeKey(io.opencannabis.schema.media.MediaItemKey.MediaKey value) {
+        if (keyBuilder_ == null) {
+          if (key_ != null) {
+            key_ =
+              io.opencannabis.schema.media.MediaItemKey.MediaKey.newBuilder(key_).mergeFrom(value).buildPartial();
+          } else {
+            key_ = value;
+          }
+          onChanged();
+        } else {
+          keyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key for the media item to attach.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
+       */
+      public Builder clearKey() {
+        if (keyBuilder_ == null) {
+          key_ = null;
+          onChanged();
+        } else {
+          key_ = null;
+          keyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Key for the media item to attach.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
+       */
+      public io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder getKeyBuilder() {
+        
+        onChanged();
+        return getKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Key for the media item to attach.
+       * </pre>
+       *
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
+       */
+      public io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getKeyOrBuilder() {
+        if (keyBuilder_ != null) {
+          return keyBuilder_.getMessageOrBuilder();
+        } else {
+          return key_ == null ?
+              io.opencannabis.schema.media.MediaItemKey.MediaKey.getDefaultInstance() : key_;
         }
       }
       /**
        * <pre>
-       * Upload transaction token, returned in a request to provision a new media upload.
+       * Key for the media item to attach.
        * </pre>
        *
-       * <code>string token = 2;</code>
+       * <code>.opencannabis.media.MediaKey key = 2;</code>
        */
-      public Builder setToken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        token_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Upload transaction token, returned in a request to provision a new media upload.
-       * </pre>
-       *
-       * <code>string token = 2;</code>
-       */
-      public Builder clearToken() {
-        
-        token_ = getDefaultInstance().getToken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Upload transaction token, returned in a request to provision a new media upload.
-       * </pre>
-       *
-       * <code>string token = 2;</code>
-       */
-      public Builder setTokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        token_ = value;
-        onChanged();
-        return this;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder> 
+          getKeyFieldBuilder() {
+        if (keyBuilder_ == null) {
+          keyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.media.MediaItemKey.MediaKey, io.opencannabis.schema.media.MediaItemKey.MediaKey.Builder, io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder>(
+                  getKey(),
+                  getParentForChildren(),
+                  isClean());
+          key_ = null;
+        }
+        return keyBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {

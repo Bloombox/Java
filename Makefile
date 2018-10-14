@@ -17,16 +17,17 @@
 ## Bloombox: Java API Client
 #
 
-BUILDMODE ?= maven
+BUILDMODE ?= gradle
 TESTS ?= yes
-RELEASE_VERSION ?= 1.4
-CLIENT_VERSION ?= 1.4-SNAPSHOT
+RELEASE_VERSION ?= 1.5
+CLIENT_VERSION ?= 1.5-SNAPSHOT
 SERVICE_ARGS ?= -Dbloombox.shop.version=$(SHOP_VERSION) -Dbloombox.telemetry.version=$(TELEMETRY_VERSION)
 SCHEMA ?= schema/
 RELEASE_ARGS ?= -DperformRelease=true
 RELEASE_GOALS ?= release:prepare release:perform
 EMBEDDED_SCHEMA ?= yes
 CURRENT_BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
+GRADLE_VERSION ?= 4.8.1
 
 ifeq ($(BUILDMODE),maven)
 TARGET ?= target/
@@ -72,7 +73,7 @@ endif
 ifeq ($(BUILDMODE),gradle)
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox (Gradle)..."
-	@gradle $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
+	@./gradlew $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
 endif
 else
 ifeq ($(BUILDMODE),maven)
@@ -144,10 +145,11 @@ run-ci:
 else
 build-ci:
 	@echo "Building from CI (Gradle)..."
-	@gradle build
+	@./gradlew wrapper --gradle-version=$(GRADLE_VERSION) --distribution-type=bin
+	@./gradlew build
 
 run-ci:
 	@echo "Running tests from CI (Gradle)..."
-	@gradle test
+	@./gradlew test
 endif
 

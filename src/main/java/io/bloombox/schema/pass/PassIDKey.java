@@ -39,18 +39,18 @@ public final class PassIDKey {
      * Specifies the entire encoded ID.
      * </pre>
      *
-     * <code>string encoded = 1 [(.core.field) = { ... }</code>
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
      */
-    java.lang.String getEncoded();
+    java.lang.String getUuid();
     /**
      * <pre>
      * Specifies the entire encoded ID.
      * </pre>
      *
-     * <code>string encoded = 1 [(.core.field) = { ... }</code>
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
      */
     com.google.protobuf.ByteString
-        getEncodedBytes();
+        getUuidBytes();
 
     /**
      * <pre>
@@ -87,6 +87,42 @@ public final class PassIDKey {
      */
     com.google.protobuf.ByteString
         getUidBytes();
+
+    /**
+     * <pre>
+     * Partner code that issued this pass/owns this pass.
+     * </pre>
+     *
+     * <code>string partner = 4;</code>
+     */
+    java.lang.String getPartner();
+    /**
+     * <pre>
+     * Partner code that issued this pass/owns this pass.
+     * </pre>
+     *
+     * <code>string partner = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getPartnerBytes();
+
+    /**
+     * <pre>
+     * Location code that issued this pass/owns this pass.
+     * </pre>
+     *
+     * <code>string location = 5;</code>
+     */
+    java.lang.String getLocation();
+    /**
+     * <pre>
+     * Location code that issued this pass/owns this pass.
+     * </pre>
+     *
+     * <code>string location = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getLocationBytes();
   }
   /**
    * <pre>
@@ -105,9 +141,11 @@ public final class PassIDKey {
       super(builder);
     }
     private PassKey() {
-      encoded_ = "";
+      uuid_ = "";
       serial_ = "";
       uid_ = "";
+      partner_ = "";
+      location_ = "";
     }
 
     @java.lang.Override
@@ -144,7 +182,7 @@ public final class PassIDKey {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              encoded_ = s;
+              uuid_ = s;
               break;
             }
             case 18: {
@@ -157,6 +195,18 @@ public final class PassIDKey {
               java.lang.String s = input.readStringRequireUtf8();
 
               uid_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              partner_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              location_ = s;
               break;
             }
           }
@@ -183,24 +233,24 @@ public final class PassIDKey {
               io.bloombox.schema.pass.PassIDKey.PassKey.class, io.bloombox.schema.pass.PassIDKey.PassKey.Builder.class);
     }
 
-    public static final int ENCODED_FIELD_NUMBER = 1;
-    private volatile java.lang.Object encoded_;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uuid_;
     /**
      * <pre>
      * Specifies the entire encoded ID.
      * </pre>
      *
-     * <code>string encoded = 1 [(.core.field) = { ... }</code>
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
      */
-    public java.lang.String getEncoded() {
-      java.lang.Object ref = encoded_;
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        encoded_ = s;
+        uuid_ = s;
         return s;
       }
     }
@@ -209,16 +259,16 @@ public final class PassIDKey {
      * Specifies the entire encoded ID.
      * </pre>
      *
-     * <code>string encoded = 1 [(.core.field) = { ... }</code>
+     * <code>string uuid = 1 [(.core.field) = { ... }</code>
      */
     public com.google.protobuf.ByteString
-        getEncodedBytes() {
-      java.lang.Object ref = encoded_;
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        encoded_ = b;
+        uuid_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -309,6 +359,90 @@ public final class PassIDKey {
       }
     }
 
+    public static final int PARTNER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object partner_;
+    /**
+     * <pre>
+     * Partner code that issued this pass/owns this pass.
+     * </pre>
+     *
+     * <code>string partner = 4;</code>
+     */
+    public java.lang.String getPartner() {
+      java.lang.Object ref = partner_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        partner_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Partner code that issued this pass/owns this pass.
+     * </pre>
+     *
+     * <code>string partner = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPartnerBytes() {
+      java.lang.Object ref = partner_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        partner_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object location_;
+    /**
+     * <pre>
+     * Location code that issued this pass/owns this pass.
+     * </pre>
+     *
+     * <code>string location = 5;</code>
+     */
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Location code that issued this pass/owns this pass.
+     * </pre>
+     *
+     * <code>string location = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        location_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -321,14 +455,20 @@ public final class PassIDKey {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getEncodedBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, encoded_);
+      if (!getUuidBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
       }
       if (!getSerialBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serial_);
       }
       if (!getUidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uid_);
+      }
+      if (!getPartnerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, partner_);
+      }
+      if (!getLocationBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, location_);
       }
       unknownFields.writeTo(output);
     }
@@ -338,14 +478,20 @@ public final class PassIDKey {
       if (size != -1) return size;
 
       size = 0;
-      if (!getEncodedBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, encoded_);
+      if (!getUuidBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
       }
       if (!getSerialBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serial_);
       }
       if (!getUidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uid_);
+      }
+      if (!getPartnerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, partner_);
+      }
+      if (!getLocationBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, location_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -363,12 +509,16 @@ public final class PassIDKey {
       io.bloombox.schema.pass.PassIDKey.PassKey other = (io.bloombox.schema.pass.PassIDKey.PassKey) obj;
 
       boolean result = true;
-      result = result && getEncoded()
-          .equals(other.getEncoded());
+      result = result && getUuid()
+          .equals(other.getUuid());
       result = result && getSerial()
           .equals(other.getSerial());
       result = result && getUid()
           .equals(other.getUid());
+      result = result && getPartner()
+          .equals(other.getPartner());
+      result = result && getLocation()
+          .equals(other.getLocation());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -380,12 +530,16 @@ public final class PassIDKey {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENCODED_FIELD_NUMBER;
-      hash = (53 * hash) + getEncoded().hashCode();
+      hash = (37 * hash) + UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getUuid().hashCode();
       hash = (37 * hash) + SERIAL_FIELD_NUMBER;
       hash = (53 * hash) + getSerial().hashCode();
       hash = (37 * hash) + UID_FIELD_NUMBER;
       hash = (53 * hash) + getUid().hashCode();
+      hash = (37 * hash) + PARTNER_FIELD_NUMBER;
+      hash = (53 * hash) + getPartner().hashCode();
+      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLocation().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -519,11 +673,15 @@ public final class PassIDKey {
       }
       public Builder clear() {
         super.clear();
-        encoded_ = "";
+        uuid_ = "";
 
         serial_ = "";
 
         uid_ = "";
+
+        partner_ = "";
+
+        location_ = "";
 
         return this;
       }
@@ -547,9 +705,11 @@ public final class PassIDKey {
 
       public io.bloombox.schema.pass.PassIDKey.PassKey buildPartial() {
         io.bloombox.schema.pass.PassIDKey.PassKey result = new io.bloombox.schema.pass.PassIDKey.PassKey(this);
-        result.encoded_ = encoded_;
+        result.uuid_ = uuid_;
         result.serial_ = serial_;
         result.uid_ = uid_;
+        result.partner_ = partner_;
+        result.location_ = location_;
         onBuilt();
         return result;
       }
@@ -591,8 +751,8 @@ public final class PassIDKey {
 
       public Builder mergeFrom(io.bloombox.schema.pass.PassIDKey.PassKey other) {
         if (other == io.bloombox.schema.pass.PassIDKey.PassKey.getDefaultInstance()) return this;
-        if (!other.getEncoded().isEmpty()) {
-          encoded_ = other.encoded_;
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
           onChanged();
         }
         if (!other.getSerial().isEmpty()) {
@@ -601,6 +761,14 @@ public final class PassIDKey {
         }
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
+          onChanged();
+        }
+        if (!other.getPartner().isEmpty()) {
+          partner_ = other.partner_;
+          onChanged();
+        }
+        if (!other.getLocation().isEmpty()) {
+          location_ = other.location_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -630,21 +798,21 @@ public final class PassIDKey {
         return this;
       }
 
-      private java.lang.Object encoded_ = "";
+      private java.lang.Object uuid_ = "";
       /**
        * <pre>
        * Specifies the entire encoded ID.
        * </pre>
        *
-       * <code>string encoded = 1 [(.core.field) = { ... }</code>
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
        */
-      public java.lang.String getEncoded() {
-        java.lang.Object ref = encoded_;
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          encoded_ = s;
+          uuid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -655,16 +823,16 @@ public final class PassIDKey {
        * Specifies the entire encoded ID.
        * </pre>
        *
-       * <code>string encoded = 1 [(.core.field) = { ... }</code>
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
        */
       public com.google.protobuf.ByteString
-          getEncodedBytes() {
-        java.lang.Object ref = encoded_;
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          encoded_ = b;
+          uuid_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -675,15 +843,15 @@ public final class PassIDKey {
        * Specifies the entire encoded ID.
        * </pre>
        *
-       * <code>string encoded = 1 [(.core.field) = { ... }</code>
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
        */
-      public Builder setEncoded(
+      public Builder setUuid(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        encoded_ = value;
+        uuid_ = value;
         onChanged();
         return this;
       }
@@ -692,11 +860,11 @@ public final class PassIDKey {
        * Specifies the entire encoded ID.
        * </pre>
        *
-       * <code>string encoded = 1 [(.core.field) = { ... }</code>
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
        */
-      public Builder clearEncoded() {
+      public Builder clearUuid() {
         
-        encoded_ = getDefaultInstance().getEncoded();
+        uuid_ = getDefaultInstance().getUuid();
         onChanged();
         return this;
       }
@@ -705,16 +873,16 @@ public final class PassIDKey {
        * Specifies the entire encoded ID.
        * </pre>
        *
-       * <code>string encoded = 1 [(.core.field) = { ... }</code>
+       * <code>string uuid = 1 [(.core.field) = { ... }</code>
        */
-      public Builder setEncodedBytes(
+      public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        encoded_ = value;
+        uuid_ = value;
         onChanged();
         return this;
       }
@@ -896,6 +1064,184 @@ public final class PassIDKey {
         onChanged();
         return this;
       }
+
+      private java.lang.Object partner_ = "";
+      /**
+       * <pre>
+       * Partner code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string partner = 4;</code>
+       */
+      public java.lang.String getPartner() {
+        java.lang.Object ref = partner_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          partner_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Partner code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string partner = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPartnerBytes() {
+        java.lang.Object ref = partner_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          partner_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Partner code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string partner = 4;</code>
+       */
+      public Builder setPartner(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        partner_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string partner = 4;</code>
+       */
+      public Builder clearPartner() {
+        
+        partner_ = getDefaultInstance().getPartner();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Partner code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string partner = 4;</code>
+       */
+      public Builder setPartnerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        partner_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object location_ = "";
+      /**
+       * <pre>
+       * Location code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string location = 5;</code>
+       */
+      public java.lang.String getLocation() {
+        java.lang.Object ref = location_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          location_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string location = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLocationBytes() {
+        java.lang.Object ref = location_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          location_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string location = 5;</code>
+       */
+      public Builder setLocation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        location_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string location = 5;</code>
+       */
+      public Builder clearLocation() {
+        
+        location_ = getDefaultInstance().getLocation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location code that issued this pass/owns this pass.
+       * </pre>
+       *
+       * <code>string location = 5;</code>
+       */
+      public Builder setLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        location_ = value;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -945,11 +1291,959 @@ public final class PassIDKey {
 
   }
 
+  public interface DigitalPassKeyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.pass.DigitalPassKey)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specifies a barcode value that was scanned.
+     * </pre>
+     *
+     * <code>string barcode = 1;</code>
+     */
+    java.lang.String getBarcode();
+    /**
+     * <pre>
+     * Specifies a barcode value that was scanned.
+     * </pre>
+     *
+     * <code>string barcode = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getBarcodeBytes();
+
+    /**
+     * <pre>
+     * Specifies a BLE signal received referencing a card.
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+     */
+    boolean hasBeacon();
+    /**
+     * <pre>
+     * Specifies a BLE signal received referencing a card.
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+     */
+    io.opencannabis.schema.proximity.BluetoothBeacon getBeacon();
+    /**
+     * <pre>
+     * Specifies a BLE signal received referencing a card.
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+     */
+    io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder();
+
+    public io.bloombox.schema.pass.PassIDKey.DigitalPassKey.ReferenceCase getReferenceCase();
+  }
+  /**
+   * <pre>
+   * Specifies a reference to a digital pass.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.identity.pass.DigitalPassKey}
+   */
+  public  static final class DigitalPassKey extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.pass.DigitalPassKey)
+      DigitalPassKeyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DigitalPassKey.newBuilder() to construct.
+    private DigitalPassKey(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DigitalPassKey() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DigitalPassKey(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              referenceCase_ = 1;
+              reference_ = s;
+              break;
+            }
+            case 18: {
+              io.opencannabis.schema.proximity.BluetoothBeacon.Builder subBuilder = null;
+              if (referenceCase_ == 2) {
+                subBuilder = ((io.opencannabis.schema.proximity.BluetoothBeacon) reference_).toBuilder();
+              }
+              reference_ =
+                  input.readMessage(io.opencannabis.schema.proximity.BluetoothBeacon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((io.opencannabis.schema.proximity.BluetoothBeacon) reference_);
+                reference_ = subBuilder.buildPartial();
+              }
+              referenceCase_ = 2;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.pass.PassIDKey.DigitalPassKey.class, io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder.class);
+    }
+
+    private int referenceCase_ = 0;
+    private java.lang.Object reference_;
+    public enum ReferenceCase
+        implements com.google.protobuf.Internal.EnumLite {
+      BARCODE(1),
+      BEACON(2),
+      REFERENCE_NOT_SET(0);
+      private final int value;
+      private ReferenceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ReferenceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ReferenceCase forNumber(int value) {
+        switch (value) {
+          case 1: return BARCODE;
+          case 2: return BEACON;
+          case 0: return REFERENCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ReferenceCase
+    getReferenceCase() {
+      return ReferenceCase.forNumber(
+          referenceCase_);
+    }
+
+    public static final int BARCODE_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Specifies a barcode value that was scanned.
+     * </pre>
+     *
+     * <code>string barcode = 1;</code>
+     */
+    public java.lang.String getBarcode() {
+      java.lang.Object ref = "";
+      if (referenceCase_ == 1) {
+        ref = reference_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (referenceCase_ == 1) {
+          reference_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Specifies a barcode value that was scanned.
+     * </pre>
+     *
+     * <code>string barcode = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBarcodeBytes() {
+      java.lang.Object ref = "";
+      if (referenceCase_ == 1) {
+        ref = reference_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (referenceCase_ == 1) {
+          reference_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BEACON_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Specifies a BLE signal received referencing a card.
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+     */
+    public boolean hasBeacon() {
+      return referenceCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Specifies a BLE signal received referencing a card.
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+     */
+    public io.opencannabis.schema.proximity.BluetoothBeacon getBeacon() {
+      if (referenceCase_ == 2) {
+         return (io.opencannabis.schema.proximity.BluetoothBeacon) reference_;
+      }
+      return io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Specifies a BLE signal received referencing a card.
+     * </pre>
+     *
+     * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+     */
+    public io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder() {
+      if (referenceCase_ == 2) {
+         return (io.opencannabis.schema.proximity.BluetoothBeacon) reference_;
+      }
+      return io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (referenceCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reference_);
+      }
+      if (referenceCase_ == 2) {
+        output.writeMessage(2, (io.opencannabis.schema.proximity.BluetoothBeacon) reference_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (referenceCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reference_);
+      }
+      if (referenceCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (io.opencannabis.schema.proximity.BluetoothBeacon) reference_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.pass.PassIDKey.DigitalPassKey)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.pass.PassIDKey.DigitalPassKey other = (io.bloombox.schema.pass.PassIDKey.DigitalPassKey) obj;
+
+      boolean result = true;
+      result = result && getReferenceCase().equals(
+          other.getReferenceCase());
+      if (!result) return false;
+      switch (referenceCase_) {
+        case 1:
+          result = result && getBarcode()
+              .equals(other.getBarcode());
+          break;
+        case 2:
+          result = result && getBeacon()
+              .equals(other.getBeacon());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (referenceCase_) {
+        case 1:
+          hash = (37 * hash) + BARCODE_FIELD_NUMBER;
+          hash = (53 * hash) + getBarcode().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + BEACON_FIELD_NUMBER;
+          hash = (53 * hash) + getBeacon().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.pass.PassIDKey.DigitalPassKey prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Specifies a reference to a digital pass.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.identity.pass.DigitalPassKey}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.pass.DigitalPassKey)
+        io.bloombox.schema.pass.PassIDKey.DigitalPassKeyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.pass.PassIDKey.DigitalPassKey.class, io.bloombox.schema.pass.PassIDKey.DigitalPassKey.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.pass.PassIDKey.DigitalPassKey.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        referenceCase_ = 0;
+        reference_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.pass.PassIDKey.internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor;
+      }
+
+      public io.bloombox.schema.pass.PassIDKey.DigitalPassKey getDefaultInstanceForType() {
+        return io.bloombox.schema.pass.PassIDKey.DigitalPassKey.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.pass.PassIDKey.DigitalPassKey build() {
+        io.bloombox.schema.pass.PassIDKey.DigitalPassKey result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.pass.PassIDKey.DigitalPassKey buildPartial() {
+        io.bloombox.schema.pass.PassIDKey.DigitalPassKey result = new io.bloombox.schema.pass.PassIDKey.DigitalPassKey(this);
+        if (referenceCase_ == 1) {
+          result.reference_ = reference_;
+        }
+        if (referenceCase_ == 2) {
+          if (beaconBuilder_ == null) {
+            result.reference_ = reference_;
+          } else {
+            result.reference_ = beaconBuilder_.build();
+          }
+        }
+        result.referenceCase_ = referenceCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.pass.PassIDKey.DigitalPassKey) {
+          return mergeFrom((io.bloombox.schema.pass.PassIDKey.DigitalPassKey)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.pass.PassIDKey.DigitalPassKey other) {
+        if (other == io.bloombox.schema.pass.PassIDKey.DigitalPassKey.getDefaultInstance()) return this;
+        switch (other.getReferenceCase()) {
+          case BARCODE: {
+            referenceCase_ = 1;
+            reference_ = other.reference_;
+            onChanged();
+            break;
+          }
+          case BEACON: {
+            mergeBeacon(other.getBeacon());
+            break;
+          }
+          case REFERENCE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.pass.PassIDKey.DigitalPassKey parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.pass.PassIDKey.DigitalPassKey) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int referenceCase_ = 0;
+      private java.lang.Object reference_;
+      public ReferenceCase
+          getReferenceCase() {
+        return ReferenceCase.forNumber(
+            referenceCase_);
+      }
+
+      public Builder clearReference() {
+        referenceCase_ = 0;
+        reference_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * Specifies a barcode value that was scanned.
+       * </pre>
+       *
+       * <code>string barcode = 1;</code>
+       */
+      public java.lang.String getBarcode() {
+        java.lang.Object ref = "";
+        if (referenceCase_ == 1) {
+          ref = reference_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (referenceCase_ == 1) {
+            reference_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a barcode value that was scanned.
+       * </pre>
+       *
+       * <code>string barcode = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBarcodeBytes() {
+        java.lang.Object ref = "";
+        if (referenceCase_ == 1) {
+          ref = reference_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (referenceCase_ == 1) {
+            reference_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a barcode value that was scanned.
+       * </pre>
+       *
+       * <code>string barcode = 1;</code>
+       */
+      public Builder setBarcode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  referenceCase_ = 1;
+        reference_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a barcode value that was scanned.
+       * </pre>
+       *
+       * <code>string barcode = 1;</code>
+       */
+      public Builder clearBarcode() {
+        if (referenceCase_ == 1) {
+          referenceCase_ = 0;
+          reference_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a barcode value that was scanned.
+       * </pre>
+       *
+       * <code>string barcode = 1;</code>
+       */
+      public Builder setBarcodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        referenceCase_ = 1;
+        reference_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> beaconBuilder_;
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      public boolean hasBeacon() {
+        return referenceCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      public io.opencannabis.schema.proximity.BluetoothBeacon getBeacon() {
+        if (beaconBuilder_ == null) {
+          if (referenceCase_ == 2) {
+            return (io.opencannabis.schema.proximity.BluetoothBeacon) reference_;
+          }
+          return io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance();
+        } else {
+          if (referenceCase_ == 2) {
+            return beaconBuilder_.getMessage();
+          }
+          return io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      public Builder setBeacon(io.opencannabis.schema.proximity.BluetoothBeacon value) {
+        if (beaconBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          reference_ = value;
+          onChanged();
+        } else {
+          beaconBuilder_.setMessage(value);
+        }
+        referenceCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      public Builder setBeacon(
+          io.opencannabis.schema.proximity.BluetoothBeacon.Builder builderForValue) {
+        if (beaconBuilder_ == null) {
+          reference_ = builderForValue.build();
+          onChanged();
+        } else {
+          beaconBuilder_.setMessage(builderForValue.build());
+        }
+        referenceCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      public Builder mergeBeacon(io.opencannabis.schema.proximity.BluetoothBeacon value) {
+        if (beaconBuilder_ == null) {
+          if (referenceCase_ == 2 &&
+              reference_ != io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance()) {
+            reference_ = io.opencannabis.schema.proximity.BluetoothBeacon.newBuilder((io.opencannabis.schema.proximity.BluetoothBeacon) reference_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            reference_ = value;
+          }
+          onChanged();
+        } else {
+          if (referenceCase_ == 2) {
+            beaconBuilder_.mergeFrom(value);
+          }
+          beaconBuilder_.setMessage(value);
+        }
+        referenceCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      public Builder clearBeacon() {
+        if (beaconBuilder_ == null) {
+          if (referenceCase_ == 2) {
+            referenceCase_ = 0;
+            reference_ = null;
+            onChanged();
+          }
+        } else {
+          if (referenceCase_ == 2) {
+            referenceCase_ = 0;
+            reference_ = null;
+          }
+          beaconBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      public io.opencannabis.schema.proximity.BluetoothBeacon.Builder getBeaconBuilder() {
+        return getBeaconFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      public io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder getBeaconOrBuilder() {
+        if ((referenceCase_ == 2) && (beaconBuilder_ != null)) {
+          return beaconBuilder_.getMessageOrBuilder();
+        } else {
+          if (referenceCase_ == 2) {
+            return (io.opencannabis.schema.proximity.BluetoothBeacon) reference_;
+          }
+          return io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies a BLE signal received referencing a card.
+       * </pre>
+       *
+       * <code>.opencannabis.proximity.BluetoothBeacon beacon = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder> 
+          getBeaconFieldBuilder() {
+        if (beaconBuilder_ == null) {
+          if (!(referenceCase_ == 2)) {
+            reference_ = io.opencannabis.schema.proximity.BluetoothBeacon.getDefaultInstance();
+          }
+          beaconBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.opencannabis.schema.proximity.BluetoothBeacon, io.opencannabis.schema.proximity.BluetoothBeacon.Builder, io.opencannabis.schema.proximity.BluetoothBeaconOrBuilder>(
+                  (io.opencannabis.schema.proximity.BluetoothBeacon) reference_,
+                  getParentForChildren(),
+                  isClean());
+          reference_ = null;
+        }
+        referenceCase_ = 2;
+        onChanged();;
+        return beaconBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.pass.DigitalPassKey)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.pass.DigitalPassKey)
+    private static final io.bloombox.schema.pass.PassIDKey.DigitalPassKey DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.pass.PassIDKey.DigitalPassKey();
+    }
+
+    public static io.bloombox.schema.pass.PassIDKey.DigitalPassKey getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DigitalPassKey>
+        PARSER = new com.google.protobuf.AbstractParser<DigitalPassKey>() {
+      public DigitalPassKey parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DigitalPassKey(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DigitalPassKey> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DigitalPassKey> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.pass.PassIDKey.DigitalPassKey getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_identity_pass_PassKey_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_identity_pass_DigitalPassKey_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -961,10 +2255,14 @@ public final class PassIDKey {
     java.lang.String[] descriptorData = {
       "\n\033identity/pass/PassKey.proto\022\035bloombox." +
       "schema.identity.pass\032\024core/Datamodel.pro" +
-      "to\"?\n\007PassKey\022\027\n\007encoded\030\001 \001(\tB\006\302\265\003\002\010\002\022\016" +
-      "\n\006serial\030\002 \001(\t\022\013\n\003uid\030\003 \001(\tB.\n\027io.bloomb" +
-      "ox.schema.passB\tPassIDKeyH\001P\000\242\002\003BBSb\006pro" +
-      "to3"
+      "to\032\037proximity/BluetoothBeacon.proto\"_\n\007P" +
+      "assKey\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\016\n\006serial\030\002" +
+      " \001(\t\022\013\n\003uid\030\003 \001(\t\022\017\n\007partner\030\004 \001(\t\022\020\n\010lo" +
+      "cation\030\005 \001(\t\"k\n\016DigitalPassKey\022\021\n\007barcod" +
+      "e\030\001 \001(\tH\000\0229\n\006beacon\030\002 \001(\0132\'.opencannabis" +
+      ".proximity.BluetoothBeaconH\000B\013\n\treferenc" +
+      "eB.\n\027io.bloombox.schema.passB\tPassIDKeyH" +
+      "\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -978,19 +2276,27 @@ public final class PassIDKey {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           core.Datamodel.getDescriptor(),
+          io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_identity_pass_PassKey_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_bloombox_schema_identity_pass_PassKey_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_pass_PassKey_descriptor,
-        new java.lang.String[] { "Encoded", "Serial", "Uid", });
+        new java.lang.String[] { "Uuid", "Serial", "Uid", "Partner", "Location", });
+    internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_bloombox_schema_identity_pass_DigitalPassKey_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_identity_pass_DigitalPassKey_descriptor,
+        new java.lang.String[] { "Barcode", "Beacon", "Reference", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(core.Datamodel.field);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     core.Datamodel.getDescriptor();
+    io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

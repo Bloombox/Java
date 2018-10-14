@@ -1640,6 +1640,1045 @@ public final class DriversLicenseID {
 
   }
 
+  public interface USDLReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.USDLReference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Driver's license number.
+     * </pre>
+     *
+     * <code>string number = 1;</code>
+     */
+    java.lang.String getNumber();
+    /**
+     * <pre>
+     * Driver's license number.
+     * </pre>
+     *
+     * <code>string number = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNumberBytes();
+
+    /**
+     * <pre>
+     * PDF417 back-side barcode.
+     * </pre>
+     *
+     * <code>string barcode = 2;</code>
+     */
+    java.lang.String getBarcode();
+    /**
+     * <pre>
+     * PDF417 back-side barcode.
+     * </pre>
+     *
+     * <code>string barcode = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getBarcodeBytes();
+
+    /**
+     * <pre>
+     * Magnetic stripe data.
+     * </pre>
+     *
+     * <code>string magstripe = 3;</code>
+     */
+    java.lang.String getMagstripe();
+    /**
+     * <pre>
+     * Magnetic stripe data.
+     * </pre>
+     *
+     * <code>string magstripe = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getMagstripeBytes();
+
+    public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.DataCase getDataCase();
+  }
+  /**
+   * <pre>
+   * Reference to a US Driver's License.
+   * </pre>
+   *
+   * Protobuf type {@code bloombox.schema.identity.ids.USDLReference}
+   */
+  public  static final class USDLReference extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:bloombox.schema.identity.ids.USDLReference)
+      USDLReferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use USDLReference.newBuilder() to construct.
+    private USDLReference(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private USDLReference() {
+      number_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private USDLReference(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              number_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              dataCase_ = 2;
+              data_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              dataCase_ = 3;
+              data_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.class, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder.class);
+    }
+
+    private int dataCase_ = 0;
+    private java.lang.Object data_;
+    public enum DataCase
+        implements com.google.protobuf.Internal.EnumLite {
+      BARCODE(2),
+      MAGSTRIPE(3),
+      DATA_NOT_SET(0);
+      private final int value;
+      private DataCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DataCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DataCase forNumber(int value) {
+        switch (value) {
+          case 2: return BARCODE;
+          case 3: return MAGSTRIPE;
+          case 0: return DATA_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DataCase
+    getDataCase() {
+      return DataCase.forNumber(
+          dataCase_);
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object number_;
+    /**
+     * <pre>
+     * Driver's license number.
+     * </pre>
+     *
+     * <code>string number = 1;</code>
+     */
+    public java.lang.String getNumber() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        number_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Driver's license number.
+     * </pre>
+     *
+     * <code>string number = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNumberBytes() {
+      java.lang.Object ref = number_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        number_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BARCODE_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * PDF417 back-side barcode.
+     * </pre>
+     *
+     * <code>string barcode = 2;</code>
+     */
+    public java.lang.String getBarcode() {
+      java.lang.Object ref = "";
+      if (dataCase_ == 2) {
+        ref = data_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (dataCase_ == 2) {
+          data_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * PDF417 back-side barcode.
+     * </pre>
+     *
+     * <code>string barcode = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBarcodeBytes() {
+      java.lang.Object ref = "";
+      if (dataCase_ == 2) {
+        ref = data_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (dataCase_ == 2) {
+          data_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAGSTRIPE_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Magnetic stripe data.
+     * </pre>
+     *
+     * <code>string magstripe = 3;</code>
+     */
+    public java.lang.String getMagstripe() {
+      java.lang.Object ref = "";
+      if (dataCase_ == 3) {
+        ref = data_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (dataCase_ == 3) {
+          data_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Magnetic stripe data.
+     * </pre>
+     *
+     * <code>string magstripe = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMagstripeBytes() {
+      java.lang.Object ref = "";
+      if (dataCase_ == 3) {
+        ref = data_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (dataCase_ == 3) {
+          data_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
+      }
+      if (dataCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, data_);
+      }
+      if (dataCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, data_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
+      }
+      if (dataCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, data_);
+      }
+      if (dataCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, data_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference)) {
+        return super.equals(obj);
+      }
+      io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference other = (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) obj;
+
+      boolean result = true;
+      result = result && getNumber()
+          .equals(other.getNumber());
+      result = result && getDataCase().equals(
+          other.getDataCase());
+      if (!result) return false;
+      switch (dataCase_) {
+        case 2:
+          result = result && getBarcode()
+              .equals(other.getBarcode());
+          break;
+        case 3:
+          result = result && getMagstripe()
+              .equals(other.getMagstripe());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getNumber().hashCode();
+      switch (dataCase_) {
+        case 2:
+          hash = (37 * hash) + BARCODE_FIELD_NUMBER;
+          hash = (53 * hash) + getBarcode().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + MAGSTRIPE_FIELD_NUMBER;
+          hash = (53 * hash) + getMagstripe().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Reference to a US Driver's License.
+     * </pre>
+     *
+     * Protobuf type {@code bloombox.schema.identity.ids.USDLReference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:bloombox.schema.identity.ids.USDLReference)
+        io.bloombox.schema.identity.ids.DriversLicenseID.USDLReferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.class, io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.Builder.class);
+      }
+
+      // Construct using io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        number_ = "";
+
+        dataCase_ = 0;
+        data_ = null;
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.bloombox.schema.identity.ids.DriversLicenseID.internal_static_bloombox_schema_identity_ids_USDLReference_descriptor;
+      }
+
+      public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getDefaultInstanceForType() {
+        return io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance();
+      }
+
+      public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference build() {
+        io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference buildPartial() {
+        io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference result = new io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference(this);
+        result.number_ = number_;
+        if (dataCase_ == 2) {
+          result.data_ = data_;
+        }
+        if (dataCase_ == 3) {
+          result.data_ = data_;
+        }
+        result.dataCase_ = dataCase_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) {
+          return mergeFrom((io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference other) {
+        if (other == io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference.getDefaultInstance()) return this;
+        if (!other.getNumber().isEmpty()) {
+          number_ = other.number_;
+          onChanged();
+        }
+        switch (other.getDataCase()) {
+          case BARCODE: {
+            dataCase_ = 2;
+            data_ = other.data_;
+            onChanged();
+            break;
+          }
+          case MAGSTRIPE: {
+            dataCase_ = 3;
+            data_ = other.data_;
+            onChanged();
+            break;
+          }
+          case DATA_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int dataCase_ = 0;
+      private java.lang.Object data_;
+      public DataCase
+          getDataCase() {
+        return DataCase.forNumber(
+            dataCase_);
+      }
+
+      public Builder clearData() {
+        dataCase_ = 0;
+        data_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object number_ = "";
+      /**
+       * <pre>
+       * Driver's license number.
+       * </pre>
+       *
+       * <code>string number = 1;</code>
+       */
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          number_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Driver's license number.
+       * </pre>
+       *
+       * <code>string number = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Driver's license number.
+       * </pre>
+       *
+       * <code>string number = 1;</code>
+       */
+      public Builder setNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        number_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Driver's license number.
+       * </pre>
+       *
+       * <code>string number = 1;</code>
+       */
+      public Builder clearNumber() {
+        
+        number_ = getDefaultInstance().getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Driver's license number.
+       * </pre>
+       *
+       * <code>string number = 1;</code>
+       */
+      public Builder setNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        number_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * PDF417 back-side barcode.
+       * </pre>
+       *
+       * <code>string barcode = 2;</code>
+       */
+      public java.lang.String getBarcode() {
+        java.lang.Object ref = "";
+        if (dataCase_ == 2) {
+          ref = data_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (dataCase_ == 2) {
+            data_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PDF417 back-side barcode.
+       * </pre>
+       *
+       * <code>string barcode = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBarcodeBytes() {
+        java.lang.Object ref = "";
+        if (dataCase_ == 2) {
+          ref = data_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (dataCase_ == 2) {
+            data_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PDF417 back-side barcode.
+       * </pre>
+       *
+       * <code>string barcode = 2;</code>
+       */
+      public Builder setBarcode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  dataCase_ = 2;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PDF417 back-side barcode.
+       * </pre>
+       *
+       * <code>string barcode = 2;</code>
+       */
+      public Builder clearBarcode() {
+        if (dataCase_ == 2) {
+          dataCase_ = 0;
+          data_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * PDF417 back-side barcode.
+       * </pre>
+       *
+       * <code>string barcode = 2;</code>
+       */
+      public Builder setBarcodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        dataCase_ = 2;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Magnetic stripe data.
+       * </pre>
+       *
+       * <code>string magstripe = 3;</code>
+       */
+      public java.lang.String getMagstripe() {
+        java.lang.Object ref = "";
+        if (dataCase_ == 3) {
+          ref = data_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (dataCase_ == 3) {
+            data_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Magnetic stripe data.
+       * </pre>
+       *
+       * <code>string magstripe = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMagstripeBytes() {
+        java.lang.Object ref = "";
+        if (dataCase_ == 3) {
+          ref = data_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (dataCase_ == 3) {
+            data_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Magnetic stripe data.
+       * </pre>
+       *
+       * <code>string magstripe = 3;</code>
+       */
+      public Builder setMagstripe(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  dataCase_ = 3;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Magnetic stripe data.
+       * </pre>
+       *
+       * <code>string magstripe = 3;</code>
+       */
+      public Builder clearMagstripe() {
+        if (dataCase_ == 3) {
+          dataCase_ = 0;
+          data_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Magnetic stripe data.
+       * </pre>
+       *
+       * <code>string magstripe = 3;</code>
+       */
+      public Builder setMagstripeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        dataCase_ = 3;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:bloombox.schema.identity.ids.USDLReference)
+    }
+
+    // @@protoc_insertion_point(class_scope:bloombox.schema.identity.ids.USDLReference)
+    private static final io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference();
+    }
+
+    public static io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<USDLReference>
+        PARSER = new com.google.protobuf.AbstractParser<USDLReference>() {
+      public USDLReference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new USDLReference(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<USDLReference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<USDLReference> getParserForType() {
+      return PARSER;
+    }
+
+    public io.bloombox.schema.identity.ids.DriversLicenseID.USDLReference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface USDLOrBuilder extends
       // @@protoc_insertion_point(interface_extends:bloombox.schema.identity.ids.USDL)
       com.google.protobuf.MessageOrBuilder {
@@ -3084,6 +4123,11 @@ public final class DriversLicenseID {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_bloombox_schema_identity_ids_USDLFieldValue_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_bloombox_schema_identity_ids_USDLReference_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_bloombox_schema_identity_ids_USDLReference_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_bloombox_schema_identity_ids_USDL_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3104,35 +4148,37 @@ public final class DriversLicenseID {
       "FieldB&\212@#Field that we are storing data" +
       " for.\022/\n\005value\030\002 \001(\tB\036\212@\033String data for" +
       " this field.H\000\022\030\n\traw_value\030\003 \001(\014B\003\200@\001H\000" +
-      "B\006\n\004data\"\346\002\n\004USDL\022\024\n\007barcode\030\001 \001(\tB\003\200@\001\022" +
-      "\026\n\tmagstripe\030\002 \001(\tB\003\200@\001\022`\n\014jurisdiction\030" +
-      "\003 \001(\0162\035.opencannabis.geo.usa.USStateB+\212@" +
-      "(State that issued this Driver\'s License" +
-      ".\022k\n\023identification_card\030\004 \001(\010BN\212@KFlag " +
-      "that indicates this is an identification" +
-      " card, not a Driver\'s License.\022a\n\006fields" +
-      "\030d \003(\0132,.bloombox.schema.identity.ids.US" +
-      "DLFieldValueB#\212@ Raw field data for this" +
-      " license.*\270\005\n\tUSDLField\022\020\n\014BACK_BARCODE\020" +
-      "\000\022\017\n\013FAMILY_NAME\020\001\022\016\n\nGIVEN_NAME\020\002\022\017\n\013MI" +
-      "DDLE_NAME\020\003\022\r\n\tFULL_NAME\020\004\022\017\n\013NAME_PREFI" +
-      "X\020\005\022\017\n\013NAME_SUFFIX\020\006\022\021\n\rDATE_OF_BIRTH\020\n\022" +
-      "\007\n\003SEX\020\013\022\n\n\006HEIGHT\020\014\022\n\n\006WEIGHT\020\r\022\r\n\tEYE_" +
-      "COLOR\020\016\022\016\n\nHAIR_COLOR\020\017\022\020\n\014FULL_ADDRESS\020" +
-      "\024\022\020\n\014ADDRESS_LINE\020\025\022\021\n\rADDRESS_LINE2\020\026\022\020" +
-      "\n\014ADDRESS_CITY\020\027\022\017\n\013POSTAL_CODE\020\030\022\026\n\022STA" +
-      "TE_JURISDICTION\020\031\022\016\n\nLICENSE_ID\020\036\022\026\n\022LIC" +
-      "ENSE_ISSUE_DATE\020\037\022\027\n\023LICENSE_EXPIRY_DATE" +
-      "\020 \022\027\n\023ISSUER_JURISDICTION\020!\022&\n\"ISSUER_JU" +
-      "RISDICTION_FORMAT_VERSION\020\"\022\030\n\024UNIQUE_DO" +
-      "CUMENT_CODE\020(\022\032\n\026INVENTORY_CONTROL_CODE\020" +
-      ")\022\021\n\rUNDER_18_DATE\0202\022\021\n\rUNDER_19_DATE\0203\022" +
-      "\021\n\rUNDER_21_DATE\0204\022\014\n\010UNDER_18\020<\022\014\n\010UNDE" +
-      "R_19\020=\022\014\n\010UNDER_21\020>\022\017\n\013ORGAN_DONOR\020?\022\013\n" +
-      "\007VETERAN\020@\022\017\n\013NONRESIDENT\020A\022\022\n\016RACE_ETHN" +
-      "ICITY\020F\022\023\n\017COMPLIANCE_TYPE\020GB=\n\037io.bloom" +
-      "box.schema.identity.idsB\020DriversLicenseI" +
-      "DH\001P\000\242\002\003BBSb\006proto3"
+      "B\006\n\004data\"O\n\rUSDLReference\022\016\n\006number\030\001 \001(" +
+      "\t\022\021\n\007barcode\030\002 \001(\tH\000\022\023\n\tmagstripe\030\003 \001(\tH" +
+      "\000B\006\n\004data\"\346\002\n\004USDL\022\024\n\007barcode\030\001 \001(\tB\003\200@\001" +
+      "\022\026\n\tmagstripe\030\002 \001(\tB\003\200@\001\022`\n\014jurisdiction" +
+      "\030\003 \001(\0162\035.opencannabis.geo.usa.USStateB+\212" +
+      "@(State that issued this Driver\'s Licens" +
+      "e.\022k\n\023identification_card\030\004 \001(\010BN\212@KFlag" +
+      " that indicates this is an identificatio" +
+      "n card, not a Driver\'s License.\022a\n\006field" +
+      "s\030d \003(\0132,.bloombox.schema.identity.ids.U" +
+      "SDLFieldValueB#\212@ Raw field data for thi" +
+      "s license.*\270\005\n\tUSDLField\022\020\n\014BACK_BARCODE" +
+      "\020\000\022\017\n\013FAMILY_NAME\020\001\022\016\n\nGIVEN_NAME\020\002\022\017\n\013M" +
+      "IDDLE_NAME\020\003\022\r\n\tFULL_NAME\020\004\022\017\n\013NAME_PREF" +
+      "IX\020\005\022\017\n\013NAME_SUFFIX\020\006\022\021\n\rDATE_OF_BIRTH\020\n" +
+      "\022\007\n\003SEX\020\013\022\n\n\006HEIGHT\020\014\022\n\n\006WEIGHT\020\r\022\r\n\tEYE" +
+      "_COLOR\020\016\022\016\n\nHAIR_COLOR\020\017\022\020\n\014FULL_ADDRESS" +
+      "\020\024\022\020\n\014ADDRESS_LINE\020\025\022\021\n\rADDRESS_LINE2\020\026\022" +
+      "\020\n\014ADDRESS_CITY\020\027\022\017\n\013POSTAL_CODE\020\030\022\026\n\022ST" +
+      "ATE_JURISDICTION\020\031\022\016\n\nLICENSE_ID\020\036\022\026\n\022LI" +
+      "CENSE_ISSUE_DATE\020\037\022\027\n\023LICENSE_EXPIRY_DAT" +
+      "E\020 \022\027\n\023ISSUER_JURISDICTION\020!\022&\n\"ISSUER_J" +
+      "URISDICTION_FORMAT_VERSION\020\"\022\030\n\024UNIQUE_D" +
+      "OCUMENT_CODE\020(\022\032\n\026INVENTORY_CONTROL_CODE" +
+      "\020)\022\021\n\rUNDER_18_DATE\0202\022\021\n\rUNDER_19_DATE\0203" +
+      "\022\021\n\rUNDER_21_DATE\0204\022\014\n\010UNDER_18\020<\022\014\n\010UND" +
+      "ER_19\020=\022\014\n\010UNDER_21\020>\022\017\n\013ORGAN_DONOR\020?\022\013" +
+      "\n\007VETERAN\020@\022\017\n\013NONRESIDENT\020A\022\022\n\016RACE_ETH" +
+      "NICITY\020F\022\023\n\017COMPLIANCE_TYPE\020GB=\n\037io.bloo" +
+      "mbox.schema.identity.idsB\020DriversLicense" +
+      "IDH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3154,8 +4200,14 @@ public final class DriversLicenseID {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_ids_USDLFieldValue_descriptor,
         new java.lang.String[] { "Field", "Value", "RawValue", "Data", });
-    internal_static_bloombox_schema_identity_ids_USDL_descriptor =
+    internal_static_bloombox_schema_identity_ids_USDLReference_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_bloombox_schema_identity_ids_USDLReference_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_bloombox_schema_identity_ids_USDLReference_descriptor,
+        new java.lang.String[] { "Number", "Barcode", "Magstripe", "Data", });
+    internal_static_bloombox_schema_identity_ids_USDL_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_bloombox_schema_identity_ids_USDL_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_bloombox_schema_identity_ids_USDL_descriptor,

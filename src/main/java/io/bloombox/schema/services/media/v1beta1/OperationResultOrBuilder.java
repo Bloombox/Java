@@ -26,26 +26,26 @@ public interface OperationResultOrBuilder extends
 
   /**
    * <pre>
-   * Resulting key, provisioned fresh for this media item.
+   * URI to access this item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1;</code>
+   * <code>.opencannabis.media.MediaItem item = 1;</code>
    */
-  boolean hasKey();
+  boolean hasItem();
   /**
    * <pre>
-   * Resulting key, provisioned fresh for this media item.
+   * URI to access this item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1;</code>
+   * <code>.opencannabis.media.MediaItem item = 1;</code>
    */
-  io.opencannabis.schema.media.MediaItemKey.MediaKey getKey();
+  io.opencannabis.schema.media.AttachedMedia.MediaItem getItem();
   /**
    * <pre>
-   * Resulting key, provisioned fresh for this media item.
+   * URI to access this item.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaKey key = 1;</code>
+   * <code>.opencannabis.media.MediaItem item = 1;</code>
    */
-  io.opencannabis.schema.media.MediaItemKey.MediaKeyOrBuilder getKeyOrBuilder();
+  io.opencannabis.schema.media.AttachedMedia.MediaItemOrBuilder getItemOrBuilder();
 }

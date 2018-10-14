@@ -37,7 +37,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MediaContent() {
-    content_ = com.google.protobuf.ByteString.EMPTY;
+    name_ = "";
   }
 
   @java.lang.Override
@@ -72,11 +72,6 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 10: {
-
-            content_ = input.readBytes();
-            break;
-          }
-          case 18: {
             io.opencannabis.schema.media.MediaItemType.MediaType.Builder subBuilder = null;
             if (type_ != null) {
               subBuilder = type_.toBuilder();
@@ -89,9 +84,9 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
-          case 26: {
+          case 18: {
             io.bloombox.schema.services.media.v1beta1.MediaFile.Builder subBuilder = null;
-            if (specCase_ == 3) {
+            if (specCase_ == 2) {
               subBuilder = ((io.bloombox.schema.services.media.v1beta1.MediaFile) spec_).toBuilder();
             }
             spec_ =
@@ -100,12 +95,31 @@ private static final long serialVersionUID = 0L;
               subBuilder.mergeFrom((io.bloombox.schema.services.media.v1beta1.MediaFile) spec_);
               spec_ = subBuilder.buildPartial();
             }
-            specCase_ = 3;
+            specCase_ = 2;
             break;
           }
-          case 32: {
-            specCase_ = 4;
+          case 24: {
+            specCase_ = 3;
             spec_ = input.readBool();
+            break;
+          }
+          case 34: {
+            io.opencannabis.schema.content.GenericContent.Content.Builder subBuilder = null;
+            if (content_ != null) {
+              subBuilder = content_.toBuilder();
+            }
+            content_ = input.readMessage(io.opencannabis.schema.content.GenericContent.Content.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(content_);
+              content_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
             break;
           }
         }
@@ -136,8 +150,8 @@ private static final long serialVersionUID = 0L;
   private java.lang.Object spec_;
   public enum SpecCase
       implements com.google.protobuf.Internal.EnumLite {
-    FILE(3),
-    BLOB(4),
+    FILE(2),
+    BLOB(3),
     SPEC_NOT_SET(0);
     private final int value;
     private SpecCase(int value) {
@@ -153,8 +167,8 @@ private static final long serialVersionUID = 0L;
 
     public static SpecCase forNumber(int value) {
       switch (value) {
-        case 3: return FILE;
-        case 4: return BLOB;
+        case 2: return FILE;
+        case 3: return BLOB;
         case 0: return SPEC_NOT_SET;
         default: return null;
       }
@@ -170,27 +184,14 @@ private static final long serialVersionUID = 0L;
         specCase_);
   }
 
-  public static final int CONTENT_FIELD_NUMBER = 1;
-  private com.google.protobuf.ByteString content_;
-  /**
-   * <pre>
-   * Raw data for the media content being uploaded, if applicable.
-   * </pre>
-   *
-   * <code>bytes content = 1;</code>
-   */
-  public com.google.protobuf.ByteString getContent() {
-    return content_;
-  }
-
-  public static final int TYPE_FIELD_NUMBER = 2;
+  public static final int TYPE_FIELD_NUMBER = 1;
   private io.opencannabis.schema.media.MediaItemType.MediaType type_;
   /**
    * <pre>
    * Type specification for the media being uploaded.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2;</code>
+   * <code>.opencannabis.media.MediaType type = 1;</code>
    */
   public boolean hasType() {
     return type_ != null;
@@ -200,7 +201,7 @@ private static final long serialVersionUID = 0L;
    * Type specification for the media being uploaded.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2;</code>
+   * <code>.opencannabis.media.MediaType type = 1;</code>
    */
   public io.opencannabis.schema.media.MediaItemType.MediaType getType() {
     return type_ == null ? io.opencannabis.schema.media.MediaItemType.MediaType.getDefaultInstance() : type_;
@@ -210,32 +211,32 @@ private static final long serialVersionUID = 0L;
    * Type specification for the media being uploaded.
    * </pre>
    *
-   * <code>.opencannabis.media.MediaType type = 2;</code>
+   * <code>.opencannabis.media.MediaType type = 1;</code>
    */
   public io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder getTypeOrBuilder() {
     return getType();
   }
 
-  public static final int FILE_FIELD_NUMBER = 3;
+  public static final int FILE_FIELD_NUMBER = 2;
   /**
    * <pre>
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
    */
   public boolean hasFile() {
-    return specCase_ == 3;
+    return specCase_ == 2;
   }
   /**
    * <pre>
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
    */
   public io.bloombox.schema.services.media.v1beta1.MediaFile getFile() {
-    if (specCase_ == 3) {
+    if (specCase_ == 2) {
        return (io.bloombox.schema.services.media.v1beta1.MediaFile) spec_;
     }
     return io.bloombox.schema.services.media.v1beta1.MediaFile.getDefaultInstance();
@@ -245,28 +246,103 @@ private static final long serialVersionUID = 0L;
    * Information about the file being uploaded, including the filename and content mime type.
    * </pre>
    *
-   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+   * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
    */
   public io.bloombox.schema.services.media.v1beta1.MediaFileOrBuilder getFileOrBuilder() {
-    if (specCase_ == 3) {
+    if (specCase_ == 2) {
        return (io.bloombox.schema.services.media.v1beta1.MediaFile) spec_;
     }
     return io.bloombox.schema.services.media.v1beta1.MediaFile.getDefaultInstance();
   }
 
-  public static final int BLOB_FIELD_NUMBER = 4;
+  public static final int BLOB_FIELD_NUMBER = 3;
   /**
    * <pre>
    * Flag indicating the specified/attached content is a raw data blob.
    * </pre>
    *
-   * <code>bool blob = 4;</code>
+   * <code>bool blob = 3;</code>
    */
   public boolean getBlob() {
-    if (specCase_ == 4) {
+    if (specCase_ == 3) {
       return (java.lang.Boolean) spec_;
     }
     return false;
+  }
+
+  public static final int CONTENT_FIELD_NUMBER = 4;
+  private io.opencannabis.schema.content.GenericContent.Content content_;
+  /**
+   * <pre>
+   * Raw data for the media content being uploaded, if applicable.
+   * </pre>
+   *
+   * <code>.opencannabis.content.Content content = 4;</code>
+   */
+  public boolean hasContent() {
+    return content_ != null;
+  }
+  /**
+   * <pre>
+   * Raw data for the media content being uploaded, if applicable.
+   * </pre>
+   *
+   * <code>.opencannabis.content.Content content = 4;</code>
+   */
+  public io.opencannabis.schema.content.GenericContent.Content getContent() {
+    return content_ == null ? io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : content_;
+  }
+  /**
+   * <pre>
+   * Raw data for the media content being uploaded, if applicable.
+   * </pre>
+   *
+   * <code>.opencannabis.content.Content content = 4;</code>
+   */
+  public io.opencannabis.schema.content.GenericContent.ContentOrBuilder getContentOrBuilder() {
+    return getContent();
+  }
+
+  public static final int NAME_FIELD_NUMBER = 5;
+  private volatile java.lang.Object name_;
+  /**
+   * <pre>
+   * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+   * </pre>
+   *
+   * <code>string name = 5;</code>
+   */
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+   * </pre>
+   *
+   * <code>string name = 5;</code>
+   */
+  public com.google.protobuf.ByteString
+      getNameBytes() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -281,18 +357,21 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!content_.isEmpty()) {
-      output.writeBytes(1, content_);
-    }
     if (type_ != null) {
-      output.writeMessage(2, getType());
+      output.writeMessage(1, getType());
+    }
+    if (specCase_ == 2) {
+      output.writeMessage(2, (io.bloombox.schema.services.media.v1beta1.MediaFile) spec_);
     }
     if (specCase_ == 3) {
-      output.writeMessage(3, (io.bloombox.schema.services.media.v1beta1.MediaFile) spec_);
-    }
-    if (specCase_ == 4) {
       output.writeBool(
-          4, (boolean)((java.lang.Boolean) spec_));
+          3, (boolean)((java.lang.Boolean) spec_));
+    }
+    if (content_ != null) {
+      output.writeMessage(4, getContent());
+    }
+    if (!getNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
     }
     unknownFields.writeTo(output);
   }
@@ -302,22 +381,25 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!content_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(1, content_);
-    }
     if (type_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getType());
+        .computeMessageSize(1, getType());
+    }
+    if (specCase_ == 2) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, (io.bloombox.schema.services.media.v1beta1.MediaFile) spec_);
     }
     if (specCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, (io.bloombox.schema.services.media.v1beta1.MediaFile) spec_);
-    }
-    if (specCase_ == 4) {
-      size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(
-            4, (boolean)((java.lang.Boolean) spec_));
+            3, (boolean)((java.lang.Boolean) spec_));
+    }
+    if (content_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getContent());
+    }
+    if (!getNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -335,22 +417,27 @@ private static final long serialVersionUID = 0L;
     io.bloombox.schema.services.media.v1beta1.MediaContent other = (io.bloombox.schema.services.media.v1beta1.MediaContent) obj;
 
     boolean result = true;
-    result = result && getContent()
-        .equals(other.getContent());
     result = result && (hasType() == other.hasType());
     if (hasType()) {
       result = result && getType()
           .equals(other.getType());
     }
+    result = result && (hasContent() == other.hasContent());
+    if (hasContent()) {
+      result = result && getContent()
+          .equals(other.getContent());
+    }
+    result = result && getName()
+        .equals(other.getName());
     result = result && getSpecCase().equals(
         other.getSpecCase());
     if (!result) return false;
     switch (specCase_) {
-      case 3:
+      case 2:
         result = result && getFile()
             .equals(other.getFile());
         break;
-      case 4:
+      case 3:
         result = result && (getBlob()
             == other.getBlob());
         break;
@@ -368,18 +455,22 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-    hash = (53 * hash) + getContent().hashCode();
     if (hasType()) {
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
     }
+    if (hasContent()) {
+      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getContent().hashCode();
+    }
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
     switch (specCase_) {
-      case 3:
+      case 2:
         hash = (37 * hash) + FILE_FIELD_NUMBER;
         hash = (53 * hash) + getFile().hashCode();
         break;
-      case 4:
+      case 3:
         hash = (37 * hash) + BLOB_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getBlob());
@@ -520,14 +611,20 @@ private static final long serialVersionUID = 0L;
     }
     public Builder clear() {
       super.clear();
-      content_ = com.google.protobuf.ByteString.EMPTY;
-
       if (typeBuilder_ == null) {
         type_ = null;
       } else {
         type_ = null;
         typeBuilder_ = null;
       }
+      if (contentBuilder_ == null) {
+        content_ = null;
+      } else {
+        content_ = null;
+        contentBuilder_ = null;
+      }
+      name_ = "";
+
       specCase_ = 0;
       spec_ = null;
       return this;
@@ -552,22 +649,27 @@ private static final long serialVersionUID = 0L;
 
     public io.bloombox.schema.services.media.v1beta1.MediaContent buildPartial() {
       io.bloombox.schema.services.media.v1beta1.MediaContent result = new io.bloombox.schema.services.media.v1beta1.MediaContent(this);
-      result.content_ = content_;
       if (typeBuilder_ == null) {
         result.type_ = type_;
       } else {
         result.type_ = typeBuilder_.build();
       }
-      if (specCase_ == 3) {
+      if (specCase_ == 2) {
         if (fileBuilder_ == null) {
           result.spec_ = spec_;
         } else {
           result.spec_ = fileBuilder_.build();
         }
       }
-      if (specCase_ == 4) {
+      if (specCase_ == 3) {
         result.spec_ = spec_;
       }
+      if (contentBuilder_ == null) {
+        result.content_ = content_;
+      } else {
+        result.content_ = contentBuilder_.build();
+      }
+      result.name_ = name_;
       result.specCase_ = specCase_;
       onBuilt();
       return result;
@@ -610,11 +712,15 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(io.bloombox.schema.services.media.v1beta1.MediaContent other) {
       if (other == io.bloombox.schema.services.media.v1beta1.MediaContent.getDefaultInstance()) return this;
-      if (other.getContent() != com.google.protobuf.ByteString.EMPTY) {
-        setContent(other.getContent());
-      }
       if (other.hasType()) {
         mergeType(other.getType());
+      }
+      if (other.hasContent()) {
+        mergeContent(other.getContent());
+      }
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
+        onChanged();
       }
       switch (other.getSpecCase()) {
         case FILE: {
@@ -671,47 +777,6 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <pre>
-     * Raw data for the media content being uploaded, if applicable.
-     * </pre>
-     *
-     * <code>bytes content = 1;</code>
-     */
-    public com.google.protobuf.ByteString getContent() {
-      return content_;
-    }
-    /**
-     * <pre>
-     * Raw data for the media content being uploaded, if applicable.
-     * </pre>
-     *
-     * <code>bytes content = 1;</code>
-     */
-    public Builder setContent(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      content_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Raw data for the media content being uploaded, if applicable.
-     * </pre>
-     *
-     * <code>bytes content = 1;</code>
-     */
-    public Builder clearContent() {
-      
-      content_ = getDefaultInstance().getContent();
-      onChanged();
-      return this;
-    }
-
     private io.opencannabis.schema.media.MediaItemType.MediaType type_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.MediaItemType.MediaType, io.opencannabis.schema.media.MediaItemType.MediaType.Builder, io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder> typeBuilder_;
@@ -720,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     public boolean hasType() {
       return typeBuilder_ != null || type_ != null;
@@ -730,7 +795,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     public io.opencannabis.schema.media.MediaItemType.MediaType getType() {
       if (typeBuilder_ == null) {
@@ -744,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     public Builder setType(io.opencannabis.schema.media.MediaItemType.MediaType value) {
       if (typeBuilder_ == null) {
@@ -764,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     public Builder setType(
         io.opencannabis.schema.media.MediaItemType.MediaType.Builder builderForValue) {
@@ -782,7 +847,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     public Builder mergeType(io.opencannabis.schema.media.MediaItemType.MediaType value) {
       if (typeBuilder_ == null) {
@@ -804,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     public Builder clearType() {
       if (typeBuilder_ == null) {
@@ -822,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     public io.opencannabis.schema.media.MediaItemType.MediaType.Builder getTypeBuilder() {
       
@@ -834,7 +899,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     public io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder getTypeOrBuilder() {
       if (typeBuilder_ != null) {
@@ -849,7 +914,7 @@ private static final long serialVersionUID = 0L;
      * Type specification for the media being uploaded.
      * </pre>
      *
-     * <code>.opencannabis.media.MediaType type = 2;</code>
+     * <code>.opencannabis.media.MediaType type = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.opencannabis.schema.media.MediaItemType.MediaType, io.opencannabis.schema.media.MediaItemType.MediaType.Builder, io.opencannabis.schema.media.MediaItemType.MediaTypeOrBuilder> 
@@ -872,26 +937,26 @@ private static final long serialVersionUID = 0L;
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     public boolean hasFile() {
-      return specCase_ == 3;
+      return specCase_ == 2;
     }
     /**
      * <pre>
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     public io.bloombox.schema.services.media.v1beta1.MediaFile getFile() {
       if (fileBuilder_ == null) {
-        if (specCase_ == 3) {
+        if (specCase_ == 2) {
           return (io.bloombox.schema.services.media.v1beta1.MediaFile) spec_;
         }
         return io.bloombox.schema.services.media.v1beta1.MediaFile.getDefaultInstance();
       } else {
-        if (specCase_ == 3) {
+        if (specCase_ == 2) {
           return fileBuilder_.getMessage();
         }
         return io.bloombox.schema.services.media.v1beta1.MediaFile.getDefaultInstance();
@@ -902,7 +967,7 @@ private static final long serialVersionUID = 0L;
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     public Builder setFile(io.bloombox.schema.services.media.v1beta1.MediaFile value) {
       if (fileBuilder_ == null) {
@@ -914,7 +979,7 @@ private static final long serialVersionUID = 0L;
       } else {
         fileBuilder_.setMessage(value);
       }
-      specCase_ = 3;
+      specCase_ = 2;
       return this;
     }
     /**
@@ -922,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     public Builder setFile(
         io.bloombox.schema.services.media.v1beta1.MediaFile.Builder builderForValue) {
@@ -932,7 +997,7 @@ private static final long serialVersionUID = 0L;
       } else {
         fileBuilder_.setMessage(builderForValue.build());
       }
-      specCase_ = 3;
+      specCase_ = 2;
       return this;
     }
     /**
@@ -940,11 +1005,11 @@ private static final long serialVersionUID = 0L;
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     public Builder mergeFile(io.bloombox.schema.services.media.v1beta1.MediaFile value) {
       if (fileBuilder_ == null) {
-        if (specCase_ == 3 &&
+        if (specCase_ == 2 &&
             spec_ != io.bloombox.schema.services.media.v1beta1.MediaFile.getDefaultInstance()) {
           spec_ = io.bloombox.schema.services.media.v1beta1.MediaFile.newBuilder((io.bloombox.schema.services.media.v1beta1.MediaFile) spec_)
               .mergeFrom(value).buildPartial();
@@ -953,12 +1018,12 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (specCase_ == 3) {
+        if (specCase_ == 2) {
           fileBuilder_.mergeFrom(value);
         }
         fileBuilder_.setMessage(value);
       }
-      specCase_ = 3;
+      specCase_ = 2;
       return this;
     }
     /**
@@ -966,17 +1031,17 @@ private static final long serialVersionUID = 0L;
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     public Builder clearFile() {
       if (fileBuilder_ == null) {
-        if (specCase_ == 3) {
+        if (specCase_ == 2) {
           specCase_ = 0;
           spec_ = null;
           onChanged();
         }
       } else {
-        if (specCase_ == 3) {
+        if (specCase_ == 2) {
           specCase_ = 0;
           spec_ = null;
         }
@@ -989,7 +1054,7 @@ private static final long serialVersionUID = 0L;
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     public io.bloombox.schema.services.media.v1beta1.MediaFile.Builder getFileBuilder() {
       return getFileFieldBuilder().getBuilder();
@@ -999,13 +1064,13 @@ private static final long serialVersionUID = 0L;
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     public io.bloombox.schema.services.media.v1beta1.MediaFileOrBuilder getFileOrBuilder() {
-      if ((specCase_ == 3) && (fileBuilder_ != null)) {
+      if ((specCase_ == 2) && (fileBuilder_ != null)) {
         return fileBuilder_.getMessageOrBuilder();
       } else {
-        if (specCase_ == 3) {
+        if (specCase_ == 2) {
           return (io.bloombox.schema.services.media.v1beta1.MediaFile) spec_;
         }
         return io.bloombox.schema.services.media.v1beta1.MediaFile.getDefaultInstance();
@@ -1016,13 +1081,13 @@ private static final long serialVersionUID = 0L;
      * Information about the file being uploaded, including the filename and content mime type.
      * </pre>
      *
-     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 3;</code>
+     * <code>.bloombox.schema.services.media.v1beta1.MediaFile file = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         io.bloombox.schema.services.media.v1beta1.MediaFile, io.bloombox.schema.services.media.v1beta1.MediaFile.Builder, io.bloombox.schema.services.media.v1beta1.MediaFileOrBuilder> 
         getFileFieldBuilder() {
       if (fileBuilder_ == null) {
-        if (!(specCase_ == 3)) {
+        if (!(specCase_ == 2)) {
           spec_ = io.bloombox.schema.services.media.v1beta1.MediaFile.getDefaultInstance();
         }
         fileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -1032,7 +1097,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         spec_ = null;
       }
-      specCase_ = 3;
+      specCase_ = 2;
       onChanged();;
       return fileBuilder_;
     }
@@ -1042,10 +1107,10 @@ private static final long serialVersionUID = 0L;
      * Flag indicating the specified/attached content is a raw data blob.
      * </pre>
      *
-     * <code>bool blob = 4;</code>
+     * <code>bool blob = 3;</code>
      */
     public boolean getBlob() {
-      if (specCase_ == 4) {
+      if (specCase_ == 3) {
         return (java.lang.Boolean) spec_;
       }
       return false;
@@ -1055,10 +1120,10 @@ private static final long serialVersionUID = 0L;
      * Flag indicating the specified/attached content is a raw data blob.
      * </pre>
      *
-     * <code>bool blob = 4;</code>
+     * <code>bool blob = 3;</code>
      */
     public Builder setBlob(boolean value) {
-      specCase_ = 4;
+      specCase_ = 3;
       spec_ = value;
       onChanged();
       return this;
@@ -1068,14 +1133,256 @@ private static final long serialVersionUID = 0L;
      * Flag indicating the specified/attached content is a raw data blob.
      * </pre>
      *
-     * <code>bool blob = 4;</code>
+     * <code>bool blob = 3;</code>
      */
     public Builder clearBlob() {
-      if (specCase_ == 4) {
+      if (specCase_ == 3) {
         specCase_ = 0;
         spec_ = null;
         onChanged();
       }
+      return this;
+    }
+
+    private io.opencannabis.schema.content.GenericContent.Content content_ = null;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> contentBuilder_;
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    public boolean hasContent() {
+      return contentBuilder_ != null || content_ != null;
+    }
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    public io.opencannabis.schema.content.GenericContent.Content getContent() {
+      if (contentBuilder_ == null) {
+        return content_ == null ? io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : content_;
+      } else {
+        return contentBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    public Builder setContent(io.opencannabis.schema.content.GenericContent.Content value) {
+      if (contentBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        content_ = value;
+        onChanged();
+      } else {
+        contentBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    public Builder setContent(
+        io.opencannabis.schema.content.GenericContent.Content.Builder builderForValue) {
+      if (contentBuilder_ == null) {
+        content_ = builderForValue.build();
+        onChanged();
+      } else {
+        contentBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    public Builder mergeContent(io.opencannabis.schema.content.GenericContent.Content value) {
+      if (contentBuilder_ == null) {
+        if (content_ != null) {
+          content_ =
+            io.opencannabis.schema.content.GenericContent.Content.newBuilder(content_).mergeFrom(value).buildPartial();
+        } else {
+          content_ = value;
+        }
+        onChanged();
+      } else {
+        contentBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    public Builder clearContent() {
+      if (contentBuilder_ == null) {
+        content_ = null;
+        onChanged();
+      } else {
+        content_ = null;
+        contentBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    public io.opencannabis.schema.content.GenericContent.Content.Builder getContentBuilder() {
+      
+      onChanged();
+      return getContentFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    public io.opencannabis.schema.content.GenericContent.ContentOrBuilder getContentOrBuilder() {
+      if (contentBuilder_ != null) {
+        return contentBuilder_.getMessageOrBuilder();
+      } else {
+        return content_ == null ?
+            io.opencannabis.schema.content.GenericContent.Content.getDefaultInstance() : content_;
+      }
+    }
+    /**
+     * <pre>
+     * Raw data for the media content being uploaded, if applicable.
+     * </pre>
+     *
+     * <code>.opencannabis.content.Content content = 4;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder> 
+        getContentFieldBuilder() {
+      if (contentBuilder_ == null) {
+        contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            io.opencannabis.schema.content.GenericContent.Content, io.opencannabis.schema.content.GenericContent.Content.Builder, io.opencannabis.schema.content.GenericContent.ContentOrBuilder>(
+                getContent(),
+                getParentForChildren(),
+                isClean());
+        content_ = null;
+      }
+      return contentBuilder_;
+    }
+
+    private java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+     * </pre>
+     *
+     * <code>string name = 5;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+     * </pre>
+     *
+     * <code>string name = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+     * </pre>
+     *
+     * <code>string name = 5;</code>
+     */
+    public Builder setName(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      name_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+     * </pre>
+     *
+     * <code>string name = 5;</code>
+     */
+    public Builder clearName() {
+      
+      name_ = getDefaultInstance().getName();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Name to give the media. Optional, and should be a human-readable label. Not usually based on a filename.
+     * </pre>
+     *
+     * <code>string name = 5;</code>
+     */
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      name_ = value;
+      onChanged();
       return this;
     }
     public final Builder setUnknownFields(
