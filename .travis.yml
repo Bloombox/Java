@@ -18,12 +18,16 @@ jdk:
   - oraclejdk8
   - openjdk8
   - oraclejdk9
+  - openjdk9
   - oraclejdk10
+  - openjdk10
 matrix:
   fast_finish: true
   allow_failures:
   - jdk: oraclejdk9
   - jdk: oraclejdk10
+  - jdk: openjdk9
+  - jdk: openjdk10
 cache:
   directories:
     - $HOME/.m2
