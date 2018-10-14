@@ -17,7 +17,7 @@
 ## Bloombox: Java API Client
 #
 
-BUILDMODE ?= maven
+BUILDMODE ?= gradle
 TESTS ?= yes
 RELEASE_VERSION ?= 1.4
 CLIENT_VERSION ?= 1.4-SNAPSHOT
