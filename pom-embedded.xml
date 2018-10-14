@@ -83,7 +83,7 @@
 
         <!-- Dependencies -->
         <grpc.version>1.11.0</grpc.version>
-        <protobuf.version>3.5.1</protobuf.version>
+        <protobuf.version>3.6.1</protobuf.version>
         <netty.boringssl.version>2.0.7.Final</netty.boringssl.version>
         <kotlin.version>1.2.50</kotlin.version>
         <commons-codec.version>1.11</commons-codec.version>
@@ -92,20 +92,20 @@
         <junit.version>4.12</junit.version>
 
         <!-- Plugins -->
-        <maven.clean.version>3.0.0</maven.clean.version>
-        <maven.compiler.version>3.7.0</maven.compiler.version>
-        <maven.jar.version>3.0.2</maven.jar.version>
-        <maven.javadoc.version>3.0.0</maven.javadoc.version>
-        <maven.reports.version>2.9</maven.reports.version>
+        <maven.clean.version>3.1.0</maven.clean.version>
+        <maven.compiler.version>3.8.0</maven.compiler.version>
+        <maven.jar.version>3.1.0</maven.jar.version>
+        <maven.javadoc.version>3.0.1</maven.javadoc.version>
+        <maven.reports.version>3.0.0</maven.reports.version>
         <maven.release.version>2.5.3</maven.release.version>
-        <maven.resources.version>3.0.2</maven.resources.version>
+        <maven.resources.version>3.1.0</maven.resources.version>
         <maven.install.version>2.5.2</maven.install.version>
-        <maven.shade.version>3.1.0</maven.shade.version>
-        <maven.site.version>3.7</maven.site.version>
+        <maven.shade.version>3.2.0</maven.shade.version>
+        <maven.site.version>3.7.1</maven.site.version>
         <maven.source.version>3.0.1</maven.source.version>
-        <maven.surefire.version>2.20.1</maven.surefire.version>
-        <maven.jacoco.version>0.8.0</maven.jacoco.version>
-        <maven.dokka.version>0.9.16</maven.dokka.version>
+        <maven.surefire.version>2.22.1</maven.surefire.version>
+        <maven.jacoco.version>0.8.2</maven.jacoco.version>
+        <maven.dokka.version>0.9.17</maven.dokka.version>
         <maven.deploy.version>2.8.2</maven.deploy.version>
         <maven.gpg.version>1.6</maven.gpg.version>
         <maven.nexus.version>1.6.8</maven.nexus.version>
