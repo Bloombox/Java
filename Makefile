@@ -73,7 +73,6 @@ endif
 ifeq ($(BUILDMODE),gradle)
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox (Gradle)..."
-	@./gradlew wrapper --gradle-version=$(GRADLE_VERSION) --distribution-type=bin
 	@./gradlew $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
 endif
 else
@@ -146,10 +145,11 @@ run-ci:
 else
 build-ci:
 	@echo "Building from CI (Gradle)..."
-	@gradle build
+	@./gradlew wrapper --gradle-version=$(GRADLE_VERSION) --distribution-type=bin
+	@./gradlew build
 
 run-ci:
 	@echo "Running tests from CI (Gradle)..."
-	@gradle test
+	@./gradlew test
 endif
 
