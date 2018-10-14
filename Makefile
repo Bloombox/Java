@@ -19,8 +19,8 @@
 
 BUILDMODE ?= gradle
 TESTS ?= yes
-RELEASE_VERSION ?= 1.4
-CLIENT_VERSION ?= 1.4-SNAPSHOT
+RELEASE_VERSION ?= 1.6
+CLIENT_VERSION ?= 1.6-SNAPSHOT
 SERVICE_ARGS ?= -Dbloombox.shop.version=$(SHOP_VERSION) -Dbloombox.telemetry.version=$(TELEMETRY_VERSION)
 SCHEMA ?= schema/
 RELEASE_ARGS ?= -DperformRelease=true
