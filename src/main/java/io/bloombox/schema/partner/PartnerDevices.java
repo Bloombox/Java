@@ -3782,27 +3782,26 @@ public final class PartnerDevices {
       "\n\033partner/PartnerDevice.proto\022\027bloombox." +
       "schema.partner\032\024core/Datamodel.proto\032\026te" +
       "mporal/Instant.proto\032\023device/Device.prot" +
-      "o\032\030partner/PartnerKey.proto\032\031partner/Loc" +
-      "ationKey.proto\"`\n\020PartnerDeviceKey\0226\n\010lo" +
-      "cation\030\001 \001(\0132$.bloombox.schema.partner.L" +
-      "ocationKey\022\024\n\004uuid\030\002 \001(\tB\006\302\265\003\002\010\002\"\342\002\n\rPar" +
-      "tnerDevice\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\0226\n\010loca" +
-      "tion\030\002 \001(\0132$.bloombox.schema.partner.Loc" +
-      "ationKey\0228\n\004type\030\003 \001(\0162*.bloombox.schema" +
-      ".partner.PartnerDeviceType\022:\n\005flags\030\004 \001(" +
-      "\0132+.bloombox.schema.partner.PartnerDevic" +
-      "eFlags\022+\n\006device\030\005 \001(\0132\033.opencannabis.de" +
-      "vice.Device\022,\n\004seen\030\006 \001(\0132\036.opencannabis" +
-      ".temporal.Instant\0222\n\nregistered\030\007 \001(\0132\036." +
-      "opencannabis.temporal.Instant\"V\n\022Partner" +
-      "DeviceFlags\022\016\n\006active\030\001 \001(\010\022\021\n\tsuspended" +
-      "\030\002 \001(\010\022\014\n\004beta\030\003 \001(\010\022\017\n\007sandbox\030\004 \001(\010*\223\001" +
-      "\n\021PartnerDeviceType\022\033\n\027UNSPECIFIED_DEVIC" +
-      "E_TYPE\020\000\022\014\n\010INTERNAL\020\001\022\017\n\013MENU_TABLET\020\n\022" +
-      "\013\n\007MENU_TV\020\013\022\023\n\017CHECKIN_STATION\020\024\022\016\n\nCHE" +
-      "CKIN_TV\020\025\022\020\n\014POS_REGISTER\020\036B6\n\032io.bloomb" +
-      "ox.schema.partnerB\016PartnerDevicesH\001P\000\242\002\003" +
-      "BBSb\006proto3"
+      "o\032\031partner/LocationKey.proto\"`\n\020PartnerD" +
+      "eviceKey\0226\n\010location\030\001 \001(\0132$.bloombox.sc" +
+      "hema.partner.LocationKey\022\024\n\004uuid\030\002 \001(\tB\006" +
+      "\302\265\003\002\010\002\"\342\002\n\rPartnerDevice\022\024\n\004uuid\030\001 \001(\tB\006" +
+      "\302\265\003\002\010\002\0226\n\010location\030\002 \001(\0132$.bloombox.sche" +
+      "ma.partner.LocationKey\0228\n\004type\030\003 \001(\0162*.b" +
+      "loombox.schema.partner.PartnerDeviceType" +
+      "\022:\n\005flags\030\004 \001(\0132+.bloombox.schema.partne" +
+      "r.PartnerDeviceFlags\022+\n\006device\030\005 \001(\0132\033.o" +
+      "pencannabis.device.Device\022,\n\004seen\030\006 \001(\0132" +
+      "\036.opencannabis.temporal.Instant\0222\n\nregis" +
+      "tered\030\007 \001(\0132\036.opencannabis.temporal.Inst" +
+      "ant\"V\n\022PartnerDeviceFlags\022\016\n\006active\030\001 \001(" +
+      "\010\022\021\n\tsuspended\030\002 \001(\010\022\014\n\004beta\030\003 \001(\010\022\017\n\007sa" +
+      "ndbox\030\004 \001(\010*\223\001\n\021PartnerDeviceType\022\033\n\027UNS" +
+      "PECIFIED_DEVICE_TYPE\020\000\022\014\n\010INTERNAL\020\001\022\017\n\013" +
+      "MENU_TABLET\020\n\022\013\n\007MENU_TV\020\013\022\023\n\017CHECKIN_ST" +
+      "ATION\020\024\022\016\n\nCHECKIN_TV\020\025\022\020\n\014POS_REGISTER\020" +
+      "\036B6\n\032io.bloombox.schema.partnerB\016Partner" +
+      "DevicesH\001P\000\242\002\003BBSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3818,7 +3817,6 @@ public final class PartnerDevices {
           core.Datamodel.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
           io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
-          io.bloombox.schema.partner.PartnerMeta.getDescriptor(),
           io.bloombox.schema.partner.LocationAccountKey.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_partner_PartnerDeviceKey_descriptor =
@@ -3847,7 +3845,6 @@ public final class PartnerDevices {
     core.Datamodel.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
     io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
-    io.bloombox.schema.partner.PartnerMeta.getDescriptor();
     io.bloombox.schema.partner.LocationAccountKey.getDescriptor();
   }
 

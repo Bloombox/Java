@@ -11420,62 +11420,61 @@ public final class CommercialPOS {
       "\n\032commerce/PointOfSale.proto\022\025opencannab" +
       "is.commerce\032\024core/Datamodel.proto\032\026ident" +
       "ity/UserKey.proto\032\027commerce/Currency.pro" +
-      "to\032\027commerce/Purchase.proto\032\033partner/Par" +
-      "tnerDevice.proto\032\037crypto/primitives/Keyp" +
-      "air.proto\032#analytics/context/Application" +
-      ".proto\032\026temporal/Instant.proto\"\340\002\n\013POSHa" +
-      "rdware\0225\n\004type\030\001 \001(\0162\'.opencannabis.comm" +
-      "erce.POSHardware.Type\022<\n\007support\030\002 \001(\0132+" +
-      ".opencannabis.commerce.POSHardware.Featu" +
-      "res\022\017\n\007version\030\003 \001(\t\032X\n\010Features\022;\n\007feat" +
-      "ure\030\001 \003(\0162*.opencannabis.commerce.POSHar" +
-      "dware.Feature\022\017\n\007drawers\030\002 \001(\r\"%\n\004Type\022\017" +
-      "\n\013UNSPECIFIED\020\000\022\014\n\010BLOOMBOX\020\001\"J\n\007Feature" +
-      "\022\013\n\007PRINTER\020\000\022\007\n\003BCS\020\001\022\007\n\003MSR\020\002\022\007\n\003BLE\020\003" +
-      "\022\t\n\005SCALE\020\004\022\014\n\010LABELLER\020\005\"\227\004\n\021PointOfSal" +
-      "eDevice\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\022\014\n\004name\030\002 " +
-      "\001(\t\0226\n\006status\030\003 \001(\0162&.opencannabis.comme" +
-      "rce.POSDeviceStatus\022\r\n\005claim\030\004 \001(\t\0224\n\010ha" +
-      "rdware\030\005 \001(\0132\".opencannabis.commerce.POS" +
-      "Hardware\022A\n\003app\030\006 \001(\01324.bloombox.schema." +
-      "analytics.context.DeviceApplication\022B\n\007s" +
-      "ession\030\007 \003(\0132).opencannabis.commerce.Poi" +
-      "ntOfSaleSessionB\006\322\265\003\002\010\001\0226\n\005state\030\010 \001(\0132\'" +
-      ".opencannabis.commerce.PointOfSaleState\022" +
-      ",\n\004seen\030\t \001(\0132\036.opencannabis.temporal.In" +
-      "stant\022/\n\007created\030b \001(\0132\036.opencannabis.te" +
-      "mporal.Instant\0220\n\010modified\030c \001(\0132\036.openc" +
-      "annabis.temporal.Instant:\021\202\367\002\r\010\002\022\tregist" +
-      "ers\"\207\004\n\020PointOfSaleState\022A\n\004open\030\001 \001(\01323" +
-      ".opencannabis.commerce.PointOfSaleState." +
-      "SessionOpen\0227\n\013transaction\030\002 \003(\0132\".openc" +
-      "annabis.commerce.PurchaseKey\0225\n\007current\030" +
-      "\003 \001(\0132$.opencannabis.commerce.BillOfChar" +
-      "ges\022C\n\005close\030\004 \001(\01324.opencannabis.commer" +
-      "ce.PointOfSaleState.SessionClose\032|\n\013Sess" +
-      "ionOpen\022;\n\ropening_float\030\001 \001(\0132$.opencan" +
-      "nabis.commerce.CurrencyValue\0220\n\010occurred" +
-      "\030\002 \001(\0132\036.opencannabis.temporal.Instant\032}" +
-      "\n\014SessionClose\022;\n\rclosing_count\030\001 \001(\0132$." +
-      "opencannabis.commerce.CurrencyValue\0220\n\010o" +
-      "ccurred\030\002 \001(\0132\036.opencannabis.temporal.In" +
-      "stant\"\275\003\n\022PointOfSaleSession\022\024\n\004uuid\030\001 \001" +
-      "(\tB\006\302\265\003\002\010\002\0224\n\006status\030\002 \001(\0162$.opencannabi" +
-      "s.commerce.SessionStatus\022/\n\004user\030\003 \001(\0132!" +
-      ".bloombox.schema.identity.UserKey\022O\n\006tic" +
-      "ket\030\004 \003(\0132%.opencannabis.commerce.Purcha" +
-      "seTicketB\030\322\265\003\002\010\001\322\265\003\016\032\014transactions\0226\n\005st" +
-      "ate\030\005 \001(\0132\'.opencannabis.commerce.PointO" +
-      "fSaleState\022,\n\004seen\030\006 \001(\0132\036.opencannabis." +
-      "temporal.Instant\022/\n\007created\030\007 \001(\0132\036.open" +
-      "cannabis.temporal.Instant\0220\n\010modified\030\010 " +
-      "\001(\0132\036.opencannabis.temporal.Instant:\020\202\367\002" +
-      "\014\010\001\022\010sessions*b\n\rSessionStatus\022\017\n\013ESTABL" +
-      "ISHED\020\000\022\n\n\006ACTIVE\020\001\022\r\n\tSUSPENDED\020\002\022\013\n\007EX" +
-      "PIRED\020\003\022\016\n\nTERMINATED\020\004\022\010\n\004LOST\020\005*(\n\017POS" +
-      "DeviceStatus\022\010\n\004IDLE\020\000\022\013\n\007CLAIMED\020\001B:\n\037i" +
-      "o.opencannabis.schema.commerceB\rCommerci" +
-      "alPOSH\001P\000\242\002\003OCSb\006proto3"
+      "to\032\027commerce/Purchase.proto\032#analytics/c" +
+      "ontext/Application.proto\032\026temporal/Insta" +
+      "nt.proto\"\340\002\n\013POSHardware\0225\n\004type\030\001 \001(\0162\'" +
+      ".opencannabis.commerce.POSHardware.Type\022" +
+      "<\n\007support\030\002 \001(\0132+.opencannabis.commerce" +
+      ".POSHardware.Features\022\017\n\007version\030\003 \001(\t\032X" +
+      "\n\010Features\022;\n\007feature\030\001 \003(\0162*.opencannab" +
+      "is.commerce.POSHardware.Feature\022\017\n\007drawe" +
+      "rs\030\002 \001(\r\"%\n\004Type\022\017\n\013UNSPECIFIED\020\000\022\014\n\010BLO" +
+      "OMBOX\020\001\"J\n\007Feature\022\013\n\007PRINTER\020\000\022\007\n\003BCS\020\001" +
+      "\022\007\n\003MSR\020\002\022\007\n\003BLE\020\003\022\t\n\005SCALE\020\004\022\014\n\010LABELLE" +
+      "R\020\005\"\227\004\n\021PointOfSaleDevice\022\024\n\004uuid\030\001 \001(\tB" +
+      "\006\302\265\003\002\010\002\022\014\n\004name\030\002 \001(\t\0226\n\006status\030\003 \001(\0162&." +
+      "opencannabis.commerce.POSDeviceStatus\022\r\n" +
+      "\005claim\030\004 \001(\t\0224\n\010hardware\030\005 \001(\0132\".opencan" +
+      "nabis.commerce.POSHardware\022A\n\003app\030\006 \001(\0132" +
+      "4.bloombox.schema.analytics.context.Devi" +
+      "ceApplication\022B\n\007session\030\007 \003(\0132).opencan" +
+      "nabis.commerce.PointOfSaleSessionB\006\322\265\003\002\010" +
+      "\001\0226\n\005state\030\010 \001(\0132\'.opencannabis.commerce" +
+      ".PointOfSaleState\022,\n\004seen\030\t \001(\0132\036.openca" +
+      "nnabis.temporal.Instant\022/\n\007created\030b \001(\013" +
+      "2\036.opencannabis.temporal.Instant\0220\n\010modi" +
+      "fied\030c \001(\0132\036.opencannabis.temporal.Insta" +
+      "nt:\021\202\367\002\r\010\002\022\tregisters\"\207\004\n\020PointOfSaleSta" +
+      "te\022A\n\004open\030\001 \001(\01323.opencannabis.commerce" +
+      ".PointOfSaleState.SessionOpen\0227\n\013transac" +
+      "tion\030\002 \003(\0132\".opencannabis.commerce.Purch" +
+      "aseKey\0225\n\007current\030\003 \001(\0132$.opencannabis.c" +
+      "ommerce.BillOfCharges\022C\n\005close\030\004 \001(\01324.o" +
+      "pencannabis.commerce.PointOfSaleState.Se" +
+      "ssionClose\032|\n\013SessionOpen\022;\n\ropening_flo" +
+      "at\030\001 \001(\0132$.opencannabis.commerce.Currenc" +
+      "yValue\0220\n\010occurred\030\002 \001(\0132\036.opencannabis." +
+      "temporal.Instant\032}\n\014SessionClose\022;\n\rclos" +
+      "ing_count\030\001 \001(\0132$.opencannabis.commerce." +
+      "CurrencyValue\0220\n\010occurred\030\002 \001(\0132\036.openca" +
+      "nnabis.temporal.Instant\"\275\003\n\022PointOfSaleS" +
+      "ession\022\024\n\004uuid\030\001 \001(\tB\006\302\265\003\002\010\002\0224\n\006status\030\002" +
+      " \001(\0162$.opencannabis.commerce.SessionStat" +
+      "us\022/\n\004user\030\003 \001(\0132!.bloombox.schema.ident" +
+      "ity.UserKey\022O\n\006ticket\030\004 \003(\0132%.opencannab" +
+      "is.commerce.PurchaseTicketB\030\322\265\003\002\010\001\322\265\003\016\032\014" +
+      "transactions\0226\n\005state\030\005 \001(\0132\'.opencannab" +
+      "is.commerce.PointOfSaleState\022,\n\004seen\030\006 \001" +
+      "(\0132\036.opencannabis.temporal.Instant\022/\n\007cr" +
+      "eated\030\007 \001(\0132\036.opencannabis.temporal.Inst" +
+      "ant\0220\n\010modified\030\010 \001(\0132\036.opencannabis.tem" +
+      "poral.Instant:\020\202\367\002\014\010\001\022\010sessions*b\n\rSessi" +
+      "onStatus\022\017\n\013ESTABLISHED\020\000\022\n\n\006ACTIVE\020\001\022\r\n" +
+      "\tSUSPENDED\020\002\022\013\n\007EXPIRED\020\003\022\016\n\nTERMINATED\020" +
+      "\004\022\010\n\004LOST\020\005*(\n\017POSDeviceStatus\022\010\n\004IDLE\020\000" +
+      "\022\013\n\007CLAIMED\020\001B:\n\037io.opencannabis.schema." +
+      "commerceB\rCommercialPOSH\001P\000\242\002\003OCSb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11492,8 +11491,6 @@ public final class CommercialPOS {
           io.bloombox.schema.identity.AppUserKey.getDescriptor(),
           io.opencannabis.schema.currency.CommerceCurrency.getDescriptor(),
           io.opencannabis.schema.commerce.CommercialPurchase.getDescriptor(),
-          io.bloombox.schema.partner.PartnerDevices.getDescriptor(),
-          io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor(),
           io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor(),
           io.opencannabis.schema.temporal.TemporalInstant.getDescriptor(),
         }, assigner);
@@ -11550,8 +11547,6 @@ public final class CommercialPOS {
     io.bloombox.schema.identity.AppUserKey.getDescriptor();
     io.opencannabis.schema.currency.CommerceCurrency.getDescriptor();
     io.opencannabis.schema.commerce.CommercialPurchase.getDescriptor();
-    io.bloombox.schema.partner.PartnerDevices.getDescriptor();
-    io.opencannabis.schema.crypto.primitives.pki.KeypairOuterClass.getDescriptor();
     io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor();
     io.opencannabis.schema.temporal.TemporalInstant.getDescriptor();
   }

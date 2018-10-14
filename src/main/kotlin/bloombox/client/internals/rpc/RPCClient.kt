@@ -243,9 +243,7 @@ abstract class RPCClient(apiKey: String) {
         NettyChannelBuilder
               .forAddress(host, port)
               .executor(executor)
-              .sslContext(GrpcSslContexts.forClient()
-                    .trustManager(authorityRoots(clientAuthorityRoots))
-                    .build())
+              .usePlaintext()
     }
   }
 }
