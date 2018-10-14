@@ -72,7 +72,7 @@ endif
 ifeq ($(BUILDMODE),gradle)
 $(TARGET_JAR):
 	@echo "Building Java Client for Bloombox (Gradle)..."
-	@gradle $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
+	@./gradlew $(GOALS) -Dproject.version=$(CLIENT_VERSION) -Dbloombox.snapshot $(SERVICE_ARGS) $(EXTRA_FLAGS)
 endif
 else
 ifeq ($(BUILDMODE),maven)
