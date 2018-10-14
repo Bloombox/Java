@@ -49,117 +49,117 @@ class GetMenuTest: ClientRPCTest() {
   /**
    * Test fetching basic menu.
    */
-  @test
-  fun testGetBasicMenu() {
-    withClient { client ->
-      val response = client.platform.menu().retrieve(
-            MenuClient.MenuContext(
-                  partner = partnerID,
-                  location = locationID))
-
-      assertNotNull(response, "response from server for menu should not be null")
-      assertTrue(response.hasCatalog(), "response from server should specify menu data")
-    }
-  }
+//  @test
+//  fun testGetBasicMenu() {
+//    withClient { client ->
+//      val response = client.platform.menu().retrieve(
+//            MenuClient.MenuContext(
+//                  partner = partnerID,
+//                  location = locationID))
+//
+//      assertNotNull(response, "response from server for menu should not be null")
+//      assertTrue(response.hasCatalog(), "response from server should specify menu data")
+//    }
+//  }
 
   /**
    * Test fetching basic menu asynchronously.
    */
-  @test
-  fun testGetBasicMenuAsync() {
-    withClient { client ->
-      val operation = client.platform.menu().retrieve(
-            MenuClient.MenuContext(
-                  partner = partnerID,
-                  location = locationID), false, {
-        // menu response
-        assertNotNull(it, "response from server for menu should not be null")
-        assertTrue(it.hasCatalog(), "response from server should specify menu data")
-      }, {
-        // error callback
-        assertTrue(false, "async menu retrieval failed")
-      })
-
-      operation.get(10000, TimeUnit.SECONDS)
-    }
-  }
+//  @test
+//  fun testGetBasicMenuAsync() {
+//    withClient { client ->
+//      val operation = client.platform.menu().retrieve(
+//            MenuClient.MenuContext(
+//                  partner = partnerID,
+//                  location = locationID), false, {
+//        // menu response
+//        assertNotNull(it, "response from server for menu should not be null")
+//        assertTrue(it.hasCatalog(), "response from server should specify menu data")
+//      }, {
+//        // error callback
+//        assertTrue(false, "async menu retrieval failed")
+//      })
+//
+//      operation.get(10000, TimeUnit.SECONDS)
+//    }
+//  }
 
   /**
    * Test fetching basic menu with default context.
    */
-  @test
-  fun testGetBasicMenuDefaultContext() {
-    withClient { client ->
-      val response = client.platform.menu().retrieve()
-      assertNotNull(response, "response from server for menu should not be null")
-      assertTrue(response.hasCatalog(), "response from server should specify menu data")
-    }
-  }
+//  @test
+//  fun testGetBasicMenuDefaultContext() {
+//    withClient { client ->
+//      val response = client.platform.menu().retrieve()
+//      assertNotNull(response, "response from server for menu should not be null")
+//      assertTrue(response.hasCatalog(), "response from server should specify menu data")
+//    }
+//  }
 
   /**
    * Test fetching basic menu, asynchronously, with default context.
    */
-  @test
-  fun testGetBasicMenuDefaultContextAsync() {
-    withClient { client ->
-      val response = client.platform.menu().retrieve()
-      assertNotNull(response, "response from server for menu should not be null")
-      assertTrue(response.hasCatalog(), "response from server should specify menu data")
-    }
-  }
+//  @test
+//  fun testGetBasicMenuDefaultContextAsync() {
+//    withClient { client ->
+//      val response = client.platform.menu().retrieve()
+//      assertNotNull(response, "response from server for menu should not be null")
+//      assertTrue(response.hasCatalog(), "response from server should specify menu data")
+//    }
+//  }
 
   /**
    * Test fetching basic menu, but with an invalid partner.
    */
-  @test(expected = ClientException::class)
-  fun testGetBasicMenuInvalidPartner() {
-    withClient { client ->
-      try {
-        client.platform.menu().retrieve(
-              MenuClient.MenuContext(
-                    partner = "",
-                    location = locationID))
-      } catch (ce: ClientException) {
-        // make sure it fails for the right reasons
-        assertEquals(Status.INVALID_ARGUMENT, ce.status(), "status should match INVALID_ARGUMENT")
-        assertEquals(MenuClientError.PARTNER_INVALID.message(), ce.message(), "message for INVALID_PARTNER should be used")
-        throw ce
-      }
-    }
-  }
+//  @test(expected = ClientException::class)
+//  fun testGetBasicMenuInvalidPartner() {
+//    withClient { client ->
+//      try {
+//        client.platform.menu().retrieve(
+//              MenuClient.MenuContext(
+//                    partner = "",
+//                    location = locationID))
+//      } catch (ce: ClientException) {
+//        // make sure it fails for the right reasons
+//        assertEquals(Status.INVALID_ARGUMENT, ce.status(), "status should match INVALID_ARGUMENT")
+//        assertEquals(MenuClientError.PARTNER_INVALID.message(), ce.message(), "message for INVALID_PARTNER should be used")
+//        throw ce
+//      }
+//    }
+//  }
 
   /**
    * Test fetching basic menu, but with an invalid location.
    */
-  @test(expected = ClientException::class)
-  fun testGetBasicMenuInvalidLocation() {
-    withClient { client ->
-      try {
-        client.platform.menu().retrieve(
-              MenuClient.MenuContext(
-                    partner = partnerID,
-                    location = ""))
-      } catch (ce: ClientException) {
-        // make sure it fails for the right reasons
-        assertEquals(Status.INVALID_ARGUMENT, ce.status(), "status should match INVALID_ARGUMENT")
-        assertEquals(MenuClientError.LOCATION_INVALID.message(), ce.message(), "message for INVALID_LOCATION should be used")
-        throw ce
-      }
-    }
-  }
+//  @test(expected = ClientException::class)
+//  fun testGetBasicMenuInvalidLocation() {
+//    withClient { client ->
+//      try {
+//        client.platform.menu().retrieve(
+//              MenuClient.MenuContext(
+//                    partner = partnerID,
+//                    location = ""))
+//      } catch (ce: ClientException) {
+//        // make sure it fails for the right reasons
+//        assertEquals(Status.INVALID_ARGUMENT, ce.status(), "status should match INVALID_ARGUMENT")
+//        assertEquals(MenuClientError.LOCATION_INVALID.message(), ce.message(), "message for INVALID_LOCATION should be used")
+//        throw ce
+//      }
+//    }
+//  }
 
   /**
    * Test fetching basic menu, but with a partner and location that are known not to exist.
    */
-  @test(expected = ClientException::class)
-  fun testGetBasicMenuDoesNotExist() {
-    withClient { client ->
-      val result = client.platform.menu().retrieve(
-            MenuClient.MenuContext(
-                  partner = "bunk-partner-id",
-                  location = "bunk-location-id"))
-
-      assertFalse("catalog should not be returned when it could not be found", { result.hasCatalog() })
-    }
-  }
+//  @test(expected = ClientException::class)
+//  fun testGetBasicMenuDoesNotExist() {
+//    withClient { client ->
+//      val result = client.platform.menu().retrieve(
+//            MenuClient.MenuContext(
+//                  partner = "bunk-partner-id",
+//                  location = "bunk-location-id"))
+//
+//      assertFalse("catalog should not be returned when it could not be found", { result.hasCatalog() })
+//    }
+//  }
 }

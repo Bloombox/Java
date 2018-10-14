@@ -137,14 +137,14 @@ class ClientConfigTests : ClientRPCTest() {
 
   @test
   fun testConfigPassthroughProduction() {
-    withClient({ client ->
+    withClient { client ->
       assertEquals(
-            "telemetry.api.bloombox.cloud",
+            "api.bloombox.cloud",
             client.platform.telemetry().host,
             "production telemetry domain should be properly set")
 
       assertEquals(
-            "shop.api.bloombox.cloud",
+            "api.bloombox.cloud",
             client.platform.shop().host,
             "production shop domain should be properly set")
 
@@ -157,20 +157,20 @@ class ClientConfigTests : ClientRPCTest() {
             expectedPort,
             client.platform.shop().port,
             "production shop port should be properly set")
-    })
+    }
   }
 
   @test
   fun testConfigEnvironments() {
     // prod
-    withClient({ client ->
+    withClient { client ->
       assertEquals(
-            "telemetry.api.bloombox.cloud",
+            "api.bloombox.cloud",
             client.platform.telemetry().host,
             "production telemetry domain should be properly set")
 
       assertEquals(
-            "shop.api.bloombox.cloud",
+            "api.bloombox.cloud",
             client.platform.shop().host,
             "production shop domain should be properly set")
 
@@ -225,6 +225,6 @@ class ClientConfigTests : ClientRPCTest() {
             expectedLocalShopPort,
             client.local.shop().port,
             "local shop port should be properly set")
-    })
+    }
   }
 }

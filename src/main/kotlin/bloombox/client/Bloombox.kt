@@ -368,7 +368,7 @@ class Bloombox constructor (
                 when (ct) {
                   ClientTarget.SANDBOX,
                   ClientTarget.INTERNAL -> "shop.rpc.$domain"
-                  else -> "shop.$domain"
+                  else -> domain
                 },
                 Bloombox.Endpoints.grpcPort,
                 apiKey,
@@ -408,7 +408,7 @@ class Bloombox constructor (
                 when (ct) {
                   ClientTarget.SANDBOX,
                   ClientTarget.INTERNAL -> "telemetry.rpc.$domain"
-                  else -> "telemetry.$domain"
+                  else -> domain
                 },
                 Bloombox.Endpoints.grpcPort,
                 apiKey,
@@ -447,7 +447,7 @@ class Bloombox constructor (
                 when (ct) {
                   ClientTarget.SANDBOX,
                   ClientTarget.INTERNAL -> "menu.rpc.$domain"
-                  else -> "menu.$domain"
+                  else -> domain
                 },
                 Bloombox.Endpoints.grpcPort,
                 apiKey,
