@@ -23,14 +23,14 @@ Via Maven:
     <dependency>
       <groupId>io.bloombox</groupId>
       <artifactId>java-client</artifactId>
-      <version>1.6</version>
+      <version>1.5</version>
     </dependency>
   </dependencies>
 ```
 
 Via Gradle:
 ```gradle
-  compile 'io.bloombox:java-client:1.6'
+  compile 'io.bloombox:java-client:1.5'
 ```
 
 Then, in your app, simply create a client (with your desired settings), and begin using services:
