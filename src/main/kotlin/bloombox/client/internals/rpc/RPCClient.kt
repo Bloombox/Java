@@ -24,6 +24,7 @@ import io.grpc.netty.GrpcSslContexts
 import io.grpc.netty.NegotiationType
 import io.grpc.netty.NettyChannelBuilder
 import io.netty.handler.ssl.ClientAuth
+import io.netty.handler.ssl.SslProvider
 import java.io.InputStream
 import java.time.Duration
 import java.util.concurrent.Executor
@@ -182,13 +183,13 @@ abstract class RPCClient(apiKey: String) {
   /**
    * Prepare a channel builder according to standard settings.
    */
-  fun channelBuilder(host: String,
+  fun managedChannel(host: String,
                      port: Int,
                      transportMode: TransportMode,
                      clientAuth: ClientAuth,
                      clientCredentials: ClientCredentials? = null,
                      clientAuthorityRoots: InputStream?,
-                     executor: Executor): NettyChannelBuilder {
+                     executor: Executor): ManagedChannel {
     val builder = NettyChannelBuilder
           .forAddress(host, port)
           .executor(executor)
@@ -222,7 +223,10 @@ abstract class RPCClient(apiKey: String) {
                 .negotiationType(NegotiationType.TLS)
                 .sslContext(GrpcSslContexts.forClient()
                       .trustManager(authorityRoots(clientAuthorityRoots))
-                      .build())
+                      .sslProvider(SslProvider.OPENSSL)
+                      .sessionCacheSize(100)
+                      .enableOcsp(false)
+                      .build()).build()
         } else {
           if (clientCredentials == null)
             throw IllegalArgumentException(
@@ -236,14 +240,14 @@ abstract class RPCClient(apiKey: String) {
                             clientCredentials.certificate, clientCredentials.privateKey, clientCredentials.keyPassword)
                       .sessionCacheSize(sessionCacheSize)
                       .sessionTimeout(sessionCacheTimeout)
-                      .build())
+                      .build()).build()
         }
 
       RPCClient.TransportMode.CLEARTEXT ->
         NettyChannelBuilder
               .forAddress(host, port)
               .executor(executor)
-              .usePlaintext()
+              .usePlaintext().build()
     }
   }
 }

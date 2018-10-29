@@ -280,7 +280,7 @@ class Bloombox constructor (
     /**
      * Production client endpoint.
      */
-    internal const val production = "api.bloombox.cloud"
+    internal const val production = "rpc.sandbox.bloombox.cloud"
 
     /**
      * Sandbox endpoint. Requires special auth.
