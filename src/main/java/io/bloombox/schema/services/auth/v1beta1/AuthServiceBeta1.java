@@ -214,7 +214,7 @@ public final class AuthServiceBeta1 {
       "\030\010 \001(\t\032\214\001\n\010Response\0222\n\005token\030\001 \001(\0132#.blo" +
       "ombox.schema.security.AuthToken\0221\n\007profi" +
       "le\030\002 \001(\0132\036.bloombox.schema.identity.User" +
-      "H\000\022\017\n\005setup\030\003 \001(\010H\000B\010\n\006result*\263\004\n\tAuthEr" +
+      "H\000\022\017\n\005setup\030\003 \001(\010H\000B\010\n\006result*\306\004\n\tAuthEr" +
       "ror\022\014\n\010NO_ERROR\020\000\022\025\n\021ACCOUNT_SUSPENDED\020\001" +
       "\022\025\n\021PROFILE_NOT_FOUND\020\002\022\024\n\020INVALID_USER_" +
       "KEY\020\003\022\025\n\021INVALID_ASSERTION\020\004\022\032\n\026UNSUPPOR" +
@@ -228,111 +228,111 @@ public final class AuthServiceBeta1 {
       "\020\021\022\023\n\017EXPIRED_SESSION\020\022\022\027\n\023INVALID_FINGE" +
       "RPRINT\020\023\022\023\n\017INVALID_CAPTCHA\020\024\022\024\n\020CAPTCHA" +
       "_REJECTED\020\025\022\025\n\021CONSENT_NOT_FOUND\020\026\022\023\n\017EX" +
-      "PIRED_CONSENT\020\027\022\022\n\016INTERNAL_ERROR\020c2\306\027\n\004" +
-      "Auth\022\352\001\n\005Nonce\022\026.google.protobuf.Empty\0320" +
-      ".bloombox.schema.services.auth.v1beta1.A" +
-      "uthNonce\"\226\001\202\323\344\223\002\025\022\023/auth/v1beta1/nonce\222A" +
-      "x\022\016Generate Nonce\032_Generate an authentic" +
-      "ation nonce, which is usable once, and o" +
-      "nly once, to perform an auth flow.*\005Nonc" +
-      "e\022\247\002\n\014Authenticate\022?.bloombox.schema.ser" +
-      "vices.auth.v1beta1.AuthenticateUser.Requ" +
-      "est\032@.bloombox.schema.services.auth.v1be" +
-      "ta1.AuthenticateUser.Response\"\223\001\202\323\344\223\002+\"\036" +
-      "/auth/v1beta1/login/{provider}:\tassertio" +
-      "n\222A_\022\021Authenticate User\032<Authenticate a " +
-      "user to their digital identity with Bloo" +
-      "mbox.*\014Authenticate\022\220\002\n\007Consent\022:.bloomb" +
-      "ox.schema.services.auth.v1beta1.ConsentF" +
-      "low.Request\032;.bloombox.schema.services.a" +
-      "uth.v1beta1.ConsentFlow.Response\"\213\001\202\323\344\223\002" +
-      "\031\022\027/auth/v1beta1/{consent}\222Ai\022\020Retrieve " +
-      "Consent\032LRetrieve information about a sp" +
-      "ecific consent operation, by consent flo" +
-      "w ID.*\007Consent\022\271\002\n\005Token\022;.bloombox.sche" +
+      "PIRED_CONSENT\020\027\022\021\n\rINVALID_NONCE\020\030\022\022\n\016IN" +
+      "TERNAL_ERROR\020c2\306\027\n\004Auth\022\352\001\n\005Nonce\022\026.goog" +
+      "le.protobuf.Empty\0320.bloombox.schema.serv" +
+      "ices.auth.v1beta1.AuthNonce\"\226\001\202\323\344\223\002\025\022\023/a" +
+      "uth/v1beta1/nonce\222Ax\022\016Generate Nonce\032_Ge" +
+      "nerate an authentication nonce, which is" +
+      " usable once, and only once, to perform " +
+      "an auth flow.*\005Nonce\022\247\002\n\014Authenticate\022?." +
+      "bloombox.schema.services.auth.v1beta1.Au" +
+      "thenticateUser.Request\032@.bloombox.schema" +
+      ".services.auth.v1beta1.AuthenticateUser." +
+      "Response\"\223\001\202\323\344\223\002+\"\036/auth/v1beta1/login/{" +
+      "provider}:\tassertion\222A_\022\021Authenticate Us" +
+      "er\032<Authenticate a user to their digital" +
+      " identity with Bloombox.*\014Authenticate\022\220" +
+      "\002\n\007Consent\022:.bloombox.schema.services.au" +
+      "th.v1beta1.ConsentFlow.Request\032;.bloombo" +
+      "x.schema.services.auth.v1beta1.ConsentFl" +
+      "ow.Response\"\213\001\202\323\344\223\002\031\022\027/auth/v1beta1/{con" +
+      "sent}\222Ai\022\020Retrieve Consent\032LRetrieve inf" +
+      "ormation about a specific consent operat" +
+      "ion, by consent flow ID.*\007Consent\022\271\002\n\005To" +
+      "ken\022;.bloombox.schema.services.auth.v1be" +
+      "ta1.ResolveToken.Request\032<.bloombox.sche" +
       "ma.services.auth.v1beta1.ResolveToken.Re" +
-      "quest\032<.bloombox.schema.services.auth.v1" +
-      "beta1.ResolveToken.Response\"\264\001\202\323\344\223\0027\"2/a" +
-      "uth/v1beta1/{origin}/{client_id}/{sessio" +
-      "n}/token:\001*\222At\022\017Provision Token\032ZMint a " +
-      "data access token, given a completed aut" +
-      "hentication and authorization/consent fl" +
-      "ow.*\005Token\022\207\002\n\006Accept\022=.bloombox.schema." +
-      "services.auth.v1beta1.ConsentDecision.Ac" +
-      "cept\032\026.google.protobuf.Empty\"\245\001\202\323\344\223\002#\"\036/" +
-      "auth/v1beta1/{consent}/accept:\001*\222Ay\022\016Acc" +
-      "ept Consent\032_Indicate that a subject ent" +
-      "ity approves or accepts the consent chal" +
-      "lenge during a consent flow.*\006Accept\022\207\002\n" +
-      "\006Reject\022=.bloombox.schema.services.auth." +
-      "v1beta1.ConsentDecision.Reject\032\026.google." +
-      "protobuf.Empty\"\245\001\202\323\344\223\002#\"\036/auth/v1beta1/{" +
-      "consent}/reject:\001*\222Ay\022\016Reject Consent\032_I" +
-      "ndicate that a subject entity approves o" +
-      "r accepts the consent challenge during a" +
-      " consent flow.*\006Reject\022\324\002\n\007Connect\022>.blo" +
-      "ombox.schema.services.auth.v1beta1.Ident" +
-      "ityConnect.Request\032?.bloombox.schema.ser" +
-      "vices.auth.v1beta1.IdentityConnect.Respo" +
-      "nse\"\307\001\202\323\344\223\002\032\"\025/auth/v1beta1/connect:\001*\222A" +
-      "\243\001\022\020Identity Connect\032_Connect a signed a" +
-      "nd validated identity to a user. Create " +
-      "the account if it does not yet exist.*\007C" +
-      "onnectb\021\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHea" +
-      "der\022\000\022\332\003\n\007Context\022:.bloombox.schema.serv" +
-      "ices.auth.v1beta1.UserContext.Request\032;." +
-      "bloombox.schema.services.auth.v1beta1.Us" +
-      "erContext.Response\"\325\002\202\323\344\223\002!\022\037/auth/v1bet" +
-      "a1/{session}/context\222A\252\002\022\020Security Conte" +
-      "xt\032\217\001Retrieve full security context (inc" +
-      "luding access rights, a full user profil" +
-      "e, and so on) for a given authorized and" +
-      " authenticated user session.*\007Contextb<\n" +
-      "\017\n\013ApiKeyParam\022\000\n)\n\006OAuth2\022\037\n\007offline\n\006o" +
-      "penid\n\014profile:readb=\n\020\n\014ApiKeyHeader\022\000\n" +
-      ")\n\006OAuth2\022\037\n\007offline\n\006openid\n\014profile:re" +
-      "ad\022\217\004\n\007Profile\0229.bloombox.schema.service" +
-      "s.auth.v1beta1.GetProfile.Request\032:.bloo" +
+      "sponse\"\264\001\202\323\344\223\0027\"2/auth/v1beta1/{origin}/" +
+      "{client_id}/{session}/token:\001*\222At\022\017Provi" +
+      "sion Token\032ZMint a data access token, gi" +
+      "ven a completed authentication and autho" +
+      "rization/consent flow.*\005Token\022\207\002\n\006Accept" +
+      "\022=.bloombox.schema.services.auth.v1beta1" +
+      ".ConsentDecision.Accept\032\026.google.protobu" +
+      "f.Empty\"\245\001\202\323\344\223\002#\"\036/auth/v1beta1/{consent" +
+      "}/accept:\001*\222Ay\022\016Accept Consent\032_Indicate" +
+      " that a subject entity approves or accep" +
+      "ts the consent challenge during a consen" +
+      "t flow.*\006Accept\022\207\002\n\006Reject\022=.bloombox.sc" +
+      "hema.services.auth.v1beta1.ConsentDecisi" +
+      "on.Reject\032\026.google.protobuf.Empty\"\245\001\202\323\344\223" +
+      "\002#\"\036/auth/v1beta1/{consent}/reject:\001*\222Ay" +
+      "\022\016Reject Consent\032_Indicate that a subjec" +
+      "t entity approves or accepts the consent" +
+      " challenge during a consent flow.*\006Rejec" +
+      "t\022\324\002\n\007Connect\022>.bloombox.schema.services" +
+      ".auth.v1beta1.IdentityConnect.Request\032?." +
+      "bloombox.schema.services.auth.v1beta1.Id" +
+      "entityConnect.Response\"\307\001\202\323\344\223\002\032\"\025/auth/v" +
+      "1beta1/connect:\001*\222A\243\001\022\020Identity Connect\032" +
+      "_Connect a signed and validated identity" +
+      " to a user. Create the account if it doe" +
+      "s not yet exist.*\007Connectb\021\n\017\n\013ApiKeyPar" +
+      "am\022\000b\022\n\020\n\014ApiKeyHeader\022\000\022\332\003\n\007Context\022:.b" +
+      "loombox.schema.services.auth.v1beta1.Use" +
+      "rContext.Request\032;.bloombox.schema.servi" +
+      "ces.auth.v1beta1.UserContext.Response\"\325\002" +
+      "\202\323\344\223\002!\022\037/auth/v1beta1/{session}/context\222" +
+      "A\252\002\022\020Security Context\032\217\001Retrieve full se" +
+      "curity context (including access rights," +
+      " a full user profile, and so on) for a g" +
+      "iven authorized and authenticated user s" +
+      "ession.*\007Contextb<\n\017\n\013ApiKeyParam\022\000\n)\n\006O" +
+      "Auth2\022\037\n\007offline\n\006openid\n\014profile:readb=" +
+      "\n\020\n\014ApiKeyHeader\022\000\n)\n\006OAuth2\022\037\n\007offline\n" +
+      "\006openid\n\014profile:read\022\217\004\n\007Profile\0229.bloo" +
       "mbox.schema.services.auth.v1beta1.GetPro" +
-      "file.Response\"\214\003\202\323\344\223\002\036\022\034/auth/v1beta1/pr" +
-      "ofile/{user}\222A\344\002\022\020Retrieve Profile\032\311\001Ret" +
-      "rieve profile data about a user by their" +
-      " user key, which is resolved upon finish" +
-      "ing an authentication and authorization/" +
-      "consent flow.\nData offered in return dep" +
-      "ends on granted OAuth2 profile scopes.*\007" +
-      "Profileb<\n\017\n\013ApiKeyParam\022\000\n)\n\006OAuth2\022\037\n\007" +
-      "offline\n\006openid\n\014profile:readb=\n\020\n\014ApiKe" +
-      "yHeader\022\000\n)\n\006OAuth2\022\037\n\007offline\n\006openid\n\014" +
-      "profile:readB\327\010\n(io.bloombox.schema.serv" +
-      "ices.auth.v1beta1H\001P\001\242\002\003BBS\222A\237\010\022g\n\010Auth " +
-      "API\032\031https://bloombox.io/terms\"7\n\010Bloomb" +
-      "ox\022\023https://bloombox.io\032\026developers@bloo" +
-      "mbox.io2\007v1beta1\032\022api.bloombox.cloud*\001\0022" +
-      "\020application/json:\020application/jsonZ\240\006\nd" +
-      "\n\013ApiKeyParam\022U\010\002\022JParameter for identif" +
-      "ying API key owned by the invoking proje" +
-      "ct or system.\032\003key \001\nh\n\014ApiKeyHeader\022X\010\002" +
-      "\022GHeader for identifying API key owned b" +
-      "y the invoking project or system.\032\tX-API" +
-      "-Key \001\n\315\004\n\006OAuth2\022\302\004\010\003\022]Bloombox Identit" +
-      "y-powered OAuth2 access, authorized on b" +
-      "ehalf of an end-user or organization.(\0042" +
-      ",https://authorize.bloombox.cloud/oauth2" +
-      "/auth:-https://authorize.bloombox.cloud/" +
-      "oauth2/tokenB\377\002\n1\n\007offline\022&Offline acce" +
-      "ss to authorized user data\n9\n\006openid\022/OI" +
-      "DC (OpenID Connect) access for seamless " +
-      "logon\n0\n\005email\022\'Read access to the user\'" +
-      "s email address\n/\n\005phone\022&Read access to" +
-      " the user\'s phone number\n9\n\006notify\022/Abil" +
-      "ity to notify the user for important eve" +
-      "nts\n1\n\014profile:read\022!Read access to the " +
-      "user\'s profile\n>\n\022profile.basic:read\022(Re" +
-      "ad access to the user\'s public profileb\021" +
-      "\n\017\n\013ApiKeyParam\022\000b\022\n\020\n\014ApiKeyHeader\022\000r/\n" +
-      "\rBloombox APIs\022\036https://apidocs.bloombox" +
-      ".cloudb\006proto3"
+      "file.Request\032:.bloombox.schema.services." +
+      "auth.v1beta1.GetProfile.Response\"\214\003\202\323\344\223\002" +
+      "\036\022\034/auth/v1beta1/profile/{user}\222A\344\002\022\020Ret" +
+      "rieve Profile\032\311\001Retrieve profile data ab" +
+      "out a user by their user key, which is r" +
+      "esolved upon finishing an authentication" +
+      " and authorization/consent flow.\nData of" +
+      "fered in return depends on granted OAuth" +
+      "2 profile scopes.*\007Profileb<\n\017\n\013ApiKeyPa" +
+      "ram\022\000\n)\n\006OAuth2\022\037\n\007offline\n\006openid\n\014prof" +
+      "ile:readb=\n\020\n\014ApiKeyHeader\022\000\n)\n\006OAuth2\022\037" +
+      "\n\007offline\n\006openid\n\014profile:readB\327\010\n(io.b" +
+      "loombox.schema.services.auth.v1beta1H\001P\001" +
+      "\242\002\003BBS\222A\237\010\022g\n\010Auth API\032\031https://bloombox" +
+      ".io/terms\"7\n\010Bloombox\022\023https://bloombox." +
+      "io\032\026developers@bloombox.io2\007v1beta1\032\022api" +
+      ".bloombox.cloud*\001\0022\020application/json:\020ap" +
+      "plication/jsonZ\240\006\nd\n\013ApiKeyParam\022U\010\002\022JPa" +
+      "rameter for identifying API key owned by" +
+      " the invoking project or system.\032\003key \001\n" +
+      "h\n\014ApiKeyHeader\022X\010\002\022GHeader for identify" +
+      "ing API key owned by the invoking projec" +
+      "t or system.\032\tX-API-Key \001\n\315\004\n\006OAuth2\022\302\004\010" +
+      "\003\022]Bloombox Identity-powered OAuth2 acce" +
+      "ss, authorized on behalf of an end-user " +
+      "or organization.(\0042,https://authorize.bl" +
+      "oombox.cloud/oauth2/auth:-https://author" +
+      "ize.bloombox.cloud/oauth2/tokenB\377\002\n1\n\007of" +
+      "fline\022&Offline access to authorized user" +
+      " data\n9\n\006openid\022/OIDC (OpenID Connect) a" +
+      "ccess for seamless logon\n0\n\005email\022\'Read " +
+      "access to the user\'s email address\n/\n\005ph" +
+      "one\022&Read access to the user\'s phone num" +
+      "ber\n9\n\006notify\022/Ability to notify the use" +
+      "r for important events\n1\n\014profile:read\022!" +
+      "Read access to the user\'s profile\n>\n\022pro" +
+      "file.basic:read\022(Read access to the user" +
+      "\'s public profileb\021\n\017\n\013ApiKeyParam\022\000b\022\n\020" +
+      "\n\014ApiKeyHeader\022\000r/\n\rBloombox APIs\022\036https" +
+      "://apidocs.bloombox.cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
