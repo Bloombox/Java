@@ -82,35 +82,35 @@ class ShopInfoTest: ClientRPCTest() {
   /**
    * Test fetching shop hours, but with an invalid partner.
    */
-//  @test(expected = ClientException::class)
-//  fun testShopHoursInvalidPartner() {
-//    // prep a client for prod
-//    val prodClient = Bloombox(Bloombox.Settings(
-//          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM"),
-//          Bloombox.ClientTarget.PRODUCTION)
-//    try {
-//      prodClient.shop().info()
-//    } finally {
-//      prodClient.close()
-//    }
-//  }
+  @test(expected = ClientException::class)
+  fun testShopHoursInvalidPartner() {
+    // prep a client for prod
+    val prodClient = Bloombox(Bloombox.Settings(
+          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM"),
+          Bloombox.ClientTarget.PRODUCTION)
+    try {
+      prodClient.shop().info()
+    } finally {
+      prodClient.close()
+    }
+  }
 
   /**
    * Test fetching shop hours, but with an invalid location.
    */
-//  @test(expected = ClientException::class)
-//  fun testShopHoursInvalidLocation() {
-//    // prep a client for prod
-//    val prodClient = Bloombox(Bloombox.Settings(
-//          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
-//          partner = "mm"),
-//          Bloombox.ClientTarget.PRODUCTION)
-//    try {
-//      prodClient.shop().info()
-//    } finally {
-//      prodClient.close()
-//    }
-//  }
+  @test(expected = ClientException::class)
+  fun testShopHoursInvalidLocation() {
+    // prep a client for prod
+    val prodClient = Bloombox(Bloombox.Settings(
+          "AIzaSyA17mIw4tWGe-GsqRhdpUDfLAn_KZ_zbcM",
+          partner = "mm"),
+          Bloombox.ClientTarget.PRODUCTION)
+    try {
+      prodClient.shop().info()
+    } finally {
+      prodClient.close()
+    }
+  }
 
   /**
    * Test a known-good zipcode via zipcheck.
@@ -118,11 +118,11 @@ class ShopInfoTest: ClientRPCTest() {
 //  @test
 //  fun testZipcheckKnownGood() {
 //    withClient { client ->
-//      val responseOne = client.platform.shop().checkZipcode("95120", ShopClient.ShopContext(
+//      val responseOne = client.local.shop().checkZipcode("95120", ShopClient.ShopContext(
 //            partner = partnerID,
 //            location = locationID))
 //
-//      val responseTwo = client.platform.shop().checkZipcode("94404", ShopClient.ShopContext(
+//      val responseTwo = client.local.shop().checkZipcode("94404", ShopClient.ShopContext(
 //            partner = partnerID,
 //            location = locationID))
 //

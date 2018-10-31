@@ -3885,45 +3885,44 @@ public final class DeviceContext {
     java.lang.String[] descriptorData = {
       "\n$analytics/context/NativeDevice.proto\022!" +
       "bloombox.schema.analytics.context\032\016bq_fi" +
-      "eld.proto\032\023device/Device.proto\032\025structs/" +
-      "Version.proto\032\032analytics/context/OS.prot" +
-      "o\032#analytics/context/Application.proto\032\037" +
-      "proximity/BluetoothBeacon.proto\"\223\001\n\tPixe" +
-      "lSize\022A\n\005width\030\001 \001(\rB2\360?\001\212@,Specifies th" +
-      "e width portion of a pixel size.\022C\n\006heig" +
-      "ht\030\002 \001(\rB3\360?\001\212@-Specifies the height por" +
-      "tion of a pixel size.\"\234\003\n\014DeviceScreen\022T" +
-      "\n\006screen\030\001 \001(\0132,.bloombox.schema.analyti" +
-      "cs.context.PixelSizeB\026\212@\023Size of the scr" +
-      "een.\022X\n\010viewport\030\002 \001(\0132,.bloombox.schema" +
-      ".analytics.context.PixelSizeB\030\212@\025Size of" +
-      " the viewport.\022A\n\007density\030\003 \001(\rB0\212@-Spec" +
+      "eld.proto\032\023device/Device.proto\032\032analytic" +
+      "s/context/OS.proto\032\037proximity/BluetoothB" +
+      "eacon.proto\"\223\001\n\tPixelSize\022A\n\005width\030\001 \001(\r" +
+      "B2\360?\001\212@,Specifies the width portion of a" +
+      " pixel size.\022C\n\006height\030\002 \001(\rB3\360?\001\212@-Spec" +
       "ifies the height portion of a pixel size" +
-      ".\022\230\001\n\013orientation\030\004 \001(\01624.bloombox.schem" +
-      "a.analytics.context.ScreenOrientationBM\212" +
-      "@JSpecifies the orientation of the scree" +
-      "n at the time an event was captured.\"\201\005\n" +
-      "\023NativeDeviceContext\022Y\n\004type\030\001 \001(\0162\037.ope" +
-      "ncannabis.device.DeviceTypeB*\360?\001\212@$Speci" +
-      "fies the type of native device.\022k\n\004role\030" +
-      "\002 \001(\0162-.bloombox.schema.analytics.contex" +
-      "t.DeviceRoleB.\360?\001\212@(Specifies the role o" +
-      "f the native device.\022e\n\002os\030\003 \001(\0132+.bloom" +
-      "box.schema.analytics.context.DeviceOSB,\360" +
-      "?\001\212@&Specifies the OS of the native devi" +
-      "ce.\022h\n\006beacon\030\006 \001(\0132\'.opencannabis.proxi" +
-      "mity.BluetoothBeaconB/\200@\001\212@)BLE signal b" +
-      "roadcasting from this device.\022g\n\twitness" +
-      "ed\030\007 \003(\0132\'.opencannabis.proximity.Blueto" +
-      "othBeaconB+\200@\001\212@%BLE signals witnessed b" +
-      "y this device.\022h\n\006screen\030\004 \001(\0132/.bloombo" +
-      "x.schema.analytics.context.DeviceScreenB" +
-      "\'\212@$Information about the device screen." +
-      "*$\n\nDeviceRole\022\n\n\006CLIENT\020\000\022\n\n\006SERVER\020\001*M" +
-      "\n\021ScreenOrientation\022\033\n\027UNSPECIFIED_ORIEN" +
-      "TATION\020\000\022\014\n\010PORTRAIT\020\001\022\r\n\tLANDSCAPE\020\002B?\n" +
-      "$io.bloombox.schema.telemetry.contextB\rD" +
-      "eviceContextH\001P\000\242\002\003BBSb\006proto3"
+      ".\"\234\003\n\014DeviceScreen\022T\n\006screen\030\001 \001(\0132,.blo" +
+      "ombox.schema.analytics.context.PixelSize" +
+      "B\026\212@\023Size of the screen.\022X\n\010viewport\030\002 \001" +
+      "(\0132,.bloombox.schema.analytics.context.P" +
+      "ixelSizeB\030\212@\025Size of the viewport.\022A\n\007de" +
+      "nsity\030\003 \001(\rB0\212@-Specifies the height por" +
+      "tion of a pixel size.\022\230\001\n\013orientation\030\004 " +
+      "\001(\01624.bloombox.schema.analytics.context." +
+      "ScreenOrientationBM\212@JSpecifies the orie" +
+      "ntation of the screen at the time an eve" +
+      "nt was captured.\"\201\005\n\023NativeDeviceContext" +
+      "\022Y\n\004type\030\001 \001(\0162\037.opencannabis.device.Dev" +
+      "iceTypeB*\360?\001\212@$Specifies the type of nat" +
+      "ive device.\022k\n\004role\030\002 \001(\0162-.bloombox.sch" +
+      "ema.analytics.context.DeviceRoleB.\360?\001\212@(" +
+      "Specifies the role of the native device." +
+      "\022e\n\002os\030\003 \001(\0132+.bloombox.schema.analytics" +
+      ".context.DeviceOSB,\360?\001\212@&Specifies the O" +
+      "S of the native device.\022h\n\006beacon\030\006 \001(\0132" +
+      "\'.opencannabis.proximity.BluetoothBeacon" +
+      "B/\200@\001\212@)BLE signal broadcasting from thi" +
+      "s device.\022g\n\twitnessed\030\007 \003(\0132\'.opencanna" +
+      "bis.proximity.BluetoothBeaconB+\200@\001\212@%BLE" +
+      " signals witnessed by this device.\022h\n\006sc" +
+      "reen\030\004 \001(\0132/.bloombox.schema.analytics.c" +
+      "ontext.DeviceScreenB\'\212@$Information abou" +
+      "t the device screen.*$\n\nDeviceRole\022\n\n\006CL" +
+      "IENT\020\000\022\n\n\006SERVER\020\001*M\n\021ScreenOrientation\022" +
+      "\033\n\027UNSPECIFIED_ORIENTATION\020\000\022\014\n\010PORTRAIT" +
+      "\020\001\022\r\n\tLANDSCAPE\020\002B?\n$io.bloombox.schema." +
+      "telemetry.contextB\rDeviceContextH\001P\000\242\002\003B" +
+      "BSb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3938,9 +3937,7 @@ public final class DeviceContext {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           gen_bq_schema.BqField.getDescriptor(),
           io.opencannabis.schema.device.DeviceOuterClass.getDescriptor(),
-          io.opencannabis.schema.struct.Version.getDescriptor(),
           io.bloombox.schema.telemetry.context.OperatingSystemContext.getDescriptor(),
-          io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor(),
           io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor(),
         }, assigner);
     internal_static_bloombox_schema_analytics_context_PixelSize_descriptor =
@@ -3970,9 +3967,7 @@ public final class DeviceContext {
         .internalUpdateFileDescriptor(descriptor, registry);
     gen_bq_schema.BqField.getDescriptor();
     io.opencannabis.schema.device.DeviceOuterClass.getDescriptor();
-    io.opencannabis.schema.struct.Version.getDescriptor();
     io.bloombox.schema.telemetry.context.OperatingSystemContext.getDescriptor();
-    io.bloombox.schema.telemetry.context.ApplicationContext.getDescriptor();
     io.opencannabis.schema.proximity.BluetoothBeaconOuterClass.getDescriptor();
   }
 

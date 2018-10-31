@@ -223,6 +223,14 @@ public enum AuthError
   EXPIRED_CONSENT(23),
   /**
    * <pre>
+   * The specified nonce was missing, invalid, or already used.
+   * </pre>
+   *
+   * <code>INVALID_NONCE = 24;</code>
+   */
+  INVALID_NONCE(24),
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
@@ -426,6 +434,14 @@ public enum AuthError
   public static final int EXPIRED_CONSENT_VALUE = 23;
   /**
    * <pre>
+   * The specified nonce was missing, invalid, or already used.
+   * </pre>
+   *
+   * <code>INVALID_NONCE = 24;</code>
+   */
+  public static final int INVALID_NONCE_VALUE = 24;
+  /**
+   * <pre>
    * An internal error was encountered.
    * </pre>
    *
@@ -476,6 +492,7 @@ public enum AuthError
       case 21: return CAPTCHA_REJECTED;
       case 22: return CONSENT_NOT_FOUND;
       case 23: return EXPIRED_CONSENT;
+      case 24: return INVALID_NONCE;
       case 99: return INTERNAL_ERROR;
       default: return null;
     }

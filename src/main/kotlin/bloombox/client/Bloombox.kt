@@ -36,7 +36,7 @@ import java.util.concurrent.TimeUnit
  * At the time of writing, supported services include:
  * - `shop/v1`: Shop service. For submitting orders, verifying customers, enrolling customers, etc.
  * - `menu/v1beta1`: Menu service. For downloading product catalog data, subscribing to changes, and publishing updates.
- * - `telemetry/v1beta3`: Telemetry service. For submitting telemetry event data of different kinds.
+ * - `telemetry/v1beta4`: Telemetry service. For submitting telemetry event data of different kinds.
  */
 @Suppress("unused")
 class Bloombox constructor (
@@ -57,7 +57,7 @@ class Bloombox constructor (
      * Version for the library. This is sent with telemetry information and kept around so the user has a way to access
      * and know the active library version at runtime.
      */
-    internal const val VERSION = "1.4"
+    internal const val VERSION = "1.6"
 
     /**
      * API client variant name. In all cases, for now, this is "full," indicating a full client library. If other,
@@ -89,6 +89,12 @@ class Bloombox constructor (
      * this for mostly west-coast-bound or originating traffic.
      */
     USW1,
+
+    /**
+     * 'USW2' region code, which stands for "US West 2." Hosted from Los Angeles, California, on Google Cloud Platform.
+     * Use this for mostly west-coast-bound or originating traffic.
+     */
+    USW2,
 
     /**
      * 'USC1' region code, which stands for "US Central 1." Hosted from South Carolina on Google Cloud Platform. Use
@@ -308,7 +314,7 @@ class Bloombox constructor (
   }
 
   // -- Internals -- //
-  private fun ClientTarget.host(region: APIRegion = APIRegion.USW1,
+  private fun ClientTarget.host(region: APIRegion = APIRegion.USW2,
                                 environment: APIEnvironment = APIEnvironment.PRODUCTION): String =
         when (this) {
           ClientTarget.LOCAL -> "127.0.0.1"
@@ -468,9 +474,9 @@ class Bloombox constructor (
      * Reference to all mounted/supported services. For each service that has been initialized within the lifetime of
      * this API client, return a reference to the client object.
      */
-    internal fun allServices(): Array<ServiceClient?> = Array(serviceMap.size, {
+    internal fun allServices(): Array<ServiceClient?> = Array(serviceMap.size) {
       serviceMap.values.elementAt(it)
-    })
+    }
   }
 
   /**

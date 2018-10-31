@@ -49,6 +49,18 @@ public final class AuthGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      io.bloombox.schema.services.auth.v1beta1.AuthNonce> METHOD_NONCE =
+      io.grpc.MethodDescriptor.<com.google.protobuf.Empty, io.bloombox.schema.services.auth.v1beta1.AuthNonce>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.auth.v1beta1.Auth", "Nonce"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              com.google.protobuf.Empty.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.AuthNonce.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request,
       io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response> METHOD_AUTHENTICATE =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request, io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response>newBuilder()
@@ -109,6 +121,18 @@ public final class AuthGrpc {
               com.google.protobuf.Empty.getDefaultInstance()))
           .build();
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request,
+      io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> METHOD_CONNECT =
+      io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request, io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName(generateFullMethodName(
+              "bloombox.schema.services.auth.v1beta1.Auth", "Connect"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response.getDefaultInstance()))
+          .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static final io.grpc.MethodDescriptor<io.bloombox.schema.services.auth.v1beta1.UserContext.Request,
       io.bloombox.schema.services.auth.v1beta1.UserContext.Response> METHOD_CONTEXT =
       io.grpc.MethodDescriptor.<io.bloombox.schema.services.auth.v1beta1.UserContext.Request, io.bloombox.schema.services.auth.v1beta1.UserContext.Response>newBuilder()
@@ -166,6 +190,16 @@ public final class AuthGrpc {
 
     /**
      * <pre>
+     * Generate an authentication nonce, which is usable once, and only once, to perform an auth flow.
+     * </pre>
+     */
+    public void nonce(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthNonce> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_NONCE, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Authenticate an identity assertion of some kind from a user. Decide whether to grant them access to the subject
      * account.
      * </pre>
@@ -217,6 +251,17 @@ public final class AuthGrpc {
 
     /**
      * <pre>
+     * Connect a signed and validated user identity to a user account. If the user account in question doesn't exist yet,
+     * create it, initializing with any user details passed in along with the provided identity.
+     * </pre>
+     */
+    public void connect(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> responseObserver) {
+      asyncUnimplementedUnaryCall(METHOD_CONNECT, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Generate a full user context after a successful ID and authorization flow.
      * </pre>
      */
@@ -237,6 +282,13 @@ public final class AuthGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            METHOD_NONCE,
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.google.protobuf.Empty,
+                io.bloombox.schema.services.auth.v1beta1.AuthNonce>(
+                  this, METHODID_NONCE)))
           .addMethod(
             METHOD_AUTHENTICATE,
             asyncUnaryCall(
@@ -272,6 +324,13 @@ public final class AuthGrpc {
                 io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject,
                 com.google.protobuf.Empty>(
                   this, METHODID_REJECT)))
+          .addMethod(
+            METHOD_CONNECT,
+            asyncUnaryCall(
+              new MethodHandlers<
+                io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request,
+                io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response>(
+                  this, METHODID_CONNECT)))
           .addMethod(
             METHOD_CONTEXT,
             asyncUnaryCall(
@@ -310,6 +369,17 @@ public final class AuthGrpc {
     protected AuthStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new AuthStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Generate an authentication nonce, which is usable once, and only once, to perform an auth flow.
+     * </pre>
+     */
+    public void nonce(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthNonce> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_NONCE, getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -370,6 +440,18 @@ public final class AuthGrpc {
 
     /**
      * <pre>
+     * Connect a signed and validated user identity to a user account. If the user account in question doesn't exist yet,
+     * create it, initializing with any user details passed in along with the provided identity.
+     * </pre>
+     */
+    public void connect(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request request,
+        io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(METHOD_CONNECT, getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Generate a full user context after a successful ID and authorization flow.
      * </pre>
      */
@@ -411,6 +493,16 @@ public final class AuthGrpc {
     protected AuthBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new AuthBlockingStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Generate an authentication nonce, which is usable once, and only once, to perform an auth flow.
+     * </pre>
+     */
+    public io.bloombox.schema.services.auth.v1beta1.AuthNonce nonce(com.google.protobuf.Empty request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_NONCE, getCallOptions(), request);
     }
 
     /**
@@ -466,6 +558,17 @@ public final class AuthGrpc {
 
     /**
      * <pre>
+     * Connect a signed and validated user identity to a user account. If the user account in question doesn't exist yet,
+     * create it, initializing with any user details passed in along with the provided identity.
+     * </pre>
+     */
+    public io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response connect(io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request request) {
+      return blockingUnaryCall(
+          getChannel(), METHOD_CONNECT, getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Generate a full user context after a successful ID and authorization flow.
      * </pre>
      */
@@ -505,6 +608,17 @@ public final class AuthGrpc {
     protected AuthFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new AuthFutureStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Generate an authentication nonce, which is usable once, and only once, to perform an auth flow.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.AuthNonce> nonce(
+        com.google.protobuf.Empty request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_NONCE, getCallOptions()), request);
     }
 
     /**
@@ -565,6 +679,18 @@ public final class AuthGrpc {
 
     /**
      * <pre>
+     * Connect a signed and validated user identity to a user account. If the user account in question doesn't exist yet,
+     * create it, initializing with any user details passed in along with the provided identity.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response> connect(
+        io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request request) {
+      return futureUnaryCall(
+          getChannel().newCall(METHOD_CONNECT, getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Generate a full user context after a successful ID and authorization flow.
      * </pre>
      */
@@ -586,13 +712,15 @@ public final class AuthGrpc {
     }
   }
 
-  private static final int METHODID_AUTHENTICATE = 0;
-  private static final int METHODID_CONSENT = 1;
-  private static final int METHODID_TOKEN = 2;
-  private static final int METHODID_ACCEPT = 3;
-  private static final int METHODID_REJECT = 4;
-  private static final int METHODID_CONTEXT = 5;
-  private static final int METHODID_PROFILE = 6;
+  private static final int METHODID_NONCE = 0;
+  private static final int METHODID_AUTHENTICATE = 1;
+  private static final int METHODID_CONSENT = 2;
+  private static final int METHODID_TOKEN = 3;
+  private static final int METHODID_ACCEPT = 4;
+  private static final int METHODID_REJECT = 5;
+  private static final int METHODID_CONNECT = 6;
+  private static final int METHODID_CONTEXT = 7;
+  private static final int METHODID_PROFILE = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -611,6 +739,10 @@ public final class AuthGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_NONCE:
+          serviceImpl.nonce((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthNonce>) responseObserver);
+          break;
         case METHODID_AUTHENTICATE:
           serviceImpl.authenticate((io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Request) request,
               (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.AuthenticateUser.Response>) responseObserver);
@@ -630,6 +762,10 @@ public final class AuthGrpc {
         case METHODID_REJECT:
           serviceImpl.reject((io.bloombox.schema.services.auth.v1beta1.ConsentDecision.Reject) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_CONNECT:
+          serviceImpl.connect((io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Request) request,
+              (io.grpc.stub.StreamObserver<io.bloombox.schema.services.auth.v1beta1.IdentityConnect.Response>) responseObserver);
           break;
         case METHODID_CONTEXT:
           serviceImpl.context((io.bloombox.schema.services.auth.v1beta1.UserContext.Request) request,
@@ -672,11 +808,13 @@ public final class AuthGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AuthDescriptorSupplier())
+              .addMethod(METHOD_NONCE)
               .addMethod(METHOD_AUTHENTICATE)
               .addMethod(METHOD_CONSENT)
               .addMethod(METHOD_TOKEN)
               .addMethod(METHOD_ACCEPT)
               .addMethod(METHOD_REJECT)
+              .addMethod(METHOD_CONNECT)
               .addMethod(METHOD_CONTEXT)
               .addMethod(METHOD_PROFILE)
               .build();

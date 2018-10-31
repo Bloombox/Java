@@ -73,14 +73,14 @@ class ShopClient(override val host: String,
    * Channel for client->server traffic. Construction of this object is handled by the base RPC client class, which adds
    * necessary items like base interceptors and crypto assets.
    */
-  override val channel: ManagedChannel = channelBuilder(
+  override val channel: ManagedChannel = managedChannel(
         host = host,
         port = port,
         executor = executor,
         clientAuth = clientAuth,
         transportMode = transportMode,
         clientCredentials = clientCredentials,
-        clientAuthorityRoots = clientAuthorityRoots).build()
+        clientAuthorityRoots = clientAuthorityRoots)
 
   /**
    * Validate shop context required values before sending. These consist of the partner and location code. The API key
